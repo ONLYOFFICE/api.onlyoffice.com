@@ -25,6 +25,10 @@ expression.SetBold(isBold);
 This example sets the bold property to the text character.
 
 ```javascript editor-docx
+// How to make a range text bold.
+
+// Update text properties of the range.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

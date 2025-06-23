@@ -18,13 +18,17 @@ expression.SetTextDirection(sType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the direction of the text flow for this table cell.
 
 ```javascript editor-docx
+// Set the direction of the cell text.
+
+// Get the cell from the table and set its direction.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example deletes the run.
 
 ```javascript editor-xlsx
+// How to delete a text run object.
+
+// Create the ApiRun object, add it into the paragraph and remove it from it.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

@@ -1,13 +1,13 @@
 # ContentControlListElement
 
-Content control list element
+The content control list element.
 
 ## Properties
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| Display | string | element display text |
-| Value | string | element value |
+| Display | string | The element display text. |
+| Value | string | The element value. |
 ## Type
 
 Object

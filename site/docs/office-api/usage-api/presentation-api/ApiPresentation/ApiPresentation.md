@@ -8,6 +8,7 @@ Represents the ApiPresentation class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddMaster](./Methods/AddMaster.md) | boolean | Adds the slide master to the presentation slide masters collection. |
+| [AddMathEquation](./Methods/AddMathEquation.md) | boolean | Adds a math equation to the current presentation. |
 | [AddSlide](./Methods/AddSlide.md) | None | Appends a new slide to the end of the presentation. |
 | [ApplyTheme](./Methods/ApplyTheme.md) | boolean | Applies a theme to all the slides in the presentation. |
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | None | Creates a new history point. |
@@ -20,10 +21,12 @@ Represents the ApiPresentation class.
 | [GetAllSlideMasters](./Methods/GetAllSlideMasters.md) | [ApiMaster](../ApiMaster/ApiMaster.md)[] | Returns an array of all slide masters from the current presentation. |
 | [GetAllSlides](./Methods/GetAllSlides.md) | [ApiSlide](../ApiSlide/ApiSlide.md)[] | Returns an array of all slides from the current presentation. |
 | [GetClassType](./Methods/GetClassType.md) | "presentation" | Returns a type of the ApiPresentation class. |
+| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Returns the core properties interface for the current presentation. This method is used to view or modify standard metadata such as title, author, and keywords. |
 | [GetCurSlideIndex](./Methods/GetCurSlideIndex.md) | number | Returns the index for the current slide. |
 | [GetCurrentSlide](./Methods/GetCurrentSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns the current slide. |
-| [GetCurrentVisibleSlide](./Methods/GetCurrentVisibleSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| [ApiLayout](../ApiLayout/ApiLayout.md) \| [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Returns the current visible slide, layout or master. |
-| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: -**Application** - the application the document has been created with. -**CreatedRaw** - the date and time when the file was created. -**Created** - the parsed date and time when the file was created. -**LastModifiedRaw** - the date and time when the file was last modified. -**LastModified** - the parsed date and time when the file was last modified. -**LastModifiedBy** - the name of the user who has made the latest change to the document. -**Autrors** - the persons who has created the file. -**Title** - this property allows you to simplify your documents classification. -**Tags** - this property allows you to simplify your documents classification. -**Subject** - this property allows you to simplify your documents classification. -**Comment** - this property allows you to simplify your documents classification. |
+| [GetCurrentVisibleSlide](./Methods/GetCurrentVisibleSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null | Returns the current visible slide. |
+| [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | Returns the custom properties from the current presentation. |
+| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: -**Application** - the application the document has been created with. -**CreatedRaw** - the date and time when the file was created. -**Created** - the parsed date and time when the file was created. -**LastModifiedRaw** - the date and time when the file was last modified. -**LastModified** - the parsed date and time when the file was last modified. -**LastModifiedBy** - the name of the user who has made the latest change to the document. -**Authors** - the persons who has created the file. -**Title** - this property allows you to simplify your documents classification. -**Tags** - this property allows you to simplify your documents classification. -**Subject** - this property allows you to simplify your documents classification. -**Comment** - this property allows you to simplify your documents classification. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the presentation height in English measure units. |
 | [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Returns a slide master by its position in the presentation. |
 | [GetMastersCount](./Methods/GetMastersCount.md) | number | Returns a number of slide masters. |

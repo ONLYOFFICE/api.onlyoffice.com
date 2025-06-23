@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a watermark text and pastes it into the document.
+This example gets a watermark settings direction and pastes it into the document.
 
 ```javascript editor-docx
+// How to get the direction of the text in watermark. 
+
+// Get the angle and the direction (for example, "clockwise45") of the watermark text.
+
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
 watermarkSettings.SetType("text");

@@ -22,9 +22,13 @@ expression.SetSolved(bSolved);
 
 ## Example
 
-
+This example shows how to resolve a comment.
 
 ```javascript editor-pptx
+// How to make a comment solved.
+
+// Get all comments from the presentation and set it solved.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

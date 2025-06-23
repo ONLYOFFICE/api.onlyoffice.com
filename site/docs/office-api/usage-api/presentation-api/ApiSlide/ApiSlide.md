@@ -7,6 +7,8 @@ Represents the ApiSlide class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [AddComment](./Methods/AddComment.md) | boolean | Adds a comment to the current slide. |
+| [AddNotesText](./Methods/AddNotesText.md) | boolean | Adds a text to the notes page of the current slide. |
 | [AddObject](./Methods/AddObject.md) | boolean | Adds an object (image, shape or chart) to the current presentation slide. |
 | [ApplyLayout](./Methods/ApplyLayout.md) | boolean | Applies the specified layout to the current slide. The layout must be in slide master. |
 | [ApplyTheme](./Methods/ApplyTheme.md) | boolean | Applies the specified theme to the current slide. |
@@ -25,6 +27,7 @@ Represents the ApiSlide class.
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the slide height in English measure units. |
 | [GetLayout](./Methods/GetLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the current slide. |
+| [GetNotesPage](./Methods/GetNotesPage.md) | [ApiNotesPage](../ApiNotesPage/ApiNotesPage.md) \| null | Returns the notes page from the current slide. |
 | [GetSlideIndex](./Methods/GetSlideIndex.md) | number | Returns a position of the current slide in the presentation. |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) | Returns a theme of the current slide. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the visibility of the current presentation slide. |

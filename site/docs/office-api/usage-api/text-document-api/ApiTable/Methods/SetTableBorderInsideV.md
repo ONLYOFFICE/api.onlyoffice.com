@@ -24,13 +24,17 @@ expression.SetTableBorderInsideV(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge of the parent table.
 
 ```javascript editor-docx
+// How to set inside vertical border to the table.
+
+// How to create a 3x3 table and add the inside vertical 4 point orange borders.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We add the inside vertical 4 point black border:");

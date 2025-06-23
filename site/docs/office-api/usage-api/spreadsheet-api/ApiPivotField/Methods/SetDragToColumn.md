@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set a drag to column of a pivot field.
 
 ```javascript editor-xlsx
+// How to rename a pivot field drag to column.
+
+// Create a pivot table, add data to it then set drag to column of a specified pivot using boolean value.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -64,5 +68,4 @@ pivotField.SetDragToColumn(false);
 pivotWorksheet.GetRange('A13').SetValue('Drag to column');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToColumn());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to columns!');
-
 ```

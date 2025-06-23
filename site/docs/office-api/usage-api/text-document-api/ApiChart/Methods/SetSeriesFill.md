@@ -27,6 +27,10 @@ boolean
 This example sets the fill to the specified chart series.
 
 ```javascript editor-docx
+// How to color a chart seria.
+
+// Create a chart, set its properties and its series background.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

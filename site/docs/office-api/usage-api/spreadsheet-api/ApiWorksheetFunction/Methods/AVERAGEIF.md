@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to find the average (arithmetic mean) for the cells specified by a given condition or criteria.
 
 ```javascript editor-xlsx
+// How to find an average (arithmetic mean) using condition.
+
+// Use function to get an average of the cells if the condition is met.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 let numbers = [67, 87, 98, 45];

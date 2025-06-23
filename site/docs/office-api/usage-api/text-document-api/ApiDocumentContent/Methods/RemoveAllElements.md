@@ -18,13 +18,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes all the elements from the current document or from the current document content.
 
 ```javascript editor-docx
+// Clear entire document.
+
+// Remove each document element.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

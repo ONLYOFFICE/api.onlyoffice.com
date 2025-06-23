@@ -17,7 +17,7 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 | sText | Required | String |  | The comment reply text (required). |
 | sAuthorName | Required | String |  | The name of the comment reply author (optional). |
 | sUserId | Required | String |  | The user ID of the comment reply author (optional). |
-| nPos | Optional | Number | this.GetRepliesCount() | The comment reply position. |
+| nPos | Optional | Number | -1 | The comment reply position. If nPos=-1 add to the end. |
 
 ## Returns
 
@@ -25,9 +25,13 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## Example
 
-
+This example shows how to add a reply to the comment.
 
 ```javascript editor-pptx
+// How to reply to the comment.
+
+// Get all comments from the presentation and reply to the first one.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

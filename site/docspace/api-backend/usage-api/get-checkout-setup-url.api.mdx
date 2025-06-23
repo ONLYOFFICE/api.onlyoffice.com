@@ -1,0 +1,71 @@
+---
+id: get-checkout-setup-url
+title: "Get the checkout setup page URL"
+description: "Returns the URL to the checkout setup page."
+sidebar_label: "Get the checkout setup page URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVktz2zYQ/iuYvfiCSqrcE2+Kk2aSdppMbI8PHk0MkSsREQmgwNK2yuF/7yxAyqLp1O5FD2D32/e3aIHULkB2C1+tJ1WJufiqDjUagrUE69Ar0tZ8KiCDHdJFifneNnSJ1LhrX4EEp7yqkdAzSgtG1QgZvFP5Pt1rAxn83aA/gIQCQ+61Y8heSFx/+xMkhLzEWkHWAh0cAwTy2uxAAj6q2lXxyNYoCB8Jum4twWNw1gQMrLVcLPhrjH9VIsMLsoJKFHnvvAjsvXBqhyAht4Y43KwF5Vyl8xjw/EdgiHbqmN38wJw4cM/pIZ0cGLyZhtCxjSZZ6G+0IdyhBwlb62tF6eh8ybKVNvtwIqu8V5w6TViH1/0oPW5f9EHlKSuTq67rJARS1IQ3upiEL2yBb1LoJJCmWMLLaPPGK+fQ96Z/W/w6Ld21UQ2V1ut/sIAodD4V+ssKh77WIWhrApfZoWfrgkodRB9xDA/zxms6xBZVIf/O6N/3yAfgURUg4cFrQlh3soV3qDx6yG7jv5XTf+DhePaSvAo6H8S/rBoqly8LfnEYZ+l2zR08juYbUuM5jFe7dgYSaqTS9lMZp5BKyGCunJ4vZ4u5i9M8d2mW5wxS2oYiRhPnMqC/H4aWTzJoNyrgta+6yaBeRlmRW7PVuyZRAki4V16rTZUar1dOVdqqpuIOmCC9T1dx6rs4xkNpLnnQEtS4QE+TEOswgbwOKC6s3WsUrISG+hkGObDRCLCnpDyqcG/11TvaKYncxMoHQ+jFwTZeNAE9AwtlCuFUCA/WFwOHMcAmAjJy3zNvgT5LwqL9fHMlruweTXc2Ak1Ysv/x+zBkn2+u2NS4SV/L2WqUKKGDKJjCa22wEJtDbLyzVT+BUeZMlKiK6ECf1JHFPqm9TCePU/DEVyoePPckyYltZR/Eg6ZSjKyKSDIS+Dq1xuntwECjw9iDMdEhm8+j1Zk11cFutzrHWW7rdLicHxkGJBAn/O2qUTxWx7qB/1URh1gVQuU5hsRH3hLmhIXwGGzjcwxHQsjghr9fkU4cOfDGUzbjwYU1Ji2BZ0nl2/eiv56OxUj77VFz42uztVzfx1+C3hlFjcfX241b+ijO81OIrfXP/JoJ3tcxs6JuAokNCrshFXvyXqvYlHcDwQ20MarInUBTOKsNzcQn4rbm8cRCqCCUSBOfuoyx4gzfnQRyN3vq7tP4njFGx/+3Nobd77WV08yH6EMK+Hy2nC04Tc4GqlVcuz3wR6Sf8Xr/Fhrlrn16oPzPDdGXhB9Mc1cpbdifJjF0Whe3XC+QwL6yq7wy4i5JD0AJk7WxllDaQKzaHtdFx8fphcfLpNCBl0IB2VZVAf8jnpP334vORvo/eUreq6phKeC9MSyftHYH5mEHktoqz9HRidbkdccoxzX68cMVyMgk43ZOG6P/wejDlTmcYo8XTPKAP3npv6jRtmlWuu4on65+qnHk3yTNKVp3Xfcv74gL0A==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the checkout setup page URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/chechoutsetupurl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the URL to the checkout setup page.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"BackUrl","in":"query","description":"Back URL","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The URL to the checkout setup page","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-docx
+// How to get a class type of ApiStroke.
+
+// Retrieve class type of ApiStroke object and insert it to the document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let rgbColor = Api.CreateRGBColor(255, 111, 61);

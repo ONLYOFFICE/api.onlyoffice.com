@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example inserts a number of the current document page into the paragraph.
 
 ```javascript editor-docx
+// How to add a page number to the text.
+
+// Insert a page number to the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("First page");

@@ -15,9 +15,9 @@ expression.AddComment(text, author, userId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| text | Required | string |  | The comment text (required). |
-| author | Required | string |  | The author's name (optional). |
-| userId | Required | string |  | The user ID of the comment author (optional). |
+| text | Required | string |  | The comment text. |
+| author | Optional | string |  | The author's name. |
+| userId | Optional | string |  | The user ID of the comment author. |
 
 ## Returns
 
@@ -25,9 +25,15 @@ expression.AddComment(text, author, userId);
 
 ## Example
 
-This example adds comment to the block content control
+This example adds a comment to the block content control.
 
 ```javascript editor-docx
+// Creates a block content control in the ApiDocument class, adds a paragraph with a text to it, and adds a comment to the content control.
+
+// How to add a comment written by John Smith to the ApiBlockLvlSdt object.
+
+// John Smith comments on the block content control in the current document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");

@@ -1,0 +1,63 @@
+---
+id: get-tfa-confirm-url
+title: "Get confirmation email"
+description: "Returns the confirmation email URL for authorization via SMS or TFA application."
+sidebar_label: "Get confirmation email"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktv4zYQ/ivEXHJhbdfbk25u9oHdtlhg7SCHwNjQ0sjiRiZZcpSsK+i/F0PKsmW7SC692BLnyZlvvlELpLYBsgdYIpE22yCmYvVxIUL/CmsJ1qFXpK35XEAGW6RVqW6tKbXf3fkaJHgMzpqAAbIW5rMZ/xUYcq8dm0EGvXr0InCndC3uvv0JEnJrCA2xhXKu1nlUmf4IbNZCyCvcKX6ivUPIwG5+YE4gwXlOi3QKesjgRDOQ12YLHcdoUoReog3hFj1IKC3nlI7ezVm31uYpnOgq79UeJGjCXXg9j8pjeTUHladKXIi6rpMQSFET3phiUr61Bb7JoJNAmmpWWsaY9145h74P/dvs18t23RnVUGW9/geL6CFg3nhNe8geWlAh/87y70/IB+BRFSDhxWtCWHeyhd9RefSQPcS3hdN/4H44u6avgs4P6l8XDVXz64pfHUYUPqy7tTxL+htS400QVKHIr+JNlNaLw82S7FkrsfxrKayPsD/B4AQk7JAq24Oee62oggymyunpfDKbHoZkSqVSzk37qMD18s/oQyxX42vIoN2ogHe+7uA872XUTSlvmzRpIOFZea02dcJVb5w6Vaqm5gZfeHqfRHG0uo4rdOjbkucouRp37wj02KQLl3cBxa21Txpj4dBQXx6QYNQuWp46lKDZLI8mjNa+tUOcishdRPlgCL3Y28aLJqBnx0KZQjgVwov1DILIBOxgEx2y5x5Qb3F9k5RF++V+JVb2CU13M3KafMn+4eNhhr7crzjUGMGv1WwxKpTQQRRI6HfaYCE2+wjQm8UpDG9EhaqICfRFHUXsi9rrdHIYkSMdqXhwnknSE2VtX8SLpkqMoorIIRJYnKBxKj0QzOgwYjAWOmTTaYw6sabe27LUOU5yu0uH8+lAICCBuOBvN43qsTvWHehdFXHCVSFUnmMIgqxw3hLmhIXwGGzjcwwDW2Rwz/+vaCcKPJDKsZrx4NYakzj+rKgsfS968eVYjKzffmsGvjal5f7+/CXorVHUeHwdbgzpQZ3npxh47pjXRKwqFLGyYtcEEhsUdkMqYpJJkEH5eCS2RBujjjwKNIWz2tBEfCaGNY8nFkIFoUSa+IQy9hVn+PHkIo+TI7pP73fGGB2/lzZeu19bC6eZD9GHdOF3k/lkxmVyNtBOxa3aO/6EdIX7z0vWHj87/o+t0beL8CdNXa204VybxN5phTxwL0EC34NJuv/WkpAWSfouiqtkLaGygdikHVZIx8d/N+h5/a6PqyJt0ANP8O6JHA+LPEdHcafUTULS2acW74ph2X36sAIZ534MvsTv/QN7P4jM/tT3eB2kDPiX9/dVi7ZNyO66QT+J/tNiYMukzRVed133LytjunA=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get confirmation email"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/tfaapp/confirm"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the confirmation email URL for authorization via SMS or TFA application.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Confirmation email URL","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

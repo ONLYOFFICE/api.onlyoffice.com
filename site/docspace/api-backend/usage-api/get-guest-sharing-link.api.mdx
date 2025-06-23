@@ -1,0 +1,71 @@
+---
+id: get-guest-sharing-link
+title: "Get a guest sharing link"
+description: "Returns a link to share a guest with another user."
+sidebar_label: "Get a guest sharing link"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVm1v2zYQ/ivEfckGKLbjpECnb17bBemKdWgS5ENgNGfpZLGRSZU8NfEM/ffhSMmOYncJ9sUv5L3fc89xA4xLD+kt/G0dY6XG6rwhzx7mCdiaHLK25iKHFJbE4eqyRKfN8pM295BAjQ5XxOTEyAYMrghSaDw5nUMC2kAKNXIJCeTkM6drMQgpXJWkRExdvB9BAo6+N9pRDim7hhLwWUkrhHQDvK7FpGfxCgkU1q2QxUkTXNAjrupKRBDphE4mp8eLDN8c/1bgyfEC32bHZ9PJm7eLM1wU07fQtnPx5mtrPHlxMJ1M5GsY3rWE5kt0pKqYaWYNk2ERxbqudBZKM/7mRX6zH7BdfKOMpUROCsk6eutd76fWio8meuhutGFaknuatTZ8OhVZCcs/kUXncC0lZ1r5l+MoHRUHY8AslmDvqm3bBDwjN/6VIUbhdzanVym0CbDm0MrL4PPGYV2T61yfTU4O9Mlgw6V1+h/KIQid7gv9ZVVNbqW919Z4xeGveFdcaq+6jIP22U+gYCyrwjYmD2F6yhqneR0wjz77KkF8vSc5AEcouHxwmgnmbbKB3wkdOUhvw79Zrf+k9fbskDx6nfXin2cNl9PDgp9rCsN5OxdUD8P+Qtw44xUGAEvSEc6oljLG6kFzqdBYLsmFSZQxXBGXtpv2MN1cQgpjrPV4OpqMa7J1ReNgwI83cczbcTAMUhb3o2eCxlWQwmaBnq5d1e7N/2WQVZk1hV42kWcggR/oNC6qiNFOObakwKYSsOxZeh+v1PWXT4KU+a49lzKT0dSwSbuhCb3YM3ntSb2z9l6TEiUy3I07JD3FDQx2RJcFFQFS18Gtn5K53vPywTA5tbZNrL8YVmhyVaP3D9ZJrwOriIFFMCiWO9y8xvRRFFabjzdX6srek2mPBkajraT78Uc/jx9vrsTVEKgv1Ww2KJTSXuWyF1baUK4Wa8UlqaNZN6xB5kiVhHkIoCvqwGNX1E6mTbaTsKM2DAfPI4lyqqjsQ0T5wKsKfJSAXEdoPL3tyWpwGDAYCu3T8Th4HVlTrW1R6IxGmV3Fw+l4S0aQAEvBX68axEN3bN2vCszDIGOuMMvIR+pyliljypUjbxuXkd+SQgo38v2CdKTTnjt21QwH76wxcV88K6rcvlfd9f5YDLRfn3WgEFNY6e/jsddLg9w4ehluAumtuMxPrgrrnsU1UvLMCJVVq8azWpCyC8aAyR8aAyjvenbraWPQkTtFJq+tNjxSFyywlvGkXKFQa5z4iDKxFWb47kkid6Mdup/m94wxWvlf2JB2twJntRY+JOdjwqej6WgiZaqt5xWGDd0ZPife0rqPz7P+1TIo2mb3iPl/66FrCdMjj+sKdViaTWTouCtupV+QgMSaQNwXkEDcGJBAun0axqUxT6C0nkVxs10WrRx/b8jJPp3vlkJYLLn28juHtMDK03+k+MuX7lH5q3r22jyYR483sw57qGoobpuwMfonbTtvk56SJJp4OcsyqvmJ2t4LUdbSdrmef7iCJFDMEOdxlXQ/xPrBkJ5tnhiBfMqL4KDGZhOHqG238vHqpxpbYo7SUqB527b/AkABLIc=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a guest sharing link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/guests/{userid}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a link to share a guest with another user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"The user ID.","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User share link","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"},"404":{"description":"User not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

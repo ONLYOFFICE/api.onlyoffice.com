@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-docx
+// How to get a class type of ApiImage.
+
+// Retrieve class type of ApiImage object and insert it to the slide.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let drawing = Api.CreateImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", 60 * 36000, 35 * 36000);

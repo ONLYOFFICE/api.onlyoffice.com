@@ -18,13 +18,17 @@ expression.SetTextPr(textPr);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example applies text settings to the content of the content control.
 
 ```javascript editor-docx
+// Creates a block content control, adds a text to it, and sets the font size and bold property to this text.
+
+// Specifies the ApiTextPr object and applies its settings to the ApiBlockLvlSdt object.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with the font size set to 30 and the font weight set to bold.");

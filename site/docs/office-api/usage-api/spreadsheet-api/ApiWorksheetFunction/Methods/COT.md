@@ -22,9 +22,13 @@ number
 
 ## Example
 
-
+This example shows how to get the cotangent of a number.
 
 ```javascript editor-xlsx
+// How to find a cotangent.
+
+// Use function to get the cotangent of an angle.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 worksheet.GetRange("A1").SetValue(func.COT(0.785398));

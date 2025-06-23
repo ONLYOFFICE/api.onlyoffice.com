@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a set of the table row properties which will be applied to all the rows within a table which match the conditional formatting type.
 
 ```javascript editor-docx
+// How to get table properties and set its height.
+
+// Update the table row properties by setting its style.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and set the height of half an inch to all the rows:");

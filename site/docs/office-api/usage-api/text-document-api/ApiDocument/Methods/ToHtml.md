@@ -28,6 +28,10 @@ string
 This example converts a document to HTML.
 
 ```javascript editor-docx
+// How to get an HTML from the document content.
+
+// Convert the document indicating "html" parameter.
+
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 paragraph1.AddText("Heading 1");

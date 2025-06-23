@@ -25,6 +25,10 @@ boolean
 This example shows how to set bookmark name.
 
 ```javascript editor-docx
+// How to rename a bookmark.
+
+// Get a bookmark from the document by its name then set a new name to it.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

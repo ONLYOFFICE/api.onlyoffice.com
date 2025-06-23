@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set a display field captions of a table.
 
 ```javascript editor-xlsx
+// How to set a display field captions of a table.
+
+// Create a pivot table, add data to it then set a display field captions.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -52,8 +56,8 @@ let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 pivotTable.AddDataField('Price');
 
 pivotTable.AddFields({
-	rows: 'Region',
-	columns: 'Style',
+    rows: 'Region',
+    columns: 'Style',
 });
 
 pivotTable.SetDisplayFieldCaptions(false);
@@ -61,5 +65,4 @@ pivotTable.SetDisplayFieldCaptions(false);
 let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Disaply field captions');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetDisplayFieldCaptions());
-
 ```

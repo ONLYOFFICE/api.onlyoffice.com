@@ -26,6 +26,10 @@ boolean
 This example sets the specified numeric format to the chart series.
 
 ```javascript editor-docx
+// How to set the "0.00" numeric format to the chart seria.
+
+// Create a chart, set its properties and its series numeric format.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

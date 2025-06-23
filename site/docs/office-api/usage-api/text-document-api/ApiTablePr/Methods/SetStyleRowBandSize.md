@@ -18,13 +18,17 @@ expression.SetStyleRowBandSize(nCount);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies a number of rows which will comprise each table row band for this table style.
 
 ```javascript editor-docx
+// How to set row band size.
+
+// How to style a row band size.
+
 let doc = Api.GetDocument();
 doc.RemoveAllElements();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

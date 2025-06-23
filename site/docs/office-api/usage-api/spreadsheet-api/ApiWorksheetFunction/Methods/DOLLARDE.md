@@ -23,9 +23,13 @@ number
 
 ## Example
 
-
+This example shows how to convert a dollar price, expressed as a fraction, into a dollar price, expressed as a decimal number.
 
 ```javascript editor-xlsx
+// How to convert a dollar price from farction to decimal.
+
+// Use function to get decimal from fraction price.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 worksheet.GetRange("A1").SetValue(func.DOLLARDE(1.03, 16));

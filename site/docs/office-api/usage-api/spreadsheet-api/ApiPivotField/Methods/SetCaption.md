@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set a pivot field caption.
 
 ```javascript editor-xlsx
+// How to rename a pivot field caption.
+
+// Create a pivot table, add data to it then rename a specified pivot field's caption.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -65,5 +69,4 @@ pivotWorksheet.GetRange('B12').SetValue(pivotField.GetCaption());
 pivotWorksheet.GetRange('A14').SetValue('New Style field caption');
 pivotField.SetCaption('My caption');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetCaption());
-
 ```

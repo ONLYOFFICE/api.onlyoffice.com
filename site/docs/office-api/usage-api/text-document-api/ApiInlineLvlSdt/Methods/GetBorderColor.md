@@ -1,6 +1,6 @@
 # GetBorderColor
 
-Gets the border color of the current content control.
+Returns the border color of the current content control.
 
 ## Syntax
 

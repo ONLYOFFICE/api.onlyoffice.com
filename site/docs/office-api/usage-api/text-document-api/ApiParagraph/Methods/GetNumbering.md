@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the numbering definition and numbering level for the numbered list.
 
 ```javascript editor-docx
+// Get the numbering from the paragraph.
+
+// How to get the numbering of the numbered text.
+
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
 let numLvl = numbering.GetLevel(0);

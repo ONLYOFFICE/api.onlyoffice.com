@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example showh how to get a collection of OLE objects from the document content.
 
 ```javascript editor-docx
+// Get all OLE objects added to the document.
+
+// How to retrieve all OLE objects and display the application ID of the first one.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set name of a pivot field.
 
 ```javascript editor-xlsx
+// How to change a pivot field name.
+
+// Create a pivot table, add data to it then rename a specified pivot.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -50,7 +54,7 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style'],
+    rows: ['Region', 'Style'],
 });
 pivotTable.SetRowAxisLayout("Tabular", false);
 
@@ -65,5 +69,4 @@ pivotWorksheet.GetRange('B12').SetValue(pivotField.GetName());
 pivotWorksheet.GetRange('A14').SetValue('New Style field name');
 pivotField.SetName('My name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
-
 ```

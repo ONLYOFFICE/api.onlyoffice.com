@@ -36,6 +36,6 @@ Type boolean
 
 ``` ts
 Asc.plugin.executeMethod("methodName", [param1, param2], (returnValue) => {
-  console.log(returnValue)
-})
+  console.log(returnValue);
+});
 ```

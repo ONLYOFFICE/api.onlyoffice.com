@@ -25,6 +25,10 @@ boolean
 This example sets the cell properties to the current cell.
 
 ```javascript editor-docx
+// How to add properties to the cell.
+
+// Create a 3x3 table, get its first cell and set its properties.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

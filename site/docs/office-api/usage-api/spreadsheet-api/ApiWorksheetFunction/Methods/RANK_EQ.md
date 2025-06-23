@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the rank of a number in a list of numbers: its size relative to other values in the list. If more than one value has the same rank, the top rank of that set of values is returned.
 
 ```javascript editor-xlsx
+// How to estimate a rank of a number from the list, return top if there are multiple.
+
+// Use a function to estimate rank of the a number from the list.
+
 const worksheet = Api.GetActiveSheet();
 
 let valueArr = [7, 6, 5, 5];

@@ -25,6 +25,10 @@ boolean
 This example sets the screen tip text of the hyperlink.
 
 ```javascript editor-docx
+// How to specify the hyperlink screen tip text.
+
+// Set the screen tip text of the link.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

@@ -23,6 +23,10 @@ Number
 This example shows how to get the paragraph position within its parent element.
 
 ```javascript editor-docx
+// How to get the position of the paragraph in the control that contains it.
+
+// Get the paragraph position inside the parent control.
+
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 let run = Api.CreateRun();

@@ -26,6 +26,10 @@ expression.SetLanguage(sLangId);
 This example specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of the text run.
 
 ```javascript editor-docx
+// How to set a language to the text for grammar checking.
+
+// Create a text run object, change its language to English for grammar check.
+
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();
 textPr.SetLanguage("en-CA");

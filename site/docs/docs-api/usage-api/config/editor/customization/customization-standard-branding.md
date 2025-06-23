@@ -418,6 +418,14 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `false`
 
+## forceWesternFontSize
+
+`Type: boolean`
+
+Defines if the Western (**true**) or Chinese (**false**) font size is used in the Chinese (Simplified) UI. The default value is **false**.
+
+**Example**: `false`
+
 ## goback
 
 `Type: object`
@@ -717,7 +725,7 @@ Starting from version 8.2, please use the [mobile](#mobile) parameter instead.
 
 `Type: boolean`
 
-Defines if [plugins](../../../../../plugin-and-macros/get-started/overview.md) will be launched and available. The default value is **true**.
+Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md) will be launched and available. The default value is **true**.
 
 **Example**: `true`
 
@@ -952,7 +960,7 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 Defines the editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**, **theme-white**, **theme-night**);
 - **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
 
 The first option has higher priority.
@@ -1054,6 +1062,7 @@ const config = {
         visible: true,
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",

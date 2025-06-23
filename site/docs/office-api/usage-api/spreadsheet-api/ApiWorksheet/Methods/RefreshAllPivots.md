@@ -20,11 +20,14 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to refresh all pivot tables.
 
 ```javascript editor-xlsx
-let worksheet = Api.GetActiveSheet();
+// How to refresh field values of all pivot tables.
 
+// Refresh pivot tables from the worksheet.
+
+let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue('Region');
 worksheet.GetRange('C1').SetValue('Price');
 worksheet.GetRange('B2').SetValue('East');

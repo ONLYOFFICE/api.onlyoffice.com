@@ -1,5 +1,49 @@
 # Change log
 
+## 6.0.0
+
+### New features
+
+#### Docs
+
+* Added Plugins version 9.0
+* Updated Office API documentation for version 9.0
+* Added new Macro samples
+
+#### Docs API
+
+* Added the theme-white and theme-night theme ids to the editorConfig.customization.uiTheme parameter
+* Added opening for odg format
+* Added opening for md format
+* Added the ability to preload the editor static resources
+* Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
+* Added the editorConfig.customization.layout.header.user parameter
+* Added conversion from vsdm, vsdx, vssm, vssx, vstm, vstx formats
+* Added the diagram document type to the documentType parameter
+
+#### Plugins and macros
+ 
+* Added a link to the plugins storybook
+* Updated the Tutorials/Samples page of the Plugins and macros
+* Updated the Get started structure of the Plugins and macros
+
+#### Docspace
+
+* Updated DocSpace version 3.2
+
+### Fixes
+
+* Renamed categories titles
+
+#### Docs
+
+* Fixed Automation API examples and usage
+
+#### Plugins and macros
+
+* Fixed Plugins and macros description and samples
+* Deprecated attachEvent method
+
 ## 5.4.0
 
 ### New features

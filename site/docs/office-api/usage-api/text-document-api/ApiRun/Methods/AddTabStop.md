@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a tab stop to the run.
 
 ```javascript editor-docx
+// How to start a sentence after a tab stop.
+
+// Break two lines of a text with a tab. 
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

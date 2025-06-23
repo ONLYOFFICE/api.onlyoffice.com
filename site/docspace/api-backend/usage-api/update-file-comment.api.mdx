@@ -1,0 +1,71 @@
+---
+id: update-file-comment
+title: "Update a comment"
+description: "Updates a comment in a file with the ID specified in the request."
+sidebar_label: "Update a comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tv2zgQ/ivEXLILqHbqBItd3dykBdJdIEXiIIfAaGhpZLGRSJak4noF/ffFkHpYsZu4wF5siZz345tRDY6vLcQP8EkUaNmUXWs03AklLSwjUN3bVQoxVDrlDonyQpUlSgcRaG54iQ4NSalB8hIhhkwUeJVCBEJCDJq7HCJI0SZGaBIHMSxyZETGri7ZJkeDzOXIkiCYCcsKlXCH6QQiMPi9EgZTiJ2pMAKb5FhyiGtwW036hHS4RgMRZMqU3IWjsxlEgD94qQuE+K8/z/9ommWQhtZ9UOmWROybNfjEMmWYd1vINeOdeWRToqSjEMQ1cK0Lkfg4Tb9ZElPvmDgY/wDPaCzpWUad5Wr1DRMfSEPBdgItMXWEh1zcN7iLWss1eTUO72dn5w3ZH1I4aLDOCLl+VYHDH955WRUFX5G0kJBeOFhVoieDpomAp6kgMbz4suNexguLh9QcFXgnnNd056uxq8SmIX0GrVbShhjOTk/38xu40k7gryTy9Yx1qvcD6oNdjUL903ptIiiEfLI7tNwYvqVWcljat+3IDWYHbeCJG1dUd+UjZx13lT3SxEB8oVI8iqEZknbrdd4brjWaVvX56fsDeZK8crky4l9MvQSLSWWE23qY4Tb5Svdfn5AOwCAntNkY4RCWTVTDB+QGDcQP/m2uxd+47c8O0XMrko78el65fHaY8FqjR8OHJWHJoeKyQ70yIRkPMLcRLvcQd3XJrMZEZAJTuqezFpKovEt0uSK01VXAV5dDDFOuxXQ2OZ2SLOt/p3VA2WY61LJF89xBcWUKiKFecYt3pmj2+vrW07JEyUysqwDzEMEzN4Ja29dCyxzSk/GqoKzuSboMV+zu5h9K6XJI1i01TxA1TtlQ3T4zeyLvLLILpZ4EMmJC6dq+JPAJM2YksJ00iWehEm3z2evJndN7Wj5Kh4ZtVWVYZdGQYMZlyjS3dqMMZd63PwlYeYEkua2iY0SfBGJWf75fsIV6QtmcjIQGWVH78KlrnM/3C1I1Ltu3YjYfBYpGaEpYWgqJKVttfaGdzNuu8jQnLEeeegPaoI40tkFtaZqo74sBg7g/eGlJoGNZoTah7kdamQeOCOg6lMbubYcqo0Nfgz7QNp5OvdaJksVWZZlIcJKoMhzOpj1q0KSggB/P6sl9dpTuMJ1TJ94gTxlPErSWOcW0UQ4TGiIGrapMgraHiBju6f8N6oB7HZIM0fQHF0rKAOwvgkq3l6y93m+LEffxXlPhC5kpyu+Pd1asJXeVwbfLjUq6J6f+Sf3QHts1YTTXfWRZWVnHVsjUynFfk8+C+6J87MCtg41RRh4ZylQrId2EXfnNkNoTU8YD0HqQ6NHV9/DjjiOPk6G6d/17gRhNBDTxb4bd8GO30+xsY7Q77axOu9sOycuUD1s76+ZaEJ52vHA2mU1OiVAr60ruR3FrWBgcw9x4Gex62FL+lyHTZpYsn+qCC0lmVQHow8R5oLRDBGRy5Pd52/5DBHG/33f2LiPIlXXEV/cjp6Hj7xUamtHLYbT48ZQKS8/p4XVw1+HfbtoN+nf2Kx8NB33sSlpu/agrKgwDzQ+l7rOlWTZRh3pkari8CAa9W5CIgXlvZ6QlIXDMkwS1e5V2uTPwv9wtaBK0nyWlx0EwfEMfQHwT7FQ6fJsRONFZDQWX64qviTaI9Ht3RTnc7eAwJNsHcupgJF7M1OAG/ZJTBznqOsBD0/T04eqnHP3ICdSUl2XTNP8BJ+QAwQ==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a comment in a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID where the comment is located.","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"The parameters for updating a comment.","content":{"application/json":{"schema":{"required":["version"],"type":"object","properties":{"version":{"type":"integer","description":"The comment version.","format":"int32","example":1234},"comment":{"type":"string","description":"The comment text.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The parameters for updating a comment.","title":"UpdateComment"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated comment","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

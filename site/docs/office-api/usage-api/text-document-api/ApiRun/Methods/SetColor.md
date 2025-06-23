@@ -28,6 +28,10 @@ expression.SetColor(r, g, b, isAuto);
 This example sets the text color for the current text run in the RGB format.
 
 ```javascript editor-docx
+// How to change text color.
+
+// Create a new text run and change its font color.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

@@ -30,6 +30,10 @@ boolean
 This example adds a numbered cross-reference to the paragraph.
 
 ```javascript editor-docx
+// How to create a numbered reference to the paragraph.
+
+// Add a cross-reference to the numbered paragraph.
+
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
 for (let i = 0; i < 8; ++i) {

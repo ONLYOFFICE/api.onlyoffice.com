@@ -22,9 +22,13 @@ expression.TRANSPOSE(arg1);
 
 ## Example
 
-
+This example shows how to convert a vertical range of cells to a horizontal range, or vice versa.
 
 ```javascript editor-xlsx
+// How to change orientation of cells to vertical/horizontal.
+
+// Use a function to transpose a range.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 worksheet.GetRange("A1").SetValue("Ann");

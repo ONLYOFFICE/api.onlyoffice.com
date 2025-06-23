@@ -23,6 +23,10 @@ Number
 This example shows how to get the row index.
 
 ```javascript editor-docx
+// Display the row index.
+
+// Get the index of the table row.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

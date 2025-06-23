@@ -23,21 +23,28 @@ This method doesn't have any parameters.
 This example shows how to get an array with all the shape objects from the slide master.
 
 ```javascript editor-pptx
-var oPresentation = Api.GetPresentation();
-var oSlide = oPresentation.GetSlideByIndex(0);
-var oMaster = oPresentation.GetMaster(0);
-oSlide.RemoveAllObjects();
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
-var oShape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, oFill, oStroke);
-oShape.SetPosition(608400, 1267200);
-oShape.SetSize(300 * 36000, 130 * 36000);
-oMaster.AddObject(oShape);
-var aShapes = oMaster.GetAllShapes();
-var sType = aShapes[0].GetClassType();
-var oDocContent = oShape.GetDocContent();
-var oParagraph = oDocContent.GetElement(0);
-oParagraph.SetJc("left");
-oParagraph.AddText("Class type = " + sType);
-oShape.SetVerticalTextAlign("center");
+// How to get all shapes from the presentation slide master.
+
+// Get all shapes from the presentation master as an array.
+
+const presentation = Api.GetPresentation();
+const master = presentation.GetMaster(0);
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(300 * 36000, 130 * 36000);
+master.AddObject(shape);
+
+const allShapes = master.GetAllShapes();
+const classType = allShapes[0].GetClassType();
+const docContent = shape.GetDocContent();
+const paragraph = docContent.GetElement(0);
+paragraph.SetJc("left");
+paragraph.AddText("Class type = " + classType);
+shape.SetVerticalTextAlign("center");
+
 ```

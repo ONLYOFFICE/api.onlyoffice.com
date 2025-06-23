@@ -18,13 +18,17 @@ expression.SetLabel(sLabel);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets a string label to the inline text content control.
 
 ```javascript editor-docx
+// How to set label for the inline content control.
+
+// Display the label set for inline text element.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

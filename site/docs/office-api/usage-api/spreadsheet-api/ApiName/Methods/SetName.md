@@ -25,6 +25,10 @@ boolean
 This example sets a string value representing the object name.
 
 ```javascript editor-xlsx
+// How to rename an object.
+
+// Set a new name for an object and display it in the worksheet.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 worksheet.GetRange("B1").SetValue("2");

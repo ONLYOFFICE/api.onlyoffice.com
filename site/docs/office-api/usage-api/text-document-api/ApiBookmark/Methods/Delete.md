@@ -23,6 +23,10 @@ boolean
 This example shows how to delete bookmark from document.
 
 ```javascript editor-docx
+// How to get a bookmark from the document by its name and remove it.
+
+// Add two bookmarks to the two ranges and delete the first one.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

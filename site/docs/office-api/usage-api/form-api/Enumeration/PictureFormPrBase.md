@@ -19,9 +19,14 @@ Object
 
 ## Example
 
-This example creates a combo box form with the specific combo box form properties.
+Create a picture form with the specific picture form properties.
 
 ```javascript editor-pdf
-let comboBoxFormPr = {"editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]};
-let comboBoxForm = Api.CreateComboBoxForm(comboBoxFormPr);
+// How to create a picture form with its base properties.
+
+// Create the base properties and apply them to the ApiPictureForm object.
+
+const pictureFormPrBase = {"scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50};
+const pictureForm = Api.CreatePictureForm(pictureFormPrBase);
+
 ```

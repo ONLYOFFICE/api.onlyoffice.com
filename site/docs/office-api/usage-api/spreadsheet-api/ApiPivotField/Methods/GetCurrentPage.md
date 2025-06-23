@@ -20,9 +20,13 @@ string \| number
 
 ## Example
 
-
+This example shows how to get a current page of a pivot field.
 
 ```javascript editor-xlsx
+// How to get a pivot field current page.
+
+// Create a pivot table, add data to it then get a current page of a specified pivot field.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -59,5 +63,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotWorksheet.GetRange('A13').SetValue('Current Page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetCurrentPage());
-
 ```

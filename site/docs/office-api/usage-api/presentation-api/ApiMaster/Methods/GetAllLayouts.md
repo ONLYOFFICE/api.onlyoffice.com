@@ -1,6 +1,6 @@
 # GetAllLayouts
 
-Returns all layouts from the slide master
+Returns all layouts from the slide master.
 
 ## Syntax
 

@@ -19,13 +19,17 @@ expression.SetVerAlign(sRelativeFrom, sAlign);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies how the floating object will be vertically aligned.
 
 ```javascript editor-docx
+// How to set the vertical alignment of the drawing.
+
+// Move the shape to the top of the page.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with a shape. ");

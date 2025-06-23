@@ -1,0 +1,63 @@
+---
+id: get-room-covers
+title: "Get covers"
+description: "Returns a list of all covers."
+sidebar_label: "Get covers"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVt9v2zYQ/leIe8mLZmduMWx685IuaDegQ5ogD4HR0NLJYiORCnlM4gn634cjJdmy0ybbiy3xfvLuu+/UAsmNg/QWLo2pHawSMA1aScrojzmksEFiyZl5ROsgAYuuMdqhg7SFxekp/+XoMqsatoEULpCcsMbUImMjSCAzmlATq8qmqVQW3M+/OdZvwWUl1pKfaNsgpGDW3zAjSKCxnAypGG0IvacprZVbSEAR1u51Dyrf03Fkld5AcpD+VYkxceG1evAoVI6aVKHQziAB7atKriuElKzHBPBZ1g2/wm+/vv8FugRySfK/hFG13KBgqx/7d6ZGQfhM0HUJyDxX7EpWf+9dsZCVw5dCWXS+ImEKQWNgiw8eHQluj1Ra6c2ecJoVKQo5RBhcBmfnZEImmfGxt/2FlSbchL4XxtaS4tG7BdemUvre/f/+lRaL49JyNbJ41yNRxxk6kuTdG1OMymcmxzcZdC8XZ8kXu7GyadD2Wbw//fl4WK619FQaq/7BPDhzmHmraAvpbQvSZV9Z/vUe+QAsyhwSeLKKEFZd0sLvKC1aSG/D27JRf+J2PHtJXzqVDeqfl57KxcuKnxsMBHC76laHgLpE8lY7IUWlXACVrKqIG8doqZFK05MH91BSCSnMZaPmi9npvFAVujkzhJtnA684tOGJr+1tBSm0a+nw2lbd0ex8CbqM20JtfCQrSOBRWsWjEzrdG8eKF9JX3LMjT+dRJK4v/+IurXb1/8KkFF1Nu7DDbij2kctrh+LMmHuFgo2YO7IhQy3rYLnvMAHFZlkwYQD2LRrjlETNUZQPmtCKrfFWeIeWHQupc9FI556M5WYGWmUH6+CQPffAeIvrk6gs2k83V+LK3KPuTiZOo6+kf/hjGItPN1ccaorE12q2nBRKKCdyJLS10piL9TbQ0smyH5SgcyJKlHlIoC/qJGJf1F6nS0ao7xhGhoPDTKKeKCrzJJ4UlWISVQRaSIDFERr70oEzJocBg6HQLp3PQ9SZ0dXWFIXKcJaZOh4u5iMRMN9ywd9uGtRDd0wz7EqZh0mVuZBZhs4JMqKxhjAjzHkfGG8zdOPUp3DD/69oRyobyGFXzXBwZrSOtH1QVJaei158PBYT67ffmoGvdGG4v88/ObXRkrzF1+HGkB7VeX5yURh7kNdM8N4MlRW1dyTWKMyaFyXm4lHJAMq7gdMG2ph05E6gzhujNM3ER2JY83hiLiRzZ5z4iDL2FWb4bu8id7Mduvfvd8AYHb8XJly730TLRjEfonXxwu9mi9kpl6kxjmoZFmXv+AJJjCQ8KVO7+257lfH7evPXybyppNIczEf6jfR/y82ABDiRBMIK4K/J8NHJ3xAhg1UCpXHE2u1I/x0fP3i0vAJXO5qPW2yYcd4bgZ9hmWXYUNgHlY8oOPjmZJ4fd9TFhytIwsxOgRO5uX9g74NIb/d9T6k8ZsC/vENftGjbiMquG/Wj6LsWI9NFbS7uquu6fwGDxgtN
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get covers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/covers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all covers.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Gets room cover","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"The cover unique identifier.","nullable":true,"example":"9846"},"data":{"type":"string","description":"The cover image data.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The result of the cover request containing the cover image data.","title":"CoversResultDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CoversResultArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

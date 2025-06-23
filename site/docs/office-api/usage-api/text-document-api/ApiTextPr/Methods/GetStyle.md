@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example finds out whether a text has the properties set.
 
 ```javascript editor-docx
+// How to know whether a text's style is changed or not.
+
+// Retrieve text properties of the form and display its style name.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

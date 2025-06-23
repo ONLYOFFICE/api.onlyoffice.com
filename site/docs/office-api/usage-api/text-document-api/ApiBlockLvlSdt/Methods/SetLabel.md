@@ -18,13 +18,17 @@ expression.SetLabel(sLabel);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example sets the label attribute to the container.
+This example sets a label attribute to the container.
 
 ```javascript editor-docx
+// Creates a block content control and sets a label to it.
+
+// How to set a label to the ApiBlockLvlSdt object.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with a label set to it.");

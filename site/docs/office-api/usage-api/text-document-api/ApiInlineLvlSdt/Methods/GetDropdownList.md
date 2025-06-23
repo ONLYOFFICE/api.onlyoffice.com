@@ -1,6 +1,6 @@
 # GetDropdownList
 
-Returns a list of values of the combo box / dropdown list content control.
+Returns a list of values of the combo box / drop-down list content control.
 
 ## Syntax
 
@@ -20,8 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example checks if the content control is a form.
+This example retrieves the drop-down list from a content control.
 
 ```javascript editor-docx
-// todo_example we don't have ability to create such class in builder
+let doc = Api.GetDocument();
+let cc = Api.CreateDropDownListContentControl([{display: 'one', value: '1'}, {display: 'two', value: '2'}], 1);
+let paragraph = Api.CreateParagraph();
+let contentControlList = cc.GetDropdownList();
+paragraph.AddText("Class Type = " + contentControlList.GetClassType());
+doc.Push(paragraph);
 ```

@@ -20,13 +20,17 @@ expression.AddElement(oCell, nPos, oElement);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a paragraph using its position in the cell.
 
 ```javascript editor-docx
+// How to add text to the cell.
+
+// Insert a paragraph object to the table cell.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

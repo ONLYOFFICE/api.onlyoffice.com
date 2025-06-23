@@ -26,6 +26,10 @@ boolean
 This example adds a paragraph to the container.
 
 ```javascript editor-docx
+// Creates a block content control and adds a paragraph with a text to it.
+
+// How to add the ApiParagraph object to the first position of the ApiBlockLvlSdt object.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let paragraph = Api.CreateParagraph();

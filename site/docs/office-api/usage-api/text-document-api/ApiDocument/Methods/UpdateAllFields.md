@@ -18,13 +18,17 @@ expression.UpdateAllFields(bBySelection);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example updates all fields in the current document.
 
 ```javascript editor-docx
+// How to update all forms in the document.
+
+// Edit document fields and then update all of them.
+
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");
 let paragraph = doc.GetElement(0);

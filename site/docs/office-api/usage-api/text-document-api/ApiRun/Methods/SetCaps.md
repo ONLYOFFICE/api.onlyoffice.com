@@ -25,6 +25,10 @@ expression.SetCaps(isCaps);
 This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
 ```javascript editor-docx
+// How to make a text capitalized.
+
+// Get the text properties of the run and set its letters uppercase.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

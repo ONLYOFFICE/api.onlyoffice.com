@@ -27,6 +27,10 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 This example removes the specified comment replies.
 
 ```javascript editor-docx
+// How to delete specified comment reply.
+
+// Get all comments from the presentation and remove a reply from the first one's.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

@@ -2,7 +2,7 @@
 sidebar_position: -6
 ---
 
-# execCommand
+# execCommand method
 
 Use the **execCommand** method of the *window\.AscDesktopEditor* object to execute a command specified in the request.
 

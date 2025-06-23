@@ -19,13 +19,17 @@ expression.SetEqualColumns(nCount, nSpace);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies that all the text columns in the current section are of equal width.
 
 ```javascript editor-docx
+// How to split the text into 3 equal columns.
+
+// Get the final section and set its columns.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();

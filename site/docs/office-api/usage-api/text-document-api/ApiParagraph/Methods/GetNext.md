@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the next paragraph.
 
 ```javascript editor-docx
+// Get the next paragraph and make it bold.
+
+// How to access the next paragraph.
+
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 paragraph1.AddText("This is just a sample paragraph №1.");
