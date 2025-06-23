@@ -1,54 +1,49 @@
-# Creating a Settings Plugin
+# Creating a settings plugin
 
-This guide walks you through creating a plugin for DocSpace that uses the **Settings** scope. This scope adds a plugin configuration panel to the plugin settings area in the admin interface.
+This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.
 
 ## Before you start
 
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
-```bash
+``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
+## Step 1: Create a plugin
 
-Initialize your plugin using the CLI:
+1. Initialize your plugin using the CLI:
 
-```bash
-npx create-docspace-plugin
-```
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `Settings`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Settings`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
-## Step 2: Confirm Plugin Configuration
+## Step 2: Confirm plugin configuration
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
 
 ```json
-"scopes": ["Settings"]
+{
+  "scopes": ["Settings"]
+}
 ```
 
 Also verify that the `scripts/createZip.js` file is present. This script will:
-- Compile your plugin
-- Package everything into `dist/plugin.zip`
 
-## Step 3: Review the Plugin Code
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
 
-By default, the plugin template includes a working implementation inside `src/index.ts`. This works out of the box and does not require modification to appear in the plugin settings.
+## Step 3: Review the plugin code
 
-Here's the default implementation:
+By default, the plugin template includes a working implementation in the `src/index.ts` file. This works out of the box and does not require modification to appear in the plugin settings.
 
-```js
+Here's the default implementation of a [settings plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md):
+
+``` ts
 import {
   IPlugin,
   PluginStatus,
@@ -82,11 +77,11 @@ window.Plugins.Settingsmenu = plugin || {};
 export default plugin;
 ```
 
-## Step 4: Build the Plugin
+## Step 4: Build the plugin
 
-From the root of your plugin:
+From the root of your plugin, run the following command:
 
-```bash
+``` sh
 npm run build
 ```
 
@@ -94,23 +89,20 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 ## Step 5: Upload to DocSpace
 
-1. Log in as an administrator
-2. Navigate to: **Admin Panel → Integration → Plugins**
-3. Click **Upload**, and select the generated `dist/plugin.zip`
-4. Enable the plugin toggle if not already active
+1. Log in as an administrator.
+2. Navigate to: **Admin Panel → Integration → Plugins**.
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 6: Test It
+## Step 6: Test it
 
-1. Go to **Admin Panel → Integration → Plugins**
-2. Click the gear icon for your plugin
-3. The settings panel should open with default behavior
-4. You can customize this panel further in your plugin frontend if needed
+1. Go to **Admin Panel → Integration → Plugins**.
+2. Click ![Settings icon](/assets/images/docspace/settings-icon.png) for your plugin.
+3. The settings panel should open with default behavior.
+4. You can customize this panel further in your plugin frontend if needed.
 
 ## Notes
 
-- You don't need to define settings items manually unless you want a custom UI
-- The plugin SDK handles basic settings persistence for you
-- You can access or update saved settings using `getAdminPluginSettings()` and `setAdminPluginSettings()`
-
-For reference:
-[MainButtonPlugin Docs](../../../usage-sdk/coding-plugin/plugin-types/settingsplugin)
+- You don't need to define settings items manually unless you want a custom UI.
+- The Plugins SDK handles basic settings persistence for you.
+- You can access or update saved settings using [`getAdminPluginSettings`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md#getadminpluginsettings) and [`setAdminPluginSettings`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md#setadminpluginsettings).

@@ -1,47 +1,47 @@
-# Creating an API Plugin
+# Creating an API plugin
 
-This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via REST API.
+This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via the REST API.
 
 ## Before you start
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally `npm i -g @onlyoffice/docspace-plugin-sdk`
 
-## Step 1: Create the Plugin
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
-First, initialize your plugin using the CLI:
-
-```bash
-npx create-docspace-plugin
+``` sh
+npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+## Step 1: Create a plugin
 
-Then, you'll be shown a list of available scopes.  
-Use the arrow keys to highlight `API`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+1. Initialize your plugin using the CLI:
 
-## Step 2: Confirm Plugin Configuration
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
+
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `API`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
+
+## Step 2: Confirm plugin configuration
+
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
 
 ```json
-"scopes": ["Api"]
+{
+  "scopes": ["API"]
+}
 ```
 
-Also verify that the `scripts/createZip.js` file is present. This script will:
-- Compile your plugin.
-- Package everything into `dist/plugin.zip`.
+Also, verify that the `scripts/createZip.js` file is present. This script will:
 
-## Step 3: Review and Extend Plugin Code
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
 
-By default, the plugin template includes a basic implementation inside the `src/index.ts` file. It defines a class that registers and manages profile menu items using the Plugin SDK:
+## Step 3: Review and extend plugin code
 
-```js
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of an [API plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md):
+
+```ts
 import { IPlugin, PluginStatus, IApiPlugin } from '@onlyoffice/docspace-plugin-sdk';
 
 class Apiplugin implements IPlugin, IApiPlugin {
@@ -142,14 +142,11 @@ window.Plugins.Apiplugin = plugin;
 export default plugin;
 ```
 
-For reference:  
-[API plugin Docs](../../../usage-sdk/coding-plugin/plugin-types/apiplugin)
+## Step 4: Build the plugin
 
-## Step 4: Build the Plugin
+From the root of your plugin, run the following command:
 
-From the root of your plugin:
-
-```bash
+``` sh
 npm run build
 ```
 
@@ -160,20 +157,21 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 1. Log in as an administrator.
 2. Navigate to: **Admin Panel → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
-4. Enable the plugin toggle if not already active.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 6: Test It
+## Step 6: Test it
 
-1. Upload and enable the plugin
-2. Reload the DocSpace interface
-3. The plugin will automatically trigger `onLoadCallback()`
-4. A new room titled `"Plugin-created Room"` should be created automatically
-5. Open the browser console to confirm the plugin sent a request and received a response
+1. Reload the DocSpace interface.
+2. The plugin will automatically trigger [`onLoadCallback()`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md#onloadcallback).
+3. A new room titled `"Plugin-created Room"` should be created automatically.
+4. Open the browser console to confirm the plugin sent a request and received a response.
 
 ## Notes
 
 - You can access:
-    - `origin`: base URL of the portal
-    - `proxy`: proxy segment if used (e.g. /ds)
-    - `prefix`: API prefix (usually /api/2.0)
-- You can expand this plugin to support context menus, main buttons, or settings by updating the scope
+
+  - [`origin`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md#origin): the base URL of the portal;
+  - [`proxy`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md#proxy): the proxy segment if used (e.g. `/ds`);
+  - [`prefix`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md#prefix): the API prefix (usually `/api/2.0`).
+
+- You can expand this plugin to support context menus, main buttons, or settings by updating the scope.

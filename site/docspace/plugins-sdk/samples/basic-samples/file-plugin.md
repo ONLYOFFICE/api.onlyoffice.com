@@ -1,52 +1,47 @@
-# Creating a File Plugin
+# Creating a file plugin
 
 This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.
 
 ## Before you start
 
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
-```bash
+``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
+## Step 1: Create a plugin
 
-Initialize your plugin using the CLI:
+1. Initialize your plugin using the CLI:
 
-```bash
-npx create-docspace-plugin
-```
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `File action`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `File action`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
-## Step 2: Confirm Plugin Configuration
+## Step 2: Confirm plugin configuration
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
 
 ```json
-"scopes": ["File"]
+{
+  "scopes": ["File"]
+}
 ```
 
 Also verify that the `scripts/createZip.js` file is present. This script will:
-- Compile your plugin
-- Package everything into `dist/plugin.zip`
 
-## Step 3: Review and Extend Plugin Code
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
 
-By default, the plugin template includes a base implementation inside `src/index.ts`. Here's an example for supporting `.md` (Markdown) files:
+## Step 3: Review and extend plugin code
 
-```js
+By default, the plugin template includes a base implementation in the `src/index.ts` file. Here's an example of a [file plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) for supporting `.md` (Markdown) files:
+
+``` ts
 import {
   IPlugin,
   PluginStatus,
@@ -81,12 +76,11 @@ window.Plugins.Filesplugin = plugin || {};
 export default plugin;
 ```
 
-## Step 4: Add Your File Item
+## Step 4: Add a file item
 
-Now append the following to the bottom of the script:
+Create a [file item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md) and append it to the end of the script:
 
-```js
-...
+```ts
 const plugin = new Filesplugin();
 
 
@@ -108,18 +102,13 @@ declare global {
     Plugins: any;
   }
 }
-...
 ```
 
-For reference:
-[MainButtonPlugin Docs](../../../usage-sdk/coding-plugin/plugin-types/fileplugin)
-[MainButtonItem Docs](../../../usage-sdk/coding-plugin/plugin-items/fileitem)
+## Step 5: Build the plugin
 
-## Step 5: Build the Plugin
+From the root of your plugin, run the following command:
 
-From the root of your plugin:
-
-```bash
+``` sh
 npm run build
 ```
 
@@ -127,20 +116,19 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 ## Step 6: Upload to DocSpace
 
-1. Log in as an administrator
-2. Navigate to: **Admin Panel → Integration → Plugins**
-3. Click **Upload**, and select the generated `dist/plugin.zip`
-4. Enable the plugin toggle if not already active
+1. Log in as an administrator.
+2. Navigate to: **Admin Panel → Integration → Plugins**.
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test It
+## Step 7: Test it
 
-1. Upload a `.md` file to any **Room**
-2. You should now see a custom icon for `.md` files
-3. Clicking the file should trigger the `onClick` function instead of downloading
+1. Upload a `.md` file to any room.
+2. You should now see a custom icon for `.md` files.
+3. Clicking the file should trigger the `onClick` function instead of downloading.
 
 ## Notes
 
-- The `fileItem.extension` must match files in your DocSpace (e.g. `.md`)
-- You can customize both list and tile icons using `fileRowIcon` and `fileTileIcon`
-- Without this plugin, unknown file types simply download on click
-- With this plugin, your `onClick` logic runs instead
+- The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
+- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filerowicon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filetileicon).
+- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onclick) logic instead.

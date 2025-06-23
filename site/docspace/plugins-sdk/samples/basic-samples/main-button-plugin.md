@@ -1,52 +1,47 @@
-# Creating a Main Button Plugin
+# Creating a main button plugin
 
 This guide walks you through creating a basic plugin for DocSpace that adds a button to the main toolbar and logs an action when clicked.
 
 ## Before you start
 
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
-```bash
+``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
+## Step 1: Create a plugin
 
-Initialize your plugin using the CLI:
+1. Initialize your plugin using the CLI:
 
-```bash
-npx create-docspace-plugin
-```
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `Main button`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Main button`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
-## Step 2: Confirm Plugin Configuration
+## Step 2: Confirm plugin configuration
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
 
 ```json
-"scopes": ["MainButton"]
+{
+  "scopes": ["MainButton"]
+}
 ```
 
 Also verify that the `scripts/createZip.js` file is present. This script will:
-- Compile your plugin
-- Package everything into `dist/plugin.zip`
 
-## Step 3: Review and Extend Plugin Code
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
 
-By default, the plugin template includes a basic implementation inside the `src/index.ts` file. It defines a class that registers and manages profile menu items using the Plugin SDK:
+## Step 3: Review and extend plugin code
 
-```js
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md):
+
+``` ts
 import {
   IPlugin, PluginStatus, IMainButtonPlugin, IMainButtonItem
 } from '@onlyoffice/docspace-plugin-sdk'
@@ -75,14 +70,13 @@ declare global {
 window.Plugins.Test = plugin || {};
 export default plugin;
 ```
-## Step 4: Add Your Main Button Item
 
-Now append the following to the bottom of the script:
+## Step 4: Add a main button item
 
-```js
-...
+Create a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md) and append it to the end of the script:
+
+``` ts
 const plugin = new Test();
-
 
 // Add this after generating the plugin
 const createItem: IMainButtonItem = {
@@ -112,18 +106,13 @@ declare global {
     Plugins: any;
   }
 }
-...
 ```
 
-For reference:
-[MainButtonPlugin Docs](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin)
-[MainButtonItem Docs](../../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem)
+## Step 5: Build the plugin
 
-## Step 5: Build the Plugin
+From the root of your plugin, run the following command:
 
-From the root of your plugin:
-
-```bash
+``` sh
 npm run build
 ```
 
@@ -131,20 +120,20 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 ## Step 6: Upload to DocSpace
 
-1. Log in as an administrator
-2. Navigate to: **Admin Panel → Integration → Plugins**
-3. Click **Upload**, and select the generated `dist/plugin.zip`
-4. Enable the plugin toggle if not already active
+1. Log in as an administrator.
+2. Navigate to: **Admin Panel → Integration → Plugins**.
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test It
+## Step 7: Test it
 
-1. Go to any **Room**
-2. Click the **...More** menu in the top toolbar
-3. Look for your button titled `"Do something"`
-4. Click it - it should log `"Main Button works!"` in the browser console
+1. Go to any room.
+2. Click **Actions → More** in the top toolbar.
+3. Look for your button titled `"Do something"`.
+4. Click it - it should log `"Main Button works!"` in the browser console.
 
 ## Notes
 
-- You can create nested items using the `items` array inside `IMainButtonItem`
-- The `onClick(id)` function can receive an entity context (e.g., room or file ID)
-- You can extend this plugin to support `Settings`, `ContextMenu`, or other scopes by updating `package.json` and logic
+- You can create nested items using the [`items`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#items) array inside `IMainButtonItem`.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onclick) function can receive an entity context (e.g., room or file ID).
+- You can extend this plugin to support `Settings`, `ContextMenu`, or other scopes by updating `package.json` and logic.
