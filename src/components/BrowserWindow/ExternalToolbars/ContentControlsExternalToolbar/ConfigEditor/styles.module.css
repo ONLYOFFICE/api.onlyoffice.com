@@ -19,6 +19,20 @@
   list-style: none;
 }
 
+.configEditor textarea {
+  flex: 1;
+
+  padding: 4px 8px;
+
+  font: inherit;
+  font-size: 14px;
+
+  resize: none;
+
+  color: var(--working-with-content-controls-input-color);
+  border-color: var(--working-with-content-controls-input-border-color);
+}
+
 .controls {
   padding: 0;
 }
@@ -132,5 +146,9 @@ html[data-theme="dark"] {
 
   .field input:hover {
     border-color: var(--working-with-content-controls-hover-input-border-color);
+  }
+
+  .configEditor textarea:hover {
+    border-color: var(--working-with-content-controls-input-border-color);
   }
 }

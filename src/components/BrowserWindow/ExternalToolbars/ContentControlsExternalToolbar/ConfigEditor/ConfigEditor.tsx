@@ -194,6 +194,18 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
             )
           )}
       </ul>
+      <textarea
+        value={JSON.stringify(
+          currentControl,
+          (key, value) => {
+            if (key !== "name" && key !== "key") {
+              return value;
+            }
+          },
+          2
+        )}
+        readOnly
+      />
     </div>
   );
 };
