@@ -1,8 +1,8 @@
 ---
-sidebar_position: -5
+sidebar_position: -4
 ---
 
-# Language-specific examples
+# Docs API integration samples
 
 With ONLYOFFICE Docs, any of collaborative solutions can be enhanced with document editing and co-editing. In this section, you will learn how to integrate ONLYOFFICE Docs into your own website.
 

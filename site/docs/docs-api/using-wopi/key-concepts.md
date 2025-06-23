@@ -60,4 +60,4 @@ The WOPISrc (WOPI Source) is the URL that runs WOPI operations on a file. It's a
 
 Starting from version 8.0, the WOPISrc query parameter is added to the requests from the browser to the server. This allows you to create several independent instances of ONLYOFFICE. Load balancing requests with WOPISrc ensure that collaborative editing works correctly: all users editing the same document are served by the same server.
 
-For WOPI, the parameter sent by the integrator is used. For Docs API, the [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) parameter is used.
+For WOPI, the parameter sent by the integrator is used. For Docs API, the [shardkey](../get-started/configuration/shard-key.md) parameter is used.

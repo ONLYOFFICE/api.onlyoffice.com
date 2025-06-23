@@ -18,13 +18,17 @@ expression.SetStyleColBandSize(nCount);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies a number of columns which will comprise each table column band for this table style.
 
 ```javascript editor-docx
+// How to set column band size.
+
+// How to style a column band size.
+
 let doc = Api.GetDocument();
 doc.RemoveAllElements();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

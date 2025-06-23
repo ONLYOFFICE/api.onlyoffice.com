@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-
+This example shows how to check whether any of the arguments are true. Returns false only if all arguments are false.
 
 ```javascript editor-xlsx
+// How to use OR logical operator.
+
+// Use a function to apply OR operation.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange("A1").SetValue(12);

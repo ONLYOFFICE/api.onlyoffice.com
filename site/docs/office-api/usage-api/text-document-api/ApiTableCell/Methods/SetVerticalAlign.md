@@ -18,13 +18,17 @@ expression.SetVerticalAlign(sType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the vertical alignment for the text contents within the table cell.
 
 ```javascript editor-docx
+// Set text vertical alignment to the cell.
+
+// Align the text to bottom of the cell.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

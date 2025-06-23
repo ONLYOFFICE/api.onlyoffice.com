@@ -19,7 +19,6 @@ Generates word definitions in your document using the [Dictionary API](https://a
     headers: { "X-Api-Key": "your-api-key" },
     contentType: "application/json",
     success: function (result) {
-      console.log(result);
       let text = result.definition;
       let paragraph = Api.CreateParagraph();
       paragraph.AddText(text);
@@ -32,7 +31,7 @@ Generates word definitions in your document using the [Dictionary API](https://a
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), GetRangeBySelect, GetText, [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), GetRangeBySelect, GetText, [CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertContent](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Result
 

@@ -12,7 +12,7 @@ Represents the ApiTextPr class.
 | [GetClassType](./Methods/GetClassType.md) | "textPr" | Returns a type of the ApiTextPr class. |
 | [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean | Gets the double strikeout property from the current text properties. |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Gets the text color from the current text properties. |
-| [GetFontFamily](./Methods/GetFontFamily.md) | string | Gets the font family from the current text properties. |
+| [GetFontFamily](./Methods/GetFontFamily.md) | string | Returns the font family from the current text properties. The method automatically calculates the font from the theme if the font was set via the theme. |
 | [GetFontSize](./Methods/GetFontSize.md) | [hps](../Enumeration/hps.md) | Gets the font size from the current text properties. |
 | [GetItalic](./Methods/GetItalic.md) | boolean | Gets the italic property from the current text properties. |
 | [GetOutLine](./Methods/GetOutLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Gets the text outline from the current text properties. |

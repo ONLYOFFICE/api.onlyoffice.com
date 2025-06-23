@@ -26,7 +26,7 @@ Download and install ONLYOFFICE Docs (packaged as Document Server):
 
 [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example), [for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example), or [for Docker](https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example).
+See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example), [for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example), or [for Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example).
 
 ## Step 2. Download the .Net (C#) / .Net (C# MVC) code for the editors integration
 
@@ -41,7 +41,7 @@ To connect the editors to your website, specify the path to the editors installa
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-path** is the path where files will be created and stored. You can set an absolute path.
 
-If you want to experiment with the editor configuration, modify the [parameters](../../usage-api/advanced-parameters.md) in the *DocEditor.aspx* file.
+If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *DocEditor.aspx* file.
 
 ## Step 3. Install the prerequisites
 

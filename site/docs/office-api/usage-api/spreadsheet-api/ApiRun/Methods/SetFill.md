@@ -25,6 +25,10 @@ expression.SetFill(oApiFill);
 This example sets the text color to the current text run.
 
 ```javascript editor-xlsx
+// How to color a text object.
+
+// Create a text run object, add a color to it using RGB format.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

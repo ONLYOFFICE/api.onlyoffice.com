@@ -1,10 +1,119 @@
 # Change log
 
+## 6.0.0
+
+### New features
+
+#### Docs
+
+* Added Plugins version 9.0
+* Updated Office API documentation for version 9.0
+* Added new Macro samples
+
+#### Docs API
+
+* Added the theme-white and theme-night theme ids to the editorConfig.customization.uiTheme parameter
+* Added opening for odg format
+* Added opening for md format
+* Added the ability to preload the editor static resources
+* Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
+* Added the editorConfig.customization.layout.header.user parameter
+* Added conversion from vsdm, vsdx, vssm, vssx, vstm, vstx formats
+* Added the diagram document type to the documentType parameter
+
+#### Plugins and macros
+ 
+* Added a link to the plugins storybook
+* Updated the Tutorials/Samples page of the Plugins and macros
+* Updated the Get started structure of the Plugins and macros
+
+#### Docspace
+
+* Updated DocSpace version 3.2
+
+### Fixes
+
+* Renamed categories titles
+
+#### Docs
+
+* Fixed Automation API examples and usage
+
+#### Plugins and macros
+
+* Fixed Plugins and macros description and samples
+* Deprecated attachEvent method
+
+## 5.4.0
+
+### New features
+
+#### Samples
+
+* Added Samples section
+
+#### Docs
+
+* Updated Office API documentation
+* Added Playground page to the Office API, Plugins and macros sections
+
+#### Docs API
+
+* Updated the main page for the Automation API samples
+* Updated documentation in Chinese
+
+### Fixes
+
+#### Docs
+
+* Fixed examples for Automation API
+
+## 5.3.0
+
+### New features
+
+#### Docspace
+
+* Added DocSpace version 3.2
+* Added the MCP server
+
+#### Docs
+
+* Added new Macro samples
+
+### Fixes
+
+#### Document Builder
+
+* Updated C++ samples
+
+## 5.2.0
+
 ### New features
 
 #### Docspace
 
 * Added new JavaScript SDK samples
+* Added the MCP server
+
+#### Docs
+
+* Updated parameter descriptions
+* Added Inserting text into a document sample
+
+#### Docs API
+
+* Added interactive examples for Automation API
+* Updated samples in Document Builder section
+* Updated documentation in Chinese
+
+### Fixes
+
+* Fixed code samples
+
+#### Docs API
+
+* Fixed Try Docs page
 
 ## 5.1.0
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: -3
 ---
 
 # Input helper
@@ -21,12 +21,12 @@ Example:
 ``` ts
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
-    window.isInit = true
-    window.Asc.plugin.currentContentControl = null
-    window.Asc.plugin.createInputHelper()
-    window.Asc.plugin.getInputHelper().createWindow()
+    window.isInit = true;
+    window.Asc.plugin.currentContentControl = null;
+    window.Asc.plugin.createInputHelper();
+    window.Asc.plugin.getInputHelper().createWindow();
   }
-}
+};
 ```
 
 ## Getting an input helper
@@ -42,12 +42,12 @@ Example:
 ``` ts
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
-    window.isInit = true
-    window.Asc.plugin.currentContentControl = null
-    window.Asc.plugin.createInputHelper()
-    window.Asc.plugin.getInputHelper().createWindow()
+    window.isInit = true;
+    window.Asc.plugin.currentContentControl = null;
+    window.Asc.plugin.createInputHelper();
+    window.Asc.plugin.getInputHelper().createWindow();
   }
-}
+};
 ```
 
 ## Showing an input helper
@@ -68,7 +68,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
+window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true]);
 ```
 
 ## Unshowing an input helper
@@ -87,7 +87,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true])
+window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true]);
 ```
 
 ## InputHelper
@@ -109,12 +109,12 @@ Example:
 ``` ts
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
-    window.isInit = true
-    window.Asc.plugin.currentText = ""
-    window.Asc.plugin.createInputHelper()
-    window.Asc.plugin.getInputHelper().createWindow()
+    window.isInit = true;
+    window.Asc.plugin.currentText = "";
+    window.Asc.plugin.createInputHelper();
+    window.Asc.plugin.getInputHelper().createWindow();
   }
-}
+};
 ```
 
 #### getItems
@@ -129,18 +129,18 @@ Example:
 
 ``` ts
 function getInputHelperSize() {
-  const size = window.Asc.plugin.getInputHelper().getScrollSizes()
-  let width = 150
-  let height = size.h
-  const inputHelper = window.Asc.plugin.getInputHelper()
-  const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length))
+  const size = window.Asc.plugin.getInputHelper().getScrollSizes();
+  let width = 150;
+  let height = size.h;
+  const inputHelper = window.Asc.plugin.getInputHelper();
+  const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length));
   if (width > 400) {
-    width = 400
+    width = 400;
   }
   if (height > heightMin) {
-    height = heightMin
-    width += 30
-    return {w: width, h: height}
+    height = heightMin;
+    width += 30;
+    return {w: width, h: height};
   }
 }
 ```
@@ -157,18 +157,18 @@ Example:
 
 ``` ts
 function getInputHelperSize() {
-  const size = window.Asc.plugin.getInputHelper().getScrollSizes()
-  let width = 200
-  let height = size.h
-  const inputHelper = window.Asc.plugin.getInputHelper()
-  const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length))
+  const size = window.Asc.plugin.getInputHelper().getScrollSizes();
+  let width = 200;
+  let height = size.h;
+  const inputHelper = window.Asc.plugin.getInputHelper();
+  const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length));
   if (width > 400) {
-    width = 400
+    width = 400;
   }
   if (height > heightMin) {
-    height = heightMin
-    width += 30
-    return {w: width, h: height}
+    height = heightMin;
+    width += 30;
+    return {w: width, h: height};
   }
 }
 ```
@@ -188,26 +188,24 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-{
-  const items = [
-    {text: "Name1.Family1", id: "0"},
-    {text: "Name2.Family2", id: "1"},
-    {text: "Name3.Family3", id: "2"},
-    {text: "Name4.Family4", id: "3"},
-    {text: "Name5.Family5", id: "4"},
-    {text: "Name6.Family6", id: "5"},
-    {text: "Name7.Family7", id: "6"},
-    {text: "Name8.Family8", id: "7"},
-    {text: "Name9.Family9", id: "8"},
-    {text: "Name10.Family10", id: "9"},
-    {text: "Name11.Family11", id: "10"},
-    {text: "Name12.Family12", id: "11"},
-    {text: "Name13.Family13", id: "12"},
-  ]
-  window.Asc.plugin.getInputHelper().setItems(items)
-  const sizes = getInputHelperSize()
-  window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true)
-}
+const items = [
+  {text: "Name1.Family1", id: "0"},
+  {text: "Name3.Family3", id: "2"},
+  {text: "Name4.Family4", id: "3"},
+  {text: "Name5.Family5", id: "4"},
+  {text: "Name6.Family6", id: "5"},
+  {text: "Name7.Family7", id: "6"},
+  {text: "Name8.Family8", id: "7"},
+  {text: "Name9.Family9", id: "8"},
+  {text: "Name2.Family2", id: "1"},
+  {text: "Name10.Family10", id: "9"},
+  {text: "Name11.Family11", id: "10"},
+  {text: "Name12.Family12", id: "11"},
+  {text: "Name13.Family13", id: "12"},
+];
+window.Asc.plugin.getInputHelper().setItems(items);
+const sizes = getInputHelperSize();
+window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true);
 ```
 
 #### show
@@ -227,26 +225,24 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-{
-  const items = [
-    {text: "Name1.Family1", id: "0"},
-    {text: "Name2.Family2", id: "1"},
-    {text: "Name3.Family3", id: "2"},
-    {text: "Name4.Family4", id: "3"},
-    {text: "Name5.Family5", id: "4"},
-    {text: "Name6.Family6", id: "5"},
-    {text: "Name7.Family7", id: "6"},
-    {text: "Name8.Family8", id: "7"},
-    {text: "Name9.Family9", id: "8"},
-    {text: "Name10.Family10", id: "9"},
-    {text: "Name11.Family11", id: "10"},
-    {text: "Name12.Family12", id: "11"},
-    {text: "Name13.Family13", id: "12"},
-  ]
-  window.Asc.plugin.getInputHelper().setItems(items)
-  const sizes = getInputHelperSize()
-  window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true)
-}
+const items = [
+  {text: "Name1.Family1", id: "0"},
+  {text: "Name2.Family2", id: "1"},
+  {text: "Name3.Family3", id: "2"},
+  {text: "Name4.Family4", id: "3"},
+  {text: "Name5.Family5", id: "4"},
+  {text: "Name6.Family6", id: "5"},
+  {text: "Name7.Family7", id: "6"},
+  {text: "Name8.Family8", id: "7"},
+  {text: "Name9.Family9", id: "8"},
+  {text: "Name10.Family10", id: "9"},
+  {text: "Name11.Family11", id: "10"},
+  {text: "Name12.Family12", id: "11"},
+  {text: "Name13.Family13", id: "12"},
+];
+window.Asc.plugin.getInputHelper().setItems(items);
+const sizes = getInputHelperSize();
+window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true);
 ```
 
 #### unShow
@@ -261,9 +257,9 @@ Example:
 
 ``` ts
 window.Asc.plugin.executeMethod("SelectContentControl", [window.Asc.plugin.currentContentControl.InternalId], () => {
-  window.Asc.plugin.executeMethod("InputText", [item.text])
-  window.Asc.plugin.getInputHelper().unShow()
-})
+  window.Asc.plugin.executeMethod("InputText", [item.text]);
+  window.Asc.plugin.getInputHelper().unShow();
+});
 ```
 
 ## InputHelperItem
@@ -296,8 +292,8 @@ const items = [
   {text: "Name11.Family11", id: "10"},
   {text: "Name12.Family12", id: "11"},
   {text: "Name13.Family13", id: "12"},
-]
-window.Asc.plugin.getInputHelper().setItems(items)
-const sizes = getInputHelperSize()
-window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true)
+];
+window.Asc.plugin.getInputHelper().setItems(items);
+const sizes = getInputHelperSize();
+window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true);
 ```

@@ -18,13 +18,17 @@ expression.SetJc(sJcType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the alignment of the table with respect to the text margins in the current section.
 
 ```javascript editor-docx
+// How to set justification of the paragraph content.
+
+// Change the justification of the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("The table is aligned at the center of the page horizontally:");

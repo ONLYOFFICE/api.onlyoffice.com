@@ -1,0 +1,71 @@
+---
+id: set-tenant-wallet-settings
+title: "Set wallet auto top up settings"
+description: "Set the wallet auto top up settings."
+sidebar_label: "Set wallet auto top up settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1Fv2zgM/isCX/pwbuKm3XDwW9ftgO1u16JN0YciWBmbSbTakibJS3OB//uBkpPYSa/tvS8PiSNRJEV+5EevwePcQXYPV9p6LMVQXOGqIuVhkoA2ZNFLrT4XkIEjPyaFyt9hWZK/Ie+lmjtIwNKPmpz/oIsVZGvItfKsIVsDGlPKPOgYfnda8ZrLF1QhP/mVIchAT79T7iEBY9mil+SC3MbAq5KkcFpS0RGcal0SKkigIJdbadgDyOBTK5kAPWFlSoLM25qaBCqpPmCJKidWU+GTrOoKspM0TcNm/Psu2ViQytOc7IGFr0FUiWmrLIGZthX6eOR01DV9Mjo9axKozVg/Z/td3/b7V23fGuH1/7Gc19aSyledyDlvpZofqL7YSCag6rLkKMbQdZSC0xUJT08emgRKdP6rLuRM9jKz1b91rkBPx15W1HUQRmn6+3F6dnySjtP32WmapekgjZ/f0rMsTaFpEsCikOwhllcdRMywdJSAlz6oeha1r57u3z/qEMugRLgd9l8ycmfRGLLQNGzNkjNauQjZUZryz56RBW0sYO218NqI2nSt/SqtX6X1q7QOSussPTmspluFtV9oK/+hAoLQ6aHQ31oYspV0TmrlOMeGLMdP+IV0AvMgxzYc5bWVfgXZ/RrQ5d9Y+7dH4gWwhIz8pZWeYNIka/hAaMlCdh/+nRv5J622a8/Jo5P5RvzyvPaL0fOCl4YCH99Pmsl+KG/IC/9yExlAAhX5hWZKN9qFkke/gAyGaORwNEiHJswCQxMngaHXpjadvDiyP8m6EIjalpDBeoqObm3ZHID7JsiKXKuZnNdxmoAEfqKVDPTQY9rDMTkzrEuG7oGmj3FL3F7/xVmf7DJyw10vqurnZVsZGMJ/WNSOxIXWj5I4VAtSvm2oXIpYhZNdhQlIPpaHIwypNmlbOwvvzTON0ZMVK11bUTuyrFigKoRB55bacnpD3w7NNShkzS1U3qL6KAqL9Ze7sRjrR1LNUU9p1JW0D39susOXuzGb6mPztZid9wIlpBMFea4gRYWYrgL8js7bwgsyR2JBWAQH2qD2LLZBbWWaZAv+HTVhWNj3JMqJWamXYin9QvSsigtdhEZd6mWERnc3bO4vBgyGQLtsOAxWB1qVKz2byZwGua7i4mi4bSzcpTjgbz8axEN2tImYDSWewTVhITDPycU2ZLWn3FMhLDld25zctg9kcMe/r0jH1rhpF7tohoULrVTk+72g8u5H0W4flkXv9NtvzcCXaqY5v0/HTs4V+trS63BjSG/FuX4KMdN2z6+B4MkpRFZUtfNiSkJPPQZM/pQYQPmw6W6bttHLyIMgVRgtlR+Iz55hzeVJhUAnUMSKjyhjXaGGHzoXeRjs0N29317HaBLgUe169770acPK/aFsO3bFOaA7QfF8sTfYxKXdxNGZFvaHhTeSf8gVJ6el4HMjuWuTdTEtp4PRIOVkMoNUGIbP9vrMQS8Psb0Md14X30pfLWL4fkNTolTsSB0JJFLZPcMJEmAn2Uems8Bz8dWWi7ZLaZMEFsyE2T2st1TW8PKPmiwT/GRHWZGjN/2KOTBwDVzEaxyP2TsWL+uI670xnTk8njjPczL+RdlJh6yvLm/G3MTbt+wqtDCwuOQ3cFxGztQhrLGv8NoaSlTzGucsG3WG8azmMHWLL/Jb+8C32mypVdfDPh3Ge/A33+rZE+t1rOym2crHrf88sWWLKM3pnTRN8y87xLSM
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set wallet auto top up settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/payment/topupsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Set the wallet auto top up settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"enabled":{"type":"boolean","description":"Enabled","example":true},"minBalance":{"maximum":1000,"minimum":5,"type":"integer","description":"Minimun balance","format":"int32","example":1234},"upToBalance":{"maximum":5000,"minimum":6,"type":"integer","description":"Up to balance","format":"int32","example":1234},"currency":{"type":"string","description":"Currency","nullable":true,"example":"some text"},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"TenantWalletSettings"}},"additionalProperties":false,"description":"Tenant wallet settings","title":"TenantWalletSettingsWrapper"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The wallet auto top up settings","content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"enabled":{"type":"boolean","description":"Enabled","example":true},"minBalance":{"maximum":1000,"minimum":5,"type":"integer","description":"Minimun balance","format":"int32","example":1234},"upToBalance":{"maximum":5000,"minimum":6,"type":"integer","description":"Up to balance","format":"int32","example":1234},"currency":{"type":"string","description":"Currency","nullable":true,"example":"some text"},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"TenantWalletSettings"}},"additionalProperties":false,"description":"Tenant wallet settings","title":"TenantWalletSettingsWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

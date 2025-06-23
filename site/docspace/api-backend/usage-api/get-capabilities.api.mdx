@@ -1,0 +1,65 @@
+---
+id: get-capabilities
+title: "Get providers"
+description: "Returns the list of the available providers."
+sidebar_label: "Get providers"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVktv2zgQ/iuDuQQIWDvr7kk3N2mDdovNok02WKRGQ0tji41MasmRE9fQf18MKT/kpIiPe9GDnBnO4/tmuEbW84DZHX4wFQUYwnVpfPGm1p5XYCzT3Gs2zuJEYUEh96aOvxl+IW68DcAlQWUCg5vFb73UptLTiqD2bmkK8mHwzX6zcHr6p2M6Pc1g/EwEHmgVMrjwrp66p79HCt65JwW3NL3QSwX/aFvQk4IrSxfeLEnB11J7+ssZywounZtXm42H+B6gQldT8v1jgRnOic91raemMmwooEJPoXY2UMBsjaOzM3n1Q/zchdXzEhXmzjJZFgVd15XJ4zHDH0G01hjykhZavnhVE2bopj8oZ1RYe3Eqnp+ttw7sSWrv9QoVGqZFOGI9sDd2jm3bildN8qnbi9Ujjwpnzi80p6W3I2wVVsY+HGP/F56XnmYveKFQ5yl1LzjYKgysuQlHupiEz11BRym0CtlwJUJjCSY+br2ua/Ld8b+f/fa8xjdWN1w6b35SEa0EyhtveIXZ3Rp1yL/L/vcHkgX0pAtU+OgNE05atcZ3pD15zO7i37g2f9Bqu/aSvA4m34hfjRsuRy8LXtUUkXs3aScKF8Sl63As5dBcYoZDXZvhaHA2nAl7hyzcjdQd5n2sB/JL8iHG1PgKM1xPdaAbX7V4SOyvURZyZ2dm3nT0V7jU3ghnY/065ZTOmW4qqcQzSxdpC26+fJYSTHbJ/SoUSab6Kd4hMmbymcmbQHDu3IMhECWy3LEPFVq9iJr7BhUaUcujisCqy//2nJK5fnbKe8vkYeUaD00gL4ZB2wJqHcKj81KpSHIxMI0GxXJX9WNMnyRhWH+6vYZr90C2PekZTbZU9/FhA/ZPt9dyVB9mr+Vs3EsUmAAFMfmFsVTAdBW79sm4Y0GUOYGSdBEd6JLaO7FLaifTqi2Od31Dx4VDT5IczCr3CI+GS+idCpHsCmU7QWN/d9MJeosRgzHRIRsO46kDZ6uVm81MToPcLdLiaLhlOSpkSfjxqlE8VsfVm86tizgCdQE6zykEYCdjgilnKsBTcI3PI/USpTO8lfcr0qlPbZi/y2ZcOHfWpmZ8kFTZvYBu+zktetrHRy3AN3bmpL5Pb4KZW82Np9fhJpDeigt/Cpg5f+DXAK5LgphZWDSBYUrgpqwjJpdGR1Deb9rbpm30KnIPZItargAD+MgCa6EnFaADaEiMTygTW5HD93uB3A926N6P76BjtPI/czHszXypjfRD8iEF/HYwGpxJmmoXeKHj+OsMXxLvrkGHmVrvLhL//9tUV3OmJx7WlTZWAm7SCEjT6E4AgQolGQrjRBK97UySi9P+VJooLF1gUVxvp1Ery/825GXcTnZTJ03MTcuRMRbHBY7znGqO46lqEigPLmS96Xn5/hpVbCF9HKdR0X2I9c2WXe3b7k+W5IE8ZV6/qLFeJ5K07VY+bf1SY9t4k7TkedK27X+adwV/
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get providers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty/capabilities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the list of the available providers.
+
+ **Note**: Available provider keys: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive, kDrive.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of provider keys","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"array","items":{"type":"string"}}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ArrayArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

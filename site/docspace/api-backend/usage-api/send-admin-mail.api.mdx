@@ -1,0 +1,71 @@
+---
+id: send-admin-mail
+title: "Send a message to the administrator"
+description: "Sends a message to the administrator email when unauthorized users encounter issues accessing DocSpace."
+sidebar_label: "Send a message to the administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V01v2zgQ/SvEXHJR7cBtD6vTpkkXaLdFizhFDkHQjMWxxUYiVXJUR2v4vy+GlG05TlIDC6wvlsX54sybN+MVMC4C5DcwJWZjF0GN1WcKARcU4DYD15BHNs5+0JBDIKvPdG3sZzQVZODpZ0uB3zndQb6Cwlkmy/KITVOZImqOfwRn5V0oSqpRnkTPeNLimOpkq05exSl3DUEObvaDCoYMGi9hsKEgyhtBecSHT2QXXEI+efs2g9rYze/TrZnA3tgFZKApFN40EhPkcFWS6gNWbq64JIVyNRPYIzuvej+KnZqRCmR5BBnYtqpwVhHk7FvKgB6wbqrox9WkmB4Y1ll/q/8Y4vs+NXPna2TIt7l6Pohppy113y/djDyHN3+WjkVnVLhawirailsfc/ey6/Ne8MgLrzNArY0oY/V1UK45VoGeSn0PHdWgx5qYfFBz56Uic7NoJaYXStLXTerBhmMwCZbpfIPly+QjXLCD9VqC9BQaZ0MC0uT0VL72Y+tNKJy5lmMInkJbRYwI/CUw3AQC2fGYfxnUm8AOKyNVc23y0J8Yy7QgP0SGsfx6IrKVsfdhIIveYwcZGKY6/D6O0tP8yRiwSAk6OIp5DYzchiNDTMLnTtNRCutdkafR57XHpiHfu37zVBU/2MJ5TwWr2DJq2M70wMoERXXDnYTzZvLHoYEeOqoytUniDwWRJh3j2ZedktVhBwohjEPopjiWJVnVWmy5dN78Q1q1QaBPNtaYvDIhtBQUFgWFIGC7cMW0wYJGkSO5dELEjQuxdig8AmNszHgyOh2HHvhjQSrquqeLQP4XeaH5FbS+ghxWMwz0zVfrg8afRtltH0Y0Qwa/0BthgVjjXjllbY5tJdU6sHSRjtS3y09SqluJo2i94W4qTZFMYSi+Sza+31M3RG1j/qbuwOS3QOrcuXtDSpTIct9vwlNYR82hwQyMqBVRRWr9DoMpBn5K5uaQdmMhOtf6WB0xrNBq1WAIS+e1ZDTeAHJJhSmiZUJP/jjTJ0lYrT5eX6krd092fbJnNNnK+oe/Ng3x8fpKXJ3F5Bw4fCZnZ3uJEihrodvaWNJq1kWonpz1gIwyJ6ok1DGAPql7Hvuk9jLrDL6I9mTILRhfPI4kyal55ZZqabhUe15VJIQM5DhBY3i6YYu9lxGDMdEhH4+j15GzVefmc1OQzLz0cjLeNpxMDEn48apRPFbHNRuuRh0pAnXfp9LyjXdMBZOWgeFaX1CADJbesKTkWr5/I5347EtDcdnaZTO+OHfWJsJ+lFQ5vVD98WFb7Gkff2sBvrFzJ/V9eBXMwuKjxeEZuAmkt+LSPzrO9f24RkpWgJhZVbeBZcFyM8aIyV8GIyjvdqyWaGOvIneKrG6csTxSHyJDS3uSVihUnDo+oUxsxR6+G1zkbrRD9/B+jxhjnYFM8svdnvt+s/4MFtHBJrTd/F7cxAaL2P7aGFMuOd5sNY0R8iUfUnZfjyajUxGUAVBjnMf9LWQK/WYIPS7WYGP/H4dYjx+58rip0Fi5T5vGSRpoNwIuyEDuKlMjDbX4uBtrtxmUMgXzG1htx9laXv9syXeQ39zuxpb8WmcbzpI5GOcNnKf7v7qSmES8ahO2H21y62yjcVYU1PCLsreDQf31y/RKiLz/h1RHGgOPS/n3hMs0N12sR+IWebeCCu2iTdhKNuXzL26cx6M=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send a message to the administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/sendadmmail"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a message to the administrator email when unauthorized users encounter issues accessing DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["email","message"],"type":"object","properties":{"message":{"maxLength":255,"minLength":0,"type":"string","description":"The content of the administrator message to be sent.","nullable":true,"example":"some text"},"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The request parameters for configuring the administrator message content.","title":"AdminMessageSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about the result of sending a message","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"400":{"description":"Incorrect email or message text is empty"},"429":{"description":"Request limit is exceeded"}}}
+>
+  
+</StatusCodes>
+
+
+      

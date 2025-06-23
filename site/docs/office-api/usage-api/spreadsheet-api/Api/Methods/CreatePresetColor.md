@@ -25,6 +25,10 @@ expression.CreatePresetColor(presetColor);
 This example creates a color selecting it from one of the available color presets.
 
 ```javascript editor-xlsx
+// How to get a color from a preset.
+
+// Color a shape background using a color from a preset. 
+
 let worksheet = Api.GetActiveSheet();
 let presetColor = Api.CreatePresetColor("peachPuff");
 let gs1 = Api.CreateGradientStop(presetColor, 0);

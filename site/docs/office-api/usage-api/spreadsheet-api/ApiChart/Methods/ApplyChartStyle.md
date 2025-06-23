@@ -25,6 +25,10 @@ boolean
 This example sets a style to the chart by style ID.
 
 ```javascript editor-xlsx
+// How to update visualization of a chart setting a new style by using its ID.
+
+// Apply new style by its ID.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

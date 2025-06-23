@@ -25,6 +25,10 @@ This method doesn't return any data.
 This example sets a formula that the name is defined to refer to.
 
 ```javascript editor-xlsx
+// How to add a name and refer it to the formula.
+
+// Create new ranges and a formula, refer a name to the formula then display it in the worksheet.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 worksheet.GetRange("B1").SetValue("2");

@@ -17,7 +17,7 @@ The latest connector signed versions are available in the official store for [ow
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.
+- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
 - The following formats are available for viewing only: PDF, DJVU, XPS.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX. ODT, ODS, and ODP are also available for instant conversion. After you enable the corresponding option in the admin settings, ODF-formatted documents are immediately converted in the editor and opened after you click on it.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to ownCloud. Co-editing is also available between several federated ownCloud instances connected to one Document Server.
@@ -40,9 +40,9 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications):
 
-  ``` sh
-  cd apps/
-  ```
+    ``` sh
+    cd apps/
+    ```
 
 2. Get the ownCloud ONLYOFFICE integration app. There are several ways to do that:
 
@@ -60,9 +60,9 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 3. Change the owner to update the application right from ownCloud web interface:
 
-  ``` sh
-  chown -R www-data:www-data onlyoffice
-  ```
+    ``` sh
+    chown -R www-data:www-data ы
+    ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 

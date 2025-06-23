@@ -23,6 +23,10 @@ string
 This example shows how to get the user ID of the comment author.
 
 ```javascript editor-docx
+// How to get ID of the user who left the first comment.
+
+// Get the comment author ID.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

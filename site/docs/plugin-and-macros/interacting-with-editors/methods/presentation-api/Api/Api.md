@@ -30,6 +30,7 @@ Represents the Api class.
 | [GetVersion](./Methods/GetVersion.md) | string | Returns the editor version. |
 | [GoToNextSlideInSlideShow](./Methods/GoToNextSlideInSlideShow.md) | None | Displays the slide following the current slide in the slide show. |
 | [GoToPreviousSlideInSlideShow](./Methods/GoToPreviousSlideInSlideShow.md) | None | Displays the slide following the current slide in the slide show. |
+| [GoToSlide](./Methods/GoToSlide.md) | None | Sets the active slide in the editor by its index. |
 | [GoToSlideInSlideShow](./Methods/GoToSlideInSlideShow.md) | None | Displays the slide with the specific index. |
 | [InputText](./Methods/InputText.md) | None | Inserts text into the document. |
 | [InstallPlugin](./Methods/InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |

@@ -1,6 +1,6 @@
 # GetInternalId
 
-Returns an internal id of the current content control.
+Returns an internal ID of the current content control.
 
 ## Syntax
 

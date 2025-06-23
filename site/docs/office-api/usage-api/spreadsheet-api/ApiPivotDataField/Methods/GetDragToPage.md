@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to get a drag to page of a pivot field.
 
 ```javascript editor-xlsx
+// How to get a pivot field drag to page.
+
+// Create a pivot table, add data to it then get a drag to page of a specified pivot field.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -59,5 +63,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 
 pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
-
 ```

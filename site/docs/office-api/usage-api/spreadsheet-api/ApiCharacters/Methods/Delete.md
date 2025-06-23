@@ -23,6 +23,10 @@ This method doesn't return any data.
 This example deletes the ApiCharacters object.
 
 ```javascript editor-xlsx
+// How to delete characters from an array.
+
+// Remove all characters.
+
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
 range.SetValue("This is just a sample text.");

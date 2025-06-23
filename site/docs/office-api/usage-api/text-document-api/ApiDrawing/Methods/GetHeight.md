@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the height of the drawing.
 
 ```javascript editor-docx
+// How to print the height of the drawing.
+
+// Create a rectangle and then show its height in mm.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
