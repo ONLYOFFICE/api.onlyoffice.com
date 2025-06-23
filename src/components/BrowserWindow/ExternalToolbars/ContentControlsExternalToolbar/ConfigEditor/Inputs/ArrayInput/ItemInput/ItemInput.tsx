@@ -1,4 +1,4 @@
-import TextInput from "../../TextInput/TextInput";
+import { TextInput } from "../..";
 import styles from "./styles.module.css";
 
 type ItemInputProps = {

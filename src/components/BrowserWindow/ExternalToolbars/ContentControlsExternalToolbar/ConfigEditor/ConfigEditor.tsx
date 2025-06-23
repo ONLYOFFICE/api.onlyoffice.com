@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { text, date, picture, combobox, checkbox } from "./types";
-import { TextInput, ColorInput, ArrayInput, CheckboxInput } from "./Inputs";
+import { TextInput, ColorInput, ArrayInput, SymbolInput, CheckboxInput } from "./Inputs";
 import styles from "./styles.module.css";
 
 type NonApiProps = {
@@ -110,6 +110,17 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
     }));
   };
 
+  const getFieldLabel = (originalString: string): string => {
+    switch (originalString) {
+      case "checkedSymbol":
+        return "Checked symbol";
+      case "uncheckedSymbol":
+        return "Unchecked symbol";
+      default:
+        return originalString.toLowerCase();
+    }
+  };
+
   return (
     <div id="configEditor" className={styles.configEditor} style={{ display: "none" }}>
       <ul className={styles.controls}>
@@ -147,7 +158,7 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
             ) : (
               Object.entries(propertyValue).map(([attribute, attributeValue]) => (
                 <li key={`${currentControl.name}-${property}-${attribute}`} className={styles.field}>
-                  <label htmlFor={attribute}>{attribute.toLowerCase()}</label>
+                  <label htmlFor={attribute}>{getFieldLabel(attribute)}</label>
                   {(attribute === "color" && (
                     <ColorInput
                       value={
@@ -160,6 +171,12 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
                       setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
                     />
                   )) ||
+                    ((attribute === "checkedSymbol" || attribute === "uncheckedSymbol") && (
+                      <SymbolInput
+                        value={attributeValue as string}
+                        setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
+                      />
+                    )) ||
                     (typeof attributeValue === "boolean" && (
                       <CheckboxInput
                         value={attributeValue}

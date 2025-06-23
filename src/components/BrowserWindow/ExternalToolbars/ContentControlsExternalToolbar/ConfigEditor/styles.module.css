@@ -79,10 +79,13 @@
 }
 
 .field label {
-  text-transform: capitalize;
   width: 100%;
   max-width: 140px;
   color: var(--working-with-content-controls-label-color);
+}
+
+.field label::first-letter {
+  text-transform: uppercase;
 }
 
 .field input {
