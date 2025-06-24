@@ -182,9 +182,6 @@ jobs:
             --content-encoding gzip --content-type "$MIME_TYPE"
           done
 
-    - name: Invalidate AWS CloudFront Cache
-      run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
-
     - uses: actions/cache/save@v3
       id: save-3d
       with:
@@ -220,6 +217,12 @@ jobs:
           aws cloudfront update-distribution --id "${AWS_DISTRIBUTION_ID}" \
                                              --distribution-config “./new-distribution-confing.json” \
                                              --if-match "${ETAG}"
+    
+    - name: Invalidate AWS CloudFront Cache
+      run: |
+         # Wait a bit just for CF can get new configuration...
+         sleep 60
+         aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
     - name: Collect statuses
       if: always()
