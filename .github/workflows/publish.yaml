@@ -221,7 +221,7 @@ jobs:
     - name: Invalidate AWS CloudFront Cache
       run: |
          # Wait a bit just for CF can get new configuration...
-         sleep 15
+         sleep 120
          aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
     - name: Collect statuses
