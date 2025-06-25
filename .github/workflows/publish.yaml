@@ -23,6 +23,8 @@ on:
 env:
   CN: ${{ github.event.inputs.chinese }}
   mode: ${{github.event.inputs.site_mode}}
+  teamlab_s3bucket: api-site-teamlab-info
+  com_s3bucket: api-site-onlyoffice-com
 
 jobs:
   publish:
@@ -64,6 +66,36 @@ jobs:
 
         NODE_OPTIONS="--max-old-space-size=12288" npm run build -- ${SUB_ARGS} ${LOCALE}
     
+    - uses: actions/cache/restore@v3
+      id: restore-3d
+      with:
+        path: ./previous_bucket
+        key: ${{ inputs.site_mode }}-bucket-number-${{ github.run_number }}
+        restore-keys: |
+           ${{ inputs.site_mode }}-bucket-number-
+
+    - name: Declare which bucket to use
+      shell: bash
+      run: |
+        if [ -f ./previous_bucket ]; then
+          previous_bucket=$(cat ./previous_bucket)
+          echo "Previous bucket number: ${previous_bucket}"
+          if [ "$previous_bucket" == "1" ]; then
+            echo "Next bucket is 2"
+            next_bucket=2
+          else
+            next_bucket=1
+            echo "Next bucket is 1"
+          fi
+        else
+          echo "Do not detect any previous bucket number, use 1 bucket"
+          next_bucket=1
+        fi
+
+        echo "$next_bucket" > ./previous_bucket
+        echo "BUCKET_NUMBER=${next_bucket}" >> "$GITHUB_ENV"
+        echo "ORIGIN_ID=${origin_id}" >> "$GITHUB_ENV"
+
     - name: Configure AWS Environment
       env:
         AWS_ACCESS_KEY_PROD: ${{secrets.AWS_ACCESS_KEY_PROD}}
@@ -74,13 +106,13 @@ jobs:
         AWS_DISTRIBUTION_ID_TEST: ${{secrets.AWS_DISTRIBUTION_ID_TEST}}
       run: |
         if [ "${mode}" = "production" ]; then
-          echo "AWS_BUCKET_URL=s3://api2static.onlyoffice.com" >> "$GITHUB_ENV"
+          echo "AWS_BUCKET_URL=s3://${com_s3bucket}${BUCKET_NUMBER}" >> "$GITHUB_ENV"
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_PROD}" >> "$GITHUB_ENV"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_PROD}" >> "$GITHUB_ENV"
           echo "AWS_REGION=us-west-2" >> "$GITHUB_ENV"
           echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_PROD}" >> "$GITHUB_ENV"
         elif [ "${mode}" = "testing" ]; then
-          echo "AWS_BUCKET_URL=s3://api2static.teamlab.info" >> "$GITHUB_ENV"
+          echo "AWS_BUCKET_URL=s3://${teamlab_s3bucket}${BUCKET_NUMBER}" >> "$GITHUB_ENV"
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_TEST}" >> "$GITHUB_ENV"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_TEST}" >> "$GITHUB_ENV"
           echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_TEST}" >> "$GITHUB_ENV"
@@ -150,14 +182,54 @@ jobs:
             --content-encoding gzip --content-type "$MIME_TYPE"
           done
 
+    - uses: actions/cache/save@v3
+      id: save-3d
+      with:
+        path: ./previous_bucket
+        key: ${{ inputs.site_mode }}-bucket-number-${{ github.run_id }}
+
+    - name: Update AWS CloudFront config
+      shell: bash
+      id: cfconf
+      run: |
+          mkdir cf_tmp
+          cd ./cf_tmp
+          aws cloudfront get-distribution-config --id "${AWS_DISTRIBUTION_ID}" > current-distribution-config.json
+
+          # backup config
+          cp current-distribution-config.json ../cf_config_backup.json
+
+          # Get ETag
+          ETAG=$(jq -r '.ETag' < ./current-distribution-config.json)
+
+          # Remove ETag from current config
+          jq -r 'del(.ETag)' ./current-distribution-config.json > tmp.json && mv tmp.json current-distribution-config.json
+
+          # Prepare target bucket
+          bucket=$(echo "$AWS_BUCKET_URL" | sed 's!s3://!!')
+          echo "Bucket that will be set in CloudFront cache behavior: ${bucket}"
+
+          # Make new CloudFront config
+          jq --arg bucket "$bucket" --arg region "$region" \
+          '.DistributionConfig.Origins.Items |= map(.DomainName = "\($bucket).s3.\($region).amazonaws.com")' \
+          current-distribution-config.json > new-distribution-confing.json
+
+          aws cloudfront update-distribution --id "${AWS_DISTRIBUTION_ID}" \
+                                             --distribution-config “./new-distribution-confing.json” \
+                                             --if-match "${ETAG}"
+    
     - name: Invalidate AWS CloudFront Cache
-      run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
+      run: |
+         # Wait a bit just for CF can get new configuration...
+         sleep 60
+         aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
     - name: Collect statuses
       if: always()
       env:
         BUILD_STATUS: ${{ steps.build.outcome }}
         SYNC_STATUS: ${{ steps.sync.outcome }}
+        CF_CONF_STATUS: ${{ steps.cfconf.outcome }}
       run: |
           if [[ "$BUILD_STATUS" == 'failure' ]]; then
              echo "BUILD_STATUS=failure🔴" >> $GITHUB_ENV
@@ -167,6 +239,8 @@ jobs:
              echo "BUILD_STATUS=success🟢" >> $GITHUB_ENV
              [[ "$SYNC_STATUS" == 'failure' ]] && echo "SYNC_STATUS=failure🔴" >> $GITHUB_ENV
              [[ "$SYNC_STATUS" == 'success' ]] && echo "SYNC_STATUS=success🟢" >> $GITHUB_ENV
+             [[ "$CF_CONF_STATUS" == 'failure' ]] && echo "CF_CONF_STATUS=failure🔴" >> $GITHUB_ENV
+             [[ "$CF_CONF_STATUS" == 'success' ]] && echo "CF_CONF_STATUS=success🟢" >> $GITHUB_ENV
           fi
 
     - name: Send alert message
@@ -175,6 +249,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        document: ./cf_config_backup.json
         message: |
             ${{ github.actor }} created commit:
             Commit message: ${{ github.event.commits[0].message }}
@@ -186,6 +261,7 @@ jobs:
 
             Api build status: ${{ env.BUILD_STATUS }}
             Api s3 sync status: ${{ env.SYNC_STATUS }}
+            CloudFront config update status: ${{ env.CF_CONF_STATUS }}
 
             See commit changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
             See action run logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_number }}
