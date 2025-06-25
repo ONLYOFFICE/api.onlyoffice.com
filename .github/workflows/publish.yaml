@@ -211,17 +211,17 @@ jobs:
 
           # Make new CloudFront config
           jq --arg bucket "$bucket" --arg region "$region" \
-          '.DistributionConfig.Origins.Items |= map(.DomainName = "\($bucket).s3.\($region).amazonaws.com")' \
+          '.DistributionConfig.Origins.Items |= map(.DomainName = "\($bucket).s3.\($region).amazonaws.com") | .DistributionConfig' \
           current-distribution-config.json > new-distribution-confing.json
 
           aws cloudfront update-distribution --id "${AWS_DISTRIBUTION_ID}" \
-                                             --distribution-config “./new-distribution-confing.json” \
-                                             --if-match "${ETAG}"
+                                             --distribution-config "file://new-distribution-confing.json" \
+                                             --if-match "${ETAG}" > /dev/null
     
     - name: Invalidate AWS CloudFront Cache
       run: |
          # Wait a bit just for CF can get new configuration...
-         sleep 60
+         sleep 120
          aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
     - name: Collect statuses
