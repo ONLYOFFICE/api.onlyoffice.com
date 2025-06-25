@@ -210,18 +210,41 @@ jobs:
           echo "Bucket that will be set in CloudFront cache behavior: ${bucket}"
 
           # Make new CloudFront config
-          jq --arg bucket "$bucket" --arg region "$region" \
+          jq --arg bucket "$bucket" --arg region "${AWS_REGION}" \
           '.DistributionConfig.Origins.Items |= map(.DomainName = "\($bucket).s3.\($region).amazonaws.com") | .DistributionConfig' \
           current-distribution-config.json > new-distribution-confing.json
 
           aws cloudfront update-distribution --id "${AWS_DISTRIBUTION_ID}" \
                                              --distribution-config "file://new-distribution-confing.json" \
                                              --if-match "${ETAG}" > /dev/null
+
+          # Wait 10 seconds before new distribution config is deployed
+          sleep 10
+
+          MAX_ATTEMPTS=20
+          SLEEP_INTERVAL=30
+          ATTEMPT=0
+
+          while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+             aws cloudfront get-distribution --id "${AWS_DISTRIBUTION_ID}" > cf_status.json
+             STATUS=$(jq -r .Distribution.Status cf_status.json)
+
+             echo "Attempt $((ATTEMPT + 1)): Status is '$STATUS'"
+
+             if [ "$STATUS" == "Deployed" ]; then
+                 echo "Distribution is deployed."
+                 exit 0
+             fi
+
+             ATTEMPT=$((ATTEMPT + 1))
+             sleep $SLEEP_INTERVAL
+          done
+
+          echo "Timeout: Distribution was not deployed within 10 minutes."
+          exit 1
     
     - name: Invalidate AWS CloudFront Cache
       run: |
-         # Wait a bit just for CF can get new configuration...
-         sleep 120
          aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
     - name: Collect statuses
