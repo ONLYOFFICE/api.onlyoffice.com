@@ -106,7 +106,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 此方法必须采用当前文件版本的编辑器初始化配置。配置必须包含用于签署 [open a file](../additional-api/signature/browser.md#opening-file) 进行编辑的请求的所有参数。以下参数无法在配置中更改：[documentType](./config/config.md#documenttype)、[type](./config/config.md#type)、[events](./config/events.md)。
 
 ``` ts
-refreshFile({
+docEditor.refreshFile({
   document: {
     fileType: "docx",
     key: "Khirz6zTPdfd7",
@@ -366,7 +366,7 @@ refreshFile({
 
   > 请注意，仅当用户对要从中获取数据的文件具有权限时才会执行此方法。
 
-  ``` ts
+   ``` ts
   docEditor.setReferenceSource({
     fileType: "xlsx",
     key: "Khirz6zTPdfd7",
@@ -403,8 +403,6 @@ refreshFile({
 ## setRequestedDocument
 
 选择用于比较、合并或插入文本的文档。该方法可以在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件之后调用。
-
-> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
 
   ``` ts
   docEditor.setRequestedDocument({

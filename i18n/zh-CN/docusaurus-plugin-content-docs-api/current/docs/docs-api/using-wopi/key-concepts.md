@@ -60,4 +60,4 @@ WOPI源地址（WOPISrc）是执行 WOPI 操作的文件专属 URL，由主机�
 
 自 8.0 版本起，WOPISrc 查询参数被加入到从浏览器至服务器的请求中，这一改动支持创建多个独立的 ONLYOFFICE 实例。利用 WOPISrc 进行负载平衡请求，可确保协作编辑顺畅进行：所有编辑同一文档的用户都将由同一服务器提供服务。
 
-对于 WOPI，采用集成商提供的参数；对于文档 API，则使用 [shardkey](../get-started/how-it-works/how-it-works.md#shard-key)参数。
+对于 WOPI，采用集成商提供的参数；对于文档 API，则使用 [shardkey](../get-started/configuration/shard-key.md)参数。

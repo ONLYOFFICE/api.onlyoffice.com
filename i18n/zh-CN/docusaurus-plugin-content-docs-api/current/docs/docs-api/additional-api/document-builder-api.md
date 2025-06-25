@@ -2,7 +2,7 @@
 
 对于与 **Web 文档生成器服务** 的交互，使用 POST 请求。请求参数在请求正文中以 JSON 格式输入。请求被发送到 `https://documentserver/docbuilder` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
-从 8.1 版开始，建议将 [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
+从 8.1 版开始，建议将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
 
 ## 参数及其说明：
 

@@ -1008,7 +1008,7 @@ const review = {
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       anonymous: {
@@ -1054,6 +1054,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         visible: true,
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -1102,7 +1103,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       zoom: 100,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md)章节。

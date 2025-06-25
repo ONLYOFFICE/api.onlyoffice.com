@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 3. 在文档编辑器初始化的配置脚本中，使用[参数行](../../usage-api/config/editor/editor.md#callbackurl)中的*回调处理程序*指定文件的 URL。使用本地链接时，请务必添加[令牌](./security.md)。否则会出现错误。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -46,7 +46,9 @@ import TabItem from '@theme/TabItem';
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
    其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。
 

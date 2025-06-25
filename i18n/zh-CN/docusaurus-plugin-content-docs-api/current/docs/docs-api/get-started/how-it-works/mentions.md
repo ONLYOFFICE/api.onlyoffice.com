@@ -37,13 +37,15 @@ sidebar_position: -17
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestUsers,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. 为了在评论字段下方设置用户列表，必须调用[setUsers](../../usage-api/methods.md#setusers)方法：
@@ -83,13 +85,15 @@ function onRequestSendNotify(event) {
   const ACTION_DATA = event.data.actionLink
   const comment = event.data.message
   const emails = event.data.emails
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSendNotify,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## 共享设置
@@ -113,7 +117,7 @@ docEditor.setSharingSettings({
       user: "External link",
     },
   ],
-})
+});
 ```
 
 如果[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)件未提供对文件的访问权限，则必须将编辑器配置的自定义部分中的[mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare)参数设置为**false**。

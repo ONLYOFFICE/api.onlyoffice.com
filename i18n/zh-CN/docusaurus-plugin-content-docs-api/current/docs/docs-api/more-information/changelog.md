@@ -45,7 +45,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onSubmit](../usage-api/config/events.md#onsubmit) 事件。
 - 将 *oform* 格式的 [documentType](../usage-api/config/config.md#documenttype) 更改为 *pdf*。
 - 将 *roles* 字段添加到 [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) 参数。
-- 发送时将 [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
+- 发送时将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
 - 向 *Automation API* 添加了 [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) 和 [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) 方法。
 - 向 Conversion API 添加了 [-10 错误代码](../additional-api/conversion-api/error-codes.md)。
 - [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数现在可用于移动编辑器。
@@ -108,7 +108,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [Connector](../usage-api/automation-api.md) 类，以与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
 - 将*theme-contrast-dark*主题id添加到 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中。
 - 将 *phone* 字段添加到 [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) 参数中。
-- 向许可证响应添加 *connections\_view*, *users\_view\_count* 和 *users\_view* [license response](../additional-api/command-service/license.md#response-parameters)。
+- 向许可证响应添加 [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) 和 [users\_view](../additional-api/command-service/license.md#quota.users_view)。
 - 在文本文档、电子表格和演示文稿编辑器中添加了 [实时查看器](../get-started/how-it-works/viewing.md) 模式。
 - 将 [embedview](../using-wopi/wopi-discovery.md#embedview) 操作添加到 wopi 发现中。
 - [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) 参数已弃用，请改用 [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) 参数。

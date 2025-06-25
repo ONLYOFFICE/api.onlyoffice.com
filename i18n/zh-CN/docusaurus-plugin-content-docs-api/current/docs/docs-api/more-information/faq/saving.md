@@ -23,13 +23,15 @@ sidebar_position: -3
 - 在编辑器初始化配置中启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 将其值设置为为 **true**:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       customization: {
         forcesave: false,
       },
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 - 在 **default.json** ONLYOFFICE 文档配置文件中启用重复强制保存启动：
@@ -66,13 +68,15 @@ sidebar_position: -3
 **自动保存**选项默认启用。要禁用它，您需要将文档配置中的 [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) 参数设置为 **false**：
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       customization: {
         autosave: false,
       },
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 > 请注意，禁用**自动保存**也会禁用**快速**共同编辑模式，该模式仅适用于启用自动文档保存。

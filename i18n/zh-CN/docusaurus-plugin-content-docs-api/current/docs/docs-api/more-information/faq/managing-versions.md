@@ -58,13 +58,15 @@ const data = {
          },
        ],
      })
-   }
+   };
   
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中
@@ -119,13 +121,15 @@ const data = {
       url: "https://documentserver/url-to-edited-document.docx",
       version,
     })
-  }
+  };
   
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     events: {
       onRequestHistoryData,
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
   包含指向当前文档版本 (*url*) 和先前文档版本 (*previous.url*) 的有效链接以及 ID（*key* 和 *previous.key*）的对象必须传递给配置文件。 *changesUrl* 存档文件也必须可用并可从浏览器下载，才能显示更改。

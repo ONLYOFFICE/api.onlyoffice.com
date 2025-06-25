@@ -9,18 +9,20 @@ sidebar_position: -5
 **文档编辑服务**通知**文档存储服务**有关文档编辑的状态，并通过 *callbackUrl* 发送包含所有必要数据的响应，在配置文件中指定如下：
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       callbackUrl: "https://example.com/url-to-callback.ashx",
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 这里的 `https://example.com/url-to-callback.ashx` 是特殊处理程序的地址，它可以处理来自**文档编辑服务**的响应和带有*错误的响应：0* 状态代码。此处理程序可以用您选择的编程语言编写。
 
 所有可以发送到回调处理程序的参数及其描述都可以在[这个页面](../../usage-api/callback-handler.md)找到。
 
-关于如何实现此处理程序，下列编程语言有示例：[.Net (C#)](../../usage-api/callback-handler.md#net-c-document-save-example), [Java](../../usage-api/callback-handler.md#java-document-save-example), [Node.js](../../usage-api/callback-handler.md#nodejs-document-save-example), [PHP](../../usage-api/callback-handler.md#php-document-save-example), [Ruby](../../usage-api/callback-handler.md#ruby-document-save-example)。
+关于如何实现此处理程序，下列编程语言有示例 [示例](../../usage-api/callback-handler.md#document-save-examples)：.Net (C#), Java, Node.js, PHP, Ruby。
 
 ## 什么是 document.key 参数？
 
@@ -40,11 +42,13 @@ sidebar_position: -5
 使用配置文件的 *editorConfig* 部分设置模式：
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       mode: "edit",
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 有关此参数的更多信息，请参见[此处](../../usage-api/config/editor/editor.md#mode)。
