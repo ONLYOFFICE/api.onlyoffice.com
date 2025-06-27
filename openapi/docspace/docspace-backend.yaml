@@ -1067,11 +1067,11 @@ paths:
               $ref: '#/components/schemas/TopUpDepositRequestDto'
       responses:
         '200':
-          description: Success status
+          description: 'Boolean value: true if the operation is successful'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StringWrapper'
+                $ref: '#/components/schemas/BooleanWrapper'
         '401':
           description: Unauthorized
         '403':
@@ -1282,7 +1282,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CustomerOperationsReportDto'
+              $ref: '#/components/schemas/CustomerOperationsReportRequestDto'
       responses:
         '200':
           description: URL to the csv report file
@@ -2189,7 +2189,7 @@ paths:
           in: query
           description: The maximum number of audit event records to retrieve.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -2547,7 +2547,7 @@ paths:
           in: query
           description: The number of login events to retrieve in the query.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -5571,6 +5571,8 @@ paths:
           description: Unauthorized
         '402':
           description: Your pricing plan does not support this option
+        '403':
+          description: Only portal owner can set user as administrator
       security:
         - asc_auth_key:
             - read
@@ -6172,7 +6174,7 @@ paths:
     put:
       tags:
         - Settings / TFA settings
-      summary: Get confirmation email for updating TFA settings
+      summary: Get a confirmation email for updating TFA settings
       operationId: updateTfaSettingsLink
       requestBody:
         content:
@@ -6188,6 +6190,10 @@ paths:
                 $ref: '#/components/schemas/StringWrapper'
         '401':
           description: Unauthorized
+        '403':
+          description: No permissions to perform this action
+        '405':
+          description: SMS settings are not available/TFA application settings are not available
       security:
         - asc_auth_key:
             - read
@@ -6562,7 +6568,7 @@ paths:
           in: query
           description: The maximum number of webhook log records to return in the query response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -7159,7 +7165,7 @@ paths:
           in: query
           description: The number of records to retrieve.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -7667,7 +7673,7 @@ paths:
           in: query
           description: The number of groups to retrieve in the request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -8299,7 +8305,7 @@ paths:
           in: query
           description: The maximum number of items to be retrieved in the response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -8938,7 +8944,7 @@ paths:
           in: query
           description: The number of items to retrieve in a request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -9165,7 +9171,7 @@ paths:
           in: query
           description: The maximum number of items to be retrieved in the response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -9434,7 +9440,7 @@ paths:
           in: query
           description: The maximum number of items to be retrieved in the response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -9561,7 +9567,7 @@ paths:
           in: query
           description: The maximum number of users to be retrieved in the request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -10166,7 +10172,7 @@ paths:
           in: query
           description: The maximum number of user profiles to retrieve.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -10881,7 +10887,7 @@ paths:
           in: query
           description: The number of history entries to retrieve for the file log.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -11621,7 +11627,7 @@ paths:
           in: query
           description: The number of items to retrieve in the request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -11744,7 +11750,7 @@ paths:
           in: query
           description: The number of items to retrieve in the request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -12329,7 +12335,7 @@ paths:
           in: query
           description: The number of records to retrieve for the folder history.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -12661,7 +12667,7 @@ paths:
           in: query
           description: The maximum number of items to retrieve in the request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -12904,7 +12910,7 @@ paths:
           in: query
           description: The maximum number of items to retrieve in the response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -12983,7 +12989,7 @@ paths:
           in: query
           description: The maximum number of items to retrieve in the request.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -13068,7 +13074,7 @@ paths:
           in: query
           description: The maximum number of items to retrieve in the response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -13152,7 +13158,7 @@ paths:
           in: query
           description: The maximum number of items to retrieve in the response.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -15673,7 +15679,7 @@ paths:
           in: query
           description: Specifies the maximum number of items to retrieve.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -16054,7 +16060,7 @@ paths:
           in: query
           description: The number of items to be retrieved or processed.
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -16753,7 +16759,7 @@ paths:
           in: query
           description: "Gets or sets the number of tag results to retrieve.\r\nThis property specifies the maximum amount of tag data to be included in the result set."
           schema:
-            maximum: 1000
+            maximum: 100
             minimum: 1
             type: integer
             format: int32
@@ -17375,6 +17381,7 @@ paths:
         - OAuth 2.0 / Authorization
       summary: OAuth2 authorization endpoint
       description: Initiates the OAuth2 authorization flow.
+      operationId: authorizeOAuth
       parameters:
         - name: response_type
           in: query
@@ -17418,6 +17425,7 @@ paths:
         - OAuth 2.0 / Authorization
       summary: OAuth2 consent endpoint
       description: Sends a consent request with the specified parameters.
+      operationId: submitConsent
       requestBody:
         content:
           multipart/form-data:
@@ -17451,6 +17459,7 @@ paths:
         - OAuth 2.0 / Authorization
       summary: OAuth2 token endpoint
       description: Exchanges an authorization code specified in the request for the access token.
+      operationId: exchangeToken
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -18101,9 +18110,9 @@ paths:
     get:
       tags:
         - OAuth 2.0 / Client Querying
+      operationId: getClientInfo
       summary: Get detailed client information
       description: Retrieves the detailed information for a client with the ID specified in the request.
-      operationId: getClientInfo
       parameters:
         - name: clientId
           in: path
@@ -18981,14 +18990,17 @@ components:
       properties:
         accountNumber:
           type: integer
+          description: The account number.
           format: int32
           example: 1234
         subAccounts:
           type: array
           items:
             $ref: '#/components/schemas/SubAccount'
+          description: A list of sub-accounts.
           nullable: true
       additionalProperties: false
+      description: Represents a balance with an account number and a list of sub-accounts.
     BalanceWrapper:
       type: object
       properties:
@@ -19654,13 +19666,16 @@ components:
       properties:
         id:
           type: integer
+          description: Unique identifier of the currency.
           format: int32
           example: 9846
         code:
           type: string
+          description: The three-character ISO 4217 currency symbol.
           nullable: true
           example: some text
       additionalProperties: false
+      description: Represents a currency.
     CurrencyArrayWrapper:
       type: object
       properties:
@@ -19882,15 +19897,18 @@ components:
       properties:
         portalId:
           type: string
+          description: The portal ID.
           nullable: true
           example: some text
         paymentMethodStatus:
           $ref: '#/components/schemas/PaymentMethodStatus'
         email:
           type: string
+          description: The email address of the customer.
           nullable: true
           example: Sydney_Roberts4@hotmail.com
       additionalProperties: false
+      description: The customer information.
     CustomerInfoWrapper:
       type: object
       properties:
@@ -19914,7 +19932,7 @@ components:
         statusCode:
           type: integer
           format: int32
-    CustomerOperationsReportDto:
+    CustomerOperationsReportRequestDto:
       type: object
       properties:
         startDate:
@@ -22822,31 +22840,44 @@ components:
       properties:
         date:
           type: string
+          description: Date of the operation.
           format: date-time
           example: '2008-04-10T06:30:00.0000000+04:00'
         service:
           type: string
+          description: Service related to the operation.
+          nullable: true
+          example: some text
+        description:
+          type: string
+          description: Brief description of the operation.
           nullable: true
           example: some text
         serviceUnit:
           type: string
+          description: Unit of the service.
           nullable: true
           example: some text
         quantity:
           type: integer
+          description: Quantity of the service used.
           format: int32
           example: 1234
         currency:
           type: string
+          description: The three-character ISO 4217 currency symbol of the operation.
           nullable: true
           example: some text
         credit:
           type: number
+          description: Credit amount of the operation.
           format: double
         withdrawal:
           type: number
+          description: Withdrawal amount of the operation.
           format: double
       additionalProperties: false
+      description: Represents an operation.
     OwnerChangeInstructionsDto:
       type: object
       properties:
@@ -23008,17 +23039,21 @@ components:
       properties:
         operationId:
           type: integer
+          description: Unique identifier of the operation.
           format: int64
           example: 1234
         amount:
           type: number
+          description: The amount of the payment calculation.
           format: double
         currency:
           type: string
+          description: The three-character ISO 4217 currency symbol of the payment calculation.
           nullable: true
           example: some text
         quantity:
           type: integer
+          description: The quantity associated with the payment calculation.
           format: int32
           example: 1234
       additionalProperties: false
@@ -23047,12 +23082,30 @@ components:
           type: integer
           format: int32
     PaymentMethodStatus:
-      enum:
-        - 0
-        - 1
-        - 2
-      type: integer
-      format: int32
+      oneOf:
+        - enum:
+            - None
+            - Set
+            - Expired
+          type: string
+          description: '[None - None, Set - Set, Expired - Expired]'
+          example: None
+        - enum:
+            - 0
+            - 1
+            - 2
+          type: integer
+          description: '[0 - None, 1 - Set, 2 - Expired]'
+          example: 0
+          x-enum-varnames:
+            - None
+            - Set
+            - Expired
+          x-enum-descriptions:
+            - None
+            - Set
+            - Expired
+      description: The payment method status.
     PaymentSettingsDto:
       type: object
       properties:
@@ -23316,6 +23369,8 @@ components:
           format: int32
           nullable: true
           example: 1234
+        state:
+          $ref: '#/components/schemas/QuotaState'
       additionalProperties: false
       description: The quota parameters.
     QuotaArrayWrapper:
@@ -23408,6 +23463,27 @@ components:
           description: The default storage quota value applied to new users.
       additionalProperties: false
       description: The request parameters for managing the user storage quota configurations.
+    QuotaState:
+      oneOf:
+        - enum:
+            - Active
+            - Overdue
+          type: string
+          description: '[Active - Active, Overdue - Overdue]'
+          example: Active
+        - enum:
+            - 0
+            - 1
+          type: integer
+          description: '[0 - Active, 1 - Overdue]'
+          example: 0
+          x-enum-varnames:
+            - Active
+            - Overdue
+          x-enum-descriptions:
+            - Active
+            - Overdue
+      description: The quota state.
     QuotaWrapper:
       type: object
       properties:
@@ -23467,28 +23543,35 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Operation'
+          description: Collection of operations.
           nullable: true
         offset:
           type: integer
+          description: Offset of the report data.
           format: int32
           example: 1234
         limit:
           type: integer
+          description: Limit of the report data.
           format: int32
           example: 1234
         totalQuantity:
           type: integer
+          description: Total quantity of operations in the report.
           format: int32
           example: 1234
         totalPage:
           type: integer
+          description: Total number of pages in the report.
           format: int32
           example: 1234
         currentPage:
           type: integer
+          description: Current page number of the report.
           format: int32
           example: 1234
       additionalProperties: false
+      description: Represents a report containing a collection of operations.
     ReportWrapper:
       type: object
       properties:
@@ -23598,16 +23681,19 @@ components:
       type: object
       properties:
         userName:
+          maxLength: 255
           type: string
           description: The name of the user submitting the sales request.
           nullable: true
           example: some text
         email:
+          maxLength: 64
           type: string
           description: The contact email address for the sales inquiry.
           nullable: true
           example: Sydney_Roberts4@hotmail.com
         message:
+          maxLength: 255
           type: string
           description: The details of the sales inquiry or payment request.
           nullable: true
@@ -23696,16 +23782,20 @@ components:
       properties:
         sessionId:
           type: integer
+          description: Unique identifier of the session.
           format: int32
           example: 1234
         reservedAmount:
           type: number
+          description: Amount reserved for the session.
           format: double
         currency:
           type: string
+          description: The three-character ISO 4217 currency symbol of the reserved amount.
           nullable: true
           example: some text
       additionalProperties: false
+      description: Represents a session with reserved amount and currency.
     SessionWrapper:
       type: object
       properties:
@@ -24523,12 +24613,15 @@ components:
       properties:
         currency:
           type: string
+          description: The three-character ISO 4217 currency symbol of the sub-account.
           nullable: true
           example: some text
         amount:
           type: number
+          description: The amount of the sub-account.
           format: double
       additionalProperties: false
+      description: Represents a sub-account with a specific currency and amount.
     Tariff:
       type: object
       properties:
@@ -24564,6 +24657,12 @@ components:
           items:
             $ref: '#/components/schemas/Quota'
           description: The list of tariff quotas.
+          nullable: true
+        overdueQuotas:
+          type: array
+          items:
+            $ref: '#/components/schemas/Quota'
+          description: The list of overdue tariff quotas.
           nullable: true
       additionalProperties: false
       description: The tariff parameters.
@@ -25482,7 +25581,7 @@ components:
           example: 1234
         currency:
           type: string
-          description: Currency
+          description: The three-character ISO 4217 currency symbol.
           nullable: true
           example: some text
         lastModified:
@@ -30329,7 +30428,6 @@ components:
           type: string
           description: The absolute URL to the document serving as a source file for the document embedded into the web page.
           nullable: true
-          readOnly: true
           example: some text
         saveUrl:
           type: string
@@ -30346,7 +30444,6 @@ components:
           type: string
           description: The absolute URL that will allow other users to share this document.
           nullable: true
-          readOnly: true
           example: some text
         toolbarDocked:
           type: string
@@ -33516,6 +33613,11 @@ components:
           description: The dark image of the logo.
           nullable: true
           example: some text
+        imageLight:
+          type: string
+          description: The light image of the logo.
+          nullable: true
+          example: some text
         imageEmbedded:
           type: string
           description: The embedded image of the logo.
@@ -36288,15 +36390,15 @@ components:
       description: OAuth2 flow with Authorization Code
       flows:
         authorizationCode:
-          authorizationUrl: https://oauth.onlyoffice.com/oauth2/authorize
-          tokenUrl: https://oauth.onlyoffice.com/oauth2/token
+          authorizationUrl: ''
+          tokenUrl: ''
           scopes:
             read: Read access to protected resources
             write: Write access to protected resources
     OpenId:
       type: openIdConnect
       description: OpenID Connect authentication
-      openIdConnectUrl: https://oauth.onlyoffice.com/oauth2/userinfo
+      openIdConnectUrl: ''
     x-signature:
       type: apiKey
       description: JWT signature used for authentication. The token must be obtained via the `api/2.0/security/oauth2/token` endpoint. It is passed as a cookie with the name `x-signature`.
@@ -36353,6 +36455,7 @@ x-tagGroups:
       - People / User type
   - name: Portal
     tags:
+      - Portal / Guests
       - Portal / Payment
       - Portal / Quota
       - Portal / Settings
