@@ -98,9 +98,9 @@ Repository on GitHub: [example_work_with_content_controls_content](https://githu
 
 - button
 - init
-- executeMethod ("GetAllContentControls")
+- executeMethod ("[GetAllContentControls](/site/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
-- executeMethod ("SelectContentControl")
+- executeMethod ("[SelectContentControl](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/SelectContentControl.md)")
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## Support

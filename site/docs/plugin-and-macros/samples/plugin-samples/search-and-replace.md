@@ -99,7 +99,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 - button
 - init
 - onMethodReturn
-- executeMethod ("SearchAndReplace")
+- executeMethod ("[SearchAndReplace](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/SearchAndReplace.md)")
 
 ## Support
 

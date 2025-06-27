@@ -112,11 +112,11 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 - onAddComment
 - onChangeCommentData
 - onRemoveComment
-- executeMethod ("AddComment")
-- executeMethod ("ChangeComment")
-- executeMethod ("GetAllComments")
-- executeMethod ("MoveToComment")
-- executeMethod ("RemoveComments")
+- executeMethod ("[AddComment](/site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
+- executeMethod ("[ChangeComment](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/RemoveComments.md)")
 
 ## Support
 

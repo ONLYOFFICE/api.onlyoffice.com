@@ -122,7 +122,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [InstallPlugin](../interacting-with-editors/methods/text-document-api/Api/Methods/InstallPlugin.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [PutImageDataToSelection](../interacting-with-editors/methods/text-document-api/Api/Methods/PutImageDataToSelection.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [RemovePlugin](../interacting-with-editors/methods/text-document-api/Api/Methods/RemovePlugin.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the SetFormValue method to *window\.Asc.plugin.executeMethod*.
+- Added the [SetFormValue](../interacting-with-editors/methods/form-api/Api/Methods/SetFormValue.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [ShowButton](../interacting-with-editors/methods/text-document-api/Api/Methods/ShowButton.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [UpdatePlugin](../interacting-with-editors/methods/text-document-api/Api/Methods/UpdatePlugin.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the onBlurContentControl event.

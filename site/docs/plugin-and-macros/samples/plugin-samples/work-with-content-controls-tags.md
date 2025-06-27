@@ -107,9 +107,9 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 - button
 - init
 - onMethodReturn
-- executeMethod ("GetAllContentControls")
+- executeMethod ("[GetAllContentControls](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
-- executeMethod ("SelectContentControl")
+- executeMethod ("[SelectContentControl](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/SelectContentControl.md)")
 
 ## Support
 
