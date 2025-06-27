@@ -1,6 +1,6 @@
 # onChangeCommentData
 
-The function called when the specified comment is changed with the [ChangeComment](../../methods/text-document-api/Api/Methods/ChangeComment) method.
+The function called when the specified comment is changed with the [ChangeComment](../../methods/text-document-api/Api/Methods/ChangeComment.md) method.
 
 ## Parameters
 

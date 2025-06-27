@@ -1,6 +1,6 @@
 # onRemoveComment
 
-The function called when the specified comment is removed with the [RemoveComments](../../methods/text-document-api/Api/Methods/RemoveComments) method.
+The function called when the specified comment is removed with the [RemoveComments](../../methods/text-document-api/Api/Methods/RemoveComments.md) method.
 
 ## Parameters
 
