@@ -74,6 +74,7 @@ jobs:
           npm install
           python generate_docs_md_site.py
           python generate_docs_plugins_md_site.py
+          python generate_docs_plugins_events_md_site.py
           cd ../../../../api.onlyoffice.com
 
           if ! git diff --exit-code; then
