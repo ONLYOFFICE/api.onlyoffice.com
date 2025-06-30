@@ -201,3 +201,55 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugin-and-macros/structure/configuration/configuration.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
 Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/plugins.md).
+
+## How to disable feature tips in the editors?
+
+To disable the tooltips about new features in the editor on first loading, use the following configuration parameter *features.featuresTips* and set its value to **false** in the configuration file:
+
+``` ts
+const config = {
+  features: {
+    featuresTips: false
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+Further information about the feature customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md#features).
+
+## How to change the font and text size in the editor interface?
+
+To customize the interface elements (buttons, tabs, etc.) font and size, use the *font* configuration block and edit the following configuration parameters *font.name*, *font.size* in the configuration file:
+
+``` ts
+const config = {
+  font: {
+    name: "Arial",
+    size: 14
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+Further information about the interface font customization can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#font).
+
+## How to hide the active user's icon and the current username in the editor header?
+
+To hide the icon with the user's avatar/initials and the button with the editing users use the *layout* configuration block and set values to **false** of the following configuration parameters *layout.header.user*, *layout.header.users* in the configuration file:
+
+``` ts
+const config = {
+  layout: {
+    header: {
+      user: false,
+      users: false,
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+Further information about the visibility customization of the active user's icon and the current username can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#layout.header).
