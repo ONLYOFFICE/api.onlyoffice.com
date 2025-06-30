@@ -1,4 +1,5 @@
 {
   "position": 2,
-  "label": "Events"
+  "label": "Events",
+  "className": "hidden"
 }
