@@ -1,9 +1,8 @@
-export type date = {
-  name: string,
+export type DateControl = {
   commonPr: {
-    id: string;
+    id: number;
     tag: string;
-    lock: "1" | "2" | "3" | "4";
+    lock: 1 | 2 | 3 | 4;
   };
   datePickerPr: {
     format: string;

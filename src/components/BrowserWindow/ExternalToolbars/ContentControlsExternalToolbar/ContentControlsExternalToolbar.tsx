@@ -1,111 +1,98 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { OnlyofficeEditor } from "@site/src/components/BrowserWindow";
 import ConfigEditor from "./ConfigEditor/ConfigEditor";
-import { text, date, picture, combobox, checkbox } from "./ConfigEditor/types";
+import { Action, NamedControl } from "./ConfigEditor/types";
 import styles from "./styles.module.css";
 
 const ContentControlsExternalToolbar: React.FC<void> = () => {
-  const [currentConfig, setCurrentConfig] = useState<text | date | picture | combobox | checkbox>();
+  const [action, setAction] = useState<Action>("create");
+  const [controls, setControls] = useState<NamedControl[]>([]);
+  const [control, setControl] = useState<NamedControl>();
+
+  const handleSelectControl = (e: ChangeEvent<HTMLSelectElement>): void => {
+    const selectedControl = controls.find((control) => control.commonPr.id === parseInt(e.target.value));
+
+    setControl(selectedControl);
+    setAction("edit");
+  };
+
+  const handleAddControl = (): void => {
+    setControls([...controls, control]);
+
+    const newControl = structuredClone(control);
+    newControl.commonPr.id = Date.now();
+
+    setAction("edit");
+    setControl(newControl);
+  };
+
+  const handleRemoveControl = (): void => {
+    setControls([...controls.filter((filteredControl) => filteredControl.commonPr.id === control.commonPr.id)]);
+  };
+
+  const isAddButtonDisabled = (): boolean => {
+    return action !== "create";
+  };
+
+  const isRemoveButtonDisabled = (): boolean => {
+    return action !== "edit" || controls.length === 0;
+  };
+
   return (
     <>
-      <select
-        id="contentControlsSelect"
-        className={styles.contentControlsSelect}
-        style={{ display: "none" }}
-        name="persons"
-        defaultValue="defaultValue"
-        required
-        disabled
-      >
-        <option value="defaultValue" disabled>
-          Choose content control
-        </option>
-      </select>
-      <ConfigEditor controlIndex={0} />
-      <ul className={styles.buttons} style={{ display: "none" }}>
-        <li>
-          <button id="addContentControl" disabled>
-            ADD CONTENT CONTROL
-          </button>
-        </li>
-      </ul>
+      <div id="contentControlsExternalToolbar" className={styles.contentControlsExternalToolbar} style={{ display: "none" }}>
+        <select id="controlSelect" className={styles.contentControlsSelect} onChange={handleSelectControl} defaultValue="defaultValue">
+          <option value="defaultValue" disabled>
+            Choose content control
+          </option>
+        </select>
+        <ConfigEditor control={control} action={action} handleSetControl={setControl} />
+        <ul className={styles.buttons}>
+          <li>
+            <button id="addControlButton" disabled={isAddButtonDisabled()} onClick={handleAddControl}>
+              ADD
+            </button>
+          </li>
+          <li>
+            <button id="removeControlButton" disabled={isRemoveButtonDisabled()} onClick={handleRemoveControl}>
+              REMOVE
+            </button>
+          </li>
+        </ul>
+      </div>
       <OnlyofficeEditor
         fileType={"docx"}
         code={""}
         height="550px"
         externalScript={{
           beforeDocumentReady: `
-            var contentControls = [];
           `,
           onDocumentReady: `
             String.prototype.replaceAll = function(search, replacement) {
 	          	return this.replace(new RegExp(search, 'g'), replacement);
             };
-
-            function createFormByObject(obj) {
-              const container = document.createElement("div");
-              container.className = "${styles.contentControlsDetails}";
-
-              for (const [key, value] of Object.entries(obj)) {
-                const label = document.createElement("label");
-                label.textContent = key;
-                label.htmlFor = key + "-input";
-
-                const input = document.createElement("input");
-                input.id = key + "-input";
-                input.type = "text";
-                input.value = JSON.stringify(value);
-                input.readOnly = true;
-
-                const field = document.createElement("div");
-                field.className = "field";
-                field.append(label, input);
-
-                container.appendChild(field);
-              }
-
-              return container;
-            }
-
-            const placeholderPlainRich = {
-              commonPr: {
-                Id: Date.now(),
-                Tag: "{Document1}",
-                Lock: 1,
-                Appearance: 1,
-                Color: { R: 0, G: 255, B: 0 },
-                PlaceHolderText: "Place holder example",
-              },
-              type: 1,
-            };
             
-            const configEditor = document.getElementById("configEditor");
-            const addContentControl = document.getElementById("addContentControl");
-            const contentControlsSelect = document.getElementById("contentControlsSelect");
-            const buttons = document.querySelector(".${styles.buttons}");
+            const contentControlsExternalToolbar = document.getElementById("contentControlsExternalToolbar");
+            contentControlsExternalToolbar.removeAttribute('style');
 
-            [configEditor, addContentControl, contentControlsSelect, buttons].forEach(element => {
-              element.disabled = false;
-              element.removeAttribute('style');
+            const controlSelect = document.getElementById("controlSelect");
+            controlSelect.addEventListener("click", () => {
+              controlSelect.innerHTML = '<option value="defaultValue" disabled selected>Choose content control</option>';
+              connector.executeMethod("GetAllContentControls", null, (controls) => controls.forEach(control => {
+                  const option = document.createElement("option");                
+                  option.value = control.Id;
+                  option.textContent = control.Id;
+
+                  controlSelect.appendChild(option);
+                })
+              );
+              connector.executeMethod("GetCurrentContentControl", null, (control) => console.log(control));
             });
-                         
-            addContentControl.onclick = () => {
-              const newContentControl = { ...placeholderPlainRich.commonPr,  Id: Date.now() };
 
-              connector.executeMethod("AddContentControl", [placeholderPlainRich.type, newContentControl]);
-              contentControls.push(newContentControl);
-            }    
-
-            contentControlsSelect.onclick = () => {
-              contentControlsSelect.innerHTML = '<option value="defaultValue" disabled selected>Choose content control</option>';
-                  
-              contentControls.forEach(contentControl => {
-                const option = document.createElement("option");                
-                option.value = contentControl.Id;
-                option.textContent = contentControl.PlaceHolderText;
-                contentControlsSelect.appendChild(option);
-              });
-            };
+            const removeControlButton = document.getElementById("removeControlButton");
+            removeControlButton.addEventListener("click", () => {
+              connector.executeMethod("GetCurrentContentControl", null, (internalId) => connector.executeMethod("RemoveContentControls", [[{InternalId: internalId}]]));
+            });
           `,
           otherFunctional: `
           `,

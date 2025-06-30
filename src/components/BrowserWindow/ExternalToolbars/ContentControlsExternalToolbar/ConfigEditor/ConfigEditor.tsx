@@ -1,51 +1,50 @@
-import { useState } from "react";
-import { text, date, picture, combobox, checkbox } from "./types";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { TextControl, DateControl, PictureControl, ComboboxControl, CheckboxControl, Action, Control, NamedControl, NonApiProps } from "./types";
 import { TextInput, ColorInput, ArrayInput, SymbolInput, CheckboxInput } from "./Inputs";
 import styles from "./styles.module.css";
-
-type NonApiProps = {
-  name: string;
-};
+import { useDebounce } from "./hooks";
 
 type InitialControls = [
-  text & NonApiProps,
-  date & NonApiProps,
-  picture & NonApiProps,
-  combobox &
+  TextControl & NonApiProps,
+  DateControl & NonApiProps,
+  PictureControl & NonApiProps,
+  ComboboxControl &
     NonApiProps & {
       list: { key: number }[];
     },
-  checkbox & NonApiProps
+  CheckboxControl & NonApiProps
 ];
 
 type ConfigEditorProps = {
-  controlIndex: number;
+  action: Action;
+  control: NamedControl;
+  handleSetControl: Dispatch<SetStateAction<NamedControl>>;
 };
 
-const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
+const ConfigEditor: React.FC<ConfigEditorProps> = ({ action, control, handleSetControl }) => {
   const controls: InitialControls = [
     {
       name: "Plain text/Rich text",
       commonPr: {
-        id: Date.now().toString().slice(-5),
+        id: Date.now(),
         tag: "{Document1}",
-        lock: "1",
-        appearence: true,
+        lock: 1,
+        appearance: 1,
         color: {
           r: 255,
-          g: 0,
+          g: 255,
           b: 0,
         },
-        placeHolder: "Placeholder example",
+        placeHolderText: "Placeholder example",
       },
-      type: "1",
+      type: 1,
     },
     {
       name: "Date",
       commonPr: {
-        id: Date.now().toString().slice(-5),
+        id: Date.now(),
         tag: "{Document2}",
-        lock: "3",
+        lock: 3,
       },
       datePickerPr: {
         format: "DD MMMM YYYY",
@@ -55,10 +54,10 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
     {
       name: "Picture",
       commonPr: {
-        id: Date.now().toString().slice(-5),
+        id: Date.now(),
         tag: "{Document3}",
-        lock: "3",
-        appearance: true,
+        lock: 3,
+        appearance: 1,
         color: {
           r: 255,
           g: 0,
@@ -69,44 +68,59 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
     {
       name: "Combobox/Dropdown list",
       commonPr: {
-        id: Date.now().toString().slice(-5),
+        id: Date.now(),
         tag: "{Document4}",
-        lock: "3",
-        placeHolder: "Placeholder example",
+        lock: 3,
+        placeHolderText: "Placeholder example",
       },
       list: [
         { key: Date.now(), display: "Item2_D", value: "Item2_V" },
         { key: Date.now() + 1, display: "Item1_D", value: "Item1_V" },
       ],
-      type: "1",
+      type: 1,
     },
     {
       name: "Checkbox",
       commonPr: {
-        id: Date.now().toString().slice(-5),
+        id: Date.now(),
         tag: "{Document5}",
-        lock: "3",
+        lock: 3,
       },
       checkBoxPr: {
         checked: false,
-        checkedSymbol: "9746",
-        uncheckedSymbol: "9744",
+        checkedSymbol: 9746,
+        uncheckedSymbol: 9744,
       },
     },
   ];
 
-  const [currentControl, setCurrentControl] = useState(controls[controlIndex]);
+  useEffect(() => {
+    if (!control) {
+      handleSetControl(controls[0]);
+    }
+  }, [control, handleSetControl]);
 
-  const handleSelectControl = (control: typeof currentControl): void => {
-    const newControl = { ...control };
-    newControl.commonPr.id = Date.now().toString().slice(-5);
+  const [currentControl, setCurrentControl] = useState(control || controls[0]);
+
+  const handleSelectControl = (selectedControl: typeof currentControl): void => {
+    const newControl = { ...selectedControl };
+    newControl.commonPr.id = Date.now();
     setCurrentControl({ ...newControl });
+  };
+
+  const isSelectButtonDisabled = (): boolean => {
+    return action === "edit";
   };
 
   const setCurrentControlProperty = (newPropertyValue: any, property: string, attribute?: string): void => {
     setCurrentControl((prev) => ({
       ...prev,
-      [property]: attribute ? { ...prev[property], [attribute]: newPropertyValue } : newPropertyValue,
+      [property]: attribute
+        ? {
+            ...prev[property],
+            [attribute]: newPropertyValue,
+          }
+        : newPropertyValue,
     }));
   };
 
@@ -121,15 +135,99 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
     }
   };
 
+  const { id, ...debouncableCommonProperties } = currentControl.commonPr;
+  const debouncableControlProperties = { ...currentControl, commonPr: { ...debouncableCommonProperties } };
+
+  useEffect(() => {
+    const stringifyProperty = (property: object): string => {
+      const capitalizeKeys = (obj: any): any => {
+        if (typeof obj !== "object" || obj === null) return obj;
+
+        if (Array.isArray(obj)) {
+          return obj.map(capitalizeKeys);
+        }
+
+        const newObj: Record<string, any> = {};
+        for (const [key, value] of Object.entries(obj)) {
+          const newKey = key.charAt(0).toUpperCase() + key.slice(1);
+          newObj[newKey] = capitalizeKeys(value);
+        }
+        return newObj;
+      };
+
+      return JSON.stringify(capitalizeKeys(property), null, 4);
+    };
+
+    const getStringifiedMethodParameters = (): string => {
+      const name: string = currentControl.name;
+      const commonPr: string = stringifyProperty(currentControl.commonPr);
+
+      switch (name) {
+        case "Plain text/Rich text": {
+          const type = (currentControl as TextControl).type;
+          return `"AddContentControl", [
+            ${type},
+            ${commonPr}
+          ]`;
+        }
+        case "Date": {
+          const datePickerPr = stringifyProperty((currentControl as DateControl).datePickerPr);
+          return `"AddContentControlDatePicker", [
+            ${datePickerPr},
+            ${commonPr}
+          ]`;
+        }
+        case "Picture": {
+          return `"AddContentControlPicture", [
+            ${commonPr}
+          ]`;
+        }
+        case "Combobox/Dropdown list": {
+          const type = (currentControl as ComboboxControl).type;
+          const list = stringifyProperty((currentControl as ComboboxControl).list);
+          return `"AddContentControlList", [
+            ${type},
+            ${list},
+            ${commonPr}
+          ]`;
+        }
+        case "Checkbox": {
+          const checkBoxPr = stringifyProperty((currentControl as CheckboxControl).checkBoxPr);
+          return `"AddContentControlCheckBox", [
+            ${checkBoxPr}, 
+            ${commonPr}
+          ]`;
+        }
+      }
+    };
+
+    const addControlButtonScript = document.createElement("script");
+    addControlButtonScript.id = "addControlButtonScript";
+    addControlButtonScript.type = "text/javascript";
+    addControlButtonScript.innerHTML = `
+      document.getElementById("addControlButton").addEventListener('click', function(e) {
+        connector.executeMethod(${getStringifiedMethodParameters()});
+      });
+    `;
+    document.body.appendChild(addControlButtonScript);
+
+    return () => {
+      const button = document.getElementById("addControlButton");
+      button.parentNode?.replaceChild(button.cloneNode(true), button);
+
+      document.getElementById("addControlButtonScript").remove();
+    };
+  }, [useDebounce(debouncableControlProperties, 100)]);
+
   return (
-    <div id="configEditor" className={styles.configEditor} style={{ display: "none" }}>
+    <div className={styles.configEditor}>
       <ul className={styles.controls}>
         {controls.map((control) => (
           <li key={control.name} className={styles.control}>
             {control.name === currentControl.name ? (
               <button className={`${styles.selectButton} ${styles.selected}`}>{control.name}</button>
             ) : (
-              <button className={`${styles.selectButton}`} onClick={() => handleSelectControl(control)}>
+              <button className={`${styles.selectButton}`} onClick={() => handleSelectControl(control)} disabled={isSelectButtonDisabled()}>
                 {control.name}
               </button>
             )}
@@ -183,9 +281,9 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
                         setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
                       />
                     )) ||
-                    (typeof attributeValue === "string" && (
+                    ((typeof attributeValue === "string" || attribute === "id" || attribute === "lock" || attribute === "appearance") && (
                       <TextInput
-                        value={attributeValue}
+                        value={attributeValue as string | number}
                         setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
                       />
                     ))}
@@ -202,7 +300,7 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
               return value;
             }
           },
-          2
+          4
         )}
         readOnly
       />

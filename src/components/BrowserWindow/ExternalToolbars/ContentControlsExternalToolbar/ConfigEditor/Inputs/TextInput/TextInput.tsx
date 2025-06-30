@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 type TextInputProps = {
   placeholder?: string;
-  value: string;
+  value: string | number;
   setValue: (newValue: string) => void;
 };
 

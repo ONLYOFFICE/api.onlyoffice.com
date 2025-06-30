@@ -1,5 +1,8 @@
-export type { text } from "./text";
-export type { date } from "./date";
-export type { picture } from "./picture";
-export type { combobox } from "./combobox";
-export type { checkbox } from "./checkbox";
+export type { TextControl } from "./TextControl";
+export type { DateControl } from "./DateControl";
+export type { PictureControl } from "./PictureControl";
+export type { ComboboxControl } from "./ComboboxControl";
+export type { CheckboxControl } from "./CheckboxControl";
+
+export type { Action } from "./Action";
+export type { Control, NamedControl, NonApiProps } from "./Controls";

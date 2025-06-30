@@ -1,29 +1,26 @@
 .contentControlsExternalToolbar {
-  background-color: var(--working-with-content-controls-bg-color);
-  border-radius: 3px;
-  padding: 15px 24px;
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  font-family: inherit;
-
-  width: 95%;
-  width: -moz-available;
-  width: -webkit-fill-available;
+  margin-bottom: 20px;
 }
 
 .contentControlsSelect {
   box-sizing: border-box;
+
   padding: 8px 16px;
   width: 100%;
   max-width: 544px;
   height: 48px;
   border: 1px solid #808080;
   border-radius: 3px;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+
   color: var(--working-with-content-controls-option-color);
-  margin-bottom: 16px;
 
   cursor: pointer;
 }
@@ -47,10 +44,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 
   font: inherit;
-  margin-bottom: 16px;
+  margin: 0;
   padding: 0;
 
   list-style: disc outside none;
@@ -113,7 +110,7 @@
   --working-with-content-controls-button-disabled-border-color: #cccccc;
 }
 
-html[data-theme="dark"] {  
+html[data-theme="dark"] {
   --working-with-content-controls-bg-color: #1a1a1a;
   --working-with-content-controls-input-color: white;
   --working-with-content-controls-input-bg-color: #111111;

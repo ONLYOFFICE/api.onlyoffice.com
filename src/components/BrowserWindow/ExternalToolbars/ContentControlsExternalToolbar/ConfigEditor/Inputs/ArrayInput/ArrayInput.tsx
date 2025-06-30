@@ -48,7 +48,7 @@ const ArrayInput: React.FC<ArrayInputProps> = ({ value, setValue }) => {
   return (
     <div className={styles.arrayInput}>
       <div className={styles.elements}>
-        Elements
+        {`Items (${keyedArray.length})`}
         <button className={styles.addElementButton} onClick={handleAddElementButton}>
           +
         </button>
