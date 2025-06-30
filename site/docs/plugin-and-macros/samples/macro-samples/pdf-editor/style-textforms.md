@@ -1,10 +1,8 @@
-# Style textforms
+# Style text forms
 
 Applies style formatting and custom text to every TextForm.
 
 ```ts
-// PDF style and custom text applier: This macro applies style formatting to every TextForm in the PDF editor as well as a custom text
-
 (function () {
   let doc = Api.GetDocument();
   let allParagraphs = doc.GetAllParagraphs();
@@ -34,7 +32,7 @@ Applies style formatting and custom text to every TextForm.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetElementsCount](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElementsCount.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateTextPr](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateTextPr.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontSize.md), [SetColor](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetColor.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontFamily.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetBold.md), [SetComb](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md), [SetTextPr](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetTextPr.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetElementsCount](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElementsCount.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateTextPr](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTextPr.md), [SetFontSize](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontSize.md), [SetColor](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetColor.md), [SetFontFamily](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontFamily.md), [SetBold](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetBold.md), [SetComb](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md), [SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md), [SetTextPr](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetTextPr.md)
 
 ## Result
 

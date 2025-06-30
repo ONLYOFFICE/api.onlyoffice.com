@@ -1,6 +1,6 @@
 # Change date format
 
-Change the default date format in the UsedRange from m/d/yyyy to d/m/yyyy.
+Changes the default date format in the UsedRange from m/d/yyyy to d/m/yyyy.
 
 ```ts
 (function () {
@@ -12,16 +12,6 @@ Change the default date format in the UsedRange from m/d/yyyy to d/m/yyyy.
   let firstColIndex = range.GetCells().Col;
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(
-    "Column indexes before clearing format: " +
-      firstColIndex +
-      " " +
-      lastColIndex
-  ); // Testing column indexes: the first should be accurate, the last should be +1
-  console.log(
-    "Row indexes before clearing format: " + firstRowIndex + " " + lastRowIndex
-  ); // Testing row indexes: the first should be accurate, the last should be +1
 
   let dateRegex =
     /^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[0-2])\/(19\d{2}|20\d{2})$/;
@@ -58,7 +48,7 @@ Change the default date format in the UsedRange from m/d/yyyy to d/m/yyyy.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetNumberFormat](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetNumberFormat.md), [SetNumberFormat](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md), [Clear](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [GetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetNumberFormat.md), [SetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md), [Clear](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

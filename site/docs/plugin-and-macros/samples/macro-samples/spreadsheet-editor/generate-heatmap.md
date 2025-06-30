@@ -1,6 +1,6 @@
 # Generate heatmap
 
-Colors a table based on value density, with darker colors for higher numbers.
+Colors the selected table based on value density, with darker colors for higher numbers.
 
 ```ts
 (function () {
@@ -19,9 +19,6 @@ Colors a table based on value density, with darker colors for higher numbers.
   let firstColIndex = range.GetCells().Col;
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(firstColIndex + " " + lastColIndex); // Testing if we got the right column indexes; the first should be on the spot, the last should be higher by 1
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing if we got the right row indexes; the first should be on the spot, the last should be higher by 1
 
   let values = []; //We will store numbers from selected data here
 
@@ -60,7 +57,7 @@ Colors a table based on value density, with darker colors for higher numbers.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [CreateColorFromRGB](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [SetFillColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
 
 ## Result
 

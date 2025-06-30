@@ -1,10 +1,8 @@
 # Standard date format
 
-Standardizes all date formats across the selected range and entire spreadsheet.
+Standardizes all date formats across the selected range or the entire spreadsheet.
 
 ```ts
-// Date Formatter: Standardize date formats across a selected range and the entire spreadsheet.
-
 (function () {
   let worksheet = Api.GetActiveSheet();
 
@@ -14,13 +12,13 @@ Standardizes all date formats across the selected range and entire spreadsheet.
 
   let range;
 
-  // One of the selection options bellow should remain uncommented
+  // One of the selection options below should remain uncommented
 
   //Option 1 - Default: targets the whole range
   range = worksheet.GetUsedRange(); // Uncommented targets all the used cells on the document
 
   //Option 2 - Takes the selected range with mouse
-  //range = worksheet.GetSelection(); // Uncommented uses mouse based selection
+  //range = worksheet.GetSelection(); // Uncommented uses mouse-based selection
 
   //Option 3 - Manually define the range
   //range = worksheet.GetRange("B5:D9"); // Uncommented enables manual selection
@@ -31,9 +29,6 @@ Standardizes all date formats across the selected range and entire spreadsheet.
   let firstColIndex = range.GetCells().Col;
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(firstColIndex + " " + lastColIndex); // Testing column indexes: first should be accurate, last should be +1
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing row indexes: first should be accurate, last should be +1
 
   for (let i = firstRowIndex; i < lastRowIndex; i++) {
     for (let j = firstColIndex; j < lastColIndex; j++) {
@@ -46,7 +41,7 @@ Standardizes all date formats across the selected range and entire spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetNumberFormat](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md)
 
 ## Result
 

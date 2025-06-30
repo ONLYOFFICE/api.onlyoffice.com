@@ -1,22 +1,24 @@
-# Replace dateforms with textforms
+# Replace date forms with text forms
 
-Replaces all instances of DateForms in the sheet with equivalent TextForms
+Replaces all instances of DateForms in the document with equivalent TextForms.
 
 ```ts
 (function () {
   let doc = Api.GetDocument();
   let allParagraphs = doc.GetAllParagraphs();
   let positionAndValue = [];
-  let newElement = {};
 
   for (let i = 0; i < allParagraphs.length; i++) {
     for (let j = 0; j < allParagraphs[i].GetElementsCount(); j++) {
-      if (allParagraphs[i].GetElement(j).GetClassType() == "form") {
-        console.log(allParagraphs[i].GetElement(j).GetText());
-        newElement = {
+      let elem = allParagraphs[i].GetElement(j);
+      console.log(elem.GetClassType())
+      let text = elem.GetText();
+
+      if (/^\d{2}\/\d{2}\/\d{4}$/.test(text)) {
+        let newElement = {
           paragraph: i,
           element: j,
-          value: allParagraphs[i].GetElement(j).GetText(),
+          value: text,
         };
         positionAndValue.push(newElement);
       }
@@ -39,7 +41,7 @@ Replaces all instances of DateForms in the sheet with equivalent TextForms
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetElementsCount](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElementsCount.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetClassType](../../../../office-api/usage-api/text-document-api/ApiTextForm/Methods/GetClassType.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiTextForm/Methods/GetText.md), [RemoveElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveElement.md), [CreateTextForm](../../../../office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [AddElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetElementsCount](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElementsCount.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiDateForm/Methods/GetText.md), [RemoveElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveElement.md), [CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md)
 
 ## Result
 

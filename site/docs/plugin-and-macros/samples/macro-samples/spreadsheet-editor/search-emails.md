@@ -7,7 +7,7 @@ Scans the spreadsheet for email addresses and compiles them into a separate colu
   let worksheet = Api.GetActiveSheet();
   let range;
 
-  // One of the selection options bellow should remain uncommented
+  // One of the selection options below should remain uncommented
 
   //Option 1 - Default, takes the whole range
   range = worksheet.GetUsedRange(); // Uncommented: targets all the used cells in the document
@@ -24,9 +24,6 @@ Scans the spreadsheet for email addresses and compiles them into a separate colu
   let firstColIndex = range.GetCells().Col;
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(firstColIndex + " " + lastColIndex); // Testing if we got the right column indexes — first should be correct, last should be higher by 1
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing if we got the right row indexes — first should be correct, last should be higher by 1
 
   let emailRegex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -48,13 +45,13 @@ Scans the spreadsheet for email addresses and compiles them into a separate colu
   let firstUsedCol = usedRange.GetCells().Col;
   let lastUsedCol = usedData[0].length + firstUsedCol;
 
-  for (i = 1; i <= emails.length; i++) {
+  for (let i = 1; i <= emails.length; i++) {
     worksheet.GetCells(i, lastUsedCol).SetValue(emails[i - 1]);
   }
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

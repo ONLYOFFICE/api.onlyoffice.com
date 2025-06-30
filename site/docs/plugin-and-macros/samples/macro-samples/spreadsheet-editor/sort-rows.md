@@ -2,10 +2,10 @@
 
 Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending or descending order.
 
+The default date format is *m/d/yyyy*. The macro is capable of detecting dates in the *d/m/yyyy* format, but only if dates are entered in this format before running the macro.
+
 ```ts
 (function () {
-  //The default date format is m/d/yyyy. The macro is capable of detecting dates in the d/m/yyyy format, but only if dates are entered in that format before running the macro.
-
   let hasHeaders;
 
   //Leave one option uncommented
@@ -29,15 +29,10 @@ Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending o
 
   let firstRowIndex = range.GetCells().Row;
   let firstColIndex = range.GetCells().Col;
-  let lastRowIndex = data.length + firstRowIndex;
-  let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(firstColIndex + " " + lastColIndex); // Testing if we got the correct column indexes; the last should be one higher
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing if we got the correct row indexes; the last should be one higher
 
   let dateIndex = -1;
 
-  //Loops for checking where in the spreadsheet is the date column, after we find it, we set the dateIndex to point to that column index
+  //Loops for checking where in the spreadsheet the date column is. After we find it, we set the dateIndex to point to that column index
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[0].length; j++) {
       let format = worksheet
@@ -68,7 +63,7 @@ Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending o
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetNumberFormat](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetNumberFormat.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [GetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetNumberFormat.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

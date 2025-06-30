@@ -98,18 +98,18 @@ Extracts rows containing negative values and inserts them into a new sheet.
   //Creating a new worksheet
   Api.AddSheet("Negative_Rows");
 
-  let sheetNeagative = Api.GetSheet("Negative_Rows");
+  let sheetNegative = Api.GetSheet("Negative_Rows");
 
   //Using negativeRowsData, we populate the new worksheet with the rows
   for (let i = 0; i < negativeRowsData.length; i++) {
     for (let j = 0; j < negativeRowsData[0].length; j++) {
-      sheetNeagative.GetCells(i + 1, j + 1).SetValue(negativeRowsData[i][j]);
+      sheetNegative.GetCells(i + 1, j + 1).SetValue(negativeRowsData[i][j]);
     }
   }
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [Clear](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md), [AddSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddSheet.md), [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [Clear](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md), [AddSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/AddSheet.md), [GetSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

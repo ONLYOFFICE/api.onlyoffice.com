@@ -7,7 +7,7 @@ Assigns titles to all columns in a table based on the values in the first row fo
   let worksheet = Api.GetActiveSheet();
   let range;
 
-  // One of the selection options bellow should remain uncommented
+  // One of the selection options below should remain uncommented
   range = worksheet.GetSelection(); // Uncommented: uses mouse based selection
   //range = worksheet.GetUsedRange();  // Uncommented: targets all the used cells in the document
   //range = worksheet.GetRange("B5:D9"); // Uncommented: enables manual selection
@@ -22,9 +22,6 @@ Assigns titles to all columns in a table based on the values in the first row fo
   let firstColIndex = range.GetCells().Col;
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(firstColIndex + " " + lastColIndex); // Testing if we got the right column indexes — first should be correct, last should be higher by 1
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing if we got the right row indexes — first should be correct, last should be higher by 1
 
   let table = [];
 
@@ -53,12 +50,10 @@ Assigns titles to all columns in a table based on the values in the first row fo
     table.push("/");
   }
 
-  console.log(table);
-
   let firstIndex = firstColIndex;
   let secondIndex = firstRowIndex;
 
-  for (i = 0; i < table.length; i++) {
+  for (let i = 0; i < table.length; i++) {
     if (table[i] != "/") {
       worksheet.GetCells(secondIndex, firstIndex).SetValue(table[i]);
       firstIndex++;
@@ -70,7 +65,7 @@ Assigns titles to all columns in a table based on the values in the first row fo
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

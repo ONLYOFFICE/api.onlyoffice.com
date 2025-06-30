@@ -13,17 +13,6 @@ Removes the default formatting for the selected range.
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
 
-  //Testing used range BEFORE clearing format
-  console.log(
-    "Column indexes before clearing format: " +
-      firstColIndex +
-      " " +
-      lastColIndex
-  ); // Testing if we got the right column indexes; the first should be correct, the last should be higher by 1
-  console.log(
-    "Row indexes before clearing format: " + firstRowIndex + " " + lastRowIndex
-  ); // Testing if we got the right row indexes; the first should be correct, the last should be higher by 1
-
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[0].length; j++) {
       if (
@@ -42,21 +31,10 @@ Removes the default formatting for the selected range.
   firstColIndex = range.GetCells().Col;
   lastRowIndex = data.length + firstRowIndex;
   lastColIndex = data[0].length + firstColIndex;
-
-  //Testing used range AFTER clearing format
-  console.log(
-    "Column indexes after clearing format: " +
-      firstColIndex +
-      " " +
-      lastColIndex
-  ); // Testing if we got the right column indexes; the first should be correct, the last should be higher by 1
-  console.log(
-    "Row indexes after clearing format: " + firstRowIndex + " " + lastRowIndex
-  ); // Testing if we got the right row indexes; the first should be correct, the last should be higher by 1
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [Clear](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [Clear](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md)
 
 ## Result
 

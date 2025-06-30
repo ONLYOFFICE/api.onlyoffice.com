@@ -3,14 +3,12 @@
 Converts data layout by transposing rows into columns.
 
 ```ts
-// Data Transposer: Convert data between rows and columns.
-
 (function () {
   let worksheet = Api.GetActiveSheet();
   let range;
 
-  // One of the selection options bellow should remain uncommented
-  range = worksheet.GetSelection(); // Uncommented: for mouse based selection
+  // One of the selection options below should remain uncommented
+  range = worksheet.GetSelection(); // Uncommented: for mouse-based selection
   //range = worksheet.GetUsedRange();  // Uncommented: targets all the used cells in the document
   //range = worksheet.GetRange("B5:D9"); // Uncommented: enables manual selection
 
@@ -21,9 +19,6 @@ Converts data layout by transposing rows into columns.
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
 
-  console.log(firstColIndex + " " + lastColIndex); // Testing column indexes: first should match exactly, last should be one higher
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing row indexes: first should match exactly, last should be one higher
-
   let table = [];
 
   for (let i = 0; i < lastRowIndex - firstRowIndex; i++) {
@@ -33,14 +28,12 @@ Converts data layout by transposing rows into columns.
     table.push("/");
   }
 
-  console.log(table);
-
   range.Clear();
 
   let firstIndex = firstColIndex;
   let secondIndex = firstRowIndex;
 
-  for (i = 0; i < table.length; i++) {
+  for (let i = 0; i < table.length; i++) {
     if (table[i] != "/") {
       worksheet.GetCells(secondIndex, firstIndex).SetValue(table[i]);
       secondIndex++;
@@ -52,7 +45,7 @@ Converts data layout by transposing rows into columns.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [Clear](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [Clear](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Clear.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

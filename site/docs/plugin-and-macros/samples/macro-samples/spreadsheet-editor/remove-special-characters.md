@@ -1,13 +1,13 @@
 # Remove special characters
 
-Removes special characters like @, #, and \$ from cell text.
+Removes special characters like @, #, \$ and others from cell text.
 
 ```ts
 (function () {
   let worksheet = Api.GetActiveSheet();
   let range;
 
-  // One of the selection options bellow should remain uncommented
+  // One of the selection options below should remain uncommented
 
   //Option 1 - Default, takes the whole range
   range = worksheet.GetUsedRange(); // Uncommented: targets all the used cells in the document
@@ -28,9 +28,6 @@ Removes special characters like @, #, and \$ from cell text.
   let firstColIndex = range.GetCells().Col;
   let lastRowIndex = data.length + firstRowIndex;
   let lastColIndex = data[0].length + firstColIndex;
-
-  console.log(firstColIndex + " " + lastColIndex); // Testing column indexes: first should match exactly, last should be one higher
-  console.log(firstRowIndex + " " + lastRowIndex); // Testing row indexes: first should match exactly, last should be one higher
 
   let specialChars = [
     "!",
@@ -82,7 +79,7 @@ Removes special characters like @, #, and \$ from cell text.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetSelection.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCells.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 
