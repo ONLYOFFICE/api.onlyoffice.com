@@ -1,9 +1,8 @@
-# Organise slides
+# Sort slides
 
 Sorts slides alphabetically or in reverse order based on their title groups.
 
 ```ts
-//With this macro you can sort the slides alphabetically or reverse alphabetically according to the title group.
 (function() {
     // Sorting options
     let options = {
@@ -16,10 +15,10 @@ Sorts slides alphabetically or in reverse order based on their title groups.
         // Merge options
         opts = opts || options;
         
-        // Get presentation
+        // Get a presentation
         let presentation = Api.GetPresentation();
         
-        // Check slide count
+        // Check slides count
         let slideCount = presentation.GetSlidesCount();
         if (slideCount <= 1) return; // Nothing to sort
         
@@ -27,26 +26,26 @@ Sorts slides alphabetically or in reverse order based on their title groups.
         let slidesInfo = [];
         
         for (let i = 0; i < slideCount; i++) {
-            let oSlide = presentation.GetSlideByIndex(i);
-            if (!oSlide) continue;
+            let slide = presentation.GetSlideByIndex(i);
+            if (!slide) continue;
             
             // Get slide shapes
-            let oShapes = oSlide.GetAllShapes();
+            let shapes = slide.GetAllShapes();
             let slideTitle = "";
             
             // Search for text in shapes
-            if (oShapes && oShapes.length > 0) {
-                for (let j = 0; j < oShapes.length; j++) {
-                    let oShape = oShapes[j];
-                    if (!oShape) continue;
+            if (shapes && shapes.length > 0) {
+                for (let j = 0; j < shapes.length; j++) {
+                    let shape = shapes[j];
+                    if (!shape) continue;
                     
-                    let oContent = oShape.GetDocContent();
-                    if (!oContent) continue;
+                    let content = shape.GetDocContent();
+                    if (!content) continue;
                     
-                    let oParagraph = oContent.GetElement(0);
-                    if (!oParagraph) continue;
+                    let paragraph = content.GetElement(0);
+                    if (!paragraph) continue;
                     
-                    let text = oParagraph.GetText();
+                    let text = paragraph.GetText();
                     if (text && text.trim()) {
                         // Shorter text is more likely to be a title
                         if (!slideTitle || text.length < slideTitle.length) {
@@ -56,14 +55,14 @@ Sorts slides alphabetically or in reverse order based on their title groups.
                 }
             }
             
-            // Extract number from title
+            // Extract a number from title
             let number = null;
             let match = slideTitle.match(/^(\d+)[\s\.\-\)]+/);
             if (match && match[1]) {
                 number = parseInt(match[1], 10);
             }
             
-            // Prepare title for sorting
+            // Prepare the title for sorting
             let sortTitle = slideTitle || "Untitled " + i;
             if (!opts.caseSensitive) {
                 sortTitle = sortTitle.toLowerCase();
@@ -71,7 +70,7 @@ Sorts slides alphabetically or in reverse order based on their title groups.
             
             slidesInfo.push({
                 index: i,
-                slide: oSlide,
+                slide: slide,
                 title: slideTitle || "Untitled " + i,
                 sortTitle: sortTitle,
                 number: number
@@ -99,12 +98,11 @@ Sorts slides alphabetically or in reverse order based on their title groups.
         
         // Move slides to new positions
         let moved = 0;
-        //Issue: When moving slides, the process stops on more than 8 slides and when I run the macro again, the control continues and ends successfully.
         for (let k = slidesInfo.length - 1; k >= 0; k--) {
             slidesInfo[k].slide.MoveTo(k);
             moved++;
         }
-        
+
         // Show results
         if (moved > 0) {
             let message = moved + " slides rearranged.";
@@ -119,7 +117,7 @@ Sorts slides alphabetically or in reverse order based on their title groups.
 })();
 ```
 
-Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetElement](../../../../office-api/usage-api/presentation-api/ApiDocContent/Methods/GetElement.md), [GetText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetText.md), [MoveTo](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/MoveTo.md)
+Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetElement](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElement.md), [MoveTo](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/MoveTo.md)
 
 ## Result
 

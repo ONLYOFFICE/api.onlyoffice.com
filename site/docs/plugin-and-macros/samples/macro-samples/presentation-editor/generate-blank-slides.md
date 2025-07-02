@@ -3,13 +3,12 @@
 Inserts a blank slide after every _n_ slides in the presentation, where _n_ is a configurable interval.
 
 ```ts
-//With this macro it counts 3 and multiples of 3 and creates 1 blank slide after every 3 slides. The created slides continue by replacing the next slide.
 (function()
 {
     // Get the presentation object
     let presentation = Api.GetPresentation();
     
-    // Get total number of slides in the presentation
+    // Get the total number of slides in the presentation
     let totalSlides = presentation.GetSlidesCount();
     
     // Define position interval for blank slides (every 3rd slide)
@@ -17,7 +16,7 @@ Inserts a blank slide after every _n_ slides in the presentation, where _n_ is a
 
     // Iterate through all slides
     for (let i = 0; i < totalSlides; i++) {
-        // Check if current position is a multiple of the blank slide position
+        // Check if the current position is a multiple of the blank slide position
         if ((i + 1) % blankSlidePosition === 0) {
             // Create a new blank slide
             let oSlide = Api.CreateSlide();
