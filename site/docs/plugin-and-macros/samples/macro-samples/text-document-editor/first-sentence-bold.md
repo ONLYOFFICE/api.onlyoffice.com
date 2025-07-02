@@ -5,7 +5,7 @@ Sets the **bold** style property to the first sentence of every paragraph.
 ```ts
 (function () {
     let doc = Api.GetDocument();
-    let element = doc.GetElement(0)
+    let element = doc.GetElement(0);
 
     // Get all paragraphs in the document
     let paragraphs = doc.GetAllParagraphs();
@@ -34,9 +34,7 @@ Sets the **bold** style property to the first sentence of every paragraph.
             let newRange = Api.CreateRange(paragraph, 0, punctuationPos - paragraph.GetRange().GetStartPos());
             newRange.SetBold(true);
         }
-
     });
-
 })();
 ```
 

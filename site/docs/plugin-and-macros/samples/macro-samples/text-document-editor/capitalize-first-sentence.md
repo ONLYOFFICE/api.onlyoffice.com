@@ -11,7 +11,6 @@ Capitalizes the first letter of the first word in every paragraph.
         let paraText = paragraph.GetText();
         if (!paraText) return;
 
-        // 1. Bold the first non-space character of the paragraph
         let pos = 0;
         while (pos < paraText.length && /\s/.test(paraText[pos])) pos++;
 

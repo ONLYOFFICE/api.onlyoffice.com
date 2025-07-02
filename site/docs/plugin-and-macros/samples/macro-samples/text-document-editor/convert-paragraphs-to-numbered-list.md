@@ -1,4 +1,4 @@
-# Paragraphs to numbered list
+# Convert paragraphs to numbered list
 
 Converts all paragraphs in the document to a numbered list.
 
