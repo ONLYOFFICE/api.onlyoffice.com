@@ -6,7 +6,7 @@ Converts all paragraphs in the document to a numbered list.
 (function () {
     let doc = Api.GetDocument();
 
-    // Grab every paragraph in one shot
+    // Retrieve every paragraph
     let allParas = doc.GetAllParagraphs();
 
     // Define a numbered style
@@ -19,7 +19,7 @@ Converts all paragraphs in the document to a numbered list.
         let para = allParas[i];
         let txt = para.GetText();
 
-        //Check whether the paragraph is empty or only whitespace
+        //Check whether the paragraph is empty
         if (txt && txt.trim().length) {
             parasToNumber.push(para);
         }
@@ -32,7 +32,7 @@ Converts all paragraphs in the document to a numbered list.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [CreateNumbering](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/CreateNumbering.md), [GetLevel](../../../../office-api/usage-api/text-document-api/ApiNumbering/Methods/GetLevel.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [SetNumbering](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetNumbering.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [CreateNumbering](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateNumbering.md), [GetLevel](/docs/office-api/usage-api/text-document-api/ApiNumbering/Methods/GetLevel.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [SetNumbering](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetNumbering.md)
 
 ## Result
 

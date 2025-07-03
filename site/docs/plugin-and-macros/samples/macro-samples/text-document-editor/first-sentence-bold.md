@@ -22,7 +22,6 @@ Sets the **bold** style property to the first sentence of every paragraph.
                     firstPos = pos;
                 }
             }
-            console.log("pargraph:" + paragraphCount)
         }
         return firstPos;
     }
@@ -38,7 +37,7 @@ Sets the **bold** style property to the first sentence of every paragraph.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetElement.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [Search](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/Search.md), [GetStartPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetStartPos.md), [CreateRange](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateRange.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetBold.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetElement.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [Search](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/Search.md), [GetStartPos](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/GetStartPos.md), [CreateRange](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateRange.md), [GetRange](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [SetBold](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetBold.md)
 
 ## Result
 

@@ -26,7 +26,7 @@ Capitalizes the first letter of the first word in every paragraph.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [GetStartPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetStartPos.md), [SetStartPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetStartPos.md), [SetEndPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetEndPos.md), [SetCaps](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetCaps.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [GetStartPos](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/GetStartPos.md), [SetStartPos](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetStartPos.md), [SetEndPos](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetEndPos.md), [SetCaps](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetCaps.md)
 
 ## Result
 
