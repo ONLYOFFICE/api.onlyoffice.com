@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Plugins and macros
+
+* Added a sample for asynchronous custom functions
+
 ## 6.1.0
 
 ### New features
