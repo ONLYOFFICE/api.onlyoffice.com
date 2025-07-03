@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the last document element.
 
 ```javascript editor-docx
+// How to bold the final element of the document.
+
+// Find the last paragraph and update its text properties.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a sample text №1.");

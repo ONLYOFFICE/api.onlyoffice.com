@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a tab stop to the run.
 
 ```javascript editor-xlsx
+// How to add a tab to a sentence.
+
+// Break two lines of a text run with a tab. 
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

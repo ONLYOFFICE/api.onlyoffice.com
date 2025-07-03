@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)[]
+[ApiTable](../../ApiTable/ApiTable.md)[]
 
 ## Example
 
 This example showh how to get an array of all tables from the document content.
 
 ```javascript editor-docx
+// Get all tables added to the document.
+
+// How to retrieve all tables and add a text to its first cell.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

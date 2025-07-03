@@ -18,13 +18,17 @@ expression.SetIndLeft(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph left side indentation.
 
 ```javascript editor-xlsx
+// How to change the sentence's left side indentation of the paragraph.
+
+// Get a paragraph from the shape's content then add a text specifying the left side indentation.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

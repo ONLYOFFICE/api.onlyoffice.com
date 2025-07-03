@@ -2,16 +2,25 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.0
+
+- Added the *theme-white* and *theme-night* theme ids to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
+- Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
+- Added opening for [md](../usage-api/config/document/document.md#filetype) format.
+- Added the ability to [preload](../get-started/configuration/preload.md) the editor static resources.
+- Added the [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) parameter for the Chinese (Simplified) UI.
+- Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
+- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
+- Added the *diagram* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
+
 ## Version 8.3
 
-<!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
-- Added the *diagram* document type to the [documentType](../usage-api/config.md#documenttype) parameter.-->
 - Added the [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) parameter.
 - Added the [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) and [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) parameters.
 - Added the [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../usage-api/config/editor/customization/customization-standard-branding.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../usage-api/config/editor/customization/customization-standard-branding.md#mobileinfo) parameter.
-- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/config.md#documenttype) formats.
+- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/document/document.md#filetype) formats.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
@@ -44,7 +53,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
-- Added the [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
+- Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) methods to the *Automation API*.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.

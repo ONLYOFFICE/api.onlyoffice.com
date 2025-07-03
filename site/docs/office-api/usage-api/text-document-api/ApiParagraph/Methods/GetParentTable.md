@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a table that contains the paragraph.
 
 ```javascript editor-docx
+// How to get the parent table of the paragraph.
+
+// Remove the cell from the parent element.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

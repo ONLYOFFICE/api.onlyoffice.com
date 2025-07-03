@@ -17,7 +17,7 @@ To build the **Encryption** plugin, you need to create three files:
 - JS file with code,
 - JSON file with config.
 
-More information about the plugin structure can be found [here](../../../plugin-and-macros/structure/manifest/manifest.md).
+More information about the plugin structure can be found [here](../../../plugin-and-macros/structure/configuration/configuration.md).
 
 Let’s have a look at the config:
 
@@ -50,7 +50,7 @@ Let’s have a look at the config:
 }
 ```
 
-All the config parameters are described in the [documentation](../../../plugin-and-macros/structure/manifest/manifest.md).
+All the config parameters are described in the [documentation](../../../plugin-and-macros/structure/configuration/configuration.md).
 
 After the config file is ready, create the plugin code file with the following contents:
 

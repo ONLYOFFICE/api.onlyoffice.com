@@ -19,13 +19,17 @@ expression.SetTemplateType(sType, sSymbol);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets one of the existing predefined numbering templates.
 
 ```javascript editor-docx
+// How to set template type of the numbering.
+
+// Set "A." template to the numbering.
+
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
 let numLvl = numbering.GetLevel(0);

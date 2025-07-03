@@ -40,9 +40,9 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications):
 
-  ``` sh
-  cd apps/
-  ```
+    ``` sh
+    cd apps/
+    ```
 
 2. Get the ownCloud ONLYOFFICE integration app. There are several ways to do that:
 
@@ -60,9 +60,9 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 3. Change the owner to update the application right from ownCloud web interface:
 
-  ``` sh
-  chown -R www-data:www-data onlyoffice
-  ```
+    ``` sh
+    chown -R www-data:www-data ы
+    ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 

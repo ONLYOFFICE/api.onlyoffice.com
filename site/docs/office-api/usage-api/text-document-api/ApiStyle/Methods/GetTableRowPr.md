@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the table row properties of the current style.
 
 ```javascript editor-docx
+// How to get table row and set its height.
+
+// Resize the row of the table.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 let table = Api.CreateTable(2, 2);

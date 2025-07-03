@@ -23,6 +23,10 @@ JSON
 This example converts the ApiRGBColor object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON from the color object.
+
+// Convert the RGB color object to json and add it to the document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let rgbColor = Api.CreateRGBColor(255, 111, 61);

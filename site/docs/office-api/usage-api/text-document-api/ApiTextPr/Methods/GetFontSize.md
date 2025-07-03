@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example shows how to get the font size of the text.
 
 ```javascript editor-docx
+// How to know the font size of the form.
+
+// Retrieve text properties of the form to find out its font size.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

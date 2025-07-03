@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example gets an outline property of a text.
 
 ```javascript editor-xlsx
+// How to find out whether a text is outlined or not.
+
+// Get a text outline property type, for example as a stroke.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

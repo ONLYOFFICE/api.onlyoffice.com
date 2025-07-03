@@ -26,6 +26,10 @@ boolean
 This example sets the properties from another drawing to the drawing.
 
 ```javascript editor-docx
+// How to apply the properties of one shape to another.
+
+// Create the second drawing with the same style.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with a shape. ");

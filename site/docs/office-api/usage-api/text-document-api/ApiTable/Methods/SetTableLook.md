@@ -29,13 +29,17 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example shows how to set table lock.
 
 ```javascript editor-docx
+// How to set the table look.
+
+// Create a table and indicate its look properties.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We set the table look to override the current table style:");

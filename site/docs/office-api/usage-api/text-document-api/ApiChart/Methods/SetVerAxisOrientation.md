@@ -18,13 +18,17 @@ expression.SetVerAxisOrientation(bIsMinMax);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the vertical axis orientation.
 
 ```javascript editor-docx
+// How to set an orientation of vertical axis.
+
+// Create a chart, set its properties and its vertical axis orientation.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

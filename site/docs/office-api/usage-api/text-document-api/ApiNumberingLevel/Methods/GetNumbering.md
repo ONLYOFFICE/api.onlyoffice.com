@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the numbering definition.
 
 ```javascript editor-docx
+// How to retrieve the numbering.
+
+// Get the numbering of the level.
+
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
 let numLvl = numbering.GetLevel(0);

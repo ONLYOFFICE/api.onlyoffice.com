@@ -26,6 +26,10 @@ boolean
 This example sets values to the specified chart series.
 
 ```javascript editor-docx
+// How to set values to the specified ApiChart object.
+
+// Create a chart, set its properties and its series values.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

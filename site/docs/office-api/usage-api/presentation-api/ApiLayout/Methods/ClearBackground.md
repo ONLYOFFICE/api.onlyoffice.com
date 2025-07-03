@@ -23,17 +23,23 @@ boolean
 This example clears backgound for a slide.
 
 ```javascript editor-pptx
-var oPresentation = Api.GetPresentation();
-var oSlide = oPresentation.GetSlideByIndex(0);
-var oMaster = oPresentation.GetMaster(0);
-var oLayout = oMaster.GetLayout(0);
-var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
-var oFill = Api.CreateRadialGradientFill([oGs1, oGs2]);
-oLayout.SetBackground(oFill);
-oSlide.FollowLayoutBackground();
-oSlide = Api.CreateSlide();
-oPresentation.AddSlide(oSlide);
-oLayout.ClearBackground();
-oSlide.FollowLayoutBackground();
+// How to remove a background from a layout.
+
+// Clear background from a layout object.
+
+const presentation = Api.GetPresentation();
+let slide = presentation.GetSlideByIndex(0);
+const master = presentation.GetMaster(0);
+const layout = master.GetLayout(0);
+
+const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const fill = Api.CreateRadialGradientFill([gs1, gs2]);
+layout.SetBackground(fill);
+slide.FollowLayoutBackground();
+slide = Api.CreateSlide();
+presentation.AddSlide(slide);
+layout.ClearBackground();
+slide.FollowLayoutBackground();
+
 ```

@@ -27,6 +27,10 @@ string
 This example returns a text from the text run.
 
 ```javascript editor-docx
+// How to get a raw text value.
+
+// Get a run, get its text value and show it in the document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

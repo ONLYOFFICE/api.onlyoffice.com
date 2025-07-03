@@ -23,6 +23,10 @@ string
 This example shows how to get the comment ID.
 
 ```javascript editor-xlsx
+// How to get a comment ID.
+
+// Find a comment by its ID and display its ID.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 let range = worksheet.GetRange("A1");

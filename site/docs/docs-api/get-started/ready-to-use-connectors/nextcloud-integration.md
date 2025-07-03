@@ -54,9 +54,9 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
 3. Change the owner to update the application right from Nextcloud web interface:
 
-  ``` sh
-  chown -R www-data:www-data onlyoffice
-  ```
+    ``` sh
+    chown -R www-data:www-data onlyoffice
+    ```
 
 4. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 

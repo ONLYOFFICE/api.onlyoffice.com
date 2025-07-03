@@ -25,6 +25,10 @@ This method doesn't return any data.
 This example pastes the Range object to the specified range.
 
 ```javascript editor-xlsx
+// How to get a range and paste it into another one.
+
+// Create a range and add it to another one.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B4").SetValue("1");
 worksheet.GetRange("C4").SetValue("2");

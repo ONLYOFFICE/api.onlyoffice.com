@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example showh how to get a parent table cell that contains the graphic object.
 
 ```javascript editor-docx
+// Get an element's parent table cell.
+
+// How to show the shape's wrapper table cell.
+
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 let table = Api.CreateTable(3, 3);

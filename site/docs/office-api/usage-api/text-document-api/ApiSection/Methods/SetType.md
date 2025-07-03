@@ -19,13 +19,17 @@ expression.SetType(sType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets section break type "continuous".
 
 ```javascript editor-docx
+// How to update a section type.
+
+// Create a section from a paragraph and make it continuous.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.CreateSection(paragraph);

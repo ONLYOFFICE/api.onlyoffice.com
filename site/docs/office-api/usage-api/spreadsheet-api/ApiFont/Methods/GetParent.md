@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the parent ApiCharacters object of the specified font.
 
 ```javascript editor-xlsx
+// How to determine a font object's parent.
+
+// Get a parent of a font and add text to it.
+
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
 range.SetValue("This is just a sample text.");

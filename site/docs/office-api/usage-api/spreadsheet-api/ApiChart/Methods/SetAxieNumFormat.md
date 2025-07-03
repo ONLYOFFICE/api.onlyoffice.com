@@ -26,6 +26,10 @@ boolean
 This example sets the specified numeric format to the axis values.
 
 ```javascript editor-xlsx
+// How to format numbers of the axis.
+
+// Apply number format for the chart axis using an expression.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

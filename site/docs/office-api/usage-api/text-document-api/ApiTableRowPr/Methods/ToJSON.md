@@ -23,6 +23,10 @@ JSON
 This example converts the ApiTableRowPr object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON from the table row properties.
+
+// Convert the table row properties to json and add it to the document.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

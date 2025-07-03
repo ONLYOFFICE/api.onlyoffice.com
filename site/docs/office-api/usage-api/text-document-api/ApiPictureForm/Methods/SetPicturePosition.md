@@ -29,6 +29,10 @@ boolean
 This example sets the picture position inside the form.
 
 ```javascript editor-docx
+// How to move the picture inside the form.
+
+// Specify the picture position of the form.
+
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});
 let paragraph = doc.GetElement(0);

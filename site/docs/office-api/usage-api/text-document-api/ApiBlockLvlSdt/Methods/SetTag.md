@@ -18,13 +18,17 @@ expression.SetTag(tag);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example shows how to set the tag attribute for the container.
+This example shows how to set a tag attribute for a container.
 
 ```javascript editor-docx
+// Creates a block content control and sets a tag to it.
+
+// How to add a tag to the ApiBlockLvlSdt object.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with a tag set to it.");

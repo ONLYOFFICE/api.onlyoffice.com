@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-docx
+// How to get a class type of ApiComment.
+
+// Retrieve class type of ApiComment object and insert it to the slide.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

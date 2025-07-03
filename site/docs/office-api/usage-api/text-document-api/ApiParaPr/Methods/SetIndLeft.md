@@ -18,13 +18,17 @@ expression.SetIndLeft(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph left side indentation.
 
 ```javascript editor-docx
+// How to set the indentation for the paragraph left side.
+
+// Create a new paragraph and set its left side indentation.
+
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();

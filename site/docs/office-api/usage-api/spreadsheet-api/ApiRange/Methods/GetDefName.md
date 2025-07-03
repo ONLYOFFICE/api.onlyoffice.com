@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the ApiName object of the range.
 
 ```javascript editor-xlsx
+// How to find out a range name.
+
+// Get a range, get its name and show it in the worksheet.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 worksheet.GetRange("B1").SetValue("2");
