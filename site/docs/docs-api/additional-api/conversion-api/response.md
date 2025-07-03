@@ -8,45 +8,13 @@ The request result is returned in XML format. To receive a response in JSON form
 
 ## Response parameters and their description
 
-### endConvert
-
-Defines if the conversion is completed or not.
-
-Type: boolean
-
-Example: true
-
-### error
-
-Defines an error occurred during the conversion. Possible error codes can be found [here](./error-codes.md).
-
-Type: integer
-
-Example: -3
-
-### fileType
-
-Defines an extension of the converted file.
-
-Type: string
-
-Example: "docm"
-
-### fileUrl
-
-Defines the link to the converted document. This parameter will be received only when the *endConvert* parameter is set to **true**.
-
-Type: string
-
-Example: `https://documentserver/url-to-converted-document.pdf`
-
-### percent
-
-Defines the percentage of the file conversion. If the *endConvert* parameter is set to **true**, the *percent* is equal to **100**.
-
-Type: integer
-
-Example: 100 
+| Parameter   | Type     | Presence | Description |
+|-------------|----------|----------|-------------|
+| `endConvert`| boolean  | required | Defines if the conversion is completed or not. |
+| `error`     | integer  | optional | Defines an error occurred during conversion. See [error codes](./error-codes.md). |
+| `fileType`  | string   | optional | Extension of the converted file. |
+| `fileUrl`   | string   | optional | Link to the converted document (only when `endConvert` is `true`). |
+| `percent`   | integer  | required | Conversion progress in percent (100 if `endConvert` is `true`). |
 
 ## Examples of responses
 
