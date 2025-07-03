@@ -25,6 +25,10 @@ boolean
 This example adds a bookmark to the specified range.
 
 ```javascript editor-docx
+// How to bookmark a range of document.
+
+// Insert a bookmark into the 'ONLYOFFICE' range.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

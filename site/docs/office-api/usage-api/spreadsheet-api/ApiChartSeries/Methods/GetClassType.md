@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a type of ApiChartSeries class and inserts it into the document.
 
 ```javascript editor-xlsx
+// How to get a chart series class type.
+
+// Get a class type of a seria.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

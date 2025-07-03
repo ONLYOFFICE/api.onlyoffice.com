@@ -25,6 +25,10 @@ boolean
 This example sets the hyperlink display text.
 
 ```javascript editor-docx
+// How to specify the hyperlink text that is displayed.
+
+// Set the visible text of the link.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

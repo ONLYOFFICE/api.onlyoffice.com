@@ -25,6 +25,10 @@ boolean
 This example sets the table wrapping style.
 
 ```javascript editor-docx
+// How to set the wrapping to the table.
+
+// Resize table by making its the width 100 percent.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text.");

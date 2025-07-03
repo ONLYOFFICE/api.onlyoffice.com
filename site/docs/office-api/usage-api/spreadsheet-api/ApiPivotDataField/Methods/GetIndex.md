@@ -20,9 +20,13 @@ number
 
 ## Example
 
-
+This example shows how to get an index of a data field.
 
 ```javascript editor-xlsx
+// How to get a table element index.
+
+// Create a pivot table, add data to it then display a custom data field's index.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');

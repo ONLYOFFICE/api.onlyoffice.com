@@ -23,13 +23,17 @@ expression.SetTableBorderBottom(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the border which will be displayed at the bottom of the table.
 
 ```javascript editor-docx
+// How to find out a style that will be applied to the table elements whish satisfy the condition.
+
+// Retrieve a conditional table style.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We add the bottom 4 point black border:");

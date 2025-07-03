@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a collection of content control objects in the current content control.
 
 ```javascript editor-docx
+// Creates three block content controls, nests two of them inside one, and returns all the inner containers in an array.
+
+// How to return an array of the ApiBlockLvlSdt objects from the specified block content control.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let innerSdt1 = Api.CreateBlockLvlSdt();

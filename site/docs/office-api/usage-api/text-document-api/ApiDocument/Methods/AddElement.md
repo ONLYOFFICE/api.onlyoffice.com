@@ -19,13 +19,17 @@ expression.AddElement(nPos, oElement);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a paragraph in document content.
 
 ```javascript editor-docx
+// How to add elements to the document content.
+
+// Clear the entire document and add a new paragraph to it.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # Icons
 
-Plugin icon image files that are specified in the [config.json](./manifest/manifest.md#variationsicons) file as the URL to the icon. This URL allows you to set the rules for theme (name, type), state (normal, hover, active), and scaling in the following format:
+Plugin icon image files that are specified in the [config.json](./configuration/configuration.md#variationsicons) file as the URL to the icon. This URL allows you to set the rules for theme (name, type), state (normal, hover, active), and scaling in the following format:
 
 ``` ini
 %parameter_name%(option1|options2|...)
@@ -66,7 +66,7 @@ Example: "svg"
 
 > Please note that all parameters are optional. You can use just the path to the icon. For example, *"resources/icon.svg"*.
 
-This string generates the objects in the old icon format (the [icon2](./manifest/manifest.md#variationsicons2) parameter):
+This string generates the objects in the old icon format (the [icon2](./configuration/configuration.md#variationsicons2) parameter):
 
 ``` ts
 [

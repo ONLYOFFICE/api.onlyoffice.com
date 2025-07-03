@@ -1,0 +1,71 @@
+---
+id: configure-csp
+title: "Configure CSP settings"
+description: "Configures the CSP (Content Security Policy) settings for the current portal."
+sidebar_label: "Configure CSP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V01v2zgQ/SvEXNICqp119+Rb6mSBdheIESfIwTCasTS22UgkS1JxvIb++2JISZY/8rGLYi+JQg5nhjNv3mO24HHpYDiFCaWllX4j+mI0GcMsAW3Iopdafc1gCKlWC7ksLY2cgQQs/SzJ+S8628Bwy7uelOdPNCaXaTjY/+G04jWXrqhA/vIbQzAEPf9BqYcEjOUwXpLj3UwXKJXrGKK1uIEEpKeiu+68lWoJVQIZudRKw/FgCLcrEqnOc0p5QeiFwDzXa8pE7VtIJfyKxChmLNp7j3Uu0434MJqMP/YgAVXmOc5zgqG3JSVAz1gY/nMKThckPD17mFVVAphlkqNhPu7cZoG5o1Pp1aUTBi0W5Mk6sdBWNAWWavl2gsKR91ItHWfqpee8YOTMTfTtLr2GquLkLDmjlYv1HZyfhzLv5XT9CMmvamAT7f9qdS6d5yaPJuOmwf+idwmsCDOyx8FOxeIY0f7VEJ0I/wEcHOTDC63/2IHMQd9Dv7mLZexhfRupPC3JQgILbQv0cenzgG1zqR7fU/4X+reytDjZJEzjdY62AhydR1+6d6YYjUc6o3cdqPZKcm/RGLJ13N9PIf/qOaXwzaRwWQMyGP92bHynsPQrbeXflIVYru4ODKdbQJd+5/3vj8QLYAkzSGBtpSdG2ha+EFqG2jT8dWHkn7Rp107Zo5NpY359UfrV4LThtaFA0dNZNTuE1KhhbRc55VV0NZwS6IjN09JatjTaeswZcgX5lWY5MNoFTKBfwRD6aGR/0DvvNzXpp0ElHNknsi5UqLQ5DGE7R0d3Nq+ORmwSbFsaDPwDCTyhlTxnATP14dicBZY5d//I02XcEnc3f3H3Z7tWTZjGoqv9hu2mIPTlyOWdY0LWj5IEHyLla4ZkJsAinOw6TECqIJp8hCFVd7ONs/LeHEW5Up6s2OjSitKRZccCVSYMOrfWlvseiJgdzIND9lxj6D2uz6Kx2H67vxW3+pFUdbbnNPpK6o8/mgH7dn/LofZB+1bNLvYKJaQTGVNXIRVlYr4JCDu7qGcq2JzV/Lor6l7Euqi1TZW0U7HjKgwLh5lEO7HI9VqspV+JvagiEEwCvB2h0d1t2GdvMWAwFNoN+/0QtadVvtGLhUypl+oiLg76LWcwX3PB3380mIfuaNOoK/Ls3RBmAtOUnBNeC2O1p9RTJiw5XdqUXEsQQ7jn329YR4pseGRXzbAw0kpFATgoKu9einr7eCz2Tr//1gx8qRZBzp4/OblU6EtLb8ONId2a8/xkgcf28+oJFtlQWVGUzos5CT33GDD5JDGA8uGIzbodeRCkMqOl8j3x1TOseTwpE+gEijjxEWXsK8zwQ+ciD70durv3O2CMKgF+e93sntlXzQOj83Y6fM6EwnGlahm8MJIplKyLNfrcG/TOubJM3wUGla5zaZUiiEQjBYdV7rz0f7m21O3ly/RNjlJxomVk+6gzU+49JMCX6OhvAqw2swRWLErDKWxblal4+WdJlkV5tlOTqKvt82+6hSADUOf/6ZZzYfO8jJA7eBKz7sYTFym/IV61nXV0c3w9uWV+rf9vKgK7gMU1/0+F6yhnOlQ7jjyvbSFHtSxxybbRZ3hallyU7lxE6ak/+FbNltp0M9xXqngP/sm3Onliu41DV1Wtfdx68URL5NGamzmrquof5lf98g==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Configure CSP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/security/csp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Configures the CSP (Content Security Policy) settings for the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"The collection of allowed domains in the Content Security Policy (CSP).","nullable":true,"example":["some text"]}},"additionalProperties":false,"description":"The request parameters for configuring the Content Security Policy (CSP) settings.","title":"CspRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"The list of CSP domains.","nullable":true,"example":["some text"]},"header":{"type":"string","description":"The CSP header.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The CSP (Content Security Policy) parameters.","title":"CspDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CspWrapper"}}}},"400":{"description":"Exception in Domains"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

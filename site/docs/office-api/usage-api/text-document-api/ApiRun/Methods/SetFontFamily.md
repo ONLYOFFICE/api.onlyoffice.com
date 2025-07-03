@@ -25,6 +25,10 @@ expression.SetFontFamily(sFontFamily);
 This example sets all 4 font slots with the specified font family.
 
 ```javascript editor-docx
+// How to set font family to the text run.
+
+// Create a new text run and change its font family.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

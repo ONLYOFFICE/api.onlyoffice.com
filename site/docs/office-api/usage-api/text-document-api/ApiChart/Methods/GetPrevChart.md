@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example show how to get the previous chart.
 
 ```javascript editor-docx
+// How to update minor horizontal gridlines of the previous chart.
+
+// Get the previous chart and set its horizontal lines as a stroke. 
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

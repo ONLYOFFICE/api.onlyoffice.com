@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets all series of ApiChart class and inserts their types into the table.
 
 ```javascript editor-xlsx
+// How to get all series of the chart and diplay their type on the worksheet.
+
+// Get all series from the chart and display their types. 
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

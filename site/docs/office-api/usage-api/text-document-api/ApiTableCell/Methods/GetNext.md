@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the next cell.
 
 ```javascript editor-docx
+// How to get next cell.
+
+// Retrieve the cell from the table and get the next one.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

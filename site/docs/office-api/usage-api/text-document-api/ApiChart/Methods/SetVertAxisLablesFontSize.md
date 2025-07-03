@@ -18,13 +18,17 @@ expression.SetVertAxisLablesFontSize(nFontSize);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies font size for the labels of the vertical axis.
 
 ```javascript editor-docx
+// How to resize a font size of the vertical axis labels.
+
+// Create a chart then change a font size of axis labels.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

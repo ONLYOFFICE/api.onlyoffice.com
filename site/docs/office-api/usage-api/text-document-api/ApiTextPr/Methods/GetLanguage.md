@@ -20,9 +20,13 @@ string
 
 ## Example
 
-
+This example shows how to find out the text language.
 
 ```javascript editor-docx
+// Get the language of the text properties.
+
+// How to know the text language property.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

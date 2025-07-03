@@ -25,6 +25,10 @@ expression.SetHighlight(sColor);
 This example specifies a highlighting color which is applied as a background to the contents of the run.
 
 ```javascript editor-docx
+// How to set highlight to the text run.
+
+// Create a new text run and highlight it.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

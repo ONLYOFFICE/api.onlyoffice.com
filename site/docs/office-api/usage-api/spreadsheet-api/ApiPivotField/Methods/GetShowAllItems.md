@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to get all items of a pivot field.
 
 ```javascript editor-xlsx
+// How to get a pivot field's all items.
+
+// Create a pivot table, add data to it then get all items of a specified pivot field.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -58,5 +62,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotWorksheet.GetRange('A12').SetValue('Style get show all items');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetShowAllItems());
-
 ```

@@ -26,6 +26,10 @@ JSON
 This example converts the ApiDrawing object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON object from the drawing.
+
+// Convert the shape to json and add it to the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);

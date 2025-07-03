@@ -717,7 +717,7 @@ const mobile = {
 
 `类型: boolean`
 
-定义 [插件](../../../../../plugin-and-macros/get-started/overview.md) 是否将启动并可用。默认值为 **true**。
+定义 [插件](../../../../../plugin-and-macros/get-started/get-started.md) 是否将启动并可用。默认值为 **true**。
 
 **示例**: `true`
 

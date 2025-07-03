@@ -25,6 +25,10 @@ expression.SetSolved(bSolved);
 This example marks a comment as solved.
 
 ```javascript editor-docx
+// How to make a comment solved.
+
+// Get all comments from the presentation and set it solved.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

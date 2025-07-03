@@ -1,6 +1,7 @@
 # GetFontFamily
 
-Gets the font family from the current text properties.
+Returns the font family from the current text properties.
+The method automatically calculates the font from the theme if the font was set via the theme.
 
 ## Syntax
 
@@ -20,9 +21,13 @@ string
 
 ## Example
 
-
+This example gets a text font family.
 
 ```javascript editor-xlsx
+// How to find out a text font family.
+
+// Get a text font family name and display it in the worksheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

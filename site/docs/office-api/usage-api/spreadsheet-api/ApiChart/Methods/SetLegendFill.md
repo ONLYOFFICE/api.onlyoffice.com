@@ -25,6 +25,10 @@ boolean
 This example sets the fill to the chart legend.
 
 ```javascript editor-xlsx
+// How to fill the chart legend with the solid fill.
+
+// Color the legend of the chart.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

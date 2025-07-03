@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example wraps the paragraph content in a mail merge field.
 
 ```javascript editor-docx
+// How to create a paragraph wrapped in 'Mail Merge Field'.
+
+// Add a paragraph to the mail merge field.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Paragraph wrapped in 'Mail Merge Field'");

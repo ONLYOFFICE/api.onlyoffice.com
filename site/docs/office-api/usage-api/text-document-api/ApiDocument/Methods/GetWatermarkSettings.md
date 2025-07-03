@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example sets the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
+// How to get watermark settings and update them.
+
+// Set text and type for the watermark.
+
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
 watermarkSettings.SetType("text");

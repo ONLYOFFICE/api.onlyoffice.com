@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example creates a paragraph copy.
 
 ```javascript editor-xlsx
+// How to create an identical paragraph.
+
+// Get a paragraph from the content of the shape create its copy and add it to the shape.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

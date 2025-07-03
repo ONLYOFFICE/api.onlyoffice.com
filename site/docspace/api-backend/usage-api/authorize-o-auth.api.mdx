@@ -1,0 +1,71 @@
+---
+id: authorize-o-auth
+title: "OAuth2 authorization endpoint"
+description: "Initiates the OAuth2 authorization flow."
+sidebar_label: "OAuth2 authorization endpoint"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVltP4zgU/ivWeemslF4oDOzkjWVmV8yuNBID4gFV4NonrUVqZ2wH6FT576tjJ2nTMsB2eYHU5+LvHH/nsgLPZw7SG/h2Wvo5Gw9GbMjo01j1k3tlNEwSkOiEVUX4mcK5Vl5xj475ObJgOGZ804ZluXkcQAKmQBtOziWk0OhgsIEECm75Aj1agrACzRcIKVh0hdEOb/2yQEhA0aU/SrRL2IZy2QAIyBtDRoYJW5TOsymynjASeywzdgslnbdQLf4olUUJqbclJuDEHBcc0hUEGCk4b5WeQQL4xBdFTkfkAKoqaaGLXKH2t0q+DjuqMiVRe5UptEw5V6Jk3oS81nJZ0q3M4kw5H3O5L9pjcSKyg5Np/2AqD/tHJ/Jj/9OROO5PcSwPP56M8OD49040FqWyKPxtadXrAV1d/EPYGyP65pnH7aQrx4QhRB73DWTufeHS4bA+GQiz6OB2wryFOK7gAvsOiYUeJcuV88xkjCCho5PgiBVoF8o5ZbTbF3GmcnSpRS6hqiZJS3FHZuPRiP51AXZqkBV8hlAlcPSc6rl+4LmSDW62UVVVlYBDUVrll6HEuBO39B6390gHECAl8GiVR5gQtAX6uaFqnaEPJernkMLQkNV42JYwkGP70JRuaXNIYTXlDq9sXu3k+3vQZcLoTM3KyGNI4IFbxad5zENtHAPMeJl7SGHH0+coIrpBFZLZBPidHiK66obZvgwv1N+4S4Yrh+zMmHuFgatUkKJBWFOq47Bmlggm9Cx/cKfExj1E0J1bvmgqhqUpLSsdWnLMuJas4M49GkvPEKhEDqbBIXlGbtG+zXUvKrPV1+tLdmnuUVe9jtPoK6k//jR2wSnFX68v6arTkJydC3+Rs9NOoqiqJVFuoTRKNl2GFtbrkLjH5shlAFAntXNjndRap0riRBpvIIkU3EFSDyDq4+xR+Xl3fLEz6tEJkDhSY1MahNuHgYNtkwm3DozOlybLlAjd5rlq8JTwt5sG9fA6poicDaWYwgVyybgQ6By10MIaj4KakUVnSivQtfWawjX9f0W7qqgLfCswDOF1NsPBmdEahd9NKkk/s1q8WxYd67dHTcRXOjP0vk99p2aa+9Li63QjSrfqVD+ynedrXANGbT1kth3+Zup54OSD4oGUd7xQw/FgNGzaRudF7hhqWRil/YCde6I1lSdKxh3jLFZ8ZBn5CjV8txHI3WDN7s34tjpGRb8zE8JWPq9rgfohWhcDPhyMByNKU2GcX3BNurXjZzeuBvZ25lYgjPao/X9b3OrX8Pjkh0XOlSYoZWzOcSTcrOtxXQaTBObGeZKu2mFQ0XEcwzQqpHLU8iWkGc8dvoD3w0U9an9j77joPRtamBM7m+cDz0vSBVou9sb9/za9F+BubpvvA3W/He7FjHZWyPdBuefi9gLMZmNc45uslxNIbybVxmL015fLmvTdvhVXg/qDmN6I9HLD9dYmEe+nv5SSZy1Wq9gUq6rVj6JfWrSDNmpTpJOqqv4Fj6HUWw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OAuth2 authorization endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/oauth2/authorize"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Initiates the OAuth2 authorization flow.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"response_type","in":"query","description":"The OAuth 2.0 response type, must be 'code' for authorization code flow.","required":true,"schema":{"type":"string","example":"code"}},{"name":"client_id","in":"query","description":"The client identifier issued to the client during registration.","required":true,"schema":{"type":"string","example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}},{"name":"redirect_uri","in":"query","description":"The URL to redirect to after authorization is complete.","required":true,"schema":{"type":"string","example":"https://example.com"}},{"name":"scope","in":"query","description":"The space-separated list of requested scope permissions.","required":true,"schema":{"type":"string","example":"files:read"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Authorization page"},"400":{"description":"Invalid request parameters"}}}
+>
+  
+</StatusCodes>
+
+
+      

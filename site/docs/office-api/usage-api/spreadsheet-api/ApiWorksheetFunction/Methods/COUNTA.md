@@ -22,9 +22,13 @@ number
 
 ## Example
 
-
+This example shows how to count a number of cells in a range that are not empty.
 
 ```javascript editor-xlsx
+// How to find a number of non-empty cells.
+
+// Use function to get non-empty cells count.
+
 let worksheet = Api.GetActiveSheet();
 let numbersArr = [45, 6, 8];
 let stringsArr = ["Apples", "ranges", "Bananas"]
