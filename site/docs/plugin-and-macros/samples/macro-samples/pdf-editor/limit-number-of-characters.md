@@ -27,5 +27,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![TextFormCharacterLimit](/assets/images/plugins/text-form-character-limit.png#gh-light-mode-only)
-![TextFormCharacterLimit](/assets/images/plugins/text-form-character-limit.dark.png#gh-dark-mode-only)
+![TextFormCharacterLimit](/assets/images/plugins/limit-number-of-characters.png#gh-light-mode-only)
+![TextFormCharacterLimit](/assets/images/plugins/limit-number-of-characters.dark.png#gh-dark-mode-only)
