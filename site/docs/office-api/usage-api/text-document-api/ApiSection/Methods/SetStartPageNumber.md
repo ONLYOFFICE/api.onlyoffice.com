@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets a custom start page index for section
+This example sets a custom start page index for section.
 
 ```javascript editor-docx
+// How to set the start page number for the current section.
+
+// Get a section from the paragraph and change its first page number to 2.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This section starts with second page number");

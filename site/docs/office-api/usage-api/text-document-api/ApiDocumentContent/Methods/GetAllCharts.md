@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a collection of chart objects from the document content.
 
 ```javascript editor-docx
+// Get all charts from the document.
+
+// How to retrieve all charts and set horizontal gridlines to the first one.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

@@ -26,6 +26,10 @@ expression.SetPosition(nPosition);
 This example specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
 
 ```javascript editor-docx
+// How to change inline position of the text.
+
+// Create a new text run and make its position lower or higher.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

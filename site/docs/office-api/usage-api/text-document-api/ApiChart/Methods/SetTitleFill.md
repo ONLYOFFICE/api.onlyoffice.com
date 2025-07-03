@@ -25,6 +25,10 @@ boolean
 This example sets the fill to the chart title.
 
 ```javascript editor-docx
+// How to color a chart title.
+
+// Create a chart, set its properties and its title color.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

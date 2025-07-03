@@ -22,9 +22,13 @@ expression.SetText(sText);
 
 ## Example
 
-
+This example shows how to set a comment text.
 
 ```javascript editor-pptx
+// How to change a text of a comment.
+
+// Get all comments from the presentation and set its first one's text.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

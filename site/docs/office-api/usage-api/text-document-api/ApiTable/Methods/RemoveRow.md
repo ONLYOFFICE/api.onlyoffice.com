@@ -25,6 +25,10 @@ boolean
 This example removes a table row with the specified cell.
 
 ```javascript editor-docx
+// How to remove the row from the table.
+
+// Create a table, get one of its cells and delete the row.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and remove one row (the second one), so that it becomes 3x2:");

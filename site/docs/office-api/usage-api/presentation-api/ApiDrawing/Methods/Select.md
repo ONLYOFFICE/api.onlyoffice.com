@@ -23,12 +23,16 @@ This method doesn't return any data.
 This example selects the current graphic object.
 
 ```javascript editor-pptx
-var oPresentation = Api.GetPresentation();
-var oSlide = oPresentation.GetSlideByIndex(0);
-var aAllDrawings = oSlide.GetAllDrawings();
-if(aAllDrawings.length > 0)
-{
-	var oDrawing = aAllDrawings[0];
-	oDrawing.Select();
+// How to select a drawing object of the slide.
+
+// Select an object from a slide.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const allDrawings = slide.GetAllDrawings();
+if (allDrawings.length > 0) {
+	const drawing = allDrawings[0];
+	drawing.Select();
 }
+
 ```

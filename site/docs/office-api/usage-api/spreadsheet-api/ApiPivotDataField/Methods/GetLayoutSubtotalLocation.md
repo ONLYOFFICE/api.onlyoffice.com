@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example shows how to get a layout subtotal location of a pivot field.
 
 ```javascript editor-xlsx
+// How to get a layout subtotal location of a pivot field.
+
+// Create a pivot table, add data to it then get a layout subtotal location of a specified pivot field.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -48,7 +52,7 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style'],
+    rows: ['Region', 'Style'],
 });
 
 pivotTable.AddDataField('Price');

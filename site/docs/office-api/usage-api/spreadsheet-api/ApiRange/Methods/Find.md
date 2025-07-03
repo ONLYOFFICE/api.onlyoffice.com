@@ -25,6 +25,10 @@ expression.Find(oSearchData);
 This example finds specific information in the range.
 
 ```javascript editor-xlsx
+// How to search throughout the range.
+
+// Get a range, search information using value, position, order, etc.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);
@@ -43,14 +47,15 @@ worksheet.GetRange("D3").SetValue(200);
 worksheet.GetRange("D4").SetValue(160);
 let range = worksheet.GetRange("A2:D4");
 let searchData = {
-	What: "200",
-	After: worksheet.GetRange("B1"),
-	LookIn: "xlValues",
-	LookAt: "xlWhole",
-	SearchOrder: "xlByColumns",
-	SearchDirection: "xlNext",
-	MatchCase: true
+    What: "200",
+    After: worksheet.GetRange("B1"),
+    LookIn: "xlValues",
+    LookAt: "xlWhole",
+    SearchOrder: "xlByColumns",
+    SearchDirection: "xlNext",
+    MatchCase: true
 };
-let oSearchRange = range.Find(searchData);
-oSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+let searchRange = range.Find(searchData);
+searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+
 ```

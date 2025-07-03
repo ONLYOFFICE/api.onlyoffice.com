@@ -20,9 +20,13 @@ string
 
 ## Example
 
-
+This example shows how to get a name of a pivot item.
 
 ```javascript editor-xlsx
+// How to get a pivot item name.
+
+// Create a pivot table, add data to it then get a name of a specified pivot item.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -62,5 +66,4 @@ pivotWorksheet.GetRangeByNumber(15, 0).SetValue('Style item names');
 for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(15 + i, 1).SetValue(pivotItems[i].GetName());
 }
-
 ```

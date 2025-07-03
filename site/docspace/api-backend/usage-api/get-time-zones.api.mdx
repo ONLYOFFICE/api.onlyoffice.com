@@ -1,0 +1,63 @@
+---
+id: get-time-zones
+title: "Get time zones"
+description: "Returns a list of all the available portal time zones."
+sidebar_label: "Get time zones"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVt9v2zgM/lcEvvTFS3rZcLjLW67dDd0N22FNUeCKYGVsOtFqS5pEt80C/+8HSs4PJ91a7CWxJYqkPn786DUwLgKMb+CSmLVZBDVUZ7aurVGhW4FZBtaRR9bWXBQwhgXxVNf0nzUUIANPwVkTKMB4DaPTU/krKOReOzkCY/igAytbKqwqxUtSeI+6wnlFinVN6rs4Ug+al7Krvbo4DwpNoQodXIUrZbCOkXJrmAxLAHSu0nnMafg1SJQ1hHxJNcoTrxzBGOz8K+UMGTgvN2CdctwkvGeJ3uMKMtBMdXjegy72bAJ7bRaQHVx6uiR1Mfk42d1R6YIM61KTH0AGpqkiCDBm31AG9Ii1k1f48483v0ObQXf/j1jTy+I1gfyr0msyRZVgU6X1EfNtFj8PHWxNiumRoW0zwKLQ4h6rf/fuX2IV6Knwnr41FFg59FgTkw8xfI0GF9os+nmo3JpSL5pErCBpseaYhLArkuJzchjO2cZ8ctuk8ndQaMO0IA8ZlNbXyGnp9UjAq7S5C79e4qWn8hh0wSRPNz7aaiXDwMhNeGGKyfjMFvSiA+1PEJrI7a49Oke+S+XN6W/HrXhlsOGl9fo7FdFjoLzxmlcwvlkDhvyL7H+5I1kAT1hABg9eM8GszdbwF6EnD+Ob+DZx+h9abdeesseg8435p0nDy9HThp8cRXW5mbWzQ259Jm68CQpV9UMlcdYzVnuCIoSqiZe2kyypMPISxjBEp4ejwelwI3FD3sAJAoi/Jx8iHo2vYAzrOQa68lV71HOX0bbPZMjgHr2WpCIPusOpFCU2lVT0yNN52lJXnz9I+Wa7wlyKqiVX/fLsmB2rcOTyKpA6s/ZOk5JDIj35JkMTJaXvMAMtx/J4ROjZ1W4bZ8nsjqK8NUxerWzjo/pEzRHtdhjCg/VS5ajL4mAeHYrnjjEvcX2SjNX6/fVUTe0dmfak5zT5yrqHvzdN8/56KqH6FH0Os0kPKKWDKkTHam2oUPNV5NzJpOugaHOiloRFTKADtRexA7WzabNtD+z0B+PCYSbJTpWVfUijsRdVRdHIQLYTNfZ3N4rSW4wcjECH8XAYow6sqVa2LHVOg9zWaXE03CqESLIA/vKj0TxWx7rNsMUitjAWCvOcQlBslfOWKWcqlKdgG5/H1ktyMIZr+X/GOmncRjV2aMaFM2tMEvUDUGX3XHXbx23RO/3yWwvxtSmt1PfxVdALg9x4ep5uQumtufRPEQdmP6+BktkakVV1E1jNSdk5Y+TkvcZIytudpiXZ6FXkVpEpnNWGB+qChdbSnlQoFFFNHb/9AEvfDbd7F7kd7Ni9f78DxWjlvbTx2t2cmjgtekg+pAu/HowGpwKTs4FrjGO0c/yOeE+9D6Fa7z7+fn0cdMWQz5uhq1AbyaRJ2pxmw41UCjKQLEWCu09gGbybCTHLYGkDi+16OxlaWf7WkJexOdtNgDT5Nu0vIyVKN0zynBzHUVE1iSAH37MyArbj693bKWSxnfucSrLdPYj3zZZZ7fvuq3zKQH5l7j55Yr1OhG3brX3a+uGJrQgma4F21rbt/+DISc4=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get time zones"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/timezones"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the available portal time zones.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all the available time zones with their IDs and display names","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"The IANA time zone identifier.","nullable":true,"example":"9846"},"displayName":{"type":"string","description":"The user-friendly name for the time zone.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The request parameters for managing the time zone configurations.","title":"TimezonesRequestsDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TimezonesRequestsArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

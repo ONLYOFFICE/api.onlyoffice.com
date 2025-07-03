@@ -23,6 +23,10 @@ This method doesn't return any data.
 This example clears the range.
 
 ```javascript editor-xlsx
+// How to clear a content of a range.
+
+// Get a range and remove everything from it.
+
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:B1");
 range.SetValue("1");

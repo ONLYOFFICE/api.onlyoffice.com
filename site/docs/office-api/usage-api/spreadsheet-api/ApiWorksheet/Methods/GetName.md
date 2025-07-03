@@ -23,6 +23,10 @@ string
 This example shows how to get a sheet name.
 
 ```javascript editor-xlsx
+// How to get name of the sheet.
+
+// Get a sheet name.
+
 let worksheet = Api.GetActiveSheet();
 let name = worksheet.GetName();
 worksheet.GetRange("A1").SetValue("Name: ");

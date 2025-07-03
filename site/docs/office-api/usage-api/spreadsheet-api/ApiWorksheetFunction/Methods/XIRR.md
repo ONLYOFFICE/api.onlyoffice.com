@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the internal rate of return for a schedule of cash flows.
 
 ```javascript editor-xlsx
+// How to return the internal rate of return.
+
+// Use a function to return the internal rate of return.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 let values = ["Values", "-$40,000.00", "$10,000.00", "$15,000.00", "$20,000.00"];

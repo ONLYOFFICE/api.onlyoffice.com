@@ -23,6 +23,10 @@ number
 This example shows how to get a number of elements in the current document content.
 
 ```javascript editor-docx
+// How to get elements count and push it to the paragraph.
+
+// Count the number of elements in the document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

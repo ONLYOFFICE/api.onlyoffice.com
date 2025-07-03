@@ -18,13 +18,17 @@ expression.SetLegendPos(sLegendPos);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the chart legend position.
 
 ```javascript editor-xlsx
+// Change the positions of the chart legend.
+
+// How to set right the chart legend.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

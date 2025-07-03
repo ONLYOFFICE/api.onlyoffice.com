@@ -37,24 +37,24 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](../../usage-api/config/editor/editor.md#user) parameter in the editorConfig section.
 
-``` ts
-const condig = {
-  editorConfig: {
-    user: [{
-      id: "78e1e841",
-      name: "John Smith",
-      group: "Group1,Group2",
+  ``` ts
+  const condig = {
+    editorConfig: {
+      user: [{
+        id: "78e1e841",
+        name: "John Smith",
+        group: "Group1,Group2",
+      },
+      {
+        id: "78e1e841",
+        name: "John Smith",
+        group: "Group1,Group2",
+      }],
     },
-    {
-      id: "78e1e841",
-      name: "John Smith",
-      group: "Group1,Group2",
-    }],
-  },
-};
+  };
 
-const docEditor = new DocsAPI.DocEditor("placeholder", config);
-```
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
+  ```
 
 2. Specify the access rights using the [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter in the permissions section of the editor initialization.
 

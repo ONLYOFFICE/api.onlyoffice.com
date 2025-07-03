@@ -24,6 +24,10 @@ boolean
 This example converts the form to an inline form.
 
 ```javascript editor-docx
+// How to make the form inline.
+
+// Create a text form and make its position inline.
+
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);

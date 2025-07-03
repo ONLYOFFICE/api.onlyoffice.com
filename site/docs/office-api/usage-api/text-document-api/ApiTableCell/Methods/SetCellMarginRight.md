@@ -18,13 +18,17 @@ expression.SetCellMarginRight(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
 
 ```javascript editor-docx
+// How to add margin to the right of the cell.
+
+// Create a 3x3 table and add the right cell margin.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

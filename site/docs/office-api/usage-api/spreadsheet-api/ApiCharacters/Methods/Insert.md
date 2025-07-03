@@ -25,6 +25,10 @@ This method doesn't return any data.
 This example inserts a string replacing the specified characters.
 
 ```javascript editor-xlsx
+// How to replace characters with a different string value.
+
+// Change the characters to another string value.
+
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
 range.SetValue("This is just a sample text.");

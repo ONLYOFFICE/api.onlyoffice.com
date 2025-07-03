@@ -23,13 +23,17 @@ expression.SetTableBorderTop(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the border which will be displayed at the top of the table.
 
 ```javascript editor-docx
+// How to create a 3x3 table and add the top 4 point black border.
+
+// Add top border to the table.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We add the top 4 point black border:");

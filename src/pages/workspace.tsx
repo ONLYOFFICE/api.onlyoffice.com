@@ -26,8 +26,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} API`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title} Workspace API`}
+      description="Detailed guides on how to integrate ONLYOFFICE Workspace into your solution, manage documents, projects, emails, CRM, and timetables in one place."
     >
       <FeaturePageTemplate {...templateProps}/>
     </Layout>
