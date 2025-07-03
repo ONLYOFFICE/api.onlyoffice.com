@@ -36,7 +36,7 @@ const connector = docEditor.createConnector()
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 指定当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons)文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons)文档）。 |
 | *onClick*  | function                 | 点击事件回调。                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -86,7 +86,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 项目类型。                                                                                                                           |
 | *text*           | string                                      | 项目标题。如果此字段为""，则工具栏按钮仅显示图标，不显示标题。                             |
 | *hint*           | string                                      | 项目提示。                                                                                                                           |
-| *icons*          | string                                      | 对象                                                                                                                                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) 文档）。 |
+| *icons*          | string                                      | 对象                                                                                                                                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
 | *disabled*       | boolean                                     | 指定当前项目是否已锁定。                                                                                          |
 | *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"* 时）或其顶部（当 *"split == true"* 时）是否可以切换。               |
 | *lockInViewMode* | boolean                                     | 指定工具栏菜单项是否在视图模式（预览、查看表单、断开连接等时）中自动锁定。 |
@@ -267,7 +267,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 | text     | string                   | 项目文本。                                                                                                             |
 | data     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | disabled | boolean                  | 指定当前项目是否已禁用。                                                                          |
-| icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) 文档）。 |
+| icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
 | items    | array of ContextMenuItem | 包含当前项的上下文菜单项的数组。                                                         |
 
 示例:
@@ -335,7 +335,7 @@ testConnectorWindow.dispatchEvent("messageName", {
 
 | 名称     | 类型   | 描述                                                                                                                                      |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| settings | object | 模态窗口参数与插件 [variations](../../plugin-and-macros/structure/manifest/manifest.md#variations) 相同。 |
+| settings | object | 模态窗口参数与插件 [variations](../../plugin-and-macros/structure/configuration/configuration.md#variations) 相同。 |
 
 示例:
 

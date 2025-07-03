@@ -25,6 +25,10 @@ boolean
 This example checks the checkbox.
 
 ```javascript editor-pdf
+// How to check a form.
+
+// Check a checkbox.
+
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);

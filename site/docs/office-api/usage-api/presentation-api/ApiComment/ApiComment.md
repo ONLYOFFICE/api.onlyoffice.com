@@ -16,6 +16,7 @@ Represents the ApiComment class.
 | [GetText](./Methods/GetText.md) | string | Returns the comment text. |
 | [GetTime](./Methods/GetTime.md) | Number | Returns the timestamp of the comment creation in the current time zone format. |
 | [GetTimeUTC](./Methods/GetTimeUTC.md) | Number | Returns the timestamp of the comment creation in UTC format. |
+| [GetUserId](./Methods/GetUserId.md) | string | Returns the user ID of the comment author. |
 | [IsSolved](./Methods/IsSolved.md) | boolean | Checks if a comment is solved or not. |
 | [RemoveReplies](./Methods/RemoveReplies.md) | [ApiComment](../ApiComment/ApiComment.md) | Removes the specified comment replies. |
 | [SetAuthorName](./Methods/SetAuthorName.md) | [ApiComment](../ApiComment/ApiComment.md) | Sets the comment author's name. |

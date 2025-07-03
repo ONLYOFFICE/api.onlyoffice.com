@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set a caption for data field.
 
 ```javascript editor-xlsx
+// How to rename a caption of a table element.
+
+// Create a pivot table, add data to it then set a custom data field's caption.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');

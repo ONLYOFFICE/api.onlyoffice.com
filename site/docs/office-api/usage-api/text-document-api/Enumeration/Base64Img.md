@@ -1,6 +1,6 @@
 # Base64Img
 
-Base64 image string
+The Base64 image string.
 
 ## Type
 

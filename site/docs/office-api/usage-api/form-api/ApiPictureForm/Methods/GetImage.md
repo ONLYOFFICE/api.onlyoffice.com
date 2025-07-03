@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get an image in the base64 format from the picture form.
 
 ```javascript editor-pdf
+// How to get an image from the picture form.
+
+// Get the image of the picture form and display it in the document.
+
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);

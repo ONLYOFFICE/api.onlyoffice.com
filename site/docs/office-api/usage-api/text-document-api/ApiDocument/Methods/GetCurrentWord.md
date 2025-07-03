@@ -25,6 +25,10 @@ string
 This example shows how to get the current word.
 
 ```javascript editor-docx
+// How to get a word where the cursor is set.
+
+// Display the parts of the word before or after the cursor.
+
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);
 para1.AddText("The quick brown ");

@@ -23,9 +23,13 @@ expression.GetPageFields(field);
 
 ## Example
 
-
+This example shows how to get page fields of a pivot table.
 
 ```javascript editor-xlsx
+// How to get table page fields as an array of fields.
+
+// Create a pivot table, add data to it then get its page fields.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -51,8 +55,8 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	columns: 'Region',
-	pages: 'Style'
+    columns: 'Region',
+    pages: 'Style'
 });
 
 pivotTable.AddDataField('Price');
@@ -62,8 +66,7 @@ pivotWorksheet.GetRange('A9').SetValue('Page Fields');
 
 let pageFields = pivotTable.GetPageFields();
 for (let i = 0; i < pageFields.length; i += 1) {
-	let cell = pivotWorksheet.GetRangeByNumber(8 + i, 1);
-	cell.SetValue(pageFields[i].GetName());
+    let cell = pivotWorksheet.GetRangeByNumber(8 + i, 1);
+    cell.SetValue(pageFields[i].GetName());
 }
-
 ```

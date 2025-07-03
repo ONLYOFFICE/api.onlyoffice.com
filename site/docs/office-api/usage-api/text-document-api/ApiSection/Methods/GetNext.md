@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the next section.
 
 ```javascript editor-docx
+// How to get the next section after the current one.
+
+// Update the margins of the next section.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a new paragraph.");

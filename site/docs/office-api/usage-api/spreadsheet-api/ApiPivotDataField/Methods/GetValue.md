@@ -20,9 +20,13 @@ string
 
 ## Example
 
-
+This example shows how to get a value of a data field.
 
 ```javascript editor-xlsx
+// How to use a table element value.
+
+// Create a pivot table, add data to it then display a custom data field's value.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -58,5 +62,4 @@ let dataField = pivotTable.GetDataFields('Sum of Price');
 
 pivotWorksheet.GetRange('A12').SetValue('The Data field value');
 pivotWorksheet.GetRange('B12').SetValue(dataField.GetValue());
-
 ```

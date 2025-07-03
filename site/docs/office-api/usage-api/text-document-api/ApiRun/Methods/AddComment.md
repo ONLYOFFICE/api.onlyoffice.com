@@ -15,9 +15,9 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The comment text (required). |
-| sAuthor | Required | string |  | The author's name (optional). |
-| sUserId | Required | string |  | The user ID of the comment author (optional). |
+| sText | Required | string |  | The comment text. |
+| sAuthor | Optional | string |  | The author's name. |
+| sUserId | Optional | string |  | The user ID of the comment author. |
 
 ## Returns
 
@@ -28,6 +28,10 @@ expression.AddComment(sText, sAuthor, sUserId);
 This example adds a comment to the run.
 
 ```javascript editor-docx
+// How to comment a specific text.
+
+// Insert a comment into the run and add an author to it.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

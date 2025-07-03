@@ -1,6 +1,7 @@
 # GetFontFamily
 
-Gets the font family from the current text properties.
+Returns the font family from the current text properties.
+The method automatically calculates the font from the theme if the font was set via the theme.
 
 ## Syntax
 
@@ -20,9 +21,13 @@ string
 
 ## Example
 
-
+This example shows how to get the font family of the text.
 
 ```javascript editor-docx
+// How to know the font name of the form.
+
+// Retrieve text properties of the form to find out its font family.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

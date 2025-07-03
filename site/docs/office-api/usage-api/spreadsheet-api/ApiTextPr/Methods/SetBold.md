@@ -25,6 +25,10 @@ expression.SetBold(isBold);
 This example sets the bold property to the text character.
 
 ```javascript editor-xlsx
+// How to make text bold.
+
+// Set bold property of a text.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

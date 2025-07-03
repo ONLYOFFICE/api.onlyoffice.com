@@ -23,6 +23,10 @@ string
 This example shows how to get the comment text.
 
 ```javascript editor-docx
+// How to get a raw text of a comment.
+
+// Get all comments from the presentation and the first one's text.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

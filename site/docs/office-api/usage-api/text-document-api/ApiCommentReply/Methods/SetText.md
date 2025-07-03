@@ -25,6 +25,10 @@ expression.SetText(sText);
 This example sets the comment reply text.
 
 ```javascript editor-docx
+// How to change a text of a comment reply.
+
+// Get all comments from the presentation and set its first one's reply text.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

@@ -22,9 +22,13 @@ number
 
 ## Example
 
-
+This example shows how to return the number of columns in the cell range.
 
 ```javascript editor-xlsx
+// How to find a number of columns from a range.
+
+// Use function to count range column.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 let column1 = [13, 14, 15];

@@ -23,6 +23,10 @@ number
 This example shows how to get a number of cells in the row.
 
 ```javascript editor-docx
+// How to count the cells of the row.
+
+// Display the number of row cells.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

@@ -23,6 +23,10 @@ Number
 This example shows how to get a number of the comment replies.
 
 ```javascript editor-docx
+// How to get a number of replies a comment has.
+
+// Get all comments from the presentation and the first one's number of replies.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

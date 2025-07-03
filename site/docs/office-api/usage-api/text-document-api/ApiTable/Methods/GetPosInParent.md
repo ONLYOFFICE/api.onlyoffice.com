@@ -23,6 +23,10 @@ Number
 This example shows how to get the table position within its parent element.
 
 ```javascript editor-docx
+// How to find out the location of the table in its parent one.
+
+// Get the position index of the table.
+
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 let run = Api.CreateRun();

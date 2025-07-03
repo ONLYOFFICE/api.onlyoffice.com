@@ -20,9 +20,13 @@ Number
 
 ## Example
 
-
+This example shows how to count number of replies of a comment.
 
 ```javascript editor-pptx
+// How to get a number of replies a comment has.
+
+// Get all comments from the presentation and the first one's number of replies.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

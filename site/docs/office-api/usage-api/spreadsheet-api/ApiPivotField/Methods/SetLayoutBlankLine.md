@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set a layout blank line of a pivot field.
 
 ```javascript editor-xlsx
+// How to change a pivot field layout blank line.
+
+// Create a pivot table, add data to it then set layout blank line of a specified pivot.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -62,5 +66,4 @@ pivotField.SetLayoutBlankLine(true);
 
 pivotWorksheet.GetRange('A14').SetValue('Region blank line');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutBlankLine());
-
 ```

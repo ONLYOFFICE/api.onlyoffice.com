@@ -36,7 +36,7 @@ The function called to add an item to the context menu. The process of working w
 | *text*     | string                   | The item caption.                                                                                                          |
 | *data*     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) documentation). |
+| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *onClick*  | function                 | The click event callback.                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | An array containing the context menu items for the current item.                                                           |
 
@@ -86,7 +86,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                           |
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                             |
 | *hint*           | string                                      | The item hint.                                                                                                                           |
-| *icons*          | string                                      | object                                                                                                                                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) documentation). |
+| *icons*          | string                                      | object                                                                                                                                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                            |
 | *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.               |
 | *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.). |
@@ -277,7 +277,7 @@ Parameters:
 | text     | string                   | The item text.                                                                                                             |
 | data     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | disabled | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) documentation). |
+| icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | items    | array of ContextMenuItem | An array containing the context menu items for the current item.                                                           |
 
 ### Example:
@@ -345,7 +345,7 @@ The function called to show a modal window inside the editor.
 
 | Name     | Type   | Description                                                                                                                                      |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| settings | object | The modal window parameters that are the same as for plugin [variations](../../plugin-and-macros/structure/manifest/manifest.md#variations). |
+| settings | object | The modal window parameters that are the same as for plugin [variations](../../plugin-and-macros/structure/configuration/configuration.md#variations). |
 
 ### Example:
 

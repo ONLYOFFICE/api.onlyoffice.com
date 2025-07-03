@@ -23,6 +23,10 @@ String[]
 This example shows how to get a list of all tags that are used for all content controls in the document.
 
 ```javascript editor-docx
+// How to get the style of the heading.
+
+// Display the style name of the "Heading 6".
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

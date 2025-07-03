@@ -198,6 +198,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugin-and-macros/structure/manifest/manifest.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
+Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugin-and-macros/structure/configuration/configuration.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
 Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/plugins.md).

@@ -23,6 +23,10 @@ JSON
 This example converts the ApiGradientStop object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON object from the gradient stop object.
+
+// Convert the radial gradient stop object to json and add it to the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

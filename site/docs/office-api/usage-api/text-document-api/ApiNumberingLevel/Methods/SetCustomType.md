@@ -20,13 +20,17 @@ expression.SetCustomType(sType, sTextFormatString, sAlign);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets your own customized numbering type.
 
 ```javascript editor-docx
+// How to set the custom type of the numbering.
+
+// Apply the lower roman style to the numbering level.
+
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
 for (let lvl = 0; lvl < 8; ++lvl) {

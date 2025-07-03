@@ -19,13 +19,17 @@ expression.AddColumn(oCell, isBefore);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a new column to the table.
 
 ```javascript editor-docx
+// How to insert a column to the table.
+
+// Get a table cell from the row and add it as a column.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 2x2 table and add a new column, so that it becomes 3x2:");

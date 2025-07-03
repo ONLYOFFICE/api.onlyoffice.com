@@ -1,6 +1,6 @@
 # Add
 
-Adds a new value to the combo box / dropdown list content control.
+Adds a new value to the combo box / drop-down list content control.
 
 ## Syntax
 
@@ -16,7 +16,7 @@ expression.Add(sText, sValue, nIndex);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sText | Required | string |  | The display text for the list item. |
 | sValue | Required | string |  | The list item value. By default is equal to sText parameter |
-| nIndex | Optional | number | this.GetElementsCount() | A position where a new value will be added. |
+| nIndex | Optional | number | -1 | A position where a new value will be added. If nIndex=-1 add to the end. |
 
 ## Returns
 
@@ -24,13 +24,13 @@ boolean
 
 ## Example
 
-
+This example shows how to add items to the content control list.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-Api.pluginMethod_AddContentControlList(1, [{Display: "Item1_D", Value: "Item1_V"}, {Display: "Item2_D", Value: "Item2_V"}], {"Id": 100, "Tag": "CC_Tag", "Lock": 3});
-let contentControls = doc.GetAllContentControls();
-let contentControlList = contentControls[0].GetDropdownList();
-contentControlList.Add("Item3_D", "Item3_V", 2);
-doc.AddElement(0, contentControlList);
+let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
+let contentControlList = cc.GetDropdownList();
+contentControlList.Add("Venus", "planet2", 1);
+let paragraph = doc.GetElement(0);
+paragraph.Push(cc);
 ```
