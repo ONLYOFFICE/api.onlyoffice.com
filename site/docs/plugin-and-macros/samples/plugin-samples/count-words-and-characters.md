@@ -12,7 +12,11 @@ Counts paragraphs, words, and characters with or without spaces in the selected 
 
 **Supported editors:** documents.
 
-![CountWordsAndCharacters](/assets/images/plugins/gifs/count-words-and-characters.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="b2vrRO6Us6g" />
+```
 
 ## Installation
 
