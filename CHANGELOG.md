@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+* The editorConfig.customization.toolbarHideFileName parameter is now available for the mobile editors
+
 ## 6.1.0
 
 ### New features
