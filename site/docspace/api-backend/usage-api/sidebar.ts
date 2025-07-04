@@ -1182,19 +1182,19 @@ const sidebar: SidebarsConfig = {
           items: [
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/o-auth-2-authorization-endpoint",
+              id: "docspace/api-backend/usage-api/authorize-o-auth",
               label: "OAuth2 authorization endpoint",
               className: "api-method get",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/o-auth-2-consent-endpoint",
+              id: "docspace/api-backend/usage-api/submit-consent",
               label: "OAuth2 consent endpoint",
               className: "api-method post",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/o-auth-2-token-endpoint",
+              id: "docspace/api-backend/usage-api/exchange-token",
               label: "OAuth2 token endpoint",
               className: "api-method post",
             },
@@ -1983,6 +1983,18 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/send-congratulations",
               label: "Send congratulations",
               className: "api-method post",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Portal / Guests",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-guest-sharing-link",
+              label: "Get a guest sharing link",
+              className: "api-method get",
             },
           ],
         },
@@ -3211,7 +3223,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/update-tfa-settings-link",
-              label: "Get confirmation email for updating TFA settings",
+              label: "Get a confirmation email for updating TFA settings",
               className: "api-method put",
             },
             {
