@@ -6,11 +6,7 @@ Inserts a Chess Board object into the document editor. The object makes it possi
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-```mdx-code-block
-import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
-
-<YoutubeVideo videoId="n_s5Tg6_ov0" />
-```
+![Chess](/assets/images/plugins/gifs/chess.gif)
 
 ## Installation
 
