@@ -14,7 +14,7 @@ expression.InstallPlugin(config);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| config | Optional | object |  | The plugin &#123;@link https://api.onlyoffice.com/docs/plugin-and-macros/structure/manifest/ config&#125;. |
+| config | Optional | object |  | The plugin [config](https://api.onlyoffice.com/docs/plugin-and-macros/structure/configuration/). |
 
 ## Returns
 
