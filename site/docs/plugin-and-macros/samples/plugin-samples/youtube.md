@@ -124,8 +124,8 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 - button
 - init
 - onTranslate
-- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/EditOleObject.md)
+- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
 - [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 - [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
 - [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
