@@ -277,8 +277,6 @@ The list of changes for Office JavaScript API.
 
 ### Comment methods
 
-- Added the [ApiComment/GetPosition](../usage-api/text-document-api/ApiComment/Methods/GetPosition.md) method to Text document API.
-- Added the [ApiComment/SetPosition](../usage-api/text-document-api/ApiComment/Methods/SetPosition.md) method to Text document API.
 - Added the [ApiComment/GetPosition](../usage-api/presentation-api/ApiComment/Methods/GetPosition.md) method to Presentation API.
 - Added the [ApiComment/SetPosition](../usage-api/presentation-api/ApiComment/Methods/SetPosition.md) method to Presentation API.
 - Added the *posX* and *posY* parameters to the [ApiSlide/AddComment](../usage-api/text-document-api/ApiSlide/Methods/AddComment.md) method of Presentation API.

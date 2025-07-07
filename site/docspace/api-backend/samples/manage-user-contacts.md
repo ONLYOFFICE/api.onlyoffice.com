@@ -77,7 +77,7 @@ def set_user_contacts(userid, contacts):
 
 ## Step 2: Retrieve a user by ID and print contacts
 
-Use the [`GET /api/2.0/people/{userid}`](/docspace/api-backend/usage-api/get-by-id.api.mdx) request to fetch user data and print contacts.
+Use the [`GET /api/2.0/people/{userid}`](/docspace/api-backend/usage-api/get-profile-by-user-id.api.mdx) request to fetch user data and print contacts.
 
 ``` py
 def print_user_contacts(userid):

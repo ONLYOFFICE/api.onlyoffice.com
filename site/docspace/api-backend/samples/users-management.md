@@ -106,7 +106,7 @@ def create_user(first_name, last_name, email):
 
 ## Step 2: Retrieve a user by ID
 
-Use the [`GET /api/2.0/people/{userid}`](/docspace/api-backend/usage-api/get-by-id.api.mdx) request to fetch user data.
+Use the [`GET /api/2.0/people/{userid}`](/docspace/api-backend/usage-api/get-profile-by-user-id.api.mdx) request to fetch user data.
 
 ``` py
 def get_user(user_id):
