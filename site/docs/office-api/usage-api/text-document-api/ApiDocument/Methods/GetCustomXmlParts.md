@@ -1,6 +1,6 @@
 # GetCustomXmlParts
 
-Retrieves the custom XML manager associated with the document.
+Retrieves the custom XML manager associated with the document.\
 This manager allows manipulation and access to custom XML parts within the document.
 
 ## Syntax
