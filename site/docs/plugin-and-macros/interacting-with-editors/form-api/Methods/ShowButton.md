@@ -21,3 +21,9 @@ expression.ShowButton(id, bShow, align);
 ## Returns
 
 This method doesn't return any data.
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("ShowButton", ["back", false, "right"]);
+```

@@ -21,3 +21,9 @@ expression.EndAction(type, description, status);
 ## Returns
 
 This method doesn't return any data.
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("EndAction", ["Block", "Save to local storage...", ""]);
+```

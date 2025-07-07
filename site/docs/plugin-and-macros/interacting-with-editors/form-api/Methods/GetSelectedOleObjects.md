@@ -17,3 +17,9 @@ This method doesn't have any parameters.
 ## Returns
 
 [OLEProperties](../Enumeration/OLEProperties.md)[]
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("GetSelectedOleObjects");
+```

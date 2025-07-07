@@ -20,3 +20,9 @@ expression.UnShowInputHelper(guid, isclear);
 ## Returns
 
 This method doesn't return any data.
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("UnShowInputHelper", ["asc.{UUID}", true]);
+```
