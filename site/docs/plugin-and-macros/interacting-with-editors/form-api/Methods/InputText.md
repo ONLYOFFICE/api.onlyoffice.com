@@ -20,3 +20,9 @@ expression.InputText(text, textReplace);
 ## Returns
 
 This method doesn't return any data.
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("InputText", ["ONLYOFFICE Plugins", "ONLYOFFICE for developers"]);
+```

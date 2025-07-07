@@ -26,3 +26,16 @@ expression.OnEncryption(obj);
 ## Returns
 
 This method doesn't return any data.
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("OnEncryption", [
+    {
+        "type": "getPasswordByFile",
+        "password": "123456",
+        "docinfo": "{docinfo}",
+        "hash": "sha256"
+    }
+]);
+```

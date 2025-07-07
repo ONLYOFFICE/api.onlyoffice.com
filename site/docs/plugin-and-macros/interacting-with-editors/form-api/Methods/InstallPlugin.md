@@ -19,3 +19,11 @@ expression.InstallPlugin(config);
 ## Returns
 
 object
+
+## Example
+
+```javascript
+window.Asc.plugin.executeMethod ("InstallPlugin", [config], function (result) {
+    postMessage (JSON.stringify (result));
+});
+```

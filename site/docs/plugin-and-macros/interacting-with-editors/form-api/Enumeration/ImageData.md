@@ -14,3 +14,23 @@ An object containing the information about the base64 encoded *png* image.
 
 Object
 
+
+
+## Example
+
+```javascript
+window.saveImage = function () {
+    let imageSrc = imageEditor.toDataURL();
+    let editorDimension = imageEditor.getCanvasSize();
+    let width = editorDimension.width;
+    let height = editorDimension.height;
+    let imageData = {
+        "src": imageSrc,
+        "width": width,
+        "height": height,
+        "replaceMode": "original"
+    };
+    window.Asc.plugin.executeMethod ("PutImageDataToSelection", [imageData]);
+    window.Asc.plugin.callCommand("close", "");
+};
+```
