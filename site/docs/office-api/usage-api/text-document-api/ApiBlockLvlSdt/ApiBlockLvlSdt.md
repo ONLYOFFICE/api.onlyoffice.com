@@ -51,7 +51,7 @@ Represents the ApiBlockLvlSdt class.
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
 | [SetId](./Methods/SetId.md) | None | Specifies a unique ID for the current content control. |
 | [SetLabel](./Methods/SetLabel.md) | boolean | Sets the label attribute to the current container. |
-| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current block text content control: -**"contentLocked"** - content cannot be edited. -**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. -**"sdtLocked"** - the container cannot be deleted. |
+| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current block text content control: -**"unlocked"** - content can be edited and the container can be deleted. -**"contentLocked"** - content cannot be edited. -**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. -**"sdtLocked"** - the container cannot be deleted. |
 | [SetPicture](./Methods/SetPicture.md) | boolean | Sets the content (image) for the picture content control. This method updates the picture inside a content control by setting an image from a provided URL. The URL should be an internet link to the image. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current content control. |
 | [SetTag](./Methods/SetTag.md) | boolean | Sets the tag attribute to the current container. |
