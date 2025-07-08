@@ -58,8 +58,8 @@ Represents the Api class.
 | [MouseMoveWindow](./MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
 | [MoveCursorToContentControl](./MoveCursorToContentControl.md) | None | Moves a cursor to the specified content control. |
-| [MoveCursorToEnd](./MoveCursorToEnd.md) | None | Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape). This method is similar to pressing the -**Ctrl + End** keyboard shortcut. |
-| [MoveCursorToStart](./MoveCursorToStart.md) | None | Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape). This method is similar to pressing the -**Ctrl + Home** keyboard shortcut. |
+| [MoveCursorToEnd](./MoveCursorToEnd.md) | None | Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape). This method is similar to pressing the **Ctrl + End** keyboard shortcut. |
+| [MoveCursorToStart](./MoveCursorToStart.md) | None | Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape). This method is similar to pressing the **Ctrl + Home** keyboard shortcut. |
 | [MoveToComment](./MoveToComment.md) | None | Moves a cursor to the specified comment. |
 | [MoveToNextReviewChange](./MoveToNextReviewChange.md) | None | Navigates through the review changes. |
 | [OnDropEvent](./OnDropEvent.md) | None | Implements the external drag&drop emulation. |
