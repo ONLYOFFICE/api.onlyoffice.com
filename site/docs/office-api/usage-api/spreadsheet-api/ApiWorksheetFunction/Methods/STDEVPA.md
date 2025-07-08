@@ -1,6 +1,6 @@
 # STDEVPA
 
-Calculates standard deviation based on the entire population, including logical values and text.
+Calculates standard deviation based on the entire population, including logical values and text.\
 Text and the -**false** logical value have the value 0; the -**true** logical value has the value 1.
 
 ## Syntax
