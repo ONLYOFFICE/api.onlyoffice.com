@@ -14,7 +14,7 @@ expression.AddContentControl(type, commonPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [ContentControlType](../Enumeration/ContentControlType.md) |  | A numeric value that specifies the content control type. It can have one of the following values: -**1** (block), -**2** (inline), -**3** (row), or -**4** (cell). |
+| type | Required | [ContentControlType](../Enumeration/ContentControlType.md) |  | A numeric value that specifies the content control type. It can have one of the following values: **1** (block), **2** (inline), **3** (row), or **4** (cell). |
 | commonPr | Optional | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | The common content control properties. |
 
 ## Returns

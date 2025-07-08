@@ -31,7 +31,7 @@ Represents the ApiPictureForm class.
 | [SetFormKey](./Methods/SetFormKey.md) | boolean | Sets a key to the current form. |
 | [SetImage](./Methods/SetImage.md) | boolean | Sets an image to the current picture form. |
 | [SetLockAspectRatio](./Methods/SetLockAspectRatio.md) | boolean | Locks the aspect ratio of the current picture form. |
-| [SetPicturePosition](./Methods/SetPicturePosition.md) | boolean | Sets the picture position inside the current form: -**0** - the picture is placed on the left/top; -**50** - the picture is placed in the center; -**100** - the picture is placed on the right/bottom. |
+| [SetPicturePosition](./Methods/SetPicturePosition.md) | boolean | Sets the picture position inside the current form: **0** - the picture is placed on the left/top; **50** - the picture is placed in the center; **100** - the picture is placed on the right/bottom. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form. Can't be set to checkbox or radio button.* |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Specifies if the current form should be required. |
 | [SetRespectBorders](./Methods/SetRespectBorders.md) | boolean | Respects the form border width when scaling the image. |

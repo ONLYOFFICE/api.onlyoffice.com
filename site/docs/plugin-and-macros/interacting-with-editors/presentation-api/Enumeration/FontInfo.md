@@ -10,7 +10,7 @@ An object containing the font information.
 | m_bBold | boolean | Specifies if the font characters are bold or not. |
 | m_bIsFixed | boolean | Specifies if the current font is monospaced or not. |
 | m_bItalic | boolean | Specifies if the font characters are italic or not. |
-| m_eFontFormat | number | The specific file type(s) used to store font data: -**0** - *.fon, -**1** - *.ttf, -**2** - *.ttf, *.otf (CFF), -**3** - unknown font format. |
+| m_eFontFormat | number | The specific file type(s) used to store font data: **0** - *.fon, **1** - *.ttf, **2** - *.ttf, *.otf (CFF), **3** - unknown font format. |
 | m_lIndex | number | The font number in the file if there is more than one font in the file. |
 | m_sFamilyClass | number | The font family class which values are assigned by IBM to each font family. |
 | m_shAscent | number | The height above the baseline for a clipping region. |

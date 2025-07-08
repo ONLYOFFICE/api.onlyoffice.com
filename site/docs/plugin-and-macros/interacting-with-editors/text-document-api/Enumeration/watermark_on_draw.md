@@ -6,12 +6,12 @@ An object containing the watermark properties.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| align | number | The vertical text align in the watermark shape: -**0** - bottom, -**1** - center, -**4** - top. |
+| align | number | The vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
 | fill | number[] \| string | The watermark fill color in the RGB format, or the URL to image (base64 support: data:image/png;...). The empty array [] means that the watermark has no fill. |
 | height | number | The watermark height measured in millimeters. |
 | margins | number[] | The text margins measured in millimeters in the watermark shape. |
 | paragraphs | object[] | The array with paragraphs from the current watermark with their properties. |
-| paragraphs.align | number | The horizontal text align in the current paragraph: -**0** - right, -**1** - left, -**2** - center, -**3** - justify. |
+| paragraphs.align | number | The horizontal text align in the current paragraph: **0** - right, **1** - left, **2** - center, **3** - justify. |
 | paragraphs.fill | number[] | The paragraph highlight in the RGB format. The empty array [] means that the paragraph is not highlighted. |
 | paragraphs.linespacing | number | The text linespacing in the current paragraph. |
 | paragraphs.runs | object[] | The array with runs from the current paragraph with their properties. |
