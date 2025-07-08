@@ -54,7 +54,7 @@ WOPI 访问令牌必须遵循[此处](https://learn.microsoft.com/zh-cn/microsof
 
 WOPI 要求主机对 WOPI 请求中的锁 ID 与文件当前锁 ID 进行比对，一旦发现不匹配，主机需在`X-WOPI-Lock`响应标头中返回当前锁 ID。这一步骤至关重要，因为它帮助 WOPI 客户端决定后续应采取哪些 WOPI 调用。
 
-## WOPI源地址（WOPISrc）
+## WOPI源地址（WOPISrc）{#wopisrc}
 
 WOPI源地址（WOPISrc）是执行 WOPI 操作的文件专属 URL，由主机的文件端点 URL 与特定[文件 ID](#file-id)组合而成，但不包含[访问令牌](#access-token)。
 

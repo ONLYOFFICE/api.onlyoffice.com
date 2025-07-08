@@ -24,7 +24,7 @@ sidebar_position: -22
 
 编辑完成后，将进行[文档保存](./saving-file.md)过程。
 
-## 如何在实践中做到这一点
+## 如何在实践中做到这一点 {#how-this-can-be-done-in-practice}
 
 1. 创建一个空的 *html* 文件。
 

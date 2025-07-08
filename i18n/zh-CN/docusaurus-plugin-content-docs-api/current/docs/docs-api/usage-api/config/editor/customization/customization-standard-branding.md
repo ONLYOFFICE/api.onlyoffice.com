@@ -13,7 +13,7 @@ sidebar_label: Standard branding
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)。
 :::
 
-## 匿名
+## 匿名 {#anonymous}
 
 `类型: object`
 
@@ -165,7 +165,7 @@ const close = {
 
 **示例**: `false`
 
-## 客户
+## 客户 {#customer}
 
 `类型: object`
 

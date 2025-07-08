@@ -21,7 +21,7 @@ sidebar_position: -19
 7. 当用户点击文档版本列表中的另一个版本时，**文档编辑器**会重新请求要显示的该版本的信息。
 8. 用户点击*关闭历史记录*按钮，**文档编辑器**隐藏文档版本列表。
 
-## 实际操作方法
+## 实际操作方法 {#how-this-can-be-done-in-practice}
 
 1. 创建一个*html*文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 

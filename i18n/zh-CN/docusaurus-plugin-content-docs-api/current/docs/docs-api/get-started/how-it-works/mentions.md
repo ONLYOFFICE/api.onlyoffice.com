@@ -14,7 +14,7 @@ sidebar_position: -17
 4. 用户在**文档编辑器**的评论字段中输入评论，该评论将添加到文档中。
 5. **文档编辑器**将消息、电子邮件列表以及文档中的链接操作发送给**文档管理器**。
 
-## 实际操作方法
+## 实际操作方法 {#how-this-can-be-done-in-practice}
 
 1.创建一个空的*html*文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 
