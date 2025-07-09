@@ -30,11 +30,28 @@ Starting from version 8.1, you can add custom functions to the spreadsheets usin
     ```
 
 3. Write a description for your function, specify the parameters and return value if necessary. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
-4. Click **Save**.
+   #### Accessing cell addresses (since v9.0.4)
+   
+   Starting from version **9.0.4**, inside your custom function you can access:
+   
+   - `this.address` — the address of the cell where the custom function is being calculated (e.g., `"C5"`).
+   - `this.args` — an array of input arguments. Each argument object includes an `address` field with the address of the source cell (e.g., `"A1"`)
+  
+    Example:
+    ```js
+    function CUSTOMFUNC() {
+      console.log("Function is evaluated in:", this.address);
+      this.args.forEach(arg => {
+        console.log("Argument value:", arg.value, "from cell:", arg.address);
+      });
+    }
+    ```
 
-![Add custom function](/assets/images/plugins/add-custom-function.png#gh-light-mode-only)![Add custom function](/assets/images/plugins/add-custom-function.dark.png#gh-dark-mode-only)
+ 4. Click **Save**.
 
-Now you can use this function in the spreadsheet.
+ ![Add custom function](/assets/images/plugins/add-custom-function.png#gh-light-mode-only)![Add custom function](/assets/images/plugins/add-custom-function.dark.png#gh-dark-mode-only)
+
+ Now you can use this function in the spreadsheet.
 
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
