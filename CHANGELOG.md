@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docspace
+
+* Added DocSpace SDKs
+
 ## 6.2.0
 
 ### New features
