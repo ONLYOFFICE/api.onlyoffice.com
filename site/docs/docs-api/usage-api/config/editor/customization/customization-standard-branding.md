@@ -624,7 +624,10 @@ Shows or hides the logo. The default value is **true**.
 
 `Type: boolean`
 
-Defines if document macros will be automatically run when the editor opens. The default value is **true**. The **false** value hides the [macros settings](#macrosmode) from the user.
+Defines if document macros will be automatically run when the editor opens. The default value is **true**.
+
+- **Before version 9.0.3**: the **false** value disables the automatic startup of macros and hides the [macros settings](#macrosmode) from the user.
+- **Since version 9.0.3**: the **false** value completely disables macros — they cannot be run, added, or edited. The **Macros** button is also hidden from the **View** tab.
 
 **Example**: `true`
 

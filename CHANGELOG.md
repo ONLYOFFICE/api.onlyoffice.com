@@ -54,6 +54,7 @@
 
 #### Docs API
 
+* Docs API: updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution.
 * Added the theme-white and theme-night theme ids to the editorConfig.customization.uiTheme parameter
 * Added opening for odg format
 * Added opening for md format

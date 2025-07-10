@@ -4,6 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 9.0
 
+- Changed [editorConfig.customization.macros](../usage-api/config/editor/customization/customization-standard-branding.md#macros): in version 9.0.3, this parameter completely disables running, adding, and editing macros (not just automatic startup).
 - The [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) parameter is now available for the mobile editors.
 - Added the *theme-white* and *theme-night* theme ids to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
