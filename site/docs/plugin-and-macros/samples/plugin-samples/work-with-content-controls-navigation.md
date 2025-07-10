@@ -117,7 +117,7 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 - executeMethod ("[GetAllContentControls](/site/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
 - executeMethod ("[GetCurrentContentControl](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
 - executeMethod ("[MoveCursorToContentControl](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/MoveCursorToContentControl.md)")
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - executeMethod ("[SelectContentControl](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/SelectContentControl.md)")
 
 ## Support

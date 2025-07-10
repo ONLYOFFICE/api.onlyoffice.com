@@ -1,8 +1,8 @@
 # RemoveElement
 
-Removes an element using the position specified.
-💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),
-a new empty run is automatically created. If you want to add
+Removes an element using the position specified.\
+💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),\
+a new empty run is automatically created. If you want to add\
 content to this run, use the [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) method.
 
 ## Syntax

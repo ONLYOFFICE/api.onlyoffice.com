@@ -1,7 +1,7 @@
 # AddCaption
 
-Adds a caption paragraph after (or before) the current paragraph.
-💡 Please note that the current paragraph must be in the document (not in the footer/header).
+Adds a caption paragraph after (or before) the current paragraph.\
+💡 Please note that the current paragraph must be in the document (not in the footer/header).\
 And if the current paragraph is placed in a shape, then a caption is added after (or before) the parent shape.
 
 ## Syntax

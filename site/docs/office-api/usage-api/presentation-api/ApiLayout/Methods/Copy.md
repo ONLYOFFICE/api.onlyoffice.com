@@ -1,6 +1,6 @@
 # Copy
 
-Creates a copy of the specified slide layout object.
+Creates a copy of the specified slide layout object.\
 Copies without master slide.
 
 ## Syntax
