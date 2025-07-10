@@ -652,7 +652,7 @@ Plugin [type](../configuration/types.md). The following values are available:
 - **"window"**. A plugin that operates as a standalone window upon launch.
 - **"panel"**. A plugin that opens in the left-side panel.
 - **"panelRight"**. A plugin that opens in the right-side panel.
-- **"unvisible"**. A plugin that is invisible upon launch.
+- **"invisible"**. A plugin that is invisible upon launch.
 
 Please note that a plugin of any type can create windows and tabs during its work.
 

@@ -2,7 +2,7 @@
 
 Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word synonyms and antonyms.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents, spreadsheets, presentations.
 

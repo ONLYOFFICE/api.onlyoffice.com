@@ -2,7 +2,7 @@
 
 Inserts custom fields into the document.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

@@ -2,7 +2,7 @@
 
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel, panelRight.
 
 **Supported editors:** documents.
 
@@ -166,7 +166,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - button
 - init
 - onTranslate
-- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
 
 ## Support
 

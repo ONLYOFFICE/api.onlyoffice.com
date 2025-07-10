@@ -2,7 +2,7 @@
 
 Inserts special symbols into the document.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents, spreadsheets, presentations.
 

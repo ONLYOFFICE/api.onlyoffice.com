@@ -2,7 +2,7 @@
 
 Adds comments to a cell of the spreadsheet.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** spreadsheets.
 

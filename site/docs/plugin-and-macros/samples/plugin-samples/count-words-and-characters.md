@@ -8,7 +8,7 @@ Counts paragraphs, words, and characters with or without spaces in the selected 
 > - numbers from numbered lists;
 > - page numbers.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

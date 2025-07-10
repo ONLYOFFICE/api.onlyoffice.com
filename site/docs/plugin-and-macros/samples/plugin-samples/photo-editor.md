@@ -2,7 +2,7 @@
 
 Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for editing images right in the document: cropping, resizing, applying effects, etc.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** window.
 
 **Supported editors:** documents, spreadsheets, presentations.
 

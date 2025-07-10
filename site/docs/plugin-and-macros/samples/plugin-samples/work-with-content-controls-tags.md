@@ -2,7 +2,7 @@
 
 Gets the list of content controls tags.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

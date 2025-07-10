@@ -2,7 +2,7 @@
 
 Searches for target text and changes its background color.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

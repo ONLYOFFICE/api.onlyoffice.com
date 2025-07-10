@@ -2,7 +2,7 @@
 
 Protects a document using a watermark.
 
-**Plugin type:** non-visual, system.
+**Plugin type:** invisible, system.
 
 **Supported editors:** documents, spreadsheets, presentations.
 

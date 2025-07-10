@@ -2,7 +2,7 @@
 
 Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position changes.
 
-**Plugin type:** non-visual, non-system.
+**Plugin type:** invisible.
 
 **Supported editors:** documents.
 

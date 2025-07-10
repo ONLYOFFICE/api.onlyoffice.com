@@ -2,7 +2,7 @@
 
 Adds a clippy assistant to the document editor.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents, spreadsheets, presentations.
 

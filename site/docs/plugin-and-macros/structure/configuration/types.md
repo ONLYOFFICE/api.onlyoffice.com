@@ -34,7 +34,7 @@ The plugin is opened in the right-side panel, like [Translator](../../samples/pl
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
-## Unvisible
+## Invisible
 
 The plugin that does not display any windows or panels upon launch but can create them later during its operation. It provides a button (or buttons) to apply some transformations or manipulations to the document, like [Hello world](../../samples/plugin-samples/hello-world.md), [Speech](../../samples/plugin-samples/speech.md). For example, it can be used when the plugin displays different windows depending on the document content.
 

@@ -2,7 +2,7 @@
 
 Inserts template fields for invoice information.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

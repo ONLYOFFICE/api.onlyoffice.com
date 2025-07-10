@@ -2,7 +2,7 @@
 
 Inserts content controls (automatically or manually), navigates and selects them as well as pastes text into them.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

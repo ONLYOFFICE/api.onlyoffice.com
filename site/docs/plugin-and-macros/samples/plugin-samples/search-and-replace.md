@@ -2,7 +2,7 @@
 
 Searches for target text and replaces it with something else.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** window.
 
 **Supported editors:** documents.
 

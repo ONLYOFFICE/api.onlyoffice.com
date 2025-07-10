@@ -2,7 +2,7 @@
 
 Searches for and replaces text in the document when it is reopened.
 
-**Plugin type:** non-visual, system.
+**Plugin type:** invisible, system.
 
 **Supported editors:** documents.
 

@@ -4,7 +4,7 @@ Connects the [Typograf](https://github.com/typograf/typograf) assistant to prepa
 
 Supported languages are listed [here](https://github.com/typograf/typograf/blob/dev/docs/LOCALES.en-US.md).
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

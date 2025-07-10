@@ -2,7 +2,7 @@
 
 Moves the text cursor to the document start/end.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents.
 

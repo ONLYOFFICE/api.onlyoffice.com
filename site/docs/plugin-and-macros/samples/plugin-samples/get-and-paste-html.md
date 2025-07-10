@@ -2,7 +2,7 @@
 
 Gets the document content as HTML code, modifies it, and pastes back to the document.
 
-**Plugin type:** visual, non-system.
+**Plugin type:** panel.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
