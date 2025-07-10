@@ -6,7 +6,11 @@ Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Youtube](/assets/images/plugins/gifs/youtube.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="jHuwwVliZ5Q" />
+```
 
 ## Installation
 

@@ -6,7 +6,11 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![HighlightCode](/assets/images/plugins/gifs/highlight-code.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="almj8Lphrmc" />
+```
 
 ## Installation
 
