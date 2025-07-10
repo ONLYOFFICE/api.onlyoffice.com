@@ -6,6 +6,10 @@
 
 * Added DocSpace SDKs
 
+#### Plugins and macros
+
+* Added a sample for asynchronous custom functions
+
 ## 6.2.0
 
 ### New features

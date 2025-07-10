@@ -8,6 +8,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.0
 
+- Added the ability to add [asynchronous custom functions](../macros/adding-custom-functions.md#asynchronous-functions) to the spreadsheets using the **Macros** plugin.
 - Added the ability to add custom [buttons to content controls](../customization/content-control-buttons.md) using a plugin.
 - Added the [GetCurrentBookmark](../interacting-with-editors/text-document-api/Methods/GetCurrentBookmark.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
 - Added the [GoToSlide](../interacting-with-editors/presentation-api/Methods/GoToSlide.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.

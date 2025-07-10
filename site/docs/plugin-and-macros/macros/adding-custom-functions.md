@@ -38,6 +38,8 @@ Now you can use this function in the spreadsheet.
 
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
+The sample of a custom function you can find [here](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md).
+
 If you want to rename your function, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the custom function name and select **Rename**. Enter a new name for the custom function and click **Ok**.
 
 To delete an unnecessary custom function, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the custom function name and select **Delete**.
@@ -45,3 +47,29 @@ To delete an unnecessary custom function, click ![Dots icon](/assets/images/plug
 You can also copy your function. To do this, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the custom function name and select **Copy**.
 
 ![Custom function menu](/assets/images/plugins/custom-function-menu.png#gh-light-mode-only)![Custom function menu](/assets/images/plugins/custom-function-menu.dark.png#gh-dark-mode-only)
+
+## Asynchronous functions
+
+Starting from version 9.0, you can add asynchronous custom functions to manage any request within the function body:
+
+<!-- This code is related to macros. -->
+
+<!-- eslint-skip -->
+
+``` ts
+(function()
+{
+  /**
+  * Function that returns the argument
+  * @customfunction
+  * @param {any} arg Any data.
+  * @returns {any} The argumet of the function.
+  */
+  async function myFunction(arg) {
+    return arg;
+  }
+  Api.AddCustomFunction(myFunction);
+})();
+```
+
+The sample of an asynchronous custom function you can find [here](../samples/macro-samples/spreadsheet-editor/calculate-world-bank-indicator.md).
