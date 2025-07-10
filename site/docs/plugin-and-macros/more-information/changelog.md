@@ -8,6 +8,8 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.0
 
+- Added the ability to [automatically convert](../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin) VBA code into ONLYOFFICE macros using AI plugin.
+- Added the ability to [automatically generate](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE macros using AI plugin.
 - Added the ability to add custom [buttons to content controls](../customization/content-control-buttons.md) using a plugin.
 - Added the [GetCurrentBookmark](../interacting-with-editors/text-document-api/Methods/GetCurrentBookmark.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
 - Added the [GoToSlide](../interacting-with-editors/presentation-api/Methods/GoToSlide.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.

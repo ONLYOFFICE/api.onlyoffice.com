@@ -1,5 +1,12 @@
 # Change log
 
+### New features
+
+#### Plugins and macros
+
+* Added the ability to automatically convert VBA code into ONLYOFFICE macros using AI plugin
+* Added the ability to automatically generate ONLYOFFICE macros using AI plugin
+
 ## 6.2.0
 
 ### New features
