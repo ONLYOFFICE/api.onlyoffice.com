@@ -13,7 +13,7 @@ Represents the ApiTable class.
 | [Copy](./Methods/Copy.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a copy of the current table. |
 | [GetClassType](./Methods/GetClassType.md) | "table" | Returns the type of the ApiTable object. |
 | [GetRow](./Methods/GetRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | Returns a row by its index. |
-| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null". -**Warning**: The number of cells in any row and the number of rows in the current table may be changed. |
+| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null". **Warning**: The number of cells in any row and the number of rows in the current table may be changed. |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | Removes a table column with the specified cell. |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | Removes a table row with the specified cell. |
 | [SetShd](./Methods/SetShd.md) | None | Specifies the shading which shall be applied to the extents of the current table. |

@@ -14,8 +14,8 @@ This documentation describes:
 
 Here are some examples of what you can do with ONLYOFFICE DocSpace plugins:
 
-- connect third-party services, like [Draw.io](../samples/drawio.md), [Markdown](../samples/markdown.md), [Speech to Text](../samples/speech-to-text.md), etc.;
-- enhance the existing user experience and the editors’ functionality: [PDF converter](../samples/pdf-converter.md).
+- connect third-party services, like [Draw.io](../samples/advanced-samples/drawio.md), [Markdown](../samples/advanced-samples/markdown.md), [Speech to Text](../samples/advanced-samples/speech-to-text.md), etc.;
+- enhance the existing user experience and the editors' functionality: [PDF converter](../samples/advanced-samples/pdf-converter.md).
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-plugins).
 

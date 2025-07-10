@@ -1,8 +1,9 @@
 # SetLock
 
-Sets the lock to the current block text content control:
--**"contentLocked"** - content cannot be edited.
--**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.
+Sets the lock to the current block text content control:\
+-**"unlocked"** - content can be edited and the container can be deleted.\
+-**"contentLocked"** - content cannot be edited.\
+-**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.\
 -**"sdtLocked"** - the container cannot be deleted.
 
 ## Syntax
@@ -17,7 +18,7 @@ expression.SetLock(lockType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| lockType | Required | "contentLocked" \| "sdtContentLocked" \| "sdtLocked" |  | The type of the lock applied to the block text content control. |
+| lockType | Required | "unlocked" \| "contentLocked" \| "sdtContentLocked" \| "sdtLocked" |  | The type of the lock applied to the block text content control. |
 
 ## Returns
 

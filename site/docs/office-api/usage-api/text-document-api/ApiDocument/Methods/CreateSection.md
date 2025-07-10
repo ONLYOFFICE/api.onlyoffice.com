@@ -1,6 +1,6 @@
 # CreateSection
 
-Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current
+Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current\
 section - page size, footer, header, columns, etc.
 
 ## Syntax

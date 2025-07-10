@@ -18,7 +18,7 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../get-sta
 |------------------|---------|----------|-------------|
 | `async`          | boolean | optional | Defines the conversion request type: asynchronous or not. |
 | `codePage`       | integer | optional | Defines the file encoding when converting from *csv* or *txt* format. See [supported values](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). |
-| `delimiter`      | integer | optional | Defines the delimiter characters when converting from *csv*. Supported values: `0` â€“ no delimiter, `1` â€“ tab, `2` â€“ semicolon, `3` â€“ colon, `4` â€“ comma, `5` â€“ space. |
+| `delimiter`      | integer | optional | Defines the delimiter characters when converting from *csv*. Supported values: `0` – no delimiter, `1` – tab, `2` – semicolon, `3` – colon, `4` – comma, `5` – space. |
 | `documentLayout` | object  | optional | Specifies layout options for printing forms as *pdf* documents or images. |
 | `documentRenderer` | object | optional | Defines the document renderer when converting from *pdf*, *xps*, *oxps*. |
 | `filetype`       | string  | required | Type of the document file to be converted. |
@@ -98,7 +98,7 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../get-sta
 
 | Parameter | Type    | Presence | Description |
 |-----------|---------|----------|-------------|
-| `aspect`  | integer | optional | Fit mode: `0` â€“ stretch, `1` â€“ keep aspect, `2` â€“ page-size-to-pixel (default). |
+| `aspect`  | integer | optional | Fit mode: `0` – stretch, `1` – keep aspect, `2` – page-size-to-pixel (default). |
 | `first`   | boolean | optional | First page only (`true`) or all pages (`false`). Default: true. |
 | `height`  | integer | optional | Height in pixels. Default: 100. |
 | `width`   | integer | optional | Width in pixels. Default: 100. |
@@ -118,14 +118,14 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../get-sta
 | `fill`          | array \| string   | optional | Fill color in RGB or base64 image. |
 | `stroke-width`  | integer           | optional | Stroke width in mm. |
 | `stroke`        | array of integers | optional | Stroke color in RGB. |
-| `align`         | integer           | optional | Vertical align: `0` â€“ bottom, `1` â€“ center, `4` â€“ top. |
+| `align`         | integer           | optional | Vertical align: `0` – bottom, `1` – center, `4` – top. |
 | `paragraphs`    | array of objects  | optional | Array of watermark paragraphs. |
 
 #### watermark.paragraphs
 
 | Parameter     | Type              | Presence | Description |
 |---------------|-------------------|----------|-------------|
-| `align`       | integer           | optional | Horizontal align: `0` â€“ right, `1` â€“ left, `2` â€“ center, `3` â€“ justify. |
+| `align`       | integer           | optional | Horizontal align: `0` – right, `1` – left, `2` – center, `3` – justify. |
 | `fill`        | array of integers | optional | Background highlight in RGB. |
 | `linespacing` | integer           | optional | Line spacing. |
 | `runs`        | array of objects  | optional | Array of text runs. |

@@ -7,10 +7,10 @@ sidebar_label: Standard branding
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
-在此页面上，您将找到 ONLYOFFICE 文档开发者版的 [白标定制](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) 可用的自定义参数。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
+在此页面上，您将找到 ONLYOFFICE 文档开发者版的[白标定制](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)可用的自定义参数。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
 
 :::请注意，
-只有以下参数可用于移动编辑器：[close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [宏模式](#macrosmode), [mobile](#mobile).
+只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)。
 :::
 
 ## 匿名
@@ -418,6 +418,14 @@ const features = {
 
 **示例**: `false`
 
+## forceWesternFontSize
+
+`Type: boolean`
+
+定义在简体中文界面中使用西文字号（true）还是中文字号（false）。默认值为 false。
+
+**示例**: `false`
+
 ## goback
 
 `类型: object`
@@ -717,7 +725,7 @@ const mobile = {
 
 `类型: boolean`
 
-定义 [插件](../../../../../plugin-and-macros/get-started/get-started.md) 是否将启动并可用。默认值为 **true**。
+定义[插件](../../../../../plugin-and-macros/get-started/get-started.md) 是否将启动并可用。默认值为 **true**。
 
 **示例**: `true`
 
@@ -1008,7 +1016,7 @@ const review = {
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       anonymous: {
@@ -1054,6 +1062,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         visible: true,
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -1102,7 +1111,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       zoom: 100,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md)章节。
