@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Plugins and macros
+
+* Added the ability to access cell address information inside custom functions
+
 ## 6.2.0
 
 ### New features
