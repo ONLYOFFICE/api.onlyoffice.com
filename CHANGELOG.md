@@ -6,6 +6,30 @@
 
 * Added a sample for asynchronous custom functions
 
+## 6.2.0
+
+### New features
+
+#### Docspace
+
+* Removed the Filtering pages
+* Added new API Backend samples
+* Added new Plugins SDK samples
+
+#### Docs
+
+* Updated Office API documentation for version 9.0.3
+
+#### Docs API
+
+* The editorConfig.customization.toolbarHideFileName parameter is now available for the mobile editors
+* Updated documentation in Chinese
+
+#### Plugins and macros
+
+* Restructured Interacting with editors section
+* Added Events section
+
 ## 6.1.0
 
 ### New features

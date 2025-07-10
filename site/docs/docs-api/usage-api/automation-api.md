@@ -241,7 +241,7 @@ connector.disconnect();
 
 ## executeMethod
 
-The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Api.md).
+The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/Methods.md).
 
 ### Parameters:
 

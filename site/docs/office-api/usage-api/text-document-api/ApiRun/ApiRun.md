@@ -46,7 +46,7 @@ Represents the ApiRun class.
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the text properties of the current run. |
 | [GetUnderline](./Methods/GetUnderline.md) | boolean | Gets the underline property from the current text properties. |
 | [GetVertAlign](./Methods/GetVertAlign.md) | string | Gets the vertical alignment type from the current text properties. |
-| [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current text run. If the current run is not assigned to any document part, then -**false** is returned. Otherwise, this method returns -**true**. If there is any selection in the document, it will be removed. |
+| [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current text run. If the current run is not assigned to any document part, then **false** is returned. Otherwise, this method returns **true**. If there is any selection in the document, it will be removed. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current run. |
 | [Select](./Methods/Select.md) | boolean | Selects the current run. |
 | [SetBold](./Methods/SetBold.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the bold property to the text character. |
@@ -68,6 +68,6 @@ Represents the ApiRun class.
 | [SetTextFill](./Methods/SetTextFill.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text fill to the current text run. |
 | [SetTextPr](./Methods/SetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text properties to the current run. |
 | [SetUnderline](./Methods/SetUnderline.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line). |
-| [SetVertAlign](./Methods/SetVertAlign.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run: -**"baseline"** - the characters in the current text run will be aligned by the default text baseline. -**"subscript"** - the characters in the current text run will be aligned below the default text baseline. -**"superscript"** - the characters in the current text run will be aligned above the default text baseline. |
+| [SetVertAlign](./Methods/SetVertAlign.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run: **"baseline"** - the characters in the current text run will be aligned by the default text baseline. **"subscript"** - the characters in the current text run will be aligned below the default text baseline. **"superscript"** - the characters in the current text run will be aligned above the default text baseline. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiRun object into the JSON object. |
 | [WrapInMailMergeField](./Methods/WrapInMailMergeField.md) | boolean | Wraps a run in a mail merge field. |

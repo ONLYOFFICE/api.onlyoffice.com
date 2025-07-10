@@ -26,6 +26,17 @@ cat > site/samples/docspace/plugins-sdk/_category_.json <<EOF
 }
 EOF
 
+mkdir -p site/samples/docspace/api-backend
+cp -r site/docspace/api-backend/samples/. site/samples/docspace/api-backend
+
+cat > site/samples/docspace/api-backend/_category_.json <<EOF
+{
+  "position": 2,
+  "collapsed": false,
+  "label": "Backend REST API"
+}
+EOF
+
 mkdir -p site/samples/docs/docs-api
 cp -r site/docs/docs-api/samples/. site/samples/docs/docs-api
 

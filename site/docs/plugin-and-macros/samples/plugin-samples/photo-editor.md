@@ -185,9 +185,9 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 - init
 - onTranslate
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetImageDataFromSelection.md)
-- [executeMethod ("GerVersion")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
-- [executeMethod ("PutImageDataToSelection")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PutImageDataToSelection.md)
+- [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetImageDataFromSelection.md)
+- [executeMethod ("GerVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("PutImageDataToSelection")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PutImageDataToSelection.md)
 - [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)

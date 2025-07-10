@@ -1,14 +1,15 @@
 # SetLock
 
-Sets the lock to the current inline text content control:
--**"contentLocked"** - content cannot be edited.
--**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.
+Sets the lock to the current inline text content control:\
+-**"unlocked"** - content can be edited and the container can be deleted.\
+-**"contentLocked"** - content cannot be edited.\
+-**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.\
 -**"sdtLocked"** - the container cannot be deleted.
 
 ## Syntax
 
 ```javascript
-expression.SetLock(sLockType);
+expression.SetLock(lockType);
 ```
 
 `expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
@@ -17,7 +18,7 @@ expression.SetLock(sLockType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLockType | Required | "contentLocked" \| "sdtContentLocked" \| "sdtLocked" |  | The lock type applied to the inline text content control. |
+| lockType | Required | "unlocked" \| "contentLocked" \| "sdtContentLocked" \| "sdtLocked" |  | The lock type applied to the inline text content control. |
 
 ## Returns
 

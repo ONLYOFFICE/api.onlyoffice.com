@@ -109,7 +109,7 @@ jobs:
           echo "AWS_BUCKET_URL=s3://${com_s3bucket}${BUCKET_NUMBER}" >> "$GITHUB_ENV"
           echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_PROD}" >> "$GITHUB_ENV"
           echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_PROD}" >> "$GITHUB_ENV"
-          echo "AWS_REGION=us-west-2" >> "$GITHUB_ENV"
+          echo "AWS_REGION=us-east-1" >> "$GITHUB_ENV"
           echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_PROD}" >> "$GITHUB_ENV"
         elif [ "${mode}" = "testing" ]; then
           echo "AWS_BUCKET_URL=s3://${teamlab_s3bucket}${BUCKET_NUMBER}" >> "$GITHUB_ENV"
