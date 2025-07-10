@@ -9,6 +9,7 @@
 #### Plugins and macros
 
 * Added a sample for asynchronous custom functions
+* Added the ability to access cell address information inside custom functions
 
 ## 6.2.0
 
