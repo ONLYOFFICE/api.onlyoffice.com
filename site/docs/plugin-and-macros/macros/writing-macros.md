@@ -76,6 +76,26 @@ Paste the code above to the macros window and click ![Play icon](/assets/images/
 
 ![Alternate raws](/assets/images/plugins/alternate-raws.png)
 
+## Generating macros using AI plugin
+
+If you want to speed up the process, starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically generate ONLYOFFICE macros from their descriptions:
+
+1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](https://helpcenter.onlyoffice.com/docs/userguides/ai/configuration.aspx).
+2. Open the **View** tab and click **Macros**.
+3. Click the **AI** icon in the **Macros** window and select **Create from description**.
+
+    ![AI plugin](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI plugin](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
+
+4. Input a prompt into the **Create macros from description** window and click **Create**. The generated macro sample will be inserted into the **Macros** window.
+
+    ![Create from description](/assets/images/plugins/create-from-description.png#gh-light-mode-only)![Create from description](/assets/images/plugins/create-from-description.dark.png#gh-dark-mode-only)
+
+5. Review the code and make adjustments if necessary.
+
+    > While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+
+6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
+
 ## Subscribing to events
 
 To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) method.
