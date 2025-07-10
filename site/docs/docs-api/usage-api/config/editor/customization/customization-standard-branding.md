@@ -638,8 +638,8 @@ Defines if document macros will be automatically run when the editor opens. The 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
 - **disable** - don't run macros at all;
-- **enable** - run all macros automatically;
-- **warn** - warn about macros and ask permission to run them.
+- **warn** - warn about macros and ask permission to run them;
+- **enable** - run all macros automatically.
 
 The default value is **warn**.
 
