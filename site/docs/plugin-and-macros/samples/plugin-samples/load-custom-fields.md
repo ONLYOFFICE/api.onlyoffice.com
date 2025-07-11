@@ -104,7 +104,7 @@ Repository on GitHub: [example_customfields_load](https://github.com/ONLYOFFICE/
 - init
 - onMethodReturn
 - executeMethod ("[GetAllContentControls](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/InsertAndReplaceContentControls.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## Support
 

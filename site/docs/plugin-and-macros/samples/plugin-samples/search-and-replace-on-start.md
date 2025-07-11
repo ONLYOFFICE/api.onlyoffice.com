@@ -58,7 +58,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 - button
 - init
 - onDocumentContentReady
-- executeMethod ("[SearchAndReplace](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/SearchAndReplace.md)")
+- executeMethod ("[SearchAndReplace](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## Support
 

@@ -100,8 +100,8 @@ Repository on GitHub: [example_customfields_add](https://github.com/ONLYOFFICE/s
 - button
 - init
 - onMethodReturn
-- executeMethod ("[AddContentControl](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/AddContentControl.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/InsertAndReplaceContentControls.md)")
+- executeMethod ("[AddContentControl](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddContentControl.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## Support
 

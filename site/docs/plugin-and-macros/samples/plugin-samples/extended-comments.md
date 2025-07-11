@@ -113,10 +113,10 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 - onChangeCommentData
 - onRemoveComment
 - executeMethod ("[AddComment](/site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
-- executeMethod ("[ChangeComment](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/ChangeComment.md)")
-- executeMethod ("[GetAllComments](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetAllComments.md)")
-- executeMethod ("[MoveToComment](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/MoveToComment.md)")
-- executeMethod ("[RemoveComments](/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/RemoveComments.md)")
+- executeMethod ("[ChangeComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RemoveComments.md)")
 
 ## Support
 
