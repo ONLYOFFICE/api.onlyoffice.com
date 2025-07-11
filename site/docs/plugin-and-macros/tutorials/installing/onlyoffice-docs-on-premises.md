@@ -98,68 +98,22 @@ The plugin will be added to the opened editors and all the editors you will open
 
 ## Adding plugins through the plugin manager for all users 
 
-This guide describes how to install an ONLYOFFICE plugin globally using the `PluginManager` tool available in the ONLYOFFICE Docs distribution.
-
 Starting from version 7.4, the **pluginsmanager** utility can be used to manage the plugins in ONLYOFFICE Docs on-premises. Commands are available for installing, removing, restoring, updating and more. For example:
 
 <Tabs>
-  <TabItem value="linux" label="Linux (Debian, Ubuntu, CentOS)">
-      1. Open the terminal.
-      2. Navigate to the Plugin Manager directory:
-
+  <TabItem value="docker" label="Docker, DEB, and RPM">
       ``` bash
-      cd /var/www/onlyoffice/documentserver/tools/pluginmanager
+      cd /usr/bin
+      ./documentserver-pluginsmanager.sh --installPlugin="zotero"
       ```
-      3. Run the command:
-   
-      ``` bash
-      sudo ./PluginManager add -plugin <path-to-plugin-zip>
-      ```
-      Replace `<path-to-plugin-zip>` with the full path to your plugin archive (ZIP file).
   </TabItem>
   <TabItem value="win" label="Windows">
-      1. Open the **Command Prompt** as Administrator.
-      2. Navigate to the Plugin Manager folder (by default):
-
       ``` bash
-      cd "C:\Program Files\ONLYOFFICE\DocumentServer\tools\pluginmanager"
-      ```
-      3. Run the command:
-   
-      ``` bash
-      PluginManager.exe add -plugin "<path-to-plugin-zip>"
-      ```
-      Replace `<path-to-plugin-zip>` with the full path to your plugin archive (ZIP file).
-  </TabItem>
-  <TabItem value="docker" label="Docker">
-      If ONLYOFFICE Docs is deployed in a Docker container:
-  
-      1. Copy the plugin archive into the container:
-   
-      ``` bash
-      docker cp <path-to-plugin-zip> <container-id>:/tmp/plugin.zip
-      ```
-      2. Access the container shell:
-   
-      ``` bash
-      docker exec -it <container-id> bash
-      ```
-      3. Navigate to the Plugin Manager directory:
-   
-      ``` bash
-      cd /var/www/onlyoffice/documentserver/tools/pluginmanager
-      ```
-      4. Run the plugin installation command:
-   
-      ``` bash
-      ./PluginManager add -plugin /tmp/plugin.zip
+      cd "C:\Program Files\ONLYOFFICE\DocumentServer\bin"
+      documentserver-pluginsmanager.bat --installPlugin="zotero"
       ```
   </TabItem>
 </Tabs>
-
-> Once installed, the plugin appears in the editors under the **Plugins** tab for all users. No additional configuration or restart is required.
-
-The paths in the examples are default values, please modify them if necessary.
 
 A full list of server commands can be found [here](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands).
 
