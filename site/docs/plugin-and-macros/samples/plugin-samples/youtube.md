@@ -9,7 +9,7 @@ Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
-<YoutubeVideo videoId="jHuwwVliZ5Q" />
+<YoutubeVideo videoId="jHuwwVliZ5Q" posterType="hqdefault" />
 ```
 
 ## Installation
