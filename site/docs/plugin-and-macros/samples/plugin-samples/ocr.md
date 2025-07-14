@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{440EBF13-9B19-4BD8-8621-05200E58140B}`.
 

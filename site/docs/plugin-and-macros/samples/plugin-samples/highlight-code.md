@@ -12,7 +12,7 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site//docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}`.
 

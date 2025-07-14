@@ -10,7 +10,7 @@ Tracks the events of calling the context menu and clicking on its items. It also
 
 ## Installation
 
-Copy the code below and save it in the *config.json*, *index.html*, and *code.js* files respectively. Download the *resources* folder with icons from [this plugin](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources). Put all the files and the folder into the plugin folder and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Copy the code below and save it in the *config.json*, *index.html*, and *code.js* files respectively. Download the *resources* folder with icons from [this plugin](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add/resources). Put all the files and the folder into the plugin folder and install it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 

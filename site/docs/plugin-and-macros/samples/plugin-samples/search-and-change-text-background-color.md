@@ -10,7 +10,7 @@ Searches for target text and changes its background color.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) and install it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
