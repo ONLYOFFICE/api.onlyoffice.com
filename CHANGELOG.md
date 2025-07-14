@@ -9,7 +9,6 @@
 #### Plugins and macros
 
 * Added a sample for asynchronous custom functions
-* Added the ability to access cell address information inside custom functions
 * Added the ability to automatically convert VBA code into ONLYOFFICE macros using AI plugin
 * Added the ability to automatically generate ONLYOFFICE macros using AI plugin
 
