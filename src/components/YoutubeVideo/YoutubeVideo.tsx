@@ -21,6 +21,7 @@ const YoutubeVideo = ({ videoId, start, posterType }: Props) => {
         title="video"
         params={params}
         poster={posterParam}
+        cookie={true}
       />
     </div>
   );
