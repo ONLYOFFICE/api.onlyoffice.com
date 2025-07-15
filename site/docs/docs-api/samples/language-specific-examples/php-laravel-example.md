@@ -36,14 +36,14 @@ The application provides you with Docker files out-of-the-box, so you will just 
 
 1. Download and extract the release archive in a directory:
 
-  ```sh
-  cd /my/php-laravel/project
-  curl --output PHP.Laravel.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Laravel.Example.zip
-  unzip PHP.Laravel.Example.zip
-  cd "PHP Laravel Example"
-  ```
+    ```sh
+    cd /my/php-laravel/project
+    curl --output PHP.Laravel.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Laravel.Example.zip
+    unzip PHP.Laravel.Example.zip
+    cd "PHP Laravel Example"
+    ```
 
-  > You should modify the `DOCUMENT_SERVER_JWT_SECRET` environment variable in your `.env` file as the `docker-compose.yml` uses it to set a JWT secret in ONLYOFFICE Docs.
+   > You should modify the `DOCUMENT_SERVER_JWT_SECRET` environment variable in your `.env` file as the `docker-compose.yml` uses it to set a JWT secret in ONLYOFFICE Docs.
 
 2. To run the containers, you can either run the `make compose-start` command that builds and starts the project, or you can execute the following commands manually:
 
@@ -85,12 +85,12 @@ Before diving into the example, you will need to install ONLYOFFICE Docs. Check 
 
 2. Download the release archive and extract it in your preferred directory:
 
-  ```sh
-  cd /path/to/my/projects
-  curl --output PHP.Laravel.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Laravel.Example.zip
-  unzip PHP.Laravel.Example.zip
-  cd "PHP Laravel Example"
-  ```
+    ```sh
+    cd /path/to/my/projects
+    curl --output PHP.Laravel.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Laravel.Example.zip
+    unzip PHP.Laravel.Example.zip
+    cd "PHP Laravel Example"
+    ```
 
 3. Run `make install` or execute the following commands manually:
 

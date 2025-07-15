@@ -1,6 +1,6 @@
 # AddBookmarkCrossRef
 
-Adds a bookmark cross-reference to the current paragraph.
+Adds a bookmark cross-reference to the current paragraph.\
 💡 Please note that this paragraph must be in the document.
 
 ## Syntax
@@ -30,6 +30,10 @@ boolean
 This example adds a bookmark cross-reference to the paragraph.
 
 ```javascript editor-docx
+// How to create a bookmark reference to the paragraph.
+
+// Add a cross-reference to the bookmark of the paragraph.
+
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 
 paragraph.AddText("ONLYOFFICE Document Builder"); 

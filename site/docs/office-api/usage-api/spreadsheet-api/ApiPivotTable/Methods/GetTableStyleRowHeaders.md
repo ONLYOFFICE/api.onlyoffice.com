@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to get table style raw headers of a pivot table.
 
 ```javascript editor-xlsx
+// How to get table style raw headers.
+
+// Create a pivot table, add data to it then get its table style raw headers.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -48,7 +52,7 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style']
+    rows: ['Region', 'Style']
 });
 
 pivotTable.AddDataField('Price');
@@ -57,5 +61,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 
 pivotWorksheet.GetRange('A12').SetValue('Table Style Row Headers');
 pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetTableStyleRowHeaders());
-
 ```

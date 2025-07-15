@@ -23,9 +23,13 @@ number
 
 ## Example
 
-
+This example shows how to return the k-th percentile of values in a range.
 
 ```javascript editor-xlsx
+// How to get the k-th percentile of values.
+
+// Use a function to get the k-th percentile.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 let column1 = [1, 0, 7, 10];

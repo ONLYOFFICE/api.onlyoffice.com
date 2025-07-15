@@ -20,11 +20,14 @@ number
 
 ## Example
 
-This example shows how to get a sheet index.
+This example shows how to get the left margin of the sheet.
 
 ```javascript editor-xlsx
+// How to get margin of the sheet's left side.
+
+// Get the size of the left margin of the sheet.
+
 let worksheet = Api.GetActiveSheet();
-let index = worksheet.GetIndex();
-worksheet.GetRange("A1").SetValue("Index: ");
-worksheet.GetRange("B1").SetValue(index);
+let leftMargin = worksheet.GetLeftMargin();
+worksheet.GetRange("A1").SetValue("Left margin: " + leftMargin + " mm");
 ```

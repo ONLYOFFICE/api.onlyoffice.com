@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get all shapes from the sheet.
 
 ```javascript editor-xlsx
+// How to get all shapes.
+
+// Get all shapes as an array.
+
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
 let gradientStop2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);

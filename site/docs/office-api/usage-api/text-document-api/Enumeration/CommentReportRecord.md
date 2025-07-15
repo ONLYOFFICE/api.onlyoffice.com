@@ -11,7 +11,7 @@ Object
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | CommentMessage | string | The comment text. |
-| Date | number | Local timestamp of the comment. |
-| DateUTC | number | UTC timestamp of the comment. |
-| IsAnswer | boolean | Whether the comment is a response. |
+| Date | number | The comment local timestamp. |
+| DateUTC | number | The  comment UTC timestamp. |
+| IsAnswer | boolean | Specifies whether the comment is a response. |
 | QuoteText | string | The quoted text (if available). |

@@ -1,8 +1,8 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text:
--**"baseline"** - the characters in the current text Range will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text Range will be aligned below the default text baseline.
+Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text:\
+-**"baseline"** - the characters in the current text Range will be aligned by the default text baseline.\
+-**"subscript"** - the characters in the current text Range will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current text Range will be aligned above the default text baseline.
 
 ## Syntax
@@ -25,9 +25,13 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example sets verlical aligment "superscript" for [ApiRange](../ApiRange.md).
+This example sets vertical aligment "superscript" for [ApiRange](../ApiRange.md).
 
 ```javascript editor-docx
+// How to set vertical alignment of a text.
+
+// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript".
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Copyright Document Builder");

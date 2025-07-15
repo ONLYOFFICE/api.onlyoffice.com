@@ -14,7 +14,7 @@ expression.SetRotation(nRotAngle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nRotAngle | Required | number |  | new drawing rot angle |
+| nRotAngle | Required | number |  | New drawing rotation angle. |
 
 ## Returns
 

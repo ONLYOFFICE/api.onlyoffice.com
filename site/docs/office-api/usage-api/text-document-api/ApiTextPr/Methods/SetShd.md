@@ -28,6 +28,10 @@ expression.SetShd(sType, r, g, b);
 This example specifies the shading applied to the contents of the current text run.
 
 ```javascript editor-docx
+// How to set a shading for a text.
+
+// Create a text run object, specify its shading options.
+
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();
 textPr.SetShd("clear", 255, 111, 61);

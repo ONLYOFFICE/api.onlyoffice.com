@@ -25,6 +25,10 @@ expression.SetItalic(isItalic);
 This example sets the italic property to the text character.
 
 ```javascript editor-xlsx
+// How to make text italic.
+
+// Set italic property of a text.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

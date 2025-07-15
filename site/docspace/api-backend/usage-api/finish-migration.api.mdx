@@ -1,0 +1,71 @@
+---
+id: finish-migration
+title: "Finish migration"
+description: "Finishes the migration process."
+sidebar_label: "Finish migration"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVk1z2zgM/SsYXHJR7Wy6J93SJJ1p9yOdxJkcPJ4GliCLjUSqJBXX69F/74CUZcvOTnJJZBIEwIcHPG7R08phOsd/1MqSV0bjIkHTcPzxJccUC6WVK/cGCVr+2bLzn0y+wXSLmdGetZdPappKZcFu+sMZLWsuK7km+fKbhjFFs/zBmccEGyuRvGInu8rds84fucpMzTc1qergzNKYikmC5+wyq5qQSor3DWeqUOxgXbIv2YI34FjnQLCOroDFFxgL2vgJJsi/qG4qxtTblrsuQcpzJf6o+naQUUGV4+N4s5KhIUs1e7YOCmPBs62VJq/0CggaazJ2TsINMEpQr7yExM8BzWtvsOsktmXXGO0iBBfn5/JvHPL2GbsE/zz/43TrQVPrS2PVf5xHo4+nRv8aaCRF55TRTvBp2BbG1uBL5YCyYCe5OM5aq/wG0/kWyWXfxfv3Z5YFtEw5Jri2yjMuumSLn5gsW0zn4ddlo/7izbD2mj05le3Mby9bX168bnjbcKDefNEtjgsQ8WMHvmSod6TcwS5I1+xLI8RtjAssI19iilNq1PRicj4dDk0js1Eubl/YunDv1laY4nZJjh9s1Z0yLthCZnShVu3QEy9kFS2rWMf+cKxFQW3lMcUTT9dxCx7u/hYyLPYFuJeWia7GZRj6gQLaJy4fHMOVMc+KQQ6x9n03YoKa6nDy0GGCSo5l4YgwqK/REKf0vjmJcqM9W9iY1kLr2IpjIJ1DQ86tjZVqhqYPjRsciueeGe9xfRaNYfv1cQYz88y6Oxs5jb6S/uOzsTUJxF8fZxJqTMW3MLscAQXKQc6xpzmH5SYQ7eyy77NgcwYlUx4S6EEdRexB7W26ZOD6fgJSWDjOJNpBUZk1rJUvYRQVrkzOmKBsR2oc7obN48XAwQC0S6fTEHVidLUxRaEynmSmjosX02GOyKgSwN9/NJiH6pgmcjZ0dIp3TDlQFsahTB1rPGeec7DsTGszdkPbp/go/9+wjhNzNx32aIaFK6N1lJUjUGX3Gvrt07YYnX7/rYX4ShdG6vvrg1MrTb61/DbdhNKDufRPHlRknNcERGgCslC3zsOSwSw9BU6+KAqkfNpNtN3YGFXkCVjnjVHaT+CLF1pLe3IO5IAgdnxkmfgKPfx0cJGnyZ7dh/c7mhhdgqLzd/sXwc1OXV9X9KC54qQwAateFi8bJUOUrYsofZxcTM4FWxniNYWHRJ9NVID97D9G+OBB8g616Ivl+ZefNhUpLUHbOLujcsylkpigJJTgYdhePxYJliI16Ry3g250svyzZSviudjrQ9S/3XAQwQmDHa9izh9mko+YV20k0dGDSmRiULhvt/czmYL9Q6wOMwAtreWRRusoOibgEhtT1rZYkV61tBLb6DM8glq57CF7o0D0H5LpbktvDjMc60m8jfwVJX/1xHYbW6PrBvu49b8nhnEbraVIi67rfgOOabr0
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Finish migration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/migration/finish"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Finishes the migration process.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"isSendWelcomeEmail":{"type":"boolean","description":"Specifies whether to send a welcome email or not.","example":true}},"additionalProperties":false,"description":"The parameters for terminating a process or operation.","title":"FinishDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

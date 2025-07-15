@@ -5,7 +5,7 @@ Creates a checkbox / radio button with the specified checkbox / radio button pro
 ## Syntax
 
 ```javascript
-expression.CreateCheckBoxForm(oFormPr);
+expression.CreateCheckBoxForm(formPr);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.CreateCheckBoxForm(oFormPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oFormPr | Required | [CheckBoxFormPr](../../Enumeration/CheckBoxFormPr.md) |  | Checkbox / radio button properties. |
+| formPr | Required | [CheckBoxFormPr](../../Enumeration/CheckBoxFormPr.md) |  | Checkbox / radio button properties. |
 
 ## Returns
 
@@ -25,6 +25,10 @@ expression.CreateCheckBoxForm(oFormPr);
 This example creates two checkboxes.
 
 ```javascript editor-pdf
+// How to create a checkbox form and add it to the paragraph.
+
+// Add two checkboxes to the ApiDocument object.
+
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);

@@ -1,8 +1,8 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:
--**"baseline"** - the characters in the current paragraph will be aligned by the default text baseline.
--**"subscript"** - the characters in the current paragraph will be aligned below the default text baseline.
+Specifies the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:\
+-**"baseline"** - the characters in the current paragraph will be aligned by the default text baseline.\
+-**"subscript"** - the characters in the current paragraph will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current paragraph will be aligned above the default text baseline.
 
 ## Syntax
@@ -28,6 +28,10 @@ expression.SetVertAlign(sType);
 This example creates two paragraphs. One with vertical aligment "subscript" and another one with vertical aligment "superscript".
 
 ```javascript editor-docx
+// How to change a vertical alignment of a text run.
+
+// Create a new text run and make it subscript, baseline or superscript.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with the text aligned below the baseline vertically.");

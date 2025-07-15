@@ -25,6 +25,10 @@ boolean
 This example sets the outline properties to the specified graphic object.
 
 ```javascript editor-docx
+// How to outline the drawing with the stroke.
+
+// Set the borders of the shape.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

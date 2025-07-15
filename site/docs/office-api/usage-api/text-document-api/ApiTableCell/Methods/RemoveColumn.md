@@ -23,6 +23,10 @@ boolean
 This example removes a column containing the cell.
 
 ```javascript editor-docx
+// How to delete the column with Cell 1.
+
+// Get the first cell and remove its column. 
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

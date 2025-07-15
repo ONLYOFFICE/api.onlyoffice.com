@@ -1,8 +1,8 @@
 # SetSpacingLine
 
-Sets the paragraph line spacing. If the value of the sLineRule parameter is either 
-"atLeast" or "exact", then the value of nLine will be interpreted as twentieths of a point. If 
-the value of the sLineRule parameter is "auto", then the value of the 
+Sets the paragraph line spacing. If the value of the sLineRule parameter is either \
+"atLeast" or "exact", then the value of nLine will be interpreted as twentieths of a point. If \
+the value of the sLineRule parameter is "auto", then the value of the \
 nLine parameter will be interpreted as 240ths of a line.
 
 ## Syntax
@@ -22,13 +22,17 @@ expression.SetSpacingLine(nLine, sLineRule);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph line spacing.
 
 ```javascript editor-docx
+// How to set the size of a spacing line from a paragraph properties.
+
+// Change a spacing line size property of a paragraph properties.
+
 let doc = Api.GetDocument();
 let myStyle1 = doc.CreateStyle("My document style #1");
 let paraPr = myStyle1.GetParaPr();

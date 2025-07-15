@@ -23,6 +23,10 @@ boolean
 This example selects the paragraph.
 
 ```javascript editor-docx
+// How to select the paragraph.
+
+// Select a paragraph with a cursor.
+
 let doc = editor.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

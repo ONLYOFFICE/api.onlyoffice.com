@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to get a column grand.
 
 ```javascript editor-xlsx
+// How to select a column grand of a table.
+
+// Create a pivot table, add data to it then get its column grand.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -52,8 +56,8 @@ let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 pivotTable.AddDataField('Price');
 
 pivotTable.AddFields({
-	columns: 'Region',
-	rows: 'Style',
+    columns: 'Region',
+    rows: 'Style',
 });
 
 pivotTable.SetColumnGrand(false);

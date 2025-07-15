@@ -24,16 +24,30 @@
   font-weight: 600;
   line-height: 1em;
 
-  color: #444444;
-  border: 1px solid #aaaaaa;
+  color: var(--working-with-review-changes-button-color);
+  border: 1px solid var(--working-with-review-changes-button-border-color);;
   border-radius: 3px;
   background-color: transparent;
 }
 
 .list-buttons button.disabled {
-  color: #cccccc;
-  border-color: #cccccc;
+  color: var(--working-with-review-changes-button-disabled-color);
+  border-color: var(--working-with-review-changes-button-disabled-border-color);
   pointer-events: none;
+}
+
+:root {
+  --working-with-review-changes-button-color: #444444;
+  --working-with-review-changes-button-border-color: #aaaaaa;
+  --working-with-review-changes-button-disabled-color: #cccccc;
+  --working-with-review-changes-button-disabled-border-color: #cccccc;
+}
+
+html[data-theme="dark"] {
+  --working-with-review-changes-button-color: #d4d4d4;
+  --working-with-review-changes-button-border-color: #cecece;
+  --working-with-review-changes-button-disabled-color: #6b6b6b;
+  --working-with-review-changes-button-disabled-border-color: #747474;
 }
 
 @media (hover: hover) {

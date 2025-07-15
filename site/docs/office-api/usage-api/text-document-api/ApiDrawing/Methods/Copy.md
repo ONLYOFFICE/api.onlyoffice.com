@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example copies the current graphic object.
 
 ```javascript editor-docx
+// How to create a duplicate of a drawing.
+
+// Add two similar shapes into the document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));

@@ -66,6 +66,9 @@ The questions concerning customizing the appearance of ONLYOFFICE Docs are in th
 - [How to view and change the document additional parameters, e.g. its owner or uploading date?](customizing.md#how-to-view-and-change-the-document-additional-parameters-eg-its-owner-or-uploading-date)
 - [How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?](customizing.md#how-to-optimize-the-appearance-of-editors-for-a-desktop-computer-or-for-a-mobile-device-or-for-embedding-into-a-web-page)
 - [How to connect plugins to ONLYOFFICE Docs so that they become visible for all editor users?](customizing.md#how-to-connect-plugins-to-onlyoffice-docs-so-that-they-become-visible-for-all-editor-users)
+- [How to disable feature tips in editors?](customizing.md#how-to-disable-feature-tips-in-editors)
+- [How to change the font and text size in the editor interface?](customizing.md#how-to-change-the-font-and-text-size-in-the-editor-interface)
+- [How to hide the active user's icon and the current username in the editor header?](customizing.md#how-to-hide-the-active-users-icon-and-the-current-username-in-the-editor-header)
 
 [More](customizing.md)
 

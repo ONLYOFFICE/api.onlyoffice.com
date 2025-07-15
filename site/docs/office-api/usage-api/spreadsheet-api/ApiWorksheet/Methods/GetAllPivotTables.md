@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example shows how to get all pivot tables from the sheet.
 
 ```javascript editor-xlsx
+// How to get all pivot tables.
+
+// Get all pivot tables as an array.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -41,5 +45,4 @@ Api.InsertPivotExistingWorksheet(dataRef, worksheet.GetRange('G7'));
 worksheet.GetAllPivotTables().forEach(function (pivot) {
     pivot.AddDataField('Price');
 });
-
 ```

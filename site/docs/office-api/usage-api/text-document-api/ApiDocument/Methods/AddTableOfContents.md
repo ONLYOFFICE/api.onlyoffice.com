@@ -1,6 +1,6 @@
 # AddTableOfContents
 
-Adds a table of content to the current document.
+Adds a table of content to the current document.\
 💡 Please note that the new table of contents replaces the existing table of contents.
 
 ## Syntax
@@ -19,13 +19,17 @@ expression.AddTableOfContents(oTocPr);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a table of content to the document.
 
 ```javascript editor-docx
+// How to add headings to the document and generate a table of contents.
+
+// Insert a table of contents specifying its properties.
+
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");
 let paragraph = doc.GetElement(0);

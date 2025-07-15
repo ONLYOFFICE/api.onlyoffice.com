@@ -23,6 +23,10 @@ number
 This example sets the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
+// How to get the opacity of the watermark. 
+
+// Get the percent of the watermark opacity from its settings.
+
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
 watermarkSettings.SetType("text");

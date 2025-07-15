@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: -1
 ---
 
 # Overview
@@ -10,7 +10,7 @@ The plugins and macros can interact with the editors using different events, met
 - [How to call methods](how-to-call-methods.md)
 - [How to call commands](how-to-call-commands.md)
 
-The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../structure/manifest/manifest.md) and [index.html](../../structure/entry-point.md) files.
+The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../structure/configuration/configuration.md) and [index.html](../../structure/entry-point.md) files.
 
 ## How it works
 
@@ -26,14 +26,14 @@ Let's see how this is done in the *helloworld.js* plugin:
 
 ``` ts
 window.Asc.plugin.init = function init() {
-  this.callCommand(() => {
-    const oDocument = Api.GetDocument()
-    const oParagraph = Api.CreateParagraph()
-    oParagraph.AddText("Hello world!")
-    oDocument.InsertContent([oParagraph])
-  }, true)
-}
-window.Asc.plugin.button = function button(id) {}
+  window.Asc.plugin.callCommand(() => {
+    const oDocument = Api.GetDocument();
+    const oParagraph = Api.CreateParagraph();
+    oParagraph.AddText("Hello world!");
+    oDocument.InsertContent([oParagraph]);
+  }, true);
+};
+window.Asc.plugin.button = function button(id) {};
 ```
 
 When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../office-api/get-started/overview.md) to create the document with this text in it (with the help of the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method - *this.callCommand(function() \{...\})*).

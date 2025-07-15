@@ -20,9 +20,13 @@ Number
 
 ## Example
 
-
+This example gets a quote text of a comment.
 
 ```javascript editor-pptx
+// How to retrieve a quote text from a comment.
+
+// Get all comments from the presentation and the first one's quote text.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

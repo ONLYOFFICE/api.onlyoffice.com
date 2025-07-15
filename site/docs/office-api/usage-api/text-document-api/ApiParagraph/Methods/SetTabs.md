@@ -1,6 +1,6 @@
 # SetTabs
 
-Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.
+Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\
 -**Warning**: The lengths of aPos array and aVal array -**MUST BE** equal to each other.
 
 ## Syntax
@@ -20,13 +20,17 @@ expression.SetTabs(aPos, aVal);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
 
 ```javascript editor-docx
+// Add tabs to the paragraph.
+
+// Create a text in a paragraph and add tab stops to it.
+
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();

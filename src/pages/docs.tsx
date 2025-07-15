@@ -29,8 +29,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} API`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title} Docs API`}
+      description="Detailed guides on how to integrate ONLYOFFICE Docs into your solution, configure it, and use advanced document editing features."
     >
       <FeaturePageTemplate {...templateProps}/>
     </Layout>

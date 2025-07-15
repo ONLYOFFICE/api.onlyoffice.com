@@ -26,6 +26,10 @@ expression.GetHeader(sType, isCreate);
 This example shows how to get the content for the specified header type.
 
 ```javascript editor-docx
+// How to get the header of the page.
+
+// Get the default header from the final section.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a page with a header. ");

@@ -1,8 +1,8 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:\
+-**"baseline"** - the characters in the current text run will be aligned by the default text baseline.\
+-**"subscript"** - the characters in the current text run will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
@@ -28,6 +28,10 @@ expression.SetVertAlign(sType);
 This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
 
 ```javascript editor-xlsx
+// How to change vertical alignment of a text.
+
+// Make text superscript.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

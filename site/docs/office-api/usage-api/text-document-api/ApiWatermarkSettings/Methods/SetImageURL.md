@@ -18,13 +18,17 @@ expression.SetImageURL(sURL);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
+// How to set the image URL of the watermark.
+
+// Indicate the link address to the image using the watermark settings.
+
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
 watermarkSettings.SetType("image");

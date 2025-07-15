@@ -6,7 +6,11 @@ Converts the selected text into speech. The plugin uses [guessLanguage](https://
 
 **Supported editors:** documents.
 
-![Speech](/assets/images/plugins/gifs/speech.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="ZALRpPomZrA" />
+```
 
 ## Installation
 

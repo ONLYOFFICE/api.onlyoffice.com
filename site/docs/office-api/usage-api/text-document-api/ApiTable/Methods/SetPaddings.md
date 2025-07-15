@@ -1,6 +1,6 @@
 # SetPaddings
 
-Sets the table paddings.
+Sets the table paddings.\
 If table is inline, then only left padding is applied.
 
 ## Syntax
@@ -29,6 +29,10 @@ boolean
 This example sets the table paddings.
 
 ```javascript editor-docx
+// How to set paddings of the table.
+
+// Create a table and specify its paddings.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

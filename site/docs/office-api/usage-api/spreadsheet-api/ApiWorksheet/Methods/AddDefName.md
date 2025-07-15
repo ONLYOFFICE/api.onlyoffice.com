@@ -27,6 +27,10 @@ boolean
 This example adds a new name to the worksheet.
 
 ```javascript editor-xlsx
+// How to change a name of the worksheet range.
+
+// Name a range from a worksheet.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 worksheet.GetRange("B1").SetValue("2");

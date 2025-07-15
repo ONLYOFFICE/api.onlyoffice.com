@@ -23,6 +23,10 @@ string
 This example shows how to get the placeholder text from the content control.
 
 ```javascript editor-docx
+// How to display the placeholder text of the inline text control.
+
+// Get the inline content control and show its placeholder text.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

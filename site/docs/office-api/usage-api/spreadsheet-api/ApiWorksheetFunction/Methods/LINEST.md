@@ -16,8 +16,8 @@ expression.LINEST(arg1, arg2, arg3, arg4);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The set of y-values from the &lt;em&gt;y = mx + b&lt;/em&gt; equation. |
 | arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | An optional set of x-values from the &lt;em&gt;y = mx + b&lt;/em&gt; equation. |
-| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant &lt;em&gt;b&lt;/em&gt; is calculated normally if this parameter is set to -**true** or omitted, and &lt;em&gt;b&lt;/em&gt; is set equal to 0 if the parameter is -**false**. |
-| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to -**true**, and return m-coefficients and the constant &lt;em&gt;b&lt;/em&gt; if the parameter is -**false** or omitted. |
+| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant &lt;em&gt;b&lt;/em&gt; is calculated normally if this parameter is set to **true** or omitted, and &lt;em&gt;b&lt;/em&gt; is set equal to 0 if the parameter is **false**. |
+| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to **true**, and return m-coefficients and the constant &lt;em&gt;b&lt;/em&gt; if the parameter is **false** or omitted. |
 
 ## Returns
 
@@ -25,9 +25,13 @@ number
 
 ## Example
 
-
+This example shows how to return statistics that describe a linear trend matching known data points, by fitting a straight line using the least squares method.
 
 ```javascript editor-xlsx
+// How to get statistics that describe a linear trend matching known data points.
+
+// Use a function to return statistics that describe a linear trend matching known data points using the least squares method.
+
 const worksheet = Api.GetActiveSheet();
 
 //configure function parameters

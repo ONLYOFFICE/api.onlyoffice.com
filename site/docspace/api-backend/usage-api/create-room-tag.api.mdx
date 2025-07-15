@@ -1,0 +1,71 @@
+---
+id: create-room-tag
+title: "Create a tag"
+description: "Creates a custom tag with the parameters specified in the request."
+sidebar_label: "Create a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv2zgQ/ivEXHJR7ayzveiWJl2g3WJTpA6CRWA0Y2lksZFIlqTieA3998WQkmzZ2caHvSQW+c2D8/hmtuBx5SB9gFutaweLBLQhi15q9SmHFDJL6Ikv57iCBCz9bMj5DzrfQLqFTCtPyvNPNKaSWZCc/nBa8ZnLSqqRf7GctJSzKYU1sSW/MQQp6OUPyjwkYCzb9pIcSwRUuoUaX76QWvkS0tn79wnUUvXf54MO561U7F9OLrPSsBeQwrwk4XElWNcEElBNVeGyIki9bSgBesHa8CfcS1VIqnJxZ7xW0LYJYJ5L1oPV1z3HCqwcvWani4wwaLEmT9aJQlsRAijVSiB7wk546YPJqxDaOa5uo+S119C2bNmSM1q5GIfZ+Tn/Gxv8i9bDwyA5PQ2/Dnlv9xjZso0mWuhupPK0IgsJFNrW6OPRxYyxlVRPbg+L1uIGEpCeave2H6WlYg/VJZdTksX3H12FsDmPvnEnuhjBVzqnkwTaXd5ugtP3Fo0h25n+/fy34yTdKWx8qa38h3IIoItj0N+6EblWZ16U+EyClG5WpTBka+mc1Ep4zV/sj/AliaE9g0+OssZKv4H0YQvosu9s8fsT8QFYwhwSWFvpCRZtsoUPhJYspA/h69LIP2kznL2GRyezHn5z2fhy9jrwxlDgi4dFuzhsjljnTqDIGud1HQp3LX0Z3rPXLs5QJgtJuZAq3HUtxU1Tky81E5LRLhQMMgHAFI2czibn00JW5KaBzDgq9pmsC0FpbAUpbJfo6M5W7RFFfAtYkWlVyFXThTaBZ7SSmSKUUycck1dgU3FhHGm6jlfi7vYLV8Vil51v3H9R1ThHuwYJqThSeedIXGn9JEmwECnftTZzWeDHscIEJItlQYRLrkvgYKf03hxZ+ag8WbHRjRWNI8uKBapcGHRurS2nOjAIK1gGhay5K5tTVJ9FsNh+vp+LuX4i1Z6NlEZdSffjj773Pt/P2dS4Tt+K2eUoUEI6kXN51VJRLpabUFhnl11jBsyZKAnz4EAX1JHFLqgdpk2GRtjRGIaDQ08iThSVXsd6H1kVgXsS4OtYGvu3PTGNDkMNhkC7dDoNVidaVRtdFDKjSabreDibDsTD84YDfrpogIfsaNOPBeTOuyXMBWYZORdIyWpPmadcWHK6sRm5gRNSuOf/b6AjdfbUsYtmOLjSSsXZcBBUvr0W3fVxW4ykT381F75Uheb8vrxzcqXQN5beLjcu6QHO/ZOHsT/2ayLCJsKRFXXjvFiS0EuPoSafJYaifOy5rKeNUUYeBancaKn8RHzyXNbcnpQLDMwaSWJg1dDDj3sPeZzsqnv/fQeM0SbAS8Ptbsv72K9I/UZ2tCqxikKHSHUT8tJIplCyLsboYjKbnDOQybtGtacsDoe4HB3Gdm+9/H+GSJdJTy9+aiqUwfkmEnscKA+cZkiA/U0gDBWW47GySKDk2ZM+wHYYJy0f/2zI8sBd7MZGnJk9Z/AcCnwPV/FB7+bsCcOrJtbWwdLGMzVKXGYZGf9L7GJvPH69+TZnIu328zrQCFhc8+6O6zi3dAhw7G0+20KFatXgirFRZ1iAGw7JfgPEGdP94Ff1V2qz7+F4JMV38F9+1asS223srrYd8PHqPyUGxo5oTuWibdt/Ad9WbBw=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a custom tag with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["name"],"type":"object","properties":{"name":{"maxLength":255,"minLength":0,"type":"string","description":"The tag name.","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"description":"The request parameters for creating a tag.","title":"CreateTagRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New tag name","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -41,7 +41,7 @@ sidebar_position: -8
 
 其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，storage-path是将创建和存储文件的路径。您可以设置一个绝对路径。
 
-如果您想尝试配置编辑器，请修改*DocEditor.aspx*文件中的[参数](../../usage-api/advanced-parameters.md)。
+如果您想尝试配置编辑器，请修改*DocEditor.aspx*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
 ## 步骤3.安装先决条件
 

@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example adds a column break to the current position and starts the next element from a new column.
 
 ```javascript editor-docx
+// How to add a column break between the text of paragraph.
+
+// Split paragraph with a coulumn break.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();

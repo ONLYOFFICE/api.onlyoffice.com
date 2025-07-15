@@ -26,6 +26,10 @@ expression.AddRows(nCount, isBefore);
 This example adds the new rows to the table.
 
 ```javascript editor-docx
+// How to add rows to the row.
+
+// Get a table row and insert two new rows after it.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

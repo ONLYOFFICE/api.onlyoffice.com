@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 For the samples to work correctly, make sure that two conditions are met:
 
-1. ONLYOFFICE Document Builder is installed. For more information visit [installing page](../get-started/installing.md).
+1. ONLYOFFICE Document Builder is installed. For more information visit [installing page](/docs/document-builder/get-started/installing.md).
 2. The directory in which you are going to store the downloaded samples has general editing access to save files created by the Document Builder.
 3. [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/). You may use either .NET 9, .NET 8, .NET Standard or .NET Core
 

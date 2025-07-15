@@ -1,6 +1,6 @@
 # MergeCells
 
-Merges an array of cells. If the merge is done successfully, it will return the resulting merged cell, otherwise the result will be "null".
+Merges an array of cells. If the merge is done successfully, it will return the resulting merged cell, otherwise the result will be "null".\
 💡 The number of cells in any row and the number of rows in the current table may be changed.
 
 ## Syntax
@@ -26,6 +26,10 @@ expression.MergeCells(aCells);
 This example merges an array of cells.
 
 ```javascript editor-docx
+// How to merge cells of the table into one.
+
+// Create a table and merge cells into another one.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
