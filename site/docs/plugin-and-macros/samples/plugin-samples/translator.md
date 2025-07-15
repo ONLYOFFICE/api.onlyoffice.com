@@ -14,7 +14,12 @@ Connects the [Google Translate API](https://cloud.google.com/translate?hl=ru) fo
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/translator) or directly from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/translator).
+
+Installation or deletion instructions:
+- [Desktop editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md)
+- [On-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md)
+- [Cloud editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md)
 
 The plugin guid: `{7327FC95-16DA-41D9-9AF2-0E7F449F6800}`.
 

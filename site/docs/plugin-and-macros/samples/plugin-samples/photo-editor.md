@@ -10,9 +10,7 @@ Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for 
 
 ## Installation
 
-Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
-
-You can remove it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/photoeditor) or directly from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/photoeditor) and install it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) instruction.
 
 The plugin guid: `{07FD8DFA-DFE0-4089-AL24-0730933CC80A}`.
 

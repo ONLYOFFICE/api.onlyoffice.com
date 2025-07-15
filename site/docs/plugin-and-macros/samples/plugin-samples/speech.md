@@ -12,7 +12,12 @@ Converts the selected text into speech. The plugin uses [guessLanguage](https://
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/speech).
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/speech) or directly from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/speech).
+
+Installation or deletion instructions:
+- [Desktop editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md)
+- [On-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md)
+- [Cloud editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md)
 
 ## Usage
 

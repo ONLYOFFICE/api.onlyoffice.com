@@ -16,9 +16,9 @@ Counts paragraphs, words, and characters with or without spaces in the selected 
 
 ## Installation
 
-Available in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
+This plugin is preinstalled in **ONLYOFFICE Enterprise Edition** and **Community Edition** (Docs + Workspace).
 
-Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/wordscounter) and install it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/wordscounter) or directly from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/wordscounter) and install it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 

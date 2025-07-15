@@ -14,10 +14,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## Installation
 
-Download the plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/thesaurus) or directly from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/thesaurus).
+Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-Installation instructions:
+You can download the plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/thesaurus) or directly from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/thesaurus).
+
+Installation or deletion instructions:
 - [Desktop editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md)
+- [On-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md)
 - [Cloud editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md)
 
 The plugin guid: `{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}`.
