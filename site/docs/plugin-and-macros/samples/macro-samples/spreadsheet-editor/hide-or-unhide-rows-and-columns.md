@@ -27,7 +27,7 @@ Hides or unhides the specified rows and/or columns in the spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetRows](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [GetHidden](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetHidden.md), [GetCols](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [SetHidden](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetHidden.md)
+Methods used: [GetActiveSheet](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetRows](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [GetHidden](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetHidden.md), [GetCols](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [SetHidden](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetHidden.md)
 
 ## Reference Microsoft VBA macro code
 

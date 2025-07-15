@@ -179,14 +179,14 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectionType.md)
-- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
-- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [callCommand](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetSelectedText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- [Asc.scope](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [info.recalculate](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

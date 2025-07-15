@@ -23,7 +23,7 @@ Adds comments to the cells in the selection and can also change the background c
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [AddComment](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md), [SetFillColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md)
+Methods used: [GetActiveSheet](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [AddComment](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md), [SetFillColor](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md)
 
 ## Reference Microsoft VBA macro code
 

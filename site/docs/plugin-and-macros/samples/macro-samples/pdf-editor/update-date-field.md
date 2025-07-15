@@ -18,7 +18,7 @@ Sets the current date to all date form fields in the document.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](/docs/office-api/usage-api/form-api/ApiDateForm/Methods/SetFormat.md), [SetLanguage](/docs/office-api/usage-api/form-api/ApiDateForm/Methods/SetLanguage.md), [SetBackgroundColor](/docs/office-api/usage-api/form-api/ApiDateForm/Methods/SetBackgroundColor.md)
+Methods used: [GetDocument](/site/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/site/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/site/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](/site/docs/office-api/usage-api/form-api/ApiDateForm/Methods/SetFormat.md), [SetLanguage](/site/docs/office-api/usage-api/form-api/ApiDateForm/Methods/SetLanguage.md), [SetBackgroundColor](/site/docs/office-api/usage-api/form-api/ApiDateForm/Methods/SetBackgroundColor.md)
 
 ## Result
 

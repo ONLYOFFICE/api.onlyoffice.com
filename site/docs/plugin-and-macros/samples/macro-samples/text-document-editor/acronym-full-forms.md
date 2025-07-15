@@ -36,7 +36,7 @@ Identifies all acronyms in the document and adds their full forms in comments.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [Search](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Search.md), [AddComment](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddComment.md)
+Methods used: [GetDocument](/site/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [Search](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Search.md), [AddComment](/site/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddComment.md)
 
 ## Result
 

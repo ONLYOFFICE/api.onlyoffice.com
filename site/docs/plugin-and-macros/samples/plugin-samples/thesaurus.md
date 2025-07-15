@@ -141,8 +141,8 @@ Repository on GitHub: [thesaurus](https://github.com/ONLYOFFICE/onlyoffice.githu
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- [executeMethod ("GetSelectedText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("PasteText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 
 ## Support
 

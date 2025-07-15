@@ -46,7 +46,7 @@ Identifies and removes duplicate sheets in the spreadsheet.
 })();
 ```
 
-Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Delete](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Delete.md)
+Methods used: [GetSheets](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetUsedRange](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRangeByNumber](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Delete](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Delete.md)
 
 ## Result
 

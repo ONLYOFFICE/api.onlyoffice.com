@@ -211,9 +211,9 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 - button
 - init
 - onTargetPositionChanged
-- [attachContextMenuClickEvent](/docs/plugin-and-macros/customization/context-menu.md#clicking-a-context-menu-item)
-- [executeMethod ("AddContextMenuItem")](/docs/plugin-and-macros/customization/context-menu.md#creating-a-context-menu-item)
-- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
+- [attachContextMenuClickEvent](/site/docs/plugin-and-macros/customization/context-menu.md#clicking-a-context-menu-item)
+- [executeMethod ("AddContextMenuItem")](/site/docs/plugin-and-macros/customization/context-menu.md#creating-a-context-menu-item)
+- [executeMethod ("InputText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
 
 ## Support
 

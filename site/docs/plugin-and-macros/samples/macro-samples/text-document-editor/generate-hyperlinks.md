@@ -41,7 +41,7 @@ Generates and inserts hyperlinks instead of text URLs.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateRun.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [AddHyperlink](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddHyperlink.md)
+Methods used: [GetDocument](/site/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](/site/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](/site/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](/site/docs/office-api/usage-api/text-document-api/Api/Methods/CreateRun.md), [AddText](/site/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [AddElement](/site/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [AddHyperlink](/site/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddHyperlink.md)
 
 ## Result
 

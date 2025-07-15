@@ -29,7 +29,7 @@ Changes the validation rules of the number and email fields in the document.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetCharactersLimit](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit.md), [SetRequired](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetRequired.md), [SetPlaceholderText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetPlaceholderText.md), [SetComb](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md)
+Methods used: [GetDocument](/site/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/site/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/site/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/site/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](/site/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetCharactersLimit](/site/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit.md), [SetRequired](/site/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetRequired.md), [SetPlaceholderText](/site/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetPlaceholderText.md), [SetComb](/site/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md)
 
 ## Result
 

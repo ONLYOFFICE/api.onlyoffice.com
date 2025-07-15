@@ -104,9 +104,9 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 - onExternalMouseUp
 - onMethodReturn
 - onTranslate
-- [executeMethod ("GetFontList")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetFontList.md)
-- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
-- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [executeMethod ("GetFontList")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetFontList.md)
+- [executeMethod ("PasteHtml")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
+- [info.editorType](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 

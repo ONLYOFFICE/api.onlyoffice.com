@@ -161,16 +161,16 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 - button
 - init
 - onExternalMouseUp
-- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
-- [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.height](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
-- [info.mmToPx](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
-- [info.objectId](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#objectId)
-- [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
-- [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
+- [executeMethod ("AddOleObject")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
+- [info.data](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.height](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)
+- [info.imgSrc](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
+- [info.mmToPx](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
+- [info.objectId](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#objectId)
+- [info.resize](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
+- [info.width](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## Support
 

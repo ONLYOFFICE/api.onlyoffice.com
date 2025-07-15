@@ -22,7 +22,7 @@ Automatically generates bookmarks for all heading paragraphs in the document, us
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllHeadingParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
+Methods used: [GetDocument](/site/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllHeadingParagraphs](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md), [GetText](/site/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](/site/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](/site/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
 
 ## Result
 

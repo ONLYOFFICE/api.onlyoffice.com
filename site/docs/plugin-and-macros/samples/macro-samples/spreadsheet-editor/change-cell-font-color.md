@@ -13,7 +13,7 @@ Sets the font color of the cell **B4** to red.
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFontColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontColor.md)
+Methods used: [GetActiveSheet](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFontColor](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontColor.md)
 
 ## Reference Microsoft VBA macro code
 

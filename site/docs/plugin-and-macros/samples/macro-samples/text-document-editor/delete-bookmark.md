@@ -24,7 +24,7 @@ Searches for bookmarks containing a specific word in their text and deletes them
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllBookmarksNames](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [GetBookmark](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiBookmark/Methods/GetText.md), [DeleteBookmark](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)
+Methods used: [GetDocument](/site/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllBookmarksNames](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [GetBookmark](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md), [GetText](/site/docs/office-api/usage-api/text-document-api/ApiBookmark/Methods/GetText.md), [DeleteBookmark](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)
 
 ## Result
 

@@ -27,7 +27,7 @@ Deletes comments from a specified range of cells in the active worksheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetComment](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetComment.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiComment/Methods/GetText.md), [Delete](/docs/office-api/usage-api/spreadsheet-api/ApiComment/Methods/Delete.md)
+Methods used: [GetActiveSheet](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetComment](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetComment.md), [GetText](/site/docs/office-api/usage-api/spreadsheet-api/ApiComment/Methods/GetText.md), [Delete](/site/docs/office-api/usage-api/spreadsheet-api/ApiComment/Methods/Delete.md)
 
 ## Result
 

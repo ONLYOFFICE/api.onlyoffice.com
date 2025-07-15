@@ -13,7 +13,7 @@ Merges the selected cell range.
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Merge](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Merge.md)
+Methods used: [GetActiveSheet](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Merge](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Merge.md)
 
 ## Reference Microsoft VBA macro code
 

@@ -111,13 +111,13 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectionType.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [callCommand](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetVersion")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("GetSelectedText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectionType.md)
+- [executeMethod ("PasteText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- [Asc.scope](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 

@@ -57,7 +57,7 @@ Repository on GitHub: [invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 - button
 - init
-- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [info.recalculate](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

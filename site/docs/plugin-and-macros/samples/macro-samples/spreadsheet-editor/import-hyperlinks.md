@@ -59,7 +59,7 @@ Imports hyperlinks between different worksheets in the spreadsheet.
 })();
 ```
 
-Methods used: [GetSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetAddress](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [SetHyperlink](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetHyperlink.md)
+Methods used: [GetSheet](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetRangeByNumber](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetSelection](/site/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetAddress](/site/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [SetHyperlink](/site/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetHyperlink.md)
 
 ## Reference Microsoft VBA macro code
 

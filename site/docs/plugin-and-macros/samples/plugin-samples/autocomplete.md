@@ -90,15 +90,15 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 - inputHelper_onSelectItem
 - onInputHelperClear
 - onInputHelperInput
-- [createInputHelper](/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
-- [getInputHelper](/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
-- [InputHelper.createWindow](/docs/plugin-and-macros/customization/input-helper.md#createwindow)
-- [InputHelper.getItems](/docs/plugin-and-macros/customization/input-helper.md#getitems)
-- [InputHelper.getScrollSizes](/docs/plugin-and-macros/customization/input-helper.md#getscrollsizes)
-- [InputHelper.setItems](/docs/plugin-and-macros/customization/input-helper.md#setitems)
-- [InputHelper.show](/docs/plugin-and-macros/customization/input-helper.md#show)
-- [InputHelper.unShow](/docs/plugin-and-macros/customization/input-helper.md#unshow)
+- [createInputHelper](/site/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
+- [executeMethod ("InputText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
+- [getInputHelper](/site/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
+- [InputHelper.createWindow](/site/docs/plugin-and-macros/customization/input-helper.md#createwindow)
+- [InputHelper.getItems](/site/docs/plugin-and-macros/customization/input-helper.md#getitems)
+- [InputHelper.getScrollSizes](/site/docs/plugin-and-macros/customization/input-helper.md#getscrollsizes)
+- [InputHelper.setItems](/site/docs/plugin-and-macros/customization/input-helper.md#setitems)
+- [InputHelper.show](/site/docs/plugin-and-macros/customization/input-helper.md#show)
+- [InputHelper.unShow](/site/docs/plugin-and-macros/customization/input-helper.md#unshow)
 
 ## Support
 

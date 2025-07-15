@@ -140,7 +140,7 @@ Repository on GitHub: [html](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 - button
 - init
 - onTranslate
-- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
+- [executeMethod ("PasteHtml")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 
 ## Support
 
