@@ -88,7 +88,7 @@ This script automates the process of retrieving Notion users and adding them to 
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a new [Notion integration](https://www.notion.so/profile/integrations) to obtain an API token. After submitting, you'll see a `Internal Integration Token`. Verify that `Read content` and `Read user information` capabilities are checked.
 
 ## Step 1: Retrieve Notion users
@@ -120,7 +120,7 @@ Use a Notion API [`GET api.notion.com/v1/users`](https://developers.notion.com/r
 </Tabs>
 
 ## Step 2: Check if user exists in DocSpace
-Use a [`GET /api/2.0/people/email?email={email}`](../../../usage-api/get-by-email) request to check if user exists in DocSpace.
+Use a [`GET /api/2.0/people/email?email={email}`](/docspace/api-backend/usage-api/get-by-email) request to check if user exists in DocSpace.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -150,7 +150,7 @@ Use a [`GET /api/2.0/people/email?email={email}`](../../../usage-api/get-by-emai
 </Tabs>
 
 ## Step 3: Add missing users to DocSpace
-Use a [`POST /api/2.0/people`](../../../usage-api/add-member) request to add missing users to DocSpace using Notion data.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/add-member) request to add missing users to DocSpace using Notion data.
 
 <Tabs>
   <TabItem value="py" label="Python">

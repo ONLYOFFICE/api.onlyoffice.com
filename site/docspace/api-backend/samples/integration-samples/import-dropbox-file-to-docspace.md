@@ -75,7 +75,7 @@ This integration allows you to automatically import files from Dropbox into a sp
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 
 Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -109,7 +109,7 @@ Use Dropbox SDK to download the file’s binary content and original name.
 </Tabs>
 
 ## Step 2: Upload file to DocSpace
-Use [`POST /api/2.0/files/{room_id}/upload`](../../../usage-api/upload-file) to upload the binary content to a DocSpace room.
+Use [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/upload-file) to upload the binary content to a DocSpace room.
 
 <Tabs>
   <TabItem value="py" label="Python">

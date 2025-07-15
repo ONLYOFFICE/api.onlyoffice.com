@@ -93,7 +93,7 @@ This integration allows you to automatically import all file attachments from a 
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant read access to cards and attachments by authorizing with `read` scope.
 
 ## Step 1: Get the Trello card ID
@@ -154,7 +154,7 @@ Use Trello's signed download URL to retrieve the raw file content.
 </Tabs>
 
 ## Step 4: Upload the file to DocSpace
-Upload the downloaded file into a specific DocSpace room using [`POST /api/2.0/files/{room_id}/upload`](../../../usage-api/upload-file)
+Upload the downloaded file into a specific DocSpace room using [`POST /api/2.0/files/{room_id}/upload`](/docspace/api-backend/usage-api/upload-file)
 
 <Tabs>
   <TabItem value="py" label="Python">

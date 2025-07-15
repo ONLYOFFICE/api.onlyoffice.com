@@ -94,7 +94,7 @@ This integration creates collaboration rooms in ONLYOFFICE DocSpace based on Asa
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Personal Access Token](https://developers.asana.com/docs/personal-access-token) in your Asana developer settings. This token will be used to authenticate API requests. Make sure the token has access to the necessary projects and tasks in your Asana workspace.
 
 ## Step 1: Get all projects from Asana
@@ -142,7 +142,7 @@ Fetch tasks related to each project using the Asana Tasks API.
 </Tabs>
 
 ## Step 3: Create a room in DocSpace for the project
-Use [`POST /api/2.0/files/rooms`](../../../usage-api/create-room) to create a collaboration room named after the project.
+Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/create-room) to create a collaboration room named after the project.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -170,7 +170,7 @@ Use [`POST /api/2.0/files/rooms`](../../../usage-api/create-room) to create a co
 </Tabs>
 
 ## Step 4: Create a folder for each task in the room
-Use [`POST /api/2.0/files/folder/{parent_id}`](../../../usage-api/create-folder) to create folders for each task under the room.
+Use [`POST /api/2.0/files/folder/{parent_id}`](/docspace/api-backend/usage-api/create-folder) to create folders for each task under the room.
 
 <Tabs>
   <TabItem value="py" label="Python">

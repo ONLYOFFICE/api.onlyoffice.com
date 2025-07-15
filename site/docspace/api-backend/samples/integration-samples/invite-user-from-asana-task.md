@@ -70,7 +70,7 @@ This integration automatically retrieves the email of the assignee from an Asana
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Personal Access Token](https://developers.asana.com/docs/personal-access-token) in your Asana developer settings. This token will be used to authenticate API requests. Make sure the token has access to the necessary projects and tasks in your Asana workspace.
 
 ## Step 1: Retrieve task assignee email from Asana
@@ -97,7 +97,7 @@ Use the `opt_fields=assignee.email` parameter to extract the email address of th
 </Tabs>
 
 ## Step 2: Send an invitation to DocSpace
-Use [`POST /api/2.0/people/invite`](../../../usage-api/invite-users) to invite the user using their email address.
+Use [`POST /api/2.0/people/invite`](/docspace/api-backend/usage-api/invite-users) to invite the user using their email address.
 
 <Tabs>
   <TabItem value="py" label="Python">

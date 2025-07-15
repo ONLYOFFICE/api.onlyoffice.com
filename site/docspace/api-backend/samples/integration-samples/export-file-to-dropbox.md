@@ -98,7 +98,7 @@ This integration allows you to automatically export files from DocSpace to Dropb
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 
 Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -107,7 +107,7 @@ pip install dropbox
 ```
 
 ## Step 1: Retrieve file metadata from DocSpace
-Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](../../../usage-api/get-file-info).
+Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](/docspace/api-backend/usage-api/get-file-info).
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -132,7 +132,7 @@ Get the file name and MIME type using [`GET /api/2.0/files/file/{file_id}`](../.
 </Tabs>
 
 ## Step 2: Generate a presigned download URL
-Use [`GET /api/2.0/files/file/{file_id}/presigneduri`](../../../usage-api/get-presigned-file-uri) to obtain a secure link.
+Use [`GET /api/2.0/files/file/{file_id}/presigneduri`](/docspace/api-backend/usage-api/get-presigned-file-uri) to obtain a secure link.
 
 <Tabs>
   <TabItem value="py" label="Python">

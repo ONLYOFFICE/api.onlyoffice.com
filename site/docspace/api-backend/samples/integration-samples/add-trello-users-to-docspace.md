@@ -76,7 +76,7 @@ This script automates the process of retrieving Trello users and adding them to 
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant `read` access to the boards.
 
 ## Step 1: Retrieve Trello users
@@ -107,7 +107,7 @@ Use a Trello API [`GET /boards/{board_id}/members`](https://developer.atlassian.
 </Tabs>
 
 ## Step 2: Add Trello users to the DocSpace
-Use a [`POST /api/2.0/people`](../../../usage-api/add-member) request to add new DocSpace users.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/add-member) request to add new DocSpace users.
 
 <Tabs>
   <TabItem value="py" label="Python">

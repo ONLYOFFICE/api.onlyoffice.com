@@ -90,7 +90,7 @@ This integration automates the process of creating shared Dropbox folders for Do
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 
 Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -99,7 +99,7 @@ pip install dropbox
 ```
 
 ## Step 1: Retrieve DocSpace groups
-Use a [`GET /api/2.0/group`](../../../usage-api/get-groups) request to retrieve the group ID and the group name for each team.
+Use a [`GET /api/2.0/group`](/docspace/api-backend/usage-api/get-groups) request to retrieve the group ID and the group name for each team.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -150,7 +150,7 @@ Use Dropbox client to generate a Dropbox folder for each DocSpace group.
 </Tabs>
 
 ## Step 3: Retrieve DocSpace group members
-Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a group by ID and extract user names and emails.
+Use a [`GET /api/2.0/group/{group_id}`](/docspace/api-backend/usage-api/get-group) to get a group by ID and extract user names and emails.
 
 <Tabs>
   <TabItem value="py" label="Python">

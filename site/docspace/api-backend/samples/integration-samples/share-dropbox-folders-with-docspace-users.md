@@ -73,7 +73,7 @@ This integration automates the process of sharing Dropbox folders with DocSpace 
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](/docspace/api-backend/get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 
 Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
@@ -82,7 +82,7 @@ pip install dropbox
 ```
 
 ## Step 1: Retrieve DocSpace users
-Use a [`GET /api/2.0/people`](../../../usage-api/get-all-profiles) request to retrieve each user's first name and email.
+Use a [`GET /api/2.0/people`](/docspace/api-backend/usage-api/get-all-profiles) request to retrieve each user's first name and email.
 
 <Tabs>
   <TabItem value="py" label="Python">
