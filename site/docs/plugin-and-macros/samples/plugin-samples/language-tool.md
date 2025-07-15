@@ -12,7 +12,11 @@ Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual g
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from the [App Directory](https://www.onlyoffice.com/app-directory/languagetool) or from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool).
+
+Refer to:
+- [Installation for Desktop Editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md)
+- [Installation for Cloud Editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md)
 
 ## Usage
 

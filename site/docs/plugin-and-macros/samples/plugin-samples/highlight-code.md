@@ -10,9 +10,9 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 ## Installation
 
-Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
+You can get the plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/highlightcode) or from the [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode).
 
-You can remove it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site//docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Follow the standard plugin [installation guide for desktop editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) or [cloud editors](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md).
 
 The plugin guid: `{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}`.
 

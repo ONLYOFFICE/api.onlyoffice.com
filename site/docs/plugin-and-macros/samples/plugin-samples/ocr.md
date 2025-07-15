@@ -14,9 +14,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## Installation
 
-Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
+You can install this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/ocr) or build it manually from the [GitHub source](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ocr).
 
-You can remove it following the [desktop](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/site/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Follow the standard [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) plugin installation instructions.
 
 The plugin guid: `{440EBF13-9B19-4BD8-8621-05200E58140B}`.
 
