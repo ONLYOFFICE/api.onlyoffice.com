@@ -95,7 +95,7 @@ $("#persons").change(function personChange(e) {
 })
 ```
 
-3. 当用户编辑表单值时，会触发 onChangeContentControl 事件，然后执行 GetFormValue 方法以获取更新的表单值并将其显示在自定义界面中：
+1. 当用户编辑表单值时，会触发 [onChangeContentContro](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeContentControl.md) 事件，然后执行 GetFormValue 方法以获取更新的表单值并将其显示在自定义界面中：
 
 ``` ts
 function onDocumentReady() {

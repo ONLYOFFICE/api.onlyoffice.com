@@ -101,7 +101,7 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 
 - button
 - init
-- onExternalMouseUp
+- [onExternalMouseUp](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - onMethodReturn
 - onTranslate
 - [executeMethod ("GetFontList")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetFontList.md)

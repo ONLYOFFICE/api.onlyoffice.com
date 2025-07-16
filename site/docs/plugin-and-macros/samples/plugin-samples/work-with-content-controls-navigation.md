@@ -113,7 +113,7 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 - button
 - init
 - onMethodReturn
-- onTargetPositionChanged
+- [onTargetPositionChanged](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - executeMethod ("GetAllContentControls")
 - executeMethod ("GetCurrentContentControl")
 - executeMethod ("MoveCursorToContentControl")

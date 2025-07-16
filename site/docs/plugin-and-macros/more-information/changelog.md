@@ -25,7 +25,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 8.2
 
-- Added the onSubmitForm event.
+- Added the [onSubmitForm](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onSubmitForm.md) event.
 - Added the CanRedo method to *window\.Asc.plugin.executeMethod* for Text document Api.
 - Added the CanUndo method to *window\.Asc.plugin.executeMethod* for Text document Api.
 - Added the Redo method to *window\.Asc.plugin.executeMethod* for Text document Api.
@@ -108,9 +108,9 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 7.2
 
-- Added the onAddComment event.
-- Added the onChangeCommentData event.
-- Added the onRemoveComment event.
+- Added the [onAddComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md) event.
+- Added the [onChangeCommentData](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md) event.
+- Added the [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) event.
 - Added the AcceptReviewChanges method to *window\.Asc.plugin.executeMethod*.
 - Added the MoveToNextReviewChange method to *window\.Asc.plugin.executeMethod*.
 - Added the RejectReviewChanges method to *window\.Asc.plugin.executeMethod*.
@@ -129,6 +129,6 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the SetFormValue method to *window\.Asc.plugin.executeMethod*.
 - Added the [ShowButton](../interacting-with-editors/text-document-api/Methods/ShowButton.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [UpdatePlugin](../interacting-with-editors/text-document-api/Methods/UpdatePlugin.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the onBlurContentControl event.
-- Added the onChangeContentControl event.
-- Added the onFocusContentControl event.
+- Added the [onBlurContentControl](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onBlurContentControl.md) event.
+- Added the [onChangeContentContro](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeContentControl.md) event.
+- Added the [onFocusContentControl](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onFocusContentControl.md) event.

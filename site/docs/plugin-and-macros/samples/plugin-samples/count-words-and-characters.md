@@ -133,7 +133,7 @@ Repository on GitHub: [wordscounter](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 - button
 - init
-- onTargetPositionChanged
+- [onTargetPositionChanged](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - onTranslate
 
 ## Support

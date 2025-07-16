@@ -26,7 +26,7 @@ Collects all the comments from the document and displays them in the custom inte
     }
     ```
 
-2. When the user clicks the **Add comment** button in the custom interface, the AddComment method is executed to add a new comment to the document. After this method is called, the onAddComment event is fired to add a new comment to an array with all the document comments:
+2. When the user clicks the **Add comment** button in the custom interface, the AddComment method is executed to add a new comment to the document. After this method is called, the [onAddComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md) event is fired to add a new comment to an array with all the document comments:
 
     ``` ts
     function onDocumentReady() {
@@ -54,7 +54,7 @@ Collects all the comments from the document and displays them in the custom inte
     })
     ```
 
-3. When the user clicks the **Remove comment** button in the custom interface, the RemoveComments method is executed to remove a comment from the document. After this method is called, the onRemoveComment event is fired to remove a comment from an array with all the document comments:
+3. When the user clicks the **Remove comment** button in the custom interface, the RemoveComments method is executed to remove a comment from the document. After this method is called, the [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) event is fired to remove a comment from an array with all the document comments:
 
     ``` ts
     function onDocumentReady() {
@@ -78,7 +78,7 @@ Collects all the comments from the document and displays them in the custom inte
     connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]])
     ```
 
-5. When the user clicks the **Add reply** button in the custom interface, the ChangeComment method is executed to add a reply to the existing comment by changing the *CommentData* object. After this method is called, the onChangeCommentData event is fired to add a new comment reply to an array with all the document comments:
+5. When the user clicks the **Add reply** button in the custom interface, the ChangeComment method is executed to add a reply to the existing comment by changing the *CommentData* object. After this method is called, the [onChangeCommentData](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md) event is fired to add a new comment reply to an array with all the document comments:
 
     ``` ts
     function onDocumentReady() {

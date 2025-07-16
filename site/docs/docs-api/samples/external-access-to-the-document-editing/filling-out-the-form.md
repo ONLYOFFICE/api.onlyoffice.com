@@ -100,7 +100,7 @@ $("#persons").change(function personChange(e) {
 })
 ```
 
-3. When the user edits a form value, the onChangeContentControl event is fired and after that, the GetFormValue method is executed to get an updated form value and display it in the custom interface:
+3. When the user edits a form value, the [onChangeContentContro](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeContentControl.md) event is fired and after that, the GetFormValue method is executed to get an updated form value and display it in the custom interface:
 
 ``` ts
 function onDocumentReady() {

@@ -109,9 +109,9 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 - button
 - init
-- onAddComment
-- onChangeCommentData
-- onRemoveComment
+- [onAddComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md)
+- [onChangeCommentData](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md)
 - executeMethod ("AddComment")
 - executeMethod ("ChangeComment")
 - executeMethod ("GetAllComments")
