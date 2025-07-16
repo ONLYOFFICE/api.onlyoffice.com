@@ -386,7 +386,7 @@ Presence: required
 
 ### watermark
 
-Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion.
+Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion.
 
 Type: object
 

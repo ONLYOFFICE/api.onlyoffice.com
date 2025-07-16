@@ -1,7 +1,7 @@
 # IsCheckBoxChecked
 
-Determines whether a checkbox content control is currently checked or unchecked.
-
+Determines whether a checkbox content control is currently checked or unchecked.\
+\
 Throws: Error if the content control is not a checkbox.
 
 ## Syntax

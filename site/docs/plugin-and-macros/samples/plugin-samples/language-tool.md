@@ -8,7 +8,11 @@ Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual g
 
 **Analogue:** [Glavred](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/glavred), [Grammalecte](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/grammalecte).
 
-![LanguageTool](/assets/images/plugins/gifs/language-tool.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="5HaV18VwOgg" />
+```
 
 ## Installation
 
@@ -180,10 +184,10 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - onExternalMouseUp
 - onTranslate
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectionType.md)
-- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)

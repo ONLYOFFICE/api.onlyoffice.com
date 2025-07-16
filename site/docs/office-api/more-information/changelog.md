@@ -11,12 +11,14 @@ The list of changes for Office JavaScript API.
 - Added the [Api/CreateDatePickerContentControl](../usage-api/text-document-api/Api/Methods/CreateDatePickerContentControl.md) method to Text document API.
 - Added the [Api/CreateDropDownListContentControl](../usage-api/text-document-api/Api/Methods/CreateDropDownListContentControl.md) method to Text document API.
 - Added the [Api/CreatePictureContentControl](../usage-api/text-document-api/Api/Methods/CreatePictureContentControl.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetAppearance](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAppearance.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetBackgroundColor.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetBorderColor.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDataBinding.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/GetDataForXmlMapping](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDataForXmlMapping.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/GetId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetId.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/IsPicture](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/IsPicture.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetAppearance](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetAppearance.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBackgroundColor.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBorderColor.md) method to Text document API.
 - Added the [ApiBlockLvlSdt/SetDataBinding](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetDataBinding.md) method to Text document API.
@@ -30,7 +32,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiDocument/AddPictureContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddPictureContentControl.md) method to Text document API.
 - Added the [ApiDocumentContent/GetCurrentContentControl](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentContentControl.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/AddListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/AddListItem.md) method to Text document API.
-- Added the [ApiInlineLvlSdt/GetAppearance](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetAppearance.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBackgroundColor.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataBinding.md) method to Text document API.
@@ -44,7 +45,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiInlineLvlSdt/IsDropDownList](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDropDownList.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/IsPicture](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsPicture.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/RemoveListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/RemoveListItem.md) method to Text document API.
-- Added the [ApiInlineLvlSdt/SetAppearance](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetAppearance.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBackgroundColor.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBorderColor.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/SetCheckBoxChecked](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetCheckBoxChecked.md) method to Text document API.
@@ -274,6 +274,12 @@ The list of changes for Office JavaScript API.
 - Added the [ApiDrawing/SetRotation](../usage-api/spreadsheet-api/ApiDrawing/Methods/SetRotation.md) method to Spreadsheet API.
 - Added the [ApiDrawing/GetRotation](../usage-api/presentation-api/ApiDrawing/Methods/GetRotation.md) method to Presentation API.
 - Added the [ApiDrawing/SetRotation](../usage-api/presentation-api/ApiDrawing/Methods/SetRotation.md) method to Presentation API.
+
+### Comment methods
+
+- Added the [ApiComment/GetPosition](../usage-api/presentation-api/ApiComment/Methods/GetPosition.md) method to Presentation API.
+- Added the [ApiComment/SetPosition](../usage-api/presentation-api/ApiComment/Methods/SetPosition.md) method to Presentation API.
+- Added the *posX* and *posY* parameters to the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method of Presentation API.
 
 ### Presentation methods
 

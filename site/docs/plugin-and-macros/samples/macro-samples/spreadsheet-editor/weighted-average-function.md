@@ -1,6 +1,6 @@
 # Weighted average function
 
-Creates a custom function to calculate a weighted average.
+Creates a [custom function](/docs/plugin-and-macros/macros/adding-custom-functions.md) to calculate a weighted average.
 
 <!-- This code snippet is shown in the screenshot. -->
 

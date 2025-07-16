@@ -99,7 +99,7 @@ Repository on GitHub: [example_work_with_content_controls_content](https://githu
 - button
 - init
 - executeMethod ("GetAllContentControls")
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 

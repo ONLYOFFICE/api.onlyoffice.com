@@ -7,7 +7,7 @@ Represents the ApiPivotTable class.
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | ColumnFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns an array that is currently displayed as column fields in the pivot table. |
-| ColumnGrand | boolean | Returns or sets the -**Grand Totals** setting for the pivot table columns. |
+| ColumnGrand | boolean | Returns or sets the **Grand Totals** setting for the pivot table columns. |
 | ColumnRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the column area in the pivot table report. |
 | DataBodyRange | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the range of values in the pivot table. |
 | DataFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns an array that is currently displayed as data fields in the pivot table. |
@@ -24,7 +24,7 @@ Represents the ApiPivotTable class.
 | RepeatAllLabels | boolean | Specifies whether to repeat item labels for all pivot fields in the specified pivot table. |
 | RowAxisLayout | object | Sets the way the specified pivot table items appear — in table format or in outline format. |
 | RowFields | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns an array that is currently displayed as row fields in the pivot table. |
-| RowGrand | boolean | Returns or sets the -**Grand Totals** setting for the pivot table rows. |
+| RowGrand | boolean | Returns or sets the **Grand Totals** setting for the pivot table rows. |
 | RowRange | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the row area in the pivot table report. |
 | ShowTableStyleColumnHeaders | boolean | Returns or sets the setting which specifies whether the column headers of the pivot table will be highlighted with the special formatting. |
 | ShowTableStyleColumnStripes | boolean | Returns or sets the setting which specifies whether the background color alternation for odd and even columns will be enabled for the pivot table. |
@@ -47,7 +47,7 @@ Represents the ApiPivotTable class.
 | [ClearAllFilters](./Methods/ClearAllFilters.md) | None | Deletes all filters currently applied to the pivot table. |
 | [ClearTable](./Methods/ClearTable.md) | None | Clears the pivot table. |
 | [GetColumnFields](./Methods/GetColumnFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns a collection that is currently displayed as column fields in the pivot table. |
-| [GetColumnGrand](./Methods/GetColumnGrand.md) | boolean | Returns the -**Grand Totals** setting of the pivot table columns. |
+| [GetColumnGrand](./Methods/GetColumnGrand.md) | boolean | Returns the **Grand Totals** setting of the pivot table columns. |
 | [GetColumnRange](./Methods/GetColumnRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the column area in the pivot table report. |
 | [GetData](./Methods/GetData.md) | number \| null | Returns the value for the data field in a pivot table. |
 | [GetDataBodyRange](./Methods/GetDataBodyRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the range of values in the pivot table. |
@@ -63,7 +63,7 @@ Represents the ApiPivotTable class.
 | [GetPivotData](./Methods/GetPivotData.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object with information about a data item in the pivot table report. |
 | [GetPivotFields](./Methods/GetPivotFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] \| [ApiPivotField](../ApiPivotField/ApiPivotField.md) \| [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md) \| null | Returns a collection that represents either a single pivot table field or a collection of both the visible and hidden fields in the pivot table report. |
 | [GetRowFields](./Methods/GetRowFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | Returns a collection that is currently displayed as row fields in the pivot table. |
-| [GetRowGrand](./Methods/GetRowGrand.md) | boolean | Returns the -**Grand Totals** setting of the pivot table rows. |
+| [GetRowGrand](./Methods/GetRowGrand.md) | boolean | Returns the **Grand Totals** setting of the pivot table rows. |
 | [GetRowRange](./Methods/GetRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the row area in the pivot table report. |
 | [GetSource](./Methods/GetSource.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the source range for the pivot table. |
 | [GetStyleName](./Methods/GetStyleName.md) | string | Returns the pivot table style name. |
@@ -80,7 +80,7 @@ Represents the ApiPivotTable class.
 | [RefreshTable](./Methods/RefreshTable.md) | None | Refreshes the pivot table report from the source data. |
 | [RemoveField](./Methods/RemoveField.md) | None | Removes the specified field from all the pivot table categories. |
 | [Select](./Methods/Select.md) | None | Selects the current pivot table. |
-| [SetColumnGrand](./Methods/SetColumnGrand.md) | None | Sets the -**Grand Totals** setting to the pivot table columns. |
+| [SetColumnGrand](./Methods/SetColumnGrand.md) | None | Sets the **Grand Totals** setting to the pivot table columns. |
 | [SetDescription](./Methods/SetDescription.md) | None | Sets the pivot table description. |
 | [SetDisplayFieldCaptions](./Methods/SetDisplayFieldCaptions.md) | None | Returns the setting which specifies whether to display field headers for rows and columns. |
 | [SetDisplayFieldsInReportFilterArea](./Methods/SetDisplayFieldsInReportFilterArea.md) | None | Sets the pivot table display fields in the report filter area settings. |
@@ -90,7 +90,7 @@ Represents the ApiPivotTable class.
 | [SetName](./Methods/SetName.md) | None | Sets the pivot table name. |
 | [SetRepeatAllLabels](./Methods/SetRepeatAllLabels.md) | None | Specifies whether to repeat item labels for all pivot fields in the specified pivot table. |
 | [SetRowAxisLayout](./Methods/SetRowAxisLayout.md) | None | Sets the way the specified pivot table items appear — in table format or in outline format. |
-| [SetRowGrand](./Methods/SetRowGrand.md) | None | Sets the -**Grand Totals** setting to the pivot table rows. |
+| [SetRowGrand](./Methods/SetRowGrand.md) | None | Sets the **Grand Totals** setting to the pivot table rows. |
 | [SetSource](./Methods/SetSource.md) | None | Sets the source range for the pivot table. |
 | [SetStyleName](./Methods/SetStyleName.md) | None | Sets the pivot table style name. |
 | [SetSubtotalLocation](./Methods/SetSubtotalLocation.md) | None | Sets the layout subtotal location in the pivot table. |

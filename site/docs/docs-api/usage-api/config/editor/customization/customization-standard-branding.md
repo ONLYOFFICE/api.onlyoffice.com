@@ -10,7 +10,7 @@ The customization section allows you to customize the editor interface according
 On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
 
 :::note
-Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile).
+Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename).
 :::
 
 ## anonymous
@@ -624,7 +624,10 @@ Shows or hides the logo. The default value is **true**.
 
 `Type: boolean`
 
-Defines if document macros will be automatically run when the editor opens. The default value is **true**. The **false** value hides the [macros settings](#macrosmode) from the user.
+Defines if document macros will be automatically run when the editor opens. The default value is **true**.
+
+- **Before version 9.0.3**: the **false** value disables the automatic startup of macros and hides the [macros settings](#macrosmode) from the user.
+- **Since version 9.0.3**: the **false** value completely disables macros — they cannot be run, added, or edited. The **Macros** button is also hidden from the **View** tab.
 
 **Example**: `true`
 
@@ -635,8 +638,8 @@ Defines if document macros will be automatically run when the editor opens. The 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
 - **disable** - don't run macros at all;
-- **enable** - run all macros automatically;
-- **warn** - warn about macros and ask permission to run them.
+- **warn** - warn about macros and ask permission to run them;
+- **enable** - run all macros automatically.
 
 The default value is **warn**.
 
@@ -923,7 +926,11 @@ Defines a message displayed after forms are submitted. The following values are 
 Defines if the document title is visible on the top toolbar (**false**) or hidden (**true**). The default value is **false**.
 
 :::note
-This setting is used when the [compactHeader](#compactheader) and [toolbarNoTabs](#toolbarnotabs) parameters are set to **true**.
+This setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
+:::
+
+:::note
+Starting from version 9.0.3, this parameter is also available for the mobile editors.
 :::
 
 **Example**: `false`

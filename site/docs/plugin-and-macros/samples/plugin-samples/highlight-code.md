@@ -6,7 +6,11 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![HighlightCode](/assets/images/plugins/gifs/highlight-code.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="almj8Lphrmc" />
+```
 
 ## Installation
 
@@ -171,7 +175,7 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 - [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 
 ## Support

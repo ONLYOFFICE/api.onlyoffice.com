@@ -91,7 +91,7 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 - onInputHelperClear
 - onInputHelperInput
 - [createInputHelper](/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/InputText.md)
+- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
 - [getInputHelper](/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
 - [InputHelper.createWindow](/docs/plugin-and-macros/customization/input-helper.md#createwindow)
 - [InputHelper.getItems](/docs/plugin-and-macros/customization/input-helper.md#getitems)

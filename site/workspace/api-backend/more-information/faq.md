@@ -22,7 +22,3 @@ Please note that the UTC date and time without the offset are used in this case.
 You can get *json* or *xml* format adding *.json* or *.xml* to the request or pointing the request *Content-Type* in application/json or text/xml.
 
 E.g.: [api/2.0/people.json](../../../workspace/api-backend/usage-api/get-profiles.api.mdx)
-
-## Is the response data pagination supported?
-
-Yes. More information you can find in the [Request filtering](./filtering.md) section.

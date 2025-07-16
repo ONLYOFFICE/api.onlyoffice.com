@@ -6,7 +6,7 @@ sidebar_label: White label
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
-在此页面上，您将找到仅适用于 ONLYOFFICE 文档开发者版的 [扩展白标许可证](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) 的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
+在此页面上，您将找到仅适用于 ONLYOFFICE 文档开发者版的[扩展白标许可证](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
 
 ## 关于
 
@@ -23,7 +23,7 @@ sidebar_label: White label
 定义拼写检查器设置是否显示拼写检查器设置在所有编辑器中可用。
 
 :::请注意
-`features` 对象的其他字段可用于标准品牌，并在 [此处](customization-standard-branding.md#features) 中描述。只有 `features.spellcheck.change` 字段需要额外付款。
+`features` 对象的其他字段可用于标准品牌，并在[此处](customization-standard-branding.md#features)中描述。只有 `features.spellcheck.change` 字段需要额外付款。
 :::
 
 **示例**: `true`
@@ -72,6 +72,7 @@ const layout = {
   header: {
     editMode: true,
     save: true,
+    user: true,
     users: true,
   },
   leftMenu: {
@@ -123,6 +124,7 @@ const layout = {
 const header = {
   editMode: true,
   save: true,
+  user: true,
   users: true,
 }
 ```
@@ -139,7 +141,15 @@ const header = {
 
 `类型: boolean`
 
-定义编辑器标题中的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 **false**时，将使用此设置。
+定义编辑器标题中的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 **false** 时，将使用此设置。
+
+**示例**: `true`
+
+### layout.header.user
+
+`Type: boolean`
+
+定义编辑器标题栏中带有用户头像/姓名首字母的图标是否显示或隐藏。默认值为 **true**。
 
 **示例**: `true`
 
@@ -153,7 +163,7 @@ const header = {
 
 ### layout.leftMenu
 
-定义左侧菜单设置。如果此参数是布尔值，则它指定左侧菜单是显示还是隐藏。默认值为**真**。
+定义左侧菜单设置。如果此参数是布尔值，则它指定左侧菜单是显示还是隐藏。默认值为 **true**。
 
 `类型: object | boolean`
 
@@ -171,7 +181,7 @@ const leftMenu = {
 
 `类型: boolean`
 
-定义左侧面板可见性的初始值 - 显示或隐藏。它用于**视图**选项卡上的**左侧面板**菜单选项。默认值为**真**。
+定义左侧面板可见性的初始值 - 显示或隐藏。它用于**视图**选项卡上的**左侧面板**菜单选项。默认值为 **true**。
 
 **示例**: `true`
 
@@ -509,7 +519,7 @@ const view = {
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       about: true,
@@ -526,6 +536,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
@@ -567,7 +578,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       loaderName: "The document is loading, please wait...",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md)章节。
