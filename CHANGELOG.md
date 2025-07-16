@@ -1,5 +1,36 @@
 # Change log
 
+## 6.3.0
+
+### New features
+
+#### Docspace
+
+* Added DocSpace SDKs
+
+#### Docs
+
+* Added new Office API samples
+
+#### Docs API
+
+* Updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution
+* Added more questions to Customization FAQ
+
+#### Plugins and macros
+
+* Added a sample for asynchronous custom functions
+* Added the ability to automatically convert VBA code into ONLYOFFICE macros using AI plugin
+* Added the ability to automatically generate ONLYOFFICE macros using AI plugin
+* Added instruction on how to run a macro sample
+* Added new Macro samples
+
+### Fixes
+
+#### Plugins and macros
+
+* Replaced gifs with YouTube videos
+
 ## 6.2.0
 
 ### New features

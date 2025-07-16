@@ -1,0 +1,55 @@
+.list-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  font: inherit;
+  margin-bottom: 16px;
+  padding: 0;
+
+  list-style: disc outside none;
+  list-style-type: none;
+}
+
+.list-buttons > * {
+  margin: 0 !important;
+}
+
+.list-buttons button {
+  cursor: pointer;
+  padding: 16px 20px;
+
+  text-decoration: none !important;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+:root {
+  --button-text-color: #444444;
+  --button-border-color: #aaaaaa;
+}
+
+html[data-theme="dark"] {
+  --button-text-color: #d4d4d4;
+  --button-border-color: #cecece;
+}
+
+@media (hover: hover) {
+  .list-buttons button:hover {
+    color: #ff6f3d;
+    border-color: #ff6f3d;
+  }
+
+  .list-buttons button.active:hover {
+    color: #ffffff;
+    background-color: #ff7a4b;
+    border-color: #ff6f3d;
+  }
+}

@@ -201,3 +201,71 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugin-and-macros/structure/configuration/configuration.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
 Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/plugins.md).
+
+## How to disable feature tips in editors?
+
+To disable the tooltips about new features in the editor on first loading, use the *features.featuresTips* configuration parameter and set its value to **false**:
+
+``` ts
+const config = {
+  editorConfig: {
+    customization: {
+      features: {
+        featuresTips: false
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+Further information about the feature customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md#features).
+
+## How to change the font and text size in the editor interface?
+
+To customize the font name and size of the interface elements (buttons, tabs, etc.), use the *font* configuration block and edit the *font.name* and *font.size* parameters:
+
+``` ts
+const config = {
+  editorConfig: {
+    customization: {
+      font: {
+        name: "Arial",
+        size: 14
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+> Please note that these parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer.
+
+Further information about the interface font customization can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#font).
+
+## How to hide the active user's icon and the current username in the editor header?
+
+To hide the icon with the user's avatar/initials in the editor header, use the *layout* configuration block and set the *layout.header.user* parameter to **false**. You can also hide the button with the editing users setting the *layout.header.users* parameter to **false**:
+
+``` ts
+const config = {
+  editorConfig: {
+    customization: {
+      layout: {
+        header: {
+          user: false,
+          users: false,
+        }
+      }
+    }
+  }
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+> Please note that these parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer.
+
+Further information about the editor header settings can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#layoutheader).
