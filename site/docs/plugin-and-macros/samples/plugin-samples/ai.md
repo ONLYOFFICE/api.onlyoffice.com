@@ -21,7 +21,7 @@ The plugin guid: `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 To start using the plugin, you need to set up an AI provider:
 
 - Open the plugin from the Plugins tab.
-- If prompted, enter your API key (for OpenAI, Azure, or other).
+- If prompted, enter your API key (for OpenAI, MistralAI, or other).
 - You can also pre-configure it in the plugin’s `config.json` and `preinstall-example.json`:
 
     ``` json
