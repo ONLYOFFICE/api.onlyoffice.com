@@ -22,9 +22,13 @@ number
 
 ## Example
 
-
+This example shows how to get the hyperbolic cosine of a number.
 
 ```javascript editor-xlsx
+// How to find a hyperbolic cosine.
+
+// Use function to get the hyperbolic cosine of an angle.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 worksheet.GetRange("A1").SetValue(func.COSH(3));

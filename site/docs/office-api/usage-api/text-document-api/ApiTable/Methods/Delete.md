@@ -23,6 +23,10 @@ boolean
 This example deletes the table.
 
 ```javascript editor-docx
+// How to remove a table from the document.
+
+// Get a table and delete it.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

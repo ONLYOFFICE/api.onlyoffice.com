@@ -25,6 +25,10 @@ boolean
 This example sets the horizontal alignment to the table.
 
 ```javascript editor-docx
+// How to set alignment of the text to the center.
+
+// Create a table and set its horizontal alignment.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

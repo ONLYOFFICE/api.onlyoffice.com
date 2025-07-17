@@ -28,11 +28,11 @@ Enumeration
 - "h:mm:ss"
 - "m/d/yyyy h:mm"
 - "#,##0_);(#,##0)"
-- "#,##0_);[Red](#,##0)"
+- "#,##0_);\[Red\](#,##0)"
 - "#,##0.00_);(#,##0.00)"
-- "#,##0.00_);[Red](#,##0.00)"
+- "#,##0.00_);\[Red\](#,##0.00)"
 - "mm:ss"
-- "[h]:mm:ss"
+- "\[h\]:mm:ss"
 - "mm:ss.0"
 - "##0.0E+0"
 - "@"
@@ -40,8 +40,13 @@ Enumeration
 
 ## Example
 
-This example shows how to specify that the range contents will be rotated upward.
+Set the "0.00" numeric format to the chart data point.
 
 ```javascript editor-docx
-worksheet.GetRange("A1").SetOrientation("xlUpward");
+// How to use the specified numeric format for the ApiChart object.
+
+// Set the chart data point to the "0.00" numeric format.
+
+chart.SetDataPointNumFormat("0.00", 0, 1, true);
+
 ```

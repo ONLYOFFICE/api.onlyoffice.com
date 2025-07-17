@@ -1,6 +1,6 @@
 # GetFormsData
 
-Returns the data from all forms present in the current document.
+Returns the data from all forms present in the current document.\
 If a form was created and not assigned to any part of the document, it won't appear in this list.
 
 ## Syntax
@@ -24,6 +24,10 @@ This method doesn't have any parameters.
 This example showh how to get the data for all forms added to the document.
 
 ```javascript editor-docx
+// How to get form information as a string.
+
+// Display the form data in the document.
+
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});

@@ -1,7 +1,7 @@
 # AddCaption
 
-Adds a caption paragraph after (or before) the current paragraph.
-💡 Please note that the current paragraph must be in the document (not in the footer/header).
+Adds a caption paragraph after (or before) the current paragraph.\
+💡 Please note that the current paragraph must be in the document (not in the footer/header).\
 And if the current paragraph is placed in a shape, then a caption is added after (or before) the parent shape.
 
 ## Syntax
@@ -33,6 +33,10 @@ boolean
 This example adds a caption paragraph after the paragraph.
 
 ```javascript editor-docx
+// How to add caption to the paragraph.
+
+// Add a caption to the text specifying its properties.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let drawing = Api.CreateImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", 60 * 36000, 35 * 36000);

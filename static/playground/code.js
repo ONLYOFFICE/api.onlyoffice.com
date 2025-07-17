@@ -1,9 +1,24 @@
+const urlParams = function getUrlParams() {
+    let e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&=]+)=?([^&]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.search.substring(1),
+        params = {};
+
+    while (e = r.exec(q))
+        params[d(e[1])] = d(e[2]);
+console.log(params)
+    return params;
+}();
+window.history.replaceState(null, '', window.location.pathname);
+
 var Environment = {
     editor: "word",
     type: "desktop",
     theme: "light",
     lang: "en",
-    testType: "office-js-api"    
+    testType: urlParams["testType"]
 };
 
 var plugins_Header = "var Editor = {\n\
@@ -104,21 +119,6 @@ var Placeholders = {
     },
 };
 
-const urlParams = function getUrlParams() {
-    let e,
-        a = /\+/g,  // Regex for replacing addition symbol with a space
-        r = /([^&=]+)=?([^&]*)/g,
-        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
-        q = window.location.search.substring(1),
-        params = {};
-
-    while (e = r.exec(q))
-        params[d(e[1])] = d(e[2]);
-
-    return params;
-}();
-window.history.replaceState(null, '', window.location.pathname);
-
 function addApiScript() {
     const apiUrl = urlParams['documentServer'] + ('web-apps/apps/api/documents/api.js');
     const scriptApi = document.createElement("script");
@@ -133,40 +133,29 @@ function addApiScript() {
 
     document.body.appendChild(scriptApi);
 }
-function Environment_Load()
-{
-    let obj = {};
-    try
-    {
-        obj = JSON.parse(window.localStorage.getItem("oo-test-editors"));
-        
-        if (obj)
-        {
-            for (let item in obj)
-            {
-                if (Environment[item])
+
+function Environment_Load() {
+    try {
+        const data = window.localStorage.getItem("oo-test-editors");
+        if (data) {
+            const obj = JSON.parse(data);
+            for (const item in obj) {
+                if (Environment[item] && item !== "testType") {
                     Environment[item] = obj[item];
+                }
             }
         }
+        const editor = urlParams?.editor;
+        editor && (Environment.editor = editor);
+    } catch (e) {
+        console.error("Error while loading environment data: ", e);
     }
-    catch (e)
-    {
-    }
-    let editor = urlParams["editor"];
-    editor && (Environment.editor = editor);
-
 }
 
-function Environment_Save()
-{
-    let obj = {};
-    try
-    {
+function Environment_Save() {
+    if (Environment) {
         window.localStorage.setItem("oo-test-editors", JSON.stringify(Environment));
-    }
-    catch (e)
-    {        
-    }
+    }    
 }
 
 Environment_Load();
@@ -200,7 +189,7 @@ async function createJWT(json, secret) {
 }
 
 function initCodeText() {
-    codeEditor && codeEditor.setValue(Placeholders[Environment.editor][Environment.testType]);
+    codeEditor && codeEditor.setValue(Placeholders[Environment.editor][urlParams["testType"]]);
 }
 
 async function initCodeEditorType()
@@ -301,11 +290,9 @@ document.getElementById("editor_themes").addEventListener('change', function() {
     initCodeEditorType();
 });
 
-document.getElementById("editor_func").value = Environment.testType;
+document.getElementById("editor_func").value = urlParams["testType"];
 document.getElementById("editor_func").addEventListener('change', function() {
     Environment.testType = this.value;
-    Environment_Save();
-
     codeEditor.setValue(Placeholders[Environment.editor][Environment.testType]);
 });
 

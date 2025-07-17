@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-docx
+// How to get a class type of ApiParaPr.
+
+// Retrieve class type of ApiParaPr object and insert it to the document.
+
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();

@@ -17,7 +17,7 @@ The latest connector signed versions are available in the official store for [Ne
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.
+- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
 - The following format is available for viewing only: PDF.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
@@ -54,9 +54,9 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
 3. Change the owner to update the application right from Nextcloud web interface:
 
-  ``` sh
-  chown -R www-data:www-data onlyoffice
-  ```
+    ``` sh
+    chown -R www-data:www-data onlyoffice
+    ```
 
 4. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 

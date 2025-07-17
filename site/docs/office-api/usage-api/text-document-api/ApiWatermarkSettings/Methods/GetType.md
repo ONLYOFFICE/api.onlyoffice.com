@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a watermark type and pastes it into the document.
 
 ```javascript editor-docx
+// How to get type of the watermark.
+
+// Display the name of the watermark style.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let watermarkSettings = doc.GetWatermarkSettings();

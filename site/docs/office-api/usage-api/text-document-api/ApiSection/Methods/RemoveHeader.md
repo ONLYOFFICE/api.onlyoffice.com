@@ -1,6 +1,6 @@
 # RemoveHeader
 
-Removes the header of the specified type from the current section. After removal, the header will be inherited from
+Removes the header of the specified type from the current section. After removal, the header will be inherited from\
 the previous section, or if this is the first section in the document, no header of the specified type will be presented.
 
 ## Syntax
@@ -19,13 +19,17 @@ expression.RemoveHeader(sType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes the header of the specified type from the section.
 
 ```javascript editor-docx
+// How to remove the header of the current section.
+
+// Create section from the paragraph and remove its header.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This page first was with a header. ");

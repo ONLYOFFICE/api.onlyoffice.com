@@ -93,10 +93,40 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
   );
 }
 
-export function PlaygroundCardsRow(): ReactNode {
+interface PlaygroundCardsRowProps {
+  searchParams?: {
+    [parameter: string]: string
+  }[]
+};
+
+export function PlaygroundCardsRow({ searchParams }: PlaygroundCardsRowProps): ReactNode {
+  const updatedPlaygrounds = Playgrounds.map(playground => {
+    const newPlayground = { ...playground };
+    
+    if (searchParams?.length > 0) {
+      const stringifiedSearchParams = searchParams
+        .filter(parameter => {
+          const key = Object.keys(parameter)[0];
+          return !newPlayground.url.includes(key);
+        })
+        .map(parameter => {
+          const key = Object.keys(parameter)[0];
+          return `${key}=${parameter[key]}`;
+        });
+
+      if (stringifiedSearchParams.length > 0) {
+        newPlayground.url += 
+          (newPlayground.url.includes("?") ? "&" : "?") + 
+          stringifiedSearchParams.join("&");
+      }
+    }
+
+    return newPlayground;
+  });
+
   return (
     <div className="row">
-      {Playgrounds.map((playground) => (
+      {updatedPlaygrounds.map((playground) => (
         <PlaygroundCard key={playground.name} {...playground} />
       ))}
     </div>

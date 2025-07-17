@@ -1,7 +1,7 @@
 # GetPageCount
 
-Returns a number of pages in the current document.
-💡 This method can be slow for large documents because it runs the document calculation
+Returns a number of pages in the current document.\
+💡 This method can be slow for large documents because it runs the document calculation\
 process before the full recalculation.
 
 ## Syntax
@@ -25,6 +25,10 @@ number
 This example shows how to get a number of pages in the current document.
 
 ```javascript editor-docx
+// How to count the number of pages in the document.
+
+// Display the number of pages of the document.
+
 let doc = Api.GetDocument();
 let pageCount = doc.GetPageCount();
 let paragraph = doc.GetElement(0);

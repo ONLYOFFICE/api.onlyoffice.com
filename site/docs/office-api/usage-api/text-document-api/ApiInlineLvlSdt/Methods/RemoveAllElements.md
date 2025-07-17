@@ -23,6 +23,10 @@ boolean
 This example clears the contents from the content control.
 
 ```javascript editor-docx
+// How to remove all elements from the inline text control.
+
+// Delete text from the inline content control.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

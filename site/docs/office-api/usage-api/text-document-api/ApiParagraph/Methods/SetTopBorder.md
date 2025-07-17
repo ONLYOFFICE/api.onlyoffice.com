@@ -1,6 +1,6 @@
 # SetTopBorder
 
-Specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.
+Specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\
 💡 The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.
 
 ## Syntax
@@ -24,13 +24,17 @@ expression.SetTopBorder(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.
 
 ```javascript editor-docx
+// Set top border to the paragraph.
+
+// Border with single line the text.
+
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();

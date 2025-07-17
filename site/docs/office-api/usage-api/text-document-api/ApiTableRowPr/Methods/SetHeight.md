@@ -19,13 +19,17 @@ expression.SetHeight(sHRule, nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the height to the current table row within the table.
 
 ```javascript editor-docx
+// Resize the height of the row.
+
+// How to set a minimum row height of the table.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and set the height of half an inch to all the rows:");

@@ -25,9 +25,13 @@ boolean
 
 ## Example
 
-This example show how to set the fill to the data point.
+This example shows how to set the fill to the data point.
 
 ```javascript editor-docx
+// How to color chart data point with a solid fill.
+
+// Create a chart and set a color for its data points.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

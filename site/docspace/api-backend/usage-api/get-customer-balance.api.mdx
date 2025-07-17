@@ -1,0 +1,71 @@
+---
+id: get-customer-balance
+title: "Get the customer balance"
+description: "Returns the customer balance from the accounting service."
+sidebar_label: "Get the customer balance"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV8tu2zgU/RXibrJR7dQpMIB3btop2hm0RZMgi8BoaOrKYiORHJJK6jH074NLUrJkuUiAziYP8r4f51B78HzrYHkHX7X1vGJz9pXvalQe1hlog5Z7qdXHHJawRX/ZOK9rtG95xZVAyMBwy2v0aMnIHhSvEZZgsbDoSshAKljCPw3aHWSQoxNWGrIIS7gyKGQh0bGnEn2JlnnNkibzJTITI2FSFdrWIRAmuCiRacuU9jPIwIkSaw7LPfidIdcbrSvkCjLAn7w2FcLS2wbbdp2BRWe0cuhIfnF+Tr/GMV2XyERKkm36LIVWnmqy3AM3ppIiBDP/4UhpPw1Cb36g8FQeSzX0Mrrs/D8vyYXQjfKfm3qDdiAulcct2kktKe6kw1RQouLEskW1i8WwJK8XF2/aDFyzWUUtN3DCreXULumxds/HKhprUYndQNJ5K9X2ZJS+tIivRMktFx4t+3j1hb1ZvP6DdWaY29UbXTFdhCFwzeZVyoxSUk1V8U3X1UFG4HSNzONPD20GvCaFQUSxKKfrFmR/4a8vYa4bctuS8TyXpM+rr4NCFLxyeGz/GxqLDpV3jA9NsyfpSzqKOyAO2XOVp4jIvZc+JHfVN4qyG/tYsUq6EP/AgZsW63dCT6uQwlZHsxaD/mUYXRIdarS0UOP2HOb6aGbbDCqpHn5jPEuLxXQ0qRYiZjq5aqlSznPfuBeGGIUvdY4vUmgnNbm13Bi0yfeb89dTaLpRvPGltvJfzCEIXUyFPmtm0NbSOamVI0A1aMk986V0LKUc8kPRWOl3Aba5E9/J+vcHpAOwyHPI4MlKj7Busz28RW4Jie7Cfysj/8Jdf3ZKnjspOvEvq8aXi9OCXwwGerlbE0Ifj6BvLKVxApVZYXUdbtKoSbVlDu2jFEhDV6MvdaKtwFO+hCXMuZHzxex8bgLdzRPFzDvr8wPmk62O1hpbwRL2G+7wxlbtlMqCLBNaFXLbRM6EDB65lbR/YYyScuxZwZuKBmJi6V28Yjff/qZhWB8adUUkk9hh1K7DYoSuTEzeOGSXWj9IZKSEyif+IoSIfD0ymEhbBBWatNTL3k/pvZl4ea8IzXe6saxxaMlwgAXDnXvSNu+4OnB0MEiW0wS9xPRZFGb7T7fX7Fo/oGrPRkajrSz98We3c59ur8nVeGSfq9lqVCgmHcvpkVNLhTnb7MLcna3SPgaZM1Yiz0MAqagjj6moSabN+p04wBcPB8eRRDlWVPopou/IKwuYkwFdx9EY3naANDoMMxgK7ZbzefA606ra6aKg1RG6joeLeY83hOFU8JerBvHQHW26tw/Pw0rznDYWXUQnqz0Kjzmz6HRjBboeHpZwS7+fkY6I2aHIoZrh4FIrFTnhqKh0+46l6+lajLRfnjUNPj1Wqb8/Xzm5Vdw3Fp8fNxrpXpz2J2eFtkdxzVh4P1FlWd04zzbI9MbzMJOPkoehvO8AroONUUfuGarcaKn8jH30NNa0npgzTiQfNz5OGdkKO3w/SOR+dpjuYX5HiNHS/4UOaSeaWxlJeIjWxYQvZovZOZXJaOdrHlg4Gf6A/iTgHxdtf3iV/xZRpM7Qy3FuKi4VhdVEoI6scUdtgwwoZIqYmCNQSvxQyqBzSeCTgl1nUGrnSXnf80ZLx/FjiFgll47YIT/9ABvm9798Kp1MNDDI4HvtkVcNSQFRT8dfkcc78KLQo9pKCDR+oDX5OCIrPRN/eH8NWQCj8UZE0kl/kPXuSu2GtsccFSOgn/SKOKmx38d1a9tePl79UqOH8ChNJVq3bfsfcwpB/w==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the customer balance"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/customer/balance"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the customer balance from the accounting service.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"refresh","in":"query","description":"Specifies whether to refresh the payment information cache or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The customer balance","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"accountNumber":{"type":"integer","description":"The account number.","format":"int32","example":1234},"subAccounts":{"type":"array","items":{"type":"object","properties":{"currency":{"type":"string","description":"The three-character ISO 4217 currency symbol of the sub-account.","nullable":true,"example":"some text"},"amount":{"type":"number","description":"The amount of the sub-account.","format":"double"}},"additionalProperties":false,"description":"Represents a sub-account with a specific currency and amount.","title":"SubAccount"},"description":"A list of sub-accounts.","nullable":true}},"additionalProperties":false,"description":"Represents a balance with an account number and a list of sub-accounts.","title":"Balance"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BalanceWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -19,7 +19,7 @@ Highlights predefined keywords in text document.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [Search](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/Search.md), [SetHighlight](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetHighlight.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [Search](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Search.md), [SetHighlight](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetHighlight.md)
 
 ## Result
 

@@ -25,7 +25,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title} API`}
-      description="Description will go into a meta tag in <head />">
+      description="Learn how to integrate ONLYOFFICE Docs and DocSpace into your solution, configure and customize them — with code samples and detailed guides.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

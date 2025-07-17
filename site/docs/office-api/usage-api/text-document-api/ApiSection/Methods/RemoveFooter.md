@@ -1,6 +1,6 @@
 # RemoveFooter
 
-Removes the footer of the specified type from the current section. After removal, the footer will be inherited from 
+Removes the footer of the specified type from the current section. After removal, the footer will be inherited from \
 the previous section, or if this is the first section in the document, no footer of the specified type will be presented.
 
 ## Syntax
@@ -19,13 +19,17 @@ expression.RemoveFooter(sType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes the footer of the specified type from the section.
 
 ```javascript editor-docx
+// How to remove the footer of the current section.
+
+// Create section from the paragraph and remove its footer.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This page first was with a footer. ");

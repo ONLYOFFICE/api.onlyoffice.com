@@ -23,13 +23,17 @@ expression.SetCellBorderRight(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the border which will be displayed to the right of the table cell.
 
 ```javascript editor-docx
+// How to add margin to the right of the cell.
+
+// Create a 3x3 table and add the right cell margin.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and add the right 4 point black border to all cells:");

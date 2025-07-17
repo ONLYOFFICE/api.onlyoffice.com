@@ -23,6 +23,10 @@ number
 This example gets the start position of a given range object.
 
 ```javascript editor-docx
+// Get the start index of the range and display it.
+
+// Retrieve a range of the paragraph and show its first position.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

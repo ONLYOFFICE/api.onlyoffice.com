@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example finds out the current form spacing value.
 
 ```javascript editor-docx
+// How to find out th text spacing.
+
+// Get the property of the text that shows the size of spacing.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

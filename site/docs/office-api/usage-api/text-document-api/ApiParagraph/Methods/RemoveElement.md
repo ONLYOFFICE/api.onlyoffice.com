@@ -1,8 +1,8 @@
 # RemoveElement
 
-Removes an element using the position specified.
-💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),
-a new empty run is automatically created. If you want to add
+Removes an element using the position specified.\
+💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),\
+a new empty run is automatically created. If you want to add\
 content to this run, use the [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) method.
 
 ## Syntax
@@ -21,13 +21,17 @@ expression.RemoveElement(nPos);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes an element using the position specified.
 
 ```javascript editor-docx
+// How to remove the element at the index from the paragraph.
+
+// Delete a third element from the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.RemoveAllElements();

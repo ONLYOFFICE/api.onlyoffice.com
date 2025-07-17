@@ -14,7 +14,7 @@ expression.AddElement(oElement, nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the position specified. Returns -**false** if the type of *oElement* is not supported by an inline text content control. |
+| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the position specified. Returns **false** if the type of *oElement* is not supported by an inline text content control. |
 | nPos | Optional | number |  | The position of the element where it will be added to the current inline text content control. If this value is not specified, then the element will be added to the end of the current inline text content control. |
 
 ## Returns
@@ -26,6 +26,10 @@ boolean
 This example adds a run to the container.
 
 ```javascript editor-docx
+// How to add text run to the inline text element.
+
+// Add text to the inline control indicating the starting index.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

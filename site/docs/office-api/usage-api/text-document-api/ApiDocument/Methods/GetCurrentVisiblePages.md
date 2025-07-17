@@ -20,11 +20,16 @@ number[]
 
 ## Example
 
-This example shows how to get current visible pages indexes
+This example shows how to get current visible pages indexes.
 
 ```javascript editor-docx
-var oDocument = Api.GetDocument();
-var oParagraph = Api.CreateParagraph();
-oParagraph.AddText("The current visibles pages indexes is: " + oDocument.GetCurrentVisiblePages());
-oDocument.Push(oParagraph);
+// How to get all indexes of non-hidden pages.
+
+// How to display numbers of all visible pages.
+
+const doc = Api.GetDocument();
+const paragraph = Api.CreateParagraph();
+paragraph.AddText("The current visibles pages indexes is: " + doc.GetCurrentVisiblePages());
+doc.Push(paragraph);
+
 ```

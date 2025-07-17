@@ -1,6 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of the current Range are displayed along with a line appearing directly below the character
+Specifies that the contents of the current Range are displayed along with a line appearing directly below the character\
 (less than all the spacing above and below the characters on the line).
 
 ## Syntax
@@ -26,6 +26,10 @@ expression.SetUnderline(isUnderline);
 This example specifies that the contents of the current Range are displayed along with a line appearing directly below the character.
 
 ```javascript editor-docx
+// Underline the range.
+
+// Get a range and underline it with one line.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

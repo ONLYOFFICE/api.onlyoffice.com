@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
+// How to remove the watermark.
+
+// Add the watermark with settings and then delete it.
+
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
 watermarkSettings.SetType("text");

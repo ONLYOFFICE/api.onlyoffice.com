@@ -23,6 +23,10 @@ number
 This example shows how to get a number of rows in the table.
 
 ```javascript editor-docx
+// How to count the number of rows of the table and display it in the document.
+
+// Add text showing the rows count of two tables.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 2x2 table and add a new row, so that it becomes 2x3:");

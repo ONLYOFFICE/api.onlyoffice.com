@@ -1,7 +1,7 @@
 # AddCaption
 
-Adds a caption paragraph after (or before) the current table.
-💡 Please note that the current table must be in the document (not in the footer/header).
+Adds a caption paragraph after (or before) the current table.\
+💡 Please note that the current table must be in the document (not in the footer/header).\
 And if the current table is placed in a shape, then a caption is added after (or before) the parent shape.
 
 ## Syntax
@@ -33,6 +33,10 @@ boolean
 This example adds a caption paragraph after the current table.
 
 ```javascript editor-docx
+// How to add caption to the table.
+
+// Add text as a table caption specifying its properties.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

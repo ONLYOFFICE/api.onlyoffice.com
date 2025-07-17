@@ -8,13 +8,17 @@ Connects a Zotero account for adding references to the document in full accordan
 
 **Analogues:** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley), [EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib).
 
-![Zotero](/assets/images/plugins/gifs/zotero.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="k1vyDlQbdEU" start={154} />
+```
 
 ## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/zotero) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md) installation instruction.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/zotero) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) installation instruction.
 
 ## Connect ONLYOFFICE to Zotero account
 
@@ -166,7 +170,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - button
 - init
 - onTranslate
-- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 
 ## Support
 

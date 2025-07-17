@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a collection of shape objects from the document content.
 
 ```javascript editor-docx
+// Get all shapes added to the document.
+
+// How to retrieve all shapes and fill with color the second one.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));

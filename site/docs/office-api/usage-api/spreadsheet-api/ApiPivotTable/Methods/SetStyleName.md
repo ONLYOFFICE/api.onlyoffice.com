@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set style name of a pivot table.
 
 ```javascript editor-xlsx
+// How to set style name of a table.
+
+// Create a pivot table, add data to it then set its style name.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -50,8 +54,8 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: 'Region',
-	columns: 'Style',
+    rows: 'Region',
+    columns: 'Style',
 });
 
 pivotTable.AddDataField('Price');
@@ -60,7 +64,6 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('B9').SetValue('Pivot Table Style will change soon');
 
 setTimeout(function () {
-	pivotTable.SetStyleName('PivotStyleLight14');
+    pivotTable.SetStyleName('PivotStyleLight14');
 }, 5000);
-
 ```

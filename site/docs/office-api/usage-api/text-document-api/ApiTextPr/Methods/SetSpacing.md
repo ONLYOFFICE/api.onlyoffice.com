@@ -25,6 +25,10 @@ expression.SetSpacing(nSpacing);
 This example sets the text spacing measured in twentieths of a point.
 
 ```javascript editor-docx
+// How to set the text spacing size.
+
+// Create a text run object, update its spacing.
+
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();
 textPr.SetSpacing(80);

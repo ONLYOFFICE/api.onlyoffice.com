@@ -11,7 +11,7 @@ The connector is available in the official [Atlassian Marketplace](https://marke
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: DOC, DOCM, DOC, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLTZ , XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.
 - The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Jira.
 

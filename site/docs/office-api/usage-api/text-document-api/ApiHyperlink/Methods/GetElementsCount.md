@@ -23,6 +23,10 @@ number
 This example shows how to get a number of elements in the hyperlink.
 
 ```javascript editor-docx
+// How to get the number of elements of the hyperlink.
+
+// Add a hyperlink to the paragraph and show its elements count.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run1 = Api.CreateRun();

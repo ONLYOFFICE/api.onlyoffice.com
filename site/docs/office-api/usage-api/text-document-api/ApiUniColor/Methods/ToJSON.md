@@ -23,6 +23,10 @@ JSON
 This example converts the ApiUniColor object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON from the uni color object.
+
+// Convert the uni color to json and add it to the document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let presetColor = Api.CreatePresetColor("peachPuff");

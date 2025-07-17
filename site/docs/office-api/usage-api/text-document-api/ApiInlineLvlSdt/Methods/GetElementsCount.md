@@ -1,7 +1,7 @@
 # GetElementsCount
 
-Returns a number of elements in the current inline text content control. The text content 
-control is created with one text run present in it by default, so even without any 
+Returns a number of elements in the current inline text content control. The text content \
+control is created with one text run present in it by default, so even without any \
 element added this method will return the value of '1'.
 
 ## Syntax
@@ -25,6 +25,10 @@ number
 This example shows how to get a number of elements in the inline text content control.
 
 ```javascript editor-docx
+// How to get the number of elements of the inline control.
+
+// Create an inline text content control and show its elements count.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

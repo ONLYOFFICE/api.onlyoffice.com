@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example finds out whether the current form is uncapitalized or not.
 
 ```javascript editor-docx
+// How to find out whether a text is ucapitalized or not.
+
+// Get the property of the text that shows whether a text is in lowercase.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

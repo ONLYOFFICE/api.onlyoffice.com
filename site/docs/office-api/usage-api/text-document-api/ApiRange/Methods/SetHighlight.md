@@ -25,6 +25,10 @@ expression.SetHighlight(sColor);
 This example specifies a highlighting color which is applied as a background to the contents of the Range.
 
 ```javascript editor-docx
+// How to color a range background.
+
+// Create a range and add color to its background.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

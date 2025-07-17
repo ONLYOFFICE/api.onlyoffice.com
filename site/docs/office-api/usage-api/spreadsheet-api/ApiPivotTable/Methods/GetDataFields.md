@@ -1,6 +1,6 @@
 # GetDataFields
 
-Returns a collection that represents either a single pivot table data field
+Returns a collection that represents either a single pivot table data field\
 or a collection of all visible data fields.
 
 ## Syntax
@@ -23,9 +23,13 @@ expression.GetDataFields(field);
 
 ## Example
 
-
+This example shows how to get data fields.
 
 ```javascript editor-xlsx
+// How to get data fields from a pivot table.
+
+// Create a pivot table, add data to it then get data fields from it.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -51,8 +55,8 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	columns: 'Region',
-	rows: 'Style',
+    columns: 'Region',
+    rows: 'Style',
 });
 
 pivotTable.AddDataField('Price');
@@ -60,9 +64,7 @@ pivotTable.AddDataField('Price');
 
 let dataFields = pivotTable.GetDataFields();
 for (let i = 0; i < dataFields.length; i += 1) {
-	dataFields[i].SetName('Count of Price' + (i + 1));
-	dataFields[i].SetFunction('Count');
+    dataFields[i].SetName('Count of Price' + (i + 1));
+    dataFields[i].SetFunction('Count');
 }
-
-
 ```

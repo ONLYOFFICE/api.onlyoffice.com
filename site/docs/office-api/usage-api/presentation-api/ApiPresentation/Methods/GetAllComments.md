@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example returns all comments from the current presentation.
 
 ```javascript editor-pptx
+// How to return an array of all comments from the ApiPresentation object and add a text of the first comment to the created shape.
+
+// Get the ApiComment objects from the current presentation.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

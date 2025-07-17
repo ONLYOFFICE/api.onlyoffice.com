@@ -22,10 +22,15 @@ number
 
 ## Example
 
-
+This example shows how to return the number of sheets in a reference.
 
 ```javascript editor-xlsx
+// How to count sheets.
+
+// Use a function to get how many sheets are present in the worksheet.
+
 // Add more sheets
+
 Api.AddSheet("Sheet2")
 Api.AddSheet("Sheet3")
 
@@ -34,5 +39,4 @@ let func = Api.GetWorksheetFunction();
 let result = func.SHEETS();
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("C3").SetValue(result);
-
 ```

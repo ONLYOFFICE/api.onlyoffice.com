@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example creates a copy of the run.
 
 ```javascript editor-docx
+// How to create a duplicate of the text.
+
+// Create a copy of the run and insert it to the paragraph. 
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run1 = Api.CreateRun();

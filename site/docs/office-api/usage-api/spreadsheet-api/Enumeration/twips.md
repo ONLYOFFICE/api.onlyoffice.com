@@ -13,5 +13,9 @@ number
 This example set the distance between columns equal to 36 points.
 
 ```javascript editor-xlsx
+// How to set a column distance in twips.
+
+// Set column distance in twips.
+
 paragraph.SetEqualColumns(2, 720);
 ```

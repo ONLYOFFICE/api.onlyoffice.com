@@ -28,6 +28,10 @@ boolean
 This example sets the fill to the marker in the specified chart series.
 
 ```javascript editor-docx
+// How to set a fill to the marker.
+
+// Create a chart, set its properties and its marker color.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("scatter", [

@@ -1,0 +1,71 @@
+---
+id: get-invitation-link
+title: "Get an invitation link"
+description: "Returns an invitation link for joining the portal."
+sidebar_label: "Get an invitation link"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V0tv2zgQ/iuDuaQF6EednnTztt0i3QJd5IEcAqNhpHHMRiJZkkriNfTfiyEl2bK9m6DAXmyZnMc3r2/kDQZ57zG7wb+NC7KECVx5ch4XAo0lJ4My+qzADO8pnOlHFeLJV6UfUKCVTlYUWD672aCWFWGGVNnSrIku15ZQoNKYoZVhhQIL8rlTlk1ghpcrgrC2BGYJnRI4UxIsjYOwIlC9RyiVfoA387IUcG5MNS8qpQV8rskHAR9NfmFlTu0ph/B2jAId/ayVowKz4GoS6PMVVRKzDRpN35YRNem64gTMyxIF9rZRYDSOAgfWUSCb5wQxdszQB6f0/UF0N/OyhBEMEcMoPoPcgQ+jo2HAqP/dibNjGMWvBQqkZ1nZkiEw9kb0sUzFOzETp+L9FqTSge7JHaKcdhjf7WGbbXGdHsHy/hiQqcDnEYMYPUrH7eB/L7OtkR2oe4YSiiOW+otkqlkca7qa88iJ4R4JKsQcftpt24YVHXlrtOcgNjibTvlraOxs2J8oMDc6kA4sKq0tVR5vJz88y292GrCti7n7QTkHYB3PW1DJW+d6R7Jts4Z91MnDQW2XxlUypKPTGcsyLL8jK52Ta57KQJV/GcfK0fIoBpmnFBxcNU0j0AcZav9KiEn4gynoVQrNtmQX0ee1k9aSa12/n747rNOVlnVYGaf+oSJa8JTXToV1ZADp8+98//2B+AAdyQIFPjkVCBc8V3+QdOQwu4m/5lb9Rev+7Ji89CrvxL/N67CaHRf8ZinS682RTj2nUDvtQeoDHmR+/GGUVvo+8qSN5M3dXFFYmZavI0OHFWY4kVZNZuPpJAlOeAD8JFqlyWaXsBvk5LjHjtNrV2KGmzvp6cqVzQF/XERZyI1eqvs67QsU+CidkndlaqJWOZVlKeuSq3lg6WO6gqvzr1zKxbZIFzw0ydSwVNuujhU5MHnlCT4Y86AIWIl0aOcRRbesBgbbZZVHFW7Nto69n1UI9sDLJx3IwdrULhILGwapC7DS+yfjuOJx7NnAXTTIltvueY3pkyQMmy/Xl3BpHkg3JwOjyZZoH/7sBubL9SW7GrbrSzmbDxIFykPBG75Smgq4W8d2O5m30xRlTmBFsogA2qQOPLZJbWUa0c/DlntkPNhHkuRgWZoneFJhBQOvEAlDIF+n1ti97dhkcBh7MCbaZ5NJ9Do2ulyb5VLlNM5NlQ5nk54teD9wwl+vGsVjdYztuFwWcZxlATLPyXsIBqwzgfJABTjypnY5+Z4aMrzm7xekE991DLLNZjz4YLROhL6XVL79CO314VgMtF8fNTe+0kvD9X0eeXWvZagdvdxu3NK9OM9PEcltiGsM8VWRMwtV7QPcEZi7IGNPPioZm/K247iONgYVuQXShTVKhzGcBW5rHk8qQHqQkCY+dRnbijN8uxPI7Xjb3bvx7TFGw7+XJobd7qi5VcyH5HwK+HQ8G085Tdb4UMm4QlvDnykcIfv9lG227xi/tyLaggR6DhNbSqUZTZ34Oe2LG64WCmSkDJQ1UWDcGjFk3hsoMBu86i8ErowPrL7pF0bDxz9rcrxZF9vFEJdLoTw/F5gtZenpPwJ9c96+yb+F//9fw9EEdW2s13G9lTWlJRYX0fA/T7NoRMd3HGYSmec52bCjfPB+yDuv39+fP12iiPw1HKK0p9oHtn4U2N5aSwj4k186jmpsNmlCm6aXT1f/qtGzfpLmNC2apvkFJdLkeg==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invitation link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/users/invite/{employeeType}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns an invitation link for joining the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"employeeType","in":"path","description":"The type of employee role for the invitation link (All, RoomAdmin, Guest, DocSpaceAdmin, User).","required":true,"schema":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0,"x-enum-varnames":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"x-enum-descriptions":["All","Room admin","Guest","DocSpace admin","User"]}],"description":"The user type.","title":"EmployeeType"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invitation link","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
