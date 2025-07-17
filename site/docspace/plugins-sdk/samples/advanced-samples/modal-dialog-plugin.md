@@ -3,7 +3,7 @@
 This guide walks you through building a plugin for DocSpace that adds a custom toolbar button. When clicked, it opens a dialog allowing users to input a filename and create an empty `.docx` file in the current room using a backend API call.
 
 <details>
-  <summary>Complete index.ts</summary>
+  <summary>index.ts</summary>
 
 ``` js
 // For plugin
@@ -251,7 +251,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running and install the Plugin SDK globally:
+Make sure you have a DocSpace server running, and install the Plugin SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -259,34 +259,37 @@ npm i -g @onlyoffice/docspace-plugin-sdk
 
 ## Step 1: Create the Plugin
 
-Initialize your plugin using the CLI:
+1. Initialize your plugin using the CLI:
 
-```bash
-npx create-docspace-plugin
-```
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `Main button` and `API`, press `space` to select them, then press `enter` to confirm and generate the plugin template.
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Main button` and `API`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+## Step 2: Confirm plugin configuration
+
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
+
 ```json
-"scopes": ["MainButton", "API"]
+{
+  "scopes": ["MainButton", "API"]
+}
 ```
 
-## Step 2: Set Up Plugin Class
+Also, verify that the `scripts/createZip.js` file is present. This script will:
+
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
+
+## Step 3: Set up plugin class
 
 The class tracks plugin status, current folder ID, and the API base URL (`origin`). It also registers main buttons and stores API config.
+
 <details>
-  <summary>Complete MainButtonDialog class</summary>
+  <summary>MainButtonDialog class</summary>
 
 ``` js
 import { 

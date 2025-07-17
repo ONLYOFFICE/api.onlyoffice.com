@@ -1,6 +1,6 @@
 # Toggle Button component
 
-This guide demonstrates how to configure and use the [Toggle Button](../../../usage-sdk/coding-plugin/plugin-components/togglebutton) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
+This guide demonstrates how to configure and use the [Toggle Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/togglebutton) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
 
 <details>
   <summary>Full Example</summary>
@@ -229,12 +229,12 @@ Ensure `package.json` includes all necessary fields. Most importantly, make sure
 ```
 
 :::info
-[Main Button](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
+[Main Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
 :::
 
 ## Step 2: Add a Main Button item
 
-Add a [Main Button item](../../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem/) below the plugin initialization.
+Add a [Main Button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem/) below the plugin initialization.
 
 ```js
 // ...
@@ -267,7 +267,7 @@ declare global {
 
 ## Step 3: Define a Toggle Button component
 
-Create styled [Toggle Button component](../../../usage-sdk/coding-plugin/plugin-components/text) with the onChange function, and embed it in a [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
+Create styled [Toggle Button component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/text) with the onChange function, and embed it in a [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
 
 
 ```js
@@ -319,7 +319,7 @@ const body: IBox = {
 
 ## Step 4: Define Modal Dialog
 
-Create the [Modal Dialog component](../../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
+Create the [Modal Dialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
 
 ```js
 // ...

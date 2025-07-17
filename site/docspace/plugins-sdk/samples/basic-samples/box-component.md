@@ -1,6 +1,6 @@
 # Box сomponent
 
-This guide demonstrates how to configure and use the [IBox](../../../usage-sdk/coding-plugin/plugin-components/box) component in the DocSpace Plugin SDK with common layout, alignment, and spacing properties.
+This guide demonstrates how to configure and use the [IBox](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) component in the DocSpace Plugin SDK with common layout, alignment, and spacing properties.
 
 <details>
   <summary>Full Example</summary>
@@ -258,11 +258,11 @@ Ensure `package.json` includes all necessary fields. Most importantly, make sure
 ```
 
 :::info
-[Main Button](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
+[Main Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
 :::
 
 ## Step 2: Add a Main Button item
-Add a [Main Button item](../../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization.
+Add a [Main Button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization.
 
 ```js
 // ...
@@ -296,7 +296,7 @@ declare global {
 ```
 
 ## Step 3: Define a Box сomponent
-Configure layout styles via [IBox](../../../usage-sdk/coding-plugin/plugin-components/box) and include nested UI elements:
+Configure layout styles via [IBox](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) and include nested UI elements:
 
 ```js
 import {
@@ -354,7 +354,7 @@ const demoBox: IBox = {
 ```
 
 ## Step 4: Define Modal behavior
-Create the [Modal Dialog component](../../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
+Create the [Modal Dialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
 
 ```js
 // ...

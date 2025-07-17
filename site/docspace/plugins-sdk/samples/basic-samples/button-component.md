@@ -1,6 +1,6 @@
 # Button Component
 
-This guide demonstrates how to render and configure a [Button](../../../usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugin SDK.
+This guide demonstrates how to render and configure a [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugin SDK.
 
 <details>
   <summary>Full Example</summary>
@@ -256,11 +256,11 @@ Ensure `package.json` includes all necessary fields. Most importantly, make sure
 ```
 
 :::info
-[Main Button](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
+[Main Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
 :::
 
 ## Step 2: Add a Main Button item
-Add a [Main Button item](../../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization.
+Add a [Main Button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization.
 
 ```js
 // ...
@@ -294,7 +294,7 @@ declare global {
 ```
 
 ## Step 3: Create the Button component
-Define an [IButton](../../../usage-sdk/coding-plugin/plugin-components/button) instance and wrap it inside ButtonGroup:
+Define an [IButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) instance and wrap it inside ButtonGroup:
 
 ```js
 import {
@@ -355,7 +355,7 @@ const body: IBox = {
 ```
 
 ## Step 4: Define Modal behavior
-Create the [Modal Dialog component](../../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
+Create the [Modal Dialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
 
 ```js
 // ...

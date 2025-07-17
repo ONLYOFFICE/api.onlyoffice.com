@@ -1,9 +1,9 @@
-# File Extension Filter Plugin
+# File extension filter plugin
 
 This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.
 
 <details>
-  <summary>Complete index.ts</summary>
+  <summary>index.ts</summary>
 
 ``` ts
 import {
@@ -252,49 +252,45 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugin SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
+## Step 1: Create a plugin
 
-Initialize your plugin using the CLI:
+1. Initialize your plugin using the CLI:
 
-```bash
-npx create-docspace-plugin
-```
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `Context menu`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Context menu`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
-## Step 2: Confirm Plugin Configuration
+## Step 2: Confirm plugin configuration
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
 
 ```json
-"scopes": ["ContextMenu"]
+{
+  "scopes": ["ContextMenu"]
+}
 ```
 
-Also verify that the `scripts/createZip.js` file is present. This script will:
-- Compile your plugin
-- Package everything into `dist/plugin.zip`
+Also, verify that the `scripts/createZip.js` file is present. This script will:
 
-## Step 3: Review and Extend Plugin Code
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
 
-By default, the plugin template includes a basic implementation inside the `src/index.ts` file. Here's an example implementation:
+## Step 3: Set up plugin class
+
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md):
+
 <details>
-  <summary>Complete ContextMenuDialog class</summary>
+  <summary>ExtSearchPlugin class</summary>
 
 ```js
 import {
@@ -387,11 +383,12 @@ export default plugin;
 
 </details>
 
-## Step 4: Add Context Menu and UI Logic
+## Step 4: Add the context menu and UI logic
 
-Now define a dropdown to choose the extension and a button to filter and render files:
+Define a dropdown to choose a file extension and a button to filter and render files:
+
 <details>
-  <summary>Complete UI components</summary>
+  <summary>UI components</summary>
 
 ```js
 // Store current API base URL and selected room ID
@@ -550,11 +547,12 @@ const contextMenuItem: IContextMenuItem = {
 // Register menu item inside the plugin
 plugin.addContextMenuItem(contextMenuItem);
 ```
+
 </details>
 
-## Step 5: Build the Plugin
+## Step 5: Build the plugin
 
-From the root of your plugin:
+From the root of your plugin, run the following command:
 
 ```bash
 npm run build
@@ -564,15 +562,15 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 ## Step 6: Upload to DocSpace
 
-1. Log in as an administrator
-2. Navigate to: **Admin Panel → Integration → Plugins**
-3. Click **Upload**, and select the generated `dist/plugin.zip`
-4. Enable the plugin toggle if not already active
+1. Log in as an administrator.
+2. Navigate to: **Admin Panel → Integration → Plugins**.
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if not already active.
 
-## Step 7: Test It
+## Step 7: Test it
 
-1. Go to any Room
-2. Open context menu on the room block
-3. Click the menu item `Extension Search`
-4. Select a file type, then click `View Files`
-5. A list of filtered files should appear with `Open File` buttons
+1. Go to any room.
+2. Right-click on a room.
+3. Click the `Ext Search` menu item.
+4. Select a file type, then click `View Files`.
+5. A list of filtered files should appear, each with the `Open File` button.
