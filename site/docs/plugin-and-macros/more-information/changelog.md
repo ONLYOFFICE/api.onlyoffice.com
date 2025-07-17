@@ -8,6 +8,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.0
 
+- Added new page for [AI](/site/docs/plugin-and-macros/samples/plugin-samples/ai.md) plugin sample instruction.
 - Added the ability to add [asynchronous custom functions](../macros/adding-custom-functions.md#asynchronous-functions) to the spreadsheets using the **Macros** plugin.
 - Added the ability to [automatically convert](../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin) VBA code into ONLYOFFICE macros using AI plugin.
 - Added the ability to [automatically generate](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE macros using AI plugin.

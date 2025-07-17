@@ -30,6 +30,7 @@
 #### Plugins and macros
 
 * Replaced gifs with YouTube videos
+* Added page for AI plugin instruction
 
 ## 6.2.0
 
