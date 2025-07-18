@@ -1,6 +1,6 @@
 # AI
 
-Connects an AI provider (e.g., OpenAI, Azure OpenAI) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.
+Connects an AI provider (e.g., OpenAI, Deepseek) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.
 
 **Plugin type:** window, panel.  
 
@@ -21,7 +21,7 @@ The plugin guid: `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 To start using the plugin, you need to set up an AI provider:
 
 - Open the plugin from the Plugins tab.
-- If prompted, enter your API key (for OpenAI, MistralAI, or other).
+- If prompted, enter your API key (for OpenAI, Deepseek, or other).
 - You can also pre-configure it in the plugin’s `config.json` and `preinstall-example.json`:
 
     ``` json
@@ -41,10 +41,10 @@ For details on adding a custom provider, refer to this [blog post](https://www.o
 
 1. Find a new AI tab in the top toolbar of ONLYOFFICE editors.
 2. Choose one of the buttons:
-   - **Settings** (the configuration panel to select your AI provider, enter the API key, and adjust the request parameters)
+   - **Settings** (the configuration panel to select your AI provider, enter the API key, and select one of its models)
    - **Chatbot** (start a conversation with the AI to ask questions, rewrite text, brainstorm ideas, and more)
-   - **Summarization** (automatically summarize the selected text or the entire document)
-   - **Translation** (translate selected text using the configured AI service. Use the dropdown to pick a language)
+   - **Summarization** (automatically summarize the entered text and choose ways to insert the result)
+   - **Translation** (translate selected text using the configured AI service)
 3. You can select or enter text and choose an action: generate image, text analysis, summarization, translate, or chat.
 4. The plugin will respond based on the configured AI model.
 5. Insert the response into the document or use it for your needs.
@@ -57,7 +57,7 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 2. Icons
 3. The translations folder contains translations into several languages.
 4. Third-party services:
-   This plugin supports OpenAI, Azure OpenAI, and custom AI providers. API key and model configuration are required. License and terms depend on the provider used.
+   This plugin supports OpenAI, and custom AI providers. API key and model configuration are required. License and terms depend on the provider used.
 
 ## Config
 
