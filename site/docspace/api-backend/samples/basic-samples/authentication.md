@@ -1,13 +1,15 @@
 # Authenticate a user
 
-This example demonstrates how to authenticate a user in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to authenticate a user in ONLYOFFICE DocSpace using the API and check the authentication with a token received.
 
-The script performs the following operations in sequence:
+## Before you start
 
-- [Authenticate a user](#step-1-authenticate-a-user) using `userName` and `password` to generate an access token.
-- [Check authentication](#step-2-check-authentication) with a token received.
+Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL, replace `USER_CREDENTIALS` with your credentials.
 
-```py title="Python"
+<details>
+  <summary>Full example</summary>
+
+``` py
 import requests
 
 # Set API base URL
@@ -46,13 +48,11 @@ if __name__ == '__main__':
         check_authentication(token)
 ```
 
-## Before you start
-
-Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL, replace `USER_CREDENTIALS` with your credentials.
+</details>
 
 ## Step 1: Authenticate a user
 
-Use the [`POST /api/2.0/authentication`](/docspace/api-backend/usage-api/authenticate-me.api.mdx) request to authenticate with `USER_CREDENTIALS`.
+A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/authenticate-me.api.mdx) to authenticate with `USER_CREDENTIALS`.
 
 ``` py
 def authenticate():
@@ -66,7 +66,7 @@ def authenticate():
 
 ## Step 2: Check authentication
 
-Use the [`GET /api/2.0/authentication`](/docspace/api-backend/usage-api/get-is-authentificated.api.mdx) request to check authentication success.
+A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-api/get-is-authentificated.api.mdx) to check authentication success.
 
 ``` py
 def check_authentication(token):

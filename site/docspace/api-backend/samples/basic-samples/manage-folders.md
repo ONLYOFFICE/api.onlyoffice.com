@@ -1,13 +1,16 @@
 # Manage folders
 
-This example demonstrates how to:
+This example demonstrates how to manage folders in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, renaming, and deleting folders through API requests.
 
-- [Add a new folder](#step-1-create-a-folder) inside another folder or room.
-- [Get details](#step-2-retrieve-folder-details) of a specific folder.
-- [Change the name](#step-3-rename-a-folder) of an existing folder.
-- [Remove a folder](#step-4-delete-a-folder) from the system.
+## Before you start
 
-```py title="Python"
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
+2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
+
+<details>
+  <summary>Full example</summary>
+
+``` py
 import requests
 
 # Set API base URL
@@ -67,14 +70,15 @@ def main():
     delete_folder(folder_id)
 ```
 
-## Before you start
-
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
-2. Before you can make requests to the API, you need to authenticate. Check out the [authentication example](/docspace/api-backend/samples/authentication.md) to learn how to obtain and use access tokens.
+</details>
 
 ## Step 1: Create a folder
 
-Use the [`POST /api/2.0/files/folder/{folderId}`](/docspace/api-backend/usage-api/create-folder.api.mdx) request to create a new folder.
+A POST request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/create-folder.api.mdx) to create a new folder.
+
+You must pass:
+
+- `title`: Desired name of the folder.
 
 ``` py
 def create_folder(parent_folder_id, folder_name):
@@ -88,7 +92,7 @@ def create_folder(parent_folder_id, folder_name):
 
 ## Step 2: Retrieve folder details
 
-Use the [`GET /api/2.0/files/folder/{folderId}`](/docspace/api-backend/usage-api/get-folder-info.api.mdx) request to get folder information.
+A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/get-folder-info.api.mdx) to get folder information.
 
 ``` py
 def get_folder_details(folder_id):
@@ -98,7 +102,11 @@ def get_folder_details(folder_id):
 
 ## Step 3: Rename a folder
 
-Use the [`PUT /api/2.0/files/folder/{folderId}`](/docspace/api-backend/usage-api/rename-folder.api.mdx) request to rename a folder.
+A PUT request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/rename-folder.api.mdx) to rename a folder.
+
+You must pass:
+
+- `title`: New folder name.
 
 ``` py
 def rename_folder(folder_id, new_name):
@@ -111,7 +119,7 @@ def rename_folder(folder_id, new_name):
 
 ## Step 4: Delete a folder
 
-Use the [`DELETE /api/2.0/files/folder/{folderId}`](/docspace/api-backend/usage-api/delete-folder.api.mdx) request to remove a folder.
+A DELETE request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend/usage-api/delete-folder.api.mdx) to remove a folder.
 
 ``` py
 def delete_folder(folder_id):

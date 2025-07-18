@@ -142,7 +142,7 @@ const addScript = async (server: string, secret: string, fileType: string, code:
         callbackUrl: server + "dummyCallback",
         customization: {
           anonymous: { request: false },
-          uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
+          uiTheme: theme === "dark" ? "default-dark" : "default-light",
           features: { featuresTips: false },
           zoom: zoom,
         },

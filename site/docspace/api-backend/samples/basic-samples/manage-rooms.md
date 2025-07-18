@@ -1,14 +1,16 @@
 # Manage rooms
 
-This example demonstrates how to:
+This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, renaming, archiving, and deleting rooms through API requests.
 
-- [Add a new room](#step-1-create-a-room) in DocSpace.
-- [Get details](#step-2-retrieve-room-details) of a specific room.
-- [Change the name](#step-3-rename-a-room) of an existing room.
-- [Move a room to archive](#step-4-archive-a-room).
-- [Remove a room](#step-5-delete-a-room) from the system.
+## Before you start
 
-```py title="Python"
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
+2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
+
+<details>
+  <summary>Full example</summary>
+
+``` py
 import requests
 
 # Set API base URL
@@ -77,14 +79,11 @@ archive_room(room_id)
 delete_room(room_id)
 ```
 
-## Before you start
-
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
-2. Before you can make requests to the API, you need to authenticate. Check out the [authentication example](/docspace/api-backend/samples/authentication.md) to learn how to obtain and use access tokens.
+</details>
 
 ## Step 1: Create a room
 
-Use the [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/create-room.api.mdx) request to create a new room.
+A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room.api.mdx) to create a new room.
 
 ``` py
 def create_room(room_name, description):
@@ -98,7 +97,7 @@ def create_room(room_name, description):
 
 ## Step 2: Retrieve room details
 
-Use the [`GET /api/2.0/files/rooms/{id}`](/docspace/api-backend/usage-api/get-room-info.api.mdx) request to get room information.
+A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/get-room-info.api.mdx) to get room information.
 
 ``` py
 def get_room_details(room_id):
@@ -110,7 +109,7 @@ def get_room_details(room_id):
 
 ## Step 3: Rename a room
 
-Use the [`PUT /api/2.0/files/rooms/{id}`](/docspace/api-backend/usage-api/update-room.api.mdx) request to rename a room.
+A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/update-room.api.mdx) to rename a room.
 
 ``` py
 def rename_room(room_id, new_name):
@@ -123,7 +122,7 @@ def rename_room(room_id, new_name):
 
 ## Step 4: Archive a room
 
-Use the [`PUT /api/2.0/files/rooms/{id}/archive`](/docspace/api-backend/usage-api/archive-room.api.mdx) request to archive a room.
+A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backend/usage-api/archive-room.api.mdx) to archive a room.
 
 ``` py
 def archive_room(room_id):
@@ -133,7 +132,7 @@ def archive_room(room_id):
 
 ## Step 5: Delete a room
 
-Use the [`DELETE /api/2.0/files/rooms/{id}`](/docspace/api-backend/usage-api/delete-room.api.mdx) request to remove a room.
+A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/delete-room.api.mdx) to remove a room.
 
 ``` py
 def delete_room(room_id):

@@ -1,13 +1,16 @@
 # Manage files
 
-This example demonstrates how to:
+This example demonstrates how to manage files in ONLYOFFICE DocSpace using the API. It covers creating, uploading, updating, and deleting files through API requests.
 
-- [Create a blank document](#step-1-create-an-empty-file) in a specific folder.
-- [Add a file](#step-2-upload-a-file) to a specific folder in DocSpace.
-- [Replace or edit an existing file](#step-3-update-an-existing-file).
-- [Remove a file](#step-4-delete-a-file) from the system.
+## Before you start
 
-```py title="Python"
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
+2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
+
+<details>
+  <summary>Full example</summary>
+
+``` py
 import requests
 # Set API base URL
 BASE_URL = 'https://yourportal.onlyoffice.com'
@@ -76,14 +79,15 @@ def main():
     delete_file(file_id)
 ```
 
-## Before you start
-
-1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
-2. Before you can make requests to the API, you need to authenticate. Check out the [authentication example](/docspace/api-backend/samples/authentication.md) to learn how to obtain and use access tokens.
+</details>
 
 ## Step 1: Create an empty file
 
-Use the [`POST /api/2.0/files/{folderId}/file`](/docspace/api-backend/usage-api/create-file.api.mdx) request to create an empty file in a specific folder.
+A POST request is sent to [/api/2.0/files/:folderId/file](/docspace/api-backend/usage-api/create-file.api.mdx) to create an empty file in a specific folder.
+
+You must pass:
+
+- `title`: Desired name of the file.
 
 ```py
 def create_file(folder_id, file_name):
@@ -96,7 +100,7 @@ def create_file(folder_id, file_name):
 
 ## Step 2: Upload a file
 
-Use the [`POST /api/2.0/files/{folderId}/upload`](/docspace/api-backend/usage-api/upload-file.api.mdx) request to upload a file to a folder.
+A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backend/usage-api/upload-file.api.mdx) to upload a file to a folder.
 
 ```py
 def upload_file(folder_id, file_path):
@@ -117,7 +121,7 @@ def upload_file(folder_id, file_path):
 
 ## Step 3: Update an existing file
 
-Use the [`PUT /api/2.0/files/file/{fileId}`](/docspace/api-backend/usage-api/update-file.api.mdx) request to update an existing file.
+A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/update-file.api.mdx) to update an existing file.
 
 ```py
 def update_file(file_id, new_file_path):
@@ -128,7 +132,11 @@ def update_file(file_id, new_file_path):
 
 ## Step 4: Delete a file
 
-Use the [`DELETE /api/2.0/files/file/{fileId}`](/docspace/api-backend/usage-api/delete-file.api.mdx) request to remove a file.
+A DELETE request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/delete-file.api.mdx) to remove a file.
+
+You must pass:
+
+- `immediately`: True — delete a file immediately (do not move it to the "Trash" folder).
 
 ```py
 def delete_file(file_id):
