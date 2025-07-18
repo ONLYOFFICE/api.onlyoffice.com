@@ -1,9 +1,9 @@
-# Basic modal dialog plugin
+# Modal dialog plugin
 
 This guide walks you through building a plugin for DocSpace that adds a custom toolbar button. When clicked, it opens a dialog allowing users to input a filename and create an empty `.docx` file in the current room using a backend API call.
 
 <details>
-  <summary>index.ts</summary>
+  <summary>Full example</summary>
 
 ``` js
 // For plugin
@@ -251,13 +251,13 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install the Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
+## Step 1: Create a plugin
 
 1. Initialize your plugin using the CLI:
 
@@ -284,9 +284,9 @@ Also, verify that the `scripts/createZip.js` file is present. This script will:
 - compile your plugin;
 - package everything into `dist/plugin.zip`.
 
-## Step 3: Set up plugin class
+## Step 3: Review and extend plugin code
 
-The class tracks plugin status, current folder ID, and the API base URL (`origin`). It also registers main buttons and stores API config.
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of the [main button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin.md) and [API](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/apiplugin.md) plugins:
 
 <details>
   <summary>MainButtonDialog class</summary>
@@ -392,17 +392,20 @@ export default plugin;
 
 </details>
 
-Ensure that `currentFolderId` functionality was added, it's required for file creating API calls.
+The `MainButtonDialog` class tracks plugin status, current folder ID, and the API base URL (`origin`). It also registers main buttons and stores API config.
 
-## Step 3: Set up UI components
+Ensure that the `currentFolderId` functionality is added. It is required for API calls that create files.
+
+## Step 4: Set up UI components
 
 Set up UI components for the modal dialog:
-- Input label
-- Input
-- Button
+
+- [Input label](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/label.md)
+- [Input](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/input.md)
+- [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button.md)
 
 <details>
-  <summary>Complete UI components</summary>
+  <summary>UI components</summary>
 
 ``` js
 // Create text props
@@ -472,14 +475,15 @@ const buttonProps: IButton = {
   }
 };
 ```
+
 </details>
 
-## Step 4: Build Modal Dialog
+## Step 5: Build a modal dialog
 
-Create a modal dialog with a label, input, and button. The modal uses `Actions.showModal` and auto-adjusts width/height:
+Create a [modal dialog](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog.md) with a label, input, and button. The modal uses `Actions.showModal` and auto-adjusts width/height:
 
 <details>
-  <summary>Complete UI components</summary>
+  <summary>Modal dialog</summary>
 
 ```js
 const body: IBox = {
@@ -513,14 +517,15 @@ export const modalDialogProps: IModalDialog = {
   autoMaxWidth: true,
 };
 ```
+
 </details>
 
-## Step 5: Register Main Button
+## Step 6: Register a main button
 
-Register a toolbar button labeled `"Create new file"` that shows the modal on click:
+Register a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md) labeled **Create new file** that shows the modal on click:
 
 <details>
-  <summary>Complete UI components</summary>
+  <summary>Main button item</summary>
   
 ```js
 const createItem: IMainButtonItem = {
@@ -549,30 +554,31 @@ const mainButtonItem: IMainButtonItem = {
 // Add the main button to the plugin
 plugin.addMainButtonItem(mainButtonItem);
 ```
+
 </details>
 
-Notice that `folder ID` is set here using Main Button ID.
+Note that the folder ID is set here using the main button ID.
 
-## Step 6: Build the Plugin
+## Step 7: Build the plugin
 
-From the root of your plugin:
+From the root of your plugin, run the following command:
 
 ```bash
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`
+This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
 
-## Step 7: Upload to DocSpace
+## Step 8: Upload to DocSpace
 
-1. Log in as an administrator
-2. Navigate to: **Admin Panel → Integration → Plugins**
-3. Click **Upload**, and select the generated `dist/plugin.zip`
-4. Enable the plugin toggle if not already active
+1. Log in as an administrator.
+2. Navigate to: **Admin Panel → Integration → Plugins**.
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 8: Test It
+## Step 9: Test the plugin
 
-1. Go to any **Room**
-2. Click the **...More** menu in the top toolbar
-3. Look for your button titled `"Create new file"`
-4. Click it - a modal dialog should open. Enter file name, submit and check new file created in your room or folder
+1. Go to any room.
+2. In the top toolbar, click **Actions → More**.
+3. Look for the button titled **Create new file**.
+4. Click it - a modal dialog should open. Enter file name, submit it, and check a new file created in your room or folder.

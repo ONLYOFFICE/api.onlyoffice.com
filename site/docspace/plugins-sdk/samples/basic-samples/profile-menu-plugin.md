@@ -1,4 +1,4 @@
-# Creating a profile menu plugin
+# Profile menu plugin
 
 This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.
 
@@ -122,12 +122,12 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Go to the bottom-left corner of the DocSpace interface.
 2. Click ![More icon](/assets/images/docspace/more-icon.png) next to your profile (avatar).
 3. A dropdown menu will appear.
-4. Look for your custom menu item titled `Profile menu item`.
+4. Look for your custom menu item titled **Profile menu item**.
 
 ## Notes
 

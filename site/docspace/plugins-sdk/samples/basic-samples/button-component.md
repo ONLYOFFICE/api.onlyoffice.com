@@ -1,11 +1,11 @@
-# Button Component
+# Button component
 
-This guide demonstrates how to render and configure a [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugin SDK.
+This guide demonstrates how to render and configure the [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugins SDK.
 
 <details>
-  <summary>Full Example</summary>
+  <summary>Full example</summary>
 
-```js
+```ts
 import {
   IPlugin,
   PluginStatus,
@@ -160,32 +160,45 @@ export default plugin;
 </details>
 
 ## Before you start
-Make sure you have a DocSpace server running and install the Plugin SDK globally:
+
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
-Initialize your plugin using the CLI:
+## Step 1: Create a plugin
 
-```bash
-npx create-docspace-plugin
+1. Initialize your plugin using the CLI:
+
+   ``` sh
+   npx create-docspace-plugin
+   ```
+
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
+
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Main button`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
+
+## Step 2: Confirm plugin configuration
+
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
+
+```json
+{
+  "scopes": ["MainButton"]
+}
 ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+Also, verify that the `scripts/createZip.js` file is present. This script will:
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `Main button`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
 
-```js
+## Step 3: Review and extend plugin code
+
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin):
+
+```ts
 import {
   IPlugin,
   PluginStatus,
@@ -249,20 +262,11 @@ window.Plugins.Boxcomponentplugin = plugin || {};
 export default plugin;
 ```
 
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+## Step 4: Add a main button item
 
-```json
-"scopes": ["MainButton"]
-```
+Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization:
 
-:::info
-[Main Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
-:::
-
-## Step 2: Add a Main Button item
-Add a [Main Button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization.
-
-```js
+```ts
 // ...
 
 const plugin = new Buttoncomponentplugin();
@@ -293,10 +297,11 @@ declare global {
 // ...
 ```
 
-## Step 3: Create the Button component
-Define an [IButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) instance and wrap it inside ButtonGroup:
+## Step 5: Create a Button component
 
-```js
+Define an [IButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) instance and wrap it inside `ButtonGroup`:
+
+```ts
 import {
   IPlugin,
   PluginStatus,
@@ -354,10 +359,11 @@ const body: IBox = {
 // ...
 ```
 
-## Step 4: Define Modal behavior
-Create the [Modal Dialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
+## Step 6: Define the modal dialog behavior
 
-```js
+Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body from the previous step:
+
+```ts
 // ...
 
 const modalDialogProps: IModalDialog = {
@@ -376,10 +382,11 @@ const modalDialogProps: IModalDialog = {
 // ...
 ```
 
-## Step 5: Append Modal to the Main Button
-Update main button's onClick function with the modal display behavior
+## Step 7: Append the modal dialog to the main button
 
-```js
+Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onclick) function with the modal display behavior:
+
+```ts
 // ...
 
 const mainButtonItem: IMainButtonItem = {
@@ -399,7 +406,9 @@ const mainButtonItem: IMainButtonItem = {
 // ...
 ```
 
-## Step 6: Build the Plugin
+## Step 8: Build the plugin
+
+From the root of your plugin, run the following command:
 
 ```bash
 npm run build
@@ -407,15 +416,17 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `dist/plugin.zip`.
 
-## Step 7: Upload to DocSpace
-1. Go to **Admin Panel → Integration → Plugins**
-2. Click **Upload** and select `dist/plugin.zip`
-3. Enable the plugin toggle
+## Step 9: Upload to DocSpace
 
+1. Log in as an administrator.
+2. Go to **Admin Panel → Integration → Plugins**
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 8: Test the Plugin
-1. Open any Room
-2. Click the **More (⋯)** button in the toolbar
-3. Click the `"Show dialog"` button
-4. A modal appears with a `"Save"` button
-5. Click it — `"Save button clicked"` will appear in the console
+## Step 10: Test the plugin
+
+1. Go to any room.
+2. In the top toolbar, click **Actions → More**.
+3. Click the **Show dialog** button.
+4. A styled container with the **Save** button inside should appear.
+5. Click it — `"Save button clicked"` will appear in the console.

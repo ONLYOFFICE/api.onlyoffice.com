@@ -3,7 +3,7 @@
 This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.
 
 <details>
-  <summary>index.ts</summary>
+  <summary>Full example</summary>
 
 ``` ts
 import {
@@ -252,7 +252,7 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running, and install DocSpace Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
@@ -285,7 +285,7 @@ Also, verify that the `scripts/createZip.js` file is present. This script will:
 - compile your plugin;
 - package everything into `dist/plugin.zip`.
 
-## Step 3: Set up plugin class
+## Step 3: Review and extend plugin code
 
 By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [context menu plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md):
 
@@ -565,12 +565,12 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 1. Log in as an administrator.
 2. Navigate to: **Admin Panel → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
-4. Enable the plugin toggle if not already active.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Go to any room.
 2. Right-click on a room.
-3. Click the `Ext Search` menu item.
-4. Select a file type, then click `View Files`.
-5. A list of filtered files should appear, each with the `Open File` button.
+3. Click the **Ext Search** menu item.
+4. Select a file type, then click **View Files**.
+5. A list of filtered files should appear, each with the **Open File** button.

@@ -1,13 +1,14 @@
-# Building a Settings Plugin UI
+# Settings plugin UI
 
 This plugin adds a settings interface for administrators in DocSpace. It includes:
-- Offline mode toggle
-- Language dropdown
-- Inputs for URL, login, and password
-- Save button that prints values to the console
+
+- a toggle for offline mode;
+- a dropdown to select language;
+- input fields for URL, login, and password;
+- the **Save** button that prints the values to the console.
 
 <details>
-  <summary>Complete index.ts</summary>
+  <summary>Full example</summary>
 
 ``` ts
 // Import interfaces and components from the SDK
@@ -355,47 +356,45 @@ export default plugin;
 
 ## Before you start
 
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+Make sure you have a DocSpace server running, and install DocSpace Plugins SDK globally:
 
 ```bash
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
-## Step 1: Create the Plugin
+## Step 1: Create a plugin
 
-Initialize your plugin using the CLI:
+1. Initialize your plugin using the CLI:
 
-```bash
-npx create-docspace-plugin
-```
+   ``` sh
+   npx create-docspace-plugin
+   ```
 
-You'll be prompted to fill out basic metadata:
-- Plugin name
-- Version
-- Author
-- Description
-- Logo
-- License
-- Homepage
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
 
-Then, you'll be shown a list of available scopes.
-Use the arrow keys to highlight `Settings`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Settings`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
-## Step 2: Confirm Plugin Configuration
-Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+## Step 2: Confirm plugin configuration
+
+Ensure `package.json` includes all the necessary fields. Most importantly, make sure it contains:
 
 ```json
-"scopes": ["Settings"]
+{
+  "scopes": ["Settings"]
+}
 ```
 
-Also verify that the `scripts/createZip.js` file is present. This script will:
-- Compile your plugin
-- Package everything into `dist/plugin.zip`
+Also, verify that the `scripts/createZip.js` file is present. This script will:
 
-## Step 3: Review and Extend Plugin Code
-By default, the plugin template includes a basic implementation inside the `src/index.ts` file. Here's an example implementation:
+- compile your plugin;
+- package everything into `dist/plugin.zip`.
+
+## Step 3: Review and extend plugin code
+
+By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [settings plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/settingsplugin.md):
+
 <details>
-  <summary>Complete Settings class</summary>
+  <summary>Settingsplugin class</summary>
 
 ```js
 // Import interfaces and components from the SDK
@@ -484,11 +483,12 @@ export default plugin;
 
 </details>
 
-## Step 4: Add Context Menu and UI Logic
-This step defines the full settings interface: input fields, toggle, dropdown, and save button.
+## Step 4: Add the settings and UI logic
+
+This step defines the full settings interface: input fields, a toggle, a dropdown, and the **Save** button.
 
 <details>
-  <summary>Complete UI components</summary>
+  <summary>UI components</summary>
 
 ```js
 // OFFLINE MODE toggle
@@ -588,9 +588,9 @@ plugin.setAdminPluginSettings(adminSettings);
 
 </details>
 
-## Step 5: Build the Plugin
+## Step 5: Build the plugin
 
-From the root of your plugin:
+From the root of your plugin, run the following command:
 
 ```bash
 npm run build
@@ -600,14 +600,14 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 ## Step 6: Upload to DocSpace
 
-1. Log in as an administrator
-2. Navigate to: **Admin Panel → Integration → Plugins**
-3. Click **Upload**, and select the generated `dist/plugin.zip`
-4. Enable the plugin toggle if not already active
+1. Log in as an administrator.
+2. Navigate to: **Admin Panel → Integration → Plugins**.
+3. Click **Upload**, and select the generated `dist/plugin.zip`.
+4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test It
+## Step 7: Test the plugin
 
 1. Go to **Admin Panel → Settings → Plugins**
-2. Click the gear icon to open settings for your plugin
-3. Enter test values in URL, Login, Password
-4. Click Save
+2. Click ![Settings icon](/assets/images/docspace/settings-icon.png) for your plugin.
+3. Enter test values in the **URL**, **Login**, and **Password** fields.
+4. Click **Save**.

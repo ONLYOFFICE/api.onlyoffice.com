@@ -1,4 +1,4 @@
-# Creating a context menu plugin
+# Context menu plugin
 
 This guide walks you through creating a basic plugin for DocSpace that adds an item to the file context menu and logs an action when clicked.
 
@@ -114,11 +114,11 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Go to any room.
 2. Right-click on a file.
-3. Look for your context menu item titled `"Do something"`.
+3. Look for your context menu item titled **Do something**.
 4. Click it - it should log `"Context Menu works!"` in the browser console.
 
 ## Notes
