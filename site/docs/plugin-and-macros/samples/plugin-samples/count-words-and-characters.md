@@ -127,7 +127,7 @@ Repository on GitHub: [wordscounter](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onTargetPositionChanged
 - onTranslate

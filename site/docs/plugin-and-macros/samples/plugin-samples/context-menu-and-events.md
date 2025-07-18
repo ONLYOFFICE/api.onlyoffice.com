@@ -208,7 +208,7 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onTargetPositionChanged
 - [attachContextMenuClickEvent](/docs/plugin-and-macros/customization/context-menu.md#clicking-a-context-menu-item)

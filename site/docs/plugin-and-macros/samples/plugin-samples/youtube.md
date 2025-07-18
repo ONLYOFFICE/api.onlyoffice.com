@@ -121,7 +121,7 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onTranslate
 - [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)

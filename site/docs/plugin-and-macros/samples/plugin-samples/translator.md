@@ -107,7 +107,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onExternalMouseUp
 - onTranslate

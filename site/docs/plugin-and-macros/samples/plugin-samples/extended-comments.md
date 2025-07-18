@@ -107,7 +107,7 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onAddComment
 - onChangeCommentData

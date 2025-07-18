@@ -181,7 +181,7 @@ Repository on GitHub: [speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## Methods and events
 
-- buttons
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)s
 - init
 
 ## Support

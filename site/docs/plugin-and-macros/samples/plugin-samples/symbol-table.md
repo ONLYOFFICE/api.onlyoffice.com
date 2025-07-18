@@ -99,10 +99,10 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onExternalMouseUp
-- onMethodReturn
+- [onMethodReturn](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md#how-to-call-methods)
 - onTranslate
 - [executeMethod ("GetFontList")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)

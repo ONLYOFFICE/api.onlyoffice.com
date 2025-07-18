@@ -55,7 +55,7 @@ Repository on GitHub: [invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 ## Methods and events
 
-- button
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
