@@ -29,7 +29,7 @@ sidebar_position: -3
 
 ## 步骤 2. 下载用于编辑器集成的 Go 代码​
 
-从我们的网站下载 [Go 示例](https://api.onlyoffice.com/editors/demopreview)。
+从我们的网站下载 [Go 示例](./language-specific-examples.md)。
 
 要将编辑器连接到您的网站，请在 *configuration.env* 文件中指定编辑器的安装路径、服务器协议、地址和端口：
 
@@ -47,7 +47,7 @@ JWT_HEADER=Authorization
 其中，**documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 **address** 是服务器的地址，**port** 是服务器端口。
 
-若要试验编辑器配置，请修改 *templates/editor.html* 文件中的[参数](https://api.onlyoffice.com/editors/advanced)。
+若要试验编辑器配置，请修改 *templates/editor.html* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
 ## 步骤 3. 安装必要软件​
 要运行 Go 示例代码，请安装 Go 编译器：
