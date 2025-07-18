@@ -130,7 +130,7 @@ Repository on GitHub: [wordscounter](https://github.com/ONLYOFFICE/onlyoffice.gi
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
 - onTargetPositionChanged
-- onTranslate
+- [onTranslate](/site/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 
 ## Support
 

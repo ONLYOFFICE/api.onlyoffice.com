@@ -165,7 +165,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - init
-- onTranslate
+- [onTranslate](/site/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 
 ## Support
