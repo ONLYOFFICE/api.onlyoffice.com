@@ -6,7 +6,11 @@ Connects an AI provider (e.g., OpenAI, Deepseek) to ONLYOFFICE editors, enabling
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![AI](/assets/images/plugins/gifs/ai.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="Mg7FPFJH3fc"/>
+```
 
 ## Installation
 
@@ -65,7 +69,6 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 {
 "name" : "AI",
 "nameLocale": {
-    "ru": "ИИ",
     "fr": "AI",
     "es": "AI",
     "de": "AI",
@@ -88,7 +91,6 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
     {
         "description": "Use the AI chatbot to perform tasks which involve understanding or generating natural language or code.",
         "descriptionLocale": {
-            "ru": "Используйте чат-бот AI для выполнения задач, связанных с пониманием или генерацией естественного языка или кода.",
             "fr": "Utilisez le chatbot AI pour effectuer des tâches qui impliquent la compréhension ou la génération de langage naturel ou de code.",
             "es": "Utilice el chatbot AI para realizar tareas que impliquen la comprensión o generación de lenguaje natural o de código.",
             "pt-BR": "Use o chatbot AI para realizar tarefas que envolvam compreensão ou geração de linguagem ou código natural.",
@@ -142,18 +144,18 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 ## Methods and events
 
 - init
-- button
-- onTranslate
-- attachEditorEvent
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
+- [onTranslate](/site/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
+- [attachEditorEvent](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
 - onThemeChanged
 - onThemeChangedBase
-- executeMethod ("CloseWindow")
+- [executeMethod ("CloseWindow")](/site/docs/plugin-and-macros/customization/windows-and-panels.md#closing-a-window)
 - [executeMethod ("PasteText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - info.aiPluginSettings
-- info.editorType
-- [info.data](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#parameters)
-- [info.guid](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#parameters)
-- [info.width](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#parameters)
+- [info.editorType](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [info.data](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.width](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## Support
 
