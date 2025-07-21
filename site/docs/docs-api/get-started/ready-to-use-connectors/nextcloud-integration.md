@@ -82,7 +82,50 @@ Enable or disable the **Open file in the same tab** setting.
 
 The **Open in ONLYOFFICE** action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.
 
-### Additional configuration parameters (`config/config.php` only)
+### ONLYOFFICE Connector for Nextcloud: Configuration Parameters
+
+These are all available configuration parameters for the ONLYOFFICE integration app for Nextcloud.
+The parameters are grouped into two categories depending on how they can be configured:
+
+- Basic settings: configured via the Nextcloud admin UI or OCC commands.
+- Advanced settings: configured **only via `config/config.php`** file.
+
+#### Basic Configuration (UI / OCC)
+
+These settings are available through the Nextcloud admin interface or via `occ` commands.
+
+| Parameter                                    | Description                                                                 |
+|---------------------------------------------|-----------------------------------------------------------------------------|
+| `DocumentServerUrl`                         | Public address of ONLYOFFICE Docs server (set via UI or `occ`).            |
+| `Open in same tab`                          | Defines whether documents open in the same browser tab.                    |
+| `Enable JWT`                                | Enables JWT validation for secure communication.                           |
+| `Secret key`                                | JWT secret used to sign requests (alternative to `jwt_secret` in config). |
+| `Advanced server settings`                  | Enables configuration of internal server URLs.                             |
+| `DocumentServerInternalUrl`                 | Internal address of ONLYOFFICE Docs (used if advanced settings enabled).   |
+| `StorageUrl`                                | Internal address of Nextcloud (used if advanced settings enabled).         |
+| `def_formats`                               | Defines default file formats.                                              |
+| `editable`                                  | Enables editing of certain file types.                                     |
+| `review`                                    | Enables review-only mode.                                                  |
+| `forcesave`                                 | Enables force saving documents to storage.                                 |
+| `customizationChat`                         | Enables or disables chat panel.                                            |
+| `customizationFeedback`                     | Enables feedback and support links.                                        |
+| `customizationHelp`                         | Enables help link.                                                         |
+| `customizationToolbarNoTabs`                | Shows toolbar without tabs.                                                |
+| `customizationCompactHeader`                | Enables compact header mode.                                               |
+| `customizationToolbarHideSettings`          | Hides the “Settings” menu in the editor.                                   |
+| `customizationFeedbackSuggestion`           | Allows users to submit suggestions.                                        |
+| `customizationFeedbackBug`                  | Allows users to report bugs.                                               |
+| `customizationAutosave`                     | Enables autosave mode.                                                     |
+| `SameTab`                                   | Opens files in the same tab (deprecated UI setting).                       |
+| `preview`                                   | Enables document preview generation.                                       |
+| `about`                                     | Shows About section.                                                       |
+
+> You can also use the `occ` command-line interface to get/set these parameters:
+> ```
+> php occ config:app:set onlyoffice {setting_key} --value={setting_value}
+> ```
+
+#### Advanced Configuration (`config/config.php` only)
 
 You can define the following parameters in the `config/config.php` file to customize the behavior of the ONLYOFFICE connector:
 
@@ -103,8 +146,13 @@ You can define the following parameters in the `config/config.php` file to custo
 | `disable_download`         | If `true`, disables file download functionality.                                               |
 | `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
 
-> These parameters are supported only when added directly into the `config/config.php` file.  
-> They are not available through the Nextcloud UI or OCC commands.
+The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation.
+
+```php
+"onlyoffice" => array (
+    {setting_key} => {setting_value},
+)
+```
 
 ## Checking the connection
 
