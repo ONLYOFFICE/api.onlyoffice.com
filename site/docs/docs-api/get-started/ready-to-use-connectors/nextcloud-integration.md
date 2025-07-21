@@ -82,6 +82,30 @@ Enable or disable the **Open file in the same tab** setting.
 
 The **Open in ONLYOFFICE** action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.
 
+### Additional configuration parameters (`config/config.php` only)
+
+You can define the following parameters in the `config/config.php` file to customize the behavior of the ONLYOFFICE connector:
+
+| Parameter                   | Description                                                                                     |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| `DocumentServerUrl`         | Public address of the ONLYOFFICE Docs server.                                                  |
+| `DocumentServerInternalUrl`| Internal address of ONLYOFFICE Docs used for server-to-server communication.                   |
+| `StorageUrl`               | Internal address of the Nextcloud server used by ONLYOFFICE Docs.                              |
+| `jwt_secret`               | Secret key used to generate and validate JWT tokens.                                           |
+| `jwt_secret_path`          | Path to a file containing the JWT secret.                                                      |
+| `jwt_header`               | Name of the HTTP header used to send the JWT. Default is `Authorization`.                     |
+| `jwt_in_body`              | If `true`, the JWT token is sent in the request body instead of the header.                    |
+| `jwt_disable`              | If `true`, disables JWT signature verification.                                                |
+| `jwt_leeway`               | Leeway in seconds to account for clock skew when validating JWT tokens.                        |
+| `jwt_expiration`           | JWT token expiration time in seconds.                                                          |
+| `verify_peer_off`          | If `true`, disables SSL peer verification for connections.                                     |
+| `limit_thumb_size`         | Maximum file size in bytes for which thumbnails will be generated.                             |
+| `disable_download`         | If `true`, disables file download functionality.                                               |
+| `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
+
+> These parameters are supported only when added directly into the `config/config.php` file.  
+> They are not available through the Nextcloud UI or OCC commands.
+
 ## Checking the connection
 
 You can check the connection to ONLYOFFICE Docs by using the following occ command:
