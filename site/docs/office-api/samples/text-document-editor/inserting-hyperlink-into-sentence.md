@@ -12,7 +12,7 @@ let paragraph = doc.GetElement(0);
 
 // Create a paragraph with embedded hyperlink
 paragraph.AddText("You can find more details in the ");
-paragraph.AddText("official documentation").AddHyperlink("https://api.onlyoffice.com/", "api.onlyoffice.com");
+paragraph.AddText("official documentation").GetRange().AddHyperlink("https://api.onlyoffice.com/", "api.onlyoffice.com");
 paragraph.AddText(" which covers the API in depth. If you are getting started, it's a good idea to review the usage examples first.");
 
 // Set paragraph alignment to left (default)
