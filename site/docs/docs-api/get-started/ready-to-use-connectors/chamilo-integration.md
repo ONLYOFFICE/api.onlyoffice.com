@@ -9,7 +9,7 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX, DOCXF, OFORM.
 - The following formats are available for viewing only: PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
 - The plugin will create a new **Open with ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Chamilo.
 
@@ -34,8 +34,13 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
    ``` sh
    git submodule update --init --recursive
    ```
+3. Get plugin dependencies:
+   
+   ``` sh
+   composer install
+   ```
 
-3. Collect all files:
+4. Collect all files:
 
    ``` sh
    mkdir /tmp/onlyoffice-deploy
@@ -46,7 +51,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
    rm -rf */.git*
    ```
 
-4. Archive the files obtained in the previous step:
+5. Archive the files obtained in the previous step:
 
    ``` sh
    cd ../
