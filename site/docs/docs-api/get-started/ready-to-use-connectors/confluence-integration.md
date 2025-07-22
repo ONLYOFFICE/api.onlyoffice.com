@@ -21,7 +21,7 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing Confluence ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Confluence
 
 Upload the compiled *target/onlyoffice-confluence-plugin.jar* to Confluence on the **Manage add-ons** page.
 
@@ -36,7 +36,7 @@ You could also install the app from Confluence administration panel:
 5. Click **Install** to download and install the app.
 6. Now you can click **Close** in the **Installed and ready to go** dialog.
 
-## Configuring Confluence ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for Confluence
 
 Find the uploaded **ONLYOFFICE Confluence connector** on the **Manage add-ons** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
@@ -48,9 +48,9 @@ where the **documentserver** is the name of the server with **ONLYOFFICE Docs** 
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Confluence administration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Compiling Confluence ONLYOFFICE integration app
+## Compiling ONLYOFFICE app for Confluence
 
-If you plan to compile the Confluence ONLYOFFICE integration app yourself (e.g. edit the source code and compile it afterwards), follow these steps:
+If you plan to compile the ONLYOFFICE app for Confluence yourself (e.g. edit the source code and compile it afterwards), follow these steps:
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
@@ -103,4 +103,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 10. Confluence downloads a new version of the document, replacing the old one.
 
-Download the Confluence ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-confluence).
+Download the ONLYOFFICE app for Confluence [here](https://github.com/ONLYOFFICE/onlyoffice-confluence).
