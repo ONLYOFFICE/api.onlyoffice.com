@@ -4,10 +4,6 @@
 
 ### New features
 
-#### Docspace
-
-* Added DocSpace SDKs
-
 #### Docs
 
 * Added new Office API samples
