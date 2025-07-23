@@ -13,12 +13,12 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-owncloud) enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs.
 
-The latest connector signed versions are available in the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
+The latest app signed versions are available in the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
-- The following formats are available for viewing only: PDF, DJVU, XPS.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, EPUB, FB2, HTML, ODT, OTT, RTF, TXT, CSV, ODS, OTS, XLSM, XLSX, XLTM, XLTX, ODP, OTP, POTM, POTX, PPSM, PPSX, PPTM, PPTX.
+- The following formats are available for viewing only: DJVU, DOC, DOT, FODT, HTM, MHT, MHTML, STW, SXW, WPS, WPT, XML, XPS, ET, ETT, FODS, SXC, XLS, XLSB, XLT, DPS, DPT, FODP, POT, PPS, PPT, SXI.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX. ODT, ODS, and ODP are also available for instant conversion. After you enable the corresponding option in the admin settings, ODF-formatted documents are immediately converted in the editor and opened after you click on it.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to ownCloud. Co-editing is also available between several federated ownCloud instances connected to one Document Server.
 - Sharing files is possible with different permission types - viewing/editing, commenting, reviewing, filling forms. It's also possible to restrict downloading (in all editors) and modifying filters (in spreadsheets). Sharing via public link is also available.
@@ -32,7 +32,7 @@ ONLYOFFICE Docs and ownCloud can be installed either on different computers, or 
 
 You can also use our [Docker installation](https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud) to get installed and configured ONLYOFFICE Docs and ownCloud installation with a couple of commands.
 
-## Installing ownCloud ONLYOFFICE integration app
+## Installing ONLYOFFICE app for ownCloud
 
 The ownCloud administrator can install the integration app from the in-built application market. To do this, click the upper-left hamburger menu and select **Market**. After that, find **ONLYOFFICE** in the list of available applications and install it.
 
@@ -44,7 +44,7 @@ If the server with the ownCloud installed does not have the Internet access, or 
     cd apps/
     ```
 
-2. Get the ownCloud ONLYOFFICE integration app. There are several ways to do that:
+2. Get the ONLYOFFICE app for ownCloud. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
    2. Download the latest signed version from the application [release page](https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases) on GitHub.
@@ -66,7 +66,7 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
-## Configuring ownCloud ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for ownCloud
 
 In ownCloud, open the *\~/settings/admin?sectionid=additional#onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
@@ -100,12 +100,12 @@ You will see a text either with information about the successful connection or t
 
 ## Enabling editing for ownCloud Web
 
-To enable work within **ownCloud Web**, register the connector in the ownCloud Web *config.json*:
+To enable work within **ownCloud Web**, register the app in the ownCloud Web *config.json*:
 
 - If you installed ownCloud Web from the [official marketplace](https://marketplace.owncloud.com/apps/onlyoffice), the path is *\<owncloud-root-catalog>/config/config.json*.
 - If you compiled it from source code yourself using [this instruction](#installing-owncloud-onlyoffice-integration-app), the path is *\<owncloud-web-root-catalog>/config/config.json*.
 
-To register the connector, use these lines:
+To register the app, use these lines:
 
 ``` json
 {
@@ -183,7 +183,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   To solve this, we added an asynchronous background task which runs on the server to check availability of the editors. It allows testing the connection between your **ownCloud instance** and **ONLYOFFICE Docs**, namely availability of server addresses and the validity of the JWT secret are being checked.
 
-  If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled. As an ownCloud admin, you will get the corresponding notification.
+  If any issue is detected, the ONLYOFFICE app (consequently, the ability to create and open files) will be disabled. As an ownCloud admin, you will get the corresponding notification.
 
   This option allows you to avoid issues when the server settings become incorrect and require changes.
 
@@ -207,4 +207,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 - When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
 
-Download the ownCloud ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-owncloud).
+Download the ONLYOFFICE app for ownCloud [here](https://github.com/ONLYOFFICE/onlyoffice-owncloud).

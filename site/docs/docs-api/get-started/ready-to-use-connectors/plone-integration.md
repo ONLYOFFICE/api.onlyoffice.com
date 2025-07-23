@@ -9,8 +9,10 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-plone) allows users to ed
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- The following formats are available for viewing only: DJVU, DOC, DOCM, DOCX, DOCXF, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, OFORM, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX.
+- The following formats are available for converting (download as): DOC, DOCM, DOCX, DOCXF, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XPS, XML, OFORM, FODS, ODS, OTS, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX.
+- The following formats are available for converting to Office Open XML: DOC, DOCM, DOCXF, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XPS, XML, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The plugin will create a new **ONLYOFFICE Edit** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Plone.
 
 ## Installing ONLYOFFICE Docs
@@ -52,54 +54,12 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 ## Developing Plone ONLYOFFICE plugin
 
-1. Clone repository and change directory:
-
-   ``` sh
-   git clone --branch deploy git@github.com:ONLYOFFICE/onlyoffice-plone.git
-   cd onlyoffice-plone
+Run this command to install the addon from the local repository:
+   ```
+   docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
    ```
 
-2. Create a *virtualenv* in the package.
-
-3. Install requirements with pip.
-
-4. Run *buildout*:
-
-   ``` sh
-   virtualenv .
-   ./bin/pip install -r requirements.txt
-   ./bin/buildout
-   ```
-
-5. Start Plone in foreground:
-
-   ``` sh
-   ./bin/instance fg
-   ```
-
-If you have a working Plone instance, you can install plugin by adding the project files to the *scr* directory:
-
-1. In the *scr* directory create the *onlyoffice.plone* directory.
-
-2. Put your project files received by Git into the *onlyoffice.plone* directory.
-
-3. Edit the *buildout.cfg* file:
-
-   ``` ini
-   [buildout]
-   eggs = onlyoffice.plone
-   develop = src/onlyoffice.plone
-   ```
-
-4. Rerun buildout for the changes to take effect:
-
-   ``` sh
-   .bin/buildout
-   ```
-
-5. Then start or restart your Plone instance.
-
-> Plone is based on **Zope server** and will not run as *root* user. If you intend to run it as *root* user, you must supply [effective-user directive](https://zope.readthedocs.io/en/2.12/SETUID.html). In order to do so, add *effective-user \<username>* line to *./parts/instance/etc/zope.conf*.
+> For more information, check [Developing packages variable](https://6.dev-docs.plone.org/install/containers/images/backend.html#developing-packages-variable).
 
 ## Upgrade Plone ONLYOFFICE integration plugin
 

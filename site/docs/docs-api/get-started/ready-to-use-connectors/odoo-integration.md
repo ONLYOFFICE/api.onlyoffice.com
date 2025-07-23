@@ -9,8 +9,8 @@ This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit 
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PDF.
+- The following formats are available for viewing only: DJVU, DOC, DOCM, DOCXF, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OFORM, OTT, OXPS, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The app will create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Odoo.
 
 ## Installing ONLYOFFICE Docs
@@ -19,7 +19,7 @@ You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing Odoo ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Odoo
 
 To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
@@ -36,7 +36,7 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
 2. Search for ONLYOFFICE and download it. You can also download the latest app version from the official [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice-odoo/releases).
 
-3. Put ONLYOFFICE connector into */path/to/odoo/addons*. Make sure the ONLYOFFICE folder is named as *onlyoffice_odoo*.
+3. Put ONLYOFFICE app into */path/to/odoo/addons*. Make sure the ONLYOFFICE folder is named as *onlyoffice_odoo*.
 
    Alternatively, you can add the following lines in the */path/to/odoo/config/odoo.conf* file specifying your path to the folder with *apps/addons*:
 
@@ -53,7 +53,9 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
 5. Switch your Odoo to the developer mode and click **Apps -> Update Apps List** or just restart your Odoo instance.
 
-## Configuring Odoo ONLYOFFICE integration app
+6. **Please note (refers to the ONLYOFFICE Templates app)**: ONLYOFFICE demo templates will only be added to the Odoo modules that are already installed. That's why we strongly recommend installing ONLYOFFICE Templates after installing other Odoo modules such as CRM, Sales, Calendar, etc.
+
+## Configuring ONLYOFFICE app for Odoo
 
 To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sidebar and press it. Specify the URL of the installed ONLYOFFICE Docs:
 
@@ -69,4 +71,4 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the Odoo ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop).
+Download the ONLYOFFICE app for Odoo [here](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop).

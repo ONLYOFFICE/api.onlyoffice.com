@@ -19,7 +19,7 @@ You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and
 
 The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing WordPress ONLYOFFICE integration plugin
+## Installing ONLYOFFICE DocSpace plugin for WordPress
 
 To start using ONLYOFFICE Docs with WordPress, follow these steps:
 
@@ -30,6 +30,8 @@ To start using ONLYOFFICE Docs with WordPress, follow these steps:
 5. Click **Choose File** and select the downloaded zipped plugin.
 6. Once the plugin is installed, click **Activate**.
 
+As a WordPress administrator you can also install the plugin via the [Marketplace](https://wordpress.com/plugins/onlyoffice-docspace).
+
 Alternatively, you can clone the master branch (and then activate the plugin from the WordPress administrative dashboard as well):
 
 ``` sh
@@ -37,16 +39,16 @@ cd wp-content/plugins
 git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
 ```
 
-## Configuring WordPress ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE DocSpace plugin for WordPress
 
 Configure the plugin via the WordPress interface. Go to **WordPress administrative dashboard -> ONLYOFFICE -> Settings** and specify the following parameters:
 
-- **Document Editing Service address**. The URL of the installed ONLYOFFICE Docs.
+- **Document Editing Portal address**. The URL of the installed ONLYOFFICE Docs.
 - **Document server JWT secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key in the WordPress administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Using WordPress ONLYOFFICE integration plugin
+## Using ONLYOFFICE DocSpace plugin for WordPress
 
-ONLYOFFICE integration plugin allows WordPress administrators to open files for collaborative editing using ONLYOFFICE Docs (online document editors). In published posts, the editors are visible to all WordPress site visitors (both authorized and unauthorized) in the **Embedded** mode only.
+ONLYOFFICE DocSpace plugin allows WordPress administrators to open files for collaborative editing using ONLYOFFICE Docs (online document editors). In published posts, the editors are visible to all WordPress site visitors (both authorized and unauthorized) in the **Embedded** mode only.
 
 ### Editing files uploaded to WordPress
 
@@ -60,4 +62,4 @@ When creating a post, you can add the ONLYOFFICE element (block) and then upload
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the WordPress ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-wordpress).
+Download the ONLYOFFICE DocSpace plugin for WordPress [here](https://github.com/ONLYOFFICE/onlyoffice-wordpress).
