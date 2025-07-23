@@ -4,7 +4,7 @@ sidebar_position: -6
 
 # 集成问题
 
-## 在哪里可以找到 ONLYOFFICE 文档的集成示例？
+## 在哪里可以找到 ONLYOFFICE 文档的集成示例？ {#where-can-i-find-integration-examples-for-onlyoffice-docs}
 
 可以在[此处](../../samples/language-specific-examples/language-specific-examples.md)找到将 ONLYOFFICE 文档与您自己的网站集成的示例。您可以在不同的 Web 开发编程语言中进行选择：
 
@@ -44,11 +44,11 @@ sidebar_position: -6
 
 大多数连接器可从相应的服务应用程序商店获得，并且易于安装。只需按照[连接器页面](../../get-started/ready-to-use-connectors/nextcloud-integration.md)上的分步说明将 ONLYOFFICE 文档连接到您的服务。
 
-## 在将 ONLYOFFICE 文档与我的网站集成时，我应该指定哪些路径？
+## 在将 ONLYOFFICE 文档与我的网站集成时，我应该指定哪些路径？ {#which-paths-should-i-specify-when-integrating-onlyoffice-docs-with-my-website}
 
 下载并解压用于将 ONLYOFFICE 文档与您的网站集成的示例后，您需要打开源代码并将 **https\://documentserver/** 字符串的所有实例替换为您安装的 ONLYOFFICE 文档的实际地址。
 
-## 通过本地和公共网络将 ONLYOFFICE 连接到 ownClowd/Nextcloud 时应该使用哪些设置？
+## 通过本地和公共网络将 ONLYOFFICE 连接到 ownClowd/Nextcloud 时应该使用哪些设置？ {#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network}
 
 将 ownCloud/Nextcloud安装连接到 ONLYOFFICE 文档时，您需要确保 Internet 浏览器和 ownCloud/Nextcloud 安装都可以访问安装了 ONLYOFFICE 文档的服务器，即一台可以向它发送请求，也可以接受来自它的响应的安装了 ONLYOFFICE 文档的计算机。
 

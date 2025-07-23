@@ -47,10 +47,10 @@ connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
     text: "mainItem",
     onClick: () => {
-      console.log("[CONTEXTMENUCLICK] menuSubItem1")
+      console.log("[CONTEXTMENUCLICK] menuSubItem1");
     },
-  }])
-})
+  }]);
+});
 ```
 
 ## addToolbarMenuItem
@@ -122,7 +122,7 @@ connector.addToolbarMenuItem({
               text: "Text",
               data: "Hello",
               onClick: (data) => {
-                console.log(`[TOOLBARMENUCLICK]: ${data}`)
+                console.log(`[TOOLBARMENUCLICK]: ${data}`);
               },
             },
           ],
@@ -130,7 +130,7 @@ connector.addToolbarMenuItem({
       ],
     },
   ],
-})
+});
 ```
 
 ## attachEvent
@@ -144,7 +144,7 @@ connector.addToolbarMenuItem({
 | name     | string   | 事件名称。     |
 | callback | function | 事件侦听器。 |
 
-示例:
+### 示例:
 
 ``` ts
 connector.attachEvent("onChangeContentControl", (obj) => {
@@ -156,9 +156,11 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 调用的函数，用于将数据发送回编辑器。它允许连接器发送可以插入到结果文档文件中的结构化数据（格式化的段落、表格、文本部分和单独的单词等）。
 
-> **ONLYOFFICE 文档生成器** 命令只能用于创建内容并将其插入文档编辑器 (使用 *Api.GetDocument().InsertContent(...))*。由于在线编辑器中的联合编辑功能，存在此限制。
+:::info
+**ONLYOFFICE 文档生成器** 命令只能用于创建内容并将其插入文档编辑器 (使用 *Api.GetDocument().InsertContent(...))*。由于在线编辑器中的联合编辑功能，存在此限制。
+:::
 
-参数:
+### 参数:
 
 | 名称     | 类型     | 描述                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -168,7 +170,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 此方法在与其他JavaScript数据隔离的上下文中执行。此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
 
-示例:
+### 示例:
 
 ``` ts
 connector.callCommand(() => {
@@ -185,9 +187,11 @@ connector.callCommand(() => {
 
  调用该函数将连接器连接到编辑器。
 
-> 请注意，只有在使用 [disconnect](#disconnect) 方法断开连接器并需要再次将其连接到编辑器时，才应调用此方法。创建连接器时，不需要使用 *connect* 方法，因为它会与 [createConnector](./methods.md#createconnector) 方法一起自动调用。
+:::note
+请注意，只有在使用 [disconnect](#disconnect) 方法断开连接器并需要再次将其连接到编辑器时，才应调用此方法。创建连接器时，不需要使用 *connect* 方法，因为它会与 [createConnector](./methods.md#createconnector) 方法一起自动调用。
+:::
 
-示例:
+### 示例:
 
 ``` ts
 connector.connect()
@@ -197,7 +201,7 @@ connector.connect()
 
 调用该函数来创建 [connector modal window](#connector-window) 以在编辑器内显示附加信息。
 
-示例:
+### 示例:
 
 ``` ts
 const testConnectorWindow = connector.createWindow()
@@ -207,13 +211,13 @@ const testConnectorWindow = connector.createWindow()
 
 调用该函数以删除事件侦听器。
 
-参数:
+### 参数:
 
 | 名称 | 类型   | 描述     |
 | ---- | ------ | --------------- |
 | name | string | 事件名称。 |
 
-示例:
+### 示例:
 
 ``` ts
 connector.detachEvent("onChangeContentControl")
@@ -223,7 +227,7 @@ connector.detachEvent("onChangeContentControl")
 
 调用该函数以断开连接器与编辑器的连接。
 
-示例:
+### 示例:
 
 ``` ts
 connector.disconnect()
@@ -233,7 +237,7 @@ connector.disconnect()
 
 调用该函数以使用连接器执行某些编辑器方法。这些方法的完整列表与插件相同。
 
-参数:
+### 参数:
 
 | 名称     | 类型     | 描述                                                      |
 | -------- | -------- | ---------------------------------------------------------------- |
@@ -241,7 +245,7 @@ connector.disconnect()
 | args     | array    | 正在使用的方法具有的参数（如果有）。       |
 | callback | function | 方法返回的结果。这是一个可选参数。 |
 
-示例:
+### 示例:
 
 ``` ts
 connector.executeMethod("GetCurrentWord", [], (word) => {
@@ -270,7 +274,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 | icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
 | items    | array of ContextMenuItem | 包含当前项的上下文菜单项的数组。                                                         |
 
-示例:
+### 示例:
 
 ``` ts
 const items = [
@@ -293,7 +297,7 @@ Connector window 是一个代表连接器窗口的类。要创建它，请使用
 
 调用函数来向模态窗口框架添加事件监听器。每当将指定事件传递给目标时，都会调用此函数。所有可用事件的列表与插件的列表相同。
 
-参数:
+### 参数:
 
 | 名称   | 类型     | 描述         |
 | ------ | -------- | ------------------- |
@@ -312,14 +316,14 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 
 调用函数来将事件发送到模态窗口框架。所有可用事件的列表与插件的列表相同。
 
-参数:
+### 参数:
 
 | 名称 | 类型            | 描述     |
 | ---- | --------------- | --------------- |
 | name | string          | 事件名称。 |
 | data | string / object | 事件数据。 |
 
-示例:
+### 示例:
 
 ``` ts
 testConnectorWindow.dispatchEvent("messageName", {
@@ -331,7 +335,7 @@ testConnectorWindow.dispatchEvent("messageName", {
 
 调用函数来在编辑器内显示模态窗口。
 
-参数:
+### 参数:
 
 | 名称     | 类型   | 描述                                                                                                                                      |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -355,7 +359,7 @@ testConnectorWindow.show({
 
 调用函数来订阅来自插件的消息。
 
-参数:
+### 参数:
 
 | 名称     | 类型     | 描述         |
 | -------- | -------- | ------------------- |
@@ -364,7 +368,7 @@ testConnectorWindow.show({
 
 返回：此方法不返回任何数据。
 
-示例:
+### 示例:
 
 ``` ts
 window.Asc.plugin.attachEvent("messageName", (message) => {
@@ -376,14 +380,14 @@ window.Asc.plugin.attachEvent("messageName", (message) => {
 
 调用函数来从模态窗口向编辑器发送消息。
 
-参数:
+### 参数:
 
 | 名称 | 类型   | 描述     |
 | ---- | ------ | --------------- |
 | name | string | 事件名称。 |
 | data | object | 事件数据。 |
 
-示例:
+### 示例:
 
 ``` ts
 window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})

@@ -191,7 +191,7 @@ func webView(_ webView: WKWebView,
 
    <!-- eslint-skip -->
    ``` ts
-   window.docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      {external_config},
      type: "mobile",
      events: {
@@ -205,7 +205,9 @@ func webView(_ webView: WKWebView,
        onRequestUsers,
        onWarning,
      },
-   })
+   };
+
+   window.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 8. 要开始在移动设备上处理文档，请通过 WKWebView 组件显示 ONLYOFFICE 编辑器。为此，指定 **EditorViewController** 控制器。请求 *editor.html* file, 文件的 URL，获取其内容，并将 *"\{external\_config\}"* 参数替换为 *samples.plist* 文件中的配置，其中所有示例配置均根据 [API 文档 Try 页面](../../try-docs/try-docs.md)进行分类：

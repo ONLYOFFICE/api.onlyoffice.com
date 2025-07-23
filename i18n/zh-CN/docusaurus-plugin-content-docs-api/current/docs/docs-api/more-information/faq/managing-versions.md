@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # 管理版本问题
 
-## 处理文档历史事件时可以使用哪些方法？
+## 处理文档历史事件时可以使用哪些方法？ {#which-methods-can-be-used-when-working-with-the-document-history-events}
 
 可以使用 [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) 函数显示文档历史记录（使用 *events.onRequestHistory* 事件）。若未启用相关功能，ONLYOFFICE 文档界面将不会显示**版本历史**菜单选项（位于**协作**标签页的**版本历史**按钮）。
 
@@ -58,13 +58,15 @@ const data = {
          },
        ],
      })
-   }
+   };
   
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中
@@ -80,7 +82,7 @@ const data = {
 
 > *history.changes* 对象在版本中显示为较小的更改（修订）。
 
-## 如何显示具有突出显示更改的文档？
+## 如何显示具有突出显示更改的文档？ {#how-to-display-a-document-with-highlighted-changes}
 
 **文档编辑服务**将文档的所有临时更改保存到单独的文件中，一旦编译版本并收到 *status* 为 **2**，带有版本之间所有更改的存档链接也将发送到回调处理程序。
 
@@ -119,17 +121,19 @@ const data = {
       url: "https://documentserver/url-to-edited-document.docx",
       version,
     })
-  }
+  };
   
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     events: {
       onRequestHistoryData,
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
   包含指向当前文档版本 (*url*) 和先前文档版本 (*previous.url*) 的有效链接以及 ID（*key* 和 *previous.key*）的对象必须传递给配置文件。 *changesUrl* 存档文件也必须可用并可从浏览器下载，才能显示更改。
 
-## 为什么强制保存文档后，文档历史记录中未显示新版本？
+## 为什么强制保存文档后，文档历史记录中未显示新版本？ {#why-is-a-new-version-not-shown-in-the-document-history-after-i-forcefully-save-a-document}
 
 ONLYOFFICE文档突出显示从当前文档会话开始时所做的更改，而不是从文档版本开始时所作的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。因此您无法在文档历史记录中看到使用[强制保存选项](../../get-started/how-it-works/saving-file.md#force-saving)创建的文档版本。

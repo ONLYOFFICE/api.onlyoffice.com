@@ -98,7 +98,7 @@ sidebar_custom_props:
 - 显示帮助菜单按钮。
 - 显示单色工具栏标题。
 
-### 格式设置
+### 格式设置 {#formats}
 
 - 指定允许直接打开进行编辑的格式列表。
 
@@ -106,7 +106,7 @@ sidebar_custom_props:
 
 该插件使用[ONLYOFFICE文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachment)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
 
-### 文档
+### 文档 {#documents}
 
 ![文档页面](/assets/images/editor/documents-page.png)
 
@@ -120,13 +120,13 @@ sidebar_custom_props:
 | 转换：保存         | 查看文档、编辑文档               |
 | 转换：下载         | 查看文档                        |
 
-### 附件
+### 附件 {#attachment}
 
 ![附件页面](/assets/images/editor/attachment-page.png)
 
 在**附件**页面，用户可以打开附件进行查看、编辑或转换操作。界面中显示的选项可能会因用户对附件所在模块的权限不同而有所差异。
 
-### 文件
+### 文件 {#files}
 
 ![文件页面](/assets/images/editor/files-page.png)
 
@@ -139,7 +139,7 @@ sidebar_custom_props:
 | 转换：保存        |  查看问题、编辑自己的问题   |
 |转换：下载         |  查看问题                  |
 
-### 问题
+### 问题 {#issues}
 
 ![问题页面](/assets/images/editor/issues-page.png)
 
@@ -152,7 +152,7 @@ sidebar_custom_props:
 | 转换：保存        | 查看问题、编辑自己的问题        |
 |转换：下载         | 查看问题                       |
 
-### 新闻
+### 新闻 {#news}
 
 ![新闻页面](/assets/images/editor/news-page.png)
 
@@ -165,7 +165,7 @@ sidebar_custom_props:
 | 转换：保存         | 查看新闻、管理新闻       |
 | 转换：下载         |  查看新闻               |
 
-### 维基
+### 维基 {#wiki}
 
 ![维基页面](/assets/images/editor/wiki-page.png)
 
@@ -178,7 +178,7 @@ sidebar_custom_props:
 | 转换：保存         |查看维基、编辑维基页面        |
 | 转换：下载         | 查看维基                  |
 
-### 论坛
+### 论坛 {#forums}
 
 ![论坛页面](/assets/images/editor/forums-page.png)
 
@@ -197,13 +197,13 @@ sidebar_custom_props:
 
 在**ONLYOFFICE中查看或编辑**页面，用户可以查看或编辑附件。此页面的可见性取决于用户对附件所在模块的权限。
 
-### 在ONLYOFFICE中创建
+### 在ONLYOFFICE中创建 {#create-in-onlyoffice}
 
 ![在ONLYOFFICE中创建](/assets/images/editor/create-page.png)
 
 **在ONLYOFFICE中创建**页面，用户可以使用考虑用户语言偏好的模板创建附件。查看[支持的格式](#formats)。此页面的可见性取决于用户对模块的权限。
 
-### 使用ONLYOFFICE转换
+### 使用ONLYOFFICE转换 {#convert-with-onlyoffice}
 
 ![使用ONLYOFFICE转换](/assets/images/editor/convert-page.png)
 
