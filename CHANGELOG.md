@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+* Added the editorConfig.customization.suggestFeature parameter
+
 ## 6.3.0
 
 ### New features
