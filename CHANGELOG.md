@@ -1,5 +1,9 @@
 # Change log
 
+### New features
+
+* Added the website Changelog section
+
 ## 6.3.0
 
 ### New features
