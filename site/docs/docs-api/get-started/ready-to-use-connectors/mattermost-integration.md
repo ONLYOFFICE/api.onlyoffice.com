@@ -21,7 +21,7 @@ ONLYOFFICE Docs and Mattermost can be installed either on different computers, o
 
 The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing Mattermost ONLYOFFICE integration plugin
+## Installing ONLYOFFICE app for Mattermost plugin
 
 To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
@@ -46,11 +46,11 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
 6. Choose the compiled plugin from your *dist* folder and press **Upload**.
 
-## Configuring Mattermost ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE app for Mattermost plugin
 
 ![Mattermost settings](/assets/images/editor/mattermost-settings.png)
 
-- **Enable Plugin**. Enable the Mattermost ONLYOFFICE integration plugin by setting this parameter to **true**.
+- **Enable Plugin**. Enable the ONLYOFFICE app for Mattermost plugin by setting this parameter to **true**.
 
 - **Document Editing Service address**. To connect ONLYOFFICE Docs, enter the following address:
 
@@ -66,7 +66,7 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
 - **JWT Prefix**. Specify the ONLYOFFICE Docs prefix.
 
-## Using Mattermost ONLYOFFICE integration plugin
+## Using ONLYOFFICE app for Mattermost plugin
 
 Users are able to open files sent in personal and group Mattermost chats for viewing and co-editing.
 
@@ -93,4 +93,4 @@ ONLYOFFICE bot sends notifications about changes in the document specifying the 
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the Mattermost ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-mattermost).
+Download the ONLYOFFICE app for Mattermost plugin [here](https://github.com/ONLYOFFICE/onlyoffice-mattermost).

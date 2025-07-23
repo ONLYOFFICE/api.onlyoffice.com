@@ -9,8 +9,8 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, PDF.
+- Currently, the following document formats can be opened and edited with this plugin: DOCM, DOCX, DOTM, DOTX, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
+- The following formats are available for viewing only: DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTM, HTML, MHT, MHTML, ODT, OTT, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, ODS, OTS, SXC, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, DPS, DPT, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX, SXI, DJVU, DOCXF, OFORM, OXPS, PDF, XPS.
 - The plugin will create a new **ONLYOFFICE Edit/View** menu option within the **Documents and Media** section for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Liferay.
 
 ## Installing ONLYOFFICE Docs
@@ -19,17 +19,17 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing ONLYOFFICE Connector for Liferay
+## Installing ONLYOFFICE app for Liferay
 
-Either install it from [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/171169174) or if you are building the connector by yourself, simply put compiled **.jar** file from *build\libs* folder to */opt/liferay/deploy*. Liferay will install it automatically.
+Either install it from [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/171169174) or if you are building the app by yourself, simply put compiled **.jar** file from *build\libs* folder to */opt/liferay/deploy*. Liferay will install it automatically.
 
-## Configuring ONLYOFFICE Connector for Liferay
+## Configuring ONLYOFFICE app for Liferay
 
-In order to configure connector, you must navigate to **System Settings** (**Control Panel -> Configuration -> System Settings**). In **Platform** section click the **Connectors** category and select **ONLYOFFICE**.
+In order to configure app, you must navigate to **System Settings** (**Control Panel -> Configuration -> System Settings**). In **Platform** section click the **Connectors** category and select **ONLYOFFICE**.
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Compiling ONLYOFFICE Connector for Liferay
+## Compiling ONLYOFFICE app for Liferay
 
 Simply run *gradle build*. Output **.jar** will be placed inside the *build/libs* directory.
 
@@ -60,4 +60,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 9. Liferay downloads a new version of the document, replacing the old one.
 
-Download the ONLYOFFICE Connector for Liferay [here](https://github.com/ONLYOFFICE/onlyoffice-liferay).
+Download the ONLYOFFICE app for Liferay [here](https://github.com/ONLYOFFICE/onlyoffice-liferay).

@@ -11,8 +11,8 @@ The connector is available in the official [Atlassian Marketplace](https://marke
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: DOC, DOCM, DOC, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLTZ , XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.
+- Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
+- The following formats are available for viewing only: DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTM, HTML, HWP, HWPX, MHT, MHTML, ODT, OTT, PAGES, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, NUMBERS, ODS, OTS, SXC, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, DPS, DPT, FODP, KEY, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX, SXI, DJVU, DOCXF, OFORM, OXPS, PDF, XPS.
 - The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Jira.
 
 ## Installing ONLYOFFICE Docs
@@ -21,7 +21,7 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing Jira ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Jira
 
 Upload the compiled *target/onlyoffice-jira-app.jar* to Jira on the **Manage apps** page.
 
@@ -34,7 +34,7 @@ You can also install the app from the Jira administration panel:
 3. Locate **ONLYOFFICE Connector for Jira** using search.
 4. Click **Install** to download and install the app.
 
-## Configuring Jira ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for Jira
 
 Find the uploaded app on the **Manage apps** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
@@ -48,9 +48,9 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. The **Advanced server settings** section allows you to set the ONLYOFFICE Docs address for internal requests from Jira and the returning Jira address for internal requests from ONLYOFFICE Docs.
 
-## Compiling Jira ONLYOFFICE integration app
+## Compiling ONLYOFFICE app for Jira
 
-If you plan to compile the Jira ONLYOFFICE integration app yourself (e.g. edit the source code and compile it afterwards), follow these steps:
+If you plan to compile the ONLYOFFICE app for Jira yourself (e.g. edit the source code and compile it afterwards), follow these steps:
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
@@ -67,7 +67,7 @@ If you plan to compile the Jira ONLYOFFICE integration app yourself (e.g. edit t
    atlas-package
    ```
 
-## Using Jira ONLYOFFICE integration app
+## Using ONLYOFFICE app for Jira
 
 With the ONLYOFFICE integration app, you can view, edit and co-author office files attached to tasks right within your Jira dashboard.
 
@@ -105,4 +105,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 10. The document with all the changes is saved as a new attachment with the postfix added to the file name.
 
-Download the Jira ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-jira).
+Download the ONLYOFFICE app for Jira [here](https://github.com/ONLYOFFICE/onlyoffice-jira).

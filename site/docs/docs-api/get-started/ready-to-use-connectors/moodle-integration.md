@@ -9,9 +9,7 @@ This [plugin](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor) enables
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, TXT, CSV.
-- The following formats are available for viewing only: PDF.
-- Currently, the following document formats can be converted into OOXML: ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM.
+- Currently, the following document formats can be viewed and edited: DOCX, XLSX, PPTX, PDF, TXT, CSV.
 - The plugin will create a new **ONLYOFFICE document** activity as one of the edit modes for the necessary course page. This allows multiple users to collaborate in real time and to save back those changes to Moodle.
 
 ## Installing ONLYOFFICE Docs

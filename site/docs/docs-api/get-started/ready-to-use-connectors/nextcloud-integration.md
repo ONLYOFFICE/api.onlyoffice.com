@@ -13,14 +13,14 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs.
 
-The latest connector signed versions are available in the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
+The latest app signed versions are available in the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
-- The following format is available for viewing only: PDF.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, EPUB, FB2, HTML, ODT, OTT, RTF, TXT, CSV, ODS, OTS, XLSM, XLSX, XLTM, XLTX, ODP, OTP, POTM, POTX, PPSM, PPSX, PPTM, PPTX.
+- The following format is available for viewing only: DJVU, DOC, DOT, FODT, HTM, MHT, MHTML, STW, SXW, WPS, WPT, XML, XPS, ET, ETT, FODS, SXC, XLS, XLSB, XLT, DPS, DPT, FODP, POT, PPS, PPT, SXI.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
-- The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
+- The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**, **PDF**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
 
 ## Installing ONLYOFFICE Docs
 
@@ -32,7 +32,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 You can also use our [Docker installation](https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud) to get installed and configured ONLYOFFICE Docs and Nextcloud installation with a couple of commands.
 
-## Installing Nextcloud ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Nextcloud
 
 The Nextcloud administrator can install the integration app from the in-built application market. To do this, go to the user name and select **Apps**. After that, find **ONLYOFFICE** in the list of available applications and install it.
 
@@ -40,7 +40,7 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
 1. Go to the Nextcloud server *apps/* directory (or some other directory [used](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories) to connect applications): cd apps/
 
-2. Get the Nextcloud ONLYOFFICE integration app. There are several ways to do that:
+2. Get the ONLYOFFICE app for Nextcloud. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
    2. Download the latest signed version from the application [release page](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases) on GitHub.
@@ -51,16 +51,24 @@ If the server with the Nextcloud installed does not have the Internet access, or
    cd onlyoffice
    git submodule update --init --recursive
    ```
-
-3. Change the owner to update the application right from Nextcloud web interface:
+3. Build webpack (only if you chose to clone on the previous step):
+   ``` sh
+   npm install
+   npm run build
+   ```
+4. Install Composer dependencies (only if you chose to clone on the step 2):
+   ``` sh
+   composer install
+   ```
+5. Change the owner to update the application right from Nextcloud web interface:
 
     ``` sh
     chown -R www-data:www-data onlyoffice
     ```
 
-4. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
+6. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
-## Configuring Nextcloud ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for Nextcloud
 
 In Nextcloud, open the *\~/settings/admin/onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
@@ -91,6 +99,15 @@ occ onlyoffice:documentserver --check
 ```
 
 You will see a text either with information about the successful connection or the cause of the error.
+
+## Advanced document permissions 
+
+The Advanced tab allows you to grant additional access rights only to those users specified in the Sharing tab without the ability to re-share the file. Depending on the chosen Custom permission option and the file type (docx, pptx, xlsx), you can grant different additional rights.
+
+- If the **DOCX** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only reviewing (**Review only**) or only commenting (**Comment only**) in the Advanced tab.
+- If the **XLSX** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only commenting (**Comment only**) or applying filtering for everyone (**Global filter**, which is enabled by default) in the Advanced tab.
+- If the **PPTX** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only commenting (**Comment only**) in the Advanced tab.
+- If the **PDF** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only filling out (**Form Filling**) in the Advanced tab.
 
 ## How it works
 
@@ -150,7 +167,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   To solve this, we added an asynchronous background task which runs on the server to check availability of the editors. It allows testing the connection between your **Nextcloud instance** and **ONLYOFFICE Docs**, namely availability of server addresses and the validity of the JWT secret are being checked.
 
-  If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled. As a Nextcloud admin, you will get the corresponding notification.
+  If any issue is detected, the ONLYOFFICE app (consequently, the ability to create and open files) will be disabled. As a Nextcloud admin, you will get the corresponding notification.
 
   This option allows you to avoid issues when the server settings become incorrect and require changes.
 
@@ -174,4 +191,6 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 - When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
 
-Download the Nextcloud ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).
+- When a file is opened for editing in ONLYOFFICE while being simultaneously edited in other tools, changes may be overwritten or lost. To avoid conflicts and ensure smooth collaboration, we recommend using the Temporary File Lock application: https://apps.nextcloud.com/apps/files_lock. This helps prevent parallel editing and safeguards your work.
+
+Download the ONLYOFFICE app for Nextcloud [here](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).
