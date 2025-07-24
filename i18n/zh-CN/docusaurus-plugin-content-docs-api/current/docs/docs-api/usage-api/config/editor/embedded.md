@@ -47,7 +47,7 @@
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     embedded: {
       embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
@@ -57,5 +57,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       toolbarDocked: "top",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

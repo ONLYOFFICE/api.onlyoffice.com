@@ -156,7 +156,9 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 调用的函数，用于将数据发送回编辑器。它允许连接器发送可以插入到结果文档文件中的结构化数据（格式化的段落、表格、文本部分和单独的单词等）。
 
-:::info
+*callback* 是命令返回的结果，是一个可选参数。如果未提供该参数，则将使用 *window.Asc.plugin.onCommandCallback* 函数返回命令执行结果。
+
+:::信息
 **ONLYOFFICE 文档生成器** 命令只能用于创建内容并将其插入文档编辑器 (使用 *Api.GetDocument().InsertContent(...))*。由于在线编辑器中的联合编辑功能，存在此限制。
 :::
 
@@ -169,6 +171,10 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 | isNoCalc | boolean  | 定义是否可以重新计算文档。**true** 值用于在执行 *command* 参数中的函数后重新计算文档。**false** 值不会重新计算文档 （仅当您的编辑肯定不需要重新计算文档时才使用它）。默认值为 **false**。                                    |
 
 此方法在与其他JavaScript数据隔离的上下文中执行。此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
+
+### 返回:
+
+此方法不返回任何数据。
 
 ### 示例:
 
@@ -187,8 +193,8 @@ connector.callCommand(() => {
 
  调用该函数将连接器连接到编辑器。
 
-:::note
-请注意，只有在使用 [disconnect](#disconnect) 方法断开连接器并需要再次将其连接到编辑器时，才应调用此方法。创建连接器时，不需要使用 *connect* 方法，因为它会与 [createConnector](./methods.md#createconnector) 方法一起自动调用。
+:::注意
+请注意，只有在您已经使用了[disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](./methods.md#createconnector) 方法一起自动被调用。 
 :::
 
 ### 示例:
@@ -366,7 +372,9 @@ testConnectorWindow.show({
 | *id*     | string   | 事件名称。     |
 | *action* | function | 事件侦听器。  |
 
-返回：此方法不返回任何数据。
+### 返回:
+
+此方法不返回任何数据。
 
 ### 示例:
 

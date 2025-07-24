@@ -113,7 +113,7 @@ files.docservice.url.site=https://documentserver/
 
 ### 步骤 5. 配置 JWT
 
-打开 *src/main/resources/settings.properties* 文件并[指定相同的密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)按照 ONLYOFFICE 文档中的说明启用 JWT：
+打开 *src/main/resouces/application.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
 
  ``` ini
  docservice.security.key=secret
@@ -207,7 +207,7 @@ files.docservice.url.site=https://documentserver/
 
    其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。
 
-   [指定与 ONLYOFFICE 文档中用于启用 JWT 的相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)： 
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT： 
  
      ``` ini
      docservice.security.key=secret
@@ -303,7 +303,7 @@ files.docservice.url.site=https://documentserver/
 
    其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。
 
-   [指定与 ONLYOFFICE 文档中用于启用 JWT 的相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)： 
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT： 
  
      ``` ini
      docservice.security.key=secret

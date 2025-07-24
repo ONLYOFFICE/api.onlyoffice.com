@@ -66,7 +66,7 @@ sidebar_position: -5
 }
 ```
 
-   另请[指定相同的密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)就像在您的 ONLYOFFICE 文档中所使用的那样：
+   同样也要与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
 
 ``` json
 {
@@ -190,7 +190,7 @@ sidebar_position: -5
    }
    ```
 
-   另请[指定相同的密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)就像在您的 ONLYOFFICE 文档中所使用的那样：
+   同样也要与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
 
       ``` json
    {

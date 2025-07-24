@@ -227,7 +227,7 @@ const config = {
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       chat: true,
@@ -253,5 +253,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     }
     ,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

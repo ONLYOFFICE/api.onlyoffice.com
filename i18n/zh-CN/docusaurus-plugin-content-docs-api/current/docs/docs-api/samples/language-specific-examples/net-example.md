@@ -62,7 +62,7 @@ sidebar_position: -8
 
  ## 步骤4. 配置 JWT
 
- 打开 *settings.config* 文件（或 MVC 版本的 *web.appsettings.config* 文件）并 [指定相同的密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)按照 ONLYOFFICE 文档中的说明启用 JWT：
+ 打开 *settings.config* 文件（或 MVC 版本的 *web.appsettings.config* 文件），并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
  
  ``` xml
  <add key="files.docservice.secret" value="secret" />

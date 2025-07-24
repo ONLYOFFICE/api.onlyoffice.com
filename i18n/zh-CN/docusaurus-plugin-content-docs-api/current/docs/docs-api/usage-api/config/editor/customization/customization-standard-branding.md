@@ -926,6 +926,10 @@ const review = {
 当 [compactHeader](#compactheader) 和 [toolbarNoTabs](#toolbarnotabs) 参数设置为 **true**时使用此设置。
 :::
 
+:::请注意
+从 9.0.3 版本开始，该参数适用于移动端编辑器。
+:::
+
 **示例**: `false`
 
 ![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png)
