@@ -29,7 +29,7 @@ See the detailed guide to learn how to install Document Server [for Windows](htt
 
 ## Step 2. Download the Go code for the editors integration
 
-Download the [Go example](./language-specific-examples.md) from our site.
+Download the [Go example](./language-specific-examples.md) from our site, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/go).
 
 To connect the editors to your website, specify the path to the editors installation, server protocol, address and port  in the *configuration.env* file:
 
