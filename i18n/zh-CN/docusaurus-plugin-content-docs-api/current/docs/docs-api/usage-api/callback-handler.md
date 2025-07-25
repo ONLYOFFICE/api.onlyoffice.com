@@ -104,7 +104,7 @@ import TabItem from '@theme/TabItem';
 
 类型: string
 
-## 用户
+## 用户 {#users}
 
 定义打开文档进行编辑的用户的标识符列表；当文档被更改时，用户将返回最后编辑文档的用户的标识符（对于 *status* **2** 和 *status* **6** 的应答）。
 
@@ -234,7 +234,7 @@ import TabItem from '@theme/TabItem';
 
 **文档管理器**和**文档存储服务**要么包含在社区版服务器中，要么必须由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施。
 
-## 文档保存示例
+## 文档保存示例 {#document-save-examples}
 
 <Tabs>
   <TabItem value="csharp" label=".Net (C#)">

@@ -14,7 +14,7 @@
 
 **示例**: `true`
 
-## 聊天
+## 聊天 {#chat}
 
 `类型: boolean`
 
@@ -78,7 +78,7 @@ const config = {
 
 **示例**: `""`
 
-## 复制
+## 复制 {#copy}
 
 `类型: boolean`
 
@@ -94,7 +94,7 @@ const config = {
 
 **示例**: `true`
 
-## 下载
+## 下载 {#download}
 
 `类型: boolean`
 
@@ -104,7 +104,7 @@ const config = {
 
 ![下载文档](/assets/images/editor/download.png)
 
-## 修改
+## 修改 {#edit}
 
 `类型: boolean`
 
@@ -176,7 +176,7 @@ const config = {
 
 ![保护文档](/assets/images/editor/protect.png)
 
-## 重命名
+## 重命名 {#rename}
 
 `类型: boolean`
 

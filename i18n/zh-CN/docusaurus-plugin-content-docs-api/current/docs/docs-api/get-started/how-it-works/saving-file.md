@@ -148,7 +148,7 @@ import TabItem from '@theme/TabItem';
 
 > 请注意，您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
 
-## 以原始格式保存
+## 以原始格式保存 {#saving-in-original-format}
 
 从版本 7.0 开始，[assemblyFormatAsOrigin](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin) 服务器设置默认启用，以便将组装好的文件保存为其原始格式。它用于将文件格式从 OOXML 更改为 ODF 或使用宏保存文件。
 

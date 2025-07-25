@@ -60,7 +60,7 @@ Nextcloud管理员可以从内置应用市场安装集成应用程序。为此�
 
 4. 在Nextcloud中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为**ONLYOFFICE**应用点击**启动**。
 
-## 配置Nextcloud ONLYOFFICE集成应用程序
+## 配置Nextcloud ONLYOFFICE集成应用程序 {#configuring-nextcloud-onlyoffice-integration-app}
 
 在Nextcloud中，打开包含**ONLYOFFICE**部分管理设置的*\~/settings/admin/onlyoffice*页面。输入以下地址来连接ONLYOFFICE文档：
 

@@ -80,7 +80,7 @@ make server-prod
 
 同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。
 
-## 步骤3.配置PHP示例
+## 步骤3.配置PHP示例 {#step-3-configure-the-php-example}
 
 通过更改环境变量来配置示例。
 

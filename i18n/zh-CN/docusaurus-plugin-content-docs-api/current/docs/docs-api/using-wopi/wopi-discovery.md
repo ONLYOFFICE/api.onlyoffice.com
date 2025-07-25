@@ -13,7 +13,7 @@ sidebar_position: -8
 - online office中可用的文档操作，
 - 支持的文件格式（扩展名）。
 
-### WOPI 操作
+### WOPI 操作 {#wopi-actions}
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
@@ -53,7 +53,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 **发现查询参数**是可以通过 *urlsrc* 属性中的文件存储公开的参数，以自定义编辑器行为。例如，更改语言、主题或聊天。
 
-## WOPI标准
+## WOPI标准 {#wopi-standard}
 
 ### 参数
 
