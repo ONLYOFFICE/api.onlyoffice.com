@@ -919,7 +919,7 @@ Defines a message displayed after forms are submitted. The following values are 
 
 **Example**: `"text"`
 
-### suggestFeature
+## suggestFeature
 
 `Type: boolean`
 
