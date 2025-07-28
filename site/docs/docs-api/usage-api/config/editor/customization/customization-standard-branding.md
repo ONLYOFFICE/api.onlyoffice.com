@@ -978,6 +978,8 @@ Apart from the available editor themes, the user can also customize their own [c
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.uiTheme* parameter.
 :::
 
+Mobile editors support only these themes: **theme-light**, **theme-dark**, **default-light**, **default-dark**.
+
 **Example**: `"theme-dark"`
 
 ## unit
