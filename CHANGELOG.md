@@ -10,6 +10,7 @@
 
 #### Docs API
 
+* Added Github links to each language specific example.
 * Updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution
 * Added more questions to Customization FAQ
 
