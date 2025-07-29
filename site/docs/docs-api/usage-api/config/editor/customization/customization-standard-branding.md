@@ -10,7 +10,7 @@ The customization section allows you to customize the editor interface according
 On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
 
 :::note
-Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename).
+Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uiTheme).
 :::
 
 ## anonymous
@@ -978,7 +978,9 @@ Apart from the available editor themes, the user can also customize their own [c
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.uiTheme* parameter.
 :::
 
-Mobile editors support only these themes: **theme-light**, **theme-dark**, **default-light**, **default-dark**.
+:::note
+Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: **theme-light**, **theme-dark**, **default-light**, **default-dark**.
+:::
 
 **Example**: `"theme-dark"`
 

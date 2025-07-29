@@ -1,5 +1,9 @@
 # Change log
 
+#### Docs API
+
+* The `editorConfig.customization.uitheme` parameter is now available for the mobile editors
+
 ## 6.3.0
 
 ### New features
@@ -10,7 +14,6 @@
 
 #### Docs API
 
-* Updated [uitheme](/site/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md#uitheme) customization parameter.
 * Updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution
 * Added more questions to Customization FAQ
 
