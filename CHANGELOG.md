@@ -1,5 +1,9 @@
 # Change log
 
+#### Docs API
+
+* Added fonts information to Changing default fonts language specific example.
+  
 ## 6.3.0
 
 ### New features
@@ -10,7 +14,6 @@
 
 #### Docs API
 
-* Added fonts information to Changing default fonts language specific example.
 * Updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution
 * Added more questions to Customization FAQ
 
