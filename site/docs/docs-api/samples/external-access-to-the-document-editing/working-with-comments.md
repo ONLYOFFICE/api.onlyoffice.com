@@ -13,7 +13,7 @@ Collects all the comments from the document and displays them in the custom inte
 
 ## How it works
 
-1. When the user opens a document, the GetAllComments method is executed to collect all the comments from the document and display them in the custom interface. The following comment data is displayed: the comment author, the time when the comment was posted, the comment text, and the comment replies:
+1. When the user opens a document, the [GetAllComments](/site/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllComments.md) method is executed to collect all the comments from the document and display them in the custom interface. The following comment data is displayed: the comment author, the time when the comment was posted, the comment text, and the comment replies:
 
     ``` ts
     let comments = []
@@ -26,7 +26,7 @@ Collects all the comments from the document and displays them in the custom inte
     }
     ```
 
-2. When the user clicks the **Add comment** button in the custom interface, the AddComment method is executed to add a new comment to the document. After this method is called, the onAddComment event is fired to add a new comment to an array with all the document comments:
+2. When the user clicks the **Add comment** button in the custom interface, the [AddComment](/site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method is executed to add a new comment to the document. After this method is called, the [onAddComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md) event is fired to add a new comment to an array with all the document comments:
 
     ``` ts
     function onDocumentReady() {
@@ -54,7 +54,7 @@ Collects all the comments from the document and displays them in the custom inte
     })
     ```
 
-3. When the user clicks the **Remove comment** button in the custom interface, the RemoveComments method is executed to remove a comment from the document. After this method is called, the onRemoveComment event is fired to remove a comment from an array with all the document comments:
+3. When the user clicks the **Remove comment** button in the custom interface, the [RemoveComments](/site/docs/plugin-and-macros/interacting-with-editors/presentation-api/Methods/RemoveComments.md) method is executed to remove a comment from the document. After this method is called, the [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) event is fired to remove a comment from an array with all the document comments:
 
     ``` ts
     function onDocumentReady() {
@@ -72,13 +72,13 @@ Collects all the comments from the document and displays them in the custom inte
     })
     ```
 
-4. When the user clicks the arrow buttons in the custom interface, the MoveToComment method is executed to move between the comments in the document:
+4. When the user clicks the arrow buttons in the custom interface, the [MoveToComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToComment.md) method is executed to move between the comments in the document:
 
     ``` ts
     connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]])
     ```
 
-5. When the user clicks the **Add reply** button in the custom interface, the ChangeComment method is executed to add a reply to the existing comment by changing the *CommentData* object. After this method is called, the onChangeCommentData event is fired to add a new comment reply to an array with all the document comments:
+5. When the user clicks the **Add reply** button in the custom interface, the [ChangeComment](/site/docs/plugin-and-macros/interacting-with-editors/presentation-api/Methods/ChangeComment.md) method is executed to add a reply to the existing comment by changing the *CommentData* object. After this method is called, the [onChangeCommentData](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md) event is fired to add a new comment reply to an array with all the document comments:
 
     ``` ts
     function onDocumentReady() {

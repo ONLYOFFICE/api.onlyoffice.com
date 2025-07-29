@@ -133,7 +133,7 @@ connector.addToolbarMenuItem({
 });
 ```
 
-## attachEvent
+## [attachEvent](/site/docs/office-api/usage-api/presentation-api/Api/Methods/attachEvent.md)
 
 The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins.
 
@@ -159,7 +159,7 @@ To call commands and send the data back to the editor, define the callCommand me
 *The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
 
 :::info
-**Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the *Api.GetDocument().InsertContent(...))*. This limitation exists due to the co-editing feature in the online editors.
+**Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the [*Api.GetDocument().InsertContent(...))*](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md). This limitation exists due to the co-editing feature in the online editors.
 :::
 
 ### Parameters:
@@ -299,7 +299,7 @@ Connector window is a class that represents the connector window. To create it,
 
 Below you can find methods that are available for this class.
 
-### attachEvent
+### [attachEvent](/site/docs/office-api/usage-api/presentation-api/Api/Methods/attachEvent.md)
 
 The function called to add an event listener to the modal window frame. This function will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins.
 
@@ -361,7 +361,7 @@ testConnectorWindow.show({
 
 In the connector window code, you can also use the following methods:
 
-### attachEvent
+### [attachEvent](/site/docs/office-api/usage-api/presentation-api/Api/Methods/attachEvent.md)
 
 The function called to subscribe to the messages from the plugin.
 

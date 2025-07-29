@@ -13,7 +13,7 @@ Manages review process from an external source.
 
 ## How it works
 
-1. When the user clicks the **Accept / Reject** buttons in the custom interface, the AcceptReviewChanges / RejectReviewChanges methods are executed to accept / reject the selected change in the editor:
+1. When the user clicks the **Accept / Reject** buttons in the custom interface, the [AcceptReviewChanges](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) methods are executed to accept / reject the selected change in the editor:
 
    ``` ts
    $("#accept").on("click", () => {
@@ -24,7 +24,7 @@ Manages review process from an external source.
    })
    ```
 
-2. When the user clicks the arrow buttons in the custom interface, the MoveToNextReviewChange method is executed to move between the next and previous review changes:
+2. When the user clicks the arrow buttons in the custom interface, the [MoveToNextReviewChange](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) method is executed to move between the next and previous review changes:
 
    ``` ts
    $("#prev").on("click", () => {
