@@ -27,17 +27,9 @@ After that, all new documents will be created with the specified font.
 
 ## Known issues
 
-When editing or opening documents in ONLYOFFICE Docs, the platform uses a predefined list of fonts available on the server. Here’s how font substitution works:
+When editing or opening documents in ONLYOFFICE Docs, the platform uses a predefined list of fonts available on the server. Here's how font substitution works:
 
 - **Pre-installed fonts**: ONLYOFFICE Docs comes with a default set of open-source fonts.
-- **Font substitution**: If a document contains proprietary fonts (e.g., created in Word), ONLYOFFICE Docs uses internal heuristics to find and apply the closest matching font.
-- **Templates compatibility**: This mechanism ensures that templates created in external software remain visually consistent when opened in ONLYOFFICE Docs, even without exact font matches.
+- **Font substitution**: If a document contains proprietary fonts (e.g., created in third-party editors), ONLYOFFICE Docs automatically selects the most similar available font.
 
-### How to update the list of available fonts
-
-To use your own or additional fonts:
-
-1. Install fonts to your server where ONLYOFFICE Docs is running.
-2. Regenerate the font cache to make them available inside the editors.
-
-Follow this guide: [Install additional fonts in ONLYOFFICE Docs](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-linux.aspx)
+To avoid layout issues caused by font substitution, make sure to install custom fonts on the document server before uploading any templates created in external software. Follow the official instructions for [Windows](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-windows.aspx), [Linux](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-linux.aspx), or [Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-install-fonts-docker.aspx).
