@@ -144,6 +144,8 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
    unzip Node.js.Example.zip
    ```
 
+   Or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/nodejs).
+
 3. Change the current directory for the project directory:
 
    ``` sh

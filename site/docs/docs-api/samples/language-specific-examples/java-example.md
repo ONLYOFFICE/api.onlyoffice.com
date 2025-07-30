@@ -171,6 +171,8 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
    unzip Java.Example.zip
    ```
 
+   Or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java).
+
 3. Change the current directory for the project directory:
 
    ``` sh
@@ -282,6 +284,8 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
    ``` sh
    unzip Java.Example.zip
    ```
+
+   Or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java).
 
 3. Change the current directory for the project directory:
 
