@@ -12,7 +12,11 @@
 
 **支持的编辑器：**文档编辑器。
 
-![CountWordsAndCharacters](/assets/images/plugins/gifs/count-words-and-characters.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="b2vrRO6Us6g" />
+```
 
 ## 安装方式
 

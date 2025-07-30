@@ -8,7 +8,11 @@
 
 **同类插件：** [Apertium](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/apertium)、[DeepL](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/deepl)
 
-![Translator](/assets/images/plugins/gifs/translator.gif)
+!```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="jCciDL48KHE" />
+```
 
 ## 安装
 

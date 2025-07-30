@@ -8,7 +8,11 @@
 
 **类似插件：** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley)，[EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib)。
 
-![Zotero](/assets/images/plugins/gifs/zotero.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="k1vyDlQbdEU" start={154} />
+```
 
 ## 安装
 

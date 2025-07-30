@@ -10,7 +10,11 @@
 
 **类似插件：** [Rainbow](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow)、[Jitsi](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi)
 
-![Telegram](/assets/images/plugins/gifs/telegram.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="8nj6smmCLis" />
+```
 
 ## 安装方式
 

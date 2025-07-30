@@ -6,7 +6,11 @@
 
 **支持编辑器：** 文档，电子表格，演示文稿。
 
-![Youtube](/assets/images/plugins/gifs/youtube.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="jHuwwVliZ5Q" posterType="hqdefault" />
+```
 
 ## 安装
 

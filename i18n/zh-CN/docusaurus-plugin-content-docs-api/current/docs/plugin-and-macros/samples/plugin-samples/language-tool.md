@@ -8,7 +8,11 @@
 
 **类似插件：** [Glavred](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/glavred)、[Grammalecte](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/grammalecte)。
 
-![LanguageTool](/assets/images/plugins/gifs/language-tool.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="5HaV18VwOgg" />
+```
 
 ## 安装
 

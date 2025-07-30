@@ -6,11 +6,15 @@
 
 **支持的编辑器：**文档、表格、演示文稿。
 
-![Chess](/assets/images/plugins/gifs/chess.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="PV5TSRvKKU0" />
+```
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess) 下载此插件，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、或 [云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) 下载此插件，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、或 [云端版](../../tutorials/installing/onlyoffice-cloud.md)。
 
 ## 使用方法
 
@@ -20,7 +24,7 @@
 
 ## 插件结构
 
-GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess)。
+GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess)。
 
 1. *config.json*、*index.html* 和 *chess.js*  
 2. 图标 

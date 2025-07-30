@@ -6,7 +6,11 @@
 
 **支持的编辑器：** 文档。
 
-![Speech](/assets/images/plugins/gifs/speech.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="ZALRpPomZrA" />
+```
 
 ## ## 安装方式
 

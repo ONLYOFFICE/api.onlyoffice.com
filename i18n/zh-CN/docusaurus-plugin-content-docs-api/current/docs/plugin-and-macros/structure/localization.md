@@ -61,10 +61,12 @@ sidebar_position: -2
 从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 translations 文件夹，使目录结构如下： 
 
 ``` ini
-[translations]
-config.json
-index.html
-pluginCode.js
+highlightcode/
+├── translations/
+├── scripts/
+    ├── pluginCode.js
+├── config.json
+├── index.html
 ```
 
 为每种语言创建对应的 .json 文件，文件名使用语言的四位语言区域码（如 de-DE.json）。这些文件包含一个对象，键为原始英文单词或短语，值为对应语言的翻译。例如，德语翻译文件如下：
@@ -93,14 +95,16 @@ pluginCode.js
 添加完所有本地化文件后，插件文件结构如下：
 
 ``` ini
-[translations]
-    de-DE.json
-    es-ES.json
-    fr-FR.json
-    langs.json
-config.json
-index.html
-pluginCode.js
+highlightcode/
+├── translations/
+    ├── de-DE.json
+    ├── es-ES.json
+    ├── fr-FR.json
+    ├── langs.json
+├── scripts/
+    ├── pluginCode.js
+├── config.json
+├── index.html
 ```
 
 你现在可以将文件中的字符串替换为对应的翻译结果。
