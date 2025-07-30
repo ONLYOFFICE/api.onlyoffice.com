@@ -1,6 +1,7 @@
 # Normalize phone numbers
 
-This macro scans the "Phone" column and normalizes phone numbers into a standardized format: `+1 (XXX) XXX-XXXX`
+This macro scans the "Phone" column and normalizes phone numbers into a standardized format: `+1 (XXX) XXX-XXXX`.
+
 It handles raw 10-digit numbers (e.g. `8005551234`) by assuming the U.S. country code (`1`), and also supports 11-digit inputs starting with `1`.
 
 ```ts
@@ -46,7 +47,7 @@ It handles raw 10-digit numbers (e.g. `8005551234`) by assuming the U.S. country
 ```
 
 Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
- 
+
 ## Result
 
 ![Normalize phone numbers](/assets/images/plugins/normalize-phone-numbers.png#gh-light-mode-only)![Normalize phone numbers](/assets/images/plugins/normalize-phone-numbers.dark.png#gh-dark-mode-only)

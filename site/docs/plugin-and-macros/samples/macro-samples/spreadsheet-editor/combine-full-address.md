@@ -52,7 +52,7 @@ This macro locates the "city", "street", and "building" columns and generates a 
 ```
 
 Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
- 
+
 ## Result
 
 ![Combine city, street, and building into full address](/assets/images/plugins/combine-full-address.png#gh-light-mode-only)![Combine city, street, and building into full address](/assets/images/plugins/combine-full-address.dark.png#gh-dark-mode-only)

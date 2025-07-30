@@ -1,11 +1,11 @@
 # Clean and normalize customer data
 
-This macro locates common CRM-style columns like "full name", "email", "signup date", and "order total" and reformats them consistently:
+This macro locates common CRM-style columns like "full name", "email", "signup date", and "order total", and reformats them consistently:
 
-- Names - capitalized
-- Emails - lowercase
-- Dates - ISO format `yyyy-mm-dd`
-- Totals - numeric with two decimals
+- Names - capitalized.
+- Emails - lowercase.
+- Dates - ISO format `yyyy-mm-dd`.
+- Totals - numeric with two decimals.
 - Optional columns: "country" and "status text" are also cleaned if present.
 
 ```ts
@@ -124,9 +124,8 @@ This macro locates common CRM-style columns like "full name", "email", "signup d
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [SetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md)
- 
-## Result
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [SetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md)
 
+## Result
 
 ![Clean and normalize customer data](/assets/images/plugins/clean-and-normalize-customer-data.png#gh-light-mode-only)![Clean and normalize customer data](/assets/images/plugins/clean-and-normalize-customer-data.dark.png#gh-dark-mode-only)

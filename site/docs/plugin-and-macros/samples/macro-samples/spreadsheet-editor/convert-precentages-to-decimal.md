@@ -1,6 +1,6 @@
 # Convert percentages to decimal values
 
-Scans the worksheet and converts all percentage-formatted cells (e.g., `20%`) into their decimal equivalents (e.g., `0.2`). The formatting is removed and the value is rewritten in decimal form.
+Scans the worksheet and converts all percentage-formatted cells (e.g., `20%`) into their decimal equivalents (e.g., `0.2`). The formatting is removed, and the value are rewritten in decimal form.
 
 ```ts
 (function () {
@@ -35,7 +35,7 @@ Scans the worksheet and converts all percentage-formatted cells (e.g., `20%`) in
 ```
 
 Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetNumberFormat.md), [SetNumberFormat](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetNumberFormat.md)
- 
+
 ## Result
 
 ![Convert percentages to decimal values](/assets/images/plugins/convert-precentages-to-decimal.png#gh-light-mode-only)![Convert percentages to decimal values](/assets/images/plugins/convert-precentages-to-decimal.dark.png#gh-dark-mode-only)

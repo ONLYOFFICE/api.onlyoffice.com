@@ -1,9 +1,9 @@
 # Trim extra spaces
 
-This macro scans the entire table (up to 20 columns) and removes extra spaces in each cell:
+This macro scans the entire table (up to 20 columns) and removes extra spaces from each cell:
 
-- Leading and trailing spaces are trimmed
-- Multiple spaces inside text are collapsed to a single space
+- Leading and trailing spaces are trimmed.
+- Multiple spaces inside text are collapsed to a single space.
 
 It operates row by row, starting from row 1, and stops at the first empty cell in the first column.
 
@@ -42,7 +42,7 @@ It operates row by row, starting from row 1, and stops at the first empty cell i
 ```
 
 Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
- 
+
 ## Result
 
 ![Split full name into first and last name](/assets/images/plugins/trim-extra-spaces.png#gh-light-mode-only)![Split full name into first and last name](/assets/images/plugins/trim-extra-spaces.dark.png#gh-dark-mode-only)
