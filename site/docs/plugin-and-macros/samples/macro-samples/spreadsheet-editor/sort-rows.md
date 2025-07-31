@@ -1,6 +1,8 @@
 # Sort rows
 
-Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending order. The default date format is *m/d/yyyy*.
+Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending order. The supported date formats are *mm/dd/yyyy* and *dd/mm/yyyy*.
+
+In the macro, you can set the sort order to ascending or descending.
 
 ```ts
 (function () {
@@ -9,6 +11,7 @@ Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending o
   let worksheet = Api.GetActiveSheet();
   let range = worksheet.GetUsedRange();
   let data = range.GetValue();
+  let ascendingOrder = true // Set false for sorting id descending order
 
   let headers;
 
@@ -26,7 +29,7 @@ Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending o
     for (let j = 0; j < data[0].length; j++) {
       let cell = worksheet.GetCells(firstRowIndex + i, firstColIndex + j);
       let format = cell.GetNumberFormat();
-      if (format == "m/d/yyyy" || format == "d/m/yyyy") {
+      if (format == "mm/dd/yyyy" || format == "dd/mm/yyyy") {
         dateIndex = j;
         break;
       }
@@ -38,7 +41,12 @@ Sorts all rows in the spreadsheet by the year mentioned in a row, in ascending o
   data.sort(function (a, b) {
     let dateA = new Date(a[dateIndex]);
     let dateB = new Date(b[dateIndex]);
-    return dateA - dateB;
+    if (ascendingOrder) {
+      return dateA - dateB;
+    } else {
+      return dateB - dateA
+    }
+    
   });
 
   if (hasHeaders) {
