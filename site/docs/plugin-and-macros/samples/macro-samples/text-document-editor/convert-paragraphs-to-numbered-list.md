@@ -36,5 +36,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![ParagraphsToNumberedList](/assets/images/plugins/paragraphs-to-numbered-list.png#gh-light-mode-only)
-![ParagraphsToNumberedList](/assets/images/plugins/paragraphs-to-numbered-list.dark.png#gh-dark-mode-only)
+![ParagraphsToNumberedList](/assets/images/plugins/convert-parapgraphs-to-numbered-list.png#gh-light-mode-only)
+![ParagraphsToNumberedList](/assets/images/plugins/convert-parapgraphs-to-numbered-list.dark.png#gh-dark-mode-only)

@@ -57,5 +57,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![ListToContentControl](/assets/images/plugins/list-to-content-control.png#gh-light-mode-only)
-![ListToContentControl](/assets/images/plugins/list-to-content-control.dark.png#gh-dark-mode-only)
+![ListToContentControl](/assets/images/plugins/convert-list-to-content-control.png#gh-light-mode-only)
+![ListToContentControl](/assets/images/plugins/convert-list-to-content-control.dark.png#gh-dark-mode-only)
