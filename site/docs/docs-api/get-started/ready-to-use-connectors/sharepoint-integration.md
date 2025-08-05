@@ -61,7 +61,7 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 ## Configuring SharePoint ONLYOFFICE integration solution
 
-In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with administrative settings. Enter the following address to connect ONLYOFFICE Document Server:
+In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with administrative settings. Enter the following address to connect ONLYOFFICE Docs:
 
 ``` sh
 https://<documentserver>/

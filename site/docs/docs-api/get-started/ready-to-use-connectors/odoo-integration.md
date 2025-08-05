@@ -10,7 +10,7 @@ This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit 
 ## Features
 
 - Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PDF.
-- The following formats are available for viewing only: DJVU, DOC, DOCM, DOCXF, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OFORM, OTT, OXPS, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The app will create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Odoo.
 
 ## Installing ONLYOFFICE Docs
@@ -53,7 +53,9 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
 5. Switch your Odoo to the developer mode and click **Apps -> Update Apps List** or just restart your Odoo instance.
 
-6. **Please note (refers to the ONLYOFFICE Templates app)**: ONLYOFFICE demo templates will only be added to the Odoo modules that are already installed. That's why we strongly recommend installing ONLYOFFICE Templates after installing other Odoo modules such as CRM, Sales, Calendar, etc.
+:::note
+**Please note (refers to the ONLYOFFICE Templates app)**: ONLYOFFICE demo templates will only be added to the Odoo modules that are already installed. That's why we strongly recommend installing ONLYOFFICE Templates after installing other Odoo modules such as CRM, Sales, Calendar, etc.
+:::
 
 ## Configuring ONLYOFFICE app for Odoo
 

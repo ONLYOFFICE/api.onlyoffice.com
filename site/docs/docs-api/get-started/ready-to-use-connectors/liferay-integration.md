@@ -10,7 +10,7 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to
 ## Features
 
 - Currently, the following document formats can be opened and edited with this plugin: DOCM, DOCX, DOTM, DOTX, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
-- The following formats are available for viewing only: DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTM, HTML, MHT, MHTML, ODT, OTT, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, ODS, OTS, SXC, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, DPS, DPT, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX, SXI, DJVU, DOCXF, OFORM, OXPS, PDF, XPS.
+- The following formats are available for viewing only: DOC, DOT, EPUB, FB2, FODT, HTM, HTML, MHT, MHTML, ODT, OTT, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, ODS, OTS, SXC, XLS, XLSB, XLT, DPS, DPT, FODP, ODP, OTP, POT, PPS, PPT, SXI, DJVU, OXPS, XPS.
 - The plugin will create a new **ONLYOFFICE Edit/View** menu option within the **Documents and Media** section for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Liferay.
 
 ## Installing ONLYOFFICE Docs
