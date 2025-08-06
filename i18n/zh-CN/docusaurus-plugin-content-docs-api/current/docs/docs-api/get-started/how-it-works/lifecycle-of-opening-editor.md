@@ -9,7 +9,7 @@ sidebar_position: -1
 添加用于初始化文档编辑器的脚本，并配置你要打开的文档：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     fileType: "docx",
     key: "Khirz6zTPdfd7",
@@ -18,7 +18,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
   },
   documentType: "word",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 在其中指定以下事件：
@@ -28,13 +30,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    ``` ts
    function onAppReady() {
      console.log("ONLYOFFICE Document Editor is ready")
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onAppReady,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    之后，可以调用[showMessage](../../usage-api/methods.md#showmessage)方法，该方法会显示一个带有消息的工具提示：
@@ -58,13 +62,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    ``` ts
    function onError(event) {
      console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onError,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    例如，可能是转换错误或加载某个编辑器组件时出错。此时将无法继续进行后续操作。
@@ -74,13 +80,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    ``` ts
    function onOutdatedVersion() {
      location.reload(true)
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onOutdatedVersion,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    会出现一个[error](../../more-information/troubleshooting.md#the-file-version-has-been-changed)，并且无法继续进行后续操作。如果不处理此事件，文件将仅以只读模式打开。必须使用新的密钥重新初始化编辑器。
@@ -104,12 +112,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
        },
        token: "...",
      })
-   }
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   };
+
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    在这种情况下，会调用[refreshFile](../../usage-api/methods.md#refreshfile)方法，并使用新的密钥值更新文件版本，而无需重新加载编辑器。
@@ -119,12 +130,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    ``` ts
    function onUserActionRequired() {
      console.log("Enter a password")
-   }
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   };
+
+   const config = {
      events: {
        onUserActionRequired,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    当用户需要输入密码才能打开受保护的文档，或者需要为`txt`或`csv`文件选择编码或分隔符时，就会发生这种情况。
@@ -134,13 +148,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    ``` ts
    function onDocumentReady() {
      console.log("Document is loaded")
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onDocumentReady,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    之后，可以向[Automation API](../../usage-api/automation-api.md)发送请求。
@@ -161,13 +177,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
        return
      }
      docEditor.destroyEditor()
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestClose,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    在调用[requestClose](../../usage-api/methods.md#requestclose)方法之后，也可能会执行`onRequestClose`事件。建议在调用[destroyEditor](../../usage-api/methods.md#destroyeditor)方法之前调用此方法，以检查编辑器中是否有未保存的数据。如果存在未保存的数据，将显示一个对话框，询问用户是要继续编辑还是关闭编辑器并丢失所有未保存的数据。如果选择`关闭`选项，则会调用`onRequestClose`事件：

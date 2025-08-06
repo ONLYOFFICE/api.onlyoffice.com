@@ -404,8 +404,6 @@ refreshFile({
 
 选择用于比较、合并或插入文本的文档。该方法可以在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件之后调用。
 
-> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
-
   ``` ts
   docEditor.setRequestedDocument({
     c: "compare",

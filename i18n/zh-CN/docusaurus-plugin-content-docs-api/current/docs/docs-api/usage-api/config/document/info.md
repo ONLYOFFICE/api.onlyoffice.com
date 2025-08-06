@@ -26,7 +26,7 @@
 
 **示例**: `"2010-07-07 3:46 PM"`
 
-## 收藏
+## 收藏 {#favorite}
 
 `类型: boolean`
 
@@ -44,7 +44,7 @@
 
 示例: `"Example Files"`
 
-## 所有者
+## 所有者 {#owner}
 
 `类型: string`
 
@@ -95,7 +95,7 @@
 
 ![共享设置](/assets/images/editor/sharing_settings.png) 
 
-## 已上传
+## 已上传 {#uploaded}
 
 `类型: string`
 
@@ -108,7 +108,7 @@
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     info: {
       favorite: false,
@@ -124,5 +124,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     }
     ,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

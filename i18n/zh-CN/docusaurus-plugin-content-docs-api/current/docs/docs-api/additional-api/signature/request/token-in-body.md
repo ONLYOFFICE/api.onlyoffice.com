@@ -11,9 +11,9 @@
 
 JSON Web 令牌的 `payload` 包含请求正文参数。
 
-## 传入请求
+## 传入请求 {#incoming-request}
 
-### 请求接收已编辑文档的状态
+### 请求接收已编辑文档的状态 {#request-to-receive-the-status-of-the-edited-document}
 
 使用从**文档存储服务**到[文档命令服务](../../command-service/command-service.md)的命令对传入请求执行验证。
 
@@ -42,7 +42,7 @@ Content-Type: application/json
 
 如您所见，不需要将上述参数包含在请求正文中，因为它们都已编码到令牌中并在其中发送。
 
-### 请求转换文档
+### 请求转换文档 {#request-to-convert-the-document}
 
 使用从**文档存储服务**到[文档转换服务](../../conversion-api/request.md)的命令对传入请求执行验证。
 
@@ -74,7 +74,7 @@ Content-Type: application/json
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节。
 
-### 请求文档生成器服务
+### 请求文档生成器服务 {#request-to-document-builder-service}
 
 使用从**文档存储服务**到[文档生成器服务](../../../get-started/how-it-works/how-it-works.md)的命令对传入请求执行验证。
 
@@ -103,7 +103,7 @@ Content-Type: application/json
 
 此处的 **example.com** 表示安装**文档存储服务**的服务器名称。要深入了解ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节。
 
-## 传出请求
+## 传出请求 {#outgoing-requests}
 
 ### 当最后一个用户关闭编辑的没有更改的文档时，文档编辑服务对"callbackUrl"地址发送的请求示例参数
 

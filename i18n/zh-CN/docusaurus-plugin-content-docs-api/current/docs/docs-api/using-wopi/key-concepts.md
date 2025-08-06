@@ -6,7 +6,7 @@ sidebar_position: -9
 
 理解以下概念对实现 WOPI 客户端集成至关重要，更多详细信息可参考[微软官方文档](https://learn.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/rest/concepts)。
 
-## 文件标识符
+## 文件标识符 {#file-id}
 
 文件标识符是用于表示 WOPI 操作对象的唯一字符串（文件或文件夹）。主机必须为 WOPI 客户端使用的任何文件发出唯一 ID。客户端在向 WOPI 主机发出请求时将包含文件标识符。因此，主机必须能够使用文件标识符来定位特定文件。
 
@@ -19,7 +19,7 @@ sidebar_position: -9
 - 上级目录重命名后标识不变；
 - 共享文件的标识对所有访问用户保持一致。
 
-## 访问令牌
+## 访问令牌 {#access-token}
 
 访问令牌是用于验证 WOPI 请求方身份和权限的安全凭证。
 
@@ -29,13 +29,13 @@ WOPI 主机存储文件的同时掌握用户权限的信息，因此需向客户
 
 WOPI 访问令牌必须遵循[此处](https://learn.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/rest/concepts#access-token)所述规范。
 
-## 令牌有效期（access_token_ttl）
+## 令牌有效期（access_token_ttl） {#the-access_token_ttl-property}
 
 `access_token_ttl`属性表示 WOPI 客户端访问令牌的过期时间，即自1970年1月1日UTC（JavaScript 纪元时间戳）起算的过期时间（以毫秒为单位）。尽管名称可能产生误解，但它并不代表令牌的有效时长，而是总是与特定的访问令牌相关联，不会单独使用。
 
 我们建议设置`access_token_ttl`值为10小时，以确保访问令牌的有效期为10小时。此外，主机也可将`access_token_ttl`设为`0`，表示令牌的过期时间无限或未知。然而，这样做可能导致客户端禁用提示用户刷新会话的 UI，进而可能因令牌过期而造成意外数据丢失。因此，我们强烈建议为`access_token_ttl`指定一个具体的值。
 
-## 锁
+## 锁 {#lock}
 
 锁是与文件操作相关的一个重要概念，在 WOPI 中有两大作用：
 
@@ -54,7 +54,7 @@ WOPI 访问令牌必须遵循[此处](https://learn.microsoft.com/zh-cn/microsof
 
 WOPI 要求主机对 WOPI 请求中的锁 ID 与文件当前锁 ID 进行比对，一旦发现不匹配，主机需在`X-WOPI-Lock`响应标头中返回当前锁 ID。这一步骤至关重要，因为它帮助 WOPI 客户端决定后续应采取哪些 WOPI 调用。
 
-## WOPI源地址（WOPISrc）
+## WOPI源地址（WOPISrc）{#wopisrc}
 
 WOPI源地址（WOPISrc）是执行 WOPI 操作的文件专属 URL，由主机的文件端点 URL 与特定[文件 ID](#file-id)组合而成，但不包含[访问令牌](#access-token)。
 

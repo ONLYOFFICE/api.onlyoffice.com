@@ -13,7 +13,7 @@ sidebar_label: Standard branding
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)。
 :::
 
-## 匿名
+## 匿名 {#anonymous}
 
 `类型: object`
 
@@ -46,7 +46,7 @@ const anonymous = {
 
 ![匿名](/assets/images/editor/anonymous.png)
 
-## 自动保存
+## 自动保存 {#autosave}
 
 `类型: boolean`
 
@@ -58,7 +58,7 @@ const anonymous = {
 
 **示例**: `true`
 
-## 聊天
+## 聊天 {#chat}
 
 `类型: boolean`
 
@@ -72,7 +72,7 @@ const anonymous = {
 
 ![聊天](/assets/images/editor/chat.png)
 
-## 关闭
+## 关闭 {#close}
 
  `类型: object`
  
@@ -165,7 +165,7 @@ const close = {
 
 **示例**: `false`
 
-## 客户
+## 客户 {#customer}
 
 `类型: object`
 
@@ -256,7 +256,7 @@ const customer = {
 
 ![客户](/assets/images/editor/customer.png)
 
-## 功能
+## 功能 {#features}
 
 `类型: object`
 
@@ -484,7 +484,7 @@ const goback = {
 
 **示例**: `https://example.com`
 
-## 帮助
+## 帮助 {#help}
 
 `类型: boolean`
 
@@ -926,6 +926,10 @@ const review = {
 当 [compactHeader](#compactheader) 和 [toolbarNoTabs](#toolbarnotabs) 参数设置为 **true**时使用此设置。
 :::
 
+:::请注意
+从 9.0.3 版本开始，该参数适用于移动端编辑器。
+:::
+
 **示例**: `false`
 
 ![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png)
@@ -973,7 +977,7 @@ const review = {
 
 **示例**: `"theme-dark"`
 
-## 单元
+## 单元 {#unit}
 
 `类型: string`
 
