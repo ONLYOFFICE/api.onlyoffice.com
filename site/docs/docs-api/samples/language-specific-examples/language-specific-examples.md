@@ -1,6 +1,7 @@
 ---
 sidebar_position: -4
 ---
+import FilterCards from '@site/src/components/Filter/FilterCards';
 
 # Docs API integration samples
 
@@ -58,3 +59,5 @@ To start integrating document editors into your own website you need to do the f
    - **Ruby** - *web/documentserver-example/ruby/config/application.rb*
 
 4. In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+
+<FilterCards />
