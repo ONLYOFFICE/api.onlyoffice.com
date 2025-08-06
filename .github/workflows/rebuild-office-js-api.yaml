@@ -72,10 +72,13 @@ jobs:
         run: |
           cd build_tools/scripts/sdkjs_common/jsdoc
           npm install
-          python office-api/generate_docs_md.py
-          python plugins/generate_docs_methods_md.py
-          python plugins/generate_docs_events_md.py
-          cd ../../../../api.onlyoffice.com
+          cd office-api
+          python generate_docs_md.py
+
+          cd ../plugins
+          python generate_docs_methods_md.py
+          python generate_docs_events_md.py
+          cd ../../../../../api.onlyoffice.com
 
           if ! git diff --exit-code; then
               git add .
