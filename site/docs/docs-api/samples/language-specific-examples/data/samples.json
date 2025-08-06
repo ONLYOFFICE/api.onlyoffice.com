@@ -2,7 +2,7 @@
   {
     "title": "Changing the default font",
     "description": "Customize default fonts for new documents by modifying document templates.",
-    "link": "/samples/docs/docs-api/language-specific-examples/changing-default-font",
+    "link": "/docs/docs-api/samples/language-specific-examples/changing-default-fonts",
     "programmingLanguages": ["All"],
     "editorTypes": ["Text document"],
     "functionalities": ["Text editing"],
@@ -14,7 +14,7 @@
   {
     "title": ".NET Example",
     "description": "Integration example using .NET (C# or C# MVC) backend with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/net-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/net-example",
     "programmingLanguages": ["C# (.Net)"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation", "PDF"],
     "functionalities": ["Creating documents", "Text editing", "Editing document structure"],
@@ -26,7 +26,7 @@
   {
     "title": "Java Example",
     "description": "Basic integration example using Java with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/java-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/java-example",
     "programmingLanguages": ["Java"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
     "functionalities": ["Creating documents", "Text editing", "Working with spreadsheets"],
@@ -38,7 +38,7 @@
   {
     "title": "Java Integration SDK",
     "description": "Java SDK integration example with managers and services for Docs API.",
-    "link": "/samples/docs/docs-api/language-specific-examples/java-integration-sdk",
+    "link": "/docs/docs-api/samples/language-specific-examples/java-integration-sdk",
     "programmingLanguages": ["Java"],
     "editorTypes": ["All"],
     "functionalities": ["Connecting external services", "Automation"],
@@ -50,7 +50,7 @@
   {
     "title": "Java Spring Example",
     "description": "Integration example using Java Spring Boot with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/java-spring-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/java-spring-example",
     "programmingLanguages": ["Java Spring"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
     "functionalities": ["Creating documents", "Text editing"],
@@ -62,7 +62,7 @@
   {
     "title": "Node.js Example",
     "description": "Node.js backend integration example for ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/nodejs-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/nodejs-example",
     "programmingLanguages": ["Node.js"],
     "editorTypes": ["Text document", "Spreadsheet"],
     "functionalities": ["Creating documents", "DocSpace authorization", "Working with files"],
@@ -74,7 +74,7 @@
   {
     "title": "PHP Example",
     "description": "Integration sample using PHP backend with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/php-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/php-example",
     "programmingLanguages": ["PHP"],
     "editorTypes": ["Text document"],
     "functionalities": ["Creating documents", "Working with tables"],
@@ -86,7 +86,7 @@
   {
     "title": "PHP Laravel Example",
     "description": "Integration example using PHP Laravel framework with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/php-laravel-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/php-laravel-example",
     "programmingLanguages": ["PHP (Laravel)"],
     "editorTypes": ["Text document"],
     "functionalities": ["Creating documents", "Form filling", "Automation", "External services"],
@@ -98,7 +98,7 @@
   {
     "title": "Python Example",
     "description": "Integration example using Python backend with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/python-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/python-example",
     "programmingLanguages": ["Python"],
     "editorTypes": ["Text document", "Spreadsheet"],
     "functionalities": ["Creating documents", "Text editing"],
@@ -110,7 +110,7 @@
   {
     "title": "Ruby Example",
     "description": "Integration example using Ruby backend with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/ruby-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/ruby-example",
     "programmingLanguages": ["Ruby"],
     "editorTypes": ["Text document", "Spreadsheet"],
     "functionalities": ["Working with files", "External source editing"],
@@ -122,7 +122,7 @@
   {
     "title": "Go Example",
     "description": "Integration example using Go backend with ONLYOFFICE Docs.",
-    "link": "/samples/docs/docs-api/language-specific-examples/go-example",
+    "link": "/docs/docs-api/samples/language-specific-examples/go-example",
     "programmingLanguages": ["Go"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
     "functionalities": ["Creating documents", "Text editing", "Automation"],
