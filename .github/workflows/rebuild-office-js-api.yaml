@@ -44,7 +44,7 @@ jobs:
           repository: ONLYOFFICE/build_tools
           token: ${{ secrets.READ_PAT }}
 #         ref: ${{ env.BRANCH }}
-          ref: release/v9.0.0
+          ref: master
           path: build_tools
     
       - name: Checkout sdkjs repository
