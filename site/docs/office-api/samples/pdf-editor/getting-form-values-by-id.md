@@ -11,12 +11,11 @@ let doc = Api.GetDocument();
 
 // Create a registration form with various field types
 function createRegistrationForm() {
-  let paragraph = Api.CreateParagraph();
+  let paragraph = doc.GetElement(0);
   paragraph.AddText("User Registration Form");
-  paragraph.SetFontSize(24 * 2);
+  paragraph.SetFontSize(18 * 2);
   paragraph.SetBold(true);
   paragraph.SetJc("center");
-  doc.Push(paragraph);
 
   // Email field (required)
   paragraph = Api.CreateParagraph();
