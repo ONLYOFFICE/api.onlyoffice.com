@@ -13,6 +13,6 @@
 ![不可视插件](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![不可视插件](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 ![语音转换设置](/assets/images/plugins/speech-settings.png#gh-light-mode-only)![语音转换设置](/assets/images/plugins/speech-settings.dark.png#gh-dark-mode-only)
 
-要创建插件变体，需要在 [config.json](./manifest.md#variations) 文件中指定其参数，并为每个变体构建相应的 [index.html](../entry-point.md) 文件。
+要创建插件变体，需要在 [config.json](./configuration.md#variations) 文件中指定其参数，并为每个变体构建相应的 [index.html](../entry-point.md) 文件。
 
 > 注意： **所有**变体的 .html 文件必须与插件的 config.json 配置文件一起放置在插件根目录中，插件才能正确运行。

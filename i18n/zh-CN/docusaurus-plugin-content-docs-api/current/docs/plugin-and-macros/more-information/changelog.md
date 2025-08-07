@@ -25,7 +25,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 
 - 添加了通过**宏插件**向电子表格中[添加自定义函数](../macros/adding-custom-functions.md)的功能。
 - 添加了为插件[添加工具栏菜单项](../customization/toolbar.md)的功能。
-- 添加了创建[多个左侧面板](../structure/manifest/variations.md)的功能。
+- 添加了创建[多个左侧面板](../structure/configuration/variations.md)的功能。
 - 添加了关于插件触发上下文菜单事件时的位置的信息。
 - 添加了**工具栏菜单点击**事件。
 - 向 *window.Asc.plugin.executeMethod* 添加了[激活窗口](../customization/windows-and-panels.md#activating-a-window)方法。

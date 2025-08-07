@@ -36,7 +36,7 @@ window.Asc.plugin.init = function init() {
 window.Asc.plugin.button = function button(id) {}
 ```
 
-当插件对象初始化时（window.Asc.plugin.init = function () \{...\}），编辑器会创建一个包含 Hello World 文字的段落，并使用 [Office JavaScript API](../../../office-api/get-started/overview.md) 创建包含该文本的文档（通过 window.Asc.plugin.callCommand 方法，即 this.callCommand(function() {...}) 实现）。
+当插件对象初始化时（window.Asc.plugin.init = function () \{...\}），编辑器会创建一个包含 Hello World 文字的段落，并使用 [Office JavaScript API](../../../office-api/get-started/overview.md) 创建包含该文本的文档（通过 window.Asc.plugin.callCommand 方法，即 this.callCommand(function() \{...\}) 实现）。
 
 > 请注意，所有 [Office JavaScript API](../../../office-api/get-started/overview.md) 功能都已包含在所有版本的 ONLYOFFICE 文档编辑器中（包括开源版），插件正是通过这些功能与编辑器交互的。如果您希望在没有文档编辑器的情况下创建文档，可安装独立的 **ONLYOFFICE 文档建构器**版本。
 

@@ -4,7 +4,7 @@ sidebar_position: -2
 
 # 类型
 
-插件类型通过 config.json 文件中的 [类型](./manifest.md#variationstype) 参数指定。可区分为以下几种插件类型。
+插件类型通过 config.json 文件中的 [类型](./configuration.md#variationstype) 参数指定。可区分为以下几种插件类型。
 
 ## 系统插件
 

@@ -24,7 +24,7 @@ ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sd
 
 ## 如何为插件创建“关于”窗口？
 
-你可以使用[插件变体](../structure/manifest/variations.md)或**子插件**来创建插件的**关于**窗口或添加额外的插件设置。如要查看包含两个变体的插件示例，请点击[此处](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld)。除了在配置中设置两个变体，还需要额外创建一个 *index_about.html* 文件。
+你可以使用[插件变体](../structure/configuration/variations.md)或**子插件**来创建插件的**关于**窗口或添加额外的插件设置。如要查看包含两个变体的插件示例，请点击[此处](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld)。除了在配置中设置两个变体，还需要额外创建一个 *index_about.html* 文件。
 
 ## 在哪里可以找到可供集成的现有插件？
 

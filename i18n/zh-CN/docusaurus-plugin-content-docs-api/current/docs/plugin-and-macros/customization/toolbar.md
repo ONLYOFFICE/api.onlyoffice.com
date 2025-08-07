@@ -57,7 +57,7 @@ sidebar_position: -4
     | 名称   | 类型                                      | 描述                                                     |
     | ------ | ----------------------------------------- | --------------------------------------------------------------- |
     | *guid* | string                                    | 插件的 guid（全局唯一标识符）                                                |
-    | *tabs* | Array.<[ToolbarMenuTab](#toolbarmenutab)> | 包含当前菜单项工具栏标签页的数组 |
+    | *tabs* | Array.\<[ToolbarMenuTab](#toolbarmenutab)\> | 包含当前菜单项工具栏标签页的数组 |
 
     示例:
 
@@ -80,7 +80,7 @@ sidebar_position: -4
     | ------- | ------------------------------------------- | ------------------------------------------------------ |
     | *id*    | string                                      | 标签页 ID。标准工具栏标签页 ID 列表见[下方](#standard-toolbar-tab-ids)。 |
     | *text*  | string                                      | 标签页文本。                                                 |
-    | *items* | Array.<[ToolbarMenuItem](#toolbarmenuitem)> | 包含当前标签页工具栏菜单项的数组。                                      |
+    | *items* | Array.\<[ToolbarMenuItem](#toolbarmenuitem)\> | 包含当前标签页工具栏菜单项的数组。                                      |
 
    示例:
 

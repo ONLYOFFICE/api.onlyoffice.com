@@ -140,7 +140,7 @@ import TabItem from '@theme/TabItem';
 
 3. 如有需要，可以[本地化](../structure/localization.md)插件。
 
-4. 为你的插件创建一个详细的**关于**窗口。在其中添加插件的简要描述、版本、开发公司名称以及网站链接。请按照[此处](../structure/manifest/variations.md)的说明，在*config.json*文件中创建一个**关于**配置项。
+4. 为你的插件创建一个详细的**关于**窗口。在其中添加插件的简要描述、版本、开发公司名称以及网站链接。请按照[此处](../structure/configuration/variations.md)的说明，在*config.json*文件中创建一个**关于**配置项。
 
    ![“关于”窗口](/assets/images/plugins/about-variation.png)
 
