@@ -3,7 +3,7 @@
 Creates a spreadsheet with interactive filters in the header row that allows users to sort and filter data conveniently:
 
 - create a table with headers and employee data ([ApiRange/SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md));
-- apply autofilter to the header row ([ApiWorksheet/SetAutoFilter](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetAutoFilter.md));
+- apply autofilter to the header row ([ApiRange/SetAutoFilter](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetAutoFilter.md));
 - format the header row with bold styling ([ApiRange/SetBold](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md));
 - adjust column widths for better readability ([ApiRange/SetColumnWidth](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetColumnWidth.md));
 - add borders to the table for better visual separation ([ApiRange/SetBorders](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBorders.md)).
