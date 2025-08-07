@@ -33,7 +33,7 @@ sidebar_position: -3
 
 即使处于离线状态，也可以手动添加您自己的插件：
 
-1. 将所有[插件文件](../../structure/manifest/manifest.md)打包为一个 **zip** 压缩包，并将其扩展名改为 .plugin（所有插件文件和子文件夹必须位于压缩包的根目录）。
+1. 将所有[插件文件](../../structure/configuration/configuration.md)打包为一个 **zip** 压缩包，并将其扩展名改为 .plugin（所有插件文件和子文件夹必须位于压缩包的根目录）。
 
    > 如果您是从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins) 下载的插件，请先解压插件文件夹，然后仅对其中的元素进行压缩。
 

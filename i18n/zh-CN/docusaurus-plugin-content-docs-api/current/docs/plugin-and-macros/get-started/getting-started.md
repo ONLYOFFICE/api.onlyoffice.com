@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## 构建插件
 
-1. 创建一个插件文件夹。请参考[此处](../structure/manifest/manifest.md)。 插件文件夹必须包含三个插件运行所必需的文件: [config.json](../structure/manifest/manifest.md)，[index.html](../structure/entry-point.md)，[pluginCode.js](../interacting-with-editors/overview/overview.md):
+1. 创建一个插件文件夹。请参考[此处](../structure/configuration/configuration.md)。 插件文件夹必须包含三个插件运行所必需的文件: [config.json](../structure/configuration/configuration.md)，[index.html](../structure/entry-point.md)，[pluginCode.js](../interacting-with-editors/overview/overview.md):
 
    ![结构](/assets/images/plugins/plugins-structure.png)
 

@@ -50,4 +50,4 @@ Microsoft Office 宏使用的是 VBA 脚本语言，而 ONLYOFFICE 编辑器使�
 
 ## 我可以将宏设为全局宏吗？
 
-宏是绑定到特定文档的，不能设置为全局宏。但你可以编写一个可以被所有用户加载的[插件](../structure/manifest/manifest.md)。
+宏是绑定到特定文档的，不能设置为全局宏。但你可以编写一个可以被所有用户加载的[插件](../structure/configuration/configuration.md)。

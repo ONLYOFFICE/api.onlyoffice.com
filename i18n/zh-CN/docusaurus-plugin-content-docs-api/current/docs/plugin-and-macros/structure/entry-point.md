@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # 入口文件
 
-每个插件都在其自己的 iframe 中运行。编辑器会连接在插件配置文件 [config.json](./manifest/manifest.md) 中指定的 index.html 文件。index.html 文件是插件的入口文件，它会连接 [plugin.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) 文件。 这是在编辑器中使用插件所需的基础文件。
+每个插件都在其自己的 iframe 中运行。编辑器会连接在插件配置文件 [config.json](./configuration/configuration.md) 中指定的 index.html 文件。index.html 文件是插件的入口文件，它会连接 [plugin.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) 文件。 这是在编辑器中使用插件所需的基础文件。
 
 ## 示例
 

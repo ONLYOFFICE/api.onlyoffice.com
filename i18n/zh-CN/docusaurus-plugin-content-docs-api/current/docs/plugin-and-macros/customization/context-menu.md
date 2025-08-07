@@ -94,7 +94,7 @@ sidebar_position: -5
     | *text*     | string                     | 项目标题。                                                                             |
     | *data*     | string                     | 项目数据（该数据将发送到点击事件回调）。                                               |
     | *disabled* | boolean                    | 指定当前项目是否被禁用。                                                               |
-    | *icons*    | string                     | 项目图标（参见插件[config](../structure/manifest/manifest.md)文档）。                   |
+    | *icons*    | string                     | 项目图标（参见插件[config](../structure/configuration/configuration.md)文档）。                   |
     | *items*    | Array.\<ContextMenuItem\>  | 包含当前项目的右键菜单项数组。                                                         |
 
     示例:

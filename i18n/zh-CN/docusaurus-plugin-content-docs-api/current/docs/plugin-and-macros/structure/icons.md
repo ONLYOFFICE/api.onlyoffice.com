@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # 图标
 
-插件图标图像文件在 [config.json](./manifest/manifest.md#variationsicons) 文件中通过 URL 指定。该 URL 允许你按照以下格式设置主题（名称、类型）、状态（normal、hover、active）和缩放规则：
+插件图标图像文件在 [config.json](./configuration/configuration.md#variationsicons) 文件中通过 URL 指定。该 URL 允许你按照以下格式设置主题（名称、类型）、状态（normal、hover、active）和缩放规则：
 
 ``` ini
 %parameter_name%(option1|options2|...)
@@ -66,7 +66,7 @@ sidebar_position: -3
 
 > 请注意，所有参数均为可选。你也可以仅使用图标路径，例如："resources/icon.svg"。
 
-该字符串会生成旧图标格式的对象（即 [icon2](./manifest/manifest.md#variationsicons2) 参数）：
+该字符串会生成旧图标格式的对象（即 [icon2](./configuration/configuration.md#variationsicons2) 参数）：
 
 ``` ts
 [

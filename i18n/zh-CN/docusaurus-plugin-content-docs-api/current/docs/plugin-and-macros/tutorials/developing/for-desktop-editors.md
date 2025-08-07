@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 若要为 ONLYOFFICE 桌面编辑器开发插件，请按照以下说明操作。
 
-1. 在您的计算机上创建一个文件夹，并将 [index.html](../../structure/entry-point.md) 和 [config.json](../../structure/manifest/manifest.md) 文件放入其中。
+1. 在您的计算机上创建一个文件夹，并将 [index.html](../../structure/entry-point.md) 和 [config.json](../../structure/configuration/configuration.md) 文件放入其中。
 
 2. 将插件文件夹中的所有插件文件打包为 **zip** 压缩包，并将扩展名更改为 .plugin（插件文件和子文件夹必须都位于压缩包的根目录）。
 

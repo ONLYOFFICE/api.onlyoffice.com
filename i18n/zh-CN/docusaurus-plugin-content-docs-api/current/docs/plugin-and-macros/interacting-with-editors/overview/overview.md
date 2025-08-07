@@ -10,7 +10,7 @@ sidebar_position: -2
 - [如何调用方法](how-to-call-methods.md)
 - [如何调用命令](how-to-call-commands.md)
 
-插件的主代码放在一个 .js 文件中，该文件描述了插件应执行的内容以及如何执行。此文件与 [config.json](../../structure/manifest/manifest.md) 和 [index.html](../../structure/entry-point.md) 文件一起放置于插件根目录中。
+插件的主代码放在一个 .js 文件中，该文件描述了插件应执行的内容以及如何执行。此文件与 [config.json](../../structure/configuration/configuration.md) 和 [index.html](../../structure/entry-point.md) 文件一起放置于插件根目录中。
 
 ## 工作原理
 
@@ -36,7 +36,7 @@ window.Asc.plugin.init = function init() {
 window.Asc.plugin.button = function button(id) {}
 ```
 
-当插件对象初始化时（window.Asc.plugin.init = function () {...}），编辑器会创建一个包含 Hello World 文字的段落，并使用 [Office JavaScript API](../../../office-api/get-started/overview.md) 创建包含该文本的文档（通过 window.Asc.plugin.callCommand 方法，即 this.callCommand(function() {...}) 实现）。
+当插件对象初始化时（window.Asc.plugin.init = function () \{...\}），编辑器会创建一个包含 Hello World 文字的段落，并使用 [Office JavaScript API](../../../office-api/get-started/overview.md) 创建包含该文本的文档（通过 window.Asc.plugin.callCommand 方法，即 this.callCommand(function() {...}) 实现）。
 
 > 请注意，所有 [Office JavaScript API](../../../office-api/get-started/overview.md) 功能都已包含在所有版本的 ONLYOFFICE 文档编辑器中（包括开源版），插件正是通过这些功能与编辑器交互的。如果您希望在没有文档编辑器的情况下创建文档，可安装独立的 **ONLYOFFICE 文档建构器**版本。
 

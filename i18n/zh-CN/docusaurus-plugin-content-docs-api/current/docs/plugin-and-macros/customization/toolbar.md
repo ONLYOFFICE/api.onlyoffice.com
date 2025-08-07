@@ -16,7 +16,7 @@ sidebar_position: -4
 
    | 名称    | 类型                                                | 描述                                      |
    | ------- | --------------------------------------------------- | ------------------------------------------------ |
-   | *items* | Array.<[ToolbarMenuMainItem](#toolbarmenumainitem)> | 包含主工具栏菜单项的数组 |
+   | *items* | Array.\<[ToolbarMenuMainItem](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组 |
 
    返回值：该方法不返回任何数据。
 
@@ -106,7 +106,7 @@ sidebar_position: -4
     | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 菜单项类型。                                                                                                                           |
     | *text*           | string                                      | 菜单项标题。如果此字段为""，工具栏按钮仅显示图标，不显示标题。                                                                         |
     | *hint*           | string                                      | 菜单项提示信息。                                                                                                                         |
-    | *icons*          | string / object                             | 菜单项图标（参见插件的[config](../structure/manifest/manifest.md#variationsicons)文档）。                                                |
+    | *icons*          | string / object                             | 菜单项图标（参见插件的[config](../structure/configuration/configuration.md#variationsicons)文档）。                                                |
     | *disabled*       | boolean                                     | 指定当前菜单项是否被锁定。                                                                                                              |
     | *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"*）或其上半部分（当 *"split == true"*）是否可切换。                                                 |
     | *lockInViewMode* | boolean                                     | 指定工具栏菜单项在视图模式下（如预览、查看表单、断开连接等）是否自动锁定。                                                               |

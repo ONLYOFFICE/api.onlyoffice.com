@@ -16,7 +16,7 @@ sidebar_position: -3
 
 要为插件创建模态窗口或面板：
 
-1. 在[插件代码](../interacting-with-editors/overview/overview.md)文件中，指定类似于插件配置中 [variations](../structure/manifest/manifest.md#variations) 的模态窗口 / 面板设置。
+1. 在[插件代码](../interacting-with-editors/overview/overview.md)文件中，指定类似于插件配置中 [variations](../structure/configuration/configuration.md#variations) 的模态窗口 / 面板设置。
 
    参数说明:
 
@@ -25,7 +25,7 @@ sidebar_position: -3
    | variations             | 模态面板          |                                                                                                                    | 设置                                                                                                                                                                                                                                        |
    | variations.url         | string          | "settings.html"                                                                                                    | 模态窗口 / 面板的入口文件，即连接 *plugin.js* 文件（用于插件运行的基础文件）并启动插件代码的 HTML 页面。详见 [index.html](../structure/entry-point.md)。 |
    | variations.description | string          | "Description"                                                                                                      | 模态窗口 / 面板的描述文本。                                                                                                                                                                                                                            |
-   | variations.type        | string          | "window"                                                                                                           | 插件的[type](../structure/manifest/manifest.md#variationstype)。使用 **"window"** 调取模态窗口，**"panel"** 调取左侧面板，**"panelRight"** 调取右侧面板。                                                                                     |
+   | variations.type        | string          | "window"                                                                                                           | 插件的[type](../structure/configuration/configuration.md#variationstype)。使用 **"window"** 调取模态窗口，**"panel"** 调取左侧面板，**"panelRight"** 调取右侧面板。                                                                                     |
    | variations.size        | Array.\<number> | [343, 122]                                                                                                         | 模态窗口的尺寸。该参数仅适用于模态窗口。                                                                                                                                                                                                     |
    | variations.buttons     | Array.\<Button> | [ \{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \} ] | 模态窗口中可皮肤化的插件按钮列表。该参数仅适用于模态窗                                                                                                                                                            |
    | variations.isActivated | boolean         | false                                                                                                              | 指定创建的面板是否默认为折叠（**false**）或展开（**true**）。默认值为 **true**。仅当 `variations.type` 为 *"panel"* 或 *"panelRight"*，并且插件版本为 8.3 及以上时该参数才有效。                        |

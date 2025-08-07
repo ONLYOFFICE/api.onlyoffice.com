@@ -10,7 +10,7 @@ ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌�
 
 本手册将介绍以下内容：
 
-- 如何[构建](../structure/manifest/manifest.md)，[本地化](../structure/localization.md)，运行，[测试](../tutorials/developing/for-web-editors.md)和[发布](../tutorials/publishing.md)插件
+- 如何[构建](../structure/configuration/configuration.md)，[本地化](../structure/localization.md)，运行，[测试](../tutorials/developing/for-web-editors.md)和[发布](../tutorials/publishing.md)插件
 - 如何自定义插件: 创建[右键菜单项](../customization/context-menu.md)，[工具栏按钮](../customization/toolbar.md)，[窗口与面板](../customization/windows-and-panels.md)，[输入助手](../customization/input-helper.md)，处理[按钮](../customization/buttons.md)
 - 如何[编写](../macros/writing-macros.md)，[调试](../macros/debugging.md)和运行宏，添加自定义函数，或者[转换](../macros/converting-vba-macros.md) VBA 宏以在 ONLYOFFICE 中使用
 - 如何[与编辑器交互](../interacting-with-editors/overview/overview.md)，使用 ONLYOFFICE 的[方法](../interacting-with-editors/overview/how-to-call-methods.md)和[事件](../interacting-with-editors/overview/how-to-attach-events.md)

@@ -8,7 +8,7 @@ sidebar_position: -1
 
 ## 方法 1. 使用绑定事件方法（适用于所有版本）
 
-1. 在 config.json 文件中，添加 [事件](../../structure/manifest/manifest.md#variationsevents)参数，并列出所有可用事件组成的数组：
+1. 在 config.json 文件中，添加 [事件](../../structure/configuration/configuration.md#variationsevents)参数，并列出所有可用事件组成的数组：
 
    ``` json
    {
