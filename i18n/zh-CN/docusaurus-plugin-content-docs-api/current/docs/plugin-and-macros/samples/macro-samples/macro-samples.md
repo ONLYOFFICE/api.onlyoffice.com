@@ -29,4 +29,4 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 如果您希望请求新功能或报告宏相关问题，请通过 [GitHub 问题页面](https://github.com/ONLYOFFICE/plugin-macros/issues)提交。
 
-您也可以通过 [marketing@onlyoffice.com](发送邮件至:marketing@onlyoffice.com) 向我们申请宏示例。
+您也可以通过 [marketing@onlyoffice.com](mailto:marketing@onlyoffice.com) 向我们申请宏示例。
