@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 # ONLYOFFICE 文档本地部署版
 
 ```mdx-code-block
-从 '@site/src/components/Youtube Video/Youtube Video' 导入 Youtube 视频；
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="R7gvhLvGL44"/>
 ```

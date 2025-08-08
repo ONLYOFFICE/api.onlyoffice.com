@@ -8,7 +8,7 @@
 
 **同类插件：** [Apertium](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/apertium)、[DeepL](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/deepl)
 
-!```mdx-code-block
+```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 <YoutubeVideo videoId="jCciDL48KHE" />
