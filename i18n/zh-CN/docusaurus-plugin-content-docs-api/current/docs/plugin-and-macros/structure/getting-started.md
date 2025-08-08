@@ -2,8 +2,8 @@
 sidebar_position: -6
 ---
 
-从 '@theme/Tabs' 导入 Tabs；
-从 '@theme/TabItem' 导入 TabItem；
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 # 入门指南

@@ -141,8 +141,8 @@ GitHub 仓库：[thesaurus](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("GetSelectedText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
-- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 
 ## 支持
 

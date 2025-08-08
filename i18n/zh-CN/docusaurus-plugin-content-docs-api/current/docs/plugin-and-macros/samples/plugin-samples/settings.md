@@ -53,7 +53,7 @@ GitHub 仓库：[设置](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 - button
 - init
-- [executeMethod ("SetProperties")](../../interacting-with-editors/methods/text-document-api/Api/Methods/SetProperties.md)
+- [executeMethod ("SetProperties")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetProperties.md)
 
 ## 支持
 

@@ -2,8 +2,8 @@
 sidebar_position: -3
 ---
 
-从 '@theme/Tabs' 导入 Tabs；
-从 '@theme/TabItem' 导入 TabItem；
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # ONLYOFFICE 桌面编辑器
 
@@ -80,7 +80,7 @@ sidebar_position: -3
 }
 ```
 
-因此，该插件的文件夹名称为 \{91EAC419-EF8B-440C-A960-B451C7DF3A37\}。
+因此，该插件的文件夹名称为 *\{91EAC419-EF8B-440C-A960-B451C7DF3A37\}*。
 
 **步骤 3.** 将所有插件文件放入此文件夹中：
 

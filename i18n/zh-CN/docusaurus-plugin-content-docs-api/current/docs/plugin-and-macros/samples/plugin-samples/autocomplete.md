@@ -90,15 +90,15 @@ GitHub 仓库： [自动完成](https://github.com/ONLYOFFICE/onlyoffice.github.
 - inputHelper_onSelectItem
 - onInputHelperClear
 - onInputHelperInput
-- [createInputHelper](../../customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/InputText.md)
-- [getInputHelper](../../customization/input-helper.md#getting-an-input-helper)
-- [InputHelper.createWindow](../../customization/input-helper.md#createwindow)
-- [InputHelper.getItems](../../customization/input-helper.md#getitems)
-- [InputHelper.getScrollSizes](../../customization/input-helper.md#getscrollsizes)
-- [InputHelper.setItems](../../customization/input-helper.md#setitems)
-- [InputHelper.show](../../customization/input-helper.md#show)
-- [InputHelper.unShow](../../customization/input-helper.md#unshow)
+- [createInputHelper](/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
+- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
+- [getInputHelper](/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
+- [InputHelper.createWindow](/docs/plugin-and-macros/customization/input-helper.md#createwindow)
+- [InputHelper.getItems](/docs/plugin-and-macros/customization/input-helper.md#getitems)
+- [InputHelper.getScrollSizes](/docs/plugin-and-macros/customization/input-helper.md#getscrollsizes)
+- [InputHelper.setItems](/docs/plugin-and-macros/customization/input-helper.md#setitems)
+- [InputHelper.show](/docs/plugin-and-macros/customization/input-helper.md#show)
+- [InputHelper.unShow](/docs/plugin-and-macros/customization/input-helper.md#unshow)
 
 ## 支持
 

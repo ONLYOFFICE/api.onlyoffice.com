@@ -104,9 +104,9 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - onExternalMouseUp
 - onMethodReturn
 - onTranslate
-- [executeMethod ("GetFontList")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetFontList.md)
-- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [executeMethod ("GetFontList")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetFontList.md)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
+- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## 支持
 

@@ -2,8 +2,8 @@
 sidebar_position: -1
 ---
 
-从 '@theme/DocCardList' 导入 DocCardList；
-从 '@docusaurus/theme-common' 导入 {useCurrentSidebarCategory}；
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # 宏示例
 

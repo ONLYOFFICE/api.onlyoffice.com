@@ -165,16 +165,16 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 - button
 - init
 - onExternalMouseUp
-- [executeMethod ("AddOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/EditOleObject.md)
-- [info.data](../../interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](../../interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.height](../../interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](../../interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
-- [info.mmToPx](../../interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
-- [info.objectId](../../interacting-with-editors/overview/how-to-call-commands.md#objectId)
-- [info.resize](../../interacting-with-editors/overview/how-to-call-commands.md#resize)
-- [info.width](../../interacting-with-editors/overview/how-to-call-commands.md#width)
+- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
+- [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.height](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)
+- [info.imgSrc](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
+- [info.mmToPx](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
+- [info.objectId](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#objectId)
+- [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
+- [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## 支持
 

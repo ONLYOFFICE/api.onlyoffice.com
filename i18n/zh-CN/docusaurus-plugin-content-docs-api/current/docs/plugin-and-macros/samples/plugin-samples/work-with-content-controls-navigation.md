@@ -117,7 +117,7 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 - executeMethod ("GetAllContentControls")
 - executeMethod ("GetCurrentContentControl")
 - executeMethod ("MoveCursorToContentControl")
-- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
 
 ## 支持
