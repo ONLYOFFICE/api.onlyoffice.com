@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Creating chart presentation",
+        "description": "Create a chart presentation.",
+        "link": "/docs/office-api/samples/presentation-editor/creating-chart-presentation"
+    },
+    {
+        "title": "Creating presentation",
+        "description": "Create a presentation on a specific topic.",
+        "link": "/docs/office-api/samples/presentation-editor/creating-presentation"
+    }
+]

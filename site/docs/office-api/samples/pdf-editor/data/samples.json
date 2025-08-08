@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Creating advanced form",
+        "description": "Create an advanced form with a table structure in a PDF editor.",
+        "link": "/docs/office-api/samples/pdf-editor/creating-advanced-form"
+    },
+    {
+        "title": "Creating basic form",
+        "description": "Create a basic form with image and text inputs.",
+        "link": "/docs/office-api/samples/pdf-editor/creating-basic-form"
+    },
+    {
+        "title": "Filling form",
+        "description": "Fill a PDF form using data stored in an object.",
+        "link": "/docs/office-api/samples/pdf-editor/filling-form"
+    }
+]
