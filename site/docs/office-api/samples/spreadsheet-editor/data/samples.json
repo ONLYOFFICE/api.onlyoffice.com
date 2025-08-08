@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Adding sequential numbers",
+        "description": "Add sequential numbering to the first column of a table for better navigation and row referencing.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/adding-sequential-numbers"
+    },
+    {
+        "title": "Commenting spreadsheet errors",
+        "description": "Script checks for formula errors like “#DIV/0!” in cells and adds comments to each error.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/commenting-spreadsheet-errors"
+    },
+    {
+        "title": "Creating formatted table",
+        "description": "Formats a table during creation: adds borders, fills headers, aligns text in cells.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/creating-formatted-table"
+    },
+    {
+        "title": "Creating spreadsheet chart",
+        "description": "Creates a custom chart filled with array-based values in a spreadsheet.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-chart"
+    },
+    {
+        "title": "Creating spreadsheet with different cell types",
+        "description": "Creates a spreadsheet with heterogeneous data types for working with tables containing text, dates, amounts, percentages, and ratings.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-with-cell-types"
+    },
+    {
+        "title": "Creating spreadsheet with filters",
+        "description": "Creates a spreadsheet with interactive filters in the header row that allows users to sort and filter data conveniently.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-with-filters"
+    },
+    {
+        "title": "Filling spreadsheet",
+        "description": "Fill an empty spreadsheet with data stored in arrays.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/filling-spreadsheet"
+    },
+    {
+        "title": "Inserting formulas",
+        "description": "Add formulas to cells for calculations like sum, average, and count.",
+        "link": "/docs/office-api/samples/spreadsheet-editor/inserting-formulas"
+    }
+]
