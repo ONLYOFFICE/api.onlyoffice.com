@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Creating an API plugin",
+        "description": "This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via the REST API.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/api-plugin"
+    },
+    {
+        "title": "Creating a context menu plugin",
+        "description": "This guide walks you through creating a basic plugin for DocSpace that adds an item to the file context menu and logs an action when clicked.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/context-menu-plugin"
+    },
+    {
+        "title": "Creating a file plugin",
+        "description": "This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/file-plugin"
+    },
+    {
+        "title": "Creating a main button plugin",
+        "description": "This guide walks you through creating a basic plugin for DocSpace that adds a button to the main toolbar and logs an action when clicked.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/main-button-plugin"
+    },
+    {
+        "title": "Creating a profile menu plugin",
+        "description": "This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/profile-menu-plugin"
+    },
+    {
+        "title": "Creating a settings plugin",
+        "description": "This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/settings-plugin"
+    }
+]
