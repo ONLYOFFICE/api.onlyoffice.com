@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Create basic task",
+        "description": "This example demonstrates how to create a task management table using the DocSpace JavaScript SDK.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/basic-task-create"
+    },
+    {
+        "title": "File manager with task attachments",
+        "description": "This example demonstrates how to integrate the DocSpace file selector into a task management interface.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/file-manager-task-attachments"
+    },
+    {
+        "title": "Collaborative project workflow",
+        "description": "This example shows how to build a freelance project workspace using DocSpace SDK.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/freelance-platform-docspace"
+    },
+    {
+        "title": "DocSpace chat commands",
+        "description": "This example shows how to integrate DocSpace SDK selectors into a chat interface.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/insert-rooms-and-files-into-chat"
+    },
+    {
+        "title": "Manage project folders",
+        "description": "This example shows how to create a simple project tracker that interacts with DocSpace.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/project-manager-folder-integration"
+    },
+    {
+        "title": "Structured room creation",
+        "description": "This example demonstrates how to use the DocSpace JavaScript SDK to create a structured workspace for each new client.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/room-creation-with-folder-structure"
+    },
+    {
+        "title": "Create files in rooms",
+        "description": "This example demonstrates how to create tasks linked to rooms in DocSpace, and then create files inside those rooms using the JavaScript SDK.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/task-file-create"
+    },
+    {
+        "title": "Room selector",
+        "description": "This example shows how to use the DocSpace Room Selector within a custom task creation dialog.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/task-room-selector"
+    },
+    {
+        "title": "Two-factor authentication",
+        "description": "This example demonstrates a two-step verification process using a phone number and 4-digit code before granting access to DocSpace via the SDK.",
+        "link": "/docspace/javascript-sdk/samples/advanced-samples/two-factor-authentication"
+    }
+]
