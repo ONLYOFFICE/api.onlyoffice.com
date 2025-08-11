@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Add state from zip code",
+        "description": "Adds the \"State\" label and the text form prefilled with \"CA\" if the zip code of California is entered.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/add-state-from-zip-code"
+    },
+    {
+        "title": "Autofill fields",
+        "description": "Automatically fills in all text fields in the document that have the same placeholder or tip text.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/autofill-fields"
+    },
+    {
+        "title": "Autofit text fields",
+        "description": "Autofits all the text fields in the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/autofit-text-fields"
+    },
+    {
+        "title": "Change validation rules",
+        "description": "Changes the validation rules of the number and email fields in the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/change-validation-rules"
+    },
+    {
+        "title": "Clear checkboxes",
+        "description": "Clears all checkboxes in the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/clear-checkboxes"
+    },
+    {
+        "title": "Count form fields",
+        "description": "Counts the number of form fields in a document and categorizes them by type.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/count-form-fields"
+    },
+    {
+        "title": "Insert calculations",
+        "description": "Performs automatic calculations on the specified fields within the form and inserts the result.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/insert-calculations"
+    },
+    {
+        "title": "Keyword match in form keys",
+        "description": "Highlights form fields based on a keyword match in the form key.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/keyword-match-in-form-keys"
+    },
+    {
+        "title": "Limit number of characters",
+        "description": "Restricts the number of characters allowed in text fields whose keys contain a specific keyword.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/limit-number-of-characters"
+    },
+    {
+        "title": "Mask card numbers",
+        "description": "Applies the mask to all forms with the specified form key to hide card numbers.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/mask-card-numbers"
+    },
+    {
+        "title": "Modify list values",
+        "description": "Deletes certain list values from all combo boxes that contain a specific key.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/mask-card-numbers"
+    },
+    {
+        "title": "Remove default values",
+        "description": "Automatically removes a specific default value from all text fields in the entire document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/remove-default-values"
+    },
+    {
+        "title": "Reset all forms",
+        "description": "Clears all fields if necessary, for example after printing the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/reset-all-forms"
+    },
+    {
+        "title": "Resize picture form",
+        "description": "Resizes PictureForms based on a predefined size or aspect ratio across the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/resize-picture-form"
+    },
+    {
+        "title": "Set checkbox tip text",
+        "description": "Sets the desired tip text to all checkboxes with a certain key.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/set-checkbox-tip-text"
+    },
+    {
+        "title": "Set form background color",
+        "description": "Changes the background color of all form fields on focus.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/set-form-background-color"
+    },
+    {
+        "title": "Set placeholder",
+        "description": "Sets a specific placeholder for all the combo boxes that have a certain key.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/set-placeholder"
+    },
+    {
+        "title": "Set USA date format",
+        "description": "Sets all date form formats to USA one.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/set-usa-date-format"
+    },
+    {
+        "title": "Update date field",
+        "description": "Sets the current date to all date form fields in the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/update-date-field"
+    },
+    {
+        "title": "Validate form fields",
+        "description": "Highlights empty or unrequired text fields in a document with desired colors.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/pdf-editor/validate-form-fields"
+    }
+]

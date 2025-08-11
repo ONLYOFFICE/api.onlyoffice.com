@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Acronym full forms",
+        "description": "Identifies all acronyms in the document and adds their full forms in comments.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/acronym-full-forms"
+    },
+    {
+        "title": "Automatic bookmark generation",
+        "description": "Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/automatic-bookmark-generation"
+    },
+    {
+        "title": "Calculate time to read",
+        "description": "Analyzes the text content of the entire document, counts the number of words, adjusts for the text complexity, and calculates how long it would take an average adult to read it.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/calculate-time-to-read"
+    },
+    {
+        "title": "Create content control list",
+        "description": "Creates a ContentControlList from all single-level numbered lists throughout the document, as well as from the manually selected text section.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/create-content-control-list"
+    },
+    {
+        "title": "Create custom header",
+        "description": "Creates a custom header with an image and a title.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/create-custom-header"
+    },
+    {
+        "title": "Custom header and footer generation",
+        "description": "Applies predefined headers and footers to all pages in the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/custom-header-footer-generation"
+    },
+    {
+        "title": "Delete bookmark",
+        "description": "Searches for bookmarks containing a specific word in their text and deletes them from the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/delete-bookmark"
+    },
+    {
+        "title": "Generate hyperlinks",
+        "description": "Generates and inserts hyperlinks instead of text URLs.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-hyperlinks"
+    },
+    {
+        "title": "Generate table of contents",
+        "description": "Generates a table of contents by scanning the document for headings.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-table-of-contents"
+    },
+    {
+        "title": "Generate word definitions",
+        "description": "Generates word definitions in your document using the [Dictionary API](https://api-ninjas.com/api/dictionary) offered by [API Ninjas](https://api-ninjas.com).",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-word-definitions"
+    },
+    {
+        "title": "Highlight predefined keywords",
+        "description": "Highlights predefined keywords in text document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/highlight-predefined-keywords"
+    },
+    {
+        "title": "Identify overused words",
+        "description": "Analyzes the frequency of words in a document and identifies overused words based on specified thresholds.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/identify-overused-words"
+    },
+    {
+        "title": "Insert text",
+        "description": "Inserts text into the document at the current cursor position.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-text"
+    },
+    {
+        "title": "Insert unique id",
+        "description": "Inserts a unique id into a form document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-unique-id"
+    },
+    {
+        "title": "Insert watermark",
+        "description": "Inserts or removes a custom watermark on every page of the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-watermark"
+    },
+    {
+        "title": "Paragraphs to table",
+        "description": "Converts a list of numbered paragraphs into a table.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/paragraphs-to-table"
+    },
+    {
+        "title": "Remove empty tables",
+        "description": "Removes all the empty tables from the document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/remove-empty-tables"
+    },
+    {
+        "title": "Remove extra spaces",
+        "description": "Removes extra spaces in text document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/remove-extra-spaces"
+    },
+    {
+        "title": "Replace words in document",
+        "description": "Searches for a word throughout the document and replaces it with the given replacement word.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/replace-words-in-document"
+    },
+    {
+        "title": "Reset text properties",
+        "description": "Resets the text properties of all the paragraphs in a document to the default settings.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/reset-text-properties"
+    },
+    {
+        "title": "Search for keyword in comments",
+        "description": "Marks comments containing a specific keyword as solved in a document.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/search-for-keyword-in-comments"
+    },
+    {
+        "title": "Sort tables",
+        "description": "Automatically sorts table rows alphabetically or numerically based on the selected column.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/sort-tables"
+    }
+]

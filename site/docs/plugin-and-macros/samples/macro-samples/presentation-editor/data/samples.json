@@ -1,0 +1,117 @@
+[
+    {
+        "title": "Adjust indentation",
+        "description": "Adjusts the first line indentation for all paragraphs in your presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/adjust-indentation"
+    },
+    {
+        "title": "Align charts",
+        "description": "Aligns charts and text boxes on every slide.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/align-charts"
+    },
+    {
+        "title": "Apply corporate branding",
+        "description": "Applies corporate branding styles to a presentation, including text color, font, and logo placement.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/apply-corporate-branding"
+    },
+    {
+        "title": "Apply font style",
+        "description": "Applies a consistent font style across all the slides.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/apply-font-style"
+    },
+    {
+        "title": "Autoplaceholder",
+        "description": "Automatically fills empty text boxes on slides with placeholder content and arranges texts in a structured format.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/auto-placeholder"
+    },
+    {
+        "title": "Bold bullet points",
+        "description": "Automatically bolds the first word of each bullet point that contains a colon ( : ) or a dash ( – ).",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/bold-bullet-points"
+    },
+    {
+        "title": "Change background color",
+        "description": "Sets blue color as the background of even indexed slides, if it is odd sets an image.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/change-background-color"
+    },
+    {
+        "title": "Change font family and size",
+        "description": "Changes the font family and/or size on all the slides in your presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/change-font-family-and-size"
+    },
+    {
+        "title": "Content alignment tool",
+        "description": "Consistently aligns text boxes and images throughout the entire presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/content-alignment-tool"
+    },
+    {
+        "title": "Count number of shapes",
+        "description": "Counts the total number of shapes in a presentation by iterating through all slides and displays the count on a newly created slide.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/count-number-of-shapes"
+    },
+    {
+        "title": "Create slides from list items",
+        "description": "Creates new slides based on the listed items in the current slide. Each list item becomes a slide title.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/create-slides-from-list-items"
+    },
+    {
+        "title": "Format bullet points",
+        "description": "Applies consistent formatting to bullet points.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/format-bullet-points"
+    },
+    {
+        "title": "Format slide titless",
+        "description": "Formats the title of each slide in a presentation. It sets the font, font size, justification, and vertical text alignment for the title.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/format-slide-titles"
+    },
+    {
+        "title": "Generate outline",
+        "description": "Automatically generates a presentation outline based on titles.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/generate-outline"
+    },
+    {
+        "title": "Hyperlinks to QR codes",
+        "description": "Converts all the hyperlinks in the presentation into QR codes using an external API.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/hyperlinks-to-qr-codes"
+    },
+    {
+        "title": "Remove duplicate slides",
+        "description": "Remove duplicate slides across the entire presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-duplicate-slides"
+    },
+    {
+        "title": "Remove empty paragraphs",
+        "description": "Deletes all unnecessary blank paragraphs across the entire presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-empty-paragraphs"
+    },
+    {
+        "title": "Remove empty text boxes",
+        "description": "Deletes all empty text box shapes throughout the entire presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-empty-text-boxes"
+    },
+    {
+        "title": "Remove extra spaces",
+        "description": "Removes extra spaces from all text in all slides of a presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-extra-spaces"
+    },
+    {
+        "title": "Remove shapes from slides",
+        "description": "Removes shapes from slides in a presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-shapes-from-slides"
+    },
+    {
+        "title": "Remove slides",
+        "description": "Removes slides from your presentation based on the slide title.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-slides"
+    },
+    {
+        "title": "Split slides",
+        "description": "Splits slides in a presentation that contain more than 100 words into multiple slides.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/split-slides"
+    },
+    {
+        "title": "Table to chart",
+        "description": "Generates a chart based on the selected table data.",
+        "link": "site/docs/plugin-and-macros/samples/macro-samples/presentation-editor/table-to-chart"
+    }
+]

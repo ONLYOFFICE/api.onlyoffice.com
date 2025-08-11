@@ -1,0 +1,182 @@
+[
+    {
+        "title": "Add chart",
+        "description": "Adds a new chart to the selected cell range.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/add-chart"
+    },
+    {
+        "title": "Add comments and change cell colors in spreadsheet",
+        "description": "Adds comments to the cells in the selection and can also change the background color of the cells.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/add-comments-and-change-cell-colors-in-spreadsheet"
+    },
+    {
+        "title": "Calculate World Bank indicator",
+        "description": "Creates an asynchronous custom function to calculate a World Bank indicator value for a specific year.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/calculate-world-bank-indicator"
+    },
+    {
+        "title": "Change cell background color",
+        "description": "Sets the background color of the cell B3 to blue.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/change-cell-background-color"
+    },
+    {
+        "title": "Change cell font color",
+        "description": "Sets the font color of the cell B4 to red.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/change-cell-font-color"
+    },
+    {
+        "title": "Change cell value",
+        "description": "Changes the selected cell value.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/change-cell-value"
+    },
+    {
+        "title": "Change background color",
+        "description": "Sets blue color as the background of even indexed slides, if it is odd sets an image.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/change-background-color"
+    },
+    {
+        "title": "Check data mismatch",
+        "description": "Highlights cells with data type mismatches based on column majority vote, starting from B2 by default, with configurable header offsets.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/change-font-family-and-size"
+    },
+    {
+        "title": "Complete address information",
+        "description": "Completes the basic address data with detailed address information and inserts it into a spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/complete-address-information"
+    },
+    {
+        "title": "Conditional formatting rules",
+        "description": "Applies multiple conditional formatting rules to the selected range.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/conditonal-formatting-rules"
+    },
+    {
+        "title": "Convert formulas into values",
+        "description": "Converts all formulas in the active worksheet into values.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/convert-formulas-into-values"
+    },
+    {
+        "title": "Currency conversion",
+        "description": "Converts a base currency into multiple desired target currencies.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/currency-conversion"
+    },
+    {
+        "title": "Delete comments",
+        "description": "Deletes comments from a specified range of cells in the active worksheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/delete-comments"
+    },
+    {
+        "title": "Find company logos",
+        "description": "Searches for a company logo throughout the spreadsheet using the [Logo API](https://api-ninjas.com/api/logo) offered by [API Ninjas](https://api-ninjas.com).",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/find-company-logos"
+    },
+    {
+        "title": "Find invalid emails",
+        "description": "Detects and highlights invalid email addresses within a specified column or across the entire spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/find-invalid-emails"
+    },
+    {
+        "title": "Format range as table",
+        "description": "Formats the range of cells A1:D10 as a table.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/format-range-as-a-table"
+    },
+    {
+        "title": "Hide or unhide rows and columns",
+        "description": "Hides or unhides the specified rows and/or columns in the spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/hide-or-unhide-rows-and-columns"
+    },
+    {
+        "title": "Highlight duplicates",
+        "description": "Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/highlight-duplicates"
+    },
+    {
+        "title": "Remove extra spaces",
+        "description": "Removes extra spaces from all text in all slides of a presentation.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/presentation-editor/remove-extra-spaces"
+    },
+    {
+        "title": "Import CSV/TXT data",
+        "description": "Imports data from remote CSV/TXT files into the spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/import-csv-or-txt-data"
+    },
+    {
+        "title": "Import hyperlinks",
+        "description": "Imports hyperlinks between different worksheets in the spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/import-hyperlinks"
+    },
+    {
+        "title": "Make cell font bold",
+        "description": "Sets the font of the cell A2 to bold.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/make-cell-font-bold"
+    },
+    {
+        "title": "Merge cell range",
+        "description": "Merges the selected cell range.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/merge-cell-range"
+    },
+    {
+        "title": "Next blank row",
+        "description": "Finds the next available blank row in a worksheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/next-blank-row"
+    },
+    {
+        "title": "Recalculate worksheet values",
+        "description": "Repeatedly recalculates worksheet cell values within one-second intervals.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/recalculate-worksheet-values"
+    },
+    {
+        "title": "Remove duplicate sheet",
+        "description": "Identifies and removes duplicate sheets in the spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/remove-duplicate-sheet"
+    },
+    {
+        "title": "Set column width",
+        "description": "Sets the width for the column B.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/set-column-width"
+    },
+    {
+        "title": "Sheet merger",
+        "description": "Merges data from all sheets into the active sheet by copying the used range of each sheet and appending it.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/sheet-merger"
+    },
+    {
+        "title": "Sort range",
+        "description": "Automatically sorts a selected range or the entire used range in a spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/sort-range"
+    },
+    {
+        "title": "Split data sheets",
+        "description": "Splits large sheets containing extensive datasets into multiple sheets if they exceed a specified row limit.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/split-data-sheets"
+    },
+    {
+        "title": "Sum of highlighted cells",
+        "description": "Sums the answer of all highlighted cells in a spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/sum-of-highlighted-cells"
+    },
+    {
+        "title": "Unhide all rows and columns",
+        "description": "Unhides all the rows and columns in the active spreadsheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/unhide-all-rows-and-columns"
+    },
+    {
+        "title": "Unmerge all cells",
+        "description": "Unmerges all the merged cells in the active worksheet.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/unmerge-cell-range"
+    },
+    {
+        "title": "Unmerge cell range",
+        "description": "Unmerges the selected cell range.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/unmerge-cell-range"
+    },
+    {
+        "title": "Weighted average function",
+        "description": "Creates a custom function to calculate a weighted average.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/weighted-average-function"
+    },
+    {
+        "title": "Write data to worksheet cell",
+        "description": "Writes the data (the Hello world phrase) to the worksheet third column of the fourth row.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/spreadsheet-editor/write-data-to-worksheet-cell"
+    }
+]
