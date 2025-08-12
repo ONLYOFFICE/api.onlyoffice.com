@@ -12,7 +12,7 @@ sidebar_position: -2
 
 ## 后台
 
-启动此类插件后，它将在所有已打开的文档及之后打开的文档中持续运行，直到您将其禁用。后台插件示例：AI(https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)、二维码生成器(https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)。插件的启用/禁用状态会在会话间保持。要访问后台插件，请点击顶部工具栏的**后台插件**按钮。
+启动此类插件后，它将在所有已打开的文档及之后打开的文档中持续运行，直到您将其禁用。后台插件示例：[AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)、[二维码生成器](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)。插件的启用/禁用状态会在会话间保持。要访问后台插件，请点击顶部工具栏的**后台插件**按钮。
 
 <img alt="Background plugins" src="/assets/images/plugins/background-plugins.png#gh-light-mode-only" width="416px" /><img alt="Background plugins" src="/assets/images/plugins/background-plugins.dark.png#gh-dark-mode-only" width="416px" />
 

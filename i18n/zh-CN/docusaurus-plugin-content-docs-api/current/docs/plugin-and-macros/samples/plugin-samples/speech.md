@@ -1,4 +1,4 @@
-# # 语音朗读
+# 语音朗读
 
 将选中的文本转换为语音。该插件使用 [guessLanguage](https://richtr.github.io/guessLanguage.js/) 来识别语言，并通过 [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) 的 [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) 接口实现朗读。
 
@@ -12,11 +12,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="ZALRpPomZrA" />
 ```
 
-## ## 安装方式
+## 安装方式
 
 默认集成于 ONLYOFFICE 企业版与社区版（文档 + 工作区），以及 ONLYOFFICE 云端服务中。
 
-你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/app-directory/speech)下载该插件。
+你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/en/app-directory/speech)下载该插件。
 
 ## 使用方法
 
@@ -30,7 +30,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 1. 某些浏览器（例如 Mozilla、Opera）只能使用系统中预安装的语言生成语音。如需支持新语言，需先将其添加至操作系统。
 2. 插件无法在 Safari 15.3（17612.4.9.1.8）上运行，该问题已在 Safari 15.4（17614.1.7.7）中修复。
 
-插件结构
+## 插件结构
 
 GitHub 仓库地址：[speech](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/speech)。
 
@@ -190,4 +190,4 @@ GitHub 仓库地址：[speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## 支持
 
-如需请求功能或报告此插件的问题，请通过 [GitHub Issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 页面提交。
+如需请求功能或报告此插件的问题，请通过 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 页面提交。
