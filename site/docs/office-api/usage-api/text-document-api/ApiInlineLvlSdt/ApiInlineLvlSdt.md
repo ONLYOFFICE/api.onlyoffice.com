@@ -20,7 +20,7 @@ Represents the ApiInlineLvlSdt class.
 | [GetClassType](./Methods/GetClassType.md) | "inlineLvlSdt" | Returns a type of the ApiInlineLvlSdt class. |
 | [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | Retrieves the data binding of the content control. |
 | [GetDataForXmlMapping](./Methods/GetDataForXmlMapping.md) | string | Returns the content control data for the XML mapping. |
-| [GetDate](./Methods/GetDate.md) | Date | Retrieves the selected date value from a date picker content control and returns it as a Date object. Throws: Error if the content control is not a date picker. |
+| [GetDate](./Methods/GetDate.md) | undefined \| Date | Retrieves the selected date value from a date picker content control and returns it as a Date object. Throws: Error if the content control is not a date picker. |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / drop-down list content control. |
 | [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns an element of the current inline text content control using the position specified. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current inline text content control. The text content  control is created with one text run present in it by default, so even without any  element added this method will return the value of '1'. |
@@ -62,7 +62,7 @@ Represents the ApiInlineLvlSdt class.
 | [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current inline text content control: **"unlocked"** - content can be edited and the container can be deleted. **"contentLocked"** - content cannot be edited. **"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. **"sdtLocked"** - the container cannot be deleted. |
 | [SetPicture](./Methods/SetPicture.md) | boolean | Sets the content (image) for the picture content control. This method updates the picture inside a content control by setting an image from a provided URL. The URL should be an internet link to the image. |
 | [SetPictureSize](./Methods/SetPictureSize.md) | boolean | Sets the size for the picture in a content control. This method adjusts the width and height of the image if the content control is a picture. |
-| [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current inline content control. Can't be set to checkbox or radio button* |
+| [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current inline content control. *Can't be set to checkbox or radio button* |
 | [SetTag](./Methods/SetTag.md) | boolean | Adds a string tag to the current inline text content control. |
 | [SetTextPr](./Methods/SetTextPr.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Applies text settings to the content of the content control. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiInlineLvlSdt object into the JSON object. |
