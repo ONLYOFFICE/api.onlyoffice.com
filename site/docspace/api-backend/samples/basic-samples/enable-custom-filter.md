@@ -1,0 +1,59 @@
+# Enable Custom Filter Mode for a File
+
+This example demonstrates how to enable the Custom Filter mode for a specific file in ONLYOFFICE DocSpace using the API. The Custom Filter feature allows you to restrict spreadsheet views so that users only see their own applied filters.
+
+## Before you start
+
+1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
+2. Before you can make requests to the API, you need to authenticate. Check out the [Personal access tokens](/docspace/api-backend/get-started/authentication/personal-access-tokens.md) page to learn how to obtain and use access tokens.
+
+<details>
+  <summary>Full example</summary>
+
+``` py
+import requests
+
+# Set your DocSpace portal URL and access token
+API_HOST = 'https://yourportal.onlyoffice.com'
+API_KEY = 'your_api_key'
+FILE_ID = 123456  # Replace with your actual file ID
+
+# Headers with authorization token
+headers = {'Authorization': API_KEY}
+
+# Step 1: Enable Custom Filter mode
+def enable_custom_filter(file_id):
+    payload = { 'enabled': True }
+    response = requests.put(
+        f'{API_HOST}/api/2.0/files/file/{file_id}/customfilter',
+        headers=headers,
+        json=payload
+    )
+
+    if response.status_code == 200:
+        result = response.json().get('response', {})
+        print(f'Custom Filter enabled for file ID {file_id}')
+        print(f'• Title: {result.get('title')}')
+        print(f'• View URL: {result.get('webUrl') or result.get('viewUrl')}')
+        print(f'• Filter Enabled By: {result.get('customFilterEnabledBy')}')
+    else:
+        raise Exception(f'Failed to enable Custom Filter mode: {response.text}')
+
+# Run the method
+if __name__ == '__main__':
+    print('Enabling Custom Filter mode...')
+    enable_custom_filter(FILE_ID)
+```
+
+</details>
+
+## How it works
+
+A PUT request is sent to [/api/2.0/files/file/:fileId/customfilter](/docspace/api-backend/usage-api/get-all-permissions) with the following payload:
+
+- `enabled: true` — turns on Custom Filter mode for the specified file.
+
+The response contains file metadata, including:
+- `title`: Document title
+- `webUrl`: Direct view link
+- `customFilterEnabledBy`: User ID who applied the filter
