@@ -1,10 +1,30 @@
 # Change log
 
+## 6.4.0
+
 ### New features
+
+#### Docs
+
+* Added new Office API samples
 
 #### Docs API
 
 * Added the editorConfig.customization.suggestFeature parameter
+
+#### Plugins and macros
+
+* Added documentation in Chinese
+
+#### Docspace
+
+* Added new Api Backend samples
+
+### Fixes
+
+#### Docs
+
+* Fixed default theme for editors in the Results tab
 
 ## 6.3.0
 
