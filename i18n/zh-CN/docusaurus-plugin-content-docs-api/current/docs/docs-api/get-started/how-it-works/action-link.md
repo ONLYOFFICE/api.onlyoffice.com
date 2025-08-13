@@ -25,13 +25,15 @@ sidebar_position: -18
      const ACTION_DATA = event.data
      const link = GENERATE_LINK(ACTION_DATA)
      docEditor.setActionLink(link)
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onMakeActionLink,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. 为了向用户提供包含书签的文档链接，软件集成商将链接发送到[setActionLink](../../usage-api/methods.md#setactionlink)方法：
@@ -51,11 +53,13 @@ sidebar_position: -18
 当用户点击链接时，**文档编辑器**会将初始化的*editorConfig* 发送给文档编辑服务。从[onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink)事件接收到的ACTION\_DATA会在*editorConfig*的[data.actionLink](../../usage-api/config/editor/editor.md#actionlink)参数中指定：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     actionLink: ACTION_DATA,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 > 在[评论中提及用户](./mentions.md#how-this-can-be-done-in-practice)时，链接的生成方式也是相同的。

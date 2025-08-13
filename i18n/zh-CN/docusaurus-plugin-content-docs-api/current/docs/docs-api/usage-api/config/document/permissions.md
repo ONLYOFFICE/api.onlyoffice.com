@@ -1,4 +1,4 @@
-﻿# 文档权限
+﻿# 文档权限 
 
 文档权限部分允许更改要编辑和下载的文档的权限。
 
@@ -14,7 +14,7 @@
 
 **示例**: `true`
 
-## 聊天
+## 聊天 {#chat}
 
 `类型: boolean`
 
@@ -22,7 +22,7 @@
 
 **示例**: `true`
 
-## 评论
+## 评论 {#comment}
 
 `类型: boolean`
 
@@ -78,7 +78,7 @@ const config = {
 
 **示例**: `""`
 
-## 复制
+## 复制 {#copy}
 
 `类型: boolean`
 
@@ -94,7 +94,7 @@ const config = {
 
 **示例**: `true`
 
-## 下载
+## 下载 {#download}
 
 `类型: boolean`
 
@@ -104,7 +104,7 @@ const config = {
 
 ![下载文档](/assets/images/editor/download.png)
 
-## 修改
+## 修改 {#edit}
 
 `类型: boolean`
 
@@ -176,7 +176,7 @@ const config = {
 
 ![保护文档](/assets/images/editor/protect.png)
 
-## 重命名
+## 重命名 {#rename}
 
 `类型: boolean`
 
@@ -188,7 +188,7 @@ const config = {
 
 **示例**: `true`
 
-## 审阅
+## 审阅 {#review}
 
 `类型: boolean`
 
@@ -227,7 +227,7 @@ const config = {
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       chat: true,
@@ -253,5 +253,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     }
     ,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

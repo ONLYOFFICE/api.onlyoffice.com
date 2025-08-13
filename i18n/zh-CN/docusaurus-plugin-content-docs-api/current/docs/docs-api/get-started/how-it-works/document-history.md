@@ -21,7 +21,7 @@ sidebar_position: -19
 7. 当用户点击文档版本列表中的另一个版本时，**文档编辑器**会重新请求要显示的该版本的信息。
 8. 用户点击*关闭历史记录*按钮，**文档编辑器**隐藏文档版本列表。
 
-## 实际操作方法
+## 实际操作方法 {#how-this-can-be-done-in-practice}
 
 1. 创建一个*html*文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 
@@ -52,13 +52,15 @@ sidebar_position: -19
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px" />
@@ -77,13 +79,15 @@ sidebar_position: -19
        url: "https://example.com/url-to-example-document.docx",
        version: 2,
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistoryData,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    ![历史记录](/assets/images/editor/history.png)
@@ -121,13 +125,15 @@ sidebar_position: -19
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const cconfig = {
      events: {
        onRequestRestore,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
@@ -141,13 +147,15 @@ sidebar_position: -19
    ``` ts
    function onRequestHistoryClose() {
      document.location.reload()
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const configg = {
      events: {
        onRequestHistoryClose,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
@@ -198,7 +206,6 @@ sidebar_position: -19
 
   调用*setHistoryData*方法查看文档历史版本时，必须添加令牌以验证参数。
 
-
   ``` ts
   docEditor.setHistoryData({
     changesUrl: "https://example.com/url-to-changes.zip",
@@ -216,6 +223,5 @@ sidebar_position: -19
   ```
 
   > *changesurl*请求是在浏览器中从添加的具有**documentserver**域的iframe中发出的，其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。为了使其正常工作，必须允许跨源HTTP请求（CORS）。这可以通过使用*Access-Control-Allow-Origin*标头来实现。
-
 
   ![变更目录](/assets/images/editor/changesurl.png)

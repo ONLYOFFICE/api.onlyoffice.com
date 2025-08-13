@@ -94,7 +94,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 **示例**: `""`
 
-## 模式
+## 模式 {#mode}
 
 `类型: string`
 
@@ -102,7 +102,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 **示例**: `"edit"`
 
-## 最近
+## 最近 {#recent}
 
 `类型: array of object`
 
@@ -146,7 +146,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 ![最近的文件](/assets/images/editor/recent.png) 
 
-## 地区
+## 地区 {#region}
 
 `类型: string`
 
@@ -156,7 +156,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 **示例**: `"en-US"`
 
-## 模板
+## 模板 {#templates}
 
 `类型: array of object`
 
@@ -200,7 +200,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 ![模板](/assets/images/editor/templates.png)
 
-## 用户
+## 用户 {#user}
 
 `类型: object`
 
@@ -282,7 +282,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     actionLink: "ACTION_DATA",
     callbackUrl: "https://example.com/url-to-callback.ashx",
@@ -315,7 +315,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       name: "John Smith",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节。

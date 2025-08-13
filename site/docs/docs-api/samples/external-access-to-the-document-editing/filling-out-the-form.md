@@ -22,11 +22,12 @@ When the document is ready, the form data can be submitted by clicking the **Com
 1. When the user opens a form document, the GetAllContentControls method is executed to collect all the content controls from the document. After that, the GetFormValue method is executed to get the content controls values and display them in the custom interface:
 
   ``` ts
-  let contentControls = []
+  
+  let contentControls = [];
 
   function onDocumentReady() {
-    window.connector = docEditor.createConnector()
-    function handleGetAllContentControls(data) {
+    window.connector = docEditor.createConnector();
+    function callbackGetAllContentControls(data) {
       setTimeout(function processContentControls(index) {
         if (index >= data.length) {
           contentControls = data
@@ -46,10 +47,10 @@ When the document is ready, the form data can be submitted by clicking the **Com
         })
       }, 0)
     }
-    function handleGetFormValue(data, index, callback) {
-      connector.executeMethod("GetFormValue", [data[index]["InternalId"]], callback)
+    function handleGetFormValue(data, index, callbackFn) {
+      connector.executeMethod("GetFormValue", [data[index].InternalId], callbackFn);
     }
-    connector.executeMethod("GetAllContentControls", null, handleGetAllContentControls)
+    connector.executeMethod("GetAllContentControls", null, callbackGetAllContentControls);
   }
   ```
 
@@ -104,12 +105,12 @@ $("#persons").change(function personChange(e) {
 
 ``` ts
 function onDocumentReady() {
-  connector.attachEvent("onChangeContentControl", onChangeContentControl)
+  connector.attachEvent("onChangeContentControl", onChangeContentControl);
 }
 function onChangeContentControl(e) {
   connector.executeMethod("GetFormValue", [e["InternalId"]], (value) => {
-    $(`#${e["InternalId"]}`).val(value || "")
-  })
+    $(`#${e["InternalId"]}`).val(value || "");
+  });
 }
 ```
 

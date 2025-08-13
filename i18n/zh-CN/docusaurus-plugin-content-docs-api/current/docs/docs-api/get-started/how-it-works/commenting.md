@@ -19,14 +19,16 @@ sidebar_position: -10
 如果*edit* 参数设置为 false，而 *comment*参数设置为 true，那么该文档将仅可用于添加评论。
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       edit: false,
       comment: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 > 请注意，如果[mode](../../usage-api/config/editor/editor.md#mode)参数设置为**edit**，文档编辑器才会具备文档评论功能。
@@ -36,54 +38,60 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 1. 如果您希望仅允许评论的作者对评论进行编辑，在编辑器初始化的权限部分中，将[editCommentAuthorOnly](../../usage-api/config/document/permissions.md#editcommentauthoronly)参数设置为**true**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          editCommentAuthorOnly: true,
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 2.如果您希望仅允许评论的作者删除评论，在编辑器初始化的权限部分中，将[deleteCommentAuthorOnly](../../usage-api/config/document/permissions.md#deletecommentauthoronly) 参数设置为**true**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          deleteCommentAuthorOnly: true,
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 ## 按群组区分评论权限
 
 1. 在 editorConfig 部分的[user](../../usage-api/config/editor/editor.md#user)参数中添加 *group* 字段，以此指定用户所属的群组（或者多个群组，群组之间用逗号分隔）。
 
-  ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
-    editorConfig: {
-      user: [{
-        id: "78e1e841",
-        name: "John Smith",
-        group: "Group1,Group2",
+    ``` ts
+    const config = {
+      editorConfig: {
+        user: [{
+          id: "78e1e841",
+          name: "John Smith",
+          group: "Group1,Group2",
+        },
+        {
+          id: "78e1e841",
+          name: "John Smith",
+          group: "Group1,Group2",
+        }],
       },
-      {
-        id: "78e1e841",
-        name: "John Smith",
-        group: "Group1,Group2",
-      }],
-    },
-  })
-  ```
+    };
+
+    const docEditor = new DocsAPI.DocEditor("placeholder", config);
+    ```
 
 2. 在编辑器初始化的权限部分中，使用[commentGroups](../../usage-api/config/document/permissions.md#commentgroups)参数指定访问权限。
 
    > 如果在编辑器配置中指定了**commentGroups**参数，那么查看、编辑和 / 或删除所有评论的访问权限将被禁用。否则，如果当前用户不属于任何一个群组，那么他或她可以编辑、删除和 / 或查看所有群组的评论。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          commentGroups: {
@@ -93,7 +101,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
          },
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    - *"edit": \["Group2", ""]* 表示用户可以编辑来自** Group2**的用户以及不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加评论的文档）。

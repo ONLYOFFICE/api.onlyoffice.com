@@ -65,5 +65,5 @@ function setTextColor(paragraph, value) {
   }
 }
 
-doc.Push(table);
+doc.AddElement(0, table);
 ```

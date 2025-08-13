@@ -30,7 +30,7 @@
 
 检查[回调处理程序](../usage-api/callback-handler.md#document-save-examples)是否正常工作。**文档存储服务**必须返回 [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service)作为响应。
 
-## 文件版本已更改
+## 文件版本已更改 {#the-file-version-has-been-changed}
 
 ![文件版本已更改](/assets/images/editor/e-key.png)
 
