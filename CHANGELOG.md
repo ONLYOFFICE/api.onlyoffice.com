@@ -2,6 +2,9 @@
 
 ### New features
 
+#### Docs API
+
+* Added GitHub links to each language-specific example
 * Added the website Changelog section
 
 ## 6.4.0
