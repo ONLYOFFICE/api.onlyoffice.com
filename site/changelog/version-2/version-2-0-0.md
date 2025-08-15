@@ -24,7 +24,7 @@ sidebar_position: -1
   - Increased build speed.
   - Renamed all files and links to kebab-case.
   - Added notifications for build and publish processes.
-- **Docspace**: Added images for [JavaScript SDK samples](../../docspace/javascript-sdk/samples/authorization.md).
+- **Docspace**: Added images for [JavaScript SDK samples](../../docspace/javascript-sdk/samples/advanced-samples/authorization.md).
 - **Docs API**:
   - Added a note about using a [token in the request body](../../docs/docs-api/additional-api/signature/request/token-in-body.md) and updated the [Signature section](../../docs/docs-api/additional-api/signature/signature.md).
   - Added a note about [default values](../../docs/docs-api/using-wopi/wopi-rest-api/checkfileinfo.md#required-response-properties) for WOPI.
