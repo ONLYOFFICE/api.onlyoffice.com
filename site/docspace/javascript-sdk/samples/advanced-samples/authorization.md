@@ -1,6 +1,11 @@
 # Authorization
 
-Logs in to the DocSpace account using the specified email and password hash.
+This examples logs in to the DocSpace account using the specified email and password hash.
+
+## Before you start
+
+Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -49,12 +54,9 @@ Logs in to the DocSpace account using the specified email and password hash.
 
 ![Authorization sample](/assets/images/docspace/js-sdk-authorization-sample.svg)
 
-## Before you start
+## Script execution steps
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
-
-## Step 1. Set HTML structure
+### 1. Set HTML structure
 
 Create an HTML file. Add two text fields and a button. The HTML file must include a *div* tag where we specify the DocSpace connection parameters:
 
@@ -81,7 +83,7 @@ Create an HTML file. Add two text fields and a button. The HTML file must includ
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. Initialize the System mode
+### 2. Initialize the System mode
 
 Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/initialization-modes/system.md) mode.
 
@@ -109,7 +111,7 @@ Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/initi
     const docSpace = DocSpace.SDK.initSystem(config)
     ```
 
-## Step 3. Add a method to log in
+### 3. Add a method to log in
 
 Add the **onButtonClick()** event handler for the button. Using the [getHashSettings](/docspace/javascript-sdk/usage-sdk/methods.md#gethashsettings) method, return the password hash settings
 and generate the password hash using the [createHash](/docspace/javascript-sdk/usage-sdk/methods.md#createhash) method. After this, authorize the user using the [login](/docspace/javascript-sdk/usage-sdk/methods.md#login) method:
@@ -125,7 +127,7 @@ function onButtonClick() {
 }
 ```
 
-## Step 4. Add a method to log in
+### 4. Add a method to log in
 
 Run our HTML file and make sure everything works.
 
