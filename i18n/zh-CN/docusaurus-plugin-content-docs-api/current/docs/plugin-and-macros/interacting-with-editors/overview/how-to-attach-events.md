@@ -68,7 +68,7 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
    });
    ```
 
-   您也可以使用 event_\{event-name\} 方法，其中 *event_* 是每个事件方法的前缀，而 *{event-name}* 是任意事件的名称。例如：
+   您也可以使用 **event_\{event-name\}** 方法，其中 *event_* 是每个事件方法的前缀，而 *\{event-name\}* 是任意事件的名称。例如：
 
    ``` ts
    Asc.plugin.event_onAddComment = (data) => {

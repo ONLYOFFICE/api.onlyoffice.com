@@ -33,6 +33,6 @@ ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌�
 
 要创建您自己的插件，需要进行以下几个步骤：
 
-1. 学习[入门指南](./getting-started.md)中的插件开发基础概念，编写定义插件外观和行为的代码。
+1. 学习[入门指南](../structure/getting-started.md)中的插件开发基础概念，编写定义插件外观和行为的代码。
 2. 插件开发完成后，对其进行全面[测试](../tutorials/developing/for-web-editors.md)，确保插件的外观和功能符合预期。尽量预判可能出现的问题并提出相应解决方案。
 3. 完成后，你可以自行使用该插件或通过向[插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io)提交拉取请求将插件[发布](../tutorials/publishing.md)。 
