@@ -76,6 +76,26 @@ sidebar_position: -5
 
 ![Alternate raws](/assets/images/plugins/alternate-raws.png)
 
+## 使用 AI 插件生成宏
+
+如果您希望加快生成宏的过程，从 9.0 版本开始，可以使用 ONLYOFFICE 内置的 AI 插件，通过描述自动生成 ONLYOFFICE 宏：
+
+1. 配置 AI 插件。详细的配置步骤可见于[此处]：(https://helpcenter.onlyoffice.com/docs/userguides/ai/configuration.aspx)。
+2. 打开**视图**选项卡，点击**宏**。
+3. 在**宏**窗口中点击 **AI** 图标，选择**根据描述创建**。
+
+    ![AI 插件](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI 插件](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
+
+4. 在**根据描述创建宏**窗口中输入描述，并点击**创建**。生成的宏示例将被插入到**宏**窗口中。
+
+    ![根据描述创建宏](/assets/images/plugins/create-from-description.png#gh-light-mode-only)![根据描述创建宏](/assets/images/plugins/create-from-description.dark.png#gh-dark-mode-only)
+
+5. 检查代码，如有必要可进行调整。
+
+    > 尽管 AI 插件可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
+
+6. 点击![播放图标](/assets/images/plugins/play.svg)测试脚本。
+
 ## 订阅事件
 
 要订阅指定事件并在事件触发时调用回调函数，请使用 [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) 方法。

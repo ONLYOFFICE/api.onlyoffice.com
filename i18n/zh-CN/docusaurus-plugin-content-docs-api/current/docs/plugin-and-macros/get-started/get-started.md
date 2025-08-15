@@ -1,7 +1,3 @@
----
-sidebar_position: -2
----
-
 # 概览
 
 ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌面编辑器](https://www.onlyoffice.com/zh/desktop.aspx)支持插件功能，允许开发者为编辑器添加与 OOXML 格式无直接关联的特定功能。
@@ -26,6 +22,8 @@ ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌�
 - 使用 [Macros](../macros/getting-started.md) 实现文档任务自动化。
 
 代码示例可见于 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)。
+
+为保证插件用户界面的一致性，您可以使用一组专为插件 UI 创建设计的预构建基础组件。您可以在我们的 [storybook](https://onlyoffice.github.io/storybook/static/) 中探索这些组件或者与它们进行交互。
 
 如需查找可直接使用的插件，请访问 [ONLYOFFICE 应用市场](https://www.onlyoffice.com/app-directory/zh)。
 

@@ -10,9 +10,11 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
 ```
 
-所有可用控件都展示在**控件示例**插件中：
+为了保持用户插件界面的一致性，您可以使用一组专为生成插件 UI 设计的预构建基础组件。您可以在我们的 [Storybook](https://onlyoffice.github.io/storybook/static/) 中探索组件功能，并进行交互。
 
-![Controls example](/assets/images/plugins/controls.png)
+所有可用的控件也都在[**控件示例**][**Controls example**](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_controls) 插件中展示：
+
+![控件示例](/assets/images/plugins/controls.png)
 
 ## 按钮
 
