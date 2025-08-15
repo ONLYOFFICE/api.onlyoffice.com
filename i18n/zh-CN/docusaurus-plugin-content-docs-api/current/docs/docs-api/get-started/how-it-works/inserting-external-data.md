@@ -23,14 +23,16 @@ sidebar_position: -6
 2. 在源电子表格的初始化配置中指定[document.referenceData](../../usage-api/config/document/document.md#referencedata)参数：
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        referenceData: {
          fileKey: "BCFA2CED",
          instanceId: "https://example.com",
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. 当用户从源电子表格复制数据时，剪贴板会接收到以下值的列表：
@@ -44,11 +46,13 @@ sidebar_position: -6
 5. 在目标电子表格的初始化配置中指定[onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata)事件处理程序，以便显示*粘贴链接*和*更新值*按钮：
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestReferenceData,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 6. 如果剪贴板中有步骤3中指定的源电子表格数据，并且目标电子表格的初始化配置中有*onRequestReferenceData*事件处理程序，那么*粘贴链接*按钮将显示在对话框中。
@@ -80,7 +84,7 @@ sidebar_position: -6
      const link = event.data.link
      const referenceData = event.data.referenceData
      const path = event.data.path
-   }
+   };
    ```
 
 <img alt="Update values" src="/assets/images/editor/update-values.png" width="700px" />
@@ -92,15 +96,15 @@ sidebar_position: -6
    ``` ts
    docEditor.setReferenceData({
      fileType: "xlsx",
+     key: "Khirz6zTPdfd7",
      path: "sample.xlsx",
      referenceData: {
        fileKey: "BCFA2CED",
        instanceId: "https://example.com",
-       key: "Khirz6zTPdfd7",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
      url: "https://example.com/url-to-example-document.xlsx",
-   })
+   });
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。有关ONLYOFFICE文档服务客户端-服务器交互的更多信息，请参阅[工作原理](./inserting-external-data.md)部分。
@@ -126,13 +130,15 @@ sidebar_position: -6
        path: "https://example.com/external-url.docx",
        windowName: event.data.windowName,
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestOpen,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](./how-it-works.md)章节。
@@ -156,20 +162,22 @@ sidebar_position: -6
    
      docEditor.setReferenceSource({
        fileType: "xlsx",
+       key: "Khirz6zTPdfd7",
        path: "sample.xlsx",
        referenceData: {
          fileKey: "BCFA2CED",
          instanceId: "https://example.com",
-         key: "Khirz6zTPdfd7",
        },
        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
        url: "https://example.com/url-to-example-document.xlsx",
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestReferenceSource,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```

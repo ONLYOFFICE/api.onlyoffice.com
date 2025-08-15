@@ -135,7 +135,7 @@ sidebar_position: -4
 
 定义文档标识符,用于明确标识文档文件。
 
-Type: string
+类型: string
 
 是否必填: 必填
 

@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 
 > 默认值在 *default.json* 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档** 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 
-## 启用 WOPI
+## 启用 WOPI {#enabling-wopi}
 
 要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 **true**:
 

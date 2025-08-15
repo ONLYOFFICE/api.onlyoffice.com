@@ -1,6 +1,9 @@
 ---
 sidebar_position: -1
+hide_table_of_contents: true
 ---
+
+import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 填写表格
 
@@ -11,6 +14,8 @@ sidebar_position: -1
 当用户在自定义界面中编辑输入数据时，它也会在表单编辑器中自动更新。
 
 文档准备好后，可以通过单击 **Complete & Submit** 按钮来提交表单数据。
+
+<FormExternalToolbar/>
 
 ## 它是如何运作的
 

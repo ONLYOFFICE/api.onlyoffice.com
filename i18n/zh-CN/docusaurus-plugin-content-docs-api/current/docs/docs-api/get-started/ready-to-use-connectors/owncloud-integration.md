@@ -66,7 +66,7 @@ ownCloud管理员可以从内置的应用市场安装集成应用程序。为此
 
 4. 在ownCloud中，管理员打开包含**未启用**应用的*\~/settings/admin?sectionid=apps\&category=disabled*页面，并为**ONLYOFFICE**应用点击**启用**。
 
-## 配置ownCloud ONLYOFFICE集成应用程序
+## 配置ownCloud ONLYOFFICE集成应用程序 {#configuring-owncloud-onlyoffice-integration-app}
 
 在ownCloud中，打开包含**ONLYOFFICE**部分管理设置的*\~/settings/admin?sectionid=additional#onlyoffice*页面。输入以下地址来连接ONLYOFFICE文档：
 

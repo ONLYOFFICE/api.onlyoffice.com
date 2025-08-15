@@ -919,6 +919,14 @@ Defines a message displayed after forms are submitted. The following values are 
 
 **Example**: `"text"`
 
+## suggestFeature
+
+`Type: boolean`
+
+Defines whether the **Suggest a Feature** menu button will be displayed or hidden. The default value is **true**.
+
+**Example**: `true`
+
 ## toolbarHideFileName
 
 `Type: boolean`
@@ -1111,6 +1119,7 @@ const config = {
         visible: true,
         resultMessage: "text",
       },
+      suggestFeature: true,
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",

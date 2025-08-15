@@ -1,6 +1,6 @@
 # FACT
 
-Returns the factorial of a number, which is equal to &lt;em&gt;1*2*3*...*&lt;/em&gt; number.
+Returns the factorial of a number, which is equal to *1*2*3*...** number.
 
 ## Syntax
 
