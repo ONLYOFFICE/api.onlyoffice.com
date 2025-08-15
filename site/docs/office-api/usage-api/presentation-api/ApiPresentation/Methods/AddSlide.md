@@ -5,7 +5,7 @@ Appends a new slide to the end of the presentation.
 ## Syntax
 
 ```javascript
-expression.AddSlide(oSlide);
+expression.AddSlide(oSlide, nIndex);
 ```
 
 `expression` - A variable that represents a [ApiPresentation](../ApiPresentation.md) class.
@@ -15,6 +15,7 @@ expression.AddSlide(oSlide);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oSlide | Required | [ApiSlide](../../ApiSlide/ApiSlide.md) |  | The slide created using the [Api#CreateSlide](../../Api/Methods/CreateSlide.md) method. |
+| nIndex | Required | number |  | Index of the slide to be added. If not specified, the slide will be added to the end of the presentation. |
 
 ## Returns
 

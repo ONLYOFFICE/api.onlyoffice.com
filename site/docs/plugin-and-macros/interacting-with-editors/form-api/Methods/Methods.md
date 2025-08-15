@@ -12,6 +12,7 @@ Represents the Api class.
 | [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
+| [FocusEditor](./FocusEditor.md) | None | Returns focus to the editor. |
 | [GetAllForms](./GetAllForms.md) | [ContentControl](../Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document. |
 | [GetDocumentLang](./GetDocumentLang.md) | string | Returns the document language. |
 | [GetFileToDownload](./GetFileToDownload.md) | string | Returns the current file to download in the specified format. |

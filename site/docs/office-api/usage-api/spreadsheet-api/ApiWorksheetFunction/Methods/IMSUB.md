@@ -1,6 +1,6 @@
 # IMSUB
 
-Returns the difference of two complex numbers expressed in the &lt;em&gt;x + yi&lt;/em&gt; or &lt;em&gt;x + yj&lt;/em&gt; form.
+Returns the difference of two complex numbers expressed in the *x + yi* or *x + yj* form.
 
 ## Syntax
 
