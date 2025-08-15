@@ -1,11 +1,15 @@
 # Change log
-
+  
 ### New features
 
 #### Docs API
 
 * Added GitHub links to each language-specific example
 * Added the website Changelog section
+
+#### Docs API
+
+* Added fonts information to Changing default fonts language specific example.
 
 ## 6.4.0
 
