@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating advanced form
 
 Create an advanced form with a table structure:

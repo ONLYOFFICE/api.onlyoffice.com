@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating spreadsheet with filters
 
 Creates a spreadsheet with interactive filters in the header row that allows users to sort and filter data conveniently:

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Highlighting key terms
 
 Create a document with highlighted key terms using bold formatting and color styling:

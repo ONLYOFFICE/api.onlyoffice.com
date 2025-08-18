@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating table in header or footer
 
 Create a document with a table in the footer that displays repeating company information on every page:
