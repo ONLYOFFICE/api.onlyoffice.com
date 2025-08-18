@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove duplicate slides
 
 Remove duplicate slides across the entire presentation.

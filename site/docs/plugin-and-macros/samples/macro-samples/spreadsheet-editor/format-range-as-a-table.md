@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Format range as table
 
 Formats the range of cells **A1:D10** as a table.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Make cell font bold
 
 Sets the font of the cell **A2** to bold.

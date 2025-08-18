@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Create slides from list items
 
 Creates new slides based on the listed items in the current slide. Each list item becomes a slide title.

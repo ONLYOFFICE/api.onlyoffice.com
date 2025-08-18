@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Replace words in document
 
 Searches for a word throughout the document and replaces it with the given replacement word.

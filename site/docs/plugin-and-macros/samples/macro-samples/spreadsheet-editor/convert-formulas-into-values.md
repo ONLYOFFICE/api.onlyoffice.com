@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Convert formulas into values
 
 Converts all formulas in the active worksheet into values.

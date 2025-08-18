@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Recalculate worksheet values
 
 Repeatedly recalculates worksheet cell values within one-second intervals.

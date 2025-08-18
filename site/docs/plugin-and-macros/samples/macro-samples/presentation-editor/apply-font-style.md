@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Apply font style
 
 Applies a consistent font style across all the slides.

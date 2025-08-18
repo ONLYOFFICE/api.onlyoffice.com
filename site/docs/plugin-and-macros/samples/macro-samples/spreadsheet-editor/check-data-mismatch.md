@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Check data mismatch
 
 Highlights cells with data type mismatches based on column majority vote, starting from B2 by default, with configurable header offsets.

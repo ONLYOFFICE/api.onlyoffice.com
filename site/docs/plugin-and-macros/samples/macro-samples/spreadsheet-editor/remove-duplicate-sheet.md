@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove duplicate sheet
 
 Identifies and removes duplicate sheets in the spreadsheet.
