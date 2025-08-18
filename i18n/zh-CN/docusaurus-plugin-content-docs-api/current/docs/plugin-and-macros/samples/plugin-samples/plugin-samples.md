@@ -11,8 +11,8 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={[...[...useCurrentSidebarCategory().items]]} />
 
-## Support
+## 支持
 
-If you want to request a feature or report a bug regarding plugins, use the issues section [on GitHub.](https://github.com/ONLYOFFICE/plugin-macros/issues)
+如果您希望请求新功能或报告插件相关的错误，请使用 [GitHub](https://github.com/ONLYOFFICE/plugin-macros/issues) 上的 Issues 部分。
 
-You can also request a plugin sample by contacting us at [marketing@onlyoffice.com](mailto:marketing@onlyoffice.com).
+您也可以通过向 [marketing@onlyoffice.com](mailto:marketing@onlyoffice.com) 发送邮件来请求插件示例。
