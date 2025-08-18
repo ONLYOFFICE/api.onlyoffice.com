@@ -37,125 +37,30 @@ Create a folder using the DMS provider as a name (e.g. *onlyoffice*) in the *pro
 
 Create a *config.json* file to specify the integration parameters.
 
-### provider
+| Parameter   | Type                   | Description                                                                                                     | Example                                                                 |
+|-------------|------------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| provider    | string                 | Defines the provider id used to refer to the desktop app in the JavaScript commands.                            | `"onlyoffice"`                                                          |
+| name        | string                 | Defines the name displayed in the provider choice section when adding a cloud.                                  | `"ONLYOFFICE"`                                                          |
+| check       | object                 | Defines parameters for checking portal availability. A GET request is sent, after which HTTP_STATUS_CODE = 200 is expected. The response must be returned in the JSON format. See [check parameters](#check-parameters). | `{ "url": "status", "headers": { "X-CUSTOM-HEADER": true } }`           |
+| entryPage   | string                 | Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the check request. | `https://url-to-connect-provider.com`                                   |
+| extraLogout | string / array[string] | Defines the URL to log out from the cloud. It is used instead of the provider address.                          | `https://url-for-logout.com`                                            |
+| editorPage  | string                 | Defines the relative URL that indicates that the type of the opening file is a document. You can use regular expressions for this parameter. | `"/apps/onlyoffice/"` or `"regex:\/lib\/(?:[\w-]{32,})\/file\/"`        |
+| startPage   | string                 | Defines the relative URL added to the entered IP or domain when creating a new connection.                       | `"/"`                                                                   |
+| icons       | object                 | Defines the icons for portals. You can add icons for each UI theme type (light and dark) by specifying the themeLight and themeDark objects with the corresponding icons. See [icons parameters](#icons-parameters). | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` |
 
-Defines the provider id used to refer to the desktop app in the JavaScript commands.
+#### check parameters	
 
-Type: string
+| Parameter       | Type   | Description                                                                 | Example                        |
+|-----------------|--------|-----------------------------------------------------------------------------|--------------------------------|
+| check.url       | string | The URL used in the request.                                                | `"status"`                     |
+| check.headers   | object | The headers added to the ajax request.                                      | `{ "OCS-APIREQUEST": true }`   |
 
-Example: "onlyoffice"
+#### icons parameters
 
-### name
-
-Defines the name displayed in the provider choice section when adding a cloud.
-
-Type: string
-
-Example: "ONLYOFFICE"
-
-### check
-
-Defines parameters for checking portal availability.
-
-A *GET* request is sent, after which *HTTP\_STATUS\_CODE = 200* is expected. The response must be returned in the JSON format.
-
-Type: object
-
-Example:
-
-``` json
-{
-  "url": "status",
-  "headers": {
-    "X-CUSTOM-HEADER": true
-  }
-}
-```
-
-#### check.url
-
-The URL used in the request.
-
-Type: string
-
-Example: "status"
-
-#### check.headers
-
-The headers added to the *ajax* request.
-
-Type: object
-
-Example: `{"OCS-APIREQUEST": true}`
-
-### entryPage
-
-Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the [check](#check) request.
-
-Type: string
-
-Example: `https://url-to-connect-provider.com`
-
-### extraLogout
-
-Defines the URL to log out from the cloud. It is used instead of the provider address.
-
-Type: string or array of strings
-
-Example: `https://url-for-logout.com`
-
-### editorPage
-
-Defines the relative URL that indicates that the type of the opening file is a document.
-
-> You can use regular expressions for this parameter. For example, *"regex:\\/lib\\/(?:\[\w-]\{32,\})\\/file\\/"*.
-
-Type: string
-
-Example: "/apps/onlyoffice/"
-
-### startPage
-
-Defines the relative URL added to the entered IP or domain when creating a new connection.
-
-Type: string
-
-Example: "/"
-
-### icons
-
-Defines the icons for portals.
-
-You can add icons for each UI theme type (light and dark) by specifying the *themeLight* and *themeDark* objects with the corresponding icons.
-
-Type: object
-
-Example:
-
-``` json
-{
-  "themeLight": {
-    "connectionsList": "./assets/listicon.svg",
-    "buttonLogo": "./assets/buttonlogo.svg"
-  }
-}
-```
-
-#### icons.connectionsList
-
-The path to the icon for the connection list.
-
-Type: string
-
-Example: "./assets/listicon.svg"
-
-#### icons.buttonLogo
-
-The path to the icon for the provider button on the connection page when the portal list is empty.
-
-Type: string
-
-Example: "./assets/buttonlogo.svg"
+| Parameter             | Type   | Description                                                                 | Example                   |
+|-----------------------|--------|-----------------------------------------------------------------------------|---------------------------|
+| icons.connectionsList | string | The path to the icon for the connection list.                               | `"./assets/listicon.svg"` |
+| icons.buttonLogo      | string | The path to the icon for the provider button on the connection page when the portal list is empty. | `"./assets/buttonlogo.svg"` |
 
 ### Example
 
