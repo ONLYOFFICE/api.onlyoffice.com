@@ -1,6 +1,6 @@
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+import FilterCards from '@site/src/components/Filter/FilterCards';
+import samples from './data/samples.json';
 
 # Advanced samples
 
-<DocCardList items={[...[...useCurrentSidebarCategory().items]]} />
+<FilterCards items={samples} />

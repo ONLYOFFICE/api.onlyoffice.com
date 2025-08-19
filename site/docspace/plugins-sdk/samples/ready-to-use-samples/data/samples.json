@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Draw.io",
+        "description": "A tool for creating diagrams, flowcharts, intelligence maps, business layouts, entity relationships, program blocks, and more.",
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/drawio"
+    },
+    {
+        "title": "Markdown",
+        "description": "A tool for viewing, editing and creating `.md` files.",
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/markdown"
+    },
+    {
+        "title": "PDF converter",
+        "description": "A tool for converting documents, spreadsheets, presentations, and forms to PDF.",
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/pdf-converter"
+    },
+    {
+        "title": "Speech to text",
+        "description": "A speech recognition software that allows you to recognize and translate spoken speech into text.",
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/speech-to-text"
+    }
+]

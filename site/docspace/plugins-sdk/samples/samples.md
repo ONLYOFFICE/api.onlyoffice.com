@@ -2,8 +2,10 @@
 sidebar_position: -2
 ---
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+import FilterCards from '@site/src/components/Filter/FilterCards';
+import basicSamples from './basic-samples/data/samples.json';
+import advancedSamples from './advanced-samples/data/samples.json';
+import readyToUseSamples from './ready-to-use-samples/data/samples.json';
 
 # DocSpace plugin samples
 
@@ -11,12 +13,12 @@ The following examples will show you how to create and use ONLYOFFICE DocSpace p
 
 ## Basic samples
 
-<DocCardList items={[...[...useCurrentSidebarCategory().items[0].items]]} />
+<FilterCards items={basicSamples} />
 
 ## Advanced samples
 
-<DocCardList items={[...[...useCurrentSidebarCategory().items[1].items]]} />
+<FilterCards items={advancedSamples} />
 
 ## Ready-to-use samples
 
-<DocCardList items={[...[...useCurrentSidebarCategory().items[2].items]]} />
+<FilterCards items={readyToUseSamples} />

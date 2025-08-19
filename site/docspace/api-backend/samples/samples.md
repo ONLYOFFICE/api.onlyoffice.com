@@ -2,8 +2,10 @@
 sidebar_class_name: hidden
 ---
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+import FilterCards from '@site/src/components/Filter/FilterCards';
+import basicSamples from './basic-samples/data/samples.json';
+import integrationSamples from './integration-samples/data/samples.json';
+
 
 # DocSpace REST API samples
 
@@ -11,8 +13,8 @@ The following examples will show you how to use ONLYOFFICE DocSpace API implemen
 
 ## Basic samples
 
-<DocCardList items={[...[...useCurrentSidebarCategory().items[0].items]]} />
+<FilterCards items={basicSamples} />
 
 ## Integration samples
 
-<DocCardList items={[...[...useCurrentSidebarCategory().items[1].items]]} />
+<FilterCards items={integrationSamples} />

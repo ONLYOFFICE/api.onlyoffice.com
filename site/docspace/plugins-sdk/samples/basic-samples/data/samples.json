@@ -1,32 +1,57 @@
 [
     {
-        "title": "Creating an API plugin",
+        "title": "API plugin",
         "description": "This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via the REST API.",
         "link": "/docspace/plugins-sdk/samples/basic-samples/api-plugin"
     },
     {
-        "title": "Creating a context menu plugin",
+        "title": "Box component",
+        "description": "This guide demonstrates how to configure and use the Box component in the DocSpace Plugins SDK with common layout, alignment, and spacing properties.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/box-component"
+    },
+    {
+        "title": "Button component",
+        "description": "This guide demonstrates how to render and configure the Button component using the DocSpace Plugins SDK.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/button-component"
+    },
+    {
+        "title": "ComboBox component",
+        "description": "This guide demonstrates how to configure and use the ComboBox component in the DocSpace Plugins SDK with nearly all supported layout and style properties.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/combobox-component"
+    },
+    {
+        "title": "Context menu plugin",
         "description": "This guide walks you through creating a basic plugin for DocSpace that adds an item to the file context menu and logs an action when clicked.",
         "link": "/docspace/plugins-sdk/samples/basic-samples/context-menu-plugin"
     },
     {
-        "title": "Creating a file plugin",
+        "title": "File plugin",
         "description": "This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.",
         "link": "/docspace/plugins-sdk/samples/basic-samples/file-plugin"
     },
     {
-        "title": "Creating a main button plugin",
+        "title": "Main button plugin",
         "description": "This guide walks you through creating a basic plugin for DocSpace that adds a button to the main toolbar and logs an action when clicked.",
         "link": "/docspace/plugins-sdk/samples/basic-samples/main-button-plugin"
     },
     {
-        "title": "Creating a profile menu plugin",
+        "title": "Profile menu plugin",
         "description": "This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.",
         "link": "/docspace/plugins-sdk/samples/basic-samples/profile-menu-plugin"
     },
     {
-        "title": "Creating a settings plugin",
+        "title": "Settings plugin",
         "description": "This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.",
         "link": "/docspace/plugins-sdk/samples/basic-samples/settings-plugin"
+    },
+    {
+        "title": "Text component",
+        "description": "This guide demonstrates how to configure and use the Text component in the DocSpace Plugins SDK with nearly all supported layout and style properties.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/text-component"
+    },
+    {
+        "title": "ToggleButton component",
+        "description": "This guide demonstrates how to configure and use the ToggleButton component in the DocSpace Plugins SDK with nearly all supported layout and style properties.",
+        "link": "/docspace/plugins-sdk/samples/basic-samples/togglebutton-component"
     }
 ]

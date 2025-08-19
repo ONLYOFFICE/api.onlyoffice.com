@@ -1,22 +1,17 @@
 [
     {
-        "title": "Draw.io",
-        "description": "A tool for creating diagrams, flowcharts, intelligence maps, business layouts, entity relationships, program blocks, and more.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/drawio"
+        "title": "File extension filter plugin",
+        "description": "This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.",
+        "link": "/docspace/plugins-sdk/samples/advanced-samples/file-extension-filter"
     },
     {
-        "title": "Markdown",
-        "description": "A tool for viewing, editing and creating `.md` files.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/markdown"
+        "title": "Modal dialog plugin",
+        "description": "This guide walks you through building a plugin for DocSpace that adds a custom toolbar button.",
+        "link": "/docspace/plugins-sdk/samples/advanced-samples/model-dialog-plugin"
     },
     {
-        "title": "PDF converter",
-        "description": "A tool for converting documents, spreadsheets, presentations, and forms to PDF.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/pdf-converter"
-    },
-    {
-        "title": "Speech to text",
-        "description": "A speech recognition software that allows you to recognize and translate spoken speech into text.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/speech-to-text"
+        "title": "Settings plugin UI",
+        "description": "This plugin adds a settings interface for administrators in DocSpace.",
+        "link": "/docspace/plugins-sdk/samples/advanced-samples/settings-plugin-ui"
     }
 ]

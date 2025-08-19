@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Add DocSpace users to Trello",
+        "description": "This script automates the process of retrieving DocSpace users and adding them to a Trello board.",
+        "link": "/docspace/api-backend/samples/integration-samples/add-docspace-users-to-trello"
+    },
+    {
+        "title": "Add Notion users to DocSpace",
+        "description": "This script automates the process of retrieving Notion users and adding them to the DocSpace.",
+        "link": "/docspace/api-backend/samples/integration-samples/add-notion-users-to-docspace"
+    },
+    {
+        "title": "Add Trello users to DocSpace",
+        "description": "This script automates the process of retrieving DocSpace users and adding them to a Trello board.",
+        "link": "/docspace/api-backend/samples/integration-samples/add-trello-users-to-docspace"
+    },
+    {
+        "title": "Create DocSpace room from Trello board",
+        "description": "This integration retrieves the name of a Trello board and creates a new room in ONLYOFFICE DocSpace with the same title.",
+        "link": "/docspace/api-backend/samples/integration-samples/create-docspace-room-from-trello-board"
+    },
+    {
+        "title": "Export DocSpace file to Dropbox",
+        "description": "This integration allows you to automatically export files from DocSpace to Dropbox using a presigned download URL.",
+        "link": "/docspace/api-backend/samples/integration-samples/export-file-to-dropbox"
+    },
+    {
+        "title": "Generate DocSpace structure from Asana projects",
+        "description": "This integration creates collaboration rooms in ONLYOFFICE DocSpace based on Asana projects and generates folders for each task inside the corresponding room.",
+        "link": "/docspace/api-backend/samples/integration-samples/generate-docspace-structure-from-asana"
+    },
+    {
+        "title": "Import Dropbox file to DocSpace",
+        "description": "This integration allows you to automatically import files from Dropbox into a specific room in ONLYOFFICE DocSpace.",
+        "link": "/docspace/api-backend/samples/integration-samples/import-dropbox-file-to-docspace"
+    },
+    {
+        "title": "Import Trello card attachments to DocSpace",
+        "description": "This integration allows you to automatically import all file attachments from a specific Trello card into an ONLYOFFICE DocSpace room.",
+        "link": "/docspace/api-backend/samples/integration-samples/import-trello-attachments-to-docspace"
+    },
+    {
+        "title": "Invite DocSpace user from Asana task",
+        "description": "This integration automatically retrieves the email of the assignee from an Asana task and invites them to ONLYOFFICE DocSpace.",
+        "link": "/docspace/api-backend/samples/integration-samples/invite-user-from-asana-task"
+    },
+    {
+        "title": "Share Dropbox folders with DocSpace group members",
+        "description": "This integration automates the process of creating shared Dropbox folders for DocSpace group members and inviting them to collaborate.",
+        "link": "/docspace/api-backend/samples/integration-samples/share-dropbox-folders-with-docspace-group-members"
+    },
+    {
+        "title": "Share Dropbox folders with DocSpace users",
+        "description": "This integration automates the process of sharing Dropbox folders with DocSpace users.",
+        "link": "/docspace/api-backend/samples/integration-samples/share-dropbox-folders-with-docspace-users"
+    }
+]
