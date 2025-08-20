@@ -6,57 +6,57 @@ sidebar_position: -4
 
 The configuration parameters describe the behavior and display options of the DocSpace elements.
 
-| Parameter            | Type              | Presence | Description |
-|----------------------|-------------------|----------|-------------|
-| **buttonColor**      | string            | optional | The selector button color. Example: `"#5299E0"`. |
-| **checkCSP**         | boolean           | optional | Specifies whether to check for the presence of CSP headers before initialization. Example: `true`. |
-| **destroyText**      | string            | optional | The text inserted into the *div* tag when the [destroyFrame](./methods.md#destroyframe) method is called. Example: `""`. |
-| **disableActionButton** | boolean        | optional | Specifies whether to disable the **Actions** button in the manager interface. Example: `false`. |
-| **downloadToEvent**  | boolean           | optional | Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](./events.md#ondownload) event. Example: `false`. |
-| **editorCustomization** | object        | optional | Parameters to customize editors from [this section](../../../docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md). Example: `{}`. |
-| **editorGoBack**     | boolean           | optional | Specifies whether the **File Location** button is displayed in the editor. Example: `true`. |
-| **editorType**       | string            | optional | The editor mode display type (`"embedded"`, `"desktop"`). Example: `"desktop"`. |
-| **events**           | object            | optional | A list of DocSpace events returned on certain actions within the SDK. Example:[events example](#events) |
-| **filter**           | object            | optional | Filter parameters for searching files in the DocSpace manager. Example: `{ count: 100, page: 1, ... }`. See [filter parameters](#filter-parameters). |
-| **filterParam**      | string            | optional | Filter parameters for selector mode (`"ALL"`, `"DOCX"`, `"IMG"`, `"GZ"`, `"DOCXF"`, `"XLSX"`, `"BackupOnly"`). Example: `"ALL"`. |
-| **frameId**          | string            | optional | The frame SDK ID used to refer to the SDK instance. Example: `"ds-frame"`. |
-| **height**           | string            | optional | Frame SDK height in percent. Example: `"100%"`. |
-| **id**               | string            | optional | Element ID for SDK initialization. Example: `null`. |
-| **infoPanelVisible** | boolean           | optional | Whether to display a button for the info panel. Example: `true`. |
-| **locale**           | string            | optional | The language of the DocSpace user interface which is specified with the four letter language code. Example: `null`. |
-| **mode**             | string            | optional | SDK [initialization mode](./initialization-modes/initialization-modes.md). Values: `"manager"`, `"file-selector"`, `"room-selector"`, `"editor"`, `"viewer"`, `"system"`. |
-| **name**             | string            | optional | Name of the object inserted into the page. Example: `"frameDocSpace"`. |
-| **requestToken**     | string            | optional | Token used to open public rooms/files. Example: `null`. |
-| **rootPath**         | string            | optional | Path to frame SDK. Example: `"/rooms/shared/"`. |
-| **selectorType**     | string            | optional | Selector type defining filters in selector mode. Values: `"roomsOnly"`, `"roomsOnly"`, `"userFolderOnly"`, `"exceptPrivacyTrashArchiveFolders"`, `"exceptSortedByTagsFolders"`. |
-| **showFilter**       | boolean           | optional | Whether the interface filter is displayed. Example: `false`. |
-| **showHeader**       | boolean           | optional | Whether the header is displayed in mobile view. Example: `false`. |
-| **showMenu**         | boolean           | optional | Whether the interface menu is displayed. Example: `false`. |
-| **showSelectorCancel** | boolean         | optional | Whether **Cancel** button is displayed in selector mode. Example: `false`. |
-| **showSelectorHeader** | boolean         | optional | Whether header is displayed in selector mode. Example: `false`. |
-| **showSettings**     | boolean           | optional | Whether to display the **Manage displayed columns** button. Example: `false`. |
-| **showSignOut**      | boolean           | optional | Whether the **Sign out** button is displayed. Example: `true`. |
-| **showTitle**        | boolean           | optional | Whether the interface title is displayed. Example: `true`. |
-| **src**              | string            | optional | Base URL to the DocSpace portal. Example: `{PORTAL\_SRC}`. |
-| **theme**            | string            | optional | UI theme (`"Base"`, `"Dark"`, `"System"`). Example: `"Base"`. |
-| **type**             | string            | optional | Platform type (`"desktop"`, `"mobile"`). Example: `"desktop"`. |
-| **viewAs**           | string            | optional | Layout in the manager (`"row"`, `"table"`, `"tile"`). Example: `"row"`. |
-| **viewTableColumns** | string            | optional | Column names for table in manager. Example: `"Name,Type,Tags"`. |
-| **width**            | string            | optional | Frame SDK width in percent. Example: `"100%"`. |
-| **withBreadCrumbs**  | boolean           | optional | Whether to display breadcrumbs in selector mode. Example: `true`. |
-| **withSearch**       | boolean           | optional | Whether to display **Search** in selector mode. Example: `true`. |
-| **withSubtitle**     | boolean           | optional | Whether to display filter parameters in selector mode. Example: `true`. |
+| Parameter           | Type    | Description                                                                                                                                                               | Example                           |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| buttonColor         | string  | The selector button color.                                                                                                                                                | `"#5299E0"`                       |
+| checkCSP            | boolean | Specifies whether to check for the presence of CSP headers before initialization.                                                                                         | `true`                            |
+| destroyText         | string  | The text inserted into the *div* tag when the [destroyFrame](./methods.md#destroyframe) method is called.                                                                 | `""`                              |
+| disableActionButton | boolean | Specifies whether to disable the **Actions** button in the manager interface.                                                                                             | `false`                           |
+| downloadToEvent     | boolean | Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](./events.md#ondownload) event.                                    | `false`                           |
+| editorCustomization | object  | Parameters to customize editors from [this section](../../../docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md).                     | `{}`                              |
+| editorGoBack        | boolean | Specifies whether the **File Location** button is displayed in the editor.                                                                                                | `true`                            |
+| editorType          | string  | The editor mode display type (`"embedded"`, `"desktop"`).                                                                                                                 | `"desktop"`                       |
+| events              | object  | A list of DocSpace events returned on certain actions within the SDK.                                                                                                     | [events example](#events-example) |
+| filter              | object  | Filter parameters for searching files in the DocSpace manager. See [filter parameters](#filter-parameters).                                                               | `{ count: 100, page: 1, ... }`    |
+| filterParam         | string  | Filter parameters for selector mode (`"ALL"`, `"DOCX"`, `"IMG"`, `"GZ"`, `"DOCXF"`, `"XLSX"`, `"BackupOnly"`).                                                            | `"ALL"`                           |
+| frameId             | string  | The frame SDK ID used to refer to the SDK instance.                                                                                                                       | `"ds-frame"`                      |
+| height              | string  | Frame SDK height in percent.                                                                                                                                              | `"100%"`                          |
+| id                  | string  | Element ID for SDK initialization.                                                                                                                                        | `null`                            |
+| infoPanelVisible    | boolean | Whether to display a button for the info panel.                                                                                                                           | `true`                            |
+| locale              | string  | The language of the DocSpace user interface which is specified with the four letter language code.                                                                        | `null`                            |
+| mode                | string  | SDK [initialization mode](./initialization-modes/initialization-modes.md). Values: `"manager"`, `"file-selector"`, `"room-selector"`, `"editor"`, `"viewer"`, `"system"`. | `"manager"`                       |
+| name                | string  | Name of the object inserted into the page.                                                                                                                                | `"frameDocSpace"`                 |
+| requestToken        | string  | Token used to open public rooms/files.                                                                                                                                    | `null`                            |
+| rootPath            | string  | Path to frame SDK.                                                                                                                                                        | `"/rooms/shared/"`                |
+| selectorType        | string  | Selector type defining filters in selector mode. Values: `"roomsOnly"`, `"userFolderOnly"`, `"exceptPrivacyTrashArchiveFolders"`, `"exceptSortedByTagsFolders"`.          | `"roomsOnly"`                     |
+| showFilter          | boolean | Whether the interface filter is displayed.                                                                                                                                | `false`                           |
+| showHeader          | boolean | Whether the header is displayed in mobile view.                                                                                                                           | `false`                           |
+| showMenu            | boolean | Whether the interface menu is displayed.                                                                                                                                  | `false`                           |
+| showSelectorCancel  | boolean | Whether **Cancel** button is displayed in selector mode.                                                                                                                  | `false`                           |
+| showSelectorHeader  | boolean | Whether header is displayed in selector mode.                                                                                                                             | `false`                           |
+| showSettings        | boolean | Whether to display the **Manage displayed columns** button.                                                                                                               | `false`                           |
+| showSignOut         | boolean | Whether the **Sign out** button is displayed.                                                                                                                             | `true`                            |
+| showTitle           | boolean | Whether the interface title is displayed.                                                                                                                                 | `true`                            |
+| src                 | string  | Base URL to the DocSpace portal.                                                                                                                                          | `{PORTAL_SRC}`                    |
+| theme               | string  | UI theme (`"Base"`, `"Dark"`, `"System"`).                                                                                                                                | `"Base"`                          |
+| type                | string  | Platform type (`"desktop"`, `"mobile"`).                                                                                                                                  | `"desktop"`                       |
+| viewAs              | string  | Layout in the manager (`"row"`, `"table"`, `"tile"`).                                                                                                                     | `"row"`                           |
+| viewTableColumns    | string  | Column names for table in manager.                                                                                                                                        | `"Name,Type,Tags"`                |
+| width               | string  | Frame SDK width in percent.                                                                                                                                               | `"100%"`                          |
+| withBreadCrumbs     | boolean | Whether to display breadcrumbs in selector mode.                                                                                                                          | `true`                            |
+| withSearch          | boolean | Whether to display **Search** in selector mode.                                                                                                                           | `true`                            |
+| withSubtitle        | boolean | Whether to display filter parameters in selector mode.                                                                                                                    | `true`                            |
 
 ## filter parameters
 
-| Parameter            | Type              | Presence | Description |
-|----------------------|-------------------|----------|-------------|
-| **filter.count**     | integer           | optional | Number of files to be displayed. Example: `100`. |
-| **filter.page**      | integer           | optional | Page number. Example: `1`. |
-| **filter.search**    | string            | optional | Query to search for files. Example: `""`. |
-| **filter.sortorder** | string            | optional | Sort order (`"descending"`, `"ascending"`). Example: `"descending"`. |
-| **filter.sortby**    | string            | optional | Sort parameter (`"DateAndTime"`, `"AZ"`, etc.). Example: `"DateAndTime"`. |
-| **filter.withSubfolders** | boolean     | optional | Specifies whether to exclude subfolders when searching. Example: `false`. |
+| Parameter             | Type    | Description                                             | Example         |
+| --------------------- | ------- | ------------------------------------------------------- | --------------- |
+| filter.count          | integer | Number of files to be displayed.                        | `100`           |
+| filter.page           | integer | Page number.                                            | `1`             |
+| filter.search         | string  | Query to search for files.                              | `""`            |
+| filter.sortorder      | string  | Sort order (`"descending"`, `"ascending"`).             | `"descending"`  |
+| filter.sortby         | string  | Sort parameter (`"DateAndTime"`, `"AZ"`, etc.).         | `"DateAndTime"` |
+| filter.withSubfolders | boolean | Specifies whether to exclude subfolders when searching. | `false`         |
 
 ### `events` example
 

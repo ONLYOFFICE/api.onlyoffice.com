@@ -21,68 +21,16 @@ Use the [execCommand](./execcommand.md) method to display a cloud in the **Conne
 }
 ```
 
-### displayName
+## User Parameters  
 
-Defines the user name displayed on the **Connected clouds** page.
-
-> This field is required.
-
-Type: string
-
-Example: "John Smith"
-
-### email
-
-Defines the user email displayed on the **Connected clouds** page.
-
-Type: string
-
-Example: `john@example.com`
-
-### domain
-
-Defines the cloud name and the cloud entry point.
-
-> This field is required.
-
-Type: string
-
-Example: `https://exampledomain.com`
-
-### provider
-
-Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)).
-
-> This field is required.
-
-Type: string
-
-Example: "onlyoffice"
-
-### uiTheme
-
-Defines the editor theme settings. It can be set in two ways:
-
-- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
-- **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**).
-
-The default light theme is **theme-classic-light**.The first option has higher priority.
-
-Apart from the available editor themes, the user can also customize their own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx) for the application interface.
-
-Type: string
-
-Example: "theme-dark"
-
-### userId
-
-Defines the user id.
-
-> This field is required.
-
-Type: string
-
-Example: "78e1e841"
+| Parameter   | Type   | Description | Example |
+|-------------|--------|-------------|---------|
+| displayName | string | Defines the user name displayed on the Connected clouds page. **This field is required.** | "John Smith" |
+| email       | string | Defines the user email displayed on the Connected clouds page. | "john@example.com" |
+| domain      | string | Defines the cloud name and the cloud entry point. **This field is required.** | "https://exampledomain.com" |
+| provider    | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the config). **This field is required.** | "onlyoffice" |
+| uiTheme     | string | Defines the editor theme settings. It can be set in two ways: • **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*). • **default theme** – the default dark or light theme value will be set (*default-dark, default-light*). The default light theme is *theme-classic-light*. The first option has higher priority. Apart from the available editor themes, the user can also customize their own color themes for the application interface. | "theme-dark" |
+| userId      | string | Defines the user id. **This field is required.** | "78e1e841" |
 
 ### Example
 
