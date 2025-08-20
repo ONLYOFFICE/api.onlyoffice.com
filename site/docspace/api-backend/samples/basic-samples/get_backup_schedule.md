@@ -9,46 +9,102 @@ This example demonstrates how to retrieve the current portal’s backup schedule
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authentication
+  const HEADERS = {
+    Authorization: API_KEY,
+  };
 
-# Headers with authentication
-HEADERS = {
+  function getBackupSchedule(dump) {
+    // Optional query parameter: Dump=True to request dump-based schedule info
+    const params = new URLSearchParams();
+    if (dump !== undefined && dump !== null) {
+      params.set('Dump', dump ? 'True' : 'False');
+    }
+
+    const qs = params.toString();
+    const url = `${API_HOST}/api/2.0/backup/getbackupschedule${qs ? `?${qs}` : ''}`;
+
+    return fetch(url, {
+      method: 'GET',
+      headers: HEADERS,
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to get backup schedule: ${res.status} - ${t}`);
+        });
+      })
+      .then((data) => {
+        const schedule = data?.response || {};
+        console.log('Storage type:', schedule.storageType);
+        console.log('Cron params:', schedule.cronParams); // period/hour/day
+        console.log('Backups stored:', schedule.backupsStored);
+        console.log('Last backup time:', schedule.lastBackupTime);
+        console.log('Dump enabled:', schedule.dump);
+        return schedule;
+      })
+      .catch((err) => {
+        console.error(err.message);
+        return null;
+      });
+  }
+
+  // Run (retrieve schedule without forcing the Dump query param)
+  getBackupSchedule();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authentication
+  HEADERS = {
     'Authorization': API_KEY
-}
+  }
 
-def get_backup_schedule(dump: bool | None = None):
+  def get_backup_schedule(dump: bool | None = None):
     # Optional query parameter: Dump=True to request dump-based schedule info
     params = {}
     if dump is not None:
-        params['Dump'] = dump
+      params['Dump'] = dump
 
     response = requests.get(
-        f'{API_HOST}/api/2.0/backup/getbackupschedule',
-        headers=HEADERS,
-        params=params
+      f'{API_HOST}/api/2.0/backup/getbackupschedule',
+      headers=HEADERS,
+      params=params
     )
 
     if response.status_code == 200:
-        schedule = response.json().get('response', {})
-        print("Storage type:", schedule.get('storageType'))
-        print("Cron params:", schedule.get('cronParams'))       # period/hour/day
-        print("Backups stored:", schedule.get('backupsStored'))
-        print("Last backup time:", schedule.get('lastBackupTime'))
-        print("Dump enabled:", schedule.get('dump'))
-        return schedule
+      schedule = response.json().get('response', {})
+      print("Storage type:", schedule.get('storageType'))
+      print("Cron params:", schedule.get('cronParams'))       # period/hour/day
+      print("Backups stored:", schedule.get('backupsStored'))
+      print("Last backup time:", schedule.get('lastBackupTime'))
+      print("Dump enabled:", schedule.get('dump'))
+      return schedule
     else:
-        raise Exception(f"Failed to get backup schedule: {response.status_code} - {response.text}")
+      raise Exception(f"Failed to get backup schedule: {response.status_code} - {response.text}")
 
-if __name__ == '__main__':
+  if __name__ == '__main__':
     # Retrieve schedule (without forcing the Dump query param)
     get_backup_schedule()
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

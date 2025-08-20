@@ -9,45 +9,99 @@ This example demonstrates how to retrieve the list of existing backups in ONLYOF
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authentication
+  const HEADERS = {
+    Authorization: API_KEY,
+  };
 
-# Headers with authentication
-HEADERS = {
+  function getBackupHistory() {
+    // Optional: set Dump=True for DB-only backups
+    const params = new URLSearchParams({ Dump: 'False' });
+    const url = `${API_HOST}/api/2.0/backup/getbackuphistory?${params.toString()}`;
+
+    // Send request to retrieve backup history
+    return fetch(url, {
+      method: 'GET',
+      headers: HEADERS,
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          console.log(`Failed to retrieve history: ${res.status} - ${t}`);
+          return null;
+        });
+      })
+      .then((data) => {
+        if (!data) return;
+        const backups = data.response || [];
+        backups.forEach((item) => {
+          console.log(`Backup ID: ${item.id}`);
+          console.log(`File: ${item.fileName}`);
+          console.log(`Storage: ${item.storageType}`);
+          console.log(`Created: ${item.createdOn}`);
+          console.log(`Expires: ${item.expiresOn}\n`);
+        });
+      })
+      .catch((err) => {
+        console.log(`Failed to retrieve history: ${err.message}`);
+      });
+  }
+
+  // Run
+  getBackupHistory();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authentication
+  HEADERS = {
     'Authorization': API_KEY
-}
+  }
 
-def get_backup_history():
+  def get_backup_history():
     # Optional: set Dump=True for DB-only backups
     params = {'Dump': False}
 
     # Send request to retrieve backup history
     response = requests.get(
-        f'{API_HOST}/api/2.0/backup/getbackuphistory',
-        headers=HEADERS,
-        params=params
+      f'{API_HOST}/api/2.0/backup/getbackuphistory',
+      headers=HEADERS,
+      params=params
     )
 
     # Handle and display response
     if response.status_code == 200:
-        backups = response.json().get('response', [])
-        for item in backups:
-            print(f"Backup ID: {item.get('id')}")
-            print(f"File: {item.get('fileName')}")
-            print(f"Storage: {item.get('storageType')}")
-            print(f"Created: {item.get('createdOn')}")
-            print(f"Expires: {item.get('expiresOn')}\n")
+      backups = response.json().get('response', [])
+      for item in backups:
+        print(f"Backup ID: {item.get('id')}")
+        print(f"File: {item.get('fileName')}")
+        print(f"Storage: {item.get('storageType')}")
+        print(f"Created: {item.get('createdOn')}")
+        print(f"Expires: {item.get('expiresOn')}\n")
     else:
-        print(f"Failed to retrieve history: {response.status_code} - {response.text}")
+      print(f"Failed to retrieve history: {response.status_code} - {response.text}")
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     get_backup_history()
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

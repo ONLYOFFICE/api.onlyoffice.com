@@ -9,32 +9,79 @@ This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE 
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const HEADERS = {
+    Authorization: `Bearer ${API_KEY}`,
+    'Content-Type': 'application/json',
+  };
 
-# Headers with API key for authentication
-HEADERS = {
+  // Step 1: Create a Virtual Data Room with a text watermark
+  function createVdrRoom(roomTitle, roomDescription) {
+    const url = `https://${API_HOST}/api/2.0/files/rooms`;
+    const data = {
+      title: roomTitle,
+      description: roomDescription,
+      roomType: 8, // VDR room
+      watermark: {
+        enabled: true,
+        text: 'Confidential',
+        rotate: -45,
+        additions: 1, // Adds UserName
+      },
+    };
+
+    return fetch(url, {
+      method: 'POST',
+      headers: HEADERS,
+      body: JSON.stringify(data),
+    })
+      .then((res) => (res.status === 200 ? res.json() : null))
+      .catch(() => null);
+  }
+
+  // Run
+  const roomTitle = 'Secure VDR Room';
+  const roomDescription = 'A virtual room with a confidential watermark.';
+
+  createVdrRoom(roomTitle, roomDescription);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  HEADERS = {
     'Authorization': f'Bearer {API_KEY}'
-}
+  }
 
-# Step 1: Create a Virtual Data Room with a text watermark
-def create_vdr_room(room_title, room_description):
-    url = f'https://{API_HOST}/api/2.0/files/rooms'
+  # Step 1: Create a Virtual Data Room with a text watermark
+  def create_vdr_room(room_title, room_description):
+    url = f'{API_HOST}/api/2.0/files/rooms'
     data = {
-        'title': room_title,
-        'description': room_description,
-        'roomType': 8,  # VDR room
-        'watermark': {
-            'enabled': True,
-            'text': 'Confidential',
-            'rotate': -45,
-            'additions': 1  # Adds UserName
-        }
+      'title': room_title,
+      'description': room_description,
+      'roomType': 8,  # VDR room
+      'watermark': {
+        'enabled': True,
+        'text': 'Confidential',
+        'rotate': -45,
+        'additions': 1  # Adds UserName
+      }
     }
 
     response = requests.post(url, headers=HEADERS, json=data)
@@ -43,13 +90,15 @@ def create_vdr_room(room_title, room_description):
         return response.json()
     return None
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     room_title = 'Secure VDR Room'
     room_description = 'A virtual room with a confidential watermark.'
 
     create_vdr_room(room_title, room_description)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

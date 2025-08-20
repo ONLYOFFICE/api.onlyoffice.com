@@ -9,42 +9,92 @@ This example demonstrates how to enable the Custom Filter mode for a specific fi
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set your DocSpace portal URL and access token
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
+  const FILE_ID = 123456; // Replace with your actual file ID
 
-# Set your DocSpace portal URL and access token
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
-FILE_ID = 123456  # Replace with your actual file ID
+  // Headers with authorization token
+  const headers = { Authorization: API_KEY };
 
-# Headers with authorization token
-headers = {'Authorization': API_KEY}
+  // Step 1: Enable Custom Filter mode
+  function enableCustomFilter(fileId) {
+    const payload = { enabled: true };
 
-# Step 1: Enable Custom Filter mode
-def enable_custom_filter(file_id):
+    return fetch(`${API_HOST}/api/2.0/files/file/${fileId}/customfilter`, {
+      method: 'PUT',
+      headers: headers,
+      body: JSON.stringify(payload),
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to enable Custom Filter mode: ${t}`);
+        });
+      })
+      .then((data) => {
+        const result = data?.response || {};
+        console.log(`Custom Filter enabled for file ID ${fileId}`);
+        console.log(`• Title: ${result.title}`);
+        console.log(`• View URL: ${result.webUrl || result.viewUrl}`);
+        console.log(`• Filter Enabled By: ${result.customFilterEnabledBy}`);
+        return result;
+      })
+      .catch((err) => {
+        console.error(err.message);
+        return null;
+      });
+  }
+
+  // Run the method
+  console.log('Enabling Custom Filter mode...');
+  enableCustomFilter(FILE_ID);
+  ```
+  
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set your DocSpace portal URL and access token
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+  FILE_ID = 123456  # Replace with your actual file ID
+
+  # Headers with authorization token
+  headers = {'Authorization': API_KEY}
+
+  # Step 1: Enable Custom Filter mode
+  def enable_custom_filter(file_id):
     payload = { 'enabled': True }
     response = requests.put(
-        f'{API_HOST}/api/2.0/files/file/{file_id}/customfilter',
-        headers=headers,
-        json=payload
+      f'{API_HOST}/api/2.0/files/file/{file_id}/customfilter',
+      headers=headers,
+      json=payload
     )
 
     if response.status_code == 200:
-        result = response.json().get('response', {})
-        print(f'Custom Filter enabled for file ID {file_id}')
-        print(f'• Title: {result.get('title')}')
-        print(f'• View URL: {result.get('webUrl') or result.get('viewUrl')}')
-        print(f'• Filter Enabled By: {result.get('customFilterEnabledBy')}')
+      result = response.json().get('response', {})
+      print(f'Custom Filter enabled for file ID {file_id}')
+      print(f'• Title: {result.get('title')}')
+      print(f'• View URL: {result.get('webUrl') or result.get('viewUrl')}')
+      print(f'• Filter Enabled By: {result.get('customFilterEnabledBy')}')
     else:
-        raise Exception(f'Failed to enable Custom Filter mode: {response.text}')
+      raise Exception(f'Failed to enable Custom Filter mode: {response.text}')
 
-# Run the method
-if __name__ == '__main__':
+  # Run the method
+  if __name__ == '__main__':
     print('Enabling Custom Filter mode...')
     enable_custom_filter(FILE_ID)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

@@ -9,59 +9,135 @@ This example demonstrates how to retrieve the contents of a folder or room in ON
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const headers = {
+    Authorization: `Bearer ${API_KEY}`,
+    Accept: 'application/json',
+  };
 
-# Headers with API key for authentication
-headers = {
+  // Step 1: Retrieve folder or room contents
+  function getFolderContents(folderId) {
+    const url = `https://${API_HOST}/api/2.0/files/${folderId}`;
+
+    return fetch(url, { method: 'GET', headers: headers })
+      .then((res) =>
+        res.text().then((text) => ({ status: res.status, text }))
+      )
+      .then(({ status, text }) => {
+        console.log('Status Code:', status);
+        console.log('Raw Response:', text);
+
+        try {
+          const data = JSON.parse(text);
+
+          if (data && typeof data === 'object' && 'response' in data) {
+            const contents = data.response;
+            const files = contents.files || [];
+            const folders = contents.folders || [];
+
+            console.log(`\nContents of Folder ID ${folderId}:`);
+
+            console.log('\nFiles:');
+            files.forEach((file) => {
+              const title = file.title ?? 'No Title';
+              const ext = file.fileExst ?? 'Unknown Extension';
+              const size = file.contentLength ?? 'Unknown Size';
+              console.log(`- ${title} (${ext}) — ${size}`);
+            });
+
+            console.log('\nFolders:');
+            folders.forEach((folder) => {
+              const title = folder.title ?? 'No Title';
+              console.log(`- ${title}`);
+            });
+
+            return contents;
+          } else {
+            console.log('Unexpected response format:', data);
+            return null;
+          }
+        } catch (e) {
+          console.log(`Error parsing JSON: ${e.message}`);
+          console.log('Raw response:', text);
+          return null;
+        }
+      })
+      .catch((err) => {
+        console.log(`Request failed: ${err.message}`);
+        return null;
+        });
+  }
+
+  // Run
+  const folder_id = 1074098; // Replace with actual folder or room ID
+  getFolderContents(folder_id);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  headers = {
     'Authorization': f'Bearer {API_KEY}',
     'Accept': 'application/json'
-}
+  }
 
-# Step 1: Retrieve folder or room contents
-def get_folder_contents(folder_id):
-    url = f'https://{API_HOST}/api/2.0/files/:folderId'
+  # Step 1: Retrieve folder or room contents
+  def get_folder_contents(folder_id):
+    url = f'{API_HOST}/api/2.0/files/:folderId'
     response = requests.get(url, headers=headers)
 
     print("Status Code:", response.status_code)
     print("Raw Response:", response.text)
 
     try:
-        data = response.json()
-        if isinstance(data, dict) and "response" in data:
-            contents = data["response"]
-            files = contents.get("files", [])
-            folders = contents.get("folders", [])
+      data = response.json()
+      if isinstance(data, dict) and "response" in data:
+        contents = data["response"]
+        files = contents.get("files", [])
+        folders = contents.get("folders", [])
 
-            print(f'\nContents of Folder ID {folder_id}:')
+        print(f'\nContents of Folder ID {folder_id}:')
 
-            print('\nFiles:')
-            for file in files:
-                print(f"- {file.get('title', 'No Title')} ({file.get('fileExst', 'Unknown Extension')}) — {file.get('contentLength', 'Unknown Size')}")
+        print('\nFiles:')
+        for file in files:
+          print(f"- {file.get('title', 'No Title')} ({file.get('fileExst', 'Unknown Extension')}) — {file.get('contentLength', 'Unknown Size')}")
 
-            print('\nFolders:')
-            for folder in folders:
-                print(f"- {folder.get('title', 'No Title')}")
+        print('\nFolders:')
+        for folder in folders:
+          print(f"- {folder.get('title', 'No Title')}")
 
-            return contents
-        else:
-            print("Unexpected response format:", data)
+          return contents
+      else:
+        print("Unexpected response format:", data)
     except Exception as e:
-        print(f"Error parsing JSON: {e}")
-        print("Raw response:", response.text)
+      print(f"Error parsing JSON: {e}")
+      print("Raw response:", response.text)
 
-    return None
+  return None
 
-if __name__ == '__main__':
+  if __name__ == '__main__':
     folder_id = 1074098  # Replace with actual folder or room ID
     get_folder_contents(folder_id)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

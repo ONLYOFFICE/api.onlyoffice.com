@@ -9,46 +9,96 @@ This example demonstrates how to retrieve the progress of an ongoing portal rest
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authentication
+  const HEADERS = {
+    Authorization: API_KEY,
+  };
 
-# Headers with authentication
-HEADERS = {
+  function getRestoreProgress(dump) {
+    // Optional query parameter: whether the restore includes a DB dump
+    const params = new URLSearchParams({ Dump: String(dump).toLowerCase() });
+    const url = `${API_HOST}/api/2.0/backup/getrestoreprogress?${params.toString()}`;
+
+    // Send GET request to check restore progress
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to retrieve restore progress: ${res.status} - ${t}`);
+        });
+      })
+      .then((data) => {
+        const progressInfo = data?.response || {};
+        console.log(`Progress: ${progressInfo.progress}%`);
+        console.log(`Completed: ${progressInfo.isCompleted}`);
+        console.log(`Task type: ${progressInfo.backupProgressEnum}`);
+        console.log(`Error: ${progressInfo.error}`);
+        console.log(`Download link: ${progressInfo.link}`);
+        console.log(`Tenant ID: ${progressInfo.tenantId}`);
+        return progressInfo;
+      })
+      .catch((err) => {
+        console.error(err.message);
+        return null;
+      });
+  }
+
+  // Run example: Check restore progress without dump parameter
+  getRestoreProgress(false);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authentication
+  HEADERS = {
     'Authorization': API_KEY
-}
+  }
 
-def get_restore_progress(dump=False):
+  def get_restore_progress(dump=False):
     # Optional query parameter: whether the restore includes a DB dump
     params = {"Dump": str(dump).lower()}
 
     # Send GET request to check restore progress
     response = requests.get(
-        f'{API_HOST}/api/2.0/backup/getrestoreprogress',
-        headers=HEADERS,
-        params=params
+      f'{API_HOST}/api/2.0/backup/getrestoreprogress',
+      headers=HEADERS,
+      params=params
     )
 
     if response.status_code == 200:
-        progress_info = response.json().get('response', {})
-        print(f"Progress: {progress_info.get('progress')}%")
-        print(f"Completed: {progress_info.get('isCompleted')}")
-        print(f"Task type: {progress_info.get('backupProgressEnum')}")
-        print(f"Error: {progress_info.get('error')}")
-        print(f"Download link: {progress_info.get('link')}")
-        print(f"Tenant ID: {progress_info.get('tenantId')}")
-        return progress_info
+      progress_info = response.json().get('response', {})
+      print(f"Progress: {progress_info.get('progress')}%")
+      print(f"Completed: {progress_info.get('isCompleted')}")
+      print(f"Task type: {progress_info.get('backupProgressEnum')}")
+      print(f"Error: {progress_info.get('error')}")
+      print(f"Download link: {progress_info.get('link')}")
+      print(f"Tenant ID: {progress_info.get('tenantId')}")
+      return progress_info
     else:
-        raise Exception(f"Failed to retrieve restore progress: {response.status_code} - {response.text}")
+      raise Exception(f"Failed to retrieve restore progress: {response.status_code} - {response.text}")
 
-if __name__ == '__main__':
+  if __name__ == '__main__':
     # Example: Check restore progress without dump parameter
     get_restore_progress(dump=False)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

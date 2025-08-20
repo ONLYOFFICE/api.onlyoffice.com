@@ -9,34 +9,81 @@ This example demonstrates how to delete an existing API key in ONLYOFFICE DocSpa
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set your DocSpace portal URL and access token
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set your DocSpace portal URL and access token
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authorization token
+  const HEADERS = {
+    Authorization: API_KEY,
+  };
 
-# Headers with authorization token
-HEADERS = {
+  // Step 1: Delete the API key by ID
+  function deleteApiKey(keyId) {
+    const url = `${API_HOST}/api/2.0/keys/${keyId}`;
+
+    return fetch(url, {
+      method: 'DELETE',
+      headers: HEADERS,
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to delete API key: ${t}`);
+        });
+      })
+      .then((data) => {
+        if (data?.response === true) {
+          console.log('API key deleted successfully.');
+        } else {
+          throw new Error('Failed to delete API key: unexpected response.');
+        }
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  }
+
+  // Run the method
+  deleteApiKey('your_key_uuid');
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set your DocSpace portal URL and access token
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authorization token
+  HEADERS = {
     'Authorization': API_KEY
-}
+  }
 
-# Step 1: Delete the API key by ID
-def delete_api_key(key_id):
+  # Step 1: Delete the API key by ID
+  def delete_api_key(key_id):
     url = f'{API_HOST}/api/2.0/keys/{key_id}'
     response = requests.delete(url, headers=HEADERS)
 
     if response.status_code == 200 and response.json().get('response') is True:
-        print('API key deleted successfully.')
+      print('API key deleted successfully.')
     else:
-        raise Exception(f'Failed to delete API key: {response.text}')
+      raise Exception(f'Failed to delete API key: {response.text}')
 
-# Run the method
-if __name__ == '__main__':
+  # Run the method
+  if __name__ == '__main__':
     delete_api_key('your_key_uuid')
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

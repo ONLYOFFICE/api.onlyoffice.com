@@ -9,41 +9,88 @@ This example demonstrates how to delete the entire backup history in ONLYOFFICE 
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authentication
+  const HEADERS = {
+    Authorization: API_KEY,
+  };
 
-# Headers with authentication
-HEADERS = {
+  function deleteBackupHistory(dump) {
+    // Optional query parameter: dump backups or not
+    const params = new URLSearchParams({ Dump: String(dump).toLowerCase() });
+    const url = `${API_HOST}/api/2.0/backup/deletebackuphistory?${params.toString()}`;
+
+    // Send DELETE request to remove backup history
+    return fetch(url, {
+      method: 'DELETE',
+      headers: HEADERS,
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to delete backup history: ${res.status} - ${t}`);
+        });
+      })
+      .then((data) => {
+        const result = data?.response;
+        console.log(`Backup history deleted: ${result}`);
+        return result;
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  }
+
+  // Example: Delete history without dump backups
+  deleteBackupHistory(false);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authentication
+  HEADERS = {
     'Authorization': API_KEY
-}
+  }
 
-def delete_backup_history(dump=False):
+  def delete_backup_history(dump=False):
     # Optional query parameter: dump backups or not
     params = {"Dump": str(dump).lower()}
 
     # Send DELETE request to remove backup history
     response = requests.delete(
-        f'{API_HOST}/api/2.0/backup/deletebackuphistory',
-        headers=HEADERS,
-        params=params
+      f'{API_HOST}/api/2.0/backup/deletebackuphistory',
+      headers=HEADERS,
+      params=params
     )
 
     if response.status_code == 200:
-        result = response.json().get('response')
-        print(f"Backup history deleted: {result}")
-        return result
+      result = response.json().get('response')
+      print(f"Backup history deleted: {result}")
+      return result
     else:
-        raise Exception(f"Failed to delete backup history: {response.status_code} - {response.text}")
+      raise Exception(f"Failed to delete backup history: {response.status_code} - {response.text}")
 
-if __name__ == '__main__':
+  if __name__ == '__main__':
     # Example: Delete history without dump backups
     delete_backup_history(dump=False)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

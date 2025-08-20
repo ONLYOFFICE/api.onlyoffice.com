@@ -9,19 +9,68 @@ This example demonstrates how to check the progress of a backup process in ONLYO
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authentication
+  const HEADERS = {
+    Authorization: API_KEY,
+  };
 
-# Headers with authentication
-HEADERS = {
+  function getBackupProgress() {
+    // Optional parameter for dump-based backup
+    const params = new URLSearchParams({ Dump: 'True' });
+    const url = `${API_HOST}/api/2.0/backup/getbackupprogress?${params.toString()}`;
+
+    // Send request to retrieve progress
+    return fetch(url, {
+      method: 'GET',
+      headers: HEADERS,
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          console.log(`Error: ${res.status} - ${t}`);
+          return null;
+        });
+      })
+      .then((data) => {
+        if (!data) return;
+        const resp = data.response || {};
+        console.log(`Progress: ${resp.progress}%`);
+        console.log(`Completed: ${resp.isCompleted}`);
+        console.log(`Type: ${resp.backupProgressEnum}`);
+        console.log(`Download Link: ${resp.link}`);
+      })
+      .catch((err) => {
+        console.log(`Error: ${err.message}`);
+      });
+  }
+
+  // Run
+  getBackupProgress();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authentication
+  HEADERS = {
     'Authorization': API_KEY
-}
+  }
 
-def get_backup_progress():
+  def get_backup_progress():
     # Optional parameter for dump-based backup
     params = {'Dump': True}
 
@@ -34,18 +83,20 @@ def get_backup_progress():
 
     # Handle response
     if response.status_code == 200:
-        data = response.json().get('response', {})
-        print(f"Progress: {data.get('progress')}%")
-        print(f"Completed: {data.get('isCompleted')}")
-        print(f"Type: {data.get('backupProgressEnum')}")
-        print(f"Download Link: {data.get('link')}")
+      data = response.json().get('response', {})
+      print(f"Progress: {data.get('progress')}%")
+      print(f"Completed: {data.get('isCompleted')}")
+      print(f"Type: {data.get('backupProgressEnum')}")
+      print(f"Download Link: {data.get('link')}")
     else:
-        print(f"Error: {response.status_code} - {response.text}")
+      print(f"Error: {response.status_code} - {response.text}")
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     get_backup_progress()
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works
