@@ -267,8 +267,6 @@ export default plugin;
 Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization:
 
 ```ts
-// ...
-
 const plugin = new Buttoncomponentplugin();
 
 const createItem: IMainButtonItem = {
@@ -293,8 +291,6 @@ declare global {
     Plugins: any;
   }
 }
-
-// ...
 ```
 
 ## Step 5: Create a Button component
@@ -320,8 +316,6 @@ import {
   ButtonSize,
   ButtonGroup
 } from '@onlyoffice/docspace-plugin-sdk';
-
-// ...
 
 const plugin = new Boxcomponentplugin();
 
@@ -355,8 +349,6 @@ const body: IBox = {
   alignItems: "center",
   children: [ButtonComponent]
 };
-
-// ...
 ```
 
 ## Step 6: Define the modal dialog behavior
@@ -364,8 +356,6 @@ const body: IBox = {
 Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body from the previous step:
 
 ```ts
-// ...
-
 const modalDialogProps: IModalDialog = {
   dialogHeader: "Box layout example",
   dialogBody: demoBox,
@@ -378,8 +368,6 @@ const modalDialogProps: IModalDialog = {
   autoMaxHeight: true,
   autoMaxWidth: true
 };
-
-// ...
 ```
 
 ## Step 7: Append the modal dialog to the main button
@@ -387,8 +375,6 @@ const modalDialogProps: IModalDialog = {
 Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onclick) function with the modal display behavior:
 
 ```ts
-// ...
-
 const mainButtonItem: IMainButtonItem = {
   key: "test-main-button",
   label: "Show dialog",
@@ -402,8 +388,6 @@ const mainButtonItem: IMainButtonItem = {
       return message;
   }
 }
-
-// ...
 ```
 
 ## Step 8: Build the plugin

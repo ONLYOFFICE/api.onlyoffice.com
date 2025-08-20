@@ -255,8 +255,6 @@ export default plugin;
 Add a [main button item](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem/) below the plugin initialization:
 
 ```ts
-// ...
-
 const plugin = new Combocomponentplugin();
 
 const createItem: IMainButtonItem = {
@@ -281,8 +279,6 @@ declare global {
     Plugins: any;
   }
 }
-
-// ...
 ```
 
 ## Step 5: Define a ComboBox component
@@ -300,8 +296,6 @@ import {
   IMessage,
   Actions
 } from '@onlyoffice/docspace-plugin-sdk'
-
-// ...
 
 const plugin = new Combocomponentplugin();
 
@@ -347,8 +341,6 @@ const body: IBox = {
     { component: Components.comboBox, props: comboBox }
   ],
 }
-
-// ...
 ```
 
 ## Step 6: Define the modal dialog behavior
@@ -356,8 +348,6 @@ const body: IBox = {
 Create a [ModalDialog component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) body from the previous step:
 
 ```ts
-// ...
-
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
@@ -386,8 +376,6 @@ export const modalDialogProps: IModalDialog = {
   autoMaxHeight: true,
   autoMaxWidth: true,
 };
-
-// ...
 ```
 
 ## Step 7: Append the modal dialog to the main button
@@ -395,8 +383,6 @@ export const modalDialogProps: IModalDialog = {
 Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onclick) function with the modal display behavior:
 
 ```ts
-// ...
-
 const mainButtonItem: IMainButtonItem = {
   key: "test-main-button",
   label: "Show dialog",
@@ -410,8 +396,6 @@ const mainButtonItem: IMainButtonItem = {
       return message;
   }
 }
-
-// ...
 ```
 
 ## Step 8: Build the plugin
