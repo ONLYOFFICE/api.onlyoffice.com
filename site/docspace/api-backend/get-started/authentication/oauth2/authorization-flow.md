@@ -52,35 +52,15 @@ The parameters that must be specified in the request body depends on the client 
 
 ### For client_secret_post
 
-#### client_id
+## OAuth Parameters
 
-The ID of the client that will be used for authorization.
-
-Example: 695d37b7-18aa-4033-91b4-09690178e99a
-
-#### client_secret
-
-The secret of the client that will be used for authorization.
-
-Example: 49487362-7d4a-471f-bbf3-c04e2e1c541f
-
-#### grant_type
-
-The OAuth grant type.
-
-Example: authorization_code
-
-#### code
-
-A temporary authorization code that is sent to the client to be exchanged for a token.
-
-Example: OENBaHXhZStQ9eDVIq1NlHu6luruKqJtCp6RhgOFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHZuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318JmihPflIpV
-
-#### redirect_uri
-
-The URL where the user will be redirected after successful or unsuccessful authentication.
-
-Example: `https://redirect-url.com`
+| Parameter     | Type   | Description | Example |
+|---------------|--------|-------------|---------|
+| client_id     | string | The ID of the client that will be used for authorization. | 695d37b7-18aa-4033-91b4-09690178e99a |
+| client_secret | string | The secret of the client that will be used for authorization. | 49487362-7d4a-471f-bbf3-c04e2e1c541f |
+| grant_type    | string | The OAuth grant type. | authorization_code |
+| code          | string | A temporary authorization code that is sent to the client to be exchanged for a token. | OENBaHXhZStQ9eDVIq1NlHu6luruKqJtCp6RhgOFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHZuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318JmihPflIpV |
+| redirect_uri  | string | The URL where the user will be redirected after successful or unsuccessful authentication. | https://redirect-url.com |
 
 ### For client with PKCE
 

@@ -6,37 +6,12 @@ sidebar_position: -3
 
 Each item which interacts with a user (onClick, onChange, onSelect, etc.) can return a message that is represented as the *IMessage* object with the following parameters:
 
-## actions
-
-Defines a collection of [events](./events.md) that will be processed on the portal side. The specified actions will be performed depending on the set of values.
-
-Type: array of [Actions](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts)
-
-Example: `[Actions.showToast, Actions.closeModal]`
-
-## newProps
-
-Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./events.md#updateprops).
-
-Type: [IInput](./plugin-components/input.md), [ICheckbox](./plugin-components/checkbox.md), [IToggleButton](./plugin-components/togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/textarea.md), [IComboBox](./plugin-components/combobox.md)
-
-Example: `{IInput}`
-
-## toastProps
-
-Defines the properties that display a toast notification after the user actions. This parameter is used only with [Actions.showToast](./events.md#showtoast).
-
-Type: array of [IToast](./plugin-components/toast.md)
-
-Example: \[IToast]
-
-## contextProps
-
-Defines the properties that update the state of the parent or child item after the event was executed.
-
-This parameter is used only with [Actions.updateContext](./events.md#updatecontext) and works in the administator or owner settings block that is embedded in the modal window with the plugin description.
-
-Type: array of objects
+| Name        | Description                                                                                                                                                                                                                                                                      | Type                                                                                                                                                                                                                                               | Example                                                                                                     |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| actions     | Defines a collection of [events](./events.md) that will be processed on the portal side. The specified actions will be performed depending on the set of values.                                                                                                                  | array of [Actions](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts)                                                                                                                                            | `[Actions.showToast, Actions.closeModal]`                                                                   |
+| newProps    | Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./events.md#updateprops).                                                                                                         | [IInput](./plugin-components/input.md), [ICheckbox](./plugin-components/checkbox.md), [IToggleButton](./plugin-components/togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/textarea.md), [IComboBox](./plugin-components/combobox.md) | `{IInput}`                                                                                                  |
+| toastProps  | Defines the properties that display a toast notification after the user actions. This parameter is used only with [Actions.showToast](./events.md#showtoast).                                                                                                                    | array of [IToast](./plugin-components/toast.md)                                                                                                                                                                                                  | `[IToast]`                                                                                                  |
+| contextProps| Defines the properties that update the state of the parent or child item after the event was executed. This parameter is used only with [Actions.updateContext](./events.md#updatecontext) and works in the administrator or owner settings block embedded in the plugin modal. See [contextProps parameters](#contextProps-parameters) | array of objects                                                                                                                                                                                                                                  | `[{ "key": "plugin-setting-item", "value": "newValue" }]`                                                    |
 
 Example:
 
@@ -49,21 +24,12 @@ Example:
 ]
 ```
 
-### contextProps.name
+### contextProps parameters
 
-The item name.
-
-Type: string
-
-Example: "accept-button"
-
-### contextProps.props
-
-The new properties for the parent or child item.
-
-Type: object
-
-Example: `{...acceptButtonProps, "isDisabled": false}`
+| Name              | Description                              | Type   | Example                                             |
+|-------------------|------------------------------------------|--------|-----------------------------------------------------|
+| contextProps.name | The item name.                           | string | `"accept-button"`                                   |
+| contextProps.props| The new properties for the parent or child item. | object | `{...acceptButtonProps, "isDisabled": false}`       |
 
 ## createDialogProps
 

@@ -29,29 +29,14 @@ To open a document in a new window / tab correctly:
 } 
 ```
 
-## url
+## Document parameters
 
-Defines the absolute URL to the opened document.
+| Parameter | Type   | Description | Example |
+|-----------|--------|-------------|---------|
+| url       | string | Defines the absolute URL to the opened document. | `https://example.com/url-to-example-document.docx` |
+| type      | string | Defines the type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**. | "word" |
+| provider  | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)). | "onlyoffice" |
 
-Type: string
-
-Example: `https://example.com/url-to-example-document.docx`
-
-## type
-
-Defines the type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.
-
-Type: string
-
-Example: "word"
-
-## provider
-
-Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)).
-
-Type: string
-
-Example: "onlyoffice"
 
 ## Example
 

@@ -19,21 +19,12 @@ This method returns an object with the following parameters:
 }
 ```
 
-## widgetType
+## Widget parameters
 
-The widget type (*"window"* or *"tab"*).
-
-Type: string
-
-Example: "window"
-
-## captionHeight
-
-The caption height.
-
-Type: integer
-
-Example: 100
+| Parameter    | Type    | Description | Example   |
+|--------------|---------|-------------|-----------|
+| widgetType   | string  | The widget type (*"window"* or *"tab"*). | "window" |
+| captionHeight| integer | The caption height. | 100 |
 
 You can also subscribe to the *onViewportSettingsChanged* event which is called every time the viewport settings are changed:
 
