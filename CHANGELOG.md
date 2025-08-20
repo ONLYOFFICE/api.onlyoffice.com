@@ -6,6 +6,7 @@
 
 * Added GitHub links to each language-specific example
 * Added the website Changelog section
+* Added missing formats to the document.fileType parameter
 
 #### Docs API
 
