@@ -28,11 +28,11 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-### Returns:
+### Returns
 
 Type boolean
 
-### Example:
+### Example
 
 ``` ts
 Asc.plugin.executeMethod("methodName", [param1, param2], (returnValue) => {
