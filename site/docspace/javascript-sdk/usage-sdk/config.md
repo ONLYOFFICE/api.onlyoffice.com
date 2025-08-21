@@ -6,6 +6,11 @@ sidebar_position: -4
 
 The configuration parameters describe the behavior and display options of the DocSpace elements.
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Parameter           | Type    | Description                                                                                                                                                               | Example                           |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | buttonColor         | string  | The selector button color.                                                                                                                                                | `"#5299E0"`                       |
@@ -46,6 +51,9 @@ The configuration parameters describe the behavior and display options of the Do
 | withBreadCrumbs     | boolean | Whether to display breadcrumbs in selector mode.                                                                                                                          | `true`                            |
 | withSearch          | boolean | Whether to display **Search** in selector mode.                                                                                                                           | `true`                            |
 | withSubtitle        | boolean | Whether to display filter parameters in selector mode.                                                                                                                    | `true`                            |
+```mdx-code-block
+</APITable>
+```
 
 ## filter parameters
 

@@ -11,6 +11,11 @@ The **document editing service** informs the **document storage service** about 
 
 ## parameters
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Parameter     | Type             | Description |
 |---------------|------------------|-------------|
 | actions       | array of object  | Defines the array of object received when the user takes an action with the document. The *type* field value can have the following values: - **0** - the user disconnects from the document co-editing; - **1** - the new user connects to the document co-editing; - **2** - the user clicks the [forcesave button](./config/editor/customization/customization-standard-branding.md#forcesave).  The *userid* field value is the user identifier. |
@@ -24,6 +29,9 @@ The **document editing service** informs the **document storage service** about 
 | url           | string           | Defines the link to the edited document to be saved with the document storage service. The link is present when the *status* value is equal to **2**, **3**, **6** or **7** only. |
 | userdata      | string           | Defines the custom information sent to the command service for the [forcesave](../additional-api/command-service/forcesave.md) and [info](../additional-api/command-service/info.md) commands in case it was present in the request. |
 | users         | array of string  | Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the **users** will return the identifier of the user who was the last to edit the document (for *status* **2** and *status* **6** replies). |
+```mdx-code-block
+</APITable>
+```
 
 ### formsdataurl parameters
 

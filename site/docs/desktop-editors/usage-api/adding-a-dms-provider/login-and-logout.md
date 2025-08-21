@@ -23,6 +23,11 @@ Use the [execCommand](./execcommand.md) method to display a cloud in the **Conne
 
 ## User Parameters  
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Parameter   | Type   | Description | Example |
 |-------------|--------|-------------|---------|
 | displayName | string | Defines the user name displayed on the Connected clouds page. **This field is required.** | "John Smith" |
@@ -31,6 +36,9 @@ Use the [execCommand](./execcommand.md) method to display a cloud in the **Conne
 | provider    | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the config). **This field is required.** | "onlyoffice" |
 | uiTheme     | string | Defines the editor theme settings. It can be set in two ways: • **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*). • **default theme** – the default dark or light theme value will be set (*default-dark, default-light*). The default light theme is *theme-classic-light*. The first option has higher priority. Apart from the available editor themes, the user can also customize their own color themes for the application interface. | "theme-dark" |
 | userId      | string | Defines the user id. **This field is required.** | "78e1e841" |
+```mdx-code-block
+</APITable>
+```
 
 ### Example
 

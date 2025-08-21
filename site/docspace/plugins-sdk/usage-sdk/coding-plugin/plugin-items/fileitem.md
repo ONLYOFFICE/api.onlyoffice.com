@@ -6,6 +6,11 @@ sidebar_position: -2
 
 Describes an item that allows the plugin to control clicking on the specified file type. It does not work with the files that already have some actions.
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Name         | Description                                                                                                                                                                                                                                            | Type                                                                                                      | Example                                                                 |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | extension    | Defines the file extension. If several plugins have the same extension, the last plugin from this list is taken.                                                                                                                                       | string                                                                                                    | `.drawio`                                                               |
@@ -15,6 +20,9 @@ Describes an item that allows the plugin to control clicking on the specified fi
 | fileTypeName | Defines a file type which is displayed in the list (for example, Document/Folder).                                                                                                                                                                     | string                                                                                                    | `Diagram`                                                               |
 | fileRowIcon  | Defines a file icon which is displayed in the table format. Preferred size: 32x32 px.                                                                                                                                                                  | string                                                                                                    | `drawio-32.svg`                                                          |
 | fileTileIcon | Defines a file icon which is displayed in the tile format. Preferred size: 96x96 px.                                                                                                                                                                   | string                                                                                                    | `drawio-96.svg`                                                          |
+```mdx-code-block
+</APITable>
+```
 
 ## Example
 

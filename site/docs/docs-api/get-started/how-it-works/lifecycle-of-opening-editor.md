@@ -49,10 +49,17 @@ Specify there the following events:
 
    ## message
 
+  ```mdx-code-block
+  import APITable from '@site/src/components/APITable/APITable';
+
+  <APITable>
+  ```
   | Parameter | Type   | Description            | Example        |
   |-----------|--------|------------------------|----------------|
-  | message   | string | Defines the message text. | `"Hello World"` |
-
+  | message | string | Defines the message text. | `"Hello World"` |
+  ```mdx-code-block
+  </APITable>
+  ```
   > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
 
 1. When an error or some other specific event occurs, the [onError](../../usage-api/config/events.md#onerror)  event is executed:

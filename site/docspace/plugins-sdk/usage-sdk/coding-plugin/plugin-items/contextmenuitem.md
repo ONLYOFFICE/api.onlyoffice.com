@@ -8,6 +8,11 @@ Describes an item that will be embedded in the **Actions** item of the file cont
 
 <img alt="Context menu item" src="/assets/images/docspace/context-menu-plugin.png" width="400px" />
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Name            | Description                                                                                                                                                                                                                                                                                                   | Type                    | Example                                                                 |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|-------------------------------------------------------------------------|
 | key             | Defines the unique item identifier used by the service to recognize the item.                                                                                                                                                                                                                                | string                  | "convert-file-item"                                                     |
@@ -20,6 +25,9 @@ Describes an item that will be embedded in the **Actions** item of the file cont
 | devices         | Defines the types of devices where the current item will be displayed in the context menu. At the moment the following device types are available: mobile, tablet, desktop. If this parameter is not specified, then the current context menu item will be displayed in any device types.                   | array of Devices        | [Devices.desktop]                                                        |
 | security        | Defines the security parameters of the parent folder or room that will be checked. If all the parameters are true, the current item will be displayed in the context menu. If this parameter is undefined, it will be ignored.                                         | array of Security       | [Security.Create]                                                        |
 | withActiveItem  | Specifies whether to add the action state to the item in the file list when the onClick event is triggered.                                                                                                                                                                                                  | boolean                 | true                                                                    |
+```mdx-code-block
+</APITable>
+```
 
 ## Example
 

@@ -37,6 +37,11 @@ Create a folder using the DMS provider as a name (e.g. *onlyoffice*) in the *pro
 
 Create a *config.json* file to specify the integration parameters.
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Parameter   | Type                   | Description                                                                                                     | Example                                                                 |
 |-------------|------------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | provider    | string                 | Defines the provider id used to refer to the desktop app in the JavaScript commands.                            | `"onlyoffice"`                                                          |
@@ -47,6 +52,9 @@ Create a *config.json* file to specify the integration parameters.
 | editorPage  | string                 | Defines the relative URL that indicates that the type of the opening file is a document. You can use regular expressions for this parameter. | `"/apps/onlyoffice/"` or `"regex:\/lib\/(?:[\w-]{32,})\/file\/"`        |
 | startPage   | string                 | Defines the relative URL added to the entered IP or domain when creating a new connection.                       | `"/"`                                                                   |
 | icons       | object                 | Defines the icons for portals. You can add icons for each UI theme type (light and dark) by specifying the themeLight and themeDark objects with the corresponding icons. See [icons parameters](#icons-parameters). | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` |
+```mdx-code-block
+</APITable>
+```
 
 #### check parameters	
 

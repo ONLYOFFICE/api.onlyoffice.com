@@ -54,6 +54,11 @@ The parameters that must be specified in the request body depends on the client 
 
 ## OAuth Parameters
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
 | Parameter     | Type   | Description | Example |
 |---------------|--------|-------------|---------|
 | client_id     | string | The ID of the client that will be used for authorization. | 695d37b7-18aa-4033-91b4-09690178e99a |
@@ -61,6 +66,9 @@ The parameters that must be specified in the request body depends on the client 
 | grant_type    | string | The OAuth grant type. | authorization_code |
 | code          | string | A temporary authorization code that is sent to the client to be exchanged for a token. | OENBaHXhZStQ9eDVIq1NlHu6luruKqJtCp6RhgOFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHZuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318JmihPflIpV |
 | redirect_uri  | string | The URL where the user will be redirected after successful or unsuccessful authentication. | https://redirect-url.com |
+```mdx-code-block
+</APITable>
+```
 
 ### For client with PKCE
 
