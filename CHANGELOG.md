@@ -1,16 +1,33 @@
 # Change log
-  
+
+## 6.5.0
+
 ### New features
+
+#### Docspace
+
+* Added new integration samples to API Backend section
+* Added new Plugins SDK samples
+
+#### Docs
+
+* Updated Office API documentation for version 9.0.4
 
 #### Docs API
 
 * Added GitHub links to each language-specific example
 * Added the website Changelog section
 * Added missing formats to the document.fileType parameter
+* Added fonts information to Changing default fonts language specific example
 
-#### Docs API
+#### Plugins and macros
 
-* Added fonts information to Changing default fonts language specific example.
+* Updated documentation in Chinese
+* Added pages with full list of events to Interacting with editors section
+
+### Fixes
+
+* Fixes for samples structure
 
 ## 6.4.0
 
