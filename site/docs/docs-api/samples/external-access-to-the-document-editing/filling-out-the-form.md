@@ -19,7 +19,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
 
 ## How it works
 
-1. When the user opens a form document, the [GetAllContentControls](/site/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md) method is executed to collect all the content controls from the document. After that, the [GetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) method is executed to get the content controls values and display them in the custom interface:
+1. When the user opens a form document, the [GetAllContentControls](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetAllContentControls.md) method is executed to collect all the content controls from the document. After that, the [GetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) method is executed to get the content controls values and display them in the custom interface:
 
   ``` ts
   let contentControls = []
@@ -53,7 +53,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
   }
   ```
 
-1. When the user chooses a username from the list, the [GetFormsByTag](/site/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByTag.md) method is executed to collect all the forms by their tags and sets the corresponding values to them with the [SetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/SetFormValue.md) method:
+1. When the user chooses a username from the list, the [GetFormsByTag](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormsByTag.md) method is executed to collect all the forms by their tags and sets the corresponding values to them with the [SetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/SetFormValue.md) method:
 
 ``` ts
 $("#persons").change(function personChange(e) {

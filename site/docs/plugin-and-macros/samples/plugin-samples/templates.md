@@ -57,7 +57,7 @@ Repository on GitHub: [templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 ## Methods and events
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
-- init
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - onExternalMouseUp
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 

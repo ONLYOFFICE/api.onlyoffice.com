@@ -133,7 +133,7 @@ connector.addToolbarMenuItem({
 });
 ```
 
-## [attachEvent](/site/docs/office-api/usage-api/presentation-api/Api/Methods/attachEvent.md)
+## attachEvent
 
 The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins.
 
@@ -299,7 +299,7 @@ Connector window is a class that represents the connector window. To create it,
 
 Below you can find methods that are available for this class.
 
-### [attachEvent](/site/docs/office-api/usage-api/presentation-api/Api/Methods/attachEvent.md)
+### attachEvent
 
 The function called to add an event listener to the modal window frame. This function will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins.
 
@@ -361,7 +361,7 @@ testConnectorWindow.show({
 
 In the connector window code, you can also use the following methods:
 
-### [attachEvent](/site/docs/office-api/usage-api/presentation-api/Api/Methods/attachEvent.md)
+### attachEvent
 
 The function called to subscribe to the messages from the plugin.
 

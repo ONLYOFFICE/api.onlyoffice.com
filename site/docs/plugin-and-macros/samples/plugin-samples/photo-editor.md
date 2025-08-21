@@ -182,7 +182,7 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 ## Methods and events
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
-- init
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onTranslate](/site/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetImageDataFromSelection.md)

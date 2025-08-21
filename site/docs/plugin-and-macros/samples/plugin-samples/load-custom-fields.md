@@ -101,7 +101,7 @@ Repository on GitHub: [example_customfields_load](https://github.com/ONLYOFFICE/
 ## Methods and events
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
-- init
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md#how-to-call-methods)
 - executeMethod ("[GetAllContentControls](/site/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - executeMethod ("[InsertAndReplaceContentControls](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")

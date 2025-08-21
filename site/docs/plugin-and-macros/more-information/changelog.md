@@ -39,10 +39,10 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [AddToolbarMenuItem](../customization/toolbar.md#creating-a-toolbar-item) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetSelectedOleObjects](../interacting-with-editors/text-document-api/Methods/GetSelectedOleObjects.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [SetPluginsOptions](../interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the [GetAllComments](../interacting-with-editors/text-document-api/Methods/GetAllComments.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
+- Added the [GetAllComments](../interacting-with-editors/spreadsheet-api/Methods/GetAllComments.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
 - Added the [GetCustomFunctions](../interacting-with-editors/spreadsheet-api/Methods/GetCustomFunctions.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
 - Added the [SetCustomFunctions](../interacting-with-editors/spreadsheet-api/Methods/SetCustomFunctions.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
-- Added the [GetAllComments](../interacting-with-editors/text-document-api/Methods/GetAllComments.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.
+- Added the [GetAllComments](../interacting-with-editors/presentation-api/Methods/GetAllComments.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.
 - Added the [OLEProperties](../interacting-with-editors/text-document-api/Enumeration/OLEProperties.md) type to the simple type definitions.
 - Added the [PluginOptions](../interacting-with-editors/text-document-api/Enumeration/PluginOptions.md) type to the simple type definitions.
 - Added the [ToolbarMenuItem](../customization/toolbar.md#toolbarmenuitem) type to the simple type definitions.
@@ -71,8 +71,8 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 - Added the ability to download ready-to-use plugins from [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-desktop-editors.md#adding-plugins-through-the-plugin-manager) in ONLYOFFICE Desktop Editors.
 - Added the [sendToPlugin](../customization/windows-and-panels.md#interacting-with-a-window) method to the *Plugin* object.
-- Added the onContextMenuClick event.
-- Added the onContextMenuShow event.
+- Added the [onContextMenuClick](../customization/context-menu.md#clicking-a-context-menu-item) event.
+- Added the [onContextMenuShow](../customization/context-menu.md#creating-a-context-menu-item) event.
 - Added the [AddContextMenuItem](../customization/context-menu.md#creating-a-context-menu-item) method to *window\.Asc.plugin.executeMethod*.
 - Added the [CloseWindow](../customization/windows-and-panels.md#closing-a-window) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetCurrentSentence](../interacting-with-editors/text-document-api/Methods/GetCurrentSentence.md) method to *window\.Asc.plugin.executeMethod*.
@@ -105,9 +105,9 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 7.2
 
-- Added the onAddComment event.
-- Added the onChangeCommentData event.
-- Added the onRemoveComment event.
+- Added the [onAddComment](../interacting-with-editors/text-document-api/Events/onAddComment.md) event.
+- Added the [onChangeCommentData](../interacting-with-editors/text-document-api/Events/onChangeCommentData.md) event.
+- Added the [onRemoveComment](../interacting-with-editors/text-document-api/Events/onRemoveComment.md) event.
 - Added the [AcceptReviewChanges](../interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [MoveToNextReviewChange](../interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [RejectReviewChanges](../interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) method to *window\.Asc.plugin.executeMethod*.
@@ -126,6 +126,6 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [SetFormValue](../interacting-with-editors/form-api/Methods/SetFormValue.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [ShowButton](../interacting-with-editors/text-document-api/Methods/ShowButton.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [UpdatePlugin](../interacting-with-editors/text-document-api/Methods/UpdatePlugin.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the onBlurContentControl event.
-- Added the onChangeContentControl event.
-- Added the onFocusContentControl event.
+- Added the [onBlurContentControl](../interacting-with-editors/text-document-api/Events/onBlurContentControl.md) event.
+- Added the [onChangeContentControl](../interacting-with-editors/text-document-api/Events/onChangeContentControl.md) event.
+- Added the [onFocusContentControl](../interacting-with-editors/text-document-api/Events/onFocusContentControl.md) event.

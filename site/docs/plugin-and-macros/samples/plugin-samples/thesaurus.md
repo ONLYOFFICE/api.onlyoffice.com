@@ -138,7 +138,7 @@ Repository on GitHub: [thesaurus](https://github.com/ONLYOFFICE/onlyoffice.githu
 ## Methods and events
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
-- init
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - onExternalMouseUp
 - [onTranslate](/site/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
