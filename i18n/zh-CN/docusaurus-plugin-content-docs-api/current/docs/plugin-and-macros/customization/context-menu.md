@@ -39,7 +39,7 @@ sidebar_position: -5
    })
    ```
 
-   ### 右键菜单选项 {#contextmenuoptions}
+### 右键菜单选项 {#contextmenuoptions}
 
    定义右键菜单选项。
 

@@ -46,7 +46,7 @@ sidebar_position: -5
    }])
    ```
 
-   ### 主工具栏菜单项 {#toolbarmenumainitem}
+### 主工具栏菜单项 {#toolbarmenumainitem}
 
    主工具栏菜单项.
 
