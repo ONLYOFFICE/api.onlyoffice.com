@@ -92,7 +92,7 @@ sidebar_position: -5
    }
    ```
 
-   ### 工具栏菜单项 {toolbarmenuitem}
+   ### 工具栏菜单项 {#toolbarmenuitem}
 
    工具栏菜单项。
 
