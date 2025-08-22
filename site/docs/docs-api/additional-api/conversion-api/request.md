@@ -14,135 +14,80 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../get-sta
 
 ## Request parameters and their description
 
-| Parameter        | Type    | Presence | Description |
-|------------------|---------|----------|-------------|
-| `async`          | boolean | optional | Defines the conversion request type: asynchronous or not. |
-| `codePage`       | integer | optional | Defines the file encoding when converting from *csv* or *txt* format. See [supported values](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). |
-| `delimiter`      | integer | optional | Defines the delimiter characters when converting from *csv*. Supported values: `0` - no delimiter, `1` - tab, `2` - semicolon, `3` - colon, `4` - comma, `5` - space. |
-| `documentLayout` | object  | optional | Specifies layout options for printing forms as *pdf* documents or images. See [documentLayout parameters](#documentlayout-parameters). |
-| `documentRenderer` | object | optional | Defines the document renderer when converting from *pdf*, *xps*, *oxps*. See [documentRenderer parameters](#documentrenderer-parameters). |
-| `filetype`       | string  | required | Type of the document file to be converted. |
-| `key`            | string  | required | Document identifier used to unambiguously identify the file. |
-| `outputtype`     | string  | required | Resulting document type. |
-| `password`       | string  | optional | Password for the protected document. The result will not have a password. |
-| `pdf`           | object  | optional | Settings for converting document files to PDF. See [pdf parameters](#pdf-parameters). |
-| `region`         | string  | optional | Default display format for currency and date/time when converting from spreadsheets. |
-| `spreadsheetLayout` | object | optional | Settings for converting spreadsheets to PDF. See [spreadsheetLayout parameters](#spreadsheetLayout-parameters). |
-| `thumbnail`      | object  | optional | Settings for generating a thumbnail image from the document. See [thumbnail parameters](#thumbnail-parameters). |
-| `title`          | string  | optional | Converted file name. |
-| `token`          | string  | required by configuration | Encrypted signature (JWT) if enabled in server configuration in the form of [token](../signature/request/token-in-body.md#request-to-convert-the-document). |
-| `url`            | string  | required | Absolute URL to the file to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-| `watermark`     | object  | optional | JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark to be inserted into *pdf* or image output. See [watermark parameters](#watermark-parameters). |
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-## Nested parameters
-
-### documentLayout parameters
-
-| Parameter            | Type    | Presence | Description |
-|----------------------|---------|----------|-------------|
-| `drawPlaceHolders`   | boolean | optional | Defines if placeholders will be drawn. |
-| `drawFormHighlight`  | boolean | optional | Defines if forms will be highlighted. |
-| `isPrint`            | boolean | optional | Enables print mode (DOCX to PDF only). |
-
----
-
-### documentRenderer parameters
-
-| Parameter         | Type   | Presence | Description |
-|-------------------|--------|----------|-------------|
-| `textAssociation` | string | optional | Rendering mode: `blockChar`, `blockLine`, `plainLine`, or `plainParagraph`. Default: `plainLine`. |
-
----
-
-### pdf parameters
-
-| Parameter | Type    | Presence | Description |
-|-----------|---------|----------|-------------|
-| `form`    | boolean | optional | Convert to PDF form (`true`) or regular PDF (`false`). |
-
----
-
-### spreadsheetLayout parameters
-
-| Parameter         | Type    | Presence | Description |
-|-------------------|---------|----------|-------------|
-| `fitToHeight`     | integer | optional | Height in pages. Default: 0. |
-| `fitToWidth`      | integer | optional | Width in pages. Default: 0. |
-| `gridLines`       | boolean | optional | Include grid lines. Default: false. |
-| `headings`        | boolean | optional | Include headings. Default: false. |
-| `ignorePrintArea` | boolean | optional | Ignore spreadsheet print area. Default: true. |
-| `margins`         | object  | optional | Page margins. See [margins parameters](#spreadsheetLayoutmargins). |
-| `orientation`     | string  | optional | Page orientation: `landscape` or `portrait`. Default: `portrait`. |
-| `pageSize`        | object  | optional | Page dimensions. See [pageSize parameters](#spreadsheetLayoutpageSize). |
-| `scale`           | integer | optional | Output scale (percentage). Default: 100. |
-
-#### spreadsheetLayout.margins
-
-| Parameter | Type   | Presence | Description |
-|-----------|--------|----------|-------------|
-| `bottom`  | string | optional | Bottom margin. Default: `19.1mm`. |
-| `left`    | string | optional | Left margin. Default: `17.8mm`. |
-| `right`   | string | optional | Right margin. Default: `17.8mm`. |
-| `top`     | string | optional | Top margin. Default: `19.1mm`. |
-
-#### spreadsheetLayout.pageSize
-
-| Parameter | Type   | Presence | Description |
-|-----------|--------|----------|-------------|
-| `height`  | string | optional | Page height. Default: `297mm`. |
-| `width`   | string | optional | Page width. Default: `210mm`. |
-
----
-
-### thumbnail parameters
-
-| Parameter | Type    | Presence | Description |
-|-----------|---------|----------|-------------|
-| `aspect`  | integer | optional | Fit mode: `0` - stretch, `1` - keep aspect, `2` - page-size-to-pixel (default). |
-| `first`   | boolean | optional | First page only (`true`) or all pages (`false`). Default: true. |
-| `height`  | integer | optional | Height in pixels. Default: 100. |
-| `width`   | integer | optional | Width in pixels. Default: 100. |
-
----
-
-### watermark parameters
-
-| Parameter       | Type              | Presence | Description |
-|-----------------|-------------------|----------|-------------|
-| `transparent`   | float             | optional | Transparency level. |
-| `type`          | string            | optional | [Shape type](../../../office-api/usage-api/text-document-api/Enumeration/ShapeType.md) of watermark. |
-| `width`         | integer           | optional | Width in mm. |
-| `height`        | integer           | optional | Height in mm. |
-| `rotate`        | integer           | optional | Rotation angle in degrees. |
-| `margins`       | array of integers | optional | Text margins in mm. |
-| `fill`          | array \| string   | optional | Fill color in RGB or base64 image. |
-| `stroke-width`  | integer           | optional | Stroke width in mm. |
-| `stroke`        | array of integers | optional | Stroke color in RGB. |
-| `align`         | integer           | optional | Vertical align: `0` - bottom, `1` - center, `4` - top. |
-| `paragraphs`    | array of objects  | optional | Array of watermark paragraphs. See [paragraphs parameters](#watermarkparagraphs). |
-
-#### watermark.paragraphs
-
-| Parameter     | Type              | Presence | Description |
-|---------------|-------------------|----------|-------------|
-| `align`       | integer           | optional | Horizontal align: `0` - right, `1` - left, `2` - center, `3` - justify. |
-| `fill`        | array of integers | optional | Background highlight in RGB. |
-| `linespacing` | integer           | optional | Line spacing. |
-| `runs`        | array of objects  | optional | Array of text runs. See [runs parameters](#watermarkparagraphsruns). |
-
-#### watermark.paragraphs.runs
-
-| Parameter     | Type              | Presence | Description |
-|---------------|-------------------|----------|-------------|
-| `text`        | string            | optional | Text content. |
-| `fill`        | array of integers | optional | Highlight color in RGB. |
-| `font-family` | string            | optional | Font family. |
-| `font-size`   | string            | optional | Font size in points. |
-| `bold`        | boolean           | optional | Bold text. |
-| `italic`      | boolean           | optional | Italic text. |
-| `strikeout`   | boolean           | optional | Strikeout text. |
-| `underline`   | boolean           | optional | Underlined text. |
-
+<APITable>
+```
+| Parameter                               | Type                | Presence                  | Description |
+|-----------------------------------------|---------------------|---------------------------|-------------|
+| async                                   | boolean             | optional                  | Defines the conversion request type: asynchronous or not.<br />Supported values:<br />- **true**<br />- **false**<br />When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the conversion is finished. The default value is **false**.<br />> If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur. Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key. |
+| codePage                                | integer             | optional                  | Defines the file encoding when converting from *csv* or *txt* format.<br />Main supported values:<br />- **932** - Japanese (Shift-JIS);<br />- **950** - Chinese Traditional (Big5);<br />- **1250** - Central European (Windows);<br />- **1251** - Cyrillic (Windows);<br />- **65001** - Unicode (UTF-8).<br />You can find all the supported values [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). |
+| delimiter                               | integer             | optional                  | Defines the delimiter characters for separating values when converting from *csv* format.<br />Supported values:<br />- **0** - no delimiter;<br />- **1** - tab;<br />- **2** - semicolon;<br />- **3** - colon;<br />- **4** - comma;<br />- **5** - space. |
+| documentLayout                          | object              | optional                  | Defines the document layout which specifies parameters for printing forms as *pdf* documents or images. |
+| documentLayout.drawPlaceHolders         | boolean             | optional                  | Defines if placeholders will be drawn or not. |
+| documentLayout.drawFormHighlight        | boolean             | optional                  | Defines if forms will be highlighted or not. |
+| documentLayout.isPrint                  | boolean             | optional                  | Defines if the print mode is turned on or off. This parameter is used only for converting *docx* into *pdf*. If this parameter is equal to **true**, the *drawPlaceHolders* and *drawFormHighlight* flags are used as described above. If this parameter is **false**, the *drawFormHighlight* flag does not work and the *drawPlaceHolders* parameter allows saving the forms in the *pdf* format. The default value is **false**. |
+| documentRenderer                        | object              | optional                  | Defines the document renderer when converting from *pdf*, *xps*, *oxps*. |
+| documentRenderer.textAssociation        | string              | optional                  | Defines the rendering mode that can have the following values:<br />- **blockChar** - all text is converted by single characters. Each character is in its own frame (like a textbox);<br />- **blockLine** - all text is converted by separate lines. Each text line is in its own frame. Lines can be combined within the same block;<br />- **plainLine** - all text is converted as a plain text. But each line is a separate paragraph;<br />- **plainParagraph** - all text is converted as a plain text. Lines are combined into paragraphs.<br />The default value is **plainLine**. |
+| filetype                                | string              | required                  | Defines the type of the document file to be converted.<br />> In the tables below you can see possibility of conversion your documents into the most known file formats, where the **Input format** column corresponds to the values of the **filetype** parameter and the **Output format** columns correspond to the values of the **outputtype** parameter. |
+| key                                     | string              | required                  | Defines the document identifier used to unambiguously identify the document file. |
+| outputtype                              | string              | required                  | Defines the resulting converted document type. Starting from version 7.0, file formats can be specified instead of extensions. They are used when we do not know in advance what extension is required:<br />- **ooxml** - defines that the file will be converted into *docx*, *docm*, *xlsx*, *xlsm*, *pptx* or *pptm*. For example, when the *doc* file is converted into the OOXML format, the resulting file can be *docx* or *docm* if this file contains macros (the same for *xls* and *ppt*). It is also applied when converting XML files into OOXML formats (*docx*, *xlsx* or *pptx* depending on the content);<br />- **odf** - defines that the file will be converted into *odt*, *ods* or *odp*. For example, it is used when converting XML files into ODF formats (*odt*, *ods* or *odp* depending on the content).<br />> In the tables below you can see possibility of conversion your documents into the most known file formats, where the **Input format** column corresponds to the values of the **filetype** parameter and the **Output format** columns correspond to the values of the **outputtype** parameter. |
+| password                                | string              | optional                  | Defines the password for the document file if it is protected with a password. After conversion the file has no password. |
+| pdf                                     | object              | optional                  | Defines settings for converting document files to pdf. |
+| pdf.form                                | boolean             | optional                  | Defines whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document. If has not, the converted document will not contain them either. |
+| region                                  | string              | optional                  | Defines the default display format for currency and date and time when converting from *Spreadsheet format* to *pdf*. Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. The default value is **en-US**. |
+| spreadsheetLayout                       | object              | optional                  | Defines settings for converting the spreadsheet to pdf.<br />> Please note that the maximum number of pages that can be returned at once after converting a spreadsheet into pdf or image formats is no more than 1500. |
+| spreadsheetLayout.fitToHeight           | integer             | optional                  | Sets the height of the converted area, measured in the number of pages. The default value is **0**. |
+| spreadsheetLayout.fitToWidth            | integer             | optional                  | Sets the width of the converted area, measured in the number of pages. The default value is **0**. |
+| spreadsheetLayout.gridLines             | boolean             | optional                  | Allows to include grid lines to the output PDF file or not. The default value is **false**. |
+| spreadsheetLayout.headings              | boolean             | optional                  | Allows to include the headings to the output PDF file or not. The default value is **false**. |
+| spreadsheetLayout.ignorePrintArea       | boolean             | optional                  | Determines whether to ignore the print area chosen for the spreadsheet file or not. The default value is **true**. |
+| spreadsheetLayout.margins               | object              | optional                  | Sets the margins of the output PDF file. |
+| spreadsheetLayout.margins.bottom        | string              | optional                  | Sets the bottom margin of the output PDF file. The default value is **19.1mm**. |
+| spreadsheetLayout.margins.left          | string              | optional                  | Sets the left margin of the output PDF file. The default value is **17.8mm**. |
+| spreadsheetLayout.margins.right         | string              | optional                  | Sets the right margin of the output PDF file. The default value is **17.8mm**. |
+| spreadsheetLayout.margins.top           | string              | optional                  | Sets the top margin of the output PDF file. The default value is **19.1mm**. |
+| spreadsheetLayout.orientation           | string              | optional                  | Sets the orientation of the output PDF file. May be **landscape**, **portrait**. The default value is **portrait**. |
+| spreadsheetLayout.pageSize              | object              | optional                  | Sets the page size of the output PDF file. |
+| spreadsheetLayout.pageSize.height       | string              | optional                  | Sets the page height of the output PDF file. The default value is **297mm**. |
+| spreadsheetLayout.pageSize.width        | string              | optional                  | Sets the page width of the output PDF file. The default value is **210mm**. |
+| spreadsheetLayout.scale                 | integer             | optional                  | Allows to set the scale of the output PDF file. The default value is **100**. |
+| thumbnail                               | object              | optional                  | Defines the settings for the thumbnail when specifying the image formats (*bmp*, *gif*, *jpg*, *png*) as **outputtype**. |
+| thumbnail.aspect                        | integer             | optional                  | Defines the mode to fit the image to the height and width specifyed. Supported values:<br />- **0** - stretch file to fit height and width;<br />- **1** - keep the aspect for the image;<br />- **2** - in this case, the width and height settings are not used. Instead of that, metric sizes of the page are converted into pixels with 96dpi. E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.<br />The default value is **2**. |
+| thumbnail.first                         | boolean             | optional                  | Defines if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is **true**. |
+| thumbnail.height                        | integer             | optional                  | Defines the thumbnail height in pixels. The default value is **100**. |
+| thumbnail.width                         | integer             | optional                  | Defines the thumbnail width in pixels. The default value is **100**. |
+| title                                   | string              | optional                  | Defines the converted file name. |
+| token                                   | string              | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#request-to-convert-the-document). |
+| url                                     | string              | required                  | Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
+| watermark                               | object              | optional                  | Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
+| watermark.transparent                   | float               | optional                  | Defines the watermark transparency degree. |
+| watermark.type                          | string              | optional                  | Defines the [shape type](../../../office-api/usage-api/text-document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
+| watermark.width                         | integer             | optional                  | Defines the watermark width measured in millimeters. |
+| watermark.height                        | integer             | optional                  | Defines the watermark height measured in millimeters. |
+| watermark.rotate                        | integer             | optional                  | Defines the watermark rotation angle measured in degrees. |
+| watermark.margins                       | array of integers   | optional                  | Defines the text margins measured in millimeters in the watermark shape. |
+| watermark.fill                          | array of integers \| string | optional          | Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
+| watermark.stroke-width                  | integer             | optional                  | Defines the watermark stroke width measured in millimeters. |
+| watermark.stroke                        | array of integers   | optional                  | Defines the watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill. |
+| watermark.align                         | integer             | optional                  | Defines the vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
+| watermark.paragraphs                    | array of objects    | optional                  | Defines the array with paragraphs from the current watermark with their properties. |
+| watermark.paragraphs.align              | integer             | optional                  | Defines the horizontal text align in the current paragraph: **0** - right, **1** - left, **2** - center, **3** - justify. |
+| watermark.paragraphs.fill               | array of integers   | optional                  | Defines the paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted. |
+| watermark.paragraphs.linespacing        | integer             | optional                  | Defines the text linespacing in the current paragraph. |
+| watermark.paragraphs.runs               | array of objects    | optional                  | Defines the array with runs from the current paragraph with their properties. |
+| watermark.paragraphs.runs.text          | string              | optional                  | Defines the run text. |
+| watermark.paragraphs.runs.fill          | array of integers   | optional                  | Defines the text highlight in the RGB format. The empty array \[] means that the text is not highlighted. |
+| watermark.paragraphs.runs.font-family   | string              | optional                  | Defines the text font family. |
+| watermark.paragraphs.runs.font-size     | string              | optional                  | Defines the text font size measured in points (pt). |
+| watermark.paragraphs.runs.bold          | boolean             | optional                  | Defines if the current text is displayed bold or not. |
+| watermark.paragraphs.runs.italic        | boolean             | optional                  | Defines if the current text is displayed italic or not. |
+| watermark.paragraphs.runs.strikeout     | boolean             | optional                  | Defines if the current text is displayed struck through or not. |
+| watermark.paragraphs.runs.underline     | boolean             | optional                  | Defines if the current text is displayed underlined or not. |
+```mdx-code-block
+</APITable>
+```
 
 ## Examples of requests
 

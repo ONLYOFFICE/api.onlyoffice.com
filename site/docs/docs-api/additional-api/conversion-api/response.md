@@ -8,13 +8,21 @@ The request result is returned in XML format. To receive a response in JSON form
 
 ## Response parameters and their description
 
-| Parameter   | Type     | Presence | Description |
-|-------------|----------|----------|-------------|
-| `endConvert`| boolean  | required | Defines if the conversion is completed or not. |
-| `error`     | integer  | optional | Defines an error occurred during conversion. See [error codes](./error-codes.md). |
-| `fileType`  | string   | optional | Extension of the converted file. |
-| `fileUrl`   | string   | optional | Link to the converted document (only when `endConvert` is `true`). |
-| `percent`   | integer  | required | Conversion progress in percent (100 if `endConvert` is `true`). |
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+| Parameter   | Type     | Description | Example |
+|-------------|----------|-------------|---------|
+| endConvert  | boolean  | Defines if the conversion is completed or not. | true |
+| error       | integer  | Defines an error occurred during the conversion. Possible error codes can be found [here](./error-codes.md). | -3 |
+| fileType    | string   | Defines an extension of the converted file. | "docm" |
+| fileUrl     | string   | Defines the link to the converted document. This parameter will be received only when the *endConvert* parameter is set to **true**. | `https://documentserver/url-to-converted-document.pdf` |
+| percent     | integer  | Defines the percentage of the file conversion. If the *endConvert* parameter is set to **true**, the *percent* is equal to **100**. | 100 |
+```mdx-code-block
+</APITable>
+```
 
 ## Examples of responses
 
