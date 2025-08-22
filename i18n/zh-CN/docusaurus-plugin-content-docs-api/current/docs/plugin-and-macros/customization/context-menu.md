@@ -55,7 +55,7 @@ sidebar_position: -5
    | *headerArea* | boolean                             | 指定是否在标题上打开上下文菜单。   |
    | *footerArea* | boolean                             | 指定是否在页脚上打开上下文菜单。   |
 
-   ### 右键菜单类型 {#contextmenutype}
+### 右键菜单类型 {#contextmenutype}
 
    右键菜单类型：
 
@@ -80,7 +80,7 @@ sidebar_position: -5
 
    返回值：此方法不返回任何数据。
 
-    ### 右键菜单项 {#contextmenuitem}
+### 右键菜单项 {#contextmenuitem}
 
     右键菜单项。
 
@@ -116,7 +116,7 @@ sidebar_position: -5
     })
     ```
 
-  ## 更新右键菜单项 {#updating-a-context-menu-item}
+## 更新右键菜单项 {#updating-a-context-menu-item}
 
   要更新右键菜单项，请使用 **UpdateContextMenuItem** 方法。
 

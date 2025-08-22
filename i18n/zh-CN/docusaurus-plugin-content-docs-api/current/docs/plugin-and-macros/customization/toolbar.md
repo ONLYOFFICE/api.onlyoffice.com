@@ -68,7 +68,7 @@ sidebar_position: -5
     }
     ```
 
-   ### 工具栏菜单选项卡 {#toolbarmenutab}
+### 工具栏菜单选项卡 {#toolbarmenutab}
 
     工具栏菜单选项卡。
 
@@ -149,13 +149,13 @@ sidebar_position: -5
     }
     ```
 
-   ### 工具栏菜单项类型 {#toolbarmenuitemtype}
+### 工具栏菜单项类型 {#toolbarmenuitemtype}
 
    工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
 
    类型："button" | "big-button"
 
-   ### 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
+### 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
 
    #### 文档编辑器
 
