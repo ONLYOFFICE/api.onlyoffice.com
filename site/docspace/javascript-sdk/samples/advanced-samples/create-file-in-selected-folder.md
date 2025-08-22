@@ -1,6 +1,11 @@
 # Create file in selected folder
 
-Creates a file in the selected folder and opens it in the editors.
+This example creates a file in the selected folder and opens it in the editors.
+
+## Before you start
+
+Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -10,7 +15,7 @@ Creates a file in the selected folder and opens it in the editors.
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     <style>
       .holder {
         margin: auto;
@@ -80,12 +85,9 @@ Creates a file in the selected folder and opens it in the editors.
 
 ![Create file sample](/assets/images/docspace/js-sdk-create-file.svg)
 
-## Before you start
+## Script execution steps
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
-
-## Step 1. Set HTML structure
+### 1. Set HTML structure
 
 Create an HTML file. Add a combo box, a text field, and a button. The HTML file must include a *div* tag where we specify the DocSpace connection parameters:
 
@@ -101,7 +103,7 @@ Create an HTML file. Add a combo box, a text field, and a button. The HTML file 
                 width: 800px;
             }
         </style>
-        <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+        <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     </head>
     <body>
         <div id="holder-buttons" class="holder" style="width: 400px; margin-top: 300px;">
@@ -119,10 +121,10 @@ Create an HTML file. Add a combo box, a text field, and a button. The HTML file 
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. Initialize the Manager mode
+### 2. Initialize the Manager mode
 
 Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/initialization-modes/manager.md) mode.
 
@@ -152,7 +154,7 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/init
     const docSpace = DocSpace.SDK.initManager(config)
     ```
 
-## Step 3. Upload a list of folders to the combo box
+### 3. Upload a list of folders to the combo box
 
 Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](/docspace/javascript-sdk/usage-sdk/methods.md#getfolders) method, upload the list into the combo box:
 
@@ -169,7 +171,7 @@ function onComboboxClick(e) {
 }
 ```
 
-## Step 4. Add a method to create a file
+### 4. Add a method to create a file
 
 Add the **onButtonClick()** event handler for the button. Using the [createFile](/docspace/javascript-sdk/usage-sdk/methods.md#createfile) method, create a file in the selected folder:
 
@@ -190,7 +192,7 @@ function onButtonClick() {
 }
 ```
 
-## Step 5. Run the sample
+### 5. Run the sample
 
 Run our HTML file and make sure everything works.
 

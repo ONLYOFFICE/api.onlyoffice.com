@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: -5
 ---
 
 # 工具栏
@@ -302,6 +302,42 @@ sidebar_position: -4
       this._onCustomMenuClick("toolbarMenuEvents", id)
     }
     ```
+
+## 更新工具栏菜单项
+
+要更新工具栏菜单项，请指定**更新工具栏菜单项**方法。
+
+参数：
+
+| 名称    | 类型                                                  | 说明                                      |
+|---------|-------------------------------------------------------|--------------------------------------------------|
+| *items* | Array.\<[工具栏主菜单](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组。 |
+
+返回值：此方法不返回任何值。
+
+示例：
+
+``` ts
+Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
+  {
+    let buttonMainToolbar = new Asc.ButtonToolbar(null, id);
+    buttonMainToolbar.text = name;
+
+    let items = {
+      guid : window.Asc.plugin.guid,
+      tabs : []
+    };
+
+    buttonMainToolbar.childs = buttons;
+    for (let i = 0, len = buttons.length; i < len; i++)
+      buttons[i].parent = buttonMainToolbar;
+
+    buttonMainToolbar.toToolbar(items);
+
+    if (items.tabs.length > 0)
+      window.Asc.plugin.executeMethod("UpdateToolbarMenuItem", [items]);
+  };
+```
 
 ## 点击工具栏项
 

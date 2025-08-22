@@ -1,6 +1,11 @@
 # Open file in ONLYOFFICE editors
 
-Opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/initialization-modes/editor.md) using the [file selector](/docspace/javascript-sdk/usage-sdk/initialization-modes/file-selector.md).
+This example opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/initialization-modes/editor.md) using the [file selector](/docspace/javascript-sdk/usage-sdk/initialization-modes/file-selector.md).
+
+## Before you start
+
+Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -11,7 +16,7 @@ Opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/initiali
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     ...
   </head>
   <body>
@@ -48,12 +53,9 @@ Opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/initiali
 
 ![Open editors sample](/assets/images/docspace/open-editors.svg)
 
-## Before you start
+## Script execution steps
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
-
-## Step 1. Set HTML structure
+### 1. Set HTML structure
 
 Create an HTML file. It must include a *div* tag where we specify the DocSpace connection parameters:
 
@@ -63,7 +65,7 @@ Create an HTML file. It must include a *div* tag where we specify the DocSpace c
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     ...
   </head>
   <body>
@@ -74,10 +76,10 @@ Create an HTML file. It must include a *div* tag where we specify the DocSpace c
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. Add the file selector
+### 2. Add the file selector
 
 Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sdk/initialization-modes/file-selector.md).
 
@@ -119,7 +121,7 @@ Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sd
     const docSpace = DocSpace.SDK.initFileSelector(config)
     ```
 
-## Step 3. Run the sample
+### 3. Run the sample
 
 Run our HTML file and make sure everything works.
 

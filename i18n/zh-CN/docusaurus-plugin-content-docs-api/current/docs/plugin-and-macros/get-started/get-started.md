@@ -1,7 +1,3 @@
----
-sidebar_position: -2
----
-
 # 概览
 
 ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌面编辑器](https://www.onlyoffice.com/zh/desktop.aspx)支持插件功能，允许开发者为编辑器添加与 OOXML 格式无直接关联的特定功能。
@@ -27,6 +23,8 @@ ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌�
 
 代码示例可见于 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)。
 
+为保证插件用户界面的一致性，您可以使用一组专为插件 UI 创建设计的预构建基础组件。您可以在我们的 [storybook](https://onlyoffice.github.io/storybook/static/) 中探索这些组件或者与它们进行交互。
+
 如需查找可直接使用的插件，请访问 [ONLYOFFICE 应用市场](https://www.onlyoffice.com/app-directory/zh)。
 
 如需快速安装和更新插件，可使用 [ONLYOFFICE 插件市场](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager-for-a-single-user)。
@@ -35,6 +33,6 @@ ONLYOFFICE 的[文档](https://www.onlyoffice.com/zh/office-suite.aspx)和[桌�
 
 要创建您自己的插件，需要进行以下几个步骤：
 
-1. 学习[入门指南](./getting-started.md)中的插件开发基础概念，编写定义插件外观和行为的代码。
+1. 学习[入门指南](../structure/getting-started.md)中的插件开发基础概念，编写定义插件外观和行为的代码。
 2. 插件开发完成后，对其进行全面[测试](../tutorials/developing/for-web-editors.md)，确保插件的外观和功能符合预期。尽量预判可能出现的问题并提出相应解决方案。
 3. 完成后，你可以自行使用该插件或通过向[插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io)提交拉取请求将插件[发布](../tutorials/publishing.md)。 

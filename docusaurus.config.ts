@@ -199,6 +199,13 @@ const config: Config = {
           docsPluginId: 'api',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'changelog',
+          label: 'Changelog',
+          docsPluginId: 'api',
+          position: 'right',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },

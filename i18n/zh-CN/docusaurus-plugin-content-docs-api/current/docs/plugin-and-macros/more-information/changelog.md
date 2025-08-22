@@ -6,6 +6,16 @@ sidebar_position: -1
 
 ONLYOFFICE 插件与宏 API 的变更列表。
 
+## 版本 9.0
+
+- 添加了使用**宏**插件为电子表格添加[异步自定义函数](../macros/adding-custom-functions.md#asynchronous-functions)的功能。
+- 添加了使用 AI 插件将 VBA 代码[自动转换](../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)为 ONLYOFFICE 宏的功能。
+- 添加了使用 AI 插件[自动生成](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE 宏的功能。
+- 添加了使用插件为内容控件添加自定义[按钮](../customization/content-control-buttons.md)的功能。
+- 为文本文档 API 的 window.Asc.plugin.executeMethod 添加了[获取当前书签](../interacting-with-editors/text-document-api/Methods/GetCurrentBookmark.md)方法。
+- 为演示文稿 API 的 window.Asc.plugin.executeMethod 添加了[前往幻灯片页面](../interacting-with-editors/presentation-api/Methods/GoToSlide.md)方法。
+- 添加了[内容控件列表元素](../interacting-with-editors/text-document-api/Enumeration/ContentControlListElement.md)枚举。
+
 ## 版本 8.3
 
 - 向 *window.Asc.plugin.executeMethod* 添加了[获取选中内容](../interacting-with-editors/text-document-api/Methods/GetSelectedContent.md)方法。

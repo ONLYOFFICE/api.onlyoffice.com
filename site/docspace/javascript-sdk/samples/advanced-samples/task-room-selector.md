@@ -19,7 +19,7 @@ Please make sure you are using a server environment to run the HTML file because
   <head>
     <meta charset="UTF-8" />
     <title>Room selector</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     <style>
       /* Check CSS tab for styles */
     </style>

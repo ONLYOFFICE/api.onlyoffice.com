@@ -1,6 +1,11 @@
 # Customize editors
 
-Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
+This example customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
+
+## Before you start
+
+Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -11,7 +16,7 @@ Customizes the editor interface so that it looks like your other products (if th
   <head>
   <meta charset="UTF-8">
   <title>DocSpace JavaScript SDK</title>
-  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+  <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     ...
   </head>
   <body>
@@ -60,12 +65,9 @@ Customizes the editor interface so that it looks like your other products (if th
 
 ![Customization sample](/assets/images/docspace/customization-of-editors.svg)
 
-## Before you start
+## Script execution steps
 
-Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
-
-## Step 1. Set HTML structure
+### 1. Set HTML structure
 
 Create an HTML file. The HTML file must include a *div* tag where we specify the DocSpace connection parameters:
 
@@ -75,7 +77,7 @@ Create an HTML file. The HTML file must include a *div* tag where we specify the
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     ...
   </head>
   <body>
@@ -86,10 +88,10 @@ Create an HTML file. The HTML file must include a *div* tag where we specify the
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
-## Step 2. Initialize the editors
+### 2. Initialize the editors
 
 Add a script to initialize the [editors](/docspace/javascript-sdk/usage-sdk/initialization-modes/editor.md).
 
@@ -102,7 +104,7 @@ Add a script to initialize the [editors](/docspace/javascript-sdk/usage-sdk/init
     ```
 
 2. Create a configuration for the **Editor** mode. Go to the [editorCustomization](/docspace/javascript-sdk/usage-sdk/config.md#editorcustomization) section and configure the editors as needed.
-After that, copy the resulting config and paste it into the [customization](../../../docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md) section, as shown below. In the config, pass the id of the file that will be opened in the editors:
+After that, copy the resulting config and paste it into the [customization](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md) section, as shown below. In the config, pass the id of the file that will be opened in the editors:
 
     ``` ts
     const config = {
@@ -136,12 +138,12 @@ After that, copy the resulting config and paste it into the [customization](../.
     }
     ```
 
-3. Initialize the <b>Editors</b> mode with the [initEditor](/docspace/javascript-sdk/usage-sdk/methods.md#initeditor) method:
+1. Initialize the <b>Editors</b> mode with the [initEditor](/docspace/javascript-sdk/usage-sdk/methods.md#initeditor) method:
 
     ```ts
     const docSpace = DocSpace.SDK.initEditor(config)
     ```
 
-## Step 3. Run the sample
+### 3. Run the sample
 
 Run our HTML file and make sure everything works.

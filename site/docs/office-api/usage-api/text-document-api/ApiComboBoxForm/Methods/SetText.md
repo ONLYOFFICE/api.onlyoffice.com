@@ -1,7 +1,7 @@
 # SetText
 
 Sets the text to the current combo box.\
-Available only for editable combo box forms.*
+*Available only for editable combo box forms.*
 
 ## Syntax
 

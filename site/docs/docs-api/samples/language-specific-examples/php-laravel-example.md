@@ -34,7 +34,7 @@ The PHP (Laravel) example offers various installation options, but we highly rec
 To get started, you need to install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 The application provides you with Docker files out-of-the-box, so you will just need to run a couple of shell commands to start the project. You can also change these files to your preferences.
 
-1. Download and extract the release archive in a directory:
+1. Download and extract the release archive in a directory, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel):
 
     ```sh
     cd /my/php-laravel/project
@@ -83,7 +83,7 @@ Before diving into the example, you will need to install ONLYOFFICE Docs. Check 
    - [Node.js (16+) and NPM](https://laravel.com/docs/11.x/vite#installing-node)
    - [Laravel (11) Server Requirements](https://laravel.com/docs/11.x/deployment#server-requirements)
 
-2. Download the release archive and extract it in your preferred directory:
+2. Download the release archive and extract it in your preferred directory or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel):
 
     ```sh
     cd /path/to/my/projects
