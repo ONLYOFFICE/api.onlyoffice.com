@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Change background color
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.

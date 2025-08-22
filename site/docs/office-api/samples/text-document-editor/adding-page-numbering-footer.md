@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Adding page numbering in footer
 
 Create a document with page numbering in the footer. Used in multi-page documents such as reports, contracts, and instructions. Allows readers to easily navigate the document structure:

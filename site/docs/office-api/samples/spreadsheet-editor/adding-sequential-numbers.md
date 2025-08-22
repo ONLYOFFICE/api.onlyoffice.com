@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Adding sequential numbers
 
 Add sequential numbering to the first column of a table for better navigation and row referencing:

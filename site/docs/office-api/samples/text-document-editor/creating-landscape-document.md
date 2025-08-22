@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating landscape document
 
 Create a document with landscape page orientation for displaying wide tables, charts, or content that requires more horizontal space:

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove default values
 
 Automatically removes a specific default value from all text fields in the entire document.

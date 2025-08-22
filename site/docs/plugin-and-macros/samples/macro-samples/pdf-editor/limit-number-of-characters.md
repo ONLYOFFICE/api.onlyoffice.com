@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Limit number of characters
 
 Restricts the number of characters allowed in text fields whose keys contain a specific keyword.

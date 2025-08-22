@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Apply corporate branding
 
 Applies corporate branding styles to a presentation, including text color, font, and logo placement.

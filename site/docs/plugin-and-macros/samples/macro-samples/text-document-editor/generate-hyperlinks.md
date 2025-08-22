@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Generate hyperlinks
 
 Generates and inserts hyperlinks instead of text URLs.

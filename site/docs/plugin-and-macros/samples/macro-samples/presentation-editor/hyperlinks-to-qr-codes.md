@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Hyperlinks to QR codes
 
 Converts all the hyperlinks in the presentation into QR codes using an external API.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating formal document
 
 Create a document following the structure of a formal paper:

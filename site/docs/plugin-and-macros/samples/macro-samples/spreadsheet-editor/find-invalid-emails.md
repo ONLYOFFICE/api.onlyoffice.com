@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Find invalid emails
 
 Detects and highlights invalid email addresses within a specified column or across the entire spreadsheet.

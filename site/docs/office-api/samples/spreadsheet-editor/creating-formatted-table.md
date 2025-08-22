@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating formatted table
 
 Formats a table during creation: adds borders, fills headers, aligns text in cells. Suitable for reports, database exports, or templates that need to be brought to a readable format:

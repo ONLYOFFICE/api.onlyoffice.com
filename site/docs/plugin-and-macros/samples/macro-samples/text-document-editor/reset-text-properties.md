@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Reset text properties
 
 Resets the text properties of all the paragraphs in a document to the default settings.

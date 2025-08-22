@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating basic form
 
 Create a basic form with the image and text inputs:

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating title page document
 
 Create a document with a formatted title page featuring centered text and proper spacing:

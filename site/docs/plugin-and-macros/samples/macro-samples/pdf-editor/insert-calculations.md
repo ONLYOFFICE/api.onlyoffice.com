@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Insert calculations
 
 Performs automatic calculations on the specified fields within the form and inserts the result.

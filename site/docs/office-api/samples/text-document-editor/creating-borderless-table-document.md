@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating borderless table document
 
 Create a document with a borderless table for structured information display:
