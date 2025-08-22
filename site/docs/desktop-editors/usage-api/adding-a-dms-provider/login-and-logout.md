@@ -34,7 +34,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | email       | string | Defines the user email displayed on the Connected clouds page. | "john@example.com" |
 | domain      | string | Defines the cloud name and the cloud entry point. **This field is required.** | "https://exampledomain.com" |
 | provider    | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the config). **This field is required.** | "onlyoffice" |
-| uiTheme     | string | Defines the editor theme settings. It can be set in two ways: • **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*). • **default theme** – the default dark or light theme value will be set (*default-dark, default-light*). The default light theme is *theme-classic-light*. The first option has higher priority. Apart from the available editor themes, the user can also customize their own color themes for the application interface. | "theme-dark" |
+| uiTheme     | string | Defines the editor theme settings. It can be set in two ways: <br />• **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*). <br />• **default theme** – the default dark or light theme value will be set (*default-dark, default-light*). The default light theme is *theme-classic-light*. The first option has higher priority. Apart from the available editor themes, the user can also customize their own color themes for the application interface. | "theme-dark" |
 | userId      | string | Defines the user id. **This field is required.** | "78e1e841" |
 ```mdx-code-block
 </APITable>
