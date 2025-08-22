@@ -12,7 +12,7 @@ ONLYOFFICE 宏与 Microsoft 宏有所不同，Microsoft 宏使用的是 Visual B
 
 - [手动转换](#manual-conversion-of-vba-macros) — 使用 [ONLYOFFICE Office API](../../office-api/get-started/overview.md) 用 JavaScript 重写逻辑。
 
-## 使用 AI 插件进行自动转换
+## 使用 AI 插件进行自动转换 {#automatic-conversion-using-ai-plugin}
 
 如果您希望加快转换过程，从 9.0 版本开始，您可以使用 ONLYOFFICE 内置的 AI 插件自动将 VBA 代码转换为与 ONLYOFFICE 宏兼容的 JavaScript：
 
@@ -67,7 +67,7 @@ End Sub
 
 运行该宏，检查它是否成功取消了工作表中所有合并单元格的合并。
 
-## 手动转换 VBA 宏
+## 手动转换 VBA 宏 {#manual-conversion-of-vba-macros}
 
 如果 AI 生成的版本无法正常工作，或者您希望完全了解并管理宏，您可以手动转换 VBA 宏：
 

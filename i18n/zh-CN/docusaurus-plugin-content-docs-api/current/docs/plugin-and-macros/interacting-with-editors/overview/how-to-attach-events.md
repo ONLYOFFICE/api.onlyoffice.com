@@ -6,7 +6,7 @@ sidebar_position: -1
 
 您可以通过两种方式在编辑器中绑定事件。
 
-## 选项 1：使用绑定编辑器事件方法
+## 选项 1：使用绑定编辑器事件方法 {#option-1-using-the-attacheditorevent-method}
 
 从 8.2 版本开始，在插件代码中定义**绑定编辑器事件**方法，以添加事件监听器。该事件监听器是一个函数，每当指定事件传递到目标时，该函数将被调用。
 
@@ -29,7 +29,7 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 });
 ```
 
-## 选项 2：使用 attachEvent 方法
+## 选项 2：使用 attachEvent 方法 {#option-2-using-the-attachevent-method}
 
 :::danger[已废弃]
 从 8.2 版本开始，请改用 [绑定编辑器事件](#option-1-using-the-attacheditorevent-method) 方法。

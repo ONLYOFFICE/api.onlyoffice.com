@@ -10,7 +10,7 @@ sidebar_position: -2
 在 [onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-formats/blob/master/onlyoffice-docs-formats.json) 文件中，您可以找到 ONLYOFFICE 编辑器支持的所有文件格式及其属性（可能的操作、MIME 等）的列表。
 :::
 
-## 文本文档文件格式
+## 文本文档文件格式 {#text-document-file-formats}
 <div className="conversion-table">
 
 |                  |          |          |          |          |          |          |输出&#x20;| 格式 |          |          |          |          |          |          |          |          |          |
@@ -73,7 +73,7 @@ sidebar_position: -2
 |        xml        | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; |
 
 </div>
-## 演示文稿文件格式
+## 演示文稿文件格式 {#presentation-file-formats}
 <div className="conversion-table">
 
 |                   |          |          |          |          |          |          |输出&#x20;| 格式 |          |          |          |          |          |         |
@@ -99,7 +99,7 @@ sidebar_position: -2
 
 </div>
 
-## 图表文档文件格式
+## 图表文档文件格式 {#diagram-document-file-formats}
 
 <div className="conversion-table">
 

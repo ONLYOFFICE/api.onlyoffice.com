@@ -123,7 +123,7 @@ const close = {
 
 **示例**: `true`
 
-## 评论
+## 评论 {#comments}
 
 `类型: boolean`
 
@@ -624,7 +624,10 @@ const logo = {
 
 `类型: boolean`
 
-定义当编辑器打开时是否自动运行文档宏。默认值为 **true**。**false**值对用户隐藏 [宏设置](#macrosmode) 。
+定义编辑器打开时是否自动运行文档宏。默认值为 true。
+
+- 9.0.3 版本之前：false 值将禁用宏的自动启动，并对用户隐藏 [宏设置](#macrosmode)。
+- 9.0.3 版本及以上：false 值将完全禁用宏——无法运行、添加或编辑宏。“宏”按钮也会在“视图”选项卡中隐藏。
 
 **示例**: `true`
 
@@ -721,7 +724,7 @@ const mobile = {
 
 **示例**: `true`
 
-## 插件
+## 插件 {#plugins}
 
 `类型: boolean`
 
@@ -739,7 +742,7 @@ const mobile = {
 
 ![指针模式](/assets/images/editor/pointerMode.png)
 
-## 审阅
+## 审阅 {#review}
 
 `类型: object`
 

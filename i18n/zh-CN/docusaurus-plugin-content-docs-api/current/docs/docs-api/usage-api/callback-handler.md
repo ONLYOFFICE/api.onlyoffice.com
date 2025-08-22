@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
  **文档编辑服务**用 [JavaScript API](../get-started/basic-concepts.md) 的 *callbackUrl* 通知**文档存储服务**有关文档编辑的状态。**文档编辑服务**使用POST 请求，请求信息在正文中。
 
-## 操作
+## 操作 {#actions}
 
  定义当用户对文档执行操作时接收到的对象。*type* 字段值可以具有以下值：
 
@@ -222,7 +222,7 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-## 来自文档存储服务的响应
+## 来自文档存储服务的响应 {#response-from-the-document-storage-service}
 
 **文档存储服务**必须返回以下响应，否则**文档编辑器**将显示错误消息：
 

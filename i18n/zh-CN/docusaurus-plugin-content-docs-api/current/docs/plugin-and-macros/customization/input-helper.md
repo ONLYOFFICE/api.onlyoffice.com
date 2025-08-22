@@ -8,7 +8,7 @@ sidebar_position: -2
 
 ![Input helper](/assets/images/plugins/input-helper.png)
 
-## 创建输入辅助
+## 创建输入辅助 {#creating-an-input-helper}
 
 要创建输入辅助，请使用 **createInputHelper** 方法。
 
@@ -29,7 +29,7 @@ window.Asc.plugin.init = (text) => {
 }
 ```
 
-## 获取输入辅助
+## 获取输入辅助 {#getting-an-input-helper}
 
 要获取 [InputHelper object](#输入辅助)，请使用 **getInputHelper** 方法。
 
@@ -96,7 +96,7 @@ window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true])
 
 ### 方法
 
-#### 创建窗口
+#### 创建窗口 {#createwindow}
 
 创建一个输入辅助窗口。
 
@@ -117,7 +117,7 @@ window.Asc.plugin.init = (text) => {
 }
 ```
 
-#### 获取项
+#### 获取项 {#getitems}
 
 返回一个包含输入辅助中所有项的 [InputHelperItem](#inputhelperitem) 对象数组。
 
@@ -145,7 +145,7 @@ function getInputHelperSize() {
 }
 ```
 
-#### 获取滚动尺寸
+#### 获取滚动尺寸 {#getscrollsizes}
 
 返回输入辅助滚动窗口的尺寸。返回一个包含宽度和高度参数的对象。
 
@@ -173,7 +173,7 @@ function getInputHelperSize() {
 }
 ```
 
-#### 设置条目
+#### 设置条目 {#setitems}
 
 为输入辅助设置条目。
 
@@ -208,7 +208,7 @@ const sizes = getInputHelperSize();
 window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true);
 ```
 
-#### 显示
+#### 显示 {#show}
 
 显示输入辅助。
 
@@ -245,7 +245,7 @@ const sizes = getInputHelperSize();
 window.Asc.plugin.getInputHelper().show(_sizes.w, _sizes.h, true);
 ```
 
-#### 不显示
+#### 不显示 {#unshow}
 
 隐藏输入辅助。
 
@@ -262,7 +262,7 @@ window.Asc.plugin.executeMethod("SelectContentControl", [window.Asc.plugin.curre
 })
 ```
 
-## 输入辅助项
+## 输入辅助项 {#inputhelperitem}
 
 定义输入辅助项。  
 

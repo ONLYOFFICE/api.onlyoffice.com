@@ -76,7 +76,7 @@ sidebar_position: -5
 
 ![Alternate raws](/assets/images/plugins/alternate-raws.png)
 
-## 使用 AI 插件生成宏
+## 使用 AI 插件生成宏 {#generating-macros-using-ai-plugin}
 
 如果您希望加快生成宏的过程，从 9.0 版本开始，可以使用 ONLYOFFICE 内置的 AI 插件，通过描述自动生成 ONLYOFFICE 宏：
 

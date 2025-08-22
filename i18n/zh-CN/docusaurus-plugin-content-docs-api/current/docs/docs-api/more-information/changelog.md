@@ -4,6 +4,9 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 9.0
 
+- 添加了 [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) 参数。
+- 更改了 [editorConfig.customization.macros](../usage-api/config/editor/customization/customization-standard-branding.md#macros)：在 9.0.3 版本中，此参数将完全禁用运行、添加和编辑宏（而不仅仅是自动启动）。
+- [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) 参数现已可用于移动编辑器。
 - 在 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中新增浅色主题和深色主题的主题 ID。
 - 新增对 [odg](../usage-api/config/document/document.md#filetype) 格式的打开支持。
 - 新增对 [md](../usage-api/config/document/document.md#filetype) 格式的打开支持。
@@ -13,7 +16,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 新增对 [vsdm、vsdx、vssm、vssx、vstm、vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) 格式的转换能力。
 - 在 [文档类型](../usage-api/config/config.md#documenttype) 参数中新增*diagram*文档类型。
 
-## 版本 8.3
+## 版本 8.3 {#version-83}
 
 - 添加了 [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) 参数。
 - 添加了 [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) 和 [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) 参数。

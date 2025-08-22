@@ -32,7 +32,7 @@ ONLYOFFICE文档和ownCloud可以安装在不同的计算机上，也可以安�
 
 您也可以使用我们的[Docker安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud)，通过几条命令就能完成ONLYOFFICE文档和ownCloud的安装与配置。
 
-## 安装ownCloud ONLYOFFICE集成应用程序
+## 安装ownCloud ONLYOFFICE集成应用程序 {#installing-owncloud-onlyoffice-integration-app}
 
 ownCloud管理员可以从内置的应用市场安装集成应用程序。为此，点击左上角的汉堡菜单，选择**应用市场**。然后，在可用应用程序列表中找到**ONLYOFFICE**并进行安装。
 

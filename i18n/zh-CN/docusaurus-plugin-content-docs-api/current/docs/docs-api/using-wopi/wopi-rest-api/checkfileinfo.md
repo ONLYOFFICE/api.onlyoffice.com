@@ -22,7 +22,7 @@
 | --------------------- | ------ | -------- | ----------------------------------------------------------------- |
 | X-WOPI-SessionContext | string | 可选的 | 会话上下文（如果在初始 WOPI 操作 URL 上提供）。 |
 
-## 必需的响应属性
+## 必需的响应属性 {#required-response-properties}
 
 > 请注意，任何响应字符串值的默认值都是空字符串。
 
@@ -130,7 +130,7 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-## 用户权限属性
+## 用户权限属性 {#user-permissions-properties}
 
 ```mdx-code-block
 <APITable>

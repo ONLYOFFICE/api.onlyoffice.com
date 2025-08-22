@@ -8,9 +8,11 @@ sidebar_position: -2
 
 callback 是命令返回的结果，为可选参数。如果未传入该参数，则会使用 window.Asc.plugin.onCommandCallback 函数来返回命令执行结果。
 
->**Office JavaScript API** 命令仅可用于创建内容并将其插入文档编辑器中（通过 Api.GetDocument().InsertContent(...) 实现）。由于在线编辑器支持协同编辑，因此存在此限制。如果需要为桌面编辑器开发插件以处理本地文件，则不受此限制。
+:::注意
+**Office JavaScript API** 命令仅可用于创建内容并将其插入文档编辑器中（通过 Api.GetDocument().InsertContent(...) 实现）。由于在线编辑器支持协同编辑，因此存在此限制。如果需要为桌面编辑器开发插件以处理本地文件，则不受此限制。
+:::
 
-## 调用命令
+## 调用命令 {#callcommand}
 
 ### 参数
 
@@ -46,7 +48,7 @@ Asc.plugin.callCommand(() => {
 }, true, true, (returnValue) => {})
 ```
 
-## Asc.scope 对象
+## Asc.scope 对象 {#ascscope-object}
 
 该方法在其独立上下文中执行，与其他 JavaScript 数据相互隔离。如果需要向该方法传递某些参数或其他附加数据（如对象、参数、变量等），可以使用 **Asc.scope** 对象。
 

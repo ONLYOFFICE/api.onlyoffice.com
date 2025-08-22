@@ -2,13 +2,13 @@
 sidebar_position: -5
 ---
 
-# 右键菜单
+# 右键菜单 
 
 插件可以通过右键菜单访问。
 
 ![Context menu item](/assets/images/plugins/context-menu-item.png#gh-light-mode-only)![Context menu item](/assets/images/plugins/context-menu-item.dark.png#gh-dark-mode-only)
 
-## 创建右键菜单项
+## 创建右键菜单项 {#creating-a-context-menu-item}
 
 1. 订阅 **onContextMenuShow** 事件，该事件在右键菜单显示时触发。
 
@@ -39,7 +39,7 @@ sidebar_position: -5
    })
    ```
 
-   ### 右键菜单选项
+   ### 右键菜单选项 {#contextmenuoptions}
 
    定义右键菜单选项。
 
@@ -55,7 +55,7 @@ sidebar_position: -5
    | *headerArea* | boolean                             | 指定是否在标题上打开上下文菜单。   |
    | *footerArea* | boolean                             | 指定是否在页脚上打开上下文菜单。   |
 
-   ### 右键菜单类型
+   ### 右键菜单类型 {#contextmenutype}
 
    右键菜单类型：
 
@@ -80,7 +80,7 @@ sidebar_position: -5
 
    返回值：此方法不返回任何数据。
 
-    ### 右键菜单项
+    ### 右键菜单项 {#contextmenuitem}
 
     右键菜单项。
 
@@ -116,7 +116,7 @@ sidebar_position: -5
     })
     ```
 
-  ## 更新右键菜单项
+  ## 更新右键菜单项 {#updating-a-context-menu-item}
 
   要更新右键菜单项，请使用 **UpdateContextMenuItem** 方法。
 
@@ -147,7 +147,7 @@ sidebar_position: -5
   })
   ```
 
-## 点击右键菜单项
+## 点击右键菜单项 {#clicking-a-context-menu-item}
 
 1. [订阅](../interacting-with-editors/overview/how-to-attach-events.md) **onContextMenuClick** 事件，该事件在右键菜单按钮被点击时触发。
 

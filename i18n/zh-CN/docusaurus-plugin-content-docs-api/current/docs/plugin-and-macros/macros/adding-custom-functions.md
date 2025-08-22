@@ -90,7 +90,7 @@ sidebar_position: -4
 
 ![自定义功能菜单](/assets/images/plugins/custom-function-menu.png#gh-light-mode-only)![自定义功能菜单](/assets/images/plugins/custom-function-menu.dark.png#gh-dark-mode-only)
 
-## 异步函数
+## 异步函数 {#asynchronous-functions}
 
 从 9.0 版本开始，您可以添加异步自定义函数，以便在函数体中管理任何请求：
 

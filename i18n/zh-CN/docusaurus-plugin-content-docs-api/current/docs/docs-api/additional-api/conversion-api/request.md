@@ -578,7 +578,7 @@ sidebar_position: -4
 
 ## 请求示例
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式
+### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式 {#sample-of-json-object-sent-to-document-conversion-service-used-to-generate-png-thumbnail-of-file-in-docx-format}
 
 ``` json
 {
