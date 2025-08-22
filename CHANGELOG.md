@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Plugins and macros
+
+* Added the bundled plugin type description
+
 ## 6.5.0
 
 ### New features
