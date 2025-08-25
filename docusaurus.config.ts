@@ -71,6 +71,7 @@ const config: Config = {
           blogSidebarTitle: 'Changelog',
           blogSidebarCount: 'ALL',
           routeBasePath: 'changelog',
+          showReadingTime: false,
         },
       } satisfies Preset.Options,
     ],
