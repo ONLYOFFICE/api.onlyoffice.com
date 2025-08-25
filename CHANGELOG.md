@@ -1,10 +1,29 @@
 # Change log
 
+## 6.6.0
+
 ### New features
+
+* Restructured changelog
+
+#### Docs
+
+* Added new Office API samples
 
 #### Plugins and macros
 
 * Added the bundled plugin type description
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+* Hide right panel in Office Api and macro samples
+
+#### Docspace
+
+* Fixed API Backend samples position
 
 ## 6.5.0
 
