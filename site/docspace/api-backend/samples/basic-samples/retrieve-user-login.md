@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Retrieve user login audit events
 
 This example demonstrates how to retrieve user login audit activities in ONLYOFFICE DocSpace. You can either fetch the most recent login records or apply filters such as user ID, action type, and time period.
@@ -9,56 +12,130 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const HEADERS = {
+    Authorization: `Bearer ${API_KEY}`,
+    'Content-Type': 'application/json',
+  };
 
-# Headers with API key for authentication
-HEADERS = {
+  // Step 1: Retrieve the most recent login audit events
+  async function getLastLoginEvents() {
+    const url = `https://${API_HOST}/api/2.0/security/audit/login/last`;
+    const res = await fetch(url, { method: 'GET', headers: HEADERS });
+
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to retrieve last login events: ${res.status} - ${text}`);
+      return null;
+    }
+
+    const loginEvents = await res.json();
+    console.log('Last login events retrieved successfully:', loginEvents);
+    return loginEvents;
+  }
+
+  // Step 2: Retrieve login events using filters
+  async function getLoginEventsByFilter({ userId = null, action = null, startDate = null, endDate = null } = {}) {
+    const params = new URLSearchParams();
+    if (userId) params.set('userId', userId);
+    if (action !== null && action !== undefined) params.set('action', String(action)); // 0=login, 1=logout
+    if (startDate) params.set('from', startDate);
+    if (endDate) params.set('to', endDate);
+
+    const url = `https://${API_HOST}/api/2.0/security/audit/login/filter${params.toString() ? `?${params.toString()}` : ''}`;
+    const res = await fetch(url, { method: 'GET', headers: HEADERS });
+
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to retrieve filtered login events: ${res.status} - ${text}`);
+      return null;
+    }
+
+    const filteredEvents = await res.json();
+    console.log('Filtered login events retrieved successfully:', filteredEvents);
+    return filteredEvents;
+  }
+
+  // Example usage
+  (async () => {
+    console.log('\nRetrieving the most recent login events:');
+    await getLastLoginEvents();
+
+    const user_id = 'user_id_here'; // Replace with actual user ID
+    const action = 0;               // 0 = login, 1 = logout
+    const start_date = '2025-01-01';
+    const end_date = '2025-12-31';
+
+    console.log(`\nRetrieving login events for user ID ${user_id} from ${start_date} to ${end_date}:`);
+    await getLoginEventsByFilter({
+      userId: user_id,
+      action,
+      startDate: start_date,
+      endDate: end_date,
+    });
+  })();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  HEADERS = {
     'Authorization': f'Bearer {API_KEY}',
     'Content-Type': 'application/json'
-}
+  }
 
-# Step 1: Retrieve the most recent login audit events
-def get_last_login_events():
+  # Step 1: Retrieve the most recent login audit events
+  def get_last_login_events():
     url = f'https://{API_HOST}/api/2.0/security/audit/login/last'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
-        login_events = response.json()
-        print(f"Last login events retrieved successfully: {login_events}")
-        return login_events
+      login_events = response.json()
+      print(f"Last login events retrieved successfully: {login_events}")
+      return login_events
     else:
-        print(f"Failed to retrieve last login events: {response.status_code} - {response.text}")
-        return None
+      print(f"Failed to retrieve last login events: {response.status_code} - {response.text}")
+      return None
 
-# Step 2: Retrieve login events using filters
-def get_login_events_by_filter(user_id=None, action=None, start_date=None, end_date=None):
+  # Step 2: Retrieve login events using filters
+  def get_login_events_by_filter(user_id=None, action=None, start_date=None, end_date=None):
     url = f'https://{API_HOST}/api/2.0/security/audit/login/filter'
     params = {
-        'userId': user_id,
-        'action': action,
-        'from': start_date,
-        'to': end_date
+      'userId': user_id,
+      'action': action,
+      'from': start_date,
+      'to': end_date
     }
     params = {k: v for k, v in params.items() if v is not None}
 
     response = requests.get(url, headers=HEADERS, params=params)
 
     if response.status_code == 200:
-        filtered_events = response.json()
-        print(f"Filtered login events retrieved successfully: {filtered_events}")
-        return filtered_events
+      filtered_events = response.json()
+      print(f"Filtered login events retrieved successfully: {filtered_events}")
+      return filtered_events
     else:
-        print(f"Failed to retrieve filtered login events: {response.status_code} - {response.text}")
-        return None
+      print(f"Failed to retrieve filtered login events: {response.status_code} - {response.text}")
+      return None
 
-# Example usage
-if __name__ == '__main__':
+  # Example usage
+  if __name__ == '__main__':
     print("\nRetrieving the most recent login events:")
     get_last_login_events()
 
@@ -69,8 +146,10 @@ if __name__ == '__main__':
 
     print(f"\nRetrieving login events for user ID {user_id} from {start_date} to {end_date}:")
     get_login_events_by_filter(user_id=user_id, action=action, start_date=start_date, end_date=end_date)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## Step 1: Get recent login audit events
@@ -79,19 +158,45 @@ A GET request is sent to [/api/2.0/security/audit/login/last](/docspace/api-back
 
 This returns the most recent login activities across the DocSpace portal.
 
-``` py
-def get_last_login_events():
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  async function getLastLoginEvents() {
+    const url = `https://${API_HOST}/api/2.0/security/audit/login/last`;
+    const res = await fetch(url, { method: 'GET', headers: HEADERS });
+
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to retrieve last login events: ${res.status} - ${text}`);
+      return null;
+    }
+
+    const loginEvents = await res.json();
+    console.log('Last login events retrieved successfully:', loginEvents);
+    return loginEvents;
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def get_last_login_events():
     url = f'https://{API_HOST}/api/2.0/security/audit/login/last'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
-        login_events = response.json()
-        print(f"Last login events retrieved successfully: {login_events}")
-        return login_events
+      login_events = response.json()
+      print(f"Last login events retrieved successfully: {login_events}")
+      return login_events
     else:
-        print(f"Failed to retrieve last login events: {response.status_code} - {response.text}")
-        return None
-```
+      print(f"Failed to retrieve last login events: {response.status_code} - {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 2: Filter login events by user, action or date
 
@@ -104,24 +209,56 @@ You can apply filters such as:
 - `from`: The starting date and time in `YYYY-MM-DD` format.
 - `to`: The ending date and time in `YYYY-MM-DD` format.
 
-``` py
-def get_login_events_by_filter(user_id=None, action=None, start_date=None, end_date=None):
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  async function getLoginEventsByFilter({ userId = null, action = null, startDate = null, endDate = null } = {}) {
+    const params = new URLSearchParams();
+    if (userId) params.set('userId', userId);
+    if (action !== null && action !== undefined) params.set('action', String(action)); // 0=login, 1=logout
+    if (startDate) params.set('from', startDate);
+    if (endDate) params.set('to', endDate);
+
+    const url = `https://${API_HOST}/api/2.0/security/audit/login/filter${params.toString() ? `?${params.toString()}` : ''}`;
+    const res = await fetch(url, { method: 'GET', headers: HEADERS });
+
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to retrieve filtered login events: ${res.status} - ${text}`);
+      return null;
+    }
+
+    const filteredEvents = await res.json();
+    console.log('Filtered login events retrieved successfully:', filteredEvents);
+    return filteredEvents;
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def get_login_events_by_filter(user_id=None, action=None, start_date=None, end_date=None):
     url = f'https://{API_HOST}/api/2.0/security/audit/login/filter'
     params = {
-        'userId': user_id,
-        'action': action,
-        'from': start_date,
-        'to': end_date
+      'userId': user_id,
+      'action': action,
+      'from': start_date,
+      'to': end_date
     }
     params = {k: v for k, v in params.items() if v is not None}
 
     response = requests.get(url, headers=HEADERS, params=params)
 
     if response.status_code == 200:
-        filtered_events = response.json()
-        print(f"Filtered login events retrieved successfully: {filtered_events}")
-        return filtered_events
+      filtered_events = response.json()
+      print(f"Filtered login events retrieved successfully: {filtered_events}")
+      return filtered_events
     else:
-        print(f"Failed to retrieve filtered login events: {response.status_code} - {response.text}")
-        return None
-```
+      print(f"Failed to retrieve filtered login events: {response.status_code} - {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>

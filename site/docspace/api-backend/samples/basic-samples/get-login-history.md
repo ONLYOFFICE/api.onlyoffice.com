@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get login history
 
 This example automates the retrieval of the last login events in ONLYOFFICE DocSpace. It extracts unique user IDs from the latest login records, ensuring that duplicate entries are removed.

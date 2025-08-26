@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get a group with members
 
 This example demonstrates how to retrieve a group by ID in ONLYOFFICE DocSpace and include its members in the response.

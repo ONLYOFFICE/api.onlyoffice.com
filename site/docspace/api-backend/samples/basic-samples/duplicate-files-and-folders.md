@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Duplicate files and folders
 
 This example demonstrates how to duplicate one or more files and folders in ONLYOFFICE DocSpace using the API. The duplicated items will appear in the same location with a modified title.

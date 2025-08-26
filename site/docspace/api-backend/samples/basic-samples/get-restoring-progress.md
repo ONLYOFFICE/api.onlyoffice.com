@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get the restoring progress
 
 This example demonstrates how to retrieve the progress of an ongoing portal restoration process in ONLYOFFICE DocSpace using the API.

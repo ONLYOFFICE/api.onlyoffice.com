@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Set Developer Tools access
 
 This example demonstrates how to configure Developer Tools access settings in ONLYOFFICE DocSpace. You can allow full access or limit it for regular users.
@@ -9,38 +12,86 @@ This example demonstrates how to configure Developer Tools access settings in ON
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set your DocSpace portal URL and token
+  const BASE_URL = 'https://yourportal.onlyoffice.com';
+  const AUTH_TOKEN = 'your_access_token';
 
-# Set your DocSpace portal URL and token
-BASE_URL = 'https://yourportal.onlyoffice.com'
-AUTH_TOKEN = 'your_access_token'
+  const HEADERS = { Authorization: AUTH_TOKEN };
 
-HEADERS = {'Authorization': AUTH_TOKEN}
+  // Step 1: Set Developer Tools access
+  async function setDevtoolsAccess(limited = true) {
+    const url = `${BASE_URL}/api/2.0/settings/devtoolsaccess`;
+    const payload = { limitedAccessForUsers: limited };
 
-# Step 1: Set Developer Tools access
-def set_devtools_access(limited=True):
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { ...HEADERS, 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`Failed to update access settings: ${text}`);
+    }
+
+    const data = (await res.json())?.response ?? {};
+    console.log('Developer Tools access settings updated:');
+    console.log(`• Limited for users: ${data.limitedAccessForUsers}`);
+    console.log(`• Last Modified: ${data.lastModified}`);
+    return data;
+  }
+
+  // Example usage
+  (async () => {
+    try {
+      console.log('Setting Developer Tools access...');
+      await setDevtoolsAccess(false); // True = limit for users, False = allow full access
+    } catch (err) {
+      console.error(err.message);
+    }
+  })();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set your DocSpace portal URL and token
+  BASE_URL = 'https://yourportal.onlyoffice.com'
+  AUTH_TOKEN = 'your_access_token'
+
+  HEADERS = {'Authorization': AUTH_TOKEN}
+
+  # Step 1: Set Developer Tools access
+  def set_devtools_access(limited=True):
     url = f'{BASE_URL}/api/2.0/settings/devtoolsaccess'
     payload = { 'limitedAccessForUsers': limited }
 
     response = requests.post(url, headers=HEADERS, json=payload)
 
     if response.status_code == 200:
-        data = response.json().get('response', {})
-        print('Developer Tools access settings updated:')
-        print(f'• Limited for users: {data.get('limitedAccessForUsers')}')
-        print(f'• Last Modified: {data.get('lastModified')}')
-        return data
+      data = response.json().get('response', {})
+      print('Developer Tools access settings updated:')
+      print(f'• Limited for users: {data.get('limitedAccessForUsers')}')
+      print(f'• Last Modified: {data.get('lastModified')}')
+      return data
     else:
-        raise Exception(f'Failed to update access settings: {response.text}')
+      raise Exception(f'Failed to update access settings: {response.text}')
 
-# Example usage
-if __name__ == '__main__':
+  # Example usage
+  if __name__ == '__main__':
     print('Setting Developer Tools access...')
     set_devtools_access(limited=False)  # True = limit for users, False = allow full access
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

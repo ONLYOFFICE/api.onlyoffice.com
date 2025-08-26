@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get backup schedule
 
 This example demonstrates how to retrieve the current portal’s backup schedule in ONLYOFFICE DocSpace using the API.

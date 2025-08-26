@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get backup history
 
 This example demonstrates how to retrieve the list of existing backups in ONLYOFFICE DocSpace using the API. The history contains information about backup IDs, file names, storage types, and creation/expiration dates.

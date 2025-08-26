@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Delete backup schedule
 
 This example demonstrates how to delete the current portal’s backup schedule in ONLYOFFICE DocSpace using the API.

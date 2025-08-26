@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Delete an API Key
 
 This example demonstrates how to delete an existing API key in ONLYOFFICE DocSpace by its unique identifier (UUID). Use this operation to revoke a key that is no longer needed or compromised.

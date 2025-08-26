@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get backup progress
 
 This example demonstrates how to check the progress of a backup process in ONLYOFFICE DocSpace using the API. The response includes information such as completion status, backup type, and download link if available.

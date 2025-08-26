@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Enable Custom Filter Mode for a File
 
 This example demonstrates how to enable the Custom Filter mode for a specific file in ONLYOFFICE DocSpace using the API. The Custom Filter feature allows you to restrict spreadsheet views so that users only see their own applied filters.

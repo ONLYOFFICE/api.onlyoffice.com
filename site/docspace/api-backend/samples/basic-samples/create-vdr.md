@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Create a virtual data room (VDR) with a watermark
 
 This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE DocSpace using the API. The room is created with a text watermark enabled, including dynamic elements such as `UserName` and `CurrentDate`.

@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Delete the backup history
 
 This example demonstrates how to delete the entire backup history in ONLYOFFICE DocSpace using the API.

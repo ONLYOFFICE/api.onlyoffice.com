@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Restore portal from a backup
 
 This example demonstrates how to restore an ONLYOFFICE DocSpace portal from a specific backup using the API. You can specify the backup ID, storage type, and optional parameters such as user notifications and dump usage.
@@ -9,46 +12,99 @@ This example demonstrates how to restore an ONLYOFFICE DocSpace portal from a sp
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with authentication
+  const HEADERS = {
+    Authorization: API_KEY,
+    'Content-Type': 'application/json',
+  };
 
-# Headers with authentication
-HEADERS = {
+  async function restorePortal() {
+    // Restore payload: specify backup ID, storage type, and options
+    const payload = {
+      backupId: 'your-backup-id', // Obtained from GET /backup/getbackuphistory
+      storageType: 'Local',       // Or "CustomCloud", "DataStore"
+      notify: true,               // Send notifications to users
+      dump: true,                 // Use dump if required
+    };
+
+    // Send request to start restoration
+    const res = await fetch(`${API_HOST}/api/2.0/backup/startrestore`, {
+      method: 'POST',
+      headers: HEADERS,
+      body: JSON.stringify(payload),
+    });
+
+    // Handle API response
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Error: ${res.status} - ${text}`);
+      return null;
+    }
+
+    const data = await res.json();
+    const result = data?.response || {};
+    console.log(`Restoration started. Progress: ${result.progress}%`);
+    return result;
+  }
+
+  // Run
+  (async () => {
+    await restorePortal();
+  })();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with authentication
+  HEADERS = {
     'Authorization': API_KEY,
     'Content-Type': 'application/json'
-}
+  }
 
-def restore_portal():
+  def restore_portal():
     # Restore payload: specify backup ID, storage type, and options
     payload = {
-        "backupId": "your-backup-id",  # Obtained from GET /backup/getbackuphistory
-        "storageType": "Local",        # Or "CustomCloud", "DataStore"
-        "notify": True,                # Send notifications to users
-        "dump": True                   # Use dump if required
+      "backupId": "your-backup-id",  # Obtained from GET /backup/getbackuphistory
+      "storageType": "Local",        # Or "CustomCloud", "DataStore"
+      "notify": True,                # Send notifications to users
+      "dump": True                   # Use dump if required
     }
 
     # Send request to start restoration
     response = requests.post(
-        f'{API_HOST}/api/2.0/backup/startrestore',
-        headers=HEADERS,
-        json=payload
+      f'{API_HOST}/api/2.0/backup/startrestore',
+      headers=HEADERS,
+      json=payload
     )
 
     # Handle API response
     if response.status_code == 200:
-        result = response.json().get('response', {})
-        print(f"Restoration started. Progress: {result.get('progress')}%")
+      result = response.json().get('response', {})
+      print(f"Restoration started. Progress: {result.get('progress')}%")
     else:
-        print(f"Error: {response.status_code} - {response.text}")
+      print(f"Error: {response.status_code} - {response.text}")
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     restore_portal()
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

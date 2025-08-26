@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Add members to a group
 
 This example demonstrates how to add one or more members to an existing group in ONLYOFFICE DocSpace using the API. Optionally, you can rename the group and assign a new manager in the same request.
@@ -116,14 +119,6 @@ if __name__ == '__main__':
 
   </TabItem>
 </Tabs>
-</details>
-
-
-<details>
-  <summary>Full example</summary>
-
-
-
 </details>
 
 ## How it works

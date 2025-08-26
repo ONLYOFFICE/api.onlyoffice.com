@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Invite user with welcome message
 
 This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the API, check their registration status, and send them a welcome message after successful activation.
@@ -9,49 +12,142 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'YOUR_TOKEN';
+  const HEADERS = { Authorization: API_KEY };
 
-API_HOST = 'https://yourportal.onlyoffice.com'
-API_KEY = 'YOUR_TOKEN'
-HEADERS = {'Authorization': API_KEY}
+  // Step 1: Get invitation link for a specific employee type
+  function getInviteLink(employeeType = 'Guest') {
+    const url = `${API_HOST}/api/2.0/portal/users/invite/${employeeType}`;
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to get invite link: ${t}`);
+        });
+      })
+      .then((data) => {
+        const inviteUrl = data?.response;
+        console.log(`Invite link for ${employeeType}: ${inviteUrl}`);
+        return inviteUrl;
+      })
+      .catch((err) => {
+        console.error(err.message);
+        return null;
+      });
+  }
 
-# Step 1: Get invitation link for a specific employee type
-def get_invite_link(employee_type='Guest'):
+  // Step 2: Check if the user is active
+  function checkUserStatus(userId) {
+    const url = `${API_HOST}/api/2.0/portal/users/${userId}`;
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to get user info: ${t}`);
+        });
+      })
+      .then((data) => {
+        const user = data?.response || {};
+        console.log('User Info:');
+        console.log(`• Name: ${user.firstName} ${user.lastName}`);
+        console.log(`• Email: ${user.email}`);
+        console.log(`• Active: ${user.isActive}`);
+        console.log(`• Created: ${user.createDate}`);
+        return user;
+      })
+      .catch((err) => {
+        console.error(err.message);
+        return null;
+      });
+  }
+
+  // Step 3: Send welcome message
+  function sendCongratulations(userId, key = 'welcome_guest') {
+    const params = new URLSearchParams({ Userid: userId, Key: key });
+    const url = `${API_HOST}/api/2.0/portal/sendcongratulations?${params.toString()}`;
+
+    return fetch(url, { method: 'POST', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) {
+          console.log('Congratulations message sent successfully.');
+        } else {
+          return res.text().then((t) => {
+            throw new Error(`Failed to send congratulations: ${t}`);
+          });
+        }
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  }
+
+  // Run sequence (mirrors the Python flow)
+  console.log('Step 1: Generate invitation link...');
+  getInviteLink('Guest').then((link) => {
+    // Simulate that user registers via this link...
+
+    console.log('\nStep 2: Check user registration status...');
+    const testUserId = 'REPLACE-WITH-REAL-USER-ID';
+    checkUserStatus(testUserId).then((user) => {
+      if (user && user.isActive) {
+        console.log('\nStep 3: Send welcome message...');
+        sendCongratulations(testUserId);
+      }
+    });
+  });
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'YOUR_TOKEN'
+  HEADERS = {'Authorization': API_KEY}
+
+  # Step 1: Get invitation link for a specific employee type
+  def get_invite_link(employee_type='Guest'):
     url = f'{API_HOST}/api/2.0/portal/users/invite/{employee_type}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
-        invite_url = response.json().get('response')
-        print(f"Invite link for {employee_type}: {invite_url}")
-        return invite_url
+      invite_url = response.json().get('response')
+      print(f"Invite link for {employee_type}: {invite_url}")
+      return invite_url
     raise Exception(f"Failed to get invite link: {response.text}")
 
-# Step 2: Check if the user is active
-def check_user_status(user_id):
+  # Step 2: Check if the user is active
+  def check_user_status(user_id):
     url = f'{API_HOST}/api/2.0/portal/users/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
-        user = response.json().get('response', {})
-        print("User Info:")
-        print(f"• Name: {user.get('firstName')} {user.get('lastName')}")
-        print(f"• Email: {user.get('email')}")
-        print(f"• Active: {user.get('isActive')}")
-        print(f"• Created: {user.get('createDate')}")
-        return user
+      user = response.json().get('response', {})
+      print("User Info:")
+      print(f"• Name: {user.get('firstName')} {user.get('lastName')}")
+      print(f"• Email: {user.get('email')}")
+      print(f"• Active: {user.get('isActive')}")
+      print(f"• Created: {user.get('createDate')}")
+      return user
     raise Exception(f"Failed to get user info: {response.text}")
 
-# Step 3: Send welcome message
-def send_congratulations(user_id, key='welcome_guest'):
+  # Step 3: Send welcome message
+  def send_congratulations(user_id, key='welcome_guest'):
     url = f'{API_HOST}/api/2.0/portal/sendcongratulations'
     params = {'Userid': user_id, 'Key': key}
     response = requests.post(url, headers=HEADERS, params=params)
     if response.status_code == 200:
-        print("Congratulations message sent successfully.")
+      print("Congratulations message sent successfully.")
     else:
-        raise Exception(f"Failed to send congratulations: {response.text}")
+      raise Exception(f"Failed to send congratulations: {response.text}")
 
-if __name__ == '__main__':
+  if __name__ == '__main__':
     print("Step 1: Generate invitation link...")
     link = get_invite_link('Guest')  # Can also be: 'User', 'RoomAdmin', etc.
 
@@ -62,10 +158,12 @@ if __name__ == '__main__':
     user = check_user_status(test_user_id)
 
     if user.get('isActive'):
-        print("\nStep 3: Send welcome message...")
-        send_congratulations(test_user_id)
-```
+      print("\nStep 3: Send welcome message...")
+      send_congratulations(test_user_id)
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## Step 1: Generate an invitation link
@@ -74,35 +172,90 @@ A GET request is sent to [/api/2.0/portal/users/invite/{employeeType}](/docspace
 
 `employeeType` — e.g. "Guest", "User", "RoomAdmin".
 
-``` py
-def get_invite_link(employee_type='Guest'):
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  function getInviteLink(employeeType = 'Guest') {
+    const url = `${API_HOST}/api/2.0/portal/users/invite/${employeeType}`;
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          throw new Error(`Failed to get invite link: ${t}`);
+        });
+      })
+      .then((data) => {
+        const inviteUrl = data?.response;
+        console.log(`Invite link for ${employeeType}: ${inviteUrl}`);
+        return inviteUrl;
+      })
+      .catch((err) => {
+        console.error(err.message);
+        return null;
+      });
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def get_invite_link(employee_type='Guest'):
     url = f'{API_HOST}/api/2.0/portal/users/invite/{employee_type}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
-        invite_url = response.json().get('response')
-        print(f"Invite link for {employee_type}: {invite_url}")
-        return invite_url
+      invite_url = response.json().get('response')
+      print(f"Invite link for {employee_type}: {invite_url}")
+      return invite_url
     raise Exception(f"Failed to get invite link: {response.text}")
-```
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 2: Check user registration status
 
 After the user registers, a GET request is sent to [/api/2.0/portal/users/{userId}](/docspace/api-backend/usage-api/get-user-by-id) to confirm that the `isActive` flag is set to `true`.
 
-``` py
-def check_user_status(user_id):
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  def check_user_status(user_id):
     url = f'{API_HOST}/api/2.0/portal/users/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
-        user = response.json().get('response', {})
-        print("User Info:")
-        print(f"• Name: {user.get('firstName')} {user.get('lastName')}")
-        print(f"• Email: {user.get('email')}")
-        print(f"• Active: {user.get('isActive')}")
-        print(f"• Created: {user.get('createDate')}")
-        return user
+      user = response.json().get('response', {})
+      print("User Info:")
+      print(f"• Name: {user.get('firstName')} {user.get('lastName')}")
+      print(f"• Email: {user.get('email')}")
+      print(f"• Active: {user.get('isActive')}")
+      print(f"• Created: {user.get('createDate')}")
+      return user
     raise Exception(f"Failed to get user info: {response.text}")
-```
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def check_user_status(user_id):
+    url = f'{API_HOST}/api/2.0/portal/users/{user_id}'
+    response = requests.get(url, headers=HEADERS)
+    if response.status_code == 200:
+      user = response.json().get('response', {})
+      print("User Info:")
+      print(f"• Name: {user.get('firstName')} {user.get('lastName')}")
+      print(f"• Email: {user.get('email')}")
+      print(f"• Active: {user.get('isActive')}")
+      print(f"• Created: {user.get('createDate')}")
+      return user
+    raise Exception(f"Failed to get user info: {response.text}")
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 3: Send a welcome message
 
@@ -111,13 +264,43 @@ If the user is active, a POST request is sent to [/api/2.0/portal/sendcongratula
 `Userid` — ID of the invited user.
 `Key` — message template key (e.g. "welcome_guest").
 
-``` py
-def send_congratulations(user_id, key='welcome_guest'):
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  function sendCongratulations(userId, key = 'welcome_guest') {
+    const params = new URLSearchParams({ Userid: userId, Key: key });
+    const url = `${API_HOST}/api/2.0/portal/sendcongratulations?${params.toString()}`;
+
+    return fetch(url, { method: 'POST', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) {
+          console.log('Congratulations message sent successfully.');
+        } else {
+          return res.text().then((t) => {
+            throw new Error(`Failed to send congratulations: ${t}`);
+          });
+        }
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def send_congratulations(user_id, key='welcome_guest'):
     url = f'{API_HOST}/api/2.0/portal/sendcongratulations'
     params = {'Userid': user_id, 'Key': key}
     response = requests.post(url, headers=HEADERS, params=params)
     if response.status_code == 200:
-        print("Congratulations message sent successfully.")
+      print("Congratulations message sent successfully.")
     else:
-        raise Exception(f"Failed to send congratulations: {response.text}")
-```
+      raise Exception(f"Failed to send congratulations: {response.text}")
+  ```
+
+  </TabItem>
+</Tabs>

@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Create and open a new file
 
 This example demonstrates how to create a new file inside a specific folder in ONLYOFFICE DocSpace using the API. After creation, the file is automatically opened in the default web browser using the returned editor link.

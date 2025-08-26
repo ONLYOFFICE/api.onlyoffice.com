@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Authenticate a user
 
 This example demonstrates how to authenticate a user in ONLYOFFICE DocSpace using the API and check the authentication with a token received.

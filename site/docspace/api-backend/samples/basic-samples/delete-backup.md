@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Delete a backup
 
 This example demonstrates how to delete a specific backup in ONLYOFFICE DocSpace using the API by providing its unique backup ID.

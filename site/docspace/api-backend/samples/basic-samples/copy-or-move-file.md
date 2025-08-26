@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Copy or move a file to a folder
 
 This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.
@@ -171,8 +174,6 @@ Payload parameters include:
 - `deleteAfter`: False — keep original file.
 - `content`: True — include content.
 
-<details>
-  <summary>Full example</summary>
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
 
@@ -233,7 +234,6 @@ Payload parameters include:
 
   </TabItem>
 </Tabs>
-</details>
 
 ## Step 2: Move a file to a folder
 
@@ -241,8 +241,6 @@ Payload parameters include:
 - Same parameters, except:
   - `deleteAfter`: True — remove the file from the source folder.
 
-<details>
-  <summary>Full example</summary>
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
 
@@ -303,4 +301,3 @@ Payload parameters include:
 
   </TabItem>
 </Tabs>
-</details>
