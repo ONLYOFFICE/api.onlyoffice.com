@@ -141,18 +141,18 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 ## Methods and events
 
 - init
-- [button](/site/docs/plugin-and-macros/customization/buttons.md)
-- [onTranslate](/site/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
-- [attachEditorEvent](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
+- [attachEditorEvent](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method)
 - onThemeChanged
 - onThemeChangedBase
-- [executeMethod ("CloseWindow")](/site/docs/plugin-and-macros/customization/windows-and-panels.md#closing-a-window)
-- [executeMethod ("PasteText")](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- [executeMethod ("CloseWindow")](/docs/plugin-and-macros/customization/windows-and-panels.md#closing-a-window)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - info.aiPluginSettings
-- [info.editorType](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
-- [info.data](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.width](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
+- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## Support
 
