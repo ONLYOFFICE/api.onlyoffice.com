@@ -13,6 +13,7 @@
 #### Plugins and macros
 
 * Added the bundled plugin type description
+* Added page for AI plugin instruction
 
 ### Fixes
 
@@ -20,6 +21,7 @@
 
 * Updated documentation in Chinese
 * Hide right panel in Office Api and macro samples
+* Hide the changelog reading time
 
 #### Docspace
 
@@ -106,7 +108,6 @@
 #### Plugins and macros
 
 * Replaced gifs with YouTube videos
-* Added page for AI plugin instruction
 
 ## 6.2.0
 
