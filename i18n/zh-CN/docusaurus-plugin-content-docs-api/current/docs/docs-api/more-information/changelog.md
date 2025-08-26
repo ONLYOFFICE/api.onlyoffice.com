@@ -161,7 +161,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了 [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了查看电子表格文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
-- 为 PostMessage WOPI 协议添加了 [UI\_InsertGraphic](../using-wopi/postmessage.md#ui_insertgraphic) 消息。
+- 为 PostMessage WOPI 协议添加了 [UI\_InsertGraphic](../using-wopi/postmessage.md#UI_InsertGraphic) 消息。
 
 ## 版本 6.4
 
