@@ -15,6 +15,7 @@ cat > site/samples/docspace/api-backend/_category_.json <<EOF
   "label": "Backend REST API"
 }
 EOF
+sed -i '1,4d' site/samples/docspace/api-backend/api-backend.md
 
 mkdir -p site/samples/docspace/javascript-sdk
 cp -r site/docspace/javascript-sdk/samples/. site/samples/docspace/javascript-sdk

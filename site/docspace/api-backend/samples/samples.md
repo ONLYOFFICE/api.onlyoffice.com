@@ -1,3 +1,7 @@
+---		
+sidebar_class_name: hidden
+---		
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
