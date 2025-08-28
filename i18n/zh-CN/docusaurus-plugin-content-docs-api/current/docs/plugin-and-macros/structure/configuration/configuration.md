@@ -120,6 +120,14 @@ sidebar_position: -5
 
 示例： "John Smith"
 
+## onlyofficeScheme
+
+该说明指明了该插件是否包含在标有 ONLYOFFICE 品牌的服务器版或桌面版中。
+
+类型: boolean
+
+示例: true
+
 ## 插件变体 {#variations}
 
 插件变体（或子插件），是在原始插件内部创建的子模块。详见[此处](variations.md)。
@@ -490,7 +498,7 @@ sidebar_position: -5
 
 示例：true
 
-### 插件变体菜单位置
+### 插件变体菜单位置 {#variations.menu}
 
 已废弃。请改用[类型](#variationstype)参数。指定插件放置位置（右侧或左侧面板）。
 

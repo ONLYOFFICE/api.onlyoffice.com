@@ -10,7 +10,7 @@ sidebar_position: -2
 
 系统插件不会显示在编辑器界面中，它随服务器启动（或桌面编辑器启动）在后台运行，且不会干扰其他插件，使它们能同时工作。此类插件无需用户手动启动。与后台插件不同，系统插件无法被禁用。系统插件示例：[设置](../../samples/plugin-samples/settings.md), [启动时搜索和替换](../../samples/plugin-samples/search-and-replace-on-start.md).
 
-## 后台
+## 后台 {#background}
 
 启动此类插件后，它将在所有已打开的文档及之后打开的文档中持续运行，直到您将其禁用。后台插件示例：[AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)、[二维码生成器](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)。插件的启用/禁用状态会在会话间保持。要访问后台插件，请点击顶部工具栏的**后台插件**按钮。
 

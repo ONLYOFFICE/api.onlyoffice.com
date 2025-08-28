@@ -919,6 +919,14 @@ const review = {
 
 **示例**: `"text"`
 
+## suggestFeature {suggestFeature}
+
+`Type: boolean`
+
+定义 **Suggest a Feature** 菜单按钮是否显示或隐藏。默认值为**true**。
+
+**示例**: `true`
+
 ## toolbarHideFileName
 
 `类型: boolean`
@@ -1111,6 +1119,7 @@ const config = {
         visible: true,
         resultMessage: "text",
       },
+      suggestFeature: true,
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",
