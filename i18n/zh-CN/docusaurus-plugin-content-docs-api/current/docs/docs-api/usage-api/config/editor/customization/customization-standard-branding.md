@@ -919,7 +919,7 @@ const review = {
 
 **示例**: `"text"`
 
-## suggestFeature {suggestFeature}
+## suggestFeature
 
 `Type: boolean`
 
