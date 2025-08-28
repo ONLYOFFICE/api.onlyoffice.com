@@ -51,6 +51,7 @@ This example demonstrates how to start a backup in ONLYOFFICE DocSpace on demand
     const result = data?.response || {};
     console.log(`Backup task started. Progress: ${result.progress}%`);
     return result;
+    }
   }
 
   // Run

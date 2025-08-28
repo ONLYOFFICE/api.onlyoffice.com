@@ -17,7 +17,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -29,7 +29,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
 
   // Step 1: Upload user photo
   async function uploadUserPhoto(userId, photoUrl) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}/photo`;
+    const url = `${API_HOST}/api/2.0/people/${userId}/photo`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -46,7 +46,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
 
   // Step 2: Delete user photo
   async function deleteUserPhoto(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}/photo`;
+    const url = `${API_HOST}/api/2.0/people/${userId}/photo`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
 
     if (res.ok) {
@@ -86,7 +86,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
  
   # Step 1: Upload user photo
   def upload_user_photo(user_id, photo_url):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}/photo'
+    url = f'{API_HOST}/api/2.0/people/{user_id}/photo'
     data = {"files": photo_url}
  
     response = requests.put(url, json=data, headers=HEADERS)
@@ -97,7 +97,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
  
   # Step 2: Delete user photo
   def delete_user_photo(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}/photo'
+    url = f'{API_HOST}/api/2.0/people/{user_id}/photo'
     response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'User photo deleted successfully for {user_id}')
@@ -132,7 +132,7 @@ A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/u
 
   ``` ts
   async function uploadUserPhoto(userId, photoUrl) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}/photo`;
+    const url = `${API_HOST}/api/2.0/people/${userId}/photo`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -153,7 +153,7 @@ A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/u
 
   ``` py
   def upload_user_photo(user_id, photo_url):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}/photo'
+    url = f'{API_HOST}/api/2.0/people/{user_id}/photo'
     data = {"files": photo_url}
  
     response = requests.put(url, json=data, headers=HEADERS)
@@ -177,7 +177,7 @@ A DELETE request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backen
 
   ``` ts
   async function deleteUserPhoto(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}/photo`;
+    const url = `${API_HOST}/api/2.0/people/${userId}/photo`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
 
     if (res.ok) {
@@ -194,7 +194,7 @@ A DELETE request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backen
 
   ``` py
   def delete_user_photo(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}/photo'
+    url = f'{API_HOST}/api/2.0/people/{user_id}/photo'
     response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
         print(f'User photo deleted successfully for {user_id}')

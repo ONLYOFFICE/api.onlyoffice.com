@@ -17,7 +17,7 @@ This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE 
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -28,7 +28,7 @@ This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE 
 
   // Step 1: Create a Virtual Data Room with a text watermark
   function createVdrRoom(roomTitle, roomDescription) {
-    const url = `https://${API_HOST}/api/2.0/files/rooms`;
+    const url = `${API_HOST}/api/2.0/files/rooms`;
     const data = {
       title: roomTitle,
       description: roomDescription,

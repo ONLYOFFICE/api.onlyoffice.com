@@ -17,7 +17,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -29,7 +29,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
 
   // Step 1: Create a new user
   async function createUser(firstName, lastName, email) {
-    const url = `https://${API_HOST}/api/2.0/people`;
+    const url = `${API_HOST}/api/2.0/people`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -48,7 +48,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
 
   // Step 2: Retrieve a user by ID
   async function getUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -62,7 +62,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
 
   // Step 3: Terminate a user
   async function terminateUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/status/Terminated`;
+    const url = `${API_HOST}/api/2.0/people/status/Terminated`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -78,7 +78,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
 
   // Step 4: Delete user profile
   async function deleteUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -106,7 +106,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
   import requests
  
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
  
   # Headers with API key for authentication
@@ -118,7 +118,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
  
   # Step 1: Create a new user
   def create_user(first_name, last_name, email):
-    url = f'https://{API_HOST}/api/2.0/people'
+    url = f'{API_HOST}/api/2.0/people'
     data = {
       'firstName': first_name,
       'lastName': last_name,
@@ -135,7 +135,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
  
   # Step 2: Retrieve a user by ID
   def get_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
@@ -147,7 +147,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
   
   # Step 3: Terminate a user
   def terminate_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/status/Terminated'
+    url = f'{API_HOST}/api/2.0/people/status/Terminated'
     data = {'userIds': [user_id], 'resendAll': False}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
@@ -157,7 +157,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
  
   # Step 4: Delete user profile
   def delete_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'User {user_id} deleted successfully')
@@ -198,7 +198,7 @@ The API returns a user ID, which is required for further operations.
 
   ``` ts
   async function createUser(firstName, lastName, email) {
-    const url = `https://${API_HOST}/api/2.0/people`;
+    const url = `${API_HOST}/api/2.0/people`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -221,7 +221,7 @@ The API returns a user ID, which is required for further operations.
 
   ``` py
   def create_user(first_name, last_name, email):
-    url = f'https://{API_HOST}/api/2.0/people'
+    url = f'{API_HOST}/api/2.0/people'
     data = {
       'firstName': first_name,
       'lastName': last_name,
@@ -257,7 +257,7 @@ This step ensures that the user exists before making any updates or deletions.
 
   ``` ts
   async function getUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -275,7 +275,7 @@ This step ensures that the user exists before making any updates or deletions.
 
   ``` py
   def get_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
@@ -305,7 +305,7 @@ The API marks the user as terminated, meaning they cannot log in but are still p
 
   ``` ts
   async function terminateUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/status/Terminated`;
+    const url = `${API_HOST}/api/2.0/people/status/Terminated`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -325,7 +325,7 @@ The API marks the user as terminated, meaning they cannot log in but are still p
 
   ``` py
   def terminate_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/status/Terminated'
+    url = f'{API_HOST}/api/2.0/people/status/Terminated'
     data = {'userIds': [user_id], 'resendAll': False}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
@@ -350,7 +350,7 @@ This step is essential for offboarding employees or cleaning up unused accounts.
 
   ``` ts
   async function deleteUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -366,7 +366,7 @@ This step is essential for offboarding employees or cleaning up unused accounts.
 
   ``` py
   def delete_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'User {user_id} deleted successfully')

@@ -17,7 +17,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -28,7 +28,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
   // Step 1: Retrieve the most recent login audit events
   async function getLastLoginEvents() {
-    const url = `https://${API_HOST}/api/2.0/security/audit/login/last`;
+    const url = `${API_HOST}/api/2.0/security/audit/login/last`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -50,7 +50,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
     if (startDate) params.set('from', startDate);
     if (endDate) params.set('to', endDate);
 
-    const url = `https://${API_HOST}/api/2.0/security/audit/login/filter${params.toString() ? `?${params.toString()}` : ''}`;
+    const url = `${API_HOST}/api/2.0/security/audit/login/filter${params.toString() ? `?${params.toString()}` : ''}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -91,7 +91,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
   import requests
 
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
 
   # Headers with API key for authentication
@@ -102,7 +102,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
   # Step 1: Retrieve the most recent login audit events
   def get_last_login_events():
-    url = f'https://{API_HOST}/api/2.0/security/audit/login/last'
+    url = f'{API_HOST}/api/2.0/security/audit/login/last'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -115,7 +115,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
   # Step 2: Retrieve login events using filters
   def get_login_events_by_filter(user_id=None, action=None, start_date=None, end_date=None):
-    url = f'https://{API_HOST}/api/2.0/security/audit/login/filter'
+    url = f'{API_HOST}/api/2.0/security/audit/login/filter'
     params = {
       'userId': user_id,
       'action': action,
@@ -163,7 +163,7 @@ This returns the most recent login activities across the DocSpace portal.
 
   ``` ts
   async function getLastLoginEvents() {
-    const url = `https://${API_HOST}/api/2.0/security/audit/login/last`;
+    const url = `${API_HOST}/api/2.0/security/audit/login/last`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -183,7 +183,7 @@ This returns the most recent login activities across the DocSpace portal.
 
   ``` py
   def get_last_login_events():
-    url = f'https://{API_HOST}/api/2.0/security/audit/login/last'
+    url = f'{API_HOST}/api/2.0/security/audit/login/last'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -220,7 +220,7 @@ You can apply filters such as:
     if (startDate) params.set('from', startDate);
     if (endDate) params.set('to', endDate);
 
-    const url = `https://${API_HOST}/api/2.0/security/audit/login/filter${params.toString() ? `?${params.toString()}` : ''}`;
+    const url = `${API_HOST}/api/2.0/security/audit/login/filter${params.toString() ? `?${params.toString()}` : ''}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -240,7 +240,7 @@ You can apply filters such as:
 
   ``` py
   def get_login_events_by_filter(user_id=None, action=None, start_date=None, end_date=None):
-    url = f'https://{API_HOST}/api/2.0/security/audit/login/filter'
+    url = f'{API_HOST}/api/2.0/security/audit/login/filter'
     params = {
       'userId': user_id,
       'action': action,

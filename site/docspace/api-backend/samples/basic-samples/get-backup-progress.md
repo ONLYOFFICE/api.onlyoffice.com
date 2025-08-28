@@ -106,13 +106,13 @@ This example demonstrates how to check the progress of a backup process in ONLYO
 
 A GET request is sent to [/api/2.0/backup/getbackupprogress](/docspace/api-backend/usage-api/get-backup-progress) with the following optional parameter:
 
-`Dump` — boolean flag to check progress for a backup that includes a full portal dump.
+- `Dump` — boolean flag to check progress for a backup that includes a full portal dump.
 
 The API response includes:
 
-`progress` — percentage of completion.
-`isCompleted` — boolean indicating whether the backup process has finished.
-`backupProgressEnum` — status/type of the backup.
-`link` — URL to download the backup file (if completed and available).
+- `progress` — percentage of completion.
+- `isCompleted` — boolean indicating whether the backup process has finished.
+- `backupProgressEnum` — status/type of the backup.
+- `link` — URL to download the backup file (if completed and available).
 
 On success (HTTP 200), the API returns the current progress and related details of the backup task.

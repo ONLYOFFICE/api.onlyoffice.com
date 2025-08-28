@@ -17,7 +17,7 @@ This example demonstrates how to move all members from one group to another in O
 
   ``` ts
   // Set your DocSpace portal URL and API key
-  сonst API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication

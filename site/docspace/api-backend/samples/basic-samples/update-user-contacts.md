@@ -17,7 +17,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -29,7 +29,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
 
   // Step 1: Create or update user contacts
   async function setUserContacts(userId, contacts) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}/contacts`;
+    const url = `${API_HOST}/api/2.0/people/${userId}/contacts`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -46,7 +46,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
 
   // Step 2: Retrieve user contacts
   async function getUserContacts(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -87,7 +87,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
   import requests
  
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
  
   # Headers with API key for authentication
@@ -99,7 +99,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
  
   # Step 1: Create or update user contacts
   def set_user_contacts(user_id, contacts):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}/contacts'
+    url = f'{API_HOST}/api/2.0/people/{user_id}/contacts'
     data = {'contacts': contacts}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
@@ -109,7 +109,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
  
   # Step 2: Retrieve user contacts
   def get_user_contacts(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
@@ -151,7 +151,7 @@ If the contact already exists, it updates the value. Otherwise, it creates a new
 
   ``` ts
   async function setUserContacts(userId, contacts) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}/contacts`;
+    const url = `${API_HOST}/api/2.0/people/${userId}/contacts`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -172,7 +172,7 @@ If the contact already exists, it updates the value. Otherwise, it creates a new
 
   ``` py
   def set_user_contacts(user_id, contacts):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}/contacts'
+    url = f'{API_HOST}/api/2.0/people/{user_id}/contacts'
     data = {'contacts': contacts}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
@@ -196,7 +196,7 @@ The response includes all the contact details associated with the user.
 
   ``` ts
   async function getUserContacts(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -223,7 +223,7 @@ The response includes all the contact details associated with the user.
 
   ``` py
   def get_user_contacts(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()

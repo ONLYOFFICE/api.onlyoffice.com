@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Get Current Token Permissions
+# Get current token permissions
 
 This example demonstrates how to retrieve the list of permissions (scopes) associated with the currently authenticated token in ONLYOFFICE DocSpace. It helps verify which actions the token can perform (e.g., file access, room management, user operations).
 

@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Retrieve Billing and Payment Information
+# Retrieve billing and payment information
 
 This example demonstrates how to read billing-related information in ONLYOFFICE DocSpace via the API: customer profile, balance by currency, current quota, available quotas, auto top-up settings, and supported currencies.
 
@@ -387,7 +387,7 @@ A GET request is sent to [/api/2.0/portal/payment/topupsettings](/docspace/api-b
       return null;
     }
     const data = await res.json();
-    // иногда ответ приходит в поле settings, иногда в response — учтём оба
+    
     const settings = data?.settings ?? data?.response ?? {};
     console.log('Auto Top-Up Settings:');
     console.log(`- Enabled: ${settings.enabled}`);

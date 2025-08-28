@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Search Users
+# Search users
 
 This example demonstrates how to search for users in ONLYOFFICE DocSpace by a text query, with optional filters for specific fields such as type, department, or role.
 

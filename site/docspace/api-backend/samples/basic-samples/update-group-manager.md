@@ -17,7 +17,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -29,7 +29,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
 
   // Step 1: Create a new group and add members
   async function createGroup(groupName, managerId, memberIds) {
-    const url = `https://${API_HOST}/api/2.0/group`;
+    const url = `${API_HOST}/api/2.0/group`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -54,7 +54,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
 
   // Step 2: Reassign group ownership
   async function reassignGroupManager(groupId, newManagerId) {
-    const url = `https://${API_HOST}/api/2.0/group/${groupId}`;
+    const url = `${API_HOST}/api/2.0/group/${groupId}`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -92,7 +92,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
   import requests
 
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
  
   # Headers with API key for authentication
@@ -104,7 +104,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
 
   # Step 1: Create a new group and add members
   def create_group(group_name, manager_id, member_ids):
-    url = f'https://{API_HOST}/api/2.0/group'
+    url = f'{API_HOST}/api/2.0/group'
     data = {
       'groupName': group_name,
       'groupManager': manager_id,
@@ -120,7 +120,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
  
   # Step 2: Reassign group ownership
   def reassign_group_manager(group_id, new_manager_id):
-    url = f'https://{API_HOST}/api/2.0/group/{group_id}'
+    url = f'{API_HOST}/api/2.0/group/{group_id}'
     data = {'groupManager': new_manager_id}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
@@ -159,7 +159,7 @@ The API returns a group ID, which is required for further operations.
 
   ``` ts
   async function createGroup(groupName, managerId, memberIds) {
-    const url = `https://${API_HOST}/api/2.0/group`;
+    const url = `${API_HOST}/api/2.0/group`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -188,7 +188,7 @@ The API returns a group ID, which is required for further operations.
 
   ``` py
   def create_group(group_name, manager_id, member_ids):
-    url = f'https://{API_HOST}/api/2.0/group'
+    url = f'{API_HOST}/api/2.0/group'
     data = {
       'groupName': group_name,
       'groupManager': manager_id,
@@ -218,7 +218,7 @@ A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/up
 
   ``` ts
   async function reassignGroupManager(groupId, newManagerId) {
-    const url = `https://${API_HOST}/api/2.0/group/${groupId}`;
+    const url = `${API_HOST}/api/2.0/group/${groupId}`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -240,7 +240,7 @@ A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/up
 
   ``` py
   def reassign_group_manager(group_id, new_manager_id):
-    url = f'https://{API_HOST}/api/2.0/group/{group_id}'
+    url = f'{API_HOST}/api/2.0/group/{group_id}'
     data = {'groupManager': new_manager_id}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:

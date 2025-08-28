@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Manage a Guest User
+# Manage a guest user
 
 This example demonstrates how to manage a guest user in ONLYOFFICE DocSpace using the API. The script includes two main operations:
 

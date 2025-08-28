@@ -16,58 +16,48 @@ This example demonstrates how to add one or more members to an existing group in
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  // Set API base URL
-  const BASE_URL = 'https://yourportal.onlyoffice.com';
+  // Config
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-  // User credentials for authentication
-  const USER_CREDENTIALS = {
-    userName: 'your-user-name',
-    password: 'your-password',
+  // Headers with API key
+  const HEADERS = {
+    Authorization: API_KEY,
+    'Content-Type': 'application/json',
   };
 
-  // Step 1: Authenticate with your login and password
-  function authenticate() {
-    return fetch(`${BASE_URL}/api/2.0/authentication`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(USER_CREDENTIALS),
-    })
-      .then((res) => {
-        if (res.status === 200) return res.json();
-        return null;
-      })
-      .then((data) => {
-        if (!data) return null;
-        const authToken = data?.response?.token;
-        return authToken || null;
-      })
-      .catch(() => null);
-  }
+  // Step 1: Add members to a group (optionally rename and/or change manager)
+  async function addMembersToGroup(groupId, members, newName = null, newManager = null) {
+    const url = `${API_HOST}/api/2.0/group/${groupId}`;
+    const data = { membersToAdd: members };
+    if (newName) data.groupName = newName;
+    if (newManager) data.groupManager = newManager;
 
-  // Step 2: Check authentication with a token you received
-  function checkAuthentication(token) {
-    return fetch(`${BASE_URL}/api/2.0/authentication`, {
-      method: 'GET',
-      headers: { Authorization: token },
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          console.log(`User is authenticated with token ${token}.`);
-        } else {
-          console.log('User is not authenticated or token is invalid.');
-        }
-      })
-      .catch(() => {
-        console.log('User is not authenticated or token is invalid.');
-      });
-  }
+    const res = await fetch(url, {
+      method: 'PUT',
+      headers: HEADERS,
+      body: JSON.stringify(data),
+    });
 
-  // Run
-  authenticate().then((token) => {
-    if (token) {
-      checkAuthentication(token);
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`Failed to update group: ${res.status} ${text}`);
     }
-  });
+
+    console.log(`Members added to group ${groupId}: ${JSON.stringify(members)}`);
+    if (newName) console.log(`Group renamed to: ${newName}`);
+    if (newManager) console.log(`New manager assigned: ${newManager}`);
+  }
+
+  // Run the method
+  (async () => {
+    await addMembersToGroup(
+      'c652dba3-210e-436d-b264-df5ceda0a48e', // Replace with your group ID
+      ['d9be1cab-3ab4-4012-ad60-48218b2713dc', '4c65a238-ca50-4374-b904-0d51d4c1822b'], // Member UUIDs
+      'Project Alpha Team',
+      'c652dba3-210e-436d-b264-df5ceda0a48e'
+    );
+  })();
   ```
 
   </TabItem>

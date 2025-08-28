@@ -151,7 +151,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
   import requests
 
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
 
   # Headers with API key for authentication
@@ -163,7 +163,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
 
   # Step 1: Retrieve all active portal connections
   def get_all_active_connections():
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections'
+    url = f'{API_HOST}/api/2.0/security/activeconnections'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -176,7 +176,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
 
   # Step 2: Log out all sessions except the current one
   def log_out_all_except_current():
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections/logoutallexceptthis'
+    url = f'{API_HOST}/api/2.0/security/activeconnections/logoutallexceptthis'
     response = requests.put(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -189,7 +189,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
 
   # Step 3: Log out a specific session by its login event ID
   def log_out_active_connection(login_event_id):
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections/logout/{login_event_id}'
+    url = f'{API_HOST}/api/2.0/security/activeconnections/logout/{login_event_id}'
     response = requests.put(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -202,7 +202,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
 
   # Step 4: Log out all sessions for a specific user
   def log_out_all_active_connections_for_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections/logoutall/{user_id}'
+    url = f'{API_HOST}/api/2.0/security/activeconnections/logoutall/{user_id}'
     response = requests.put(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -281,7 +281,7 @@ It returns a list of active sessions on the portal.
 
   ``` py
   def get_all_active_connections():
-  url = f'https://{API_HOST}/api/2.0/security/activeconnections'
+  url = f'{API_HOST}/api/2.0/security/activeconnections'
   response = requests.get(url, headers=HEADERS)
 
   if response.status_code == 200:
@@ -333,7 +333,7 @@ It terminates all sessions except the current API session.
 
   ``` py
   def log_out_all_except_current():
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections/logoutallexceptthis'
+    url = f'{API_HOST}/api/2.0/security/activeconnections/logoutallexceptthis'
     response = requests.put(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -385,7 +385,7 @@ It logs out a session by its login event ID.
 
   ``` py
 def log_out_active_connection(login_event_id):
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections/logout/{login_event_id}'
+    url = f'{API_HOST}/api/2.0/security/activeconnections/logout/{login_event_id}'
     response = requests.put(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -437,7 +437,7 @@ It logs out all active sessions for the provided user ID.
 
   ``` py
   def log_out_all_active_connections_for_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/security/activeconnections/logoutall/{user_id}'
+    url = f'{API_HOST}/api/2.0/security/activeconnections/logoutall/{user_id}'
     response = requests.put(url, headers=HEADERS)
 
     if response.status_code == 200:

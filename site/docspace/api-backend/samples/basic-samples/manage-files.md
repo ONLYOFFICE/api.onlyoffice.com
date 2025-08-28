@@ -50,7 +50,6 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
     const blob = new Blob([buffer], { type: 'application/octet-stream' });
     form.append('file', blob, path.basename(filePath));
 
-    // Не ставим Content-Type — boundary выставит fetch сам
     return fetch(url, {
       method: 'POST',
       headers: { Authorization: `Bearer ${API_KEY}` },
@@ -248,7 +247,6 @@ A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backen
     const blob = new Blob([buffer], { type: 'application/octet-stream' });
     form.append('file', blob, path.basename(filePath));
 
-    // Не ставим Content-Type — boundary выставит fetch сам
     return fetch(url, {
       method: 'POST',
       headers: { Authorization: `Bearer ${API_KEY}` },

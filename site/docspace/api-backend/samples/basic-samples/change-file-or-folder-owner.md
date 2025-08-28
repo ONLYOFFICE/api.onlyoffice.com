@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Change File or Folder Ownership
+# Change file or folder ownership
 
 This example demonstrates how to transfer ownership of files and/or folders in ONLYOFFICE DocSpace to another user using the API. This is useful for reassigning responsibility when a project changes owners or a team member leaves.
 

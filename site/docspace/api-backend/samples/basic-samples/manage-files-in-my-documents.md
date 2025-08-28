@@ -17,7 +17,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -27,7 +27,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   // Step 1: Get "My Documents" contents
   function getMyDocuments() {
-    const url = `https://${API_HOST}/api/2.0/files/@my`;
+    const url = `${API_HOST}/api/2.0/files/@my`;
     return fetch(url, { method: 'GET', headers: HEADERS })
       .then((res) => (res.status === 200 ? res.json() : null))
       .catch(() => null);
@@ -35,7 +35,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   // Step 2: Upload a file to "My Documents"
   function uploadFileToMy(filePath) {
-    const url = `https://${API_HOST}/api/2.0/files/@my/upload`;
+    const url = `${API_HOST}/api/2.0/files/@my/upload`;
 
     // Build multipart form-data with Blob (no external deps)
     const form = new FormData();
@@ -58,7 +58,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   // Step 3: Create an empty file in "My Documents"
   function createFileInMy(fileTitle) {
-    const url = `https://${API_HOST}/api/2.0/files/@my/file`;
+    const url = `${API_HOST}/api/2.0/files/@my/file`;
     const data = { title: fileTitle };
 
     return fetch(url, {
@@ -72,7 +72,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   // Step 4: Delete a file from "My Documents"
   function deleteFile(fileId, immediately = true, deleteAfter = false) {
-    const url = `https://${API_HOST}/api/2.0/files/file/${fileId}`;
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}`;
     const data = { immediately, deleteAfter };
 
     return fetch(url, {
@@ -104,7 +104,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
   import requests
 
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
 
   # Headers with API key for authentication
@@ -114,7 +114,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
 # Step 1: Get "My Documents" contents
   def get_my_documents():
-    url = f'https://{API_HOST}/api/2.0/files/@my'
+    url = f'{API_HOST}/api/2.0/files/@my'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -123,7 +123,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   # Step 2: Upload a file to "My Documents"
   def upload_file_to_my(file_path):
-    url = f'https://{API_HOST}/api/2.0/files/@my/upload'
+    url = f'{API_HOST}/api/2.0/files/@my/upload'
     with open(file_path, 'rb') as file:
       files = {'file': (file_path, file)}
       response = requests.post(url, headers=HEADERS, files=files)
@@ -134,7 +134,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   # Step 3: Create an empty file in "My Documents"
   def create_file_in_my(file_title):
-    url = f'https://{API_HOST}/api/2.0/files/@my/file'
+    url = f'{API_HOST}/api/2.0/files/@my/file'
     data = {'title': file_title}
     response = requests.post(url, headers=HEADERS, json=data)
 
@@ -144,7 +144,7 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
   # Step 4: Delete a file from "My Documents"
   def delete_file(file_id, immediately=True, delete_after=False):
-    url = f'https://{API_HOST}/api/2.0/files/file/{file_id}'
+    url = f'{API_HOST}/api/2.0/files/file/{file_id}'
     data = {
       'immediately': immediately,
       'deleteAfter': delete_after
@@ -180,7 +180,7 @@ It returns a list of files and folders in the user's personal space.
 
   ``` ts
   function getMyDocuments() {
-    const url = `https://${API_HOST}/api/2.0/files/@my`;
+    const url = `${API_HOST}/api/2.0/files/@my`;
     return fetch(url, { method: 'GET', headers: HEADERS })
       .then((res) => (res.status === 200 ? res.json() : null))
       .catch(() => null);
@@ -192,7 +192,7 @@ It returns a list of files and folders in the user's personal space.
 
   ``` py
   def get_my_documents():
-    url = f'https://{API_HOST}/api/2.0/files/@my'
+    url = f'{API_HOST}/api/2.0/files/@my'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
@@ -214,7 +214,7 @@ A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usag
 
   ``` ts
   function uploadFileToMy(filePath) {
-    const url = `https://${API_HOST}/api/2.0/files/@my/upload`;
+    const url = `${API_HOST}/api/2.0/files/@my/upload`;
 
     // Build multipart form-data with Blob (no external deps)
     const form = new FormData();
@@ -241,7 +241,7 @@ A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usag
 
   ``` py
   def upload_file_to_my(file_path):
-    url = f'https://{API_HOST}/api/2.0/files/@my/upload'
+    url = f'{API_HOST}/api/2.0/files/@my/upload'
     with open(file_path, 'rb') as file:
       files = {'file': (file_path, file)}
       response = requests.post(url, headers=HEADERS, files=files)
@@ -265,7 +265,7 @@ A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-
 
   ``` ts
   function createFileInMy(fileTitle) {
-    const url = `https://${API_HOST}/api/2.0/files/@my/file`;
+    const url = `${API_HOST}/api/2.0/files/@my/file`;
     const data = { title: fileTitle };
 
     return fetch(url, {
@@ -283,7 +283,7 @@ A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-
 
   ``` py
   def create_file_in_my(file_title):
-    url = f'https://{API_HOST}/api/2.0/files/@my/file'
+    url = f'{API_HOST}/api/2.0/files/@my/file'
     data = {'title': file_title}
     response = requests.post(url, headers=HEADERS, json=data)
 
@@ -309,7 +309,7 @@ The following parameters can be optionally defined:
 
   ``` ts
   function deleteFile(fileId, immediately = true, deleteAfter = false) {
-    const url = `https://${API_HOST}/api/2.0/files/file/${fileId}`;
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}`;
     const data = { immediately, deleteAfter };
 
     return fetch(url, {
@@ -327,7 +327,7 @@ The following parameters can be optionally defined:
 
   ``` py
   def delete_file(file_id, immediately=True, delete_after=False):
-    url = f'https://{API_HOST}/api/2.0/files/file/{file_id}'
+    url = f'{API_HOST}/api/2.0/files/file/{file_id}'
     data = {
       'immediately': immediately,
       'deleteAfter': delete_after

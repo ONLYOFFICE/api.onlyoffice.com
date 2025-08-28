@@ -17,7 +17,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -29,7 +29,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
   // Step 1: Create a new user
   async function createUser(firstName, lastName, email) {
-    const url = `https://${API_HOST}/api/2.0/people`;
+    const url = `${API_HOST}/api/2.0/people`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -50,7 +50,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
   // Step 2: Retrieve a user by ID
   async function getUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -66,7 +66,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
   // Step 3: Update user role
   async function updateUserRole(userId, role) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -90,7 +90,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
       await getUser(userId);
       await updateUserRole(userId, 'Manager');
     }
-  )();
+  })();
   ```
 
   </TabItem>
@@ -100,7 +100,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
   import requests
  
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
  
   # Headers with API key for authentication
@@ -112,7 +112,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
  
   # Step 1: Create a new user
   def create_user(first_name, last_name, email):
-    url = f'https://{API_HOST}/api/2.0/people'
+    url = f'{API_HOST}/api/2.0/people'
     data = {
       'firstName': first_name,
       'lastName': last_name,
@@ -129,7 +129,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
  
   # Step 2: Retrieve a user by ID
   def get_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
@@ -141,7 +141,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
   
   # Step 3: Update user role
   def update_user_role(user_id, role):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     data = {'role': role}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
@@ -180,7 +180,7 @@ The API returns a user ID, which is required for further operations.
 
   ``` ts
   async function createUser(firstName, lastName, email) {
-    const url = `https://${API_HOST}/api/2.0/people`;
+    const url = `${API_HOST}/api/2.0/people`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -205,7 +205,7 @@ The API returns a user ID, which is required for further operations.
 
   ``` py
   def create_user(first_name, last_name, email):
-    url = f'https://{API_HOST}/api/2.0/people'
+    url = f'{API_HOST}/api/2.0/people'
     data = {
       'firstName': first_name,
       'lastName': last_name,
@@ -237,7 +237,7 @@ This step ensures that the user exists before making any updates or deletions.
 
   ``` ts
   async function getUser(userId) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -257,7 +257,7 @@ This step ensures that the user exists before making any updates or deletions.
 
   ``` py
   def get_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
@@ -282,7 +282,7 @@ The request updates the user's profile, applying the new role or permissions.
 
   ``` ts
   async function updateUserRole(userId, role) {
-    const url = `https://${API_HOST}/api/2.0/people/${userId}`;
+    const url = `${API_HOST}/api/2.0/people/${userId}`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -304,7 +304,7 @@ The request updates the user's profile, applying the new role or permissions.
 
   ``` py
   def update_user_role(user_id, role):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    url = f'{API_HOST}/api/2.0/people/{user_id}'
     data = {'role': role}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:

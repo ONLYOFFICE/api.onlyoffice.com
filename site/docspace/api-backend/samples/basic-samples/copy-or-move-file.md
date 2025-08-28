@@ -61,7 +61,7 @@ This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.
   // Step 2: Move a file to another folder
   function moveFileToFolder(fileId, destFolderId) {
     const url = `${BASE_URL}/api/2.0/files/fileops/move`;
-    сonst payload = {
+    const payload = {
       fileIds: [fileId],
       destFolderId: destFolderId,
       deleteAfter: true, // Move means remove from original

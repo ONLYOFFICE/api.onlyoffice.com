@@ -22,41 +22,42 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   // Headers with API key for authentication
   const HEADERS = {
-    Authorization: `Bearer ${API_KEY}`,
+    Authorization: API_KEY, // если используете PAT, Bearer не нужен
+    // Authorization: `Bearer ${API_KEY}`, // вариант, если токен JWT
     'Content-Type': 'application/json',
   };
 
   // Step 1: Create a room
   async function createRoom(roomName, description) {
-    const url = `${BASE_URL}/api/2.0/files/room`;
+    const url = `${BASE_URL}/api/2.0/files/rooms`; // исправлен путь
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
-      body: JSON.stringify({ title: roomName, description }),
+      body: JSON.stringify({ title: roomName, description, roomType: 2 }),
     });
     if (!res.ok) {
       const t = await res.text();
       throw new Error(`Create room failed: ${res.status} - ${t}`);
     }
-    // Python-версия ничего не возвращала; можно вернуть JSON при желании:
-    // const json = await res.json(); return json;
+    const json = await res.json();
+    return json.response;
   }
 
   // Step 2: Retrieve room details
   async function getRoomDetails(roomId) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
       throw new Error(`Get room failed: ${res.status} - ${t}`);
     }
     const roomInfo = await res.json();
-    return roomInfo;
+    return roomInfo.response;
   }
 
   // Step 3: Rename a room
   async function renameRoom(roomId, newName) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}/rename`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -70,7 +71,7 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   // Step 4: Archive a room
   async function archiveRoom(roomId) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}/archive`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}/archive`;
     const res = await fetch(url, { method: 'PUT', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -80,7 +81,7 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   // Step 5: Delete a room
   async function deleteRoom(roomId) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -93,14 +94,14 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     const room_name = 'New Room';                // Replace with actual room name
     const description = 'This is a test room.';  // Replace with actual room description
     const new_room_name = 'Updated Room Name';   // Replace with actual new room name
-    const room_id = 1234;                        // Replace with actual room ID
+    const room_id = 1234                         // Replace with actual room ID
 
     try {
       // Step 1
       await createRoom(room_name, description);
 
       // Step 2
-      await getRoomDetails(room_id);
+      await getRoomDetails(room_id); // вставьте актуальный ID
 
       // Step 3
       await renameRoom(room_id, new_room_name);
@@ -113,7 +114,7 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     } catch (e) {
       console.error(e.message);
     }
-  })();  
+  })();
   ```
 
   </TabItem>

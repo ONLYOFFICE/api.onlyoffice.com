@@ -17,7 +17,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
 
   ``` ts
   // Set API base URL
-  const API_HOST = 'yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const API_KEY = 'your_api_key';
 
   // Headers with API key for authentication
@@ -27,7 +27,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
 
   // Step 1: Get file version history
   async function getFileVersions(fileId) {
-    const url = `https://${API_HOST}/api/2.0/files/file/${fileId}/edit/history`;
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}/edit/history`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -48,7 +48,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
   // Step 2: Restore file to specific version
   async function restoreFileVersion(fileId, versionNumber) {
     const params = new URLSearchParams({ version: String(versionNumber) });
-    const url = `https://${API_HOST}/api/2.0/files/file/${fileId}/restoreversion?${params}`;
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}/restoreversion?${params}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (res.ok) {
@@ -81,7 +81,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
   import requests
 
   # Set API base URL
-  API_HOST = "yourportal.onlyoffice.com"
+  API_HOST = "https://yourportal.onlyoffice.com"
   API_KEY = "your_api_key"
 
   # Headers with API key for authentication
@@ -91,7 +91,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
 
   # Step 1: Get file version history
   def get_file_versions(file_id):
-    url = f"https://{API_HOST}/api/2.0/files/file/{file_id}/edit/history"
+    url = f"{API_HOST}/api/2.0/files/file/{file_id}/edit/history"
     response = requests.get(url, headers=HEADERS)
     
     if response.status_code == 200:
@@ -107,7 +107,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
 
   # Step 2: Restore file to specific version
   def restore_file_version(file_id, version_number):
-    url = f"https://{API_HOST}/api/2.0/files/file/{file_id}/restoreversion"
+    url = f"{API_HOST}/api/2.0/files/file/{file_id}/restoreversion"
     params = { "version": version_number }
     response = requests.get(url, headers=HEADERS, params=params)
 
@@ -139,14 +139,12 @@ A GET request is sent to [/api/2.0/files/file/:fileId/edit/history](/docspace/ap
 
 Returns a list of all saved versions with `version` and `created` timestamps.
 
-<details>
-  <summary>Full example</summary>
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
   async function getFileVersions(fileId) {
-    const url = `https://${API_HOST}/api/2.0/files/file/${fileId}/edit/history`;
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}/edit/history`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (!res.ok) {
@@ -170,7 +168,7 @@ Returns a list of all saved versions with `version` and `created` timestamps.
 
   ``` py
   def get_file_versions(file_id):
-    url = f"https://{API_HOST}/api/2.0/files/file/{file_id}/edit/history"
+    url = f"{API_HOST}/api/2.0/files/file/{file_id}/edit/history"
     response = requests.get(url, headers=HEADERS)
     
     if response.status_code == 200:
@@ -187,7 +185,6 @@ Returns a list of all saved versions with `version` and `created` timestamps.
 
   </TabItem>
 </Tabs>
-</details>
 
 ## Step 2: Restore to specific version
 
@@ -197,15 +194,13 @@ This method requires the following query parameter:
 
 - `version`. The file version number to restore.
 
-<details>
-  <summary>Full example</summary>
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
   async function restoreFileVersion(fileId, versionNumber) {
     const params = new URLSearchParams({ version: String(versionNumber) });
-    const url = `https://${API_HOST}/api/2.0/files/file/${fileId}/restoreversion?${params}`;
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}/restoreversion?${params}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
 
     if (res.ok) {
@@ -223,7 +218,7 @@ This method requires the following query parameter:
 
   ``` py
   def restore_file_version(file_id, version_number):
-    url = f"https://{API_HOST}/api/2.0/files/file/{file_id}/restoreversion"
+    url = f"{API_HOST}/api/2.0/files/file/{file_id}/restoreversion"
     params = { "version": version_number }
     response = requests.get(url, headers=HEADERS, params=params)
 
@@ -236,4 +231,3 @@ This method requires the following query parameter:
 
   </TabItem>
 </Tabs>
-</details>
