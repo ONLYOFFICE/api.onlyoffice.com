@@ -32,7 +32,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 在这里，您可以找到可供 ONLYOFFICE 文档发送到主机页面的消息。Online office接收消息的过程将在稍后提供。
 
-## 可用消息
+## 可用消息 {#available-messages}
 
 ```mdx-code-block
 <APITable>

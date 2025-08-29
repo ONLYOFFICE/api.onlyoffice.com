@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-# 输入辅助 {#input-helper}
+# 输入辅助
 
 插件可以创建自己的窗口，该窗口在您输入文本时显示或隐藏。其位置与光标绑定。
 
@@ -31,11 +31,11 @@ window.Asc.plugin.init = (text) => {
 
 ## 获取输入辅助 {#getting-an-input-helper}
 
-要获取 [InputHelper object](#输入辅助)，请使用 **getInputHelper** 方法。
+要获取 [InputHelper object](#inputhelper)，请使用 **getInputHelper** 方法。
 
 参数：此方法无参数。
 
-返回值：类型为 [InputHelper](#输入辅助)
+返回值：类型为 [InputHelper](#inputhelper)
 
 示例:
 
@@ -90,7 +90,7 @@ window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
 window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true])
 ```
 
-# 输入辅助 {#inputhelper}
+## 输入辅助 {#inputhelper}
 
 表示输入辅助的类。
 

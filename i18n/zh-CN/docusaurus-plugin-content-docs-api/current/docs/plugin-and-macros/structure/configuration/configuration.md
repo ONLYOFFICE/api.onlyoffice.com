@@ -498,7 +498,7 @@ sidebar_position: -5
 
 示例：true
 
-### 插件变体菜单位置 {#variations.menu}
+### 插件变体菜单位置 {#variationsmenu}
 
 已废弃。请改用[类型](#variationstype)参数。指定插件放置位置（右侧或左侧面板）。
 
