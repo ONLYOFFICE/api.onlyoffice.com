@@ -16,7 +16,7 @@ This can be the reason for some inconvenience in case you previously used Micros
 
 If you want to speed up the process, starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically convert VBA code into JavaScript compatible with ONLYOFFICE macros:
 
-1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](/docs/plugin-and-macros/samples/plugin-samples/ai.md#configuring).
+1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](/docs/plugin-and-macros/samples/plugin-samples/ai-plugin.md#configuring).
 2. Open the **View** tab and click **Macros**.
 3. Click the **AI** icon in the **Macros** window and select **Convert from VBA**.
 
