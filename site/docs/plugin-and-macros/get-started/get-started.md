@@ -25,7 +25,7 @@ Code samples are available at [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugi
 
 To maintain a consistent plugin user interface, you can use a set of prebuilt base components designed specifically for plugin UI creation. You can explore and interact with these components in our [storybook](https://onlyoffice.github.io/storybook/static/).
 
-If you are looking for ready-to-use plugins, please visit [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory).
+If you are looking for ready-to-use plugins, please visit [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en).
 
 To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager-for-a-single-user).
 
