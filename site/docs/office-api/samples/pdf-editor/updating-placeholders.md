@@ -300,7 +300,7 @@ function updatePlaceholdersForLanguage(language) {
         try {
           // For demonstration, we'll update the form by recreating it with new placeholder
           // In a real implementation, you'd use the appropriate API method
-          form.SetPlaceholder(dictionary[key]);
+          form.SetPlaceholderText(dictionary[key]);
           updatedCount++;
         } catch (e) {
           // If SetPlaceholder is not available, we could update the text content
