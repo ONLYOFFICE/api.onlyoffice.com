@@ -76,7 +76,7 @@ pivotTable.AddDataField('Quantity', 'Total Quantity', 'sum');
 pivotTable.RefreshTable();
 
 // Get the pivot table worksheet and format it
-let pivotWorksheet = Api.GetWorksheets().GetItem(1);
+let pivotWorksheet = Api.GetSheet(0);
 pivotWorksheet.SetName("Sales Summary by Category");
 
 // Format the pivot table for better presentation
