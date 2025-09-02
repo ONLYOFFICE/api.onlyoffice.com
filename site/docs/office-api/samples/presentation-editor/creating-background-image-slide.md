@@ -1,3 +1,7 @@
+---
+sidebar_class_name: hidden
+---
+
 # Creating background image slide
 
 Create a slide with a background image and overlay text:
