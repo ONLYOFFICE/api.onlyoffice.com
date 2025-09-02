@@ -13,7 +13,7 @@
 #### Plugins and macros
 
 * Added the bundled plugin type description
-* Added page for AI plugin instruction
+* Added the AI plugin section
 
 ### Fixes
 

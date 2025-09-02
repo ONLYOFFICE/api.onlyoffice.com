@@ -1,7 +1,6 @@
 ---
-sidebar_position: -1
+sidebar_position: -2
 ---
-
 
 # AI agent (beta)
 
@@ -12,7 +11,7 @@ The AI inline agent is a contextual assistant integrated into ONLYOFFICE editors
 The AI agent:
 
 - Provides natural language interaction for executing common editing tasks without navigating menus.
-- Includes a collection of simple predefined functions adapted to common tasks for each editor.
+- Includes a collection of simple predefined [functions](custom-ai-functions.md) adapted to common tasks for each editor.
 - Maintains conversation history to support iterative refinement and multi-step requests.
 
 ## What the AI agent can do {#functions}
@@ -21,7 +20,7 @@ The AI agent:
 - **Smart formatting**. Apply formatting without searching through menus. Request formatting changes, and the editor updates the document automatically.
 - **Data analysis and visualization**. Aggregate, sort, and filter data in spreadsheets, and generate visual representations from selected ranges or entire sheets. Create diagrams and slide images based on simple text descriptions.
 
-## How to install the AI agent (#installation)
+## How to install the AI agent {#installation}
 
 To install the AI agent, follow the steps below:
 
@@ -46,11 +45,11 @@ To install the AI agent, follow the steps below:
 
 The AI agent is now installed and ready to start.
 
-## How to use the AI agent (#usage)
+## How to use the AI agent {#usage}
 
 To invoke the AI agent:
 
-1. Press `Ctrl + /` in any editor to open the AI Agent input.
+1. Press `Ctrl + /` in any editor to open the AI agent input.
 2. Type your request and press `Enter` to receive an immediate response.
 
 The editor supports request history, so you can continue the conversation, giving instructions step by step.
