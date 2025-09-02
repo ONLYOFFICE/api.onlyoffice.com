@@ -14,6 +14,7 @@
 
 * Added the bundled plugin type description
 * Added the AI plugin section
+* Added the ability to access cell address information inside custom functions
 
 ### Fixes
 
