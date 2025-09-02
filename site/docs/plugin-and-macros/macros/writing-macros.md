@@ -80,7 +80,7 @@ Paste the code above to the macros window and click ![Play icon](/assets/images/
 
 If you want to speed up the process, starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically generate ONLYOFFICE macros from their descriptions:
 
-1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](/docs/plugin-and-macros/samples/plugin-samples/ai.md#configuring).
+1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](/docs/plugin-and-macros/ai/ai-plugin.md#configuring).
 2. Open the **View** tab and click **Macros**.
 3. Click the **AI** icon in the **Macros** window and select **Create from description**.
 
