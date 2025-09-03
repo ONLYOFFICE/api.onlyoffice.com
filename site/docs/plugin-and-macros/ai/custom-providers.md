@@ -24,11 +24,11 @@ Any custom provider can be added to the AI plugin. To do this, follow the instru
 
 - **API key**. A unique key provided by the service provider, used for authentication.
 
-## Step 1. Create the external JavaScript file {#create-ja-file}
+## Step 1. Create the external JavaScript file {#create-js-file}
 
-To add a custom provider and display it in the list of available providers within the AI plugin, create and upload an external JS file. An example of such a file can be found [here](https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io/blob/38ea6b9909c43a9d7dfaf539d95fdda3dd9b36bc/sdkjs-plugins/content/ai/scripts/engine/providers/internal/openai.js).
+To add a custom provider and display it in the list of available providers within the AI plugin, create and upload an external JS file. An example of such a file can be found [here](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/engine/providers/internal/openai.js).
 
-Custom providers parsed from this file are instances of the [`Provider`](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/187c8183ed69b421f7ee4d955bea22f1b6dc417f/sdkjs-plugins/content/ai/scripts/engine/providers/provider.js) class, which extends `AI.Provider`. This class manages all available providers within the plugin.
+Custom providers parsed from this file are instances of the [`Provider`](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/engine/providers/provider.js) class, which extends `AI.Provider`. This class manages all available providers within the plugin.
 
 #### Provider class
 

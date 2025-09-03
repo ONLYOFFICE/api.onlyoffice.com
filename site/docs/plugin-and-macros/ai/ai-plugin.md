@@ -8,7 +8,7 @@ AI is a background plugin that connects an AI provider (e.g., OpenAI, DeepSeek) 
 
 **Supported editors:** documents, spreadsheets, presentations, PDF.
 
-**Repository on GitHub**: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/187c8183ed69b421f7ee4d955bea22f1b6dc417f/sdkjs-plugins/content/ai).
+**Repository on GitHub**: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai).
 
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';

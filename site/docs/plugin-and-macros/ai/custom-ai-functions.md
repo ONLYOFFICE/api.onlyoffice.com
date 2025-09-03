@@ -11,7 +11,7 @@ AI functions define the functionality of an AI agent. They specify:
 
 Adding custom AI functions expands the AI agent's capabilities and allows adapting it to specific use cases. Whether working with documents, spreadsheets, or presentations, custom functions let you integrate AI-driven operations directly into your workflow and align the agent's behavior with your requirements.
 
-You can find ready-to-use custom AI functions [here](https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io/tree/38ea6b9909c43a9d7dfaf539d95fdda3dd9b36bc/sdkjs-plugins/content/ai/scripts/helpers) or create your own ones.
+You can find ready-to-use custom AI functions [here](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai/scripts/helpers) or create your own ones.
 
 ## How to use AI functions {#usage}
 
@@ -83,7 +83,7 @@ func.examples = [
 ]
 ```
 
-These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFunc.js](https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io/blob/8a8b3e3237745bde2f99db5b8cee0abf2c637317/sdkjs-plugins/content/ai/scripts/helperFuncs.js) file .
+These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helperFuncs.js) file .
 
 ### Function execution {#execution}
 
@@ -120,7 +120,7 @@ After registering the function, implement the actual logic that gets executed wh
     let argPromt = params.prompt + ":\n" + text;
     ```
 
-3. Initialize a request engine for communicating with the AI model using `AI.Request.create`. The object is defined in [engine.js](https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io/blob/8a8b3e3237745bde2f99db5b8cee0abf2c637317/sdkjs-plugins/content/ai/scripts/engine/engine.js#L554) file. This object facilitates sending a request to the AI model:
+3. Initialize a request engine for communicating with the AI model using `AI.Request.create`. The object is defined in [engine.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/engine/engine.js#L554) file. This object facilitates sending a request to the AI model:
 
     ``` ts
     // Initializes a request engine for communicating with the AI model (e.g. Chat, Translation).
