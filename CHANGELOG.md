@@ -1,5 +1,33 @@
 # Change log
 
+## 6.6.0
+
+### New features
+
+* Restructured changelog
+
+#### Docs
+
+* Added new Office API samples
+
+#### Plugins and macros
+
+* Added the bundled plugin type description
+* Added the AI plugin section
+* Added the ability to access cell address information inside custom functions
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+* Hide right panel in Office Api and macro samples
+* Hide the changelog reading time
+
+#### Docspace
+
+* Fixed API Backend samples position
+
 ## 6.5.0
 
 ### New features

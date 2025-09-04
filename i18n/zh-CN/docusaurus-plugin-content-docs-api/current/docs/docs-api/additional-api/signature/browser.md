@@ -52,7 +52,7 @@
 }
 ```
 
-## 方法
+## 方法 {#methods}
 
 ### insertImage
 

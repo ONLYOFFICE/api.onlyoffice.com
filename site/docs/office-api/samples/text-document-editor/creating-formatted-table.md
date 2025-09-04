@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating formatted table
 
 Create a document with a formatted table containing employee data with styled headers and center-aligned content:

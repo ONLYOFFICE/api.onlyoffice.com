@@ -8,7 +8,7 @@ sidebar_position: -5
 
 ![Toolbar item](/assets/images/plugins/toolbar-plugins.png#gh-light-mode-only)![Toolbar item](/assets/images/plugins/toolbar-plugins.dark.png#gh-dark-mode-only)
 
-## 创建工具栏项目
+## 创建工具栏项目 {#creating-a-toolbar-item}
 
 1. 如有必要，使用 **AddToolbarMenuItem** 方法向工具栏菜单添加项目。
 
@@ -46,7 +46,7 @@ sidebar_position: -5
    }])
    ```
 
-   ### 主工具栏菜单项
+### 主工具栏菜单项 {#toolbarmenumainitem}
 
    主工具栏菜单项.
 
@@ -68,7 +68,7 @@ sidebar_position: -5
     }
     ```
 
-   ### 工具栏菜单选项卡
+### 工具栏菜单选项卡 {#toolbarmenutab}
 
     工具栏菜单选项卡。
 
@@ -92,7 +92,7 @@ sidebar_position: -5
    }
    ```
 
-   ### 工具栏菜单项
+### 工具栏菜单项 {#toolbarmenuitem}
 
    工具栏菜单项。
 
@@ -149,13 +149,13 @@ sidebar_position: -5
     }
     ```
 
-   ### 工具栏菜单项类型
+### 工具栏菜单项类型 {#toolbarmenuitemtype}
 
    工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
 
    类型："button" | "big-button"
 
-   ### 标准工具栏标签页 ID
+### 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
 
    #### 文档编辑器
 

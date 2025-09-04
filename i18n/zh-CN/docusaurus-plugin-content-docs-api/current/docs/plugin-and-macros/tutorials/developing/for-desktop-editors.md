@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 
    你可以编辑插件并重新加载以查看更改。
 
-## 调试
+## 调试 {#debugging}
 
 要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 --ascdesktop-support-debug-info 参数。具体操作请根据你所使用的操作系统，参考[此处说明](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)。
 

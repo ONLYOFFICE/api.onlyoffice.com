@@ -9,7 +9,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 以下示例将向您展示如何使用 ONLYOFFICE 宏，并将 JavaScript 代码与 VBA 代码进行对比，以便您了解差异，并掌握如何将 VBA 代码转换为 ONLYOFFICE 宏。
 
-## 运行示例宏
+## 运行示例宏 {#running-the-example-macro}
 
 要设置并运行示例宏，请按照以下步骤操作：
 
@@ -36,7 +36,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={[...[...useCurrentSidebarCategory().items[2].items]]} />
 
-## PDF 编辑器
+## PDF 编辑器 {#pdf-editor}
 
 <DocCardList items={[...[...useCurrentSidebarCategory().items[3].items]]} />
 

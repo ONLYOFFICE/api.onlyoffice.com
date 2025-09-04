@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Calculate time to read
 
 Analyzes the text content of the entire document, counts the number of words, adjusts for the text complexity, and calculates how long it would take an average adult to read it.

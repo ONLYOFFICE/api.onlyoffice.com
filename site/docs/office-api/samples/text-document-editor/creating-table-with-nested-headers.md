@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating table with nested headers
 
 Create a document with a table containing nested headers and merged cells. This structure is commonly used in analytical reports, plans, revenue tables, and activity reports where headers need to be grouped by periods, regions, categories, etc. The top cells are merged horizontally to span multiple subcategories:

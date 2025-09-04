@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Inserting text into a document
 
 Create a document with formatted text using different methods:

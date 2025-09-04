@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Formatting variables in text
 
 Create a document with formulas or variables styled differently from the main text:

@@ -15,7 +15,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 添加插件有两种方式：通过插件管理器或通过插件文件夹。
 
-## 通过插件管理器添加插件
+## 通过插件管理器添加插件 {#adding-plugins-through-the-plugin-manager}
 
 从 7.4 版本开始，你可以从 **ONLYOFFICE 插件市场**下载可直接使用的插件。
 

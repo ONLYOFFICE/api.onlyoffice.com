@@ -73,7 +73,7 @@ sidebar_position: -5
 
 示例："6.3.0"
 
-## 名称
+## 名称 {#name}
 
 插件名称，将显示在插件工具栏中。
 
@@ -89,7 +89,7 @@ sidebar_position: -5
 
 示例：`{ "fr": "french plugin name" }`
 
-#### 多语言翻译
+#### 多语言翻译 {#localetranslate}
 
 文本字段的多语言翻译。对象的键为两位语言代码（如 ru、de、it 等），值为各语言对应的按钮标签翻译。
 
@@ -120,7 +120,15 @@ sidebar_position: -5
 
 示例： "John Smith"
 
-## 插件变体
+## onlyofficeScheme
+
+该说明指明了该插件是否包含在标有 ONLYOFFICE 品牌的服务器版或桌面版中。
+
+类型: boolean
+
+示例: true
+
+## 插件变体 {#variations}
 
 插件变体（或子插件），是在原始插件内部创建的子模块。详见[此处](variations.md)。
 
@@ -180,7 +188,7 @@ sidebar_position: -5
 ]
 ```
 
-### 插件变体按钮
+### 插件变体按钮 {#variationsbuttons}
 
 插件界面中使用的可换肤按钮列表。该参数仅适用于插件窗口和面板类型的插件，即当[类型](#variationstype)参数为窗口、面板或右侧面板时使用。
 
@@ -204,7 +212,7 @@ sidebar_position: -5
 
 ![插件按钮](/assets/images/plugins/plugin-buttons.png#gh-light-mode-only)![插件按钮](/assets/images/plugins/plugin-buttons.dark.png#gh-dark-mode-only)
 
-#### 按钮
+#### 按钮 {#button}
 
 该可换肤插件按钮用于插件界面（仅用于具有独立窗口的可视插件，即 `isVisual == true` 且 `isInsideMode == false`
 
@@ -280,7 +288,7 @@ sidebar_position: -5
 
 示例："1" 
 
-### 变体描述
+### 变体描述 {#variationsdescription}
 
 描述，即最能描述你插件的内容。将显示在 **ONLYOFFICE 插件市场**。
 
@@ -306,7 +314,7 @@ sidebar_position: -5
 
 示例：`["word"]`
 
-#### 编辑器类型
+#### 编辑器类型 {#editortype}
 
 插件可用的编辑器：
 
@@ -330,7 +338,7 @@ sidebar_position: -5
 };
 ```
 
-### 插件变体事件
+### 插件变体事件 {#variationsevents}
 
 当前插件代码中使用的插件事件。了解如何订阅事件，请参见[这里](../../interacting-with-editors/overview/how-to-attach-events.md)。
 
@@ -357,7 +365,7 @@ sidebar_position: -5
 };
 ```
 
-### 插件变体图标
+### 插件变体图标 {#variationsicons}
 
 插件图标图片文件的 URL。该 URL 允许你为主题（名称、类型）、样式（普通、悬停、激活）和缩放设置自定义规则。更多信息见[这里](../icons.md)。
 
@@ -365,7 +373,7 @@ sidebar_position: -5
 
 示例："url_to_icon"
 
-### 插件变体图标2
+### 插件变体图标2 {#variationsicons2}
 
 用于插件扩展的可缩放图标，已废弃。更多信息见[这里](../icons.md)。
 
@@ -383,7 +391,7 @@ sidebar_position: -5
 
 ![初始化数据](/assets/images/plugins/init-data.png#gh-light-mode-only)![初始化数据](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
 
-### 插件变体初始化数据类型
+### 插件变体初始化数据类型 {#variationsinitdatatype}
 
 编辑器中选定并发送给插件的数据类型（**text**、**html**、**ole**、**desktop**、**desktop-external**、**sign** 或 **none**）。
 
@@ -391,7 +399,7 @@ sidebar_position: -5
 
 示例："ole"
 
-#### 初始化数据类型
+#### 初始化数据类型 {#initdatatype}
 
 编辑器中选定并发送给插件的数据类型：
 
@@ -490,7 +498,7 @@ sidebar_position: -5
 
 示例：true
 
-### 插件变体菜单位置
+### 插件变体菜单位置 {#variationsmenu}
 
 已废弃。请改用[类型](#variationstype)参数。指定插件放置位置（右侧或左侧面板）。
 
@@ -633,7 +641,7 @@ sidebar_position: -5
 
 示例："resources/store/icons"
 
-### 插件市场描述截图
+### 插件市场描述截图 {#variationsstorescreenshots}
 
 用于 **ONLYOFFICE 插件市场**插件描述的图片。
 
@@ -643,7 +651,7 @@ sidebar_position: -5
 
 ![插件屏幕截图](/assets/images/plugins/plugin-screenshots.png#gh-light-mode-only)![插件屏幕截图](/assets/images/plugins/plugin-screenshots.dark.png#gh-dark-mode-only)
 
-### 插件类型
+### 插件类型 {#variationstype} 
 
 插件的[类型](../configuration/types.md)。可用值如下：
 

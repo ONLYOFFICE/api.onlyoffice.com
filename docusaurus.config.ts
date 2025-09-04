@@ -63,6 +63,16 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        blog: {
+          path: 'changelog',
+          blogTitle: 'Changelog',
+          blogDescription: 'The history of updates and changes to the documentation.',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'Changelog',
+          blogSidebarCount: 'ALL',
+          routeBasePath: 'changelog',
+          showReadingTime: false,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -199,11 +209,9 @@ const config: Config = {
           docsPluginId: 'api',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'changelog',
+          to: 'changelog',
           label: 'Changelog',
-          docsPluginId: 'api',
-          position: 'right',
+          position: 'left'
         },
         {
           type: 'localeDropdown',

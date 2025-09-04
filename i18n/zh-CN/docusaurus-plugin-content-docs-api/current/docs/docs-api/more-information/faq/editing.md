@@ -22,7 +22,7 @@ sidebar_position: -5
 
 所有可以发送到回调处理程序的参数及其描述都可以在[这个页面](../../usage-api/callback-handler.md)找到。
 
-关于如何实现此处理程序，下列编程语言有示例：[.Net (C#)](../../usage-api/callback-handler.md#net-c-document-save-example), [Java](../../usage-api/callback-handler.md#java-document-save-example), [Node.js](../../usage-api/callback-handler.md#nodejs-document-save-example), [PHP](../../usage-api/callback-handler.md#php-document-save-example), [Ruby](../../usage-api/callback-handler.md#ruby-document-save-example)。
+关于如何实现此处理程序，下列编程语言有示例 [examples](../../usage-api/callback-handler.md#document-save-examples)：.Net (C#), Java, Node.js, PHP, Ruby。
 
 ## 什么是 document.key 参数？ {#what-is-the-documentkey-parameter}
 

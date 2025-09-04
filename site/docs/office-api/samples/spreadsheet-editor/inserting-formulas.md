@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Inserting formulas
 
 Add formulas to cells for calculations like sum, average, and count. Used in reports, calculations, and templates where automatic totals are needed:

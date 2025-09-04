@@ -12,7 +12,7 @@ sidebar_position: -18
 2. **文档编辑器**将请求发送给**文档管理器**，软件集成商在其中创建链接。
 3. **文档管理器**将链接发送回**文档编辑器**，并在其中显示该链接。
 
-## 实际操作方法
+## 实际操作方法 {#how-this-can-be-done-in-practice}
 
 1. 创建一个*html*l文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 

@@ -12,7 +12,7 @@ sidebar_position: -3
 
 可以同时运行多个面板插件。每个插件将在左侧或右侧工具栏显示为一个独立按钮。
 
-## 创建窗口
+## 创建窗口 {#creating-a-window}
 
 要为插件创建模态窗口或面板：
 
@@ -69,7 +69,7 @@ sidebar_position: -3
 
 3. 在[index.html](../structure/entry-point.md) 文件中指定窗口 / 面板的外观。
 
-## 显示窗口
+## 显示窗口 {#showing-a-window}
 
 要在编辑器中显示插件的模态窗口 / 面板，请使用 **show** 方法。
 
@@ -122,7 +122,7 @@ const variation = {
 window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation])
 ```
 
-## 激活窗口
+## 激活窗口 {#activating-a-window}
 
 要激活（前置）插件窗口 / 面板，请使用 window.Asc.plugin.executeMethod 的 **ActivateWindow** 方法。
 
@@ -140,7 +140,7 @@ window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B
 window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"])
 ```
 
-## 与窗口进行交互
+## 与窗口进行交互 {#interacting-with-a-window}
 
 当鼠标在插件的 iframe 内移动时，可以使用 **MouseMoveWindow** 方法（来自*window.Asc.plugin.executeMethod*）向插件发送事件。
 
@@ -291,7 +291,7 @@ Asc.plugin.attachEvent("messageName", (message) => {
 })
 ```
 
-## 关闭窗口
+## 关闭窗口 {#closing-a-window}
 
 要关闭插件窗口或面板，请使用 *window.Asc.plugin.executeMethod* 的 **CloseWindow** 方法。
 

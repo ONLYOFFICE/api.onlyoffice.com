@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Generate word definitions
 
 Generates word definitions in your document using the [Dictionary API](https://api-ninjas.com/api/dictionary) offered by [API Ninjas](https://api-ninjas.com).
