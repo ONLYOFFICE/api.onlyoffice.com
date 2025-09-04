@@ -1,146 +1,151 @@
----
-hide_table_of_contents: true
----
-
 # rewriteText
 
-This function comments or explains anything. If text or paragraph number is not specified assume that we are working with the current paragraph. Specify whether the explanation should be added as a comment or as a footnote. The AI will generate the content based on your prompt and insert it in the chosen format.
+This function rewrites or replaces text. If no text or paragraph number is specified, the current paragraph is used by default.
 
 ## Function registration {#function-registration}
 
 ```ts
 let func = new RegisteredFunction();
-func.name = "commentText";
-func.description = "Use this function if you asked to comment or explain anything. If text or paragraph number is not specified assume that we are working with the current paragraph. Specify whether the explanation should be added as a comment or as a footnote. The AI will generate the content based on your prompt and insert it in the chosen format.";
+func.name = "rewriteText";
 func.params = [
-    "type (string): whether to add as a 'comment' or as a 'footnote' (default is 'comment')"
+    "parNumber (number): the paragraph number to change",
+    "prompt (string): instructions on how to change the text",
+    "showDifference (boolean): whether to show the difference between the original and new text, or just replace it",
+    "type (string): which part of the text to be rewritten (e.g., 'sentence' or 'paragraph')"
 ];
+func.description = "Use this function when you asked to rewrite or replace some text. If text or paragraph number is not specified assume that we are working with the current paragraph.";
 
 func.examples = [
-    "If you need to explain something, respond with:\n" +
-    "[functionCalling (commentText)]: {\"prompt\" : \"Explain this text\", \"type\": \"comment\"}",
+    "if you need to rewrite, respond with:\n" +
+    "[functionCalling (rewriteText)]: {\"prompt\": \"Rewrite\", \"type\" : \"paragraph\"}",
 
-    "If you need to explain selected text as a comment, respond with:\n" +
-    "[functionCalling (commentText)]: {\"prompt\" : \"Explain this text\", \"type\": \"comment\"}",
+    "If you need to rephrase current sentence, respond with:\n" +
+    "[functionCalling (rewriteText)]: {\"prompt\": \"rephrase sentence\", \"type\" : \"sentence\"}",
 
-    "If you need to add a footnote to selected text, respond with:\n" +
-    "[functionCalling (commentText)]: {\"prompt\" : \"Add a footnote to this text\", \"type\": \"footnote\"}",
+    "If you need to rephrase current sentence and show difference, respond with:\n" +
+    "[functionCalling (rewriteText)]: {\"prompt\": \"rephrase sentence\", \"type\" : \"sentence\", \"showDifference\" : true}",
 
-    "If you need to comment selected text, respond with:\n" +
-    "[functionCalling (commentText)]: {\"prompt\" : \"Comment this text\"}",
+    "if you need to change paragraph 2 to be more emotional, respond with:\n" +
+    "[functionCalling (rewriteText)]: {\"parNumber\": 2, \"prompt\": \"make the text more emotional\", \"type\" : \"paragraph\"}",
 
-    "If you need to explain selected text as a footnote, respond with:\n" +
-    "[functionCalling (commentText)]: {\"prompt\" : \"Explain this text\", \"type\": \"footnote\"}"
+    "if you need to rewrite the first paragraph, respond with:\n" +
+    "[functionCalling (rewriteText)]: {\"parNumber\": 1, \"prompt\": \"Rephrase \", \"type\" : \"paragraph\"}",
+
+    "if you need to rewrite the current paragraph to be more official, respond with:\n" +
+    "[functionCalling (rewriteText)]: {\"prompt\": \"Rewrite in official style\", \"type\" : \"paragraph\"}"
 ];
 ```
+
+### Parameters
+
+| Name           | Type    | Example     | Description                                                                                     |
+|----------------|---------|-------------|-------------------------------------------------------------------------------------------------|
+| parNumber      | number  | 1           | The number of the paragraph to change.                                                          |
+| prompt         | string  | "Rewrite"   | The instructions on how to change the text.                                                     |
+| showDifference | boolean | true        | Specifies whether to show the difference between the original and new text, or just replace it. |
+| type           | string  | "paragraph" | The part of the text to be rewritten (e.g., "sentence" or "paragraph").                         |
+
+### Prompts
+
+- Rewrite
+- Rephrase sentence
+- Make the text more emotional
+- Rephrase
+- Rewrite in official style
 
 ## Function execution {#function-execution}
 
 ```ts
 func.call = async function(params) {
-  let type = params.type;
-  let isFootnote = "footnote" === type;
 
-  let text = await Asc.Editor.callCommand(function(){
-      let doc = Api.GetDocument();
-      let range = doc.GetRangeBySelect();
-      let text = range ? range.GetText() : "";
-      if (!text)
-      {
-          text = doc.GetCurrentWord();
-          doc.SelectCurrentWord();
-      }
+    let text = "";
+    if ("paragraph" === params.type)
+    {
+        Asc.scope.parNumber = params.parNumber;
+        text = await Asc.Editor.callCommand(function(){
+            let doc = Api.GetDocument();
+            let par = undefined === Asc.scope.parNumber ? doc.GetCurrentParagraph() : doc.GetElement(Asc.scope.parNumber - 1);
+            if (!par)
+                return "";
+            par.Select();
+            return par.GetText();
+        });
+    }
+    else // if ("sentence" === params.type)
+    {
+        text = await Asc.Editor.callCommand(function(){
+            return Api.GetDocument().GetCurrentSentence();
+        });
+    }
 
-      return text;
-  });
+    let argPromt = params.prompt + ":\n" + text + "\n Answer with only the new one sentence, no need of any explanations";
 
-  let argPromt = params.prompt + ":\n" + text;
+    let requestEngine = AI.Request.create(AI.ActionType.Chat);
+    if (!requestEngine)
+        return;
 
-  let requestEngine = AI.Request.create(AI.ActionType.Chat);
-  if (!requestEngine)
-      return;
+    await Asc.Editor.callMethod("StartAction", ["GroupActions"]);
 
-  let isSendedEndLongAction = false;
-  async function checkEndAction() {
-      if (!isSendedEndLongAction) {
-          await Asc.Editor.callMethod("EndAction", ["Block", "AI (" + requestEngine.modelUI.name + ")"]);
-          isSendedEndLongAction = true
-      }
-  }
+    let turnOffTrackChanges = false;
+    if (params.showDifference)
+    {
+        let isTrackChanges = await Asc.Editor.callCommand(function(){
+            return Api.GetDocument().IsTrackRevisions();
+        });
 
-  await Asc.Editor.callMethod("StartAction", ["Block", "AI (" + requestEngine.modelUI.name + ")"]);
-  await Asc.Editor.callMethod("StartAction", ["GroupActions"]);
+        if (!isTrackChanges)
+        {
+            await Asc.Editor.callCommand(function(){
+                Api.GetDocument().SetTrackRevisions(true);
+            });
+            turnOffTrackChanges = true;
+        }
+    }
 
-  if (isFootnote)
-  {
-      let addFootnote = true;
-      let result = await requestEngine.chatRequest(argPromt, false, async function(data) {
-          if (!data)
-              return;
+    await Asc.Editor.callMethod("StartAction", ["Block", "AI (" + requestEngine.modelUI.name + ")"]);
 
-          await checkEndAction();
-          Asc.scope.data = data;
-          Asc.scope.model = requestEngine.modelUI.name;
+    let isSendedEndLongAction = false;
+    async function checkEndAction() {
+        if (!isSendedEndLongAction) {
+            await Asc.Editor.callMethod("EndAction", ["Block", "AI (" + requestEngine.modelUI.name + ")"]);
+            isSendedEndLongAction = true
+        }
+    }
 
-          if (addFootnote)
-          {
-              await Asc.Editor.callCommand(function(){
-                  Api.GetDocument().AddFootnote();
-              });
-              addFootnote = false;
-          }
-          await Asc.Library.PasteText(data);
-      });
-  }
-  else 
-  {
-      let commentId = null;
-      let result = await requestEngine.chatRequest(argPromt, false, async function(data) {
-          if (!data)
-              return;
+    let result = await requestEngine.chatRequest(argPromt, false, async function(data) {
+        if (!data)
+            return;
+        await checkEndAction();
 
-          await checkEndAction();
-          Asc.scope.data = data;
-          Asc.scope.model = requestEngine.modelUI.name;
-          Asc.scope.commentId = commentId;
+        if (text && "sentence" === params.type)
+        {
+            Asc.scope.data = data;
+            await Asc.Editor.callCommand(function(){
+                let doc = Api.GetDocument();
+                doc.ReplaceCurrentSentence("");
+            });
+            text = null;
+        }
 
-          commentId = await Asc.Editor.callCommand(function(){
-              let doc = Api.GetDocument();
+        await Asc.Library.PasteText(data);
+    });
 
-              let commentId = Asc.scope.commentId;
-              if (!commentId)
-              {
-                  let range = doc.GetRangeBySelect();
-                  if (!range)
-                      return null;
+    await checkEndAction();
 
-                  let comment = range.AddComment(Asc.scope.data, Asc.scope.model, "uid" + Asc.scope.model);
-                  if (!comment)
-                      return null;
-                  doc.ShowComment([comment.GetId()]);
-                  return comment.GetId();
-              }
+    if (turnOffTrackChanges)
+        await Asc.Editor.callCommand(function(){return Api.GetDocument().SetTrackRevisions(false);});
 
-              let comment = doc.GetCommentById(commentId);
-              if (!comment)
-                  return commentId;
-
-              comment.SetText(comment.GetText() + scope.data);
-              return commentId;
-          });
-      });
-  }
-
-  await checkEndAction();
-  await Asc.Editor.callMethod("EndAction", ["GroupActions"]);
+    await Asc.Editor.callMethod("EndAction", ["GroupActions"]);
 };
 
 return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [AddComment](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddComment.md), [GetCurrentWord](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentWord.md), [SelectCurrentWord](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/SelectCurrentWord.md), [AddFootnote](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/AddFootnote.md), [ShowComment](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/ShowComment.md), [GetCommentById](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCommentById.md), [GetId](/docs/office-api/usage-api/text-document-api/ApiComment/Methods/GetId.md), [SetText](/docs/office-api/usage-api/text-document-api/ApiComment/Methods/SetText.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiComment/Methods/GetText.md), [EndAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md), [StartAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetCurrentParagraph](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentParagraph.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetElement.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [Select](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/Select.md), [GetCurrentSentence](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentSentence.md), [IsTrackRevisions](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/IsTrackRevisions.md), [SetTrackRevisions](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/SetTrackRevisions.md), [ReplaceCurrentSentence](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/ReplaceCurrentSentence.md), [EndAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md), [StartAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 
-![commentText](/assets/images/plugins/comment-text-result.png#gh-light-mode-only)
-![commentText](/assets/images/plugins/comment-text-result.dark.png#gh-dark-mode-only)
+![rewriteText function](/assets/images/plugins/rewrite-text-function.png#gh-light-mode-only)
+![rewriteText function](/assets/images/plugins/rewrite-text-function.dark.png#gh-dark-mode-only)
+![rewriteText result](/assets/images/plugins/rewrite-text-result.png#gh-light-mode-only)
+![rewriteText result](/assets/images/plugins/rewrite-text-result.dark.png#gh-dark-mode-only)
