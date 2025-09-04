@@ -142,6 +142,13 @@ Repository on GitHub: [html](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 - onTranslate
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 
+## Debugging
+
+- Use the browser console `(F12)` to check initialization logs.
+- Ensure the plugin is loaded inside the editor (check `isInsideMode` in config).
+- Test color, styling, and DOM event handling with small snippets first.
+- If pasting fails, verify that `executeMethod("PasteHtml")` is being called with valid HTML.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

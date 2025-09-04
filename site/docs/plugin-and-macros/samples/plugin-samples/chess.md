@@ -176,6 +176,13 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 - [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
 - [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
+## Debugging
+
+- If the chessboard preview looks blurry after resizing, verify `isUpdateOleOnResize` is enabled.
+- To reset a broken board state, manually clear the object’s `info.data` and reopen the plugin.
+- For collaborative use, remember: the chessboard is embedded per-document, not per-user. Two users editing simultaneously may overwrite moves if not synchronized.
+- Always test with both light and dark UI themes to confirm that icons are properly linked.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

@@ -188,6 +188,13 @@ Repository on GitHub: [speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - buttons
 - init
 
+## Best practices
+
+- Assisting users with visual impairments by providing voice feedback for text content.  
+- Proofreading documents by listening to the text read out loud.  
+- Language learning and pronunciation practice.  
+- Quickly reviewing long passages without having to read them manually.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

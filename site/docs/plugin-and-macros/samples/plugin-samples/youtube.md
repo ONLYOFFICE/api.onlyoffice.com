@@ -140,6 +140,13 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 - [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
 - [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
+## Best practices
+
+- Use this plugin to enrich documents, presentations, or reports with educational or reference video materials.
+- Ideal for training manuals, online courses, or academic presentations where embedded video content improves clarity.
+- Helps keep multimedia resources self-contained within the document, so users don’t need to switch between apps.
+- Best suited when you want to preserve formatting and have an interactive, playable video instead of just a static link.
+
 ## Supports
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

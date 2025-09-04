@@ -144,6 +144,14 @@ Repository on GitHub: [thesaurus](https://github.com/ONLYOFFICE/onlyoffice.githu
 - [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 
+## Best practices
+
+- Content enrichment – improve text variety by replacing repetitive words with synonyms.
+- Tone adjustment – choose words that better fit formal, academic, or casual contexts.
+- Language learning – quickly explore alternative vocabulary and antonyms when studying.
+- Editing workflow – integrate with proofreading to refine readability and style.
+- Debugging tip – if synonyms don’t appear, check the plugin’s API key/service availability and confirm that text is actually selected before triggering the call.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

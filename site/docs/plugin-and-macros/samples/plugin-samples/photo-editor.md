@@ -192,6 +192,12 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
+## Best practices
+
+- In-document adjustments – no need to export/import images for small edits.
+- Performance tip – large image edits may be memory-heavy; resize before applying multiple effects.
+- Common workflows – preparing screenshots for reports, enhancing scanned images, or creating quick mockups directly in documents.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

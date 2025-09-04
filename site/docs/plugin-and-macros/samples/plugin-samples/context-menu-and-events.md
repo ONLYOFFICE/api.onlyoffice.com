@@ -215,6 +215,14 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 - [executeMethod ("AddContextMenuItem")](/docs/plugin-and-macros/customization/context-menu.md#creating-a-context-menu-item)
 - [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
 
+## Developer notes
+
+**Dynamic Menus:** Context menus can adapt based on selection type (`Target`, `Selection`, `Image`, `Shape`).
+**Styling:** Custom icons can be applied for light/dark themes under resources/.
+**Debugging:** Use `console.log()` to trace event flow (`onContextMenuShow`, `onTargetPositionChanged`).
+**Localization:** Provide multilingual labels for menu items via text: { en: "...", de: "..." }.
+**Integration:** Combine context menu events with document APIs (`InputText`, `ReplaceText`, etc.) to build powerful right-click actions.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

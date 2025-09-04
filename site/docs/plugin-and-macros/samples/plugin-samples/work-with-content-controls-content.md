@@ -18,6 +18,12 @@ Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 2. Open the **Plugins** tab and press **Example work with content controls content**.
 3. The content from the content control with tag 11 will be inserted into the content control with tag 14.
 
+## Known limitations
+
+- Only plain text and basic formatting are reliably transferred.
+- Nested or complex content controls may not be fully supported.
+- Using the same tag value across multiple controls can lead to unpredictable results.
+
 ## Plugin structure
 
 Repository on GitHub: [example_work_with_content_controls_content](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_content).
@@ -102,6 +108,12 @@ Repository on GitHub: [example_work_with_content_controls_content](https://githu
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+
+## Best practices
+
+- Use descriptive and unique tag names for each control to avoid confusion.
+- Helpful for template-based documents where placeholder text (e.g., in a contract or form) needs to be replaced programmatically.
+- Debugging tip: start with two simple content controls and expand gradually to more complex scenarios.
 
 ## Support
 

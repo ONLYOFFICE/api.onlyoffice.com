@@ -55,6 +55,13 @@ Repository on GitHub: [settings](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 - init
 - [executeMethod ("SetProperties")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetProperties.md)
 
+## Best practices
+
+- Use in corporate environments where sensitive documents require watermarking.
+- Combine with access restrictions to discourage unauthorized distribution.
+- Customize the watermark text and styling in the plugin code before deploying.
+- Test across all editor types (documents, spreadsheets, presentations) to ensure consistent visibility.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

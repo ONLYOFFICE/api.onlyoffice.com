@@ -60,6 +60,14 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 - onDocumentContentReady
 - executeMethod ("SearchAndReplace")
 
+## Best practices
+
+- Automating replacement of placeholder values (e.g., `{{CompanyName}}` → actual company name).
+- Enforcing document consistency by replacing outdated terms with updated ones.
+- Useful in templates or workflows where recurring replacements are required.
+- Keep the replacement scope narrow to avoid unintended changes (e.g., only replace exact keywords).
+- Test the plugin with sample documents before applying to production files.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

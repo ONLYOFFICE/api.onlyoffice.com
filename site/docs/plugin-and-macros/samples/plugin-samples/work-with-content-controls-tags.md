@@ -19,6 +19,12 @@ Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 3. In the plugin window, you can see all the content controls tags. Press the **Refresh list** button to update the list.
 4. Press the **Test paste for document** button to paste text into the document (where the text cursor is located).
 
+## Known limitations
+
+- Only lists tags of existing content controls — empty or untagged controls will not appear in the results.
+- Repeated or duplicate tags may cause confusion when identifying specific content controls.
+- Large documents with many content controls may slow down refresh performance.
+
 ## Plugin structure
 
 Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example\_work\_with\_content\_controls\_tags](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags).
@@ -110,6 +116,12 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 - executeMethod ("GetAllContentControls")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
+
+## Best practices
+
+- Use this plugin when working with structured templates (contracts, forms, reports) that rely on tags for automation.
+- Helpful for debugging template setups by quickly verifying which tags exist and where they are applied.
+- Combine with other content control plugins (navigation and content insertion) to build end-to-end workflows: locate → check tag → insert/update values.
 
 ## Support
 

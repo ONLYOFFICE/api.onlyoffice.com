@@ -103,6 +103,13 @@ Repository on GitHub: [telegram](https://github.com/ONLYOFFICE/onlyoffice.github
 - init
 - onExternalMouseUp
 
+## Best practices
+
+- Collaborate with co-authors in real time without switching between applications.  
+- Use Telegram alongside document editing for quick feedback and coordination.  
+- Replace or complement other chat integrations (e.g., Rainbow, Jitsi) depending on your team’s preferred platform.  
+- Customize the embedded client URL if you want to connect to a specific Telegram web client build.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

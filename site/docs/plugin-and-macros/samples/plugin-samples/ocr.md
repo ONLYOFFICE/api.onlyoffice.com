@@ -197,6 +197,13 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 - [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
+## Best practices
+
+- Screenshots & scanned docs – quickly digitize content from images or scanned PDFs.
+- Multilingual workflows – recognition supports 60+ languages, useful for international teams.
+- Editing efficiency – insert OCR results directly into the document to avoid copy-paste from external tools.
+- Debugging tip – if recognition fails, try resizing or enhancing image contrast before running OCR.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

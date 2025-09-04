@@ -108,6 +108,14 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
+## Best practices / use cases
+
+- Quickly inserting special symbols, mathematical operators, or currency signs into your document.  
+- Accessing Unicode characters that are not available on a standard keyboard.  
+- Working with multilingual texts that require unique diacritical marks or non-Latin scripts.  
+- Designing professional documents that need consistent symbol formatting.
+
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

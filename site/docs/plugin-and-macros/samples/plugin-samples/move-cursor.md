@@ -102,6 +102,12 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 - executeMethod ("MoveCursorToStart")
 - executeMethod ("MoveCursorToEnd")
 
+## Best practices
+
+**Template navigation:** quickly jump to the start or end when editing long structured documents.
+**Testing and debugging:** useful for plugin developers verifying cursor-dependent methods.
+**Accessibility helpers:** can be adapted for keyboard-free navigation tools.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

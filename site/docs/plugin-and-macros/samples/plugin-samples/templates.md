@@ -61,6 +61,14 @@ Repository on GitHub: [templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - onExternalMouseUp
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
+## Best practices
+
+- Standardize recurring documents such as invoices, contracts, or reports.  
+- Reduce manual formatting by inserting templates with predefined styles and layouts.  
+- Combine with the Document Builder script to auto-generate dynamic templates from data sources.  
+- Use in educational or corporate environments to ensure consistency across frequently used documents.
+
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

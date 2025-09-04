@@ -84,6 +84,13 @@ Repository on GitHub: [helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
+## Debugging
+
+- Open the browser console `(F12)` to track plugin logs.
+- If nothing happens when pressing the button, check that `callCommand` is properly defined.
+- Verify that `EditorsSupport` in `config.json` includes "word".
+- Keep the guid unique – conflicts can prevent plugin loading.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

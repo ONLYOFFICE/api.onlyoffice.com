@@ -101,6 +101,14 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 - onMethodReturn
 - executeMethod ("SearchAndReplace")
 
+## Best practices
+
+- Quickly replace placeholders (e.g., `{{Name}}`) with user-defined values.
+- Standardize terminology across a document by replacing inconsistent terms.
+- Useful for simple document automation scenarios, such as template personalization.
+- Keep the `arrCodes` array small and specific to avoid replacing unintended text.
+- Test the plugin with a sample document before applying it in production workflows.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

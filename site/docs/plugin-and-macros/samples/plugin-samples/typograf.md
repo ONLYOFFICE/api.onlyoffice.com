@@ -137,6 +137,14 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
+## Best practices
+
+- Publishing workflows – polish texts for blogs, articles, or official documents before publishing.
+- Multilingual documents – apply locale-specific rules for consistent formatting across different languages.
+- Consistency checks – enforce corporate or editorial style guides automatically.
+- Proofreading – catch small typographic issues (spaces, dashes, quotes) that are easy to miss manually.
+- Debugging tip – test on smaller text selections first to avoid known issues with objects, track changes, or headers.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

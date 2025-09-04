@@ -59,6 +59,13 @@ Repository on GitHub: [invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 - init
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
+## Development notes & best practices
+
+**DOM handling:** The plugin uses a simple `index.html` with button callbacks bound in `code.js`. Keep UI minimal to avoid editor conflicts.
+**Debugging:** Run the plugin in desktop editors with developer mode enabled for easier console access.
+**Custom styling:** Modify `index.html` or add a stylesheet if you need custom highlighting for placeholders.
+**Extending functionality:** You can adapt the plugin to integrate with external services (e.g., CRM, ERP) by fetching invoice data and populating placeholders dynamically.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

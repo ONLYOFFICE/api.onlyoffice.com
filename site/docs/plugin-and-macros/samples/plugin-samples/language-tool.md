@@ -192,6 +192,14 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
+## Development notes & best practices
+
+**Initialization flow:** The plugin binds init to load UI elements `index.html` and connects to the LanguageTool API via `langTool.js`.
+**UI/UX tips:** Keep the plugin modal window smaller so it doesn’t block large portions of text.
+**Debugging:** Use browser dev tools in Desktop Editors (Ctrl+Shift+I) to inspect API calls. LanguageTool API responses include error categories, which help trace false positives.
+**Extensibility:** Developers can replace the default public LanguageTool endpoint with a self-hosted server for better privacy and higher request limits.
+**Styling:** Customize `plugin_style.css` to adjust how suggestions (highlighted text, tooltips) are displayed.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

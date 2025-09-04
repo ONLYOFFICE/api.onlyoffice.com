@@ -104,6 +104,14 @@ Repository on GitHub: [example_search_and_change_text_background_color](https://
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
+## Best practices
+
+- Highlight keywords or phrases in study materials to improve readability.
+- Mark action items in meeting notes for faster follow-up.
+- Emphasize repeated terms in legal or technical documents.
+- Use Reset wisely: clear only what you need, keeping other highlights intact.
+- For performance with long documents, prefer Color on selected matches rather than Color all.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

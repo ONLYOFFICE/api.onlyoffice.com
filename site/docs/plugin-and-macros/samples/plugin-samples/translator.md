@@ -123,6 +123,14 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
+## Best practices
+
+- Quick comprehension – translate a short passage or sentence to understand foreign-language content without leaving the editor.
+- Collaboration – bridge language gaps when co-editing documents across teams.
+- Multilingual drafting – prepare text in one language and instantly preview how it reads in another.
+- Proofreading – check how well phrases transfer between languages to spot ambiguous wording.
+- Debugging tip – if translation fails, confirm the text is selected and verify API/service availability in your environment.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

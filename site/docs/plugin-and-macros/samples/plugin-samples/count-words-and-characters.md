@@ -136,6 +136,13 @@ Repository on GitHub: [wordscounter](https://github.com/ONLYOFFICE/onlyoffice.gi
 - onTargetPositionChanged
 - onTranslate
 
+## Best practices
+
+- Use `initOnSelectionChanged` to ensure real-time updates while selecting text.
+- Handle `onTargetPositionChanged` carefully to avoid redundant recalculations on large documents.
+- Test with different locales to confirm correct translation rendering.
+- For debugging, check the console logs from `code.js` — they capture selection events and character count calculations.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

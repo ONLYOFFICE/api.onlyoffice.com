@@ -91,6 +91,12 @@ Repository on GitHub: [clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/
 - button
 - init
 
+## Debugging
+
+- Open browser DevTools → Console to trace `Clippy.js` errors.
+- Use `console.log` inside `code.js` event handlers to verify plugin initialization.
+- If animations don’t play, ensure assets are loaded correctly under `/resources/`.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

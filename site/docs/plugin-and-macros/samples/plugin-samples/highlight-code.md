@@ -178,6 +178,14 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 - [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 
+## Debugging & best practices
+
+- Check the browser console `(F12)` for highlight.js warnings (e.g., unsupported language).
+- If language detection fails, manually select the language from the dropdown.
+- Use Prettier/Beautify integration to clean up pasted code before inserting.
+- Keep an eye on DOM events (like `onExternalMouseUp`) if custom UI components stop responding.
+- For consistency, set a default theme (e.g., GitHub) in `config.json` so users aren’t greeted with an empty preview.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

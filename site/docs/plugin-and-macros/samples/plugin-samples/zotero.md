@@ -172,6 +172,13 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - onTranslate
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 
+## Best practices
+
+- Best for academic and research writing where strict citation standards (APA, MLA, Chicago, etc.) must be followed.
+- Saves time by automating bibliography generation and reducing citation errors.
+- Great for collaborative research papers, as team members can rely on a shared Zotero library.
+- Ideal for students, researchers, and educators who frequently work with multiple references.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

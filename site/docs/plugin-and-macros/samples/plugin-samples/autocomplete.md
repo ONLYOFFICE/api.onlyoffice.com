@@ -21,6 +21,8 @@ Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.
 1. Start typing a word. If the plugin finds some words in the dictionary, an input helper window with the found words will appear.
 2. Select the required option using the **Down/Up arrow** button and press the **Enter** button to complete the word.
 
+Example: typing doc shows suggestions like document, doctor, dock.
+
 ## Plugin structure
 
 Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/autocomplete).
@@ -83,6 +85,39 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 }
 ```
 
+## Localization
+
+The plugin supports multiple languages through `nameLocale`, `descriptionLocale`, and the `/translations/` folder.
+Common pitfalls:
+| Issue                | Symptom                     | Solution                                                   |
+| -------------------- | --------------------------- | ---------------------------------------------------------- |
+| Missing `langs.json` | Plugin UI always in English | Add `langs.json` with proper language mappings             |
+| Wrong locale codes   | Some languages ignored      | Use [IETF BCP 47 codes](https://tools.ietf.org/html/bcp47) |
+| Untranslated strings | Silent fallback to English  | Ensure all string IDs exist in translation files           |
+
+## Initialization flow
+
+To prevent DOM timing issues, initialize plugin logic after both plugin and DOM are ready:
+
+```js
+window.Asc.plugin.init = function() {
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("Autocomplete plugin initialized");
+    // Example: highlight input area on init
+    document.body.style.backgroundColor = "#f9f9f9";
+  });
+};
+
+window.Asc.plugin.onThemeChanged = function(theme) {
+  console.log("Theme changed:", theme.type);
+};
+```
+
+Best practices:
+- Always wrap DOM access in `DOMContentLoaded`.
+- Use `window.Asc.plugin.init` for plugin startup logic.
+- Listen to `onThemeChanged` for consistent UI appearance.
+
 ## Methods and events
 
 - button
@@ -99,6 +134,17 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 - [InputHelper.setItems](/docs/plugin-and-macros/customization/input-helper.md#setitems)
 - [InputHelper.show](/docs/plugin-and-macros/customization/input-helper.md#show)
 - [InputHelper.unShow](/docs/plugin-and-macros/customization/input-helper.md#unshow)
+  
+## Debugging
+
+**In web editors:** Use browser console `F12` to log plugin behavior.
+**Desktop editors:** Install in developer mode using `Asc.editor.installDeveloperPlugin` and check plugin logs.
+
+Best practices:
+
+- Use `console.log` inside `onInputHelperInput` and `onSelectItem` to trace plugin flow.
+- Test both light/dark themes with `onThemeChanged`.
+- Validate dictionary structure to avoid silent failures.
 
 ## Support
 

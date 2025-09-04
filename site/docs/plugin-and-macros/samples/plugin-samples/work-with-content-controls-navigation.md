@@ -23,6 +23,12 @@ Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 7. Press the **Get All Content Controls** button in the third field to see all the content controls with their IDs.
 8. To select text in a content control, select it and press the** Select Current Content Control** button.
 
+## Known limitations
+
+- Works best with uniquely tagged content controls — repeated IDs may cause navigation issues.
+- Complex/nested content controls may not display correctly in the list.
+- Large documents with hundreds of controls may update slowly.
+
 ## Plugin structure
 
 Repository on GitHub: [example_work_with_content_controls_navigation](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation).
@@ -119,6 +125,12 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 - executeMethod ("MoveCursorToContentControl")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
+
+## Best practices
+
+- Use this plugin to quickly jump between placeholders in contract templates or form-based documents.
+- Ideal for debugging content control setups — quickly check IDs and selection behavior.
+- Combine with the Work with content controls content plugin to both navigate and insert/update values programmatically.
 
 ## Support
 

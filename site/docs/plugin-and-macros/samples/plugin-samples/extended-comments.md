@@ -118,6 +118,13 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 - executeMethod ("MoveToComment")
 - executeMethod ("RemoveComments")
 
+## Best practices
+
+- Use `GetAllComments` when syncing comments with an external system (e.g., bug tracker).
+- Track `onChangeCommentData` to maintain a live audit trail of edits.
+- Combine Problem Category and Severity fields to enforce consistent review standards.
+- For debugging, log all executeMethod responses to confirm correct document API integration.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

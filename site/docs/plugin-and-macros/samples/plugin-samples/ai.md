@@ -36,6 +36,8 @@ The plugin guid: `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 6. The plugin will respond based on the configured AI model.
 7. Insert the response into the document or use it for your needs.
 
+Example:  Select a paragraph → Right-click → AI → Summarization → Insert summary at cursor.
+
 ## Configuring
 
 To start using the plugin, you need to set up an AI provider:
@@ -138,6 +140,29 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 }
 ```
 
+## Initialization flow
+
+Because this is a background plugin, initialization is slightly different from UI plugins.
+```js
+window.Asc.plugin.init = function() {
+  console.log("AI plugin initialized");
+
+  // Example: preload provider info
+  window.Asc.plugin.executeMethod("GetPluginInfo", [], function(info) {
+    console.log("Plugin Info:", info);
+  });
+};
+
+window.Asc.plugin.onThemeChanged = function(theme) {
+  document.body.style.background = theme.type === "dark" ? "#121212" : "#fff";
+};
+```
+
+Best practices:
+- Use Asc.plugin.init for loading provider settings and attaching events.
+- Always check editor type (info.editorType) before executing text operations.
+- Wrap async AI calls with error handling → providers often return 400/401 errors for misconfigured keys.
+
 ## Methods and events
 
 - init
@@ -153,6 +178,22 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
 - [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
 - [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
+
+## Debugging
+
+- Check provider connection: use browser dev tools (network tab) to see if requests reach the AI API.
+- Desktop editors: run in developer mode with Asc.editor.installDeveloperPlugin.
+- Log everything:
+```js
+console.log("Editor Type:", window.Asc.plugin.info.editorType);
+console.log("AI Settings:", window.Asc.plugin.info.aiPluginSettings);
+```
+
+| Error            | Likely Cause                           | Fix                                      |
+| ---------------- | -------------------------------------- | ---------------------------------------- |
+| 401 Unauthorized | Wrong/missing API key                  | Re-enter provider credentials            |
+| Empty response   | Wrong model type for task              | Ensure `Text` vs `Image` role is correct |
+| Theme mismatch   | Styles not updated on `onThemeChanged` | Add handler for light/dark modes         |
 
 ## Support
 
