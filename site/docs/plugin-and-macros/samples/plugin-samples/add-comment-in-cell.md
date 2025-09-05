@@ -102,6 +102,13 @@ Repository on GitHub: [example_add_comment_in_cell](https://github.com/ONLYOFFIC
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
+## Best practices
+
+- Use for collaborative spreadsheet review when multiple users need to leave notes directly in cells.
+- Combine with conditional formatting to highlight commented cells for quick scanning.
+- Test plugin behavior with large spreadsheets — performance may vary depending on the number of comments.
+- Consider integrating with a version-control workflow to track comments alongside data changes.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

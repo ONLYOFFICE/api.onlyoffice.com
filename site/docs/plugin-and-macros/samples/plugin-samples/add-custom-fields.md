@@ -103,6 +103,13 @@ Repository on GitHub: [example_customfields_add](https://github.com/ONLYOFFICE/s
 - executeMethod ("AddContentControl")
 - executeMethod ("InsertAndReplaceContentControls")
 
+## Best practices
+
+- Ideal for building interactive forms, questionnaires, and templates.
+- Use drop-down fields to standardize responses and reduce manual editing errors.
+- Combine with macros or other plugins to automate form population or validation.
+- Place fields strategically to avoid disrupting existing document formatting.
+
 ## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).
