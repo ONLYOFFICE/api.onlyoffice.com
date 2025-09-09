@@ -5,7 +5,7 @@ sidebar_position: -1
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# Custom AI functions samples
+# Custom AI function samples
 
 The following examples will show you how to create custom AI functions and use them to expand the AI agent's capabilities and allow adapting it to specific use cases.
 
