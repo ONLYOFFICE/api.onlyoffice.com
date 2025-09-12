@@ -284,7 +284,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 当 [editorConfig](./editor/editor.md#mode) *模式*参数设置为 **view** 并且*编辑**文档的*权限*([文档权限](./document/permissions.md#edit))设置为 **true** 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
 :::
 
-![onRequestEditRights](/assets/images/editor/onRequestEditRights.png#gh-light-mode-only)
+![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
 ![Edit PDF button](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
 ![Edit PDF button](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 

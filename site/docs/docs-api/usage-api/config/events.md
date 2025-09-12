@@ -311,7 +311,8 @@ The function called when the user is trying to switch the document from the view
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
-![Edit PDF button](/assets/images/editor/edit-pdf.png)
+![Edit PDF button](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
+![Edit PDF button](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -456,7 +457,7 @@ The type of image insertion is specified in parameter *data.c*.
 
 To insert an image into the file you must call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters. If the method is not declared the *Image from Storage* button will not be displayed.
 
-![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png)
+![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
 **Example**:
 

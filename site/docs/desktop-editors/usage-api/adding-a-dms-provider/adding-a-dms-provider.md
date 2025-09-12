@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Adding a DMS provider
 
-ONLYOFFICE Desktop Editors allows users to access the documents from the cloud and collaborate on them with their teammates. In this case, an Internet connection is required. Currently, users can connect the application to ONLYOFFICE Workspace (SaaS or on-premises), Nextcloud, ownCloud or Seafile, but you can extend this list adding your own DMS.
+ONLYOFFICE Desktop Editors allows users to access the documents from the cloud and collaborate on them with their teammates. In this case, an Internet connection is required. Currently, users can connect the application to ONLYOFFICE DocSpaace (SaaS or on-premises), Nextcloud, ownCloud, Moodle, Liferay, kDrive, or Seafile, but you can extend this list adding your own DMS.
 
 Follow the steps below to add your own document management system (DMS) to the connection list:
 
@@ -151,7 +151,7 @@ Example: "./assets/listicon.svg"
 
 #### icons.buttonLogo
 
-The path to the icon for the provider button on the connection page when the portal list is empty.
+The path to the icon for the provider button on the connection page when the portal list is empty. This parameter is used for versions below 9.0.
 
 Type: string
 
@@ -188,13 +188,13 @@ Example: "./assets/buttonlogo.svg"
 
 ## Step 3
 
-Create two icons for the application page and put to the folder specified in the *config.json* file:
+Create icons for the application page and put to the folder specified in the *config.json* file:
 
-1. The icon for the connection list. The required icon size is 36x36:
+1. The light and dark icons for the connection list. The required icon size is 36x36:
 
    ![Connection list](/assets/images/desktop/connection-list.png#gh-light-mode-only)![Connection list](/assets/images/desktop/connection-list.dark.png#gh-dark-mode-only)
 
-2. The icon for the provider button on the connection page when the **Connected clouds** list is empty. The required icon size is 148x38:
+2. The light and dark icons for the provider button on the connection page when the **Connected clouds** list is empty. The required icon size is 148x38. These icons are used in versions below 9.0:
 
    ![Provider button](/assets/images/desktop/provider-button.png#gh-light-mode-only)![Provider button](/assets/images/desktop/provider-button.dark.png#gh-dark-mode-only)
 
@@ -204,4 +204,6 @@ You can also add icons for each UI theme type (light and dark). In this case, cr
 
 ## Step 4
 
-Launch ONLYOFFICE Desktop Editors or restart it if needed and switch to the **Connected clouds** section to check if the connection works correctly.
+1. Launch ONLYOFFICE Desktop Editors or restart it if needed.
+2. Click ![Plus icon](/assets/images/desktop/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/desktop/plus.dark.svg#gh-dark-mode-only) next to **Clouds**.
+3. In the **Connect to cloud office** window, open the list of available clouds to check if the connection works correctly.

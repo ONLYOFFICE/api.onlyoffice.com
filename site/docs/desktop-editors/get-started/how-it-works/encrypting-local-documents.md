@@ -136,7 +136,7 @@ The *index.html* file will look as follows:
 
 With it, we will get a new tab called **Encryption** on the main app page:
 
-![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
+![Encryption exabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption exabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
 
 Enable encryption by ticking the checkbox:
 
