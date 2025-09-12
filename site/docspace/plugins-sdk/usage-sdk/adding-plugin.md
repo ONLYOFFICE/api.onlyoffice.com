@@ -28,7 +28,7 @@ After that, the plugin will function automatically unless additional settings ne
 
 A list of the system plugins can be also found in the **Developer Tools** section on the **Plugins SDK** tab. For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.
 
-![Plugin samples](/assets/images/docspace/plugin-samples.png)
+![Plugin samples](/assets/images/docspace/plugin-samples.png#gh-light-mode-only)![Plugin samples](/assets/images/docspace/plugin-samples.dark.png#gh-dark-mode-only)
 
 ## Configuring plugin settings
 
