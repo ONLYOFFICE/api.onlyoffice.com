@@ -5,23 +5,23 @@
     "link": "/docs/docs-api/samples/language-specific-examples/changing-default-fonts",
     "programmingLanguages": ["All"],
     "editorTypes": ["Text document"],
-    "functionalities": ["Text editing"],
-    "tools": [],
+    "functionalities": ["Customization", "Text editing"],
+    "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
     "difficulty": "Beginner",
-    "tags": ["font", "templates", "cross-platform"]
+    "tags": ["Docs", "Text documents", "Customization"]
   },
   {
     "title": ".NET Example",
     "description": "Integration example using .NET (C# or C# MVC) backend with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/net-example",
-    "programmingLanguages": ["C# (.Net)"],
+    "programmingLanguages": ["C#"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation", "PDF"],
-    "functionalities": ["Creating documents", "Text editing", "Editing document structure"],
-    "tools": [],
+    "functionalities": ["Creating documents", "Editing"],
+    "tools": ["Docs API integration"],
     "operatingSystems": ["Windows"],
     "difficulty": "Intermediate",
-    "tags": ["csharp", ".net", "windows"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides", "PDF"]
   },
   {
     "title": "Java Example",
@@ -29,11 +29,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/java-example",
     "programmingLanguages": ["Java"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
-    "functionalities": ["Creating documents", "Text editing", "Working with spreadsheets"],
-    "tools": [],
+    "functionalities": ["Creating documents", "Editing"],
+    "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
     "difficulty": "Intermediate",
-    "tags": ["java", "cross-platform"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides"]
   },
   {
     "title": "Java Integration SDK",
@@ -41,11 +41,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/java-integration-sdk",
     "programmingLanguages": ["Java"],
     "editorTypes": ["All"],
-    "functionalities": ["Connecting external services", "Automation"],
-    "tools": ["SDK"],
+    "functionalities": ["Automation", "Integration"],
+    "tools": ["SDK", "Docs API integration"],
     "operatingSystems": ["Cross-platform"],
     "difficulty": "Advanced",
-    "tags": ["java", "sdk", "integration"]
+    "tags": ["Integration", "Docs"]
   },
   {
     "title": "Java Spring Example",
@@ -53,11 +53,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/java-spring-example",
     "programmingLanguages": ["Java Spring"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
-    "functionalities": ["Creating documents", "Text editing"],
-    "tools": [],
-    "operatingSystems": ["Cross‑platform"],
+    "functionalities": ["Creating documents", "Editing"],
+    "tools": ["Docs API integration"],
+    "operatingSystems": ["Cross-platform"],
     "difficulty": "Intermediate",
-    "tags": ["java", "spring", "integration"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides"]
   },
   {
     "title": "Node.js Example",
@@ -65,11 +65,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/nodejs-example",
     "programmingLanguages": ["Node.js"],
     "editorTypes": ["Text document", "Spreadsheet"],
-    "functionalities": ["Creating documents", "DocSpace authorization", "Working with files"],
-    "tools": ["Plugins"],
-    "operatingSystems": ["Docker", "Cross-platform"],
+    "functionalities": ["Creating documents", "Authorization", "Files"],
+    "tools": ["Docs API integration", "Plugins"],
+    "operatingSystems": ["Cross-platform", "Docker"],
     "difficulty": "Intermediate",
-    "tags": ["nodejs", "docker", "integration"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Plugins", "Authorization", "Files"]
   },
   {
     "title": "PHP Example",
@@ -78,10 +78,10 @@
     "programmingLanguages": ["PHP"],
     "editorTypes": ["Text document"],
     "functionalities": ["Creating documents", "Working with tables"],
-    "tools": [],
-    "operatingSystems": ["Docker", "Cross-platform"],
+    "tools": ["Docs API integration"],
+    "operatingSystems": ["Cross-platform", "Docker"],
     "difficulty": "Intermediate",
-    "tags": ["php", "integration"]
+    "tags": ["Integration", "Docs", "Text documents"]
   },
   {
     "title": "PHP Laravel Example",
@@ -89,11 +89,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/php-laravel-example",
     "programmingLanguages": ["PHP (Laravel)"],
     "editorTypes": ["Text document"],
-    "functionalities": ["Creating documents", "Form filling", "Automation", "External services"],
-    "tools": ["Plugins"],
-    "operatingSystems": ["Docker", "Cross-platform"],
+    "functionalities": ["Creating documents", "Forms", "Automation"],
+    "tools": ["Docs API integration", "Plugins"],
+    "operatingSystems": ["Cross-platform", "Docker"],
     "difficulty": "Intermediate",
-    "tags": ["php", "laravel", "automation"]
+    "tags": ["Integration", "Docs", "Text documents", "Forms", "Plugins"]
   },
   {
     "title": "Python Example",
@@ -101,11 +101,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/python-example",
     "programmingLanguages": ["Python"],
     "editorTypes": ["Text document", "Spreadsheet"],
-    "functionalities": ["Creating documents", "Text editing"],
-    "tools": [],
-    "operatingSystems": ["Docker", "Cross-platform"],
+    "functionalities": ["Creating documents", "Editing"],
+    "tools": ["Docs API integration"],
+    "operatingSystems": ["Cross-platform", "Docker"],
     "difficulty": "Intermediate",
-    "tags": ["python", "integration"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets"]
   },
   {
     "title": "Ruby Example",
@@ -113,11 +113,11 @@
     "link": "/docs/docs-api/samples/language-specific-examples/ruby-example",
     "programmingLanguages": ["Ruby"],
     "editorTypes": ["Text document", "Spreadsheet"],
-    "functionalities": ["Working with files", "External source editing"],
-    "tools": [],
+    "functionalities": ["Working with files", "Editing"],
+    "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
     "difficulty": "Intermediate",
-    "tags": ["ruby", "integration"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Files"]
   },
   {
     "title": "Go Example",
@@ -125,10 +125,10 @@
     "link": "/docs/docs-api/samples/language-specific-examples/go-example",
     "programmingLanguages": ["Go"],
     "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
-    "functionalities": ["Creating documents", "Text editing", "Automation"],
-    "tools": [],
+    "functionalities": ["Creating documents", "Editing", "Automation"],
+    "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
     "difficulty": "Intermediate",
-    "tags": ["go", "integration"]
+    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides"]
   }
 ]
