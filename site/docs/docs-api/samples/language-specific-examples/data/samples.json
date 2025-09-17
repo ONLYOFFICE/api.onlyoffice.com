@@ -3,132 +3,110 @@
     "title": "Changing the default font",
     "description": "Customize default fonts for new documents by modifying document templates.",
     "link": "/docs/docs-api/samples/language-specific-examples/changing-default-fonts",
+    "mainTags": ["Docs", "Text documents", "Editing"],
     "programmingLanguages": ["All"],
-    "editorTypes": ["Text document"],
-    "functionalities": ["Customization", "Text editing"],
-    "tools": ["Docs API integration"],
+    "tools": ["Document Builder"],
     "operatingSystems": ["Cross-platform"],
-    "difficulty": "Beginner",
-    "tags": ["Docs", "Text documents", "Customization"]
+    "additionalTags": ["font", "templates"]
   },
   {
     "title": ".NET Example",
     "description": "Integration example using .NET (C# or C# MVC) backend with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/net-example",
-    "programmingLanguages": ["C#"],
-    "editorTypes": ["Text document", "Spreadsheet", "Presentation", "PDF"],
-    "functionalities": ["Creating documents", "Editing"],
+    "mainTags": ["Integration", "Docs"],
+    "programmingLanguages": ["C# (.Net)"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Windows"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides", "PDF"]
+    "additionalTags": ["csharp", ".net", "windows"]
   },
   {
     "title": "Java Example",
     "description": "Basic integration example using Java with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/java-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Java"],
-    "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
-    "functionalities": ["Creating documents", "Editing"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides"]
+    "additionalTags": ["java", "cross-platform"]
   },
   {
     "title": "Java Integration SDK",
     "description": "Java SDK integration example with managers and services for Docs API.",
     "link": "/docs/docs-api/samples/language-specific-examples/java-integration-sdk",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Java"],
-    "editorTypes": ["All"],
-    "functionalities": ["Automation", "Integration"],
-    "tools": ["SDK", "Docs API integration"],
+    "tools": ["SDK"],
     "operatingSystems": ["Cross-platform"],
-    "difficulty": "Advanced",
-    "tags": ["Integration", "Docs"]
+    "additionalTags": ["java", "sdk", "integration"]
   },
   {
     "title": "Java Spring Example",
     "description": "Integration example using Java Spring Boot with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/java-spring-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Java Spring"],
-    "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
-    "functionalities": ["Creating documents", "Editing"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides"]
+    "additionalTags": ["java", "spring", "integration"]
   },
   {
     "title": "Node.js Example",
     "description": "Node.js backend integration example for ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/nodejs-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Node.js"],
-    "editorTypes": ["Text document", "Spreadsheet"],
-    "functionalities": ["Creating documents", "Authorization", "Files"],
-    "tools": ["Docs API integration", "Plugins"],
-    "operatingSystems": ["Cross-platform", "Docker"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Plugins", "Authorization", "Files"]
+    "tools": ["Plugins"],
+    "operatingSystems": ["Docker", "Cross-platform"],
+    "additionalTags": ["nodejs", "docker", "integration"]
   },
   {
     "title": "PHP Example",
     "description": "Integration sample using PHP backend with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/php-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["PHP"],
-    "editorTypes": ["Text document"],
-    "functionalities": ["Creating documents", "Working with tables"],
     "tools": ["Docs API integration"],
-    "operatingSystems": ["Cross-platform", "Docker"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents"]
+    "operatingSystems": ["Docker", "Cross-platform"],
+    "additionalTags": ["php", "integration"]
   },
   {
     "title": "PHP Laravel Example",
     "description": "Integration example using PHP Laravel framework with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/php-laravel-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["PHP (Laravel)"],
-    "editorTypes": ["Text document"],
-    "functionalities": ["Creating documents", "Forms", "Automation"],
-    "tools": ["Docs API integration", "Plugins"],
-    "operatingSystems": ["Cross-platform", "Docker"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Forms", "Plugins"]
+    "tools": ["Plugins"],
+    "operatingSystems": ["Docker", "Cross-platform"],
+    "additionalTags": ["php", "laravel", "automation"]
   },
   {
     "title": "Python Example",
     "description": "Integration example using Python backend with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/python-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Python"],
-    "editorTypes": ["Text document", "Spreadsheet"],
-    "functionalities": ["Creating documents", "Editing"],
     "tools": ["Docs API integration"],
-    "operatingSystems": ["Cross-platform", "Docker"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets"]
+    "operatingSystems": ["Docker", "Cross-platform"],
+    "additionalTags": ["python", "integration"]
   },
   {
     "title": "Ruby Example",
     "description": "Integration example using Ruby backend with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/ruby-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Ruby"],
-    "editorTypes": ["Text document", "Spreadsheet"],
-    "functionalities": ["Working with files", "Editing"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Files"]
+    "additionalTags": ["ruby", "integration"]
   },
   {
     "title": "Go Example",
     "description": "Integration example using Go backend with ONLYOFFICE Docs.",
     "link": "/docs/docs-api/samples/language-specific-examples/go-example",
+    "mainTags": ["Integration", "Docs"],
     "programmingLanguages": ["Go"],
-    "editorTypes": ["Text document", "Spreadsheet", "Presentation"],
-    "functionalities": ["Creating documents", "Editing", "Automation"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "difficulty": "Intermediate",
-    "tags": ["Integration", "Docs", "Text documents", "Sheets", "Slides"]
+    "additionalTags": ["go", "integration"]
   }
 ]
