@@ -2,6 +2,11 @@
 
 This function changes the background of a specified slide. Supports solid colors and gradient fills.
 
+## Prompts
+
+- Set blue background on slide 1
+- Set gradient background with colors #FF0000 and #0000FF on slide 2
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -30,11 +35,6 @@ func.examples = [
 | backgroundType | string           | "solid"                  | The background type can be "solid" or "gradient".                |
 | color          | string           | "#FF5733"                | The hexadecimal color code for the solid background.             |
 | gradientColors | array of strings | \["#FF0000", "#0000FF"\] | An array of hexadecimal color codes for the gradient background. |
-
-### Prompts
-
-- Set blue background on slide 1
-- Set gradient background with colors #FF0000 and #0000FF on slide 2
 
 ## Function execution {#function-execution}
 
@@ -93,7 +93,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![changeSlideBackground function](/assets/images/plugins/change-slide-background-function.png#gh-light-mode-only)
-![changeSlideBackground function](/assets/images/plugins/change-slide-background-function.dark.png#gh-dark-mode-only)
-![changeSlideBackground result](/assets/images/plugins/change-slide-background-result.png#gh-light-mode-only)
-![changeSlideBackground result](/assets/images/plugins/change-slide-background-result.dark.png#gh-dark-mode-only)
+![changeSlideBackground](/assets/images/plugins/functions-gifs/change-slide-background-function.gif#gh-light-mode-only)
+![changeSlideBackground](/assets/images/plugins/functions-gifs/change-slide-background-function.dark.gif#gh-dark-mode-only)

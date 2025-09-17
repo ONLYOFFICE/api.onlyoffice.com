@@ -2,6 +2,10 @@
 
 This function duplicates the specified slide in the current presentation.
 
+## Prompts
+
+- Duplicate slide 8
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -22,10 +26,6 @@ func.examples = [
 | Name        | Type   | Example | Description                           |
 |-------------|--------|---------|---------------------------------------|
 | slideNumber | number | 2       | The number of the slide to duplicate. |
-
-### Prompts
-
-- Duplicate slide 8
 
 ## Function execution {#function-execution}
 
@@ -49,7 +49,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![duplicateSlide function](/assets/images/plugins/duplicate-slide-function.png#gh-light-mode-only)
-![duplicateSlide function](/assets/images/plugins/duplicate-slide-function.dark.png#gh-dark-mode-only)
-![duplicateSlide result](/assets/images/plugins/duplicate-slide-result.png#gh-light-mode-only)
-![duplicateSlide result](/assets/images/plugins/duplicate-slide-result.dark.png#gh-dark-mode-only)
+![duplicateSlide](/assets/images/plugins/functions-gifs/duplicate-slide-function.gif#gh-light-mode-only)
+![duplicateSlide](/assets/images/plugins/functions-gifs/duplicate-slide-function.dark.gif#gh-dark-mode-only)

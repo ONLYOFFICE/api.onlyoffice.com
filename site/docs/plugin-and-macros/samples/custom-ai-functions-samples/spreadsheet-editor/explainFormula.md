@@ -2,6 +2,11 @@
 
 This function explains a formula from the specified range or, if omitted, the active/selected range.
 
+## Prompts
+
+- Explain a formula in the active cell
+- Explain a formula in cell A1
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -28,11 +33,6 @@ func.examples = [
 | Name  | Type   | Example | Description                                                                                         |
 |-------|--------|---------|-----------------------------------------------------------------------------------------------------|
 | range | string | "A1"    | The cell range containing the formula to explain. If omitted, the active or selected range is used. |
-
-### Prompts
-
-- Explain a formula in the active cell
-- Explain a formula in cell A1
 
 ## Function execution {#function-execution}
 
@@ -144,7 +144,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![explainFormula function](/assets/images/plugins/explain-formula-function.png#gh-light-mode-only)
-![explainFormula function](/assets/images/plugins/explain-formula-function.dark.png#gh-dark-mode-only)
-![explainFormula result](/assets/images/plugins/explain-formula-result.png#gh-light-mode-only)
-![explainFormula result](/assets/images/plugins/explain-formula-result.dark.png#gh-dark-mode-only)
+![explainFormula](/assets/images/plugins/functions-gifs/explain-formula-function.gif#gh-light-mode-only)
+![explainFormula](/assets/images/plugins/functions-gifs/explain-formula-function.dark.gif#gh-dark-mode-only)

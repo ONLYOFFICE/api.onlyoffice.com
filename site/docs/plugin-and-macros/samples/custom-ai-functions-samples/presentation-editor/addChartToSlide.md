@@ -2,6 +2,12 @@
 
 This function adds a chart to the specified  or the current slide. By default, the chart is 152x89 mm and centered.
 
+## Prompts
+
+- Add a bar chart showing sales data [[100, 120, 140], [90, 110, 130]] with series "Product A", "Product B" and categories "Q1", "Q2", "Q3" on the current slide
+- Add a pie chart showing data [[30, 25, 20, 15, 10]] with series "Market Share" and categories "Company A", "Company B", "Company C", "Company D", "Others" on slide 2
+- Generate chart data for monthly revenue showing steady growth from $50k to $120k in 2024
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -39,12 +45,6 @@ func.examples = [
 | series      | array  | \["Series 1", "Series 2", "Series 3"\]                                          | An array of series names, which must have the same length as the number of data arrays.                                                                                                                                                                                                                                                                                                                                                                           |
 | categories  | array  | \["Jan", "Feb", "Mar", "Apr"\]                                                  | An array of category names, which must have the same length as each data array.                                                                                                                                                                                                                                                                                                                                                                                   |
 | prompt      | string | "Create monthly revenue data for 2024 showing steady growth from $50k to $120k" | The description of the data to generate for the chart.                                                                                                                                                                                                                                                                                                                                                                                                            |
-
-### Prompts
-
-- Add a bar chart showing sales data [[100, 120, 140], [90, 110, 130]] with series "Product A", "Product B" and categories "Q1", "Q2", "Q3" on the current slide
-- Add a pie chart showing data [[30, 25, 20, 15, 10]] with series "Market Share" and categories "Company A", "Company B", "Company C", "Company D", "Others" on slide 2
-- Generate chart data for monthly revenue showing steady growth from $50k to $120k in 2024
 
 ## Function execution {#function-execution}
 
@@ -201,7 +201,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addChartToSlide function](/assets/images/plugins/add-chart-to-slide-function.png#gh-light-mode-only)
-![addChartToSlide function](/assets/images/plugins/add-chart-to-slide-function.dark.png#gh-dark-mode-only)
-![addChartToSlide result](/assets/images/plugins/add-chart-to-slide-result.png#gh-light-mode-only)
-![addChartToSlide result](/assets/images/plugins/add-chart-to-slide-result.dark.png#gh-dark-mode-only)
+![addChartToSlide](/assets/images/plugins/functions-gifs/add-chart-to-slide-function.gif#gh-light-mode-only)
+![addChartToSlide](/assets/images/plugins/functions-gifs/add-chart-to-slide-function.dark.gif#gh-dark-mode-only)

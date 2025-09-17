@@ -2,6 +2,14 @@
 
 This function adds a shape to the slide with optional text. By default, the shape is 139x42 mm, centered, with a blue fill and a dark border.
 
+## Prompts
+
+- Add a rectangle with text "Important Point" on slide 2
+- Add a star shape on the current slide
+- Add a rounded rectangle with text "Key Message"
+- Add a diamond shape with text "Decision Point"
+- Add a right arrow with text "Next Step"
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -35,14 +43,6 @@ func.examples = [
 | slideNumber | number | 2                | The slide number where the shape will be added. If omitted, the shape is added to the current slide.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | shapeType   | string | "rect"           | The shape type can be "rect", "roundRect", "ellipse", "triangle", "diamond", "pentagon", "hexagon", "star5", "plus", "mathMinus", "mathMultiply", "mathEqual", "mathNotEqual", "heart", "cloud", "leftArrow", "rightArrow", "upArrow", "downArrow", "leftRightArrow", "chevron", "bentArrow", "curvedRightArrow", "blockArc", "wedgeRectCallout", "cloudCallout", "ribbon", "wave", "can", "cube", "pie", "donut", "sun", "moon", "smileyFace", "lightningBolt", "noSmoking". The default value is "roundRect". |
 | text        | string | "Decision Point" | The text to add to the shape.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-
-### Prompts
-
-- Add a rectangle with text "Important Point" on slide 2
-- Add a star shape on the current slide
-- Add a rounded rectangle with text "Key Message"
-- Add a diamond shape with text "Decision Point"
-- Add a right arrow with text "Next Step"
 
 ## Function execution {#function-execution}
 
@@ -102,7 +102,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addShapeToSlide function](/assets/images/plugins/add-shape-to-slide-function.png#gh-light-mode-only)
-![addShapeToSlide function](/assets/images/plugins/add-shape-to-slide-function.dark.png#gh-dark-mode-only)
-![addShapeToSlide result](/assets/images/plugins/add-shape-to-slide-result.png#gh-light-mode-only)
-![addShapeToSlide result](/assets/images/plugins/add-shape-to-slide-result.dark.png#gh-dark-mode-only)
+![addShapeToSlide](/assets/images/plugins/functions-gifs/add-shape-to-slide-function.gif#gh-light-mode-only)
+![addShapeToSlide](/assets/images/plugins/functions-gifs/add-shape-to-slide-function.dark.gif#gh-dark-mode-only)

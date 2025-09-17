@@ -2,6 +2,12 @@
 
 This function inserts a new page into the document at a specified location.
 
+## Prompts
+
+- Insert a page at the current location
+- Add a page at the end of the document
+- Add a page at the start of the document
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -29,12 +35,6 @@ func.examples = [
 |----------|--------|-----------|----------------------------------------------------------------------|
 | location | string | "current" | Specifies where to insert a new page ("current", "start", or "end"). |
 
-### Prompts
-
-- Insert a page at the current location
-- Add a page at the end of the document
-- Add a page at the start of the document
-
 ## Function execution {#function-execution}
 
 ```ts
@@ -59,7 +59,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![insertPage function](/assets/images/plugins/insert-page-function.png#gh-light-mode-only)
-![insertPage function](/assets/images/plugins/insert-page-function.dark.png#gh-dark-mode-only)
-![insertPage result](/assets/images/plugins/insert-page-result.png#gh-light-mode-only)
-![insertPage result](/assets/images/plugins/insert-page-result.dark.png#gh-dark-mode-only)
+![insertPage](/assets/images/plugins/functions-gifs/insert-page-function.gif#gh-light-mode-only)
+![insertPage](/assets/images/plugins/functions-gifs/insert-page-function.dark.gif#gh-dark-mode-only)

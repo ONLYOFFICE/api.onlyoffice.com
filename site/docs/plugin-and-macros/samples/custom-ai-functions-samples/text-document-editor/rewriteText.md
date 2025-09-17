@@ -2,6 +2,14 @@
 
 This function rewrites or replaces text. If no text or paragraph number is specified, the current paragraph is used by default.
 
+## Prompts
+
+- Rewrite
+- Rephrase sentence
+- Make the text more emotional
+- Rephrase
+- Rewrite in official style
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -44,14 +52,6 @@ func.examples = [
 | prompt         | string  | "Rewrite"   | The instructions on how to change the text.                                                     |
 | showDifference | boolean | true        | Specifies whether to show the difference between the original and new text, or just replace it. |
 | type           | string  | "paragraph" | The part of the text to be rewritten (e.g., "sentence" or "paragraph").                         |
-
-### Prompts
-
-- Rewrite
-- Rephrase sentence
-- Make the text more emotional
-- Rephrase
-- Rewrite in official style
 
 ## Function execution {#function-execution}
 
@@ -145,7 +145,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![rewriteText function](/assets/images/plugins/rewrite-text-function.png#gh-light-mode-only)
-![rewriteText function](/assets/images/plugins/rewrite-text-function.dark.png#gh-dark-mode-only)
-![rewriteText result](/assets/images/plugins/rewrite-text-result.png#gh-light-mode-only)
-![rewriteText result](/assets/images/plugins/rewrite-text-result.dark.png#gh-dark-mode-only)
+![rewriteText](/assets/images/plugins/functions-gifs/rewrite-text-function.gif#gh-light-mode-only)
+![rewriteText](/assets/images/plugins/functions-gifs/rewrite-text-function.dark.gif#gh-dark-mode-only)

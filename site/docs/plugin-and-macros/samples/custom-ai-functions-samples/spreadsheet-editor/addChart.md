@@ -2,6 +2,13 @@
 
 This function creates a chart of the specified type from the given range or the selected range.
 
+## Prompts
+
+- Create a bar chart from the current selection
+- Create a line chart from the current selection
+- Create a pie chart from range A1:B10
+- Create a chart with title "Sales Overview"
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -35,13 +42,6 @@ func.examples = [
 | range     | string | "A1:D10"         | The cell range containing the data for the chart. If omitted, the selected range is used.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | chartType | string | "bar3D"          | The chart type can be "bar", "barStacked", "barStackedPercent", "bar3D", "barStacked3D", "barStackedPercent3D", "barStackedPercent3DPerspective", "horizontalBar", "horizontalBarStacked", "horizontalBarStackedPercent", "horizontalBar3D", "horizontalBarStacked3D", "horizontalBarStackedPercent3D", "lineNormal", "lineStacked", "lineStackedPercent", "line3D", "pie", "pie3D", "doughnut", "scatter", "stock", "area", "areaStacked", "areaStackedPercent". The default value is "bar". |
 | title     | string | "Sales Overview" | The chart title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-
-### Prompts
-
-- Create a bar chart from the current selection
-- Create a line chart from the current selection
-- Create a pie chart from range A1:B10
-- Create a chart with title "Sales Overview"
 
 ## Function execution {#function-execution}
 
@@ -94,7 +94,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![addChart function](/assets/images/plugins/add-chart-function.png#gh-light-mode-only)
-![addChart function](/assets/images/plugins/add-chart-function.dark.png#gh-dark-mode-only)
-![addChart result](/assets/images/plugins/add-chart-result.png#gh-light-mode-only)
-![addChart result](/assets/images/plugins/add-chart-result.dark.png#gh-dark-mode-only)
+![addChart](/assets/images/plugins/functions-gifs/add-chart-function.gif#gh-light-mode-only)
+![addChart](/assets/images/plugins/functions-gifs/add-chart-function.dark.gif#gh-dark-mode-only)

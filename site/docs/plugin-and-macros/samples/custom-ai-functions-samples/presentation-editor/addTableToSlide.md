@@ -2,6 +2,12 @@
 
 This function adds a table to the specified or the current slide. By default, the table is 194x97 mm and centered.
 
+## Prompts
+
+- Add a 3x3 table on slide 2
+- Add a table with data [["Name", "Age", "City"], ["John", "30", "New York"], ["Jane", "25", "London"]] on the current slide
+- Add a simple 2x4 table
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -33,12 +39,6 @@ func.examples = [
 | rows        | number | 2                                                                                       | The number of rows. The default value is 3.                                                          |
 | columns     | number | 4                                                                                       | The number of columns. The default value is 3.                                                       |
 | data        | array  | \[\["Name", "Age", "City"\], \["John", "30", "New York"\], \["Jane", "25", "London"\]\] | A two-dimensional array of cell values, structured as rows × columns.                                |
-
-### Prompts
-
-- Add a 3x3 table on slide 2
-- Add a table with data [["Name", "Age", "City"], ["John", "30", "New York"], ["Jane", "25", "London"]] on the current slide
-- Add a simple 2x4 table
 
 ## Function execution {#function-execution}
 
@@ -121,7 +121,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addTableToSlide function](/assets/images/plugins/add-table-to-slide-function.png#gh-light-mode-only)
-![addTableToSlide function](/assets/images/plugins/add-table-to-slide-function.dark.png#gh-dark-mode-only)
-![addTableToSlide result](/assets/images/plugins/add-table-to-slide-result.png#gh-light-mode-only)
-![addTableToSlide result](/assets/images/plugins/add-table-to-slide-result.dark.png#gh-dark-mode-only)
+![addTableToSlide](/assets/images/plugins/functions-gifs/add-table-to-slide-function.gif#gh-light-mode-only)
+![addTableToSlide](/assets/images/plugins/functions-gifs/add-table-to-slide-function.dark.gif#gh-dark-mode-only)

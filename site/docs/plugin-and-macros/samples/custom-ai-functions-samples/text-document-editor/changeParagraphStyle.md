@@ -2,6 +2,10 @@
 
 This function modifies the visual style of the specified paragraph.
 
+## Prompts
+
+- Change the style of paragraph 2 to Heading 1
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -24,10 +28,6 @@ func.examples = [
 |-----------|--------|-------------|--------------------------------------------------------|
 | parNumber | number | 3           | The number of the paragraph to apply style changes to. |
 | style     | string | "Heading 1" | The style name to apply to the paragraph.              |
-
-### Prompts
-
-- Change the style of paragraph 2 to Heading 1
 
 ## Function execution {#function-execution}
 
@@ -53,7 +53,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![changeParagraphStyle function](/assets/images/plugins/change-paragraph-style-function.png#gh-light-mode-only)
-![changeParagraphStyle function](/assets/images/plugins/change-paragraph-style-function.dark.png#gh-dark-mode-only)
-![changeParagraphStyle result](/assets/images/plugins/change-paragraph-style-result.png#gh-light-mode-only)
-![changeParagraphStyle result](/assets/images/plugins/change-paragraph-style-result.dark.png#gh-dark-mode-only)
+![changeParagraphStyle](/assets/images/plugins/functions-gifs/change-paragraph-style-function.gif#gh-light-mode-only)
+![changeParagraphStyle](/assets/images/plugins/functions-gifs/change-paragraph-style-function.dark.gif#gh-dark-mode-only)

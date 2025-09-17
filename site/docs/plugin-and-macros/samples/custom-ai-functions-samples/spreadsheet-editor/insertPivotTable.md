@@ -3,6 +3,12 @@
 This function inserts a pivot table into the specified range or the currently selected range.
 This function can be used to summarize, group, or aggregate data by rows and values.
 
+## Prompts
+
+- Insert a pivot table
+- Group data by columns Column1 and Column2 using a pivot table
+- Aggregate data by Column3 in a pivot table
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -39,12 +45,6 @@ func.examples = [
 | range       | string           | "A1:D10"               | The cell range to apply the autofilter. If omitted, the active or selected range is used. |
 | columns     | array of strings | ["Column1", "Column2"] | An array of column names used for pivot rows (categorical/grouping).                      |
 | valueColumn | string           | "Column3"              | The column name used for pivot values (numeric/aggregate).                                |
-
-### Prompts
-
-- Insert a pivot table
-- Group data by columns Column1 and Column2 using a pivot table
-- Aggregate data by Column3 in a pivot table
 
 ## Function execution {#function-execution}
 
@@ -278,7 +278,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![insertPivotTable function](/assets/images/plugins/insert-pivot-table-function.png#gh-light-mode-only)
-![insertPivotTable function](/assets/images/plugins/insert-pivot-table-function.dark.png#gh-dark-mode-only)
-![insertPivotTable result](/assets/images/plugins/insert-pivot-table-result.png#gh-light-mode-only)
-![insertPivotTable result](/assets/images/plugins/insert-pivot-table-result.dark.png#gh-dark-mode-only)
+![insertPivotTable](/assets/images/plugins/functions-gifs/insert-pivot-table-function.gif#gh-light-mode-only)
+![insertPivotTable](/assets/images/plugins/functions-gifs/insert-pivot-table-function.dark.gif#gh-dark-mode-only)

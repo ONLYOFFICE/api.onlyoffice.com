@@ -2,6 +2,14 @@
 
 This function modifies the visual style of the selected text. If no text is selected, the current word is used by default.
 
+## Prompts
+
+- Make this text bold and underlined
+- Underline this text
+- Strike out this text
+- Set the font size of this text to 18
+- Make this text non-italic
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -45,14 +53,6 @@ func.examples = [
 | underline | boolean | true    | Specifies whether to underline the text.     |
 | strikeout | boolean | true    | Specifies whether to strike out the text.    |
 | fontSize  | number  | 18      | The font size to apply to the selected text. |
-
-### Prompts
-
-- Make this text bold and underlined
-- Underline this text
-- Strike out this text
-- Set the font size of this text to 18
-- Make this text non-italic
 
 ## Function execution {#function-execution}
 
@@ -99,7 +99,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![changeTextStyle function](/assets/images/plugins/change-text-style-function.png#gh-light-mode-only)
-![changeTextStyle function](/assets/images/plugins/change-text-style-function.dark.png#gh-dark-mode-only)
-![changeTextStyle result](/assets/images/plugins/change-text-style-result.png#gh-light-mode-only)
-![changeTextStyle result](/assets/images/plugins/change-text-style-result.dark.png#gh-dark-mode-only)
+![changeTextStyle](/assets/images/plugins/functions-gifs/change-text-style-function.gif#gh-light-mode-only)
+![changeTextStyle](/assets/images/plugins/functions-gifs/change-text-style-function.dark.gif#gh-dark-mode-only)

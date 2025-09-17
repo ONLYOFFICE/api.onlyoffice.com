@@ -2,6 +2,14 @@
 
 This function sorts a given range (or the active/selected range) by up to three columns, using either cell references, column indices, named ranges, or column headers. Supports ascending/descending order and optional header detection.
 
+## Prompts
+
+- Sort cells A1:D10 by the first column ascending
+- Sort the table by Column1 ascending
+- Sort by the second column descending
+- Sort A1:D10 by Column1 ascending, then by Column2 descending
+- Sort the selected range by the first column
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -90,14 +98,6 @@ func.examples = [
 | key3Name   | string                       | "Country"      | The column name or header of the third sort field, which will be automatically resolved to the corresponding column number.  |
 | sortOrder3 | string                       | "xlDescending" | The sort order for the third sort field can be "xlAscending" or "xlDescending". The default value is "xlAscending".          |
 | header     | string                       | "xlNo"         | Specifies whether the first row contains headers: "xlYes" or "xlNo". The default value is "xlNo".                            |
-
-### Prompts
-
-- Sort cells A1:D10 by the first column ascending
-- Sort the table by Column1 ascending
-- Sort by the second column descending
-- Sort A1:D10 by Column1 ascending, then by Column2 descending
-- Sort the selected range by the first column
 
 ## Function execution {#function-execution}
 
@@ -250,7 +250,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![setSort function](/assets/images/plugins/set-sort-function.png#gh-light-mode-only)
-![setSort function](/assets/images/plugins/set-sort-function.dark.png#gh-dark-mode-only)
-![setSort result](/assets/images/plugins/set-sort-result.png#gh-light-mode-only)
-![setSort result](/assets/images/plugins/set-sort-result.dark.png#gh-dark-mode-only)
+![setSort](/assets/images/plugins/functions-gifs/set-sort-function.gif#gh-light-mode-only)
+![setSort](/assets/images/plugins/functions-gifs/set-sort-function.dark.gif#gh-dark-mode-only)

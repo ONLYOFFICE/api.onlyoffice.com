@@ -3,6 +3,15 @@
 This function applies or modifies an AutoFilter on a given cell range or the active selection.
 Supports filtering by column index or name, comparison operators, multiple values, colors, and advanced filter operators.
 
+## Prompts
+
+- Apply autofilter to range A1:D10
+- Apply filter to the selected cells
+- Filter column 4 for values greater than 10
+- Show rows where Column1 is greater than 17
+- Show top 3 items in column 4
+- Show rows where column 4 is greater than 15 or less than 5
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -95,15 +104,6 @@ func.examples = [
 | operator        | string                    | "xlFilterValues" | The filter operator. Can be: "xlAnd", "xlOr", "xlFilterValues", "xlTop10Items", "xlTop10Percent", "xlBottom10Items", "xlBottom10Percent", "xlFilterCellColor", "xlFilterFontColor", "xlFilterDynamic".                             |
 | criteria2       | string                    | "\<2"            | The second filter criteria, used with "xlAnd" or "xlOr" operators for compound filters.                                                                                                                                            |
 | visibleDropDown | boolean                   | true             | Specifies whether to show the filter dropdown arrow. The default value is "true".                                                                                                                                                  |
-
-### Prompts
-
-- Apply autofilter to range A1:D10
-- Apply filter to the selected cells
-- Filter column 4 for values greater than 10
-- Show rows where Column1 is greater than 17
-- Show top 3 items in column 4
-- Show rows where column 4 is greater than 15 or less than 5
 
 ## Function execution {#function-execution}
 
@@ -223,7 +223,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![setAutoFilter function](/assets/images/plugins/set-auto-filter-function.png#gh-light-mode-only)
-![setAutoFilter function](/assets/images/plugins/set-auto-filter-function.dark.png#gh-dark-mode-only)
-![setAutoFilter result](/assets/images/plugins/set-auto-filter-result.png#gh-light-mode-only)
-![setAutoFilter result](/assets/images/plugins/set-auto-filter-result.dark.png#gh-dark-mode-only)
+![setAutoFilter](/assets/images/plugins/functions-gifs/set-auto-filter-function.gif#gh-light-mode-only)
+![setAutoFilter](/assets/images/plugins/functions-gifs/set-auto-filter-function.dark.gif#gh-dark-mode-only)

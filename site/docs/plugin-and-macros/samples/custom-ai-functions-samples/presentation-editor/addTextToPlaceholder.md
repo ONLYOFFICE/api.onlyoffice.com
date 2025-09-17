@@ -2,6 +2,12 @@
 
 This function adds any text content to the specified or the current slide. Use this function for all text insertion requests, including recipes, lists, instructions, notes, ideas, or other text content.
 
+## Prompts
+
+- Add recipe for coffee: Coffee Recipe:\n1. Grind coffee beans\n2. Heat water to 95°C\n3. Pour water over coffee\n4. Wait 4 minutes\n5. Enjoy
+- Insert shopping list: Shopping List:\n- Milk\n- Bread\n- Eggs\n- Coffee\n- Sugar
+- Add title Introduction to slide 9
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -42,12 +48,6 @@ func.examples = [
 | text        | string | "Introduction"                               | The text content to add. Can include recipes, lists, instructions, notes, ideas, descriptions, stories, data, or any other text requested by the user.                                                                |
 | textType    | string | "title"                                      | The text type can be "body", "chart", "clipArt", "ctrTitle", "diagram", "date", "footer", "header", "media", "object", "picture", "sldImage", "sldNumber", "subTitle", "table", "title". The default value is "body". |
 | prompt      | string | "generate detailed content about this topic" | The AI instructions for text enhancement or generation.                                                                                                                                                               |
-
-### Prompts
-
-- Add recipe for coffee: Coffee Recipe:\n1. Grind coffee beans\n2. Heat water to 95°C\n3. Pour water over coffee\n4. Wait 4 minutes\n5. Enjoy
-- Insert shopping list: Shopping List:\n- Milk\n- Bread\n- Eggs\n- Coffee\n- Sugar
-- Add title Introduction to slide 9
 
 ## Function execution {#function-execution}
 
@@ -208,7 +208,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addTextToPlaceholder function](/assets/images/plugins/add-text-to-placeholder-function.png#gh-light-mode-only)
-![addTextToPlaceholder function](/assets/images/plugins/add-text-to-placeholder-function.dark.png#gh-dark-mode-only)
-![addTextToPlaceholder result](/assets/images/plugins/add-text-to-placeholder-result.png#gh-light-mode-only)
-![addTextToPlaceholder result](/assets/images/plugins/add-text-to-placeholder-result.dark.png#gh-dark-mode-only)
+![addTextToPlaceholder](/assets/images/plugins/functions-gifs/add-text-to-placeholder-function.gif#gh-light-mode-only)
+![addTextToPlaceholder](/assets/images/plugins/functions-gifs/add-text-to-placeholder-function.dark.gif#gh-dark-mode-only)

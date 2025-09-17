@@ -2,6 +2,10 @@
 
 This function checks spelling or fixes other text errors in the current paragraph.
 
+## Prompts
+
+- Check spelling
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -17,10 +21,6 @@ func.examples = [
     "[functionCalling (checkSpelling)]: {}"
 ];
 ```
-
-### Prompts
-
-- Check spelling
 
 ## Function execution {#function-execution}
 
@@ -122,7 +122,5 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![checkSpelling function](/assets/images/plugins/check-spelling-function.png#gh-light-mode-only)
-![checkSpelling function](/assets/images/plugins/check-spelling-function.dark.png#gh-dark-mode-only)
-![checkSpelling result](/assets/images/plugins/check-spelling-result.png#gh-light-mode-only)
-![checkSpelling result](/assets/images/plugins/check-spelling-result.dark.png#gh-dark-mode-only)
+![checkSpelling](/assets/images/plugins/functions-gifs/check-spelling-function.gif#gh-light-mode-only)
+![checkSpelling](/assets/images/plugins/functions-gifs/check-spelling-function.dark.gif#gh-dark-mode-only)

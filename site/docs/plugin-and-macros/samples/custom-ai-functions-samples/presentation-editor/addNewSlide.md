@@ -2,6 +2,10 @@
 
 This function adds a new slide at the end of presentation using default layout from the current slide's master.
 
+## Prompts
+
+- Add a new slide
+
 ## Function registration {#function-registration}
 
 ```ts
@@ -11,10 +15,6 @@ func.description = "Adds a new slide at the end of presentation using default la
 func.params = [];
 func.examples = ["if you need to add a new slide, respond with:\n" + "[functionCalling (addNewSlide)]: {}"];
 ```
-
-### Prompts
-
-- Add a new slide
 
 ## Function execution {#function-execution}
 
@@ -62,7 +62,5 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addNewSlide function](/assets/images/plugins/add-new-slide-function.png#gh-light-mode-only)
-![addNewSlide function](/assets/images/plugins/add-new-slide-function.dark.png#gh-dark-mode-only)
-![addNewSlide result](/assets/images/plugins/add-new-slide-result.png#gh-light-mode-only)
-![addNewSlide result](/assets/images/plugins/add-new-slide-result.dark.png#gh-dark-mode-only)
+![addNewSlide](/assets/images/plugins/functions-gifs/add-new-slide-function.gif#gh-light-mode-only)
+![addNewSlide](/assets/images/plugins/functions-gifs/add-new-slide-function.dark.gif#gh-dark-mode-only)
