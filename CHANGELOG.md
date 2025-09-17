@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.5
+
 ## 6.6.0
 
 ### New features
