@@ -8,7 +8,7 @@ Each DocSpace plugin is a folder with files. It must contain the following files
 
 ## assets
 
-A folder for storing plugin images. Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The following formats are currently supported: *.jpg, .jpeg, .png, .svg*.
+A folder for storing plugin images. Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg, .jpeg, .png, .svg*.
 
 - The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
