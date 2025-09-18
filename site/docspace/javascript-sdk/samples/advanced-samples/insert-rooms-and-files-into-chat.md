@@ -19,7 +19,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with DocSpace Selectors</title>
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* Styles omitted for brevity - same as your input */
     </style>

@@ -32,7 +32,7 @@ Create the target HTML file which must include a placeholder *div* tag, where al
     <head>
         <meta charset="UTF-8">
         <title>DocSpace JavaScript SDK</title>
-        <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+        <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     </head>
     <body>
         <div id="ds-frame"></div>
@@ -42,7 +42,7 @@ Create the target HTML file which must include a placeholder *div* tag, where al
 
 The API JavaScript file can normally be found in the following DocSpace folder:
 
-`{PORTAL\_SRC}/static/scripts/sdk/2.0.0/api.js`
+`{PORTAL\_SRC}/static/scripts/sdk/2.1.0/api.js`
 
 where **\{PORTAL\_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 

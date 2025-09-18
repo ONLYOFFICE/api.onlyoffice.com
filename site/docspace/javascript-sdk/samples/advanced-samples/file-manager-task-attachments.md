@@ -16,7 +16,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
   <head>
     <meta charset="UTF-8" />
     <title>Task Attachments</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* CSS omitted for brevity */
     </style>

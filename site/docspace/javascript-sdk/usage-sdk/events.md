@@ -114,6 +114,42 @@ Example:
   })
   ```
 
+## onEditorOpen
+
+The function called when the document editor is opened for creating or editing documents, or filling out forms, from the context menu, modal windows, panels, or hotkeys.
+
+Example:
+
+  ``` ts
+  function onEditorOpen() {
+    console.log("The document editor is opened.")
+  }
+  
+  const docSpace = DocSpace.SDK.initEditor({
+    events: {
+      onEditorOpen,
+    },
+  })
+  ```
+
+## onFileManagerClick
+
+The function called when a file is clicked in the list of files.
+
+Example:
+
+  ``` ts
+  function onFileManagerClick() {
+    console.log("The file is clicked.")
+  }
+  
+  const docSpace = DocSpace.SDK.initManager({
+    events: {
+      onFileManagerClick,
+    },
+  })
+  ```
+
 ## onSelectCallback
 
 The function called only in the [room-selector](./initialization-modes/room-selector.md) and [file-selector](./initialization-modes/file-selector.md) modes when a room or file is selected.
