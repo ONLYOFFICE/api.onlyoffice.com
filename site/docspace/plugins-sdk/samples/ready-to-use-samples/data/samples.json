@@ -2,21 +2,41 @@
     {
         "title": "Draw.io",
         "description": "A tool for creating diagrams, flowcharts, intelligence maps, business layouts, entity relationships, program blocks, and more.",
-        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/drawio"
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/drawio",
+        "tags": ["DocSpace", "Plugins", "Diagrams", "Flowcharts"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK", "Draw.io"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["entity relationships", "mind maps", "business layouts"]
     },
     {
         "title": "Markdown",
         "description": "A tool for viewing, editing and creating `.md` files.",
-        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/markdown"
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/markdown",
+        "tags": ["DocSpace", "Plugins", "Markdown", "Text"],
+        "programmingLanguages": ["JavaScript", "Markdown"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": [".md files", "markdown editor", "markdown viewer"]
     },
     {
         "title": "PDF converter",
         "description": "A tool for converting documents, spreadsheets, presentations, and forms to PDF.",
-        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/pdf-converter"
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/pdf-converter",
+        "tags": ["DocSpace", "Plugins", "PDF", "Conversion"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["convert to PDF", "spreadsheets", "presentations", "forms"]
     },
     {
         "title": "Speech to text",
         "description": "A speech recognition software that allows you to recognize and translate spoken speech into text.",
-        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/speech-to-text"
+        "link": "/docspace/plugins-sdk/samples/ready-to-use-samples/speech-to-text",
+        "tags": ["DocSpace", "Plugins", "Speech Recognition", "AI"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK", "Speech Recognition API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["speech recognition", "voice to text", "translation"]
     }
-]
+]  

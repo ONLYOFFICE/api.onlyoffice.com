@@ -2,151 +2,101 @@
     {
         "title": "Add tags to room",
         "description": "This example demonstrates how to add custom tags to a room using a button.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/add-tags-to-room"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/add-tags-to-room",
+        "tags": ["DocSpace", "JavaScript SDK", "Rooms", "Tags"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["add tags", "room customization", "metadata"]
     },
     {
         "title": "Create file",
         "description": "This example demonstrates how to create a new file inside a DocSpace room using a button.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/create-file"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/create-file",
+        "tags": ["DocSpace", "JavaScript SDK", "Files"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["file creation", "document", "room integration"]
     },
     {
         "title": "Create folder",
         "description": "This example demonstrates how to create a folder in a room.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/create-folder"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/create-folder",
+        "tags": ["DocSpace", "JavaScript SDK", "Folders"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["folder creation", "room management", "organization"]
     },
     {
         "title": "Create password hash",
         "description": "This example demonstrates how to generate a secure hash from a plain-text password using DocSpace SDK methods.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/create-hash"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/create-hash",
+        "tags": ["DocSpace", "JavaScript SDK", "Security"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["password", "hashing", "authentication"]
     },
     {
         "title": "Create room",
         "description": "This example demonstrates how to create a new shared room.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/create-room"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/create-room",
+        "tags": ["DocSpace", "JavaScript SDK", "Rooms"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["room creation", "workspace", "collaboration"]
     },
     {
         "title": "Create tag",
         "description": "This example demonstrates how to create a new custom tag in DocSpace using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/create-tag"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/create-tag",
+        "tags": ["DocSpace", "JavaScript SDK", "Tags"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tag creation", "metadata", "room organization"]
     },
     {
         "title": "Destroy frame",
         "description": "This example demonstrates how to destroy (remove) the embedded DocSpace iframe using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/destroy-frame"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/destroy-frame",
+        "tags": ["DocSpace", "JavaScript SDK", "Frames"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["iframe", "remove", "UI management"]
     },
     {
         "title": "Get config",
         "description": "This example demonstrates how to retrieve the configuration object of the embedded frame.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-config"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/get-config",
+        "tags": ["DocSpace", "JavaScript SDK", "Configuration"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["config", "frame", "settings"]
     },
     {
         "title": "Get files and folders list",
         "description": "This example demonstrates how to retrieve both files and folders from a DocSpace room using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-files-and-folders-list"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/get-files-and-folders-list",
+        "tags": ["DocSpace", "JavaScript SDK", "Files", "Folders"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["file list", "folder list", "room data"]
     },
     {
         "title": "Get files",
         "description": "This example demonstrates how to retrieve a list of files from a room using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-files"
-    },
-    {
-        "title": "Get folder info",
-        "description": "This example demonstrates how to retrieve information about the current folder in DocSpace using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-folder-info"
-    },
-    {
-        "title": "Get folders",
-        "description": "This example demonstrates how to retrieve a list of folders from a shared DocSpace room using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-foldes"
-    },
-    {
-        "title": "Get hash settings",
-        "description": "This example demonstrates how to retrieve hash-based settings from the embedded DocSpace frame using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-hash-settings"
-    },
-    {
-        "title": "Get rooms",
-        "description": "This example demonstrates how to retrieve a list of available rooms using the JavaScript SDK embedded in a DocSpace frame.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-rooms"
-    },
-    {
-        "title": "Get selection",
-        "description": "This example demonstrates how to retrieve the current selection in the DocSpace interface using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-selection"
-    },
-    {
-        "title": "Get user info",
-        "description": "This example demonstrates how to retrieve user information using the JavaScript SDK embedded in a DocSpace frame.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/get-user-info"
-    },
-    {
-        "title": "Initialize editor",
-        "description": "This example demonstrates how to open a document in the ONLYOFFICE DocSpace editor using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-editor"
-    },
-    {
-        "title": "Initialize file selector",
-        "description": "This example demonstrates how to initialize the DocSpace file selector using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-file-selector"
-    },
-    {
-        "title": "Initialize frame",
-        "description": "This example demonstrates how to initialize the DocSpace view-only frame using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-frame"
-    },
-    {
-        "title": "Initialize manager",
-        "description": "This example demonstrates how to initialize the DocSpace manager using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-manager"
-    },
-    {
-        "title": "Initialize room selector",
-        "description": "This example demonstrates how to embed the room selection interface using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-room-selector"
-    },
-    {
-        "title": "Initialize system",
-        "description": "This example demonstrates how to initialize the DocSpace system interface using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-system"
-    },
-    {
-        "title": "Initialize viewer",
-        "description": "This example demonstrates how to embed a read-only document viewer using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/init-viewer"
-    },
-    {
-        "title": "Login",
-        "description": "This example demonstrates how to log in to DocSpace using the JavaScript SDK by hashing the password.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/login"
-    },
-    {
-        "title": "Logout",
-        "description": "This example demonstrates how to log out a user from the DocSpace session using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/logout"
-    },
-    {
-        "title": "Mark iframe as loaded",
-        "description": "This example demonstrates how to explicitly mark the iframe as loaded using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/mark-iframe-as-loaded"
-    },
-    {
-        "title": "Open modal",
-        "description": "This example demonstrates how to open a predefined modal window in DocSpace using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/open-modal"
-    },
-    {
-        "title": "Remove tags from room",
-        "description": "This example demonstrates how to remove one or more tags from a room using the JavaScript SDK method.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/remove-tags-from-room"
-    },
-    {
-        "title": "Set config",
-        "description": "This example demonstrates how to update the configuration of the embedded DocSpace frame using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/set-config"
-    },
-    {
-        "title": "Set list view",
-        "description": "This example demonstrates how to change the file list display mode in DocSpace using the JavaScript SDK.",
-        "link": "/docspace/javascript-sdk/samples/basic-samples/set-list-view"
+        "link": "/docspace/javascript-sdk/samples/basic-samples/get-files",
+        "tags": ["DocSpace", "JavaScript SDK", "Files"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["DocSpace SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["files", "room data", "retrieval"]
     }
 ]

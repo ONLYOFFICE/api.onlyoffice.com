@@ -1,42 +1,82 @@
 [
     {
-        "title": "Adding sequential numbers",
-        "description": "Add sequential numbering to the first column of a table for better navigation and row referencing.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/adding-sequential-numbers"
+      "title": "Adding sequential numbers",
+      "description": "Add sequential numbering to the first column of a table for better navigation and row referencing.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/adding-sequential-numbers",
+      "tags": ["Docs", "Sheets", "Editing"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["sequential", "numbering", "tables"]
     },
     {
-        "title": "Commenting spreadsheet errors",
-        "description": "Script checks for formula errors like “#DIV/0!” in cells and adds comments to each error.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/commenting-spreadsheet-errors"
+      "title": "Commenting spreadsheet errors",
+      "description": "Script checks for formula errors like “#DIV/0!” in cells and adds comments to each error.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/commenting-spreadsheet-errors",
+      "tags": ["Docs", "Sheets", "Errors", "Collaboration"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["formulas", "comments", "debugging"]
     },
     {
-        "title": "Creating formatted table",
-        "description": "Formats a table during creation: adds borders, fills headers, aligns text in cells.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/creating-formatted-table"
+      "title": "Creating formatted table",
+      "description": "Formats a table during creation: adds borders, fills headers, aligns text in cells.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/creating-formatted-table",
+      "tags": ["Docs", "Sheets", "Tables"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["formatting", "borders", "alignment"]
     },
     {
-        "title": "Creating spreadsheet chart",
-        "description": "Creates a custom chart filled with array-based values in a spreadsheet.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-chart"
+      "title": "Creating spreadsheet chart",
+      "description": "Creates a custom chart filled with array-based values in a spreadsheet.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-chart",
+      "tags": ["Docs", "Sheets", "Charts"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["charts", "visualization", "data"]
     },
     {
-        "title": "Creating spreadsheet with different cell types",
-        "description": "Creates a spreadsheet with heterogeneous data types for working with tables containing text, dates, amounts, percentages, and ratings.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-with-cell-types"
+      "title": "Creating spreadsheet with different cell types",
+      "description": "Creates a spreadsheet with heterogeneous data types for working with tables containing text, dates, amounts, percentages, and ratings.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-with-cell-types",
+      "tags": ["Docs", "Sheets", "Tables"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["cell types", "data", "heterogeneous"]
     },
     {
-        "title": "Creating spreadsheet with filters",
-        "description": "Creates a spreadsheet with interactive filters in the header row that allows users to sort and filter data conveniently.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-with-filters"
+      "title": "Creating spreadsheet with filters",
+      "description": "Creates a spreadsheet with interactive filters in the header row that allows users to sort and filter data conveniently.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/creating-spreadsheet-with-filters",
+      "tags": ["Docs", "Sheets", "Filters"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["filters", "sorting", "tables"]
     },
     {
-        "title": "Filling spreadsheet",
-        "description": "Fill an empty spreadsheet with data stored in arrays.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/filling-spreadsheet"
+      "title": "Filling spreadsheet",
+      "description": "Fill an empty spreadsheet with data stored in arrays.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/filling-spreadsheet",
+      "tags": ["Docs", "Sheets", "Data"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["arrays", "fill", "data"]
     },
     {
-        "title": "Inserting formulas",
-        "description": "Add formulas to cells for calculations like sum, average, and count.",
-        "link": "/docs/office-api/samples/spreadsheet-editor/inserting-formulas"
+      "title": "Inserting formulas",
+      "description": "Add formulas to cells for calculations like sum, average, and count.",
+      "link": "/docs/office-api/samples/spreadsheet-editor/inserting-formulas",
+      "tags": ["Docs", "Sheets", "Formulas"],
+      "programmingLanguages": ["All"],
+      "tools": ["Office API"],
+      "operatingSystems": ["Cross-platform"],
+      "additionalTags": ["formulas", "calculations", "sum", "average", "count"]
     }
-]
+]  

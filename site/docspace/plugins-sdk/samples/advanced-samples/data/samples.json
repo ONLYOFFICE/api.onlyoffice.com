@@ -2,16 +2,31 @@
     {
         "title": "File extension filter plugin",
         "description": "This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/file-extension-filter"
+        "link": "/docspace/plugins-sdk/samples/advanced-samples/file-extension-filter",
+        "tags": ["DocSpace", "Plugins", "Files", "Rooms"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["file extension filter", "modal", "UI components"]
     },
     {
         "title": "Modal dialog plugin",
         "description": "This guide walks you through building a plugin for DocSpace that adds a custom toolbar button.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/model-dialog-plugin"
+        "link": "/docspace/plugins-sdk/samples/advanced-samples/model-dialog-plugin",
+        "tags": ["DocSpace", "Plugins", "UI"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["modal dialog", "toolbar button", "UI customization"]
     },
     {
         "title": "Settings plugin UI",
         "description": "This plugin adds a settings interface for administrators in DocSpace.",
-        "link": "/docspace/plugins-sdk/samples/advanced-samples/settings-plugin-ui"
+        "link": "/docspace/plugins-sdk/samples/advanced-samples/settings-plugin-ui",
+        "tags": ["DocSpace", "Plugins", "Settings", "Administration"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["settings UI", "admin panel", "configuration"]
     }
-]
+]  

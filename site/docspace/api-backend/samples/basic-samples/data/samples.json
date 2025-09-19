@@ -2,141 +2,101 @@
     {
         "title": "Authenticate a user",
         "description": "This example demonstrates how to authenticate a user in ONLYOFFICE DocSpace using the API and check the authentication with a token received.",
-        "link": "/docspace/api-backend/samples/basic-samples/authentication"
+        "link": "/docspace/api-backend/samples/basic-samples/authentication",
+        "tags": ["DocSpace", "Authorization", "Users"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["token", "authentication", "login"]
     },
     {
         "title": "Copy or move a file to a folder",
         "description": "This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/basic-samples/copy-or-move-file"
+        "link": "/docspace/api-backend/samples/basic-samples/copy-or-move-file",
+        "tags": ["DocSpace", "Files", "Folders"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["file management", "copy", "move"]
     },
     {
         "title": "Create and open a new file",
         "description": "This example demonstrates how to create a new file inside a specific folder in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/basic-samples/create-and-open-new-file"
+        "link": "/docspace/api-backend/samples/basic-samples/create-and-open-new-file",
+        "tags": ["DocSpace", "Files", "Folders"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["file creation", "file open"]
     },
     {
         "title": "Create a room and invite a user",
         "description": "This example demonstrates how to programmatically create a new room in ONLYOFFICE DocSpace and invite a user to it via email with specific access permissions.",
-        "link": "/docspace/api-backend/samples/basic-samples/create-room-invite-user"
+        "link": "/docspace/api-backend/samples/basic-samples/create-room-invite-user",
+        "tags": ["DocSpace", "Rooms", "Users"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["room creation", "user invitation"]
     },
     {
         "title": "Create a text file",
         "description": "This example demonstrates how to create a `.txt` file in a specified folder in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/basic-samples/create-text-file"
+        "link": "/docspace/api-backend/samples/basic-samples/create-text-file",
+        "tags": ["DocSpace", "Files", "Text documents"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["txt", "file creation"]
     },
     {
         "title": "Create a virtual data room (VDR) with a watermark",
         "description": "This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/basic-samples/create-vdr"
+        "link": "/docspace/api-backend/samples/basic-samples/create-vdr",
+        "tags": ["DocSpace", "Rooms", "Security"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["VDR", "watermark", "secure room"]
     },
     {
         "title": "Duplicate files and folders",
         "description": "This example demonstrates how to duplicate one or more files and folders in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/basic-samples/duplicate-files-and-folders"
+        "link": "/docspace/api-backend/samples/basic-samples/duplicate-files-and-folders",
+        "tags": ["DocSpace", "Files", "Folders"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["duplicate", "copy", "management"]
     },
     {
         "title": "Get folder and room contents",
         "description": "This example demonstrates how to retrieve the contents of a folder or room in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/basic-samples/get-folder-room-content"
+        "link": "/docspace/api-backend/samples/basic-samples/get-folder-room-content",
+        "tags": ["DocSpace", "Folders", "Rooms"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["folder content", "room content", "list files"]
     },
     {
         "title": "Get login history",
         "description": "This example automates the retrieval of the last login events in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/basic-samples/get-login-history"
+        "link": "/docspace/api-backend/samples/basic-samples/get-login-history",
+        "tags": ["DocSpace", "Users", "Authorization"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["login events", "history", "audit"]
     },
     {
         "title": "Invite users",
         "description": "This example automates the process of creating new users and sending them invitations in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/basic-samples/invite-users"
-    },
-    {
-        "title": "Lock and unlock a file",
-        "description": "This example demonstrates how to lock or unlock the specified file in ONLYOFFICE DocSpace and get a list of users and their access levels for the file.",
-        "link": "/docspace/api-backend/samples/integration-samples/lock-unlock-file"
-    },
-    {
-        "title": "Manage active portal connections",
-        "description": "This example shows how to manage active user sessions in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-active-connections"
-    },
-    {
-        "title": "Manage files in \"My Documents\"",
-        "description": "This example demonstrates how to interact with a user's personal space (\"My Documents\") in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-files-in-my-documents"
-    },
-    {
-        "title": "Manage files",
-        "description": "This example demonstrates how to manage files in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-files"
-    },
-    {
-        "title": "Manage folders",
-        "description": "This example demonstrates how to manage folders in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-folders"
-    },
-    {
-        "title": "Manage groups",
-        "description": "This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-groups"
-    },
-    {
-        "title": "Manage IP restrictions",
-        "description": "This example demonstrates how to retrieve and update IP restriction settings in ONLYOFFICE DocSpace using API requests.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-ip-restrictions"
-    },
-    {
-        "title": "Manage login settings",
-        "description": "This example demonstrates how to configure login security settings, including failed login attempt limits, account blocking duration, and login monitoring periods using API requests.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-login-settings"
-    },
-    {
-        "title": "Manage room links",
-        "description": "This example demonstrates how to set and retrieve room invitation or external links in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-room-links"
-    },
-    {
-        "title": "Manage rooms",
-        "description": "This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-room"
-    },
-    {
-        "title": "Manage the Trash section",
-        "description": "This example demonstrates how to retrieve, restore, and empty the contents of the Trash section in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-trash-sections"
-    },
-    {
-        "title": "Manage user photo",
-        "description": "This example demonstrates how to upload and delete user profile photos in ONLYOFFICE DocSpace using API requests.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-user-photo"
-    },
-    {
-        "title": "Manage users",
-        "description": "This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/manage-users"
-    },
-    {
-        "title": "Restore file to previous version",
-        "description": "This example demonstrates how to retrieve the edit history of a file in ONLYOFFICE DocSpace and restore it to a specific previous version using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/restore-file"
-    },
-    {
-        "title": "Retrieve user login audit events",
-        "description": "This example demonstrates how to retrieve user login audit activities in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/integration-samples/retrieve-user-login"
-    },
-    {
-        "title": "Update group manager",
-        "description": "This example demonstrates how to update group manager in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/integration-samples/update-group-manager"
-    },
-    {
-        "title": "Update user contacts",
-        "description": "This example demonstrates how to create and retrieve user contacts in ONLYOFFICE DocSpace using API requests.",
-        "link": "/docspace/api-backend/samples/integration-samples/update-user-contacts"
-    },
-    {
-        "title": "Update user role",
-        "description": "This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace using the API.",
-        "link": "/docspace/api-backend/samples/integration-samples/update-user-role"
+        "link": "/docspace/api-backend/samples/basic-samples/invite-users",
+        "tags": ["DocSpace", "Users", "Collaboration"],
+        "programmingLanguages": ["cURL"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["user creation", "invite", "onboarding"]
     }
 ]

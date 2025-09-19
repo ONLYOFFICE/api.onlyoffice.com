@@ -2,56 +2,111 @@
     {
         "title": "API plugin",
         "description": "This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via the REST API.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/api-plugin"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/api-plugin",
+        "tags": ["DocSpace", "Plugins", "API", "Rooms"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK", "Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["authorized requests", "API integration", "room creation"]
     },
     {
         "title": "Box component",
         "description": "This guide demonstrates how to configure and use the Box component in the DocSpace Plugins SDK with common layout, alignment, and spacing properties.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/box-component"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/box-component",
+        "tags": ["DocSpace", "Plugins", "UI Components"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["box component", "layout", "alignment", "spacing"]
     },
     {
         "title": "Button component",
         "description": "This guide demonstrates how to render and configure the Button component using the DocSpace Plugins SDK.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/button-component"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/button-component",
+        "tags": ["DocSpace", "Plugins", "UI Components"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["button component", "UI customization", "rendering"]
     },
     {
         "title": "ComboBox component",
         "description": "This guide demonstrates how to configure and use the ComboBox component in the DocSpace Plugins SDK with nearly all supported layout and style properties.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/combobox-component"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/combobox-component",
+        "tags": ["DocSpace", "Plugins", "UI Components"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["combobox", "dropdown", "UI component", "layout"]
     },
     {
         "title": "Context menu plugin",
         "description": "This guide walks you through creating a basic plugin for DocSpace that adds an item to the file context menu and logs an action when clicked.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/context-menu-plugin"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/context-menu-plugin",
+        "tags": ["DocSpace", "Plugins", "Files", "UI"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["context menu", "file actions", "UI extension"]
     },
     {
         "title": "File plugin",
         "description": "This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/file-plugin"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/file-plugin",
+        "tags": ["DocSpace", "Plugins", "Files"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["file extension", "custom icons", "file action"]
     },
     {
         "title": "Main button plugin",
         "description": "This guide walks you through creating a basic plugin for DocSpace that adds a button to the main toolbar and logs an action when clicked.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/main-button-plugin"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/main-button-plugin",
+        "tags": ["DocSpace", "Plugins", "UI"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["main toolbar", "button action", "UI customization"]
     },
     {
         "title": "Profile menu plugin",
         "description": "This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/profile-menu-plugin"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/profile-menu-plugin",
+        "tags": ["DocSpace", "Plugins", "Users", "UI"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["profile menu", "dropdown", "user action"]
     },
     {
         "title": "Settings plugin",
         "description": "This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/settings-plugin"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/settings-plugin",
+        "tags": ["DocSpace", "Plugins", "Settings", "Administration"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["settings panel", "plugin configuration", "admin interface"]
     },
     {
         "title": "Text component",
         "description": "This guide demonstrates how to configure and use the Text component in the DocSpace Plugins SDK with nearly all supported layout and style properties.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/text-component"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/text-component",
+        "tags": ["DocSpace", "Plugins", "UI Components"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["text component", "UI customization", "layout"]
     },
     {
         "title": "ToggleButton component",
         "description": "This guide demonstrates how to configure and use the ToggleButton component in the DocSpace Plugins SDK with nearly all supported layout and style properties.",
-        "link": "/docspace/plugins-sdk/samples/basic-samples/togglebutton-component"
+        "link": "/docspace/plugins-sdk/samples/basic-samples/togglebutton-component",
+        "tags": ["DocSpace", "Plugins", "UI Components"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins SDK"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["toggle button", "UI component", "style properties"]
     }
-]
+]  

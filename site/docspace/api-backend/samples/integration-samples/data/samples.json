@@ -2,56 +2,111 @@
     {
         "title": "Add DocSpace users to Trello",
         "description": "This script automates the process of retrieving DocSpace users and adding them to a Trello board.",
-        "link": "/docspace/api-backend/samples/integration-samples/add-docspace-users-to-trello"
+        "link": "/docspace/api-backend/samples/integration-samples/add-docspace-users-to-trello",
+        "tags": ["DocSpace", "Integration", "Users", "Trello"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["sync", "automation", "board members"]
     },
     {
         "title": "Add Notion users to DocSpace",
         "description": "This script automates the process of retrieving Notion users and adding them to the DocSpace.",
-        "link": "/docspace/api-backend/samples/integration-samples/add-notion-users-to-docspace"
+        "link": "/docspace/api-backend/samples/integration-samples/add-notion-users-to-docspace",
+        "tags": ["DocSpace", "Integration", "Users", "Notion"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["import users", "sync", "automation"]
     },
     {
         "title": "Add Trello users to DocSpace",
         "description": "This script automates the process of retrieving DocSpace users and adding them to a Trello board.",
-        "link": "/docspace/api-backend/samples/integration-samples/add-trello-users-to-docspace"
+        "link": "/docspace/api-backend/samples/integration-samples/add-trello-users-to-docspace",
+        "tags": ["DocSpace", "Integration", "Users", "Trello"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["sync", "automation", "invite"]
     },
     {
         "title": "Create DocSpace room from Trello board",
         "description": "This integration retrieves the name of a Trello board and creates a new room in ONLYOFFICE DocSpace with the same title.",
-        "link": "/docspace/api-backend/samples/integration-samples/create-docspace-room-from-trello-board"
+        "link": "/docspace/api-backend/samples/integration-samples/create-docspace-room-from-trello-board",
+        "tags": ["DocSpace", "Integration", "Rooms", "Trello"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["room creation", "board sync"]
     },
     {
         "title": "Export DocSpace file to Dropbox",
         "description": "This integration allows you to automatically export files from DocSpace to Dropbox using a presigned download URL.",
-        "link": "/docspace/api-backend/samples/integration-samples/export-file-to-dropbox"
+        "link": "/docspace/api-backend/samples/integration-samples/export-file-to-dropbox",
+        "tags": ["DocSpace", "Integration", "Files", "Dropbox"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["export", "cloud storage", "automation"]
     },
     {
         "title": "Generate DocSpace structure from Asana projects",
         "description": "This integration creates collaboration rooms in ONLYOFFICE DocSpace based on Asana projects and generates folders for each task inside the corresponding room.",
-        "link": "/docspace/api-backend/samples/integration-samples/generate-docspace-structure-from-asana"
+        "link": "/docspace/api-backend/samples/integration-samples/generate-docspace-structure-from-asana",
+        "tags": ["DocSpace", "Integration", "Rooms", "Folders", "Asana"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["automation", "room generation", "project sync"]
     },
     {
         "title": "Import Dropbox file to DocSpace",
         "description": "This integration allows you to automatically import files from Dropbox into a specific room in ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/integration-samples/import-dropbox-file-to-docspace"
+        "link": "/docspace/api-backend/samples/integration-samples/import-dropbox-file-to-docspace",
+        "tags": ["DocSpace", "Integration", "Files", "Dropbox"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["import", "cloud sync", "automation"]
     },
     {
         "title": "Import Trello card attachments to DocSpace",
         "description": "This integration allows you to automatically import all file attachments from a specific Trello card into an ONLYOFFICE DocSpace room.",
-        "link": "/docspace/api-backend/samples/integration-samples/import-trello-attachments-to-docspace"
+        "link": "/docspace/api-backend/samples/integration-samples/import-trello-attachments-to-docspace",
+        "tags": ["DocSpace", "Integration", "Files", "Trello"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["import", "attachments", "automation"]
     },
     {
         "title": "Invite DocSpace user from Asana task",
         "description": "This integration automatically retrieves the email of the assignee from an Asana task and invites them to ONLYOFFICE DocSpace.",
-        "link": "/docspace/api-backend/samples/integration-samples/invite-user-from-asana-task"
+        "link": "/docspace/api-backend/samples/integration-samples/invite-user-from-asana-task",
+        "tags": ["DocSpace", "Integration", "Users", "Asana"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["automation", "user invite", "task sync"]
     },
     {
         "title": "Share Dropbox folders with DocSpace group members",
         "description": "This integration automates the process of creating shared Dropbox folders for DocSpace group members and inviting them to collaborate.",
-        "link": "/docspace/api-backend/samples/integration-samples/share-dropbox-folders-with-docspace-group-members"
+        "link": "/docspace/api-backend/samples/integration-samples/share-dropbox-folders-with-docspace-group-members",
+        "tags": ["DocSpace", "Integration", "Folders", "Dropbox", "Groups"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["share", "cloud storage", "collaboration"]
     },
     {
         "title": "Share Dropbox folders with DocSpace users",
         "description": "This integration automates the process of sharing Dropbox folders with DocSpace users.",
-        "link": "/docspace/api-backend/samples/integration-samples/share-dropbox-folders-with-docspace-users"
+        "link": "/docspace/api-backend/samples/integration-samples/share-dropbox-folders-with-docspace-users",
+        "tags": ["DocSpace", "Integration", "Folders", "Dropbox", "Users"],
+        "programmingLanguages": ["JavaScript", "Node.js"],
+        "tools": ["Backend REST API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["share", "cloud storage", "automation"]
     }
 ]

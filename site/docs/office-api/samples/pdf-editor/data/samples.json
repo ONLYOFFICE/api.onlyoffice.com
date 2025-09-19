@@ -2,16 +2,31 @@
     {
         "title": "Creating advanced form",
         "description": "Create an advanced form with a table structure in a PDF editor.",
-        "link": "/docs/office-api/samples/pdf-editor/creating-advanced-form"
+        "link": "/docs/office-api/samples/pdf-editor/creating-advanced-form",
+        "tags": ["Docs", "PDF", "Forms"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["advanced", "forms", "pdf"]
     },
     {
         "title": "Creating basic form",
         "description": "Create a basic form with image and text inputs.",
-        "link": "/docs/office-api/samples/pdf-editor/creating-basic-form"
+        "link": "/docs/office-api/samples/pdf-editor/creating-basic-form",
+        "tags": ["Docs", "PDF", "Forms"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["basic", "forms", "pdf"]
     },
     {
         "title": "Filling form",
         "description": "Fill a PDF form using data stored in an object.",
-        "link": "/docs/office-api/samples/pdf-editor/filling-form"
+        "link": "/docs/office-api/samples/pdf-editor/filling-form",
+        "tags": ["Docs", "PDF", "Forms"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["fill", "forms", "pdf"]
     }
 ]

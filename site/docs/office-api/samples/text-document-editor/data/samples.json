@@ -2,181 +2,361 @@
     {
         "title": "Adding footer with date and company name",
         "description": "Create a document with footer containing date and company name.",
-        "link": "/docs/office-api/samples/text-document-editor/adding-footer-with-date-and-company"
+        "link": "/docs/office-api/samples/text-document-editor/adding-footer-with-date-and-company",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["footer", "date", "company name"]
     },
     {
         "title": "Adding header and footer with logo",
         "description": "Create a document with a professional header containing a company logo and organization name.",
-        "link": "/docs/office-api/samples/text-document-editor/adding-header-footer-logo"
+        "link": "/docs/office-api/samples/text-document-editor/adding-header-footer-logo",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["header", "footer", "logo", "branding"]
     },
     {
         "title": "Adding page numbering in footer",
         "description": "Create a document with page numbering in the footer.",
-        "link": "/docs/office-api/samples/text-document-editor/adding-page-numbering-footer"
+        "link": "/docs/office-api/samples/text-document-editor/adding-page-numbering-footer",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["footer", "page numbering"]
     },
     {
         "title": "Adding text watermark",
         "description": "Create a document with a \"Confidential\" text watermark for marking document confidentiality level.",
-        "link": "/docs/office-api/samples/text-document-editor/adding-text-watermark"
+        "link": "/docs/office-api/samples/text-document-editor/adding-text-watermark",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["watermark", "text", "confidential"]
     },
     {
         "title": "Adding image watermark",
         "description": "Create a document with an image watermark with custom settings.",
-        "link": "/docs/office-api/samples/text-document-editor/adding-watermark"
+        "link": "/docs/office-api/samples/text-document-editor/adding-watermark",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["watermark", "image", "branding"]
     },
     {
         "title": "Creating auto-width table",
         "description": "Create a document with a table that automatically adjusts column widths based on content.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-auto-width-table"
+        "link": "/docs/office-api/samples/text-document-editor/creating-auto-width-table",
+        "tags": ["Docs", "Text documents", "Editing", "Tables"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "auto-width", "layout"]
     },
     {
         "title": "Creating borderless table document",
         "description": "Create a document with a borderless table for structured information display.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-borderless-table-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-borderless-table-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "borderless", "layout"]
     },
     {
         "title": "Creating a bulleted task list",
         "description": "Create a document with a bulleted task list for enumerating tasks, steps, or requirements.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-bulleted-task-list"
+        "link": "/docs/office-api/samples/text-document-editor/creating-bulleted-task-list",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["lists", "bulleted", "tasks"]
     },
     {
         "title": "Creating event invitation",
         "description": "Create a custom-sized event invitation document with specific page dimensions and content.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-event-invitation"
+        "link": "/docs/office-api/samples/text-document-editor/creating-event-invitation",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["invitation", "custom-size", "page-layout"]
     },
     {
         "title": "Creating a document with fixed-width column table",
         "description": "Create a document with a table that has fixed column widths for predictable document structure.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-fixed-width-table-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-fixed-width-table-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "fixed-width", "structure"]
     },
     {
         "title": "Creating formal document",
         "description": "Create a document following the structure of a formal paper.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-formal-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-formal-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["formal", "paper", "structure"]
     },
     {
         "title": "Creating formatted table",
         "description": "Create a document with a formatted table containing employee data with styled headers and center-aligned content.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-formatted-table"
+        "link": "/docs/office-api/samples/text-document-editor/creating-formatted-table",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "formatted", "employee-data"]
     },
     {
         "title": "Creating landscape document",
         "description": "Create a document with landscape page orientation for wide tables, charts, or content requiring more horizontal space.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-landscape-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-landscape-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["page-orientation", "landscape", "wide-content"]
     },
     {
         "title": "Creating nested list",
         "description": "Create a document with a multi-level nested list that combines numbered and bulleted items.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-nested-list"
+        "link": "/docs/office-api/samples/text-document-editor/creating-nested-list",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["lists", "nested", "multi-level"]
     },
     {
         "title": "Creating nested table document",
         "description": "Create a document with nested tables (table within a table) for displaying hierarchical data.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-nested-table-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-nested-table-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "nested", "hierarchical-data"]
     },
     {
         "title": "Creating note blocks",
         "description": "Create a document with styled note blocks that highlight important information using left border formatting.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-note-blocks"
-    },
+        "link": "/docs/office-api/samples/text-document-editor/creating-note-blocks",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["notes", "highlight", "borders"]
+    },      
     {
         "title": "Creating a numbered steps list",
         "description": "Create a document with a numbered steps list for step-by-step instructions, algorithms, and procedures.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-numbered-steps-list"
+        "link": "/docs/office-api/samples/text-document-editor/creating-numbered-steps-list",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["lists", "numbered", "instructions"]
     },
     {
         "title": "Creating paragraph with colored border",
         "description": "Create a document with a paragraph that has a decorative colored bottom border.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-paragraph-with-colored-border"
+        "link": "/docs/office-api/samples/text-document-editor/creating-paragraph-with-colored-border",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["paragraph", "borders", "styling"]
     },
     {
         "title": "Creating product catalog document",
         "description": "Create a document with a product catalog table containing images and product information.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-product-catalog-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-product-catalog-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "catalog", "products"]
     },
     {
         "title": "Creating quote paragraph",
         "description": "Create a document with a quote paragraph that has special visual formatting for highlighting quoted text or excerpts.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-quote-paragraph"
+        "link": "/docs/office-api/samples/text-document-editor/creating-quote-paragraph",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["quote", "paragraph", "highlighting"]
     },
     {
         "title": "Creating report document",
         "description": "Create reports on all comments and every change made to the document in review mode.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-report-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-report-document",
+        "tags": ["Docs", "Text documents", "Collaboration"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["reports", "comments", "review-mode"]
     },
     {
         "title": "Creating sales report with merged table cells",
         "description": "Create a professional sales report document with a table containing merged cells and proper formatting.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-sales-report-table"
+        "link": "/docs/office-api/samples/text-document-editor/creating-sales-report-table",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["sales-report", "tables", "merged-cells"]
     },
     {
         "title": "Creating signature block",
         "description": "Create a document with a signature block containing position, name and signature line.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-signature-block"
+        "link": "/docs/office-api/samples/text-document-editor/creating-signature-block",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["signature", "block", "documents"]
     },
     {
         "title": "Creating structured report",
         "description": "Create a document with structured sections, specific formatting, alignment, and page breaks.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-structured-report"
+        "link": "/docs/office-api/samples/text-document-editor/creating-structured-report",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["structured", "reports", "formatting"]
     },
     {
         "title": "Creating table document",
         "description": "Create a styled table filled with array-based values.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-table-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-table-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "arrays", "data"]
     },
     {
         "title": "Creating table from JSON data",
         "description": "Create a document with a table populated from JSON data array.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-table-from-json-data"
+        "link": "/docs/office-api/samples/text-document-editor/creating-table-from-json-data",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "json", "data"]
     },
     {
         "title": "Creating table in header or footer",
         "description": "Create a document with a table in the footer that displays repeating company information on every page.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-table-in-header-footer"
+        "link": "/docs/office-api/samples/text-document-editor/creating-table-in-header-footer",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "header", "footer"]
     },
     {
         "title": "Creating table with nested headers",
         "description": "Create a document with a table containing nested headers and merged cells.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-table-with-nested-headers"
+        "link": "/docs/office-api/samples/text-document-editor/creating-table-with-nested-headers",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "nested-headers", "merged-cells"]
     },
     {
         "title": "Creating title page document",
         "description": "Create a document with a formatted title page featuring centered text and proper spacing.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-title-page-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-title-page-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["title-page", "formatting", "documents"]
     },
     {
-        "title": "Creating two‑column text document",
+        "title": "Creating two-column text document",
         "description": "Create a document with text arranged in two columns—useful for instructions, brochures, and articles.",
-        "link": "/docs/office-api/samples/text-document-editor/creating-two-column-text-document"
+        "link": "/docs/office-api/samples/text-document-editor/creating-two-column-text-document",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["two-columns", "layout", "documents"]
     },
     {
         "title": "Formatting variables in text",
         "description": "Create a document with formulas or variables styled differently from the main text.",
-        "link": "/docs/office-api/samples/text-document-editor/formatting-variables-in-text"
+        "link": "/docs/office-api/samples/text-document-editor/formatting-variables-in-text",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["variables", "formatting", "formulas"]
     },
     {
         "title": "Highlighting key terms",
         "description": "Create a document with highlighted key terms using bold formatting and color styling.",
-        "link": "/docs/office-api/samples/text-document-editor/highlighting-key-terms"
+        "link": "/docs/office-api/samples/text-document-editor/highlighting-key-terms",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["highlighting", "keywords", "styling"]
     },
     {
         "title": "Highlighting text with background color",
         "description": "Create a document with colored highlighting inside sentences for visual emphasis.",
-        "link": "/docs/office-api/samples/text-document-editor/highlighting-text-with-background-color"
+        "link": "/docs/office-api/samples/text-document-editor/highlighting-text-with-background-color",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["highlighting", "background-color", "emphasis"]
     },
     {
         "title": "Inserting hyperlink into sentence",
         "description": "Create a document with a clickable hyperlink embedded within a regular paragraph.",
-        "link": "/docs/office-api/samples/text-document-editor/inserting-hyperlink-into-sentence"
+        "link": "/docs/office-api/samples/text-document-editor/inserting-hyperlink-into-sentence",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["hyperlinks", "links", "documents"]
     },
     {
         "title": "Inserting special symbols",
         "description": "Create a document with special Unicode symbols commonly used in legal, scientific, and financial documents.",
-        "link": "/docs/office-api/samples/text-document-editor/inserting-special-symbols"
+        "link": "/docs/office-api/samples/text-document-editor/inserting-special-symbols",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["unicode", "symbols", "special-characters"]
     },
     {
         "title": "Inserting text into a document",
         "description": "Create a document with formatted text using various methods, including bold, italic, font size, color, and line breaks.",
-        "link": "site/docs/office-api/samples/text-document-editor/text-document-editor"
-    }
+        "link": "site/docs/office-api/samples/text-document-editor/text-document-editor",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["All"],
+        "tools": ["Office API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["text", "formatting", "documents"]
+    }      
 ]

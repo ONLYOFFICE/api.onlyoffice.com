@@ -2,111 +2,221 @@
     {
         "title": "Acronym full forms",
         "description": "Identifies all acronyms in the document and adds their full forms in comments.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/acronym-full-forms"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/acronym-full-forms",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["acronyms", "comments", "definitions"]
     },
     {
         "title": "Automatic bookmark generation",
         "description": "Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/automatic-bookmark-generation"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/automatic-bookmark-generation",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["bookmarks", "headings", "automation"]
     },
     {
         "title": "Calculate time to read",
         "description": "Analyzes the text content of the entire document, counts the number of words, adjusts for the text complexity, and calculates how long it would take an average adult to read it.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/calculate-time-to-read"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/calculate-time-to-read",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["reading time", "word count", "analysis"]
     },
     {
         "title": "Create content control list",
         "description": "Creates a ContentControlList from all single-level numbered lists throughout the document, as well as from the manually selected text section.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/create-content-control-list"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/create-content-control-list",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["content control", "lists", "numbered"]
     },
     {
         "title": "Create custom header",
         "description": "Creates a custom header with an image and a title.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/create-custom-header"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/create-custom-header",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["header", "image", "title"]
     },
     {
         "title": "Custom header and footer generation",
         "description": "Applies predefined headers and footers to all pages in the document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/custom-header-footer-generation"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/custom-header-footer-generation",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["header", "footer", "automation"]
     },
     {
         "title": "Delete bookmark",
         "description": "Searches for bookmarks containing a specific word in their text and deletes them from the document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/delete-bookmark"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/delete-bookmark",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["bookmarks", "delete", "search"]
     },
     {
         "title": "Generate hyperlinks",
         "description": "Generates and inserts hyperlinks instead of text URLs.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-hyperlinks"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-hyperlinks",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["hyperlinks", "urls", "automation"]
     },
     {
         "title": "Generate table of contents",
         "description": "Generates a table of contents by scanning the document for headings.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-table-of-contents"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-table-of-contents",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["TOC", "headings", "navigation"]
     },
     {
         "title": "Generate word definitions",
-        "description": "Generates word definitions in your document using the [Dictionary API](https://api-ninjas.com/api/dictionary) offered by [API Ninjas](https://api-ninjas.com).",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-word-definitions"
+        "description": "Generates word definitions in your document using the Dictionary API.",
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/generate-word-definitions",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros", "API"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["definitions", "dictionary", "API"]
     },
     {
         "title": "Highlight predefined keywords",
         "description": "Highlights predefined keywords in text document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/highlight-predefined-keywords"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/highlight-predefined-keywords",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["highlight", "keywords", "text"]
     },
     {
         "title": "Identify overused words",
         "description": "Analyzes the frequency of words in a document and identifies overused words based on specified thresholds.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/identify-overused-words"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/identify-overused-words",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["word frequency", "analysis", "overused words"]
     },
     {
         "title": "Insert text",
         "description": "Inserts text into the document at the current cursor position.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-text"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-text",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["insert", "text", "cursor"]
     },
     {
         "title": "Insert unique id",
         "description": "Inserts a unique id into a form document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-unique-id"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-unique-id",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["unique id", "forms", "automation"]
     },
     {
         "title": "Insert watermark",
         "description": "Inserts or removes a custom watermark on every page of the document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-watermark"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/insert-watermark",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["watermark", "pages", "customization"]
     },
     {
         "title": "Paragraphs to table",
         "description": "Converts a list of numbered paragraphs into a table.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/paragraphs-to-table"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/paragraphs-to-table",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["paragraphs", "table", "conversion"]
     },
     {
         "title": "Remove empty tables",
         "description": "Removes all the empty tables from the document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/remove-empty-tables"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/remove-empty-tables",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "remove", "cleanup"]
     },
     {
         "title": "Remove extra spaces",
         "description": "Removes extra spaces in text document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/remove-extra-spaces"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/remove-extra-spaces",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["spaces", "cleanup", "text"]
     },
     {
         "title": "Replace words in document",
         "description": "Searches for a word throughout the document and replaces it with the given replacement word.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/replace-words-in-document"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/replace-words-in-document",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["replace", "words", "search"]
     },
     {
         "title": "Reset text properties",
         "description": "Resets the text properties of all the paragraphs in a document to the default settings.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/reset-text-properties"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/reset-text-properties",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["reset", "text properties", "default"]
     },
     {
         "title": "Search for keyword in comments",
         "description": "Marks comments containing a specific keyword as solved in a document.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/search-for-keyword-in-comments"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/search-for-keyword-in-comments",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["comments", "search", "keywords"]
     },
     {
         "title": "Sort tables",
         "description": "Automatically sorts table rows alphabetically or numerically based on the selected column.",
-        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/sort-tables"
+        "link": "/docs/plugin-and-macros/samples/macro-samples/text-document-editor/sort-tables",
+        "tags": ["Docs", "Text Document"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Macros"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["tables", "sorting", "automation"]
     }
 ]

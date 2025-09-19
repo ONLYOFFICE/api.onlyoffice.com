@@ -2,166 +2,141 @@
     {
         "title": "Add comment in cell",
         "description": "Adds comments to a cell of the spreadsheet.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/add-comment-in-cell"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/add-comment-in-cell",
+        "tags": ["Docs", "Sheets", "Editing"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["comments", "cells", "annotation"]
     },
     {
         "title": "Add custom fields",
         "description": "Inserts custom fields into the document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/add-custom-fields"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/add-custom-fields",
+        "tags": ["Docs", "Text documents", "Customization"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["fields", "customization"]
     },
     {
         "title": "Autocomplete",
         "description": "Helps the user to input text quickly.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/autocomplete"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/autocomplete",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["autocomplete", "typing", "UX"]
     },
     {
         "title": "Chess",
         "description": "Inserts a Chess Board object into the document editor.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/chess"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/chess",
+        "tags": ["Docs", "Text documents", "Customization"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["chess", "game", "object embedding"]
     },
     {
         "title": "Clippy",
         "description": "Adds a clippy assistant to the document editor.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/clippy"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/clippy",
+        "tags": ["Docs", "Text documents", "Artificial intelligence (AI)"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["assistant", "helper", "UI"]
     },
     {
         "title": "Context menu and events",
         "description": "Tracks the events of calling the context menu and clicking on its items.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/context-menu-and-events"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/context-menu-and-events",
+        "tags": ["Docs", "Customization", "Integration"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["context menu", "events", "tracking"]
     },
     {
         "title": "Count words and characters",
         "description": "Counts paragraphs, words, and characters with or without spaces in the selected part of the document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/count-words-and-characters"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/count-words-and-characters",
+        "tags": ["Docs", "Text documents", "Editing"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["word count", "characters", "analysis"]
     },
     {
         "title": "Extended comments",
         "description": "Pastes, edits, and removes comments and replies (with user data) in a document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/extended-comments"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/extended-comments",
+        "tags": ["Docs", "Collaboration", "Text documents"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["comments", "collaboration", "user data"]
     },
     {
         "title": "Get and paste html",
         "description": "Gets the document content as HTML code, modifies it, and pastes back to the document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/get-and-paste-html"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/get-and-paste-html",
+        "tags": ["Docs", "Integration", "Customization"],
+        "programmingLanguages": ["JavaScript", "HTML"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["HTML", "export", "import"]
     },
     {
         "title": "Hello world",
         "description": "Inserts the Hello world! phrase when the user presses the button.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/hello-world"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/hello-world",
+        "tags": ["Docs", "Customization", "Integration"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["example", "basic", "demo"]
     },
     {
         "title": "Highlight code",
         "description": "Connects the highlight.js library for highlighting code syntax with the necessary language, style, and background color.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/highlight-code"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/highlight-code",
+        "tags": ["Docs", "Text documents", "Customization"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["syntax highlighting", "highlight.js", "code"]
     },
     {
         "title": "Invoices",
         "description": "Inserts template fields for invoice information.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/invoices"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/invoices",
+        "tags": ["Docs", "Customization", "Forms"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["invoices", "templates", "fields"]
     },
     {
         "title": "Language tool",
-        "description": "Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual grammar, and style checker to check the text for grammar, style, and spell errors.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/language-tool"
+        "description": "Connects the LanguageTool assistant, multilingual grammar, and style checker to check the text for grammar, style, and spell errors.",
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/language-tool",
+        "tags": ["Docs", "Text documents", "Artificial intelligence (AI)"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["grammar", "spellcheck", "languagetool"]
     },
     {
         "title": "Load custom fields",
         "description": "Loads custom fields from the document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/load-custom-fields"
-    },
-    {
-        "title": "Move cursor",
-        "description": "Moves the text cursor to the document start/end.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/move-cursor"
-    },
-    {
-        "title": "OCR",
-        "description": "Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) for extracting text from an image (*.png* *.jpg*) and inserting it into the document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/ocr"
-    },
-    {
-        "title": "Photo editor",
-        "description": "Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for editing images right in the document: cropping, resizing, applying effects, etc.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/photo-editor"
-    },
-    {
-        "title": "Search and change text background color",
-        "description": "Searches for target text and changes its background color.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/search-and-change-text-background-color"
-    },
-    {
-        "title": "Search and replace on start",
-        "description": "Searches for and replaces text in the document when it is reopened.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/search-and-replace-on-start"
-    },
-    {
-        "title": "Search and replace",
-        "description": "Searches for target text and replaces it with something else.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/search-and-replace"
-    },
-    {
-        "title": "Settings",
-        "description": "Protects a document using a watermark.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/settings"
-    },
-    {
-        "title": "Speech",
-        "description": "Converts the selected text into speech.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/speech"
-    },
-    {
-        "title": "Symbol table",
-        "description": "Inserts special symbols into the document.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/symbol-table"
-    },
-    {
-        "title": "Telegram",
-        "description": "Connects the Telegram application for instant messaging within the ONLYOFFICE editors.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/telegram"
-    },
-    {
-        "title": "Templates",
-        "description": "Inserts document templates generated by the Document Builder script.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/templates"
-    },
-    {
-        "title": "Thesaurus",
-        "description": "Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word synonyms and antonyms.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/thesaurus"
-    },
-    {
-        "title": "Translator",
-        "description": "Connects the [Google Translate API](https://cloud.google.com/translate?hl=ru) for translating the selected text into other languages.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/translator"
-    },
-    {
-        "title": "Typograf",
-        "description": "Connects the [Typograf](https://github.com/typograf/typograf) assistant to prepare text for publishing by correcting typographical errors.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/typograf"
-    },
-    {
-        "title": "Work with content controls content",
-        "description": "Inserts the content of one content control into another.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/work-with-content-controls-content"
-    },
-    {
-        "title": "Work with content controls navigation",
-        "description": "Inserts content controls (automatically or manually), navigates and selects them as well as pastes text into them.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/work-with-content-controls-navigation"
-    },
-    {
-        "title": "Work with content controls tags",
-        "description": "Gets the list of content controls tags.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/work-with-content-controls-tags"
-    },
-    {
-        "title": "YouTube",
-        "description": "Connects [youtube iframe\\_api](https://developers.google.com/youtube/iframe_api_reference) for embedding YouTube videos into documents as OLE objects and managing them by adjusting their size, rotating, and changing position.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/youtube"
-    },
-    {
-        "title": "Zotero",
-        "description": "Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.",
-        "link": "/docs/plugin-and-macros/samples/plugin-samples/zotero"
+        "link": "/docs/plugin-and-macros/samples/plugin-samples/load-custom-fields",
+        "tags": ["Docs", "Customization", "Forms"],
+        "programmingLanguages": ["JavaScript"],
+        "tools": ["Plugins"],
+        "operatingSystems": ["Cross-platform"],
+        "additionalTags": ["fields", "load", "templates"]
     }
-]
+]  
