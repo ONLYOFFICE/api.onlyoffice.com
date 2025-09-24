@@ -572,7 +572,7 @@ const logo = {
 
 `Type: string`
 
-Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 172x40.
+Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/logo.png"`
 
@@ -580,7 +580,7 @@ Path to the image file used to show in the common work mode (i.e. in view and ed
 
 `Type: string`
 
-Path to the image file used for the dark header (for example, in a dark theme or in a theme with a colored header). The image must have the following size: 172x40.
+Path to the image file used for the dark header (for example, in a dark theme or in a theme with a colored header). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/dark-logo.png"`
 
@@ -588,7 +588,7 @@ Path to the image file used for the dark header (for example, in a dark theme or
 
 `Type: string`
 
-Path to the image file used for the light header (for example, in the Gray theme). The image must have the following size: 172x40.
+Path to the image file used for the light header (for example, in the Gray theme). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/light-logo.png"`
 
