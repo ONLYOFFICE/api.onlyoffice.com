@@ -34,7 +34,7 @@ This example automates the retrieval of the last login events in ONLYOFFICE DocS
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to retrieve last login users: ${res.status} - ${t}`);
+          console.log(`Last login users retrieval failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -46,7 +46,7 @@ This example automates the retrieval of the last login events in ONLYOFFICE DocS
         return userIds;
       })
       .catch((err) => {
-        console.log(`Failed to retrieve last login users: ${err.message}`);
+        console.log(`Last login users retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -83,7 +83,7 @@ This example automates the retrieval of the last login events in ONLYOFFICE DocS
       print(f'Last login users: {user_ids}')
       return user_ids
     else:
-      print(f'Failed to retrieve last login users: {response.status_code} - {response.text}')
+      print(f"Last login users retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
  
   if __name__ == "__main__":

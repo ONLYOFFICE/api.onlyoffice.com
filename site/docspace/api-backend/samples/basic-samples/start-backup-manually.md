@@ -43,15 +43,14 @@ This example demonstrates how to start a backup in ONLYOFFICE DocSpace on demand
     // Handle API response
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Error: ${res.status} - ${text}`);
+      console.log(`Backup start failed. Status code: ${res.status}, Message: ${text}`);
       return null;
-    
+    }
 
     const data = await res.json();
     const result = data?.response || {};
     console.log(`Backup task started. Progress: ${result.progress}%`);
     return result;
-    }
   }
 
   // Run
@@ -94,7 +93,7 @@ This example demonstrates how to start a backup in ONLYOFFICE DocSpace on demand
       result = response.json().get('response', {})
       print(f"Backup task started. Progress: {result.get('progress')}%")
     else:
-      print(f"Error: {response.status_code} - {response.text}")
+      print(f"Backup start failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     start_backup()

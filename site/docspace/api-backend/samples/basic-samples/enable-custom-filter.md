@@ -36,7 +36,8 @@ This example demonstrates how to enable the Custom Filter mode for a specific fi
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to enable Custom Filter mode: ${t}`);
+          console.log(`Custom Filter enabling failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -88,7 +89,7 @@ This example demonstrates how to enable the Custom Filter mode for a specific fi
       print(f'• View URL: {result.get('webUrl') or result.get('viewUrl')}')
       print(f'• Filter Enabled By: {result.get('customFilterEnabledBy')}')
     else:
-      raise Exception(f'Failed to enable Custom Filter mode: {response.text}')
+      print(f"Custom Filter enabling failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the method
   if __name__ == '__main__':

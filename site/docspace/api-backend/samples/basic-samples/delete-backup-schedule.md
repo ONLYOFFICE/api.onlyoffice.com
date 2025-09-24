@@ -42,11 +42,12 @@ This example demonstrates how to delete the current portal’s backup schedule i
     })
       .then((res) => {
         if (res.status === 200) return res.json();
-        return res.text().then((t) => {
-          throw new Error(`Failed to delete backup schedule: ${res.status} - ${t}`);
-        });
+        const text = await res.text();
+        console.log(`Backup schedule deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
       .then((data) => {
+        if (!data) return null;
         const result = data?.response;
         console.log(`Backup schedule deleted: ${result}`);
         return result;
@@ -71,7 +72,7 @@ This example demonstrates how to delete the current portal’s backup schedule i
 
   # Headers with authentication
   HEADERS = {
-    'Authorization': AUTH_TOKEN
+    'Authorization': API_KEY
   }
 
   def delete_backup_schedule(dump: bool | None = None):
@@ -81,7 +82,7 @@ This example demonstrates how to delete the current portal’s backup schedule i
       params['Dump'] = dump
 
     response = requests.delete(
-      f'{BASE_URL}/api/2.0/backup/deletebackupschedule',
+      f'{API_HOST}/api/2.0/backup/deletebackupschedule',
       headers=HEADERS,
       params=params
     )
@@ -91,7 +92,8 @@ This example demonstrates how to delete the current portal’s backup schedule i
       print(f"Backup schedule deleted: {result}")
       return result
     else:
-      raise Exception(f"Failed to delete backup schedule: {response.status_code} - {response.text}")
+      print(f"Backup schedule deletion failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == '__main__':
     # Delete backup schedule without specifying Dump

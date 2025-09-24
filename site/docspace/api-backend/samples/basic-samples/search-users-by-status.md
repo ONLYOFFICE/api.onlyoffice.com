@@ -34,7 +34,8 @@ This example demonstrates how to search for users in ONLYOFFICE DocSpace based o
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to search users: ${text}`);
+      console.log(`User search by status failed. Status code: ${res.status}, Message: ${text}`);
+      return [];
     }
 
     const data = await res.json();
@@ -56,7 +57,7 @@ This example demonstrates how to search for users in ONLYOFFICE DocSpace based o
         filterValue: 'Sales',
       });
     } catch (err) {
-      console.error(err.message);
+      console.log(`User search by status error: ${err.message}`);
     }
   })();
   ```
@@ -98,7 +99,8 @@ This example demonstrates how to search for users in ONLYOFFICE DocSpace based o
         print(f'- {user.get('displayName')} | Email: {user.get('email')} | ID: {user.get('id')}')
       return users
     else:
-      raise Exception(f'Failed to search users: {response.text}')
+      print(f"User search by status failed. Status code: {response.status_code}, Message: {response.text}")
+      return []
 
   # Example usage
   if __name__ == '__main__':

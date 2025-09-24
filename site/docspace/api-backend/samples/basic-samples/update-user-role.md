@@ -38,7 +38,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to create user: ${res.status} - ${t}`);
+      console.log(`User creation failed. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
 
@@ -55,7 +55,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to retrieve user: ${res.status} - ${t}`);
+      console.log(`User retrieval failed. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
 
@@ -75,8 +75,8 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to update user role: ${res.status} - ${t}`);
-      return;
+      console.log(`User role update failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
 
     console.log(`User ${userId} role updated to ${role}`);
@@ -124,7 +124,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
       print(f'User created successfully: {user_id}')
       return user_id
     else:
-      print(f'Failed to create user: {response.status_code} - {response.text}')
+      print(f"User creation failed. Status code: {response.status_code}, Message: {response.text}")
       return None
  
   # Step 2: Retrieve a user by ID
@@ -136,7 +136,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
       print(f'User retrieved: {user_data}')
       return user_data
     else:
-      print(f'Failed to retrieve user: {response.status_code} - {response.text}')
+      print(f"User retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   
   # Step 3: Update user role
@@ -147,7 +147,7 @@ This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace
     if response.status_code == 200:
       print(f'User {user_id} role updated to {role}')
     else:
-      print('Failed to update user role:', response.status_code, response.text)
+      print(f"User role update failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     # Step 1: Create a new user
@@ -189,7 +189,7 @@ The API returns a user ID, which is required for further operations.
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to create user: ${res.status} - ${t}`);
+      console.log(`User creation failed. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
 
@@ -217,7 +217,7 @@ The API returns a user ID, which is required for further operations.
       print(f'User created successfully: {user_id}')
       return user_id
     else:
-      print(f'Failed to create user: {response.status_code} - {response.text}')
+      print(f"User creation failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -242,7 +242,7 @@ This step ensures that the user exists before making any updates or deletions.
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to retrieve user: ${res.status} - ${t}`);
+      console.log(`User retrieval failed. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
 
@@ -264,7 +264,7 @@ This step ensures that the user exists before making any updates or deletions.
       print(f'User retrieved: {user_data}')
       return user_data
     else:
-      print(f'Failed to retrieve user: {response.status_code} - {response.text}')
+      print(f"User retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -291,8 +291,8 @@ The request updates the user's profile, applying the new role or permissions.
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to update user role: ${res.status} - ${t}`);
-      return;
+      console.log(`User role update failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
 
     console.log(`User ${userId} role updated to ${role}`);
@@ -310,7 +310,7 @@ The request updates the user's profile, applying the new role or permissions.
     if response.status_code == 200:
       print(f'User {user_id} role updated to {role}')
     else:
-      print('Failed to update user role:', response.status_code, response.text)
+      print(f"User role update failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

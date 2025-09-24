@@ -42,7 +42,8 @@ This example demonstrates how to retrieve the current portal’s backup schedule
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to get backup schedule: ${res.status} - ${t}`);
+          console.log(`Backup schedule retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -55,7 +56,7 @@ This example demonstrates how to retrieve the current portal’s backup schedule
         return schedule;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Backup schedule retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -99,7 +100,8 @@ This example demonstrates how to retrieve the current portal’s backup schedule
       print("Dump enabled:", schedule.get('dump'))
       return schedule
     else:
-      raise Exception(f"Failed to get backup schedule: {response.status_code} - {response.text}")
+      print(f"Backup schedule retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == '__main__':
     # Retrieve schedule (without forcing the Dump query param)

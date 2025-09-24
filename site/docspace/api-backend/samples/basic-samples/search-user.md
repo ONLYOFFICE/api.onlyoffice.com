@@ -36,7 +36,8 @@ This example demonstrates how to search for users in ONLYOFFICE DocSpace by a te
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to search users: ${text}`);
+      console.log(`User search failed. Status code: ${res.status}, Message: ${text}`);
+      return [];
     }
 
     const data = await res.json();
@@ -87,13 +88,14 @@ This example demonstrates how to search for users in ONLYOFFICE DocSpace by a te
 
     if response.status_code == 200:
       users = response.json().get('response', [])
-      print(f'Found {len(users)} user(s) for query: '{query}'')
+      print(f"Found {len(users)} user(s) for query: '{query}'")
       for user in users:
         role = 'Visitor' if user.get('isVisitor') else 'User'
-        print(f'- {user.get('displayName')} | {user.get('email')} | Role: {role}')
+        print(f"- {user.get('displayName')} | {user.get('email')} | Role: {role}")
       return users
     else:
-      raise Exception(f'Failed to search users: {response.text}')
+      print(f"User search failed. Status code: {response.status_code}, Message: {response.text}")
+      return []
 
   # Run examples
   if __name__ == '__main__':

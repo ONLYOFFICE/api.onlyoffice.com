@@ -41,7 +41,8 @@ This example demonstrates how to add one or more members to an existing group in
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to update group: ${res.status} ${text}`);
+      console.log(`Group update failed. Status code: ${res.status}, Message: ${text}`);
+      return;
     }
 
     console.log(`Members added to group ${groupId}: ${JSON.stringify(members)}`);
@@ -95,7 +96,7 @@ This example demonstrates how to add one or more members to an existing group in
       if new_manager:
         print(f"New manager assigned: {new_manager}")
     else:
-        raise Exception(f"Failed to update group: {response.status_code} {response.text}")
+        print(f"Group update failed. Status code: {response.status_code}, Message: {response.text}")
 
 # Run the method
 if __name__ == '__main__':

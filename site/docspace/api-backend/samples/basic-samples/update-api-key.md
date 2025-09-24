@@ -43,14 +43,17 @@ This example demonstrates how to update an existing API key in DocSpace using th
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to update API key: ${text}`);
+      console.log(`API key update failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
 
     const data = await res.json();
     if (data?.response === true) {
       console.log('API key updated successfully.');
+      return true;
     } else {
-      throw new Error('Failed to update API key: unexpected response.');
+      console.log('API key update failed. Unexpected response.');
+      return null;
     }
   }
 
@@ -87,19 +90,19 @@ This example demonstrates how to update an existing API key in DocSpace using th
 
   # Step 1: Update an API key
   def update_api_key(key_id, new_name, new_permissions, is_active=True):
-  url = f'{API_HOST}/api/2.0/keys/{key_id}'
-  payload = {
-    'name': new_name,
-    'permissions': new_permissions,
-    'isActive': is_active
-  }
+    url = f'{API_HOST}/api/2.0/keys/{key_id}'
+    payload = {
+      'name': new_name,
+      'permissions': new_permissions,
+      'isActive': is_active
+    }
 
-  response = requests.put(url, headers=HEADERS, json=payload)
+    response = requests.put(url, headers=HEADERS, json=payload)
 
-  if response.status_code == 200 and response.json().get('response') is True:
-    print('API key updated successfully.')
-  else:
-    raise Exception(f'Failed to update API key: {response.text}')
+    if response.status_code == 200 and response.json().get('response') is True:
+      print('API key updated successfully.')
+    else:
+      print(f"API key update failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Example usage
   if __name__ == '__main__':

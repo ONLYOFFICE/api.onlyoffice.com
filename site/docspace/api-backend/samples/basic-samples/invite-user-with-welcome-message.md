@@ -28,7 +28,8 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to get invite link: ${t}`);
+          console.log(`Invite link retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -37,7 +38,7 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
         return inviteUrl;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Invite link retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -49,7 +50,8 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to get user info: ${t}`);
+          console.log(`User info retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -62,7 +64,7 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
         return user;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`User info retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -78,7 +80,7 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
           console.log('Congratulations message sent successfully.');
         } else {
           return res.text().then((t) => {
-            throw new Error(`Failed to send congratulations: ${t}`);
+            console.log(`Congratulations send failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -121,7 +123,8 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
       invite_url = response.json().get('response')
       print(f"Invite link for {employee_type}: {invite_url}")
       return invite_url
-    raise Exception(f"Failed to get invite link: {response.text}")
+    print(f"Invite link retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+    return None
 
   # Step 2: Check if the user is active
   def check_user_status(user_id):
@@ -135,7 +138,8 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
       print(f"• Active: {user.get('isActive')}")
       print(f"• Created: {user.get('createDate')}")
       return user
-    raise Exception(f"Failed to get user info: {response.text}")
+    print(f"User info retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+    return None
 
   # Step 3: Send welcome message
   def send_congratulations(user_id, key='welcome_guest'):
@@ -145,7 +149,7 @@ This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the 
     if response.status_code == 200:
       print("Congratulations message sent successfully.")
     else:
-      raise Exception(f"Failed to send congratulations: {response.text}")
+      print(f"Congratulations send failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == '__main__':
     print("Step 1: Generate invitation link...")
@@ -182,7 +186,8 @@ A GET request is sent to [/api/2.0/portal/users/invite/:employeeType](/docspace/
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to get invite link: ${t}`);
+          console.log(`Invite link retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -191,7 +196,7 @@ A GET request is sent to [/api/2.0/portal/users/invite/:employeeType](/docspace/
         return inviteUrl;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Invite link retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -208,7 +213,8 @@ A GET request is sent to [/api/2.0/portal/users/invite/:employeeType](/docspace/
       invite_url = response.json().get('response')
       print(f"Invite link for {employee_type}: {invite_url}")
       return invite_url
-    raise Exception(f"Failed to get invite link: {response.text}")
+    print(f"Invite link retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+    return None
   ```
 
   </TabItem>
@@ -222,18 +228,30 @@ After the user registers, a GET request is sent to [/api/2.0/portal/users/:userI
   <TabItem value="nodejs" label="Node.js">
 
   ``` ts
-  def check_user_status(user_id):
-    url = f'{API_HOST}/api/2.0/portal/users/{user_id}'
-    response = requests.get(url, headers=HEADERS)
-    if response.status_code == 200:
-      user = response.json().get('response', {})
-      print("User Info:")
-      print(f"• Name: {user.get('firstName')} {user.get('lastName')}")
-      print(f"• Email: {user.get('email')}")
-      print(f"• Active: {user.get('isActive')}")
-      print(f"• Created: {user.get('createDate')}")
-      return user
-    raise Exception(f"Failed to get user info: {response.text}")
+  function checkUserStatus(userId) {
+    const url = `${API_HOST}/api/2.0/portal/users/${userId}`;
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          console.log(`User info retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
+        });
+      })
+      .then((data) => {
+        const user = data?.response || {};
+        console.log('User Info:');
+        console.log(`• Name: ${user.firstName} ${user.lastName}`);
+        console.log(`• Email: ${user.email}`);
+        console.log(`• Active: ${user.isActive}`);
+        console.log(`• Created: ${user.createDate}`);
+        return user;
+      })
+      .catch((err) => {
+        console.log(`User info retrieval error: ${err.message}`);
+        return null;
+      });
+  }
   ```
 
   </TabItem>
@@ -251,7 +269,8 @@ After the user registers, a GET request is sent to [/api/2.0/portal/users/:userI
       print(f"• Active: {user.get('isActive')}")
       print(f"• Created: {user.get('createDate')}")
       return user
-    raise Exception(f"Failed to get user info: {response.text}")
+    print(f"User info retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+    return None
   ```
 
   </TabItem>
@@ -278,7 +297,7 @@ If the user is active, a POST request is sent to [/api/2.0/portal/sendcongratula
           console.log('Congratulations message sent successfully.');
         } else {
           return res.text().then((t) => {
-            throw new Error(`Failed to send congratulations: ${t}`);
+            console.log(`Congratulations send failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -299,7 +318,7 @@ If the user is active, a POST request is sent to [/api/2.0/portal/sendcongratula
     if response.status_code == 200:
       print("Congratulations message sent successfully.")
     else:
-      raise Exception(f"Failed to send congratulations: {response.text}")
+      print(f"Congratulations send failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

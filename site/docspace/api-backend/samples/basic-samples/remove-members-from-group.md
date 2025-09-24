@@ -37,7 +37,8 @@ This example demonstrates how to remove one or more members from a group in ONLY
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to remove members: ${res.status} ${text}`);
+      console.log(`Remove members failed. Status code: ${res.status}, Message: ${text}`);
+      return;
     }
 
     console.log(`Members removed from group ${groupId}: ${JSON.stringify(members)}`);
@@ -52,7 +53,7 @@ This example demonstrates how to remove one or more members from a group in ONLY
         ['4c65a238-ca50-4374-b904-0d51d4c1822b'] // Replace with member IDs to remove
       );
     } catch (err) {
-      console.error(err.message);
+      console.log(`Remove members error: ${err.message}`);
     }
   })();
   ```
@@ -83,7 +84,7 @@ This example demonstrates how to remove one or more members from a group in ONLY
     if response.status_code == 200:
       print(f'Members removed from group {group_id}: {members}')
     else:
-      raise Exception(f'Failed to remove members: {response.status_code} {response.text}')
+      print(f'Remove members failed. Status code: {response.status_code}, Message: {response.text}')
 
   # Run the method
   if __name__ == '__main__':

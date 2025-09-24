@@ -37,17 +37,18 @@ This example demonstrates how to delete the entire backup history in ONLYOFFICE 
     })
       .then((res) => {
         if (res.status === 200) return res.json();
-        return res.text().then((t) => {
-          throw new Error(`Failed to delete backup history: ${res.status} - ${t}`);
-        });
+        const text = await res.text();
+        console.log(`Backup history deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
       .then((data) => {
+        if (!data) return null;
         const result = data?.response;
         console.log(`Backup history deleted: ${result}`);
         return result;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Backup history deletion error: ${err.message}`);
       });
   }
 

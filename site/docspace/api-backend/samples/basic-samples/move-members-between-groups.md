@@ -33,7 +33,8 @@ This example demonstrates how to move all members from one group to another in O
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to move members: ${res.status} ${text}`);
+      console.log(`Move members failed. Status code: ${res.status}, Message: ${text}`);
+      return;
     }
 
     console.log(`Members moved from group ${fromGroupId} to group ${toGroupId}`);
@@ -47,7 +48,7 @@ This example demonstrates how to move all members from one group to another in O
         '258efd0c-b5b7-4bc9-87ab-e39b2c2eb09c'  // Replace with destination group ID
       );
     } catch (err) {
-      console.error(err.message);
+      console.log(`Move members error: ${err.message}`);
     }
   })();
   ```
@@ -76,7 +77,8 @@ This example demonstrates how to move all members from one group to another in O
     if response.status_code == 200:
       print(f'Members moved from group {from_group_id} to group {to_group_id}')
     else:
-      raise Exception(f'Failed to move members: {response.status_code} {response.text}')
+      print(f'Move members failed. Status code: {response.status_code}, Message: {response.text}')
+
 
   if __name__ == '__main__':
     move_group_members(

@@ -38,7 +38,7 @@ This example demonstrates how to retrieve the list of existing backups in ONLYOF
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to retrieve history: ${res.status} - ${t}`);
+          console.log(`Backup history retrieval failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -97,7 +97,7 @@ This example demonstrates how to retrieve the list of existing backups in ONLYOF
         print(f"Created: {item.get('createdOn')}")
         print(f"Expires: {item.get('expiresOn')}\n")
     else:
-      print(f"Failed to retrieve history: {response.status_code} - {response.text}")
+      print(f"Backup history retrieval failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     get_backup_history()

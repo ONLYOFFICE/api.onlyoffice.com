@@ -38,7 +38,7 @@ This example demonstrates how to check the progress of a backup process in ONLYO
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Error: ${res.status} - ${t}`);
+          console.log(`Backup progress retrieval failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -51,7 +51,7 @@ This example demonstrates how to check the progress of a backup process in ONLYO
         console.log(`Download Link: ${resp.link}`);
       })
       .catch((err) => {
-        console.log(`Error: ${err.message}`);
+        console.log(`Backup progress retrieval error: ${err.message}`);
       });
   }
 
@@ -92,7 +92,7 @@ This example demonstrates how to check the progress of a backup process in ONLYO
       print(f"Type: {data.get('backupProgressEnum')}")
       print(f"Download Link: {data.get('link')}")
     else:
-      print(f"Error: {response.status_code} - {response.text}")
+      print(f"Backup progress retrieval failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     get_backup_progress()

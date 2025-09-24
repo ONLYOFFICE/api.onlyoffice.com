@@ -30,7 +30,11 @@ This example demonstrates how to retrieve, restore, and empty the contents of th
   async function getTrashSection() {
     const url = `${API_HOST}/api/2.0/files/@trash`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Failed to get Trash: ${res.status} - ${t}`);
+      return null;
+    }
     return res.json();
   }
 
@@ -38,7 +42,14 @@ This example demonstrates how to retrieve, restore, and empty the contents of th
   async function emptyTrash() {
     const url = `${API_HOST}/api/2.0/files/fileops/emptytrash`;
     const res = await fetch(url, { method: 'PUT', headers: HEADERS });
-    return res.ok;
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Failed to empty Trash: ${res.status} - ${t}`);
+      return false;
+    }
+
+    console.log('Trash emptied successfully.');
+    return true;
   }
 
   // Step 3: Restore a file from Trash to a specific folder
@@ -52,7 +63,14 @@ This example demonstrates how to retrieve, restore, and empty the contents of th
     });
 
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
-    return res.ok;
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Failed to restore file ${fileId}: ${res.status} - ${t}`);
+      return false;
+    }
+
+    console.log(`File ${fileId} restored to folder ${destFolderId}.`);
+    return true;
   }
 
   // Run
@@ -91,7 +109,9 @@ This example demonstrates how to retrieve, restore, and empty the contents of th
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f'Failed to get Trash: {response.status_code} - {response.text}')
+      return None
 
 # Step 2: Empty the Trash section
   def empty_trash():
@@ -100,7 +120,9 @@ This example demonstrates how to retrieve, restore, and empty the contents of th
 
     if response.status_code == 200:
       return True
-    return False
+    else:
+      print(f'Failed to empty Trash: {response.status_code} - {response.text}')
+      return False
 
 # Step 3: Restore a file from Trash to a specific folder
   def restore_file(file_id, dest_folder_id):
@@ -115,8 +137,11 @@ This example demonstrates how to retrieve, restore, and empty the contents of th
     response = requests.put(url, headers=HEADERS, data=json.dumps(data))
 
     if response.status_code == 200:
+      print(f'File {file_id} restored to folder {dest_folder_id}.')
       return True
-    return False
+    else:
+      print(f'Failed to restore file {file_id}: {response.status_code} - {response.text}')
+      return False
 
   if __name__ == "__main__":
     get_trash_section()
@@ -145,7 +170,11 @@ This operation is useful for checking which items are pending permanent removal.
   async function getTrashSection() {
     const url = `${API_HOST}/api/2.0/files/@trash`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Failed to get Trash: ${res.status} - ${t}`);
+      return null;
+    }
     return res.json();
   }
   ```
@@ -160,7 +189,9 @@ This operation is useful for checking which items are pending permanent removal.
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f'Failed to get Trash: {response.status_code} - {response.text}')
+      return None
   ```
 
   </TabItem>
@@ -179,7 +210,14 @@ This operation permanently deletes all files and folders from the Trash.
   async function emptyTrash() {
     const url = `${API_HOST}/api/2.0/files/fileops/emptytrash`;
     const res = await fetch(url, { method: 'PUT', headers: HEADERS });
-    return res.ok;
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Failed to empty Trash: ${res.status} - ${t}`);
+      return false;
+    }
+
+    console.log('Trash emptied successfully.');
+    return true;
   }
   ```
 
@@ -193,7 +231,9 @@ This operation permanently deletes all files and folders from the Trash.
 
     if response.status_code == 200:
       return True
-    return False
+    else:
+      print(f'Failed to empty Trash: {response.status_code} - {response.text}')
+      return False
   ```
 
   </TabItem>
@@ -224,7 +264,14 @@ This operation is useful for selectively restoring documents from Trash back to 
     });
 
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
-    return res.ok;
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Failed to restore file ${fileId}: ${res.status} - ${t}`);
+      return false;
+    }
+
+    console.log(`File ${fileId} restored to folder ${destFolderId}.`);
+    return true;
   }
   ```
 
@@ -244,8 +291,11 @@ This operation is useful for selectively restoring documents from Trash back to 
     response = requests.put(url, headers=HEADERS, data=json.dumps(data))
 
     if response.status_code == 200:
+      print(f'File {file_id} restored to folder {dest_folder_id}.')
       return True
-    return False
+    else:
+      print(f'Failed to restore file {file_id}: {response.status_code} - {response.text}')
+      return False
   ```
 
   </TabItem>

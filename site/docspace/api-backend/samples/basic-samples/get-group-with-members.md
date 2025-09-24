@@ -35,7 +35,8 @@ This example demonstrates how to retrieve a group by ID in ONLYOFFICE DocSpace a
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to get group: ${res.status} ${t}`);
+          console.log(`Group retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -48,7 +49,7 @@ This example demonstrates how to retrieve a group by ID in ONLYOFFICE DocSpace a
         return group;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Group retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -88,7 +89,7 @@ This example demonstrates how to retrieve a group by ID in ONLYOFFICE DocSpace a
       for m in group.get('members', []):
         print(f'- {m.get('id')} — {m.get('displayName')}')
     else:
-        raise Exception(f'Failed to get group: {response.status_code} {response.text}')
+      print(f"Group retrieval failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the method
   if __name__ == '__main__':

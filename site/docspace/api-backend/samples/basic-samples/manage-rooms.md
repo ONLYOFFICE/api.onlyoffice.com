@@ -37,7 +37,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Create room failed: ${res.status} - ${t}`);
+      console.log(`Create room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     return json.response;
@@ -49,7 +50,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Get room failed: ${res.status} - ${t}`);
+      console.log(`Get room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const roomInfo = await res.json();
     return roomInfo.response;
@@ -65,7 +67,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Rename room failed: ${res.status} - ${t}`);
+      console.log(`Rename room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
 
@@ -75,7 +78,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     const res = await fetch(url, { method: 'PUT', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Archive room failed: ${res.status} - ${t}`);
+      console.log(`Archive room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
 
@@ -85,7 +89,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Delete room failed: ${res.status} - ${t}`);
+      console.log(`Delete room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
 
@@ -140,14 +145,26 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
       'title': room_name,
       'description': description
     }
-    requests.post(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      room_id = response.json()['response']['id']
+      print(f'Room created successfully: {room_id}')
+      return room_id
+    else:
+      print(f'Failed to create room: {response.status_code} - {response.text}')
+      return None
 
   # Step 2: Retrieve room details
   def get_room_details(room_id):
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
     response = requests.get(url, headers=headers)
     room_info = response.json()
-    return room_info
+    if response.status_code == 200:
+      room_info = response.json()
+      print(f'Room details: {room_info}')
+      return room_info
+    else:
+      print(f'Failed to get room details: {response.status_code} - {response.text}')
+      return None
 
   # Step 3: Rename a room
   def rename_room(room_id, new_name):
@@ -156,16 +173,28 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
       'title': new_name
     }
     requests.put(url, headers=headers, json=data)
+    if response.status_code == 200:
+      print(f'Room {room_id} renamed successfully.')
+    else:
+      print(f'Failed to rename room: {response.status_code} - {response.text}')
 
   # Step 4: Archive a room
   def archive_room(room_id):
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}/archive'
     requests.put(url, headers=headers)
+    if response.status_code == 200:
+      print(f'Room {room_id} archived successfully.')
+    else:
+      print(f'Failed to archive room: {response.status_code} - {response.text}')
 
   # Step 5: Delete a room
   def delete_room(room_id):
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
     requests.delete(url, headers=headers)
+    if response.status_code == 200:
+      print(f'Room {room_id} deleted successfully.')
+    else:
+      print(f'Failed to delete room: {response.status_code} - {response.text}')
 
   def main():
     room_name = 'New Room' # Replace with actual room name
@@ -210,7 +239,8 @@ A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api
     });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Create room failed: ${res.status} - ${t}`);
+      console.log(`Create room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
   ```
@@ -226,6 +256,13 @@ A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api
       'description': description
     }
     requests.post(url, headers=headers, json=data)
+    if response.status_code == 200:
+      room_id = response.json()['response']['id']
+      print(f'Room created successfully: {room_id}')
+      return room_id
+    else:
+      print(f'Failed to create room: {response.status_code} - {response.text}')
+      return None
   ```
 
   </TabItem>
@@ -244,7 +281,8 @@ A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Get room failed: ${res.status} - ${t}`);
+      console.log(`Get room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const roomInfo = await res.json();
     return roomInfo;
@@ -259,7 +297,13 @@ A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
     response = requests.get(url, headers=headers)
     room_info = response.json()
-    return room_info
+    if response.status_code == 200:
+      room_info = response.json()
+      print(f'Room details: {room_info}')
+      return room_info
+    else:
+      print(f'Failed to get room details: {response.status_code} - {response.text}')
+      return None
   ```
 
   </TabItem>
@@ -282,7 +326,8 @@ A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
     });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Rename room failed: ${res.status} - ${t}`);
+      console.log(`Rename room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
   ```
@@ -297,6 +342,10 @@ A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
       'title': new_name
     }
     requests.put(url, headers=headers, json=data)
+    if response.status_code == 200:
+      print(f'Room {room_id} renamed successfully.')
+    else:
+      print(f'Failed to rename room: {response.status_code} - {response.text}')
   ```
 
   </TabItem>
@@ -315,7 +364,8 @@ A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backen
     const res = await fetch(url, { method: 'PUT', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Archive room failed: ${res.status} - ${t}`);
+      console.log(`Archive room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
   ```
@@ -327,6 +377,10 @@ A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backen
   def archive_room(room_id):
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}/archive'
     requests.put(url, headers=headers)
+    if response.status_code == 200:
+      print(f'Room {room_id} archived successfully.')
+    else:
+      print(f'Failed to archive room: {response.status_code} - {response.text}')
   ```
 
   </TabItem>
@@ -345,7 +399,8 @@ A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usa
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Delete room failed: ${res.status} - ${t}`);
+      console.log(`Delete room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
   }
   ```
@@ -357,6 +412,10 @@ A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usa
   def delete_room(room_id):
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
     requests.delete(url, headers=headers)
+    if response.status_code == 200:
+      print(f'Room {room_id} deleted successfully.')
+    else:
+      print(f'Failed to delete room: {response.status_code} - {response.text}')
   ```
 
   </TabItem>

@@ -53,7 +53,7 @@ This example demonstrates how to create a new file inside a specific folder in O
     .then((res) => {
       if (res.status === 200) return res.json();
       return res.text().then((t) => {
-        console.log(`Error: ${res.status} - ${t}`);
+        console.log(`File creation failed. Status code: ${res.status}, Message: ${t}`);
         return null;
       });
     })
@@ -65,7 +65,7 @@ This example demonstrates how to create a new file inside a specific folder in O
       return fileInfo;
     })
     .catch((err) => {
-      console.log(`Error: ${err.message}`);
+      console.log(`File creation error: ${err.message}`);
       return null;
     });
   }
@@ -110,6 +110,8 @@ This example demonstrates how to create a new file inside a specific folder in O
       if edit_url:
         webbrowser.open(edit_url)  # Open document in default browser
       return file_info
+    else:
+      print(f"File creation failed. Status code: {response.status_code}, Message: {response.text}")
     return None
 
   if __name__ == "__main__":

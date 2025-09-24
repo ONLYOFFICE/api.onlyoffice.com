@@ -35,7 +35,17 @@ This example demonstrates how to lock or unlock the specified file in ONLYOFFICE
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(data),
-    }).then((res) => (res.status === 200 ? res.json() : null));
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File lock failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File lock error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 2: Unlock a file by ID
@@ -47,7 +57,17 @@ This example demonstrates how to lock or unlock the specified file in ONLYOFFICE
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(data),
-    }).then((res) => (res.status === 200 ? res.json() : null));
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File unlock failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File unlock error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 3: View users with access to the file
@@ -56,7 +76,17 @@ This example demonstrates how to lock or unlock the specified file in ONLYOFFICE
     return fetch(url, {
       method: 'GET',
       headers: HEADERS,
-    }).then((res) => (res.status === 200 ? res.json() : null));
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Protected file users retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Protected file users retrieval error: ${err.message}`);
+        return null;
+      });
   }
 
   // Run
@@ -92,7 +122,9 @@ This example demonstrates how to lock or unlock the specified file in ONLYOFFICE
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"File lock failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Step 2: Unlock a file by ID
   def unlock_file(file_id):
@@ -103,7 +135,9 @@ This example demonstrates how to lock or unlock the specified file in ONLYOFFICE
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"File unlock failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
 # Step 3: View users with access to the file
   def get_protected_file_users(file_id):
@@ -111,7 +145,9 @@ This example demonstrates how to lock or unlock the specified file in ONLYOFFICE
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Protected file users retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == "__main__":
     file_id = '123456'  # Replace with a valid file ID
@@ -145,7 +181,17 @@ This prevents other users from editing the file until it is unlocked.
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(data),
-    }).then((res) => (res.status === 200 ? res.json() : null));
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File lock failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File lock error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -161,7 +207,9 @@ This prevents other users from editing the file until it is unlocked.
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"File lock failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -187,7 +235,17 @@ This re-enables editing for the file.
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(data),
-    }).then((res) => (res.status === 200 ? res.json() : null));
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File unlock failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File unlock error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -203,7 +261,9 @@ This re-enables editing for the file.
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"File unlock failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -224,7 +284,17 @@ It returns a list of users and their access levels for the file.
     return fetch(url, {
       method: 'GET',
       headers: HEADERS,
-    }).then((res) => (res.status === 200 ? res.json() : null));
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Protected file users retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Protected file users retrieval error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -237,7 +307,9 @@ It returns a list of users and their access levels for the file.
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Protected file users retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>

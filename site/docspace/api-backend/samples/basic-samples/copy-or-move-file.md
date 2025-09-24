@@ -47,8 +47,7 @@ This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.
           console.log(`File ${fileId} copied to folder ${destFolderId}`);
         } else {
           return res.text().then((t) => {
-            console.log(`Copy failed: ${res.status}`);
-            console.log(t);
+            console.log(`Copy failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -79,8 +78,7 @@ This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.
           console.log(`File ${fileId} moved to folder ${destFolderId}`);
         } else {
           return res.text().then((t) => {
-            console.log(`Move failed: ${res.status}`);
-            console.log(t);
+            console.log(`Move failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -129,8 +127,8 @@ This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.
     if response.status_code == 200:
       print(f"File {file_id} copied to folder {dest_folder_id}")
     else:
-      print(f"Copy failed: {response.status_code}")
-      print(response.text)
+      print(f"Copy failed. Status code: {response.status_code}, Message: {response.text}")
+
 
   # Step 2: Move a file to another folder
   def move_file_to_folder(file_id: int, dest_folder_id: int):
@@ -147,8 +145,7 @@ This example demonstrates how to copy or move a file in ONLYOFFICE DocSpace.
     if response.status_code == 200:
       print(f"File {file_id} moved to folder {dest_folder_id}")
     else:
-      print(f"Move failed: {response.status_code}")
-      print(response.text)
+      print(f"Move failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run an example
   if __name__ == "__main__":
@@ -198,8 +195,7 @@ Payload parameters include:
           console.log(`File ${fileId} copied to folder ${destFolderId}`);
         } else {
           return res.text().then((t) => {
-            console.log(`Copy failed: ${res.status}`);
-            console.log(t);
+            console.log(`Copy failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -228,8 +224,7 @@ Payload parameters include:
     if response.status_code == 200:
       print(f"File {file_id} copied to folder {dest_folder_id}")
     else:
-      print(f"Copy failed: {response.status_code}")
-      print(response.text)
+      print(f"Copy failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -265,8 +260,7 @@ Payload parameters include:
           console.log(`File ${fileId} moved to folder ${destFolderId}`);
         } else {
           return res.text().then((t) => {
-            console.log(`Move failed: ${res.status}`);
-            console.log(t);
+            console.log(`Move failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
@@ -295,8 +289,7 @@ Payload parameters include:
     if response.status_code == 200:
       print(f"File {file_id} moved to folder {dest_folder_id}")
     else:
-      print(f"Move failed: {response.status_code}")
-    print(response.text)
+      print(f"Move failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

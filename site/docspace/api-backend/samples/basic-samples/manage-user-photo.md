@@ -37,7 +37,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
     });
 
     if (res.ok) {
-      console.log(`User photo uploaded successfully for ${userId}`);
+      console.log(`Failed to upload user photo: ${res.status} - ${text}`);
     } else {
       const text = await res.text();
       console.log(`Failed to upload user photo: ${res.status} - ${text}`);
@@ -50,7 +50,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
 
     if (res.ok) {
-      console.log(`User photo deleted successfully for ${userId}`);
+      console.log(`Failed to delete user photo: ${res.status} - ${text}`);
     } else {
       const text = await res.text();
       console.log(`Failed to delete user photo: ${res.status} - ${text}`);
@@ -74,7 +74,7 @@ This example demonstrates how to upload and delete user profile photos in ONLYOF
   import requests
  
   # Set API base URL
-  API_HOST = 'yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   API_KEY = 'your_api_key'
  
   # Headers with API key for authentication
@@ -140,7 +140,7 @@ A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/u
     });
 
     if (res.ok) {
-      console.log(`User photo uploaded successfully for ${userId}`);
+      console.log(`Failed to upload user photo: ${res.status} - ${text}`);
     } else {
       const text = await res.text();
       console.log(`Failed to upload user photo: ${res.status} - ${text}`);
@@ -158,9 +158,9 @@ A PUT request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backend/u
  
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
-        print(f'User photo uploaded successfully for {user_id}')
+      print(f'User photo uploaded successfully for {user_id}')
     else:
-        print(f'Failed to upload user photo: {response.status_code} - {response.text}')
+      print(f'Failed to upload user photo: {response.status_code} - {response.text}')
   ```
 
   </TabItem>
@@ -197,9 +197,9 @@ A DELETE request is sent to [/api/2.0/people/:userid/photo](/docspace/api-backen
     url = f'{API_HOST}/api/2.0/people/{user_id}/photo'
     response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
-        print(f'User photo deleted successfully for {user_id}')
+      print(f'User photo deleted successfully for {user_id}')
     else:
-        print(f'Failed to delete user photo: {response.status_code} - {response.text}')
+      print(f'Failed to delete user photo: {response.status_code} - {response.text}')
   ```
 
   </TabItem>

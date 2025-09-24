@@ -39,9 +39,17 @@ This example demonstrates how to programmatically create a new room in ONLYOFFIC
       headers: HEADERS,
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Room creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
       .then((json) => (json ? json.response?.id ?? null : null))
-      .catch(() => null);
+      .catch((err) => {
+        console.log(`Room creation error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 2: Invite a user to the room
@@ -62,7 +70,18 @@ This example demonstrates how to programmatically create a new room in ONLYOFFIC
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(data),
-    }).catch(() => {});
+    })
+      .then(async (res) => {
+        if (res.status === 200) {
+          console.log(`User ${email} invited to room ${roomId} with access ${access}`);
+        } else {
+          const text = await res.text();
+          console.log(`Invitation failed. Status code: ${res.status}, Message: ${text}`);
+        }
+      })
+      .catch((err) => {
+        console.log(`Invitation error: ${err.message}`);
+      });
   }
 
   // Run
@@ -106,6 +125,8 @@ This example demonstrates how to programmatically create a new room in ONLYOFFIC
     if response.status_code == 200:
       room_id = response.json()['response']['id']
       return room_id
+    else:
+      print(f"Room creation failed. Status code: {response.status_code}, Message: {response.text}")
   return None
 
   # Step 2: Invite a user to the room
@@ -123,6 +144,10 @@ This example demonstrates how to programmatically create a new room in ONLYOFFIC
     }
 
     requests.put(url, json=data, headers=HEADERS)
+    if response.status_code == 200:
+      print(f"User {email} invited to room {room_id} with access {access}")
+    else:
+      print(f"Invitation failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     room_title = 'Project Collaboration'
@@ -164,9 +189,17 @@ The API returns a unique `roomId` used in the next step.
       headers: HEADERS,
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Room creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
       .then((json) => (json ? json.response?.id ?? null : null))
-      .catch(() => null);
+      .catch((err) => {
+        console.log(`Room creation error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -186,6 +219,8 @@ The API returns a unique `roomId` used in the next step.
     if response.status_code == 200:
       room_id = response.json()['response']['id']
       return room_id
+    else:
+      print(f"Room creation failed. Status code: {response.status_code}, Message: {response.text}")
     return None
   ```
 
@@ -222,7 +257,18 @@ A PUT request is sent to [/api/2.0/files/rooms/:roomId/share](/docspace/api-back
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(data),
-    }).catch(() => {});
+    })
+      .then(async (res) => {
+        if (res.status === 200) {
+          console.log(`User ${email} invited to room ${roomId} with access ${access}`);
+        } else {
+          const text = await res.text();
+          console.log(`Invitation failed. Status code: ${res.status}, Message: ${text}`);
+        }
+      })
+      .catch((err) => {
+        console.log(`Invitation error: ${err.message}`);
+      });
   }
   ```
 
@@ -244,6 +290,10 @@ A PUT request is sent to [/api/2.0/files/rooms/:roomId/share](/docspace/api-back
     }
 
     requests.put(url, json=data, headers=HEADERS)
+    if response.status_code == 200:
+      print(f"User {email} invited to room {room_id} with access {access}")
+    else:
+      print(f"Invitation failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

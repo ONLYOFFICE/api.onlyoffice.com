@@ -17,14 +17,14 @@ This example demonstrates how to configure Developer Tools access settings in ON
 
   ``` ts
   // Set your DocSpace portal URL and token
-  const BASE_URL = 'https://yourportal.onlyoffice.com';
+  const API_HOST = 'https://yourportal.onlyoffice.com';
   const AUTH_TOKEN = 'your_access_token';
 
   const HEADERS = { Authorization: AUTH_TOKEN };
 
   // Step 1: Set Developer Tools access
   async function setDevtoolsAccess(limited = true) {
-    const url = `${BASE_URL}/api/2.0/settings/devtoolsaccess`;
+    const url = `${API_HOST}/api/2.0/settings/devtoolsaccess`;
     const payload = { limitedAccessForUsers: limited };
 
     const res = await fetch(url, {
@@ -35,7 +35,8 @@ This example demonstrates how to configure Developer Tools access settings in ON
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to update access settings: ${text}`);
+      console.log(`Failed to update access settings. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
 
     const data = (await res.json())?.response ?? {};
@@ -63,14 +64,14 @@ This example demonstrates how to configure Developer Tools access settings in ON
   import requests
 
   # Set your DocSpace portal URL and token
-  BASE_URL = 'https://yourportal.onlyoffice.com'
+  API_HOST = 'https://yourportal.onlyoffice.com'
   AUTH_TOKEN = 'your_access_token'
 
   HEADERS = {'Authorization': AUTH_TOKEN}
 
   # Step 1: Set Developer Tools access
   def set_devtools_access(limited=True):
-    url = f'{BASE_URL}/api/2.0/settings/devtoolsaccess'
+    url = f'{API_HOST}/api/2.0/settings/devtoolsaccess'
     payload = { 'limitedAccessForUsers': limited }
 
     response = requests.post(url, headers=HEADERS, json=payload)
@@ -82,7 +83,8 @@ This example demonstrates how to configure Developer Tools access settings in ON
       print(f'• Last Modified: {data.get('lastModified')}')
       return data
     else:
-      raise Exception(f'Failed to update access settings: {response.text}')
+      print(f"Failed to update access settings. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Example usage
   if __name__ == '__main__':

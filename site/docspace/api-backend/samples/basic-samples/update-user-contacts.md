@@ -40,7 +40,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
       console.log(`Contacts updated successfully for user ${userId}`);
     } else {
       const text = await res.text();
-      console.log(`Failed to update contacts: ${res.status} - ${text}`);
+      console.log(`User contacts update failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
 
@@ -51,7 +51,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve user contacts: ${res.status} - ${text}`);
+      console.log(`User contacts retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -105,7 +105,7 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
     if response.status_code == 200:
       print(f'Contacts updated successfully for user {user_id}')
     else:
-      print(f'Failed to update contacts: {response.status_code} - {response.text}')
+      print(f"User contacts update failed. Status code: {response.status_code}, Message: {response.text}")
  
   # Step 2: Retrieve user contacts
   def get_user_contacts(user_id):
@@ -113,12 +113,13 @@ This example demonstrates how to create and retrieve user contacts in ONLYOFFICE
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
-      try:
-        user_contacts = user_data['response']['contacts']
+      user_contacts = user_data.get('response', {}).get('contacts')
+      if user_contacts:
         print(user_contacts)
         return user_contacts
-      except:
-        print(f'No contact found for user {user_id}')
+      else:
+        print(f"User contacts retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+        return None
     else:
       print(f'Failed to retrieve user contacts: {response.status_code} - {response.text}')
       return None
@@ -162,7 +163,7 @@ If the contact already exists, it updates the value. Otherwise, it creates a new
       console.log(`Contacts updated successfully for user ${userId}`);
     } else {
       const text = await res.text();
-      console.log(`Failed to update contacts: ${res.status} - ${text}`);
+      console.log(`User contacts update failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
   ```
@@ -178,8 +179,7 @@ If the contact already exists, it updates the value. Otherwise, it creates a new
     if response.status_code == 200:
       print(f'Contacts updated successfully for user {user_id}')
     else:
-      print(f'Failed to update contacts: {response.status_code} - {response.text}') 'my@gmail.com'}]
-    set_user_contacts(user_id, contacts)
+      print(f"User contacts update failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -201,7 +201,7 @@ The response includes all the contact details associated with the user.
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve user contacts: ${res.status} - ${text}`);
+      console.log(`User contacts retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -227,14 +227,15 @@ The response includes all the contact details associated with the user.
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       user_data = response.json()
-      try:
-        user_contacts = user_data['response']['contacts']
+      user_contacts = user_data.get('response', {}).get('contacts')
+      if user_contacts:
         print(user_contacts)
         return user_contacts
-      except:
-        print(f'No contact found for user {user_id}')
+      else:
+        print(f"No contact found for user {user_id}")
+        return None
     else:
-      print(f'Failed to retrieve user contacts: {response.status_code} - {response.text}')
+      print(f"User contacts retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 

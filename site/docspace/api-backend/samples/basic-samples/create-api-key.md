@@ -43,8 +43,7 @@ This example demonstrates how to programmatically generate an API key in ONLYOFF
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to create API key: ${res.status}`);
-          console.log('Response:', t);
+          console.log(`API key creation failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -59,8 +58,7 @@ This example demonstrates how to programmatically generate an API key in ONLYOFF
         console.log(`• Expires: ${resp.expiresAt}`);
       })
       .catch((err) => {
-        console.log('Failed to create API key:');
-        console.log(err.message);
+        console.log(`API key creation error: ${err.message}`);
       });
   }
 
@@ -104,8 +102,8 @@ This example demonstrates how to programmatically generate an API key in ONLYOFF
       print(f'• Permissions: {data.get('permissions')}')
       print(f'• Expires: {data.get('expiresAt')}')
     else:
-      print(f'Failed to create API key: {response.status_code}')
-      print('Response:', response.text)
+      print(f"API key creation failed. Status code: {response.status_code}, Message: {response.text}")
+
 
   # Run the method
   if __name__ == '__main__':

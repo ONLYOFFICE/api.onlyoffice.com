@@ -42,7 +42,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
 
     if (!res.ok) {
       const t = await res.text();
-      console.log('Failed to create group:', res.status, t);
+      console.log(`Group creation failed. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
 
@@ -63,7 +63,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to reassign group manager: ${res.status} - ${t}`);
+      console.log(`Group manager reassignment failed. Status code: ${res.status}, Message: ${t}`);
       return;
     }
 
@@ -116,7 +116,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
       print('Group created successfully:', group_id)
       return group_id
     else:
-      print('Failed to create group:', response.status_code, response.text)
+      print(f"Group creation failed. Status code: {response.status_code}, Message: {response.text}")
  
   # Step 2: Reassign group ownership
   def reassign_group_manager(group_id, new_manager_id):
@@ -126,7 +126,7 @@ This example demonstrates how to update group manager in ONLYOFFICE DocSpace.
     if response.status_code == 200:
       print(f'Group {group_id} manager reassigned successfully to {new_manager_id}')
     else:
-      print(f'Failed to reassign group manager: {response.status_code} - {response.text}')
+      print(f"Group manager reassignment failed. Status code: {response.status_code}, Message: {response.text}")
     
   if __name__ == "__main__":
     manager_user_id = "10001"
@@ -172,7 +172,7 @@ The API returns a group ID, which is required for further operations.
 
     if (!res.ok) {
       const t = await res.text();
-      console.log('Failed to create group:', res.status, t);
+      console.log(`Group creation failed. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
 
@@ -200,7 +200,7 @@ The API returns a group ID, which is required for further operations.
       print('Group created successfully:', group_id)
       return group_id
     else:
-      print('Failed to create group:', response.status_code, response.text)
+      print(f"Group creation failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -227,7 +227,7 @@ A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/up
 
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to reassign group manager: ${res.status} - ${t}`);
+      console.log(`Group manager reassignment failed. Status code: ${res.status}, Message: ${t}`);
       return;
     }
 
@@ -246,7 +246,7 @@ A PUT request is sent to [/api/2.0/group/:id](/docspace/api-backend/usage-api/up
     if response.status_code == 200:
       print(f'Group {group_id} manager reassigned successfully to {new_manager_id}')
     else:
-      print(f'Failed to reassign group manager: {response.status_code} - {response.text}')
+      print(f"Group manager reassignment failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

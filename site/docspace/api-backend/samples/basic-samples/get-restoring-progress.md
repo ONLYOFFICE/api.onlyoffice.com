@@ -35,7 +35,8 @@ This example demonstrates how to retrieve the progress of an ongoing portal rest
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to retrieve restore progress: ${res.status} - ${t}`);
+          console.log(`Restore progress retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -49,7 +50,7 @@ This example demonstrates how to retrieve the progress of an ongoing portal rest
         return progressInfo;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Restore progress retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -93,7 +94,8 @@ This example demonstrates how to retrieve the progress of an ongoing portal rest
       print(f"Tenant ID: {progress_info.get('tenantId')}")
       return progress_info
     else:
-      raise Exception(f"Failed to retrieve restore progress: {response.status_code} - {response.text}")
+      print(f"Restore progress retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == '__main__':
     # Example: Check restore progress without dump parameter

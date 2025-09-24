@@ -29,8 +29,16 @@ This example demonstrates how to interact with a user's personal space ("My Docu
   function getMyDocuments() {
     const url = `${API_HOST}/api/2.0/files/@my`;
     return fetch(url, { method: 'GET', headers: HEADERS })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`"My Documents" retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`"My Documents" retrieval error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 2: Upload a file to "My Documents"
@@ -52,8 +60,16 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
     // Do NOT set Content-Type manually; fetch will set the multipart boundary
     return fetch(url, { method: 'POST', headers: { Authorization: HEADERS.Authorization }, body: form })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Upload to "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Upload to "My Documents" error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 3: Create an empty file in "My Documents"
@@ -66,8 +82,16 @@ This example demonstrates how to interact with a user's personal space ("My Docu
       headers: { ...HEADERS, 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File creation in "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File creation in "My Documents" error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 4: Delete a file from "My Documents"
@@ -80,8 +104,16 @@ This example demonstrates how to interact with a user's personal space ("My Docu
       headers: { ...HEADERS, 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File deletion from "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File deletion from "My Documents" error: ${err.message}`);
+        return null;
+      });
   }
 
   // Run (mirrors the Python example)
@@ -119,7 +151,9 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"\"My Documents\" retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Step 2: Upload a file to "My Documents"
   def upload_file_to_my(file_path):
@@ -130,7 +164,9 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Upload to \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Step 3: Create an empty file in "My Documents"
   def create_file_in_my(file_title):
@@ -140,7 +176,9 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"File creation in \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Step 4: Delete a file from "My Documents"
   def delete_file(file_id, immediately=True, delete_after=False):
@@ -151,6 +189,10 @@ This example demonstrates how to interact with a user's personal space ("My Docu
     }
 
     requests.delete(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print(f"File deletion from \"My Documents\" succeeded: {response.json()}")
+    else:
+      print(f"File deletion from \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     get_my_documents()
@@ -182,8 +224,16 @@ It returns a list of files and folders in the user's personal space.
   function getMyDocuments() {
     const url = `${API_HOST}/api/2.0/files/@my`;
     return fetch(url, { method: 'GET', headers: HEADERS })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`"My Documents" retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`"My Documents" retrieval error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -197,7 +247,9 @@ It returns a list of files and folders in the user's personal space.
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"\"My Documents\" retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -231,8 +283,16 @@ A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usag
 
     // Do NOT set Content-Type manually; fetch will set the multipart boundary
     return fetch(url, { method: 'POST', headers: { Authorization: HEADERS.Authorization }, body: form })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Upload to "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Upload to "My Documents" error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -248,7 +308,9 @@ A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usag
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Upload to \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -273,8 +335,16 @@ A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-
       headers: { ...HEADERS, 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File creation in "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File creation in "My Documents" error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -289,7 +359,9 @@ A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"File creation in \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -317,8 +389,16 @@ The following parameters can be optionally defined:
       headers: { ...HEADERS, 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File deletion from "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File deletion from "My Documents" error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -334,6 +414,10 @@ The following parameters can be optionally defined:
     }
 
     requests.delete(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print(f"File deletion from \"My Documents\" succeeded: {response.json()}")
+    else:
+      print(f"File deletion from \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

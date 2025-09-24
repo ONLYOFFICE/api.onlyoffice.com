@@ -39,7 +39,8 @@ This example demonstrates how to retrieve the list of groups in ONLYOFFICE DocSp
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to list managed groups: ${res.status} ${t}`);
+          console.log(`Managed groups retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -51,7 +52,7 @@ This example demonstrates how to retrieve the list of groups in ONLYOFFICE DocSp
         return groups;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Managed groups retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -92,7 +93,8 @@ This example demonstrates how to retrieve the list of groups in ONLYOFFICE DocSp
         print(f'- {g.get('id')} — {g.get('name')}')
       return groups
     else:
-      raise Exception(f'Failed to list managed groups: {response.status_code} {response.text}')
+      print(f"Managed groups retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Run the method
   if __name__ == '__main__':

@@ -45,7 +45,7 @@ This example demonstrates how to restore an ONLYOFFICE DocSpace portal from a sp
     // Handle API response
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Error: ${res.status} - ${text}`);
+      console.log(`Restore start failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -97,7 +97,7 @@ This example demonstrates how to restore an ONLYOFFICE DocSpace portal from a sp
       result = response.json().get('response', {})
       print(f"Restoration started. Progress: {result.get('progress')}%")
     else:
-      print(f"Error: {response.status_code} - {response.text}")
+      print(f"Restore start failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     restore_portal()

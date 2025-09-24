@@ -42,7 +42,7 @@ This example automates the process of creating new users and sending them invita
         .then((res) => {
           if (res.status === 200) return res.json();
           return res.text().then((t) => {
-            console.log(`Failed to create user ${user.email}: ${res.status} - ${t}`);
+            console.log(`User creation failed for ${user.email}. Status code: ${res.status}, Message: ${t}`);
             return null;
           });
         })
@@ -53,7 +53,7 @@ This example automates the process of creating new users and sending them invita
           return userData;
         })
         .catch((err) => {
-          console.log(`Failed to create user ${user.email}: ${err.message}`);
+          console.log(`User creation error for ${user.email}: ${err.message}`);
           return null;
         });
     });
@@ -74,12 +74,12 @@ This example automates the process of creating new users and sending them invita
           console.log('Invitations sent successfully to users.');
         } else {
           return res.text().then((t) => {
-            console.log(`Failed to send invitations: ${res.status} - ${t}`);
+            console.log(`Invitations send failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
       .catch((err) => {
-        console.log(`Failed to send invitations: ${err.message}`);
+        console.log(`Invitations send error: ${err.message}`);
       });
   }
 
@@ -132,7 +132,7 @@ This example automates the process of creating new users and sending them invita
         print(f'User created successfully: {user_data}')
         created_users.append(user_data)
       else:
-        print(f'Failed to create user {user["email"]}: {response.status_code} - {response.text}')
+        print(f'User creation failed for {user["email"]}. Status code: {response.status_code}, Message: {response.text}')
     return created_users
  
   # Step 2: Send invitations to newly created users
@@ -145,7 +145,7 @@ This example automates the process of creating new users and sending them invita
     if response.status_code == 200:
       print(f'Invitations sent successfully to users.')
     else:
-      print(f'Failed to send invitations: {response.status_code} - {response.text}')
+      print(f'Invitations send failed. Status code: {response.status_code}, Message: {response.text}')
  
   if __name__ == "__main__":
     # List of users to create
@@ -195,7 +195,7 @@ The API returns users, which are required for further operations.
         .then((res) => {
           if (res.status === 200) return res.json();
           return res.text().then((t) => {
-            console.log(`Failed to create user ${user.email}: ${res.status} - ${t}`);
+            console.log(`User creation failed for ${user.email}. Status code: ${res.status}, Message: ${t}`);
             return null;
           });
         })
@@ -206,7 +206,7 @@ The API returns users, which are required for further operations.
           return userData;
         })
         .catch((err) => {
-          console.log(`Failed to create user ${user.email}: ${err.message}`);
+          console.log(`User creation error for ${user.email}: ${err.message}`);
           return null;
         });
     });
@@ -234,7 +234,7 @@ The API returns users, which are required for further operations.
           print(f'User created successfully: {user_data}')
           created_users.append(user_data)
         else:
-          print(f'Failed to create user {user["email"]}: {response.status_code} - {response.text}')
+          print(f'User creation failed for {user["email"]}. Status code: {response.status_code}, Message: {response.text}')
     return created_users
   ```
 
@@ -263,12 +263,12 @@ The API triggers an invitation email for each newly created user. This ensures t
           console.log('Invitations sent successfully to users.');
         } else {
           return res.text().then((t) => {
-            console.log(`Failed to send invitations: ${res.status} - ${t}`);
+            console.log(`Invitations send failed. Status code: ${res.status}, Message: ${t}`);
           });
         }
       })
       .catch((err) => {
-        console.log(`Failed to send invitations: ${err.message}`);
+        console.log(`Invitations send error: ${err.message}`);
       });
   }
   ```
@@ -286,7 +286,7 @@ The API triggers an invitation email for each newly created user. This ensures t
     if response.status_code == 200:
       print(f'Invitations sent successfully to users.')
     else:
-      print(f'Failed to send invitations: {response.status_code} - {response.text}')
+      print(f'Invitations send failed. Status code: {response.status_code}, Message: {response.text}')
   ```
 
   </TabItem>

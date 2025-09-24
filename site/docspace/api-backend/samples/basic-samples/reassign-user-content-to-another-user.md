@@ -35,8 +35,11 @@ This example demonstrates how to reassign a user’s data to another user in ONL
       method: 'GET',
       headers: HEADERS,
     });
-    if (!res.ok) throw new Error(await res.text());
-
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to check reassignment: ${res.status} - ${text}`);
+      return false;
+    }
     const data = await res.json();
     const necessary = data?.response ?? false;
     console.log(`Reassignment required: ${necessary}`);
@@ -51,7 +54,11 @@ This example demonstrates how to reassign a user’s data to another user in ONL
       headers: HEADERS,
       body: JSON.stringify(payload),
     });
-    if (!res.ok) throw new Error(await res.text());
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to start reassignment: ${res.status} - ${text}`);
+      return;
+    }
     console.log('Reassignment started.');
   }
 
@@ -62,8 +69,11 @@ This example demonstrates how to reassign a user’s data to another user in ONL
         method: 'GET',
         headers: HEADERS,
       });
-      if (!res.ok) throw new Error(await res.text());
-
+      if (!res.ok) {
+        const text = await res.text();
+        console.log(`Failed to get progress: ${res.status} - ${text}`);
+        break;
+      }
       const data = await res.json();
       const info = data?.response || {};
       console.log(`Progress: ${info.percentage}%`);
@@ -82,7 +92,11 @@ This example demonstrates how to reassign a user’s data to another user in ONL
       headers: HEADERS,
       body: JSON.stringify({ userId }),
     });
-    if (!res.ok) throw new Error(await res.text());
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to terminate reassignment: ${res.status} - ${text}`);
+      return;
+    }
     console.log('Reassignment terminated.');
   }
 
@@ -119,7 +133,9 @@ This example demonstrates how to reassign a user’s data to another user in ONL
       necessary = r.json().get('response', False)
       print(f"Reassignment required: {necessary}")
       return necessary
-    raise Exception(f"Failed to check necessity: {r.text}")
+    else:
+      print(f"Failed to check necessity. Status code: {r.status_code}, Message: {r.text}")
+      return False
 
   # Step 2: Start reassignment process
   def start_reassignment(from_user_id, to_user_id, delete_profile=False):
@@ -128,7 +144,7 @@ This example demonstrates how to reassign a user’s data to another user in ONL
     if r.status_code == 200:
       print("Reassignment started.")
     else:
-      raise Exception(f"Failed to start reassignment: {r.text}")
+      print(f"Failed to start reassignment. Status code: {r.status_code}, Message: {r.text}")
 
   # Step 3: Monitor progress
   def get_progress(user_id):
@@ -140,9 +156,10 @@ This example demonstrates how to reassign a user’s data to another user in ONL
         if data.get('isCompleted'):
           print("Reassignment completed.")
           break
-          time.sleep(2)
-        else:
-          raise Exception(f"Failed to fetch progress: {r.text}")
+        time.sleep(2)
+      else:
+        print(f"Failed to fetch progress. Status code: {r.status_code}, Message: {r.text}")
+        break
 
   # Step 4: terminate the reassignment
   def terminate_reassignment(user_id):
@@ -151,7 +168,7 @@ This example demonstrates how to reassign a user’s data to another user in ONL
     if r.status_code == 200:
       print("Reassignment terminated.")
     else:
-      raise Exception(f"Failed to terminate reassignment: {r.text}")
+      print(f"Failed to terminate reassignment. Status code: {r.status_code}, Message: {r.text}")
 
   if __name__ == '__main__':
     from_user_id = 'SOURCE-USER-ID'
@@ -190,8 +207,11 @@ If successful, the API returns a boolean in response indicating whether reassign
       method: 'GET',
       headers: HEADERS,
     });
-    if (!res.ok) throw new Error(await res.text());
-
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to check reassignment: ${res.status} - ${text}`);
+      return false;
+    }
     const data = await res.json();
     const necessary = data?.response ?? false;
     console.log(`Reassignment required: ${necessary}`);
@@ -210,7 +230,9 @@ If successful, the API returns a boolean in response indicating whether reassign
       necessary = r.json().get('response', False)
       print(f"Reassignment required: {necessary}")
       return necessary
-    raise Exception(f"Failed to check necessity: {r.text}")
+    else:
+      print(f"Failed to check necessity. Status code: {r.status_code}, Message: {r.text}")
+      return False
   ```
 
   </TabItem>
@@ -235,7 +257,11 @@ A POST request is sent to [/api/2.0/people/reassign/start](/docspace/api-backend
       headers: HEADERS,
       body: JSON.stringify(payload),
     });
-    if (!res.ok) throw new Error(await res.text());
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to start reassignment: ${res.status} - ${text}`);
+      return;
+    }
     console.log('Reassignment started.');
   }
   ```
@@ -250,7 +276,7 @@ A POST request is sent to [/api/2.0/people/reassign/start](/docspace/api-backend
     if r.status_code == 200:
       print("Reassignment started.")
     else:
-      raise Exception(f"Failed to start reassignment: {r.text}")
+      print(f"Failed to start reassignment. Status code: {r.status_code}, Message: {r.text}")
   ```
 
   </TabItem>
@@ -275,8 +301,11 @@ The API response typically includes:
         method: 'GET',
         headers: HEADERS,
       });
-      if (!res.ok) throw new Error(await res.text());
-
+      if (!res.ok) {
+        const text = await res.text();
+        console.log(`Failed to get progress: ${res.status} - ${text}`);
+        break;
+      }
       const data = await res.json();
       const info = data?.response || {};
       console.log(`Progress: ${info.percentage}%`);
@@ -304,7 +333,8 @@ The API response typically includes:
           break
         time.sleep(2)
       else:
-        raise Exception(f"Failed to fetch progress: {r.text}")
+        print(f"Failed to fetch progress. Status code: {r.status_code}, Message: {r.text}")
+        break
   ```
 
   </TabItem>
@@ -326,7 +356,11 @@ A PUT request is sent to [/api/2.0/people/reassign/terminate](/docspace/api-back
       headers: HEADERS,
       body: JSON.stringify({ userId }),
     });
-    if (!res.ok) throw new Error(await res.text());
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Failed to terminate reassignment: ${res.status} - ${text}`);
+      return;
+    }
     console.log('Reassignment terminated.');
   }
   ```
@@ -341,7 +375,7 @@ A PUT request is sent to [/api/2.0/people/reassign/terminate](/docspace/api-back
     if r.status_code == 200:
       print("Reassignment terminated.")
     else:
-      raise Exception(f"Failed to terminate reassignment: {r.text}")
+      print(f"Failed to terminate reassignment. Status code: {r.status_code}, Message: {r.text}")
   ```
 
   </TabItem>

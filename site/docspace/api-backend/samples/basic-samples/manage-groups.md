@@ -35,7 +35,8 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
     const res = await fetch(url, { method: 'POST', headers: HEADERS, body: JSON.stringify(data) });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to create group: ${res.status} ${t}`);
+      console.log(`Group creation failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     const groupId = json?.response?.id;
@@ -49,7 +50,8 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to get group: ${res.status} ${t}`);
+      console.log(`Group retrieval failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     console.log(json);
@@ -64,7 +66,8 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body: JSON.stringify(data) });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to update group: ${res.status} ${t}`);
+      console.log(`Group update failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     const id = json?.response?.id;
@@ -78,7 +81,8 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to delete group: ${res.status} ${t}`);
+      console.log(`Group deletion failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     console.log(res.status);
     return res.status;
@@ -132,7 +136,7 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
       print('Group created successfully:', group_id)
       return group_id
     else:
-      print('Failed to create group:', response.status_code, response.text)
+      print(f"Group creation failed. Status code: {response.status_code}, Message: {response.text}")
  
   # Step 2: Retrieve group by ID
   def get_group_by_id(group_id):
@@ -143,7 +147,7 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
       print(group)
       return group
     else:
-      print('Failed to get group:', response.status_code, response.text)
+      print(f"Group retrieval failed. Status code: {response.status_code}, Message: {response.text}")
  
   # Step 3: Update an existing group
   def update_group(group_id, new_group_name):
@@ -157,13 +161,17 @@ This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the 
       print('Group updated successfully:', group_id)
       return group_id
     else:
-      print('Failed to update group:', response.status_code, response.text)
+      print(f"Group update failed. Status code: {response.status_code}, Message: {response.text}")
  
   # Step 4: Delete a group
   def delete_group(group_id):
     url = f'{API_HOST}/api/2.0/group/{group_id}'
     response = requests.delete(url, headers=HEADERS)
-    print(response.status_code)
+    if response.status_code == 200:
+      print(f"Group {group_id} deleted successfully.")
+    else:
+      print(f"Group deletion failed. Status code: {response.status_code}, Message: {response.text}")
+
  
   if __name__ == "__main__":
     group_name = "New Group" # Replace with actual group name
@@ -207,7 +215,8 @@ The API returns a group ID, which is required for further operations.
     const res = await fetch(url, { method: 'POST', headers: HEADERS, body: JSON.stringify(data) });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to create group: ${res.status} ${t}`);
+      console.log(`Group creation failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     const groupId = json?.response?.id;
@@ -233,7 +242,7 @@ The API returns a group ID, which is required for further operations.
       print('Group created successfully:', group_id)
       return group_id
     else:
-      print('Failed to create group:', response.status_code, response.text)
+      print(f"Group creation failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -256,7 +265,8 @@ This step ensures that the group exists before making any updates or deletions.
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to get group: ${res.status} ${t}`);
+      console.log(`Group retrieval failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     console.log(json);
@@ -276,7 +286,7 @@ This step ensures that the group exists before making any updates or deletions.
         print(group)
         return group
       else:
-        print('Failed to get group:', response.status_code, response.text)
+        print(f"Group retrieval failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -301,7 +311,8 @@ This step simulates renaming or modifying the existing group's properties.
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body: JSON.stringify(data) });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to update group: ${res.status} ${t}`);
+      console.log(`Group update failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     const json = await res.json();
     const id = json?.response?.id;
@@ -325,7 +336,7 @@ This step simulates renaming or modifying the existing group's properties.
       print('Group updated successfully:', group_id)
       return group_id
     else:
-      print('Failed to update group:', response.status_code, response.text)
+      print(f"Group update failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -348,7 +359,8 @@ This step is crucial for cleaning up unused or test data.
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`Failed to delete group: ${res.status} ${t}`);
+      console.log(`Group deletion failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
     }
     console.log(res.status);
     return res.status;
@@ -360,9 +372,12 @@ This step is crucial for cleaning up unused or test data.
 
   ``` py
   def delete_group(group_id):
-    url = f'https://{API_HOST}/api/2.0/group/{group_id}'
+    url = f'{API_HOST}/api/2.0/group/{group_id}'
     response = requests.delete(url, headers=HEADERS)
-    print(response.status_code)
+    if response.status_code == 200:
+      print(f"Group {group_id} deleted successfully.")
+    else:
+      print(f"Group deletion failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

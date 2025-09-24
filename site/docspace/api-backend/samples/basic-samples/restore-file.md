@@ -32,7 +32,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
 
     if (!res.ok) {
       const text = await res.text();
-      console.log('Failed to retrieve versions:', text);
+      console.log(`File versions retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return [];
     }
 
@@ -55,8 +55,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
       console.log(`File restored to version ${versionNumber}`);
     } else {
       const text = await res.text();
-      console.log(`Failed to restore to version ${versionNumber}: ${res.status}`);
-      console.log('Response:', text);
+      console.log(`Restore to version ${versionNumber} failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
 
@@ -102,7 +101,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
           print(f"- Version {v['version']} created at {v['created']}")
       return versions
     else:
-      print("Failed to retrieve versions:", response.text)
+      print(f"File versions retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return []
 
   # Step 2: Restore file to specific version
@@ -114,8 +113,7 @@ This example demonstrates how to retrieve the edit history of a file in ONLYOFFI
     if response.status_code == 200:
       print(f"File restored to version {version_number}")
     else:
-      print(f"Failed to restore to version {version_number}: {response.status_code}")
-      print("Response:", response.text)
+      print(f"Restore to version {version_number} failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the flow
   if __name__ == "__main__":
@@ -149,7 +147,7 @@ Returns a list of all saved versions with `version` and `created` timestamps.
 
     if (!res.ok) {
       const text = await res.text();
-      console.log('Failed to retrieve versions:', text);
+      console.log(`File versions retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return [];
     }
 
@@ -179,7 +177,7 @@ Returns a list of all saved versions with `version` and `created` timestamps.
         print(f"- Version {v['version']} created at {v['created']}")
       return versions
     else:
-      print("Failed to retrieve versions:", response.text)
+      print(f"File versions retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return []
   ```
 
@@ -207,8 +205,7 @@ This method requires the following query parameter:
       console.log(`File restored to version ${versionNumber}`);
     } else {
       const text = await res.text();
-      console.log(`Failed to restore to version ${versionNumber}: ${res.status}`);
-      console.log('Response:', text);
+      console.log(`Restore to version ${versionNumber} failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
   ```
@@ -225,8 +222,7 @@ This method requires the following query parameter:
     if response.status_code == 200:
       print(f"File restored to version {version_number}")
     else:
-      print(f"Failed to restore to version {version_number}: {response.status_code}")
-      print("Response:", response.text)
+      print(f"Restore to version {version_number} failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

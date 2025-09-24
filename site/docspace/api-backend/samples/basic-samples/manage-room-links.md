@@ -39,7 +39,8 @@ This example demonstrates how to set and retrieve room invitation or external li
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to set room link: ${res.status} - ${text}`);
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
     return res.json();
   }
@@ -50,7 +51,8 @@ This example demonstrates how to set and retrieve room invitation or external li
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to get room links: ${res.status} - ${text}`);
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
     return res.json();
   }
@@ -101,7 +103,9 @@ This example demonstrates how to set and retrieve room invitation or external li
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Room link set failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Step 2: Retrieve all links for a room
   def get_room_links(room_id):
@@ -110,7 +114,9 @@ This example demonstrates how to set and retrieve room invitation or external li
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Room links retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == "__main__":
     room_id = '123456'  # Replace with your actual room ID
@@ -148,7 +154,8 @@ A PUT request is sent to [/api/2.0/files/rooms/:roomId/links](/docspace/api-back
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to set room link: ${res.status} - ${text}`);
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
     return res.json();
   }
@@ -171,7 +178,9 @@ A PUT request is sent to [/api/2.0/files/rooms/:roomId/links](/docspace/api-back
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Room link set failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -190,7 +199,8 @@ A GET request is sent to the same endpoint to retrieve all configured room links
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to get room links: ${res.status} - ${text}`);
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
     return res.json();
   }
@@ -206,7 +216,9 @@ A GET request is sent to the same endpoint to retrieve all configured room links
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Room links retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>

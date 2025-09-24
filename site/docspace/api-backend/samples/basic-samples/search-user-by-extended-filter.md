@@ -39,7 +39,8 @@ This example demonstrates how to retrieve a list of users in ONLYOFFICE DocSpace
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`Failed to retrieve users: ${text}`);
+      console.log(`Users retrieval failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
     }
 
     const data = await res.json();
@@ -61,7 +62,7 @@ This example demonstrates how to retrieve a list of users in ONLYOFFICE DocSpace
         count: 5,
       });
     } catch (err) {
-      console.error(err.message);
+      console.log(`Users retrieval error: ${err.message}`);
     }
   })();
   ```
@@ -100,7 +101,8 @@ This example demonstrates how to retrieve a list of users in ONLYOFFICE DocSpace
         print(f'- {user.get('displayName')} | Dept: {user.get('department')} | Admin: {user.get('isAdmin')}')
       return users
     else:
-      raise Exception(f'Failed to retrieve users: {response.text}')
+      print(f"Users retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == '__main__':
     filter_users(

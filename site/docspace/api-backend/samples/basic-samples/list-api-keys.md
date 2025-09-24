@@ -33,7 +33,8 @@ This example demonstrates how to retrieve all API keys associated with the curre
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to retrieve API keys: ${t}`);
+          console.log(`API keys retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -51,7 +52,7 @@ This example demonstrates how to retrieve all API keys associated with the curre
         return keys;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`API keys retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -92,7 +93,7 @@ This example demonstrates how to retrieve all API keys associated with the curre
         print(f'  Last used: {key.get('lastUsed')}')
         print(f'  Expires at: {key.get('expiresAt')}')
     else:
-      raise Exception(f'Failed to retrieve API keys: {response.text}')
+      print(f"API keys retrieval failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the method
   if __name__ == '__main__':

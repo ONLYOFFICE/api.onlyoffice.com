@@ -33,21 +33,19 @@ This example demonstrates how to delete an existing API key in ONLYOFFICE DocSpa
       method: 'DELETE',
       headers: HEADERS,
     })
-      .then((res) => {
+      .then(async (res) => {
         if (res.status === 200) return res.json();
-        return res.text().then((t) => {
-          throw new Error(`Failed to delete API key: ${t}`);
-        });
+        const text = await res.text();
+        console.log(`API key deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
       .then((data) => {
         if (data?.response === true) {
           console.log('API key deleted successfully.');
-        } else {
-          throw new Error('Failed to delete API key: unexpected response.');
         }
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`API key deletion error: ${err.message}`);
       });
   }
 
@@ -78,7 +76,7 @@ This example demonstrates how to delete an existing API key in ONLYOFFICE DocSpa
     if response.status_code == 200 and response.json().get('response') is True:
       print('API key deleted successfully.')
     else:
-      raise Exception(f'Failed to delete API key: {response.text}')
+      print(f"API key deletion failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the method
   if __name__ == '__main__':

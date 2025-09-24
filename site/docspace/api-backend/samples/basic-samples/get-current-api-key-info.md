@@ -33,7 +33,8 @@ This example demonstrates how to retrieve the list of permissions (scopes) assoc
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          throw new Error(`Failed to get key permissions: ${t}`);
+          console.log(`Key permissions retrieval failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
         });
       })
       .then((data) => {
@@ -43,7 +44,7 @@ This example demonstrates how to retrieve the list of permissions (scopes) assoc
         return permissions;
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Key permissions retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -78,7 +79,7 @@ This example demonstrates how to retrieve the list of permissions (scopes) assoc
       for perm in permissions:
         print(f'• {perm}')
     else:
-      raise Exception(f'Failed to get key permissions: {response.text}')
+      print(f"Key permissions retrieval failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the method
   if __name__ == '__main__':

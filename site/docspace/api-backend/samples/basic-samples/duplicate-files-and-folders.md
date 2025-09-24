@@ -43,7 +43,12 @@ This example demonstrates how to duplicate one or more files and folders in ONLY
       headers: HEADERS,
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Duplication failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
       .catch(() => null);
   }
 
@@ -83,7 +88,9 @@ This example demonstrates how to duplicate one or more files and folders in ONLY
 
     if response.status_code == 200:
       return response.json()
-    return None
+    else:
+      print(f"Duplication failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == "__main__":
     duplicate_files_and_folders(FILE_IDS, FOLDER_IDS)

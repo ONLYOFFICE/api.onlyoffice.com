@@ -35,7 +35,17 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
       method: 'POST',
       headers: HEADERS,
       body: JSON.stringify(data),
-    });
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File creation error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 2: Upload a file
@@ -54,12 +64,17 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
       method: 'POST',
       headers: { Authorization: `Bearer ${API_KEY}` },
       body: form,
-    }).then((res) =>
-      res.text().then((text) => {
-        console.log(res.status, text);
-        return { status: res.status, text };
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File upload failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
-    );
+      .catch((err) => {
+        console.log(`File upload error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 3: Update an existing file
@@ -78,7 +93,17 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
       method: 'PUT',
       headers: { Authorization: `Bearer ${API_KEY}` },
       body: form,
-    });
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File update failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File update error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 4: Delete a file
@@ -90,7 +115,17 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
       method: 'DELETE',
       headers: HEADERS,
       body: JSON.stringify(data),
-    });
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File deletion error: ${err.message}`);
+        return null;
+      });
   }
 
   function main() {
@@ -135,6 +170,12 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
       'title': file_name
     }
     requests.post(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print("File created successfully.")
+      return response.json()
+    else:
+      print(f"File creation failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   # Step 2: Upload a file
   def upload_file(folder_id, file_path):
@@ -148,14 +189,25 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
         'file': (file_path, file, 'application/octet-stream')
       }
       response = requests.post(url, headers=headers, files=files)
-      print(response.status_code, response.text)
-      return response
+      if response.status_code == 200:
+        print("File uploaded successfully.")
+        return response.json()
+      else:
+        print(f"File upload failed. Status code: {response.status_code}, Message: {response.text}")
+        return None
 
   # Step 3: Update an existing file
   def update_file(file_id, new_file_path):
     url = f'{BASE_URL}/api/2.0/files/file/{file_id}'
     files = {'file': open(new_file_path, 'rb')}
     requests.put(url, headers=headers, files=files)
+    if response.status_code == 200:
+      print("File updated successfully.")
+      return response.json()
+    else:
+      print(f"File update failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
+    
 
   # Step 4: Delete a file
   def delete_file(file_id):
@@ -164,6 +216,12 @@ This example demonstrates how to manage files in ONLYOFFICE DocSpace using the A
       'immediately': True
     }
     requests.delete(url, headers=headers, json=data)
+    if response.status_code == 200:
+      print("File deletion succeeded.")
+      return response.json()
+    else:
+      print(f"File deletion failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   def main():
     folder_id = 776261 # Replace with actual folder ID
@@ -209,7 +267,17 @@ You must pass:
       method: 'POST',
       headers: HEADERS,
       body: JSON.stringify(data),
-    });
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File creation error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -223,6 +291,12 @@ You must pass:
         'title': file_name
     }
     requests.post(url, headers=headers, json=data)
+    if response.status_code == 200:
+      print("File created successfully.")
+      return response.json()
+    else:
+      print(f"File creation failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -256,7 +330,17 @@ A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backen
         console.log(res.status, text);
         return { status: res.status, text };
       })
-    );
+    )
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File upload failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File upload error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -275,9 +359,12 @@ A POST request is sent to [/api/2.0/files/:folderId/upload](/docspace/api-backen
             'file': (file_path, file, 'application/octet-stream')
         }
         response = requests.post(url, headers=headers, files=files)
-
-        print(response.status_code, response.text)
-        return response
+        if response.status_code == 200:
+          print("File uploaded successfully.")
+          return response.json()
+        else:
+          print(f"File upload failed. Status code: {response.status_code}, Message: {response.text}")
+          return None
   ```
 
   </TabItem>
@@ -306,7 +393,17 @@ A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usa
       method: 'PUT',
       headers: { Authorization: `Bearer ${API_KEY}` },
       body: form,
-    });
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File update failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File update error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -318,6 +415,12 @@ A PUT request is sent to [/api/2.0/files/file/:fileId](/docspace/api-backend/usa
     url = f'{BASE_URL}/api/2.0/files/file/{file_id}'
     files = {'file': open(new_file_path, 'rb')}
     requests.put(url, headers=headers, files=files)
+    if response.status_code == 200:
+      print("File updated successfully.")
+      return response.json()
+    else:
+      print(f"File update failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>
@@ -343,7 +446,17 @@ You must pass:
       method: 'DELETE',
       headers: HEADERS,
       body: JSON.stringify(data),
-    });
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File deletion error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -357,6 +470,12 @@ You must pass:
         'immediately': True
     }
     requests.delete(url, headers=headers, json=data)
+    if response.status_code == 200:
+      print("File deletion succeeded.")
+      return response.json()
+    else:
+      print(f"File deletion failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
   ```
 
   </TabItem>

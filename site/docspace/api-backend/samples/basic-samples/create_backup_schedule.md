@@ -48,7 +48,8 @@ This example demonstrates how to create a daily backup schedule in ONLYOFFICE Do
           console.log('Backup schedule created successfully.');
         } else {
           return res.text().then((t) => {
-            console.log(`Error: ${res.status} - ${t}`);
+            const text = await res.text();
+            console.log(`Backup schedule creation failed. Status code: ${res.status}, Message: ${text}`);
           });
         }
       })
@@ -100,7 +101,7 @@ This example demonstrates how to create a daily backup schedule in ONLYOFFICE Do
     if response.status_code == 200:
       print("Backup schedule created successfully.")
     else:
-      print(f"Error: {response.status_code} - {response.text}")
+      print(f"Backup schedule creation failed. Status code: {response.status_code}, Message: {response.text}")
 
   if __name__ == "__main__":
     create_backup_schedule()

@@ -33,7 +33,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve last login events: ${res.status} - ${text}`);
+      console.log(`Login events retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -55,7 +55,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve filtered login events: ${res.status} - ${text}`);
+      console.log(`Filtered login events retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -110,7 +110,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
       print(f"Last login events retrieved successfully: {login_events}")
       return login_events
     else:
-      print(f"Failed to retrieve last login events: {response.status_code} - {response.text}")
+      print(f"Login events retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   # Step 2: Retrieve login events using filters
@@ -131,7 +131,7 @@ This example demonstrates how to retrieve user login audit activities in ONLYOFF
       print(f"Filtered login events retrieved successfully: {filtered_events}")
       return filtered_events
     else:
-      print(f"Failed to retrieve filtered login events: {response.status_code} - {response.text}")
+      print(f"Filtered login events retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   # Example usage
@@ -168,7 +168,7 @@ This returns the most recent login activities across the DocSpace portal.
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve last login events: ${res.status} - ${text}`);
+      console.log(`Login events retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -191,7 +191,7 @@ This returns the most recent login activities across the DocSpace portal.
       print(f"Last login events retrieved successfully: {login_events}")
       return login_events
     else:
-      print(f"Failed to retrieve last login events: {response.status_code} - {response.text}")
+      print(f"Login events retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -225,7 +225,7 @@ You can apply filters such as:
 
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve filtered login events: ${res.status} - ${text}`);
+      console.log(`Filtered login events retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
 
@@ -256,7 +256,7 @@ You can apply filters such as:
       print(f"Filtered login events retrieved successfully: {filtered_events}")
       return filtered_events
     else:
-      print(f"Failed to retrieve filtered login events: {response.status_code} - {response.text}")
+      print(f"Filtered login events retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 

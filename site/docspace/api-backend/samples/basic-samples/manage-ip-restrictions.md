@@ -35,7 +35,7 @@ This example demonstrates how to retrieve and update IP restriction settings in 
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to update IP restrictions: ${res.status} - ${text}`);
+      console.log(`IP restrictions update failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
     const settings = await res.json();
@@ -50,7 +50,7 @@ This example demonstrates how to retrieve and update IP restriction settings in 
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve IP restrictions settings: ${res.status} - ${text}`);
+      console.log(`IP restrictions retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
     const settings = await res.json();
@@ -99,9 +99,9 @@ This example demonstrates how to retrieve and update IP restriction settings in 
       print('IP restrictions updated successfully.')
       return settings
     else:
-      print(f'Failed to update IP restrictions: {response.status_code} - {response.text}')
+      print(f"IP restrictions update failed. Status code: {response.status_code}, Message: {response.text}")
       return None
- 
+
   # Step 2: Retrieve current IP restrictions settings
   def get_restrictions():
     url = f'{API_HOST}/api/2.0/settings/iprestrictions'
@@ -111,7 +111,7 @@ This example demonstrates how to retrieve and update IP restriction settings in 
       print(f'IP restrictions settings retrieved: {settings}')
       return settings
     else:
-      print(f'Failed to retrieve IP restrictions settings: {response.status_code} - {response.text}')
+      print(f"IP restrictions retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
  
   if __name__ == "__main__":
@@ -146,7 +146,7 @@ A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backen
     const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to update IP restrictions: ${res.status} - ${text}`);
+      console.log(`IP restrictions update failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
     const settings = await res.json();
@@ -172,7 +172,7 @@ A PUT request is sent to [/api/2.0/settings/iprestrictions](/docspace/api-backen
       print('IP restrictions updated successfully.')
       return settings
     else:
-      print(f'Failed to update IP restrictions: {response.status_code} - {response.text}')
+      print(f"IP restrictions update failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -195,7 +195,7 @@ Fetches the current security policy to verify allowed addresses.
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const text = await res.text();
-      console.log(`Failed to retrieve IP restrictions settings: ${res.status} - ${text}`);
+      console.log(`IP restrictions retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
     const settings = await res.json();
@@ -216,7 +216,7 @@ Fetches the current security policy to verify allowed addresses.
       print(f'IP restrictions settings retrieved: {settings}')
       return settings
     else:
-      print(f'Failed to retrieve IP restrictions settings: {response.status_code} - {response.text}')
+      print(f"IP restrictions retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 

@@ -37,7 +37,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
     });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to create user: ${res.status} - ${t}`);
+      console.log(`Failed to create user. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
     const json = await res.json();
@@ -52,7 +52,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to retrieve user: ${res.status} - ${t}`);
+      console.log(`Failed to retrieve user. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
     const userData = await res.json();
@@ -70,7 +70,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
     });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to terminate user: ${res.status} - ${t}`);
+      console.log(`Failed to terminate user. Status code: ${res.status}, Message: ${t}`);
       return;
     }
     console.log(`User ${userId} terminated successfully`);
@@ -82,7 +82,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to delete user: ${res.status} - ${t}`);
+      console.log(`Failed to delete user. Status code: ${res.status}, Message: ${t}`);
       return;
     }
     console.log(`User ${userId} deleted successfully`);
@@ -130,7 +130,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
       print(f'User created successfully: {user_id}')
       return user_id
     else:
-      print(f'Failed to create user: {response.status_code} - {response.text}')
+      print(f'Failed to create user. Status code: {response.status_code}, Message: {response.text}')
       return None
  
   # Step 2: Retrieve a user by ID
@@ -142,7 +142,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
       print(f'User retrieved: {user_data}')
       return user_data
     else:
-      print(f'Failed to retrieve user: {response.status_code} - {response.text}')
+      print(f'Failed to retrieve user. Status code: {response.status_code}, Message: {response.text}')
       return None
   
   # Step 3: Terminate a user
@@ -153,7 +153,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
     if response.status_code == 200:
       print(f'User {user_id} terminated successfully')
     else:
-      print('Failed to terminate user:', response.status_code, response.text)
+      print(f'Failed to terminate user. Status code: {response.status_code}, Message: {response.text}')
  
   # Step 4: Delete user profile
   def delete_user(user_id):
@@ -162,7 +162,7 @@ This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace usi
     if response.status_code == 200:
       print(f'User {user_id} deleted successfully')
     else:
-      print('Failed to delete user:', response.status_code, response.text)
+      print(f'Failed to delete user. Status code: {response.status_code}, Message: {response.text}')
  
   if __name__ == "__main__":
     # Step 1: Create a new user
@@ -206,7 +206,7 @@ The API returns a user ID, which is required for further operations.
     });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to create user: ${res.status} - ${t}`);
+      console.log(`Failed to create user. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
     const json = await res.json();
@@ -233,7 +233,7 @@ The API returns a user ID, which is required for further operations.
       print(f'User created successfully: {user_id}')
       return user_id
     else:
-      print(f'Failed to create user: {response.status_code} - {response.text}')
+      print(f'Failed to create user. Status code: {response.status_code}, Message: {response.text}')
       return None
 
   if __name__ == "__main__":
@@ -261,7 +261,7 @@ This step ensures that the user exists before making any updates or deletions.
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to retrieve user: ${res.status} - ${t}`);
+      console.log(`Failed to retrieve user. Status code: ${res.status}, Message: ${t}`);
       return null;
     }
     const userData = await res.json();
@@ -282,7 +282,7 @@ This step ensures that the user exists before making any updates or deletions.
       print(f'User retrieved: {user_data}')
       return user_data
     else:
-      print(f'Failed to retrieve user: {response.status_code} - {response.text}')
+      print(f'Failed to retrieve user. Status code: {response.status_code}, Message: {response.text}')
       return None
   ```
 
@@ -313,7 +313,7 @@ The API marks the user as terminated, meaning they cannot log in but are still p
     });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to terminate user: ${res.status} - ${t}`);
+      console.log(`Failed to terminate user. Status code: ${res.status}, Message: ${t}`);
       return;
     }
     console.log(`User ${userId} terminated successfully`);
@@ -331,7 +331,7 @@ The API marks the user as terminated, meaning they cannot log in but are still p
     if response.status_code == 200:
       print(f'User {user_id} terminated successfully')
     else:
-      print('Failed to terminate user:', response.status_code, response.text)
+      print(f'Failed to terminate user. Status code: {response.status_code}, Message: {response.text}')
   ```
 
   </TabItem>
@@ -354,7 +354,7 @@ This step is essential for offboarding employees or cleaning up unused accounts.
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
-      console.log(`Failed to delete user: ${res.status} - ${t}`);
+      console.log(`Failed to delete user. Status code: ${res.status}, Message: ${t}`);
       return;
     }
     console.log(`User ${userId} deleted successfully`);
@@ -371,7 +371,7 @@ This step is essential for offboarding employees or cleaning up unused accounts.
     if response.status_code == 200:
       print(f'User {user_id} deleted successfully')
     else:
-      print('Failed to delete user:', response.status_code, response.text)
+      print(f'Failed to delete user. Status code: {response.status_code}, Message: {response.text}')
   ```
 
   </TabItem>

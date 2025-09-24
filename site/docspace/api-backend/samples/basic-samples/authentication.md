@@ -33,6 +33,8 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
     })
       .then((res) => {
         if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Authentication failed. Status code: ${res.status}, Message: ${text}`);
         return null;
       })
       .then((data) => {
@@ -40,7 +42,10 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
         const authToken = data?.response?.token;
         return authToken || null;
       })
-      .catch(() => null);
+      .catch((err) => {
+        console.log(`Authentication error: ${err}`);
+        return null;
+      });
   }
 
   // Step 2: Check authentication with a token you received
@@ -53,11 +58,12 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
         if (res.status === 200) {
           console.log(`User is authenticated with token ${token}.`);
         } else {
-          console.log('User is not authenticated or token is invalid.');
+          const text = await res.text();
+          console.log(`Authentication check failed. Status code: ${res.status}, Message: ${text}`);
         }
       })
-      .catch(() => {
-        console.log('User is not authenticated or token is invalid.');
+      .catch((err) => {
+        console.log(`Authentication check error: ${err}`);
       });
   }
 
@@ -89,8 +95,10 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
     response = requests.post(f'{BASE_URL}/api/2.0/authentication', json=USER_CREDENTIALS)
     if response.status_code == 200:
       auth_token = response.json().get('response', {}).get('token')
-    if auth_token:
-      return auth_token
+      if auth_token:
+        return auth_token
+    else:
+      print(f'Authentication failed. Status code: {response.status_code}, Message: {response.text}')
     return None
 
   # Step 2: Check authentication with a token you received
@@ -100,7 +108,7 @@ Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL
     if response.status_code == 200:
       print(f'User is authenticated with token {token}.')
     else:
-      print('User is not authenticated or token is invalid.')
+      print(f'Authentication check failed. Status code: {response.status_code}, Message: {response.text}')
 
     if __name__ == '__main__':
       # Step 1
@@ -131,6 +139,8 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
     })
       .then((res) => {
         if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Authentication failed. Status code: ${res.status}, Message: ${text}`);
         return null;
       })
       .then((data) => {
@@ -138,7 +148,10 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
         const authToken = data?.response?.token;
         return authToken || null;
       })
-      .catch(() => null);
+      .catch((err) => {
+        console.log(`Authentication error: ${err}`);
+        return null;
+      });
   }
   ```
 
@@ -150,8 +163,10 @@ A POST request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-
     response = requests.post(f'{BASE_URL}/api/2.0/authentication', json=USER_CREDENTIALS)
     if response.status_code == 200:
       auth_token = response.json().get('response', {}).get('token')
-      if auth_token:
-        return auth_token
+        if auth_token:
+          return auth_token
+    else:
+      print(f'Authentication failed. Status code: {response.status_code}, Message: {response.text}')
     return None
   ```
 
@@ -176,11 +191,12 @@ A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-a
         if (res.status === 200) {
           console.log(`User is authenticated with token ${token}.`);
         } else {
-          console.log('User is not authenticated or token is invalid.');
+          const text = await res.text();
+          console.log(`Authentication check failed. Status code: ${res.status}, Message: ${text}`);
         }
       })
-      .catch(() => {
-        console.log('User is not authenticated or token is invalid.');
+      .catch((err) => {
+        console.log(`Authentication check error: ${err}`);
       });
   }
   ```
@@ -195,7 +211,7 @@ A GET request is sent to [/api/2.0/authentication](/docspace/api-backend/usage-a
     if response.status_code == 200:
       print(f'User is authenticated with token {token}.')
     else:
-      print('User is not authenticated or token is invalid.')
+      print(f'Authentication check failed. Status code: {response.status_code}, Message: {response.text}')
   ```
 
   </TabItem>

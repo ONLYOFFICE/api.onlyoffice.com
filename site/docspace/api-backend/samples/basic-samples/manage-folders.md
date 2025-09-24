@@ -30,42 +30,84 @@ This example demonstrates how to manage folders in ONLYOFFICE DocSpace using the
   function createFolder(parentFolderId, folderName) {
     const url = `${BASE_URL}/api/2.0/files/folder/${parentFolderId}`;
     const data = { title: folderName };
-    return fetch(url, { method: 'POST', headers: HEADERS, body: JSON.stringify(data) });
+    return fetch(url, { method: 'POST', headers: HEADERS, body: JSON.stringify(data) })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder creation error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 2: Retrieve folder details
   function getFolderDetails(folderId) {
     const url = `${BASE_URL}/api/2.0/files/folder/${folderId}`;
-    return fetch(url, { method: 'GET', headers: HEADERS });
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder details retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder details retrieval error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 3: Rename a folder
   function renameFolder(folderId, newName) {
     const url = `${BASE_URL}/api/2.0/files/folder/${folderId}/rename`;
     const data = { title: newName };
-    return fetch(url, { method: 'PUT', headers: HEADERS, body: JSON.stringify(data) });
+    return fetch(url, { method: 'PUT', headers: HEADERS, body: JSON.stringify(data) })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder rename failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder rename error: ${err.message}`);
+        return null;
+      });
   }
 
   // Step 4: Delete a folder
   function deleteFolder(folderId) {
     const url = `${BASE_URL}/api/2.0/files/folder/${folderId}`;
-    return fetch(url, { method: 'DELETE', headers: HEADERS });
+    return fetch(url, { method: 'DELETE', headers: HEADERS })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder deletion error: ${err.message}`);
+        return null;
+      });
   }
 
-  function main() {
-    const parent_folder_id = 1234; // Replace with actual parent folder or room ID
-    const folder_id = 1234;        // Replace with actual folder ID
-    const folder_name = 'New Folder'; // Replace with actual folder name
-    const new_folder_name = 'Updated Folder Name'; // Replace with actual new folder name
+  async function main() {
+    const parent_folder_id = 1234;
+    const folder_id = 1234;
+    const folder_name = 'New Folder';
+    const new_folder_name = 'Updated Folder Name';
 
-    // Step 1
-    createFolder(parent_folder_id, folder_name)
-    // Step 2
-    getFolderDetails(folder_id)
-    // Step 3
-    renameFolder(folder_id, new_folder_name)
-    // Step 4
-    deleteFolder(folder_id)
+    const created = await createFolder(parent_folder_id, folder_name);
+    if (!created) return;
+
+    const details = await getFolderDetails(folder_id);
+    if (!details) return;
+
+    const renamed = await renameFolder(folder_id, new_folder_name);
+    if (!renamed) return;
+
+    await deleteFolder(folder_id);
   }
 
   main();
@@ -94,12 +136,22 @@ This example demonstrates how to manage folders in ONLYOFFICE DocSpace using the
       'title': folder_name
     }
 
-    requests.post(url, headers=HEADERS, json=data)
+    response = requests.post(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print("Folder created successfully.")
+    else:
+      print(f"Folder creation failed. Status code: {response.status_code}, Message: {response.text}")
+
 
   # Step 2: Retrieve folder details
   def get_folder_details(folder_id):
     url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}'
-    requests.get(url, headers=headers)
+    response = requests.get(url, headers=HEADERS)
+    if response.status_code == 200:
+      print(f"Folder details: {response.json()}")
+    else:
+      print(f"Folder details retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+
 
   # Step 3: Rename a folder
   def rename_folder(folder_id, new_name):
@@ -108,12 +160,22 @@ This example demonstrates how to manage folders in ONLYOFFICE DocSpace using the
       'title': new_name
     }
 
-    requests.put(url, headers=headers, json=data)
+    response = requests.put(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print("Folder rename succeeded.")
+    else:
+      print(f"Folder rename failed. Status code: {response.status_code}, Message: {response.text}")
+
 
   # Step 4: Delete a folder
   def delete_folder(folder_id):
     url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}'
-    requests.delete(url, headers=headers)
+    response = requests.delete(url, headers=HEADERS)
+    if response.status_code == 200:
+      print("Folder deletion succeeded.")
+    else:
+      print(f"Folder deletion failed. Status code: {response.status_code}, Message: {response.text}")
+
 
   def main():
     parent_folder_id = 1234 # Replace with actual parent folder or room ID
@@ -153,7 +215,17 @@ You must pass:
   function createFolder(parentFolderId, folderName) {
     const url = `${BASE_URL}/api/2.0/files/folder/${parentFolderId}`;
     const data = { title: folderName };
-    return fetch(url, { method: 'POST', headers: HEADERS, body: JSON.stringify(data) });
+    return fetch(url, { method: 'POST', headers: HEADERS, body: JSON.stringify(data) })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder creation error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -167,7 +239,11 @@ You must pass:
       'title': folder_name
     }
 
-    requests.post(url, headers=headers, json=data)
+    response = requests.post(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print("Folder created successfully.")
+    else:
+      print(f"Folder creation failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -183,7 +259,17 @@ A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend
   ``` ts
   function getFolderDetails(folderId) {
     const url = `${BASE_URL}/api/2.0/files/folder/${folderId}`;
-    return fetch(url, { method: 'GET', headers: HEADERS });
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder details retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder details retrieval error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -193,7 +279,11 @@ A GET request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-backend
   ``` py
   def get_folder_details(folder_id):
     url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}'
-    requests.get(url, headers=headers)
+    response = requests.get(url, headers=HEADERS)
+    if response.status_code == 200:
+      print(f"Folder details: {response.json()}")
+    else:
+      print(f"Folder details retrieval failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -214,7 +304,17 @@ You must pass:
   function renameFolder(folderId, newName) {
     const url = `${BASE_URL}/api/2.0/files/folder/${folderId}/rename`;
     const data = { title: newName };
-    return fetch(url, { method: 'PUT', headers: HEADERS, body: JSON.stringify(data) });
+    return fetch(url, { method: 'PUT', headers: HEADERS, body: JSON.stringify(data) })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder rename failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder rename error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -227,7 +327,11 @@ You must pass:
     data = {
       'title': new_name
     }
-    requests.put(url, headers=headers, json=data)
+    response = requests.put(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print("Folder rename succeeded.")
+    else:
+      print(f"Folder rename failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -243,7 +347,17 @@ A DELETE request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-back
   ``` ts
   function deleteFolder(folderId) {
     const url = `${BASE_URL}/api/2.0/files/folder/${folderId}`;
-    return fetch(url, { method: 'DELETE', headers: HEADERS });
+    return fetch(url, { method: 'DELETE', headers: HEADERS })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Folder deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Folder deletion error: ${err.message}`);
+        return null;
+      });
   }
   ```
 
@@ -253,7 +367,11 @@ A DELETE request is sent to [/api/2.0/files/folder/:folderId](/docspace/api-back
   ``` py
   def delete_folder(folder_id):
     url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}'
-  requests.delete(url, headers=headers)
+    response = requests.delete(url, headers=HEADERS)
+    if response.status_code == 200:
+      print("Folder deletion succeeded.")
+    else:
+      print(f"Folder deletion failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

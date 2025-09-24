@@ -46,8 +46,16 @@ This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE 
       headers: HEADERS,
       body: JSON.stringify(data),
     })
-      .then((res) => (res.status === 200 ? res.json() : null))
-      .catch(() => null);
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`VDR room creation failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`VDR room creation error: ${err.message}`);
+        return null;
+      });
   }
 
   // Run
@@ -90,8 +98,10 @@ This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE 
     response = requests.post(url, headers=HEADERS, json=data)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"VDR room creation failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == "__main__":
     room_title = 'Secure VDR Room'

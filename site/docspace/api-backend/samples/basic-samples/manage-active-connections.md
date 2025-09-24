@@ -34,7 +34,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to retrieve active connections: ${res.status} - ${t}`);
+          console.log(`Active connections retrieval failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -44,7 +44,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to retrieve active connections: ${err.message}`);
+        console.log(`Active connections retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -56,7 +56,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to log out all connections except the current one: ${res.status} - ${t}`);
+          console.log(`Logout-all-except-current failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -66,7 +66,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to log out all connections except the current one: ${err.message}`);
+        console.log(`Logout-all-except-current error: ${err.message}`);
         return null;
       });
   }
@@ -78,7 +78,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to log out connection ${loginEventId}: ${res.status} - ${t}`);
+          console.log(`Logout connection ${loginEventId} failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -88,7 +88,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to log out connection ${loginEventId}: ${err.message}`);
+        console.log(`Logout connection ${loginEventId} error: ${err.message}`);
         return null;
       });
   }
@@ -100,7 +100,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to log out all connections for user ${userId}: ${res.status} - ${t}`);
+          console.log(`Logout all for user ${userId} failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -110,7 +110,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to log out all connections for user ${userId}: ${err.message}`);
+        console.log(`Logout all for user ${userId} error: ${err.message}`);
         return null;
       });
   }
@@ -171,7 +171,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       print(f"Active connections retrieved successfully: {active_connections}")
       return active_connections
     else:
-      print(f"Failed to retrieve active connections: {response.status_code} - {response.text}")
+      print(f"Active connections retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   # Step 2: Log out all sessions except the current one
@@ -184,7 +184,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       print(f"Logged out all connections except the current one: {result}")
       return result
     else:
-      print(f"Failed to log out all connections except the current one: {response.status_code} - {response.text}")
+      print(f"Logout-all-except-current failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   # Step 3: Log out a specific session by its login event ID
@@ -197,7 +197,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       print(f"Logged out connection {login_event_id}: {result}")
       return result
     else:
-      print(f"Failed to log out connection {login_event_id}: {response.status_code} - {response.text}")
+      print(f"Logout connection {login_event_id} failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   # Step 4: Log out all sessions for a specific user
@@ -210,7 +210,7 @@ This example shows how to manage active user sessions in ONLYOFFICE DocSpace. Yo
       print(f"Logged out all connections for user {user_id}: {result}")
       return result
     else:
-      print(f"Failed to log out all connections for user {user_id}: {response.status_code} - {response.text}")
+      print(f"Logout all for user {user_id} failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   # Example usage
@@ -260,7 +260,7 @@ It returns a list of active sessions on the portal.
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to retrieve active connections: ${res.status} - ${t}`);
+          console.log(`Active connections retrieval failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -270,7 +270,7 @@ It returns a list of active sessions on the portal.
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to retrieve active connections: ${err.message}`);
+        console.log(`Active connections retrieval error: ${err.message}`);
         return null;
       });
   }
@@ -289,7 +289,7 @@ It returns a list of active sessions on the portal.
     print(f"Active connections retrieved successfully: {active_connections}")
     return active_connections
   else:
-    print(f"Failed to retrieve active connections: {response.status_code} - {response.text}")
+    print(f"Active connections retrieval failed. Status code: {response.status_code}, Message: {response.text}")
     return None
   ```
 
@@ -312,7 +312,7 @@ It terminates all sessions except the current API session.
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to log out all connections except the current one: ${res.status} - ${t}`);
+          console.log(`Logout-all-except-current failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -322,7 +322,7 @@ It terminates all sessions except the current API session.
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to log out all connections except the current one: ${err.message}`);
+        console.log(`Logout-all-except-current error: ${err.message}`);
         return null;
       });
   }
@@ -341,7 +341,7 @@ It terminates all sessions except the current API session.
       print(f"Logged out all connections except the current one: {result}")
       return result
     else:
-      print(f"Failed to log out all connections except the current one: {response.status_code} - {response.text}")
+      print(f"Logout-all-except-current failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -364,7 +364,7 @@ It logs out a session by its login event ID.
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to log out connection ${loginEventId}: ${res.status} - ${t}`);
+          console.log(`Logout connection ${loginEventId} failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -374,7 +374,7 @@ It logs out a session by its login event ID.
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to log out connection ${loginEventId}: ${err.message}`);
+        console.log(`Logout connection ${loginEventId} error: ${err.message}`);
         return null;
       });
   }
@@ -393,7 +393,7 @@ def log_out_active_connection(login_event_id):
       print(f"Logged out connection {login_event_id}: {result}")
       return result
     else:
-      print(f"Failed to log out connection {login_event_id}: {response.status_code} - {response.text}")
+      print(f"Logout connection {login_event_id} failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -416,7 +416,7 @@ It logs out all active sessions for the provided user ID.
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to log out all connections for user ${userId}: ${res.status} - ${t}`);
+          console.log(`Logout all for user ${userId} failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -426,7 +426,7 @@ It logs out all active sessions for the provided user ID.
         return data;
       })
       .catch((err) => {
-        console.log(`Failed to log out all connections for user ${userId}: ${err.message}`);
+        console.log(`Logout all for user ${userId} error: ${err.message}`);
         return null;
       });
   }
@@ -445,7 +445,7 @@ It logs out all active sessions for the provided user ID.
       print(f"Logged out all connections for user {user_id}: {result}")
       return result
     else:
-      print(f"Failed to log out all connections for user {user_id}: {response.status_code} - {response.text}")
+      print(f"Logout all for user {user_id} failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 

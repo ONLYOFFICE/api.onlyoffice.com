@@ -44,7 +44,8 @@ This example demonstrates how to manage a guest user in ONLYOFFICE DocSpace usin
     console.log('Raw Response:', raw);
 
     if (!res.ok) {
-      throw new Error('Failed to approve guest — verify that the guest was invited via share.');
+      console.log(`Guest approval failed. Status code: ${res.status}, Message: ${raw}`);
+      return null;
     }
 
     const data = JSON.parse(raw);
@@ -69,7 +70,8 @@ This example demonstrates how to manage a guest user in ONLYOFFICE DocSpace usin
     console.log('Raw Response (delete):', raw);
 
     if (!res.ok) {
-      throw new Error(`Failed to delete guest: ${raw}`);
+      console.log(`Guest deletion failed. Status code: ${res.status}, Message: ${raw}`);
+      return null;
     }
 
     console.log(`Guest with ID ${userId} deleted successfully.`);
@@ -116,10 +118,11 @@ This example demonstrates how to manage a guest user in ONLYOFFICE DocSpace usin
 
     if resp.status_code == 200:
       guest = resp.json().get('response', {})
-      print(f'Approved guest: {guest.get('displayName')} ({guest.get('email')})')
+      print(f"Approved guest: {guest.get('displayName')} ({guest.get('email')})")
       return str(guest.get('id'))
     else:
-      raise Exception('Failed to approve guest — verify that the guest was invited via share.')
+      print(f"Guest approval failed. Status code: {resp.status_code}, Message: {resp.text}")
+      return None
 
   # Step 2: Delete a guest by ID
   def delete_guest(user_id: str) -> None:
@@ -133,7 +136,8 @@ This example demonstrates how to manage a guest user in ONLYOFFICE DocSpace usin
     if resp.status_code == 200:
       print(f'Guest with ID {user_id} deleted successfully.')
     else:
-      raise Exception(f'Failed to delete guest: {resp.text}')
+      print(f"Guest approval failed. Status code: {resp.status_code}, Message: {resp.text}")
+      return None
 
   # Run the guest management flow
   if __name__ == '__main__':
@@ -173,7 +177,8 @@ On success, the API returns the guest's details including their `id`, which will
     console.log('Raw Response:', raw);
 
     if (!res.ok) {
-      throw new Error('Failed to approve guest — verify that the guest was invited via share.');
+      console.log(`Guest approval failed. Status code: ${res.status}, Message: ${raw}`);
+      return null;
     }
 
     const data = JSON.parse(raw);
@@ -196,10 +201,11 @@ On success, the API returns the guest's details including their `id`, which will
 
     if resp.status_code == 200:
       guest = resp.json().get('response', {})
-      print(f'Approved guest: {guest.get('displayName')} ({guest.get('email')})')
+      print(f"Approved guest: {guest.get('displayName')} ({guest.get('email')})")
       return str(guest.get('id'))
     else:
-      raise Exception('Failed to approve guest — verify that the guest was invited via share.')
+      print(f"Guest approval failed. Status code: {resp.status_code}, Message: {resp.text}")
+      return None
   ```
 
   </TabItem>
@@ -231,7 +237,8 @@ A DELETE request is sent to [/api/2.0/people/guests](/docspace/api-backend/usage
     console.log('Raw Response (delete):', raw);
 
     if (!res.ok) {
-      throw new Error(`Failed to delete guest: ${raw}`);
+      console.log(`Guest deletion failed. Status code: ${res.status}, Message: ${raw}`);
+      return null;
     }
 
     console.log(`Guest with ID ${userId} deleted successfully.`);
@@ -253,7 +260,7 @@ A DELETE request is sent to [/api/2.0/people/guests](/docspace/api-backend/usage
     if resp.status_code == 200:
       print(f'Guest with ID {user_id} deleted successfully.')
     else:
-      raise Exception(f'Failed to delete guest: {resp.text}')
+      print(f"Guest deletion failed. Status code: {resp.status_code}, Message: {resp.text}")
   ```
 
   </TabItem>

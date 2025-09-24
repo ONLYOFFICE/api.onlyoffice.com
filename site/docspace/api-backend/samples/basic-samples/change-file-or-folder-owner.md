@@ -47,9 +47,9 @@ This example demonstrates how to transfer ownership of files and/or folders in O
     })
       .then((res) => {
         if (res.status === 200) return res.json();
-        return res.text().then((t) => {
-          throw new Error(`Failed to update ownership: ${t}`);
-        });
+        const text = await res.text();
+        console.log(`Ownership update failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
       .then((data) => {
         const result = data?.response ?? [];
@@ -61,7 +61,7 @@ This example demonstrates how to transfer ownership of files and/or folders in O
         });
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Ownership update error: ${err}`);
       });
   }
 
@@ -108,7 +108,7 @@ This example demonstrates how to transfer ownership of files and/or folders in O
         shared = entry.get('access', {}).get('shared', False)
         print(f"- {title} (Shared: {shared})")
     else:
-      raise Exception(f"Failed to update ownership: {response.text}")
+      print(f"Ownership update failed. Status code: {response.status_code}, Message: {response.text}")
 
   # Run the method
   if __name__ == '__main__':
@@ -154,9 +154,9 @@ The API responds with a list of updated items and whether they are still shared.
     })
       .then((res) => {
         if (res.status === 200) return res.json();
-        return res.text().then((t) => {
-          throw new Error(`Failed to update ownership: ${t}`);
-        });
+        const text = await res.text();
+        console.log(`Ownership update failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
       .then((data) => {
         const result = data?.response ?? [];
@@ -168,7 +168,7 @@ The API responds with a list of updated items and whether they are still shared.
         });
       })
       .catch((err) => {
-        console.error(err.message);
+        console.log(`Ownership update error: ${err}`);
       });
   }
   ```
@@ -189,7 +189,7 @@ The API responds with a list of updated items and whether they are still shared.
         shared = entry.get('access', {}).get('shared', False)
         print(f"- {title} (Shared: {shared})")
     else:
-      raise Exception(f"Failed to update ownership: {response.text}")
+      print(f"Ownership update failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

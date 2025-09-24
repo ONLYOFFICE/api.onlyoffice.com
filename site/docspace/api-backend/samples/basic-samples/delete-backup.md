@@ -34,11 +34,12 @@ This example demonstrates how to delete a specific backup in ONLYOFFICE DocSpace
     })
       .then((res) => {
         if (res.status === 200) return res.json();
-        return res.text().then((t) => {
-          throw new Error(`Failed to delete backup: ${res.status} - ${t}`);
-        });
+        const text = await res.text();
+        console.log(`Backup deletion failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
       })
       .then((data) => {
+        if (!data) return null;
         const result = data?.response;
         console.log(`Backup deleted: ${result}`);
         return result;
@@ -77,7 +78,8 @@ This example demonstrates how to delete a specific backup in ONLYOFFICE DocSpace
       print(f"Backup deleted: {result}")
       return result
     else:
-      raise Exception(f"Failed to delete backup: {response.status_code} - {response.text}")
+      print(f"Backup deletion failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
   if __name__ == '__main__':
     # Example: Replace with actual backup ID from backup history

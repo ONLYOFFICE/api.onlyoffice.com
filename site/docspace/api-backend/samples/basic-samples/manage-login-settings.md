@@ -40,7 +40,7 @@ This example demonstrates how to configure login security settings, including fa
       console.log('Login settings updated successfully.');
     } else {
       const text = await res.text();
-      console.log(`Failed to update login settings: ${res.status} - ${text}`);
+      console.log(`Login settings update failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
 
@@ -55,7 +55,7 @@ This example demonstrates how to configure login security settings, including fa
       return settings;
     } else {
       const text = await res.text();
-      console.log(`Failed to retrieve login settings: ${res.status} - ${text}`);
+      console.log(`Login settings retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
   }
@@ -69,7 +69,7 @@ This example demonstrates how to configure login security settings, including fa
       console.log('Login settings reset to default successfully.');
     } else {
       const text = await res.text();
-      console.log(`Failed to reset login settings: ${res.status} - ${text}`);
+      console.log(`Login settings reset failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
 
@@ -116,7 +116,7 @@ This example demonstrates how to configure login security settings, including fa
     if response.status_code == 200:
       print('Login settings updated successfully.')
     else:
-      print(f'Failed to update login settings: {response.status_code} - {response.text}')
+      print(f"Login settings update failed. Status code: {response.status_code}, Message: {response.text}")
  
   # Step 2: Retrieve current login settings
   def get_login_settings():
@@ -127,7 +127,7 @@ This example demonstrates how to configure login security settings, including fa
       print(f'Login settings retrieved: {settings}')
       return settings
     else:
-      print(f'Failed to retrieve login settings: {response.status_code} - {response.text}')
+      print(f"Login settings retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
  
   # Step 3: Reset login settings to default
@@ -137,7 +137,7 @@ This example demonstrates how to configure login security settings, including fa
     if response.status_code == 200:
       print('Login settings reset to default successfully.')
     else:
-      print(f'Failed to reset login settings: {response.status_code} - {response.text}')
+      print(f"Login settings reset failed. Status code: {response.status_code}, Message: {response.text}")
  
   if __name__ == "__main__":
     # Step 1: Update login settings
@@ -181,7 +181,7 @@ Modifies the security settings, such as the number of failed attempts before blo
       console.log('Login settings updated successfully.');
     } else {
       const text = await res.text();
-      console.log(`Failed to update login settings: ${res.status} - ${text}`);
+      console.log(`Login settings update failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
   ```
@@ -201,7 +201,7 @@ Modifies the security settings, such as the number of failed attempts before blo
     if response.status_code == 200:
       print('Login settings updated successfully.')
     else:
-      print(f'Failed to update login settings: {response.status_code} - {response.text}')
+      print(f"Login settings update failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>
@@ -233,7 +233,7 @@ This step ensures that security policies are correctly configured and applied.
       return settings;
     } else {
       const text = await res.text();
-      console.log(`Failed to retrieve login settings: ${res.status} - ${text}`);
+      console.log(`Login settings retrieval failed. Status code: ${res.status}, Message: ${text}`);
       return null;
     }
   }
@@ -251,7 +251,7 @@ This step ensures that security policies are correctly configured and applied.
       print(f'Login settings retrieved: {settings}')
       return settings
     else:
-      print(f'Failed to retrieve login settings: {response.status_code} - {response.text}')
+      print(f"Login settings retrieval failed. Status code: {response.status_code}, Message: {response.text}")
       return None
   ```
 
@@ -278,7 +278,7 @@ A GET request is sent to [/api/2.0/settings/security/loginsettings](/docspace/ap
       console.log('Login settings reset to default successfully.');
     } else {
       const text = await res.text();
-      console.log(`Failed to reset login settings: ${res.status} - ${text}`);
+      console.log(`Login settings reset failed. Status code: ${res.status}, Message: ${text}`);
     }
   }
   ```
@@ -293,7 +293,7 @@ A GET request is sent to [/api/2.0/settings/security/loginsettings](/docspace/ap
     if response.status_code == 200:
       print('Login settings reset to default successfully.')
     else:
-      print(f'Failed to reset login settings: {response.status_code} - {response.text}')
+      print(f"Login settings reset failed. Status code: {response.status_code}, Message: {response.text}")
   ```
 
   </TabItem>

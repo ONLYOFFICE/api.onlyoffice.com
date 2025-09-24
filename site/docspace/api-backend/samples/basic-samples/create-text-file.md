@@ -42,7 +42,7 @@ This example demonstrates how to create a `.txt` file in a specified folder in O
       .then((res) => {
         if (res.status === 200) return res.json();
         return res.text().then((t) => {
-          console.log(`Failed to create file: ${res.status} - ${t}`);
+          console.log(`File creation failed. Status code: ${res.status}, Message: ${t}`);
           return null;
         });
       })
@@ -52,7 +52,7 @@ This example demonstrates how to create a `.txt` file in a specified folder in O
         return fileInfo;
       })
       .catch((err) => {
-        console.log(`Failed to create file: ${err.message}`);
+        console.log(`File creation error: ${err.message}`);
         return null;
       });
   }
@@ -97,7 +97,7 @@ This example demonstrates how to create a `.txt` file in a specified folder in O
       print(f'File created successfully: {file_info}')
       return file_info
     else:
-      print(f'Failed to create file: {response.status_code} - {response.text}')
+      print(f"File creation failed. Status code: {response.status_code}, Message: {response.text}")
       return None
 
   if __name__ == "__main__":
