@@ -32,6 +32,7 @@ jobs:
           BRANCH_NAME: ${{ github.ref_name }}
         run: |
           if [[ "$BRANCH_NAME" == "master" ]]; then
+            echo "Set production environment"
             echo "environment=production" >> $GITHUB_OUTPUT
             echo "stack_name=api-onlyoffice-redirects-prod" >> $GITHUB_OUTPUT
             echo "alias=prod" >> $GITHUB_OUTPUT
@@ -40,7 +41,7 @@ jobs:
             echo "aws_access_key=${{ secrets.AWS_ACCESS_KEY_PROD }}" >> $GITHUB_OUTPUT
             echo "aws_access_key_secret=${{ secrets.AWS_SECRET_KEY_PROD }}" >> $GITHUB_OUTPUT
           elif [[ "$BRANCH_NAME" == "develop" ]]; then
-            echo ">>>>>>>>>>>>> MAKE OUTPUT"
+            echo "Set develop environment"
             echo "environment=develop" >> $GITHUB_OUTPUT
             echo "stack_name=api-onlyoffice-redirects-dev" >> $GITHUB_OUTPUT
             echo "alias=develop" >> $GITHUB_OUTPUT
