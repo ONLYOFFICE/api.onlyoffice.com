@@ -55,7 +55,15 @@ var Placeholders = {
                   "    let version = await Editor.callMethod(\"GetVersion\");\n" +
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
-                  "})();\n"
+                  "})();\n",
+
+        "builder":       "builder.CreateFile(\"docx\");\n" +
+                         "var oDocument = Api.GetDocument();\n" +
+                         "var oParagraph = Api.CreateParagraph();\n" +
+                         "oParagraph.AddText(\"Hello world!\");\n" +
+                         "oDocument.InsertContent([oParagraph]);\n" +
+                         "builder.SaveFile(\"docx\", \"Api.docx\");\n" +
+                         "builder.CloseFile();\n",
     },
     "cell" : {
         "office-js-api": "Api.AddComment(\"Comment 1\", \"Bob\");\n" +
@@ -74,7 +82,17 @@ var Placeholders = {
                   "    let version = await Editor.callMethod(\"GetVersion\");\n" +
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
-                  "})();\n"
+                  "})();\n",
+
+        "builder":       "builder.CreateFile(\"xlsx\");\n" +
+                         "Api.AddComment(\"Comment 1\", \"Bob\");\n" +
+                         "Api.AddComment(\"Comment 2\");\n" +
+                         "let comments = Api.GetComments();\n" +
+                         "let worksheet = Api.GetActiveSheet();\n" +
+                         "worksheet.GetRange(\"A1\").SetValue(\"Comment Text: \", comments[0].GetText());\n" +
+                         "worksheet.GetRange(\"B1\").SetValue(\"Comment Author: \", comments[0].GetAuthorName());\n" +
+                         "builder.SaveFile(\"xlsx\", \"Api.xlsx\");\n" +
+                         "builder.CloseFile();\n"
     },
     "slide" : {
         "office-js-api": "var oPresentation = Api.GetPresentation();\n" +
@@ -98,7 +116,18 @@ var Placeholders = {
                   "    let version = await Editor.callMethod(\"GetVersion\");\n" +
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
-                  "})();\n"
+                  "})();\n",
+
+        "builder":       "builder.CreateFile(\"pptx\");\n" +
+                         "var oPresentation = Api.GetPresentation();\n" +
+                         "var oSlide = Api.CreateSlide();\n" +
+                         "var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);\n" +
+                         "var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);\n" +
+                         "var oFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\n" +
+                         "oSlide.SetBackground(oFill);\n" +
+                         "oPresentation.AddSlide(oSlide);\n" +
+                         "builder.SaveFile(\"pptx\", \"Api.pptx\");\n" +
+                         "builder.CloseFile();\n",
     },
     "form" : {
         "office-js-api": "var oDocument = Api.GetDocument();\n" +
@@ -115,7 +144,15 @@ var Placeholders = {
             "    let version = await Editor.callMethod(\"GetVersion\");\n" +
             "    console.log(version);\n" +
             "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" +
-            "})();\n"
+            "})();\n",
+
+        "builder": "builder.CreateFile(\"pdf\");\n" +
+            "var oDocument = Api.GetDocument();\n" +
+            "var oParagraph = Api.CreateParagraph();\n" +
+            "oParagraph.AddText(\"Hello world!\");\n" +
+            "oDocument.InsertContent([oParagraph]);\n" +
+            "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
+            "builder.CloseFile();\n",
     },
 };
 
@@ -330,6 +367,18 @@ buttonRun.onclick = function()
         case "office-js-api":
         {
             window.connector.callCommand(new Function(codeEditor.getValue()));
+            break;
+        }
+        case "builder":
+        {
+            var removeMethod = {
+                "word": "Api.GetDocument().RemoveAllElements();",
+                "cell": "Api.AddSheet(\"Sheet 1\");var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
+                "slide": "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());",
+                "form": "Api.GetDocument().RemoveAllElements();"
+            };
+            var script = removeMethod[Environment.editor] + codeEditor.getValue().replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
+            window.connector.callCommand(new Function(script));
             break;
         }
         case "connector":
