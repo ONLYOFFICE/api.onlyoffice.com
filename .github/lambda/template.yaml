@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: ONLYOFFICE redirects lambda
+
+
+Parameters:
+  FunctionName:
+    Type: String
+    Description: Logical Lambda function name (shared between envs)
+  AliasName:
+    Type: String
+    AllowedValues:
+      - develop
+      - prod
+    Description: Alias to auto-publish to (develop|prod)
+
+Resources:
+  RedirectsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Ref FunctionName
+      Runtime: python3.11
+      Handler: function.handler
+      CodeUri: src/
+      MemorySize: 128
+      Timeout: 3
+      Description: 'Redirects for api site'
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      AutoPublishAlias: !Ref AliasName
+
+Outputs:
+  FunctionArn:
+    Value: !GetAtt RedirectsFunction.Arn
