@@ -2,6 +2,19 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.1
+
+### Pivot tables methods
+
+- Added the [ApiPivotField/GetPivotFilters] method to the Spreadsheet API
+- Added the [ApiPivotField/AutoSort] method to the Spreadsheet API.
+- Added the [ApiPivotField/AutoSortField] property to the Spreadsheet API.
+- Added the [ApiPivotField/AutoSortOrder] property to the Spreadsheet API.
+- Added the [ApiPivotFilters] class to the Spreadsheet API.
+- Added the [ApiPivotFilters/Add] method to the Spreadsheet API.
+- Added the [ApiPivotItem/GetVisible] method to the Spreadsheet API.
+- Added the [ApiPivotItem/SetVisible] method to the Spreadsheet API.
+
 ## Version 9.0
 
 ### Content control methods
