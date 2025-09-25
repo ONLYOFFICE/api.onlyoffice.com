@@ -11,7 +11,7 @@ This documentation describes:
 - How to [write](../macros/writing-macros.md), [debug](../macros/debugging.md) and run a macro, add a custom function, or [convert](../macros/converting-vba-macros.md) VBA macros to use in ONLYOFFICE
 - How to use [AI tools](../ai/ai-plugin.md), add [custom providers](../ai/custom-providers.md), configure [AI agent](../ai/ai-agent.md), and create [custom functions](../ai/custom-ai-functions.md)
 - How to [interact with the editors](../interacting-with-editors/overview/overview.md), use ONLYOFFICE [methods](../interacting-with-editors/overview/how-to-call-methods.md) and [events](../interacting-with-editors/overview/how-to-attach-events.md)
-- Where to find guides and [plugin](../samples/plugin-samples/plugin-samples.md)/[macro](../samples/macro-samples/macro-samples.md) code samples to get started
+- Where to find guides and [plugin](../samples/plugin-samples/plugin-samples.md)/[macro](../samples/macro-samples/macro-samples.md)/[custom AI function](../samples/custom-ai-functions-samples/custom-ai-functions-samples.md) code samples to get started
 
 ## What plugins can do
 
