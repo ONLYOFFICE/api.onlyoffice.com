@@ -2,6 +2,60 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.1
+
+### Geometry classes and methods
+
+- Added the [Api/CreateCustomGeometry] method to the Presentation API.
+- Added the [Api/CreatePresetGeometry] method to the Presentation API.
+- Added the [ApiShape/GetGeometry] method to the Presentation API.
+- Added the [ApiShape/SetGeometry] method to the Presentation API.
+- Added the [ApiGeometry] class to the Presentation API.
+- Added the [ApiGeometry/IsCustom] method to the Presentation API.
+- Added the [ApiGeometry/GetPreset] method to the Presentation API.
+- Added the [ApiGeometry/GetPathCount] method to the Presentation API.
+- Added the [ApiGeometry/GetPath] method to the Presentation API.
+- Added the [ApiGeometry/GetPaths] method to the Presentation API.
+- Added the [ApiGeometry/AddPath] method to the Presentation API.
+- Added the [ApiGeometry/GetAdjValue] method to the Presentation API.
+- Added the [ApiGeometry/AddAdj] method to the Presentation API.
+- Added the [ApiGeometry/SetAdjValue] method to the Presentation API.
+- Added the [ApiGeometry/AddGuide] method to the Presentation API.
+- Added the [ApiGeometry/SetTextRect] method to the Presentation API.
+- Added the [ApiGeometry/AddConnectionPoint] method to the Presentation API.
+- Added the [ApiPath] class to the Presentation API.
+- Added the [ApiPath/GetStroke] method to the Presentation API.
+- Added the [ApiPath/SetStroke] method to the Presentation API.
+- Added the [ApiPath/GetFill] method to the Presentation API.
+- Added the [ApiPath/SetFill] method to the Presentation API.
+- Added the [ApiPath/GetWidth] method to the Presentation API.
+- Added the [ApiPath/SetWidth] method to the Presentation API.
+- Added the [ApiPath/GetHeight] method to the Presentation API.
+- Added the [ApiPath/SetHeight] method to the Presentation API.
+- Added the [ApiPath/GetCommands] method to the Presentation API.
+- Added the [ApiPath/GetCommandCount] method to the Presentation API.
+- Added the [ApiPath/GetCommand] method to the Presentation API.
+- Added the [ApiPath/MoveTo] method to the Presentation API.
+- Added the [ApiPath/LineTo] method to the Presentation API.
+- Added the [ApiPath/CubicBezTo] method to the Presentation API.
+- Added the [ApiPath/QuadBezTo] method to the Presentation API.
+- Added the [ApiPath/ArcTo] method to the Presentation API.
+- Added the [ApiPath/Close] method to the Presentation API.
+- Added the [ApiPathCommand] class to the Presentation API.
+- Added the [ApiPathCommand/GetType] method to the Presentation API.
+- Added the [ApiPathCommand/GetX] method to the Presentation API.
+- Added the [ApiPathCommand/GetY] method to the Presentation API.
+- Added the [ApiPathCommand/GetX0] method to the Presentation API.
+- Added the [ApiPathCommand/GetY0] method to the Presentation API.
+- Added the [ApiPathCommand/GetX1] method to the Presentation API.
+- Added the [ApiPathCommand/GetY1] method to the Presentation API.
+- Added the [ApiPathCommand/GetX2] method to the Presentation API.
+- Added the [ApiPathCommand/GetY2] method to the Presentation API.
+- Added the [ApiPathCommand/GetWR] method to the Presentation API.
+- Added the [ApiPathCommand/GetHR] method to the Presentation API.
+- Added the [ApiPathCommand/GetStartAngle] method to the Presentation API.
+- Added the [ApiPathCommand/GetSweepAngle] method to the Presentation API.
+
 ## Version 9.0
 
 ### Content control methods
