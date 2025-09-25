@@ -14,6 +14,11 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPivotFilters/Add] method to the Spreadsheet API.
 - Added the [ApiPivotItem/GetVisible] method to the Spreadsheet API.
 - Added the [ApiPivotItem/SetVisible] method to the Spreadsheet API.
+- Added the [ApiRange/Offset] method to the Spreadsheet API.
+- Added the [ApiRange/Resize] method to the Spreadsheet API.
+- Added the [ApiRange/GetRange] method to the Spreadsheet API.
+- Added the [ApiRange/GetEntireRow] method to the Spreadsheet API.
+- Added the [ApiRange/GetEntireColumn] method to the Spreadsheet API.
 
 ## Version 9.0
 
