@@ -10,106 +10,90 @@ on:
   workflow_dispatch: {}
 
 concurrency:
-  group: deploy-lambda-${{ github.ref }}
+  group: update-cf-config
   cancel-in-progress: false
   
-jobs:            
-  prepare:
-    runs-on: ubuntu-latest
-    outputs:
-      environment: ${{ steps.vars.outputs.environment }}
-      stack_name:  ${{ steps.vars.outputs.stack_name }}
-      alias:       ${{ steps.vars.outputs.alias }}
-      aws_region:  ${{ steps.vars.outputs.aws_region }}
-      aws_distribution_id: ${{ steps.vars.outputs.aws_distribution_id }}
-      aws_access_key: ${{ steps.vars.outputs.aws_access_key }}
-      aws_access_key_secret: ${{ steps.vars.outputs.aws_access_key_secret }}
-      
-    steps:
-      - name: Compute environment variables by branch
-        id: vars
-        env: 
-          BRANCH_NAME: ${{ github.ref_name }}
-        run: |
-          if [[ "$BRANCH_NAME" == "master" ]]; then
-            echo "Set production environment"
-            echo "environment=production" >> $GITHUB_OUTPUT
-            echo "stack_name=api-onlyoffice-redirects-prod" >> $GITHUB_OUTPUT
-            echo "alias=prod" >> $GITHUB_OUTPUT
-            echo "aws_region=us-east-1" >> $GITHUB_OUTPUT
-            echo "aws_distribution_id=${{ secrets.AWS_DISTRIBUTION_ID_PROD }}" >> $GITHUB_OUTPUT
-            echo "aws_access_key=${{ secrets.AWS_ACCESS_KEY_PROD }}" >> $GITHUB_OUTPUT
-            echo "aws_access_key_secret=${{ secrets.AWS_SECRET_KEY_PROD }}" >> $GITHUB_OUTPUT
-          elif [[ "$BRANCH_NAME" == "develop" ]]; then
-            echo "Set develop environment"
-            echo "environment=develop" >> $GITHUB_OUTPUT
-            echo "stack_name=api-onlyoffice-redirects-dev" >> $GITHUB_OUTPUT
-            echo "alias=develop" >> $GITHUB_OUTPUT
-            echo "aws_region=us-east-1" >> $GITHUB_OUTPUT
-            echo "aws_distribution_id=${{ secrets.AWS_DISTRIBUTION_ID_TEST }}" >> $GITHUB_OUTPUT
-            echo "aws_access_key=${{ secrets.AWS_ACCESS_KEY_TEST }}" >> $GITHUB_OUTPUT
-            echo "aws_access_key_secret=${{ secrets.AWS_SECRET_KEY_TEST }}" >> $GITHUB_OUTPUT
-          fi
-          
+jobs:                      
   deploy:
     runs-on: ubuntu-latest
-    needs: [ prepare ]
-    environment: ${{ needs.prepare.outputs.environment }}
+    environment: ${{ github.ref_name == 'develop' && 'develop' || 'production' }}
     env:
       LAMBDA_CODE_DIR: .github/lambda/src
       SAM_TEMPLATE: .github/lambda/template.yaml
-      STACK_NAME: ${{ needs.prepare.outputs.stack_name }}
-      LAMBDA_FUNCTION_NAME: "url-rewrite-api-teamlab-info-rewriteUrls-python"
-      LAMBDA_ALIAS: ${{ needs.prepare.outputs.alias }}
-      AWS_REGION: ${{ needs.prepare.outputs.aws_region }}
-      AWS_ACCESS_KEY: ${{ needs.prepare.outputs.aws_access_key }}
-      AWS_SECRET_ACCESS_KEY: ${{ needs.prepare.outputs.aws_access_key_secret }}
-      AWS_DISTRIBUTION_ID: ${{ needs.prepare.outputs.aws_distribution_id }}
+      LAMBDA_FUNCTION_NAME: "onlyoffice-api-site-url-rewrite"
     steps:
     - uses: actions/checkout@v4
+    - name: Compute environment variables by branch
+      id: vars
+      env: 
+        BRANCH_NAME: ${{ github.ref_name }}
+      run: |
+        if [[ "$BRANCH_NAME" == "master" ]]; then
+          echo "Set environment for production"
+          echo "STACK_NAME=api-onlyoffice-redirects-prod" >> $GITHUB_ENV
+          echo "ALIAS=prod" >> $GITHUB_ENV
+          echo "AWS_DISTRIBUTION_ID=${{ secrets.AWS_DISTRIBUTION_ID_PROD }}" >> $GITHUB_ENV
+        elif [[ "$BRANCH_NAME" == "develop" ]]; then
+          echo "Set environment for Develop"
+          echo "STACK_NAME=api-onlyoffice-redirects-dev" >> $GITHUB_ENV
+          echo "ALIAS=develop" >> $GITHUB_ENV
+          echo "AWS_DISTRIBUTION_ID=${{ secrets.AWS_DISTRIBUTION_ID_TEST }}" >> $GITHUB_ENV
+        else
+          echo "ERROR: Wrong github.ref_name"
+          exit 1
+        fi
+        
     - uses: aws-actions/configure-aws-credentials@v4
       with:
-        aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID_PROD }}
-        aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY_PROD }}
-        aws-region: ${{ env.AWS_REGION_PROD }}
+        aws-access-key-id: ${{ secrets.AWS_LAMBDA_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_LAMBDA_SECRET_KEY }}
+        aws-region: us-east-1
     
     - name: Setup SAM CLI
       uses: aws-actions/setup-sam@v2
 
     - name: Build (SAM)
+      id: sam-build
       run: |
-          sam build --template ${SAM_TEMPLATE}
+          sam build -u --template-file ${SAM_TEMPLATE}
 
     - name: Deploy (SAM)
+      id: sam-deploy
       run: |
           sam deploy \
             --no-confirm-changeset \
             --resolve-s3 \
             --stack-name "${STACK_NAME}" \
             --capabilities CAPABILITY_IAM \
+            --template-file ${SAM_TEMPLATE} \
+            --role-arn ${{ secrets.CLOUDFORMATION_EXECUTION_ROLE }} \
             --parameter-overrides \
               FunctionName=${LAMBDA_FUNCTION_NAME} \
-              AliasName=${LAMBDA_ALIAS}
+              AliasName=${ALIAS}
+          sleep 10
 
     - name: Resolve new Lambda version from alias
       id: resolve_version
       run: |
         VERSION=$(aws lambda get-alias \
-          --function-name "${{ env.LAMBDA_FUNCTION_NAME }}" \
-          --name "${{ needs.prepare.outputs.alias }}" \
+          --function-name "${LAMBDA_FUNCTION_NAME}" \
+          --name "${ALIAS}" \
           --query 'FunctionVersion' --output text)
 
         BASE_ARN=$(aws lambda get-function \
-          --function-name "${{ env.LAMBDA_FUNCTION_NAME }}" \
+          --function-name "${LAMBDA_FUNCTION_NAME}" \
           --query 'Configuration.FunctionArn' --output text)
 
         echo "version=$VERSION" >> $GITHUB_OUTPUT
         echo "versioned_arn=${BASE_ARN}:${VERSION}" >> $GITHUB_OUTPUT
       
     - name: Update distribution config
+      id: cfconf
       env:
         VERSIONED_ARN: ${{ steps.resolve_version.outputs.versioned_arn }}
       run: |
+          mkdir cf_tmp
+          cd ./cf_tmp
           aws cloudfront get-distribution-config --id "$AWS_DISTRIBUTION_ID" --output json > current-distribution-config.json
           
           # backup config
@@ -128,9 +112,45 @@ jobs:
             .DefaultCacheBehavior.LambdaFunctionAssociations.Items
             |= (map(if .EventType=="viewer-request"
                     then .LambdaFunctionARN=$arn else . end))
-          ' dist.json > dist-upd.json
+          ' dist.json > new-distribution-confing.json
 
           aws cloudfront update-distribution --id "${AWS_DISTRIBUTION_ID}" \
-                                             --distribution-config "file://dist-upd.json" \
+                                             --distribution-config "file://new-distribution-confing.json" \
                                              --if-match "${ETAG}" > /dev/null
+    
+    - name: Collect statuses
+      if: always()
+      env:
+        SAM_DEPLOY: ${{ steps.sam-deploy.outcome }}
+        CF_CONF_STATUS: ${{ steps.cfconf.outcome }}
+      run: |
+          if [[ "$SAM_DEPLOY" == 'failure' ]]; then
+             echo "SAM_DEPLOY==failure🔴" >> $GITHUB_ENV
+             echo "CF_CONF_STATUS=skipped" >> $GITHUB_ENV
+          fi
+          if [[ "$SAM_DEPLOY" == 'success' ]]; then
+             echo "SAM_DEPLOY=success🟢" >> $GITHUB_ENV
+             [[ "$CF_CONF_STATUS" == 'failure' ]] && echo "CF_CONF_STATUS=failure🔴" >> $GITHUB_ENV
+             [[ "$CF_CONF_STATUS" == 'success' ]] && echo "CF_CONF_STATUS=success🟢" >> $GITHUB_ENV
+          fi
 
+    - name: Send alert message
+      if: always()
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        document: ./cf_config_backup.json
+        message: |
+            AWS LAMBDA redirects update for env: ${{ env.ALIAS }}
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+            Action: ${{ github.event_name }}
+            Workflow: ${{ github.workflow }}
+            Branch: ${{ github.ref_name }}
+            Environment: ${{ env.ALIAS }}
+
+            AWS Lambda deploy status: ${{ env.SAM_DEPLOY }}
+            AWS CloudFront config update status: ${{ env.CF_CONF_STATUS }}

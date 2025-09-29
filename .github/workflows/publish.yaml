@@ -26,6 +26,10 @@ env:
   teamlab_s3bucket: api-site-teamlab-info
   com_s3bucket: api-site-onlyoffice-com
 
+concurrency:
+  group: update-cf-config
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest

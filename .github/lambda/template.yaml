@@ -2,7 +2,6 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: ONLYOFFICE redirects lambda
 
-
 Parameters:
   FunctionName:
     Type: String
@@ -19,15 +18,50 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Ref FunctionName
-      Runtime: python3.11
-      Handler: function.handler
+      Runtime: python3.13
+      Handler: function.lambda_handler
       CodeUri: src/
       MemorySize: 128
+      Architectures:
+        - x86_64
       Timeout: 3
       Description: 'Redirects for api site'
-      Policies:
-        - AWSLambdaBasicExecutionRole
+      Role: !GetAtt ApiSiteRedirectsRole.Arn
       AutoPublishAlias: !Ref AliasName
+
+  # ==== ROLES ==== #
+  ApiSiteRedirectsRole:
+    Type: AWS::IAM::Role
+    DeletionPolicy: Retain
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: sts:AssumeRole
+            Principal:
+              Service:
+                - "lambda.amazonaws.com"
+                - "edgelambda.amazonaws.com"
+
+  # ==== POLICIES ==== #
+  PublishLogsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    DeletionPolicy: Retain
+    Properties:
+      Description: Allows functions to write logs
+      Roles:
+        - !Ref ApiSiteRedirectsRole
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+              - cloudwatch:PutMetricData
+            Resource: "*"
 
 Outputs:
   FunctionArn:
