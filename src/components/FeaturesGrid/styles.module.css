@@ -1,7 +1,7 @@
 .featuresGridList {
+  display: grid;
   gap: var(--base-size-32);
   grid-template-columns: 1fr;
-  display: grid;
 }
 
 .featuresGridList a {
@@ -48,6 +48,9 @@
 }
 
 @media (min-width: 544px) {
+  .featuresGridList {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .featuresGridItemHeader > h3 {
     font-size: var(--text-title-font-size-medium);
     font-weight: var(--text-title-font-weight-medium);
@@ -57,7 +60,7 @@
 
 @media (min-width: 768px) {
   .featuresGridList {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .featuresGridItemHeader {
