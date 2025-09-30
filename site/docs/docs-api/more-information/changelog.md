@@ -4,7 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 9.1
 
-- Change [logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
+- Changed the [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
 
 ## Version 9.0
 
