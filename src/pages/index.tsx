@@ -4,6 +4,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import { DocsFeatures } from "@site/src/features";
+import { DocSpaceFeatures } from "@site/src/features";
 
 import styles from './index.module.css';
 
@@ -15,10 +17,29 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           Welcome to {siteConfig.title} API
         </Heading>
+        <Heading as="h2" className={styles.subtitle}>
+          Developer Documentation
+        </Heading>
       </div>
     </header>
   );
 }
+
+const templateProps: HomepageFeatures.Props = {
+  linkPrefix: '',
+  featureGroups: [
+    {
+      heading: 'DocSpace',
+      subheading: 'APIs and tools for managing collaborative rooms and content.',
+      items: DocSpaceFeatures.items,
+    },
+    {
+      heading: 'Docs',
+      subheading: 'APIs and extensions for editing and managing documents.',
+      items: DocsFeatures.items,
+    }
+  ],
+};
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
@@ -28,7 +49,7 @@ export default function Home(): ReactNode {
       description="Learn how to integrate ONLYOFFICE Docs and DocSpace into your solution, configure and customize them — with code samples and detailed guides.">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <HomepageFeatures {...templateProps}/>
       </main>
     </Layout>
   );

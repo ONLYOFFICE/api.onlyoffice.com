@@ -5,56 +5,33 @@ import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import Heading from "@theme/Heading";
 
 export namespace FeaturePageTemplate {
-  export type FeatureGroup = {
-    heading: string
-    subheading?: string
-    items: FeaturesGrid.Item[]
-  }
-
   export type Props = {
     title: string
-    subtitle?: string
-    description?: string | ReactNode
+    description: string | ReactNode
     links: ReactNode[]
     linkPrefix: string
-    featureGroups: FeatureGroup[]
+    items: FeaturesGrid.Item[]
   }
 }
 
-export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({
-  title,
-  subtitle,
-  description,
-  linkPrefix,
-  links,
-  featureGroups,
-}) => {
+export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({ title, description, linkPrefix, links, items}) => {
   return (
     <div className={styles.container}>
       <div className={styles.containerInner}>
         <div className={styles.headerSection}>
           <Heading as="h1" className="hero__title">{title}</Heading>
-          {subtitle && <Heading as="h2" className={styles.subtitle}>{subtitle}</Heading>}
-          {description && <p>{description}</p>}
+          <p>{description}</p>
         </div>
         <main>
-          {featureGroups.map((group, index) => (
-            <section key={index} className={styles.featureGroup}>
-              <Heading as="h3">{group.heading}</Heading>
-              {group.subheading && <p className={styles.subheading}>{group.subheading}</p>}
-              <FeaturesGrid linkPrefix={linkPrefix} items={group.items} />
-            </section>
-          ))}
+          <FeaturesGrid linkPrefix={linkPrefix} items={items}/>
         </main>
         <div className={styles.helpSection}>
           <div className={styles.helpSectionHeader}>
-            <GithubIcon />
+            <GithubIcon/>
             <Heading as='h2'>Get help</Heading>
           </div>
           <ul>
-            {links.map((linkChildren, index) => (
-              <li key={index}>{linkChildren}</li>
-            ))}
+            {links.map((linkChildren, index) => (<li key={index}>{linkChildren}</li>))}
           </ul>
         </div>
       </div>
