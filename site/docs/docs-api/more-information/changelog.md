@@ -2,6 +2,10 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.1
+
+- The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
+
 ## Version 9.0
 
 - Added the [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) parameter.
