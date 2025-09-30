@@ -4,6 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 9.1
 
+- The document is opened in viewer mode with an error message if it cannot be [locked](../using-wopi/key-concepts.md#lock) in WOPI.
 - Added the [UserCanOnlyComment](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanOnlyComment) property to the *CheckFileInfo* WOPI operation.
 - The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
 
