@@ -2,6 +2,11 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.1
+
+- Added opening for [hml](../usage-api/config/document/document.md#filetype) format.
+- Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to *txt*.
+
 ## Version 9.0
 
 - Added the [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) parameter.
