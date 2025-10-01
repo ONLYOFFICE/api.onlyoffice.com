@@ -297,6 +297,8 @@ const config: Config = {
 
       indexName: 'api-onlyoffice',
       contextualSearch: true,
+
+      askAi: 'SWpvi77fTWXN'
     },
     languageTabs: [
       {
