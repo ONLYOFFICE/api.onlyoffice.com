@@ -20,7 +20,7 @@ sidebar_position: -3
 2. 要设置当前用户头像，请使用初始化配置的 [editorConfig.user.image](../../usage-api/config/editor/editor.md#user) 字段：
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config  = {
      editorConfig: {
        user: {
          group: "Group1",
@@ -29,7 +29,9 @@ sidebar_position: -3
          name: "John Smith",
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. 在文档编辑器初始化的配置脚本中，指定用于设置用户头像的事件处理程序。当用户打开评论或共同编辑者列表时，将调用 [onRequestUsers](../../usage-api/config/events.md#onrequestusers) 事件 *data.id* 参数。操作类型为 *info* 的 *data.c* 参数也会在此事件中传递。
@@ -38,39 +40,41 @@ sidebar_position: -3
 
   <img alt="共同编辑头像" src="/assets/images/editor/avatars-coediting.png" width="298px" />
 
-  ``` ts
-  function onRequestUsers(event) {
-    const c = event.data.c
-    const id = event.data.id
-  }
+    ``` ts
+    function onRequestUsers(event) {
+      const c = event.data.c
+      const id = event.data.id
+    };
 
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
-      onRequestUsers,
-    },
-  })
-  ```
+    const config = {
+      events: {
+        onRequestUsers,
+      },
+    };
+
+    const docEditor = new DocsAPI.DocEditor("placeholder", config);
+    ```
 
 4. 为了设置用户的头像，必须调用 [setUsers](../../usage-api/methods.md#setusers) 方法：
 
-  ``` ts
-  docEditor.setUsers({
-    c: "info",
-    users: [
-      {
-        email: "john@example.com",
-        id: "78e1e841",
-        image: "https://example.com/url-to-user-avatar1.png",
-        name: "John Smith",
-      },
-      {
-        email: "kate@example.com",
-        id: "F89d8069ba2b",
-        image: "https://example.com/url-to-user-avatar2.png",
-        name: "Kate Cage",
-      },
-    ],
-  })
-  ```
+    ``` ts
+    docEditor.setUsers({
+      c: "info",
+      users: [
+        {
+          email: "john@example.com",
+          id: "78e1e841",
+          image: "https://example.com/url-to-user-avatar1.png",
+          name: "John Smith",
+        },
+        {
+          email: "kate@example.com",
+          id: "F89d8069ba2b",
+          image: "https://example.com/url-to-user-avatar2.png",
+          name: "Kate Cage",
+        },
+      ],
+    });
+    ```
 
 其中 **example.com** 是安装**文档管理器**和**文档存储服务**的服务器的名称。请参阅[工作原理](./how-it-works.md)部分，了解有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息。

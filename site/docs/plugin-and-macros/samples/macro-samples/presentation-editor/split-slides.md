@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Split slides
 
 Splits slides in a presentation that contain more than 100 words into multiple slides.

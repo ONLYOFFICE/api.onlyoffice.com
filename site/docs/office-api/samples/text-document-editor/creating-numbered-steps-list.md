@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating a numbered steps list
 
 Create a document with a numbered steps list for step-by-step instructions, algorithms, and procedures:

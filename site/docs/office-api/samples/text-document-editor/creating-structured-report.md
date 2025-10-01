@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating structured report
 
 Create a document with structured sections, specific formatting, alignment, and page breaks:

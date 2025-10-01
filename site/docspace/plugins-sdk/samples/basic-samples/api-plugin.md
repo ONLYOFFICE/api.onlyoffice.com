@@ -1,4 +1,4 @@
-# Creating an API plugin
+# API plugin
 
 This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via the REST API.
 
@@ -159,11 +159,11 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 6: Test it
+## Step 6: Test the plugin
 
 1. Reload the DocSpace interface.
 2. The plugin will automatically trigger [`onLoadCallback()`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/plugin.md#onloadcallback).
-3. A new room titled `"Plugin-created Room"` should be created automatically.
+3. A new room titled **Plugin-created Room** should be created automatically.
 4. Open the browser console to confirm the plugin sent a request and received a response.
 
 ## Notes

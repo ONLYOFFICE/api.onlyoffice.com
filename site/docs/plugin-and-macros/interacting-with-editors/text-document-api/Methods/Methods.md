@@ -25,6 +25,7 @@ Represents the Api class.
 | [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
+| [FocusEditor](./FocusEditor.md) | None | Returns focus to the editor. |
 | [GetAllAddinFields](./GetAllAddinFields.md) | [AddinFieldData](../Enumeration/AddinFieldData.md)[] | Returns all addin fields from the current document. |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetAllContentControls](./GetAllContentControls.md) | [ContentControl](../Enumeration/ContentControl.md)[] | Returns information about all the content controls that have been added to the page. |

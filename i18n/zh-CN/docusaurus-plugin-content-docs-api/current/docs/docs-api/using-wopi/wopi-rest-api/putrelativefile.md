@@ -58,7 +58,7 @@
 | HostViewUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建文件加载[查看](../wopi-discovery.md#view) WOPI 操作。    |
 | HostEditUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建的文件加载[编辑](../wopi-discovery.md#edit)操作。             |
 
-## 另存为
+## 另存为 {#save-copy-as}
 
 从 8.1 版开始，通过 *PutRelativeFile* 操作将 *另存为* 功能添加到 WOPI 协议中。在 ONLYOFFICE Docs API 中，此操作作为 [onRequestSaveAs](../../usage-api/config/events.md#onrequestsaveas) 事件实现。
 

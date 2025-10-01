@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Highlight predefined keywords
 
 Highlights predefined keywords in text document.

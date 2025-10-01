@@ -17,7 +17,7 @@ The following table indicates the input and output file formats supported **ONLY
 | "dotx" | OFFICESTUDIO\_FILE\_DOCUMENT\_DOTX      |
 | "ott"  | OFFICESTUDIO\_FILE\_DOCUMENT\_OTT       |
 | "html" | OFFICESTUDIO\_FILE\_DOCUMENT\_HTML      |
-| "pdf"  | OFFICESTUDIO\_FILE\_DOCUMENT\_OFORM\_PDF|
+| "form" | OFFICESTUDIO\_FILE\_DOCUMENT\_OFORM\_PDF|
 | "pptx" | OFFICESTUDIO\_FILE\_PRESENTATION\_PPTX  |
 | "ppt"  | OFFICESTUDIO\_FILE\_PRESENTATION\_PPT   |
 | "odp"  | OFFICESTUDIO\_FILE\_PRESENTATION\_ODP   |

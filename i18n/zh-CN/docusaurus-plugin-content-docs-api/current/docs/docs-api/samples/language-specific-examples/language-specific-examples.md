@@ -35,8 +35,10 @@ sidebar_position: -5
    - [Java.Spring.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip)
    - [Node.js.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip)
    - [PHP.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip)
+   - [PHP.Laravel.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Laravel.Example.zip)
    - [Python.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip)
    - [Ruby.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip)
+   - [Go.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip)
 
    或者查找源代码：[集成示例](https://github.com/ONLYOFFICE/document-server-integration)。
 
@@ -46,11 +48,13 @@ sidebar_position: -5
 
    - **.Net (C# MVC)** - *web/documentserver-example/csharp-mvc/web.appsettings.config*
    - **.Net (C#)** - *web/documentserver-example/csharp/settings.config*
+   - **Go** - *web/documentserver-example/go/config/configuration.json*
    - **Java** - *web/documentserver-example/java/src/main/resources/settings.properties*
    - **Java Spring** - *web/documentserver-example/java-spring/src/main/resources/application.properties*
    - **Node.js** - *web/documentserver-example/nodejs/config/default.json*
-   - **PHP** - *web/documentserver-example/php/config.json*
-   - **Python** - *web/documentserver-example/python/config.py*
+   - **PHP** - *web/documentserver-example/php/src/configuration/ConfigurationManager.php*
+   - **PHP (Laravel)** - *web/documentserver-example/php-laravel/.env.example*
+   - **Python** - *web/documentserver-example/python/manage.py*
    - **Ruby** - *web/documentserver-example/ruby/config/application.rb*
 
 4. 如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。并且您还必须确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com***的）地址。

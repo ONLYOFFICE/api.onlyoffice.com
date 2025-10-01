@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Create custom header
 
 Creates a custom header with an image and a title. The image is represented as a base64 string in the code, which can be customized or replaced as needed.

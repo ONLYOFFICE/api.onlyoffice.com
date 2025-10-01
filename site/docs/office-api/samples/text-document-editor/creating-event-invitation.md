@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating event invitation
 
 Create a custom-sized event invitation document with specific page dimensions and content:

@@ -27,6 +27,7 @@ ONLYOFFICE 文档可以更改的参数可以细分为以下主要部分：
 const config = {
   document: {
     fileType: "docx",
+    isForm: true,
     info: {
       favorite: true,
       folder: "Example Files",
@@ -109,6 +110,7 @@ const config = {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,
@@ -132,6 +134,7 @@ const config = {
         size: "11px",
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -146,6 +149,7 @@ const config = {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
@@ -209,6 +213,8 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,

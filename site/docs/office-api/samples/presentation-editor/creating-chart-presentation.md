@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating chart presentation
 
 Create a chart presentation:

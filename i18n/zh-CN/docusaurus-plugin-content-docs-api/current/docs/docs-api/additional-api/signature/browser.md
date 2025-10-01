@@ -2,7 +2,7 @@
 
 在向 ONLYOFFICE 文档服务器执行客户端浏览器请求时，必须将令牌添加到参数中以验证数据。
 
-## 打开文件
+## 打开文件 {#opening-file}
 
 在 ONLYOFFICE 文档中[打开](../../get-started/how-it-works/opening-file.md)文件进行编辑时，必须将[令牌](../../usage-api/config/config.md#token)添加到配置中以验证参数。
 
@@ -52,7 +52,7 @@
 }
 ```
 
-## 方法
+## 方法 {#methods}
 
 ### insertImage
 

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove empty text boxes
 
 Deletes all empty text box shapes throughout the entire presentation.

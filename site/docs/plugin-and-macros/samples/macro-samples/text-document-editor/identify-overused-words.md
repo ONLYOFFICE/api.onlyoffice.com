@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Identify overused words
 
 Analyzes the frequency of words in a document and identifies overused words based on specified thresholds.
