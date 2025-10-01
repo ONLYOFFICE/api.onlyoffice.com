@@ -10,7 +10,7 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-plone) allows users to ed
 ## Features
 
 - Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: DJVU, DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The following formats are available for converting (download as): DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XPS, XML, FODS, ODS, OTS, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX.
 - The following formats are available for converting to Office Open XML: DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XPS, XML, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The plugin will create a new **ONLYOFFICE Edit** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Plone.
@@ -25,7 +25,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 To start using ONLYOFFICE Docs with Plone, the following steps must be performed:
 
-1. Installation instructions can be found under [Manage add-ons and packages](https://6.docs.plone.org/install/manage-add-ons-packages.html).
+1. Installation instructions can be found under [Install Plone add-ons](https://6.docs.plone.org/admin-guide/add-ons.html).
 
 2. Go to **Site Setup -> Add-ons** and press the **Install** button to enable plugin.
 

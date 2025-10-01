@@ -9,8 +9,8 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-wordpress) enables users 
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.
+- Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, MHT, MHTML, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PDF, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, WPS, WPT, XLS, XLSB, XLT, XML, XPS.
 - The plugin allows multiple users to collaborate in real time and save back those changes to WordPress.
 
 ## Installing ONLYOFFICE Docs
@@ -30,8 +30,6 @@ To start using ONLYOFFICE Docs with WordPress, follow these steps:
 5. Click **Choose File** and select the downloaded zipped plugin.
 6. Once the plugin is installed, click **Activate**.
 
-As a WordPress administrator you can also install the plugin via the [Marketplace](https://wordpress.com/plugins/onlyoffice-docspace).
-
 Alternatively, you can clone the master branch (and then activate the plugin from the WordPress administrative dashboard as well):
 
 ``` sh
@@ -48,7 +46,7 @@ Configure the plugin via the WordPress interface. Go to **WordPress administrati
 
 ## Using ONLYOFFICE Docs plugin for WordPress
 
-ONLYOFFICE DocSpace plugin allows WordPress administrators to open files for collaborative editing using ONLYOFFICE Docs (online document editors). In published posts, the editors are visible to all WordPress site visitors (both authorized and unauthorized) in the **Embedded** mode only.
+ONLYOFFICE Docs plugin allows WordPress administrators to open files for collaborative editing using ONLYOFFICE Docs (online document editors). In published posts, the editors are visible to all WordPress site visitors (both authorized and unauthorized) in the **Embedded** mode only.
 
 ### Editing files uploaded to WordPress
 

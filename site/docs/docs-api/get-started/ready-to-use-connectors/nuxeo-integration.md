@@ -10,7 +10,7 @@ This [package](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to 
 ## Features
 
 - Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, HTM, XML, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX.
-- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XML, XPS, CSV, FODS, ODS, OTS, XLS, XLT, FODP, ODP, OTP, POT, PPS, PPT.
+- The following formats are available for viewing only: DJVU, DOC, DOT, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, CSV, FODS, ODS, OTS, XLS, XLT, FODP, ODP, OTP, POT, PPS, PPT.
 - The following formats are available for converting to Office Open XML formats: DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTM, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XML, XPS, FODS, ODS, OTS, XLS, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The package allows multiple users to collaborate in real time and to save back those changes to Nuxeo.
 
