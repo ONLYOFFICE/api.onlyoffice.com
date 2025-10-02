@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Delete bookmark
 
 Searches for bookmarks containing a specific word in their text and deletes them from the document.

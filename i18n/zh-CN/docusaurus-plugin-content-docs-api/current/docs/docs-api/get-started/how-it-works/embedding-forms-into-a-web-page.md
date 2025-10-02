@@ -65,7 +65,7 @@ ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现�
 8. 添加脚本，使用您想要打开的文档的配置来初始化文档编辑器，并在占位符元素中打开编辑器：
 
    ``` ts
-   this.docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "pdf",
        key,
@@ -76,7 +76,9 @@ ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现�
        url,
      },
      documentType: "pdf",
-   })
+   };
+
+   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 完整的代码片段如下：
@@ -92,19 +94,19 @@ ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现�
         }
         const url = "https://example.com/url-to-example-form.pdf";
         const key = filename + ".pdf";
-        this.docEditor = new DocsAPI.DocEditor("placeholder",
-        {
-            "document": {
-                "fileType": "pdf",
-                "key": key,
-                "permissions": {
-                    "edit": true
-                },
-                "title": "Form Template",
-                "url": url
-            },
-            "documentType": "pdf"
-        });
+        const config = {
+         "document": {
+               "fileType": "pdf",
+               "key": key,
+               "permissions": {
+                  "edit": true
+               },
+               "title": "Form Template",
+               "url": url
+         },
+         "documentType": "pdf"
+        };
+        this.docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```
@@ -164,19 +166,20 @@ ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现�
 8. 添加脚本，使用您想要打开的文档的配置来初始化文档编辑器，并在占位符元素中打开编辑器：
 
    ``` ts
-   this.docEditor = new DocsAPI.DocEditor("placeholder",
-     {
-       document: {
+   const config = {
+      document: {
          fileType: "pdf",
          permissions: {
-           edit: false,
-           fillForms: true,
+            edit: false,
+            fillForms: true,
          },
          title: "Form",
          url,
-       },
-       documentType: "pdf",
-     })
+      },
+      documentType: "pdf",
+   };
+
+   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 完整的代码片段如下：

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove extra spaces
 
 Removes extra spaces from all text in all slides of a presentation.

@@ -4,7 +4,7 @@ sidebar_position: -9
 
 # 嵌入问题
 
-## 如何将文档嵌入到网站？
+## 如何将文档嵌入到网站？ {#how-to-embed-a-document-to-a-web-site}
 
 编辑器有三种主要外观，针对不同用途进行了优化：
 
@@ -17,14 +17,16 @@ sidebar_position: -9
 这就是为什么 *type* 应该设置为 **embedded** 并且配置文件看起来像这样：
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "embedded",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 有关显示类型的更多信息，请参见[此页面](../../usage-api/config/config.md#type)。
 
-## 如何更改嵌入模式下按钮的行为？
+## 如何更改嵌入模式下按钮的行为？ {#how-to-change-the-behavior-of-the-buttons-in-the-embedded-mode}
 
 嵌入模式只允许使用三个控制按钮显示文档：**下载**、 **共享**和**嵌入**。您可以通过以下方式更改这些按钮的行为：
 
@@ -35,7 +37,7 @@ sidebar_position: -9
 - *editorConfig.embedded.shareUrl* i是文档的绝对 URL，其他用户可以使用它与他人共享。
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       embedded: {
         embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
@@ -43,7 +45,9 @@ sidebar_position: -9
         shareUrl: "https://example.com/view?doc=exampledocument1.docx",
       },
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 其中 **>example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户机-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。

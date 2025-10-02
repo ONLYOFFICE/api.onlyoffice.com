@@ -52,7 +52,33 @@ sidebar_position: -5
 
 安装用于运行**Node.js**项目的node.js环境。请访问[官方网站](https://nodejs.org/en/download/)，根据您的Windows操作系统（32位或64位）选择正确的版本进行安装。
 
-### 步骤4.运行Node.js代码
+### 步骤4. 配置 JWT 
+ 
+打开 *config/default.json* 文件并启用 JWT：
+
+``` json
+{
+   "server": {
+      "token": {
+         "enable": true
+      }
+   }
+}
+```
+
+   同样也要与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
+
+``` json
+{
+   "server": {
+      "token": {
+         "secret": "secret"
+      }
+   }
+}
+```
+
+### 步骤5.运行Node.js代码
 
 我们将在Node.js运行时环境中运行代码，并使用**命令行界面(cmd)**与之交互。
 
@@ -82,7 +108,7 @@ sidebar_position: -5
    http://localhost:3000
    ```
 
-### 步骤5.检查可访问性
+### 步骤6.检查可访问性
 
 如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。
 
@@ -144,13 +170,36 @@ sidebar_position: -5
      "storagePath": "/files",
      "siteUrl": "https://documentserver/"
    }
-   
    ```
 
    其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，**storageFolder**和**storagePath**是将创建和存储文件的路径。请注意，您必须对该文件夹具有读写权限。如果没有，请使用以下命令：
 
    ``` sh
    sudo chmod -R ugo+rw /{path}
+   ```
+
+   启用 JWT：
+
+      ``` json
+   {
+      "server": {
+         "token": {
+            "enable": true
+         }
+      }
+   }
+   ```
+
+   同样也要与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
+
+      ``` json
+   {
+      "server": {
+         "token": {
+            "secret": "secret"
+         }
+      }
+   }
    ```
 
 6. 使用Node.js运行项目：

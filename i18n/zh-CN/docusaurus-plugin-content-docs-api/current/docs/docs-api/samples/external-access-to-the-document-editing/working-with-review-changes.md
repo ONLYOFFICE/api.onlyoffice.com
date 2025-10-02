@@ -1,10 +1,15 @@
 ---
 sidebar_position: -2
+hide_table_of_contents: true
 ---
+
+import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # 处理评审更改
 
 管理来自外部来源的审核流程。
+
+<ReviewChangesExternalToolbar/>
 
 ## 它是如何运作的
 

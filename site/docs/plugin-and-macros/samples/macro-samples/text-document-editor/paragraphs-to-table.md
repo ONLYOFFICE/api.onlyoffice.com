@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Paragraphs to table
 
 Converts a list of numbered paragraphs into a table.

@@ -27,7 +27,7 @@ The Python example offers various installation options, but we highly recommend 
 
 To run the example using [Docker](https://www.docker.com/), you will need [Docker Desktop 4.17.0](https://docs.docker.com/desktop/) or [Docker Engine 20.10.23](https://docs.docker.com/engine/) with [Docker Compose 2.15.1](https://docs.docker.com/compose/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it:
+Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python):
 
 ``` sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
@@ -55,7 +55,7 @@ Check the detailed guide to learn how to install it on [Windows](https://helpcen
 
 To run the example on your local machine, you will need [Python 3.11.4](https://www.python.org/) with [pip 23.1.2](https://pip.pypa.io/en/stable/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it:
+Once you have everything installed, download the release archive and unarchive it or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python):
 
 ``` sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip

@@ -18,7 +18,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-Date
+undefined \| Date
 
 ## Example
 

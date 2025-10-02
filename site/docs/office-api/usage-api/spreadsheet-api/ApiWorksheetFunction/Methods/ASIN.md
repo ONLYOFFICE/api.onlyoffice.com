@@ -1,6 +1,6 @@
 # ASIN
 
-Returns the arcsine of a number in radians, in the range from &lt;em&gt;-Pi/2&lt;/em&gt; to &lt;em&gt;Pi/2&lt;/em&gt;.
+Returns the arcsine of a number in radians, in the range from *-Pi/2* to *Pi/2*.
 
 ## Syntax
 

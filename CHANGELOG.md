@@ -4,6 +4,101 @@
 
 * The `editorConfig.customization.uitheme` parameter is now available for the mobile editors
 
+## 7.0.0
+
+### New features
+
+* Updated Docusaurus version 3.9.1
+* Added AskAI feature
+
+#### Plugins and macros
+
+* Added samples for custom AI functions
+* Updated documentation in Chinese in the Interacting with editors section
+
+## 6.6.0
+
+### New features
+
+* Restructured changelog
+
+#### Docs
+
+* Added new Office API samples
+
+#### Plugins and macros
+
+* Added the bundled plugin type description
+* Added the AI plugin section
+* Added the ability to access cell address information inside custom functions
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+* Hide right panel in Office Api and macro samples
+* Hide the changelog reading time
+
+#### Docspace
+
+* Fixed API Backend samples position
+
+## 6.5.0
+
+### New features
+
+#### Docspace
+
+* Added new integration samples to API Backend section
+* Added new Plugins SDK samples
+
+#### Docs
+
+* Updated Office API documentation for version 9.0.4
+
+#### Docs API
+
+* Added GitHub links to each language-specific example
+* Added the website Changelog section
+* Added missing formats to the document.fileType parameter
+* Added fonts information to Changing default fonts language specific example
+
+#### Plugins and macros
+
+* Updated documentation in Chinese
+* Added pages with full list of events to Interacting with editors section
+
+### Fixes
+
+* Fixes for samples structure
+
+## 6.4.0
+
+### New features
+
+#### Docs
+
+* Added new Office API samples
+
+#### Docs API
+
+* Added the editorConfig.customization.suggestFeature parameter
+
+#### Plugins and macros
+
+* Added documentation in Chinese
+
+#### Docspace
+
+* Added new Api Backend samples
+
+### Fixes
+
+#### Docs
+
+* Fixed default theme for editors in the Results tab
+
 ## 6.3.0
 
 ### New features

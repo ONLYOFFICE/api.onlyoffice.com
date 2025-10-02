@@ -28,7 +28,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ONLYOFFICE文档和Nextcloud可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下ONLYOFFICE文档和Nextcloud都使用80端口。或者您可以在代理服务器后使用ONLYOFFICE文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
 
-使用[Docker]（https://github.com/ONLYOFFICE/Docker-DocumentServer）是启动ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动ONLYOFFICE文档实例的最简单方法。
 
 您也可以使用我们的[Docker安装方式](https://github.com/ONLYOFFICE/Docker-DocumentServer)，通过几条命令就能完成。
 
@@ -60,7 +60,7 @@ Nextcloud管理员可以从内置应用市场安装集成应用程序。为此�
 
 4. 在Nextcloud中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为**ONLYOFFICE**应用点击**启动**。
 
-## 配置Nextcloud ONLYOFFICE集成应用程序
+## 配置Nextcloud ONLYOFFICE集成应用程序 {#configuring-nextcloud-onlyoffice-integration-app}
 
 在Nextcloud中，打开包含**ONLYOFFICE**部分管理设置的*\~/settings/admin/onlyoffice*页面。输入以下地址来连接ONLYOFFICE文档：
 

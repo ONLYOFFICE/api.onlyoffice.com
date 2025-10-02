@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Adding image watermark
 
 Create a document with an image watermark with custom settings:

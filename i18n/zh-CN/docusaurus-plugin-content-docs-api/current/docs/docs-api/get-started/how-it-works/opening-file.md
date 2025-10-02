@@ -24,7 +24,7 @@ sidebar_position: -22
 
 编辑完成后，将进行[文档保存](./saving-file.md)过程。
 
-## 如何在实践中做到这一点
+## 如何在实践中做到这一点 {#how-this-can-be-done-in-practice}
 
 1. 创建一个空的 *html* 文件。
 
@@ -45,7 +45,7 @@ sidebar_position: -22
 4. 添加脚本，使用要打开的文档的配置为 *div* 元素初始化**文档编辑器**。使用本地链接时，请务必添加[令牌](./security.md)。否则会出现错误。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -54,7 +54,9 @@ sidebar_position: -22
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
    其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。
 

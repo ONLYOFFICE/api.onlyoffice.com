@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Content alignment tool
 
 Consistently aligns text boxes and images throughout the entire presentation.
