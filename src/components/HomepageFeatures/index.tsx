@@ -9,10 +9,10 @@ export namespace HomepageFeatures {
     heading: string;
     subheading?: string;
     items: FeaturesGrid.Item[];
+    linkPrefix?: string;
   };
 
   export type Props = {
-    linkPrefix: string;
     featureGroups: FeatureGroup[];
   };
 }
@@ -39,7 +39,10 @@ const HomepageFeatures: FC<HomepageFeatures.Props> = ({
                       group.heading === "Docs" && styles.docsGrid
                     )}
                   >
-                    <FeaturesGrid linkPrefix={linkPrefix} items={group.items} />
+                    <FeaturesGrid
+                    linkPrefix={group.linkPrefix ?? ""}
+                    items={group.items}
+                  />
                   </div>
               </section>
             ))}
