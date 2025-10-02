@@ -9,8 +9,8 @@ The ONLYOFFICE [module](https://github.com/ONLYOFFICE/onlyoffice-drupal) enables
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing: DJVU, DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, PPTX, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PDF.
+- The following formats are available for viewing: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The module also allows to preview files on public pages.
 - The module will create a new **Edit in ONLYOFFICE** menu option within the document library for office documents. This allows multiple users to collaborate in real time and save back those changes to Drupal.
 
@@ -67,7 +67,7 @@ There are two options to enable the Drupal module.
 
 ## Configuring Drupal ONLYOFFICE connector module
 
-In Drupal, open *\~/config/system/onlyoffice-settings* page with administrative settings for **ONLYOFFICE** section. Enter the address to connect ONLYOFFICE Docs:
+In Drupal, open *\~/config/system/onlyoffice-settings* page with administrative settings for **ONLYOFFICE** section. Or follow *Configuration –> MEDIA –> ONLYOFFICE Connector settings*. Enter the address to connect ONLYOFFICE Docs:
 
 ``` sh
 https://<documentserver>/
@@ -100,6 +100,34 @@ Specify title and select a file (if the content contains **File** fields).
 For **Media** section, specify the name of the previously uploaded file.
 
 Your site visitors will also be able to view the created page (**People -> Permissions -> View published content**).
+
+### Work with forms
+
+The ONLYOFFICE form section allows Drupal users to create new PDF forms: *Manage-> Content -> ONLYOFFICE form*.
+
+**Creating, uploading, editing PDF forms**
+
+To create a new PDF form, click the *Create&Upload* button. Select the *Blank* option and fill in the name for the new file.
+
+To upload, select the *Upload* option and upload a PDF form from your device.
+
+The created/uploaded file will appear in the list on the Forms page and open in editing mode in the ONLYOFFICE editor in a new tab.
+
+**Publishing PDF forms on a Drupal page**
+
+To add a PDF form to a Drupal page, some initial setup is required. Navigate to *Manage → Structure → Content types*. For the desired content type, select *Manage fields*. On the next page, click *Create a new field*, choose *ONLYOFFICE form*, and set a field name. This will add a field of the ONLYOFFICE form type to the selected content type.
+
+To add a PDF form to a site page, navigate to *Manage → Content*. Click the *Add content* button and select the content type that includes the previously added ONLYOFFICE form field. In the form field, enter the name of the existing form. If the form hasn’t been created yet, click *Create new ONLYOFFICE form* to open the PDF Forms section, where you can upload or create a new PDF form. Finally, click the Save button to complete the page creation in Drupal.
+
+**Filling out PDF forms**
+
+On the Drupal page, users can fill out the form with their data. To submit the completed form, click the *Complete & Submit* button in the top editor panel.
+
+Once submitted, the completed form will be sent to the site. Visitors can also download a copy to their device by opening the context menu in the top editor panel and selecting *Download as DOCX* or *Download as PDF*.
+
+**Working with the filled forms**
+
+In the *Manage → Content → ONLYOFFICE form → Submitted forms* section, Drupal users can view completed forms, organized by template name. To view all responses for a specific template, simply select the form's template name.
 
 ## How it works
 

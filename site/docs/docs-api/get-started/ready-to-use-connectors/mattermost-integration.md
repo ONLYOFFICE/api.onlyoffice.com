@@ -9,7 +9,7 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-mattermost) enables users
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, XLSB, XLTX.
 - The following formats are available for viewing only: XLS, CSV, XLSM, XLT, XLTM, ODS, FODS, OTS, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP, DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF.
 - The plugin will create a new **Open in ONLYOFFICE** menu option within the document library for office documents. This allows multiple users to collaborate in real time and save back those changes to Mattermost.
 
