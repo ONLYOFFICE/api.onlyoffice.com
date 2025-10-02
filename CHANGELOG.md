@@ -1,5 +1,9 @@
 # Change log
 
+#### Docs API
+
+* The `editorConfig.customization.uitheme` parameter is now available for the mobile editors
+
 ## 6.6.0
 
 ### New features
