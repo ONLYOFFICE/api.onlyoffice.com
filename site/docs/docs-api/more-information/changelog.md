@@ -5,6 +5,8 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 9.1
 
 - The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
+- Added opening for [hml](../usage-api/config/document/document.md#filetype) format.
+- Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to *txt*.
 
 ## Version 9.0
 
