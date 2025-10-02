@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Update date field
 
 Sets the current date to all date form fields in the document.

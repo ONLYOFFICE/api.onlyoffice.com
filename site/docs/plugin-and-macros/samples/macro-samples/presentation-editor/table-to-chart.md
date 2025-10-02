@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Table to chart
 
 Generates a chart based on the selected table data.

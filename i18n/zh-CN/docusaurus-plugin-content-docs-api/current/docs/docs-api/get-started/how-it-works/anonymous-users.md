@@ -35,7 +35,7 @@ sidebar_position: -11
    ![Label](/assets/images/editor/label.png)
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      editorConfig: {
        customization: {
          anonymous: {
@@ -44,7 +44,9 @@ sidebar_position: -11
          },
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 5. 一旦您首次设置了名称，它将存储在浏览器的本地存储中。下次使用时，只需按**F5**键即可。

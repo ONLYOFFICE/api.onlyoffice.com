@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Write data to worksheet cell
 
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.

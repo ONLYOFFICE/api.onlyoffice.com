@@ -1,6 +1,6 @@
 # TODAY
 
-Returns the current date in the &lt;em&gt;MM/dd/yy&lt;/em&gt; format.
+Returns the current date in the *MM/dd/yy* format.
 
 ## Syntax
 

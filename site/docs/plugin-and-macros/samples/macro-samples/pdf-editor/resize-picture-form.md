@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Resize picture form
 
 Resizes PictureForms based on a predefined size or aspect ratio across the document.

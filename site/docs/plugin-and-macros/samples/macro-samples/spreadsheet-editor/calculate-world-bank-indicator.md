@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Calculate World Bank indicator
 
 Creates an [asynchronous custom function](/docs/plugin-and-macros/macros/adding-custom-functions.md#asynchronous-functions) to calculate a World Bank indicator value for a specific year.

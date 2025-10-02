@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating sales report with merged table cells
 
 Create a professional sales report document with a table containing merged cells and proper formatting:

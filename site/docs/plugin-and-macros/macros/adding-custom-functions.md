@@ -42,7 +42,7 @@ Now you can use this function in the spreadsheet.
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
 The sample of a custom function you can find [here](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md).
-<!--
+
 ## Accessing cell addresses (since v9.0.4)
 
 Starting from version 9.0.4, you can access  cell address information inside custom functions:
@@ -78,7 +78,7 @@ Example:
   }
   Api.AddCustomFunction(CUSTOMFUNC);
 })();
-```-->
+```
 
 ## Managing custom functions
 

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Add comments and change cell colors in spreadsheet
 
 Adds comments to the cells in the selection and can also change the background color of the cells.

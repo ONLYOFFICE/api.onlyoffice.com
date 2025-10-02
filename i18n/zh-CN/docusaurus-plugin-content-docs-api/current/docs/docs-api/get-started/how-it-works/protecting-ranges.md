@@ -38,13 +38,15 @@ sidebar_position: -4
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestUsers,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. 为了设置*谁可以编辑*字段下的用户列表，必须调用 [setUsers](../../usage-api/methods.md#setusers) 方法：

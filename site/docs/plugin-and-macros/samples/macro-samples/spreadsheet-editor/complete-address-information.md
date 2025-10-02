@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Complete address information
 
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Insert watermark
 
 Inserts or removes a custom watermark on every page of the document.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Mask card numbers
 
 Applies the mask to all forms with the specified form key to hide card numbers.

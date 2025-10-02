@@ -83,7 +83,7 @@ f
 
 > 请注意，*"\<%= actionUrl %\>"*, *"\<%= token %\>"*, *"\<%= tokenTtl %\>"*, *"\<%= apiConfig %\>"* 字符串将使用适当的参数呈现。
 
-## 参数
+## 参数 {#parameters}
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';

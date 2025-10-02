@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating signature block
 
 Create a document with a signature block containing position, name and signature line:

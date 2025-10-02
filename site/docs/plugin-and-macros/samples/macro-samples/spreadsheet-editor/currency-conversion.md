@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Currency conversion
 
 Converts a base currency into multiple desired target currencies. It can also fetch historical currency values for a specific date. Uses the Currency Conversion API from [currencyapi](https://app.currencyapi.com/).

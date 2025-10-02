@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: -5
 ---
 
 # 工作原理
@@ -26,11 +26,3 @@ sidebar_position: -2
 - **文档构建服务**：一种服务器服务，无需实际运行文档处理编辑器即可轻松构建文档。
 
 请注意，ONLYOFFICE文档包括**文档编辑器**、**文档编辑服务**、**文档命令服务**、**文档转换服务**和**文档构建服务**。**文档管理器**和**文档存储服务**要么包含在ONLYOFFICE工作区中，要么必须由在自己的服务器上使用ONLYOFFICE文档的软件集成商来实现。
-
-## 分片密钥
-
-从8.1版本开始，在向ONLYOFFICE文档API、**文档命令服务**、**文档转换服务**或**文档构建服务**发送请求时，*shardkey*参数会添加到URL的*查询字符串*中。在协同编辑期间，它也会作为[WOPISrc](../../using-wopi/key-concepts.md#wopisrc)查询参数添加到浏览器与服务器的交互中。
-
-*key*字段用作其值。例如，*?shardkey=Khirz6zTPdfd7*。如果请求体中没有密钥，则无需发送（例如，在[getForgottenList](../../additional-api/command-service/getforgottenlist.md)命令中）。
-
-这是在使用编辑器服务器集群时的一个建议，以便在协同编辑期间实现请求的负载均衡：编辑同一文档的所有用户都由同一台服务器提供服务

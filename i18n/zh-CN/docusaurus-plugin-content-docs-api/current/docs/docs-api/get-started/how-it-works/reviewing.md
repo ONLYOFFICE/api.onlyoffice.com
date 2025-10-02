@@ -19,14 +19,16 @@ sidebar_position: -15
 如果 *edit* 参数设置为 **false** 并且 *review* 参数设置为 **true**，则文档将仅可用于审阅。
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       edit: false,
       review: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 > 请注意，仅当 [mode](../../usage-api/config/editor/editor.md#mode) 参数设置为 **edit** 时，文档编辑器才能使用文档审阅。
@@ -35,35 +37,39 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 1. 通过在 editorConfig 部分的 [user](../../usage-api/config/editor/editor.md#user) 参数中添加字段 *group* 来指定用户所属的组（或用逗号分隔的多个组）。
 
-``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
-  editorConfig: {
-    user: [{
-      id: "78e1e841",
-      name: "John Smith",
-      group: "Group1,Group2",
+  ``` ts
+  const condig = {
+    editorConfig: {
+      user: [{
+        id: "78e1e841",
+        name: "John Smith",
+        group: "Group1,Group2",
+      },
+      {
+        id: "78e1e841",
+        name: "John Smith",
+        group: "Group1,Group2",
+      }],
     },
-    {
-      id: "78e1e841",
-      name: "John Smith",
-      group: "Group1,Group2",
-    }],
-  },
-})
-```
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
+  ```
 
 2. 使用编辑器初始化的权限部分中的 [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) 参数指定访问权限。
 
    > 如果在编辑器配置中指定了 **reviewGroups** 参数，则禁用查看所有更改的访问权限。否则，如果当前用户不属于任何组，他或她可以查看所有组的文档。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          reviewGroups: ["Group1", "Group2"],
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    *\["Group1", "Group2"]* 表示用户可以查看来自 *Group1* 和 *Group2* 的用户所做的更改。
@@ -71,13 +77,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) 参数可以采用空组的值。这意味着用户可以查看不属于任何组的用户所做的更改（例如，在第三方编辑器中查看的文档）。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          reviewGroups: ["Group2", ""],
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    *\["Group2", ""]* 表示用户可以查看 *Group2* 中的用户和不属于任何组的用户所做的更改。

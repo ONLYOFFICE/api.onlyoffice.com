@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating report document
 
 Create reports on all the comments added to the document and on every change which was made to the document in the review mode:

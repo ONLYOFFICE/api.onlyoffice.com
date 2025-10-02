@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove empty paragraphs
 
 Deletes all unnecessary blank paragraphs across the entire presentation.

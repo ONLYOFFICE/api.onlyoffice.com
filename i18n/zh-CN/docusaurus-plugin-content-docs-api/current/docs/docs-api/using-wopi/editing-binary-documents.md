@@ -34,7 +34,7 @@ sidebar_position: -2
 
 **选项1**。显示通知消息
 
-主机可以在转换开始之前向用户显示一些 UI。**执行**转换操作时，主机将其识别为尝试编辑二进制文档并显示通知消息以通知用户文档将被转换。通过将 [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#EditModePostMessage) 属性设置为 **true** 并处理 [UI\_Edit](./postmessage.md#ui_edit) PostMessage，这种情况也可以应用于**编辑**按钮。
+主机可以在转换开始之前向用户显示一些 UI。**执行**转换操作时，主机将其识别为尝试编辑二进制文档并显示通知消息以通知用户文档将被转换。通过将 [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#EditModePostMessage) 属性设置为 **true** 并处理 [UI\_Edit](./postmessage.md#UI_Edit) PostMessage，这种情况也可以应用于**编辑**按钮。
 
 **选项2**。以不同方式处理转换后的文档
 

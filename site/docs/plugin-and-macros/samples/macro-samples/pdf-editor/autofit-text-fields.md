@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Autofit text fields
 
 Autofits all the text fields in the document.

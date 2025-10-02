@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove empty tables
 
 Removes all the empty tables from the document.

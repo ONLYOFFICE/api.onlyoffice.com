@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Add state from zip code
 
 Adds the "State" label and the text form prefilled with "CA" if the zip code of California is entered. It can be extended by using API to prefill "State" when entering the zip code.

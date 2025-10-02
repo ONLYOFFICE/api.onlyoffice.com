@@ -14,7 +14,14 @@ The system plugin is not displayed in the editor interface and is started in the
 
 Launch such a plugin and it will work until you disable it in all opened documents and documents that will be opened later. Samples of background plugins: [AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai), [QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR). The plugin state (enabled / disabled) persists between sessions. To access background plugins, click the **Background Plugins** button on the top toolbar.
 
-<img alt="Background plugins" src="/assets/images/plugins/background-plugins.png#gh-light-mode-only" width="416px" /><img alt="Background plugins" src="/assets/images/plugins/background-plugins.dark.png#gh-dark-mode-only" width="416px" />
+A background plugin is considered as **bundled** if it has the following characteristics:
+
+- It is included in the product distribution (server/desktop).
+- It has not been updated, removed, or disabled.
+
+![Background plugin](/assets/images/plugins/bundled-plugin.png#gh-light-mode-only)![Background plugin](/assets/images/plugins/bundled-plugin.dark.png#gh-dark-mode-only)
+
+If a plugin is **bundled** and **background**, it now starts immediately (from version 9.0.4).
 
 ## Window
 

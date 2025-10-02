@@ -61,7 +61,7 @@ If the server with the ownCloud installed does not have the Internet access, or 
 3. Change the owner to update the application right from ownCloud web interface:
 
     ``` sh
-    chown -R www-data:www-data ы
+    chown -R www-data:www-data
     ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.

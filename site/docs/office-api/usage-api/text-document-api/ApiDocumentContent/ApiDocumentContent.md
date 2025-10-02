@@ -22,6 +22,7 @@ Represents the ApiDocumentContent class.
 | [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the current run where the cursor is located. |
 | [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current document. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current document content. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the document content. |
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |

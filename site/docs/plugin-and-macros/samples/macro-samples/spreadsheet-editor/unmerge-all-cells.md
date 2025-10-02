@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Unmerge all cells
 
 Unmerges all the merged cells in the active worksheet.

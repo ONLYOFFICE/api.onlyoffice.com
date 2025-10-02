@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Sort range
 
 Automatically sorts a selected range or the entire used range in a spreadsheet.

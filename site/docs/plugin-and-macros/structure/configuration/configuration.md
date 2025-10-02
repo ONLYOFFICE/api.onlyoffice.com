@@ -120,6 +120,14 @@ Type: string
 
 Example: "John Smith"
 
+## onlyofficeScheme
+
+Specifies whether the plugin is included in the server or desktop builds branded as ONLYOFFICE.
+
+Type: boolean
+
+Example: true
+
 ## variations
 
 Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
@@ -694,6 +702,7 @@ Example: "1.0"
     "es": "spanish plugin name"
   },
   "offered": "John Smith",
+  "onlyofficeScheme": true,
   "variations": [
     {
       "buttons": [

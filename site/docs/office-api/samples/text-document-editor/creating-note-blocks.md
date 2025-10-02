@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating note blocks
 
 Create a document with styled note blocks that highlight important information using left border formatting:

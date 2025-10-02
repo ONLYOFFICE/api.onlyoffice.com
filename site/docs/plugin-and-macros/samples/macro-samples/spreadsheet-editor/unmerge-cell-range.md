@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Unmerge cell range
 
 Unmerges the selected cell range.

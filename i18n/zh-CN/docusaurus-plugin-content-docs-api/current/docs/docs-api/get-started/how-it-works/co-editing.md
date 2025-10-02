@@ -37,7 +37,7 @@ sidebar_position: -20
 4. 为*div*元素添加初始化**文档编辑器**的脚本，并配置要打开的文档。使用本地链接时务必添加[令牌](../../additional-api/signature/signature.md)，否则会出现错误。
 
    ``` ts
-   const docEditor = DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -52,7 +52,9 @@ sidebar_position: -20
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiSm9obiBTbWl0aCJ9fX0.6AcBUCbys9kQ7S982Qm4w1romVg86kZ4ECNsxDff5zU",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -64,7 +66,7 @@ sidebar_position: -20
 7. 在复制的*html*文件中更改初始化**文档编辑器**的脚本。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -79,7 +81,9 @@ sidebar_position: -20
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiRjg5ZDgwNjliYTJiIiwibmFtZSI6IkthdGUgQ2FnZSJ9fX0.rdmhKLzXwXXVTABioKy3R2-HGMBY5u4pbZ_TVhW2rJs",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -107,7 +111,7 @@ sidebar_position: -20
    关闭**文档编辑器**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -116,7 +120,9 @@ sidebar_position: -20
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifX0.GcpcY8sLCUDqbgqCLvPs6Z0xfBtayOy-GHEXYiZCpfs",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -124,7 +130,7 @@ sidebar_position: -20
 2. 添加使用相同的*密钥1*初始化**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开，因此不会使用新的URL。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -133,7 +139,9 @@ sidebar_position: -20
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IDIuZG9jeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQyLmRvY3gifX0.aegFVaZpkqc5bEYmF-PQYf3MMFg7QvAfWeOnfDJeuTg",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -143,7 +151,7 @@ sidebar_position: -20
    关闭**文档编辑器**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Mgetl3dYUppf2",
@@ -152,7 +160,9 @@ sidebar_position: -20
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJNZ2V0bDNkWVVwcGYyIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.5YvlbNVbXFddzKBdz_qPpqgUX_JrUHBWCGRQ5YgVp_w",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -162,7 +172,7 @@ sidebar_position: -20
    在不关闭文档的情况下获取当前文档状态。在编辑器初始化的自定义部分中，[强制文件](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave)参数可让您实现这一点。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -176,7 +186,9 @@ sidebar_position: -20
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjdXN0b21pemF0aW9uIjp7ImZvcmNlc2F2ZSI6dHJ1ZX19fQ.dlIJqq6tH9ncQmXQV-gCi4Zc7sqYhGS5RwvpiIZGZXA",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -186,7 +198,7 @@ sidebar_position: -20
    关闭所有使用*密钥1**的三个编辑会话。所有更改都已成功保存。由于文档已保存，必须重新生成密钥。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -198,7 +210,9 @@ sidebar_position: -20
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.L53bCRlJyvIf-C7bcKYM2WMfmk4FeZIoeDaEpc5IxXA",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -206,7 +220,7 @@ sidebar_position: -20
 6. 添加初始化**文档编辑器**以查看所创建文档的脚本。可以使用*密钥1*。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -218,7 +232,9 @@ sidebar_position: -20
        mode: "view",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoidmlldyJ9fQ.wpEk-zrrGq5hKHCm6sAhl_tb51n56th-q-K52Oeq1a4",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
@@ -228,7 +244,7 @@ sidebar_position: -20
    关闭**文档编辑器**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -240,26 +256,30 @@ sidebar_position: -20
        mode: "edit",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoiZWRpdCJ9fQ.rSc0yYe3_2u7N_uaxZcDQ6vC_d5ZWU5LFkkGSow5UDY",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
 
-## 协同编辑模式
+## 协同编辑模式 {#co-editing-modes}
 
 有两种实时协作处理文档的模式：**快速**模式和**严格**模式
 
 您可以使用[editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting)参数来更改协同编辑模式：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     coEditing: {
       mode: "fast",
       change: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ### 自动模式

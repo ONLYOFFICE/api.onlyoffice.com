@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Set column width
 
 Sets the width for the column **B**.

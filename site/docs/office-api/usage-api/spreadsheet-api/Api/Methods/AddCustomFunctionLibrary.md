@@ -1,8 +1,8 @@
 # AddCustomFunctionLibrary
 
 Registers a new custom functions library (see the -**SetCustomFunctions** plugin method).\
-The description of the function parameters and result is specified using JSDoc. The &lt;em&gt;@customfunction&lt;/em&gt; tag is required in JSDoc.\
-Parameters and results can be specified as the &lt;em&gt;number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]&lt;/em&gt; types.\
+The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.\
+Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.\
 Parameters can be required or optional. A user can also set a default value.
 
 ## Syntax
@@ -36,15 +36,16 @@ This example calculates custom function result.
 // How to add cell values using custom function library.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
-    /**
-     * Function that returns the argument
-     * @customfunction
-     * @param {any} first First argument.
-     * @returns {any} second Second argument.
-    */
-    Api.AddCustomFunction(function ADD(first, second) {
-        return first + second;
-    });
+	/**
+	 * Function that returns the argument
+	 * @customfunction
+	 * @param {number} first First argument.
+	 * @param {number} second Second argument.
+	 * @returns {number} The sum of the numbers.
+	 */
+	Api.AddCustomFunction(function ADD(first, second) {
+		return first + second;
+	});
 });
 
 let worksheet = Api.GetActiveSheet();

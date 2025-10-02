@@ -1,5 +1,6 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
+let category_keys = {};
 const filterOpenApiSidebarItems = (item) => {
   // Remove Introduction items
   if (item.type === 'doc' && !item.className) {
@@ -7,6 +8,15 @@ const filterOpenApiSidebarItems = (item) => {
   }
 
   if (item.type === 'category' && item.items) {
+    // Set unique key for item. https://docusaurus.io/docs/sidebar#passing-unique-key
+    if (!item.key) {
+      let ikey = item.label.replace(' ', '-');
+      if (!category_keys[item.label])
+        category_keys[item.label] = 1;
+      else
+        category_keys[item.label] += 1;
+      item.key = ikey + '-' + category_keys[item.label];
+    }
     // Change items with only one item
     if (item.items.length === 2 && item.items[0].type === 'doc' && !item.items[0].className &&
       item.items[1].type === 'category' && item.items[1].label === item.label) {

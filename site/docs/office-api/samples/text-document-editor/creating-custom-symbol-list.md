@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating a custom symbol list
 
 Create a document with a custom symbol list using non-standard characters instead of typical bullet points:

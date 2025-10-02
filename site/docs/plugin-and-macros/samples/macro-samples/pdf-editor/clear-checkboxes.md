@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Clear checkboxes
 
 Clears all checkboxes in the document.

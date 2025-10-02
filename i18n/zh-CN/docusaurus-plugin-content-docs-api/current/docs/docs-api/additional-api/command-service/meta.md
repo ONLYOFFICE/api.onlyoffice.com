@@ -21,6 +21,7 @@
 | c         | string | 必填 | 定义命令类型。                                                                                                                     |
 | key       | string | 必填 | 定义文档标识符，用于明确标识文档文件。                                                             |
 | meta      | object | 必填 | 定义文档的新元信息：<br /><br />**title** - 新文档名称。<br />**类型**: string<br />**是否必填**: 必填 |
+| meta.title | string | 必填 | 定义新文档名称。                                                    |
 
 ## 响应示例
 

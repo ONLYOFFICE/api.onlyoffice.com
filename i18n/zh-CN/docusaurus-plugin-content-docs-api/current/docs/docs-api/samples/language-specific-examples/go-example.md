@@ -74,7 +74,7 @@ export PATH=$PATH:/usr/local/go/bin
 }
 ```
 
-另外，指定与 ONLYOFFICE 文档中使用的[相同的密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
+同样也要与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
 
 ``` json
 {

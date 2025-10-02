@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Insert text
 
 Inserts text into the document at the current cursor position.

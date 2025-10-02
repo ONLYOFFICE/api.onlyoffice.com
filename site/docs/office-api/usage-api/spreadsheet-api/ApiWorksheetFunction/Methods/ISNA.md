@@ -1,6 +1,6 @@
 # ISNA
 
-Checks whether a value is &lt;em&gt;#N/A&lt;/em&gt;, and returns -**true** or -**false**.
+Checks whether a value is *#N/A*, and returns -**true** or -**false**.
 
 ## Syntax
 

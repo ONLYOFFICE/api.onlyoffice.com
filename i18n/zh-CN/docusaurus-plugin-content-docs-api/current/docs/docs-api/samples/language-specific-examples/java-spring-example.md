@@ -111,7 +111,15 @@ files.docservice.url.site=https://documentserver/
    echo %MAVEN_HOME%
    ```
 
-### 步骤 5. 使用 Maven 启动应用程序
+### 步骤 5. 配置 JWT
+
+打开 *src/main/resouces/application.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
+
+ ``` ini
+ docservice.security.key=secret
+ ```
+
+### 步骤 6. 使用 Maven 启动应用程序
 
 1. 打开控制台并使用 **cd** 命令转到 *java-spring* 文件夹：
 
@@ -133,7 +141,7 @@ files.docservice.url.site=https://documentserver/
    http://server.address:server.port/
    ```
 
-### 步骤 6. 检查可访问性
+### 步骤 7. 检查可访问性
 
 如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 **documentserver**。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 **example.com**。
 
@@ -198,6 +206,12 @@ files.docservice.url.site=https://documentserver/
    ```
 
    其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。
+
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT： 
+ 
+     ``` ini
+     docservice.security.key=secret
+     ```
 
 5. 安装 **Maven**:
 
@@ -288,6 +302,12 @@ files.docservice.url.site=https://documentserver/
    ```
 
    其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。
+
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT： 
+ 
+     ``` ini
+     docservice.security.key=secret
+     ```
 
 5. 在 Java-Spring 示例目录中运行下一个命令：
 

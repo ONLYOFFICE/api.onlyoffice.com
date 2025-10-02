@@ -1,6 +1,6 @@
 # ISERR
 
-Checks whether a value is an error other than &lt;em&gt;#N/A&lt;/em&gt;, and returns -**true** or -**false**.
+Checks whether a value is an error other than *#N/A*, and returns -**true** or -**false**.
 
 ## Syntax
 

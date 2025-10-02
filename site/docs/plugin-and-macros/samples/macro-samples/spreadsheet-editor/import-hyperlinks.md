@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Import hyperlinks
 
 Imports hyperlinks between different worksheets in the spreadsheet.

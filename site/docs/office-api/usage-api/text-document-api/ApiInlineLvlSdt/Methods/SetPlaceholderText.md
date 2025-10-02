@@ -1,7 +1,7 @@
 # SetPlaceholderText
 
 Sets the placeholder text to the current inline content control.\
-Can't be set to checkbox or radio button*
+*Can't be set to checkbox or radio button*
 
 ## Syntax
 

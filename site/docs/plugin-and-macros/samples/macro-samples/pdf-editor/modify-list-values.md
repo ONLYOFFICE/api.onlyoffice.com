@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Modify list values
 
 Deletes certain list values from all combo boxes that contain a specific key.

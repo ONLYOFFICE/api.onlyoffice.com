@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Set form background color
 
 Changes the background color of all form fields on focus.

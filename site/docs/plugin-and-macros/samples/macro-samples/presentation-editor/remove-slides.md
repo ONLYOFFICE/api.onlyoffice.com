@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Remove slides
 
 Removes slides from your presentation based on the slide title.

@@ -13,7 +13,7 @@ sidebar_label: Standard branding
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)。
 :::
 
-## 匿名
+## 匿名 {#anonymous}
 
 `类型: object`
 
@@ -46,7 +46,7 @@ const anonymous = {
 
 ![匿名](/assets/images/editor/anonymous.png)
 
-## 自动保存
+## 自动保存 {#autosave}
 
 `类型: boolean`
 
@@ -58,7 +58,7 @@ const anonymous = {
 
 **示例**: `true`
 
-## 聊天
+## 聊天 {#chat}
 
 `类型: boolean`
 
@@ -72,7 +72,7 @@ const anonymous = {
 
 ![聊天](/assets/images/editor/chat.png)
 
-## 关闭
+## 关闭 {#close}
 
  `类型: object`
  
@@ -123,7 +123,7 @@ const close = {
 
 **示例**: `true`
 
-## 评论
+## 评论 {#comments}
 
 `类型: boolean`
 
@@ -165,7 +165,7 @@ const close = {
 
 **示例**: `false`
 
-## 客户
+## 客户 {#customer}
 
 `类型: object`
 
@@ -256,7 +256,7 @@ const customer = {
 
 ![客户](/assets/images/editor/customer.png)
 
-## 功能
+## 功能 {#features}
 
 `类型: object`
 
@@ -484,7 +484,7 @@ const goback = {
 
 **示例**: `https://example.com`
 
-## 帮助
+## 帮助 {#help}
 
 `类型: boolean`
 
@@ -624,7 +624,10 @@ const logo = {
 
 `类型: boolean`
 
-定义当编辑器打开时是否自动运行文档宏。默认值为 **true**。**false**值对用户隐藏 [宏设置](#macrosmode) 。
+定义编辑器打开时是否自动运行文档宏。默认值为 true。
+
+- 9.0.3 版本之前：false 值将禁用宏的自动启动，并对用户隐藏 [宏设置](#macrosmode)。
+- 9.0.3 版本及以上：false 值将完全禁用宏——无法运行、添加或编辑宏。“宏”按钮也会在“视图”选项卡中隐藏。
 
 **示例**: `true`
 
@@ -721,7 +724,7 @@ const mobile = {
 
 **示例**: `true`
 
-## 插件
+## 插件 {#plugins}
 
 `类型: boolean`
 
@@ -739,7 +742,7 @@ const mobile = {
 
 ![指针模式](/assets/images/editor/pointerMode.png)
 
-## 审阅
+## 审阅 {#review}
 
 `类型: object`
 
@@ -916,6 +919,14 @@ const review = {
 
 **示例**: `"text"`
 
+## suggestFeature
+
+`Type: boolean`
+
+定义 **Suggest a Feature** 菜单按钮是否显示或隐藏。默认值为**true**。
+
+**示例**: `true`
+
 ## toolbarHideFileName
 
 `类型: boolean`
@@ -924,6 +935,10 @@ const review = {
 
 :::请注意，
 当 [compactHeader](#compactheader) 和 [toolbarNoTabs](#toolbarnotabs) 参数设置为 **true**时使用此设置。
+:::
+
+:::请注意
+从 9.0.3 版本开始，该参数适用于移动端编辑器。
 :::
 
 **示例**: `false`
@@ -973,7 +988,7 @@ const review = {
 
 **示例**: `"theme-dark"`
 
-## 单元
+## 单元 {#unit}
 
 `类型: string`
 
@@ -1104,6 +1119,7 @@ const config = {
         visible: true,
         resultMessage: "text",
       },
+      suggestFeature: true,
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",

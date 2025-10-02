@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Insert unique id
 
 Inserts a unique id into a form document.

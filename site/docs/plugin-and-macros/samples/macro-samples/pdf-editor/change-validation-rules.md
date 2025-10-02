@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Change validation rules
 
 Changes the validation rules of the number and email fields in the document.

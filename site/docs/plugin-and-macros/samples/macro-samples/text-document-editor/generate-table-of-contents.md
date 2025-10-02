@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Generate table of contents
 
 Generates a table of contents by scanning the document for headings.

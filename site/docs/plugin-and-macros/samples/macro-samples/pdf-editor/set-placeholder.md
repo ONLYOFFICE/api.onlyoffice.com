@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Set placeholder
 
 Sets a specific placeholder for all the combo boxes that have a certain key.

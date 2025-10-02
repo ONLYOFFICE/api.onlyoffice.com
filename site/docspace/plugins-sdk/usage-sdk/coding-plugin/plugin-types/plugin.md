@@ -16,7 +16,7 @@ This interface must be used in each plugin because the plugin [status](#status) 
 
 Stores the plugin status (**active** or **hide**).
 
-Type: [PluginStatus](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/plugins.ts)
+Type: [PluginStatus](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts)
 
 Example: "active"
 
@@ -36,7 +36,7 @@ Parameters:
 
 | Name   | Type                                                                                               | Example  | Description                                           |
 | ------ | -------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------- |
-| status | [PluginStatus](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/plugins.ts) | "active" | Defines a new plugin status (**active** or **hide**). |
+| status | [PluginStatus](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Plugins.ts) | "active" | Defines a new plugin status (**active** or **hide**). |
 
 ### getStatus
 

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Sheet merger
 
 Merges data from all sheets into the active sheet by copying the used range of each sheet and appending it.

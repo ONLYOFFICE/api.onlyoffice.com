@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Search for keyword in comments
 
 Marks comments containing a specific keyword as solved in a document.

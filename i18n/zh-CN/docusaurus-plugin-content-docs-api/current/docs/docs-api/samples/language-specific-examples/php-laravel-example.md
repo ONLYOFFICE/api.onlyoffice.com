@@ -114,7 +114,7 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
 
    如果安装和配置成功，您现在可以访问服务器地址来试用示例应用程序。
 
-## 步骤 3. 配置 PHP（Laravel）示例
+## 步骤 3. 配置 PHP（Laravel）示例 {#step-3-configure-the-php-laravel-example}
 
 PHP（Laravel）示例是通过更改环境变量来配置的。
 

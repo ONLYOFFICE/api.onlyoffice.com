@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating spreadsheet chart
 
 Creates a custom chart filled with array-based values in the spreadsheet:

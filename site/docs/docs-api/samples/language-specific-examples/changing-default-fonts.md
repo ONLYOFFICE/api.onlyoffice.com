@@ -24,3 +24,12 @@ To change the default font for all new documents created within the ONLYOFFICE D
 3. Save the file.
 
 After that, all new documents will be created with the specified font.
+
+## Known issues
+
+When editing or opening documents in ONLYOFFICE Docs, the platform uses a predefined list of fonts available on the server. Here's how font substitution works:
+
+- **Pre-installed fonts**: ONLYOFFICE Docs comes with a default set of open-source fonts.
+- **Font substitution**: If a document contains proprietary fonts (e.g., created in third-party editors), ONLYOFFICE Docs automatically selects the most similar available font.
+
+To avoid layout issues caused by font substitution, make sure to install custom fonts on the document server before uploading any templates created in external software. Follow the official instructions for [Windows](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-windows.aspx), [Linux](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-linux.aspx), or [Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-install-fonts-docker.aspx).

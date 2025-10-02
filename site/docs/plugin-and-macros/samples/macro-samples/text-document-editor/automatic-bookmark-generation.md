@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Automatic bookmark generation
 
 Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.

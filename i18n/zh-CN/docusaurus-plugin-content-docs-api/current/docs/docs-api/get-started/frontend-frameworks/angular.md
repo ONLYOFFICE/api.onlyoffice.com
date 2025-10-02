@@ -51,10 +51,10 @@ ng version
 1. 打开 *onlyoffice-angular-demo* 项目中的 *./src/app/app.module.ts* 文件并导入 **DocumentEditorModule**：
 
    ``` ts
-   import {NgModule} from "@angular/core"
-   import {BrowserModule} from "@angular/platform-browser"
-   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular"
-   import {AppComponent} from "./app.component"
+   import {NgModule} from "@angular/core";
+   import {BrowserModule} from "@angular/platform-browser";
+   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
+   import {AppComponent} from "./app.component";
    
    @NgModule({
      declarations: [
@@ -74,8 +74,8 @@ ng version
 2. 打开 *onlyoffice-angular-demo* 项目中的 *./src/app/app.component.ts* 文件，并在您的使用组件中定义选项：
 
    ``` ts
-   import {Component} from "@angular/core"
-   import {type IConfig} from "@onlyoffice/document-editor-angular"
+   import {Component} from "@angular/core";
+   import {type IConfig} from "@onlyoffice/document-editor-angular";
    
    @Component({
      selector: "app-root",
@@ -95,21 +95,21 @@ ng version
        },
      }
      onDocumentReady = () => {
-       console.log("Document is loaded")
+       console.log("Document is loaded");
      }
      onLoadComponentError = (errorCode, errorDescription) => {
        switch (errorCode) {
        case -1: // Unknown error loading component
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
   
        case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
   
        case -3: // DocsAPI is not defined
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        }
      }
    }
@@ -143,8 +143,8 @@ ng version
    > 请注意，从 Angular v17.0.0 开始，默认情况下，*app.module.ts* 文件不会添加到新项目中。您必须在 *Component* 装饰器的 *imports* 属性中指定 *DocumentEditorModule*，并将 *standalone* 设置为 *true*。
 
    ``` ts
-   import {Component} from "@angular/core"
-   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular"
+   import {Component} from "@angular/core";
+   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
 
    @Component({
      selector: "app-root",
@@ -166,19 +166,19 @@ ng version
        },
      }
      onDocumentReady = () => {
-       console.log("Document is loaded")
+       console.log("Document is loaded");
      }
      onLoadComponentError = (errorCode, errorDescription) => {
        switch (errorCode) {
        case -1: // Unknown error loading component
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        case -3: // DocsAPI is not defined
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        }
      }
    }
@@ -362,6 +362,12 @@ onDocumentReady = () => {
 
 ### 属性
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | 名称                                 | 类型                    | 默认 | 描述                                                                                                                                                |
 | ------------------------------------ | ----------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                  | null    | 组件唯一标识符。                                                                                                                               |
@@ -392,6 +398,10 @@ onDocumentReady = () => {
 | events\_onRequestHistoryClose        | (event: object) => void | null    | 当用户试图通过单击**关闭历史记录**按钮从查看文档版本历史记录返回到文档时调用的函数。 |
 | events\_onRequestHistoryData         | (event: object) => void | null    | 当用户试图单击文档版本历史记录中的特定文档版本时调用的函数。                                        |
 | events\_onRequestRestore             | (event: object) => void | null    | 当用户尝试通过单击版本历史记录中的**恢复**按钮来恢复文件版本时调用的函数。                         |
+
+```mdx-code-block
+</APITable>
+```
 
 \* *- 必填字段*
 

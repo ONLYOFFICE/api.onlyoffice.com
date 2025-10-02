@@ -8,7 +8,7 @@ sidebar_position: -4
 
 > 请注意，在 5.5 版本之前，使用`https://documentserver/ConvertService.ashx`地址发送请求。
 
-从 8.1 版开始，建议将 [shardkey](../../get-started/how-it-works/how-it-works.md#shard-key) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
+从 8.1 版开始，建议将 [shardkey](../../get-started/configuration/shard-key.md) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
 
 > **ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求,请求参数在 *QueryString* 中。
 
@@ -135,7 +135,7 @@ sidebar_position: -4
 
 定义文档标识符,用于明确标识文档文件。
 
-Type: string
+类型: string
 
 是否必填: 必填
 
@@ -578,7 +578,7 @@ Type: string
 
 ## 请求示例
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式
+### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式 {#sample-of-json-object-sent-to-document-conversion-service-used-to-generate-png-thumbnail-of-file-in-docx-format}
 
 ``` json
 {

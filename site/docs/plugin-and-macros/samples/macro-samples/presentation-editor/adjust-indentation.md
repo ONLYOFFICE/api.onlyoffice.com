@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Adjust indentation
 
 Adjusts the first line indentation for all paragraphs in your presentation.

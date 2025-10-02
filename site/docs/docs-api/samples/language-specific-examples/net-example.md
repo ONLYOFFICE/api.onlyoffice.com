@@ -30,7 +30,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](htt
 
 ## Step 2. Download the .Net (C#) / .Net (C# MVC) code for the editors integration
 
-Download the [.Net (C#) or .Net (C# MVC) example](./language-specific-examples.md) from our site.
+Download the [.Net (C#) or .Net (C# MVC) example](./language-specific-examples.md) from our site, or get the source code directly from GitHub for [.Net (C#)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp) or [.Net (C# MVC)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp-mvc).
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *settings.config* file (or *web.appsettings.config* file for MVC version):
 

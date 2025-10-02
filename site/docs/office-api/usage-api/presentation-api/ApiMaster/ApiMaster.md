@@ -22,6 +22,7 @@ Represents the ApiMaster class.
 | [GetClassType](./Methods/GetClassType.md) | "master" | Returns the type of the ApiMaster class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
 | [GetLayout](./Methods/GetLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the specified slide master by its position. |
+| [GetLayoutByType](./Methods/GetLayoutByType.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the specified slide master by its position. |
 | [GetLayoutsCount](./Methods/GetLayoutsCount.md) | number | Returns a number of layout objects. |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Returns a theme of the slide master. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide master. |

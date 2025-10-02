@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Filling spreadsheet
 
 Fill an empty spreadsheet with the data stored in arrays:

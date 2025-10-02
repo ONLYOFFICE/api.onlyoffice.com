@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Inserting special symbols
 
 Create a document with special Unicode symbols commonly used in legal, scientific, and financial documents:

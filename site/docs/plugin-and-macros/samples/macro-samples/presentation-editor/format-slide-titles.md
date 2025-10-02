@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Format slide titles
 
 Formats the title of each slide in a presentation. It sets the font, font size, justification, and vertical text alignment for the title.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Delete comments
 
 Deletes comments from a specified range of cells in the active worksheet.

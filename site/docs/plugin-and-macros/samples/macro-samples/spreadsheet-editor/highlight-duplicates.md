@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Highlight duplicates
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.

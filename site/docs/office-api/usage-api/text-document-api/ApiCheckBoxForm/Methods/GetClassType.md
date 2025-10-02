@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiFormBase class.
+Returns a type of the ApiCheckBoxForm class.
 
 ## Syntax
 
@@ -16,22 +16,27 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"form"
+"checkBoxForm"
 
 ## Example
 
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-docx
-// How to get a class type of ApiFormBase.
+// How get a class type of ApiCheckBoxForm.
 
-// Retrieve class type of ApiFormBase object and insert it to the slide.
+// Retrieve class type of a created checkbox object and display it.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let classType = textForm.GetClassType();
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Married");
+paragraph.AddLineBreak();
+checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+let classType = checkBoxForm.GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating presentation
 
 Create a presentation on a specific topic:

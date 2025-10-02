@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Import CSV/TXT data
 
 Imports data from remote CSV/TXT files into the spreadsheet.

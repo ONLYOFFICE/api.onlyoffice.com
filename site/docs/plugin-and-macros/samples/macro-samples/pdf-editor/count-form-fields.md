@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Count form fields
 
 Counts the number of form fields in a document and categorizes them by type.

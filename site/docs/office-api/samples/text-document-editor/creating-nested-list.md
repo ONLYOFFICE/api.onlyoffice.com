@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating nested list
 
 Create a document with a multi-level nested list that combines numbered and bulleted items:

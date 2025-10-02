@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating document with comments
 
 Create a document with comments added to paragraphs and specific text fragments for review, approval, and collaborative discussion:

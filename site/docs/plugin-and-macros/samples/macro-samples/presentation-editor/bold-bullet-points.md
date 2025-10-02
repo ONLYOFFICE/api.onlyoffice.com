@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Bold bullet points
 
 Automatically **bolds** the first word of each bullet point that contains a colon ( : ) or a dash ( – ).

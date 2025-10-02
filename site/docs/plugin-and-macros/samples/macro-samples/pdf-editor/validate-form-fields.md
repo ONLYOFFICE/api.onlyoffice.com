@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Validate form fields
 
 Highlights empty or unrequired text fields in a document with desired colors.

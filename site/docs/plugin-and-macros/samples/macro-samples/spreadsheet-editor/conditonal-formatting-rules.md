@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Conditional formatting rules
 
 Applies multiple conditional formatting rules to the selected range.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Count number of shapes
 
 Counts the total number of shapes in a presentation by iterating through all slides and displays the count on a newly created slide.

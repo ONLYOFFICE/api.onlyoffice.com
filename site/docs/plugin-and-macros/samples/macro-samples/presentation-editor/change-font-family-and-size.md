@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Change font family and size
 
 Changes the font family and/or size on all the slides in your presentation.

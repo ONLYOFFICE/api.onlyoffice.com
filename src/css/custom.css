@@ -449,3 +449,9 @@ button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
 .hidden {
   display: none !important;
 }
+
+@media (max-width: 545px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Hide or unhide rows and columns
 
 Hides or unhides the specified rows and/or columns in the spreadsheet.

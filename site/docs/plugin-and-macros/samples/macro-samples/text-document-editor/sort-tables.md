@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Sort tables
 
 Automatically sorts table rows alphabetically or numerically based on the selected column.

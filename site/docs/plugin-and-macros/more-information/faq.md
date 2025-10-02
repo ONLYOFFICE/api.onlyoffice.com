@@ -28,7 +28,7 @@ Use the [plugin variations](../structure/configuration/variations.md) or *subplu
 
 ## Where to find the existing plugins available for integration?
 
-All ready-to-use plugins are available in the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory).
+All ready-to-use plugins are available in the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en).
 
 More plugin samples are listed [on GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins). Feel free to fork them and use them as examples to create your own plugin.
 

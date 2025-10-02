@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Weighted average function
 
 Creates a [custom function](/docs/plugin-and-macros/macros/adding-custom-functions.md) to calculate a weighted average.

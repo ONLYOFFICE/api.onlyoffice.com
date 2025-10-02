@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Add chart
 
 Adds a new chart to the selected cell range.

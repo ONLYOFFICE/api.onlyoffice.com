@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Align charts
 
 Aligns charts and text boxes on every slide.

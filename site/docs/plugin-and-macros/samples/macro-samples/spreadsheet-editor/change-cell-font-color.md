@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Change cell font color
 
 Sets the font color of the cell **B4** to red.

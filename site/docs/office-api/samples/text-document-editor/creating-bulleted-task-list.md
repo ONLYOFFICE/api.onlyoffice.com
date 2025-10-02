@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating a bulleted task list
 
 Create a document with a bulleted task list for enumerating tasks, steps, or requirements:

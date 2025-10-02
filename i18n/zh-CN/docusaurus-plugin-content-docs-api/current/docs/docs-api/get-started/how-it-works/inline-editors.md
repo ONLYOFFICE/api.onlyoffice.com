@@ -33,7 +33,7 @@ sidebar_position: -14
    每个编辑器都有其自己的初始化脚本：
 
    ``` ts
-   const documentEditor = new DocsAPI.DocEditor("placeholder1", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -42,8 +42,10 @@ sidebar_position: -14
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
-   })
-   const spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", {
+   };
+   const documentEditor = new DocsAPI.DocEditor("placeholder1", config);
+
+   const config = {
      document: {
        fileType: "xlsx",
        key: "af86C7e71Ca8",
@@ -52,8 +54,10 @@ sidebar_position: -14
      },
      documentType: "cell",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6Inhsc3giLCJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ0aXRsZSI6IkV4YW1wbGUgU3ByZWFkc2hlZXQgVGl0bGUueGxzeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtc3ByZWFkc2hlZXQueGxzeCJ9LCJkb2N1bWVudFR5cGUiOiJjZWxsIn0.8CklPIjYSEkgM7swGAC7-85ICcq_42be3WTWNOuvhlg",
-   })
-   const presentationEditor = new DocsAPI.DocEditor("placeholder3", {
+   };
+   const spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", config);
+
+   const config = {
      document: {
        fileType: "pptx",
        key: "bv48M5r64Sf9",
@@ -62,7 +66,8 @@ sidebar_position: -14
      },
      documentType: "slide",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6InBwdHgiLCJrZXkiOiJidjQ4TTVyNjRTZjkiLCJ0aXRsZSI6IkV4YW1wbGUgUHJlc2VudGF0aW9uIFRpdGxlLnBwdHgiLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXByZXNlbnRhdGlvbi5wcHR4In0sImRvY3VtZW50VHlwZSI6InNsaWRlIn0.FKaDWfJE-OuODhtpq-8Qv6BdDy_evgdpaBw616T7zOs",
-   })
+   };
+   const presentationEditor = new DocsAPI.DocEditor("placeholder3", config);
    ```
 
    其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。

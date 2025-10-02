@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Sum of highlighted cells
 
 Sums the answer of all highlighted cells in a spreadsheet.

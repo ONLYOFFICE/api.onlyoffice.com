@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Autofill fields
 
 Automatically fills in all text fields in the document that have the same placeholder or tip text.

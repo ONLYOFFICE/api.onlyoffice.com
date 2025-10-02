@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Next blank row
 
 Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).

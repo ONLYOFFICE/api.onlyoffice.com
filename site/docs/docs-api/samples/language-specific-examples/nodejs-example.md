@@ -31,7 +31,7 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Windows](htt
 
 ### Step 2. Download the Node.js code for the editors integration
 
-Download the [Node.js example](./language-specific-examples.md) from our site.
+Download the [Node.js example](./language-specific-examples.md) from our site, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/nodejs).
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *config/default.json* file:
 
@@ -143,6 +143,8 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
    ``` sh
    unzip Node.js.Example.zip
    ```
+
+   Or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/nodejs).
 
 3. Change the current directory for the project directory:
 
