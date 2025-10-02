@@ -32,14 +32,19 @@ const config: Config = {
   },
 
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true
+    },
     experimental_faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
+      ssgWorkerThreads: true,
 
       swcJsLoader: false,
       swcJsMinimizer: false,
       swcHtmlMinimizer: false,
       rspackBundler: false,
+      rspackPersistentCache: false
     }
   },
 
