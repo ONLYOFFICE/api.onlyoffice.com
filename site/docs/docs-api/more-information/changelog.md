@@ -5,6 +5,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 9.1
 
 - The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
+- Changed the [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
 
 ## Version 9.0
 
