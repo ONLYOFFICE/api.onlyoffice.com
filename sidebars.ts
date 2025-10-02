@@ -8,7 +8,7 @@ const filterOpenApiSidebarItems = (item) => {
   }
 
   if (item.type === 'category' && item.items) {
-    // Change items with only one item
+    // Set unique key for item. https://docusaurus.io/docs/sidebar#passing-unique-key
     if (!item.key) {
       let ikey = item.label.replace(' ', '-');
       if (!category_keys[item.label])
@@ -17,6 +17,7 @@ const filterOpenApiSidebarItems = (item) => {
         category_keys[item.label] += 1;
       item.key = ikey + '-' + category_keys[item.label];
     }
+    // Change items with only one item
     if (item.items.length === 2 && item.items[0].type === 'doc' && !item.items[0].className &&
       item.items[1].type === 'category' && item.items[1].label === item.label) {
       item.items = item.items[1].items;
