@@ -76,3 +76,16 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
 Download the Odoo ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop).
+
+## Working with forms
+
+You can create, upload, and use fillable form templates within the **ONLYOFFICE Templates** module in Odoo. The module allows you to generate documents with fields that can be automatically filled with data from Odoo records.
+
+**Requirements** 
+- An instance of **ONLYOFFICE Docs** with support for fillable forms.
+- A valid **ONLYOFFICE license** with the **Automation API** option enabled. 
+- The **ONLYOFFICE Templates** module in Odoo (automatically installs the main ONLYOFFICE module).
+  
+> For Odoo integration specifics, see the [ONLYOFFICE Odoo connector guide](https://helpcenter.onlyoffice.com/integration/odoo.aspx).
+
+**Note:** If you are planning to deploy fillable form workflows in Odoo, make sure that your edition of ONLYOFFICE Docs supports PDF forms. For exact minimal supported versions in your environment (Community, Enterprise, Cloud), please check the [ONLYOFFICE release notes](https://github.com/ONLYOFFICE/DocumentServer/releases) or contact the support team.
