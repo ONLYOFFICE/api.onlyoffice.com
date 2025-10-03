@@ -1,6 +1,5 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
-let category_keys = {};
 const filterOpenApiSidebarItems = (item) => {
   // Remove Introduction items
   if (item.type === 'doc' && !item.className) {
