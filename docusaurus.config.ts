@@ -40,11 +40,11 @@ const config: Config = {
       lightningCssMinimizer: true,
       ssgWorkerThreads: true,
 
-      swcJsLoader: false,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
-      rspackBundler: false,
-      rspackPersistentCache: false
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      rspackBundler: true,
+      rspackPersistentCache: true
     }
   },
 
