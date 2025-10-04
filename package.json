@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "sh fix-scripts/add_translate_field.sh && docusaurus start",
-    "build": "sh fix-scripts/add_translate_field.sh && docusaurus build",
+    "start": "sh fix-scripts/fix-sidebar-translation.sh && sh fix-scripts/add_translate_field.sh && docusaurus start",
+    "build": "sh fix-scripts/fix-sidebar-translation.sh && sh fix-scripts/add_translate_field.sh && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

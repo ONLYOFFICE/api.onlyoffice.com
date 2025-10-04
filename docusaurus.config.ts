@@ -51,14 +51,6 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh-CN'],
-    localeConfigs: {
-      en: {
-        translate: false
-      },
-      'zh-CN': {
-        translate: false
-      },
-    }
   },
 
   presets: [
