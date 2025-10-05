@@ -72,6 +72,7 @@ jobs:
         free -h
  
         export NODE_OPTIONS="--max-old-space-size=8192"
+        export RSPACK_PARALLEL=6
         export RAYON_NUM_THREADS=6
         export TOKIO_WORKER_THREADS=4
         npm run build -- ${SUB_ARGS} ${LOCALE}
