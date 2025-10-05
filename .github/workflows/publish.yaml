@@ -70,6 +70,8 @@ jobs:
         [[ "$mode" == "testing" ]] && SUB_ARGS="--dev"
 
         free -h
+
+        cat /sys/fs/cgroup/memory/memory.limit_in_bytes
  
         export NODE_OPTIONS="--max-old-space-size=8192"
         export RSPACK_PARALLEL=6
