@@ -53,7 +53,7 @@ function getSidebarTranslationFileContent(sidebar, sidebarName) {
                 }
             }
             const prevPath = path;
-            path = item.label + '.';
+            path = (path + item.label) + '.';
             item.items.forEach(sidebarRecursive);
             path = prevPath;
         } else if (item.type === 'link') {
