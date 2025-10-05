@@ -1,11 +1,11 @@
 ---
-id: get-filtered-tasks
-title: "Get filtered tasks"
-description: "Returns a list with the detailed information about all the tasks matching the parameters specified in the request."
-sidebar_label: "Get filtered tasks"
+id: get-my-tasks-by-status-in-the-project
+title: "Get my tasks by status in the project"
+description: "Returns a list of all the tasks for the current user with the selected status in the project with the ID specified in the request."
+sidebar_label: "Get my tasks by status in the project"
 hide_title: true
 hide_table_of_contents: true
-api: eJztGdtS2zj0VzTeV4fcSGgzs7MLgVLawrIkLdPSPCi2jFVsyyvJQDaTz9kf2S/bcyQ7iSEXQ5npPjQPGVk696t8PHU0vVZO78pJpfjGPF0fUnWjnJHrKOZlkusJHE6d/UyHQvK/qeYiecuozyQiSVg5rnMHcMwZzQDLZ8qTPEUwp+dcMJ3JRBFKIq40ueM6JDpkxGea8oj5hCeBkLGhSuhYZJrQKDIgGuUgcOSFPLk2WymVNGaaSUVUyjwecEPBnEn2V8aU3gFp8uWB8EH2qeOJRLNE45KmacQ9w63+TaGEU0d5IYsprvQkZSCzGKMdgA5YJGVSc6bwNLcP9/GhrOW5PSInh4CVU+HA9BqMNHOdeJIDqMeog1wPRe5CBnpIogXoglbLLSCSaEICKWIST0guBOxKkgi9YDcWImI0MezAsEqLhD3mdloclUSlUtIJPIIPY7VkiEIF17E+slvtljMzSs2Jfb9ac5E3KpaIDapV5IgRiFFWjSPkxnpv4+EqdytNdbbCJphYJD/8PturbLyOST8DrWKj8cvwCkQUibun2dv61iBCgubWX29ln0Fia8hsm6RlPoeLQ3L8cTlslZZQGJAAQnCPp3QVgfPF4QMC6+yRE14yR5ZB2qM1PCh4WsgVdrcHa0X0oVBGPGEDDeKsSsyEx1lMbmmUMSIC68ACaTNBka6gR++fSC+iSp+sqG0fYN9ir6xu5oclV6UiUbYUtBqNFXSw/ueCYEw+tSqvc9aaam38wQ4m2yGt0ptd7zrsnsZphCCN/Fdb8Vf80KCHXKURnZxB6K5isCB4ym8Y+UKTCdXqhiPqkOtoGxJNaF5v9m8pBNUghsa5GSeTESapQkhCDRbiQz0LoBp+lFvQv36tA6ifQfvBJROwbfcQfYeq9P63TDH5K/VjCGegYFIFw0NbhZwjICUmjF1KmlrhrZ9WumDBudVoNWrNVq3ZHTbavWaz19ndaXf22p1284shArFEPb3d10cx3DoqhARcSoYGYnuNBDmTLMa70HkoTGpZJq5zycYKr0WuM7hBIuBX6D7aEPnAkxvmnySwfEM9BsXwBpb7vg+JpMz5LXsnoJZSpHQ6GaQABavjU0v7IBLXVpzPNBQCYQZn8H/S/xP+39Hx2Bzun5zC/6f3zqOL2VWD1IiR2CVNWBqhXdKCZS63S9rwYER3yS4sc+ld0oGHQgGXdOGp0MEle/CUq+GSVwZwrolLXsNGrgywRRGMQrBGGXKl4AnFMIrBGqUA5WCFQoCCsEIJrJLwgAKAorBC5p/ej0qx0zQBAjF2LeSkokMXuW4SGRJlc3yqLE2F1L9j3xNBwD2244l4mfH2KvBWAARgnKhzyWNakrXolcvwWmYW/vCpSjVb7d1SVubpg1GPiZlnpikob4QWWwtDXlcCgEXEU+bzLH4OZuWSOaT+N+b70MrIAYX3A2kt1xcxtPltlgtopIzp9j0PwhQb0/P7zM/u8eO6R5EtIAurmi1qEFJZ6jcbQ8RAP70VnNlOcAH3rUtpewCu15Ths3kVniPYSoyPo8cFqZ9JyRKvwt2mQij04e2aKUY+Z/YyPpjEY7HFl//+YyJnPJbsllOrykYeZ5+t3BG8HrDtMd0/K/I5uQVl6Diq7t8DqrhXzb3LJTA36YMa2KfJkc91ReYAfcgiVj0YX6x0g9LsEt5sTRdfkr+C/wcs8Qkl0K9iJj1OI7ikBxb7cDlUN9FYBjR41P/Aky2Mt13q9iNw/Sd8f3mylRD9wr6R8HLs/Kzi/7sqbhI9EmprUV6k2aPL3Dq3xmCfc6rDzUqlFKeSgnAEr2h7C/IdSdIXkZ0jrMf4he4Fng2kAVwv/5Bm6PqMXHiBQoPDq8LwptosisxRos2UeOvLl4F70ExXqC3MZTpLkOicfClDK6uw21lQqODUtwJiNxQRFEQcSdAE7ocEmcmEaaJCkZYj2dB9drt4Ia/M+dtJzG6j+Xj48jGh+fye2TlWzOARTOpcM+MokyNOnaa83tpp1ItvATisqUNm25dWyGtox8p8D8iwUjih1qnq1evTUCg9603RcTOAvKWSY9c2fsczK1JA4QYAaJHwaGS2cXgn5IPjV43XOHucLX2DGOA4yJJb+SVicX1P+Xtm7u+od2iPXScxFbiMawyB86aLxfeCo8LWpXl/ozzDRweWxuxXjdHDgbiFKU2s7ZYZKTcWU2KDuzTQNc/F0NWilOaji7gtTT2vnHZAX3WC7m6ts9fcq+12uq3auB14tZb3utsOul0a0C5eQOcjzAWlB8PJVQc4ZFzsF8PCxgwNHQjjgPmVJI5N8pKBiRdycTQYkv3zE4wLCB8bkRHUksL/SsfUFM/cS8eQbDboiumx8+DevPRR58d8YsqjTbN7XYcOz01Jz2z3tMl0haEIkJBOthLmNRF5YpbbpAJ/2PS4cqbTMdRV6MCzGW4DK2xxV6NFNuETsAmLr29T5wZC3V4CwRa1oZ0y3do70+Ox6swtMPDNN9UbYUdLReL4aAiw4/x7Wix8RJH0Djbxv+fAQhjXmAw1e1NwcXKdYUftOZYk5hvWoXK63ph0zReoVHGUTJYELGeum+uB/6jVSpTp1BaD2WwOb4/WYszLhYVGr45A6v8A3AbFYw==
+api: eJztGNly2zbwVzDsSzulrcN2Ds10Gll2GyWx61pOPDn8sCJBEzEIsADoRJX1Of2Rfll3QeqKHZFxM9M+RA+aBbn3Ce40cHBpg97bIDf6PY9c6wzslQ0uwsDyqDDCTfDlNOgXLtVG/AlOaPWUQ8wNERmEgjD4gHg8uJghVcxtZEROaEEvOOWuMMoyYFJYx3TCQErmUs4ciWGJNv6EkgxXjhWWG/ZBuNQ/tVyiRjxm1oErLBPKP640XeIND5jNeSQSgbgVkuF/FNy6bdSuAvd1jLZMg0grh7IIhDyXIvI2td5b0nga2CjlGRDkJjlHG/SYpCEflJtz4wS39LbSQsR0WLf6pFJweIBUFReBQi/RaTN0rLfmNhl5vjL1Djr/I2NsrpUtdei227fZvKg87T2MjL7UXjAGJkiHIc1svR8GmAOO70/qMYfxCo51RqhLxMEUyAC1C4pCUC7xj5DlklDa1W/rjr/5j/x5IGwuYXIMGb9LwJLhkbji7A2oCTh7JYj0TDhZRwQKqsD1r8GBGWWYw5tpCoNJrpklTAaeiugxLxIh+UtTQ/7uXQtR4yJylkCu8XH5jMi3weYff6ZK+QniTCgMtwGnKUUwa0qDgkNkpSecnxvIS+XLON0ZgqXkbrvb3up0tzoPzto7vU6nt7e7vbP3cGdvp/PGM8FcgsjVx/owAyEbpIRK9JnHmH6a8CuZgY92uqSnKjLqOiepVhzPpZAwOOdjSw0oDEZXxATjir3BeSYvhLri8VAh+AtEfKz1FYL9OMZCsv79NX+msUkBcTqajHLEQujXo5L3vtSXpTqvIdWacEbH+D8c/I7/z2A89i/7wyP8f/U8uNUC37bZFvMah6yDoFc6ZF0EK71DtoMHr3rIdhGstA/ZHh7mBoTsAZ7mNoTsIZ4qM0L2yCMuLAnZY3xQGYNiSQVvEMKkQ2UUnkgNbxjCpAUahxApgQYiRBqURuKBFEBDESLhr55frOVOxycI5tilNpOGAV3Wui9kLJTN+WmLPNfGPdFKTnSSiIhvRzpbFVzfBZ5qxECKoT0xIoM1XdG1koNaw3emKPEPvtSoTndnd60qq/KhrKfCrCrTN5RftNO1jaHqKwniEuERj0WR3Yeyccs8g/g9j2OhONuHKBWm9NxAZzn20RrPJSCtd10/ijBNaTDdf858mx7/3fSYVwvqwptWix2lYNbmzcYU8dhfPgqOy0lwivfQc1POAII/04aPF114QVB2Yjpe3G5IA38tjRrcbRqkwiDFKrKcvS7QB2TxJBvrmlj+/ZfPnPHY8GsBpSkbZRy/LvWWeO/m9Tk9OJ7Xs7pGY2Asm8d3H6yImoV3tQVWLv2kBw5AHcbCNRSO2Af4bdA8Gb9a60aj+Tl+d/gpvqJ/g/iPuIrxQwjnVcZNJEDiJT0pqQ9WU3UTj1VETwcx3g9qBNdd6voSQ/8KZNG09tZH/mn5RSLWc+dbF//fdXFf6FLb2qa8LLNbl7nPhTVD/5yASzcblQN9sWsmCL2h70uUf1EkAy3RMRspvoOHSVQm0givl78Zv964Ry18hUZDW4C54323WTaZQ+X8Pqb248vjfTJM7zBb+8t0oYjpgv1ahTY2YXdvyaFBUJ9qzN1US2yItJIAhfdDRsKM4o7ZVOfrmez53ntcfKWoLOSXm5jdduf28uWlgmpThlVGWBnHI7o0uOQ+UL5GghbkotXdbrfmW7fpYp3Ue9veenzx46xF+5vWE8tl0pqWW6He90rjEIp47m4w3uom8tV8EwtLk/umUJEEa/0e7AZRhcqwV1iHt54fZgFt9AxOeesXegU1oCB1Lre9VmuaautmvSnlA2FegxHE0qcTvSstTQAvFkgmdQTSP0YLiWb99aP24y55aWWJOKItU8nuzlXi8qsgF8+5/ywgd6bl6zBQvrGv03r/0hrrdLngO5yHcG1B114u3dozYp1oL3Ix27PMVwEbeQ+x08PRGeufDMkT6LAytBKLkiye/QP8AAxx
 sidebar_class_name: "get api-method"
 info_path: site/workspace/api-backend/usage-api/community-server-rest-api
 custom_edit_url: null
@@ -22,13 +22,13 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get filtered tasks"}
+  children={"Get my tasks by status in the project"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/project/task/filter"}
+  path={"/api/2.0/project/{projectid:[0-9]+}/task/@self/{status:(notaccept|open|closed|disable|unclassified|notinmilestone)}"}
   context={"endpoint"}
 >
   
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Returns a list with the detailed information about all the tasks matching the parameters specified in the request.
+Returns a list of all the tasks for the current user with the selected status in the project with the ID specified in the request.
 
 <Heading
   id={"request"}
@@ -54,7 +54,7 @@ Returns a list with the detailed information about all the tasks matching the pa
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectid":{"description":"Project ID","type":"integer"},"myProjects":{"description":"Specifies whether to return tasks only from my projects or not","type":"boolean"},"milestone":{"description":"Milestone ID","type":"array","items":{"type":"integer","format":"int32"}},"myMilestones":{"description":"Specifies whether to return tasks only from my milestones or not","type":"boolean"},"nomilestone":{"description":"Specifies whether to return tasks only without milestones or not","type":"boolean"},"tag":{"description":"Project tag","type":"integer"},"status":{"description":"Task status","type":"array","items":{"type":"integer","format":"int32"}},"substatus":{"description":"Custom task status","type":"array","items":{"type":"integer","format":"int32"}},"follow":{"description":"Specifies whether to return only followed tasks or not","type":"boolean"},"departament":{"description":"Departament GUID","type":"string"},"participant":{"description":"Participant GUID","type":"array","items":{"type":"string","format":"uuid"}},"creator":{"description":"Creator GUID","type":"string"},"deadlineStart":{"description":"Minimum value of task deadline","type":"string"},"deadlineStop":{"description":"Maximum value of task deadline","type":"string"},"lastId":{"description":"Last task ID","type":"integer"}}}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectid":{"description":"Project ID","type":"integer"},"status":{"description":"Task status","type":"integer"}}}}}}}
 >
   
 </RequestSchema>
