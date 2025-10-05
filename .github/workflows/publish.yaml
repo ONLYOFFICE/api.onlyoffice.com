@@ -74,6 +74,7 @@ jobs:
         cat /sys/fs/cgroup/memory/memory.limit_in_bytes
  
         export NODE_OPTIONS="--max-old-space-size=8192"
+        export UV_THREADPOOL_SIZE=4
         export RSPACK_PARALLEL=6
         export RAYON_NUM_THREADS=6
         export TOKIO_WORKER_THREADS=4
