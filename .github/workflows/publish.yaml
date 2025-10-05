@@ -72,7 +72,11 @@ jobs:
         free -h
  
         # node --trace-gc node_modules/.bin/docusaurus build ${SUB_ARGS} ${LOCALE}
-        NODE_OPTIONS="--max_old_space_size=8192" npm run build -- ${SUB_ARGS} ${LOCALE}
+        export NODE_OPTIONS="--max-old-space-size=8192"
+        export RSPACK_PARALLEL=6
+        export RAYON_NUM_THREADS=6
+        export TOKIO_WORKER_THREADS=4
+        npm run build -- ${SUB_ARGS} ${LOCALE}
     
     - uses: actions/cache/restore@v3
       id: restore-3d
