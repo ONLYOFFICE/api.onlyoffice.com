@@ -71,7 +71,7 @@ jobs:
 
         free -h
 
-        cat /sys/fs/cgroup/memory/memory.limit_in_bytes
+        cat /sys/fs/cgroup/memory.max
  
         export NODE_OPTIONS="--max-old-space-size=8192"
         export UV_THREADPOOL_SIZE=4
