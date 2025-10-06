@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating quote paragraph
 
 Create a document with a quote paragraph that has special visual formatting for highlighting quoted text or excerpts. The quote paragraph features increased left indent, light gray background, and italic styling for better visual distinction from regular text:

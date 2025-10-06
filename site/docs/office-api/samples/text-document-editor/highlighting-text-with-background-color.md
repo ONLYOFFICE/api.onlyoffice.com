@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Highlighting text with background color
 
 Create a document with colored highlighting inside sentences for visual emphasis:

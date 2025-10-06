@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating spreadsheet with different cell types
 
 Creates a spreadsheet with heterogeneous data types for working with tables containing text, dates, amounts, percentages, and ratings. This approach is suitable for project reports, surveys, and budget tables.

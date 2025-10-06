@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: -5
 ---
 
 # 工具栏
@@ -8,7 +8,7 @@ sidebar_position: -4
 
 ![Toolbar item](/assets/images/plugins/toolbar-plugins.png#gh-light-mode-only)![Toolbar item](/assets/images/plugins/toolbar-plugins.dark.png#gh-dark-mode-only)
 
-## 创建工具栏项目
+## 创建工具栏项目 {#creating-a-toolbar-item}
 
 1. 如有必要，使用 **AddToolbarMenuItem** 方法向工具栏菜单添加项目。
 
@@ -46,7 +46,7 @@ sidebar_position: -4
    }])
    ```
 
-   ### 主工具栏菜单项
+### 主工具栏菜单项 {#toolbarmenumainitem}
 
    主工具栏菜单项.
 
@@ -68,7 +68,7 @@ sidebar_position: -4
     }
     ```
 
-   ### 工具栏菜单选项卡
+### 工具栏菜单选项卡 {#toolbarmenutab}
 
     工具栏菜单选项卡。
 
@@ -92,7 +92,7 @@ sidebar_position: -4
    }
    ```
 
-   ### 工具栏菜单项
+### 工具栏菜单项 {#toolbarmenuitem}
 
    工具栏菜单项。
 
@@ -149,13 +149,13 @@ sidebar_position: -4
     }
     ```
 
-   ### 工具栏菜单项类型
+### 工具栏菜单项类型 {#toolbarmenuitemtype}
 
    工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
 
    类型："button" | "big-button"
 
-   ### 标准工具栏标签页 ID
+### 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
 
    #### 文档编辑器
 
@@ -302,6 +302,42 @@ sidebar_position: -4
       this._onCustomMenuClick("toolbarMenuEvents", id)
     }
     ```
+
+## 更新工具栏菜单项
+
+要更新工具栏菜单项，请指定**更新工具栏菜单项**方法。
+
+参数：
+
+| 名称    | 类型                                                  | 说明                                      |
+|---------|-------------------------------------------------------|--------------------------------------------------|
+| *items* | Array.\<[工具栏主菜单](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组。 |
+
+返回值：此方法不返回任何值。
+
+示例：
+
+``` ts
+Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
+  {
+    let buttonMainToolbar = new Asc.ButtonToolbar(null, id);
+    buttonMainToolbar.text = name;
+
+    let items = {
+      guid : window.Asc.plugin.guid,
+      tabs : []
+    };
+
+    buttonMainToolbar.childs = buttons;
+    for (let i = 0, len = buttons.length; i < len; i++)
+      buttons[i].parent = buttonMainToolbar;
+
+    buttonMainToolbar.toToolbar(items);
+
+    if (items.tabs.length > 0)
+      window.Asc.plugin.executeMethod("UpdateToolbarMenuItem", [items]);
+  };
+```
 
 ## 点击工具栏项
 

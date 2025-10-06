@@ -166,7 +166,7 @@ const config = {
 
 ![打印文档](/assets/images/editor/print.png)
 
-## 保护
+## 保护 {#protect}
 
 `类型: boolean`
 

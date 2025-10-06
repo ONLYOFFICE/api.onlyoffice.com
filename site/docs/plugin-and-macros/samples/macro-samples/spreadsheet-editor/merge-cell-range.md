@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Merge cell range
 
 Merges the selected cell range.

@@ -110,7 +110,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    - *"remove": \[""]* 表示用户可以删除不属于这些群组的人所添加的评论（例如，在第三方编辑器中添加评论的文档）。
    - *"view": ""* 表示用户可以查看任何用户所添加的评论。
 
-## 电子表格中的线程式评论
+## 电子表格中的线程式评论 {#threaded-comments-in-spreadsheets}
 
 为了在其他编辑器中正确显示 ONLYOFFICE 电子表格的评论，所有评论会以两种格式保存：原始格式和线程式格式：
 

@@ -104,4 +104,4 @@ GitHub 仓库地址：[example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 ## 支持
 
-如果你希望请求新功能或报告此插件的相关问题，请前往 GitHub 的事件（issues）区(https://github.com/ONLYOFFICE/sdkjs-plugins/issues)提交。
+如果你希望请求新功能或报告此插件的相关问题，请前往的事件（issues）区[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues)提交。

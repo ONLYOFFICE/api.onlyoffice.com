@@ -19,7 +19,12 @@ const config: Config = {
   noIndex: isDev,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
+    }
+  },
 
   customFields: {
     documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
@@ -27,14 +32,19 @@ const config: Config = {
   },
 
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true
+    },
     experimental_faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
+      ssgWorkerThreads: true,
 
-      swcJsLoader: false,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
-      rspackBundler: false,
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      rspackBundler: true,
+      rspackPersistentCache: true
     }
   },
 
@@ -62,6 +72,16 @@ const config: Config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        blog: {
+          path: 'changelog',
+          blogTitle: 'Changelog',
+          blogDescription: 'The history of updates and changes to the documentation.',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'Changelog',
+          blogSidebarCount: 'ALL',
+          routeBasePath: 'changelog',
+          showReadingTime: false,
         },
       } satisfies Preset.Options,
     ],
@@ -199,6 +219,11 @@ const config: Config = {
           docsPluginId: 'api',
         },
         {
+          to: 'changelog',
+          label: 'Changelog',
+          position: 'left'
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -282,6 +307,8 @@ const config: Config = {
 
       indexName: 'api-onlyoffice',
       contextualSearch: true,
+
+      askAi: 'SWpvi77fTWXN'
     },
     languageTabs: [
       {

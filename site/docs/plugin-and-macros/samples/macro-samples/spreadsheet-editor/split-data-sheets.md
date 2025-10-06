@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Split data sheets
 
 Splits large sheets containing extensive datasets into multiple sheets if they exceed a specified row limit.

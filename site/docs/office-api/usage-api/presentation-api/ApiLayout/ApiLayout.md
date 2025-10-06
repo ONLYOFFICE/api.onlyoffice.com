@@ -20,6 +20,7 @@ Represents the ApiLayout class.
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide layout. |
 | [GetClassType](./Methods/GetClassType.md) | "layout" | Returns the type of the ApiLayout class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
+| [GetLayoutType](./Methods/GetLayoutType.md) | boolean | Returns a type if the current layout. |
 | [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | Returns the parent slide master of the current layout. |
 | [GetName](./Methods/GetName.md) | string | Returns a name of the current layout. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current layout. |

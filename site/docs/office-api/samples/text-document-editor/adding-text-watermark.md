@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Adding text watermark
 
 Create a document with a "Confidential" text watermark for marking document confidentiality level. The watermark appears in the background as semi-transparent text and is applied to reports, contracts, and internal memos:

@@ -24,3 +24,12 @@ sidebar_position: -1
 3. 保存文件。
 
 之后，所有新文档都将使用指定的字体创建。
+
+## 已知问题 {#known-issues}
+
+在 ONLYOFFICE 文档中编辑或打开文档时，系统会使用服务器上预装的字体列表。字体替换的工作原理如下：
+
+- **默认字体支持**：ONLYOFFICE 文档自带一组默认的开源字体。
+- **字体替换机制**：如果文档包含专有字体（例如，使用第三方编辑器创建的字体），ONLYOFFICE 文档会自动选择最接近的可用字体进行替代。
+
+为避免字体替换导致的布局问题，请在上传使用外部软件创建的模板之前，先在文档服务器上安装自定义字体。请遵循 [Windows](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-windows.aspx)、[Linux](https://helpcenter.onlyoffice.com/docs/installation/docs-community-install-fonts-linux.aspx) 或 [Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-install-fonts-docker.aspx) 的官方说明。

@@ -15,7 +15,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 可以通过以下三种方式添加插件：sdkjs-plugins 文件夹、config.json 文件或插件管理器。
 
-## 通过 sdkjs-plugins 文件夹添加插件
+## 通过 sdkjs-plugins 文件夹添加插件 {#adding-plugins-through-the-plugin-manager-for-all-users}
 
 将插件代码文件夹放入 **ONLYOFFICE 文档**指定路径中，路径依操作系统而异：
 
@@ -82,7 +82,7 @@ add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 ```
 
-## 通过插件管理器为单个用户添加插件
+## 通过插件管理器为单个用户添加插件 {#adding-plugins-through-the-plugin-manager-for-a-single-user}
 
 从 7.2 版本开始，您可以从 **ONLYOFFICE 插件市场**下载现成的插件。
 

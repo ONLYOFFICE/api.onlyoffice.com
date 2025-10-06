@@ -67,7 +67,7 @@ sidebar_position: -10
 
 有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md)。
 
-## 如何打开文档并启用"评论"模式？ {#how-to-open-a-document-with-track-changes-mode-enabled}
+## 如何打开文档并启用"评论"模式？ {#how-to-open-a-document-with-commenting-mode-enabled}
 
 要在启用*评论*模式的情况下打开文档，需要使用 *document.permissions* 参数（请参阅[此处](../../usage-api/advanced-parameters.md))了解 ONLYOFFICE 文档配置对象的完整结构）。
 

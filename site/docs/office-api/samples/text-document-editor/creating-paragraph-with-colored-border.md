@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating paragraph with colored border
 
 Create a document with a paragraph that has a decorative colored bottom border:

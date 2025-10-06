@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating table from JSON data
 
 Create a document with a table populated from JSON data array:

@@ -15,6 +15,7 @@ Represents the Api class.
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
 | [EndSlideShow](./EndSlideShow.md) | None | Ends the current slide show. |
+| [FocusEditor](./FocusEditor.md) | None | Returns focus to the editor. |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetDocumentLang](./GetDocumentLang.md) | string | Returns the document language. |
 | [GetFileToDownload](./GetFileToDownload.md) | string | Returns the current file to download in the specified format. |

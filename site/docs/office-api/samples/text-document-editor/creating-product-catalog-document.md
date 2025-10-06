@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating product catalog document
 
 Create a document with a product catalog table containing images and product information:

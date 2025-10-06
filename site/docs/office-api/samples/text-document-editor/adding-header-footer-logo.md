@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Adding header and footer with logo
 
 Create a document with a professional header containing a company logo and organization name. The header is activated for all pages and includes properly positioned branding elements for official documents, reports, and corporate communications:

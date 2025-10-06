@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Inserting hyperlink into sentence
 
 Create a document with a clickable hyperlink embedded within a regular paragraph:

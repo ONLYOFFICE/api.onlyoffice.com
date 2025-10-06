@@ -1,4 +1,4 @@
-# Creating a file plugin
+# File plugin
 
 This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.
 
@@ -121,7 +121,7 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Upload a `.md` file to any room.
 2. You should now see a custom icon for `.md` files.

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating nested table document
 
 Create a document with nested tables (table within a table) for displaying hierarchical data:

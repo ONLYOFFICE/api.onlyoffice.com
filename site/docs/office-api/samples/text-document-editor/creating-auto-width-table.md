@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating auto-width table
 
 Create a document with a table that automatically adjusts column widths based on content:

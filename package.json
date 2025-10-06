@@ -1,11 +1,11 @@
 {
   "name": "api-onlyoffice-com",
-  "version": "6.4.0",
+  "version": "6.6.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "sh fix-scripts/fix-sidebar-translation.sh && sh fix-scripts/add_translate_field.sh && docusaurus start",
+    "build": "sh fix-scripts/fix-sidebar-translation.sh && sh fix-scripts/add_translate_field.sh && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -15,10 +15,10 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "3.7.0",
-    "@docusaurus/faster": "3.7.0",
-    "@docusaurus/plugin-google-gtag": "3.7.0",
-    "@docusaurus/preset-classic": "3.7.0",
+    "@docusaurus/core": "^3.9.1",
+    "@docusaurus/faster": "^3.9.1",
+    "@docusaurus/plugin-google-gtag": "^3.9.1",
+    "@docusaurus/preset-classic": "^3.9.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "4.3.3",
@@ -30,9 +30,9 @@
     "react-router-dom": "^5.3.4"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.7.0",
-    "@docusaurus/tsconfig": "3.7.0",
-    "@docusaurus/types": "3.7.0",
+    "@docusaurus/module-type-aliases": "^3.9.1",
+    "@docusaurus/tsconfig": "^3.9.1",
+    "@docusaurus/types": "^3.9.1",
     "@types/react-dom": "^19.1.2",
     "@types/react-router-dom": "^5.3.3",
     "typescript": "~5.6.2"
