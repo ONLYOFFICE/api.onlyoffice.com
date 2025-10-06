@@ -1,5 +1,9 @@
 # Key generation
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+```
+
 To check if the desktop app supports encryption, call the following command:
 
 ``` ts
@@ -28,29 +32,19 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    }
    ```
 
-   ## domain
+   ```mdx-code-block
+   <APITable>
+   ```
 
-   Defines the cloud name and the cloud entry point.
+   | Name       | Description                                       | Type   | Example                       |
+   |------------|---------------------------------------------------|--------|-------------------------------|
+   | domain     | Defines the cloud name and the cloud entry point. | string | `"https://exampledomain.com"` |
+   | emailInput | Defines the user email entered on the login page. | string | `"john@example.com"`          |
+   | pwdInput   | Defines the password entered on the login page.   | string | `"123456"`                    |
 
-   Type: string
-
-   Example: `https://exampledomain.com`
-
-   ## emailInput
-
-   Defines the user email entered on the login page.
-
-   Type: string
-
-   Example: `john@example.com`
-
-   ## pwdInput
-
-   Defines the password entered on the login page.
-
-   Type: string
-
-   Example: "123456"
+   ```mdx-code-block
+   </APITable>
+   ```
 
    ## Example
 
@@ -76,29 +70,19 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    }
    ```
 
-   ## cryptoEngineId
+   ```mdx-code-block
+   <APITable>
+   ```
 
-   Defines the **Encryption** plugin ID.
+   | Name           | Description                           | Type   | Example                                    |
+   |----------------|---------------------------------------|--------|--------------------------------------------|
+   | cryptoEngineId | Defines the **Encryption** plugin ID. | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` |
+   | privateKeyEnc  | Defines the encrypted private key.    | string | `"xxx"`                                    |
+   | publicKey      | Defines the public key.               | string | `"yyy"`                                    |
 
-   Type: string
-
-   Example: `{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}`
-
-   ## privateKeyEnc
-
-   Defines the encrypted private key.
-
-   Type: string
-
-   Example: "xxx"
-
-   ## publicKey
-
-   Defines the public key.
-
-   Type: string
-
-   Example: "yyy"
+   ```mdx-code-block
+   </APITable>
+   ```
 
    ## Example
 
