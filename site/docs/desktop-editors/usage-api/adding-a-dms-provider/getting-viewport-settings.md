@@ -19,17 +19,17 @@ This method returns an object with the following parameters:
 }
 ```
 
-## Widget parameters
-
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
 ```
-| Parameter    | Type    | Description | Example   |
-|--------------|---------|-------------|-----------|
-| widgetType   | string  | The widget type (*"window"* or *"tab"*). | "window" |
-| captionHeight| integer | The caption height. | 100 |
+
+| Parameter     | Type    | Description                              | Example    |
+|---------------|---------|------------------------------------------|------------|
+| widgetType    | string  | The widget type (*"window"* or *"tab"*). | `"window"` |
+| captionHeight | integer | The caption height.                      | `100`      |
+
 ```mdx-code-block
 </APITable>
 ```

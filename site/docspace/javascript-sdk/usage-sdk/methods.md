@@ -94,7 +94,7 @@ Creates a tag with the specified name.
 
 ## destroyFrame
 
-Destroys the SDK frame, replacing it with the element passed to [destroyText](./config.md#destroytext).
+Destroys the SDK frame, replacing it with the element passed to [destroyText](./config.md#destroyText).
 
   ``` ts
   docSpace.destroyFrame()

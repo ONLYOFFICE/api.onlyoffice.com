@@ -21,26 +21,26 @@ Use the [execCommand](./execcommand.md) method to display a cloud in the **Conne
 }
 ```
 
-## User Parameters  
-
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
 ```
-| Parameter   | Type   | Description | Example |
-|-------------|--------|-------------|---------|
-| displayName | string | Defines the user name displayed on the Connected clouds page. **This field is required.** | "John Smith" |
-| email       | string | Defines the user email displayed on the Connected clouds page. | "john@example.com" |
-| domain      | string | Defines the cloud name and the cloud entry point. **This field is required.** | "https://exampledomain.com" |
-| provider    | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the config). **This field is required.** | "onlyoffice" |
-| uiTheme     | string | Defines the editor theme settings. It can be set in two ways: <br />• **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*). <br />• **default theme** – the default dark or light theme value will be set (*default-dark, default-light*). The default light theme is *theme-classic-light*. The first option has higher priority. Apart from the available editor themes, the user can also customize their own color themes for the application interface. | "theme-dark" |
-| userId      | string | Defines the user id. **This field is required.** | "78e1e841" |
+
+| Parameter   | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Example                       |
+|-------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| displayName | string | Defines the user name displayed on the *Connected clouds* page. **This field is required.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `"John Smith"`                |
+| email       | string | Defines the user email displayed on the *Connected clouds* page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `"john@example.com"`          |
+| domain      | string | Defines the cloud name and the cloud entry point. **This field is required.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | `"https://exampledomain.com"` |
+| provider    | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](adding-a-dms-provider.md)). **This field is required.**                                                                                                                                                                                                                                                                                                                                                                                                 | `"onlyoffice"`                |
+| uiTheme     | string | Defines the editor theme settings. It can be set in two ways:<br /><br />• **theme id** – the user sets the theme parameter by its id (*theme-light, theme-classic-light, theme-dark, theme-contrast-dark*).<br /><br />• **default theme** – the default dark or light theme value will be set (*default-dark, default-light*).<br /><br />The default light theme is *theme-classic-light*. The first option has higher priority.<br /><br />Apart from the available editor themes, the user can also customize their own color themes for the application interface. | `"theme-dark"`                |
+| userId      | string | Defines the user id. **This field is required.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `"78e1e841"`                  |
+
 ```mdx-code-block
 </APITable>
 ```
 
-### Example
+#### Example
 
 ``` ts
 const params = {
@@ -64,15 +64,19 @@ Use the [execCommand](./execcommand.md) method to remove a cloud from the **Conn
 }
 ```
 
-### domain
+```mdx-code-block
+<APITable>
+```
 
-Defines the cloud name and the cloud entry point.
+| Parameter | Type   | Description                                       | Example                     |
+|-----------|--------|---------------------------------------------------|-----------------------------|
+| domain    | string | Defines the cloud name and the cloud entry point. | `https://exampledomain.com` |
 
-Type: string
+```mdx-code-block
+</APITable>
+```
 
-Example: `https://exampledomain.com`
-
-### Example
+#### Example
 
 ``` ts
 window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({

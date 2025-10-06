@@ -4,6 +4,10 @@ sidebar_position: -1
 
 # Lifecycle of opening editor
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+```
+
 The lifecycle of [opening](./opening-file.md) an editor can be defined by the sequence of the events.
 
 Add the script initializing the Document Editor with the configuration for the document you want to open:
@@ -27,42 +31,41 @@ Specify there the following events:
 
 1. When the application is loaded into the browser, the [onAppReady](../../usage-api/config/events.md#onappready) event is executed:
 
-   ``` ts
-   function onAppReady() {
-     console.log("ONLYOFFICE Document Editor is ready")
-   };
+     ``` ts
+     function onAppReady() {
+       console.log("ONLYOFFICE Document Editor is ready")
+     };
 
-   const config = {
-     events: {
-       onAppReady,
-     },
-   };
+     const config = {
+       events: {
+         onAppReady,
+       },
+     };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
+     const docEditor = new DocsAPI.DocEditor("placeholder", config);
+     ```
 
-   After that, the [showMessage](../../usage-api/methods.md#showmessage) method can be called which displays a tooltip with a message:
+     After that, the [showMessage](../../usage-api/methods.md#showmessage) method can be called which displays a tooltip with a message:
 
-   ``` ts
-   docEditor.showMessage(message);
-   ```
+     ``` ts
+     docEditor.showMessage(message);
+     ```
 
-   ## message
+     ```mdx-code-block
+     <APITable>
+     ```
 
-  ```mdx-code-block
-  import APITable from '@site/src/components/APITable/APITable';
+     | Parameter | Type   | Description               | Presence |
+     |-----------|--------|---------------------------|----------|
+     | message   | string | Defines the message text. | required |
 
-  <APITable>
-  ```
-  | Parameter | Type   | Description            | Example        |
-  |-----------|--------|------------------------|----------------|
-  | message | string | Defines the message text. | `"Hello World"` |
-  ```mdx-code-block
-  </APITable>
-  ```
-  > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
+     ```mdx-code-block
+     </APITable>
+     ```
 
-1. When an error or some other specific event occurs, the [onError](../../usage-api/config/events.md#onerror)  event is executed:
+     > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
+
+2. When an error or some other specific event occurs, the [onError](../../usage-api/config/events.md#onerror)  event is executed:
 
    ``` ts
    function onError(event) {
@@ -80,7 +83,7 @@ Specify there the following events:
 
    For example, it may be a conversion error or an error loading a certain editor component. Further work will not be available.
 
-2. When the document is opened for editing with the old [document.key](../../usage-api/config/document/document.md#key) value, which was used to edit the previous document version and was successfully saved, the [onOutdatedVersion](../../usage-api/config/events.md#onoutdatedversion) event is executed:
+3. When the document is opened for editing with the old [document.key](../../usage-api/config/document/document.md#key) value, which was used to edit the previous document version and was successfully saved, the [onOutdatedVersion](../../usage-api/config/events.md#onoutdatedversion) event is executed:
 
    ``` ts
    function onOutdatedVersion() {
@@ -130,7 +133,7 @@ Specify there the following events:
 
    In this case, the [refreshFile](../../usage-api/methods.md#refreshfile) method is called and the file version is updated with a new key value without reloading the editor.
 
-3. When a user action is required to open a document, the [onUserActionRequired](../../usage-api/config/events.md#onuseractionrequired) event is executed:
+4. When a user action is required to open a document, the [onUserActionRequired](../../usage-api/config/events.md#onuseractionrequired) event is executed:
 
    ``` ts
    function onUserActionRequired() {
@@ -148,7 +151,7 @@ Specify there the following events:
 
    This happens when  the user needs to enter a password to open the protected document or to select an encoding or a delimiter for the `txt` or `csv` files.
 
-4. When the document is loaded and the editor is ready for work, the [onDocumentReady](../../usage-api/config/events.md#ondocumentready) event is executed:
+5. When the document is loaded and the editor is ready for work, the [onDocumentReady](../../usage-api/config/events.md#ondocumentready) event is executed:
 
    ``` ts
    function onDocumentReady() {
@@ -165,7 +168,7 @@ Specify there the following events:
    ```
 
    After that, the requests to the [Automation API](/docs/docs-api/usage-api/automation-api.md) can be sent.
-   
+
    The `onOutdatedVersion` or `onRequestRefreshFile` events can be also called after the `onDocumentReady` event in the following case:
 
    1. the document has been modified;
@@ -173,7 +176,7 @@ Specify there the following events:
    3. the document has been saved successfully;
    4. the editor has reconnected to the server.
 
-5. When the user is trying to end the work with the editor and close it by clicking the cross button, the [onRequestClose](../../usage-api/config/events.md#onrequestclose) event is executed:
+6. When the user is trying to end the work with the editor and close it by clicking the cross button, the [onRequestClose](../../usage-api/config/events.md#onrequestclose) event is executed:
 
    ```ts
    function onRequestClose() {

@@ -20,11 +20,21 @@ This object is also used for all users not found in the DocSpace portal (guests,
 
 ## Parameters
 
-| Parameter        | Type              | Description                                                                 | Value                                                                 |
-|------------------|-------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| Id               | string            | The user ID. The removed users always have the `{4A515A15-D4D6-4b8e-828E-E0586F18F3A3}` ID. | `new Guid("{4A515A15-D4D6-4b8e-828E-E0586F18F3A3}")`                  |
-| FirstName        | string            | The user first name.                                                        | `"Unknown"`                                                           |
-| LastName         | string            | The user last name.                                                         | `"Unknown"`                                                           |
-| ActivationStatus | string \| integer | The user activation status (`"NotActivated"` or `0`).                        | `EmployeeActivationStatus.NotActivated`                               |
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
+| Parameter        | Type              | Value                                                | Description                                                                                 |
+|------------------|-------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| Id               | string            | `new Guid("{4A515A15-D4D6-4b8e-828E-E0586F18F3A3}")` | The user ID. The removed users always have the `{4A515A15-D4D6-4b8e-828E-E0586F18F3A3}` ID. |
+| FirstName        | string            | `"Unknown"`                                          | The user first name.                                                                        |
+| LastName         | string            | `"Unknown"`                                          | The user last name.                                                                         |
+| ActivationStatus | string \| integer | `EmployeeActivationStatus.NotActivated`              | The user activation status (`"NotActivated"` or `0`).                                       |
+
+```mdx-code-block
+</APITable>
+```
 
 For example, when sending GET requests to the [`api/2.0/people/email`](../../../../docspace/api-backend/usage-api/get-profile-by-email.api.mdx) or [`api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/get-profile-by-user-id.api.mdx) addresses, the `LostUser` ID is used to check if a user with the specified email or name exists. If the user ID is equal to the `LostUser` ID, this user is removed from the portal and a 404 status code is returned (`User not found`).

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Manager
 
-Displays a list of entities depending on the specified [rootPath](../config.md#rootpath). It allows you to create rooms, folders, and files and work with them.
+Displays a list of entities depending on the specified [rootPath](../config.md#rootPath). It allows you to create rooms, folders, and files and work with them.
 
 ![Manager](/assets/images/docspace/manager-mode.png)
 

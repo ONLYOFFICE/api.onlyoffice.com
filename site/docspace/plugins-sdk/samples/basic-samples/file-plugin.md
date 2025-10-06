@@ -130,5 +130,5 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 ## Notes
 
 - The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
-- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filerowicon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filetileicon).
-- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onclick) logic instead.
+- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileTileIcon).
+- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onClick) logic instead.
