@@ -12,10 +12,10 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| Name           | Description                                                                                                                                | Type   | Example                                    |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------|--------------------------------------------|
-| cryptoEngineId | Defines the **Encryption** plugin ID.                                                                                                      | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` |
-| filter         | Defines the document types that can be encrypted. Currently, it is possible to encrypt only OOXML formats, which are DOCX, XLSX, and PPTX. | string | `"*.docx *.xlsx *.pptx"`                   |
+| Name           | Type   | Example                                    | Description                                                                                                                                |
+| -------------- | ------ | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` | Defines the **Encryption** plugin ID.                                                                                                      |
+| filter         | string | `"*.docx *.xlsx *.pptx"`                   | Defines the document types that can be encrypted. Currently, it is possible to encrypt only OOXML formats, which are DOCX, XLSX, and PPTX. |
 
 ```mdx-code-block
 </APITable>
@@ -48,11 +48,11 @@ To share the encrypted document, call the *cloudCryptoCommand* function with the
 <APITable>
 ```
 
-| Name           | Description                                               | Type   | Example                                              |
-|----------------|-----------------------------------------------------------|--------|------------------------------------------------------|
-| cryptoEngineId | Defines the **Encryption** plugin ID.                     | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`           |
-| file           | Defines the absolute url to the document.                 | string | `"https://example.com/url-to-example-document.docx"` |
-| keys           | Defines the pairs of user ids and associated public keys. | array  | `[{"userId":"78e1e841","publicKey":"yyy"}, ...]`     |
+| Name           | Type   | Example                                              | Description                                               |
+| -------------- | ------ | ---------------------------------------------------- | --------------------------------------------------------- |
+| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`           | Defines the **Encryption** plugin ID.                     |
+| file           | string | `"https://example.com/url-to-example-document.docx"` | Defines the absolute url to the document.                 |
+| keys           | array  | `[{"userId":"78e1e841","publicKey":"yyy"}, ...]`     | Defines the pairs of user ids and associated public keys. |
 
 ```mdx-code-block
 </APITable>

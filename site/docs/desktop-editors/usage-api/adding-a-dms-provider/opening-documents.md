@@ -34,12 +34,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 <APITable>
 ```
-
-| Parameter | Type   | Description                                                                                                                                    | Example                                            |
-|-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| url       | string | Defines the absolute URL to the opened document.                                                                                               | `https://example.com/url-to-example-document.docx` |
-| type      | string | Defines the type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.                                | `"word"`                                           |
-| provider  | string | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)). | `"onlyoffice"`                                     |
+| Parameter | Type   | Example                                            | Description                                                                                                                                    |
+| --------- | ------ | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| url       | string | `https://example.com/url-to-example-document.docx` | Defines the absolute URL to the opened document.                                                                                               |
+| type      | string | `"word"`                                           | Defines the type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.                                |
+| provider  | string | `"onlyoffice"`                                     | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)). |
 
 ```mdx-code-block
 </APITable>

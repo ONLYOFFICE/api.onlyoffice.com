@@ -54,10 +54,9 @@ Specify there the following events:
      ```mdx-code-block
      <APITable>
      ```
-
-     | Parameter | Type   | Description               | Presence |
-     |-----------|--------|---------------------------|----------|
-     | message   | string | Defines the message text. | required |
+      | Parameter | Type   | Presence | Description               |
+      | --------- | ------ | -------- | ------------------------- |
+      | message   | string | required | Defines the message text. |
 
      ```mdx-code-block
      </APITable>

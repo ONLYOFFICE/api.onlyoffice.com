@@ -25,10 +25,10 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| Parameter     | Type    | Description                              | Example    |
-|---------------|---------|------------------------------------------|------------|
-| widgetType    | string  | The widget type (*"window"* or *"tab"*). | `"window"` |
-| captionHeight | integer | The caption height.                      | `100`      |
+| Parameter     | Type    | Example    | Description                              |
+| ------------- | ------- | ---------- | ---------------------------------------- |
+| widgetType    | string  | `"window"` | The widget type (*"window"* or *"tab"*). |
+| captionHeight | integer | `100`      | The caption height.                      |
 
 ```mdx-code-block
 </APITable>

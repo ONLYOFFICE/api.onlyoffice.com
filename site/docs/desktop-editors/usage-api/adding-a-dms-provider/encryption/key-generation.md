@@ -35,12 +35,11 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    ```mdx-code-block
    <APITable>
    ```
-
-   | Name       | Description                                       | Type   | Example                       |
-   |------------|---------------------------------------------------|--------|-------------------------------|
-   | domain     | Defines the cloud name and the cloud entry point. | string | `"https://exampledomain.com"` |
-   | emailInput | Defines the user email entered on the login page. | string | `"john@example.com"`          |
-   | pwdInput   | Defines the password entered on the login page.   | string | `"123456"`                    |
+    | Name       | Type   | Example                       | Description                                       |
+    | ---------- | ------ | ----------------------------- | ------------------------------------------------- |
+    | domain     | string | `"https://exampledomain.com"` | Defines the cloud name and the cloud entry point. |
+    | emailInput | string | `"john@example.com"`          | Defines the user email entered on the login page. |
+    | pwdInput   | string | `"123456"`                    | Defines the password entered on the login page.   |
 
    ```mdx-code-block
    </APITable>
