@@ -7,7 +7,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["sequential", "numbering", "tables"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
       "title": "Commenting spreadsheet errors",
@@ -17,7 +17,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["formulas", "comments", "debugging"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
       "title": "Creating formatted table",
@@ -27,7 +27,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["formatting", "borders", "alignment"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
       "title": "Creating spreadsheet chart",
@@ -37,7 +37,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["charts", "visualization", "data"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
       "title": "Creating spreadsheet with different cell types",
@@ -47,7 +47,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["cell types", "data", "heterogeneous"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
       "title": "Creating spreadsheet with filters",
@@ -57,7 +57,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["filters", "sorting", "tables"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
       "title": "Filling spreadsheet",
@@ -67,7 +67,7 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["arrays", "fill", "data"]
+      "additionalTags": ["Office API", "Cross-platform"]
     },
     {
       "title": "Inserting formulas",
@@ -77,6 +77,6 @@
       "programmingLanguages": ["All"],
       "tools": ["Office API"],
       "operatingSystems": ["Cross-platform"],
-      "additionalTags": ["formulas", "calculations", "sum", "average", "count"]
+      "additionalTags": ["All", "Office API", "Cross-platform"]
     }
-]  
+]

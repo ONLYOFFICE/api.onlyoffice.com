@@ -7,7 +7,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK", "Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["authorized requests", "API integration", "room creation"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Box component",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["box component", "layout", "alignment", "spacing"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Button component",
@@ -27,7 +27,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["button component", "UI customization", "rendering"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "ComboBox component",
@@ -37,7 +37,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["combobox", "dropdown", "UI component", "layout"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Context menu plugin",
@@ -47,7 +47,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["context menu", "file actions", "UI extension"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "File plugin",
@@ -57,7 +57,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["file extension", "custom icons", "file action"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Main button plugin",
@@ -67,7 +67,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["main toolbar", "button action", "UI customization"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Profile menu plugin",
@@ -77,7 +77,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["profile menu", "dropdown", "user action"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Settings plugin",
@@ -87,7 +87,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["settings panel", "plugin configuration", "admin interface"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Text component",
@@ -97,7 +97,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["text component", "UI customization", "layout"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "ToggleButton component",
@@ -107,6 +107,6 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["toggle button", "UI component", "style properties"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     }
-]  
+]

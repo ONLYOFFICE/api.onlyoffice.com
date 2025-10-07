@@ -7,7 +7,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["comments", "cells", "annotation"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Add custom fields",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["fields", "customization"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Autocomplete",
@@ -27,7 +27,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["autocomplete", "typing", "UX"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Chess",
@@ -37,7 +37,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["chess", "game", "object embedding"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Clippy",
@@ -47,7 +47,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["assistant", "helper", "UI"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Context menu and events",
@@ -57,7 +57,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["context menu", "events", "tracking"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Count words and characters",
@@ -67,7 +67,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["word count", "characters", "analysis"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Extended comments",
@@ -77,7 +77,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["comments", "collaboration", "user data"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Get and paste html",
@@ -87,7 +87,7 @@
         "programmingLanguages": ["JavaScript", "HTML"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["HTML", "export", "import"]
+        "additionalTags": ["JavaScript", "HTML", "Plugins", "Cross-platform"]
     },
     {
         "title": "Hello world",
@@ -97,7 +97,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["example", "basic", "demo"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Highlight code",
@@ -107,7 +107,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["syntax highlighting", "highlight.js", "code"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Invoices",
@@ -117,7 +117,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["invoices", "templates", "fields"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Language tool",
@@ -127,7 +127,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["grammar", "spellcheck", "languagetool"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     },
     {
         "title": "Load custom fields",
@@ -137,6 +137,6 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["fields", "load", "templates"]
+        "additionalTags": ["JavaScript", "Plugins", "Cross-platform"]
     }
-]  
+]

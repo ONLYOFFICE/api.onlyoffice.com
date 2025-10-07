@@ -7,7 +7,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["file extension filter", "modal", "UI components"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Modal dialog plugin",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["modal dialog", "toolbar button", "UI customization"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Settings plugin UI",
@@ -27,6 +27,6 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["settings UI", "admin panel", "configuration"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     }
-]  
+]

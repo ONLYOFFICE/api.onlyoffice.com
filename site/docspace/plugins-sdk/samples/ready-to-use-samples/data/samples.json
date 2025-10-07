@@ -7,7 +7,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK", "Draw.io"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["entity relationships", "mind maps", "business layouts"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Draw.io", "Cross-platform"]
     },
     {
         "title": "Markdown",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["JavaScript", "Markdown"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": [".md files", "markdown editor", "markdown viewer"]
+        "additionalTags": ["JavaScript", "Markdown", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "PDF converter",
@@ -27,7 +27,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["convert to PDF", "spreadsheets", "presentations", "forms"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Cross-platform"]
     },
     {
         "title": "Speech to text",
@@ -37,6 +37,6 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Plugins SDK", "Speech Recognition API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["speech recognition", "voice to text", "translation"]
+        "additionalTags": ["JavaScript", "Plugins SDK", "Speech Recognition API", "Cross-platform"]
     }
 ]  

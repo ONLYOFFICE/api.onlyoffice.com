@@ -7,7 +7,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["indentation", "paragraphs", "formatting"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Align charts",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["alignment", "charts", "text boxes"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Apply corporate branding",
@@ -27,7 +27,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["branding", "styles", "corporate"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Apply font style",
@@ -37,7 +37,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["fonts", "style", "slides"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Autoplaceholder",
@@ -47,7 +47,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["placeholder", "text boxes", "automation"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Bold bullet points",
@@ -57,7 +57,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["bullet points", "bold", "text"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Change background color",
@@ -67,7 +67,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["background", "color", "image"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Change font family and size",
@@ -77,7 +77,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["fonts", "size", "slides"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Content alignment tool",
@@ -87,7 +87,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["alignment", "content", "images"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Count number of shapes",
@@ -97,7 +97,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["count", "shapes", "automation"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Create slides from list items",
@@ -107,7 +107,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["slides", "list items", "titles"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Format bullet points",
@@ -117,7 +117,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["bullet points", "formatting", "text"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Format slide titles",
@@ -127,7 +127,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["titles", "formatting", "alignment"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Generate outline",
@@ -137,7 +137,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["outline", "automation", "titles"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Hyperlinks to QR codes",
@@ -147,7 +147,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros", "External API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["QR code", "hyperlinks", "conversion"]
+        "additionalTags": ["JavaScript", "Macros", "External API", "Cross-platform"]
     },
     {
         "title": "Remove duplicate slides",
@@ -157,7 +157,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["remove", "duplicate", "slides"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Remove empty paragraphs",
@@ -167,7 +167,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["remove", "empty", "paragraphs"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Remove empty text boxes",
@@ -177,7 +177,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["remove", "empty", "text boxes"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Remove extra spaces",
@@ -187,7 +187,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["remove", "spaces", "text"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Remove shapes from slides",
@@ -197,7 +197,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["remove", "shapes", "slides"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Remove slides",
@@ -207,7 +207,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["remove", "slides", "title"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Split slides",
@@ -217,7 +217,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["split", "slides", "text length"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     },
     {
         "title": "Table to chart",
@@ -227,6 +227,6 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["Macros"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["table", "chart", "data visualization"]
+        "additionalTags": ["JavaScript", "Macros", "Cross-platform"]
     }
-]  
+]

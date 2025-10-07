@@ -7,7 +7,7 @@
         "programmingLanguages": ["All"],
         "tools": ["Office API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["advanced", "forms", "pdf"]
+        "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
         "title": "Creating basic form",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["All"],
         "tools": ["Office API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["basic", "forms", "pdf"]
+        "additionalTags": ["All", "Office API", "Cross-platform"]
     },
     {
         "title": "Filling form",
@@ -27,6 +27,6 @@
         "programmingLanguages": ["All"],
         "tools": ["Office API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["fill", "forms", "pdf"]
+        "additionalTags": ["All", "Office API", "Cross-platform"]
     }
 ]

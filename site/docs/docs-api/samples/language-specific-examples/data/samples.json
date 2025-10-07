@@ -7,7 +7,7 @@
     "programmingLanguages": ["All"],
     "tools": ["Document Builder"],
     "operatingSystems": ["Cross-platform"],
-    "additionalTags": ["font", "templates"]
+    "additionalTags": ["All", "Document Builder", "Cross-platform"]
   },
   {
     "title": ".NET Example",
@@ -17,7 +17,7 @@
     "programmingLanguages": ["C# (.Net)"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Windows"],
-    "additionalTags": ["csharp", ".net", "windows"]
+    "additionalTags": ["C# (.Net)", "Docs API integration", "Windows"]
   },
   {
     "title": "Java Example",
@@ -27,7 +27,7 @@
     "programmingLanguages": ["Java"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "additionalTags": ["java", "cross-platform"]
+    "additionalTags": ["Java", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "Java Integration SDK",
@@ -37,7 +37,7 @@
     "programmingLanguages": ["Java"],
     "tools": ["SDK"],
     "operatingSystems": ["Cross-platform"],
-    "additionalTags": ["java", "sdk", "integration"]
+    "additionalTags": ["Java", "SDK", "Cross-platform"]
   },
   {
     "title": "Java Spring Example",
@@ -47,7 +47,7 @@
     "programmingLanguages": ["Java Spring"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "additionalTags": ["java", "spring", "integration"]
+    "additionalTags": ["Java Spring", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "Node.js Example",
@@ -55,9 +55,9 @@
     "link": "/docs/docs-api/samples/language-specific-examples/nodejs-example",
     "tags": ["Integration", "Docs"],
     "programmingLanguages": ["Node.js"],
-    "tools": ["Plugins"],
-    "operatingSystems": ["Docker", "Cross-platform"],
-    "additionalTags": ["nodejs", "docker", "integration"]
+    "tools": ["Docs API integration"],
+    "operatingSystems": ["Cross-platform"],
+    "additionalTags": ["Node.js", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "PHP Example",
@@ -66,8 +66,8 @@
     "tags": ["Integration", "Docs"],
     "programmingLanguages": ["PHP"],
     "tools": ["Docs API integration"],
-    "operatingSystems": ["Docker", "Cross-platform"],
-    "additionalTags": ["php", "integration"]
+    "operatingSystems": ["Cross-platform"],
+    "additionalTags": ["PHP", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "PHP Laravel Example",
@@ -75,9 +75,9 @@
     "link": "/docs/docs-api/samples/language-specific-examples/php-laravel-example",
     "tags": ["Integration", "Docs"],
     "programmingLanguages": ["PHP (Laravel)"],
-    "tools": ["Plugins"],
-    "operatingSystems": ["Docker", "Cross-platform"],
-    "additionalTags": ["php", "laravel", "automation"]
+    "tools": ["Docs API integration"],
+    "operatingSystems": ["Cross-platform"],
+    "additionalTags": ["PHP (Laravel)", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "Python Example",
@@ -86,8 +86,8 @@
     "tags": ["Integration", "Docs"],
     "programmingLanguages": ["Python"],
     "tools": ["Docs API integration"],
-    "operatingSystems": ["Docker", "Cross-platform"],
-    "additionalTags": ["python", "integration"]
+    "operatingSystems": ["Cross-platform"],
+    "additionalTags": ["Python", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "Ruby Example",
@@ -97,7 +97,7 @@
     "programmingLanguages": ["Ruby"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "additionalTags": ["ruby", "integration"]
+    "additionalTags": ["Ruby", "Docs API integration", "Cross-platform"]
   },
   {
     "title": "Go Example",
@@ -107,6 +107,6 @@
     "programmingLanguages": ["Go"],
     "tools": ["Docs API integration"],
     "operatingSystems": ["Cross-platform"],
-    "additionalTags": ["go", "integration"]
+    "additionalTags": ["Go", "Docs API integration", "Cross-platform"]
   }
 ]

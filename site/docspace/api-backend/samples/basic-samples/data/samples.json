@@ -7,7 +7,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["token", "authentication", "login"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Copy or move a file to a folder",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["file management", "copy", "move"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Create and open a new file",
@@ -27,7 +27,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["file creation", "file open"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Create a room and invite a user",
@@ -37,7 +37,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["room creation", "user invitation"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Create a text file",
@@ -47,7 +47,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["txt", "file creation"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Create a virtual data room (VDR) with a watermark",
@@ -57,7 +57,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["VDR", "watermark", "secure room"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Duplicate files and folders",
@@ -67,7 +67,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["duplicate", "copy", "management"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Get folder and room contents",
@@ -77,7 +77,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["folder content", "room content", "list files"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Get login history",
@@ -87,7 +87,7 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["login events", "history", "audit"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     },
     {
         "title": "Invite users",
@@ -97,6 +97,6 @@
         "programmingLanguages": ["cURL"],
         "tools": ["Backend REST API"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["user creation", "invite", "onboarding"]
+        "additionalTags": ["cURL", "Backend REST API", "Cross-platform"]
     }
 ]

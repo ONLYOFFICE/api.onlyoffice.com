@@ -7,7 +7,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["add tags", "room customization", "metadata"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Create file",
@@ -17,7 +17,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["file creation", "document", "room integration"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Create folder",
@@ -27,7 +27,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["folder creation", "room management", "organization"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Create password hash",
@@ -37,7 +37,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["password", "hashing", "authentication"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Create room",
@@ -47,7 +47,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["room creation", "workspace", "collaboration"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Create tag",
@@ -57,7 +57,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["tag creation", "metadata", "room organization"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Destroy frame",
@@ -67,7 +67,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["iframe", "remove", "UI management"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Get config",
@@ -77,7 +77,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["config", "frame", "settings"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Get files and folders list",
@@ -87,7 +87,7 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["file list", "folder list", "room data"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     },
     {
         "title": "Get files",
@@ -97,6 +97,6 @@
         "programmingLanguages": ["JavaScript"],
         "tools": ["DocSpace SDK"],
         "operatingSystems": ["Cross-platform"],
-        "additionalTags": ["files", "room data", "retrieval"]
+        "additionalTags": ["JavaScript", "DocSpace SDK", "Cross-platform"]
     }
 ]
