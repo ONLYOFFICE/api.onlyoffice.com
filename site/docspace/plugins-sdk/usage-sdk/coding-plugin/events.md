@@ -148,6 +148,20 @@ The function called when opening a modal window for creating certain item (file,
   }
   ```
 
+## updateCreateDialogModal
+
+The function called to update the **CreateDialog** component. It does not work if the [createDialogProps](./plugin-message.md#createdialogprops) parameter is not passed to the message.
+
+```ts
+import { IMessage, Actions } from "@onlyoffice/docspace-plugin-sdk";
+
+const message: IMessage = {
+  actions: [Actions.updateCreateDialogModal],
+  createDialogProps: {
+    title: "some title value",
+  },
+};
+
 ## showModal
 
 The function called when opening a modal window. It does not work if the [modalDialogProps](./plugin-message.md#modaldialogprops) parameter is not passed to the message.

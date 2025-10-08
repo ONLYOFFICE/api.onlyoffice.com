@@ -62,6 +62,22 @@ Type: string
 
 Example: "drawio-96.svg"
 
+## filesSecurity
+
+Defines the security parameters of the file that will be checked. If all the parameters are **true**, the `onClick` event will be triggered. If this parameter is not specified, the security settings are ignored.
+
+Type: array of [FilesSecurity](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/FilesSecurity.ts)
+
+Example: [FilesSecurity.Edit]
+
+## security
+
+Checks the specified security parameters of the parent folder or room. If all the parameters are **true**, the `onClick` event will be triggered. If this parameter is not specified, the security settings are ignored.
+
+Type: array of [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/Security.ts)
+
+Example: [Security.Create]
+
 ## Example
 
 ``` ts
@@ -72,6 +88,8 @@ export const drawIoItem: IFileItem = {
   fileTypeName: "Diagram",
   fileRowIcon: "drawio-32.svg",
   fileTileIcon: "drawio-96.svg",
+  filesSecurity: [FilesSecurity.Edit],
+  security: [Security.Create],
   onClick: async (item: File) => {},
 }
 ```

@@ -32,11 +32,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 }
 ```
 
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
-
 ## Step 3: Review and extend plugin code
 
 By default, the plugin template includes a base implementation in the `src/index.ts` file. Here's an example of a [file plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) for supporting `.md` (Markdown) files:
@@ -112,7 +107,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 6: Upload to DocSpace
 

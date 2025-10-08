@@ -67,7 +67,7 @@ Example: `{...acceptButtonProps, "isDisabled": false}`
 
 ## createDialogProps
 
-Defines the properties that display the default dialog box for creating a file/folder managed by the plugin. This parameter is used only with [Actions.showCreateDialogModal](./events.md#showcreatedialogmodal).
+Defines the properties that display the default dialog box for creating a file/folder managed by the plugin. This parameter is used only with [Actions.showCreateDialogModal](./events.md#showcreatedialogmodal) and [Actions.updateCreateDialogModal](./events.md#updateCreateDialogModal).
 
 Type: [ICreateDialog](./plugin-components/createdialog.md)
 

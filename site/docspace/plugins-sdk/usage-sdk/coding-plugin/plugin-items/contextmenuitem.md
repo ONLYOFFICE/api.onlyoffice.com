@@ -80,6 +80,14 @@ Type: array of [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob
 
 Example: \[Security.Create]
 
+## itemSecurity
+
+Defines the security parameters of the file, room, or folder that will be checked. If all the parameters are **true**, the current context menu item will be displayed. If this parameter is not specified, the security settings are ignored.
+
+Type: array of [FilesSecurity](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/FilesSecurity.ts) | [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/Security.ts)
+
+Example: [FilesSecurity.Edit]
+
 ## withActiveItem
 
 Specifies whether to add the action state to the item in the file list when the [onClick](#onclick) event is triggered.
@@ -99,6 +107,7 @@ export const convertFileItem: IContextMenuItem = {
   icon: "convert-16.png",
   onClick: (id: number) => {},
   fileType: [FilesType.file],
+  itemSecurity: [FilesSecurity.Edit],
   usersTypes: [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin],
 }
 ```
