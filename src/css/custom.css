@@ -455,3 +455,8 @@ button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
     font-size: 2.5rem;
   }
 }
+
+[data-theme='light'] .dark-video,
+[data-theme='dark'] .light-video {
+  display: none;
+}
