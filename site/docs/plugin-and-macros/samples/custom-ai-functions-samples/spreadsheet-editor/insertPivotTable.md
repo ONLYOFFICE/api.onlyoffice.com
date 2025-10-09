@@ -278,11 +278,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<video class="light-video" controls width="800">
+<video className="light-video" controls width="800">
   <source src="/assets/images/plugins/functions-video/insert-pivot-table-function.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
-<video class="dark-video" controls width="800">
+<video className="dark-video" controls width="800">
   <source src="/assets/images/plugins/functions-video/insert-pivot-table-function.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
