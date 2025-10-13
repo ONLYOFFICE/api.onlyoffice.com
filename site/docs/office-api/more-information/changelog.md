@@ -4,8 +4,37 @@ The list of changes for Office JavaScript API.
 
 ## Version 9.1
 
-### Conditional formatting Methods
+### Conditional formatting methods
 
+- Added the [ApiFormatCondition](../usage-api/spreadsheet-api/ApiFormatCondition/ApiFormatCondition.md) class to the Spreadsheet API.
+- Added the [ApiFormatCondition/Delete](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/Modify](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/Modify.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetAppliesTo](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetDateOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetDateOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFillColor](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFont](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFont.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFormula1](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFormula1.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFormula2](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFormula2.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetNumberFormat](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetParent](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetPTCondition](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetScopeType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetText](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetText.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetTextOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetTextOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetBorders](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetBorders.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetDateOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetDateOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetFillColor](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetFirstPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetLastPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetNumberFormat](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetScopeType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetText](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetText.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetTextOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetTextOperator.md) method to the Spreadsheet API.
 - Added the [ApiFormatConditions](../usage-api/spreadsheet-api/ApiFormatConditions/ApiFormatConditions.md) class to the Spreadsheet API.
 - Added the [ApiFormatConditions/Add](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/Add.md) method to the Spreadsheet API.
 - Added the [ApiFormatConditions/AddAboveAverage](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddAboveAverage.md) method to the Spreadsheet API.
@@ -16,36 +45,8 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFormatConditions/AddUniqueValues](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddUniqueValues.md) method to the Spreadsheet API.
 - Added the [ApiFormatConditions/Delete](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/Delete.md) method to the Spreadsheet API.
 - Added the [ApiFormatConditions/GetCount](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetCount.md) method to the Spreadsheet API.
-- Added the [ApiFormatConditions/GetParent](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetParent.md) method to the Spreadsheet API.
 - Added the [ApiFormatConditions/GetItem](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetItem.md) method to the Spreadsheet API.
-- Added the [ApiFormatConditions/ApiUniqueValues](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/ApiUniqueValues.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition](../usage-api/spreadsheet-api/ApiFormatCondition/ApiFormatCondition.md) class to the Spreadsheet API.
-- Added the [ApiFormatCondition/Modify](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/Modify.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetFirstPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetFirstPriority.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetLastPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetLastPriority.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetAppliesTo](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetAppliesTo.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetFont](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFont.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetType.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetFormula1](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFormula1.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetFormula2](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFormula2.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetNumberFormat](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetNumberFormat](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetOperator.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetParent](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetParent.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetPTCondition](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetPTCondition.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetPriority.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetScopeType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetStopIfTrue](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetStopIfTrue](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetText](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetText.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetTextOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetTextOperator.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetTextOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetTextOperator.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetDateOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetDateOperator.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetDateOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetDateOperator.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetBorders](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetBorders.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/SetFillColor](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetFillColor.md) method to the Spreadsheet API.
-- Added the [ApiFormatCondition/GetFillColor](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/GetParent](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetParent.md) method to the Spreadsheet API.
 - Added the [ApiRange/GetFormatConditions](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormatConditions.md) method to the Spreadsheet API.
 - Added the *FormatConditions* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 - Added the [XlContainsOperator](../usage-api/spreadsheet-api/Enumeration/XlContainsOperator.md) type to the simple type definitions.
@@ -57,211 +58,192 @@ The list of changes for Office JavaScript API.
 ### Above average methods
 
 - Added the [ApiAboveAverage](../usage-api/spreadsheet-api/ApiAboveAverage/ApiAboveAverage.md) class to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetAboveBelow](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetAboveBelow.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetAboveBelow](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetAboveBelow.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetCalcFor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetCalcFor.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetCalcFor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetCalcFor.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetNumStdDev](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetNumStdDev.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetNumStdDev](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetNumStdDev.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/Delete](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/Delete.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetFirstPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetFirstPriority.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetLastPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetAboveBelow](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetAboveBelow.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetAppliesTo](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetFillColor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetFillColor.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetFont](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetFont.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetInterior](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetInterior.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetNumberFormat](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetNumberFormat](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetNumStdDev](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetNumStdDev.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetParent](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetParent.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetPriority.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetPriority.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetPTCondition](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetPTCondition.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/GetScopeType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetScopeType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetStopIfTrue](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/SetStopIfTrue](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetAboveBelow](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetAboveBelow.md) method to the Spreadsheet API.
 - Added the [ApiAboveAverage/SetFillColor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetFillColor.md) method to the Spreadsheet API.
-- Added the [ApiAboveAverage/GetFillColor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetFirstPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetLastPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetNumStdDev](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetNumStdDev.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetNumberFormat](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetScopeType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetScopeType.md) method to the Spreadsheet API.
 
 ### Color scale methods
 
 - Added the [ApiColorScale](../usage-api/spreadsheet-api/ApiColorScale/ApiColorScale.md) class to the Spreadsheet API.
-- Added the [ApiColorScale/GetType](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiColorScale/Delete](../usage-api/spreadsheet-api/ApiColorScale/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetAppliesTo](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetColorScaleCriteria](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetColorScaleCriteria.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetParent](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetPTCondition](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetScopeType](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetType](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiColorScale/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiColorScale/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
 - Added the [ApiColorScale/SetFirstPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetFirstPriority.md) method to the Spreadsheet API.
 - Added the [ApiColorScale/SetLastPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetLastPriority.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetAppliesTo](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetAppliesTo.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetParent](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetParent.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetPriority.md) method to the Spreadsheet API.
 - Added the [ApiColorScale/SetPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetPriority.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetPTCondition](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetPTCondition.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetScopeType](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetScopeType.md) method to the Spreadsheet API.
 - Added the [ApiColorScale/SetScopeType](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetStopIfTrue](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/SetStopIfTrue](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiColorScale/GetColorScaleCriteria](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetColorScaleCriteria.md) method to the Spreadsheet API.
 - Added the [ApiColorScaleCriterion](../usage-api/spreadsheet-api/ApiColorScaleCriterion/ApiColorScaleCriterion.md) class to the Spreadsheet API.
-- Added the [ApiColorScaleCriterion/GetType](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetType.md) method to the Spreadsheet API.
-- Added the [ApiColorScaleCriterion/SetType](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetType.md) method to the Spreadsheet API.
-- Added the [ApiColorScaleCriterion/GetValue](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetValue.md) method to the Spreadsheet API.
-- Added the [ApiColorScaleCriterion/SetValue](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetValue.md) method to the Spreadsheet API.
-- Added the [ApiColorScaleCriterion/GetIndex](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetIndex.md) method to the Spreadsheet API.
 - Added the [ApiColorScaleCriterion/GetColor](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetColor.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetIndex](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetIndex.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetType](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetValue](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetValue.md) method to the Spreadsheet API.
 - Added the [ApiColorScaleCriterion/SetColor](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetColor.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/SetType](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetType.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/SetValue](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetValue.md) method to the Spreadsheet API.
 - Added the [XlConditionValueTypes](../usage-api/spreadsheet-api/Enumeration/XlConditionValueTypes.md) type to the simple type definitions.
 
 ### Databar methods
 
 - Added the [ApiDatabar](../usage-api/spreadsheet-api/ApiDatabar/ApiDatabar.md) class to the Spreadsheet API.
-- Added the [ApiDatabar/GetAxisColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAxisColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetAxisColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetAxisColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetAxisPosition](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAxisPosition.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetAxisPosition](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetAxisPosition.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetShowValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetShowValue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetShowValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetShowValue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetDirection](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetDirection.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetDirection](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetDirection.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetBarFillType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarFillType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetBarFillType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarFillType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetMinPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMinPointType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetMinPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMinPointType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetMinPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMinPointValue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetMinPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMinPointValue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetMaxPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMaxPointType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetMaxPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMaxPointType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetMaxPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMaxPointValue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetMaxPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMaxPointValue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetNegativeBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetNegativeBarColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetNegativeBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetNegativeBarColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetNegativeBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetNegativeBorderColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetNegativeBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetNegativeBorderColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetBarBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarBorderColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetBarBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarBorderColor.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetPercentMax](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPercentMax.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetPercentMax](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPercentMax.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetPercentMin](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPercentMin.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetPercentMin](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPercentMin.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetFormula](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetFormula.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/Delete](../usage-api/spreadsheet-api/ApiDatabar/Methods/Delete.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiDatabar/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetFirstPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetFirstPriority.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetLastPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetLastPriority.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/GetAppliesTo](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetAxisColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAxisColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetAxisPosition](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAxisPosition.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetBarBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarBorderColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetBarFillType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarFillType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetDirection](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetDirection.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetFormula](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetFormula.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMaxPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMaxPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMaxPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMaxPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMinPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMinPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMinPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMinPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetNegativeBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetNegativeBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetNegativeBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetNegativeBorderColor.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/GetParent](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetPercentMax](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPercentMax.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetPercentMin](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPercentMin.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/GetPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPriority.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPriority.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/GetPTCondition](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPTCondition.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/GetScopeType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetShowValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetShowValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiDatabar/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetAxisColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetAxisColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetAxisPosition](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetAxisPosition.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetBarBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarBorderColor.md) method to the Spreadsheet API.v
+- Added the [ApiDatabar/SetBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetBarFillType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarFillType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetDirection](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetDirection.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetFirstPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetLastPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMaxPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMaxPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMaxPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMaxPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMinPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMinPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMinPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMinPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetNegativeBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetNegativeBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetNegativeBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetNegativeBorderColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetPercentMax](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPercentMax.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetPercentMin](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPercentMin.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPriority.md) method to the Spreadsheet API.
 - Added the [ApiDatabar/SetScopeType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/GetStopIfTrue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiDatabar/SetStopIfTrue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetShowValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetShowValue.md) method to the Spreadsheet API.
 - Added the [XlDataBarAxisPosition](../usage-api/spreadsheet-api/Enumeration/XlDataBarAxisPosition.md) type to the simple type definitions.
 - Added the [XlDataBarFillType](../usage-api/spreadsheet-api/Enumeration/XlDataBarFillType.md) type to the simple type definitions.
 - Added the [XlReadingOrder](../usage-api/spreadsheet-api/Enumeration/XlReadingOrder.md) type to the simple type definitions.
 
-### Icon set condition methods
+### Icon set methods
 
+- Added the [ApiIconCriterion](../usage-api/spreadsheet-api/ApiIconCriterion/ApiIconCriterion.md) class to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetIcon](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetIcon.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetIndex](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetIndex.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetOperator](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetOperator.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetType](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetValue](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetValue.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetIcon](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetIcon.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetOperator](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetOperator.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetType](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetType.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetValue](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetValue.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition](../usage-api/spreadsheet-api/ApiIconSetCondition/ApiIconSetCondition.md) class to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetIconSet](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetIconSet.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/SetIconSet](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetIconSet.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetPercentileValues](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPercentileValues.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/SetPercentileValues](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetPercentileValues.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetReverseOrder](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetReverseOrder.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/SetReverseOrder](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetReverseOrder.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetShowIconOnly](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetShowIconOnly.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/SetShowIconOnly](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetShowIconOnly.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetIconCriteria](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetIconCriteria.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetFormula](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetFormula.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition/Delete](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetAppliesTo](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetFormula](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetFormula.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetIconCriteria](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetIconCriteria.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetIconSet](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetIconSet.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetParent](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetPercentileValues](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPercentileValues.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetPTCondition](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetReverseOrder](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetReverseOrder.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetScopeType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetShowIconOnly](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetShowIconOnly.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition/SetFirstPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetIconSet](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetIconSet.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition/SetLastPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetLastPriority.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetAppliesTo](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetAppliesTo.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetParent](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetParent.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetPercentileValues](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetPercentileValues.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition/SetPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetPriority.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetPTCondition](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPTCondition.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetScopeType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetReverseOrder](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetReverseOrder.md) method to the Spreadsheet API.
 - Added the [ApiIconSetCondition/SetScopeType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/GetStopIfTrue](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiIconSetCondition/SetStopIfTrue](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion](../usage-api/spreadsheet-api/ApiIconCriterion/ApiIconCriterion.md) class to the Spreadsheet API.
-- Added the [ApiIconCriterion/GetType](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetType.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/SetType](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetType.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/GetValue](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetValue.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/SetValue](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetValue.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/GetOperator](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetOperator.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/SetOperator](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetOperator.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/GetIndex](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetIndex.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/GetIcon](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetIcon.md) method to the Spreadsheet API.
-- Added the [ApiIconCriterion/SetIcon](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetIcon.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetShowIconOnly](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetShowIconOnly.md) method to the Spreadsheet API.
 - Added the [XlIcon](../usage-api/spreadsheet-api/Enumeration/XlIcon.md) type to the simple type definitions.
 - Added the [XlIconSet](../usage-api/spreadsheet-api/Enumeration/XlIconSet.md) type to the simple type definitions.
 
 ### Top 10 methods
 
 - Added the [ApiTop10](../usage-api/spreadsheet-api/ApiTop10/ApiTop10.md) class to the Spreadsheet API.
-- Added the [ApiTop10/GetCalcFor](../usage-api/spreadsheet-api/ApiTop10/Methods/GetCalcFor.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetCalcFor](../usage-api/spreadsheet-api/ApiTop10/Methods/SetCalcFor.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetTopBottom](../usage-api/spreadsheet-api/ApiTop10/Methods/GetTopBottom.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetTopBottom](../usage-api/spreadsheet-api/ApiTop10/Methods/SetTopBottom.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetPercent](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPercent.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetPercent](../usage-api/spreadsheet-api/ApiTop10/Methods/SetPercent.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetRank](../usage-api/spreadsheet-api/ApiTop10/Methods/GetRank.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetRank](../usage-api/spreadsheet-api/ApiTop10/Methods/SetRank.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetType](../usage-api/spreadsheet-api/ApiTop10/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiTop10/Delete](../usage-api/spreadsheet-api/ApiTop10/Methods/Delete.md) method to the Spreadsheet API.
-- Added the [ApiTop10/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiTop10/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetFirstPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetFirstPriority.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetLastPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetLastPriority.md) method to the Spreadsheet API.
 - Added the [ApiTop10/GetAppliesTo](../usage-api/spreadsheet-api/ApiTop10/Methods/GetAppliesTo.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetParent](../usage-api/spreadsheet-api/ApiTop10/Methods/GetParent.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPriority.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetPriority.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetPTCondition](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPTCondition.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetScopeType](../usage-api/spreadsheet-api/ApiTop10/Methods/GetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetScopeType](../usage-api/spreadsheet-api/ApiTop10/Methods/SetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetStopIfTrue](../usage-api/spreadsheet-api/ApiTop10/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetStopIfTrue](../usage-api/spreadsheet-api/ApiTop10/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetFillColor](../usage-api/spreadsheet-api/ApiTop10/Methods/GetFillColor.md) method to the Spreadsheet API.
 - Added the [ApiTop10/GetFont](../usage-api/spreadsheet-api/ApiTop10/Methods/GetFont.md) method to the Spreadsheet API.
 - Added the [ApiTop10/GetNumberFormat](../usage-api/spreadsheet-api/ApiTop10/Methods/GetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiTop10/SetNumberFormat](../usage-api/spreadsheet-api/ApiTop10/Methods/SetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiTop10/GetFillColor](../usage-api/spreadsheet-api/ApiTop10/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetParent](../usage-api/spreadsheet-api/ApiTop10/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetPercent](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPercent.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetPTCondition](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetRank](../usage-api/spreadsheet-api/ApiTop10/Methods/GetRank.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetScopeType](../usage-api/spreadsheet-api/ApiTop10/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetTopBottom](../usage-api/spreadsheet-api/ApiTop10/Methods/GetTopBottom.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetType](../usage-api/spreadsheet-api/ApiTop10/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiTop10/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiTop10/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
 - Added the [ApiTop10/SetFillColor](../usage-api/spreadsheet-api/ApiTop10/Methods/SetFillColor.md) method to the Spreadsheet API.
-- Added the [XlCalcFor](../usage-api/spreadsheet-api/Enumeration/XlCalcFor.md) type to the simple type definitions.
+- Added the [ApiTop10/SetFirstPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetLastPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetNumberFormat](../usage-api/spreadsheet-api/ApiTop10/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetPercent](../usage-api/spreadsheet-api/ApiTop10/Methods/SetPercent.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetRank](../usage-api/spreadsheet-api/ApiTop10/Methods/SetRank.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetScopeType](../usage-api/spreadsheet-api/ApiTop10/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetTopBottom](../usage-api/spreadsheet-api/ApiTop10/Methods/SetTopBottom.md) method to the Spreadsheet API.
 - Added the [XlTopBottom](../usage-api/spreadsheet-api/Enumeration/XlTopBottom.md) type to the simple type definitions.
 
 ### Unique values methods
 
 - Added the [ApiUniqueValues](../usage-api/spreadsheet-api/ApiUniqueValues/ApiUniqueValues.md) class to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetDupeUnique](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetDupeUnique.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetDupeUnique](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetDupeUnique.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/Delete](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/Delete.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetFirstPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetFirstPriority.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetLastPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetLastPriority.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/GetAppliesTo](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetDupeUnique](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetDupeUnique.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetFillColor](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetFont](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetFont.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetNumberFormat](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetNumberFormat.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/GetParent](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetParent.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/GetPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetPriority.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetPriority.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/GetPTCondition](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetPTCondition.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/GetScopeType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetScopeType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetScopeType.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetStopIfTrue](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetStopIfTrue](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetStopIfTrue.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetFont](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetFont.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetInterior](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetInterior.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetNumberFormat](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/SetNumberFormat](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetNumberFormat.md) method to the Spreadsheet API.
-- Added the [ApiUniqueValues/GetFillColor](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetDupeUnique](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetDupeUnique.md) method to the Spreadsheet API.
 - Added the [ApiUniqueValues/SetFillColor](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetFirstPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetLastPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetNumberFormat](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetScopeType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetScopeType.md) method to the Spreadsheet API.
 - Added the [XlDuplicateValues](../usage-api/spreadsheet-api/Enumeration/XlDuplicateValues.md) type to the simple type definitions.
 
 ### Geometry methods
@@ -315,6 +297,8 @@ The list of changes for Office JavaScript API.
 - Added the [ApiGeometry/IsCustom](../usage-api/presentation-api/ApiGeometry/Methods/IsCustom.md) method to the Presentation API.
 - Added the [ApiGeometry/SetAdjValue](../usage-api/presentation-api/ApiGeometry/Methods/SetAdjValue.md) method to the Presentation API.
 - Added the [ApiGeometry/SetTextRect](../usage-api/presentation-api/ApiGeometry/Methods/SetTextRect.md) method to the Presentation API.
+- Added the [ApiShape/GetGeometry](../usage-api/presentation-api/ApiShape/Methods/GetGeometry.md) method to the Presentation API.
+- Added the [ApiShape/SetGeometry](../usage-api/presentation-api/ApiShape/Methods/SetGeometry.md) method to the Presentation API.
 - Added the [GeometryFormulaType](../usage-api/text-document-api/Enumeration/GeometryFormulaType.md) type to the simple type definitions.
 
 ### Path methods
@@ -502,6 +486,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiCustomXmlParts/GetByNamespace](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetByNamespace.md) method to Presentation API.
 - Added the [ApiCustomXmlParts/GetClassType](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetClassType.md) method to Presentation API.
 - Added the [ApiCustomXmlParts/GetCount](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetCount.md) method to Presentation API.
+- Added the [ApiPresentation/GetCustomXmlParts](../usage-api/presentation-api/ApiPresentation/Methods/GetCustomXmlParts.md) method to Presentation API.
 
 ### Conversion methods
 
@@ -635,18 +620,30 @@ The list of changes for Office JavaScript API.
 - Added the *EntireRow* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 - Added the *RowsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
 
+### Presentation methods
+
+- Added the [ApiLayout/GetAllTables](../usage-api/presentation-api/ApiLayout/Methods/GetAllTables.md) method to the Presentation API.
+- Added the [ApiMaster/GetAllTables](../usage-api/presentation-api/ApiMaster/Methods/GetAllTables.md) method to the Presentation API.
+- Added the [ApiNotesPage/GetBodyShapeText](../usage-api/presentation-api/ApiNotesPage/Methods/GetBodyShapeText.md) method to the Presentation API.
+- Added the [ApiPresentation/GetAllTables](../usage-api/presentation-api/ApiPresentation/Methods/GetAllTables.md) method to the Presentation API.
+- Added the [ApiSlide/GetAllTables](../usage-api/presentation-api/ApiSlide/Methods/GetAllTables.md) method to the Presentation API.
+
 ### Other methods
 
+- Added the [ApiDocument/GetDocumentVisitor](../usage-api/text-document-api/ApiDocument/Methods/GetDocumentVisitor.md) method to the Text document API.
 - Added the [ApiDocument/GoToPage](../usage-api/text-document-api/ApiDocument/Methods/GoToPage.md) method to the Text document API.
+- Added the [ApiDocumentContent/GetDocumentVisitor](../usage-api/text-document-api/ApiDocumentContent/Methods/GetDocumentVisitor.md) method to the Text document API.
 - Added the [ApiParagraph/SetReadingOrder](../usage-api/text-document-api/ApiParagraph/Methods/SetReadingOrder.md) method to the Text document API.
 - Added the [ApiDrawing/Select](../usage-api/spreadsheet-api/ApiDrawing/Methods/Select.md) method to the Spreadsheet API.
 - Added the [ApiTheme/GetClassType](../usage-api/spreadsheet-api/ApiTheme/Methods/GetClassType.md) method to the Spreadsheet API.
 - Added the [ApiTheme/GetName](../usage-api/spreadsheet-api/ApiTheme/Methods/GetName.md) method to the Spreadsheet API.
+- Added the [ApiFormBase/GetPlaceholderText](../usage-api/form-api/ApiFormBase/Methods/GetPlaceholderText.md) method to Form API.
 - Added the [ReadingOrder](../usage-api/text-document-api/Enumeration/ReadingOrder.md) type to the simple type definitions.
 - Added the [XlPivotFilterType](../usage-api/spreadsheet-api/Enumeration/XlPivotFilterType.md) type to the simple type definitions.
 - Added the [ValidationAlertStyle](../usage-api/spreadsheet-api/Enumeration/ValidationAlertStyle.md) type to the simple type definitions.
 - Added the [ValidationOperator](../usage-api/spreadsheet-api/Enumeration/ValidationOperator.md) type to the simple type definitions.
 - Added the [ValidationType](../usage-api/spreadsheet-api/Enumeration/ValidationType.md) type to the simple type definitions.
+- Added the *dateForm* value for the [FormType](../usage-api/spreadsheet-api/Enumeration/FormType.md) type.
 
 ## Version 9.0
 
