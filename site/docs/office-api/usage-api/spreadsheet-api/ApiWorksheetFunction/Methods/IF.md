@@ -32,6 +32,6 @@ This example shows how to check whether a condition is met, and returns one valu
 // Use a function to use IF condition checker.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IF("12<100", 0, 1));
 ```

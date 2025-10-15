@@ -31,7 +31,7 @@ This example shows how to return the day of the date given in the numerical form
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.DAY("2018/3/16"); 
 
 worksheet.GetRange("C1").SetValue(ans);

@@ -32,7 +32,7 @@ This example shows how to сheck if the specified logical value is true or false
 const worksheet = Api.GetActiveSheet();
 
 let condition = 12 < 100;
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.NOT(condition);
 
 worksheet.GetRange("C1").SetValue(ans);

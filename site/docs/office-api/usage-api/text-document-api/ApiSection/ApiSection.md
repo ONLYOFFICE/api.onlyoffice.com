@@ -9,9 +9,15 @@ Represents the ApiSection class.
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "section" | Returns a type of the ApiSection class. |
 | [GetFooter](./Methods/GetFooter.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content for the specified footer type. |
+| [GetFooterDistance](./Methods/GetFooterDistance.md) | [twips](../Enumeration/twips.md) | Returns the distance from the bottom edge of the page to the bottom edge of the footer. |
 | [GetHeader](./Methods/GetHeader.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content for the specified header type. |
+| [GetHeaderDistance](./Methods/GetHeaderDistance.md) | [twips](../Enumeration/twips.md) | Returns the distance from the top edge of the page to the top edge of the header. |
 | [GetNext](./Methods/GetNext.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Returns the next section if exists. |
 | [GetPageHeight](./Methods/GetPageHeight.md) | [twips](../Enumeration/twips.md) | Gets page height for current section. |
+| [GetPageMarginBottom](./Methods/GetPageMarginBottom.md) | [twips](../Enumeration/twips.md) | Returns the bottom page margin for all pages in the current section. |
+| [GetPageMarginLeft](./Methods/GetPageMarginLeft.md) | [twips](../Enumeration/twips.md) | Returns the left page margin for all pages in the current section. |
+| [GetPageMarginRight](./Methods/GetPageMarginRight.md) | [twips](../Enumeration/twips.md) | Returns the right page margin for all pages in the current section. |
+| [GetPageMarginTop](./Methods/GetPageMarginTop.md) | [twips](../Enumeration/twips.md) | Returns the top page margin for all pages in the current section. |
 | [GetPageWidth](./Methods/GetPageWidth.md) | [twips](../Enumeration/twips.md) | Gets page width for current section. |
 | [GetPrevious](./Methods/GetPrevious.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Returns the previous section if exists. |
 | [GetStartPageNumber](./Methods/GetStartPageNumber.md) | number | Returns the start page number of the specified section. |

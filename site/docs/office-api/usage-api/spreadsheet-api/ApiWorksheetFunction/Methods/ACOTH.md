@@ -30,6 +30,6 @@ This example shows how to return the inverse hyperbolic cotangent of a number.
 // Get a function that gets inverse hyperbolic cotangent of a number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ACOTH(3));
 ```

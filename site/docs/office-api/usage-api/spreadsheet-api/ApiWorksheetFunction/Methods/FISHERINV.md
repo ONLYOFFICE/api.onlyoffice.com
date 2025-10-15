@@ -30,7 +30,7 @@ This example shows how to get an inverse of the Fisher transformation: if y = FI
 // Use function to find out an inverse of Fisher transformation.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.FISHERINV(0.56);
 worksheet.GetRange("B2").SetValue(ans);
 
