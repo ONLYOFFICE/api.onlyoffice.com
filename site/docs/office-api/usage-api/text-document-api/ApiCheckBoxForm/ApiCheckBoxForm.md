@@ -13,6 +13,7 @@ Represents the ApiCheckBoxForm class.
 | [GetClassType](./Methods/GetClassType.md) | "checkBoxForm" | Returns a type of the ApiCheckBoxForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
+| [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRadioGroup](./Methods/GetRadioGroup.md) | string | Returns the radio group key if the current checkbox is a radio button. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |

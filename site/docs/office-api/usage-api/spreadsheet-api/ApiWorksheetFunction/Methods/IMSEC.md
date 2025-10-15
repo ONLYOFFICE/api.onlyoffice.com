@@ -30,6 +30,6 @@ This example shows how to return the secant of a complex number.
 // Use a function to get the secant of a complex number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMSEC("-2+2.5i"));
 ```

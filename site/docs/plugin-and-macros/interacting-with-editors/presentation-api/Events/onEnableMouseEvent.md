@@ -6,7 +6,7 @@ The function called to turn the mouse or touchpad events on/off.
 
 | **Name** | **Data type** | **Description** |
 | --------- | ------------- | ----------- |
-| isEnabled | boolean | Defines if the mouse or touchpad is enabled (**true**) or not (**false**). |
+| isEnabled | boolean | Indicates whether the mouse or touchpad is enabled (**true**) or not (**false**). |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onEnableMouseEvent", (isEnabled) => {

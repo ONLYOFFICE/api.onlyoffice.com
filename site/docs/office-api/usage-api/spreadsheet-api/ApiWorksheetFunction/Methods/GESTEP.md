@@ -31,6 +31,6 @@ This example shows how to test whether a number is greater than a threshold valu
 // Use a function to find out whether a value greater than a limit.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.GESTEP(-2, 2));
 ```

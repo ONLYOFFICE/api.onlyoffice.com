@@ -14,7 +14,7 @@ expression.GetByInternalId(id);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| id | Required | string |  | ID of the object. |
+| id | Required | string |  | The object internal ID. |
 
 ## Returns
 

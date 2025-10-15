@@ -1,11 +1,11 @@
-# Expand
+# GetCurrentRegion
 
 Returns a range that represents the expanded range around the current range.
 
 ## Syntax
 
 ```javascript
-expression.Expand();
+expression.GetCurrentRegion();
 ```
 
 `expression` - A variable that represents a [ApiRange](../ApiRange.md) class.

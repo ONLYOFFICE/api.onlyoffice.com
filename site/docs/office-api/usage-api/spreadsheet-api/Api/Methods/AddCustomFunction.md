@@ -1,11 +1,11 @@
 # AddCustomFunction
 
-Creates a new custom function.\
-The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.\
-Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.\
-Parameters can be required or optional. A user can also set a default value.\
-The passed function can be asynchronous (async function or function returning a Promise).\
-Inside the passed function, you can access the current cell address where the calculation is performed using *this.address*.\
+Creates a new custom function.
+The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.
+Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.
+Parameters can be required or optional. A user can also set a default value.
+The passed function can be asynchronous (async function or function returning a Promise).
+Inside the passed function, you can access the current cell address where the calculation is performed using *this.address*.
 You can also access the addresses of function arguments using *this.args[0].address*, *this.args[1].address*, etc.
 
 ## Syntax

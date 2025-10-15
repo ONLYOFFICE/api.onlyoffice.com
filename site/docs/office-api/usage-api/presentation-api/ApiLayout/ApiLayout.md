@@ -18,9 +18,10 @@ Represents the ApiLayout class.
 | [GetAllImages](./Methods/GetAllImages.md) | [ApiImage](../ApiImage/ApiImage.md)[] | Returns an array with all the image objects from the slide layout. |
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns an array with all the OLE objects from the slide layout. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide layout. |
+| [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array with all tables from the current slide layout. |
 | [GetClassType](./Methods/GetClassType.md) | "layout" | Returns the type of the ApiLayout class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
-| [GetLayoutType](./Methods/GetLayoutType.md) | boolean | Returns a type if the current layout. |
+| [GetLayoutType](./Methods/GetLayoutType.md) | [LayoutType](../Enumeration/LayoutType.md) | Returns the type of the current layout. |
 | [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) | Returns the parent slide master of the current layout. |
 | [GetName](./Methods/GetName.md) | string | Returns a name of the current layout. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current layout. |

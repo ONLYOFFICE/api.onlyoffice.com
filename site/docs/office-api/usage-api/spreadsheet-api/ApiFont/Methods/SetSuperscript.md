@@ -1,6 +1,6 @@
 # SetSuperscript
 
-Sets the superscript property to the specified font.\
+Sets the superscript property to the specified font.
 💡 This method will work only with the text format of the cell.
 
 ## Syntax

@@ -39,6 +39,7 @@ Represents the Api class.
 | [PasteText](./PasteText.md) | None | Pastes text into the document. |
 | [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
+| [RemoveOleObject](./RemoveOleObject.md) | None | Removes the OLE object from the workbook by its internal ID. |
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SetCustomFunctions](./SetCustomFunctions.md) | None | Updates a library of local custom functions. |

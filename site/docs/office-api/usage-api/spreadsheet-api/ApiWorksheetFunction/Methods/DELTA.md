@@ -31,6 +31,6 @@ This example shows how to test whether two numbers are equal. The function retur
 // Use function to compare two numbers if it returns 1 they are equal else 0.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DELTA(23, 24));
 ```
