@@ -73,11 +73,11 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    <APITable>
    ```
 
-   | Name           | Description                           | Type   | Example                                    |
-   |----------------|---------------------------------------|--------|--------------------------------------------|
-   | cryptoEngineId | Defines the **Encryption** plugin ID. | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` |
-   | privateKeyEnc  | Defines the encrypted private key.    | string | `"xxx"`                                    |
-   | publicKey      | Defines the public key.               | string | `"yyy"`                                    |
+   | Name           |  Type   | Example                                    | Description                           |
+   |----------------|---------|--------------------------------------------|---------------------------------------|
+   | cryptoEngineId |  string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` | Defines the **Encryption** plugin ID. |
+   | privateKeyEnc  | string  | `"xxx"`                                    | Defines the encrypted private key.    |
+   | publicKey      |  string | `"yyy"`                                    | Defines the public key.               |
 
    ```mdx-code-block
    </APITable>
