@@ -304,59 +304,59 @@ The list of changes for Office JavaScript API.
 ### Path methods
 
 - Added the [ApiPath](../usage-api/text-document-api/ApiPath/ApiPath.md) class to the Text document API.
-- Added the [ApiPath/ArcTo](../usage-api/text-document-api/ApiPath/Methods/ApiPath/ArcTo.md) method to the Text document API.
-- Added the [ApiPath/CubicBezTo](../usage-api/text-document-api/ApiPath/Methods/ApiPath/CubicBezTo.md) method to the Text document API.
-- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/ApiPath/Close.md) method to the Text document API.
-- Added the [ApiPath/GetCommand](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetCommand.md) method to the Text document API.
-- Added the [ApiPath/GetCommandCount](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetCommandCount.md) method to the Text document API.
-- Added the [ApiPath/GetCommands](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetCommands.md) method to the Text document API.
-- Added the [ApiPath/GetFill](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetFill.md) method to the Text document API.
-- Added the [ApiPath/GetHeight](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetHeight.md) method to the Text document API.
-- Added the [ApiPath/GetStroke](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetStroke.md) method to the Text document API.
-- Added the [ApiPath/GetWidth](../usage-api/text-document-api/ApiPath/Methods/ApiPath/GetWidth.md) method to the Text document API.
-- Added the [ApiPath/LineTo](../usage-api/text-document-api/ApiPath/Methods/ApiPath/LineTo.md) method to the Text document API.
-- Added the [ApiPath/MoveTo](../usage-api/text-document-api/ApiPath/Methods/ApiPath/MoveTo.md) method to the Text document API.
-- Added the [ApiPath/QuadBezTo](../usage-api/text-document-api/ApiPath/Methods/ApiPath/QuadBezTo.md) method to the Text document API.
-- Added the [ApiPath/SetFill](../usage-api/text-document-api/ApiPath/Methods/ApiPath/SetFill.md) method to the Text document API.
-- Added the [ApiPath/SetHeight](../usage-api/text-document-api/ApiPath/Methods/ApiPath/SetHeight.md) method to the Text document API.
-- Added the [ApiPath/SetStroke](../usage-api/text-document-api/ApiPath/Methods/ApiPath/SetStroke.md) method to the Text document API.
-- Added the [ApiPath/SetWidth](../usage-api/text-document-api/ApiPath/Methods/ApiPath/SetWidth.md) method to the Text document API.
+- Added the [ApiPath/ArcTo](../usage-api/text-document-api/ApiPath/Methods/ArcTo.md) method to the Text document API.
+- Added the [ApiPath/CubicBezTo](../usage-api/text-document-api/ApiPath/Methods/CubicBezTo.md) method to the Text document API.
+- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/Close.md) method to the Text document API.
+- Added the [ApiPath/GetCommand](../usage-api/text-document-api/ApiPath/Methods/GetCommand.md) method to the Text document API.
+- Added the [ApiPath/GetCommandCount](../usage-api/text-document-api/ApiPath/Methods/GetCommandCount.md) method to the Text document API.
+- Added the [ApiPath/GetCommands](../usage-api/text-document-api/ApiPath/Methods/GetCommands.md) method to the Text document API.
+- Added the [ApiPath/GetFill](../usage-api/text-document-api/ApiPath/Methods/GetFill.md) method to the Text document API.
+- Added the [ApiPath/GetHeight](../usage-api/text-document-api/ApiPath/Methods/GetHeight.md) method to the Text document API.
+- Added the [ApiPath/GetStroke](../usage-api/text-document-api/ApiPath/Methods/GetStroke.md) method to the Text document API.
+- Added the [ApiPath/GetWidth](../usage-api/text-document-api/ApiPath/Methods/GetWidth.md) method to the Text document API.
+- Added the [ApiPath/LineTo](../usage-api/text-document-api/ApiPath/Methods/LineTo.md) method to the Text document API.
+- Added the [ApiPath/MoveTo](../usage-api/text-document-api/ApiPath/Methods/MoveTo.md) method to the Text document API.
+- Added the [ApiPath/QuadBezTo](../usage-api/text-document-api/ApiPath/Methods/QuadBezTo.md) method to the Text document API.
+- Added the [ApiPath/SetFill](../usage-api/text-document-api/ApiPath/Methods/SetFill.md) method to the Text document API.
+- Added the [ApiPath/SetHeight](../usage-api/text-document-api/ApiPath/Methods/SetHeight.md) method to the Text document API.
+- Added the [ApiPath/SetStroke](../usage-api/text-document-api/ApiPath/Methods/SetStroke.md) method to the Text document API.
+- Added the [ApiPath/SetWidth](../usage-api/text-document-api/ApiPath/Methods/SetWidth.md) method to the Text document API.
 - Added the [ApiPath](../usage-api/spreadsheet-api/ApiPath/ApiPath.md) class to the Spreadsheet API.
-- Added the [ApiPath/ArcTo](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/ArcTo.md) method to the Spreadsheet API.
-- Added the [ApiPath/CubicBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/CubicBezTo.md) method to the Spreadsheet API.
-- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/ApiPath/Close.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetCommand](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetCommand.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetCommandCount](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetCommandCount.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetCommands](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetCommands.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetFill](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetFill.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetHeight](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetHeight.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetStroke](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetStroke.md) method to the Spreadsheet API.
-- Added the [ApiPath/GetWidth](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/GetWidth.md) method to the Spreadsheet API.
-- Added the [ApiPath/LineTo](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/LineTo.md) method to the Spreadsheet API.
-- Added the [ApiPath/MoveTo](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/MoveTo.md) method to the Spreadsheet API.
-- Added the [ApiPath/QuadBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/QuadBezTo.md) method to the Spreadsheet API.
-- Added the [ApiPath/SetFill](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/SetFill.md) method to the Spreadsheet API.
-- Added the [ApiPath/SetHeight](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/SetHeight.md) method to the Spreadsheet API.
-- Added the [ApiPath/SetStroke](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/SetStroke.md) method to the Spreadsheet API.
-- Added the [ApiPath/SetWidth](../usage-api/spreadsheet-api/ApiPath/Methods/ApiPath/SetWidth.md) method to the Spreadsheet API.
+- Added the [ApiPath/ArcTo](../usage-api/spreadsheet-api/ApiPath/Methods/ArcTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/CubicBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/CubicBezTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/Close.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetCommand](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommand.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetCommandCount](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommandCount.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetCommands](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommands.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetFill](../usage-api/spreadsheet-api/ApiPath/Methods/GetFill.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetHeight](../usage-api/spreadsheet-api/ApiPath/Methods/GetHeight.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetStroke](../usage-api/spreadsheet-api/ApiPath/Methods/GetStroke.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetWidth](../usage-api/spreadsheet-api/ApiPath/Methods/GetWidth.md) method to the Spreadsheet API.
+- Added the [ApiPath/LineTo](../usage-api/spreadsheet-api/ApiPath/Methods/LineTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/MoveTo](../usage-api/spreadsheet-api/ApiPath/Methods/MoveTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/QuadBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/QuadBezTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetFill](../usage-api/spreadsheet-api/ApiPath/Methods/SetFill.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetHeight](../usage-api/spreadsheet-api/ApiPath/Methods/SetHeight.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetStroke](../usage-api/spreadsheet-api/ApiPath/Methods/SetStroke.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetWidth](../usage-api/spreadsheet-api/ApiPath/Methods/SetWidth.md) method to the Spreadsheet API.
 - Added the [ApiPath](../usage-api/presentation-api/ApiPath/ApiPath.md) class to the Presentation API.
-- Added the [ApiPath/ArcTo](../usage-api/presentation-api/ApiPath/Methods/ApiPath/ArcTo.md) method to the Presentation API.
-- Added the [ApiPath/CubicBezTo](../usage-api/presentation-api/ApiPath/Methods/ApiPath/CubicBezTo.md) method to the Presentation API.
-- Added the [ApiPath/Close](../usage-api/presentation-api/ApiPath/Methods/ApiPath/Close.md) method to the Presentation API.
-- Added the [ApiPath/GetCommand](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetCommand.md) method to the Presentation API.
-- Added the [ApiPath/GetCommandCount](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetCommandCount.md) method to the Presentation API.
-- Added the [ApiPath/GetCommands](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetCommands.md) method to the Presentation API.
-- Added the [ApiPath/GetFill](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetFill.md) method to the Presentation API.
-- Added the [ApiPath/GetHeight](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetHeight.md) method to the Presentation API.
-- Added the [ApiPath/GetStroke](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetStroke.md) method to the Presentation API.
-- Added the [ApiPath/GetWidth](../usage-api/presentation-api/ApiPath/Methods/ApiPath/GetWidth.md) method to the Presentation API.
-- Added the [ApiPath/LineTo](../usage-api/presentation-api/ApiPath/Methods/ApiPath/LineTo.md) method to the Presentation API.
-- Added the [ApiPath/MoveTo](../usage-api/presentation-api/ApiPath/Methods/ApiPath/MoveTo.md) method to the Presentation API.
-- Added the [ApiPath/QuadBezTo](../usage-api/presentation-api/ApiPath/Methods/ApiPath/QuadBezTo.md) method to the Presentation API.
-- Added the [ApiPath/SetFill](../usage-api/presentation-api/ApiPath/Methods/ApiPath/SetFill.md) method to the Presentation API.
-- Added the [ApiPath/SetHeight](../usage-api/presentation-api/ApiPath/Methods/ApiPath/SetHeight.md) method to the Presentation API.
-- Added the [ApiPath/SetStroke](../usage-api/presentation-api/ApiPath/Methods/ApiPath/SetStroke.md) method to the Presentation API.
-- Added the [ApiPath/SetWidth](../usage-api/presentation-api/ApiPath/Methods/ApiPath/SetWidth.md) method to the Presentation API.
+- Added the [ApiPath/ArcTo](../usage-api/presentation-api/ApiPath/Methods/ArcTo.md) method to the Presentation API.
+- Added the [ApiPath/CubicBezTo](../usage-api/presentation-api/ApiPath/Methods/CubicBezTo.md) method to the Presentation API.
+- Added the [ApiPath/Close](../usage-api/presentation-api/ApiPath/Methods/Close.md) method to the Presentation API.
+- Added the [ApiPath/GetCommand](../usage-api/presentation-api/ApiPath/Methods/GetCommand.md) method to the Presentation API.
+- Added the [ApiPath/GetCommandCount](../usage-api/presentation-api/ApiPath/Methods/GetCommandCount.md) method to the Presentation API.
+- Added the [ApiPath/GetCommands](../usage-api/presentation-api/ApiPath/Methods/GetCommands.md) method to the Presentation API.
+- Added the [ApiPath/GetFill](../usage-api/presentation-api/ApiPath/Methods/GetFill.md) method to the Presentation API.
+- Added the [ApiPath/GetHeight](../usage-api/presentation-api/ApiPath/Methods/GetHeight.md) method to the Presentation API.
+- Added the [ApiPath/GetStroke](../usage-api/presentation-api/ApiPath/Methods/GetStroke.md) method to the Presentation API.
+- Added the [ApiPath/GetWidth](../usage-api/presentation-api/ApiPath/Methods/GetWidth.md) method to the Presentation API.
+- Added the [ApiPath/LineTo](../usage-api/presentation-api/ApiPath/Methods/LineTo.md) method to the Presentation API.
+- Added the [ApiPath/MoveTo](../usage-api/presentation-api/ApiPath/Methods/MoveTo.md) method to the Presentation API.
+- Added the [ApiPath/QuadBezTo](../usage-api/presentation-api/ApiPath/Methods/QuadBezTo.md) method to the Presentation API.
+- Added the [ApiPath/SetFill](../usage-api/presentation-api/ApiPath/Methods/SetFill.md) method to the Presentation API.
+- Added the [ApiPath/SetHeight](../usage-api/presentation-api/ApiPath/Methods/SetHeight.md) method to the Presentation API.
+- Added the [ApiPath/SetStroke](../usage-api/presentation-api/ApiPath/Methods/SetStroke.md) method to the Presentation API.
+- Added the [ApiPath/SetWidth](../usage-api/presentation-api/ApiPath/Methods/SetWidth.md) method to the Presentation API.
 - Added the [PathFillType](../usage-api/text-document-api/Enumeration/PathFillType.md) type to the simple type definitions.
 
 ### Path command methods
