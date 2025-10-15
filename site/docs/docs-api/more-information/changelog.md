@@ -9,6 +9,7 @@ The list of changes of ONLYOFFICE Docs API.
 - The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
 - Added opening for [hml](../usage-api/config/document/document.md#filetype) format.
 - Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to *txt*.
+- Changed the [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
 
 ## Version 9.0
 
