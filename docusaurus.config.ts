@@ -19,7 +19,12 @@ const config: Config = {
   noIndex: isDev,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
+    }
+  },
 
   customFields: {
     documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
@@ -27,14 +32,19 @@ const config: Config = {
   },
 
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true
+    },
     experimental_faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
+      ssgWorkerThreads: true,
 
-      swcJsLoader: false,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
-      rspackBundler: false,
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      rspackBundler: true,
+      rspackPersistentCache: true
     }
   },
 
@@ -297,6 +307,8 @@ const config: Config = {
 
       indexName: 'api-onlyoffice',
       contextualSearch: true,
+
+      askAi: 'SWpvi77fTWXN'
     },
     languageTabs: [
       {
