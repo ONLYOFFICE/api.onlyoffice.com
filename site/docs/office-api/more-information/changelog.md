@@ -640,10 +640,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFormBase/GetPlaceholderText](../usage-api/form-api/ApiFormBase/Methods/GetPlaceholderText.md) method to Form API.
 - Added the [ReadingOrder](../usage-api/text-document-api/Enumeration/ReadingOrder.md) type to the simple type definitions.
 - Added the [XlPivotFilterType](../usage-api/spreadsheet-api/Enumeration/XlPivotFilterType.md) type to the simple type definitions.
-- Added the [ValidationAlertStyle](../usage-api/spreadsheet-api/Enumeration/ValidationAlertStyle.md) type to the simple type definitions.
-- Added the [ValidationOperator](../usage-api/spreadsheet-api/Enumeration/ValidationOperator.md) type to the simple type definitions.
-- Added the [ValidationType](../usage-api/spreadsheet-api/Enumeration/ValidationType.md) type to the simple type definitions.
-- Added the *dateForm* value for the [FormType](../usage-api/spreadsheet-api/Enumeration/FormType.md) type.
 
 ## Version 9.0
 
