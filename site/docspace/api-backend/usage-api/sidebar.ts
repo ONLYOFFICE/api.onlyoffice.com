@@ -534,6 +534,12 @@ const sidebar: SidebarsConfig = {
           items: [
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-folder-recent",
+              label: "getFolderRecent",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-folder-history",
               label: "getFolderHistory",
               className: "api-method get",
