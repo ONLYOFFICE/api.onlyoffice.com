@@ -3120,21 +3120,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TenantDeepLinkSettingsWrapper'
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-        - Bearer: []
-        - ApiKeyBearer:
-            - read
-            - write
-        - Basic: []
-        - OAuth2:
-            - read
-            - write
-        - OpenId: []
       description: Returns the deep link settings.
   /api/2.0/settings/cultures:
     get:
@@ -12343,6 +12328,92 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NoContentResultWrapper'
+    get:
+      tags:
+        - Files / Folders
+      operationId: getFolderRecent
+      parameters:
+        - name: userIdOrGroupId
+          in: query
+          description: The user or group ID.
+          schema:
+            type: string
+            format: uuid
+            example: 75a5f745-f697-4418-b38d-0fe0d277e258
+        - name: filterType
+          in: query
+          description: The filter type.
+          schema:
+            $ref: '#/components/schemas/FilterType'
+        - name: excludeSubject
+          in: query
+          description: Specifies whether to exclude search by user or group ID.
+          schema:
+            type: boolean
+            example: true
+        - name: applyFilterOption
+          in: query
+          description: Specifies whether to return only files, only folders or all elements.
+          schema:
+            $ref: '#/components/schemas/ApplyFilterOption'
+        - name: searchArea
+          in: query
+          description: The search area.
+          schema:
+            $ref: '#/components/schemas/SearchArea'
+        - name: extension
+          in: query
+          description: Specifies whether to search for a specific file extension in the "Recent" folder.
+          style: deepObject
+          schema:
+            type: array
+            items:
+              type: string
+            example: .txt
+        - name: count
+          in: query
+          description: The maximum number of items to return.
+          schema:
+            maximum: 100
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting position of the results to be returned in the query response.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the sorting criteria for the folder request.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text used for filtering or searching folder contents.
+          schema:
+            type: string
+            example: some text
+      responses:
+        '200':
+          description: The "Recent" section contents
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FolderContentIntegerWrapper'
+        '403':
+          description: You don't have enough permission to view the folder content
+        '404':
+          description: The required folder was not found
   /api/2.0/files/file/{fileId}/edit_session:
     post:
       tags:
@@ -17664,6 +17735,13 @@ components:
           description: Culture
           nullable: true
           example: some text
+        recaptchaType:
+          $ref: '#/components/schemas/RecaptchaType'
+        recaptchaResponse:
+          type: string
+          description: The user's response to the CAPTCHA challenge.
+          nullable: true
+          example: some text
       additionalProperties: false
       description: The request parameters for configuring the administrator message content.
     ApiDateTime:
@@ -17795,7 +17873,6 @@ components:
     AuthKey:
       required:
         - name
-        - title
         - value
       type: object
       properties:
@@ -26736,6 +26813,13 @@ components:
           description: The user email address.
           format: email
           example: Sydney_Roberts4@hotmail.com
+        recaptchaType:
+          $ref: '#/components/schemas/RecaptchaType'
+        recaptchaResponse:
+          type: string
+          description: The user's response to the CAPTCHA challenge.
+          nullable: true
+          example: some text
       additionalProperties: false
       description: The request parameters for the user email.
     EmployeeFullArrayWrapper:
@@ -27475,7 +27559,6 @@ components:
       description: The user sex.
     SignupAccountRequestDto:
       required:
-        - email
         - key
         - serializedProfile
       type: object
@@ -30511,6 +30594,11 @@ components:
               example: true
             expirationDate:
               $ref: '#/components/schemas/ApiDateTime'
+            isLinkExpired:
+              type: boolean
+              description: Indicates whether the shareable link associated with the file or folder has expired.
+              nullable: true
+              example: true
       additionalProperties: false
       description: The generic file entry information.
     FileEntryDtoString:
@@ -30704,6 +30792,11 @@ components:
               example: true
             expirationDate:
               $ref: '#/components/schemas/ApiDateTime'
+            isLinkExpired:
+              type: boolean
+              description: Indicates whether the shareable link associated with the file or folder has expired.
+              nullable: true
+              example: true
       additionalProperties: false
       description: The generic file entry information.
     FileEntryIntegerArrayWrapper:
@@ -31227,6 +31320,7 @@ components:
         - canEditDenyDownload
         - canEditExpirationDate
         - canEditInternal
+        - canRevoke
         - isLocked
         - isOwner
         - subjectType
@@ -31271,6 +31365,10 @@ components:
         canEditExpirationDate:
           type: boolean
           description: Indicates whether the expiration date of access permissions can be edited.
+          example: true
+        canRevoke:
+          type: boolean
+          description: Specifies whether the file sharing access can be revoked by the current user.
           example: true
         subjectType:
           $ref: '#/components/schemas/SubjectType'
@@ -32307,6 +32405,7 @@ components:
               description: Specifies if an external link to the folder is expired or not.
               nullable: true
               example: true
+              deprecated: true
       additionalProperties: false
       description: The folder parameters.
     FolderDtoString:
@@ -32409,6 +32508,7 @@ components:
               description: Specifies if an external link to the folder is expired or not.
               nullable: true
               example: true
+              deprecated: true
       additionalProperties: false
       description: The folder parameters.
     FolderIntegerArrayWrapper:
@@ -36203,15 +36303,15 @@ components:
       description: OAuth2 flow with Authorization Code
       flows:
         authorizationCode:
-          authorizationUrl: https://oauth.onlyoffice.com/oauth2/authorize
-          tokenUrl: https://oauth.onlyoffice.com/oauth2/token
+          authorizationUrl: ''
+          tokenUrl: ''
           scopes:
             read: Read access to protected resources
             write: Write access to protected resources
     OpenId:
       type: openIdConnect
       description: OpenID Connect authentication
-      openIdConnectUrl: https://oauth.onlyoffice.com/oauth2/userinfo
+      openIdConnectUrl: ''
     x-signature:
       type: apiKey
       description: JWT signature used for authentication. The token must be obtained via the `api/2.0/security/oauth2/token` endpoint. It is passed as a cookie with the name `x-signature`.
