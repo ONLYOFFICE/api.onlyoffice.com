@@ -51,49 +51,79 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
+## Authorization and authentication
+
+You can authenticate in three ways:
+
+- Using an API key
+- Using an auth token
+- Using username/password
+
+If authentication fails, you’ll receive a *401* Unauthorized error.
+Double-check your credentials and make sure your DocSpace account has the necessary permissions.
+
 ## Usage
 
 Model Context Protocol describes several different concepts, however the ONLYOFFICE DocSpace MCP server implements [Tools](https://modelcontextprotocol.io/docs/concepts/tools) only.
 
 ### Tools
 
-Below is a table with the names of available tools and their descriptions:
+The DocSpace MCP server exposes a set of Tools — predefined operations that your MCP client or AI model can call. Each tool corresponds to a specific DocSpace action, such as creating folders, uploading files, or managing rooms.
 
 ```mdx-code-block
 <APITable>
 ```
 
-| Name                                          | Description                                             |
-|-----------------------------------------------|---------------------------------------------------------|
-| `files_archive_room`                          | Archive a room.                                         |
-| `files_copy_batch_items`                      | Copy to a folder.                                       |
-| `files_create_folder`                         | Create a folder.                                        |
-| `files_create_room`                           | Create a room.                                          |
-| `files_delete_file`                           | Delete a file.                                          |
-| `files_delete_folder`                         | Delete a folder.                                        |
-| `files_get_file_info`                         | Get file information.                                   |
-| `files_get_folder`                            | Get the contents of a folder.                           |
-| `files_get_folder_info`                       | Get folder information.                                 |
-| `files_get_folders`                           | Get the subfolders of a folder.                         |
-| `files_get_my_folder`                         | Get the "My documents" folder.                          |
-| `files_get_operation_statuses`                | Get active file operations.                             |
-| `files_get_room_info`                         | Get room information.                                   |
-| `files_get_room_security_info`                | Get a list of users with their access levels to a room. |
-| `files_get_rooms_folder`                      | Get the "Rooms" folder.                                 |
-| `files_move_batch_items`                      | Move to a folder.                                       |
-| `files_rename_folder`                         | Rename a folder.                                        |
-| `files_set_room_security`                     | Invite or remove users from a room.                     |
-| `files_update_file`                           | Update a file.                                          |
-| `files_update_room`                           | Update a room.                                          |
-| `others_download_as_text`                     | Download a file as text.                                |
-| `others_get_available_room_invitation_access` | Get a list of available room invitation access levels.  |
-| `others_get_available_room_types`             | Get a list of available room types.                     |
-| `others_upload_file`                          | Upload a file.                                          |
-| `people_get_all`                              | Get all people.                                         |
-| `portal_get_quota`                            | Get the current quota.                                  |
-| `portal_get_tariff`                           | Get the current tariff.                                 |
-| `settings_get_supported_cultures`             | Get a list of the supported cultures, languages.        |
-| `settings_get_time_zones`                     | Get a list of the available time zones.                 |
+#### Files
+
+| Name                           | Description                              |
+| ------------------------------ | ---------------------------------------- |
+| `files_archive_room`           | Archive a room.                          |
+| `files_copy_batch_items`       | Copy files or folders.                   |
+| `files_create_folder`          | Create a new folder.                     |
+| `files_create_room`            | Create a room.                           |
+| `files_delete_file`            | Delete a file.                           |
+| `files_delete_folder`          | Delete a folder.                         |
+| `files_get_file_info`          | Get file metadata.                       |
+| `files_get_folder`             | Retrieve folder contents.                |
+| `files_get_folder_info`        | Get information about a folder.          |
+| `files_get_folders`            | List subfolders.                         |
+| `files_get_my_folder`          | Access the “My Documents” folder.        |
+| `files_get_operation_statuses` | Check active file operations.            |
+| `files_get_room_info`          | Retrieve information about a room.       |
+| `files_get_room_security_info` | List users and access levels for a room. |
+| `files_get_rooms_folder`       | Get the “Rooms” root folder.             |
+| `files_move_batch_items`       | Move files or folders.                   |
+| `files_rename_folder`          | Rename a folder.                         |
+| `files_set_room_security`      | Invite or remove users in a room.        |
+| `files_update_file`            | Update file data.                        |
+| `files_update_room`            | Update room details.                     |
+
+#### Other tools
+
+| Name                                          | Description                                  |
+| --------------------------------------------- | -------------------------------------------- |
+| `others_download_as_text`                     | Download a file as plain text.               |
+| `others_get_available_room_invitation_access` | Get available access levels for invitations. |
+| `others_get_available_room_types`             | List available room types.                   |
+| `others_upload_file`                          | Upload a file.                               |
+
+#### People and portal
+
+| Name                | Description                        |
+| ------------------- | ---------------------------------- |
+| `people_get_all`    | Retrieve all users.                |
+| `portal_get_quota`  | Check your current storage quota.  |
+| `portal_get_tariff` | Retrieve your current tariff plan. |
+
+#### Settings
+
+| Name                              | Description                            |
+| --------------------------------- | -------------------------------------- |
+| `settings_get_supported_cultures` | List supported cultures and languages. |
+| `settings_get_time_zones`         | List all available time zones.         |
+
+### Tools
 
 ```mdx-code-block
 </APITable>
