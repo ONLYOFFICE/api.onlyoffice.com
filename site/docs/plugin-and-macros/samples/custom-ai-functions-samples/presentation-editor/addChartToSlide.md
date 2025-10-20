@@ -201,5 +201,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addChartToSlide](/assets/images/plugins/functions-gifs/add-chart-to-slide-function.gif#gh-light-mode-only)
-![addChartToSlide](/assets/images/plugins/functions-gifs/add-chart-to-slide-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/addChartToSlide.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/addChartToSlide.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

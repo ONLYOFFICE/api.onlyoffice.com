@@ -145,5 +145,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![rewriteText](/assets/images/plugins/functions-gifs/rewrite-text-function.gif#gh-light-mode-only)
-![rewriteText](/assets/images/plugins/functions-gifs/rewrite-text-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/rewriteText.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/rewriteText.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

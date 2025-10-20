@@ -223,5 +223,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![setAutoFilter](/assets/images/plugins/functions-gifs/set-auto-filter-function.gif#gh-light-mode-only)
-![setAutoFilter](/assets/images/plugins/functions-gifs/set-auto-filter-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/setAutoFilter.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/setAutoFilter.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -208,5 +208,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addTextToPlaceholder](/assets/images/plugins/functions-gifs/add-text-to-placeholder-function.gif#gh-light-mode-only)
-![addTextToPlaceholder](/assets/images/plugins/functions-gifs/add-text-to-placeholder-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/addTextToPlaceholder.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls width="800">
+  <source src="/assets/images/plugins/functions-video/addTextToPlaceholder.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
