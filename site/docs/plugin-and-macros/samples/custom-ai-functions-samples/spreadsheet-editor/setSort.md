@@ -250,11 +250,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<video className="light-video" controls width="600">
+<video className="light-video" controls style={{maxWidth: '848px'}}>
   <source src="/assets/images/plugins/functions-video/setSort.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
-<video className="dark-video" controls width="600">
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
   <source src="/assets/images/plugins/functions-video/setSort.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
