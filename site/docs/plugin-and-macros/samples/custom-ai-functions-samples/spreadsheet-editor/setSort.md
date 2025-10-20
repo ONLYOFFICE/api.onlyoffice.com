@@ -250,5 +250,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![setSort](/assets/images/plugins/functions-gifs/set-sort-function.gif#gh-light-mode-only)
-![setSort](/assets/images/plugins/functions-gifs/set-sort-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/setSort.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/setSort.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

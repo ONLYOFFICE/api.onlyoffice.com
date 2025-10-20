@@ -150,5 +150,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![commentText](/assets/images/plugins/functions-gifs/comment-text-function.gif#gh-light-mode-only)
-![commentText](/assets/images/plugins/functions-gifs/comment-text-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/commentText.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/commentText.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

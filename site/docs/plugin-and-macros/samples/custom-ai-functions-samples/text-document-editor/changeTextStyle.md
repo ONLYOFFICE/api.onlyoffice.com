@@ -99,5 +99,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![changeTextStyle](/assets/images/plugins/functions-gifs/change-text-style-function.gif#gh-light-mode-only)
-![changeTextStyle](/assets/images/plugins/functions-gifs/change-text-style-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/changeTextStyle.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/changeTextStyle.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

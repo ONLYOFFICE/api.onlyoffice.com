@@ -122,5 +122,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![checkSpelling](/assets/images/plugins/functions-gifs/check-spelling-function.gif#gh-light-mode-only)
-![checkSpelling](/assets/images/plugins/functions-gifs/check-spelling-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/checkSpelling.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/checkSpelling.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

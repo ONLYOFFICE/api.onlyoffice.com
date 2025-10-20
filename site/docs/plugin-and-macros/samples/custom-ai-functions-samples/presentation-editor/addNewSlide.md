@@ -62,5 +62,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addNewSlide](/assets/images/plugins/functions-gifs/add-new-slide-function.gif#gh-light-mode-only)
-![addNewSlide](/assets/images/plugins/functions-gifs/add-new-slide-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addNewSlide.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addNewSlide.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

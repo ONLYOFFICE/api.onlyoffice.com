@@ -121,5 +121,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addTableToSlide](/assets/images/plugins/functions-gifs/add-table-to-slide-function.gif#gh-light-mode-only)
-![addTableToSlide](/assets/images/plugins/functions-gifs/add-table-to-slide-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addTableToSlide.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addTableToSlide.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

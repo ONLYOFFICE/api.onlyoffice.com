@@ -93,5 +93,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![changeSlideBackground](/assets/images/plugins/functions-gifs/change-slide-background-function.gif#gh-light-mode-only)
-![changeSlideBackground](/assets/images/plugins/functions-gifs/change-slide-background-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/changeSlideBackground.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/changeSlideBackground.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

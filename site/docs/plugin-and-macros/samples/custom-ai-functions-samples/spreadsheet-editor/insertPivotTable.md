@@ -278,11 +278,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<video className="light-video" controls width="800">
-  <source src="/assets/images/plugins/functions-video/insert-pivot-table-function.webm" type="video/webm" />
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/insertPivotTable.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
-<video className="dark-video" controls width="800">
-  <source src="/assets/images/plugins/functions-video/insert-pivot-table-function.dark.webm" type="video/webm" />
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/insertPivotTable.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

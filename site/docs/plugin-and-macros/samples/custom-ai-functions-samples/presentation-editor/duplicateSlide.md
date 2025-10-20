@@ -49,5 +49,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![duplicateSlide](/assets/images/plugins/functions-gifs/duplicate-slide-function.gif#gh-light-mode-only)
-![duplicateSlide](/assets/images/plugins/functions-gifs/duplicate-slide-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/duplicateSlide.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/duplicateSlide.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

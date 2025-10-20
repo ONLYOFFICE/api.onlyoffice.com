@@ -102,5 +102,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![addShapeToSlide](/assets/images/plugins/functions-gifs/add-shape-to-slide-function.gif#gh-light-mode-only)
-![addShapeToSlide](/assets/images/plugins/functions-gifs/add-shape-to-slide-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addShapeToSlide.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addShapeToSlide.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

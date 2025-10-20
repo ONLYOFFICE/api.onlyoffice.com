@@ -94,5 +94,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![addChart](/assets/images/plugins/functions-gifs/add-chart-function.gif#gh-light-mode-only)
-![addChart](/assets/images/plugins/functions-gifs/add-chart-function.dark.gif#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addChart.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/images/plugins/functions-video/addChart.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
