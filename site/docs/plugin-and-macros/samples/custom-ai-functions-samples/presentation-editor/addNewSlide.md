@@ -62,11 +62,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<video className="light-video" controls width="800">
+<video className="light-video" controls width="600">
   <source src="/assets/images/plugins/functions-video/addNewSlide.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
-<video className="dark-video" controls width="800">
+<video className="dark-video" controls width="600">
   <source src="/assets/images/plugins/functions-video/addNewSlide.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
