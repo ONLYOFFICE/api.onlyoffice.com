@@ -5,7 +5,7 @@ This function creates a chart of the specified type from the given range or the 
 ## Prompts
 
 - Create a bar chart from the current selection
-- Create a line chart from the current selection
+- Create a normal line chart from the current selection
 - Create a pie chart from range A1:B10
 - Create a chart with title "Sales Overview"
 
