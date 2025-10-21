@@ -86,7 +86,7 @@ const config: Config = {
 
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
-            keyPath = '';
+            keyPath = args.item.dirName;
             sidebarItems.forEach(sidebarRecursive);
             return sidebarItems;
           },
