@@ -6,6 +6,20 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const isDev = process.env.NODE_ENV === 'development';
 
+let keyPath = '';
+function sidebarRecursive(item) {
+  if (!item.key) {
+    item.key = keyPath + item.label;
+  }
+  
+  if (item.type === 'category') {
+    const prevPath = keyPath;
+    keyPath = (keyPath + item.key) + '.';
+    item.items.forEach(sidebarRecursive);
+    keyPath = prevPath;
+  }
+}
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -22,7 +36,7 @@ const config: Config = {
 
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'warn'
+      onBrokenMarkdownLinks: 'warn',
     }
   },
 
@@ -69,6 +83,13 @@ const config: Config = {
               : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
 
           docItemComponent: '@theme/ApiItem',
+
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            keyPath = '';
+            sidebarItems.forEach(sidebarRecursive);
+            return sidebarItems;
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
