@@ -32,7 +32,7 @@ This example shows how to estimate variance based on a sample from the selected 
 // Use function to calculate a variance from a range sample.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Month");
 worksheet.GetRange("C1").SetValue("Sales");

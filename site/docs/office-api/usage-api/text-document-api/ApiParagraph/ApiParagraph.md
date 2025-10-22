@@ -95,6 +95,7 @@ Represents the ApiParagraph class.
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | Sets the outline level for the specified properties. |
 | [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document. |
 | [SetPosition](./Methods/SetPosition.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies an amount by which text is raised or lowered for this paragraph in relation to the default baseline of the surrounding non-positioned text. |
+| [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies the reading order for the current paragraph. Possible values are: **null** - use the standart direction parameter; **"ltr"** - left-to-right text direction; **"rtl"** - right-to-left text direction. |
 | [SetRightBorder](./Methods/SetRightBorder.md) | boolean | Specifies the border which will be displayed at the right side of the page around the specified paragraph. |
 | [SetSection](./Methods/SetSection.md) | boolean | Sets the specified section to the current paragraph. |
 | [SetShd](./Methods/SetShd.md) | boolean | Specifies the shading applied to the contents of the paragraph. |

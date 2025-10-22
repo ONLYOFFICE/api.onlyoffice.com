@@ -1,8 +1,8 @@
 # SetPicturePosition
 
-Sets the picture position inside the current form:\
--**0** - the picture is placed on the left/top;\
--**50** - the picture is placed in the center;\
+Sets the picture position inside the current form:
+-**0** - the picture is placed on the left/top;
+-**50** - the picture is placed in the center;
 -**100** - the picture is placed on the right/bottom.
 
 ## Syntax
@@ -37,7 +37,7 @@ let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(pictureForm);
-pictureForm.SetImage("https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png");
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png");
 pictureForm.SetPicturePosition(70, 70);
 let position = pictureForm.GetPicturePosition();
 paragraph = Api.CreateParagraph();

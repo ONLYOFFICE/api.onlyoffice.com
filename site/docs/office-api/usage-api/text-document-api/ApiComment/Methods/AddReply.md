@@ -14,9 +14,9 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | String |  | The comment reply text (required). |
-| sAuthorName | Required | String |  | The name of the comment reply author (optional). |
-| sUserId | Required | String |  | The user ID of the comment reply author (optional). |
+| sText | Required | String |  | The comment reply text. |
+| sAuthorName | Optional | String |  | The name of the comment reply author. |
+| sUserId | Optional | String |  | The user ID of the comment reply author. |
 | nPos | Optional | Number | -1 | The comment reply position. If nPos=-1 add to the end. |
 
 ## Returns

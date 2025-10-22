@@ -29,7 +29,7 @@ This example shows how to return the current date and time in the MM/dd/yy hh:mm
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.NOW(); 
 
 worksheet.GetRange("C1").SetValue(ans);

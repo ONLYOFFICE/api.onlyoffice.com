@@ -1,0 +1,54 @@
+# AddGuide
+
+Adds a guide (formula) to the current geometry.
+
+## Syntax
+
+```javascript
+expression.AddGuide(sName, sFormula, sX, sY, sZ);
+```
+
+`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sName | Required | string |  | The guide name. |
+| sFormula | Required | [GeometryFormulaType](../../Enumeration/GeometryFormulaType.md) |  | The formula type. |
+| sX | Required | string |  | The X parameter. |
+| sY | Required | string |  | The Y parameter. |
+| sZ | Required | string |  | The Z parameter. |
+
+## Returns
+
+boolean
+
+## Example
+
+Creates adjustable custom geometry with guides and connection points.
+
+```javascript editor-xlsx
+// Displays adjustment value in a cell and applies geometry to shape.
+let worksheet = Api.GetActiveSheet();
+let customGeometry = Api.CreateCustomGeometry();
+customGeometry.AddAdj("adj1", 25000);
+customGeometry.SetAdjValue("adj1", 30000);
+worksheet.GetRange("A7").SetValue("Adjustment: " + customGeometry.GetAdjValue("adj1"));
+customGeometry.AddGuide("x1", "*/", "adj1", "w", "100000");
+customGeometry.SetTextRect("x1", "0", "w", "h");
+customGeometry.AddConnectionPoint("0", "hc", "0");
+let path = customGeometry.AddPath();
+path.SetStroke(true);
+path.SetFill("norm");
+path.MoveTo("l", "t");
+path.LineTo("r", "t");
+path.LineTo("r", "b");
+path.LineTo("l", "b");
+path.LineTo("x1", "hd2");
+path.Close();
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 9, 0, 2, 2);
+shape.SetGeometry(customGeometry);
+```

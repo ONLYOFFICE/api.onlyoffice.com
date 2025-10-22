@@ -30,6 +30,6 @@ This example shows how to return the inverse of the standard normal cumulative d
 // Use a function to get the inverse of the standard normal cumulative distribution.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.NORM_S_INV(0.908));
 ```
