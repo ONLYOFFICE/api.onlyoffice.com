@@ -1,0 +1,71 @@
+---
+id: create-report-folder-history
+title: "createReportFolderHistory"
+description: "createReportFolderHistory"
+sidebar_label: "createReportFolderHistory"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVttu20YQ/ZXBvLgFGFGQ0xc+1XVq1GkAB77AKAwhXpFDcWNyd7MXO4rAfy9ml5RFK639JGp37nNmzm7Ri7XD4g7PZEsOcjjTbUXW4TJDbcgKL7U6r7DA0pLwdElGW5+E/pLOa7vBDI2woiPPesXdFpXoCAuso9R5hRlKhQUa4RvM0NK3IC1VWHgbKENXNtQJLLboN4b1pPK0JosZ1tp2wqej4wX2/ZLVndHKkWONxXzOPxW50krDsWKBN5efwGvwDYGN4UItW8IMS608Kc8awphWljG7/Ktjte1hIHr1lUrP+VmuhZfJ6RjBnqTzVqo19uwjJA+vJpNhK9WD25MV1goup/TUudfjaCzVP41BlKkSB1d932fovPDBvTHEJHyqK3pbgzL00rcsdBV93lphDNnB9fv58WG7/tEBKq2OPDTikYCUDusGDNlOOie14l4asuwq9nQHS4wW3x9avI6dTyiDhEJ4Eg6U9lDroKoY6FTn/+DdkW80z4DRLraBgVxgLozMF7N5zvByeXKUb0fY93mr13lCIGboyD6OAxJsiwVuV8LRjW17fBnMVZSFUqtarsOQbYaPwkqxalP3B+WUfS1Cy204sPQhXcHN5SfuwZLjKIOVfnPFaE+mhCu/iOCbLw+02YejkX/T5sDkjSM41fpBErASKT8MEmbj5E8MDtNfRhXu2R/CyXLPT+O9OfDyp/JkYaODheDIsmEQqgIjnHvSlpdKnFc2sIoG2TIJS/Ztpo+SMGw/3l7DtX4g1R9NjCZb2fBxNiL94+01uzqJxTlw+B81O5kUCqSDitdlJxVVsNpEXB+xkLbyR5Q5goZEFQMYijrxOBR1kOkzvGDtxf7SEPHgZSRJDupWP8GT9A1MvEKc9Az5OkFj/3ZcA5PDiMFYaFfkefQ606rd6LqWJc1K3aXDRT6qsQPPBX+7ahSP3dFmXMKCJ/KSRAWiLMm5uCes9lR6qsCS08GW5DDDJys9l+SWf1+RTovqwlBkvedqxoNTrVTaxC+KyrcfYLg+HIuJ9tuzZuBLVWvu7/d3Tq6V8MHS63BjSO/EeX54DdoXcc2A92SsLHTBeVgR6JUXEZOPUkRQ3o87blwbk47cA6nKaKn8DM49w5rHkyoQDgSkiU8oY1txhu/3ErmfPaN7P78XG6Pn/7WOaQ/kcmLkwOeijGw7zsjnc7gKZli5YVLphlpTkXt4WeymzEm9CwwU6oRkFZdM/D6V5DbwCk81Pp79NpvzEZNCJ9ReFIlLIJHJ8KKCZzqZ9GrXSk/ffW5aISOvhbTZE9PccZ8xw8VszrPJbBO5t037odh7aLV6HZ9YsQLLDBtmrOIOtzuy6fn4WyC7weJu+UwqkZgq6fi7wqIWraODWHcvKPzlciDYX4HH+Wc5jBhVm8hdbaDEUJFlnl+H/bLPxkXGMaTrk7Ik4/cUD15sTGY7Zv58cXWNff8vRbK9Tg==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"createReportFolderHistory"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/folder/{folderId}/log/report"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+createReportFolderHistory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","required":true,"schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"URL to the report file","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"403":{"description":"You don't have enough permission to perform the operation"},"404":{"description":"The required folder was not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

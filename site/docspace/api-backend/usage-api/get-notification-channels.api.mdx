@@ -1,0 +1,63 @@
+---
+id: get-notification-channels
+title: "Get notification channels"
+description: "Returns a list of notification channels."
+sidebar_label: "Get notification channels"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV01z2zYQ/SuYvfjCSKrTXniqaqeZpJ0mE9vjg0cTQ+BSREwBCLCMo2j43zsLkKIoObY604slAfuFtw9v4S2QXAXI7+AKibRZBTEV/1jSpVaStDUBFhlYhz7+eldADiukfYuLShqDdYAMPAZnTcAA+RbOZzP+KDAorx1bQg77jiJ0KSEDZQ2hIXaQztWdxfRLYK8tBFXhWvI32jiEHOzyCyqCDJzn4kinnH0BL1uqvurBUnovN5CBJlx30b422mPB8OjwxshljQVkYOQaGZbnM0SrIXogr80KsgNArisUZh+UrjDB7hNO1tQ1J4acfIMZ4He5dvwTbrUpNdaFuHFkDbTZXpFD3qW1NUpzlPjKodKlxiAeK6QKvaCflaKDwBSXC9oVwPW0bQayKDTby/rjHgClrAOefFptSuvXcY1zkKZ4xCd4dkmWj3oct9aBhC2fjB+Okfy/Ku9J/ELZVySpCV3xyjaJ612PtCFcoYcMEgpp6fU529baPDzL0udZWHksj1nIZ1fpZEdbLSMTYrknlpiML2yBJzm0JwB166Vz6Ltqfp39ciwlN0Y2VFmvf2ARgwZUjde0gfxuCzKoz7z/+QF5ATxKvrqPXhPCos228AdKjx7yu/hr7vRfuNmtPWUvg1a9+Yd5Q9X504YfHEahvFu0i0MafUJqvAlCvkzXNVJlO73ltkqqIIepdHp6PplNe95N9wNM1SDGAf039CGi0fgactguZcAbX7fHYhBthbKm1KsmaT1k8E16zTcmEqFzTo0oZVNzS48iXaYtcfPpb27eYmjLFWt4CjVuzkDt2IOjkDcBxYW1DxoFO6Gh7rS9FOfjgBlodlPRhfnZdW6XpyJyR1neGEIvNrbxognoObCQphBOhvBoPfc4TqGoqTEgR+74ckros2Qstu9vr8W1fUDTno2CplhZ9+XP/ta8v73mVGOCvoTZfAQUK3iBhH6tDRZiuYlafzbv7k+0ORMVyiIW0IE6ytiB2tm02e4GDAIk48JhJclOlLV9FI+aKjHKKqJqZMDbiRr7u72kjBYjByPQIZ9OY9aJNfXGlqVWOFF2nRbPpzt9YGlmwE93jeaxO9b1TwtZxAssCyGVwhAEWeG8JVSEhfAYbOMVhp0Y5HDLny9YJ4XrNWNAMy5cWGOSqh+AyruXots+vhYj79NPzcTnScz9/f4q6JWR1Hh8mW5M6Z05359ClNYf1DURPEQjsmLdBBJLFHZJMnLym5aRlPeDviXZGHXkXqApnNWGJuIdMa35emIhJEtquvGJZfExw3f4fu8g95OB3fvnO1AMfkkxCnzsblDNne5eqVLR8LqD+cd34qpxznpuUjNCusLaFRgeDsGu1BTNq4aJgmup2SWkEL+PLbkNLOEJ49eT3yYzXnI20FqavSreIj09Rw4btR0e2v9lFHXNJ/xOU1dLHR+bTZoFaS7dMTMgg/PJLI6e3cN+PyYj2Be2yKCygdhzu5tLLS9/bdDzyF4M8ydN3V58eKDFwQFzpdBRHFR1k+h58L8DD6DdIH375hqyKCZjRqeh0X3h6P2W2ezHHs+YVAH/5Zn/pMd2m65L2+7s09ZPPXYSnKwZ6EXbtv8CW1TB/g==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get notification channels"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/notification/channels"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of notification channels.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"channels":{"type":"array","items":{"required":["isEnabled","name"],"type":"object","properties":{"name":{"type":"string","description":"The notification channel name.","nullable":true,"example":"Winfield Upton"},"isEnabled":{"type":"boolean","description":"Specifies whether the notification channel is enabled.","example":true}},"additionalProperties":false,"description":"The notification channel information.","title":"NotificationChannelDto"},"description":"The list of notification channels.","nullable":true}},"additionalProperties":false,"description":"The notification channel settings.","title":"NotificationChannelStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"NotificationChannelStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
