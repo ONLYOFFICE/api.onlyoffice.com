@@ -4,6 +4,10 @@
 
 ### New features
 
+#### Docspace
+
+* Updated DocSpace version 3.5
+
 #### Docs
 
 * Updated Office API documentation for version 9.1.0
