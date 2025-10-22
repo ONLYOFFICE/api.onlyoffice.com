@@ -146,10 +146,10 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/rewriteText.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/rewriteText.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/rewriteText.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/rewriteText.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
