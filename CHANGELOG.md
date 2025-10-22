@@ -1,5 +1,17 @@
 # Change log
 
+## 7.0.0
+
+### New features
+
+* Updated Docusaurus version 3.9.1
+* Added AskAI feature
+
+#### Plugins and macros
+
+* Added samples for custom AI functions
+* Updated documentation in Chinese in the Interacting with editors section
+
 ## 6.6.0
 
 ### New features

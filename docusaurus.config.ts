@@ -6,6 +6,20 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const isDev = process.env.NODE_ENV === 'development';
 
+let keyPath = '';
+function sidebarRecursive(item) {
+  if (!item.key) {
+    item.key = keyPath + item.label;
+  }
+  
+  if (item.type === 'category') {
+    const prevPath = keyPath;
+    keyPath = (keyPath + item.key) + '.';
+    item.items.forEach(sidebarRecursive);
+    keyPath = prevPath;
+  }
+}
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -19,7 +33,12 @@ const config: Config = {
   noIndex: isDev,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    }
+  },
 
   customFields: {
     documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
@@ -27,14 +46,19 @@ const config: Config = {
   },
 
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true
+    },
     experimental_faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
+      ssgWorkerThreads: true,
 
-      swcJsLoader: false,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
-      rspackBundler: false,
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      rspackBundler: true,
+      rspackPersistentCache: true
     }
   },
 
@@ -59,6 +83,13 @@ const config: Config = {
               : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
 
           docItemComponent: '@theme/ApiItem',
+
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            keyPath = args.item.dirName;
+            sidebarItems.forEach(sidebarRecursive);
+            return sidebarItems;
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -297,6 +328,8 @@ const config: Config = {
 
       indexName: 'api-onlyoffice',
       contextualSearch: true,
+
+      askAi: 'SWpvi77fTWXN'
     },
     languageTabs: [
       {

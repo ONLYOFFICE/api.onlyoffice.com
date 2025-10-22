@@ -11,7 +11,7 @@ AI functions define the functionality of an AI agent. They specify:
 
 Adding custom AI functions expands the AI agent's capabilities and allows adapting it to specific use cases. Whether working with documents, spreadsheets, or presentations, custom functions let you integrate AI-driven operations directly into your workflow and align the agent's behavior with your requirements.
 
-You can find ready-to-use custom AI functions [here](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai/scripts/helpers) or create your own ones.
+You can find ready-to-use custom AI functions [here](../samples/custom-ai-functions-samples/custom-ai-functions-samples.md) or create your own ones.
 
 ## How to use AI functions {#usage}
 
