@@ -94,10 +94,10 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/changeSlideBackground.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/presentation-editor/changeSlideBackground.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/changeSlideBackground.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/presentation-editor/changeSlideBackground.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

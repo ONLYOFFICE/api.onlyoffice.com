@@ -100,10 +100,10 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/changeTextStyle.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/changeTextStyle.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/changeTextStyle.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/changeTextStyle.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
