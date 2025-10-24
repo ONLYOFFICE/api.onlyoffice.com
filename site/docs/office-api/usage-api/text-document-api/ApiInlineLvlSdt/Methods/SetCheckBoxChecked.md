@@ -1,6 +1,6 @@
 # SetCheckBoxChecked
 
-Sets the checkbox value for the content control.\
+Sets the checkbox value for the content control.
 This method updates the checkbox state of the content control to either checked or unchecked.
 
 ## Syntax

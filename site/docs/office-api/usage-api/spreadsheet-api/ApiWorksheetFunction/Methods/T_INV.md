@@ -31,7 +31,7 @@ This example shows how to return the left-tailed inverse of the Student's t-dist
 // Use a function to estimate the Student's t-distribution left-tailed inverse.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let result = func.T_INV(0.75, 2);
 worksheet.GetRange("B2").SetValue(result);
 

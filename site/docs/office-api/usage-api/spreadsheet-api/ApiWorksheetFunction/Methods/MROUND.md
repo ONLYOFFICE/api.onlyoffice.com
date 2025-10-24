@@ -31,6 +31,6 @@ This example shows how to return a number rounded to the desired multiple.
 // Use a function to round the number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.MROUND(14.35, 0.4));
 ```

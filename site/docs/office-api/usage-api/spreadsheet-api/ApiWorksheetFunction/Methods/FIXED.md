@@ -32,6 +32,6 @@ This example shows how to round a number to the specified number of decimals and
 // Use function to round a number with specified decimal points.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.FIXED(1234.9, 1, false));
 ```

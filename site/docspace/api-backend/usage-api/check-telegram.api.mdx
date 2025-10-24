@@ -1,0 +1,63 @@
+---
+id: check-telegram
+title: "Check the Telegram connection"
+description: "Checks if the current user is connected to the Telegram Bot or not."
+sidebar_label: "Check the Telegram connection"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1z2zYQ/SuYvfjCSIrSXniqYqcdp51JJrbHB40mhsCViIgEEGBpR9Xwv2cWoChRcmoferEpYL/37T7sgOQ6QD6HGyTSZh3EWNxihWsva1hkYB16Sdqa6wJyUCWqTX+dgcfgrAkYIN/BdDLhfwUG5bVjHcjhhiQ1QeiVaAJ6oYOotNlgIawXxhJkoKwhNMSq0rlKq+hu/C2w/g6CKrGW/EVbh5CDXX5DxYrOc3Ckk/d9KOn7e6M9FpxXiAFwKv+t38nlO0DT1JDPJ9nbbHpQ04ZwjR6ykwRvSxQe1zpQqlNfPZEsjiCDlfW1pGTk3RQyIE0VG/2C61QgaDPgAhlZ41Gugbw2a8jANFUll6xDvsEM8IesXTQRbI2C8AdB22Ygi0JzFLL6fJTdSlYBD173ESbXV2TZu7JNasJZvifRtxlwC8ORrPRebiEDTViHl1tVelydJ8nRq1TUs6uWczt06BUhJuFLW+CrFNpfVefeS+fQdyH8Nnl7DvE7Ixsqrdf/YhEtBVSN17SFfL4DGdRXvv+6QT4Aj7KADJ68JoRFm+3gPUqPHvJ5/DVz+m/c9mfPycug1V7806yhcvq84CeHcWzni3ZxCttLnuQ4l1SiUI33aKifUWWNQUVYCLJRoAf1e0vd6DKwa6TS8mJYY2yzpBJyGEunx9PRZBy6nTKmTn0cFwhwifwj+hAr1PgKctgtZcA7X7VnE3YTZTmmlV43acogg0fpNY9ERESnnJqzkk3FvT2zdJWuxN2Xf7ihi0OrbnjLJFPDhh0wHvtyZvIuoLi0dqNRsBIa6hYYD20c5qHBDDSrqajCQO262fspidyZlw+G0IutbbzYbwkhTSGcDOHJeu573JNsYBkNsuUOQ68xfZGExe7j/a24tRs07cXAaLKVdR9/7sfn4/0tuxqC9qWazQaFYrwVSOhrbbAQy20E3MWsm6kocyFKlEUMoCvqwGNX1E6mzfqpOGwiGQ9OI0lyYlXZJ/GkqRQDryKujwz4OkHj+Ha/WwaHEYOx0CEfj6PXkTXV1q5WWuFI2TodTsf9zmA64IK/XjWKx+5Ytyc/WUQ6kYWQSmEIPLjOW0pT7DHYxisM/YLI4Z7/vyCdtt5+jxyqGQ8u05I4LyrfXonu+nwsBtqvz5qBr80qktWPN0GvjaTG48twY0j34jw/hVhZfxLXSDCRx8qKugkklijskmTE5KOWEZQPh8WW1sagIw8CTeGsNjQS18Sw5vHEQsggpEgTn1DGtuIMPxwl8jA6oPs4v5ON0fLvlY1pd4w1c7p7R0kVKXw/I5+vxU3jnPXcpGZQ6RIrV2DYnBa7VGM0bxoGCtZSs0pIJv4YSnIbeIWnGr8b/T6a8JGzgWppjqKITDMkkY5eEhwGzdodnoP/E0V12OAX0thVUpv41EpUkfhqzsCBDKajSWSmxFmsenjoJt5aZFDaQKyy6/mq5ePvDXqm98WBlxJD75cSE10kFJgphY4igVVNgu3Jq5eJqWfWvz7cQhaXzBDpiUy6D7a+vzLbY9tD7kkR8F9+HzyrsdulMWrbXj5d/VKjX81Jmiu8aNv2JwexQ+g=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the Telegram connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/telegram/check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the current user is connected to the Telegram Bot or not.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status if user is linked or not","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["status"],"type":"object","properties":{"status":{"enum":[0,1,2],"type":"integer","description":"The registration Telegram status.","format":"int32","title":"RegStatus"},"username":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"TelegramStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TelegramStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

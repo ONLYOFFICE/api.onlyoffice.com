@@ -1,6 +1,6 @@
 # SetCellMarginBottom
 
-Specifies an amount of space which will be left between the bottom extent of the cell contents and the border\
+Specifies an amount of space which will be left between the bottom extent of the cell contents and the border
 of a specific table cell within a table.
 
 ## Syntax

@@ -1,6 +1,6 @@
 # InsertBlankPage
 
-Insert blank page to the current location.
+Inserts a blank page to the current location.
 
 ## Syntax
 

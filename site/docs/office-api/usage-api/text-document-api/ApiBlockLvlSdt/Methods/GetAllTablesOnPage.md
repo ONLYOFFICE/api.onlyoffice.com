@@ -1,7 +1,7 @@
 # GetAllTablesOnPage
 
-Returns a collection of tables on a given absolute page.\
-💡 This method can be a little bit slow, because it runs the document calculation\
+Returns a collection of tables on a given absolute page.
+💡 This method can be a little bit slow, because it runs the document calculation
 process to arrange tables on the specified page.
 
 ## Syntax

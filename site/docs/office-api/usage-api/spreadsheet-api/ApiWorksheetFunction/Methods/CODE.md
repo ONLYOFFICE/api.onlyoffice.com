@@ -30,6 +30,6 @@ This example shows how to return the code number from your computer's character 
 // Use function to get a code number from your computer's character set.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.CODE("office"));
 ```

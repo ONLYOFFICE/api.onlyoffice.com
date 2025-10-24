@@ -1,6 +1,6 @@
 # GetDataFields
 
-Returns a collection that represents either a single pivot table data field\
+Returns a collection that represents either a single pivot table data field
 or a collection of all visible data fields.
 
 ## Syntax

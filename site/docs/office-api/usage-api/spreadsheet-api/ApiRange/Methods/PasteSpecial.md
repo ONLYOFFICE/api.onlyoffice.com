@@ -16,8 +16,8 @@ expression.PasteSpecial(sPasteType, sPasteSpecialOperation, bSkipBlanks, bTransp
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sPasteType | Optional | [PasteType](../../Enumeration/PasteType.md) | "xlPasteAll" | Paste option. |
 | sPasteSpecialOperation | Optional | [PasteSpecialOperation](../../Enumeration/PasteSpecialOperation.md) | "xlPasteSpecialOperationNone" | The mathematical operation which will be applied to the copied data. |
-| bSkipBlanks | Required | boolean |  | [bSkipBlanks=false] - Specifies whether to avoid replacing values in the paste area when blank cells occur in the copy area. |
-| bTranspose | Required | boolean |  | [bTranspose=false] - Specifies whether the pasted data will be transposed from rows to columns. |
+| bSkipBlanks | Optional | boolean | false | Specifies whether to avoid replacing values in the paste area when blank cells occur in the copy area. |
+| bTranspose | Optional | boolean | false | Specifies whether the pasted data will be transposed from rows to columns. |
 
 ## Returns
 
