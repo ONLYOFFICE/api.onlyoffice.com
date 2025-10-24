@@ -32,11 +32,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 }
 ```
 
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
-
 ## Step 3: Review the plugin code
 
 By default, the plugin template includes a working implementation in the `src/index.ts` file. This works out of the box and does not require modification to appear in the plugin settings.
@@ -85,7 +80,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 5: Upload to DocSpace
 

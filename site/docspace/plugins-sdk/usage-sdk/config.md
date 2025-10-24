@@ -54,6 +54,14 @@ Type: string
 
 Example: "MIT"
 
+## minDocSpaceVersion
+
+The minimum DocSpace version required by the plugin. It is compared with the current version of the DocSpace client where the plugin is uploaded.
+
+Type: string
+
+Example: "7.2.0"
+
 ## name
 
 The plugin name.

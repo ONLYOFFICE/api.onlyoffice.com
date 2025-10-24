@@ -7,6 +7,7 @@
 #### Docspace
 
 * Updated DocSpace version 3.5
+* Updated documentation for Plugins SDK 2.0.0
 
 #### Docs
 

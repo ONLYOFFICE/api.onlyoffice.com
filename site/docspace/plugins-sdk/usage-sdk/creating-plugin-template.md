@@ -4,7 +4,11 @@ sidebar_position: -6
 
 # Creating plugin template
 
-Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings.
+Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings. For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
+
+   ```json
+   "build": "webpack && npx build-docspace-plugin"
+   ```
 
 1. Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
