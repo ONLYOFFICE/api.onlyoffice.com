@@ -76,7 +76,7 @@ Example: \[Devices.desktop]
 
 Defines the security parameters of the parent folder or room that will be checked. If all the parameters are **true**, the current item will be displayed in the context menu. If this parameter is undefined, it will be ignored.
 
-Type: array of [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/Security.ts)
+Type: array of [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Security.ts)
 
 Example: \[Security.Create]
 
@@ -84,7 +84,7 @@ Example: \[Security.Create]
 
 Defines the security parameters of the file, room, or folder that will be checked. If all the parameters are **true**, the current context menu item will be displayed. If this parameter is not specified, the security settings are ignored.
 
-Type: array of [FilesSecurity](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/FilesSecurity.ts) | [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/Security.ts)
+Type: array of [FilesSecurity](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts) | [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Security.ts)
 
 Example: [FilesSecurity.Edit]
 
