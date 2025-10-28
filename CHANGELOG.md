@@ -1,5 +1,26 @@
 # Change log
 
+## 7.1.0
+
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.5
+* Updated documentation for Plugins SDK 2.0.0
+
+#### Docs
+
+* Updated Office API documentation for version 9.1.0
+
+#### Docs API
+
+* The editorConfig.customization.uitheme parameter is now available for the mobile editors
+* Added the UserCanOnlyComment property to the CheckFileInfo WOPI operation
+* Changed the required size of the logo customization parameter
+* Added opening for hml format
+* Added conversion from pptx format to txt
+
 ## 7.0.0
 
 ### New features

@@ -1,0 +1,71 @@
+---
+id: toggle-file-favorite
+title: "toggleFileFavorite"
+description: "toggleFileFavorite"
+sidebar_label: "toggleFileFavorite"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVm1v4zYM/isEv3QD3KRIb8PmT+u116G3ATf0BcVwKK6KTce62JJOkttmgf/7QMlO7bhbu32KI/HlEcmH5Ba9WDlMP+O5rMjBHMIv3iWoDVnhpVYXOabo9WpVEV+eiwdtpSdM0AgravJk2cIWlagJUyxkRRc5JigVpmiELzHBnFxmpWF7mOJ1ScBicHE2wwQtfWukpRxTbxtK0GUl1QLTLfqNYZNSeVqRxQQLbWvh49HxAhOkJ1GbijD9+ad3P7Zt8gzjGWcA8q0hu5kguTKUyUKSA1mA72FJB7Wwa8pBOOgNgbagtGfAE4BLrSsSaoiHn9K2d/w6Z7Ry5Fh+cXTEP2MQ76M2PIiqoRRYEw5HaHoMCRSicvu3SnsYPDfTypPy7EcYU8kspHH+1bGz7RS8Xn6lzHM+LSfdywi1x/3CM1t20kQXr6WoTbCSau0GssJawamQnmr3OpDSUjGQct5KtWK7IosBnFy1bZug88I37o0Qo/CpzulNCm2CXnpOc5+8WyuMIdv5fnd0PE3zn7qBXKsDD6V4ICClm1UJhmwtnZNagdf8j32F9O4YGPyNbb3Ix5p8qZmtKwpRZOqlOBdGzhezozmXi5v3heLm28jUlgua7ENP48ZWmOJ2KRzd2KqdUibIQqZVIVdNhzDBB2GlWFYxZZ1yjEEhmopjN7F0Fq/g5vJ3jtsd48gaK/3mims0mhIu+yIaX35Z02ZYQ0b+RlM+3ziCU63XkoCVSPmu/DHpG8PIYNccsqDChfBeOJkN/JTem4mXD8qThY1uLDSOLBsGoXIwwrlHbfO+RQTOBINsmYQl+zbTB1EYth9vr+Far0m1ByOj0VbSfZz35fnx9ppdnYTgTBz+Q8xORoHihpJzU6+lohyWm1CLByykrfwryBxASSIPALqgjjx2Qe1k2gQ/sfZiyHQRDvaRRDkoKv0Ij9KXMPIKgZ4J8nUsjeFtz93RYajBEGiXzufB60yraqOLQmY0y3QdDxfzXo0deA7421WDeMiONn3rFEzDSxI5iCwj5wK3rfaUecrBktONzchhgo+BvCnehhnz79KxuXwyFIbyczTDwalWKrbPvaDy7Rl011NajLTf/moufKkKzfl9OnRypYRvLL1eblzSO3HmTw6Ftnu4ZsA7Qogs1I3zsCTQSy9CTT5IEYryvu9sfdsYZeQeSOVGS+VncOG5rJmecaYLiIyPVca2AofvBw+5nz1X9/B9ex2j5f+FDs/uJsKJkd0UFlkYkT1H/riAq8YYbTlJzSjSJVUmJ7feD3aZzUkdNlwoVAvJKi6a+GUsyWngFh5jfDz7YXbER0Y7Xws1QBEnR9jzYDA7RjnapdDTk5+bSsgw85vY0eNc+cz5xQQXsyPmZFgbk93Wxd9ptwneJVhq51lluxsrLR/HnYyHTi4dD48c07DgTPDsdpr/ubG9+J4wUYaLYljAeFLxLOoH2n/E991lt81+D3tr7osYeq6ozdD/DluMYHvXJn07ZTTx8iTLyPiB2mTb42fsloJfP1xj2/4NdKsdsQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"toggleFileFavorite"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/favorites/{fileId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+toggleFileFavorite
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID.","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"favorite","in":"query","description":"Specifies if the file is marked as favorite or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - the file is favorite, false - the file is not favorite","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

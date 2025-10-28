@@ -1,6 +1,6 @@
 # GetLayoutType
 
-Returns a type if the current layout.
+Returns the type of the current layout.
 
 ## Syntax
 
@@ -16,4 +16,4 @@ This method doesn't have any parameters.
 
 ## Returns
 
-boolean
+[LayoutType](../../Enumeration/LayoutType.md)

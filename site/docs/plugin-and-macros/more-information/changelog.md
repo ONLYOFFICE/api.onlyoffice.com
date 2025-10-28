@@ -6,6 +6,11 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 9.1
+
+- Added the [RemoveOleObject](../interacting-with-editors/spreadsheet-api/Methods/RemoveOleObject.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
+- Added the [RemoveOleObject](../interacting-with-editors/presentation-api/Methods/RemoveOleObject.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.
+
 ## Version 9.0
 
 - Added the ability to access [cell address information](../macros/adding-custom-functions.md#accessing-cell-addresses-since-v904) inside custom functions.

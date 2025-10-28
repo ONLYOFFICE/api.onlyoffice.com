@@ -54,6 +54,7 @@ Represents the ApiWorksheet class.
 | [GetCells](./Methods/GetCells.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use). |
 | [GetCols](./Methods/GetCols.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object that represents all the cells on the columns range. |
 | [GetComments](./Methods/GetComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | Returns all comments from the current worksheet. |
+| [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the current sheet. This manager allows manipulation and access to custom XML parts within the current sheet. |
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) \| null | Returns the ApiName object by the worksheet name. |
 | [GetDefNames](./Methods/GetDefNames.md) | [ApiName](../ApiName/ApiName.md)[] | Returns an array of ApiName objects. |
 | [GetFreezePanes](./Methods/GetFreezePanes.md) | [ApiFreezePanes](../ApiFreezePanes/ApiFreezePanes.md) | Returns the freeze panes from the current worksheet. |

@@ -32,7 +32,7 @@ This example shows how to find the average (arithmetic mean) for the cells speci
 // Use function to get an average of the cells if the condition is met.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let numbers = [67, 87, 98, 45];
 
 for (let i = 0; i < numbers.length; i++) {

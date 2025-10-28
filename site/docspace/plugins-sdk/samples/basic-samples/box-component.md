@@ -191,11 +191,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 }
 ```
 
-Also, verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
-
 ## Step 3: Review and extend plugin code
 
 By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin):

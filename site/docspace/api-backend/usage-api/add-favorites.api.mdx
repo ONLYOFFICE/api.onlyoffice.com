@@ -1,0 +1,71 @@
+---
+id: add-favorites
+title: "addFavorites"
+description: "addFavorites"
+sidebar_label: "addFavorites"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV0tv2zgQ/isDXnJR7azTvfi0ebRAugukSFIEiyBoxtLIYiORLB9xvYb+ezGkZEt222T3tL7IIufB+eabGWojPC6dmN+L97ImB1O4MmTRS62ceMiE7t8uCzEXWBTv8Vlb6cmJTFj6Gsj5M12sxXwjcq08Kc9/0Zha5lFx+sVpxWsur6jBuFvXV6WY32+EXxsSc6EXXyj3IhPGskMvybGcJR+supFqWdP2WLzRqS20rgmVyERBLrfSpH1xYyiXpSQHq4p8RRa8hmQMtKrX4CuCPFhLysM2QpEJ+oaNqUnMvQ3UthkHLHkP64+Dk5VYO9p3elsRLNDRziB0+IBBiw15sm4iMuGlZxcR8G1U1x2U6OjCa9FmL2FT6roge1m4AR5oLa5FJqSnJq6jWo+BlsrTkuww1N9mJ28H7py3Ui2HAsLphsDTNy/ah/ZHYdfSedAlpDPB5YXjN98DskCfVz0YjIAKdY2LLc6ZKGVN/7NQZE3/OpC2ffhvlBkZ/gldmBpnLNdRJdKkZZJackYrl3gxOz7mx9jRWSoUeMY60Bz4sCBTYDu2Sgcu5Dk5V4ZaZK8v55eKOJ3uB3XbspOQXBxktdS2QZ+WTmYsW0v19EuO/PoglaVyINWxg4s83+sr/VZE13n0wb3yiEn4XBf0KoV2kN6EyZ1FY8h2vt8enxwm828doNDqyEOFzwSkdFhWYMg20jlOpNf8xr7GGY7+xrb2GnpDvtLc6I12EUD0lZiLKRo5nU2Op1wVbloONBzZZ7IuFmawtZiLDTP6k63bw7YcZSHXqpTLsG26z2glF1HEuFNOUZcYakbrwNJF2oJP13+JVHWO8mClX98wK5MpdPlnDL76/ETrIWuM/JPWByY/OYJzrZ8kASuR8h3hucyxiZpDg5mQrJZHFU79GTqZD/xU3psDL++UJwtrHSwER5YNA6oCDDq30rZgRGMEXCXRIFsmtGRfZ/ooCcPmw90t3OonUu3RyGiylXV/3veE/HB3y65OIzgHDn+C2ekIKG4gBbetRioqYJHG7BELaSv/iTJHUBEW8QAdqCOPHaidTJuJK9aeDWsb48L+SZIclLVewUr6CkZeIRZkJng7UWO421fraDFyMALt5tNp9Drhq4MuS5nTJNdNWpxNezV24Bnw16tG8ZgdbfpmiVx+14QFYOzFsZqt9pR7KsCS08HmsfRWXINiLu74+YJ0aidXhuI9bodmXDjXSqWGuQcq715At31YFiPt10fNxJeq5EuO+PbGyaVCHyy9TDem9Fac66eAUtu9c02Ap2pEFprgPCwI9MJj5OSzxEjKx76h9W1jlJFHIFUYLZWfwKVnWnN5UgHoACFVfGIZ24o1/DgI5HGyY/cwvr2O0WaCR+n17g79rr+mbFqWLXWEpJsPp0Z2MxnzODD7+vl4CTfBGG05gWGUhYpqU5B72k9ElU9JvQlMImpQsopLJv4YS3KKuL0n/E8mv0+OeYmnQ4NqcAosChgOklHitnnli9fU1Cjj6A+pzacZc89JF5mYTY5Fug+ymd2kechExTNpfi822wnT8vLXQHYt5vcPu0nCb23WtxEeTXEEiPN0o3lzy8dh8Tokuu3dbvgOmTRO85yM/6Xsw2Bsfry6ueXe2n0QNbGzCIsr/ljCVRpl2qSvKy53XtuIGtUy4JJlk03+fQd7+L1c
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"addFavorites"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/favorites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+addFavorites
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"returnSingleOperation":{"type":"boolean","description":"Specifies whether to return only the current operation","example":true}},"additionalProperties":false,"description":"The base operation request parameters.","title":"FileOperationRequestBaseDto"},{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of folder IDs of the base batch request.","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of file IDs of the base batch request.","nullable":true}}}],"additionalProperties":false,"description":"The base batch request parameters.","title":"BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -34,10 +34,6 @@ A folder for storing plugin images. Nesting is not supported. The number of icon
 
 A folder for storing the compiled plugin version.
 
-## scripts
-
-A folder for storing script files for building the plugin. The *createZip.js* script is added to this folder. The script is executed when building the plugin to automatically archive it and create the *config.json* file.
-
 ## src
 
 A folder for the plugin source files.

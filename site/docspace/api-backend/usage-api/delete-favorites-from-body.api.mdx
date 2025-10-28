@@ -1,0 +1,71 @@
+---
+id: delete-favorites-from-body
+title: "deleteFavoritesFromBody"
+description: "deleteFavoritesFromBody"
+sidebar_label: "deleteFavoritesFromBody"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV0tv2zgQ/isDXnJR7ay7e/Fp8wTSLZAiSZFDEDRjaWSxoUiWpOJ6Df33xZCSLdltk93T5uKYnOc338zQGxFw6cX8QVxKRR6mcG3JYZBGe/GYCdN/uyrEXBSkKNAlvhgnA/lLZ+pTU6xFJhx9a8iH+G2+EbnRgXTgf9FaJfNoY/rVG81nPq+oxnir1HUp5g8bEdaWxFyYxVfKg8iEdew7SPIs5yg0Tt9KvVS0jZAvOrWFMYpQi0wU5HMnbboXt5ZyWUrysKooVOQgGEjGwGi1hlAR5I1zpANskxWZoO9YW0ViHlxDbZsJLArJd6g+DSIrUXnad3pXESzQ084gdPiARYc1BXJ+IjIRZGAXEfttVjcdlOjpPBjRZq9hUxpVkLsq/AAPdA65LjJQHc9Rr8dASx1oSW6Y6m+z978P3PngpF4OBYQ3NUGg70G0j+2P0lbSBzAlpJjg6tzzt9ADssCQVz0YjIBulMLFFudMlFLR/ywVqehfJ9K2j/+NMiPDP6ELU+OU5TqqRJq0TFJH3hrtEy9mx8f8MXZ0mhoFXlA1NAcOFmRKbMdW6cE3eU7el40S2dvb+bUmTtH9oG9bdtIkFwdVLY2rMaSj9zOWVVI//5Ijvw6kclQOpDp2cJPne3Olv4ro+oCh8W8MMQmfmYLepNAOypswuXdoLbno+4CgP5/ENYXK7IY1546hEnMxRSuns8nxlAntp2WvKzLhyb2Q87GnGqfEXGyYjJ+dag8napSF3OhSLpvtvHxBJ5n/EZ5OObGvxEZxogeWztMVfL75KFLDeMobJ8P6lgmVTKHPv2ATqi/PtB4W3Mq/aH1g8rMnODPmWRKwEunQcZU7FOuoOTSYCclqeVThqp2il/nATxWCPfByoQM5WJvGQePJsWFAXYBF71fGFYxozIAJHg2yZUJH7m2mj5IwbD7c38GdeSbdHo2MJltZ989lz6UP93fs6iSCc+DwJ5idjIDi3i944tRSUwGLtCGPWMg4+XeUOYKKsIgBdKCOPHagdjJtJq5ZezZsS4wH+5EkOSiVWcFKhgpGXiH2Uib4OlFjeNs32ugwcjAC7efTafQ64a1vylLmNMlNnQ5n016NHQQG/O2qUTxWx9h+ziE34A1hARjHKL86rDOB8kAFOPKmcXlsvRX3oJiLe/58RToNgmtL8TW2QzMenBmt06zbA5Vvz6G7PmyLkfbbs2biS13y+0R8f+flUmNoHL1ON6b0Vpz7p4DSuL24JsALMSILdeMDLAjMImDk5IvESMqnfqD1Y2NUkScgXVgjdZjAVWBac3tSAegBIXV8Yhnbij38NEjkabJj9zC/vYnRZoK34M3u+XvRvzA2LcuWJkLSjfYTK7t1inncdX3/fLqC28Za47iAzagKFSlbkH/eL0SVT0m/a5hEVKNkFZ9M/DmW5BLxeE/4v5/8MTnmI2t8qFEPokgbA7ZbBXitQLdXRlXcFpkfUFOrUMYV3qSZnxbOAzNAZGI2ORbpXceh7tbOYyYq4wMLbrbrpuXjbw25tZg/PO7WCn9rs36m8J6K+0CcpZfJuzsOh8VVk7i390rht2DSOMlzsuGXso+DLXp+8fHi7oJHbffTpo6DRjhc8c8eXKXNZmz6ycTdz2cboVAvG1yybLLKf/8Aqo6u3w==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"deleteFavoritesFromBody"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/favorites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+deleteFavoritesFromBody
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"returnSingleOperation":{"type":"boolean","description":"Specifies whether to return only the current operation","example":true}},"additionalProperties":false,"description":"The base operation request parameters.","title":"FileOperationRequestBaseDto"},{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of folder IDs of the base batch request.","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of file IDs of the base batch request.","nullable":true}}}],"additionalProperties":false,"description":"The base batch request parameters.","title":"BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

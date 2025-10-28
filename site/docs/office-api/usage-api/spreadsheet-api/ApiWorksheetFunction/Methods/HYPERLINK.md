@@ -31,6 +31,6 @@ This example shows how create a shortcut that jumps to another location in the c
 // Use a function to add url to the text.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.HYPERLINK("https://example.com/files/example.xlsx", "Click here"));
 ```

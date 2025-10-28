@@ -42,7 +42,7 @@ Example: `(id: number) => {}`
 
 ## fileExt
 
-Defines the extensions of files where the current item will be displayed in the context menu. It only works if the *FilesType.Files* is specified in the *fileType* parameter. If this parameter is not specified, then the current context menu item will be displayed in any file extension.
+Defines the extensions of files where the current item will be displayed in the context menu. It only works if the *FilesType.Files* is specified in the *fileType* parameter. If this parameter is not specified, then the current item will be displayed in any file extension.
 
 Type: array of [FilesExst](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts) / string
 
@@ -50,7 +50,7 @@ Example: \[FilesExst.docx, FilesExst.xlsx]
 
 ## fileType
 
-Defines the types of files where the current item will be displayed in the context menu. Presently the following file types are available: **room**, **file**, **folder**, **image**, **video**. If this parameter is not specified, then the current context menu item will be displayed in any file type.
+Defines the types of files where the current item will be displayed in the context menu. Presently the following file types are available: **room**, **file**, **folder**, **image**, **video**. If this parameter is not specified, then the current item will be displayed in any file type.
 
 Type: array of [FilesType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts)
 
@@ -58,7 +58,7 @@ Example: \[FilesType.file]
 
 ## usersType
 
-Defines the types of users who will see the current item in the context menu. Currently the following user types are available: **owner**, **docSpaceAdmin**, **roomAdmin**, **collaborator**, **user**. If this parameter is not specified, then the current context menu item will be displayed for all user types.
+Defines the types of users who will see the current item in the context menu. Currently the following user types are available: **owner**, **docSpaceAdmin**, **roomAdmin**, **collaborator**, **user**. If this parameter is not specified, then the current item will be displayed for all user types.
 
 Type: array of [UsersType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts)
 
@@ -66,7 +66,7 @@ Example: \[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]
 
 ## devices
 
-Defines the types of devices where the current item will be displayed in the context menu. At the moment the following device types are available: **mobile**, **tablet**, **desktop**. If this parameter is not specified, then the current context menu item will be displayed in any device types.
+Defines the types of devices where the current item will be displayed in the context menu. At the moment the following device types are available: **mobile**, **tablet**, **desktop**. If this parameter is not specified, then the current item will be displayed in any device types.
 
 Type: array of [Devices](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Devices.ts)
 
@@ -76,9 +76,17 @@ Example: \[Devices.desktop]
 
 Defines the security parameters of the parent folder or room that will be checked. If all the parameters are **true**, the current item will be displayed in the context menu. If this parameter is undefined, it will be ignored.
 
-Type: array of [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/develop/src/enums/Security.ts)
+Type: array of [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Security.ts)
 
 Example: \[Security.Create]
+
+## itemSecurity
+
+Defines the security parameters of the file, room, or folder that will be checked. If all the parameters are **true**, the current context menu item will be displayed. If this parameter is not specified, the security settings are ignored.
+
+Type: array of [FilesSecurity](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts) | [Security](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Security.ts)
+
+Example: [FilesSecurity.Edit]
 
 ## withActiveItem
 
@@ -99,6 +107,7 @@ export const convertFileItem: IContextMenuItem = {
   icon: "convert-16.png",
   onClick: (id: number) => {},
   fileType: [FilesType.file],
+  itemSecurity: [FilesSecurity.Edit],
   usersTypes: [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin],
 }
 ```

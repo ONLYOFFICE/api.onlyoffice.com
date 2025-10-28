@@ -1,6 +1,6 @@
 # FormType
 
-Form type.\
+Form type.
 The available form types.
 
 ## Type
@@ -16,6 +16,7 @@ Enumeration
 - "radioButtonForm"
 - "pictureForm"
 - "complexForm"
+- "dateForm"
 
 
 ## Example

@@ -1,0 +1,71 @@
+---
+id: remove-security-info
+title: "removeSecurityInfo"
+description: "removeSecurityInfo"
+sidebar_label: "removeSecurityInfo"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV0tvGzcQ/ivEXHzZSK7SXnSqXwGcBnBgO/DBMOLR7qyWMZdk+LCjCvvfiyF35ZXkxG5P9UUWOc9vvpmh1hBw6WF+Cx+kIi+m4qpBJ/US7gowlhwGafR5BXNw1JpHuqIyOhlW57o2UICj75F8ODbVCuZrKI0OpAP/i9YqWSb16TdvNJ/5sqEW061SFzXMb9cQVpZgDmbxjcoABVjHboMkz3KOQnT6SuqlooshHL7o1RbGKEINBVTkSydtvocrS6WsJXnx1FBoyIlgRDYmjFYrERoSZXSOdBCbPKEA+oGtVQTz4CJ1XQFYVZLvUH0eRVaj8rTr9LohsUBPzwZFj4+w6LClQM5PoIAgA7tImG+yuuyhRE+nwUBXvIZNbVRF7rzyIzzQOVxBATJQm85Rr7aBljrQktw41d9m738fufMhEWAkAN60JAL9CNDddS+lraQPwtQixyTOTz1/CwMgCwxlM4DBCOioFC42OBdQS0X/s1Skon+dSNfd/TfKbBn+CV2YGscs11Ml0aRjkjry1mifeTE7POSPbUfHuVHEI6pIc8HBCpkTe2ar9MLHsiTv66igeHs7v9bEOboX+rZjJzG72KtqbVyLIR+9n7Gskvrhlxz5dSCNo3ok1bODm7zcmSvDVULXBwzRvzHELHxiKnqTQjcqb8bkxqG15JLvPYK+OIRbCo3hEV2RokCcNoYG5jBFK6ezyeGUueynvkHHt57cIzmfWik6BXNYMwe/ONXtD9IkK0qja7mMmzH5iE4y7RMqvXImXY1RcX57lk7zlfhy+Qlyn/g+jSvmUTaFvvyKMTRfH2g1rrOVf9Fqz+QXT+LEmAdJgpVIh56i3JjYJs2xwQIkq5VJhYt1jF6WIz9NCHbPy5kO5MTKRCeiJ8eGBepKWPT+ybiKEU0ZMK+TQbZM6Mi9zfRBFhbrjzfX4to8kO4OtoxmW0X/z4eBQh9vrtnVUQJnz+FPMDvaAopbvuJB00pNlVjkxXjAQsbJv5PMgWgIqxRAD+qWxx7UXqYr4IK1Z+NuxHSwG0mWE7UyT+JJhkZseRWphQrg60yN8e3QX1uHiYMJaD+fTpPXCS97U9eypElp2nw4mw5q7CAw4G9XTeKpOsYO4w25+S4JK4FpevJjwzoTqAxUCUfeRFeShwKenAwMyQ1/viKd+//CUnp/PaOZDk6M1nnE7YDKt6eiv95viy3tt2fNxJc8bboCfrzzcqkxREev040pvRHn/qlEbdxOXBPBezAhK9rog1iQMIuAiZOPEhMp74dhNoyNrYrcC9KVNVKHiTgPTGtuT6oEeoEid3xmGdtKPXw/SuR+8szucX47E6MrgJff5fOr92x4WKw7lq1NgqSf6EdW9lsUy7Tihv75fC6uorXGcQHjVhUaUrYi/7BbiKackn4XmUTUomQVn038uS3JJeLxnvF/P/ljcshH1vjQoh5FkXeJGJaJ6LfJVv025eUX09QqlGlnxzzt85q55dpDAbPJIeSHHAeZl81dAY3xgYXWmyXT8fH3SG4F89u752XC37pimCS8ndIWgJP8DHl3zaGwuIqZcTtPEn74ZY2jsiQbfil7N9qbp2efzq7PeMD2v2PaNF7A4RP/xsGnvM9MAiX3PJ+tQaFeRlyybLbKf/8AuYCkZQ==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"removeSecurityInfo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+removeSecurityInfo
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"returnSingleOperation":{"type":"boolean","description":"Specifies whether to return only the current operation","example":true}},"additionalProperties":false,"description":"The base operation request parameters.","title":"FileOperationRequestBaseDto"},{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of folder IDs of the base batch request.","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of file IDs of the base batch request.","nullable":true}}}],"additionalProperties":false,"description":"The base batch request parameters.","title":"BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

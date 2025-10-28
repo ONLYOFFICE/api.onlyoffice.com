@@ -15,6 +15,7 @@ Represents the ApiDateForm class.
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetFormat](./Methods/GetFormat.md) | string | Gets the date format of the current form. |
 | [GetLanguage](./Methods/GetLanguage.md) | string | Gets the used date language of the current form. |
+| [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |
 | [GetText](./Methods/GetText.md) | string | Returns the text from the current form. |
