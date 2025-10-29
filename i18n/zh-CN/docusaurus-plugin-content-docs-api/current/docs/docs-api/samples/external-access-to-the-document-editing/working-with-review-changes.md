@@ -17,22 +17,22 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 
    ``` ts
    $("#accept").on("click", () => {
-     connector.executeMethod("AcceptReviewChanges")
-   })
+     connector.executeMethod("AcceptReviewChanges");
+   });
    $("#reject").on("click", () => {
-     connector.executeMethod("RejectReviewChanges")
-   })
+     connector.executeMethod("RejectReviewChanges");
+   });
    ```
 
 2. 当用户单击自定义界面中的箭头按钮时，将执行 MoveToNextReviewChange 方法，在下一次和上一次审阅更改之间移动：
 
    ``` ts
    $("#prev").on("click", () => {
-     connector.executeMethod("MoveToNextReviewChange", [false])
-   })
+     connector.executeMethod("MoveToNextReviewChange", [false]);
+   });
    $("#next").on("click", () => {
-     connector.executeMethod("MoveToNextReviewChange")
-   })
+     connector.executeMethod("MoveToNextReviewChange");
+   });
    ```
 
 :::note
