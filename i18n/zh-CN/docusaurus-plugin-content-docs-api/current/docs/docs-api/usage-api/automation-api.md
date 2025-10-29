@@ -99,9 +99,9 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 ### ToolbarMenuItemType
 
-工具栏菜单项类型。*button* 和 *big-button* 值相同，可以同样用于指定工具栏按钮。
-
-类型: "button" | "big-button"
+| 类型                      | 描述                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| "button" \| "big-button" | 工具栏菜单项类型。*button* 和 *big-button* 值相同，可以同样用于指定工具栏按钮。 |
 
 示例:
 

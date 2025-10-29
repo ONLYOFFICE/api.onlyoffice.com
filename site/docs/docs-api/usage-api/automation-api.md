@@ -99,9 +99,9 @@ The function called to add an item to the toolbar menu. The process of working w
 
 ### ToolbarMenuItemType
 
-The toolbar menu item type. The *button* and *big-button* values are the same and can be equally used to specify the toolbar button.
-
-Type: "button" | "big-button"
+| Type                      | Description                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| "button" \| "big-button" | The toolbar menu item type. The *button* and *big-button* values are the same and can be equally used to specify the toolbar button. |
 
 ### Example:
 
