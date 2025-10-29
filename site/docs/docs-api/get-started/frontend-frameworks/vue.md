@@ -110,19 +110,19 @@ This procedure creates a [basic Vue.js application](https://cli.vuejs.org/guide/
 
 1. Add the `DocEditor.instances` parameter to the `window` object and get the editor object from it by the editor ID:
 
-   ```vue
+   ```js
    const documentEditor = window.DocEditor.instances["docEditor"];
    ```
 
 2. Call any editor [method](../../usage-api/methods.md) from this object:
 
-   ```vue
+   ```js
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
    ```
 
 Example:
 
-```vue
+```js
 onDocumentReady() {
   const documentEditor = window.DocEditor.instances["docEditor"];
 
