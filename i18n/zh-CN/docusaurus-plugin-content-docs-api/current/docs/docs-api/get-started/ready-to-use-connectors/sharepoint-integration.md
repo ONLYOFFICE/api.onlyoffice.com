@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # SharePoint 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="5rN7CksWE-w"/>
+```
+
 该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) 可让用户借助ONLYOFFICE文档在SharePoint中编辑办公文档。
 
 ## 功能特性

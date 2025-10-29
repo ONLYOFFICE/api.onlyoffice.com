@@ -11,7 +11,7 @@
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
-<YoutubeVideo videoId="k1vyDlQbdEU" start={154} />
+<YoutubeVideo videoId="y6RKGiBHiG8" />
 ```
 
 ## 安装

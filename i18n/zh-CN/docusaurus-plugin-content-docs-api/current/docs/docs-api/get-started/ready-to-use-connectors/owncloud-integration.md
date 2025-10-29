@@ -8,7 +8,7 @@ sidebar_custom_props:
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
-<YoutubeVideo videoId="IAjhUxBWKkQ"/>
+<YoutubeVideo videoId="33w03FcPWTo"/>
 ```
 
 这个[应用](https://github.com/ONLYOFFICE/onlyoffice-owncloud)允许用户借助ONLYOFFICE文档，在[ownCloud](https://owncloud.com)中编辑办公文档。

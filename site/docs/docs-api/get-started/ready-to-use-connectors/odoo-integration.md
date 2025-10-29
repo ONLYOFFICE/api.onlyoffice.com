@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Odoo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="wkLTlJpmLQg"/>
+```
+
 This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit and collaborate on office documents within [Odoo](https://www.odoo.com/) Documents using ONLYOFFICE Docs.
 
 ## Features

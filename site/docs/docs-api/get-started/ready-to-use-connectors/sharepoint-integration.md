@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # SharePoint integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="5rN7CksWE-w"/>
+```
+
 This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from SharePoint using ONLYOFFICE Docs.
 
 ## Features

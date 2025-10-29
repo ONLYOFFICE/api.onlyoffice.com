@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Nuxeo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="W6z0475IxCU"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to edit office documents from [Nuxeo](https://www.nuxeo.com/) using ONLYOFFICE Docs.
 
 ## Features

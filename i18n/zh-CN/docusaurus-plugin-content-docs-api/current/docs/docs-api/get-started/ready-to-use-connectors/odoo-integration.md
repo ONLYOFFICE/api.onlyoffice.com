@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Odoo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="wkLTlJpmLQg"/>
+```
+
 该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-odoo)允许用户在[Odoo](https://www.odoo.com/)的“文档”模块中，借助ONLYOFFICE文档进行办公文档的编辑与协作。
 
 ## 功能特性

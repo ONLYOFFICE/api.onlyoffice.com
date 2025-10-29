@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Moodle integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="JudgGPQo1nQ"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor) enables users to edit office documents from [Moodle](https://moodle.org/) using ONLYOFFICE Docs.
 
 ## Features

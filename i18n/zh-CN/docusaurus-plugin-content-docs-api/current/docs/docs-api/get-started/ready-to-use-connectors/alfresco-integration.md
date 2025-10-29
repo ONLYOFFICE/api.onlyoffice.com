@@ -8,6 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Alfresco 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="pQPm00oUqOE"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share中用ONLYOFFICE文档编辑办公文档。
 
 该插件在官方[Alfresco附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。

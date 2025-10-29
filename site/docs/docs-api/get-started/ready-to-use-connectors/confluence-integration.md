@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Confluence integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="pGd06HLkWU4"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-confluence) enables users to edit office documents from [Confluence](https://www.atlassian.com/software/confluence/) using ONLYOFFICE Docs.
 
 The connector is available in the official [Atlassian Marketplace](https://marketplace.atlassian.com/1218214).

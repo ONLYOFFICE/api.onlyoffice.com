@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Chamilo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="gl3gmhOKFk8"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to edit office documents within [Chamilo](https://chamilo.org/en/) using ONLYOFFICE Docs.
 
 ## Features

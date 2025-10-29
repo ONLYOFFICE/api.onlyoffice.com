@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Jira integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="mQgpkMwwbLE"/>
+```
+
 This [app](https://github.com/ONLYOFFICE/onlyoffice-jira) enables users to edit office documents from [Jira Software](https://www.atlassian.com/software/jira) using ONLYOFFICE Docs.
 
 The connector is available in the official [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira).
