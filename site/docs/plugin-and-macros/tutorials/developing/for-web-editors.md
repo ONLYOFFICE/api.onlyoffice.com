@@ -25,7 +25,7 @@ To develop a plugin for ONLYOFFICE web editors, follow the instructions below.
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json");
    ```
 
-   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed.
+   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 

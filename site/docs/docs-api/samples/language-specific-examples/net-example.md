@@ -41,7 +41,7 @@ To connect the editors to your website, specify the path to the editors installa
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-path** is the path where files will be created and stored. You can set an absolute path.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-path** is the path where files will be created and stored. You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *DocEditor.aspx* file.
 

@@ -236,7 +236,7 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json")
    ```
 
-   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed.
+   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 

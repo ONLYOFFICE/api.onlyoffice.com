@@ -40,7 +40,7 @@ After the editing is finished, the [document saving](./saving-file.md) process t
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
 

@@ -46,7 +46,7 @@ JWT_SECRET=secret
 JWT_HEADER=Authorization
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 **address** is the address of the server, **port** is the server port.
 
 If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *templates/editor.html* file.
