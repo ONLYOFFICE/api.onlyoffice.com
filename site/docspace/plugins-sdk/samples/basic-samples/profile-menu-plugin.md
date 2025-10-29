@@ -127,5 +127,5 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - You can add multiple items via [`addProfileMenuItem`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/profilemenuplugin.md#addprofilemenuitem).
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/profilemenuitem.md#onclick) function is a good place to trigger modals, open side panels, or call APIs.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/profilemenuitem.md#onClick) function is a good place to trigger modals, open side panels, or call APIs.
 - You can extend this plugin to support other scopes like `MainButton`, `Settings`, or `ContextMenu` by updating the `package.json` and plugin logic accordingly.

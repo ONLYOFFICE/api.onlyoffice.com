@@ -80,7 +80,7 @@ Example:
 
 ## onDownload
 
-The function called when firing events to download items from the manager. It returns a link to the download object. This event is called only when the [downloadToEvent](./config.md#downloadtoevent) parameter is specified in the config.
+The function called when firing events to download items from the manager. It returns a link to the download object. This event is called only when the [downloadToEvent](./config.md#downloadToEvent) parameter is specified in the config.
 
 Example:
 

@@ -6,381 +6,61 @@ sidebar_position: -4
 
 The configuration parameters describe the behavior and display options of the DocSpace elements.
 
-## buttonColor
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-The selector button color.
-
-Type: string
-
-Example: "#5299E0"
-
-## checkCSP
-
-Specifies whether to check for the presence of CSP headers before initialization.
-
-Type: boolean
-
-Example: true
-
-## destroyText
-
-The text that will be inserted into the *div* tag when the [destroyFrame](./methods.md#destroyframe) method is called.
-
-Type: string
-
-Example: ""
-
-## disableActionButton
-
-Specifies whether to disable the **Actions** button in the manager interface.
-
-Type: boolean
-
-Example: false
-
-## downloadToEvent
-
-Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](./events.md#ondownload) event.
-
-Type: boolean
-
-Example: false
-
-## editorCustomization
-
-The parameters to customize editors. The parameters from [this section](../../../docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md) are used.
-
-Type: object
-
-Example: {}
-
-## editorGoBack
-
-Specifies whether the **File Location** button is displayed in the editor.
-
-Type: boolean
-
-Example: true
-
-## editorType
-
-The editor mode display type ("embedded", "desktop").
-
-Type: string
-
-Example: "desktop"
-
-## events
-
-A list of DocSpace events that will be returned on certain actions within the SDK.
-
-Type: object
-
-Example:
-
-``` ts
-const events = {
-  onSelectCallback: null,
-  onCloseCallback: null,
-  onAppReady: null,
-  onAppError: null,
-  onEditorCloseCallback: null,
-  onAuthSuccess: null,
-  onSignOut: null,
-  onDownload: null,
-}
+<APITable>
 ```
+| Parameter             | Type    | Example                                                                                                                                                                                      | Description                                                                                                                                                                   |
+| --------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| buttonColor           | string  | `"#5299E0"`                                                                                                                                                                                  | The selector button color.                                                                                                                                                    |
+| checkCSP              | boolean | `true`                                                                                                                                                                                       | Specifies whether to check for the presence of CSP headers before initialization.                                                                                             |
+| destroyText           | string  | `""`                                                                                                                                                                                         | The text inserted into the *div* tag when the [destroyFrame](./methods.md#destroyframe) method is called.                                                                     |
+| disableActionButton   | boolean | `false`                                                                                                                                                                                      | Specifies whether to disable the **Actions** button in the manager interface.                                                                                                 |
+| downloadToEvent       | boolean | `false`                                                                                                                                                                                      | Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](./events.md#ondownload) event.                                        |
+| editorCustomization   | object  | `{}`                                                                                                                                                                                         | The parameters to customize editors from [this section](../../../docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md).                     |
+| editorGoBack          | boolean | `true`                                                                                                                                                                                       | Specifies whether the **File Location** button is displayed in the editor.                                                                                                    |
+| editorType            | string  | `"desktop"`                                                                                                                                                                                  | The editor mode display type (`"embedded"`, `"desktop"`).                                                                                                                     |
+| events                | object  | `const events = { onSelectCallback: null, onCloseCallback: null, onAppReady: null, onAppError: null, onEditorCloseCallback: null, onAuthSuccess: null, onSignOut: null, onDownload: null, }` | A list of DocSpace events returned on certain actions within the SDK.                                                                                                         |
+| filter                | object  | `{ count: 100, page: 1, search: "", sortorder: "descending", sortby: "DateAndTime", withSubfolders: false, }`                                                                                | The filter parameters for searching files in the DocSpace manager.                                                                                                            |
+| filter.count          | integer | `100`                                                                                                                                                                                        | A number of files to be displayed.                                                                                                                                            |
+| filter.page           | integer | `1`                                                                                                                                                                                          | A page number.                                                                                                                                                                |
+| filter.search         | string  | `""`                                                                                                                                                                                         | A query to search for files.                                                                                                                                                  |
+| filter.sortorder      | string  | `"descending"`                                                                                                                                                                               | The sort order of files (`"descending"`, `"ascending"`).                                                                                                                      |
+| filter.sortby         | string  | `"DateAndTime"`                                                                                                                                                                              | The sort parameter (`"DateAndTime"`, `"AZ"`, `"Type"`, `"Size"`, `"DateAndTimeCreation"`, `"Author"`).                                                                        |
+| filter.withSubfolders | boolean | `false`                                                                                                                                                                                      | Specifies whether to exclude subfolders when searching for files.                                                                                                             |
+| filterParam           | string  | `"ALL"`                                                                                                                                                                                      | The filter parameters for selector mode (`"ALL"`, `"DOCX"`, `"IMG"`, `"GZ"`, `"DOCXF"`, `"XLSX"`, `"BackupOnly"`).                                                            |
+| frameId               | string  | `"ds-frame"`                                                                                                                                                                                 | The frame SDK ID used to refer to the SDK instance.                                                                                                                           |
+| height                | string  | `"100%"`                                                                                                                                                                                     | The frame SDK height in percent.                                                                                                                                              |
+| id                    | string  | `null`                                                                                                                                                                                       | The element ID for SDK initialization.                                                                                                                                        |
+| infoPanelVisible      | boolean | `true`                                                                                                                                                                                       | Specifies whether to display a button to show the info panel in the manager.                                                                                                  |
+| locale                | string  | `null`                                                                                                                                                                                       | The language of the DocSpace user interface which is specified with the four letter language code.                                                                            |
+| mode                  | string  | `"manager"`                                                                                                                                                                                  | The SDK [initialization mode](./initialization-modes/initialization-modes.md). Values: `"manager"`, `"file-selector"`, `"room-selector"`, `"editor"`, `"viewer"`, `"system"`. |
+| name                  | string  | `"frameDocSpace"`                                                                                                                                                                            | The name of the object inserted into the page.  It is used for messaging at the SDK level.                                                                                    |
+| requestToken          | string  | `null`                                                                                                                                                                                       | The token used to open public rooms/files.                                                                                                                                    |
+| rootPath              | string  | `"/rooms/shared/"`                                                                                                                                                                           | The path to the frame SDK. Opens a list of rooms by default.                                                                                                                  |
+| selectorType          | string  | `"roomsOnly"`                                                                                                                                                                                | The selector type defining filters in the selector mode. Values: `"roomsOnly"`, `"userFolderOnly"`, `"exceptPrivacyTrashArchiveFolders"`, `"exceptSortedByTagsFolders"`.      |
+| showFilter            | boolean | `false`                                                                                                                                                                                      | Specifies whether the interface filter is displayed in the DocSpace manager.                                                                                                  |
+| showHeader            | boolean | `false`                                                                                                                                                                                      | Specifies whether the header is displayed in the mobile view manager.                                                                                                         |
+| showMenu              | boolean | `false`                                                                                                                                                                                      | Specifies whether the interface menu is displayed in the DocSpace manager.                                                                                                    |
+| showSelectorCancel    | boolean | `false`                                                                                                                                                                                      | Specifies whether **Cancel** button is displayed in the selector mode.                                                                                                        |
+| showSelectorHeader    | boolean | `false`                                                                                                                                                                                      | Specifies whether the interface header is displayed in the selector mode.                                                                                                     |
+| showSettings          | boolean | `false`                                                                                                                                                                                      | Specifies whether to display the **Manage displayed columns** button for configuring the table columns in the manager.                                                        |
+| showSignOut           | boolean | `true`                                                                                                                                                                                       | Specifies whether the **Sign out** button is displayed.                                                                                                                       |
+| showTitle             | boolean | `true`                                                                                                                                                                                       | Specifies whether the interface title is displayed in the DocSpace manager.                                                                                                   |
+| src                   | string  | `{PORTAL_SRC}`                                                                                                                                                                               | The base URL to the DocSpace portal. It is used to generate links.                                                                                                            |
+| theme                 | string  | `"Base"`                                                                                                                                                                                     | The UI theme (`"Base"`, `"Dark"`, `"System"`).                                                                                                                                |
+| type                  | string  | `"desktop"`                                                                                                                                                                                  | The platform type which is used by the browser and affects the parameters of the inserted object  (`"desktop"`, `"mobile"`).                                                  |
+| viewAs                | string  | `"row"`                                                                                                                                                                                      | The way elements are arranged in the DocSpace manager (`"row"`, `"table"`, `"tile"`).                                                                                         |
+| viewTableColumns      | string  | `"Name,Type,Tags"`                                                                                                                                                                           | The column names that are displayed for the table in the manager.                                                                                                             |
+| width                 | string  | `"100%"`                                                                                                                                                                                     | The frame SDK width in percent.                                                                                                                                               |
+| withBreadCrumbs       | boolean | `true`                                                                                                                                                                                       | Specifies whether to display the breadcrumbs in the selector mode.                                                                                                            |
+| withSearch            | boolean | `true`                                                                                                                                                                                       | Specifies whether to display **Search** in the selector mode.                                                                                                                 |
+| withSubtitle          | boolean | `true`                                                                                                                                                                                       | Specifies whether to display the filter parameters in the selector mode.                                                                                                      |
 
-## filter
-
-The filter parameters that facilitate searching files in the DocSpace manager.
-
-Type: object
-
-Example:
-
-``` ts
-const filter = {
-  count: 100,
-  page: 1,
-  search: "",
-  sortorder: "descending",
-  sortby: "DateAndTime",
-  withSubfolders: false,
-}
+```mdx-code-block
+</APITable>
 ```
-
-### filter.count
-
-A number of files to be displayed.
-
-Type: integer
-
-Example: 100
-
-### filter.page
-
-A page number.
-
-Type: integer
-
-Example: 1
-
-### filter.search
-
-A query to search for files.
-
-Type: string
-
-Example: ""
-
-### filter.sortorder
-
-The sort order of files ("descending", "ascending").
-
-Type: string
-
-Example: "descending"
-
-### filter.sortby
-
-The parameter by which the files will be sorted ("DateAndTime", "AZ", "Type", "Size", "DateAndTimeCreation", "Author").
-
-Type: string
-
-Example: "DateAndTime"
-
-### filter.withSubfolders
-
-Specifies whether to exclude subfolders when searching for files.
-
-Type: boolean
-
-Example: false
-
-## filterParam
-
-The filter parameters that facilitate searching files in the selector mode. The possible values: *"ALL", "DOCX", "IMG", "GZ", "DOCXF", "XLSX", "BackupOnly"*.
-
-Type: string
-
-Example: "ALL"
-
-## frameId
-
-The frame SDK ID which is used to refer to the SDK instance.
-
-Type: string
-
-Example: "ds-frame"
-
-## height
-
-The frame SDK height measured in percent.
-
-Type: string
-
-Example: "100%"
-
-## id
-
-The element ID which will be used in the SDK initialization modes.
-
-Type: string
-
-Example: null
-
-## infoPanelVisible
-
-Specifies whether to display a button to show the info panel in the manager.
-
-Type: boolean
-
-Example: true
-
-## locale
-
-The language of the DocSpace user interface which is specified with the four letter language code.
-
-Type: string
-
-Example: null
-
-## mode
-
-The SDK [initialization mode](./initialization-modes/initialization-modes.md) ("manager", "file-selector", "room-selector", "editor", "viewer", "system").
-
-Type: string
-
-Example: "manager"
-
-## name
-
-The name of the object inserted into the page. It is used for messaging at the SDK level.
-
-Type: string
-
-Example: "frameDocSpace"
-
-## requestToken
-
-The request token that is used to open public rooms and files in public rooms.
-
-Type: string
-
-Example: null
-
-## rootPath
-
-The path to the frame SDK. Opens a list of rooms by default.
-
-Type: string
-
-Example: "/rooms/shared/"
-
-## selectorType
-
-The selector type that defines filters for elements in the selector mode. The possible values: *"roomsOnly", "userFolderOnly", "exceptPrivacyTrashArchiveFolders", "exceptSortedByTagsFolders"*.
-
-Type: string
-
-Example: "roomsOnly"
-
-## showFilter
-
-Specifies whether the interface filter is displayed in the DocSpace manager.
-
-Type: boolean
-
-Example: false
-
-## showHeader
-
-Specifies whether the interface header is displayed in the mobile view manager.
-
-Type: boolean
-
-Example: false
-
-## showMenu
-
-Specifies whether the interface menu is displayed in the DocSpace manager.
-
-Type: boolean
-
-Example: false
-
-## showSelectorCancel
-
-Specifies whether the **Cancel** button is displayed in the selector mode.
-
-Type: boolean
-
-Example: false
-
-## showSelectorHeader
-
-Specifies whether the interface header is displayed in the selector mode.
-
-Type: boolean
-
-Example: false
-
-## showSettings
-
-Specifies whether to display the **Manage displayed columns** button for configuring the table columns in the manager.
-
-Type: boolean
-
-Example: false
-
-## showSignOut
-
-Specifies whether the **Sign out** button is displayed.
-
-Type: boolean
-
-Example: true
-
-## showTitle
-
-Specifies whether the interface title is displayed in the DocSpace manager.
-
-Type: boolean
-
-Example: true
-
-## src
-
-The base URL to the DocSpace portal. It is used to generate links.
-
-Type: string
-
-Example: `{PORTAL\_SRC}`
-
-## theme
-
-The DocSpace user interface theme ("Base", "Dark", "System").
-
-Type: string
-
-Example: "Base"
-
-## type
-
-The platform type which is used by the browser and affects the parameters of the inserted object ("desktop", "mobile").
-
-Type: string
-
-Example: "desktop"
-
-## viewAs
-
-The way elements are arranged in the DocSpace manager ("row", "table", "tile").
-
-Type: string
-
-Example: "row"
-
-## viewTableColumns
-
-The column names that are displayed for the table in the manager.
-
-Type: string
-
-Example: "Name,Type,Tags"
-
-## width
-
-The frame SDK width measured in percent.
-
-Type: string
-
-Example: "100%"
-
-## withBreadCrumbs
-
-Specifies whether to display the breadcrumbs in the selector mode.
-
-Type: boolean
-
-Example: true
-
-## withSearch
-
-Specifies whether to display **Search** in the selector mode.
-
-Type: boolean
-
-Example: true
-
-## withSubtitle
-
-Specifies whether to display the filter parameters in the selector mode.
-
-Type: boolean
-
-Example: true
 
 ## Example
 
