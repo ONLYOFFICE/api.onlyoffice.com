@@ -37,7 +37,7 @@ Follow the steps [in this section](../../using-wopi/overview.md#ip-filter) to co
 - available document operations in the online office,
 - supported file formats (extensions).
 
-The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 More information about WOPI discovery can be found [here](../../using-wopi/wopi-discovery.md).
 
