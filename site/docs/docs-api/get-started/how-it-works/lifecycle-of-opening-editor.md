@@ -49,13 +49,13 @@ Specify there the following events:
 
    ## message
 
+   `Type: string` | **required**
+
    Defines the message text.
 
-   Type: string
-
-   Presence: required
-
-  > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
+   :::note
+   Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
+   :::
 
 2. When an error or some other specific event occurs, the [onError](../../usage-api/config/events.md#onerror)  event is executed:
 

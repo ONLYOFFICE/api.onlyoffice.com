@@ -49,13 +49,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
    ## 消息
 
+   `类型：字符串` | **必需**
+
    定义消息文本。
 
-   类型：字符串
-
-   是否必需：是
-
-  > 请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
+   :::note
+   请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
+   :::
 
 2. 当发生错误或其他特定事件时，会执行[onError](../../usage-api/config/events.md#onerror)事件：
 
