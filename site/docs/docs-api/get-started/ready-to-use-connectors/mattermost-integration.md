@@ -34,7 +34,10 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
    ``` sh
    npm install --legacy-peer-deps
    ```
-   > Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.
+
+   :::note
+   Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.
+   :::
 
 4. Run the following command:
 
