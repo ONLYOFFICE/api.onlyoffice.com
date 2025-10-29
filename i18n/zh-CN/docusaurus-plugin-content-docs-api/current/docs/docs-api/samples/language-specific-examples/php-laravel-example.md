@@ -8,7 +8,9 @@ sidebar_position: -3
 
 这是一个使用 PHP 和 [Laravel 框架](https://laravel.com/docs/11.x/installation#meet-laravel)编写的示例应用，集成了 ONLYOFFICE文档。
 
-> 该示例应用仅用于测试和演示编辑器功能，**请勿**在未修改代码的情况下直接用于生产环境。如需启用测试示例，务必在上线前将其禁用。
+:::note
+该示例应用仅用于测试和演示编辑器功能，**请勿**在未修改代码的情况下直接用于生产环境。如需启用测试示例，务必在上线前将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -43,7 +45,9 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
   cd "PHP Laravel Example"
   ```
 
-  > 您应该修改`.env`文件中的`DOCUMENT_SERVER_JWT_SECRET`环境变量，因为`docker-compose.yml`使用它在 ONLYOFFICE 文档中设置 JWT 机密。
+  :::note
+  您应该修改`.env`文件中的`DOCUMENT_SERVER_JWT_SECRET`环境变量，因为`docker-compose.yml`使用它在 ONLYOFFICE 文档中设置 JWT 机密。
+  :::
 
 2. 要运行容器，可以使用`make compose-start`命令来构建并启动项目，也可以手动执行相应命令：
 
@@ -67,11 +71,15 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
      docker compose exec example php artisan key:generate
      ```
 
-   > 要停止 Docker 容器，可以运行`make compose-stop`或`docker compose down`命令。
+   :::note
+   要停止 Docker 容器，可以运行`make compose-stop`或`docker compose down`命令。
+   :::
 
    如果安装和配置顺利完成，您现在可以通过访问`localhost:80`来试用示例应用程序。
 
-   > 同时，您可以根据需要调整 [nginx](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel/docker) 配置和应用运行的[端口](https://github.com/ONLYOFFICE/document-server-integration/blob/master/web/documentserver-example/php-laravel/docker-compose.yml)。
+   :::note
+   同时，您可以根据需要调整 [nginx](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel/docker) 配置和应用运行的[端口](https://github.com/ONLYOFFICE/document-server-integration/blob/master/web/documentserver-example/php-laravel/docker-compose.yml)。
+   :::
 
 ### 选项 2. 本地安装
 
