@@ -266,7 +266,9 @@ The **document manager** and **document storage service** are either included to
       }
       ```
 
-      > *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::note
+      *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
 
       On the [.Net example](../samples/language-specific-examples/net-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
   </TabItem>
@@ -308,7 +310,9 @@ The **document manager** and **document storage service** are either included to
       }
       ```
 
-      > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::note
+      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
 
       On the [Java example](../samples/language-specific-examples/java-example.md) and [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
   </TabItem>
@@ -347,7 +351,9 @@ The **document manager** and **document storage service** are either included to
       })
       ```
 
-      > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::note
+      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
 
       On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
   </TabItem>
@@ -375,7 +381,9 @@ The **document manager** and **document storage service** are either included to
       ?>
       ```
 
-      > *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::note
+      *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
 
       On the [PHP example](../samples/language-specific-examples/php-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
   </TabItem>
@@ -411,7 +419,9 @@ The **document manager** and **document storage service** are either included to
       end
       ```
 
-      > *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::note
+      *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
 
       On the [Ruby example](../samples/language-specific-examples/ruby-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.
   </TabItem>

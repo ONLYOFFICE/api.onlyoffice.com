@@ -14,7 +14,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 [connector](./automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
 
-> 此参数仅适用于ONLYOFFICE文档开发者版的编辑。
+:::note
+此参数仅适用于ONLYOFFICE文档开发者版的编辑。
+:::
 
   ``` ts
   docEditor.createConnector()
@@ -52,7 +54,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format    | string | 非必填的 | 定义下载文件的格式。您可以在[转换表](../additional-api/conversion-api/conversion-tables.md)中找到所有可能的格式。但是您不能下载 *bmp*, *gif*, *jpg*, *png* 等图像格式的文件。 如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
 
-> 请注意从 *djvu*, *pdf*, *xps* 格式的转换不可用。将下载原始格式。
+:::note
+请注意从 *djvu*, *pdf*, *xps* 格式的转换不可用。将下载原始格式。
+:::
 
 ## insertImage
 
@@ -87,17 +91,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 | token           | string           | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
 | url             | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。自 7.0 版起已弃用，请改用 *images.url* 参数。 |
 
-  > 在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
-  >
-  > ``` ts
-  > docEditor.insertImage({
-  >   c: "add",
-  >   fileType: "png",
-  >   url: "https://example.com/url-to-example-image.png",
-  > })
-  >```
-  >
-  > 请注意，此结构已弃用，下一个编辑器版本将不支持此结构。请使用新的。
+:::note
+在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
+
+``` ts
+docEditor.insertImage({
+  c: "add",
+  fileType: "png",
+  url: "https://example.com/url-to-example-image.png",
+})
+```
+
+请注意，此结构已弃用，下一个编辑器版本将不支持此结构。请使用新的。
+:::
 
 ## refreshFile
 
@@ -322,9 +328,13 @@ refreshFile({
 
 通过指向文件的链接刷新数据, 该链接使用 *referenceData*、*path* 或 *link* 参数指定。 此方法必须在 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件之后调用。
 
- > 此参数仅可用于ONLYOFFICE文档开发者版的编辑。
+:::note
+此参数仅可用于ONLYOFFICE文档开发者版的编辑。
+:::
 
-  > 请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。
+:::note
+请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。
+:::
 
   ``` ts
   docEditor.setReferenceData({
@@ -364,7 +374,9 @@ refreshFile({
 
 更改外部数据源。该方法可以在 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件之后调用。
 
-  > 请注意，仅当用户对要从中获取数据的文件具有权限时才会执行此方法。
+:::note
+请注意，仅当用户对要从中获取数据的文件具有权限时才会执行此方法。
+:::
 
   ``` ts
   docEditor.setReferenceSource({
@@ -448,7 +460,9 @@ refreshFile({
 
 选择一个文档进行比较。此方法必须在 [onRequestCompareFile](./config/events.md#onrequestcomparefile) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedDocument](#setrequesteddocument)。
 
-> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
+:::note
+此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
+:::
 
   ``` ts
   docEditor.setRevisedFile({
@@ -527,9 +541,13 @@ refreshFile({
 | users.image | string           | 非必填的 | 定义用户头像的路径。 当*c*参数为*info*时，此字段是必需的。                                                                                                                  |
 | users.name  | string           | 非必填的 | 定义用户的全名。                                                                                                                                                                               |
 
-> 请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png,base64,\*\*\*\*\*"*。
+:::note
+请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png,base64,\*\*\*\*\*"*。
+:::
 
-> 请注意，如果您订阅了 *onRequestUsers* 事件并使用 *setUsers* 方法发送头像，则 [user.image](./config/editor/editor.md#user) 初始化配置中的字段不是必需的。如果头像以base64格式发送并且初始化配置使用JWT签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
+:::note
+请注意，如果您订阅了 *onRequestUsers* 事件并使用 *setUsers* 方法发送头像，则 [user.image](./config/editor/editor.md#user) 初始化配置中的字段不是必需的。如果头像以base64格式发送并且初始化配置使用JWT签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
+:::
 
 ## showMessage
 
@@ -543,7 +561,9 @@ refreshFile({
 | --------- | ------ | -------- | ------------------------- |
 | message   | string | 必填 | 定义消息文本。 |
 
-> 请注意，嵌入式平台[类型](./config/config.md#type)不支持显示带有消息的工具提示。
+:::note
+请注意，嵌入式平台[类型](./config/config.md#type)不支持显示带有消息的工具提示。
+:::
 
 ## startFilling
 

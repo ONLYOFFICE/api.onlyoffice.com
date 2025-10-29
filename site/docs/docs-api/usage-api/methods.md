@@ -14,7 +14,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 Create the [connector](./automation-api.md) to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
-> This parameter is available for editing only for ONLYOFFICE Docs Developer.
+:::note
+This parameter is available for editing only for ONLYOFFICE Docs Developer.
+:::
 
   ``` ts
   docEditor.createConnector()
@@ -52,7 +54,9 @@ Download the edited file. This method can be called only when the existence of t
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format    | string | optional | Defines the format in which a file will be downloaded. All the possible formats you can find in the [conversion tables](../additional-api/conversion-api/conversion-tables.md). But you cannot download a file in the image formats such as *bmp*, *gif*, *jpg*, *png*. If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type. |
 
-> Please note that conversion from the *djvu*, *pdf*, *xps* formats are not available. The original format will be downloaded.
+:::note
+Please note that conversion from the *djvu*, *pdf*, *xps* formats are not available. The original format will be downloaded.
+:::
 
 ## insertImage
 
@@ -87,17 +91,19 @@ Where **example.com** is the name of the server where **document manager** and *
 | token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#insertimage).                                                                                                                                 |
 | url             | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. Deprecated since version 7.0, please use the *images.url* parameter instead. |
 
-  > Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
-  >
-  > ``` ts
-  > docEditor.insertImage({
-  >   c: "add",
-  >   fileType: "png",
-  >   url: "https://example.com/url-to-example-image.png",
-  > })
-  >```
-  >
-  > Please note that this structure is deprecated and will not be supported by the next editors versions. Please use a new one.
+:::note
+Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
+
+``` ts
+docEditor.insertImage({
+  c: "add",
+  fileType: "png",
+  url: "https://example.com/url-to-example-image.png",
+})
+```
+
+Please note that this structure is deprecated and will not be supported by the next editors versions. Please use a new one.
+:::
 
 ## refreshFile
 
@@ -322,9 +328,13 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
-  > This parameter is available for editing only for ONLYOFFICE Docs Developer.
+:::note
+This parameter is available for editing only for ONLYOFFICE Docs Developer.
+:::
 
-  > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
+:::note
+Please note that this method is executed only when the user has permissions to the file from which the data is taken.
+:::
 
   ``` ts
   docEditor.setReferenceData({
@@ -364,7 +374,9 @@ Show an error message explaining if any error occurred:
 
 Change a source of the external data. This method can be called after the [onRequestReferenceSource](./config/events.md#onrequestreferencesource) event.
 
-  > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
+:::note
+Please note that this method is executed only when the user has permissions to the file from which the data is taken.
+:::
 
   ``` ts
   docEditor.setReferenceSource({
@@ -448,7 +460,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
 
-> This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
+:::note
+This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
+:::
 
   ``` ts
   docEditor.setRevisedFile({
@@ -527,9 +541,13 @@ Where **example.com** is the name of the server where **document manager** and *
 | users.image | string           | optional | Defines the path to the user's avatar. This field is required when the *c* parameter is *info*.                                                                                                                  |
 | users.name  | string           | optional | Defines the full name of the user.                                                                                                                                                                               |
 
-> Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, *"data:image/png,base64,\*\*\*\*\*"*.
+:::note
+Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, *"data:image/png,base64,\*\*\*\*\*"*.
+:::
 
-> Please note that if you are subscribed to the *onRequestUsers* event and send an avatar using the *setUsers* method, the [user.image](./config/editor/editor.md#user) field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
+:::note
+Please note that if you are subscribed to the *onRequestUsers* event and send an avatar using the *setUsers* method, the [user.image](./config/editor/editor.md#user) field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
+:::
 
 ## showMessage
 
@@ -543,7 +561,9 @@ Display a tooltip with a message. This method can be called only after the [onAp
 | --------- | ------ | -------- | ------------------------- |
 | message   | string | required | Defines the message text. |
 
-> Please note that displaying a tooltip with a message is not supported in the embedded platform [type](./config/config.md#type).
+:::note
+Please note that displaying a tooltip with a message is not supported in the embedded platform [type](./config/config.md#type).
+:::
 
 ## startFilling
 

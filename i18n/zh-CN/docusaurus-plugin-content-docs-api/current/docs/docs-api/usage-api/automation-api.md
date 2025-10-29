@@ -12,9 +12,11 @@ sidebar_position: -2
 const connector = docEditor.createConnector()
 ```
 
-> > 请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
->
-> 连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+:::note
+请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
+
+连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+:::
 
 连接器与插件具有相同的接口。下面可以找到可用于此类的方法。
 
@@ -193,7 +195,7 @@ connector.callCommand(() => {
 
  调用该函数将连接器连接到编辑器。
 
-:::注意
+:::note
 请注意，只有在您已经使用了[disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](./methods.md#createconnector) 方法一起自动被调用。 
 :::
 

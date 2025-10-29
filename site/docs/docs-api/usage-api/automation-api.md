@@ -12,9 +12,11 @@ To create the connector, use the [createConnector](./methods.md#createconnector)
 const connector = docEditor.createConnector();
 ```
 
-> Please note that the connector is available only for the **ONLYOFFICE Docs Developer**.
->
-> The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+:::note
+Please note that the connector is available only for the **ONLYOFFICE Docs Developer**.
+
+The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+:::
 
 The connector has the same interface as plugins. Below you can find methods that are available for this class.
 
