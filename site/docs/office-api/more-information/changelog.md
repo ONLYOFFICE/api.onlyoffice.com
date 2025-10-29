@@ -902,7 +902,6 @@ The list of changes for Office JavaScript API.
 
 - Added the [ApiRange/AddField](../usage-api/text-document-api/ApiRange/Methods/AddField.md) method to Text document API.
 - Added the [ApiRange/MoveCursorToPos](../usage-api/text-document-api/ApiRange/Methods/MoveCursorToPos.md) method to Text document API.
-- Added the [ApiRange/Expand](../usage-api/spreadsheet-api/ApiRange/Methods/Expand.md) method to Spreadsheet API.
 - Added the [ApiRange/GetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormulaArray.md) method to Spreadsheet API.
 - Added the [ApiRange/SetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/SetFormulaArray.md) method to Spreadsheet API.
 
