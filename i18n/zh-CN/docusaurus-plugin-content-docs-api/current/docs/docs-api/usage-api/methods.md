@@ -7,7 +7,7 @@ sidebar_position: -3
 初始化**文档编辑器**后，您将获得可用于调用方法的对象。
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", config)
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## createConnector
@@ -19,7 +19,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 :::
 
   ``` ts
-  docEditor.createConnector()
+  docEditor.createConnector();
   ```
 
 ## denyEditingRights
@@ -27,7 +27,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
  拒绝编辑。当您想让文档编辑不可用时，可以调用此方法。
 
   ``` ts
-  docEditor.denyEditingRights(message)
+  docEditor.denyEditingRights(message);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述                           |
@@ -39,7 +39,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 销毁 *docEditor* 对象。当您想使用其他配置重新启动文档编辑器时，可以调用此方法。从 4.3 版开始使用。
 
   ``` ts
-  docEditor.destroyEditor()
+  docEditor.destroyEditor();
   ```
 
 ## downloadAs
@@ -47,7 +47,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 下载编辑后的文件。只有在存在 [onDownloadAs](./config/events.md#ondownloadas) 事件 时才能调用该方法。**文档编辑服务**异步创建文档并使用参数中的链接触发 **onDownloadAs** 事件。
 
   ``` ts
-  docEditor.downloadAs(format)
+  docEditor.downloadAs(format);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -76,7 +76,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
       },
     ],
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md) 部分。
@@ -124,7 +124,7 @@ refreshFile({
     callbackUrl: "https://example.com/url-to-callback.ashx",
   },
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-})
+});
 ```
 
 ## refreshHistory
@@ -218,7 +218,7 @@ refreshFile({
  请求关闭编辑器。建议在 [destroyEditor](#destroyeditor) 方法之前调用该方法来检查编辑器中是否有一些未保存的数据。如果存在未保存的数据，则会显示对话框询问用户是否要继续编辑或关闭编辑器，丢失所有未保存的数据。如果选择*关闭*选项，则将调用 [onRequestClose](./config/events.md#onrequestclose) 事件。
 
   ``` ts
-  docEditor.requestClose()
+  docEditor.requestClose();
   ```
 
 ## setActionLink
@@ -226,7 +226,7 @@ refreshFile({
 设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 *ACTION_DATA* 以设置链接。 该链接由软件集成商创建，他们在 **文档管理器**中使用 ONLYOFFICE 文档。
 
   ``` ts
-  docEditor.setActionLink(link)
+  docEditor.setActionLink(link);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述                                                                       |
@@ -238,7 +238,7 @@ refreshFile({
 更改 *收藏* 图标状态。此方法必须在 [onMetaChange](./config/events.md#onmetachange) 事件之后调用。
 
   ``` ts
-  docEditor.setFavorite(favorite)
+  docEditor.setFavorite(favorite);
   ```
 
 | 参数 | 类型    | 是否必填 | 描述                                                                  |
@@ -256,7 +256,7 @@ refreshFile({
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
     url: "https://example.com/url-to-example-document.docx",
     version: 2,
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -276,7 +276,7 @@ refreshFile({
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     url: "https://example.com/url-to-example-document.docx",
     version: 2,
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -287,7 +287,7 @@ refreshFile({
   docEditor.setHistoryData({
     error: "Exception",
     version: 2,
-  })
+  });
   ```
 
 | 参数         | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                 |
@@ -313,7 +313,7 @@ refreshFile({
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -347,7 +347,7 @@ refreshFile({
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -357,7 +357,7 @@ refreshFile({
   ``` ts
   docEditor.setReferenceData({
     error: "Exception",
-  })
+  });
   ```
 
 | 参数     | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -389,7 +389,7 @@ refreshFile({
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -399,7 +399,7 @@ refreshFile({
   ``` ts
   docEditor.setReferenceSource({
     error: "Exception",
-  })
+  });
   ```
 
 | 参数     | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -422,7 +422,7 @@ refreshFile({
     fileType: "docx",
     url: "https://example.com/url-to-example-document.docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -444,7 +444,7 @@ refreshFile({
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -469,7 +469,7 @@ refreshFile({
     fileType: "docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
     url: "https://example.com/url-to-example-document.docx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../get-started/how-it-works/how-it-works.md) 部分。
@@ -497,7 +497,7 @@ refreshFile({
         user: "External link",
       },
     ],
-  })
+  });
   ```
 
 | 参数                   | 类型            | 是否必填 | 描述                                                             |
@@ -527,7 +527,7 @@ refreshFile({
         name: "Kate Cage",
       },
     ],
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -554,7 +554,7 @@ refreshFile({
 显示带有消息的工具提示。该方法只能在 [onAppReady](./config/events.md#onappready) 事件之后调用。
 
   ``` ts
-  docEditor.showMessage(message)
+  docEditor.showMessage(message);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述               |
@@ -570,5 +570,5 @@ refreshFile({
 开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。
 
   ``` ts
-  docEditor.startFilling()
+  docEditor.startFilling();
   ```

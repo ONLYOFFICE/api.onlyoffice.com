@@ -7,7 +7,7 @@ sidebar_position: -3
 After initializing **document editor** you will get the object that can be used to call the methods.
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", config)
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## createConnector
@@ -19,7 +19,7 @@ This parameter is available for editing only for ONLYOFFICE Docs Developer.
 :::
 
   ``` ts
-  docEditor.createConnector()
+  docEditor.createConnector();
   ```
 
 ## denyEditingRights
@@ -27,7 +27,7 @@ This parameter is available for editing only for ONLYOFFICE Docs Developer.
 Deny editing. This method can be called when you want to make the document editing unavailable.
 
   ``` ts
-  docEditor.denyEditingRights(message)
+  docEditor.denyEditingRights(message);
   ```
 
 | Parameter | Type   | Presence | Description                           |
@@ -39,7 +39,7 @@ Deny editing. This method can be called when you want to make the document editi
 Destroy *docEditor* object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.
 
   ``` ts
-  docEditor.destroyEditor()
+  docEditor.destroyEditor();
   ```
 
 ## downloadAs
@@ -47,7 +47,7 @@ Destroy *docEditor* object. This method can be called when you want to reinit do
 Download the edited file. This method can be called only when the existence of the [onDownloadAs](./config/events.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
 
   ``` ts
-  docEditor.downloadAs(format)
+  docEditor.downloadAs(format);
   ```
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -76,7 +76,7 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
       },
     ],
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA",
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -124,7 +124,7 @@ docEditor.refreshFile({
     callbackUrl: "https://example.com/url-to-callback.ashx",
   },
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-})
+});
 ```
 
 ## refreshHistory
@@ -218,7 +218,7 @@ Show an error message explaining why the version history cannot be displayed:
 Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](./config/events.md#onrequestclose) event will be called.
 
   ``` ts
-  docEditor.requestClose()
+  docEditor.requestClose();
   ```
 
 ## setActionLink
@@ -226,7 +226,7 @@ Request to close the editor. It is recommended to call this method before the [d
 Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](./config/events.md#onmakeactionlink) event. The software integrator must process the *ACTION\_DATA* received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.
 
   ``` ts
-  docEditor.setActionLink(link)
+  docEditor.setActionLink(link);
   ```
 
 | Parameter | Type   | Presence | Description                                                                       |
@@ -238,7 +238,7 @@ Set the link to the document which contains a bookmark. This method must be call
 Change the *Favorite* icon state. This method must be called after the [onMetaChange](./config/events.md#onmetachange) event.
 
   ``` ts
-  docEditor.setFavorite(favorite)
+  docEditor.setFavorite(favorite);
   ```
 
 | Parameter | Type    | Presence | Description                                                                  |
@@ -256,7 +256,7 @@ Send the link to the document for viewing the version history. This method must 
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
     url: "https://example.com/url-to-example-document.docx",
     version: 2,
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -276,7 +276,7 @@ If after editing and saving the document the *changesurl* link to the file with 
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     url: "https://example.com/url-to-example-document.docx",
     version: 2,
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -287,7 +287,7 @@ Send an error message explaining why the document version cannot be displayed:
   docEditor.setHistoryData({
     error: "Exception",
     version: 2,
-  })
+  });
   ```
 
 | Parameter         | Type    | Presence | Description                                                                                                                                                                                                                                                                                                                 |
@@ -313,7 +313,7 @@ Insert recipient data for mail merge into the file. This method must be called a
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -347,7 +347,7 @@ Please note that this method is executed only when the user has permissions to t
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
   ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -357,7 +357,7 @@ Show an error message explaining if any error occurred:
   ``` ts
   docEditor.setReferenceData({
     error: "Exception",
-  })
+  });
   ```
 
 | Parameter     | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -389,7 +389,7 @@ Please note that this method is executed only when the user has permissions to t
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
   ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -399,7 +399,7 @@ Show an error message explaining if any error occurred:
   ``` ts
   docEditor.setReferenceSource({
     error: "Exception",
-  })
+  });
   ```
 
 | Parameter     | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -422,7 +422,7 @@ Select a document for comparing, combining, or inserting text. This method must 
     fileType: "docx",
     url: "https://example.com/url-to-example-document.docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -444,7 +444,7 @@ Insert recipient data for mail merge into the file. This method must be called a
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -469,7 +469,7 @@ This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE D
     fileType: "docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
     url: "https://example.com/url-to-example-document.docx",
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -497,7 +497,7 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
         user: "External link",
       },
     ],
-  })
+  });
   ```
 
 | Parameter                   | Type            | Presence | Description                                                             |
@@ -527,7 +527,7 @@ Set a list of users to mention in the comments, grant the access rights to edit 
         name: "Kate Cage",
       },
     ],
-  })
+  });
   ```
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -554,7 +554,7 @@ Please note that if you are subscribed to the *onRequestUsers* event and send an
 Display a tooltip with a message. This method can be called only after the [onAppReady](./config/events.md#onappready) events.
 
   ``` ts
-  docEditor.showMessage(message)
+  docEditor.showMessage(message);
   ```
 
 | Parameter | Type   | Presence | Description               |
@@ -570,5 +570,5 @@ Please note that displaying a tooltip with a message is not supported in the emb
 Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event.
 
   ``` ts
-  docEditor.startFilling()
+  docEditor.startFilling();
   ```

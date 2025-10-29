@@ -318,37 +318,37 @@ import TabItem from '@theme/TabItem';
 </TabItem>
   <TabItem value="nodejs" label="Node.js">
       ``` ts
-      import {fs} from "node:fs"
-      import {syncRequest} from "sync-request"
+      import {fs} from "node:fs";
+      import {syncRequest} from "sync-request";
 
       app.post("/track", (req, res) => {
         function updateFile(response, body, path) {
           if (body.status === 2) {
-            const file = syncRequest("GET", body.url)
-            fs.writeFileSync(path, file.getBody())
+            const file = syncRequest("GET", body.url);
+            fs.writeFileSync(path, file.getBody());
           }
 
-          response.write("{\"error\":0}")
-          response.end()
+          response.write("{\"error\":0}");
+          response.end();
         }
 
         function readbody(request, response, path) {
-          let content = ""
+          let content = "";
           request.on("data", (data) => {
-            content += data
-          })
+            content += data;
+          });
           request.on("end", () => {
-            const body = JSON.parse(content)
-            updateFile(response, body, path)
-          })
+            const body = JSON.parse(content);
+            updateFile(response, body, path);
+          });
         }
 
         if (req.body.hasOwn("status")) {
-          updateFile(res, req.body, pathForSave)
+          updateFile(res, req.body, pathForSave);
         } else {
-          readbody(req, res, pathForSave)
+          readbody(req, res, pathForSave);
         }
-      })
+      });
       ```
 
       :::note
