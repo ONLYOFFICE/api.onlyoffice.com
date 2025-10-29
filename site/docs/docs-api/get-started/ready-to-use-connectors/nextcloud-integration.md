@@ -144,7 +144,9 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs.
 
-  > Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  :::note
+  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  :::
 
 - **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
 
