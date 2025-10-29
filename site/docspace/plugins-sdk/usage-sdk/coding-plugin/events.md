@@ -150,7 +150,7 @@ The function called when opening a modal window for creating certain item (file,
 
 ## updateCreateDialogModal
 
-The function called to update the **CreateDialog** component. It does not work if the [createDialogProps](./plugin-message.md#createdialogprops) parameter is not passed to the message.
+The function called to update the **CreateDialog** component. It does not work if the [createDialogProps](./plugin-message.md#createDialogProps) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
