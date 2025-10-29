@@ -39,13 +39,15 @@ sidebar_custom_props:
    https://<yoursharepointsite>
    ```
 
-   > 除了步骤**3**和**4**，您也可以输入以下命令：
-   >
-   >   ``` ps1
-   >   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
-   >   ```
-   >   
-   >在**SharePoint中央管理**主页上，点击**系统设置->场管理->管理场解决方案**。在**解决方案管理**页面，点击**onlyoffice.wsp->部署解决方案**。
+   :::note
+   除了步骤**3**和**4**，您也可以输入以下命令：
+
+   ``` ps1
+   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
+   ```
+   
+   在**SharePoint中央管理**主页上，点击**系统设置->场管理->管理场解决方案**。在**解决方案管理**页面，点击**onlyoffice.wsp->部署解决方案**。
+   :::
 
 5. 在**SharePoint中央管理**主页的**应用程序管理**下，点击**管理Web应用程序**。
 
@@ -69,7 +71,9 @@ https://<documentserver>/
 
 其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称，该地址必须能被用户浏览器和SharePoint服务器访问。SharePoint服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
 
-> 请注意，如果您使用SharePoint设置了子网站，为确保功能正常，您需要为每个子网站额外配置ONLYOFFICE文档连接。进入每个子网站的设置，在相应字段中输入ONLYOFFICE文档地址。
+:::note
+请注意，如果您使用SharePoint设置了子网站，为确保功能正常，您需要为每个子网站额外配置ONLYOFFICE文档连接。进入每个子网站的设置，在相应字段中输入ONLYOFFICE文档地址。
+:::
 
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在SharePoint管理设置中指定您自己的**密钥**。在ONLYOFFICE文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
