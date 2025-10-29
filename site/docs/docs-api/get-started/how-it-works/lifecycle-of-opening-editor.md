@@ -29,8 +29,8 @@ Specify there the following events:
 
    ``` ts
    function onAppReady() {
-     console.log("ONLYOFFICE Document Editor is ready")
-   };
+     console.log("ONLYOFFICE Document Editor is ready");
+   }
 
    const config = {
      events: {
@@ -61,8 +61,8 @@ Specify there the following events:
 
    ``` ts
    function onError(event) {
-     console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-   };
+     console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
+   }
 
    const config = {
      events: {
@@ -79,8 +79,8 @@ Specify there the following events:
 
    ``` ts
    function onOutdatedVersion() {
-     location.reload(true)
-   };
+     location.reload(true);
+   }
 
    const config = {
      events: {
@@ -111,8 +111,8 @@ Specify there the following events:
          mode: "edit",
        },
        token: "...",
-     })
-   };
+     });
+   }
 
    const config = {
      events: {
@@ -129,8 +129,8 @@ Specify there the following events:
 
    ``` ts
    function onUserActionRequired() {
-     console.log("Enter a password")
-   };
+     console.log("Enter a password");
+   }
 
    const config = {
      events: {
@@ -147,8 +147,8 @@ Specify there the following events:
 
    ``` ts
    function onDocumentReady() {
-     console.log("Document is loaded")
-   };
+     console.log("Document is loaded");
+   }
 
    const config = {
      events: {
@@ -173,11 +173,11 @@ Specify there the following events:
    ```ts
    function onRequestClose() {
      if (window.opener) {
-       window.close()
-       return
+       window.close();
+       return;
      }
-     docEditor.destroyEditor()
-   };
+     docEditor.destroyEditor();
+   }
 
    const config = {
      events: {
