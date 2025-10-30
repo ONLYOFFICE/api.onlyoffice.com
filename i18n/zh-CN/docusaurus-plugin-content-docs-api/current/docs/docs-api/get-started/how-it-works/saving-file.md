@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 5. **文档编辑服务**使用来自 [JavaScript API](../basic-concepts.md) 的 *callbackUrl* 通知**文档存储服务**文档编辑结束，并返回修改后文档的链接。
 
-   > 请注意，从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status*) 选择 [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 是从最后一个加入共同编辑的用户开始使用的。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
+   > 请注意，从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status) 选择 [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 是从最后一个加入共同编辑的用户开始使用的。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
 
 6. **文档存储服务**从**文档编辑服务**下载所有已保存更改的文档文件并将其存储。
 
