@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Duplicate files and folders
 
 This example demonstrates how to duplicate one or more files and folders in ONLYOFFICE DocSpace using the API. The duplicated items will appear in the same location with a modified title.
@@ -9,42 +12,92 @@ This example demonstrates how to duplicate one or more files and folders in ONLY
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const HEADERS = {
+    Authorization: `Bearer ${API_KEY}`,
+    'Content-Type': 'application/json',
+  };
 
-# Headers with API key for authentication
-HEADERS = {
+  // File and folder IDs to duplicate
+  const FILE_IDS = [111111, 222222];
+  const FOLDER_IDS = [333333, 444444];
+
+  // Step 1: Duplicate specified files and folders
+  function duplicateFilesAndFolders(fileIds, folderIds) {
+    const url = `${API_HOST}/api/2.0/files/fileops/duplicate`;
+    const data = {
+      fileIds: fileIds,
+      folderIds: folderIds,
+    };
+
+    return fetch(url, {
+      method: 'PUT',
+      headers: HEADERS,
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Duplication failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch(() => null);
+  }
+
+  // Run
+  duplicateFilesAndFolders(FILE_IDS, FOLDER_IDS);
+  ```
+  
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  HEADERS = {
     'Authorization': f'Bearer {API_KEY}',
     'Content-Type': 'application/json'
-}
+  }
 
-# File and folder IDs to duplicate
-FILE_IDS = [111111, 222222]
-FOLDER_IDS = [333333, 444444]
+  # File and folder IDs to duplicate
+  FILE_IDS = [111111, 222222]
+  FOLDER_IDS = [333333, 444444]
 
-# Step 1: Duplicate specified files and folders
-def duplicate_files_and_folders(file_ids, folder_ids):
-    url = f'https://{API_HOST}/api/2.0/files/fileops/duplicate'
+  # Step 1: Duplicate specified files and folders
+  def duplicate_files_and_folders(file_ids, folder_ids):
+    url = f'{API_HOST}/api/2.0/files/fileops/duplicate'
     data = {
-        'fileIds': file_ids,
-        'folderIds': folder_ids
+      'fileIds': file_ids,
+      'folderIds': folder_ids
     }
 
     response = requests.put(url, headers=HEADERS, json=data)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"Duplication failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     duplicate_files_and_folders(FILE_IDS, FOLDER_IDS)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works
