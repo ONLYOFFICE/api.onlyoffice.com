@@ -1,5 +1,35 @@
 # Change log
 
+## 7.2.0
+
+### New features
+
+#### Docspace
+
+* Added new API Backend samples
+* Added error handling in API Backend samples
+* Added js language to API Backend samples
+* Added JavaScript SDK react samples
+
+#### Docs API
+
+* Added YouTube videos to ready-to-use connectors
+* Added additional examples for documentserver and api instructions
+
+### Fixes
+
+* Restructured parameters description to tables
+
+#### Docs
+
+* Fixed Office API documentation
+
+#### Docs API
+
+* Fixed note style
+* Fixed code samples
+* Fixed sorting for Docs API integration samples
+
 ## 7.1.0
 
 ### New features
