@@ -199,7 +199,8 @@ This example demonstrates how to read billing-related information in ONLYOFFICE 
 
 A GET request is sent to [/api/2.0/portal/payment/customerinfo](/docspace/api-backend/usage-api/get-customer-info).
 
-- The API response includes:
+The API response includes:
+
 - Basic customer profile details.
 - Billing-related contact information.
 
@@ -321,7 +322,7 @@ The API response includes:
 
 ## Step 4: Retrieve available quotas
 
-A GET request is sent to [/api/2.0/portal/payment/quotas](/docspace/api-backend/usage-api/delete-file).
+A GET request is sent to [/api/2.0/portal/payment/quotas](/docspace/api-backend/usage-api/get-payment-quotas).
 
 The API response includes:
 
