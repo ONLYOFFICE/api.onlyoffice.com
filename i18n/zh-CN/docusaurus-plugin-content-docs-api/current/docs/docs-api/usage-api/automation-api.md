@@ -9,12 +9,14 @@ sidebar_position: -2
 要创建连接器，请使用**文档编辑器**对象的 [createConnector](./methods.md#createconnector) 方法 ：
 
 ``` ts
-const connector = docEditor.createConnector()
+const connector = docEditor.createConnector();
 ```
 
-> > 请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
->
-> 连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+:::note
+请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
+
+连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+:::
 
 连接器与插件具有相同的接口。下面可以找到可用于此类的方法。
 
@@ -97,9 +99,9 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 ### ToolbarMenuItemType
 
-工具栏菜单项类型。*button* 和 *big-button* 值相同，可以同样用于指定工具栏按钮。
-
-类型: "button" | "big-button"
+| 类型                      | 描述                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| "button" \| "big-button" | 工具栏菜单项类型。*button* 和 *big-button* 值相同，可以同样用于指定工具栏按钮。 |
 
 示例:
 
@@ -148,8 +150,8 @@ connector.addToolbarMenuItem({
 
 ``` ts
 connector.attachEvent("onChangeContentControl", (obj) => {
-  console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`)
-})
+  console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
+});
 ```
 
 ## callCommand
@@ -180,27 +182,27 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 ``` ts
 connector.callCommand(() => {
-  const oDocument = Api.GetDocument()
-  const oParagraph = Api.CreateParagraph()
-  oParagraph.AddText("Hello")
-  oDocument.InsertContent([oParagraph])
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText("Hello");
+  oDocument.InsertContent([oParagraph]);
 }, () => {
-  console.log("[COMMAND] Callback command")
-})
+  console.log("[COMMAND] Callback command");
+});
 ```
 
 ## 连接
 
  调用该函数将连接器连接到编辑器。
 
-:::注意
+:::note
 请注意，只有在您已经使用了[disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](./methods.md#createconnector) 方法一起自动被调用。 
 :::
 
 ### 示例:
 
 ``` ts
-connector.connect()
+connector.connect();
 ```
 
 ## createWindow
@@ -210,7 +212,7 @@ connector.connect()
 ### 示例:
 
 ``` ts
-const testConnectorWindow = connector.createWindow()
+const testConnectorWindow = connector.createWindow();
 ```
 
 ## detachEvent
@@ -226,7 +228,7 @@ const testConnectorWindow = connector.createWindow()
 ### 示例:
 
 ``` ts
-connector.detachEvent("onChangeContentControl")
+connector.detachEvent("onChangeContentControl");
 ```
 
 ## disconnect
@@ -236,7 +238,7 @@ connector.detachEvent("onChangeContentControl")
 ### 示例:
 
 ``` ts
-connector.disconnect()
+connector.disconnect();
 ```
 
 ## executeMethod
@@ -255,8 +257,8 @@ connector.disconnect()
 
 ``` ts
 connector.executeMethod("GetCurrentWord", [], (word) => {
-  console.log(`[METHOD] GetCurrentWord: ${word}`)
-})
+  console.log(`[METHOD] GetCurrentWord: ${word}`);
+});
 ```
 
 ## updateContextMenuItem
@@ -288,9 +290,9 @@ const items = [
     id: "onConvert",
     text: "Convert to Markdown or HTML",
   },
-]
+];
 
-connector.updateContextMenuItem(items)
+connector.updateContextMenuItem(items);
 ```
 
 ## Connector window
@@ -314,8 +316,8 @@ Connector window 是一个代表连接器窗口的类。要创建它，请使用
 
 ``` ts
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
-  console.log(`panel message: ${message}`)
-})
+  console.log(`panel message: ${message}`);
+});
 ```
 
 ### dispatchEvent
@@ -334,7 +336,7 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 ``` ts
 testConnectorWindow.dispatchEvent("messageName", {
   prop: "value",
-})
+});
 ```
 
 ### show
@@ -356,7 +358,7 @@ testConnectorWindow.show({
   type: "panel",
   buttons: [],
   icons: "./icon.svg",
-})
+});
 ```
 
 在连接器窗口代码中，您还可以使用以下方法：
@@ -380,8 +382,8 @@ testConnectorWindow.show({
 
 ``` ts
 window.Asc.plugin.attachEvent("messageName", (message) => {
-  console.log(message)
-})
+  console.log(message);
+});
 ```
 
 ### sendToPlugin
@@ -398,5 +400,5 @@ window.Asc.plugin.attachEvent("messageName", (message) => {
 ### 示例:
 
 ``` ts
-window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
+window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```

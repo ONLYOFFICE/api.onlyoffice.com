@@ -136,7 +136,7 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/init
     }
     ```
 
-2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/config.md#rootpath) field, specify the section whose directories you want to display:
+2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/config.md#rootPath) field, specify the section whose directories you want to display:
 
     ``` ts
     const config = {

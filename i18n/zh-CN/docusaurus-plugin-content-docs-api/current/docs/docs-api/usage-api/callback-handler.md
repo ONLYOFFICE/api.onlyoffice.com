@@ -266,7 +266,9 @@ import TabItem from '@theme/TabItem';
       }
       ```
 
-     > *PATH\_FOR\_SAVE* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::note
+      *PATH\_FOR\_SAVE* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::
 
       在 [.Net example](../samples/language-specific-examples/net-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 .Net (C#) 或 .Net (C# MVC) 编写的 Web 应用程序中。
  </TabItem>
@@ -308,46 +310,50 @@ import TabItem from '@theme/TabItem';
       }
       ```
 
-      > *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::note
+      *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::
 
       在 [Java example](../samples/language-specific-examples/java-example.md) 和 [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 Java 编写的 Web 应用程序中。
 </TabItem>
   <TabItem value="nodejs" label="Node.js">
       ``` ts
-      import {fs} from "node:fs"
-      import {syncRequest} from "sync-request"
+      import {fs} from "node:fs";
+      import {syncRequest} from "sync-request";
 
       app.post("/track", (req, res) => {
         function updateFile(response, body, path) {
           if (body.status === 2) {
-            const file = syncRequest("GET", body.url)
-            fs.writeFileSync(path, file.getBody())
+            const file = syncRequest("GET", body.url);
+            fs.writeFileSync(path, file.getBody());
           }
 
-          response.write("{\"error\":0}")
-          response.end()
+          response.write("{\"error\":0}");
+          response.end();
         }
 
         function readbody(request, response, path) {
-          let content = ""
+          let content = "";
           request.on("data", (data) => {
-            content += data
-          })
+            content += data;
+          });
           request.on("end", () => {
-            const body = JSON.parse(content)
-            updateFile(response, body, path)
-          })
+            const body = JSON.parse(content);
+            updateFile(response, body, path);
+          });
         }
 
         if (req.body.hasOwn("status")) {
-          updateFile(res, req.body, pathForSave)
+          updateFile(res, req.body, pathForSave);
         } else {
-          readbody(req, res, pathForSave)
+          readbody(req, res, pathForSave);
         }
-      })
+      });
       ```
 
-      > *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::note
+      *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::
 
       在 [NodeJS example](../samples/language-specific-examples/nodejs-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 Node.js 编写的 Web 应用程序中。
   </TabItem>
@@ -375,7 +381,9 @@ import TabItem from '@theme/TabItem';
       ?>
       ```
 
-      > *$path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::note
+      *$path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::
 
       在 [PHP example](../samples/language-specific-examples/php-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 PHP 编写的 Web 应用程序中。
   </TabItem>
@@ -411,7 +419,9 @@ import TabItem from '@theme/TabItem';
       end
       ```
 
-      > *path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::note
+      *path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      :::
 
       在 [Ruby example](../samples/language-specific-examples/ruby-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 Ruby 编写的 Web 应用程序中。
   </TabItem>

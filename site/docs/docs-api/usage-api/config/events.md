@@ -10,8 +10,8 @@ The function called when the application is loaded into the browser.
 
 ``` ts
 function onAppReady() {
-  console.log("ONLYOFFICE Document Editor is ready")
-};
+  console.log("ONLYOFFICE Document Editor is ready");
+}
 
 const config = {
   events: {
@@ -30,8 +30,8 @@ The function called when the document is co-edited by the other user in the *str
 
 ``` ts
 function onCollaborativeChanges() {
-  console.log("The document changed by collaborative user")
-};
+  console.log("The document changed by collaborative user");
+}
 
 const config = {
   events: {
@@ -50,8 +50,8 @@ The function called when the document is loaded into the document editor.
 
 ``` ts
 function onDocumentReady() {
-  console.log("Document is loaded")
-};
+  console.log("Document is loaded");
+}
 
 const config = {
   events: {
@@ -71,11 +71,11 @@ The function called when the document is modified. It is called with the paramet
 ``` ts
 function onDocumentStateChange(event) {
   if (event.data) {
-    console.log("The document changed")
+    console.log("The document changed");
   } else {
-    console.log("Changes are collected on document editing service")
+    console.log("Changes are collected on document editing service");
   }
-};
+}
 
 const config = {
   events: {
@@ -94,10 +94,10 @@ The function called with the absolute URL to the edited file when the [downloadA
 
 ``` ts
 function onDownloadAs(event) {
-  const fileType = event.data.fileType
-  const url = event.data.url
-  console.log(`ONLYOFFICE Document Editor create file: ${url}`)
-};
+  const fileType = event.data.fileType;
+  const url = event.data.url;
+  console.log(`ONLYOFFICE Document Editor create file: ${url}`);
+}
 
 const config = {
   events: {
@@ -116,8 +116,8 @@ The function called when an error or some other specific event occurs. The error
 
 ``` ts
 function onError(event) {
-  console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-};
+  console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
+}
 
 const config = {
   events: {
@@ -136,8 +136,8 @@ The function called when the application opened the file. The mode is sent in th
 
 ``` ts
 function onInfo(event) {
-  console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`)
-};
+  console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`);
+}
 
 const config = {
   events: {
@@ -160,10 +160,10 @@ To set the bookmark link, you must call the [setActionLink](../methods.md#setact
 
 ``` ts
 function onMakeActionLink(event) {
-  const ACTION_DATA = event.data
-  const link = GENERATE_LINK(ACTION_DATA)
-  docEditor.setActionLink(link)
-};
+  const ACTION_DATA = event.data;
+  const link = GENERATE_LINK(ACTION_DATA);
+  docEditor.setActionLink(link);
+}
 
 const config = {
   events: {
@@ -186,9 +186,9 @@ When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfav
 
 ``` ts
 function onMetaChange(event) {
-  const title = event.data.title
-  const favorite = event.data.favorite
-};
+  const title = event.data.title;
+  const favorite = event.data.favorite;
+}
 
 const config = {
   events: {
@@ -211,8 +211,8 @@ Starting from version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfi
 
 ``` ts
 function onOutdatedVersion() {
-  location.reload(true)
-};
+  location.reload(true);
+}
 
 const config = {
   events: {
@@ -258,11 +258,11 @@ The function called when the user is trying to end the work with the editor and 
 ``` ts
 function onRequestClose() {
   if (window.opener) {
-    window.close()
-    return
+    window.close();
+    return;
   }
-  docEditor.destroyEditor()
-};
+  docEditor.destroyEditor();
+}
 
 const config = {
   events: {
@@ -317,9 +317,9 @@ The function called when the user is trying to switch the document from the view
 
 ``` ts
 function onRequestEditRights() {
-  console.log("ONLYOFFICE Document Editor requests editing rights")
-  document.location.reload()
-};
+  console.log("ONLYOFFICE Document Editor requests editing rights");
+  document.location.reload();
+}
 
 const config = {
   events: {
@@ -366,8 +366,8 @@ function onRequestHistory() {
         version: 2,
       },
     ],
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -392,8 +392,8 @@ The function called when the user is trying to go back to the document from view
 
 ``` ts
 function onRequestHistoryClose() {
-  document.location.reload()
-};
+  document.location.reload();
+}
 
 const config = {
   events: {
@@ -418,7 +418,7 @@ To show the changes corresponding to the specific document version you must call
 
 ``` ts
 function onRequestHistoryData(event) {
-  const version = event.data
+  const version = event.data;
   docEditor.setHistoryData({
     changesUrl: "https://example.com/url-to-changes.zip",
     fileType: "docx",
@@ -431,8 +431,8 @@ function onRequestHistoryData(event) {
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4In0.pfPJs9XvCmAnPiUnZYRm0rZGPYHzqfEP7AFRjKg1af4",
     url: "https://example.com/url-to-example-document.docx",
     version,
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -474,8 +474,8 @@ function onRequestInsertImage(event) {
       },
     ],
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZXMiOlt7ImZpbGVUeXBlIjoicG5nIiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1pbWFnZTEucG5nIn0seyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UyLnBuZyJ9XX0.ly1O8-6u4Y7WJlgp9O-bJMeffHe0GtaXzyvY2UUFJTg",
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -510,14 +510,14 @@ An object with the unique file data, the file path, and a new browser tab name a
 
 ``` ts
 function onRequestOpen(event) {
-  const path = event.data.path
-  const referenceData = event.data.referenceData
-  const windowName = event.data.windowName
+  const path = event.data.path;
+  const referenceData = event.data.referenceData;
+  const windowName = event.data.windowName;
   window.open({
     path: "https://example.com/external-url.docx",
     windowName: event.data.windowName,
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -552,9 +552,9 @@ This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.on
 
 ``` ts
 function onRequestReferenceData(event) {
-  const link = event.data.link
-  const referenceData = event.data.referenceData
-  const path = event.data.path
+  const link = event.data.link;
+  const referenceData = event.data.referenceData;
+  const path = event.data.path;
 
   docEditor.setReferenceData({
     fileType: "xlsx",
@@ -566,8 +566,8 @@ function onRequestReferenceData(event) {
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -596,8 +596,8 @@ To send the data to the *setReferenceSource* method, it is recommended to search
 
 ``` ts
 function onRequestReferenceSource(event) {
-  const referenceData = event.data.referenceData
-  const path = event.data.path
+  const referenceData = event.data.referenceData;
+  const path = event.data.path;
 
   docEditor.setReferenceSource({
     fileType: "xlsx",
@@ -609,8 +609,8 @@ function onRequestReferenceSource(event) {
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -646,8 +646,8 @@ function onRequestRefreshFile() {
       callbackUrl: "https://example.com/url-to-callback.ashx",
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -672,8 +672,8 @@ Until version 6.0 the *Rename...* button is only available if the [document.perm
 
 ``` ts
 function onRequestRename(event) {
-  const title = event.data
-};
+  const title = event.data;
+}
 
 const config = {
   events: {
@@ -702,9 +702,9 @@ The *Restore* button is displayed for the previous document versions only and hi
 
 ``` ts
 function onRequestRestore(event) {
-  const fileType = event.data.fileType
-  const url = event.data.url
-  const version = event.data.version
+  const fileType = event.data.fileType;
+  const url = event.data.url;
+  const version = event.data.version;
 
   docEditor.refreshHistory({
     currentVersion: 2,
@@ -730,8 +730,8 @@ function onRequestRestore(event) {
         version: 2,
       },
     ],
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -758,10 +758,10 @@ The function called when the user is trying to save file by clicking *Save Copy 
 
 ``` ts
 function onRequestSaveAs(event) {
-  const fileType = event.data.fileType
-  const title = event.data.title
-  const url = event.data.url
-};
+  const fileType = event.data.fileType;
+  const title = event.data.title;
+  const url = event.data.url;
+}
 
 const config = {
   events: {
@@ -793,8 +793,8 @@ function onRequestSelectDocument() {
     fileType: "docx",
     url: "https://example.com/url-to-example-document.docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -826,8 +826,8 @@ function onRequestSelectSpreadsheet() {
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -856,10 +856,10 @@ In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUser
 
 ``` ts
 function onRequestSendNotify(event) {
-  const ACTION_DATA = event.data.actionLink
-  const comment = event.data.message
-  const emails = event.data.emails
-};
+  const ACTION_DATA = event.data.actionLink;
+  const comment = event.data.message;
+  const emails = event.data.emails;
+}
 
 const config = {
   events: {
@@ -894,8 +894,8 @@ function onRequestSharingSettings() {
         user: "External link",
       },
     ],
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -916,8 +916,8 @@ When the user clicks the *Start filling* button, the [startFilling](../methods.m
 
 ``` ts
 function onRequestStartFilling() {
-  docEditor.startFilling()
-};
+  docEditor.startFilling();
+}
 
 const config = {
   events: {
@@ -946,8 +946,8 @@ To set a list of users, you must call the [setUsers](../methods.md#setusers) met
 
 ``` ts
 function onRequestUsers(event) {
-  const c = event.data.c
-  const id = event.data.id
+  const c = event.data.c;
+  const id = event.data.id;
 
   docEditor.setUsers({
     c: event.data.c,
@@ -965,8 +965,8 @@ function onRequestUsers(event) {
         name: "Kate Cage",
       },
     ],
-  })
-};
+  });
+}
 
 const config = {
   events: {
@@ -985,8 +985,8 @@ The function called when the force saving request of the *3* [forcesavetype](../
 
 ``` ts
 function onSubmit(event) {
-  console.log("The form was submitted.")
-};
+  console.log("The form was submitted.");
+}
 
 const config = {
   events: {
@@ -1009,8 +1009,8 @@ The function called when a user action is required to open a document in the fol
 
 ``` ts
 function onUserActionRequired() {
-  console.log("Enter a password")
-};
+  console.log("Enter a password");
+}
 
 const config = {
   events: {
@@ -1029,8 +1029,8 @@ The function called when a warning occurs. The warning message is sent in the *d
 
 ``` ts
 function onWarning(event) {
-  console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`)
-};
+  console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`);
+}
 
 const config = {
   events: {

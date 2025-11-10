@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Chamilo 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="gl3gmhOKFk8"/>
+```
+
 该[插件](https://github.com/ONLYOFFICE/onlyoffice-chamilo)支持您在[Chamilo](https://chamilo.org/en/)中使用ONLYOFFICE文档直接编辑办公文档。
 
 ## 功能特性

@@ -30,22 +30,22 @@ When the document is ready, the form data can be submitted by clicking the **Com
     function callbackGetAllContentControls(data) {
       setTimeout(function processContentControls(index) {
         if (index >= data.length) {
-          contentControls = data
-          return
+          contentControls = data;
+          return;
         }
         handleGetFormValue(data, index, (value) => {
           if (data[index].Value === value) {
-            data[index].Value = value
+            data[index].Value = value;
           } else {
-            data[index].Value = ""
+            data[index].Value = "";
           }
           if (index === data.length - 1) {
-            contentControls = data
+            contentControls = data;
           } else {
-            processContentControls(index + 1)
+            processContentControls(index + 1);
           }
-        })
-      }, 0)
+        });
+      }, 0);
     }
     function handleGetFormValue(data, index, callbackFn) {
       connector.executeMethod("GetFormValue", [data[index].InternalId], callbackFn);
@@ -58,7 +58,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
 
 ``` ts
 $("#persons").change(function personChange(e) {
-  const postalCode = $(this).val()
+  const postalCode = $(this).val();
   const persons = [
     {
       Title: "Miss",
@@ -74,13 +74,13 @@ $("#persons").change(function personChange(e) {
       Email: "Emma.Smith@email.com",
       PostalCode: "11225",
     },
-  ]
+  ];
 
   for (const person of persons) {
     if (person["PostalCode"] === postalCode) {
       for (key in person) {
-        const value = person[key]
-        setFormValue(key, value)
+        const value = person[key];
+        setFormValue(key, value);
       }
     }
   }
@@ -94,11 +94,11 @@ $("#persons").change(function personChange(e) {
           "SetFormValue",
           [forms[0]["InternalId"], value],
           null,
-        )
+        );
       },
-    )
+    );
   }
-})
+});
 ```
 
 3. When the user edits a form value, the onChangeContentControl event is fired and after that, the GetFormValue method is executed to get an updated form value and display it in the custom interface:
@@ -114,6 +114,8 @@ function onChangeContentControl(e) {
 }
 ```
 
-> Please note that the connector is available only for **ONLYOFFICE Docs Developer**.
->
-> The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+:::note
+Please note that the connector is available only for **ONLYOFFICE Docs Developer**.
+
+The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+:::

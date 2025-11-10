@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Manage files in "My Documents"
 
 This example demonstrates how to interact with a user's personal space ("My Documents") in ONLYOFFICE DocSpace using the API. It includes retrieving contents, uploading a file, creating a new document, and deleting a file.
@@ -9,60 +12,189 @@ This example demonstrates how to interact with a user's personal space ("My Docu
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const HEADERS = {
+    Authorization: `Bearer ${API_KEY}`,
+  };
 
-# Headers with API key for authentication
-HEADERS = {
+  // Step 1: Get "My Documents" contents
+  function getMyDocuments() {
+    const url = `${API_HOST}/api/2.0/files/@my`;
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`"My Documents" retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`"My Documents" retrieval error: ${err.message}`);
+        return null;
+      });
+  }
+
+  // Step 2: Upload a file to "My Documents"
+  function uploadFileToMy(filePath) {
+    const url = `${API_HOST}/api/2.0/files/@my/upload`;
+
+    // Build multipart form-data with Blob (no external deps)
+    const form = new FormData();
+    try {
+      const fs = require('node:fs');
+      const path = require('node:path');
+      const buffer = fs.readFileSync(filePath);
+      const blob = new Blob([buffer]);
+      form.append('file', blob, path.basename(filePath));
+    } catch (e) {
+      console.error('Failed to read file:', e.message);
+      return Promise.resolve(null);
+    }
+
+    // Do NOT set Content-Type manually; fetch will set the multipart boundary
+    return fetch(url, { method: 'POST', headers: { Authorization: HEADERS.Authorization }, body: form })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Upload to "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Upload to "My Documents" error: ${err.message}`);
+        return null;
+      });
+  }
+
+  // Step 3: Create an empty file in "My Documents"
+  function createFileInMy(fileTitle) {
+    const url = `${API_HOST}/api/2.0/files/@my/file`;
+    const data = { title: fileTitle };
+
+    return fetch(url, {
+      method: 'POST',
+      headers: { ...HEADERS, 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File creation in "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File creation in "My Documents" error: ${err.message}`);
+        return null;
+      });
+  }
+
+  // Step 4: Delete a file from "My Documents"
+  function deleteFile(fileId, immediately = true, deleteAfter = false) {
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}`;
+    const data = { immediately, deleteAfter };
+
+    return fetch(url, {
+      method: 'DELETE',
+      headers: { ...HEADERS, 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File deletion from "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File deletion from "My Documents" error: ${err.message}`);
+        return null;
+      });
+  }
+
+  // Run (mirrors the Python example)
+  getMyDocuments();
+
+  const file_path = 'example.pdf'; // Replace with actual path to the file
+  uploadFileToMy(file_path);
+
+  const file_title = 'NewDocument.docx';
+  createFileInMy(file_title);
+
+  const file_id = '123456'; // Replace with an actual file ID
+  deleteFile(file_id);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  HEADERS = {
     'Authorization': f'Bearer {API_KEY}'
-}
+  }
 
 # Step 1: Get "My Documents" contents
-def get_my_documents():
-    url = f'https://{API_HOST}/api/2.0/files/@my'
+  def get_my_documents():
+    url = f'{API_HOST}/api/2.0/files/@my'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"\"My Documents\" retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-# Step 2: Upload a file to "My Documents"
-def upload_file_to_my(file_path):
-    url = f'https://{API_HOST}/api/2.0/files/@my/upload'
+  # Step 2: Upload a file to "My Documents"
+  def upload_file_to_my(file_path):
+    url = f'{API_HOST}/api/2.0/files/@my/upload'
     with open(file_path, 'rb') as file:
-        files = {'file': (file_path, file)}
-        response = requests.post(url, headers=HEADERS, files=files)
+      files = {'file': (file_path, file)}
+      response = requests.post(url, headers=HEADERS, files=files)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"Upload to \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-# Step 3: Create an empty file in "My Documents"
-def create_file_in_my(file_title):
-    url = f'https://{API_HOST}/api/2.0/files/@my/file'
+  # Step 3: Create an empty file in "My Documents"
+  def create_file_in_my(file_title):
+    url = f'{API_HOST}/api/2.0/files/@my/file'
     data = {'title': file_title}
     response = requests.post(url, headers=HEADERS, json=data)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"File creation in \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-# Step 4: Delete a file from "My Documents"
-def delete_file(file_id, immediately=True, delete_after=False):
-    url = f'https://{API_HOST}/api/2.0/files/file/{file_id}'
+  # Step 4: Delete a file from "My Documents"
+  def delete_file(file_id, immediately=True, delete_after=False):
+    url = f'{API_HOST}/api/2.0/files/file/{file_id}'
     data = {
-        'immediately': immediately,
-        'deleteAfter': delete_after
+      'immediately': immediately,
+      'deleteAfter': delete_after
     }
 
     requests.delete(url, headers=HEADERS, json=data)
+    if response.status_code == 200:
+      print(f"File deletion from \"My Documents\" succeeded: {response.json()}")
+    else:
+      print(f"File deletion from \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     get_my_documents()
 
     file_path = 'example.pdf'  # Replace with actual path to the file
@@ -73,8 +205,10 @@ if __name__ == "__main__":
 
     file_id = '123456'  # Replace with an actual file ID
     delete_file(file_id)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## Step 1: Retrieve contents of "My Documents"
@@ -83,15 +217,43 @@ A GET request is sent to [/api/2.0/files/@my](/docspace/api-backend/usage-api/ge
 
 It returns a list of files and folders in the user's personal space.
 
-``` py
-def get_my_documents():
-    url = f'https://{API_HOST}/api/2.0/files/@my'
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  function getMyDocuments() {
+    const url = `${API_HOST}/api/2.0/files/@my`;
+    return fetch(url, { method: 'GET', headers: HEADERS })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`"My Documents" retrieval failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`"My Documents" retrieval error: ${err.message}`);
+        return null;
+      });
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def get_my_documents():
+    url = f'{API_HOST}/api/2.0/files/@my'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
-        return response.json()
-    return None
-```
+      return response.json()
+    else:
+      print(f"\"My Documents\" retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 2: Upload a file to "My Documents"
 
@@ -99,17 +261,60 @@ A POST request is sent to [/api/2.0/files/@my/upload](/docspace/api-backend/usag
 
 - `file`: The file represented as binary data.
 
-``` py
-def upload_file_to_my(file_path):
-    url = f'https://{API_HOST}/api/2.0/files/@my/upload'
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  function uploadFileToMy(filePath) {
+    const url = `${API_HOST}/api/2.0/files/@my/upload`;
+
+    // Build multipart form-data with Blob (no external deps)
+    const form = new FormData();
+    try {
+      const fs = require('node:fs');
+      const path = require('node:path');
+      const buffer = fs.readFileSync(filePath);
+      const blob = new Blob([buffer]);
+      form.append('file', blob, path.basename(filePath));
+    } catch (e) {
+      console.error('Failed to read file:', e.message);
+      return Promise.resolve(null);
+    }
+
+    // Do NOT set Content-Type manually; fetch will set the multipart boundary
+    return fetch(url, { method: 'POST', headers: { Authorization: HEADERS.Authorization }, body: form })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`Upload to "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`Upload to "My Documents" error: ${err.message}`);
+        return null;
+      });
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def upload_file_to_my(file_path):
+    url = f'{API_HOST}/api/2.0/files/@my/upload'
     with open(file_path, 'rb') as file:
-        files = {'file': (file_path, file)}
-        response = requests.post(url, headers=HEADERS, files=files)
+      files = {'file': (file_path, file)}
+      response = requests.post(url, headers=HEADERS, files=files)
 
     if response.status_code == 200:
-        return response.json()
-    return None
-```
+      return response.json()
+    else:
+      print(f"Upload to \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 3: Create an empty file in "My Documents"
 
@@ -117,16 +322,50 @@ A POST request is sent to [/api/2.0/files/@my/file](/docspace/api-backend/usage-
 
 - `title`: The file title.
 
-``` py
-def create_file_in_my(file_title):
-    url = f'https://{API_HOST}/api/2.0/files/@my/file'
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  function createFileInMy(fileTitle) {
+    const url = `${API_HOST}/api/2.0/files/@my/file`;
+    const data = { title: fileTitle };
+
+    return fetch(url, {
+      method: 'POST',
+      headers: { ...HEADERS, 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File creation in "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File creation in "My Documents" error: ${err.message}`);
+        return null;
+      });
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def create_file_in_my(file_title):
+    url = f'{API_HOST}/api/2.0/files/@my/file'
     data = {'title': file_title}
     response = requests.post(url, headers=HEADERS, json=data)
 
     if response.status_code == 200:
-        return response.json()
-    return None
-```
+      return response.json()
+    else:
+      print(f"File creation in \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 4: Delete a file from "My Documents"
 
@@ -137,13 +376,49 @@ The following parameters can be optionally defined:
 - `immediately`: Whether to delete without moving to trash.
 - `deleteAfter`: Whether to delete after a delay.
 
-``` py
-def delete_file(file_id, immediately=True, delete_after=False):
-    url = f'https://{API_HOST}/api/2.0/files/file/{file_id}'
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  function deleteFile(fileId, immediately = true, deleteAfter = false) {
+    const url = `${API_HOST}/api/2.0/files/file/${fileId}`;
+    const data = { immediately, deleteAfter };
+
+    return fetch(url, {
+      method: 'DELETE',
+      headers: { ...HEADERS, 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        if (res.status === 200) return res.json();
+        const text = await res.text();
+        console.log(`File deletion from "My Documents" failed. Status code: ${res.status}, Message: ${text}`);
+        return null;
+      })
+      .catch((err) => {
+        console.log(`File deletion from "My Documents" error: ${err.message}`);
+        return null;
+      });
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def delete_file(file_id, immediately=True, delete_after=False):
+    url = f'{API_HOST}/api/2.0/files/file/{file_id}'
     data = {
-        'immediately': immediately,
-        'deleteAfter': delete_after
+      'immediately': immediately,
+      'deleteAfter': delete_after
     }
 
     requests.delete(url, headers=HEADERS, json=data)
-```
+    if response.status_code == 200:
+      print(f"File deletion from \"My Documents\" succeeded: {response.json()}")
+    else:
+      print(f"File deletion from \"My Documents\" failed. Status code: {response.status_code}, Message: {response.text}")
+  ```
+
+  </TabItem>
+</Tabs>

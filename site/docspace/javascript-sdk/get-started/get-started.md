@@ -79,7 +79,7 @@ The full list of [config parameters](../usage-sdk/config.md) can be found here.
 
 ## Step 6. Using
 
-After initialization, the current SDK instance can be accessed by using its [frameId](../usage-sdk/config.md#frameid). The list of current SDK instances is available in the *DocSpace.SDK.frames* array. To get the specific SDK instance, use the following string:
+After initialization, the current SDK instance can be accessed by using its [frameId](../usage-sdk/config.md#frameId). The list of current SDK instances is available in the *DocSpace.SDK.frames* array. To get the specific SDK instance, use the following string:
 
 ``` ts
 DocSpace.SDK.frames[frameId]

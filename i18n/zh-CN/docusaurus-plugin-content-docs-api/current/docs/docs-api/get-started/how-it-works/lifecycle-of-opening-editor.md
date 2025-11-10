@@ -29,8 +29,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
    ``` ts
    function onAppReady() {
-     console.log("ONLYOFFICE Document Editor is ready")
-   };
+     console.log("ONLYOFFICE Document Editor is ready");
+   }
 
    const config = {
      events: {
@@ -44,25 +44,25 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    之后，可以调用[showMessage](../../usage-api/methods.md#showmessage)方法，该方法会显示一个带有消息的工具提示：
 
    ``` ts
-   docEditor.showMessage(message)
+   docEditor.showMessage(message);
    ```
 
    ## 消息
 
+   `类型：字符串` | **必需**
+
    定义消息文本。
 
-   类型：字符串
-
-   是否必需：是
-
-  > 请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
+   :::note
+   请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
+   :::
 
 2. 当发生错误或其他特定事件时，会执行[onError](../../usage-api/config/events.md#onerror)事件：
 
    ``` ts
    function onError(event) {
-     console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-   };
+     console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
+   }
 
    const config = {
      events: {
@@ -79,8 +79,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
    ``` ts
    function onOutdatedVersion() {
-     location.reload(true)
-   };
+     location.reload(true);
+   }
 
    const config = {
      events: {
@@ -111,8 +111,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
          mode: "edit",
        },
        token: "...",
-     })
-   };
+     });
+   }
 
    const config = {
      events: {
@@ -129,8 +129,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
    ``` ts
    function onUserActionRequired() {
-     console.log("Enter a password")
-   };
+     console.log("Enter a password");
+   }
 
    const config = {
      events: {
@@ -147,8 +147,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
    ``` ts
    function onDocumentReady() {
-     console.log("Document is loaded")
-   };
+     console.log("Document is loaded");
+   }
 
    const config = {
      events: {
@@ -173,11 +173,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```ts
    function onRequestClose() {
      if (window.opener) {
-       window.close()
-       return
+       window.close();
+       return;
      }
-     docEditor.destroyEditor()
-   };
+     docEditor.destroyEditor();
+   }
 
    const config = {
      events: {
@@ -191,11 +191,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    在调用[requestClose](../../usage-api/methods.md#requestclose)方法之后，也可能会执行`onRequestClose`事件。建议在调用[destroyEditor](../../usage-api/methods.md#destroyeditor)方法之前调用此方法，以检查编辑器中是否有未保存的数据。如果存在未保存的数据，将显示一个对话框，询问用户是要继续编辑还是关闭编辑器并丢失所有未保存的数据。如果选择`关闭`选项，则会调用`onRequestClose`事件：
 
    ``` ts
-   docEditor.requestClose()
+   docEditor.requestClose();
    ```
 
    `destroyEditor`  方法用于销毁 `docEditor` 对象。当需要使用其他配置重新初始化文档编辑器时，可以调用此方法：
 
    ``` ts
-   docEditor.destroyEditor()
+   docEditor.destroyEditor();
    ```

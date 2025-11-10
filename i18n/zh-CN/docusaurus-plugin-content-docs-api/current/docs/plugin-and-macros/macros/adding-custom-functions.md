@@ -42,7 +42,7 @@ sidebar_position: -4
 ![函数使用示例](/assets/images/plugins/add.png#gh-light-mode-only)![函数使用示例](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
 您可以在[此处](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md)找到自定义函数的示例。
-<!--
+
 ## 访问单元格地址（自 v9.0.4 起） {#accessing-cell-addresses-since-v904}
 
 从 9.0.4 版本开始，您可以在自定义函数中访问单元格地址信息：
@@ -78,7 +78,7 @@ sidebar_position: -4
   }
   Api.AddCustomFunction(CUSTOMFUNC);
 })();
-```-->
+```
 
 ## 管理自定义函数
 

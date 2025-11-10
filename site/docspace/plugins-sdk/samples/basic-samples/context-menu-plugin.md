@@ -119,5 +119,5 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - You can define multiple context items using different keys.
-- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#filetype) and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#userstype) fields to control visibility.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onclick) function receives the selected file's ID.
+- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType) and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onClick) function receives the selected file's ID.

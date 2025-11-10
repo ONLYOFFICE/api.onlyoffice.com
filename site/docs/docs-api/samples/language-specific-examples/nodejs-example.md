@@ -1,5 +1,5 @@
 ---
-sidebar_position: -8
+sidebar_position: -11
 ---
 
 # NodeJS example
@@ -8,7 +8,9 @@ sidebar_position: -8
 
 This example will help you integrate ONLYOFFICE Docs into your web application on Node.js.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::note
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::
 
 ## Important security info
 
@@ -44,7 +46,7 @@ To connect the editors to your website, specify the path to the editors installa
 
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *\views\editor.ejs* file.
 
@@ -203,6 +205,8 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
       }
    }
    ```
+   
+   You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 6. Run the project with Node.js:
 

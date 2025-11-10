@@ -905,6 +905,19 @@ The list of changes for Office JavaScript API.
 - Added the [ApiRange/GetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormulaArray.md) method to Spreadsheet API.
 - Added the [ApiRange/SetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/SetFormulaArray.md) method to Spreadsheet API.
 
+### Document methods
+
+- Added the [ApiDocument/GetInternalId](../usage-api/text-document-api/ApiDocument/Methods/GetInternalId.md) method to Text document API.
+- Added the [ApiDocument/InsertBlankPage](../usage-api/text-document-api/ApiDocument/Methods/InsertBlankPage.md) method to Text document API.
+- Added the [ApiDocument/MoveCursorToEnd](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToEnd.md) method to Text document API.
+- Added the [ApiDocument/MoveCursorToStart](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToStart.md) method to Text document API.
+- Added the [ApiDocument/SetAssistantTrackRevisions](../usage-api/text-document-api/ApiDocument/Methods/SetAssistantTrackRevisions.md) method to Text document API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to Text document API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to Text document API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/text-document-api/ApiDocumentContent/Methods/GetInternalId.md) method to Text document API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetInternalId.md) method to Spreadsheet API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/presentation-api/ApiDocumentContent/Methods/GetInternalId.md) method to Presentation API.
+
 ### Drawing methods
 
 - Added the [ApiDrawing/GetRotation](../usage-api/text-document-api/ApiDrawing/Methods/GetRotation.md) method to Text document API.
@@ -916,6 +929,7 @@ The list of changes for Office JavaScript API.
 
 ### Comment methods
 
+- Added the [ApiDocument/ShowComment](../usage-api/text-document-api/ApiDocument/Methods/ShowComment.md) method to Text document API.
 - Added the [ApiComment/GetPosition](../usage-api/presentation-api/ApiComment/Methods/GetPosition.md) method to Presentation API.
 - Added the [ApiComment/SetPosition](../usage-api/presentation-api/ApiComment/Methods/SetPosition.md) method to Presentation API.
 - Added the *posX* and *posY* parameters to the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method of Presentation API.
@@ -928,6 +942,14 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPresentation/GetAllImages](../usage-api/presentation-api/ApiPresentation/Methods/GetAllImages.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllOleObjects](../usage-api/presentation-api/ApiPresentation/Methods/GetAllOleObjects.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllShapes](../usage-api/presentation-api/ApiPresentation/Methods/GetAllShapes.md) method to Presentation API.
+- Added the *nIndex* parameter to the [ApiPresentation/AddSlide](../usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md) method of Presentation API.
+
+### Layout methods
+
+- Added the [ApiLayout/GetLayoutType](../usage-api/presentation-api/ApiLayout/Methods/GetLayoutType.md) method to Presentation API.
+- Added the [ApiMaster/GetAllLayouts](../usage-api/presentation-api/ApiMaster/Methods/GetAllLayouts.md) method to Presentation API.
+- Added the [ApiMaster/GetLayoutByType](../usage-api/presentation-api/ApiMaster/Methods/GetLayoutByType.md) method to Presentation API.
+- Added the [LayoutType](../usage-api/presentation-api/Enumeration/LayoutType.md) type to the simple type definitions.
 
 ### Notes page methods
 
@@ -940,15 +962,14 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [ApiDocument/MoveCursorToPos](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToPos.md) method to Text document API.
-- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to Text document API.
-- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to Text document API.
+- Added the [Api/GetByInternalId](../usage-api/text-document-api/Api/Methods/GetByInternalId.md) method to Text document API.
 - Added the [ApiRun/GetParentParagraph](../usage-api/text-document-api/ApiRun/Methods/GetParentParagraph.md) method to Text document API.
 - Added the [ApiTablePr/SetTableBorderAll](../usage-api/text-document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Text document API.
 - Added the *fontSlot* parameter to the [ApiTextPr/GetFontFamily](../usage-api/text-document-api/ApiTextPr/Methods/GetFontFamily.md) method of Text document API.
-- Added the [ApiMaster/GetAllLayouts](../usage-api/presentation-api/ApiMaster/Methods/GetAllLayouts.md) method to Presentation API.
+- Added the [ApiParagraph/Select](../usage-api/presentation-api/ApiParagraph/Methods/Select.md) method to Presentation API.
 - Added the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method to Presentation API.
 - Added the [Base64Img](../usage-api/text-document-api/Enumeration/Base64Img.md) type to the simple type definitions.
+
 
 ## Version 8.3
 
