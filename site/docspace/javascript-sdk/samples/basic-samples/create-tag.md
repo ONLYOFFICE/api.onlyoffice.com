@@ -121,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to configure and initialize the SDK. Use the [createTag()](/docspace/javascript-sdk/usage-sdk/methods.md#createtag) method to create a new tag with a unique name.
+Create a script block to configure and initialize the SDK. Use the [createTag()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createtag) method to create a new tag with a unique name.
 
 ``` ts
 function onAppReady() {

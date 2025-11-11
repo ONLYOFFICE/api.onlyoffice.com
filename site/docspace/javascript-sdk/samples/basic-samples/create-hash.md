@@ -124,7 +124,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to initialize the SDK and trigger the [createHash()](/docspace/javascript-sdk/usage-sdk/methods.md#createhash) method using settings returned by [getHashSettings()](/docspace/javascript-sdk/usage-sdk/methods.md#gethashsettings).
+Create a script block to initialize the SDK and trigger the [createHash()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createhash) method using settings returned by [getHashSettings()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#gethashsettings).
 ``` ts
 document.getElementById("button").onclick = async () => {
   let password = "qwerty12345";

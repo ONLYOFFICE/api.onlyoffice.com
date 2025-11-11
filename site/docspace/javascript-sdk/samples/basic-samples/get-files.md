@@ -125,7 +125,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getFiles()](/docspace/javascript-sdk/usage-sdk/methods.md#getfiles) method to retrieve files in the current view.
+Use the [getFiles()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfiles) method to retrieve files in the current view.
 
 ``` ts
 const roomId = "71234"; // Replace with your room ID
