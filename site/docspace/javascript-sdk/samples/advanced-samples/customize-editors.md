@@ -103,7 +103,7 @@ Add a script to initialize the [editors](/docspace/javascript-sdk/usage-sdk/clas
     }
     ```
 
-2. Create a configuration for the **Editor** mode. Go to the [editorCustomization](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameConfig.md#editorCustomization) section and configure the editors as needed.
+2. Create a configuration for the **Editor** mode. Go to the [editorCustomization](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameConfig.md#editorcustomization) section and configure the editors as needed.
 After that, copy the resulting config and paste it into the [customization](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md) section, as shown below. In the config, pass the id of the file that will be opened in the editors:
 
     ``` ts
