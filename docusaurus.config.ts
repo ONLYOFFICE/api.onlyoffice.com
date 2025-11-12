@@ -156,6 +156,10 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/favicon.png',
+    colorMode: {
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       logo: {
         alt: 'ONLYOFFICE',
