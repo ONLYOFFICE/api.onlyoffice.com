@@ -13,6 +13,7 @@ Represents the ApiCheckBoxForm class.
 | [GetClassType](./Methods/GetClassType.md) | "checkBoxForm" | Returns a type of the ApiCheckBoxForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
+| [GetLabel](./Methods/GetLabel.md) | string | Returns a label of the current form. |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRadioGroup](./Methods/GetRadioGroup.md) | string | Returns the radio group key if the current checkbox is a radio button. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
@@ -31,6 +32,7 @@ Represents the ApiCheckBoxForm class.
 | [SetChecked](./Methods/SetChecked.md) | boolean | Checks the current checkbox. |
 | [SetChoiceName](./Methods/SetChoiceName.md) | boolean | Sets the choice name for the current radio button. |
 | [SetFormKey](./Methods/SetFormKey.md) | boolean | Sets a key to the current form. |
+| [SetLabel](./Methods/SetLabel.md) | boolean | Sets a label to the current form. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form. *Can't be set to checkbox or radio button.* |
 | [SetRadioGroup](./Methods/SetRadioGroup.md) | boolean | Sets the radio group key to the current radio button. |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Specifies if the current form should be required. |

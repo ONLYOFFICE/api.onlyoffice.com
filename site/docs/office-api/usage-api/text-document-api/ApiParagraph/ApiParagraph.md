@@ -48,6 +48,7 @@ Represents the ApiParagraph class.
 | [GetOutlineLvl](./Methods/GetOutlineLvl.md) | Number | Returns the outline level of the specified properties. |
 | [GetParaPr](./Methods/GetParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | Returns the paragraph properties. |
 | [GetParagraphMarkTextPr](./Methods/GetParagraphMarkTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the text properties of the paragraph mark which is used to mark the paragraph end. The mark can also acquire common text properties like bold, italic, underline, etc. |
+| [GetParaId](./Methods/GetParaId.md) | string | Returns the paragraph ID. |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | Returns a content control that contains the current paragraph. |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Returns a table that contains the current paragraph. |
 | [GetParentTableCell](./Methods/GetParentTableCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | Returns a table cell that contains the current paragraph. |
@@ -94,6 +95,7 @@ Represents the ApiParagraph class.
 | [SetNumbering](./Methods/SetNumbering.md) | boolean | Specifies that the current paragraph references the numbering definition instance in the current document. |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | Sets the outline level for the specified properties. |
 | [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document. |
+| [SetParaId](./Methods/SetParaId.md) | None | Sets the paragraph ID. |
 | [SetPosition](./Methods/SetPosition.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies an amount by which text is raised or lowered for this paragraph in relation to the default baseline of the surrounding non-positioned text. |
 | [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies the reading order for the current paragraph. Possible values are: **null** - use the standart direction parameter; **"ltr"** - left-to-right text direction; **"rtl"** - right-to-left text direction. |
 | [SetRightBorder](./Methods/SetRightBorder.md) | boolean | Specifies the border which will be displayed at the right side of the page around the specified paragraph. |

@@ -2,6 +2,29 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.2
+
+### CheckBoxForm methods
+
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Form API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Form API.
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Text document API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Text document API.
+
+### FormBase methods
+
+- Added the [ApiFormBase/Delete](../usage-api/form-api/ApiFormBase/Methods/Delete.md) method to the Form API.
+- Added the [ApiFormBase/Delete](../usage-api/text-document-api/ApiFormBase/Methods/Delete.md) method to the Text document API.
+
+### Paragraph methods
+
+- Added the [ApiParagraph/GetParaId](../usage-api/presentation-api/ApiParagraph/Methods/GetParaId.md) method to the Presentation API.
+- Added the [ApiParagraph/SetParaId](../usage-api/presentation-api/ApiParagraph/Methods/SetParaId.md) method to the Presentation API.
+- Added the [ApiParagraph/GetParaId](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetParaId.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetParaId](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetParaId.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetParaId](../usage-api/text-document-api/ApiParagraph/Methods/GetParaId.md) method to the Text document API.
+- Added the [ApiParagraph/SetParaId](../usage-api/text-document-api/ApiParagraph/Methods/SetParaId.md) method to the Text document API.
+
 ## Version 9.1
 
 ### Conditional formatting methods

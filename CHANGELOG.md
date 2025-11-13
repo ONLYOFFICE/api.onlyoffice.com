@@ -8,6 +8,10 @@
 
 * Updated JavaScript SDK section
 
+#### Docs
+
+* Updated Office API documentation for version 9.2.0
+
 ## 7.2.0
 
 ### New features
