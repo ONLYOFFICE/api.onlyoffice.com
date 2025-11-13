@@ -48,11 +48,12 @@ jobs:
           cd docspace-sdk-js
           pnpm install
           pnpm run docs
+          cd ..
           
           rm -rf api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/*
-          cp -r docs/* api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/
+          cp -r docspace-sdk-js/docs/* api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/
           
-          cd ../api.onlyoffice.com
+          cd api.onlyoffice.com
           if ! git diff --exit-code; then
               git add .
               git commit -m "Update DocSpace SDK documentation from GitHub Actions"
