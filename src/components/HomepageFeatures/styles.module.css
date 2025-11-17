@@ -34,7 +34,7 @@
 }
 
 .containerFeatures {
-  max-width: var(--temp-home-breakpoint-xlarge);
+  max-width: var(--temp-home-breakpoint-xlarge, 1300px);
   margin: 0 auto;
   padding: 0 1.5rem;
 }

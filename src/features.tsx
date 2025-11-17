@@ -2,6 +2,7 @@ import SdkIcon from "@site/static/icons/javascript-sdk-icon.svg";
 import PluginIcon from "@site/static/icons/plugins-icon.svg";
 import DocsApiIcon from "@site/static/icons/docs-api-icon.svg";
 import DocSpaceApiIcon from "@site/static/icons/docspace-api-icon.svg";
+import OfficeApiIcon from "@site/static/icons/office-api-icon.svg";
 import HostingIcon from "@site/static/icons/self-hosted-icon.svg";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
@@ -38,7 +39,7 @@ export const DocsFeatures: Features = {
           Spreadsheet API, Presentation API, and Form API.
         </>
       ),
-      icon: <DocSpaceApiIcon/>,
+      icon: <OfficeApiIcon/>,
     },
     {
       title: 'Plugins and macros',
