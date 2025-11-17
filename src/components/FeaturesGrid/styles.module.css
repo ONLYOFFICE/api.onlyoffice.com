@@ -64,10 +64,10 @@
     gap: 24px;
   }
 
-  .featuresGridItemHeader svg {
-    width: 48px;
-    height: 48px;
-  }
+  /*.featuresGridItemHeader svg {*/
+  /*  width: 48px;*/
+  /*  height: 48px;*/
+  /*}*/
 }
 
 @media (min-width: 1440px) {
@@ -75,8 +75,8 @@
   /*  display: block;*/
   /*}*/
 
-  .featuresGridItemHeader svg {
-    width: 64px;
-    height: 64px;
-  }
+  /*.featuresGridItemHeader svg {*/
+  /*  width: 64px;*/
+  /*  height: 64px;*/
+  /*}*/
 }

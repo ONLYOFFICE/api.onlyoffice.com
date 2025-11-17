@@ -2,6 +2,7 @@ import SdkIcon from "@site/static/icons/javascript-sdk-icon.svg";
 import PluginIcon from "@site/static/icons/plugins-icon.svg";
 import DocsApiIcon from "@site/static/icons/docs-api-icon.svg";
 import DocSpaceApiIcon from "@site/static/icons/docspace-api-icon.svg";
+import OfficeApiIcon from "@site/static/icons/office-api-icon.svg";
 import HostingIcon from "@site/static/icons/self-hosted-icon.svg";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
@@ -20,7 +21,7 @@ export const DocsFeatures: Features = {
       link: 'docs-api/get-started/basic-concepts',
       description: (
         <>
-          In this section, you will learn how to bring document editing and{" "}
+          Bring document editing and{" "}
           co-authoring to your web app users, set up, configure, and integrate{" "}
           ONLYOFFICE Docs.
         </>
@@ -32,20 +33,20 @@ export const DocsFeatures: Features = {
       link: 'office-api/get-started/overview',
       description: (
         <>
-          In this section, you will learn how to use our JavaScript library to{" "}
+          Use our JavaScript library to{" "}
           write code for your plugins, macros, builder scripts, etc. This library{" "}
           contains classes and methods for every document type: Text document API,{" "}
           Spreadsheet API, Presentation API, and Form API.
         </>
       ),
-      icon: <DocSpaceApiIcon/>,
+      icon: <OfficeApiIcon/>,
     },
     {
       title: 'Plugins and macros',
       link: 'plugin-and-macros/get-started',
       description: (
         <>
-          In this section, you will learn how to extend the ONLYOFFICE Docs{" "}
+          Extend the ONLYOFFICE Docs{" "}
           functionality by creating your own plugins/macros. Here you will find{" "}
           the information about their structure, development lifecycle, and examples.
         </>
@@ -57,7 +58,7 @@ export const DocsFeatures: Features = {
       link: 'document-builder/get-started/overview',
       description: (
         <>
-          In this section, you will learn how to generate documents easily without{" "}
+          Generate documents easily without{" "}
           running a document editor and integrate Document builder into your DMS,{" "}
           CRM system, etc.
         </>
@@ -69,7 +70,7 @@ export const DocsFeatures: Features = {
       link: 'desktop-editors/get-started/overview',
       description: (
         <>
-          In this section, you will learn how to extend the ONLYOFFICE Desktop{" "}
+          Extend the ONLYOFFICE Desktop{" "}
           Editors functionality by setting up, customizing and integrating them{" "}
           with the document management systems.
         </>
@@ -87,7 +88,7 @@ export const DocSpaceFeatures: Features = {
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
-          In this section, you will learn how to integrate ONLYOFFICE DocSpace into{" "}
+          Integrate ONLYOFFICE DocSpace into{" "}
           your own application and interact with its backend using GET/POST/PUT/DELETE.
         </>
       ),
@@ -98,7 +99,7 @@ export const DocSpaceFeatures: Features = {
       link: 'javascript-sdk/get-started',
       description: (
         <>
-          In this section, you will learn how to connect DocSpace as a frame to{" "}
+          Connect DocSpace as a frame to{" "}
           your website using api.js. You can embed an entire DocSpace portal, a{" "}
           single room, or a document.
         </>
@@ -110,7 +111,7 @@ export const DocSpaceFeatures: Features = {
       link: 'plugins-sdk/get-started',
       description: (
         <>
-          In this section, you will learn how to create your own plugins and add{" "}
+          Create your own plugins and add{" "}
           them to the DocSpace portal.
         </>
       ),
@@ -121,7 +122,7 @@ export const DocSpaceFeatures: Features = {
       link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>
-          In this section, you will learn how to provide the DocSpace portal as a{" "}
+          Provide the DocSpace portal as a{" "}
           SaaS solution on your own servers using our API methods.
         </>
       ),
