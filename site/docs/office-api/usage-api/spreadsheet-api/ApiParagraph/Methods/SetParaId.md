@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to get the paragraph ID.
+This example shows how to set the paragraph ID.
 
 ```javascript editor-docx
 // Method for changing the numerical identifier of a paragraph.
