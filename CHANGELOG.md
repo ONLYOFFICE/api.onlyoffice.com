@@ -1,5 +1,19 @@
 # Change log
 
+## 7.3.0
+
+### New features
+
+* Updated Docusaurus version 3.9.2
+* Added system theme mode
+* Updated documentation start page
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+
 ## 7.2.0
 
 ### New features
