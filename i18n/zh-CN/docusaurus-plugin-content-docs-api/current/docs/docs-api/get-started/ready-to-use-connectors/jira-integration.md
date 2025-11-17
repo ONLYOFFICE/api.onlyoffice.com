@@ -48,7 +48,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 http://documentserver/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Jira服务器访问。Jira服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Jira服务器访问。Jira服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Jira管理页面指定您自己的**密钥**。在ONLYOFFICE官方的[配置文档](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 

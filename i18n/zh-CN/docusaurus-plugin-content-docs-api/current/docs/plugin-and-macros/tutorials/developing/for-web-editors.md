@@ -25,7 +25,7 @@ sidebar_position: -2
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json");
    ```
 
-   其中 **documentserver** 是服务器地址，**port** 是您安装 ONLYOFFICE 文档所使用的端口。
+   其中 **documentserver** 是服务器地址，**port** 是您安装 ONLYOFFICE 文档所使用的端口。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    ![开发者控制台](/assets/images/plugins/developer-console.png)
 
