@@ -9,6 +9,7 @@ Represents the ApiTextForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified form. |
 | [GetCharactersLimit](./Methods/GetCharactersLimit.md) | number | Returns a limit of the text field characters. |
 | [GetClassType](./Methods/GetClassType.md) | "textForm" | Returns a type of the ApiTextForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |

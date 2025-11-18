@@ -11,10 +11,22 @@ The list of changes for Office JavaScript API.
 - Added the [ApiCheckBoxForm/GetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Text document API.
 - Added the [ApiCheckBoxForm/SetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Text document API.
 
-### FormBase methods
+### Form methods
 
 - Added the [ApiFormBase/Delete](../usage-api/form-api/ApiFormBase/Methods/Delete.md) method to the Form API.
 - Added the [ApiFormBase/Delete](../usage-api/text-document-api/ApiFormBase/Methods/Delete.md) method to the Text document API.
+- Added the [ApiCheckBoxForm/Delete](../usage-api/form-api/ApiCheckBoxForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiCheckBoxForm/Delete](../usage-api/text-document-api/ApiCheckBoxForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/form-api/ApiComboBoxForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/text-document-api/ApiComboBoxForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiComplexForm/Delete](../usage-api/form-api/ApiComplexForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiComplexForm/Delete](../usage-api/text-document-api/ApiComplexForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiDateForm/Delete](../usage-api/form-api/ApiDateForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiDateForm/Delete](../usage-api/text-document-api/ApiDateForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiPictureForm/Delete](../usage-api/form-api/ApiPictureForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiPictureForm/Delete](../usage-api/text-document-api/ApiPictureForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiTextForm/Delete](../usage-api/form-api/ApiTextForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiTextForm/Delete](../usage-api/text-document-api/ApiTextForm/Methods/Delete.md) method to the Text document API.
 
 ### Paragraph methods
 

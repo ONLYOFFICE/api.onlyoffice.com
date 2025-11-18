@@ -9,6 +9,7 @@ Represents the ApiCheckBoxForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified form. |
 | [GetChoiceName](./Methods/GetChoiceName.md) | string | Returns the choice name of the current radio button. |
 | [GetClassType](./Methods/GetClassType.md) | "checkBoxForm" | Returns a type of the ApiCheckBoxForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |

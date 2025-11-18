@@ -9,6 +9,7 @@ Represents the ApiDateForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified form. |
 | [GetClassType](./Methods/GetClassType.md) | "dateForm" | Returns a type of the ApiDateForm class. |
 | [GetDate](./Methods/GetDate.md) | undefined \| Date | Returns the date of the current form. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |

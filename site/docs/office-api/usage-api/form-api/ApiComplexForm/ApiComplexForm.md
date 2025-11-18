@@ -11,6 +11,7 @@ Represents the ApiComplexForm class.
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [ClearContent](./Methods/ClearContent.md) | boolean | Clears all content from the current complex form, resetting it to its placeholder state. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified form. |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiComplexForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
