@@ -29,13 +29,11 @@ const templateProps: HomepageFeatures.Props = {
   featureGroups: [
     {
       heading: 'DocSpace',
-      subheading: 'APIs and tools for managing collaborative rooms and content.',
       linkPrefix: DocSpaceFeatures.linkPrefix,
       items: DocSpaceFeatures.items,
     },
     {
       heading: 'Docs',
-      subheading: 'APIs and extensions for editing and managing documents.',
       linkPrefix: DocsFeatures.linkPrefix,
       items: DocsFeatures.items,
     }
