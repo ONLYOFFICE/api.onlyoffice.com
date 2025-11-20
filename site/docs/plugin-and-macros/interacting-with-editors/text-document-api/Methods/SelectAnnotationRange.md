@@ -12,12 +12,12 @@ expression.SelectAnnotationRange(obj);
 
 ## Parameters
 
-| **Name**        | **Required/Optional** | **Data type** | **Default** | **Description**                                                           |
-| --------------- | --------------------- | ------------- | ----------- | ------------------------------------------------------------------------- |
-| obj             | Required              | `Object`      |             | The range selection object.                                               |
-| paragraphId | Required              | `string`      |             | ID of the paragraph containing the annotation.                            |
-| rangeId     | Required              | `string`      |             | ID of the specific range to select.                                       |
-| name        | Optional              | `string`      |             | Optional name/type of the annotation (e.g., "grammar", "spelling", etc.). |
+| **Name**    | **Required/Optional** | **Data type** | **Description**                                                           |
+| ----------- | --------------------- | ------------- | ------------------------------------------------------------------------- |
+| obj         | Required              | `Object`      | The range selection object.                                               |
+| paragraphId | Required              | `string`      | ID of the paragraph containing the annotation.                            |
+| rangeId     | Required              | `string`      | ID of the specific range to select.                                       |
+| name        | Optional              | `string`      | Optional name/type of the annotation (e.g., "grammar", "spelling", etc.). |
 
 ## Returns
 

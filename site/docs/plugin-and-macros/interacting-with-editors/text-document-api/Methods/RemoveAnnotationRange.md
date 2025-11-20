@@ -12,13 +12,13 @@ expression.RemoveAnnotationRange(obj);
 
 ## Parameters
 
-| **Name**        | **Required/Optional** | **Data type** | **Default** | **Description**                                                                     |
-| --------------- | --------------------- | ------------- | ----------- | ----------------------------------------------------------------------------------- |
-| obj             | Required              | `Object`      |             | The range removing object.                                                          |
-| paragraphId | Required              | `string`      |             | ID of the paragraph containing the annotation.                                      |
-| all         | Optional              | `boolean`     |             | Optional parameter, flag to remove all annotations for the current paragraph. |
-| rangeId     | Optional              | `string`      |             | ID of the specific range to remove.                                                 |
-| name        | Optional              | `string`      |             | Optional name/type of the annotation (e.g., "grammar", "spelling", etc.).           |
+| **Name**    | **Required/Optional** | **Data type** | **Description**                                                               |
+| ----------- | --------------------- | ------------- | ----------------------------------------------------------------------------- |
+| obj         | Required              | `Object`      | The range removing object.                                                    |
+| paragraphId | Required              | `string`      | ID of the paragraph containing the annotation.                                |
+| all         | Optional              | `boolean`     | Optional parameter, flag to remove all annotations for the current paragraph. |
+| rangeId     | Optional              | `string`      | ID of the specific range to remove.                                           |
+| name        | Optional              | `string`      | Optional name/type of the annotation (e.g., "grammar", "spelling", etc.).     |
 
 ## Returns
 
