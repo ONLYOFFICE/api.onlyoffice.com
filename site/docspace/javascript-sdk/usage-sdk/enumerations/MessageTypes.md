@@ -1,6 +1,6 @@
 # Enumeration: MessageTypes
 
-Defined in: [enums/index.ts:194](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L194)
+Defined in: [enums/index.ts:194](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L194)
 
 The types of messages exchanged between SDK components and the host application.
 
@@ -10,7 +10,7 @@ The types of messages exchanged between SDK components and the host application.
 
 > **OnMethodReturn**: `"onMethodReturn"`
 
-Defined in: [enums/index.ts:196](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L196)
+Defined in: [enums/index.ts:196](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L196)
 
 The message sent when a method returns a result.
 
@@ -20,7 +20,7 @@ The message sent when a method returns a result.
 
 > **OnEventReturn**: `"onEventReturn"`
 
-Defined in: [enums/index.ts:198](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L198)
+Defined in: [enums/index.ts:198](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L198)
 
 The message sent when an event occurs.
 
@@ -30,7 +30,7 @@ The message sent when an event occurs.
 
 > **OnCallCommand**: `"onCallCommand"`
 
-Defined in: [enums/index.ts:200](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L200)
+Defined in: [enums/index.ts:200](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L200)
 
 The message sent when a command is called.
 
@@ -40,6 +40,6 @@ The message sent when a command is called.
 
 > **Error**: `"error"`
 
-Defined in: [enums/index.ts:202](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L202)
+Defined in: [enums/index.ts:202](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L202)
 
 The message sent when an error occurs.

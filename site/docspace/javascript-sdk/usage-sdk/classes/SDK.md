@@ -1,6 +1,6 @@
 # Class: SDK
 
-Defined in: [sdk/index.ts:49](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L49)
+Defined in: [sdk/index.ts:49](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L49)
 
 The SDK class is responsible for managing multiple `SDKInstance` objects.
 It provides methods to initialize instances with different configurations for various DocSpace modes.
@@ -39,7 +39,7 @@ const instance = sdk.init({
 
 > **frames**: `Record`\<`string`, [`SDKInstance`](SDKInstance.md)\> = `{}`
 
-Defined in: [sdk/index.ts:54](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L54)
+Defined in: [sdk/index.ts:54](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L54)
 
 Maps frame IDs to their corresponding `SDKInstance` objects.
 Used to track and manage multiple SDK instances across different frames.
@@ -50,7 +50,7 @@ Used to track and manage multiple SDK instances across different frames.
 
 > **init**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:209](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L209)
+Defined in: [sdk/index.ts:209](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L209)
 
 Initializes an SDK instance with the provided configuration.
 
@@ -219,7 +219,7 @@ console.log('Frame reinitialized in editor mode');
 
 > **initFrame**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:333](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L333)
+Defined in: [sdk/index.ts:333](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L333)
 
 Initializes the frame with the given configuration.
 
@@ -342,7 +342,7 @@ try {
 
 > **initManager**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:464](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L464)
+Defined in: [sdk/index.ts:464](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L464)
 
 Initializes the manager with the provided configuration.
 
@@ -487,7 +487,7 @@ const adminManager = sdk.initManager({
 
 > **initViewer**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:595](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L595)
+Defined in: [sdk/index.ts:595](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L595)
 
 Initializes the viewer with the provided configuration.
 
@@ -631,7 +631,7 @@ const controlledViewer = sdk.initViewer({
 
 > **initEditor**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:764](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L764)
+Defined in: [sdk/index.ts:764](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L764)
 
 Initializes the editor with the given configuration.
 
@@ -813,7 +813,7 @@ const mobileEditor = sdk.initEditor({
 
 > **initRoomSelector**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:906](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L906)
+Defined in: [sdk/index.ts:906](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L906)
 
 Initializes the room selector with the provided configuration.
 
@@ -968,7 +968,7 @@ function grantUserAccess(roomId, permissions) {
 
 > **initFileSelector**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:1061](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L1061)
+Defined in: [sdk/index.ts:1061](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L1061)
 
 Initializes the file selector with the given configuration.
 
@@ -1136,7 +1136,7 @@ function processBatchFiles(files) {
 
 > **initSystem**(`config`): [`SDKInstance`](SDKInstance.md)
 
-Defined in: [sdk/index.ts:1089](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/sdk/index.ts#L1089)
+Defined in: [sdk/index.ts:1089](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/sdk/index.ts#L1089)
 
 Initializes the system with the provided configuration.
 
