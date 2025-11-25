@@ -4,10 +4,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures, { HomepageFeaturesProps } from '@site/src/components/HomepageFeatures';
 import HomepageSamples, { HomepageSamplesProps } from '@site/src/components/HomepageSamples';
+import HomepageBlog, { HomepageBlogProps } from '@site/src/components/HomepageBlog';
 import Heading from '@theme/Heading';
 import { DocsFeatures } from "@site/src/features";
 import { DocSpaceFeatures } from "@site/src/features";
-import { Samples } from "@site/src/homepageItems";
+import { Samples, BlogArticles } from "@site/src/homepageItems";
 
 import styles from './index.module.css';
 
@@ -50,6 +51,14 @@ const samplesProps: HomepageSamplesProps.Props = {
   ],
 };
 
+const blogProps: HomepageBlogProps.Props = {
+  blogGroups: [
+    {
+      items: BlogArticles.items,
+    },
+  ],
+};
+
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -60,6 +69,7 @@ export default function Home(): ReactNode {
       <main>
         <HomepageFeatures {...templateProps}/>
         <HomepageSamples {...samplesProps}/>
+        <HomepageBlog {...blogProps}/>
       </main>
     </Layout>
   );

@@ -1,32 +1,41 @@
-.samplesGridList {
+.blogGridList {
   gap: var(--base-size-32);
   grid-template-columns: 1fr;
   display: grid;
 }
 
-.samplesGridItem {
+.blogGridList a:hover {
+  text-decoration: none;
+}
+
+.blogGridItem {
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--base-size-24);
-  padding: var(--base-size-32);
+  padding: 0 0 32px;
   background-color: var(--card-background-color);
   border-radius: 4px;
   border: 1px solid var(--card-border-color);
   transition: box-shadow 300ms;
 }
 
-.samplesGridItem:hover {
+.blogGridItem:hover {
   box-shadow: var(--temp-color-shadow-default-small);
 }
 
-.samplesItemHeader {
+.blogGridItem p {
+  margin-block: 0;
+}
+
+.blogItemHeader {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding: 0 32px;
 }
 
-.samplesItemHeader h3 {
+.blogItemHeader h3 {
   font-size: var(--text-title-font-size-small);
   font-weight: var(--text-title-font-weight-small);
   line-height: var(--text-title-line-height-small);
@@ -34,7 +43,7 @@
 }
 
 @media (min-width: 544px) {
-  .samplesItemHeader > h3 {
+  .blogItemHeader > h3 {
     font-size: var(--text-title-font-size-medium);
     font-weight: var(--text-title-font-weight-medium);
     line-height: var(--text-title-line-height-medium);
@@ -42,11 +51,11 @@
 }
 
 @media (min-width: 768px) {
-  .samplesGridList {
+  .blogGridList {
     grid-template-columns: 1fr 1fr;
   }
 
-  .samplesItemHeader {
+  .blogItemHeader {
     gap: 24px;
   }
 }
