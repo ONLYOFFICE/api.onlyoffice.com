@@ -2,10 +2,12 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageFeatures, { HomepageFeaturesProps } from '@site/src/components/HomepageFeatures';
+import HomepageSamples, { HomepageSamplesProps } from '@site/src/components/HomepageSamples';
 import Heading from '@theme/Heading';
 import { DocsFeatures } from "@site/src/features";
 import { DocSpaceFeatures } from "@site/src/features";
+import { Samples } from "@site/src/homepageItems";
 
 import styles from './index.module.css';
 
@@ -25,7 +27,7 @@ function HomepageHeader() {
   );
 }
 
-const templateProps: HomepageFeatures.Props = {
+const templateProps: HomepageFeaturesProps.Props = {
   featureGroups: [
     {
       heading: 'DocSpace',
@@ -40,6 +42,14 @@ const templateProps: HomepageFeatures.Props = {
   ],
 };
 
+const samplesProps: HomepageSamplesProps.Props = {
+  samplesGroups: [
+    {
+      items: Samples.items,
+    },
+  ],
+};
+
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -49,6 +59,7 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main>
         <HomepageFeatures {...templateProps}/>
+        <HomepageSamples {...samplesProps}/>
       </main>
     </Layout>
   );

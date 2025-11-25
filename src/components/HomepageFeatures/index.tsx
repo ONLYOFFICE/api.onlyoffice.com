@@ -4,7 +4,7 @@ import Heading from "@theme/Heading";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import styles from "./styles.module.css";
 
-export namespace HomepageFeatures {
+export namespace HomepageFeaturesProps {
   export type FeatureGroup = {
     heading: string;
     subheading?: string;
@@ -17,8 +17,7 @@ export namespace HomepageFeatures {
   };
 }
 
-const HomepageFeatures: FC<HomepageFeatures.Props> = ({
-  linkPrefix,
+const HomepageFeatures: FC<HomepageFeaturesProps.Props> = ({
   featureGroups,
 }) => {
   return (

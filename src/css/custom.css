@@ -245,6 +245,8 @@ html[data-theme='dark'] {
 
   --sidebar-category-c: var(--c-gray-0);
   --color-page-header-default-background: #333;
+
+  --temp-color-shadow-default-small: 0 7px 15px 0 #ABABAB1a;
 }
 
 /* START OPENAPI */
