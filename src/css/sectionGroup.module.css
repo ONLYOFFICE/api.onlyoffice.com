@@ -28,7 +28,7 @@
   display: inline-block;
   font-weight: 600;
   line-height: 22px;
-  padding: 16px 32px;
+  padding: 12px 32px;
 
   &:hover {
     color: var(--button-color);
@@ -59,19 +59,22 @@
   text-align: center;
 }
 
-.blogGroup {
+.sectionGroup {
   margin-top: 2rem;
 }
 
-.blogGroup h3 {
+.sectionGroup h3 {
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
-.blogGroup p {
+.sectionGroup p {
   font-size: 0.75rem;
   line-height: 1.4;
+}
+
+.blogGroup p {
   padding: 0 32px;
 }
 
@@ -82,6 +85,14 @@
 }
 
 @media (min-width: 768px) {
+  .sectionGroup h3 {
+    font-size: 1.05rem;
+  }
+
+  .sectionGroup p {
+    font-size: 0.9rem;
+  }
+
   .blogGroup h3 {
     font-size: 18px;
   }

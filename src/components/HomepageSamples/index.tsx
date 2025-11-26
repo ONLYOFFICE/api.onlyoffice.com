@@ -2,7 +2,7 @@ import type { FC } from "react";
 import Heading from "@theme/Heading";
 import Link from '@docusaurus/Link';
 import { SamplesGrid } from "@site/src/components/SamplesGrid";
-import styles from "./styles.module.css";
+import styles from "@site/src/css/sectionGroup.module.css";
 
 export namespace HomepageSamplesProps {
   export type SamplesGroup = {
@@ -24,7 +24,7 @@ const HomepageSamples: FC<HomepageSamplesProps.Props> = ({
         <div className={styles.samplesСontainerInner}>
           <main>
             {samplesGroups.map((group, index) => (
-              <section key={index} className={styles.samplesGroup}>
+              <section key={index} className={styles.sectionGroup}>
                 <Heading as="h2" className={styles.samplesHeading}>
                   Check out our popular samples
                 </Heading>

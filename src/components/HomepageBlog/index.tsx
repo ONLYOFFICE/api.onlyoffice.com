@@ -2,7 +2,7 @@ import type { FC } from "react";
 import Heading from "@theme/Heading";
 import Link from '@docusaurus/Link';
 import { BlogGrid } from "@site/src/components/BlogGrid";
-import styles from "./styles.module.css";
+import styles from "@site/src/css/sectionGroup.module.css";
 
 export namespace HomepageBlogProps {
   export type BlogGroup = {
@@ -24,7 +24,7 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
         <div className={styles.samplesСontainerInner}>
           <main>
             {blogGroups.map((group, index) => (
-              <section key={index} className={styles.blogGroup}>
+              <section key={index} className={`${styles.sectionGroup} ${styles.blogGroup}`}>
                 <Heading as="h2" className={styles.samplesHeading}>
                   Want to know more?
                 </Heading>
