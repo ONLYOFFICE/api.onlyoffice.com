@@ -4,17 +4,121 @@ sidebar_position: -3
 
 # Icons
 
-Plugin icon image files that are specified in the [config.json](./configuration/configuration.md#variationsicons) file as the URL to the icon. This URL allows you to set the rules for theme (name, type), state (normal, hover, active), and scaling in the following format:
+When building a plugin for editor, adding icons can significantly enhance usability and make your interface more intuitive.
 
-``` ini
-%parameter_name%(option1|options2|...)
+## Folder structure
+
+Your plugin should include a */resources* directory to store all images, icons, and other static assets.
+This folder is automatically accessible to editor when the plugin is loaded.
+
+Here's a recommended layout:
+
+``` text
+my-plugin/
+|-- config.json
+|-- index.html
+|-- plugin.js
+`-- resources/
+    |-- dark/
+    |   |-- icon.png
+    |   |-- icon@1.25x.png
+    |   |-- icon@1.5x.png
+    |   |-- icon@1.75x.png
+    |   `-- icon@2x.png
+    |
+    |-- light/
+    |   |-- icon.png
+    |   |-- icon@1.25x.png
+    |   |-- icon@1.5x.png
+    |   |-- icon@1.75x.png
+    |   `-- icon@2x.png
+    |
+    `-- store/
+        |-- icons/
+        |   |-- icon.png
+        |   |-- icon.svg
+        |   |-- icon@1.25x.png
+        |   |-- icon@1.5x.png
+        |   |-- icon@1.75x.png
+        |   `-- icon@2x.png
+        `-- screenshots/
+            |-- screen_1.png
+            |-- screen_2.png
+            |-- screen_3.png
+            |-- screen_4.png
+            |-- screen_5.png
+            `-- screen_6.png
 ```
 
-For example:
+This hierarchy allows editor to automatically choose the correct icon based on the theme, state, and scale.
 
-``` ini
+## Defining the icon in config.json
+
+Inside your [config.json](./configuration/configuration.md), define your icon using a smart URL pattern that adapts to themes and scaling:
+
+``` json
+{
+"name": "My Plugin",
+ 
+"guid": "asc.{UUID}",
+ 
+"version": "1.0.0",
+ 
+"description": "Example plugin with adaptive icons",
+ 
+"icons": [
+ 
 "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
+ 
+],
+ 
+"isVisual": true,
+ 
+"initDataType": "none",
+ 
+"initOnSelectionChanged": false
+}
 ```
+
+This single line dynamically tells the editor where to look for the icon depending on:
+
+* The theme name (classic or dark)
+* The theme type (light or dark)
+* The state (normal, hover)
+* The scale (100%, 125%, 150%, etc.)
+* The extension (png or svg)
+
+## How it works
+
+When the plugin loads, editor:
+
+1. Detects the active editor theme (light/dark).
+2. Checks the screen scale (e.g. 125%).
+3. Loads the corresponding icon variant.
+4. If no perfect match is found, it picks the closest size available.
+
+For example, when the editor is set to a dark theme with a zoom level of 150%, the following adjustments are automatically applied:
+
+```
+resources/dark/icon@1.5x.png
+```
+
+## Optional: adding icons to content controls
+
+You can also use icons inside content control buttons introduced in version 9.0:
+
+``` ts
+let button = new Asc.ButtonContentControl();
+ 
+button.icons = "/resources/check%scale%(default).png";
+ 
+button.attachOnClick(function(contentControlId){
+ 
+Asc.plugin.executeMethod("RemoveContentControl", [contentControlId]);
+ 
+});
+```
+This allows you to add interactive buttons directly inside your document content.
 
 ## Parameters  
 
@@ -36,7 +140,6 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-> Please note that all parameters are optional. You can use just the path to the icon. For example, *"resources/icon.svg"*.
 
 This string generates the objects in the old icon format (the [icon2](./configuration/configuration.md#variationsicons2) parameter):
 
