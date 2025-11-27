@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Manage rooms
 
-This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, renaming, archiving, and deleting rooms through API requests.
+This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, renaming, archiving, unarchiving and deleting rooms through API requests.
 
 ## Before you start
 
@@ -83,7 +83,22 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     }
   }
 
-  // Step 5: Delete a room
+  // Step 5: Unarchive a room
+  async function unarchiveRoom(roomId) {
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}/unarchive`;
+    const res = await fetch(url, {
+      method: 'PUT',
+      headers: HEADERS,
+    });
+
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Unarchive room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
+    }
+  }
+
+  // Step 6: Delete a room
   async function deleteRoom(roomId) {
     const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
@@ -115,6 +130,9 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
       await archiveRoom(room_id);
 
       // Step 5
+      await unarchiveRoom(room_id);
+
+      // Step 6
       await deleteRoom(room_id);
     } catch (e) {
       console.error(e.message);
@@ -187,7 +205,16 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     else:
       print(f'Failed to archive room: {response.status_code} - {response.text}')
 
-  # Step 5: Delete a room
+  # Step 5: Unarchive a room
+  def unarchive_room(room_id):
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}/unarchive'
+    response = requests.put(url, headers=HEADERS)
+    if response.status_code == 200:
+      print(f'Room {room_id} unarchived successfully.')
+    else:
+      print(f'Failed to unarchive room: {response.status_code} - {response.text}')
+
+  # Step 6: Delete a room
   def delete_room(room_id):
     url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
     requests.delete(url, headers=headers)
@@ -214,7 +241,10 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
   #Step 4
   archive_room(room_id)
 
-  #Step 5
+  # Step 5
+  unarchive_room(room_id)
+
+  #Step 6
   delete_room(room_id)
   ```
 
@@ -386,7 +416,45 @@ A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backen
   </TabItem>
 </Tabs>
 
-## Step 5: Delete a room
+## Step 5: Unarchive a room
+
+A PUT request is sent to [/api/2.0/files/rooms/:id/unarchive](/docspace/api-backend/usage-api/unarchive-room.api.mdx) to unarchive a room and restore it from the archived state.
+
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  async function unarchiveRoom(roomId) {
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}/unarchive`;
+    const res = await fetch(url, {
+      method: 'PUT',
+      headers: HEADERS,
+    });
+    if (!res.ok) {
+      const t = await res.text();
+      console.log(`Unarchive room failed. Status code: ${res.status}, Message: ${t}`);
+      return null;
+    }
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def unarchive_room(room_id):
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}/unarchive'
+    response = requests.put(url, headers=HEADERS)
+    if response.status_code == 200:
+      print(f'Room {room_id} unarchived successfully.')
+    else:
+      print(f'Failed to unarchive room: {response.status_code} - {response.text}')
+  ```
+
+  </TabItem>
+</Tabs>
+
+## Step 6: Delete a room
 
 A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-api/delete-room.api.mdx) to remove a room.
 
