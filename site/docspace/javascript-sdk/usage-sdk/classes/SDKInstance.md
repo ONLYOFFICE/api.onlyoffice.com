@@ -1,6 +1,6 @@
 # Class: SDKInstance
 
-Defined in: [instance/index.ts:65](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L65)
+Defined in: [instance/index.ts:65](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L65)
 
 Represents an SDK instance for managing frames and communicating with DocSpace.
 
@@ -33,7 +33,7 @@ console.log('Current user:', userInfo);
 
 > **new SDKInstance**(`config`): `SDKInstance`
 
-Defined in: [instance/index.ts:73](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L73)
+Defined in: [instance/index.ts:73](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L73)
 
 #### Parameters
 
@@ -51,7 +51,7 @@ Defined in: [instance/index.ts:73](https://github.com/ONLYOFFICE/docspace-sdk-js
 
 > **config**: [`TFrameConfig`](../type-aliases/TFrameConfig.md)
 
-Defined in: [instance/index.ts:71](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L71)
+Defined in: [instance/index.ts:71](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L71)
 
 The iframe configuration options.
 
@@ -61,7 +61,7 @@ The iframe configuration options.
 
 > **setIsLoaded**(): `void`
 
-Defined in: [instance/index.ts:281](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L281)
+Defined in: [instance/index.ts:281](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L281)
 
 Manages the frame loading completion process.
 Handles frame finalization, visual transition management, and user event coordination.
@@ -111,7 +111,7 @@ May throw an error if frame elements cannot be accessed or if style
 
 > **initFrame**(`config`): `HTMLIFrameElement` \| `null`
 
-Defined in: [instance/index.ts:747](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L747)
+Defined in: [instance/index.ts:747](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L747)
 
 Initializes an iframe with the given configuration and appends it to the target element.
 
@@ -184,7 +184,7 @@ May throw an error if the configuration contains invalid values or the target el
 
 > **destroyFrame**(): `void`
 
-Defined in: [instance/index.ts:802](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L802)
+Defined in: [instance/index.ts:802](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L802)
 
 Destroys the current frame instance and performs comprehensive cleanup operations.
 
@@ -234,7 +234,7 @@ try {
 
 > **setConfig**(`config`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:896](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L896)
+Defined in: [instance/index.ts:896](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L896)
 
 Sets the configuration for the instance and applies updates to the active frame.
 
@@ -296,7 +296,7 @@ May throw an error if the new configuration contains invalid values or if frame 
 
 > **getConfig**(): [`TFrameConfig`](../type-aliases/TFrameConfig.md)
 
-Defined in: [instance/index.ts:960](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L960)
+Defined in: [instance/index.ts:960](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L960)
 
 Retrieves the current configuration object for the SDK instance.
 
@@ -367,7 +367,7 @@ if (!config.src) {
 
 > **getFolderInfo**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1003](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1003)
+Defined in: [instance/index.ts:1003](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1003)
 
 Retrieves comprehensive information about the current or specified folder.
 
@@ -419,7 +419,7 @@ try {
 
 > **getSelection**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1052](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1052)
+Defined in: [instance/index.ts:1052](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1052)
 
 Retrieves the current user selection for context-aware operations and bulk actions.
 
@@ -479,7 +479,7 @@ Throws an error if unable to retrieve the current selection state.
 
 > **getFiles**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1091](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1091)
+Defined in: [instance/index.ts:1091](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1091)
 
 Retrieves a list of files from the current context with comprehensive metadata.
 
@@ -527,7 +527,7 @@ console.log(`Found ${documents.length} document files`);
 
 > **getFolders**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1130](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1130)
+Defined in: [instance/index.ts:1130](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1130)
 
 Retrieves a list of folders from the current context with detailed information.
 
@@ -575,7 +575,7 @@ console.log(`Shared: ${sharedFolders.length}`);
 
 > **getList**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1170](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1170)
+Defined in: [instance/index.ts:1170](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1170)
 
 Retrieves a combined list of files and folders from the current context.
 
@@ -624,7 +624,7 @@ console.log(`Found ${searchResults.length} items matching 'report'`);
 
 > **getRooms**(`filter`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1215](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1215)
+Defined in: [instance/index.ts:1215](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1215)
 
 Retrieves a list of rooms based on the provided filter criteria.
 
@@ -688,7 +688,7 @@ May throw an error if the filter parameters are invalid or if the user lacks per
 
 > **getUserInfo**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1260](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1260)
+Defined in: [instance/index.ts:1260](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1260)
 
 Retrieves comprehensive information about the current user profile and session details.
 
@@ -745,7 +745,7 @@ Throws an error if the user is not authenticated or user information cannot be r
 
 > **getHashSettings**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1307](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1307)
+Defined in: [instance/index.ts:1307](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1307)
 
 Retrieves the server's current password hashing configuration.
 
@@ -804,7 +804,7 @@ Throws an error if the hash settings cannot be retrieved from the server.
 
 > **openModal**(`type`, `options`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1356](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1356)
+Defined in: [instance/index.ts:1356](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1356)
 
 Opens a modal dialog of the specified type with comprehensive configuration options.
 
@@ -877,7 +877,7 @@ Throws an error if the modal type is not supported or the configuration is inval
 
 > **createFile**(`folderId`, `title`, `templateId`, `formId`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1404](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1404)
+Defined in: [instance/index.ts:1404](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1404)
 
 Creates a new file in the specified folder using templates and forms.
 
@@ -956,7 +956,7 @@ try {
 
 > **createFolder**(`parentFolderId`, `title`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1456](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1456)
+Defined in: [instance/index.ts:1456](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1456)
 
 Creates a new folder within the specified parent folder for content organization.
 
@@ -1019,7 +1019,7 @@ try {
 
 > **createRoom**(`title`, `roomType`, `quota?`, `tags?`, `color?`, `cover?`, `indexing?`, `denyDownload?`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1512](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1512)
+Defined in: [instance/index.ts:1512](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1512)
 
 Creates a new room with the specified parameters and configuration.
 
@@ -1125,7 +1125,7 @@ Throws an error if room creation fails due to permissions, quota limits, or inva
 
 > **setListView**(`viewType`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1577](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1577)
+Defined in: [instance/index.ts:1577](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1577)
 
 Dynamically changes the list view display mode for enhanced user experience.
 
@@ -1191,7 +1191,7 @@ Throws an error if the view type is not supported or the operation fails.
 
 > **createHash**(`password`, `hashSettings`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1605](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1605)
+Defined in: [instance/index.ts:1605](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1605)
 
 Creates a hash for the given password using the specified hash settings.
 
@@ -1244,7 +1244,7 @@ Throws an error if the password is empty or the hash settings are invalid.
 
 > **login**(`email`, `passwordHash`, `password?`, `session?`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1655](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1655)
+Defined in: [instance/index.ts:1655](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1655)
 
 Authenticates a user with the provided credentials.
 
@@ -1325,7 +1325,7 @@ Throws an error if authentication fails or credentials are invalid.
 
 > **logout**(): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1694](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1694)
+Defined in: [instance/index.ts:1694](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1694)
 
 Ends the current user session and logs out the user.
 
@@ -1367,7 +1367,7 @@ Throws an error if the logout operation fails.
 
 > **createTag**(`name`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1732](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1732)
+Defined in: [instance/index.ts:1732](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1732)
 
 Creates a new tag with the specified name.
 
@@ -1424,7 +1424,7 @@ May throw an error if thetag name is invalid, already exists, or user lacks perm
 
 > **addTagsToRoom**(`roomId`, `tags`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1765](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1765)
+Defined in: [instance/index.ts:1765](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1765)
 
 Adds tags to a specified room for organization and categorization.
 
@@ -1481,7 +1481,7 @@ May throw an error if the room ID is invalid, tags do not exist, or the user lac
 
 > **removeTagsFromRoom**(`roomId`, `tags`): `Promise`\<`object`\>
 
-Defined in: [instance/index.ts:1809](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1809)
+Defined in: [instance/index.ts:1809](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1809)
 
 Removes specified tags from a room for organization and categorization cleanup.
 
@@ -1546,7 +1546,7 @@ May throw an error if the room ID is invalid, tags do not exist in the room, or 
 
 > **executeInEditor**(`callback`, `data?`): `void`
 
-Defined in: [instance/index.ts:1867](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/instance/index.ts#L1867)
+Defined in: [instance/index.ts:1867](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/instance/index.ts#L1867)
 
 Executes custom functions within the editor context for advanced document manipulation.
 

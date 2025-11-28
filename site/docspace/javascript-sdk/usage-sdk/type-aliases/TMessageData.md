@@ -2,7 +2,7 @@
 
 > **TMessageData** = `object`
 
-Defined in: [types/index.ts:324](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L324)
+Defined in: [types/index.ts:324](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L324)
 
 The message data structure.
 
@@ -12,7 +12,7 @@ The message data structure.
 
 > `optional` **commandData**: `object`
 
-Defined in: [types/index.ts:326](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L326)
+Defined in: [types/index.ts:326](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L326)
 
 The command data payload.
 
@@ -22,7 +22,7 @@ The command data payload.
 
 > **commandName**: `string`
 
-Defined in: [types/index.ts:328](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L328)
+Defined in: [types/index.ts:328](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L328)
 
 The name of the command to execute in the DocSpace frame.
 
@@ -32,7 +32,7 @@ The name of the command to execute in the DocSpace frame.
 
 > `optional` **eventReturnData**: [`TEventReturnData`](TEventReturnData.md)
 
-Defined in: [types/index.ts:330](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L330)
+Defined in: [types/index.ts:330](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L330)
 
 The event return data.
 
@@ -42,7 +42,7 @@ The event return data.
 
 > `optional` **error**: `object`
 
-Defined in: [types/index.ts:332](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L332)
+Defined in: [types/index.ts:332](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L332)
 
 The error information.
 
@@ -64,7 +64,7 @@ The error code.
 
 > **frameId**: `string`
 
-Defined in: [types/index.ts:339](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L339)
+Defined in: [types/index.ts:339](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L339)
 
 The frame unique identifier.
 
@@ -74,7 +74,7 @@ The frame unique identifier.
 
 > `optional` **methodReturnData**: `object`
 
-Defined in: [types/index.ts:341](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L341)
+Defined in: [types/index.ts:341](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L341)
 
 The method return data.
 
@@ -84,6 +84,6 @@ The method return data.
 
 > **type**: [`TMessageTypes`](TMessageTypes.md)
 
-Defined in: [types/index.ts:343](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L343)
+Defined in: [types/index.ts:343](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L343)
 
 The message type.
