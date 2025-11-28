@@ -97,4 +97,4 @@ Use it when your CDN provider becomes unstable, too expensive, or you want to te
 
 A DELETE request is sent to [/api/2.0/settings/storage/cdn](/docspace/api-backend/usage-api/reset-cdn-to-default).
 This endpoint resets CDN-related settings to their defaults and effectively disables CDN usage for static content.
-After this operation, files are served directly from the portal’s primary storage without changing its configuration.
+After this operation, files are served directly from the portal's primary storage without changing its configuration.

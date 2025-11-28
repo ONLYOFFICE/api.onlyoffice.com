@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Manage file external links
 
-This example demonstrates how to get all external links of a file and update the file’s external link settings in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to get all external links of a file and update the file's external link settings in ONLYOFFICE DocSpace using the API.
 
 ## Before you start
 
