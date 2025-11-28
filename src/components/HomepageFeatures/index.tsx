@@ -3,13 +3,20 @@ import clsx from 'clsx';
 import Heading from "@theme/Heading";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import styles from "./styles.module.css";
+import Link from '@docusaurus/Link';
 
 export namespace HomepageFeaturesProps {
+  export type Button = {
+    text: string;
+    href: string;
+  }
+
   export type FeatureGroup = {
     heading: string;
     subheading?: string;
     items: FeaturesGrid.Item[];
     linkPrefix?: string;
+    button?: Button;
   };
 
   export type Props = {
@@ -27,7 +34,14 @@ const HomepageFeatures: FC<HomepageFeaturesProps.Props> = ({
           <main>
             {featureGroups.map((group, index) => (
               <section key={index} className={styles.featureGroup}>
-                <Heading as="h2">{group.heading}</Heading>
+                <p className={styles.featureHeaderTop}>
+                  <Heading as="h2">{group.heading}</Heading>
+                  {group.button &&
+                  <Link className={styles.tryButton} to={group.button.href} >
+                    {group.button.text}
+                  </Link>
+                  }
+                </p>
                 {group.subheading && (
                   <p className={styles.subheading}>{group.subheading}</p>
                 )} 

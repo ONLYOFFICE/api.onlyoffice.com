@@ -1,3 +1,8 @@
+
+:root {
+  --button-color: #245ADD;
+}
+
 .features {
   display: flex;
   justify-content: center;
@@ -46,7 +51,7 @@
 }
 
 .featureGroup {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .featureGroup h3 {
@@ -60,10 +65,31 @@
   line-height: 1.4;
 }
 
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
+.featureHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.featureHeaderTop h2 {
+  margin: 0;
+}
+
+.tryButton {
+  border: 1px solid var(--button-color);
+  border-radius: 12px;
+  color: var(--button-color);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 12px 32px;
+
+  &:hover {
+    color: var(--button-color);
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 768px) {

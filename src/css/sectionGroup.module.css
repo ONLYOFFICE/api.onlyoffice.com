@@ -78,12 +78,6 @@
   padding: 0 32px;
 }
 
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
-}
-
 @media (min-width: 768px) {
   .sectionGroup h3 {
     font-size: 1.05rem;

@@ -11,10 +11,15 @@ import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
 export type Features = {
   linkPrefix: string
   items: FeaturesGrid.Item[]
+  button?: FeaturesGrid.Button
 };
 
 export const DocsFeatures: Features = {
   linkPrefix: 'docs',
+  button: {
+    text: "Try Docs Playground",
+    href: "/docs/docs-api/get-started/playground/",
+  },
   items: [
     {
       title: 'Docs API',

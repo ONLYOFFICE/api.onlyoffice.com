@@ -39,6 +39,7 @@ const templateProps: HomepageFeaturesProps.Props = {
       heading: 'Docs',
       linkPrefix: DocsFeatures.linkPrefix,
       items: DocsFeatures.items,
+      button: DocsFeatures.button,
     }
   ],
 };
