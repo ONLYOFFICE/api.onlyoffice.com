@@ -404,7 +404,7 @@ Payload parameters include:
 
 ## Step 4: Set a password for a public share link
 
-A POST request is sent to [/api/2.0/files/share/{share_key}/password](/docspace/api-backend/usage-api/apply-external-share-password).
+A POST request is sent to [/api/2.0/files/share/:share_key/password](/docspace/api-backend/usage-api/apply-external-share-password).
 
 Payload parameters include:
 

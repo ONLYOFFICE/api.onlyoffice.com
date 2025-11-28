@@ -304,7 +304,7 @@ This returns a list of all registered OAuth2 applications in the portal.
 
 ## Step 2: Retrieve a specific client by ID
 
-A GET request is sent to [/api/2.0/clients/{id}](/docspace/api-backend/usage-api/get-client).
+A GET request is sent to [/api/2.0/clients/:id](/docspace/api-backend/usage-api/get-client).
 This retrieves the basic information of a specific client, including its name, redirect URIs, and owner.
 
 <Tabs>
@@ -354,7 +354,7 @@ This retrieves the basic information of a specific client, including its name, r
 
 ## Step 3: Retrieve private client details
 
-A GET request is sent to [/api/2.0/clients/{id}/info](/docspace/api-backend/usage-api/get-client-info).
+A GET request is sent to [/api/2.0/clients/:id/info](/docspace/api-backend/usage-api/get-client-info).
 This returns extended details about the client, including confidential configuration parameters (visible only to administrators).
 
 <Tabs>
@@ -404,7 +404,7 @@ This returns extended details about the client, including confidential configura
 
 ## Step 4: Retrieve public client information
 
-A GET request is sent to [/api/2.0/clients/public/{id}/info](/docspace/api-backend/usage-api/get-public-client-info).
+A GET request is sent to [/api/2.0/clients/public/:id/info](/docspace/api-backend/usage-api/get-public-client-info).
 This endpoint returns non-sensitive information about a client, such as its name and description, which can be safely displayed to end users.
 
 <Tabs>

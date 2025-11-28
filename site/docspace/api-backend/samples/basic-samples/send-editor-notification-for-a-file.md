@@ -110,7 +110,7 @@ You can use this endpoint to notify collaborators or mentioned users about impor
 
 ## How it works
 
-A POST request is sent to [/api/2.0/files/file/{fileId}/sendeditornotify](/docspace/api-backend/usage-api/send-editor-notify).
+A POST request is sent to [/api/2.0/files/file/:fileId/sendeditornotify](/docspace/api-backend/usage-api/send-editor-notify).
 
 Payload parameters include:
 

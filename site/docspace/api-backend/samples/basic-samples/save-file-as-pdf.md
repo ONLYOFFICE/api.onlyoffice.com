@@ -118,7 +118,7 @@ This example demonstrates how to convert a document to PDF and save it to a spec
 
 ## How it works
 
-A POST request is sent to [/api/2.0/files/file/{fileId}/saveaspdf](/docspace/api-backend/usage-api/save-file-as-pdf) to convert a file into PDF format and save it in the specified folder.
+A POST request is sent to [/api/2.0/files/file/:fileId/saveaspdf](/docspace/api-backend/usage-api/save-file-as-pdf) to convert a file into PDF format and save it in the specified folder.
 
 Payload parameters:
 

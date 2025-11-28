@@ -143,7 +143,7 @@ This example demonstrates how to retrieve users with room sharing settings in ON
 
 ## How it works
 
-A GET request is sent to [/api/2.0/people/room/{id}](/docspace/api-backend/usage-api/get-users-with-room-shared) to return the users with sharing settings in the specified room.
+A GET request is sent to [/api/2.0/people/room/:id](/docspace/api-backend/usage-api/get-users-with-room-shared) to return the users with sharing settings in the specified room.
 
 Path parameters:
 

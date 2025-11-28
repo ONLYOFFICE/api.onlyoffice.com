@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Manage folder primary external link
 
-This example demonstrates how to create, get, and update a folder’s primary external link in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to create, get, and update a folder's primary external link in ONLYOFFICE DocSpace using the API.
 
 ## Before you start
 
@@ -300,7 +300,7 @@ A POST request is sent to [/api/2.0/files/folder/:folderId/link](/docspace/api-b
 
 ## Step 2: Get primary external link info
 
-A GET request is sent to [/api/2.0/files/folder/:folderId/link](/docspace/api-backend/usage-api/get-folder-primary-external-link) to retrieve information about the folder’s existing external link.
+A GET request is sent to [/api/2.0/files/folder/:folderId/link](/docspace/api-backend/usage-api/get-folder-primary-external-link) to retrieve information about the folder's existing external link.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

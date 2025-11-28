@@ -173,7 +173,7 @@ This example demonstrates how to get all external links of a file and update the
     get_file_links(file_id)
 
     # Step 2: Update external link configuration
-    # Provide at least one field according to your portal’s policy
+    # Provide at least one field according to your portal's policy
     link_payload = {
       # Examples (adjust to your portal policy):
       # "denyDownload": True,
@@ -254,7 +254,7 @@ A GET request is sent to [/api/2.0/files/file/:fileId/links](/docspace/api-backe
 
 ## Step 2: Update external link settings for a file
 
-A PUT request is sent to [/api/2.0/files/file/:fileId/links](/docspace/api-backend/usage-api/set-file-external-link) to modify the file’s external link configuration. The request body should include the fields you are allowed to change (e.g., `denyDownload`, `password`, `expiration`, `access`).
+A PUT request is sent to [/api/2.0/files/file/:fileId/links](/docspace/api-backend/usage-api/set-file-external-link) to modify the file's external link configuration. The request body should include the fields you are allowed to change (e.g., `denyDownload`, `password`, `expiration`, `access`).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

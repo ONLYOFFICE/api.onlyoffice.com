@@ -131,4 +131,4 @@ This example demonstrates how to enable or disable an OAuth2 client in ONLYOFFIC
 
 ## How it works
 
-A PATCH request is sent to [/api/2.0/clients/:clientId/activation](/docspace/api-backend/usage-api/change-activation) with a JSON body specifying the new state (e.g., {"isActive": true}) to activate or deactivate the client. When deactivated, the client cannot request new tokens; existing tokens remain valid until they expire.
+A PATCH request is sent to [/api/2.0/clients/:clientId/activation](/docspace/api-backend/usage-api/change-activation) with a JSON body specifying the new state to activate or deactivate the client. When deactivated, the client cannot request new tokens; existing tokens remain valid until they expire.

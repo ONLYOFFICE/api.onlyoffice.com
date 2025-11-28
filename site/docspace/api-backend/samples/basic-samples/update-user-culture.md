@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Update user culture
 
-This example demonstrates how to update a user’s culture (language and regional settings) in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to update a user's culture (language and regional settings) in ONLYOFFICE DocSpace using the API.
 
 ## Before you start
 
@@ -108,7 +108,7 @@ This example demonstrates how to update a user’s culture (language and regiona
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/people/{userId}/culture](/docspace/api-backend/usage-api/update-member-culture) to change the user’s language and regional settings.
+A PUT request is sent to [/api/2.0/people/:userId/culture](/docspace/api-backend/usage-api/update-member-culture) to change the user's language and regional settings.
 
 Payload parameters:
 

@@ -239,7 +239,7 @@ You can optionally filter by the `enabled` flag to return only active or inactiv
 
 ## Step 2: Get a web plugin by name
 
-A GET request is sent to [/api/2.0/settings/webplugins/{name}](/docspace/api-backend/usage-api/get-web-plugin) to retrieve full metadata of a single web plugin.
+A GET request is sent to [/api/2.0/settings/webplugins/:name](/docspace/api-backend/usage-api/get-web-plugin) to retrieve full metadata of a single web plugin.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

@@ -228,7 +228,7 @@ A POST request is sent to [/api/2.0/settings/webplugins](/docspace/api-backend/u
 
 ## Step 2: Delete a web plugin
 
-A DELETE request is sent to [/api/2.0/settings/webplugins/{name}](/docspace/api-backend/usage-api/delete-web-plugin) where `{name}` is the web plugin name returned when the plugin was added.
+A DELETE request is sent to [/api/2.0/settings/webplugins/:name](/docspace/api-backend/usage-api/delete-web-plugin) where `{name}` is the web plugin name returned when the plugin was added.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

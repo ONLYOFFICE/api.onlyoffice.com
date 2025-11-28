@@ -89,7 +89,7 @@ The backup service is responsible for creating, storing, and managing scheduled 
       print(json.dumps(state_info, indent=2))
       return state_info
     elif response.status_code == 403:
-      print("You don’t have enough permissions to perform this operation (403).")
+      print("You don't have enough permissions to perform this operation (403).")
       return None
     else:
       print(f"Request failed: {response.status_code}")

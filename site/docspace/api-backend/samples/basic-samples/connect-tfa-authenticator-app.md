@@ -163,7 +163,7 @@ The flow consists of two phases: generating a setup payload with a QR code and m
 
 ## Step 1: Generate TFA setup payload
 
-A GET request is sent to [/api/2.0/settings/tfaapp/setup](/docspace/api-backend/usage-api/usage-api/tfa-app-generate-setup-code) to generate TFA setup data for the current user.
+A GET request is sent to [/api/2.0/settings/tfaapp/setup](/docspace/api-backend/usage-api/tfa-app-generate-setup-code) to generate TFA setup data for the current user.
 
 The response contains fields such as:
 

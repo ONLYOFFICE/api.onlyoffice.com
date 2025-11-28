@@ -128,4 +128,4 @@ A POST request is sent to [/api/2.0/files/@my/insert](/docspace/api-backend/usag
 
 - The filename is provided via the `title` query parameter.
 - The request must include correct `Content-Type` and `Content-Length` headers.
-- On success, the API responds with the created file’s metadata (ID, title, folder, version, and URLs).
+- On success, the API responds with the created file's metadata (ID, title, folder, version, and URLs).

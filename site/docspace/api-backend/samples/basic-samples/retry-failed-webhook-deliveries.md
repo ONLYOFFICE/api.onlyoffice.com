@@ -313,7 +313,7 @@ Useful query parameters:
 
 ## Step 2: Retry a single webhook delivery
 
-A PUT request is sent to [/api/2.0/settings/webhook/{id}/retry](/docspace/api-backend/usage-api/retry-webhook), where `{id}` is the webhook log ID returned in Step 1.
+A PUT request is sent to [/api/2.0/settings/webhook/:id/retry](/docspace/api-backend/usage-api/retry-webhook), where `{id}` is the webhook log ID returned in Step 1.
 
 The API retries the delivery attempt for this specific log entry.
 The response returns an updated log object with the new status and delivery timestamp.

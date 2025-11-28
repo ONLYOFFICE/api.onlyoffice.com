@@ -177,7 +177,7 @@ A PUT request is sent to [/api/2.0/portal/payment/calculatewallet](/docspace/api
 The request body includes:
 
 - `quantity`: a mapping of item identifiers to their quantities in the payment.
-- `productQuantityType`: the type of action performed on a product’s quantity. Possible values: `Set`, `Add`, `Sub`, `Renew`.
+- `productQuantityType`: the type of action performed on a product's quantity. Possible values: `Set`, `Add`, `Sub`, `Renew`.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -241,8 +241,8 @@ A PUT request is sent to [/api/2.0/portal/payment/updatewallet](/docspace/api-ba
 
 The request body includes:
 
-`quantity`: mapping of item identifiers to their quantities in the payment.
-`productQuantityType`: the type of action for those quantities (`Set`, `Add`, `Sub`, `Renew`).
+- `quantity`: mapping of item identifiers to their quantities in the payment.
+- `productQuantityType`: the type of action for those quantities (`Set`, `Add`, `Sub`, `Renew`).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

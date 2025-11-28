@@ -144,6 +144,6 @@ Use it when an integration is no longer required, the target URL is deprecated, 
 
 ## How it works
 
-A DELETE request is sent to [/api/2.0/settings/webhook/{id}](/docspace/api-backend/usage-api/remove-webhook), where `{id}` is the webhook configuration ID.
+A DELETE request is sent to [/api/2.0/settings/webhook/:id](/docspace/api-backend/usage-api/remove-webhook), where `{id}` is the webhook configuration ID.
 
 You can obtain this ID from the list returned by [/api/2.0/settings/webhook](/docspace/api-backend/usage-api/get-tenant-webhooks) and then pass it to the delete method to remove the corresponding webhook configuration.

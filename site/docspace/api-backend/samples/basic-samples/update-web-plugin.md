@@ -132,7 +132,7 @@ A common pattern is to save a JSON object as a string (for example, `{"theme":"d
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/settings/webplugins/{name}](/docspace/api-backend/usage-api/update-web-plugin) where `{name}` is the web plugin name.
+A PUT request is sent to [/api/2.0/settings/webplugins/:name](/docspace/api-backend/usage-api/update-web-plugin) where `{name}` is the web plugin name.
 
 You can:
 

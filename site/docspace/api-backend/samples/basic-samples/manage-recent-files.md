@@ -151,7 +151,7 @@ This example demonstrates how to add a file to the “Recent” list and remove 
 ## Step 1: Add a file to the Recent list
 A POST request is sent to [/api/2.0/files/file/:fileId/recent](/docspace/api-backend/usage-api/add-file-to-recent).
 
-- The request adds the specified file to the user’s “Recent” list.
+- The request adds the specified file to the user's “Recent” list.
 - Requires only the `fileId` parameter.
 
 <Tabs>

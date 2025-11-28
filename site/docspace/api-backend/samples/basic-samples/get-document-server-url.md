@@ -89,7 +89,7 @@ The Document Server URL defines where documents are edited and co-authored — i
       print(json.dumps(info, indent=2))
       return info
     elif response.status_code == 403:
-      print("You don’t have enough permission to view this setting (403).")
+      print("You don't have enough permission to view this setting (403).")
       return None
     else:
       print(f"Request failed: {response.status_code}")

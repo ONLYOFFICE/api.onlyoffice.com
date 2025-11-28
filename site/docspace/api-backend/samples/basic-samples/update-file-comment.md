@@ -153,4 +153,4 @@ This example demonstrates how to update a file comment (description) in ONLYOFFI
 
 ## How it works
 
-A PUT request is sent to [/api/2.0/files/file/{fileId}/comment](/docspace/api-backend/usage-api/update-file-comment) to update the description or comment associated with the file.
+A PUT request is sent to [/api/2.0/files/file/:fileId/comment](/docspace/api-backend/usage-api/update-file-comment) to update the description or comment associated with the file.

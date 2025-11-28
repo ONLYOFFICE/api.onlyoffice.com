@@ -151,7 +151,7 @@ When an administrator updates the TFA policy (trusted IPs, mandatory users or gr
 
 ## Step 1: Request confirmation email for TFA policy changes
 
-A PUT request is sent to [/api/2.0/settings/tfaappwithlink](/docspace/api-backend/usage-api/usage-api/update-tfa-settings-link) with the updated TFA settings:
+A PUT request is sent to [/api/2.0/settings/tfaappwithlink](/docspace/api-backend/usage-api/update-tfa-settings-link) with the updated TFA settings:
 
 - `id`: ID of the user whose action will be confirmed (typically the administrator changing the policy).
 - `trustedIps`: list of IP addresses that bypass TFA verification.

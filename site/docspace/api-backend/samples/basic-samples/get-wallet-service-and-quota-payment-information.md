@@ -150,10 +150,11 @@ This example demonstrates how to retrieve wallet service details and payment inf
 
   </TabItem>
 </Tabs>
+</details>
 
 ## Step 1: Get wallet service details
 
-A GET request is sent to [/api/2.0/portal/payment/walletservice](/docspace/api-backend/usage-api/usage-api/get-wallet-service) with the `service` query parameter to return the specified wallet service.
+A GET request is sent to [/api/2.0/portal/payment/walletservice](/docspace/api-backend/usage-api/get-wallet-service) with the `service` query parameter to return the specified wallet service.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

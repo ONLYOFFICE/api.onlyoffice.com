@@ -121,7 +121,7 @@ This example retrieves users who have access to a specific folder in ONLYOFFICE 
 
 ## How it works
 
-A GET request is sent to [/api/2.0/people/folder/{id}](/docspace/api-backend/usage-api/get-users-with-folders-shared) to return the users with the sharing settings for the specified folder.
+A GET request is sent to [/api/2.0/people/folder/:id](/docspace/api-backend/usage-api/get-users-with-folders-shared) to return the users with the sharing settings for the specified folder.
 
 Path parameter:
 

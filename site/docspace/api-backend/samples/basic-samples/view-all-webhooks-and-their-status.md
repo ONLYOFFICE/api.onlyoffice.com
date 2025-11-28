@@ -203,7 +203,7 @@ For each webhook you can inspect:
 ## Step 2: Get available webhook triggers
 
 A GET request is sent to [/api/2.0/settings/webhook/triggers](/docspace/api-backend/usage-api/get-webhook-triggers) to retrieve the list of supported trigger values (for example, `user.created`, `file.uploaded`, `room.deleted`).
-You can use this list when building UI controls for webhook configuration or when interpreting the triggers field returned in Step 1.
+You can use this list when building UI controls for webhook configuration or when interpreting the triggers field returned in Step 1.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

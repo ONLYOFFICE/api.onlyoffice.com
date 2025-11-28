@@ -269,7 +269,7 @@ The response includes fields such as:
 `host`: SMTP server host (for example, mail.example.com).
 `port`: SMTP port (for example, 25, 465, or 587).
 `senderAddress`: email used as the sender address.
-`senderDisplayName`: display name shown in the recipient’s inbox.
+`senderDisplayName`: display name shown in the recipient's inbox.
 `credentialsUserName`, `credentialsUserPassword`: authentication credentials (if enableAuth is true).
 `enableSSL`, `enableAuth`, `useNtlm`, `isDefaultSettings`: flags controlling protocol and authentication behavior.
 

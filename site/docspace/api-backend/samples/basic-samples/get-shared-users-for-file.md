@@ -101,4 +101,4 @@ This example demonstrates how to retrieve a list of users who have access to a s
 
 ## How it works
 
-A GET request is sent to [/api/2.0/files/file/{fileId}/sharedusers](/docspace/api-backend/usage-api/get-shared-users) to retrieve all users who have access to the specified file, including their permission levels.
+A GET request is sent to [/api/2.0/files/file/:fileId/sharedusers](/docspace/api-backend/usage-api/get-shared-users) to retrieve all users who have access to the specified file, including their permission levels.
