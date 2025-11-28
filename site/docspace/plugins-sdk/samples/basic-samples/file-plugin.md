@@ -1,4 +1,4 @@
-# Creating a file plugin
+# File plugin
 
 This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.
 
@@ -31,11 +31,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
   "scopes": ["File"]
 }
 ```
-
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
 
 ## Step 3: Review and extend plugin code
 
@@ -112,7 +107,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 6: Upload to DocSpace
 
@@ -121,7 +116,7 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Upload a `.md` file to any room.
 2. You should now see a custom icon for `.md` files.
@@ -130,5 +125,5 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 ## Notes
 
 - The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
-- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filerowicon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filetileicon).
-- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onclick) logic instead.
+- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileTileIcon).
+- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onClick) logic instead.

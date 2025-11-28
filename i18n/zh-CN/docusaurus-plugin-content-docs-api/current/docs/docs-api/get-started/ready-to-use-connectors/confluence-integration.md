@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Confluence 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="pGd06HLkWU4"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-confluence)允许用户在[Confluence](https://www.atlassian.com/software/confluence/)中使用ONLYOFFICE文档直接编辑办公文档。
 
 该连接器可在官方的[Atlassian应用市场](https://marketplace.atlassian.com/1218214)获取。

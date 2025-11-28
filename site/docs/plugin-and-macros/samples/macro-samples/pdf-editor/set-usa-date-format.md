@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Set USA date format
 
 Sets all date form formats to USA one.

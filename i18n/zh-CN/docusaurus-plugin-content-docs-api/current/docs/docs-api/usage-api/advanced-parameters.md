@@ -27,6 +27,7 @@ ONLYOFFICE 文档可以更改的参数可以细分为以下主要部分：
 const config = {
   document: {
     fileType: "docx",
+    isForm: true,
     info: {
       favorite: true,
       folder: "Example Files",
@@ -109,6 +110,7 @@ const config = {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,
@@ -132,6 +134,7 @@ const config = {
         size: "11px",
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -146,6 +149,7 @@ const config = {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
@@ -209,6 +213,8 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
@@ -319,7 +325,7 @@ const config = {
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
   type: "desktop",
   width: "100%",
-}
+};
 ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关文档服务器服务客户机-服务器交互的更多信息，有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。

@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiFormBase class.
+Returns a type of the ApiPictureForm class.
 
 ## Syntax
 
@@ -16,22 +16,23 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"form"
+"pictureForm"
 
 ## Example
 
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-pdf
-// How to get a class type of ApiFormBase.
+// How to get a class type of ApiPictureForm.
 
-// Retrieve class type of ApiFormBase object and insert it to the slide.
+// Retrieve class type of ApiPictureForm object and insert it to the document.
 
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let classType = textForm.GetClassType();
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", 70 * 36000, 80 * 36000);
+let classType = pictureForm.GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);

@@ -8,7 +8,7 @@ sidebar_custom_props:
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
-<YoutubeVideo videoId="IAjhUxBWKkQ"/>
+<YoutubeVideo videoId="33w03FcPWTo"/>
 ```
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-owncloud) enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs.
@@ -56,12 +56,14 @@ If the server with the ownCloud installed does not have the Internet access, or 
    git submodule update --init --recursive
    ```
 
-   > ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **a** or **b** to get the application.
+   :::note
+   ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **a** or **b** to get the application.
+   :::
 
 3. Change the owner to update the application right from ownCloud web interface:
 
     ``` sh
-    chown -R www-data:www-data ы
+    chown -R www-data:www-data
     ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
@@ -74,7 +76,7 @@ In ownCloud, open the *\~/settings/admin?sectionid=additional#onlyoffice* page w
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the ownCloud server. The ownCloud server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the ownCloud server. The ownCloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ![Local](/assets/images/editor/owncloud-local.jpg)
 
@@ -160,7 +162,9 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 - **Encrypting file storage**. ownCloud provides an option to encrypt the file storage. But if the encryption with the *per-user encryption keys* (used by default in ownCloud **Default encryption module** app) is enabled, ONLYOFFICE Docs cannot open the encrypted files for editing and save them after the editing. The ONLYOFFICE section of the administrative settings page will display a notification about it. However, if you set the encryption with the *master key*, ONLYOFFICE application will work as intended. The instruction on enabling *master key* based encryption is available in the official documentation on [ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line) websites.
 
-  > ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
+  :::note
+  ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
+  :::
 
 - **Validating certificate**. If you are using a self-signed certificate for ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
 
@@ -177,7 +181,9 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   This will disable the certificate verification and allow ownCloud to establish connection with ONLYOFFICE Docs.
 
-  > Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.
+  :::note
+  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.
+  :::
 
 - **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
 

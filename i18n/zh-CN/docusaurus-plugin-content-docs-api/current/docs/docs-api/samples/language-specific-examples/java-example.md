@@ -1,5 +1,5 @@
 ---
-sidebar_position: -7
+sidebar_position: -8
 ---
 
 # Java 示例
@@ -8,7 +8,9 @@ sidebar_position: -7
 
 此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。
 
-> 它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。I如果您启用了测试示例，请在投入产品之前将其禁用。
+:::note
+它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。I如果您启用了测试示例，请在投入产品之前将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -105,7 +107,15 @@ files.docservice.url.site=https://documentserver/
 
    如果一切正确，您将在浏览器中看到 Tomcat 网页，如下所示。
 
-### 步骤 5. 运行 Java 代码
+### 步骤 5. 配置 JWT
+
+打开*src/main/resouces/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
+
+ ``` ini
+ files.docservice.secret=secret
+ ```
+
+### 步骤 6. 运行 Java 代码
 
 1. 通过单击 **Manager App:** 打开 Tomcat Web Application Manager：
 
@@ -135,7 +145,7 @@ files.docservice.url.site=https://documentserver/
 
 5. 单击应用程序名来运行它。
 
-### 步骤 6. 检查可访问性
+### 步骤 7. 检查可访问性
 
 如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 **documentserver**。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 **example.com** 安装。
 
@@ -187,6 +197,12 @@ files.docservice.url.site=https://documentserver/
    ``` sh
    sudo chmod -R ugo+rw /{path}
    ```
+
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT： 
+ 
+ 	``` ini
+ 	files.docservice.secret=secret
+ 	```
 
 5. 安装 **Maven**:
 
@@ -289,6 +305,12 @@ files.docservice.url.site=https://documentserver/
    ```
 
    其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。
+
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
+ 
+ 	``` ini
+ 	files.docservice.secret=secret
+ 	```
 
 5. 在 Java 示例目录中运行下一个命令：
 

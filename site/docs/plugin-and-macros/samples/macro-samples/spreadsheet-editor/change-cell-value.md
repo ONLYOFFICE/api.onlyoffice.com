@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Change cell value
 
 Changes the selected cell value.

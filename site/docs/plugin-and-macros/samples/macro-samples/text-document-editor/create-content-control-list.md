@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Create content control list
 
 Creates a ContentControlList from all single-level numbered lists throughout the document, as well as from the manually selected text section.

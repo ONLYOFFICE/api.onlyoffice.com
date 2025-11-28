@@ -17,24 +17,26 @@ Manages review process from an external source.
 
    ``` ts
    $("#accept").on("click", () => {
-     connector.executeMethod("AcceptReviewChanges")
-   })
+     connector.executeMethod("AcceptReviewChanges");
+   });
    $("#reject").on("click", () => {
-     connector.executeMethod("RejectReviewChanges")
-   })
+     connector.executeMethod("RejectReviewChanges");
+   });
    ```
 
 2. When the user clicks the arrow buttons in the custom interface, the MoveToNextReviewChange method is executed to move between the next and previous review changes:
 
    ``` ts
    $("#prev").on("click", () => {
-     connector.executeMethod("MoveToNextReviewChange", [false])
-   })
+     connector.executeMethod("MoveToNextReviewChange", [false]);
+   });
    $("#next").on("click", () => {
-     connector.executeMethod("MoveToNextReviewChange")
-   })
+     connector.executeMethod("MoveToNextReviewChange");
+   });
    ```
 
-> Please note that the connector is available only for **ONLYOFFICE Docs Developer**.
->
-> The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+:::note
+Please note that the connector is available only for **ONLYOFFICE Docs Developer**.
+
+The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+:::

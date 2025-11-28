@@ -110,19 +110,19 @@ ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-v
 
 1. 将`DocEditor.instances` 参数添加到`window` 对象中，并通过编辑器 ID 从该对象中获取编辑器对象：
 
-   ```vue
+   ```js
    const documentEditor = window.DocEditor.instances["docEditor"]
    ```
 
 2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md):
 
-   ```vue
+   ```js
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
    ```
 
 示例:
 
-```vue
+```js
 onDocumentReady() {
   const documentEditor = window.DocEditor.instances["docEditor"]
 

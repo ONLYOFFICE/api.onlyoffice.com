@@ -1,5 +1,5 @@
 ---
-sidebar_position: -6
+sidebar_position: -3
 ---
 
 # PHP (Laravel) example
@@ -8,7 +8,9 @@ sidebar_position: -6
 
 This is an example application written on PHP with [Laravel Framework](https://laravel.com/docs/11.x/installation#meet-laravel) that integrates ONLYOFFICE Docs.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::note
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::
 
 ## Important security info
 
@@ -34,7 +36,7 @@ The PHP (Laravel) example offers various installation options, but we highly rec
 To get started, you need to install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 The application provides you with Docker files out-of-the-box, so you will just need to run a couple of shell commands to start the project. You can also change these files to your preferences.
 
-1. Download and extract the release archive in a directory:
+1. Download and extract the release archive in a directory, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel):
 
     ```sh
     cd /my/php-laravel/project
@@ -43,7 +45,9 @@ The application provides you with Docker files out-of-the-box, so you will just 
     cd "PHP Laravel Example"
     ```
 
-   > You should modify the `DOCUMENT_SERVER_JWT_SECRET` environment variable in your `.env` file as the `docker-compose.yml` uses it to set a JWT secret in ONLYOFFICE Docs.
+   :::note
+   You should modify the `DOCUMENT_SERVER_JWT_SECRET` environment variable in your `.env` file as the `docker-compose.yml` uses it to set a JWT secret in ONLYOFFICE Docs.
+   :::
 
 2. To run the containers, you can either run the `make compose-start` command that builds and starts the project, or you can execute the following commands manually:
 
@@ -67,11 +71,15 @@ The application provides you with Docker files out-of-the-box, so you will just 
      docker compose exec example php artisan key:generate
      ```
 
-   > To stop the Docker containers, you should run the `make compose-stop` or `docker compose down` commands.
+   :::note
+   To stop the Docker containers, you should run the `make compose-stop` or `docker compose down` commands.
+   :::
 
    If the installation and configuration process has been successful, you can now visit `localhost:80` and try the example application.
 
-   > You can always change the configuration of the [nginx](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel/docker) web-server and the [port](https://github.com/ONLYOFFICE/document-server-integration/blob/master/web/documentserver-example/php-laravel/docker-compose.yml) at which the application will run.
+   :::note
+   You can always change the configuration of the [nginx](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel/docker) web-server and the [port](https://github.com/ONLYOFFICE/document-server-integration/blob/master/web/documentserver-example/php-laravel/docker-compose.yml) at which the application will run.
+   :::
 
 ### Option 2. On local machine
 
@@ -83,7 +91,7 @@ Before diving into the example, you will need to install ONLYOFFICE Docs. Check 
    - [Node.js (16+) and NPM](https://laravel.com/docs/11.x/vite#installing-node)
    - [Laravel (11) Server Requirements](https://laravel.com/docs/11.x/deployment#server-requirements)
 
-2. Download the release archive and extract it in your preferred directory:
+2. Download the release archive and extract it in your preferred directory or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel):
 
     ```sh
     cd /path/to/my/projects

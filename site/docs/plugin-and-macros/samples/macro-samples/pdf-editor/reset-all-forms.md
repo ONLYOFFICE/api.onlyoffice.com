@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Reset all forms
 
 Clears all fields if necessary, for example after printing the document.

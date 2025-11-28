@@ -14,10 +14,10 @@ expression.TREND(arg1, arg2, arg3, arg4);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | A range or array of y-values from the &lt;em&gt;y = mx + b&lt;/em&gt; equation. |
-| arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | An optional range or array of x-values from the &lt;em&gt;y = mx + b&lt;/em&gt; equation, an array of the same size as an array of y-values. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | A range or array of y-values from the *y = mx + b* equation. |
+| arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | An optional range or array of x-values from the *y = mx + b* equation, an array of the same size as an array of y-values. |
 | arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | A range or array of new x-values for which this function will return corresponding y-values. |
-| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant &lt;em&gt;b&lt;/em&gt; is calculated normally if this parameter is set to **true** or omitted, and &lt;em&gt;b&lt;/em&gt; is set equal to 0 if the parameter is **false**. |
+| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, and *b* is set equal to 0 if the parameter is **false**. |
 
 ## Returns
 
@@ -33,7 +33,7 @@ This example shows how to return numbers in a linear trend matching known data p
 // Use a function to find a linear trend using data points by the least squares method.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let month = ["Month", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let sales = ["Sales", "$1,500.00", "$1,230.00", "$1,700.00", "$1,000.00", "$980.00", "$1,470.00", "$1,560.00", "$1,640.00", "$1,420.00", "$1,100.00"];
 

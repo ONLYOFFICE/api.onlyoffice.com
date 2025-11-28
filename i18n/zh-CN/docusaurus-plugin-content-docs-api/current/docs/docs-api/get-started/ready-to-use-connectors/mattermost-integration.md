@@ -34,7 +34,10 @@ ONLYOFFICE文档和Mattermost可以安装在不同的计算机上，也可以安
    ``` sh
    npm install --legacy-peer-deps
    ```
-   > 请注意，您需要在计算机上安装Node.js（v.15.14.0）才能构建该插件。
+
+   :::note
+   请注意，您需要在计算机上安装Node.js（v.15.14.0）才能构建该插件。
+   :::
 
 4. 运行以下命令：
 

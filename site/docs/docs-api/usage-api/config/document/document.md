@@ -6,7 +6,7 @@ The document section allows to change all the parameters pertaining to the docum
 
 `Type: string`
 
-Defines the type of the file for the source viewed or edited document. Must be lowercase. The following file types are available: *.csv, .djvu, .doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodp, .fods, .fodt, .htm, .html, .hwp, .hwpx, .key, .md, .mht, .numbers, .odg, .odp, .ods, .odt, .otp, .ots, .ott, .oxps, .pages, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .txt, .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps*.
+Defines the type of the file for the source viewed or edited document. Must be lowercase. The following file types are available: *.csv, .djvu, .doc, .docm, .docx, .dot, .dotm, .dotx, .dps, .dpt, .epub, .et, .ett, .fb2, .fodp, .fods, .fodt, .hml, .htm, .html, .hwp, .hwpx, .key, .md, .mht, .mhtml, .numbers, .odg, .odp, .ods, .odt, .otp, .ots, .ott, .oxps, .pages, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .stw, .sxc, .sxi, .sxw, .txt, .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx, .wps, .wpt, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps*.
 
 **Example**: `"docx"`
 

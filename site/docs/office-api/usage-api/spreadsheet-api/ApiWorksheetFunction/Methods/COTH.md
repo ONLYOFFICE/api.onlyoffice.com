@@ -14,7 +14,7 @@ expression.COTH(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The angle in radians for which the hyperbolic cotangent will be calculated. Its absolute value must be less than &lt;em&gt;2^27&lt;/em&gt;. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The angle in radians for which the hyperbolic cotangent will be calculated. Its absolute value must be less than *2^27*. |
 
 ## Returns
 
@@ -30,6 +30,6 @@ This example shows how to get the hyperbolic cotangent of a number.
 // Use function to get the hyperbolic cotangent of an angle.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.COTH(0.785398));
 ```

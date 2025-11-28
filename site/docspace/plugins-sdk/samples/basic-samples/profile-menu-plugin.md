@@ -1,4 +1,4 @@
-# Creating a profile menu plugin
+# Profile menu plugin
 
 This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.
 
@@ -31,11 +31,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
   "scopes": ["ProfileMenu"]
 }
 ```
-
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
 
 ## Step 3: Review and extend plugin code
 
@@ -113,7 +108,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 6: Upload to DocSpace
 
@@ -122,15 +117,15 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Go to the bottom-left corner of the DocSpace interface.
 2. Click ![More icon](/assets/images/docspace/more-icon.png) next to your profile (avatar).
 3. A dropdown menu will appear.
-4. Look for your custom menu item titled `Profile menu item`.
+4. Look for your custom menu item titled **Profile menu item**.
 
 ## Notes
 
 - You can add multiple items via [`addProfileMenuItem`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/profilemenuplugin.md#addprofilemenuitem).
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/profilemenuitem.md#onclick) function is a good place to trigger modals, open side panels, or call APIs.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/profilemenuitem.md#onClick) function is a good place to trigger modals, open side panels, or call APIs.
 - You can extend this plugin to support other scopes like `MainButton`, `Settings`, or `ContextMenu` by updating the `package.json` and plugin logic accordingly.

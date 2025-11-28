@@ -1,6 +1,6 @@
 # onClick
 
-The function called when the user clicks on the element.
+The function called when the user clicks the element.
 
 ## Parameters
 

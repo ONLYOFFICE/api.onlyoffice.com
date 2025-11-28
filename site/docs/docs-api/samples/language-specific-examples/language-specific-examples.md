@@ -10,7 +10,9 @@ Each ONLYOFFICE Docs instance includes online editors for text documents, spread
 
 Test example is simple document management system that can be built into your application for testing. The test example included by default is written on Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.
 
-> The integration examples are used to demonstrate document editors functions and the ways to connect **ONLYOFFICE Docs** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**! If you enabled any of the test examples, disable it before going for production.
+:::note
+The integration examples are used to demonstrate document editors functions and the ways to connect **ONLYOFFICE Docs** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**! If you enabled any of the test examples, disable it before going for production.
+:::
 
 ## Important security info
 

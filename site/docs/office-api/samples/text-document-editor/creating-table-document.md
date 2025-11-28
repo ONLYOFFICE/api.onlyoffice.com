@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating table document
 
 Create a document with a styled table filled with array-based values:
@@ -65,5 +69,5 @@ function setTextColor(paragraph, value) {
   }
 }
 
-doc.Push(table);
+doc.AddElement(0, table);
 ```

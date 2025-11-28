@@ -42,7 +42,9 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
 
 这两种方式都会自动从[PyPi](https://pypi.org/project/onlyoffice.plone/)安装插件。
 
-> 请注意，如果您之前安装过旧版本的插件（早期使用*onlyoffice.connector*这个旧名称的插件版本），请在安装新版本之前将其卸载。
+:::note
+请注意，如果您之前安装过旧版本的插件（早期使用*onlyoffice.connector*这个旧名称的插件版本），请在安装新版本之前将其卸载。
+:::
 
 ## 配置Plone ONLYOFFICE集成插件
 
@@ -99,7 +101,9 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
 
 5. 然后启动或重启您的Plone实例。
 
-> Plone基于**Zope服务器**不能以*root*用户身份运行。如果您打算以*root*用户身份运行，必须提供[有效的用户指令](https://zope.readthedocs.io/en/2.12/SETUID.html)。为此，需要在line to *./parts/instance/etc/zope.conf*中添加*effective-user \<用户名>* 这一行。
+:::note
+Plone基于**Zope服务器**不能以*root*用户身份运行。如果您打算以*root*用户身份运行，必须提供[有效的用户指令](https://zope.readthedocs.io/en/2.12/SETUID.html)。为此，需要在line to *./parts/instance/etc/zope.conf*中添加*effective-user \<用户名>* 这一行。
+:::
 
 ## 升级Plone ONLYOFFICE集成插件
 

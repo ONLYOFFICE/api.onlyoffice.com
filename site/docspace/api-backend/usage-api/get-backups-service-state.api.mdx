@@ -1,0 +1,63 @@
+---
+id: get-backups-service-state
+title: "Get the backup service state"
+description: "Returns the backup service state."
+sidebar_label: "Get the backup service state"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVsFy2zgM/RUOLrmottfdvei0btLtpLsz7TTJ5JDxNDQFWaxlkktCSbwe/XsHpGRbdrrxxZbIBxAEHh60BZLLAPkDfJBq1TiYZ2AdeknamusCclgipa1wg/5JK7whSQgZeAzOmoAB8i1MJxP+KzAorx0bQ965FCHZidAZKmsIDTFeOldrFQ8b/whstIWgKlxLfqKNQ8jBLn6gIsjAeQ6NdDqyP/9tJBq5qLE4AC6srVEayI4ivnGodKkxCF0KqlAshlfQQXTOhPXCWBpBBvgi165GyMk32LYZyKLQ7FDWXw/iKGUd8PjA11LEPkkTe+z2DzN/RRZaTmKTUtjdSBvCJXrIoLR+LSktvZ8yttZmFQ6w0nu5gQw04Tq8nb7KY3mACuS1WbJfqdItTrZazgLfpQlnhpjAl7bAswza/8vQvZfOoe/C+H3y2ykz74xsqLJe/4dF9BZQNV7TBvKHLcigvvP+9xXyAniUBWTw7DUhzNtsCx9QevSQP8S3mdN/42a39hpeBq16+JdZQ9X0deAXh7HtHubt/Jgr35Aab8JrvNzxZo1U2a5tuZCSKshhLJ0eT0eTcTIbL5E6y74n+RV9iNdvfA05bBcy4J2v29MmiVihrCn1sklSARk8Sa+5NWLJO+OU+VI2NRfvxNNV2hJ33/7has33dbhhEUiuhtXYkzgm/cTlXUBxae1Ko2AjNNTpC2Rg5DpaHjrMQLOZiibMxK5Uu3MqIndyykdD6MXGNl40AT07FtIUwskQnq3nokYZi1oTHbLnjiDnuL5IYLH9fH8rbu0KTXsxcJp8Zd3DX31/fL6/5aOGjHwrZ7NBoljkCiT0a22wEItNJNzFrGuYiLkQFcoiBtAldXBil9QO02Y7yu+lRsaF40gSTpS1fRbPmioxOFVEfciAtxM1Dnd78RgsRg7GRId8PI6njqypN7YstcKRsuu0OB3vBIHVlxN+vmmEx+pY188mWcSOlYWQSmEIgqxw3hIqwkJ4DLbxCsOu+3O45/830EnSepHYZzMuXFpjkn4fJZV3r0S3fdoWA+vzb83E16aM0+jlXdBLI6nx+DbdmNI7OPdPIUrrj+IaidsKRcysWDeBxAKFXZCMnHzSMpLysde1XjYGFXkUaApntaGRuCamNbcnFkIGIUXq+MQy9hV7+PHgIo+jPbsP73ekGC2/lzZeuxtJM6e7zxyp4ozue+TrtbhpnLOei9QMMl1h7QoMq+NkV2qM5l3DRMG11GwSkos/h0guA0t4yvH70R+jCS85G2gtzUEUn5B+OUKOa7Xdf6ydNX66whO+0NjVUhsOoUlzIM2iB2YFZDAdTVi90kdnBscTaZ5BZQMxfrubRC0v/9ug56k830+cNFh7ueERFkcFzJRCR3E01U0i5NHnJo+c3cj89PEWsigfQw6nMdE9sPd+y2wOfQ+nSoqAf3msv2qx3aYGadsdPm390mInugnN6Z23bfsT+VkTaA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup service state"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/backup/getservicestate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the backup service state.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup service state","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"enabled":{"type":"boolean","description":"Specifies if the backup service is enabled or not.","example":true}},"additionalProperties":false,"description":"Backup service state.","title":"BackupServiceStateDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BackupServiceStateWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

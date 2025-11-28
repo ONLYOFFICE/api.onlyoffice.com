@@ -1,0 +1,71 @@
+---
+id: display-recent
+title: "displayRecent"
+description: "displayRecent"
+sidebar_label: "displayRecent"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv40YM/isDXnJRbMNpLz41j10g2wIbJA6CIgg2tERZs5FmZucRr2vovxeckRzJbpsc6ottDvmRQ/IjZwce1w4Wj/BZ1uTEVNyR91KtHTxloA1Z9FKr6wIWUEhnatzeUk7KQwaWfgRy/kIXW1jsINfK88FiB2hMLfNoOf3utGKZyytqkH/5rSFYgF59p5xxjGU/XpKLeuQHSiuta0IFGRTkcisNY8IC7gzlspTkxKYiX5EVXgtHXviKhOsOC5bEywhthdJ+AhnQT2xMTbDwNlDbZoBFIRkV65tBICXWjg69Lhm8h+yuLwxabMiTdQzvpWdwuOqTFZWuvIa2ZW+WnNHKpbvOZzP+Gju5SFcWr1gHWggOU8gyXmzvSkgnSOGqpgKy/yvzfWj/kP6WnQQ1rIxUntZkIYNS2wZ9Ep3NWbeW6sUNdNFa3EIG0lPj3g+kslQOtJy3Uq0ZF/OUo6OjmFrn0Qf3wRCT8qUu6EMG7Vtlu/o8WDSGbOf7l9nZcSX/1EEUWp14UeErCVI6rCthyDbSOakV96why75iefd0i/7GWIfka8hXmllpQkwg+goWMEUjp/PJbFoym6edke2NHNlXskz3HQRbwwJ2K3R0b+v2mGFRV+RalXIdurgyeEUrue9injvjdPMSQ80ZO0K6Skfi/vYPztYTx5EHK/32jjszQaHLv2Hw1bcX2g47x8jfaXsEee9IXGr9IkmwESnfNT1koLCJlkPADCSb5dGEy3+BTuYDP5X35sjLJ8VU2+pgRXBkGVigKoRB5zbaMvUityJTIiAjE1qyH4M+Scpi9+VhKZb6hVR7MgJNWFn343PflF8eluzqPCbnyOG/5Ox8lCieIAWPkkYqKsRqGzvwhJW0lX9FnRNRERYxgC6pI49dUjudNoOvbD0f8huj4DCSpCfKWm/ERvpKjLyKSMoM+Di1xvC0Z+xIGHswJtotptPodaJVvdVlKXOa5LpJwvm0N2MHnhP+cdOoHqujTT8wkRl4S1gIzHNyLjLaak+5p0JYcjrYnBxksLHSc0oe+Psd7TRSvhqKe/ctm1FwqZVKQ/MgqXx6JbrjY1qMrD9+a258qUrN9f156uRaoQ+W3m83bum9OvOnEKW2B3FNBK/UmFnRBOfFioReeYw9+SoxNuVzP9T6sTGqyLMgVRgtlZ+Ia89tzfSkQqATKBLjU5cxVuTw8+Aiz5O37h7e72BitBnwOr19e/J86t8R3ZMlPifYqtQxOd22ODey29CYx/XZM+nmWtwFY7TlUoZRPSqqTUHu5bAkVT4ldRq4nahBySYuQfw21uRi8aBPlTib/DqZscho5xtUgyi6BSH2a2VUw32JPf30U1OjjC+BkCZ+WjmPXH/IYD6ZMWd57TDMaPE8ZVBp51l5t184LYt/BLJbWDw+vS0W/tdm/VThTRU3AlymR87pkkNi9Tqk7jt48LRZb3Ge52T8f+o+DRbpzf2SJ233mm3inAGLG37p4iYtNh0zk8jPsh3UqNYB16ybIPnzNw6P8zI=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"displayRecent"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/displayrecent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+displayRecent
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not.","example":true}},"additionalProperties":false,"description":"The settings request parameters.","title":"DisplayRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

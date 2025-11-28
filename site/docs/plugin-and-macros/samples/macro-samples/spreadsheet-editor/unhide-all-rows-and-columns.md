@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Unhide all rows and columns
 
 Unhides all the rows and columns in the active spreadsheet.

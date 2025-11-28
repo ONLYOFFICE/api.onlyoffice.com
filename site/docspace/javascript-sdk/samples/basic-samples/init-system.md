@@ -19,7 +19,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Init System</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
   </head>
 
   <body>
@@ -55,7 +55,7 @@ Create an HTML page with a frame element that will load the DocSpace system inte
     <title>Init System</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
   </head>
 
   <body>
@@ -66,12 +66,12 @@ Create an HTML page with a frame element that will load the DocSpace system inte
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the system view using the [initSystem()](/docspace/javascript-sdk/usage-sdk/methods.md#initsystem) method.
+Configure and initialize the system view using the [initSystem()](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initsystem) method.
 
 ``` ts
 const config = {

@@ -14,7 +14,7 @@ expression.SIN(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The angle in radians for which the sine will be returned. If your argument is in degrees, multiply it by &lt;em&gt;PI()/180&lt;/em&gt;. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The angle in radians for which the sine will be returned. If your argument is in degrees, multiply it by *PI()/180*. |
 
 ## Returns
 
@@ -30,6 +30,6 @@ This example shows how to return the sine of an angle.
 // Use a function to get a sine of a number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SIN(0.5));
 ```

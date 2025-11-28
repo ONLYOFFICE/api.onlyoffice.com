@@ -102,7 +102,7 @@ ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-r
 
    - 要停止开发服务器，请选择命令行或命令提示符，然后按 *Ctrl+C*。
 
-## ## 在 React 组件中调用编辑器方法
+## 在 React 组件中调用编辑器方法 {#calling-editor-methods-in-the-react-component}
 
 1. 将`DocEditor.instances` 参数添加到`window` 对象中，并通过编辑器 ID 从该对象中获取编辑器对象：
 

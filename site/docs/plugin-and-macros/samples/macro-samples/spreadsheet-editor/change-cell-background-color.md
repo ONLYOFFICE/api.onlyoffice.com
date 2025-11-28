@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Change cell background color
 
 Sets the background color of the cell **B3** to blue.

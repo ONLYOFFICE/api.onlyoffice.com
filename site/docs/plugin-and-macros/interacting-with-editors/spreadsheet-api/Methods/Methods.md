@@ -14,6 +14,7 @@ Represents the Api class.
 | [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
+| [FocusEditor](./FocusEditor.md) | None | Returns focus to the editor. |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetCustomFunctions](./GetCustomFunctions.md) | string | Returns a library of local custom functions. |
 | [GetDocumentLang](./GetDocumentLang.md) | string | Returns the document language. |
@@ -38,6 +39,7 @@ Represents the Api class.
 | [PasteText](./PasteText.md) | None | Pastes text into the document. |
 | [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
+| [RemoveOleObject](./RemoveOleObject.md) | None | Removes the OLE object from the workbook by its internal ID. |
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SetCustomFunctions](./SetCustomFunctions.md) | None | Updates a library of local custom functions. |

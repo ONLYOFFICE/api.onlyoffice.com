@@ -8,6 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Alfresco integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="pQPm00oUqOE"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-alfresco) enables users to edit office documents from [Alfresco](https://www.alfresco.com/) Share using ONLYOFFICE Docs.
 
 The plugin is available in the official [Alfresco Add-ons directory](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606).
@@ -40,7 +46,10 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
 
    - from *onlyoffice-alfresco/repo/target/* to */usr/local/tomcat/amps/* for Alfresco repository,
    - from *onlyoffice-alfresco/share/target/* to */usr/local/tomcat/amps\_share/* for Share.
-   > You can download the already compiled package files [here](https://github.com/onlyoffice/onlyoffice-alfresco/releases) and place them to the respective directories.
+
+   :::note
+   You can download the already compiled package files [here](https://github.com/onlyoffice/onlyoffice-alfresco/releases) and place them to the respective directories.
+   :::
 
 2. Use the **Module Management Tool (MMT)** to install modules, run this commands:
 
@@ -73,7 +82,9 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
    share.protocol=https
    ```
 
-   > Probably located here */usr/local/tomcat/shared/classes/alfresco-global.properties*
+   :::note
+   Probably located here */usr/local/tomcat/shared/classes/alfresco-global.properties*
+   :::
 
 2. Restart Alfresco:
 
@@ -88,7 +99,9 @@ The module can be checked in administrator tools at */share/page/console/admin-c
 
 Module configuration can be found inside **Alfresco Administration Console** or by simply navigating to *http\://\<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config*.
 
-> You can also add *onlyoffice.url* to **alfresco-global.properties**. Configuration made via settings page will override **alfresco-global.properties**.
+:::note
+You can also add *onlyoffice.url* to **alfresco-global.properties**. Configuration made via settings page will override **alfresco-global.properties**.
+:::
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Alfresco configuration page or by adding *onlyoffice.jwtsecret* to **alfresco-global.properties**. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 

@@ -19,7 +19,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Get Selection</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -84,7 +84,7 @@ Create a basic HTML page that includes the DocSpace iframe and a button to trigg
     <title>Get Selection</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -115,12 +115,12 @@ Create a basic HTML page that includes the DocSpace iframe and a button to trigg
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getSelection()](/docspace/javascript-sdk/usage-sdk/methods.md#getselection) method to fetch selected files or folders currently active in the DocSpace UI. The selection will be printed to the console.
+Use the [getSelection()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getselection) method to fetch selected files or folders currently active in the DocSpace UI. The selection will be printed to the console.
 
 ``` ts
 function onAppReady() {

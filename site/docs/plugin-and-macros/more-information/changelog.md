@@ -6,8 +6,14 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 9.1
+
+- Added the [RemoveOleObject](../interacting-with-editors/spreadsheet-api/Methods/RemoveOleObject.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
+- Added the [RemoveOleObject](../interacting-with-editors/presentation-api/Methods/RemoveOleObject.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.
+
 ## Version 9.0
 
+- Added the ability to access [cell address information](../macros/adding-custom-functions.md#accessing-cell-addresses-since-v904) inside custom functions.
 - Added the ability to add [asynchronous custom functions](../macros/adding-custom-functions.md#asynchronous-functions) to the spreadsheets using the **Macros** plugin.
 - Added the ability to [automatically convert](../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin) VBA code into ONLYOFFICE macros using AI plugin.
 - Added the ability to [automatically generate](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE macros using AI plugin.

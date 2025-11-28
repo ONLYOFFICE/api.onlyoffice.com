@@ -1,6 +1,6 @@
 ---
 sidebar_label: .Net example
-sidebar_position: -8
+sidebar_position: -10
 ---
 
 # .Net 示例
@@ -9,7 +9,9 @@ sidebar_position: -8
 
 本示例将帮助您把ONLYOFFICE文档集成到用.Net（C#）或.Net（C#MVC）编写的Web应用程序中。
 
-> 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::note
+本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -60,7 +62,15 @@ sidebar_position: -8
 
    <img alt="Windows features" src="/assets/images/csharp/server-components.png" width="778px" />
 
-## 步骤4.运行带有编辑器的网站
+ ## 步骤4. 配置 JWT
+
+ 打开 *settings.config* 文件（或 MVC 版本的 *web.appsettings.config* 文件），并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
+ 
+ ``` xml
+ <add key="files.docservice.secret" value="secret" />
+ ```
+
+## 步骤5.运行带有编辑器的网站
 
 1. 运行Internet Information Service（IIS）管理器：
 
@@ -92,6 +102,6 @@ sidebar_position: -8
 
    <img alt="Browse website" src="/assets/images/csharp/browse.png" width="500px" />
 
-## 步骤 5.检查可访问性
+## 步骤 6.检查可访问性
 
 如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。

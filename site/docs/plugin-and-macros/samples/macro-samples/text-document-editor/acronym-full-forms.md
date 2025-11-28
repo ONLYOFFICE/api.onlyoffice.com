@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Acronym full forms
 
 Identifies all acronyms in the document and adds their full forms in comments.

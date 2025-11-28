@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'DocSpace',
     link: "docspace",
-    Image: require('@site/static/assets/images/docspace-preview.svg').default,
+    Image: require('@site/static/assets/images/docspace-preview.png').default,
     description: (
       <>
         In this section, you will learn how to integrate ONLYOFFICE{" "}

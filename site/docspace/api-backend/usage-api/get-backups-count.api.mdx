@@ -1,0 +1,71 @@
+---
+id: get-backups-count
+title: "Get the number of backups"
+description: "Returns the number of backups for a period of time. The default is one month."
+sidebar_label: "Get the number of backups"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vt9v2zYQ/leIe8nDFFt1u2HQ09K0K9INa9EmyENgNLR0sthIJEeeknqG/vfhSMm2bC9Jh2F5iG3yfvHuu+9uDSSXHrIbeC3zu9bCPAFj0UlSRl8UkMESKV75c9NqggSsdLJBQsd6a9CyQcigdKaBBJSGDP5s0a0ggQJ97pRlW5DBZYWCpUQhCSeQgM8rbCRka6CVZRuenNJLSKA0rpEEGbDoKakGIQH8Jhtbs9wsTX8+TV+dvkgv05+yl2mWppM0/v2QvsrSFLou2URG5um4yPzfUVmpisfj+mwxV6VCL1QpqEKxiHUQ0qFgdWGc0IaOBr0wpkapdwMk12LXzRNw6K3RHj3Lz9KUP8au/2ibBTphysEnJJAbTaiJhaW1tcoDRqZfPWusDyMwi6+YB7w4RhSp6G9wviOpNOESHXTspI0u9q52kq80vZyxbK30nd+Rlc5JzqIibPzTgVQOy8MqdwnIPGbh4KrrugQ8SWr9M0OMwuemOPbcQ4UuAVIUwHTBJ9dOWsuJCZ5fpS8OK3WlZUuVceovLIIBj3nrFK1Cb0qff+H7L3fIB+BQMugenCKEOaPxNUqHDrKb8OvMqt9wtTk7Ji+9ygfxD2ctVbPjgh8sBgK5mTPkxkF/Qmqd9gHUeh9qojROSGHRKVPwOTfaRHCXFljKtiahvDAaRWM0VYz+BqkyPVkFgqIKMphKq6azSTqNhqdLpN5F3jOZR3c/0FjrashgvZAer1zdHXZjkBW50aVatpEgIYF76ZRc1BFSvXKsUggVMjiw9KZ/xdWn37my823NPnMPRVPjym0xHgp0YPLKozg35k6hYCXU1LcnJAPfjAz2vJMHFQZqX9aNn4rIHnh5qwmdWJnWidajY8NC6kJY6f2DccXAQ4F/gkG23IPpOaZPorBYv7++FJfmDnV3MjIabSX9l1+H9nl/fcmuxuh9Kmdno0Qxpgoeao3SWIjFKoDz5KxvriBzIiqURQigT+rIY5/UXqZLNu2xZSIZDvYjiXKirM2DeFBUiZFXEegjAb6O0Ni9HbhldBgwGBLts+k0eJ0YXa9MWaocJ7lp4uFsuiEPSIA44c9XDeKhOsYO1C6L0N2yEDLP0Xueq9YZwpywEA69aV2OfsMUGVzz5xPSkf4GQtlmMxycG60jve8llW/fiP76sC1G2s9/NQNf6dJwfb+derXUklqHT8ONIb0R5/4pItGN4oo0FzIrmtaTWKAwC5IBk/dKBlDeDrw20MaoIrcCdWGN0jQRF4EquT2xENILKWLHR5QF9uUevt15yO1ki+7d9+0xRse/SxOe3U+sM6v6LUHmYYQPPfLxQnxurTWOi9SOMl1hbQv0d/vJrvIp6tOWgYKNVKzio4lfxpJcBqbwmOOXkx8nKR9Z46mReieKd0jHx81+odbbRec/n1M9Qgi/0dTWUmmOtY0DIw6tG4YPJDCbpExzcSdPYH90zROojCeWX29GVsfHcZXkgVYoz4OpgKyUtcdHnnmwmB+NMwyiYc2/l3XLIsCj/vs87azaj/gJS/u/9PI9i/MjIfQb+jaI+Xbcxw1o4HpOd9Q5y3O0tKN1sCqzlc2+8u7tJSSBu8cEEmd0/4WtD1d6tWt7PNJjBPyf03VUY72O7NR1G/l49Y8am4kXpTk/867r/gYywtVy
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the number of backups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/backup/getbackupscount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the number of backups for a period of time. The default is one month.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"from","in":"query","description":"The from date.","schema":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},{"name":"to","in":"query","description":"The to date.","schema":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},{"name":"paid","in":"query","description":"Specifies if the backups are paid or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Number of backups","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"integer"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"Int32Wrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

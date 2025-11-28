@@ -1,4 +1,4 @@
-# Creating a settings plugin
+# Settings plugin
 
 This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.
 
@@ -31,11 +31,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
   "scopes": ["Settings"]
 }
 ```
-
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
 
 ## Step 3: Review the plugin code
 
@@ -85,7 +80,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 5: Upload to DocSpace
 
@@ -94,7 +89,7 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 6: Test it
+## Step 6: Test the plugin
 
 1. Go to **Admin Panel → Integration → Plugins**.
 2. Click ![Settings icon](/assets/images/docspace/settings-icon.png) for your plugin.

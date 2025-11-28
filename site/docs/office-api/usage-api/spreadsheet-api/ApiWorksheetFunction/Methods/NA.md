@@ -1,6 +1,6 @@
 # NA
 
-Returns the &lt;em&gt;#N/A&lt;/em&gt; error value which means "no value is available".
+Returns the *#N/A* error value which means "no value is available".
 
 ## Syntax
 
@@ -28,7 +28,7 @@ This example shows how to return the N/A error value which means "no value is av
 // Use a function to get a N/A error value.
 
 const worksheet = Api.GetActiveSheet(); 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let result = func.NA();
 worksheet.GetRange("C3").SetValue(result);
 

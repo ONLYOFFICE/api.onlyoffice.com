@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Nuxeo 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="W6z0475IxCU"/>
+```
+
 该[插件](https://github.com/ONLYOFFICE/onlyoffice-nuxeo)允许用户借助ONLYOFFICE文档，在[Nuxeo](https://www.nuxeo.com/)中编辑办公文档。
 
 ## 功能特性

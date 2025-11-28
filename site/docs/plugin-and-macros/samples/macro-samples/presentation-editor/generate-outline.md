@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Generate outline
 
 Automatically generates a presentation outline based on titles.

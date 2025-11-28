@@ -7,17 +7,19 @@ sidebar_position: -3
 初始化**文档编辑器**后，您将获得可用于调用方法的对象。
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", config)
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## createConnector
 
 [connector](./automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
 
-> 此参数仅适用于ONLYOFFICE文档开发者版的编辑。
+:::note
+此参数仅适用于ONLYOFFICE文档开发者版的编辑。
+:::
 
   ``` ts
-  docEditor.createConnector()
+  docEditor.createConnector();
   ```
 
 ## denyEditingRights
@@ -25,7 +27,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
  拒绝编辑。当您想让文档编辑不可用时，可以调用此方法。
 
   ``` ts
-  docEditor.denyEditingRights(message)
+  docEditor.denyEditingRights(message);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述                           |
@@ -37,7 +39,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 销毁 *docEditor* 对象。当您想使用其他配置重新启动文档编辑器时，可以调用此方法。从 4.3 版开始使用。
 
   ``` ts
-  docEditor.destroyEditor()
+  docEditor.destroyEditor();
   ```
 
 ## downloadAs
@@ -45,14 +47,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 下载编辑后的文件。只有在存在 [onDownloadAs](./config/events.md#ondownloadas) 事件 时才能调用该方法。**文档编辑服务**异步创建文档并使用参数中的链接触发 **onDownloadAs** 事件。
 
   ``` ts
-  docEditor.downloadAs(format)
+  docEditor.downloadAs(format);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format    | string | 非必填的 | 定义下载文件的格式。您可以在[转换表](../additional-api/conversion-api/conversion-tables.md)中找到所有可能的格式。但是您不能下载 *bmp*, *gif*, *jpg*, *png* 等图像格式的文件。 如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
 
-> 请注意从 *djvu*, *pdf*, *xps* 格式的转换不可用。将下载原始格式。
+:::note
+请注意从 *djvu*, *pdf*, *xps* 格式的转换不可用。将下载原始格式。
+:::
 
 ## insertImage
 
@@ -72,7 +76,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
       },
     ],
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md) 部分。
@@ -87,17 +91,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 | token           | string           | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
 | url             | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。自 7.0 版起已弃用，请改用 *images.url* 参数。 |
 
-  > 在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
-  >
-  > ``` ts
-  > docEditor.insertImage({
-  >   c: "add",
-  >   fileType: "png",
-  >   url: "https://example.com/url-to-example-image.png",
-  > })
-  >```
-  >
-  > 请注意，此结构已弃用，下一个编辑器版本将不支持此结构。请使用新的。
+:::note
+在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
+
+``` ts
+docEditor.insertImage({
+  c: "add",
+  fileType: "png",
+  url: "https://example.com/url-to-example-image.png",
+})
+```
+
+请注意，此结构已弃用，下一个编辑器版本将不支持此结构。请使用新的。
+:::
 
 ## refreshFile
 
@@ -118,7 +124,7 @@ refreshFile({
     callbackUrl: "https://example.com/url-to-callback.ashx",
   },
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-})
+});
 ```
 
 ## refreshHistory
@@ -212,7 +218,7 @@ refreshFile({
  请求关闭编辑器。建议在 [destroyEditor](#destroyeditor) 方法之前调用该方法来检查编辑器中是否有一些未保存的数据。如果存在未保存的数据，则会显示对话框询问用户是否要继续编辑或关闭编辑器，丢失所有未保存的数据。如果选择*关闭*选项，则将调用 [onRequestClose](./config/events.md#onrequestclose) 事件。
 
   ``` ts
-  docEditor.requestClose()
+  docEditor.requestClose();
   ```
 
 ## setActionLink
@@ -220,7 +226,7 @@ refreshFile({
 设置包含书签的文档的链接。此方法必须在 [onMakeActionLink](./config/events.md#onmakeactionlink) 事件之后调用。软件集成商必须处理从**文档编辑服务**接收到的 *ACTION_DATA* 以设置链接。 该链接由软件集成商创建，他们在 **文档管理器**中使用 ONLYOFFICE 文档。
 
   ``` ts
-  docEditor.setActionLink(link)
+  docEditor.setActionLink(link);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述                                                                       |
@@ -232,7 +238,7 @@ refreshFile({
 更改 *收藏* 图标状态。此方法必须在 [onMetaChange](./config/events.md#onmetachange) 事件之后调用。
 
   ``` ts
-  docEditor.setFavorite(favorite)
+  docEditor.setFavorite(favorite);
   ```
 
 | 参数 | 类型    | 是否必填 | 描述                                                                  |
@@ -250,7 +256,7 @@ refreshFile({
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
     url: "https://example.com/url-to-example-document.docx",
     version: 2,
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -270,7 +276,7 @@ refreshFile({
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
     url: "https://example.com/url-to-example-document.docx",
     version: 2,
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -281,7 +287,7 @@ refreshFile({
   docEditor.setHistoryData({
     error: "Exception",
     version: 2,
-  })
+  });
   ```
 
 | 参数         | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                 |
@@ -307,7 +313,7 @@ refreshFile({
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -322,9 +328,13 @@ refreshFile({
 
 通过指向文件的链接刷新数据, 该链接使用 *referenceData*、*path* 或 *link* 参数指定。 此方法必须在 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件之后调用。
 
- > 此参数仅可用于ONLYOFFICE文档开发者版的编辑。
+:::note
+此参数仅可用于ONLYOFFICE文档开发者版的编辑。
+:::
 
-  > 请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。
+:::note
+请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。
+:::
 
   ``` ts
   docEditor.setReferenceData({
@@ -337,7 +347,7 @@ refreshFile({
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -347,7 +357,7 @@ refreshFile({
   ``` ts
   docEditor.setReferenceData({
     error: "Exception",
-  })
+  });
   ```
 
 | 参数     | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -364,7 +374,9 @@ refreshFile({
 
 更改外部数据源。该方法可以在 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件之后调用。
 
-  > 请注意，仅当用户对要从中获取数据的文件具有权限时才会执行此方法。
+:::note
+请注意，仅当用户对要从中获取数据的文件具有权限时才会执行此方法。
+:::
 
   ``` ts
   docEditor.setReferenceSource({
@@ -377,7 +389,7 @@ refreshFile({
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -387,7 +399,7 @@ refreshFile({
   ``` ts
   docEditor.setReferenceSource({
     error: "Exception",
-  })
+  });
   ```
 
 | 参数     | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -404,15 +416,13 @@ refreshFile({
 
 选择用于比较、合并或插入文本的文档。该方法可以在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件之后调用。
 
-> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
-
   ``` ts
   docEditor.setRequestedDocument({
     c: "compare",
     fileType: "docx",
     url: "https://example.com/url-to-example-document.docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -434,7 +444,7 @@ refreshFile({
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -450,14 +460,16 @@ refreshFile({
 
 选择一个文档进行比较。此方法必须在 [onRequestCompareFile](./config/events.md#onrequestcomparefile) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedDocument](#setrequesteddocument)。
 
-> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
+:::note
+此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
+:::
 
   ``` ts
   docEditor.setRevisedFile({
     fileType: "docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
     url: "https://example.com/url-to-example-document.docx",
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../get-started/how-it-works/how-it-works.md) 部分。
@@ -485,7 +497,7 @@ refreshFile({
         user: "External link",
       },
     ],
-  })
+  });
   ```
 
 | 参数                   | 类型            | 是否必填 | 描述                                                             |
@@ -515,7 +527,7 @@ refreshFile({
         name: "Kate Cage",
       },
     ],
-  })
+  });
   ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
@@ -529,28 +541,34 @@ refreshFile({
 | users.image | string           | 非必填的 | 定义用户头像的路径。 当*c*参数为*info*时，此字段是必需的。                                                                                                                  |
 | users.name  | string           | 非必填的 | 定义用户的全名。                                                                                                                                                                               |
 
-> 请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png,base64,\*\*\*\*\*"*。
+:::note
+请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png,base64,\*\*\*\*\*"*。
+:::
 
-> 请注意，如果您订阅了 *onRequestUsers* 事件并使用 *setUsers* 方法发送头像，则 [user.image](./config/editor/editor.md#user) 初始化配置中的字段不是必需的。如果头像以base64格式发送并且初始化配置使用JWT签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
+:::note
+请注意，如果您订阅了 *onRequestUsers* 事件并使用 *setUsers* 方法发送头像，则 [user.image](./config/editor/editor.md#user) 初始化配置中的字段不是必需的。如果头像以base64格式发送并且初始化配置使用JWT签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
+:::
 
 ## showMessage
 
 显示带有消息的工具提示。该方法只能在 [onAppReady](./config/events.md#onappready) 事件之后调用。
 
   ``` ts
-  docEditor.showMessage(message)
+  docEditor.showMessage(message);
   ```
 
 | 参数 | 类型   | 是否必填 | 描述               |
 | --------- | ------ | -------- | ------------------------- |
 | message   | string | 必填 | 定义消息文本。 |
 
-> 请注意，嵌入式平台[类型](./config/config.md#type)不支持显示带有消息的工具提示。
+:::note
+请注意，嵌入式平台[类型](./config/config.md#type)不支持显示带有消息的工具提示。
+:::
 
 ## startFilling
 
 开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。仅在 [onRequestStartFilling](./config/events.md#onrequeststartfilling) 事件之后才可调用此方法。
 
   ``` ts
-  docEditor.startFilling()
+  docEditor.startFilling();
   ```

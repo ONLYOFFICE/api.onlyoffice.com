@@ -1,16 +1,185 @@
 # Change log
 
+## 7.3.0
+
 ### New features
 
 #### Docspace
 
-* Added DocSpace SDKs
+* Updated JavaScript SDK section
+
+## 7.2.0
+
+### New features
+
+#### Docspace
+
+* Added new API Backend samples
+* Added error handling in API Backend samples
+* Added js language to API Backend samples
+* Added JavaScript SDK react samples
+
+#### Docs API
+
+* Added YouTube videos to ready-to-use connectors
+* Added additional examples for documentserver and api instructions
+
+### Fixes
+
+* Restructured parameters description to tables
+
+#### Docs
+
+* Fixed Office API documentation
+
+#### Docs API
+
+* Fixed note style
+* Fixed code samples
+* Fixed sorting for Docs API integration samples
+
+## 7.1.0
+
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.5
+* Updated documentation for Plugins SDK 2.0.0
+
+#### Docs
+
+* Updated Office API documentation for version 9.1.0
+
+#### Docs API
+
+* The editorConfig.customization.uitheme parameter is now available for the mobile editors
+* Added the UserCanOnlyComment property to the CheckFileInfo WOPI operation
+* Changed the required size of the logo customization parameter
+* Added opening for hml format
+* Added conversion from pptx format to txt
+
+## 7.0.0
+
+### New features
+
+* Updated Docusaurus version 3.9.1
+* Added AskAI feature
+
+#### Plugins and macros
+
+* Added samples for custom AI functions
+* Updated documentation in Chinese in the Interacting with editors section
+
+## 6.6.0
+
+### New features
+
+* Restructured changelog
+
+#### Docs
+
+* Added new Office API samples
+
+#### Plugins and macros
+
+* Added the bundled plugin type description
+* Added the AI plugin section
+* Added the ability to access cell address information inside custom functions
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+* Hide right panel in Office Api and macro samples
+* Hide the changelog reading time
+
+#### Docspace
+
+* Fixed API Backend samples position
+
+## 6.5.0
+
+### New features
+
+#### Docspace
+
+* Added new integration samples to API Backend section
+* Added new Plugins SDK samples
+
+#### Docs
+
+* Updated Office API documentation for version 9.0.4
+
+#### Docs API
+
+* Added GitHub links to each language-specific example
+* Added the website Changelog section
+* Added missing formats to the document.fileType parameter
+* Added fonts information to Changing default fonts language specific example
+
+#### Plugins and macros
+
+* Updated documentation in Chinese
+* Added pages with full list of events to Interacting with editors section
+
+### Fixes
+
+* Fixes for samples structure
+
+## 6.4.0
+
+### New features
+
+#### Docs
+
+* Added new Office API samples
+
+#### Docs API
+
+* Added the editorConfig.customization.suggestFeature parameter
+
+#### Plugins and macros
+
+* Added documentation in Chinese
+
+#### Docspace
+
+* Added new Api Backend samples
+
+### Fixes
+
+#### Docs
+
+* Fixed default theme for editors in the Results tab
+
+## 6.3.0
+
+### New features
+
+#### Docs
+
+* Added new Office API samples
+
+#### Docs API
+
+* Updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution
+* Added more questions to Customization FAQ
 
 #### Plugins and macros
 
 * Added a sample for asynchronous custom functions
 * Added the ability to automatically convert VBA code into ONLYOFFICE macros using AI plugin
 * Added the ability to automatically generate ONLYOFFICE macros using AI plugin
+* Added instruction on how to run a macro sample
+* Added new Macro samples
+
+### Fixes
+
+#### Plugins and macros
+
+* Replaced gifs with YouTube videos
 
 ## 6.2.0
 
@@ -56,7 +225,6 @@
 
 #### Docs API
 
-* Docs API: updated behavior of `customization.macros` — it now disables all macro-related functionality including adding, editing, and execution.
 * Added the theme-white and theme-night theme ids to the editorConfig.customization.uiTheme parameter
 * Added opening for odg format
 * Added opening for md format

@@ -10,14 +10,16 @@
 
 ``` ts
 function onAppReady() {
-  console.log("ONLYOFFICE Document Editor is ready")
+  console.log("ONLYOFFICE Document Editor is ready");
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onAppReady,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onCollaborativeChanges
@@ -28,14 +30,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onCollaborativeChanges() {
-  console.log("The document changed by collaborative user")
+  console.log("The document changed by collaborative user");
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onCollaborativeChanges,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onDocumentReady
@@ -46,14 +50,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onDocumentReady() {
-  console.log("Document is loaded")
+  console.log("Document is loaded");
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onDocumentReady,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onDocumentStateChange
@@ -65,17 +71,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 ``` ts
 function onDocumentStateChange(event) {
   if (event.data) {
-    console.log("文档已更改")
+    console.log("The document changed");
   } else {
-    console.log("Changes are collected on document editing service")
+    console.log("Changes are collected on document editing service");
   }
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onDocumentStateChange,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onDownloadAs
@@ -86,16 +94,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onDownloadAs(event) {
-  const fileType = event.data.fileType
-  const url = event.data.url
-  console.log(`ONLYOFFICE Document Editor create file: ${url}`)
+  const fileType = event.data.fileType;
+  const url = event.data.url;
+  console.log(`ONLYOFFICE Document Editor create file: ${url}`);
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onDownloadAs,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onError
@@ -106,14 +116,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onError(event) {
-  console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
+  console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onError,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onInfo
@@ -124,14 +136,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onInfo(event) {
-  console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`)
+  console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`);
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onInfo,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onMakeActionLink
@@ -146,16 +160,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onMakeActionLink(event) {
-  const ACTION_DATA = event.data
-  const link = GENERATE_LINK(ACTION_DATA)
-  docEditor.setActionLink(link)
+  const ACTION_DATA = event.data;
+  const link = GENERATE_LINK(ACTION_DATA);
+  docEditor.setActionLink(link);
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onMakeActionLink,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onMetaChange
@@ -170,15 +186,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onMetaChange(event) {
-  const title = event.data.title
-  const favorite = event.data.favorite
+  const title = event.data.title;
+  const favorite = event.data.favorite;
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onMetaChange,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onOutdatedVersion
@@ -193,14 +211,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onOutdatedVersion() {
-  location.reload(true)
+  location.reload(true);
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onOutdatedVersion,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onPluginsReady
@@ -210,13 +230,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 **示例**:
 
 ``` ts
-function onPluginsReady() {}
+function onPluginsReady() {};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onPluginsReady,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onReady
@@ -236,17 +258,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 ``` ts
 function onRequestClose() {
   if (window.opener) {
-    window.close()
-    return
+    window.close();
+    return;
   }
-  docEditor.destroyEditor()
+  docEditor.destroyEditor();
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestClose,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestCompareFile
@@ -267,13 +291,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 **示例**:
 
 ``` ts
-function onRequestCreateNew() {}
+function onRequestCreateNew() {};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestCreateNew,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestEditRights
@@ -291,15 +317,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestEditRights() {
-  console.log("ONLYOFFICE Document Editor requests editing rights")
-  document.location.reload()
+  console.log("ONLYOFFICE Document Editor requests editing rights");
+  document.location.reload();
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestEditRights,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestHistory
@@ -338,14 +366,16 @@ function onRequestHistory() {
         version: 2,
       },
     ],
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestHistory,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 **changes** 是保存文档后返回的[历史对象](../callback-handler.md#history)的*更改*。
@@ -362,14 +392,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestHistoryClose() {
-  document.location.reload()
+  document.location.reload();
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestHistoryClose,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestHistoryData
@@ -386,7 +418,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestHistoryData(event) {
-  const version = event.data
+  const version = event.data;
   docEditor.setHistoryData({
     changesUrl: "https://example.com/url-to-changes.zip",
     fileType: "docx",
@@ -399,14 +431,16 @@ function onRequestHistoryData(event) {
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4In0.pfPJs9XvCmAnPiUnZYRm0rZGPYHzqfEP7AFRjKg1af4",
     url: "https://example.com/url-to-example-document.docx",
     version,
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestHistoryData,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 [JSON 对象](../callback-handler.md#changesurl) 中的 *changesUrl*。
@@ -440,14 +474,16 @@ function onRequestInsertImage(event) {
       },
     ],
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZXMiOlt7ImZpbGVUeXBlIjoicG5nIiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1pbWFnZTEucG5nIn0seyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UyLnBuZyJ9XX0.ly1O8-6u4Y7WJlgp9O-bJMeffHe0GtaXzyvY2UUFJTg",
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestInsertImage,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
@@ -474,20 +510,22 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestOpen(event) {
-  const path = event.data.path
-  const referenceData = event.data.referenceData
-  const windowName = event.data.windowName
+  const path = event.data.path;
+  const referenceData = event.data.referenceData;
+  const windowName = event.data.windowName;
   window.open({
     path: "https://example.com/external-url.docx",
     windowName: event.data.windowName,
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestOpen,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
@@ -513,10 +551,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 **示例**:
 
 ``` ts
-function onRequestReferenceData() {
-  const link = event.data.link
-  const referenceData = event.data.referenceData
-  const path = event.data.path
+function onRequestReferenceData(event) {
+  const link = event.data.link;
+  const referenceData = event.data.referenceData;
+  const path = event.data.path;
 
   docEditor.setReferenceData({
     fileType: "xlsx",
@@ -528,14 +566,16 @@ function onRequestReferenceData() {
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestReferenceData,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestReferenceSource
@@ -555,9 +595,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 **示例**:
 
 ``` ts
-function onRequestReferenceSource() {
-  const referenceData = event.data.referenceData
-  const path = event.data.path
+function onRequestReferenceSource(event) {
+  const referenceData = event.data.referenceData;
+  const path = event.data.path;
 
   docEditor.setReferenceSource({
     fileType: "xlsx",
@@ -569,14 +609,16 @@ function onRequestReferenceSource() {
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestReferenceSource,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestRefreshFile
@@ -604,13 +646,16 @@ function onRequestRefreshFile() {
       callbackUrl: "https://example.com/url-to-callback.ashx",
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-  })
+  });
 }
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+
+const config = {
   events: {
     onRequestRefreshFile,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestRename
@@ -627,14 +672,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestRename(event) {
-  const title = event.data
+  const title = event.data;
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestRename,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestRestore
@@ -655,9 +702,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestRestore(event) {
-  const fileType = event.data.fileType
-  const url = event.data.url
-  const version = event.data.version
+  const fileType = event.data.fileType;
+  const url = event.data.url;
+  const version = event.data.version;
 
   docEditor.refreshHistory({
     currentVersion: 2,
@@ -683,14 +730,16 @@ function onRequestRestore(event) {
         version: 2,
       },
     ],
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestRestore,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 **changes** 保存文档后返回的[历史对象](../callback-handler.md#history)的*更改*。
@@ -709,16 +758,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestSaveAs(event) {
-  const fileType = event.data.fileType
-  const title = event.data.title
-  const url = event.data.url
+  const fileType = event.data.fileType;
+  const title = event.data.title;
+  const url = event.data.url;
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSaveAs,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestSelectDocument
@@ -728,10 +779,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 文档选择类型在 *data.c* 参数中指定。
 
 要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。
-
-:::请注意
-此事件仅适用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
-:::
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
 
@@ -746,14 +793,16 @@ function onRequestSelectDocument() {
     fileType: "docx",
     url: "https://example.com/url-to-example-document.docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSelectDocument,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
@@ -777,14 +826,16 @@ function onRequestSelectSpreadsheet() {
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSelectSpreadsheet,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
@@ -805,16 +856,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestSendNotify(event) {
-  const ACTION_DATA = event.data.actionLink
-  const comment = event.data.message
-  const emails = event.data.emails
+  const ACTION_DATA = event.data.actionLink;
+  const comment = event.data.message;
+  const emails = event.data.emails;
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSendNotify,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestSharingSettings
@@ -841,14 +894,16 @@ function onRequestSharingSettings() {
         user: "External link",
       },
     ],
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSharingSettings,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestStartFilling
@@ -861,14 +916,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestStartFilling() {
-  docEditor.startFilling()
+  docEditor.startFilling();
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestStartFilling,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestUsers
@@ -889,8 +946,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onRequestUsers(event) {
-  const c = event.data.c
-  const id = event.data.id
+  const c = event.data.c;
+  const id = event.data.id;
 
   docEditor.setUsers({
     c: event.data.c,
@@ -908,14 +965,16 @@ function onRequestUsers(event) {
         name: "Kate Cage",
       },
     ],
-  })
+  });
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestUsers,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onSubmit
@@ -926,14 +985,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onSubmit(event) {
-  console.log("The form was submitted.")
+  console.log("The form was submitted.");
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onSubmit,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onUserActionRequired
@@ -948,13 +1009,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onUserActionRequired() {
-  console.log("Enter a password")
+  console.log("Enter a password");
 }
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+
+const config = {
   events: {
     onUserActionRequired,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onWarning
@@ -965,12 +1029,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ``` ts
 function onWarning(event) {
-  console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`)
+  console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`);
 }
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onWarning,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

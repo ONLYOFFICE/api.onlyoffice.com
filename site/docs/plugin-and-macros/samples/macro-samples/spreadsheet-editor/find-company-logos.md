@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Find company logos
 
 Searches for a company logo throughout the spreadsheet using the [Logo API](https://api-ninjas.com/api/logo) offered by [API Ninjas](https://api-ninjas.com).

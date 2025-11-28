@@ -64,6 +64,7 @@ Represents the ApiDocument class.
 | [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Returns the default style parameters for the specified document element. |
 | [GetDefaultTextPr](./Methods/GetDefaultTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns a set of default properties for the text run in the current document. |
 | [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: **Application** - the application the document was created with. **CreatedRaw** - the date and time when the file was created. **Created** - the parsed date and time when the file was created. **LastModifiedRaw** - the date and time when the file was last modified. **LastModified** - the parsed date and time when the file was last modified. **LastModifiedBy** - the name of the user who made the latest change to the document. **Authors** - the persons who created the file. **Title** - the document title (this property allows you to simplify your documents classification). **Tags** - the document tags (this property allows you to simplify your documents classification). **Subject** - the document subject (this property allows you to simplify your documents classification). **Comment** - the comment to the document (this property allows you to simplify your documents classification). |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | Returns a visitor object for traversing the elements of the current document. |
 | [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current document. |
 | [GetEndNotesFirstParagraphs](./Methods/GetEndNotesFirstParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns the first paragraphs from all endnotes in the current document. |
@@ -75,6 +76,7 @@ Represents the ApiDocument class.
 | [GetFormsByRole](./Methods/GetFormsByRole.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified role name. |
 | [GetFormsByTag](./Methods/GetFormsByTag.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns a list of all forms in the document with the specified tag name. |
 | [GetFormsData](./Methods/GetFormsData.md) | [FormData](../Enumeration/FormData.md)[] | Returns the data from all forms present in the current document. If a form was created and not assigned to any part of the document, it won't appear in this list. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current document content. |
 | [GetPageCount](./Methods/GetPageCount.md) | number | Returns a number of pages in the current document. 💡 This method can be slow for large documents because it runs the document calculation process before the full recalculation. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified document. |
 | [GetRangeBySelect](./Methods/GetRangeBySelect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a range object by the current selection. |
@@ -87,12 +89,16 @@ Represents the ApiDocument class.
 | [GetTagsOfAllForms](./Methods/GetTagsOfAllForms.md) | String[] | Returns a list of all tags that are used for all forms in the document. |
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |
 | [GetWatermarkSettings](./Methods/GetWatermarkSettings.md) | [ApiWatermarkSettings](../ApiWatermarkSettings/ApiWatermarkSettings.md) | Returns the watermark settings in the current document. |
+| [GoToPage](./Methods/GoToPage.md) | boolean | Moves a cursor to the start of the specified page in the document. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current document. |
+| [InsertBlankPage](./Methods/InsertBlankPage.md) | boolean | Inserts a blank page to the current location. |
 | [InsertContent](./Methods/InsertContent.md) | boolean | Inserts an array of elements into the current position of the document. |
 | [InsertWatermark](./Methods/InsertWatermark.md) | boolean | Inserts a watermark on each document page. |
 | [IsTrackRevisions](./Methods/IsTrackRevisions.md) | boolean | Checks if change tracking mode is enabled or not. |
 | [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns the last document element. |
+| [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves a cursor to the end of the document. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. If there is any selection in the document, it will be removed. |
+| [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves a cursor to the start of the document. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RejectAllRevisionChanges](./Methods/RejectAllRevisionChanges.md) | boolean | Rejects all changes made in review mode. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. 💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) method. |
@@ -106,12 +112,14 @@ Represents the ApiDocument class.
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a document object. The search results are a collection of ApiRange objects. |
 | [SearchAndReplace](./Methods/SearchAndReplace.md) | boolean | Finds and replaces the text. |
 | [SelectCurrentWord](./Methods/SelectCurrentWord.md) | object | Selects the current word if it is possible. |
+| [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | Enables or disables AI-assisted change tracking in the document. |
 | [SetControlsHighlight](./Methods/SetControlsHighlight.md) | boolean | Sets the highlight to the content controls from the current document. |
 | [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | Specifies whether sections in this document will have different headers and footers for even and odd pages (one header/footer for odd pages and another header/footer for even pages). |
 | [SetFormsData](./Methods/SetFormsData.md) | boolean | Sets the data to the specified forms. |
 | [SetFormsHighlight](./Methods/SetFormsHighlight.md) | boolean | Sets the highlight to the forms in the document. |
 | [SetTrackRevisions](./Methods/SetTrackRevisions.md) | boolean | Sets the change tracking mode. |
 | [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Sets the watermark settings in the current document. |
+| [ShowComment](./Methods/ShowComment.md) | boolean | Shows a comment by its ID. |
 | [ToHtml](./Methods/ToHtml.md) | string | Converts a document to HTML. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDocument object into the JSON object. |
 | [ToMarkdown](./Methods/ToMarkdown.md) | string | Converts a document to Markdown. |

@@ -1,4 +1,4 @@
-# Creating a context menu plugin
+# Context menu plugin
 
 This guide walks you through creating a basic plugin for DocSpace that adds an item to the file context menu and logs an action when clicked.
 
@@ -31,11 +31,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
   "scopes": ["ContextMenu"]
 }
 ```
-
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
 
 ## Step 3: Review and extend plugin code
 
@@ -105,7 +100,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 6: Upload to DocSpace
 
@@ -114,15 +109,15 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if it is not already active.
 
-## Step 7: Test it
+## Step 7: Test the plugin
 
 1. Go to any room.
 2. Right-click on a file.
-3. Look for your context menu item titled `"Do something"`.
+3. Look for your context menu item titled **Do something**.
 4. Click it - it should log `"Context Menu works!"` in the browser console.
 
 ## Notes
 
 - You can define multiple context items using different keys.
-- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#filetype) and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#userstype) fields to control visibility.
-- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onclick) function receives the selected file's ID.
+- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType) and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
+- The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onClick) function receives the selected file's ID.

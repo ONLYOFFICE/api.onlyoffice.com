@@ -29,7 +29,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    </dict>
    ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    If **DocumentServerURL** is specified, the DMS main page is loaded. Otherwise, an error occurs:
 
@@ -185,7 +185,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 7. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open:
 

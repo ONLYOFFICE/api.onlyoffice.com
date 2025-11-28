@@ -4,7 +4,7 @@
 
 > 请注意，在 8.2 版本之前，`https://documentserver/coauthoring/CommandService.ashx` 地址被用于发送请求。
 
-从 8.1 版开始，建议将[shardkey](../../get-started/how-it-works/how-it-works.md#shard-key)参数添加到 URL *QueryString*，其中包含 *key* 值。 例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
+从 8.1 版开始，建议将[shardkey](../../get-started/configuration/shard-key.md)参数添加到 URL *QueryString*，其中包含 *key* 值。 例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
 
 > 在版本4.2之前的 **ONLYOFFICE 文档服务器**中，使用了带有 *QueryString* 中参数的GET请求。
 

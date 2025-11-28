@@ -14,8 +14,8 @@ This documentation describes:
 
 Here are some examples of what you can do with ONLYOFFICE DocSpace plugins:
 
-- connect third-party services, like [Draw.io](../samples/advanced-samples/drawio.md), [Markdown](../samples/advanced-samples/markdown.md), [Speech to Text](../samples/advanced-samples/speech-to-text.md), etc.;
-- enhance the existing user experience and the editors' functionality: [PDF converter](../samples/advanced-samples/pdf-converter.md).
+- connect third-party services, like [Draw.io](../samples/ready-to-use-samples/drawio.md), [Markdown](../samples/ready-to-use-samples/markdown.md), [Speech to Text](../samples/ready-to-use-samples/speech-to-text.md), etc.;
+- enhance the existing user experience and the editors' functionality: [PDF converter](../samples/ready-to-use-samples/pdf-converter.md).
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-plugins).
 
@@ -40,6 +40,12 @@ npm i -g @onlyoffice/docspace-plugin-sdk
 Now, the **npx** command is available, which will be used to create a plugin.
 
 ### Step 2. Creating plugin template
+
+For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
+
+   ```json
+   "build": "webpack && npx build-docspace-plugin"
+   ```
 
 1. To create a plugin template, run the following command:
 

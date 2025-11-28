@@ -1,5 +1,5 @@
 ---
-sidebar_position: -7
+sidebar_position: -5
 ---
 
 # PHP example
@@ -8,7 +8,9 @@ sidebar_position: -7
 
 This example will help you integrate ONLYOFFICE Docs into your web application written on PHP.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::note
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::
 
 ## Important security info
 
@@ -27,7 +29,7 @@ The PHP example offers various installation options, but we highly recommend usi
 
 To run the example using [Docker](https://www.docker.com/), you will need [Docker Desktop 4.17.0](https://docs.docker.com/desktop/) or [Docker Engine 20.10.23](https://docs.docker.com/engine/) with [Docker Compose 2.15.1](https://docs.docker.com/compose/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it:
+Once you have everything installed, you can either download the release archive or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php):
 
 ``` sh
 curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
@@ -55,7 +57,7 @@ Check the detailed guide to learn how to install it on [Windows](https://helpcen
 
 To run the example on your local machine, you will need [PHP 8.2.11](https://www.php.net/) with [Composer 2.6.5](https://getcomposer.org/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it:
+Once you have everything installed, you can either download the release archive or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php):
 
 ``` sh
 curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip

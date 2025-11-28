@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Moodle 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="JudgGPQo1nQ"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor)允许用户使用ONLYOFFICE文档在[Moodle](https://moodle.org/)平台上编辑办公文档。
 
 ## 功能特点
