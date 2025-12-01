@@ -47,6 +47,12 @@
   margin-block: 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .featuresGridItem {
+    padding: var(--base-size-24);
+  }
+}
+
 @media (min-width: 544px) {
   .featuresGridItemHeader > h3 {
     font-size: var(--text-title-font-size-medium);

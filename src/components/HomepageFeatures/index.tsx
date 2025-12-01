@@ -34,14 +34,14 @@ const HomepageFeatures: FC<HomepageFeaturesProps.Props> = ({
           <main>
             {featureGroups.map((group, index) => (
               <section key={index} className={styles.featureGroup}>
-                <p className={styles.featureHeaderTop}>
+                <div className={styles.featureHeaderTop}>
                   <Heading as="h2">{group.heading}</Heading>
                   {group.button &&
                   <Link className={styles.tryButton} to={group.button.href} >
                     {group.button.text}
                   </Link>
                   }
-                </p>
+                </div>
                 {group.subheading && (
                   <p className={styles.subheading}>{group.subheading}</p>
                 )} 

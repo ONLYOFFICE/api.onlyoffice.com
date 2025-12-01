@@ -33,6 +33,18 @@
   margin-block: 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .samplesGridItem {
+    padding: var(--base-size-24);
+  }
+}
+
+@media (max-width: 768px) {
+  .samplesGridItem {
+    gap: var(--base-size-16);
+  }
+}
+
 @media (min-width: 544px) {
   .samplesItemHeader > h3 {
     font-size: var(--text-title-font-size-medium);

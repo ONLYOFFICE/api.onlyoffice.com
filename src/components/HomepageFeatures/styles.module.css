@@ -55,13 +55,13 @@
 }
 
 .featureGroup h3 {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .featureGroup p {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
@@ -89,15 +89,5 @@
   &:hover {
     color: var(--button-color);
     text-decoration: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .featureGroup h3 {
-    font-size: 1.05rem;
-  }
-
-  .featureGroup p {
-    font-size: 0.9rem;
   }
 }

@@ -17,7 +17,7 @@
 }
 
 .buttonWrapper {
-  margin: 28px 0 24px;
+  margin: 32px 0;
   text-align: center;
 }
 
@@ -33,6 +33,12 @@
   &:hover {
     color: var(--button-color);
     text-decoration: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .samplesGridWrapper > * {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -64,34 +70,37 @@
 }
 
 .sectionGroup h3 {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .sectionGroup p {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
+.sectionGroup p:last-child {
+  margin-bottom: 0;
+}
+
 .blogGroup p {
+  font-size: 16px;
   padding: 0 32px;
 }
 
-@media (min-width: 768px) {
-  .sectionGroup h3 {
-    font-size: 1.05rem;
-  }
+.blogGroup h3 {
+  font-size: 18px;
+}
 
-  .sectionGroup p {
-    font-size: 0.9rem;
-  }
-
+@media (max-width: 1024px) {
   .blogGroup h3 {
-    font-size: 18px;
-  }
-
-  .blogGroup p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionGroup p {
+    margin-bottom: 8px;
   }
 }
