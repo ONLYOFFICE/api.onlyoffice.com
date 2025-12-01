@@ -9,11 +9,13 @@ Represents the ApiDateForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
 | [GetClassType](./Methods/GetClassType.md) | "dateForm" | Returns a type of the ApiDateForm class. |
 | [GetDate](./Methods/GetDate.md) | undefined \| Date | Returns the date of the current form. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetFormat](./Methods/GetFormat.md) | string | Gets the date format of the current form. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current form. |
 | [GetLanguage](./Methods/GetLanguage.md) | string | Gets the used date language of the current form. |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |

@@ -41,6 +41,7 @@ Represents the Api class.
 | [CreateThemeFontScheme](./Methods/CreateThemeFontScheme.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | Creates a new theme font scheme. |
 | [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) | Creates a new theme format scheme. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | None | Converts the specified JSON object into the Document Builder object of the corresponding type. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
@@ -48,6 +49,7 @@ Represents the Api class.
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | Returns the selection from the current presentation. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | Converts picas to points. |
