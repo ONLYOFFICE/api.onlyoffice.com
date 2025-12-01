@@ -122,7 +122,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the SDK. Use the [createRoom()](/docspace/javascript-sdk/usage-sdk/methods.md#createroom) method to create a new shared room.
+Configure and initialize the SDK. Use the [createRoom()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createroom) method to create a new shared room.
 
 ``` ts
 function onAppReady() {

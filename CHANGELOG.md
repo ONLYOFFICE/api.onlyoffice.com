@@ -1,5 +1,13 @@
 # Change log
 
+## 7.3.0
+
+### New features
+
+#### Docspace
+
+* Updated JavaScript SDK section
+
 ## 7.2.0
 
 ### New features

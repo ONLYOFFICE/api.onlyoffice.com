@@ -85,9 +85,9 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ### 2. Initialize the System mode
 
-Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/initialization-modes/system.md) mode.
+Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initsystem) mode.
 
-1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready), which fires when initialization is successful:
 
     ``` ts
     function onAppReady() {
@@ -105,7 +105,7 @@ Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/initi
     }
     ```
 
-3. Initialize the **System** mode with the [initSystem](/docspace/javascript-sdk/usage-sdk/methods.md#initsystem) method:
+3. Initialize the **System** mode with the [initSystem](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initsystem) method:
 
     ``` ts
     const docSpace = DocSpace.SDK.initSystem(config)
@@ -113,8 +113,8 @@ Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/initi
 
 ### 3. Add a method to log in
 
-Add the **onButtonClick()** event handler for the button. Using the [getHashSettings](/docspace/javascript-sdk/usage-sdk/methods.md#gethashsettings) method, return the password hash settings
-and generate the password hash using the [createHash](/docspace/javascript-sdk/usage-sdk/methods.md#createhash) method. After this, authorize the user using the [login](/docspace/javascript-sdk/usage-sdk/methods.md#login) method:
+Add the **onButtonClick()** event handler for the button. Using the [getHashSettings](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#gethashsettings) method, return the password hash settings
+and generate the password hash using the [createHash](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createhash) method. After this, authorize the user using the [login](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) method:
 
 ``` ts
 function onButtonClick() {
