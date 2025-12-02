@@ -1,0 +1,16 @@
+.previewContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--ifm-background-color);
+    overflow: hidden;
+}
+
+.previewContent {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    overflow: hidden;
+}

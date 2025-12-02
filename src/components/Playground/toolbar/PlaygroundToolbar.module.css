@@ -1,0 +1,211 @@
+.Toolbar {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background: var(--ifm-background-surface-color);
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ToolbarGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-600);
+    white-space: nowrap;
+}
+
+.SelectTrigger {
+    padding: 6px 12px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    cursor: pointer;
+    font-size: 13px;
+    min-width: 130px;
+    text-align: left;
+    color: var(--ifm-font-color-base);
+    transition: all var(--ifm-transition-fast) ease;
+}
+
+.SelectTrigger:hover {
+    border-color: var(--ifm-color-primary);
+}
+
+.SelectTrigger:focus-visible {
+    border-color: var(--ifm-color-primary);
+}
+
+.SelectPopup {
+    background-color: var(--ifm-dropdown-background-color);
+    border-radius: var(--ifm-global-radius);
+    box-shadow: var(--ifm-global-shadow-md);
+    padding: 0.5rem;
+    min-width: 130px;
+}
+
+.SelectOption {
+    border-radius: 0.25rem;
+    color: var(--ifm-dropdown-link-color);
+    display: block;
+    font-size: 0.875rem;
+    margin-top: 0.2rem;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.SelectOption:hover, .SelectOption[data-selected] {
+    background-color: var(--ifm-dropdown-hover-background-color);
+    color: var(--ifm-dropdown-link-color);
+}
+
+.WarningDialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.WarningContent {
+    background: var(--ifm-background-surface-color);
+    padding: 24px;
+    border-radius: var(--ifm-global-radius);
+    max-width: 420px;
+    width: 90%;
+    box-shadow: var(--ifm-global-shadow-lg);
+    animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.WarningContent p {
+    margin: 0 0 20px 0;
+    color: var(--ifm-font-color-base);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.WarningActions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.RunButton {
+    padding: 6px 16px;
+    background: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--ifm-global-radius);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--ifm-transition-fast) ease;
+    margin-left: auto;
+}
+
+.RunButton:hover {
+    background: var(--ifm-color-primary-dark);
+}
+
+.RunButton:active {
+    background: var(--ifm-color-primary-darker);
+}
+
+.ConfirmButton,
+.KeepButton,
+.CancelButton {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.ConfirmButton {
+    background: var(--ifm-color-primary);
+    color: white;
+}
+
+.ConfirmButton:hover {
+    background: var(--ifm-color-primary-dark);
+}
+
+.ConfirmButton:active {
+    background: var(--ifm-color-primary-darker);
+}
+
+.KeepButton {
+    background: var(--ifm-color-success);
+    color: white;
+}
+
+.KeepButton:hover {
+    opacity: 0.9;
+}
+
+.CancelButton {
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.CancelButton:hover {
+    background: var(--ifm-hover-overlay);
+}
+
+@media (max-width: 767px) {
+    .Toolbar {
+        gap: 12px;
+        padding: 8px 12px;
+    }
+
+    .ToolbarGroup {
+        gap: 6px;
+    }
+
+    .Label {
+        font-size: 12px;
+    }
+
+    .SelectTrigger {
+        min-width: 100px;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
