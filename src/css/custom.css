@@ -364,6 +364,12 @@ html[data-theme='dark'] {
   .navbar__title {
     color: var(--ifm-heading-color);
   }
+
+  @media (max-width: 996px) {
+    .navbar__toggle {
+      margin-right: 12px;
+    }
+  }
 }
 /* END SIDEBAR */
 

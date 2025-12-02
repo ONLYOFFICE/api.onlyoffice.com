@@ -6,7 +6,7 @@
 .features {
   display: flex;
   justify-content: center;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 0rem 2rem 7rem 2rem;
   width: 100%;
 }
 
@@ -29,12 +29,6 @@
   .docspaceGrid > *,
   .docsGrid > * {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 540px) {
-  .featuresGridWrapper > * {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
@@ -69,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: var(--base-size-32);
 }
 
 .featureHeaderTop h2 {
@@ -89,5 +83,120 @@
   &:hover {
     color: var(--button-color);
     text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 0rem 1.5rem 6rem 1.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .featureGroup {
+    margin-top: 2.5rem;
+  }
+
+  .featureHeaderTop {
+    margin-bottom: var(--base-size-24);
+  }
+
+  .featureHeaderTop h2 {
+    font-size: 1.25rem;
+  }
+
+  .featureGroup h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .containerFeatures {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .features {
+    padding: 0rem 1rem 5.5rem 1rem;
+  }
+
+  .featureHeaderTop {
+    margin-bottom: var(--base-size-24);
+  }
+
+  .featureHeaderTop h2 {
+    font-size: 1.25rem;
+  }
+
+  .featuresGridWrapper > * {
+    gap: var(--base-size-16, 1rem);
+  }
+
+  .tryButton {
+    font-size: 14px;
+    padding: 10px 28px;
+  }
+}
+
+@media (max-width: 580px) {
+  .featuresGridWrapper > * {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featureHeaderTop {
+    margin-bottom: var(--base-size-16);
+  }
+
+  .featureHeaderTop h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .featureGroup {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding-bottom: 5rem;
+  }
+
+  .containerFeatures {
+    padding: 0 0.5rem;
+  }
+
+  .featureGroup h3 {
+    font-size: 0.95rem;
+  }
+
+  .featureGroup p {
+    font-size: 0.85rem;
+  }
+
+  .tryButton {
+    padding: 8px 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .features {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .features {
+    padding: 0rem 0.5rem 4.5rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .features {
+    padding-bottom: 4rem;
   }
 }

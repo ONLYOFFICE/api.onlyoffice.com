@@ -4,22 +4,34 @@
  */
 
 .heroBanner {
-  padding: 7rem 0 2rem;
+  padding: 7rem 0 3rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .heroBanner {
-    padding: 6rem 0 1rem;
+    padding-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 720px) {
   .title {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 
   .subtitle {
@@ -27,8 +39,89 @@
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 640px) {
+  .heroBanner {
+    padding: 6rem 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroBanner {
+    padding-top: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heroBanner {
+    padding: 5rem 0 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .heroBanner {
+    padding: 4.5rem 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .title {
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .title {
+    font-size: 21px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
 }

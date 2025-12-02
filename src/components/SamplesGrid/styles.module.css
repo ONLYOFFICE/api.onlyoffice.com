@@ -45,11 +45,16 @@
   }
 }
 
-@media (min-width: 544px) {
-  .samplesItemHeader > h3 {
-    font-size: var(--text-title-font-size-medium);
-    font-weight: var(--text-title-font-weight-medium);
-    line-height: var(--text-title-line-height-medium);
+@media (max-width: 580px) {
+  .samplesGridItem {
+    gap: var(--base-size-12);
+  }
+}
+
+@media (max-width: 480px) {
+  .samplesGridItem {
+    gap: var(--base-size-8);
+    padding: var(--base-size-16);
   }
 }
 

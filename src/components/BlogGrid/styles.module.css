@@ -53,3 +53,10 @@
     gap: var(--base-size-24);
   }
 }
+
+@media screen and (max-width: 1023px) {
+  .blogGridItem {
+    gap: var(--base-size-16);
+    padding-bottom: var(--base-size-16);
+  }
+}
