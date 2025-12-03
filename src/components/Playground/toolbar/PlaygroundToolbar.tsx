@@ -5,7 +5,7 @@ import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react'
 import {useCallback, useState} from "react";
-import {EditorType, PlaygroundTheme, ScriptType, usePlaygroundRootContext} from '../root/PlaygroundRootContext'
+import {EditorType, ScriptType, usePlaygroundRootContext} from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
 import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 
@@ -149,21 +149,19 @@ export const PlaygroundToolbar = () => {
 
             <div className={styles.ToolbarGroup}>
                 <div className={styles.Label}>Theme:</div>
-                <Select.Root value={theme} onValueChange={(value) => setTheme(value as PlaygroundTheme)}>
+                <Select.Root value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                     </Select.Trigger>
                     <Select.Portal>
                         <Select.Content>
                             <Select.Viewport className={styles.SelectPopup}>
-
-                                    <Select.Item value="light" className={styles.SelectOption}>
-                                        <Select.ItemText>Light</Select.ItemText>
-                                    </Select.Item>
-                                    <Select.Item value="dark" className={styles.SelectOption}>
-                                        <Select.ItemText>Dark</Select.ItemText>
-                                    </Select.Item>
-
+                                <Select.Item value="light" className={styles.SelectOption}>
+                                    <Select.ItemText>Light</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="dark" className={styles.SelectOption}>
+                                    <Select.ItemText>Dark</Select.ItemText>
+                                </Select.Item>
                             </Select.Viewport>
                         </Select.Content>
                     </Select.Portal>

@@ -15,8 +15,6 @@ export type EditorType = 'word' | 'cell' | 'slide' | 'form'
 export type ScriptType = 'office-js-api' | 'connector' | 'plugin'
 export type PreviewType = 'desktop' | 'mobile' | 'embedded'
 
-export type PlaygroundTheme = 'light' | 'dark'
-
 export interface PlaygroundRootContext {
     editorType: EditorType
     setEditorType: Dispatch<SetStateAction<EditorType>>
@@ -24,8 +22,8 @@ export interface PlaygroundRootContext {
     setPreviewType: Dispatch<SetStateAction<PreviewType>>
     scriptType: ScriptType
     setScriptType: Dispatch<SetStateAction<ScriptType>>
-    theme: PlaygroundTheme
-    setTheme: Dispatch<SetStateAction<PlaygroundTheme>>
+    theme: 'light' | 'dark'
+    setTheme: Dispatch<SetStateAction<'light' | 'dark'>>
     scriptValue: string
     setScriptValue: Dispatch<SetStateAction<string>>
     isScriptModified: boolean

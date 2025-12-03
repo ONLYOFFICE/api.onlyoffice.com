@@ -2,6 +2,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {useCallback, useEffect, useRef} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 declare global {
     interface Window {
@@ -9,10 +10,19 @@ declare global {
     }
 }
 
-function getFullUrl(localUrl: string): string {
-    let url = location.href;
-    url = url.substring(0, url.lastIndexOf("/"));
-    return url + localUrl;
+const FILE_CONFIGS = {
+    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
+    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
+    slide: {
+        ext: 'pptx',
+        docType: 'slide',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
+    },
+    form: {
+        ext: 'pdf',
+        docType: 'pdf',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
+    },
 }
 
 export const PlaygroundPreview = () => {
@@ -59,27 +69,19 @@ export const PlaygroundPreview = () => {
     )
 
     const initEditor = useCallback(async () => {
-        if (!containerRef.current || !window.DocsAPI) return
+        if (docEditorRef.current) {
+            docEditorRef.current.destroyEditor()
+            docEditorRef.current = null
+        }
+
+        if (connectorRef.current) {
+            connectorRef.current.disconnect()
+            connectorRef.current = null
+        }
 
         containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>'
 
-        const fileConfigs = {
-            word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
-            cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
-            slide: {
-                ext: 'pptx',
-                docType: 'slide',
-                url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
-            },
-            form: {
-                ext: 'pdf',
-                docType: 'pdf',
-                url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
-            },
-        }
-
-        const fileConfig = fileConfigs[editorType] || fileConfigs.word
-        const uiTheme = theme === 'dark' ? 'default-dark' : 'default-light'
+        const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
 
         // fixme: config typescript type
         const config = {
@@ -98,7 +100,7 @@ export const PlaygroundPreview = () => {
                     name: 'Developer',
                 },
                 customization: {
-                    uiTheme: uiTheme,
+                    uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
                     features: {
                         featuresTips: false,
                     },
@@ -117,13 +119,13 @@ export const PlaygroundPreview = () => {
             onDocumentReady: () => {
                 connectorRef.current = docEditorRef.current.createConnector();
 
-                let url = getFullUrl("/plugin/config.json");
+                let url = useBaseUrl("/plugin/config.json");
                 connectorRef.current.callCommand(new Function("Api.installDeveloperPlugin(\"" + url + "\");"));
             }
         };
 
         docEditorRef.current = new window.DocsAPI.DocEditor('placeholder', config)
-    }, [editorType, theme, documentServer, documentServerSecret])
+    }, [editorType, theme, previewType, documentServer, documentServerSecret, createJWT])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!connectorRef.current) {
@@ -169,9 +171,14 @@ export const PlaygroundPreview = () => {
 
         return () => {
             docEditorRef.current?.destroyEditor()
-            connectorRef.current?.disconnect()
         }
-    }, [documentServer, theme])
+    }, [documentServer])
+
+    useEffect(() => {
+        if (!docEditorRef.current) return
+
+        initEditor().catch(error => console.error('Error reinitializing editor:', error))
+    }, [theme, previewType, initEditor])
 
     useEffect(() => {
         const handleRefresh = () => {

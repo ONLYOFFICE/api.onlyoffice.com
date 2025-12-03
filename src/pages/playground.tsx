@@ -1,15 +1,17 @@
-import type {Component, ComponentProps, ReactNode} from "react";
 import { Playground } from "../components/Playground";
 import styles from './playground.module.css';
+import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 
-const PlaygroundRoute: Component = () => {
+const PlaygroundRoute = () => {
     return (
-        <div className={styles.playgroundContainer}>
-            <Playground.Root>
-                <Playground.Toolbar/>
-                <Playground.Content/>
-            </Playground.Root>
-        </div>
+        <ColorModeProvider>
+            <div className={styles.playgroundContainer}>
+                <Playground.Root>
+                    <Playground.Toolbar/>
+                    <Playground.Content/>
+                </Playground.Root>
+            </div>
+        </ColorModeProvider>
     )
 }
 
