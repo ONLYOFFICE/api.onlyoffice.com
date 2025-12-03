@@ -19,7 +19,7 @@ The following examples will show you how to use ONLYOFFICE Office API to create 
 
 ## Presentation editor
 
-<DocCardList items={[...[useCurrentSidebarCategory().items[2].items[0], ...useCurrentSidebarCategory().items[2].items.slice(2)]]} />
+<DocCardList items={[...[...useCurrentSidebarCategory().items[2].items]]} />
 
 ## PDF editor
 
