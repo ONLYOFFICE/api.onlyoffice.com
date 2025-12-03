@@ -46,12 +46,12 @@ let criteria = colorScale.GetColorScaleCriteria();
 
 if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Before:");
-    worksheet.GetRange("C2").SetValue(criteria[0].GetValue() || "No value");
+    worksheet.GetRange("C2").SetValue(criteria[1].GetValue() || "No value");
     
-    criteria[0].SetValue("25");
+    criteria[1].SetValue("25");
     
     worksheet.GetRange("C3").SetValue("After:");
-    worksheet.GetRange("C4").SetValue(criteria[0].GetValue() || "No value");
+    worksheet.GetRange("C4").SetValue(criteria[1].GetValue() || "No value");
 }
 
 ```
