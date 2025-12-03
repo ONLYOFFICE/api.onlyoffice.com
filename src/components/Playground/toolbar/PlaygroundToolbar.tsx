@@ -1,71 +1,71 @@
 'use client'
 
+import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react'
-import { useState } from "react";
-import {EditorType, ScriptType, usePlaygroundRootContext} from '../root/PlaygroundRootContext'
+import {useCallback, useState} from "react";
+import {EditorType, PlaygroundTheme, ScriptType, usePlaygroundRootContext} from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
+import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 
 export const PlaygroundToolbar = () => {
-    const { editorType, setEditorType, previewType, setPreviewType, scriptType, setScriptType, isScriptModified, setIsScriptModified, theme, setTheme, getDefaultScript, setScriptValue } = usePlaygroundRootContext()
+    const { editorType, setEditorType, previewType, setPreviewType, scriptType, setScriptType, isScriptModified, setIsScriptModified, theme, setTheme, setScriptValue } = usePlaygroundRootContext()
 
-    const [showWarning, setShowWarning] = useState(false)
-    const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null)
+    const [dialogOpen, setDialogOpen] = useState(false)
+    const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null) // todo: better handle script+editor type
 
-    const handleEditorTypeChange = (value: string | string[] | null) => {
+    const handleEditorTypeChange = useCallback((value: string) => {
         const newEditorType = value as EditorType
 
         if (isScriptModified) {
             setPendingEditorType(newEditorType)
-            setShowWarning(true)
+            setDialogOpen(true)
         } else {
             setEditorType(newEditorType)
-            setScriptValue(getDefaultScript())
+            setScriptValue(DEFAULT_SCRIPTS[newEditorType][scriptType])
         }
-    }
+    }, [isScriptModified, scriptType, setEditorType, setScriptValue])
 
-    const handleConfirmChange = () => {
+    const handleConfirmChange = useCallback(() => {
         if (pendingEditorType) {
             setEditorType(pendingEditorType)
-            setTimeout(() => {
-                const newScript = getDefaultScript()
-                setScriptValue(newScript)
-                setIsScriptModified(false)
-            }, 0)
+            setScriptValue(DEFAULT_SCRIPTS[pendingEditorType][scriptType])
+            setIsScriptModified(false)
             setPendingEditorType(null)
         }
-        setShowWarning(false)
-    }
+        setDialogOpen(false)
+    }, [pendingEditorType, scriptType, setEditorType, setScriptValue, setIsScriptModified])
 
-    const handleKeepScript = () => {
+    const handleKeepScript = useCallback(() => {
         if (pendingEditorType) {
             setEditorType(pendingEditorType)
             setPendingEditorType(null)
         }
-        setShowWarning(false)
-    }
+        setDialogOpen(false)
+    }, [pendingEditorType, setEditorType])
 
-    const handleCancelChange = () => {
+    const handleCancelChange = useCallback(() => {
         setPendingEditorType(null)
-        setShowWarning(false)
-    }
+        setDialogOpen(false)
+    }, [])
 
-    const handleScriptTypeChange = (value: string | string[] | null) => {
+    const handleScriptTypeChange = useCallback((value: string) => {
         const newScriptType = value as ScriptType
-        const prevScriptType = scriptType
+
+        if (newScriptType === scriptType) {
+            return
+        }
+
         setScriptType(newScriptType)
 
-        if (!isScriptModified && prevScriptType !== newScriptType) {
-            setTimeout(() => {
-                const newScript = getDefaultScript()
-                setScriptValue(newScript)
-                setIsScriptModified(false)
-            }, 0)
+        if (!isScriptModified) {
+            setScriptValue(DEFAULT_SCRIPTS[editorType][newScriptType])
         }
-    }
+    }, [scriptType, isScriptModified, editorType, setScriptType, setScriptValue])
 
-    const handleRun = React.useCallback(() => {
+
+    const handleRun = useCallback(() => {
         window.dispatchEvent(new Event('playground-run'))
     }, [])
 
@@ -149,7 +149,7 @@ export const PlaygroundToolbar = () => {
 
             <div className={styles.ToolbarGroup}>
                 <div className={styles.Label}>Theme:</div>
-                <Select.Root value={theme} onValueChange={(value) => setTheme(value)}>
+                <Select.Root value={theme} onValueChange={(value) => setTheme(value as PlaygroundTheme)}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                     </Select.Trigger>
@@ -174,27 +174,37 @@ export const PlaygroundToolbar = () => {
                 ▶ Run
             </button>
 
-            {showWarning && (
-                <div className={styles.WarningDialog}>
-                    <div className={styles.WarningContent}>
-                        <p>
-                            You have modified the script. Do you want to replace it with the default script for the new
-                            editor type?
-                        </p>
-                        <div className={styles.WarningActions}>
-                            <button onClick={handleConfirmChange} className={styles.ConfirmButton}>
-                                Replace Script
-                            </button>
-                            <button onClick={handleKeepScript} className={styles.KeepButton}>
-                                Keep Script
-                            </button>
-                            <button onClick={handleCancelChange} className={styles.CancelButton}>
-                                Cancel
-                            </button>
+            <AlertDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
+                <AlertDialog.Portal>
+                    <AlertDialog.Overlay className={styles.DialogOverlay} />
+                    <AlertDialog.Content className={styles.DialogContent}>
+                        <AlertDialog.Title className={styles.DialogTitle}>
+                            Script Modified
+                        </AlertDialog.Title>
+                        <AlertDialog.Description className={styles.DialogDescription}>
+                            You have modified the script. Do you want to replace it with the default
+                            script for the new editor type?
+                        </AlertDialog.Description>
+                        <div className={styles.DialogActions}>
+                            <AlertDialog.Action asChild>
+                                <button onClick={handleConfirmChange} className={styles.ConfirmButton}>
+                                    Replace Script
+                                </button>
+                            </AlertDialog.Action>
+                            <AlertDialog.Action asChild>
+                                <button onClick={handleKeepScript} className={styles.KeepButton}>
+                                    Keep Script
+                                </button>
+                            </AlertDialog.Action>
+                            <AlertDialog.Cancel asChild>
+                                <button onClick={handleCancelChange} className={styles.CancelButton}>
+                                    Cancel
+                                </button>
+                            </AlertDialog.Cancel>
                         </div>
-                    </div>
-                </div>
-            )}
+                    </AlertDialog.Content>
+                </AlertDialog.Portal>
+            </AlertDialog.Root>
         </div>
     )
 }

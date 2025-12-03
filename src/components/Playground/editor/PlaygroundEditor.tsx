@@ -5,7 +5,7 @@ import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundEditor.module.css';
 
 export const PlaygroundEditor = () => {
-    const { scriptValue, setScriptValue, setIsScriptModified, theme, editorApiConfig } = usePlaygroundRootContext()
+    const { scriptValue, setScriptValue, setIsScriptModified, theme, editorType, scriptType } = usePlaygroundRootContext()
 
     const onChange = (newValue: string | undefined) => {
         setScriptValue(newValue)
@@ -13,7 +13,7 @@ export const PlaygroundEditor = () => {
     }
 
     const onMount: OnMount = (editor, monaco) => {
-        const apiUrl = `./libs/${editorApiConfig.editorType}/api.js`
+        const apiUrl = `./libs/${editorType}/api.js`
         fetch(apiUrl)
             .then(response => response.text())
             .then(libSource => {
@@ -24,12 +24,10 @@ export const PlaygroundEditor = () => {
             })
     }
 
-    const editorKey = `${editorApiConfig.editorType}-${editorApiConfig.scriptType}`
-
     return (
         <div className={styles.editorContainer}>
             <MonacoEditor
-                key={editorKey}
+                key={`${editorType}-${scriptType}`}
                 defaultLanguage="javascript"
                 value={scriptValue}
                 onChange={onChange}

@@ -20,7 +20,7 @@ export const PlaygroundPreview = () => {
     const documentServer = customFields.documentServer as string;
     const documentServerSecret = customFields.documentServerSecret as string;
 
-    const { editorApiConfig, theme, scriptValue } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
     const docEditorRef = useRef<any>(null)
@@ -78,7 +78,7 @@ export const PlaygroundPreview = () => {
             },
         }
 
-        const fileConfig = fileConfigs[editorApiConfig.editorType] || fileConfigs.word
+        const fileConfig = fileConfigs[editorType] || fileConfigs.word
         const uiTheme = theme === 'dark' ? 'default-dark' : 'default-light'
 
         // fixme: config typescript type
@@ -90,7 +90,7 @@ export const PlaygroundPreview = () => {
                 url: fileConfig.url,
             },
             documentType: fileConfig.docType,
-            type: editorApiConfig.previewType,
+            type: previewType,
             editorConfig: {
                 callbackUrl: documentServer + '/dummyCallback',
                 user: {
@@ -123,7 +123,7 @@ export const PlaygroundPreview = () => {
         };
 
         docEditorRef.current = new window.DocsAPI.DocEditor('placeholder', config)
-    }, [editorApiConfig, theme, documentServer, documentServerSecret, createJWT])
+    }, [editorType, theme, documentServer, documentServerSecret])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!connectorRef.current) {
@@ -168,31 +168,22 @@ export const PlaygroundPreview = () => {
         document.body.appendChild(script)
 
         return () => {
-            if (docEditorRef.current) {
-                docEditorRef.current.destroyEditor()
-                docEditorRef.current = null
-            }
-            if (connectorRef.current) {
-                connectorRef.current.disconnect()
-                connectorRef.current = null
-            }
-            if (document.body.contains(script)) {
-                document.body.removeChild(script)
-            }
+            docEditorRef.current?.destroyEditor()
+            connectorRef.current?.disconnect()
         }
-    }, [documentServer, initEditor])
+    }, [documentServer, theme])
 
     useEffect(() => {
         const handleRefresh = () => {
             if (connectorRef.current && !!scriptValue.length) {
-                executeCode(scriptValue, editorApiConfig.scriptType)
+                executeCode(scriptValue, scriptType)
             }
         }
 
         window.addEventListener('playground-run', handleRefresh)
 
         return () => window.removeEventListener('playground-run', handleRefresh)
-    }, [scriptValue, editorApiConfig.scriptType, executeCode])
+    }, [scriptValue, scriptType, executeCode])
 
     return <div ref={containerRef} className={styles.PlaygroundPreviewContainer}/>
 }

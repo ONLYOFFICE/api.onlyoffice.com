@@ -1,5 +1,11 @@
-import {EditorAPIConfig, EditorType, PlaygroundRootContext, PreviewType, ScriptType} from "./PlaygroundRootContext"
-import {ComponentProps, PropsWithChildren, useCallback, useMemo, useState} from "react";
+import {
+    EditorType,
+    PlaygroundRootContext,
+    PlaygroundTheme,
+    PreviewType,
+    ScriptType
+} from "./PlaygroundRootContext"
+import {ComponentProps, useMemo, useState} from "react";
 import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 
 export type PlaygroundRootProps = ComponentProps<'div'> & {
@@ -18,7 +24,7 @@ export const PlaygroundRoot = (incomingProps: PlaygroundRootProps) => {
     const props = { ...defaultProps, ...incomingProps };
 
     const initialScript = DEFAULT_SCRIPTS[props.editorType][props.scriptType];
-    const initialTheme = (typeof window !== 'undefined' && document.querySelector('html').dataset.theme === 'dark') ? 'dark' : 'light';
+    const initialTheme: PlaygroundTheme = (typeof window !== 'undefined' && document.querySelector('html')?.dataset.theme === 'dark') ? 'dark' : 'light';
 
     const [editorType, setEditorType] = useState<EditorType>(props.editorType)
     const [previewType, setPreviewType] = useState<PreviewType>(props.previewType)
@@ -27,18 +33,7 @@ export const PlaygroundRoot = (incomingProps: PlaygroundRootProps) => {
     const [scriptValue, setScriptValue] = useState(initialScript)
     const [isScriptModified, setIsScriptModified] = useState(false)
 
-    const editorApiConfig = useMemo<EditorAPIConfig>(() => ({
-        editorType,
-        previewType,
-        scriptType
-    }), [editorType, previewType, scriptType])
-
-    const getDefaultScript = useCallback(() => {
-        return DEFAULT_SCRIPTS[editorType][scriptType]
-    }, [editorType, scriptType])
-
     const contextValue = useMemo(() => ({
-        editorApiConfig,
         editorType,
         setEditorType,
         previewType,
@@ -50,9 +45,8 @@ export const PlaygroundRoot = (incomingProps: PlaygroundRootProps) => {
         scriptValue,
         setScriptValue,
         isScriptModified,
-        setIsScriptModified,
-        getDefaultScript
-    }), [editorApiConfig, editorType, previewType, scriptType, theme, scriptValue, isScriptModified, getDefaultScript])
+        setIsScriptModified
+    }), [editorType, previewType, scriptType, theme, scriptValue, isScriptModified])
 
     return (
         <PlaygroundRootContext.Provider value={contextValue}>
