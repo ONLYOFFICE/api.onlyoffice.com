@@ -7,7 +7,7 @@
 
 /* eslint-disable global-require */
 
-import React, {type ReactNode} from 'react';
+import React, {type ReactNode, type ComponentProps } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
@@ -52,7 +52,7 @@ interface Props {
   description: string;
 }
 
-function PlaygroundCard({name, image, imageDark, url, description}: Props) {
+function PlaygroundCard({name, image, imageDark, url, description}: ComponentProps<Props>) {
   const {
     siteConfig: {customFields},
   } = useDocusaurusContext();

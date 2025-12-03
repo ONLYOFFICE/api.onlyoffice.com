@@ -48,7 +48,7 @@ export const PlaygroundContent = () => {
 
     return (
         <PanelGroup direction="horizontal" className={styles.DesktopContent}>
-            <Panel minSize={20} defaultSize={50}>
+            <Panel minSize={20} defaultSize={40}>
                 <PlaygroundEditor />
             </Panel>
             <PanelResizeHandle className={styles.ResizeHandle}>
@@ -74,7 +74,7 @@ export const PlaygroundContent = () => {
                     </svg>
                 </div>
             </PanelResizeHandle>
-            <Panel minSize={20} defaultSize={50}>
+            <Panel minSize={20} defaultSize={60}>
                 <PlaygroundPreview />
             </Panel>
         </PanelGroup>

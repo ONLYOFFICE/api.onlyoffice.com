@@ -9,6 +9,12 @@ declare global {
     }
 }
 
+function getFullUrl(localUrl: string): string {
+    let url = location.href;
+    url = url.substring(0, url.lastIndexOf("/"));
+    return url + localUrl;
+}
+
 export const PlaygroundPreview = () => {
     const { siteConfig: { customFields } } = useDocusaurusContext()
     const documentServer = customFields.documentServer as string;
@@ -75,6 +81,7 @@ export const PlaygroundPreview = () => {
         const fileConfig = fileConfigs[editorApiConfig.editorType] || fileConfigs.word
         const uiTheme = theme === 'dark' ? 'default-dark' : 'default-light'
 
+        // fixme: config typescript type
         const config = {
             document: {
                 fileType: fileConfig.ext,
@@ -99,17 +106,21 @@ export const PlaygroundPreview = () => {
                 lang: 'en',
             },
             height: '100%',
-            width: '100%',
-            events: {
-                onDocumentReady: () => {
-                    connectorRef.current = docEditorRef.current.createConnector()
-                },
-            },
+            width: '100%'
         }
 
         if (!!documentServerSecret?.length) {
             (config as any).token = await createJWT(config)
         }
+
+        (config as any).events = {
+            onDocumentReady: () => {
+                connectorRef.current = docEditorRef.current.createConnector();
+
+                let url = getFullUrl("/plugin/config.json");
+                connectorRef.current.callCommand(new Function("Api.installDeveloperPlugin(\"" + url + "\");"));
+            }
+        };
 
         docEditorRef.current = new window.DocsAPI.DocEditor('placeholder', config)
     }, [editorApiConfig, theme, documentServer, documentServerSecret, createJWT])
@@ -183,9 +194,5 @@ export const PlaygroundPreview = () => {
         return () => window.removeEventListener('playground-run', handleRefresh)
     }, [scriptValue, editorApiConfig.scriptType, executeCode])
 
-    return (
-        <div className={styles.previewContainer}>
-            <div ref={containerRef} className={styles.previewContent} />
-        </div>
-    )
+    return <div ref={containerRef} className={styles.PlaygroundPreviewContainer}/>
 }
