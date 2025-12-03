@@ -3,6 +3,7 @@
 import MonacoEditor, {OnMount} from '@monaco-editor/react'
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundEditor.module.css';
+import {getFullUrl} from "@site/src/utils/url";
 
 export const PlaygroundEditor = () => {
     const { scriptValue, setScriptValue, setIsScriptModified, theme, editorType, scriptType } = usePlaygroundRootContext()
@@ -12,10 +13,16 @@ export const PlaygroundEditor = () => {
         setIsScriptModified(true)
     }
 
-    const onMount: OnMount = (editor, monaco) => {
-        const apiUrl = `./libs/${editorType}/api.js`
+    const apiUrl = getFullUrl(`/libs/${editorType}/api.js`)
+
+    const onMount: OnMount = (_, monaco) => {
         fetch(apiUrl)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${apiUrl}: ${response.status}`)
+                }
+                return response.text()
+            })
             .then(libSource => {
                 monaco.languages.typescript.javascriptDefaults.addExtraLib(libSource)
             })

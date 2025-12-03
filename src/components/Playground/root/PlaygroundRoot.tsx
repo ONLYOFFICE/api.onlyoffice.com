@@ -4,7 +4,7 @@ import {
     PreviewType,
     ScriptType
 } from "./PlaygroundRootContext"
-import {ComponentProps, useMemo, useState} from "react";
+import {ComponentProps, useEffect, useMemo, useState} from "react";
 import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 import {useColorMode} from "@docusaurus/theme-common";
 
@@ -47,6 +47,15 @@ export const PlaygroundRoot = (incomingProps: PlaygroundRootProps) => {
         isScriptModified,
         setIsScriptModified
     }), [editorType, previewType, scriptType, colorMode, scriptValue, isScriptModified])
+
+    useEffect(() => {
+        if (!isScriptModified) {
+            const newScript = DEFAULT_SCRIPTS[editorType]?.[scriptType];
+            if (newScript) {
+                setScriptValue(newScript);
+            }
+        }
+    }, [editorType, scriptType, isScriptModified]);
 
     return (
         <PlaygroundRootContext.Provider value={contextValue}>

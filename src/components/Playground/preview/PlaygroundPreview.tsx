@@ -1,12 +1,14 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import {useCallback, useEffect, useRef} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import {getFullUrl} from "@site/src/utils/url";
 
 declare global {
     interface Window {
         DocsAPI: any
+        connector: any
+        docEditor: any
     }
 }
 
@@ -33,8 +35,10 @@ export const PlaygroundPreview = () => {
     const { theme, scriptValue, previewType, scriptType, editorType } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
-    const docEditorRef = useRef<any>(null)
-    const connectorRef = useRef<any>(null)
+    const initializingRef = useRef(false)
+    const [isApiLoaded, setIsApiLoaded] = useState(false)
+
+    const pluginConfigUrl = getFullUrl("/plugin/config.json");
 
     const createJWT = useCallback(
         async (payload: object): Promise<string> => {
@@ -68,67 +72,93 @@ export const PlaygroundPreview = () => {
         [documentServerSecret],
     )
 
-    const initEditor = useCallback(async () => {
-        if (docEditorRef.current) {
-            docEditorRef.current.destroyEditor()
-            docEditorRef.current = null
-        }
-
-        if (connectorRef.current) {
-            connectorRef.current.disconnect()
-            connectorRef.current = null
-        }
-
-        containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>'
-
-        const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
-
-        // fixme: config typescript type
-        const config = {
-            document: {
-                fileType: fileConfig.ext,
-                key: `key${Date.now()}${Math.random()}`,
-                title: `Document.${fileConfig.ext}`,
-                url: fileConfig.url,
-            },
-            documentType: fileConfig.docType,
-            type: previewType,
-            editorConfig: {
-                callbackUrl: documentServer + '/dummyCallback',
-                user: {
-                    id: 'userID',
-                    name: 'Developer',
-                },
-                customization: {
-                    uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
-                    features: {
-                        featuresTips: false,
-                    },
-                },
-                lang: 'en',
-            },
-            height: '100%',
-            width: '100%'
-        }
-
-        if (!!documentServerSecret?.length) {
-            (config as any).token = await createJWT(config)
-        }
-
-        (config as any).events = {
-            onDocumentReady: () => {
-                connectorRef.current = docEditorRef.current.createConnector();
-
-                let url = useBaseUrl("/plugin/config.json");
-                connectorRef.current.callCommand(new Function("Api.installDeveloperPlugin(\"" + url + "\");"));
+    const destroyEditor = useCallback(() => {
+        if (window.connector) {
+            try {
+                window.connector.disconnect()
+            } catch (error) {
+                console.warn('Failed to disconnect connector:', error)
             }
-        };
+            delete window.connector
+        }
 
-        docEditorRef.current = new window.DocsAPI.DocEditor('placeholder', config)
-    }, [editorType, theme, previewType, documentServer, documentServerSecret, createJWT])
+        if (window.docEditor) {
+            try {
+                window.docEditor.destroyEditor()
+            } catch (error) {
+                console.warn('Failed to destroy editor:', error)
+            }
+            delete window.docEditor
+        }
+    }, [])
+
+    const initEditor = useCallback(async () => {
+        if (!containerRef.current || !isApiLoaded || initializingRef.current) return
+
+        initializingRef.current = true
+
+        try {
+            destroyEditor()
+
+            containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>'
+
+            const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
+
+            // fixme: config typescript type
+            const config = {
+                document: {
+                    fileType: fileConfig.ext,
+                    key: `key${Date.now()}${Math.random()}`,
+                    title: `Document.${fileConfig.ext}`,
+                    url: fileConfig.url,
+                },
+                documentType: fileConfig.docType,
+                type: previewType,
+                editorConfig: {
+                    callbackUrl: documentServer + '/dummyCallback',
+                    user: {
+                        id: 'userID',
+                        name: 'Developer',
+                    },
+                    customization: {
+                        uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
+                        features: {
+                            featuresTips: false,
+                        },
+                    },
+                    lang: 'en',
+                },
+                height: '100%',
+                width: '100%',
+                events: {
+                    onDocumentReady: () => {
+                        try {
+                            window.connector = window.docEditor.createConnector();
+                            window.connector.callCommand(
+                                new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+                            );
+                        } catch (error) {
+                            console.error('Failed to initialize connector:', error)
+                        }
+                    }
+                }
+            }
+
+            if (!!documentServerSecret?.length) {
+                (config as any).token = await createJWT(config)
+            }
+
+            window.docEditor = new window.DocsAPI.DocEditor('placeholder', config)
+        } catch (error) {
+            console.error('Failed to create editor:', error)
+        } finally {
+            initializingRef.current = false
+        }
+
+    }, [editorType, theme, previewType, documentServer, documentServerSecret, createJWT, pluginConfigUrl, isApiLoaded, destroyEditor])
 
     const executeCode = useCallback((code: string, type: string) => {
-        if (!connectorRef.current) {
+        if (!window.connector) {
             console.log('Please wait for editor to load...')
             return
         }
@@ -136,13 +166,14 @@ export const PlaygroundPreview = () => {
         try {
             switch (type) {
                 case 'office-js-api':
-                    connectorRef.current.callCommand(new Function(code))
+                    window.connector.callCommand(new Function(code))
                     break
                 case 'connector':
-                    eval(code)
+                    const connectorFn = new Function('connector', code);
+                    connectorFn(window.connector);
                     break
                 case 'plugin': {
-                    connectorRef.current.executeMethod('SetPluginsOptions', [
+                    window.connector.executeMethod('SetPluginsOptions', [
                         {
                             'asc.{D764D084-C77A-4A3E-A157-A9A1E442BCFC}': {
                                 codeExecute: code,
@@ -159,30 +190,45 @@ export const PlaygroundPreview = () => {
         }
     }, [])
 
+
     useEffect(() => {
-        if (!containerRef.current) return
+        if (!documentServer) return
 
         const script = document.createElement('script')
         script.src = `${documentServer}web-apps/apps/api/documents/api.js`
         script.async = true
-        script.onload = () => initEditor()
+        script.onload = () => {
+            setIsApiLoaded(true)
+        }
+        script.onerror = () => {
+            console.error('Failed to load OnlyOffice API')
+        }
 
         document.body.appendChild(script)
 
         return () => {
-            docEditorRef.current?.destroyEditor()
+            destroyEditor()
+            if (document.body.contains(script)) {
+                document.body.removeChild(script)
+            }
         }
-    }, [documentServer])
+    }, [documentServer, destroyEditor])
 
     useEffect(() => {
-        if (!docEditorRef.current) return
+        if (!isApiLoaded || !containerRef.current) return
+
+        initEditor().catch(error => console.error('Error initializing editor:', error))
+    }, [isApiLoaded])
+
+    useEffect(() => {
+        if (!isApiLoaded) return
 
         initEditor().catch(error => console.error('Error reinitializing editor:', error))
-    }, [theme, previewType, initEditor])
+    }, [theme, previewType, editorType, initEditor])
 
     useEffect(() => {
         const handleRefresh = () => {
-            if (connectorRef.current && !!scriptValue.length) {
+            if (window.connector && !!scriptValue.length) {
                 executeCode(scriptValue, scriptType)
             }
         }
