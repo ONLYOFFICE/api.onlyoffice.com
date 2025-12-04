@@ -18,7 +18,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 2. Place a cursor anywhere in the document, press the right mouse button, and go to **Item 1 -> Subitem 2**. The *clicked: onClickItem1Sub2* message will be inserted at the cursor position.
 3. Select any text in the document, press the right mouse button, and click **Item 3**. The *clicked: onClickItem3* message will be inserted in place of the selected text.
 4. Select any shape or image in the document, press the right mouse button, and click **Item 4**. The *clicked: onClickItem4* message will appear in the console.
-5. Change the cursor position. The *event: onTargetPositionChanged* message will appear in the console.
+5. Change the cursor position. The *event: [onTargetPositionChanged](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)* message will appear in the console.
 
 ## Plugin structure
 
@@ -210,7 +210,7 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- onTargetPositionChanged
+- [onTargetPositionChanged](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - [attachContextMenuClickEvent](/docs/plugin-and-macros/customization/context-menu.md#clicking-a-context-menu-item)
 - [executeMethod ("AddContextMenuItem")](/docs/plugin-and-macros/customization/context-menu.md#creating-a-context-menu-item)
 - [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)

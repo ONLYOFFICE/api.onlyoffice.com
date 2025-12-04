@@ -109,9 +109,9 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- onAddComment
-- onChangeCommentData
-- onRemoveComment
+- [onAddComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md)
+- [onChangeCommentData](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md)
 - executeMethod ("[AddComment](/site/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
 - executeMethod ("[ChangeComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md)")
 - executeMethod ("[GetAllComments](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetAllComments.md)")

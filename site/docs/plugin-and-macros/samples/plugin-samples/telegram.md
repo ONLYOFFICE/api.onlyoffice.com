@@ -101,7 +101,7 @@ Repository on GitHub: [telegram](https://github.com/ONLYOFFICE/onlyoffice.github
 
 - [button](/site/docs/plugin-and-macros/customization/buttons.md)
 - [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- onExternalMouseUp
+- [onExternalMouseUp](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 
 ## Support
 

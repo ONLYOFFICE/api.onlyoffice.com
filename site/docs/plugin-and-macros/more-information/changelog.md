@@ -31,7 +31,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 8.2
 
-- Added the onSubmitForm event.
+- Added the [onSubmitForm](../interacting-with-editors/form-api/Events/onSubmitForm.md) event.
 - Added the [CanRedo](../interacting-with-editors/text-document-api/Methods/CanRedo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
 - Added the [CanUndo](../interacting-with-editors/text-document-api/Methods/CanUndo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
 - Added the [Redo](../interacting-with-editors/text-document-api/Methods/Redo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.

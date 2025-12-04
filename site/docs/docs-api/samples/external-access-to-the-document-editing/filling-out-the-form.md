@@ -54,7 +54,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
   }
   ```
 
-1. When the user chooses a username from the list, the [GetFormsByTag](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormsByTag.md) method is executed to collect all the forms by their tags and sets the corresponding values to them with the [SetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/SetFormValue.md) method:
+2. When the user chooses a username from the list, the [GetFormsByTag](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormsByTag.md) method is executed to collect all the forms by their tags and sets the corresponding values to them with the [SetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/SetFormValue.md) method:
 
 ``` ts
 $("#persons").change(function personChange(e) {
@@ -101,7 +101,7 @@ $("#persons").change(function personChange(e) {
 });
 ```
 
-1. When the user edits a form value, the [onChangeContentControl](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeContentControl.md) event is fired and after that, the [GetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) method is executed to get an updated form value and display it in the custom interface:
+3. When the user edits a form value, the [onChangeContentControl](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeContentControl.md) event is fired and after that, the [GetFormValue](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) method is executed to get an updated form value and display it in the custom interface:
 
 ``` ts
 function onDocumentReady() {
