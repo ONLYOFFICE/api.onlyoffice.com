@@ -66,10 +66,10 @@
 }
 
 .tryButton {
-  background-color: var(--try-button-bg-color);
-  border: 1px solid var(--try-button-border-color);
+  background-color: var(--button-bg-color);
+  border: 1px solid var(--button-border-color);
   border-radius: 12px;
-  color: var(--try-button-text-color);
+  color: var(--button-text-color);
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
@@ -78,8 +78,9 @@
   transition: all 0.3s;
 
   &:hover {
-    border-color: var(--try-button-border-color-hover);
-    color: var(--try-button-text-color-hover);
+    background-color: var(--button-bg-color-hover);
+    border-color: var(--button-border-color-hover);
+    color: var(--button-text-color-hover);
     text-decoration: none;
   }
 }

@@ -29,6 +29,7 @@
   transition: all 0.3s;
 
   &:hover {
+    background-color: var(--button-bg-color-hover);
     border-color: var(--button-border-color-hover);
     color: var(--button-text-color-hover);
     text-decoration: none;

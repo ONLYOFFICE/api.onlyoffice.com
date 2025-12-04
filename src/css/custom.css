@@ -211,17 +211,12 @@
   --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
   /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
 
-  --try-button-text-color: #245ADD;
-  --try-button-border-color: #245ADD;
-  --try-button-bg-color: #00000000;
-  --try-button-text-color-hover: #2033F5;
-  --try-button-border-color-hover: #2033F5;
-
   --button-text-color: #245ADD;
   --button-border-color: #245ADD;
   --button-bg-color: #00000000;
-  --button-text-color-hover: #231990;
-  --button-border-color-hover: #231990;
+  --button-text-color-hover: #2033F5;
+  --button-border-color-hover: #2033F5;
+  --button-bg-color-hover: #f5f5faC0;
 }
 
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
@@ -260,17 +255,12 @@ html[data-theme='dark'] {
 
   --temp-color-shadow-default-small: 0 7px 15px 0 #ABABAB1a;
 
-  --try-button-text-color: #EAF1FE;
-  --try-button-border-color: #2033F5;
-  --try-button-bg-color: #2033F518;
-  --try-button-text-color-hover: #EAF1FEC0;
-  --try-button-border-color-hover: #2033F5C0;
-
   --button-text-color: #EAF1FE;
-  --button-border-color: #231990;
+  --button-border-color: #2033F5;
   --button-bg-color: #2033F518;
-  --button-text-color-hover: #EAF1FED0;
-  --button-border-color-hover: #231990D0;
+  --button-text-color-hover: #EAF1FEC0;
+  --button-border-color-hover: #2033F5C0;
+  --button-bg-color-hover: #2033F518;
 }
 
 /* START OPENAPI */
