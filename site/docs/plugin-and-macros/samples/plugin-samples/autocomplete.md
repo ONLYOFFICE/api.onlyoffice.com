@@ -85,11 +85,11 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Methods and events
 
-- button
-- init
-- inputHelper_onSelectItem
-- onInputHelperClear
-- onInputHelperInput
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [inputHelper_onSelectItem](/site/docs/plugin-and-macros/customization/input-helper.md)
+- [onInputHelperClear](/site/docs/plugin-and-macros/customization/input-helper.md)
+- [onInputHelperInput](/site/docs/plugin-and-macros/customization/input-helper.md)
 - [createInputHelper](/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
 - [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
 - [getInputHelper](/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
