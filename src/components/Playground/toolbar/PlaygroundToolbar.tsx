@@ -169,7 +169,7 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <button onClick={handleRun} className={styles.RunButton}>
-                ▶ Run
+                Run
             </button>
 
             <AlertDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
