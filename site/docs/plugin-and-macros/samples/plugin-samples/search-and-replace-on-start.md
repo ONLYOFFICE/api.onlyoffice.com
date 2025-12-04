@@ -55,10 +55,10 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 ## Methods and events
 
-- button
-- init
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onDocumentContentReady](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)
-- executeMethod ("SearchAndReplace")
+- executeMethod ("[SearchAndReplace](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## Support
 

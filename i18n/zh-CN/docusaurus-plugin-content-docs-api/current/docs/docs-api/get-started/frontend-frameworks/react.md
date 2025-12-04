@@ -86,8 +86,8 @@ ONLYOFFICE 文档 React [组件](https://github.com/ONLYOFFICE/document-editor-r
 
    将以下行替换为您自己的数据：
 
-   - `http://documentserver/` - 替换为您的服务器的 URL；
-   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；
+   - `http://documentserver/` - 替换为您的服务器的 URL；您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
    - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 JavaScript 文件将创建 *App* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
@@ -229,7 +229,7 @@ import APITable from '@site/src/components/APITable/APITable';
    }
    ```
 
-   其中 **documentserver** 是安装了 **ONLYOFFICE 文档**的服务器的名称。
+   其中 **documentserver** 是安装了 **ONLYOFFICE 文档**的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 2. 使用以下命令生成 Storybook：
 

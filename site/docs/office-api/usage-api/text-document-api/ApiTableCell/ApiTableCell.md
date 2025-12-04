@@ -14,6 +14,7 @@ Represents the ApiTableCell class.
 | [GetClassType](./Methods/GetClassType.md) | "tableCell" | Returns a type of the ApiTableCell class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the current cell content. |
 | [GetIndex](./Methods/GetIndex.md) | Number | Returns the current cell index. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current table cell. |
 | [GetNext](./Methods/GetNext.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | Returns the next cell if exists. |
 | [GetParentRow](./Methods/GetParentRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) \| null | Returns a parent row of the current cell. |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Returns a parent table of the current cell. |

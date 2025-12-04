@@ -9,9 +9,11 @@ Represents the ApiComboBoxForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
 | [GetClassType](./Methods/GetClassType.md) | "comboBoxForm" | Returns a type of the ApiComboBoxForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current form. |
 | [GetListValues](./Methods/GetListValues.md) | string[] | Returns the list values from the current combo box. |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |

@@ -32,7 +32,7 @@ sidebar_position: -20
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   其中**documentserver**是安装了ONLYOFFICE文档的服务器名称
+   其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。 您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 4. 为*div*元素添加初始化**文档编辑器**的脚本，并配置要打开的文档。使用本地链接时务必添加[令牌](../../additional-api/signature/signature.md)，否则会出现错误。
 
@@ -57,7 +57,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 5. 在浏览器中打开您的*html*文件。
 
@@ -86,7 +86,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 8. 在浏览器中打开您复制并编辑后的*html*文件。
 
@@ -125,7 +125,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 2. 添加使用相同的*密钥1*初始化**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开，因此不会使用新的URL。
 
@@ -144,7 +144,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 3. 添加使用*密钥2*初始化另一个**文档编辑器**的脚本。此时密钥未知，并且指定了打开文件的URL。即使这个URL与第一种情况中的URL相同，它们也是两个独立的编辑会话。
 
@@ -165,7 +165,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 4. 添加使用*密钥1*初始化另一个**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开。因为这个密钥与第二种情况中的密钥相同，所以文档将以协同编辑模式打开。
 
@@ -191,7 +191,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 5. 添加初始化另一个**文档编辑器**的脚本。在成功进行[强制保存](./saving-file.md#force-saving)操作后，当前编辑会话的新用户的密钥不会更改。因此，要进入与第二种和第四种情况中的用户相同的协同编辑会话，必须使用*密钥1*。
 
@@ -215,7 +215,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 6. 添加初始化**文档编辑器**以查看所创建文档的脚本。可以使用*密钥1*。
 
@@ -237,7 +237,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 7. 添加初始化**文档编辑器**以编辑所创建文档的脚本。不能使用*密钥1*，因为在保存文件后该密钥已更改，此时会出现[错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed)。
 
@@ -261,7 +261,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 ## 协同编辑模式 {#co-editing-modes}
 

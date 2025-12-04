@@ -33,7 +33,7 @@ Represents the ApiWorksheet class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [AddChart](./Methods/AddChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart of the specified type from the selected data range of the current sheet. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
+| [AddChart](./Methods/AddChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Creates a chart of the specified type from the selected data range of the current sheet. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
 | [AddDefName](./Methods/AddDefName.md) | boolean | Adds a new name to the current worksheet. |
 | [AddImage](./Methods/AddImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Adds an image to the current sheet with the parameters specified. |
 | [AddOleObject](./Methods/AddOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | Adds an OLE object to the current sheet with the parameters specified. |

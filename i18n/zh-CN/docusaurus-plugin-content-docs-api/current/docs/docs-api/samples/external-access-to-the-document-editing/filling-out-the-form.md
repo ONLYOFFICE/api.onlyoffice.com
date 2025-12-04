@@ -22,11 +22,12 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 1. 当用户打开表单文档时，将执行 GetAllContentControls 方法以从文档中收集所有内容控件。之后，执行 GetFormValue 方法来获取内容控件的值，并将其显示在自定义界面中：
 
   ``` ts
+  
   let contentControls = [];
 
   function onDocumentReady() {
     window.connector = docEditor.createConnector();
-    function handleGetAllContentControls(data) {
+    function callbackGetAllContentControls(data) {
       setTimeout(function processContentControls(index) {
         if (index >= data.length) {
           contentControls = data;
@@ -46,10 +47,10 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
         });
       }, 0);
     }
-    function handleGetFormValue(data, index, callback) {
-      connector.executeMethod("GetFormValue", [data[index]["InternalId"]], callback);
+    function handleGetFormValue(data, index, callbackFn) {
+      connector.executeMethod("GetFormValue", [data[index].InternalId], callbackFn);
     }
-    connector.executeMethod("GetAllContentControls", null, handleGetAllContentControls);
+    connector.executeMethod("GetAllContentControls", null, callbackGetAllContentControls);
   }
   ```
 

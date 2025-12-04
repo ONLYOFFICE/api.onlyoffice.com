@@ -208,8 +208,8 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## Methods and events
 
-- button
-- init
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onTargetPositionChanged](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - [attachContextMenuClickEvent](/docs/plugin-and-macros/customization/context-menu.md#clicking-a-context-menu-item)
 - [executeMethod ("AddContextMenuItem")](/docs/plugin-and-macros/customization/context-menu.md#creating-a-context-menu-item)

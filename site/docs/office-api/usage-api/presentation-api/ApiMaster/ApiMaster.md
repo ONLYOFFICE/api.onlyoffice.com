@@ -11,7 +11,7 @@ Represents the ApiMaster class.
 | [AddObject](./Methods/AddObject.md) | boolean | Adds an object (image, shape or chart) to the current slide master. |
 | [ClearBackground](./Methods/ClearBackground.md) | boolean | Clears the slide master background. |
 | [Copy](./Methods/Copy.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Creates a copy of the specified slide master object. |
-| [Delete](./Methods/Delete.md) | boolean | Deletes the specified object from the parent if it exists. |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified object from the parent if it exists. Note: Master can't be deleted if it's the last one in the presentation. |
 | [Duplicate](./Methods/Duplicate.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Creates a duplicate of the specified slide master object, adds the new slide master to the slide masters collection. |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns an array with all the chart objects from the slide master. |
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array with all the drawing objects from the slide master. |

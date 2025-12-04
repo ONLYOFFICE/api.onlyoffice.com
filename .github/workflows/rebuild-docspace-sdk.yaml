@@ -23,19 +23,11 @@ jobs:
         with:
           version: 10
       
-      - name: Check if branch exists and set checkout branch
-        run: |
-          BRANCH_EXISTS=$(git ls-remote --heads https://github.com/ONLYOFFICE/docspace-sdk-js ${{ github.ref_name }} | wc -l)
-          BRANCH=$([ "$BRANCH_EXISTS" == "1" ] && echo "${{ github.ref_name }}" || echo "")
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          echo "Using branch: ${BRANCH:-default branch}"
-      
       - name: Checkout docspace-sdk-js repository
         uses: actions/checkout@v4
         with:
           repository: ONLYOFFICE/docspace-sdk-js
           token: ${{ secrets.READ_PAT }}
-          ref: ${{ env.BRANCH }}
           path: docspace-sdk-js
       
       - name: Set up Git

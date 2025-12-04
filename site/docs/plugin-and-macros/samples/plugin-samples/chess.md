@@ -162,8 +162,8 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## Methods and events
 
-- button
-- init
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/site/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)

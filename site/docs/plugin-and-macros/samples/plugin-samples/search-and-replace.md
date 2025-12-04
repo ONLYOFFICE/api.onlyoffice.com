@@ -96,10 +96,10 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 ## Methods and events
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("SearchAndReplace")
+- [button](/site/docs/plugin-and-macros/customization/buttons.md)
+- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/site/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md#how-to-call-methods)
+- executeMethod ("[SearchAndReplace](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## Support
 
