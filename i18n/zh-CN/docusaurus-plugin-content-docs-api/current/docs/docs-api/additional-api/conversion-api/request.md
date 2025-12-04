@@ -591,7 +591,7 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将受密码保护的文件从 *docx* 格式转换为 *pdf* 格式
 
@@ -607,7 +607,7 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式
 
@@ -625,7 +625,7 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为插入水印的 *pdf* 格式
 
@@ -674,7 +674,7 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于生成 *docx* 格式的文件 *png* 缩略图
 
@@ -694,7 +694,7 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将 *电子表格* 文件转换为 *pdf* 格式
 
@@ -728,7 +728,7 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### JSON 对象示例包含发送到**文档转换服务**的 JSON Web Token，用于将文件从 *docx* 格式转换为 *pdf* 格式
 
@@ -738,4 +738,4 @@ sidebar_position: -4
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
