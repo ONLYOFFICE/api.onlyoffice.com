@@ -104,18 +104,17 @@ export const PlaygroundPreview = () => {
 
             const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
 
-            // fixme: config typescript type
             const config = {
                 document: {
                     fileType: fileConfig.ext,
-                    key: `key${Date.now()}${Math.random()}`,
-                    title: `Document.${fileConfig.ext}`,
+                    key: "0" + Math.random(),
+                    title: `Example Document Title.${fileConfig.ext}`,
                     url: fileConfig.url,
                 },
                 documentType: fileConfig.docType,
                 type: previewType,
                 editorConfig: {
-                    callbackUrl: documentServer + '/dummyCallback',
+                    callbackUrl: documentServer + 'dummyCallback',
                     user: {
                         id: 'userID',
                         name: 'Developer',
