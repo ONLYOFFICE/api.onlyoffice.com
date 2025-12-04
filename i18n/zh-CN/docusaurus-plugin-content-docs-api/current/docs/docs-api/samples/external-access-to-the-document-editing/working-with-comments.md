@@ -54,7 +54,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     });
     ```
 
-1. 当用户单击自定义界面中的 **删除评论** 按钮时，将执行 RemoveComments 方法从文档中删除评论。调用此方法后，将触发 [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) 事件，以从包含所有文档评论的数组中删除评论：
+3. 当用户单击自定义界面中的 **删除评论** 按钮时，将执行 RemoveComments 方法从文档中删除评论。调用此方法后，将触发 [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) 事件，以从包含所有文档评论的数组中删除评论：
 
     ``` ts
     function onDocumentReady() {
