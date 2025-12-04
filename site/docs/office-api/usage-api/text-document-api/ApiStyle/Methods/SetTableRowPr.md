@@ -5,7 +5,7 @@ Sets the table row properties to the current style.
 ## Syntax
 
 ```javascript
-expression.SetTableRowPr(oTableRowPr);
+expression.SetTableRowPr(tableRowPr);
 ```
 
 `expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
@@ -14,7 +14,7 @@ expression.SetTableRowPr(oTableRowPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTableRowPr | Required | [ApiTableRowPr](../../ApiTableRowPr/ApiTableRowPr.md) |  | The table row properties that will be set. |
+| tableRowPr | Required | [ApiTableRowPr](../../ApiTableRowPr/ApiTableRowPr.md) |  | The table row properties that will be set. |
 
 ## Returns
 

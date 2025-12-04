@@ -5,7 +5,7 @@ Sets the text properties to the current style.
 ## Syntax
 
 ```javascript
-expression.SetTextPr(oTextPr);
+expression.SetTextPr(textPr);
 ```
 
 `expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
@@ -14,7 +14,7 @@ expression.SetTextPr(oTextPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTextPr | Required | [ApiTextPr](../../ApiTextPr/ApiTextPr.md) |  | The text properties that will be set. |
+| textPr | Required | [ApiTextPr](../../ApiTextPr/ApiTextPr.md) |  | The text properties that will be set. |
 
 ## Returns
 

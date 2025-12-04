@@ -21,7 +21,7 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | Returns an array of ApiComment objects. |
-| [AddCustomFunction](./Methods/AddCustomFunction.md) | None | Creates a new custom function. The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc. Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types. Parameters can be required or optional. A user can also set a default value. The passed function can be asynchronous (async function or function returning a Promise). Inside the passed function, you can access the current cell address where the calculation is performed using *this.address*. You can also access the addresses of function arguments using *this.args[0].address*, *this.args[1].address*, etc. |
+| [AddCustomFunction](./Methods/AddCustomFunction.md) | None | Creates a new custom function. The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc. Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types. Parameters can be required or optional. A user can also set a default value. The passed function can be asynchronous (async function or function returning a Promise). Inside the passed function, you can access the current cell address where the calculation is performed using *this.address*. You can also access the addresses of function arguments using *this.args[0].address*, *this.args[1].address*, etc. This method is not used in ONLYOFFICE Document Builder. Use AddCustomFunctionLibrary instead. |
 | [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | None | Registers a new custom functions library (see the **SetCustomFunctions** plugin method). The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc. Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types. Parameters can be required or optional. A user can also set a default value. |
 | [AddDefName](./Methods/AddDefName.md) | boolean | Adds a new name to a range of cells. |
 | [AddSheet](./Methods/AddSheet.md) | None | Creates a new worksheet. The new worksheet becomes the active sheet. |
@@ -48,6 +48,7 @@ Represents the Api class.
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a solid fill to apply to the object using a selected solid color as the object background. |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Creates a stroke adding shadows to the element. |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Creates the empty text properties. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [Format](./Methods/Format.md) | string | Returns a class formatted according to the instructions contained in the format expression. |
 | [GetActiveSheet](./Methods/GetActiveSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns an object that represents the active sheet. |
@@ -77,6 +78,7 @@ Represents the Api class.
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Inserts the specified pivot table into a new worksheet. |
 | [Intersect](./Methods/Intersect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | Converts picas to points. |
