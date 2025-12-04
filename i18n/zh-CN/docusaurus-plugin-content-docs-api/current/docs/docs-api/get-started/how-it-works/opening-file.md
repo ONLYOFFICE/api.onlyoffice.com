@@ -40,7 +40,7 @@ sidebar_position: -22
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   **文档服务器**是安装了 ONLYOFFICE 文档的服务器的名称。
+   **文档服务器**是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 4. 添加脚本，使用要打开的文档的配置为 *div* 元素初始化**文档编辑器**。使用本地链接时，请务必添加[令牌](./security.md)。否则会出现错误。
 

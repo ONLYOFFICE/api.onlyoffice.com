@@ -37,7 +37,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 </form>
 ```
 
-其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ### 带有*格式*参数的转换请求示例
 
@@ -45,7 +45,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
-其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ### *格式*参数为 HTML 格式的转换请求示例
 
@@ -57,4 +57,4 @@ curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserv
 </form>
 ```
 
-其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。

@@ -41,7 +41,7 @@ sidebar_position: -10
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
-其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，storage-path是将创建和存储文件的路径。您可以设置一个绝对路径。
+其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，**storage-path**是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 如果您想尝试配置编辑器，请修改*DocEditor.aspx*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 

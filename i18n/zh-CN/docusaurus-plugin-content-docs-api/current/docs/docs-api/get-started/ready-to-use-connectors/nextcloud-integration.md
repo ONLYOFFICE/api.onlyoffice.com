@@ -68,7 +68,7 @@ Nextcloud管理员可以从内置应用市场安装集成应用程序。为此�
 https://<文档服务器地址>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Nextcloud服务器访问。Nextcloud服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Nextcloud服务器访问。Nextcloud服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ![本地的](/assets/images/editor/nextcloud-local.jpg)
 
