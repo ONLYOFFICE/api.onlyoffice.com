@@ -20,6 +20,10 @@
   box-shadow: var(--temp-color-shadow-default-small);
 }
 
+.samplesGridItem p a {
+  color: #245ADD;
+}
+
 .samplesItemHeader {
   display: flex;
   align-items: center;
