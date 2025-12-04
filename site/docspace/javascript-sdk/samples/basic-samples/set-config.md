@@ -121,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [setConfig()](/docspace/javascript-sdk/usage-sdk/methods.md#setconfig) method to modify and apply new configuration settings dynamically.
+Use the [setConfig()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#setconfig) method to modify and apply new configuration settings dynamically.
 
 ``` ts
 function onAppReady() {

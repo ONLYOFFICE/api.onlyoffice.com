@@ -87,7 +87,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [initRoomSelector()](/docspace/javascript-sdk/usage-sdk/methods.md#initroomselector) method to embed the room selection interface. Handle events like `onAppReady` and `onSelectCallback` for interaction.
+Use the [initRoomSelector()](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initroomselector) method to embed the room selection interface. Handle events like `onAppReady` and `onSelectCallback` for interaction.
 
 ``` ts
 function onAppReady() {

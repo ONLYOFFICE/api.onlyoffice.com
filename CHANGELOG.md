@@ -1,6 +1,6 @@
 # Change log
 
-## 7.3.0
+## 7.4.0
 
 ### New features
 
@@ -13,6 +13,14 @@
 #### Docs
 
 * Updated documentation in Chinese
+
+## 7.3.0
+
+### New features
+
+#### Docspace
+
+* Updated JavaScript SDK section
 
 ## 7.2.0
 
