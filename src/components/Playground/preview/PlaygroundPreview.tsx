@@ -1,4 +1,3 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
@@ -28,11 +27,7 @@ const FILE_CONFIGS = {
 }
 
 export const PlaygroundPreview = () => {
-    const { siteConfig: { customFields } } = useDocusaurusContext()
-    const documentServer = customFields.documentServer as string;
-    const documentServerSecret = customFields.documentServerSecret as string;
-
-    const { theme, scriptValue, previewType, scriptType, editorType } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
     const initializingRef = useRef(false)
@@ -114,7 +109,7 @@ export const PlaygroundPreview = () => {
                 documentType: fileConfig.docType,
                 type: previewType,
                 editorConfig: {
-                    callbackUrl: documentServer + 'dummyCallback',
+                    callbackUrl: documentServerUrl + 'dummyCallback',
                     user: {
                         id: 'userID',
                         name: 'Developer',
@@ -154,7 +149,7 @@ export const PlaygroundPreview = () => {
             initializingRef.current = false
         }
 
-    }, [editorType, theme, previewType, documentServer, documentServerSecret, createJWT, pluginConfigUrl, isApiLoaded, destroyEditor])
+    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, pluginConfigUrl, isApiLoaded, destroyEditor])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
@@ -191,10 +186,10 @@ export const PlaygroundPreview = () => {
 
 
     useEffect(() => {
-        if (!documentServer) return
+        if (!documentServerUrl) return
 
         const script = document.createElement('script')
-        script.src = `${documentServer}web-apps/apps/api/documents/api.js`
+        script.src = `${documentServerUrl}web-apps/apps/api/documents/api.js`
         script.async = true
         script.onload = () => {
             setIsApiLoaded(true)
@@ -211,7 +206,7 @@ export const PlaygroundPreview = () => {
                 document.body.removeChild(script)
             }
         }
-    }, [documentServer, destroyEditor])
+    }, [documentServerUrl, destroyEditor])
 
     useEffect(() => {
         if (!isApiLoaded || !containerRef.current) return
