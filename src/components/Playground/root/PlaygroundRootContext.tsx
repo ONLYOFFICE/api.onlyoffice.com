@@ -28,4 +28,6 @@ export interface PlaygroundRootContext {
     setScriptValue: Dispatch<SetStateAction<string>>
     isScriptModified: boolean
     setIsScriptModified: Dispatch<SetStateAction<boolean>>
+    documentServerUrl: string
+    documentServerSecret: string
 }

@@ -11,7 +11,6 @@ import React, { type ReactNode, type ComponentProps } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const Playgrounds = [
   {

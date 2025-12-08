@@ -7,46 +7,54 @@ import {
 import {ComponentProps, useEffect, useMemo, useState} from "react";
 import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 import {useColorMode} from "@docusaurus/theme-common";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 export type PlaygroundRootProps = ComponentProps<'div'> & {
     editorType?: EditorType
     previewType?: PreviewType
     scriptType?: ScriptType
+    documentServerUrl?: string
+    documentServerSecret?: string
 }
 
-const defaultProps = {
-    editorType: 'word',
-    previewType: 'desktop',
-    scriptType: 'connector'
-} satisfies PlaygroundRootProps
-
-export const PlaygroundRoot = (incomingProps: PlaygroundRootProps) => {
-    const props = { ...defaultProps, ...incomingProps };
-
+export const PlaygroundRoot = ({ editorType = 'word', previewType = 'desktop', scriptType = 'connector', documentServerUrl, documentServerSecret, ...props }: PlaygroundRootProps) => {
     const { colorMode, setColorMode } = useColorMode()
 
-    const initialScript = DEFAULT_SCRIPTS[props.editorType][props.scriptType];
+    const initialScript = DEFAULT_SCRIPTS[editorType][scriptType];
 
-    const [editorType, setEditorType] = useState<EditorType>(props.editorType)
-    const [previewType, setPreviewType] = useState<PreviewType>(props.previewType)
-    const [scriptType, setScriptType] = useState<ScriptType>(props.scriptType)
+    if (!documentServerUrl || !documentServerSecret) {
+        const { siteConfig: { customFields } } = useDocusaurusContext()
+        if (!documentServerUrl) {
+            documentServerUrl = customFields.documentServer as string;
+        }
+
+        if (!documentServerSecret) {
+            documentServerSecret = customFields.documentServerSecret as string;
+        }
+    }
+
+    const [editorTypeState, setEditorType] = useState<EditorType>(editorType)
+    const [previewTypeState, setPreviewType] = useState<PreviewType>(previewType)
+    const [scriptTypeState, setScriptType] = useState<ScriptType>(scriptType)
     const [scriptValue, setScriptValue] = useState(initialScript)
     const [isScriptModified, setIsScriptModified] = useState(false)
 
     const contextValue = useMemo(() => ({
-        editorType,
+        editorType: editorTypeState,
         setEditorType,
-        previewType,
+        previewType: previewTypeState,
         setPreviewType,
-        scriptType,
+        scriptType: scriptTypeState,
         setScriptType,
         theme: colorMode,
         setTheme: setColorMode,
         scriptValue,
         setScriptValue,
         isScriptModified,
-        setIsScriptModified
-    }), [editorType, previewType, scriptType, colorMode, scriptValue, isScriptModified])
+        setIsScriptModified,
+        documentServerUrl,
+        documentServerSecret
+    }), [editorType, previewType, scriptType, colorMode, documentServerUrl, documentServerSecret, scriptValue, isScriptModified])
 
     useEffect(() => {
         if (!isScriptModified) {
@@ -58,9 +66,7 @@ export const PlaygroundRoot = (incomingProps: PlaygroundRootProps) => {
     }, [editorType, scriptType, isScriptModified]);
 
     return (
-        <PlaygroundRootContext.Provider value={contextValue}>
-            {props.children}
-        </PlaygroundRootContext.Provider>
+        <PlaygroundRootContext.Provider value={contextValue} {...props}/>
     )
 }
 
