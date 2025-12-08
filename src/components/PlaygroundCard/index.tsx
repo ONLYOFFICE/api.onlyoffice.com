@@ -18,28 +18,28 @@ const Playgrounds = [
     name: 'Text document API',
     image: require('@site/static/assets/images/editor/word-playground.png').default + '#gh-light-mode-only',
     imageDark: require('@site/static/assets/images/editor/word-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/playground.html?editor=word',
+    url: 'pathname:///playground?editor=word',
     description: 'Engage with the text document editor to create and manipulate text files.',
   },
   {
     name: 'Spreadsheet API',
     image: require('@site/static/assets/images/editor/cell-playground.png').default + '#gh-light-mode-only',
     imageDark: require('@site/static/assets/images/editor/cell-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/playground.html?editor=cell',
+    url: 'pathname:///playground?editor=cell',
     description: 'Access the spreadsheet editor for data analysis and management tasks.',
   },
   {
     name: 'Presentation API',
     image: require('@site/static/assets/images/editor/slide-playground.png').default + '#gh-light-mode-only',
     imageDark: require('@site/static/assets/images/editor/slide-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/playground.html?editor=slide',
+    url: 'pathname:///playground?editor=slide',
     description: 'Use the presentation editor to design and present slideshows.',
   },
   {
     name: 'Form API',
     image: require('@site/static/assets/images/editor/form-playground.png').default + '#gh-light-mode-only',
     imageDark: require('@site/static/assets/images/editor/form-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/playground.html?editor=form',
+    url: 'pathname:///playground?editor=form',
     description: 'Interact with the form editor to create and manage forms.',
   },
 ];
@@ -53,26 +53,11 @@ type Props = ComponentProps<'div'> & {
 }
 
 function PlaygroundCard({name, image, imageDark, url, description}: Props) {
-  const {
-    siteConfig: {customFields},
-  } = useDocusaurusContext();
-  const documentServer = customFields.documentServer as string;
-  const documentServerSecret = customFields.documentServerSecret as string;
-
-  const handleClick = (e: React.MouseEvent) => {
-    if (window===undefined) return;
-
-    e.preventDefault();
-    const fullUrl = new URL(e.currentTarget.getAttribute('href'), window.location.origin).href + `&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`;
-    window.open(fullUrl, '_blank');
-  };
-
   return (
     <div className="col col--6 margin-bottom--lg">
       <div className={clsx('card')}>
         <div className={clsx('card__image')}>
-          <Link to={typeof window !== 'undefined' ? url : `${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}
-                onClick={handleClick}>
+          <Link to={url} target='_blank'>
             <img src={image} alt={name} /><img src={imageDark} alt={name} />
           </Link>
         </div>
@@ -82,8 +67,7 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
         </div>
         <div className="card__footer">
           <div className="button-group button-group--block">
-            <Link className="button button--secondary" to={typeof window !== 'undefined' ? url : `${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}
-                  onClick={handleClick}>
+            <Link className="button button--secondary" to={url} target='_blank'>
               Try it now
             </Link>
           </div>
