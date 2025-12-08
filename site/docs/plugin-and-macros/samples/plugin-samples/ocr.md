@@ -192,7 +192,7 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 ## Methods and events
 
 - [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 - [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)

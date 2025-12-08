@@ -111,8 +111,8 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 ## Methods and events
 
 - [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md#how-to-call-methods)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
 - [onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
 - executeMethod ("[GetCurrentContentControl](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentContentControl.md)")

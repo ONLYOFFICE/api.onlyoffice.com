@@ -98,7 +98,7 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 ## Methods and events
 
 - [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - executeMethod ("[MoveCursorToStart](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToStart.md)")
 - executeMethod ("[MoveCursorToEnd](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToEnd.md)")
 
