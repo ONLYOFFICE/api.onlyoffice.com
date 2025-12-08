@@ -26,7 +26,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     }
     ```
 
-2. 当用户单击自定义界面中的 **添加评论** 按钮时，将执行 AddComment 方法向文档添加新评论。调用此方法后，会触发 [onAddComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md) 事件，将新评论添加到包含所有文档评论的数组中：
+2. 当用户单击自定义界面中的 **添加评论** 按钮时，将执行 AddComment 方法向文档添加新评论。调用此方法后，会触发 [onAddComment](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md) 事件，将新评论添加到包含所有文档评论的数组中：
 
     ``` ts
     function onDocumentReady() {
@@ -54,7 +54,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
     });
     ```
 
-3. 当用户单击自定义界面中的 **删除评论** 按钮时，将执行 RemoveComments 方法从文档中删除评论。调用此方法后，将触发 [onRemoveComment](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) 事件，以从包含所有文档评论的数组中删除评论：
+3. 当用户单击自定义界面中的 **删除评论** 按钮时，将执行 RemoveComments 方法从文档中删除评论。调用此方法后，将触发 [onRemoveComment](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md) 事件，以从包含所有文档评论的数组中删除评论：
 
     ``` ts
     function onDocumentReady() {
@@ -78,7 +78,7 @@ import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
    connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
    ```
 
-5. 当用户单击自定义界面中的 **添加回复** 按钮时，将执行 ChangeComment 方法，通过更改 *CommentData* 对象向现有评论添加回复。调用此方法后，会触发 [onChangeCommentData](/site/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md) 事件，将新的评论回复添加到包含所有文档评论的数组中：
+5. 当用户单击自定义界面中的 **添加回复** 按钮时，将执行 ChangeComment 方法，通过更改 *CommentData* 对象向现有评论添加回复。调用此方法后，会触发 [onChangeCommentData](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md) 事件，将新的评论回复添加到包含所有文档评论的数组中：
 
     ``` ts
     function onDocumentReady() {
