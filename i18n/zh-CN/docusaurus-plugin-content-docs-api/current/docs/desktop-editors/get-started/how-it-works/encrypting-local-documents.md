@@ -83,7 +83,7 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-从上面的代码可以看出，所有文件都将使用一个密码加密——*{my-super-long-password}*。[OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md)、[StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md)、[EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) 方法可以在**插件和宏 API 文档**中找到。
+从上面的代码可以看出，所有文件都将使用一个密码加密——*\{my-super-long-password\}*。[OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md)、[StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md)、[EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) 方法可以在**插件和宏 API 文档**中找到。
 
 > 请注意，*OnEncryption* 方法的 *encryptData* 和 *decryptData* 类型与本地文件无关。
 
