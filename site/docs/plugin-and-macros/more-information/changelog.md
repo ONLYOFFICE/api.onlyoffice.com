@@ -6,6 +6,16 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 9.2
+
+- Added the [AnnotateParagraph](../interacting-with-editors/text-document-api/Methods/AnnotateParagraph.md) method for Text document Api.
+- Added the [RemoveAnnotationRange](../interacting-with-editors/text-document-api/Methods/RemoveAnnotationRange.md) method for Text document Api.
+- Added the [SelectAnnotationRange](../interacting-with-editors/text-document-api/Methods/SelectAnnotationRange.md) method for Text document Api.
+- Added the [onBlurAnnotation](../interacting-with-editors/text-document-api/Events/onBlurAnnotation.md) event for Text document Api.
+- Added the [onClickAnnotation](../interacting-with-editors/text-document-api/Events/onClickAnnotation.md) event for Text document Api.
+- Added the [onFocusAnnotation](../interacting-with-editors/text-document-api/Events/onFocusAnnotation.md) event for Text document Api.
+- Added the [onParagraphText](../interacting-with-editors/text-document-api/Events/onParagraphText.md) event for Text document Api.
+
 ## Version 9.1
 
 - Added the [RemoveOleObject](../interacting-with-editors/spreadsheet-api/Methods/RemoveOleObject.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
