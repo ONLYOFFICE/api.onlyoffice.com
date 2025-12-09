@@ -1,11 +1,11 @@
-# RemoveAnnotationRange
+# SelectAnnotationRange
 
-Remove a specific annotation range from the document.
+Selects text in a document using a given annotation.
 
 ## Syntax
 
 ```javascript
-expression.RemoveAnnotationRange(annotation);
+expression.SelectAnnotationRange(annotation);
 ```
 
 `expression` - A variable that represents a [Api](Methods.md) class.
@@ -14,8 +14,7 @@ expression.RemoveAnnotationRange(annotation);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| annotation | Required | [TextAnnotation](../Enumeration/TextAnnotation.md) |  | The annotation removing object. |
-| annotation.all | Optional | boolean | false | Optional parameter, flag to remove all annotations for the current paragraph. |
+| annotation | Required | [TextAnnotation](../Enumeration/TextAnnotation.md) |  | The annotation selection object. |
 
 ## Returns
 
@@ -24,7 +23,7 @@ This method doesn't return any data.
 ## Example
 
 ```javascript
-window.Asc.plugin.executeMethod("RemoveAnnotationRange", [{
+window.Asc.plugin.executeMethod("SelectAnnotationRange", [{
     paragraphId: "p1",
     rangeId: "a1",
     name: "grammar"

@@ -1,11 +1,11 @@
 # MoveCursorDown
 
-Moves a cursor down.
+Moves the cursor down.
 
 ## Syntax
 
 ```javascript
-expression.MoveCursorDown(nCount, isShift, isCtl);
+expression.MoveCursorDown(count, addToSelect);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,9 +14,8 @@ expression.MoveCursorDown(nCount, isShift, isCtl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of lines to move down. |
-| isShift | Required | boolean |  | Specifies whether to select text during the move. |
-| isCtl | Required | boolean |  | Specifies whether to move by paragraph instead of by line. |
+| count | Optional | number | 1 | Number of movements. |
+| addToSelect | Optional | boolean | false | Specifies whether to select text during the move. |
 
 ## Returns
 
@@ -29,16 +28,20 @@ This example shows how to move the cursor down through the document.
 ```javascript editor-docx
 // How to move the cursor down by a specified number of lines.
 
-// Create multiple paragraphs and move cursor down with selection.
+// Create multiple paragraphs and move cursor.
 let doc = Api.GetDocument();
 const paragraphCount = 5;
-for (let i = 1; i < paragraphCount; i++) {
+for (let i = 0; i < paragraphCount; i++) {
     const newParagraph = Api.CreateParagraph();
     newParagraph.AddText("This is " + (i + 1) + " paragraph.");
     doc.Push(newParagraph);
 }
 
-doc.ForceRecalculate();
-doc.MoveCursorDown(3, false, false);
-doc.MoveCursorUp(1, true, true);
+doc.MoveCursorDown(3);
+
+let paragraph = Api.CreateParagraph();
+paragraph.AddText("Current line is: ");
+paragraph.AddText(doc.GetCurrentSentence());
+doc.Push(paragraph);
+
 ```

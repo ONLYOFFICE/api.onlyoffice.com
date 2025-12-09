@@ -1,11 +1,11 @@
 # MoveCursorLeft
 
-Moves a cursor to the left.
+Moves the cursor to the left.
 
 ## Syntax
 
 ```javascript
-expression.MoveCursorLeft(nCount, isShift, isCtl);
+expression.MoveCursorLeft(count, addToSelect, byWords);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,9 +14,9 @@ expression.MoveCursorLeft(nCount, isShift, isCtl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of characters to move left. |
-| isShift | Required | boolean |  | Specifies whether to select text during the move. |
-| isCtl | Required | boolean |  | Specifies whether to move by word instead of by character. |
+| count | Optional | number | 1 | Number of movements. |
+| addToSelect | Optional | boolean | false | Specifies whether to select text during the move. |
+| byWords | Optional | boolean | false | Specifies whether to move by words instead of by character. |
 
 ## Returns
 
@@ -33,6 +33,10 @@ This example shows how to move the cursor left in the document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the text in your document.");
-doc.MoveCursorRight(6, true, true);
-doc.MoveCursorLeft(2, false, false);
+doc.MoveCursorToEnd();
+doc.MoveCursorLeft(11);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText(doc.GetCurrentWord());
+doc.Push(paragraph);
 ```

@@ -98,13 +98,13 @@ Represents the ApiDocument class.
 | [InsertWatermark](./Methods/InsertWatermark.md) | boolean | Inserts a watermark on each document page. |
 | [IsTrackRevisions](./Methods/IsTrackRevisions.md) | boolean | Checks if change tracking mode is enabled or not. |
 | [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns the last document element. |
-| [MoveCursorDown](./Methods/MoveCursorDown.md) | boolean | Moves a cursor down. |
-| [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | Moves a cursor to the left. |
-| [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | Moves a cursor to the right. |
+| [MoveCursorDown](./Methods/MoveCursorDown.md) | boolean | Moves the cursor down. |
+| [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | Moves the cursor to the left. |
+| [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | Moves the cursor to the right. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves a cursor to the end of the document. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. If there is any selection in the document, it will be removed. |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves a cursor to the start of the document. |
-| [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | Moves a cursor up. |
+| [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | Moves the cursor up. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RejectAllRevisionChanges](./Methods/RejectAllRevisionChanges.md) | boolean | Rejects all changes made in review mode. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. 💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) method. |

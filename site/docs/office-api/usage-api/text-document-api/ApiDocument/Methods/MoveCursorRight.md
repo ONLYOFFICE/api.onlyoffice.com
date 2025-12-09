@@ -1,11 +1,11 @@
 # MoveCursorRight
 
-Moves a cursor to the right.
+Moves the cursor to the right.
 
 ## Syntax
 
 ```javascript
-expression.MoveCursorRight(nCount, isShift, isCtl);
+expression.MoveCursorRight(count, addToSelect, byWords);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,9 +14,9 @@ expression.MoveCursorRight(nCount, isShift, isCtl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of characters to move right. |
-| isShift | Required | boolean |  | Specifies whether to select text during the move. |
-| isCtl | Required | boolean |  | Specifies whether to move by word instead of by character. |
+| count | Optional | number | 1 | Number of movements. |
+| addToSelect | Optional | boolean | false | Specifies whether to select text during the move. |
+| byWords | Optional | boolean | false | Specifies whether to move by words instead of by character. |
 
 ## Returns
 
@@ -33,6 +33,9 @@ This example shows how to move the cursor right in the document.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the text in your document.");
-doc.MoveCursorRight(6, true, true);
-doc.MoveCursorLeft(2, false, false);
+doc.MoveCursorRight(12);
+
+paragraph = Api.CreateParagraph();
+paragraph.AddText(doc.GetCurrentWord());
+doc.Push(paragraph);
 ```

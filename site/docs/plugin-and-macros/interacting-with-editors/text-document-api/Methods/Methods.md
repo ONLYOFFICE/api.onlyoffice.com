@@ -16,8 +16,7 @@ Represents the Api class.
 | [AddContentControlList](./AddContentControlList.md) | None | Adds an empty content control list to the document. |
 | [AddContentControlPicture](./AddContentControlPicture.md) | None | Adds an empty content control picture to the document. |
 | [AddOleObject](./AddOleObject.md) | None | Adds an OLE object to the current document position. |
-| [AnnotateParagraph](./AnnotateParagraph.md) | None | Annotate the specified paragraph. |
-| [AnnotateParagraph](./AnnotateParagraph.md) | None | Selects a specific annotation range in the document. |
+| [AnnotateParagraph](./AnnotateParagraph.md) | None | Adds annotations to the specified paragraph. |
 | [CanRedo](./CanRedo.md) | boolean | Checks if it possible to revert the user's last undone action. |
 | [CanUndo](./CanUndo.md) | boolean | Checks if it is possible to undo the user's last action. |
 | [ChangeComment](./ChangeComment.md) | None | Changes the specified comment. |
@@ -87,6 +86,7 @@ Represents the Api class.
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SearchAndReplace](./SearchAndReplace.md) | None | Finds and replaces the text. |
 | [SearchNext](./SearchNext.md) | boolean | Finds and selects the next occurrence of the text starting at the current position. |
+| [SelectAnnotationRange](./SelectAnnotationRange.md) | None | Selects text in a document using a given annotation. |
 | [SelectContentControl](./SelectContentControl.md) | None | Selects the specified content control. |
 | [SelectOleObject](./SelectOleObject.md) | None | Selects the specified OLE object. |
 | [SetDisplayModeInReview](./SetDisplayModeInReview.md) | None | Sets the display mode for track changes. |

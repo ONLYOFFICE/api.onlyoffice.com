@@ -1,11 +1,11 @@
 # MoveCursorUp
 
-Moves a cursor up.
+Moves the cursor up.
 
 ## Syntax
 
 ```javascript
-expression.MoveCursorUp(nCount, isShift, isCtl);
+expression.MoveCursorUp(count, addToSelect);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,9 +14,8 @@ expression.MoveCursorUp(nCount, isShift, isCtl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of lines to move up. |
-| isShift | Required | boolean |  | Specifies whether to select text during the move. |
-| isCtl | Required | boolean |  | Specifies whether to move by paragraph instead of by line. |
+| count | Optional | number | 1 | Number of movements. |
+| addToSelect | Optional | boolean | false | Specifies whether to select text during the move. |
 
 ## Returns
 
@@ -32,13 +31,18 @@ This example shows how to move the cursor up through the document.
 // Create multiple paragraphs, move cursor down, then move it up with selection.
 let doc = Api.GetDocument();
 const paragraphCount = 5;
-for (let i = 1; i < paragraphCount; i++) {
+for (let i = 0; i < paragraphCount; i++) {
     const newParagraph = Api.CreateParagraph();
     newParagraph.AddText("This is " + (i + 1) + " paragraph.");
     doc.Push(newParagraph);
 }
 
-doc.ForceRecalculate();
-doc.MoveCursorDown(3, false, false);
-doc.MoveCursorUp(1, true, true);
+doc.MoveCursorToEnd();
+doc.MoveCursorUp(3);
+
+let paragraph = Api.CreateParagraph();
+paragraph.AddText("Current line is: ");
+paragraph.AddText(doc.GetCurrentSentence());
+doc.Push(paragraph);
+
 ```
