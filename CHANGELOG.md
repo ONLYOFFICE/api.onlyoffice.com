@@ -10,10 +10,10 @@
 
 #### Plugins and macros
 
-* Added Debugging subsection to the tutorials section
-* Plugin icon page updated with additional info
-* Added How to customize themes page
-* Added Troubleshooting section to the localization page
+* Added the Debugging subsection to the Tutorials section
+* Updated the plugin Icons page with additional info
+* Added the How to customize themes page
+* Added the Troubleshooting section to the Localization page
 
 #### Desktop
 
