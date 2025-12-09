@@ -1,5 +1,30 @@
 # Change log
 
+## 7.5.0
+
+### New features
+
+#### Docs
+
+* Updated Office API documentation for version 9.2.0
+
+#### Plugins and macros
+
+* Added Debugging subsection to the tutorials section
+* Plugin icon page updated with additional info
+* Added How to customize themes page
+* Added Troubleshooting section to the localization page
+
+#### Desktop
+
+* Translated Desktop Editors section into Chinese
+
+### Fixes
+
+#### Plugins and macros
+
+* Added missing links to the samples
+
 ## 7.4.0
 
 ### New features
