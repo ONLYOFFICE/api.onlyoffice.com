@@ -83,7 +83,7 @@ func.examples = [
 ]
 ```
 
-These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helperFuncs.js) file .
+These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) file .
 
 ### Function execution {#execution}
 
