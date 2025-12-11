@@ -5,7 +5,7 @@ Sets the table properties to the current style.
 ## Syntax
 
 ```javascript
-expression.SetTablePr(oTablePr);
+expression.SetTablePr(tablePr);
 ```
 
 `expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
@@ -14,7 +14,7 @@ expression.SetTablePr(oTablePr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTablePr | Required | [ApiTablePr](../../ApiTablePr/ApiTablePr.md) |  | The table properties that will be set. |
+| tablePr | Required | [ApiTablePr](../../ApiTablePr/ApiTablePr.md) |  | The table properties that will be set. |
 
 ## Returns
 

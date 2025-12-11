@@ -27,6 +27,7 @@ Represents the ApiDocument class.
 | [CreateSection](./Methods/CreateSection.md) | [ApiSection](../ApiSection/ApiSection.md) \| null | Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current section - page size, footer, header, columns, etc. |
 | [CreateStyle](./Methods/CreateStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Creates a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one. |
 | [DeleteBookmark](./Methods/DeleteBookmark.md) | boolean | Removes a bookmark from the document, if one exists. |
+| [EnterText](./Methods/EnterText.md) | boolean | Add text to the document on the cursor position. |
 | [GetAllBookmarksNames](./Methods/GetAllBookmarksNames.md) | string[] | Returns an array with names of all bookmarks in the current document. |
 | [GetAllCaptionParagraphs](./Methods/GetAllCaptionParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns all caption paragraphs of the specified type from the current document. |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns a collection of chart objects from the document content. |
@@ -93,12 +94,17 @@ Represents the ApiDocument class.
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current document. |
 | [InsertBlankPage](./Methods/InsertBlankPage.md) | boolean | Inserts a blank page to the current location. |
 | [InsertContent](./Methods/InsertContent.md) | boolean | Inserts an array of elements into the current position of the document. |
+| [InsertParagraphBreak](./Methods/InsertParagraphBreak.md) | boolean | Add paragraph to the document on the cursor position. |
 | [InsertWatermark](./Methods/InsertWatermark.md) | boolean | Inserts a watermark on each document page. |
 | [IsTrackRevisions](./Methods/IsTrackRevisions.md) | boolean | Checks if change tracking mode is enabled or not. |
 | [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns the last document element. |
+| [MoveCursorDown](./Methods/MoveCursorDown.md) | boolean | Moves the cursor down. |
+| [MoveCursorLeft](./Methods/MoveCursorLeft.md) | boolean | Moves the cursor to the left. |
+| [MoveCursorRight](./Methods/MoveCursorRight.md) | boolean | Moves the cursor to the right. |
 | [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | Moves a cursor to the end of the document. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current document. If there is any selection in the document, it will be removed. |
 | [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | Moves a cursor to the start of the document. |
+| [MoveCursorUp](./Methods/MoveCursorUp.md) | boolean | Moves the cursor up. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
 | [RejectAllRevisionChanges](./Methods/RejectAllRevisionChanges.md) | boolean | Rejects all changes made in review mode. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. 💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) method. |

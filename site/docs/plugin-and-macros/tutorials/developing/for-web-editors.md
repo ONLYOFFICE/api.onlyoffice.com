@@ -25,47 +25,8 @@ To develop a plugin for ONLYOFFICE web editors, follow the instructions below.
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json");
    ```
 
-   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed.
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 
    The plugin will be displayed within the **Plugins** tab. You can edit the plugin and reload it to see the changes.
-
-## Debugging
-
-To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
-
-1. Add the **debugger** command to your script:
-
-      <!-- This code snippet is shown in the screenshot. -->
-
-      <!-- eslint-skip -->
-
-      ``` ts
-      (function debugger(window, undefined){
-
-      var text = "Hello world!";
-
-      window.Asc.plugin.init = function init()
-      {
-         debugger;
-         var variant = 2;
-
-         switch (variant)
-         {}
-      };
-
-      window.Asc.plugin.button = function button(id)
-      {
-      };
-
-      })(window, undefined);
-      ```
-
-2. Open the developer console by pressing the **F12** button.
-
-3. Open the **Plugins** tab and run the plugin.
-
-   > Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it.
-   
-   ![Builder debugger](/assets/images/plugins/plugin-debugging.png)

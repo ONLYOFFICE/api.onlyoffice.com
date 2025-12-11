@@ -2,6 +2,124 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.2
+
+### CheckBoxForm methods
+
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Form API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Form API.
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Text document API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Text document API.
+
+### Form methods
+
+- Added the [ApiCheckBoxForm/Delete](../usage-api/form-api/ApiCheckBoxForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiCheckBoxForm/GetInternalId](../usage-api/form-api/ApiCheckBoxForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/form-api/ApiComboBoxForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiComboBoxForm/GetInternalId](../usage-api/form-api/ApiComboBoxForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiComplexForm/Delete](../usage-api/form-api/ApiComplexForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiComplexForm/GetInternalId](../usage-api/form-api/ApiComplexForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiDateForm/Delete](../usage-api/form-api/ApiDateForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiDateForm/GetInternalId](../usage-api/form-api/ApiDateForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiFormBase/Delete](../usage-api/form-api/ApiFormBase/Methods/Delete.md) method to the Form API.
+- Added the [ApiFormBase/GetInternalId](../usage-api/form-api/ApiFormBase/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiPictureForm/Delete](../usage-api/form-api/ApiPictureForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiPictureForm/GetInternalId](../usage-api/form-api/ApiPictureForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiTextForm/Delete](../usage-api/form-api/ApiTextForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiTextForm/GetInternalId](../usage-api/form-api/ApiTextForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiCheckBoxForm/Delete](../usage-api/text-document-api/ApiCheckBoxForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiCheckBoxForm/GetInternalId](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/text-document-api/ApiComboBoxForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiComboBoxForm/GetInternalId](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiComplexForm/Delete](../usage-api/text-document-api/ApiComplexForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiComplexForm/GetInternalId](../usage-api/text-document-api/ApiComplexForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiDateForm/Delete](../usage-api/text-document-api/ApiDateForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiDateForm/GetInternalId](../usage-api/text-document-api/ApiDateForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiFormBase/Delete](../usage-api/text-document-api/ApiFormBase/Methods/Delete.md) method to the Text document API.
+- Added the [ApiFormBase/GetInternalId](../usage-api/text-document-api/ApiFormBase/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiPictureForm/Delete](../usage-api/text-document-api/ApiPictureForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiPictureForm/GetInternalId](../usage-api/text-document-api/ApiPictureForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiTextForm/Delete](../usage-api/text-document-api/ApiTextForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiTextForm/GetInternalId](../usage-api/text-document-api/ApiTextForm/Methods/GetInternalId.md) method to the Text document API.
+
+### Paragraph methods
+
+- Added the [ApiParagraph/GetFontNames](../usage-api/presentation-api/ApiParagraph/Methods/GetFontNames.md) method to the Presentation API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/presentation-api/ApiParagraph/Methods/GetInternalId.md) method to the Presentation API.
+- Added the [ApiParagraph/GetLastRunWithText](../usage-api/presentation-api/ApiParagraph/Methods/GetLastRunWithText.md) method to the Presentation API.
+- Added the [ApiParagraph/InsertParagraph](../usage-api/presentation-api/ApiParagraph/Methods/InsertParagraph.md) method to the Presentation API.
+- Added the [ApiParagraph/Last](../usage-api/presentation-api/ApiParagraph/Methods/Last.md) method to the Presentation API.
+- Added the [ApiParagraph/Push](../usage-api/presentation-api/ApiParagraph/Methods/Push.md) method to the Presentation API.
+- Added the [ApiParagraph/SetBold](../usage-api/presentation-api/ApiParagraph/Methods/SetBold.md) method to the Presentation API.
+- Added the [ApiParagraph/SetCaps](../usage-api/presentation-api/ApiParagraph/Methods/SetCaps.md) method to the Presentation API.
+- Added the [ApiParagraph/SetColor](../usage-api/presentation-api/ApiParagraph/Methods/SetColor.md) method to the Presentation API.
+- Added the [ApiParagraph/SetDoubleStrikeout](../usage-api/presentation-api/ApiParagraph/Methods/SetDoubleStrikeout.md) method to the Presentation API.
+- Added the [ApiParagraph/SetFontFamily](../usage-api/presentation-api/ApiParagraph/Methods/SetFontFamily.md) method to the Presentation API.
+- Added the [ApiParagraph/SetFontSize](../usage-api/presentation-api/ApiParagraph/Methods/SetFontSize.md) method to the Presentation API.
+- Added the [ApiParagraph/SetItalic](../usage-api/presentation-api/ApiParagraph/Methods/SetItalic.md) method to the Presentation API.
+- Added the [ApiParagraph/SetSmallCaps](../usage-api/presentation-api/ApiParagraph/Methods/SetSmallCaps.md) method to the Presentation API.
+- Added the [ApiParagraph/SetSpacing](../usage-api/presentation-api/ApiParagraph/Methods/SetSpacing.md) method to the Presentation API.
+- Added the [ApiParagraph/SetStrikeout](../usage-api/presentation-api/ApiParagraph/Methods/SetStrikeout.md) method to the Presentation API.
+- Added the [ApiParagraph/SetTextPr](../usage-api/presentation-api/ApiParagraph/Methods/SetTextPr.md) method to the Presentation API.
+- Added the [ApiParagraph/SetUnderline](../usage-api/presentation-api/ApiParagraph/Methods/SetUnderline.md) method to the Presentation API.
+- Added the [ApiParagraph/ToJSON](../usage-api/presentation-api/ApiParagraph/Methods/ToJSON.md) method to the Presentation API.
+- Added the [ApiParagraph/GetFontNames](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetFontNames.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetInternalId.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetLastRunWithText](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetLastRunWithText.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/InsertParagraph](../usage-api/spreadsheet-api/ApiParagraph/Methods/InsertParagraph.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/Last](../usage-api/spreadsheet-api/ApiParagraph/Methods/Last.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/Push](../usage-api/spreadsheet-api/ApiParagraph/Methods/Push.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetBold](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetBold.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetCaps](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetCaps.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetColor](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetColor.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetDoubleStrikeout](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetDoubleStrikeout.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetFontFamily](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetFontFamily.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetFontSize](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetFontSize.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetItalic](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetItalic.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetSmallCaps](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetSmallCaps.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetSpacing](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetSpacing.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetStrikeout](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetStrikeout.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetTextPr](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetTextPr.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetUnderline](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetUnderline.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/ToJSON](../usage-api/spreadsheet-api/ApiParagraph/Methods/ToJSON.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/text-document-api/ApiParagraph/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiParagraph/GetParaId](../usage-api/text-document-api/ApiParagraph/Methods/GetParaId.md) method to the Text document API.
+- Added the [ApiParagraph/SetParaId](../usage-api/text-document-api/ApiParagraph/Methods/SetParaId.md) method to the Text document API.
+
+### Presentation methods
+
+- Added the [Api/EmusToMillimeters](../usage-api/presentation-api/Api/Methods/EmusToMillimeters.md) method to the Presentation API.
+- Added the [Api/MillimetersToEmus](../usage-api/presentation-api/Api/Methods/MillimetersToEmus.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetAllParagraphs](../usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/presentation-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/presentation-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetText](../usage-api/presentation-api/ApiDocumentContent/Methods/GetText.md) method to the Presentation API.
+- Added the [ApiTable/GetInternalId](../usage-api/presentation-api/ApiTable/Methods/GetInternalId.md) method to the Presentation API.
+
+### Spreadsheet methods
+
+- Added the [Api/EmusToMillimeters](../usage-api/spreadsheet-api/Api/Methods/EmusToMillimeters.md) method to the Spreadsheet API.
+- Added the [Api/MillimetersToEmus](../usage-api/spreadsheet-api/Api/Methods/MillimetersToEmus.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetAllParagraphs](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetAllParagraphs.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetText](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetText.md) method to the Spreadsheet API.
+- Added the [ApiTable/GetInternalId](../usage-api/spreadsheet-api/ApiTable/Methods/GetInternalId.md) method to the Spreadsheet API.
+
+### Document methods
+
+- Added the [Api/EmusToMillimeters](../usage-api/text-document-api/Api/Methods/EmusToMillimeters.md) method to the Text document API.
+- Added the [Api/MillimetersToEmus](../usage-api/text-document-api/Api/Methods/MillimetersToEmus.md) method to the Text document API.
+- Added the [ApiDocument/EnterText](../usage-api/text-document-api/ApiDocument/Methods/EnterText.md) method to the Text document API.
+- Added the [ApiDocument/InsertParagraphBreak](../usage-api/text-document-api/ApiDocument/Methods/InsertParagraphBreak.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorDown](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorDown.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorLeft](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorLeft.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorRight](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorRight.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorUp](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorUp.md) method to the Text document API.
+- Added the [ApiTable/GetInternalId](../usage-api/text-document-api/ApiTable/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiTableCell/GetInternalId](../usage-api/text-document-api/ApiTableCell/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiTableRow/GetInternalId](../usage-api/text-document-api/ApiTableRow/Methods/GetInternalId.md) method to the Text document API.
+
 ## Version 9.1
 
 ### Conditional formatting methods

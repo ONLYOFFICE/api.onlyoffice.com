@@ -12,7 +12,7 @@ sidebar_position: -2
 
 插件的主代码放在一个 .js 文件中，该文件描述了插件应执行的内容以及如何执行。此文件与 [config.json](../../structure/configuration/configuration.md) 和 [index.html](../../structure/entry-point.md) 文件一起放置于插件根目录中。
 
-## 工作原理
+## 工作原理 {#how-it-works}
 
 任何插件都包含 window.Asc.plugin 对象，该对象拥有多个方法，用于与 ONLYOFFICE 的文档、电子表格和演示编辑器进行交互。
 
