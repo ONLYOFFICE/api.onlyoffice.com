@@ -6,7 +6,7 @@ sidebar_position: -5
 
 在开始处理存储在云盘中的文档之前，您需要先登录到云盘。
 
-## 登录
+## 登录 {#login}
 
 使用 [execCommand](./execcommand.md) 方法在**已连接的云盘**列表中显示云盘。当发送 *portal:login* 命令时，云盘将被注册并显示在**已连接的云盘**页面上。在登录云盘后可访问的所有页面上调用此命令。参数以包含序列化 *json* 的字符串格式指定，如下所示：
 
@@ -53,7 +53,7 @@ const params = {
 window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params));
 ```
 
-## 登出
+## 登出 {#logout}
 
 使用 [execCommand](./execcommand.md) 方法从**已连接的云盘**列表中移除云盘。当发送 *portal:logout* 命令时，该云盘将从**已连接的云盘**页面的列表中移除。此域名的 Cookie 将被清除。参数以包含序列化 *json* 的字符串格式指定，如下所示：
 

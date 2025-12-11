@@ -39,7 +39,7 @@ sidebar_label: Windows
 
 ![调试](/assets/images/desktop/debugging.png)
 
-## 运行应用程序
+## 运行应用程序 {#running-the-application}
 
 从 7.1 版本开始，您可以使用 `--ascdesktop-support-debug-info-keep` 标志运行 ONLYOFFICE 桌面编辑器。它可以与以下值一起使用：
 
