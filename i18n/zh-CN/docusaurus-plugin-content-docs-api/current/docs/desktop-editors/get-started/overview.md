@@ -18,7 +18,7 @@ ONLYOFFICE 桌面编辑器适用于 Windows、Linux 和 macOS。从 6.1 版本�
 
 在本地计算机上安装此应用程序的最简单方法是从我们的官方网站下载：
 
-[获取桌面编辑器](https://www.onlyoffice.com/download-desktop.aspx?from=api)
+[获取桌面编辑器](https://www.onlyoffice.com/zh/download-desktop?from=api)
 
 对于某些 Linux 发行版，如 Zorin OS、Linux Mint、Linkat、Linspire 等，ONLYOFFICE 桌面编辑器软件包已预安装或在其官方商店中可用。
 
