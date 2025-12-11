@@ -43,6 +43,10 @@
     border-color: var(--ifm-color-primary);
 }
 
+.SelectContent {
+    z-index: 1500;
+}
+
 .SelectPopup {
     background-color: var(--ifm-dropdown-background-color);
     border-radius: var(--ifm-global-radius);

@@ -54,16 +54,16 @@ export const PlaygroundRoot = ({ editorType = 'word', previewType = 'desktop', s
         setIsScriptModified,
         documentServerUrl,
         documentServerSecret
-    }), [editorType, previewType, scriptType, colorMode, documentServerUrl, documentServerSecret, scriptValue, isScriptModified])
+    }), [editorTypeState, previewTypeState, scriptTypeState, colorMode, documentServerUrl, documentServerSecret, scriptValue, isScriptModified])
 
     useEffect(() => {
         if (!isScriptModified) {
-            const newScript = DEFAULT_SCRIPTS[editorType]?.[scriptType];
+            const newScript = DEFAULT_SCRIPTS[editorTypeState]?.[scriptTypeState];
             if (newScript) {
                 setScriptValue(newScript);
             }
         }
-    }, [editorType, scriptType, isScriptModified]);
+    }, [editorTypeState, scriptTypeState, isScriptModified]);
 
     return (
         <PlaygroundRootContext.Provider value={contextValue} {...props}/>
