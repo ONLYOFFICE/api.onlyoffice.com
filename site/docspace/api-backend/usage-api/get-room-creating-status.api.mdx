@@ -1,11 +1,11 @@
 ---
 id: get-room-creating-status
-title: "getRoomCreatingStatus"
-description: "getRoomCreatingStatus"
-sidebar_label: "getRoomCreatingStatus"
+title: "Get the room creation progress"
+description: "Returns the progress of creating a room from the template."
+sidebar_label: "Get the room creation progress"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNVk1v2zgQ/SsEL7koUpBuF12fNpu0i3QXaJE4yCEIGpoaWWwkkiWHSVxD/30xpGRLdrPxybI4H49v5s1ozVEsPZ/d8StjWs/vM24sOIHK6MuSz/gSkE7OHQhUenmNAoPnGXfgrdEePJ+t+enJCf2U4KVTlnz5jG9MpdEIGslCWNsoGaMX3z2ZrbmXNbSCnnBlgc+4WXwHiTzj1hEWVCnJkDE9/wjKQUnAwTnjeMaVPzetbQChTL5LBz5CNaa9LOlqbyRIdlsgSiMsgWJPbzavgZExu7zIecYr41qByf7dKc84vAgCwmd/fPjt926EZRtah3bxSuTBmpmKyZ52JlLCypmWYQ0MobWNQJjkL01YNDAGcPwhf99lPUXb7B6d0stfZo+mrAXvxRIY1gKZ8syDRvZcgx6AKM+0wYQPSuaDlOB9FZpm9WuQOjSNIHQzdAFGELk3LZm+IO+mRdziXRjTgNB7gK8tSFUp8IQNa3AxrXVGHsofXUQOGfMxdQSz6zIuylJROtF8HXVLJRoP/1s9K5xoAcEdXkhUGBkhwX1ypp33Z0lJF2iIIWlC0tJek+70YZfxRunHcdcJ58SKpILQ+rcVVzuo9ruGOJHpxntHHTHmk/APg5iMz00JBzl0b7F064S14CKUbrdArw2zFrA2/bQjFgTWfMYLYVVxmp8UlWrAF1Q3X1DhhpoVfgjgwT2Bozm65sE1fMbXC+HhxjXdftNGWyaNrtQypFHLM/4knCKBROJ65zRUKxEaomAv0kU6YjdX/9J97wmHDE7h6ppmagolvPwmAtbfHmE1bgWr/oHVXsgbD+zcmEcFjJxAYz+uScKijZ7jgBlX5CajC9XzL+GVHOWpEe1elo8awbGVCY4FD44CM6FLZoX3z8bR/I5bIWo/BqTIIBy4w0IfJWO2/nw7Z3PzCLo7mgRNsbL+4dPQZZ9v55TqLJKzl/AVzs4mRNFEKUn3rdJQssUqyvyIjIxTP6PNEatBlBFAT+okY09qb9Nl/At5n44FK+KLXSTJjlWNeWbPCms2ycqiyjJOx6k1xqeDBCcvYw9Gov2sKGLW3OhmZapKSciladPL02JwowRIhB/uGs1jdYwdVr0gNV6BKJmIm4WhodGKIGndOPAmOAkkvWenkCi5pd83rNNM+GJBT/a8iS/OjdZpCu6QSqcXrD/el8XE+/BbU+MrXcWZ/nLs1VILDA7ebjdq6Y056adklXE7uHJGyygyy9rgkS2AmQWK2JNPSsSmfBgG3DA2JhV5YKBLa5TGnF3GrwCSJ5RMeCZYUnzqMooVNfwwushDvu3u8f12JgbtfGKBrt0P9jOr+q9GIeOmGzTy9ZJdB2uNoyKFCdM1NLYE/7hLdi0L0MdxRkMrFLn4FOLPqSWVgUZ44vhd/j4/oVfWeGyFHqFYAjJaImzYImyzRiZ12pSRPm0K2wilKWBIUz2tmDuqMc/4aX5CuqQ103+v0u941fDNWr3PeG08kvN6s2Q6ev0jgFvx2d39dpnQvy4bJgltp7gF+JmUYDFunSakXtv5MKdtslmLf3+c8677D9S6Pfs=
+api: eJylV1tv2zYU/isEX/Ki2FnaFZ2eliVtkW5Ai8RBHgKjoakji41EsuRhEs/Qfx8OKdmSnS4e9lIrPFeey/exa45i6Xl+x6+MaTyfZ9xYcAKV0ZcFz/kSkCTnDgQqvbxGgcHzjDvw1mgPnudrfnpyQj8FeOmUJVue842qNBpBI2kIa2slo/fpd09qa+5lBY2gL1xZ4Dk3i+8gkWfcOsoFVQrSR0zfP4JyUFDi4JxxPOPKn5vG1oBQJNulAx9TNaa5LOhqrwRIettElEZYAvke32xWASNldnkx4RkvjWsEJv03pzzj8CwoEZ7/9v7tu3aQy9a1Ds3iJ557bWZKJruyM5ECls40DCtgCI2tBcIofmHCooZhAsfvJ7+2WVeibXSPTunli9GjKmvAe7EEhpVApjzzoJE9VaD7RJRn2mDKDwrmg5TgfRnqevVykjrUtaDscnQBBilybxpSfUbejpu4zXdhTA1C7yV8bUGqUoGn3LACF8NaZ+Sh9aOLyD7iZFg6SrNtMy6KQlE4UX8dTEspag//2j0rnGgAwR3eSFQYK0IL99GZZtbJ0iZdoKEKSRPSLu0N6c4cthmvlX4YTp1wTqxoVRAa//rGVQ7K/amhmsh04z1RSxXzafEPSzEpn5sCDjJoX6vSrRPWgutSeXvyyz4w3WgRsDJO/Q1F9OhBBqdwxfO7NRdefiP5twegA+5AEJ48OYXA52225n+AcOB4fhf/OrPqT1htzl7SF17JXv3LWcDq9GXFLxYi6N7N2/nubF0BBqd9P+D/DSEawMp0aE5dFljxnE+FVdPTycm0VDX4KZn7Kdn3plPfQ7gH9wjOxwIFV/OcrxfCw42r2/2ljLpMGl2qZUhUwjP+KJwiAIiD0Rmn3pQi1NTiPU8XScRurv6ifs63nbomzkiuxv3ajnpsy57LGw/s3JgHBYyMQGNHRwRRoomWQ4cZV2QmownNa9fMTZwK0e5F+aARHFuZ4Fjw4MgxE7pgVnj/ZBy1PbJexLbokDx3I3SI66OkzNafb2dsZh5At0cjp8lX1n187Lfo8+2MQo1n9rWanY0KRYhZEK41SkPBFqs4bUdn3UpFnSNWgShiAl1RRxG7onY6bbZZii0giXiwm0nSY2VtntiTwoqNorKIIhkncRqNobSHmNFhnMFYaJ9PpzHqxOh6ZcpSSZhI06TD0+kGMginqeCHm0b12B1j+6eMKOJOi4KJyJwMDa01giQ6deBNcBL8Bh9yfku/r2gn0OthZFvNeHButE4ov1NUkl6wTry/FiPrw29Ng690GTnr+dirpRYYHLw+bjTSG3Xan4KVxu3kNWFEtrGyrAke2QKYWaCIM/moRBzK+x7getgYdeSegS6sURon7DK+cmg9oWDCM8HSxqcpI19xh+8HF7mfbKd7eL8dxKA3DVWBrt0R15lV3atYyMjk/Y58vWTXwVrjqElhVOkKaluAf9gtdiWnoI8jRkMjFJn45OL3sSa1gSA81fjN5N3khI6s8dgIPcjiE2C8cGSTxC5Gs8FzetSt9fZ1//8oqpsJegdObS2UpuxCoojEV3c0MDzjp5MTWnLirO5xT79D3uKbN8g845XxSMbrDWO1dPwjgCN+n2+ZKVF0D0tEdZFS+JmUYDFSWB3S4O78L4aoacOxnz7MeBZhZjzriU66D/Lei/Rq6HvMPikD+pceCC9arNdpkdp2o59EP7XYgHPSplrP27b9Bwel4Fc=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"getRoomCreatingStatus"}
+  children={"Get the room creation progress"}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-getRoomCreatingStatus
+Returns the progress of creating a room from the template.
 
 <ParamsDetails
   parameters={undefined}
@@ -54,7 +54,7 @@ getRoomCreatingStatus
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["error","isCompleted","progress","roomId"],"type":"object","properties":{"roomId":{"type":"integer","description":"The room ID.","format":"int32","example":9846},"progress":{"type":"number","description":"The progress of creating a room from the template.","format":"double","example":-8.5},"error":{"type":"string","description":"The error message that is sent when a room is not created successfully from the template.","nullable":true,"example":"some text"},"isCompleted":{"type":"boolean","description":"Specifies whether the process of creating a room from the template is completed.","example":true}},"additionalProperties":false,"description":"The progress parameters of creating a room from the template.","title":"RoomFromTemplateStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomFromTemplateStatusWrapper"}}}}}}
+  responses={{"200":{"description":"Status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["error","isCompleted","progress","roomId"],"type":"object","properties":{"roomId":{"type":"integer","description":"The room ID.","format":"int32","example":9846},"progress":{"type":"number","description":"The progress of creating a room from the template.","format":"double","example":-8.5},"error":{"type":"string","description":"The error message that is sent when a room is not created successfully from the template.","nullable":true,"example":"some text"},"isCompleted":{"type":"boolean","description":"Specifies whether the process of creating a room from the template is completed.","example":true}},"additionalProperties":false,"description":"The progress parameters of creating a room from the template.","title":"RoomFromTemplateStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomFromTemplateStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>
