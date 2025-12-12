@@ -1,11 +1,11 @@
 ---
 id: get-presigned-file-uri
-title: "getPresignedFileUri"
-description: "getPresignedFileUri"
-sidebar_label: "getPresignedFileUri"
+title: "Get file download link asynchronously"
+description: "Returns a link to download a file with the ID specified in the request asynchronously."
+sidebar_label: "Get file download link asynchronously"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVV1tv2zYU/isH5yUboNpBug2bnpal7ZCuQIsmQR6CoKHFI4uNRLK8xPEM/ffhkJIvcdp4L5FMnevH71yywiDmHssbfKda8jCF9MTbAo0lJ4Iy+lxiiXMKnxx5NdckWeTKKSzQCic6CuTYxAq16AhLrFVL5xILVBpLtCI0WKAkXzll2SCWeNkQsBhErb5FAiVJB1UrchMs0NG3qBxJLIOLVKCvGuoElisMS8selA40J4cF1sZ1IuSj1ydYID2KzraE5R+///Jb39+yNW+N9uTZwMnxMT92o+GEQJqFbo2Q0Cp9jwVWRgfSgaWFta2qEhjTr55VVvsxmdlXqgKD4hi6oLLD0Xt+H/O6SSAlzQKjaxnwH9tZy288+uCUnj+LLUuAqSGMONfGpR/eRFcRPChakATjgKQKJEGaKnakA8OvY9uKGWOY4V9Dit50BIEeA/YFBnNP+rBwSFduadkPM0iE6AiElCQhmBRWZXSt5qB0jti4jqMXkHz8j5gYyoMiEjNv2hgIrj5/gEVDjg6CB5QHH4wjOdkmX0zVcFCMfYFCSsWhiPbT1hXXovX03TphUsKGEew9qJCMM3s/MGd7Jm3MlH2pUPoC2aTfkhXOiSVXbaDOv0zsxlG9jzWnV+Xg9z71nLwPIkR/YIhZ+MxIOkih3wfl2glrySXn/VN0n29qHYXGDD0v9bjQYIlTYdX0ZHI85evw6e90lTtdP7WjFSzQk3sYG2KiI65mwtOVa/s9Jl4k2YH9MbdbLPBBOMVESjANyrlr1SK2nPCepTf5E9OZc73lOKroVFhecKPKpoSvvogYmi/3tNy+eKv+oeWeyStPcGbMvSJgJW7Q1Rjh0Ol3DA79vkoqfHt/Ca+qLT9NCHbPy1sdyMHSRAfRk2PDILQEK7xfGJcQTRlgyVCoKlkm4cgdZvooC8Pq/fUlXHI/6Y92jGZbxfDybuTU++tLdnWawNlz+B3MTneA4m4heTx2SpOE2TL1mCMWMk79m2SOoCEhUwADqDseB1AHmb7Aj6x9sl2eIh08jSTLQd2aBSxUaGDHK6SaKpA/Z2psfx0LbucwcTAB7cvpNHmdGN0uTV2riiaV6fLhyXRUYwepgR+ummcK346x4/wUXIufSUgQVUXe88ywzgSquDM7yj3bY4ELpwJDcs3PF6RzP/hoKe03GzTTwZnROve8J6Dy1zcwfN4vix3tw7Nm4itdG77fx1frEfky3ZjSm4kaPck06HfjmkDaCBhZ6KIPMCMwsyASJx+USKS8G9vb2DZ2buQOSEtrlA4TOE9DkMuTJAgPAnLFZ5axrVTDd1uJ3E027N7O70nH6Pl3bVLaQxs/tWpYxUSV5tpYI5/O4SJaa1wYFqgN0g21VpK/fwp2U01Jv4pMFOqEYhWfTfy5K8nXwC08Y/x68uvkmI+s8aETeiuKOQVYD5C0OUMeITu3tL5EXgCmthVKb60qebzc8A1jgSeTY67KtIPnJxZYrhfqzZy5LbAxPrDmaj1fej7+Fsktsby53cyRNIuk8vwun980Vpt9F3/6POypP8OP9/Rn8xoZq5dpkrWR8rxKM2f836C/7YuxqXFw+eNpVZENW2p7izcPtvV8/vvtJfb9fxQMagw=
+api: eJy1V9tu2zgQ/RViXrILqHY2LYpdPW22N6RboEWbIA+B0dDiKGIjkSwvcbyG/n0xpC6W7Tbeh32xZHI4HB6eOTPagOd3DvIbeCtrdGzO4hMWGWiDlnup1YWAHO7Qf7Lo5J1CQSZXVkIGhlveoEdLLjageIOQQylrvBCQgVSQg+G+ggwEusJKQw4hh8sKGZmxoOT3gEwKVF6WEu0MMrD4PUiLAnJvA2bgigobDvkG/NrQDlJ5vEMLGZTaNtynoednkAE+8sbUCPkfv7942bYL8uaMVg4dOTg7PaXHNBo6EBN6pWrNBauluocMCq08Kk/W3JhaFhGM+TdHSzb7MenlNyw8gWIJOi/Thv3u6b0/100EKa7MINiaAP+5n8F+3NF5K9XdQWzJgumS+R7nUtv4x+lgC2QPElcomLYMhfQomNBFaFB5gl+FuuZLwjDBP0AKTjfIPD56aDPw+h7VceGgKuza0D7EIO6DRcaFQMG8jmEVWpXyjkmVIta2oeg5i3v8h5gIyqMi4kun6+CRXX3+wFYVWjwKHiYdc15bFLNt8oWYDUfF2GbAhZAUCq8/bV1xyWuHP8wTIiUbGUG7e+mjc2LvB+JsS6QNibJPJUqbAbl0W7bcWr6mrPXYuKeJXVks97Gm4xUp+L2plg7vPPfBHRliMn6lBR61oN0H5dpyY9B2m784/W0/+68UD77SVv6DIvpwWAQr/TpqGnfFV5r/eo80ABY5SdvKSo+waLMN/IXcooX8Jv47N/JvXA9jh+y5k0Vv/vE8+OrssOFHg1F8bxYkY9OgP6MPVjnGEzO8HvWLJ8aspK8ipy9eM2ewIHUVfYaREqHzjLu1KiqrlQ6uXhOrGvSV7hQ/KryvIIc5N3J+Njudk2sXf+ebpPPt3PSFAQg7+9CXg5iMsFlyh1e2bvfy8Eu07XI/pGIDGTxwKymNIkm6xenWSh5quu49T6/TFCUz3fRivMMvJNPJ1fQmR9rHC9tzeeWQvdL6XiKjRVSeij7Crs5NHHbVrohLiLvdNQ/7VN6bvV3eKI+WrXWwLDi05JhxJZjhzq20jYjGE0BOUMgieu7IdYzrk2TMNu+vL9klqWl7MnGafGXdy9s+o95fX9JWUzY/hdn5BCjSSkHNQSMVCrZcR+adnHfJFm1OWIVcxAA6UCc7dqB2Nm02pMsoTjwO7EaS7FhZ61VKhMmuLCpKBjSdqLE928vNZDByMALt8vk87jrTql7rspQFzgrdpMGz+SAm0JXI45emikq3o03fPXARs53yuijQOUp1Y7XHguqSxVSx3KAcOVzT8wnrJIe9wIxoxoFXWqmk+Dug0uxr1k3vp8Vk9fGnJuJLVWq638dnQ4PwNN2I0mM/ERyK2OZM45qx2A8RsqwJzrMlMr30PHLyQfJIytte3nrZmNzILUMljJbKz9hFbAEoPVEwTvqbMn6U25jDt1sHuZ2N7N4+345itPS/1PHYXRE7N7JrRHkRq3qfI58u2JdgjLa+ax9HpCusjUB3vwt2VcxRPQtEFGy4pCUuufhzaknXQBKeMH4+ezk7pSGjnW+42oriHfpUaSad805J2b20zdhX/381rKMNNVxzU3OptlrDVNBuiFOQwdnslHQgfvOkJ2SQDx8wY2VbZFBp52nlZqhoLQ1/D2ipM1iMlStWPyEdvYvDnd02Dr987r4LfmU//y46eK4+R9Q61s46YKqQscr132Ltos16GaXg0uR5UaDxW8v2PnSolA4dwbs3l5BFWZzmZip/3Qt5PxjSTrVMEdAvtToHV2w2KfHbdrBPUz9cMRSTZE0ALdq2/RdvkiV4
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"getPresignedFileUri"}
+  children={"Get file download link asynchronously"}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-getPresignedFileUri
+Returns a link to download a file with the ID specified in the request asynchronously.
 
 <Heading
   id={"request"}
@@ -62,7 +62,7 @@ getPresignedFileUri
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["filetype","url"],"type":"object","properties":{"filetype":{"type":"string","description":"The type of the file for the source viewed or edited document.","nullable":true,"example":"some text"},"token":{"type":"string","description":"The encrypted signature added to the config in the form of a token.","nullable":true,"example":"some text"},"url":{"type":"string","description":"The absolute URL where the source viewed or edited document is stored.","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The file link properties.","title":"FileLink"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"FileLinkWrapper"}}}}}}
+  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["filetype","url"],"type":"object","properties":{"filetype":{"type":"string","description":"The type of the file for the source viewed or edited document.","nullable":true,"example":"some text"},"token":{"type":"string","description":"The encrypted signature added to the config in the form of a token.","nullable":true,"example":"some text"},"url":{"type":"string","description":"The absolute URL where the source viewed or edited document is stored.","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The file link properties.","title":"FileLink"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"FileLinkWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>
