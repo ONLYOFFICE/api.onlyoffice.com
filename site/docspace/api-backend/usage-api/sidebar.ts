@@ -535,7 +535,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-folder-recent",
-              label: "Get the 'Recent' section",
+              label: "Get recent files",
               className: "api-method get",
             },
             {
@@ -1093,13 +1093,13 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-groups-members-with-folder-security",
-              label: "Get group members with security information",
+              label: "Get folder group members with security information",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-groups-members-with-file-security",
-              label: "Get group members with security information",
+              label: "Get file group members with security information",
               className: "api-method get",
             },
             {
