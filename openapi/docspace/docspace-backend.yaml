@@ -39370,15 +39370,15 @@ components:
       description: OAuth2 flow with Authorization Code
       flows:
         authorizationCode:
-          authorizationUrl: ''
-          tokenUrl: ''
+          authorizationUrl: https://oauth.onlyoffice.com/oauth2/authorize
+          tokenUrl: https://oauth.onlyoffice.com/oauth2/token
           scopes:
             read: Read access to protected resources
             write: Write access to protected resources
     OpenId:
       type: openIdConnect
       description: OpenID Connect authentication
-      openIdConnectUrl: ''
+      openIdConnectUrl: https://oauth.onlyoffice.com/oauth2/userinfo
     x-signature:
       type: apiKey
       description: JWT signature used for authentication. The token must be obtained via the `api/2.0/security/oauth2/token` endpoint. It is passed as a cookie with the name `x-signature`.
