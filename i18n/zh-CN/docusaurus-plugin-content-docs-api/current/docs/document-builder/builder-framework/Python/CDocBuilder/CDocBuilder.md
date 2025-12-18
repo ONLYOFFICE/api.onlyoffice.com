@@ -14,7 +14,7 @@ class CDocBuilder
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [CloseFile](CloseFile.md)                                   | 关闭文件以停止对其进行操作。                                                                                                      |
 | [CreateFile](CreateFile.md)                                 | 创建一个新文件。                                                                                                                 |
-| [Destroy](Destroy.md)                                       | 当不再需要 ONLYOFFICE 文档生成器时，将其从应用程序内存中卸载。                                                                    |
+| [Dispose](Dispose.md)                                       | 当不再需要 ONLYOFFICE 文档生成器时，将其从应用程序内存中卸载。                                                                    |
 | [ExecuteCommand](ExecuteCommand.md)                         | 执行用于创建文档文件（文本文档、电子表格、演示文稿、表单文档、PDF）的命令。                                                         |
 | [GetContext](GetContext.md)                                 | 返回当前的 JS 上下文。                                                                                                           |
 | [GetVersion](GetVersion.md)                                 | 返回 ONLYOFFICE 文档生成器引擎版本。                                                                                             |

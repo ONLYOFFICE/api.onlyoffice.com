@@ -12966,7 +12966,7 @@ paths:
     get:
       tags:
         - Files / Folders
-      summary: Get the "Recent" section
+      summary: Get recent files
       operationId: getFolderRecent
       parameters:
         - name: userIdOrGroupId
@@ -16658,7 +16658,7 @@ paths:
     get:
       tags:
         - Files / Sharing
-      summary: Get group members with security information
+      summary: Get folder group members with security information
       operationId: getGroupsMembersWithFolderSecurity
       parameters:
         - name: folderId
@@ -16726,7 +16726,7 @@ paths:
     get:
       tags:
         - Files / Sharing
-      summary: Get group members with security information
+      summary: Get file group members with security information
       operationId: getGroupsMembersWithFileSecurity
       parameters:
         - name: fileId
