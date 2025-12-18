@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-string
+number
 
 ## Example
 
@@ -33,7 +33,7 @@ let inlineLvlSdt = Api.CreateInlineLvlSdt();
 let run = Api.CreateRun();
 run.AddText("This is an inline text content control with a label set to it.");
 inlineLvlSdt.AddElement(run, 0);
-inlineLvlSdt.SetLabel("2147483647");
+inlineLvlSdt.SetLabel(2147483647);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 let label = inlineLvlSdt.GetLabel();
 paragraph = Api.CreateParagraph();

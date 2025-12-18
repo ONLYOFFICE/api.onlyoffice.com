@@ -4,6 +4,10 @@ sidebar_position: -1
 
 # 打开编辑器的生命周期
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+```
+
 [opening](./opening-file.md)编辑器的生命周期可以通过一系列事件来定义。
 
 添加用于初始化文档编辑器的脚本，并配置你要打开的文档：
@@ -47,12 +51,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    docEditor.showMessage(message);
    ```
 
-   ## 消息
-
-   `类型：字符串` | **必需**
-
-   定义消息文本。
-
+   ```mdx-code-block
+   <APITable>
+   ```
+      | 范围 | 类型   | 在场 | 描述               |
+      | --------- | ------ | -------- | ------------------------- |
+      | 信息   | 字符串 | 必需 | 定义消息文本。 |
+  
+     ```mdx-code-block
+     </APITable>
+     ```
    :::note
    请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
    :::

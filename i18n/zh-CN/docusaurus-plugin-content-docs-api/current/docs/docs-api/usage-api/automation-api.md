@@ -24,7 +24,7 @@ const connector = docEditor.createConnector();
 
 调用该函数将项目添加到上下文菜单。上下文菜单的操作过程与 [plugins](../../plugin-and-macros/customization/context-menu.md) 相同，但 *onClick* 方法除外，该方法用于代替通过 ID 订阅。
 
-参数  :
+### 参数
 
 | 名称  | 类型                                        | 描述                                           |
 | ----- | ------------------------------------------- | ----------------------------------------------------- |
@@ -42,7 +42,7 @@ const connector = docEditor.createConnector();
 | *onClick*  | function                 | 点击事件回调。                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | 包含当前项的上下文菜单项的数组。                                                           |
 
-示例:
+### 示例
 
 ``` ts
 connector.attachEvent("onContextMenuShow", (options) => {
@@ -59,7 +59,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 调用该函数将项目添加到工具栏菜单。使用工具栏菜单的过程与 [plugins](../../plugin-and-macros/customization/toolbar.md) 相同，除了使用 *onClick* 方法代替通过 ID 订阅。
 
-参数:
+### 参数
 
 | 名称  | 类型                                        | 描述                            |
 | ----- | ------------------------------------------- | -------------------------------------- |
@@ -103,7 +103,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | "button" \| "big-button" | 工具栏菜单项类型。*button* 和 *big-button* 值相同，可以同样用于指定工具栏按钮。 |
 
-示例:
+#### 示例
 
 ``` ts
 connector.addToolbarMenuItem({
@@ -305,14 +305,14 @@ Connector window 是一个代表连接器窗口的类。要创建它，请使用
 
 调用函数来向模态窗口框架添加事件监听器。每当将指定事件传递给目标时，都会调用此函数。所有可用事件的列表与插件的列表相同。
 
-### 参数:
+### 参数
 
 | 名称   | 类型     | 描述         |
 | ------ | -------- | ------------------- |
 | id     | string   | 事件名称。     |
 | action | function | 事件侦听器。 |
 
-示例:
+#### 示例
 
 ``` ts
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
@@ -324,14 +324,14 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 
 调用函数来将事件发送到模态窗口框架。所有可用事件的列表与插件的列表相同。
 
-### 参数:
+### 参数
 
 | 名称 | 类型            | 描述     |
 | ---- | --------------- | --------------- |
 | name | string          | 事件名称。 |
 | data | string / object | 事件数据。 |
 
-### 示例:
+### 示例
 
 ``` ts
 testConnectorWindow.dispatchEvent("messageName", {
@@ -343,13 +343,13 @@ testConnectorWindow.dispatchEvent("messageName", {
 
 调用函数来在编辑器内显示模态窗口。
 
-### 参数:
+### 参数
 
 | 名称     | 类型   | 描述                                                                                                                                      |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | settings | object | 模态窗口参数与插件 [variations](../../plugin-and-macros/structure/configuration/configuration.md#variations) 相同。 |
 
-示例:
+#### 示例
 
 ``` ts
 testConnectorWindow.show({
@@ -367,7 +367,7 @@ testConnectorWindow.show({
 
 调用函数来订阅来自插件的消息。
 
-### 参数:
+### 参数
 
 | 名称     | 类型     | 描述         |
 | -------- | -------- | ------------------- |
@@ -378,7 +378,7 @@ testConnectorWindow.show({
 
 此方法不返回任何数据。
 
-### 示例:
+### 示例
 
 ``` ts
 window.Asc.plugin.attachEvent("messageName", (message) => {
@@ -390,14 +390,14 @@ window.Asc.plugin.attachEvent("messageName", (message) => {
 
 调用函数来从模态窗口向编辑器发送消息。
 
-### 参数:
+### 参数
 
 | 名称 | 类型   | 描述     |
 | ---- | ------ | --------------- |
 | name | string | 事件名称。 |
 | data | object | 事件数据。 |
 
-### 示例:
+### 示例
 
 ``` ts
 window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});

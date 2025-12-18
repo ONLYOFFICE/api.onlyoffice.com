@@ -161,7 +161,7 @@ To call commands and send the data back to the editor, define the callCommand me
 *The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
 
 :::info
-**Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the *Api.GetDocument().InsertContent(...))*. This limitation exists due to the co-editing feature in the online editors.
+**Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the [*Api.GetDocument().InsertContent(...))*](../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md). This limitation exists due to the co-editing feature in the online editors.
 :::
 
 ### Parameters

@@ -259,7 +259,7 @@ refreshFile({
   });
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
 
 如果在编辑和保存文档后，返回到包含更改数据的文件的 *changesurl* 链接，请通过此链接下载文件，并在 *changesurl* 参数中发送文件URL。文档上一版本的绝对 URL 地址必须在 *previous.url* 参数中发送。
 
@@ -279,7 +279,7 @@ refreshFile({
   });
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
 
 发送错误消息，说明文档版本无法显示的原因:
 
@@ -425,7 +425,7 @@ refreshFile({
   });
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
 
 | 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -472,7 +472,7 @@ refreshFile({
   });
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../get-started/how-it-works/how-it-works.md) 部分。
 
 | 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

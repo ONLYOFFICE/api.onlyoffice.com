@@ -5,7 +5,7 @@ Sets the paragraph properties to the current style.
 ## Syntax
 
 ```javascript
-expression.SetParaPr(oParaPr);
+expression.SetParaPr(paraPr);
 ```
 
 `expression` - A variable that represents a [ApiStyle](../ApiStyle.md) class.
@@ -14,7 +14,7 @@ expression.SetParaPr(oParaPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oParaPr | Required | [ApiParaPr](../../ApiParaPr/ApiParaPr.md) |  | The paragraph properties that will be set. |
+| paraPr | Required | [ApiParaPr](../../ApiParaPr/ApiParaPr.md) |  | The paragraph properties that will be set. |
 
 ## Returns
 

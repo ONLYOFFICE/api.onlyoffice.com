@@ -47,6 +47,7 @@ Represents the Api class.
 | [CreateTableStylePr](./Methods/CreateTableStylePr.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | Creates the empty table style properties. |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Creates the empty text properties. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | object | Converts the specified JSON object into the Document Builder object of the corresponding type. |
 | [GetByInternalId](./Methods/GetByInternalId.md) | object | Returns the object by it's internal ID. |
@@ -58,6 +59,7 @@ Represents the Api class.
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
 | [LoadMailMergeData](./Methods/LoadMailMergeData.md) | boolean | Loads data for the mail merge. |
 | [MailMerge](./Methods/MailMerge.md) | boolean | Starts the mail merge process. |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | Converts picas to points. |

@@ -236,7 +236,7 @@ import TabItem from '@theme/TabItem';
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json")
    ```
 
-   其中 **documentserver** 是服务器名称， **port** 是安装 ONLYOFFICE 文档的端口号。
+   其中 **documentserver** 是服务器名称，**port** 是安装 ONLYOFFICE 文档的端口号。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 

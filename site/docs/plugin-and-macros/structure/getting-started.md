@@ -215,7 +215,7 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
 
   You can edit the plugin and reload it to see the changes.
 
-  To debug the plugin in the desktop editors, follow the instructions [here](../tutorials/developing/for-desktop-editors.md#debugging).
+  To debug the plugin in the desktop editors, follow the instructions [here](../tutorials/debugging/for-desktop-editors.md).
 
 ### To web editors
 
@@ -244,4 +244,4 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
 
    The plugin will be displayed within the **Plugins** tab. You can edit the plugin and reload it to see the changes.
 
-   To debug the plugin in the web editors, follow the instructions [here](../tutorials/developing/for-web-editors.md#debugging).
+   To debug the plugin in the web editors, follow the instructions [here](../tutorials/debugging/for-web-editors.md).
