@@ -1,5 +1,17 @@
 # Change log
 
+## 7.6.0
+
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.6
+
+#### Docs
+
+* Translated Document Builder section into Chinese
+
 ## 7.5.0
 
 ### New features
