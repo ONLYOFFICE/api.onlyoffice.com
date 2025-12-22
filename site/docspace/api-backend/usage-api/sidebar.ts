@@ -534,8 +534,8 @@ const sidebar: SidebarsConfig = {
           items: [
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get-folder-recent",
-              label: "Get recent files",
+              id: "docspace/api-backend/usage-api/get-recent-folder",
+              label: "Get the 'Recent' section",
               className: "api-method get",
             },
             {
@@ -656,12 +656,6 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-privacy-folder",
               label: "Get the 'Private Room' section",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-recent-folder",
-              label: "Get the 'Recent' section",
               className: "api-method get",
             },
             {
