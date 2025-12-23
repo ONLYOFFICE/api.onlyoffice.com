@@ -1,5 +1,17 @@
 # Change log
 
+## 7.6.1
+
+### New features
+
+* Updated the main page
+
+### Fixes
+
+#### Docs API
+
+* Edited the document.info.favorite parameter description
+
 ## 7.6.0
 
 ### New features
