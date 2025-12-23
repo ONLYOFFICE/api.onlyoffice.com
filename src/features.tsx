@@ -11,7 +11,7 @@ import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
 export type Features = {
   linkPrefix: string
   items: FeaturesGrid.Item[]
-  button?: FeaturesGrid.Button
+  button: FeaturesGrid.Button
 };
 
 export const DocsFeatures: Features = {
@@ -87,6 +87,10 @@ export const DocsFeatures: Features = {
 
 export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
+  button: {
+    text: "Try DocSpace Cloud",
+    href: "https://www.onlyoffice.com/docspace-registration",
+  },
   items: [
     {
       title: 'Backend REST API',

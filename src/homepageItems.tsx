@@ -32,38 +32,32 @@ export const Samples: Samples = {
       ],
     },
     {
-      title: 'Creating commercial offer',
+      title: 'Inserting Pivot Table',
       description: (
         <>
-          Generates a personalized commercial offer in DOCX format with client-specific products, services, and timelines.
+          This <Link to="https://api.onlyoffice.com/samples/docs/plugin-and-macros/custom-ai-functions-samples/spreadsheet-editor/insertPivotTable/">AI function</Link> inserts a pivot table into the specified range or the currently selected range. This function can be used to summarize, group, or aggregate data by rows and values.
         </>
       ),
       seeSamples: [
         {
-          name: "C++",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_commercial_offer/main.cpp",
-        },
-        {
-          name: ".Net",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_commercial_offer/Program.cs",
-        },
-        {
-          name: "Python",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/python/creating_commercial_offer/main.py",
-        },
-        {
-          name: "Java",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/java/creating_commercial_offer/Program.java",
+          name: "AI functions",
+          link: "https://api.onlyoffice.com/samples/docs/plugin-and-macros/custom-ai-functions-samples/#spreadsheet-editor",
         },
       ],
     },
     {
-      title: 'Highlight code',
+      title: 'Working with comments',
       description: (
         <>
-          Connects the <Link to="https://highlightjs.org/">highlight.js library</Link> for highlighting code syntax with the necessary language, style, and background color.
+          Collects all the <Link to="https://api.onlyoffice.com/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/ ">comments</Link> from the document and displays them in the custom interface.
         </>
       ),
+      seeSamples: [
+        {
+          name: "Automation API",
+          link: "https://api.onlyoffice.com/samples/docs/docs-api/external-access-to-the-document-editing/ p",
+        },
+      ],
     },
   ]
 }
@@ -71,9 +65,9 @@ export const Samples: Samples = {
 export const BlogArticles: BlogArticles = {
   items: [
     {
-      title: 'API roundup for developers: ONLYOFFICE Docs 9.1 & DocSpace 3.5',
-      link: "https://www.onlyoffice.com/blog/2025/10/api-roundup-onlyoffice-docs-9-1-docspace-3-5",
-      imgHref: "/img/homepage-blog/api-9.1-768x392.png",
+      title: 'ONLYOFFICE API updates: What’s new in December 2025',
+      link: "https://www.onlyoffice.com/blog/2025/12/api-updates-december-2025",
+      imgHref: "/img/homepage-blog/api-december-2025-768x388.png",
     },
     {
       title: 'A developer’s guide to ONLYOFFICE style and color APIs',
