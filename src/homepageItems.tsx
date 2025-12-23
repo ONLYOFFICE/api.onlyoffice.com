@@ -35,13 +35,13 @@ export const Samples: Samples = {
       title: 'Inserting Pivot Table',
       description: (
         <>
-          This <Link to="https://api.onlyoffice.com/samples/docs/plugin-and-macros/custom-ai-functions-samples/spreadsheet-editor/insertPivotTable/">AI function</Link> inserts a pivot table into the specified range or the currently selected range. This function can be used to summarize, group, or aggregate data by rows and values.
+          This <Link to="/samples/docs/plugin-and-macros/custom-ai-functions-samples/spreadsheet-editor/insertPivotTable/">AI function</Link> inserts a pivot table into the specified range or the currently selected range. This function can be used to summarize, group, or aggregate data by rows and values.
         </>
       ),
       seeSamples: [
         {
           name: "AI functions",
-          link: "https://api.onlyoffice.com/samples/docs/plugin-and-macros/custom-ai-functions-samples/#spreadsheet-editor",
+          link: "/samples/docs/plugin-and-macros/custom-ai-functions-samples/#spreadsheet-editor",
         },
       ],
     },
@@ -49,13 +49,13 @@ export const Samples: Samples = {
       title: 'Working with comments',
       description: (
         <>
-          Collects all the <Link to="https://api.onlyoffice.com/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/ ">comments</Link> from the document and displays them in the custom interface.
+          Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in the custom interface.
         </>
       ),
       seeSamples: [
         {
           name: "Automation API",
-          link: "https://api.onlyoffice.com/samples/docs/docs-api/external-access-to-the-document-editing/ p",
+          link: "/samples/docs/docs-api/external-access-to-the-document-editing/",
         },
       ],
     },
