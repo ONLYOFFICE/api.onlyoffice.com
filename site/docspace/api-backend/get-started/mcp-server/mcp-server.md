@@ -31,7 +31,7 @@ The DocSpace MCP Server connects AI tools directly to ONLYOFFICE DocSpace. This 
 
 ## Installation
 
-You can connect to the DocSpace MCP server using any MCP clients. We have covered some popular clients, such as Claude Desktop, Cursor, Windsurf, etc., and [here](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/clients/README.md) you can read about it.
+You can connect to the DocSpace MCP server using any MCP clients. We have covered some popular clients, such as Claude Desktop, Cursor, Windsurf, etc., and [here](connecting-clients/connecting-clients.md) you can read about it.
 
 ### Remote DocSpace MCP Server
 
@@ -86,8 +86,6 @@ Close and reopen your client. In most cases, the DocSpace MCP Server will start 
 
 - Create a new project room and invite Anna with editor rights.
 - Upload this file to "My documents".
-
-For a more detailed example of the MCP server installation process, see how it can be done using [Claude Desktop](https://modelcontextprotocol.io/quickstart/user#for-claude-desktop-users).
 
 ## Configuration
 
