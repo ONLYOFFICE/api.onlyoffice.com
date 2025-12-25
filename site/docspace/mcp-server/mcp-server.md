@@ -1,8 +1,8 @@
 ---
-sidebar_position: -1
+sidebar_position: -10
 ---
 
-# MCP Server
+# MCP Server overview
 
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is a standardized protocol for managing context between large language models (LLMs) and external systems. An MCP server for ONLYOFFICE DocSpace can be found in this [repository](https://github.com/ONLYOFFICE/docspace-mcp).
 

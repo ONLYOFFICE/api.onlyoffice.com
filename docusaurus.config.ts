@@ -190,7 +190,13 @@ const config: Config = {
               sidebarId: 'docspacePlugins',
               label: 'Plugins SDK',
               docsPluginId: 'api',
-            },
+             },
+             {
+               type: 'docSidebar',
+               sidebarId: 'docspaceMCPServer',
+               label: 'MCP Server',
+               docsPluginId: 'api',
+             },
             {
               type: 'docSidebar',
               sidebarId: 'docspaceHosting',
