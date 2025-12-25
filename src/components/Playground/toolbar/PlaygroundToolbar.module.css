@@ -23,6 +23,10 @@
 }
 
 .SelectTrigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
     padding: 6px 12px;
     border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ifm-global-radius);
@@ -69,6 +73,42 @@
 .SelectOption:hover, .SelectOption[data-selected] {
     background-color: var(--ifm-dropdown-hover-background-color);
     color: var(--ifm-dropdown-link-color);
+}
+
+.SelectOption:focus-visible {
+    outline: none;
+}
+
+.SelectIcon {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: var(--dropdown-icon-width);
+    height: var(--dropdown-icon-height);
+    margin-block-end: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+    color: var(--ifm-font-color-base);
+}
+
+.SelectIcon::before {
+    content: ' ';
+    /*background: url('/icons/arrow-sidebar.svg') center / var(--dropdown-icon-width) var(--dropdown-icon-height);*/
+    /*background-repeat: no-repeat;*/
+    background-color: currentColor;
+    mask-image: url('/icons/arrow-sidebar.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    height: var(--dropdown-icon-height);
+    margin-block-end: 0;
+    margin-inline-end: var(--dropdown-icon-gap);
+    margin-inline-start: unset;
+    min-width: auto;
+    width: var(--dropdown-icon-width);
+    flex-shrink: 0;
+    transform: rotate(180deg);
 }
 
 /* Radix UI AlertDialog Styles */

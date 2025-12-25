@@ -76,6 +76,9 @@ export const PlaygroundToolbar = () => {
                 <Select.Root value={editorType} onValueChange={handleEditorTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
+                        <Select.Icon asChild>
+                            <div className={styles.SelectIcon}/>
+                        </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent}>
@@ -103,6 +106,9 @@ export const PlaygroundToolbar = () => {
                 <Select.Root value={scriptType} onValueChange={handleScriptTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
+                        <Select.Icon asChild>
+                            <div className={styles.SelectIcon}/>
+                        </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent}>
@@ -127,6 +133,9 @@ export const PlaygroundToolbar = () => {
                 <Select.Root value={previewType} onValueChange={(value) => setPreviewType(value as PreviewType)}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
+                        <Select.Icon asChild>
+                            <div className={styles.SelectIcon}/>
+                        </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent}>
@@ -151,6 +160,9 @@ export const PlaygroundToolbar = () => {
                 <Select.Root value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
+                        <Select.Icon asChild>
+                            <div className={styles.SelectIcon}/>
+                        </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent}>
