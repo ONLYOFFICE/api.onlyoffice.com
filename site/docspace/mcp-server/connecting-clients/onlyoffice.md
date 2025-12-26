@@ -33,8 +33,7 @@ Ensure [Docker](https://www.docker.com/) is installed on your system.
 }
 ```
 7. Set environment values:
-
-- `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
-- `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
-
+    - `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
+    - `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
 9. Click "Save".
+![Add MCP Server](/assets/images/docspace/mcp_server/onlyoffice.png)

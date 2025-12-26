@@ -28,11 +28,11 @@ is the preferred connection method.
 }
 ```
 8. Save the file;
+![Add MCP Server](/assets/images/docspace/mcp_server/windsurf.png)
 9. Complete the OAuth authentication process:
-
-- Sign in to your DocSpace account by entering your email and password and clicking "Sign In".
-- If you have more than one account associated with the entered email, choose one of them.
-- Allow the MCP Remote Server to access the specified data in your DocSpace account.
+    - Sign in to your DocSpace account by entering your email and password and clicking "Sign In".
+    - If you have more than one account associated with the entered email, choose one of them.
+    - Allow the MCP Remote Server to access the specified data in your DocSpace account.
 
 ### Local DocSpace MCP Server
 
@@ -62,8 +62,6 @@ Ensure [Docker](https://www.docker.com/) is installed on your system.
 }
 ```
 8. Set environment values:
-
-- `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
-- `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
-
+    - `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
+    - `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
 9. Save the file.
