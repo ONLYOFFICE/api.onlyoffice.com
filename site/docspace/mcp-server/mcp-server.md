@@ -1,5 +1,5 @@
 ---
-sidebar_position: -10
+sidebar_position: -11
 ---
 
 # MCP Server overview
@@ -10,24 +10,24 @@ The DocSpace MCP Server connects AI tools directly to ONLYOFFICE DocSpace. This 
 
 ## Features
 
-- **Tools with granular control** - Access to tools organized into logical
+- **Tools with granular control** - Access to [tools](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/features/tools.md) organized into logical
   toolsets with fine-grained enable/disable capabilities and meta tools.
 - **Multiple transport protocols** - Support for stdio, SSE, and Streamable HTTP
-  transports.
-- **Different authentication methods** - Supports OAuth, API keys, Personal
-  Access Tokens, and Basic authentication.
+  [transports](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/configuration/global-configuration.md#user-content-docspace_transport).
+- **Different authentication methods** - Supports API keys, Personal Access
+  Tokens, Basic authentication, and OAuth 2.0 with dynamic client registration. See [examples](installation/remote-server.md#user-content-examples).
 - **Request-level configuration** - Configure authentication and tool selection
-  during session initialization using custom HTTP headers.
-- **Various distribution formats** - Available as Docker image, Docker MCP
-  Server, MCP bundle, and Node.js application.
+  during session initialization using [custom HTTP headers](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/configuration/request-configuration.md#user-content-header-options).
+- **Various distribution formats** - Available as [Docker image](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/distribution/docker-hub.md#user-content-docker-image), [Docker MCP
+  Server](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/distribution/docker-mcp.md#user-content-docker-mcp-server), [MCP bundle](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/distribution/build-from-source.md#user-content-mcp-bundle), and [Node.js application](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/distribution/npm-registry.md#user-content-nodejs-application).
 
 ## Use Cases
 
-- **Room Management**: Create, update, and archive rooms. Configure room types, manage membership, and control access levels.
-- **Folder & File Operations**: Create folders, upload documents, copy or move items in batches, rename or delete content, and check file or folder details.
-- **Collaboration & Permissions**: Invite or remove users, adjust security settings, and review current access rights for rooms and shared spaces.
-- **Content Access**: Retrieve "My documents" or "Rooms" folders, get folder contents, download files as text, and monitor ongoing file operations.
-- **People Directory**: List all people in the portal to streamline invitations and access management.
+- **[Room](#rooms) Management**: Create, update, and archive rooms. Configure room types, manage membership, and control access levels.
+- **[Folder](#folders) & [File](#files) Operations**: Create folders, upload documents, copy or move items in batches, rename or delete content, and check file or folder details.
+- **Collaboration & Permissions**: [Invite or remove users](#set_room_security), adjust security settings, and [review current access rights](#get_room_security_info) for rooms and shared spaces.
+- **Content Access**: Retrieve ["My documents"](#get_my_folder) or ["Rooms"](#get_rooms_folder) folders, [get folder contents](#get_folder_content), [download files as text](#download_file_as_text), and monitor ongoing file operations.
+- **[People](#people) Directory**: List all people in the portal to streamline invitations and access management.
 
 ## Installation
 
@@ -42,11 +42,11 @@ that support modern Streamable HTTP transport and at
 https://mcp.onlyoffice.com/sse for clients that support only the legacy SSE
 transport. It is preferable to use the Streamable HTTP transport whenever possible.
 
-See all options for connecting clients to the Remote DocSpace MCP Server [here](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/installation/remote-server.md).
+See all options for connecting clients to the Remote DocSpace MCP Server [here](installation/remote-server.md).
 
 ### Local DocSpace MCP Server
 
-If your MCP host does not support remote MCP servers, you can run the [local version](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/installation/local-server.md) of the DocSpace MCP Server instead.
+If your MCP host does not support remote MCP servers, you can run the [local version](installation/local-server.md) of the DocSpace MCP Server instead.
 
 Most clients that implement the MCP protocol have a common configuration file in the `JSON` format, inside which you can add the ONLYOFFICE DocSpace MCP Local Server.
 
