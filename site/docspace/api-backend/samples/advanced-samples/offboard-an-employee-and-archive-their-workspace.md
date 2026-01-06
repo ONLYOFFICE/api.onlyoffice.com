@@ -439,7 +439,7 @@ This example shows a practical offboarding flow in ONLYOFFICE DocSpace:
 The script disables the employee account to prevent further access to DocSpace.
 
 
-This is done using PUT [/api/2.0/people/{userId}](/docspace/api-backend/usage-api/update-member) with body `{ "disabled": true }`.
+This is done using PUT [/api/2.0/people/:userId](/docspace/api-backend/usage-api/update-member) with body `{ "disabled": true }`.
 
 After this step, the user can no longer sign in, but their files remain available.
 
@@ -576,7 +576,7 @@ After the workspace is archived, the script updates access rules so that:
 - the archive owner has full access,
 - other users lose access.
 
-This is applied using PUT [/api/2.0/files/rooms/{roomId}/share](/docspace/api-backend/usage-api/set-room-security) (or the corresponding folder access method, depending on the workspace type).
+This is applied using PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security) (or the corresponding folder access method, depending on the workspace type).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

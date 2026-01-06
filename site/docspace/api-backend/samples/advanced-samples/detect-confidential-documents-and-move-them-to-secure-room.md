@@ -309,7 +309,7 @@ There are no webhooks in this case – it is a batch scan that you can start whe
 
 ## Step 1: List files in the target room (including subfolders)
 
-The script starts from `START_FOLDER_ID` (a room id or folder id) and reads its contents using GET [/api/2.0/files/{folderId}](/docspace/api-backend/usage-api/get-folder-by-folder-id).
+The script starts from `START_FOLDER_ID` (a room id or folder id) and reads its contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/get-folder-by-folder-id).
 
 DocSpace returns two lists:
 

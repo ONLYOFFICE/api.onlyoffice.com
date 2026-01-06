@@ -376,7 +376,7 @@ The script keeps only tasks where:
 
 ## Step 2: Read file items from the task document folder
 
-For each closed task, the script loads the folder contents using GET [/api/2.0/files/{docsFolderId}](/docspace/api-backend/usage-api/create-room)
+For each closed task, the script loads the folder contents using GET [/api/2.0/files/:docsFolderId](/docspace/api-backend/usage-api/get-folder-by-folder-id)
 From the response, it uses response.files and ignores folders (because only documents need to be moved).
 
 <Tabs>
@@ -411,7 +411,7 @@ From the response, it uses response.files and ignores folders (because only docu
 
 ## Step 3: Move all task documents to the global Completed folder
 
-If the task folder contains files, the script moves them into the common Completed location using PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/create-room) with body.
+If the task folder contains files, the script moves them into the common Completed location using PUT [/api/2.0/files/fileops/move](/docspace/api-backend/usage-api/move-batch-items) with body.
 
 As a result:
 - the Completed folder becomes the single place where finished task documents live,

@@ -474,7 +474,7 @@ Only upload-related triggers are processed (for example, `file.uploaded`, `file.
 ## Step 2: Read the uploaded file name
 
 To classify the document reliably, the script loads file metadata from DocSpace and reads the actual file title.
-It requests file details using GET [/api/2.0/files/file/{fileId}](/docspace/api-backend/usage-api/get-file-info).
+It requests file details using GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/get-file-info).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

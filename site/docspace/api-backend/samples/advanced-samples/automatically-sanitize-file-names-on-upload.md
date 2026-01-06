@@ -430,7 +430,7 @@ The script processes only `file.uploaded` and `file.created`, and extracts:
 - `fileId` from `payload.id`
 - `title` from `payload.title`
 
-If the title is missing, the script loads it via GET [/api/2.0/files/file/{fileId}](/docspace/api-backend/usage-api/get-file-info)
+If the title is missing, the script loads it via GET [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/get-file-info)
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -511,7 +511,7 @@ The script normalizes the title:
 
 ## Step 3: Rename the file in DocSpace
 
-If the sanitized name differs from the original title, the script renames the file using PUT [/api/2.0/files/file/{fileId}](/docspace/api-backend/usage-api/update-file) with body `{ "title": "<newTitle>" }`
+If the sanitized name differs from the original title, the script renames the file using PUT [/api/2.0/files/file/:fileId](/docspace/api-backend/usage-api/update-file) with body `{ "title": "<newTitle>" }`
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

@@ -641,7 +641,7 @@ If the trigger is not in the allowed list, the handler returns 200 OK and does n
 The script creates a room for the new user using POST [/api/2.0/files/rooms](/docspace/api-backend/usage-api/create-room)
 
 Fields used in this example:
-- `title`: Home – {displayName}
+- `title`: Home – displayName
 - `roomType`: `HOME_ROOM_TYPE` (example: `2`)
 - `share`: empty array
 
@@ -700,7 +700,7 @@ The API response returns the new room identifier (`id`/`roomId`), which is used 
 ## Step 4: Create a default folder structure
 
 After the room is created, the script creates folders inside it using the room ID as the parent container.
-For each folder name, it sends POST [/api/2.0/files/folder/{parentFolderId}](/docspace/api-backend/usage-api/create-folder)
+For each folder name, it sends POST [/api/2.0/files/folder/:parentFolderId](/docspace/api-backend/usage-api/create-folder)
 In this example, `parentFolderId` is the created `roomId`.
 
 <Tabs>
@@ -746,7 +746,7 @@ In this example, `parentFolderId` is the created `roomId`.
 ## Step 5: Copy starter documents from templates
 
 To give each user a standard set of documents, the script copies templates into the room.
-For each file ID in `TEMPLATE_FILE_IDS`, it sends POST [/api/2.0/files/file/{fileId}/copyas](/docspace/api-backend/usage-api/copy-file-as)
+For each file ID in `TEMPLATE_FILE_IDS`, it sends POST [/api/2.0/files/file/:fileId/copyas](/docspace/api-backend/usage-api/copy-file-as)
 
 Body fields:
 - `destFolderId`: room ID
@@ -787,7 +787,7 @@ Body fields:
 
 ## Step 6: Apply access rules (ACL)
 
-To configure who can access the room, the script applies room sharing rules PUT [/api/2.0/files/rooms/{roomId}/share](/docspace/api-backend/usage-api/set-room-security)
+To configure who can access the room, the script applies room sharing rules PUT [/api/2.0/files/rooms/:roomId/share](/docspace/api-backend/usage-api/set-room-security)
 Entries used in this example:
 - the new user (`payload.id`) gets full access (`access: 4`)
 - an optional HR group (`HR_GROUP_ID`) gets read-only access (`access: 1`)

@@ -460,7 +460,7 @@ If `folderId` is present, the script checks it equals `SHARED_WITH_CLIENT_ROOM_I
 
 ## Step 3: Copy the file to the internal room
 
-When `fileId` is known (and the source check passed), the script copies the file using PUT [/api/2.0/files/fileops/copy](/docspace/api-backend/usage-api/create-room) with JSON body:
+When `fileId` is known (and the source check passed), the script copies the file using PUT [/api/2.0/files/fileops/copy](/docspace/api-backend/usage-api/copy-batch-items) with JSON body:
 
 - `fileIds`: [fileId]
 - `destFolderId`: INTERNAL_PROCESSING_FOLDER_ID

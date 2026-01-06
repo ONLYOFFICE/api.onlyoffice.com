@@ -339,7 +339,7 @@ The external project system (PM/ERP/CRM) sends project data (for example, `proje
 
 The integration loads templates from DocSpace and picks a suitable template for the project type.
 
-It requests the templates list using GET [/api/2.0/files/rooms?searchArea=Templates](/docspace/api-backend/usage-api/get-folder-info) and selects a template (for example, by matching `projectType` against template `title`).
+It requests the templates list using GET [/api/2.0/files/rooms?searchArea=Templates](/docspace/api-backend/usage-api/get-rooms-folder) and selects a template (for example, by matching `projectType` against template `title`).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
@@ -381,7 +381,7 @@ It requests the templates list using GET [/api/2.0/files/rooms?searchArea=Templa
 
 ## Step 2: Scan folders recursively
 
-Once the template is selected, the integration starts room creation using POST [/api/2.0/files/rooms/fromtemplate](/docspace/api-backend/usage-api/get-folder-info)
+Once the template is selected, the integration starts room creation using POST [/api/2.0/files/rooms/fromtemplate](/docspace/api-backend/usage-api/create-room-from-template)
 
 In this example the minimal payload is `{ "templateId": <templateId>, "title": "<projectRoomTitle>" }`
 
@@ -410,7 +410,7 @@ In this example the minimal payload is `{ "templateId": <templateId>, "title": "
 ## Step 3: Wait until the room is created
 
 Room creation from a template may take time (copying structure, files, permissions).
-The integration periodically checks the creation progress using GET [/api/2.0/files/rooms/fromtemplate/status](/docspace/api-backend/usage-api/get-folder-info).
+The integration periodically checks the creation progress using GET [/api/2.0/files/rooms/fromtemplate/status](/docspace/api-backend/usage-api/get-room-creating-status).
 When a completed task appears and a roomId becomes available, the integration continues.
 
 <Tabs>
@@ -466,7 +466,7 @@ When a completed task appears and a roomId becomes available, the integration co
 After the room is created, you may want to load its metadata (title, flags, ids) before sending it back to the external system.
 
 The integration requests room information using
-GET [/api/2.0/files/rooms/{roomId}](/docspace/api-backend/usage-api/move-batch-items) (room info endpoint is available in the Rooms section of the API docs).
+GET [/api/2.0/files/rooms/:roomId](/docspace/api-backend/usage-api/get-room-info) (room info endpoint is available in the Rooms section of the API docs).
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">

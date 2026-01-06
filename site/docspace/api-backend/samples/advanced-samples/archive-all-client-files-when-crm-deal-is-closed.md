@@ -476,7 +476,7 @@ The script then:
 
 Your CRM provides CLIENT_ROOM_ID. The script treats it as a folder ID and recursively walks through the room:
 
-- It reads the room contents using GET [/api/2.0/files/{folderId}](/docspace/api-backend/usage-api/get-folder-by-folder-id).
+- It reads the room contents using GET [/api/2.0/files/:folderId](/docspace/api-backend/usage-api/get-folder-by-folder-id).
 - It repeats the same request for every subfolder.
 - It builds a flat list of **file IDs** found across the entire room tree.
 
@@ -551,9 +551,9 @@ Your CRM provides CLIENT_ROOM_ID. The script treats it as a folder ID and recurs
 
 Under your archive root folder (for example, `/Archive` with ID `ARCHIVE_ROOT_FOLDER_ID`), the script:
 
-- reads existing child folders using GET [/api/2.0/files/{archiveRootId}](/docspace/api-backend/usage-api/get-folder-by-folder-id),
+- reads existing child folders using GET [/api/2.0/files/:archiveRootId](/docspace/api-backend/usage-api/get-folder-by-folder-id),
 - looks for a folder with `title == CLIENT_NAME`,
-- if it does not exist, creates it using POST [/api/2.0/files/folder/{archiveRootId}](/docspace/api-backend/usage-api/create-folder) with body `{ "title": "<ClientName>" }`,
+- if it does not exist, creates it using POST [/api/2.0/files/folder/:archiveRootId](/docspace/api-backend/usage-api/create-folder) with body `{ "title": "<ClientName>" }`,
 - returns the folder ID of `/Archive/<ClientName>`.
 
 <Tabs>
