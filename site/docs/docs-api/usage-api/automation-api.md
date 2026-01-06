@@ -356,8 +356,12 @@ testConnectorWindow.show({
   url: "./window/panel.html",
   description: "Panel example!",
   type: "panel",
+  isVisual: true, // required for visual connector windows
   buttons: [],
   icons: "./icon.svg",
+  customization: {
+    plugins: true, // enable plugins so connector windows are available
+  }
 });
 ```
 
