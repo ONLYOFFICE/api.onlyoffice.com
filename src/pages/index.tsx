@@ -34,6 +34,7 @@ const templateProps: HomepageFeaturesProps.Props = {
       heading: 'DocSpace',
       linkPrefix: DocSpaceFeatures.linkPrefix,
       items: DocSpaceFeatures.items,
+      button: DocSpaceFeatures.button,
     },
     {
       heading: 'Docs',

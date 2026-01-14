@@ -7,7 +7,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 # Custom AI function samples
 
-The following examples will show you how to create custom AI functions and use them to expand the AI agent's capabilities and allow adapting it to specific use cases.
+The following examples will show you how to create custom AI functions and use them to expand the [inline AI agent's](/docs/plugin-and-macros/ai/ai-agent/#usage) capabilities and allow adapting it to specific use cases.
 
 ## Text document editor
 

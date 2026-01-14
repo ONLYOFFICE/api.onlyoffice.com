@@ -153,13 +153,13 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
   Read the plugin [customization](../customization/context-menu.md) section to find out how the plugin can be displayed in the editor: as context menu items, toolbar buttons, windows, left or right panels, input helpers. Choose the option that is suitable for your plugin and customize it following our instructions.
 
-  Add the ONLYOFFICE [style sheet](../structure/styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
+  Add the ONLYOFFICE [style sheet](../customization/styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
 
     ``` html
     <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
     ```
 
-2. [Add icons](../structure/icons.md) for you plugin. So that the structure looked like this:
+2. [Add icons](../customization/icons.md) for you plugin. So that the structure looked like this:
 
   ``` ini
   helloworld/
