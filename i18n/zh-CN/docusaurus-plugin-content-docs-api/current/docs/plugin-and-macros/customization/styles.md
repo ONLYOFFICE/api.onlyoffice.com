@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # 样式
 
-ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件界面适配 ONLYOFFICE 的样式，可以在 [index.html](./entry-point.md) 文件中通过以下链接引入 [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) 文件：
+ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件界面适配 ONLYOFFICE 的样式，可以在 [index.html](../structure/entry-point.md) 文件中通过以下链接引入 [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) 文件：
 
 ``` html
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
