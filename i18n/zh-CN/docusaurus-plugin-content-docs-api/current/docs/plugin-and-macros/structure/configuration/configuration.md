@@ -375,7 +375,7 @@ sidebar_position: -5
 
 ### 插件变体图标2 {#variationsicons2}
 
-用于插件扩展的可缩放图标，已废弃。更多信息见[这里](../icons.md)。
+用于插件扩展的可缩放图标，已废弃。更多信息见[这里](../../customization/icons.md)。
 
 类型：array of objects
 
