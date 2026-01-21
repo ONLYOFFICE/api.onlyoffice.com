@@ -15,7 +15,7 @@ The DocSpace MCP Server connects AI tools directly to ONLYOFFICE DocSpace. This 
 - **Multiple transport protocols** - Support for stdio, SSE, and Streamable HTTP
   [transports](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/configuration/global-configuration.md#user-content-docspace_transport).
 - **Different authentication methods** - Supports API keys, Personal Access
-  Tokens, Basic authentication, and OAuth 2.0 with dynamic client registration. See [examples](installation/remote-server.md#user-content-examples).
+  Tokens, Basic authentication, and OAuth 2.0 with dynamic client registration. See [examples](installation/remote-server.md#examples).
 - **Request-level configuration** - Configure authentication and tool selection
   during session initialization using [custom HTTP headers](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/configuration/request-configuration.md#user-content-header-options).
 - **Various distribution formats** - Available as [Docker image](https://github.com/ONLYOFFICE/docspace-mcp/blob/main/docs/distribution/docker-hub.md#user-content-docker-image), [Docker MCP
