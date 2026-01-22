@@ -24,6 +24,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 插件的 guid 是 `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`。
 
+<a id="configuring"></a>
 ## 配置
 
 要开始使用该插件，需要设置 AI 提供商：
