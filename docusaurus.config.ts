@@ -197,12 +197,6 @@ const config: Config = {
                label: 'MCP Server',
                docsPluginId: 'api',
              },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceHosting',
-              label: 'For hosting providers',
-              docsPluginId: 'api',
-            },
           ],
         },
         {

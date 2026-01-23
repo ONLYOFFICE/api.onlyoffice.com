@@ -126,17 +126,6 @@ export const DocSpaceFeatures: Features = {
       ),
       icon: <PluginIcon/>,
     },
-    {
-      title: 'For hosting providers',
-      link: 'for-hosting-providers/get-started/authentication',
-      description: (
-        <>
-          Provide the DocSpace portal as a{" "}
-          SaaS solution on your own servers using our API methods.
-        </>
-      ),
-      icon: <HostingIcon/>,
-    },
   ]
 }
 
