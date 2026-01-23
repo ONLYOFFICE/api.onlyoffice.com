@@ -1,0 +1,51 @@
+# GetOperator
+
+Returns the format condition operator.
+
+## Syntax
+
+```javascript
+expression.GetOperator();
+```
+
+`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+
+## Example
+
+This example gets the operator of a conditional formatting rule.
+
+```javascript editor-xlsx
+// How to retrieve the operator from conditional formatting rules.
+
+// Get conditional formatting rule operator.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A2").SetValue(100);
+worksheet.GetRange("A3").SetValue(250);
+worksheet.GetRange("A4").SetValue(150);
+worksheet.GetRange("A5").SetValue(300);
+worksheet.GetRange("A6").SetValue(75);
+
+let dataRange = worksheet.GetRange("A2:A6");
+
+let formatConditions = dataRange.GetFormatConditions();
+
+let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
+condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
+
+let operator = condition1.GetOperator();
+
+worksheet.GetRange("C1").SetValue("Rule operator:");
+worksheet.GetRange("C2").SetValue(operator);
+
+```

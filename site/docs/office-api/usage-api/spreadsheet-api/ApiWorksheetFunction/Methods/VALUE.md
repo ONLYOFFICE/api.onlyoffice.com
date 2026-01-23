@@ -30,6 +30,6 @@ This example shows how to convert a text string that represents a number to a nu
 // Use a function to return a number from a string.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.VALUE("$3.50"));
 ```

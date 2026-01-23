@@ -1,6 +1,6 @@
 # ShowComment
 
-Show a comment by its ID.
+Shows a comment by its ID.
 
 ## Syntax
 

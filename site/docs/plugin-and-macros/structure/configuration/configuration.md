@@ -348,7 +348,7 @@ Example:  `["onClick"]`
 
 #### EventType
 
-Plugin event ("onDocumentContentReady", "onTargetPositionChanged", onClick", "onInputHelperClear", "onInputHelperInput", etc.).
+Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)", "[onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)", "[onClick](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onClick.md)", "onInputHelperClear", "onInputHelperInput", etc.).
 
 Type: string
 
@@ -367,7 +367,7 @@ Example:
 
 ### variations.icons
 
-URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. More information can be found [here](../icons.md).
+URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. More information can be found [here](../../customization/icons.md).
 
 Type: string
 
@@ -375,7 +375,7 @@ Example:  "url_to_icon"
 
 ### variations.icons2
 
-Deprecated. Scalable icons for plugin extensions. More information can be found [here](../icons.md).
+Deprecated. Scalable icons for plugin extensions. More information can be found [here](../../customization/icons.md).
 
 Type: array of objects
 

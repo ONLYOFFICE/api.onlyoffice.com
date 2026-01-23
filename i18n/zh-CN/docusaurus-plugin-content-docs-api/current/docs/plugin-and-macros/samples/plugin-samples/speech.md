@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 默认集成于 ONLYOFFICE 企业版与社区版（文档 + 工作区），以及 ONLYOFFICE 云端服务中。
 
-你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/en/app-directory/speech)下载该插件。
+你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en/speech)下载该插件。
 
 ## 使用方法
 

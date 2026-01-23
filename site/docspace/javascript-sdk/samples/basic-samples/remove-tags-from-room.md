@@ -121,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [removeTagsFromRoom()](/docspace/javascript-sdk/usage-sdk/methods.md#removetagsfromroom) method to remove specific tags from a selected DocSpace room.
+Use the [removeTagsFromRoom()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#removetagsfromroom) method to remove specific tags from a selected DocSpace room.
 
 ``` ts
 const roomId = "71234"; // Replace with your actual Room ID

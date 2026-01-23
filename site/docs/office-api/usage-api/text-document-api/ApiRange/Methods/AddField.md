@@ -1,6 +1,6 @@
 # AddField
 
-Adds a field to the specified range by the field instruction code.\
+Adds a field to the specified range by the field instruction code.
 💡  This method removes text within a range. 
 
 ## Syntax

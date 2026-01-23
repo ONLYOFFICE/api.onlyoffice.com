@@ -25,7 +25,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-api-keys",
-              label: "Get user API keys",
+              label: "Get current user's API keys",
               className: "api-method get",
             },
             {
@@ -37,7 +37,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-api-key",
-              label: "Get user API key info",
+              label: "Get current user's API key",
               className: "api-method get",
             },
             {
@@ -188,6 +188,18 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-restore-progress",
               label: "Get the restoring progress",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-backups-count",
+              label: "Get the number of backups",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-backups-service-state",
+              label: "Get the backup service state",
               className: "api-method get",
             },
           ],
@@ -386,11 +398,11 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/restore-file-version",
               label: "Restore a file version",
-              className: "api-method get",
+              className: "api-method post",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/create-primary-external-link",
+              id: "docspace/api-backend/usage-api/create-file-primary-external-link",
               label: "Create primary external link",
               className: "api-method post",
             },
@@ -402,6 +414,18 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-file-links",
+              label: "Get file external links",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-file-external-link",
+              label: "Set an external link",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/set-file-order",
               label: "Set file order",
               className: "api-method put",
@@ -410,18 +434,6 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-files-order",
               label: "Set order of files",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-file-links",
-              label: "Get file external links",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/set-external-link",
-              label: "Set an external link",
               className: "api-method put",
             },
             {
@@ -480,6 +492,18 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/add-file-to-recent",
+              label: "Add a file to the 'Recent' section",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/toggle-file-favorite",
+              label: "Change the file favorite status",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/add-templates",
               label: "Add template files",
               className: "api-method post",
@@ -510,9 +534,21 @@ const sidebar: SidebarsConfig = {
           items: [
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-recent-folder",
+              label: "Get the 'Recent' section",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-folder-history",
               label: "Get folder history",
               className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-report-folder-history",
+              label: "Generates folder history",
+              className: "api-method post",
             },
             {
               type: "doc",
@@ -582,8 +618,32 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/create-folder-primary-external-link",
+              label: "Create primary external link",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-folder-primary-external-link",
               label: "Get primary external link",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-folder-primary-external-link",
+              label: "Set the folder external link",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-folder-links",
+              label: "Get the folder links",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-favorites-folder",
+              label: "Get the 'Favorites' section",
               className: "api-method get",
             },
             {
@@ -721,7 +781,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/check-move-or-copy-batch-items",
-              label: "Check and move or copy to a folder",
+              label: "Move or copy files to a folder",
               className: "api-method get",
             },
             {
@@ -733,7 +793,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/check-move-or-copy-dest-folder",
-              label: "Check for moving or copying to a folder",
+              label: "Check for moving or copying files to a folder",
               className: "api-method get",
             },
             {
@@ -741,6 +801,18 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/terminate-tasks",
               label: "Finish active operations",
               className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/add-favorites",
+              label: "Add favorite files and folders",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-favorites-from-body",
+              label: "Delete favorite files and folders (using body parameters)",
+              className: "api-method delete",
             },
             {
               type: "doc",
@@ -800,6 +872,12 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/change-download-zip-from-body",
               label: "Change the archive format (using body parameters)",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/display-recent",
+              label: "Display the 'Recent' folder",
               className: "api-method put",
             },
             {
@@ -978,15 +1056,69 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-file-security-info",
+              label: "Get the shared file information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-folder-security-info",
+              label: "Get the shared folder information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-file-security-info",
+              label: "Share a file",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-folder-security-info",
+              label: "Share a folder",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/send-editor-notify",
               label: "Send the mention message",
               className: "api-method post",
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-groups-members-with-folder-security",
+              label: "Get folder group members with security information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-groups-members-with-file-security",
+              label: "Get file group members with security information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/change-file-owner",
               label: "Change the file owner",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-security-info",
+              label: "Get the sharing rights",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/remove-security-info",
+              label: "Remove the sharing rights",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-security-info",
+              label: "Set the sharing rights",
+              className: "api-method put",
             },
             {
               type: "doc",
@@ -1088,12 +1220,24 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Rooms",
+          label: "Group / Search",
           items: [
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get-groups-with-shared",
-              label: "Get groups with sharing settings",
+              id: "docspace/api-backend/usage-api/get-groups-with-rooms-shared",
+              label: "Get groups with room sharing settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-groups-with-folders-shared",
+              label: "Get groups with folder sharing settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-groups-with-files-shared",
+              label: "Get groups with file sharing settings",
               className: "api-method get",
             },
           ],
@@ -1310,30 +1454,6 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Contacts",
-          items: [
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-member-contacts",
-              label: "Delete user contacts",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/set-member-contacts",
-              label: "Set user contacts",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/update-member-contacts",
-              label: "Update user contacts",
-              className: "api-method put",
-            },
-          ],
-        },
-        {
-          type: "category",
           label: "Guests",
           items: [
             {
@@ -1411,7 +1531,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-claims",
-              label: "Returns the user claims.",
+              label: "Get user claims",
               className: "api-method get",
             },
             {
@@ -1447,7 +1567,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-profile-by-user-id",
-              label: "Get a profile by user name",
+              label: "Get a profile by user ID",
               className: "api-method get",
             },
             {
@@ -1518,8 +1638,20 @@ const sidebar: SidebarsConfig = {
           items: [
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get-accounts-entries-with-shared",
+              id: "docspace/api-backend/usage-api/get-accounts-entries-with-rooms-shared",
               label: "Get account entries",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-accounts-entries-with-folders-shared",
+              label: "Get account entries with folder sharing settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-accounts-entries-with-files-shared",
+              label: "Get account entries with file sharing settings",
               className: "api-method get",
             },
             {
@@ -1531,7 +1663,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/search-users-by-extended-filter",
-              label: "Search users with detaailed information by extended filter",
+              label: "Search users with detailed information by extended filter",
               className: "api-method get",
             },
             {
@@ -1556,6 +1688,18 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-users-with-room-shared",
               label: "Get users with room sharing settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-users-with-folders-shared",
+              label: "Get users with folder sharing settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-users-with-files-shared",
+              label: "Get users with file sharing settings",
               className: "api-method get",
             },
           ],
@@ -1633,7 +1777,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/necessary-reassign",
-              label: "Check the data reassignment need",
+              label: "Check data for reassignment need",
               className: "api-method get",
             },
             {
@@ -1711,7 +1855,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/star-user-typet-update",
-              label: "Update user type",
+              label: "Start updating user type",
               className: "api-method post",
             },
             {
@@ -1723,7 +1867,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/terminate-user-type-update",
-              label: "Terminate update user type",
+              label: "Terminate updating user type",
               className: "api-method put",
             },
           ],
@@ -1765,7 +1909,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/calculate-wallet-payment",
-              label: "Calculate amount of the wallet payment",
+              label: "Calculate the wallet payment amount",
               className: "api-method put",
             },
             {
@@ -1794,6 +1938,18 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-wallet-services",
+              label: "Get wallet services",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-wallet-service",
+              label: "Get wallet service",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-quota-payment-information",
               label: "Get quota payment information",
               className: "api-method get",
@@ -1813,7 +1969,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-customer-info",
-              label: "Get the customer info",
+              label: "Get the customer information",
               className: "api-method get",
             },
             {
@@ -1830,18 +1986,6 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/open-customer-session",
-              label: "Open customer session",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/perform-customer-operation",
-              label: "Perform customer operation",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
               id: "docspace/api-backend/usage-api/get-customer-operations",
               label: "Get the customer operations",
               className: "api-method get",
@@ -1849,25 +1993,43 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/create-customer-operations-report",
-              label: "Generate the customer operations report",
+              label: "Start the customer operations report generation",
               className: "api-method post",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get-accounting-currencies",
-              label: "Get list of currencies",
+              id: "docspace/api-backend/usage-api/get-customer-operations-report",
+              label: "Get the status of the customer operations report generation",
               className: "api-method get",
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/terminate-customer-operations-report",
+              label: "Terminate the customer operations report generation",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-tenant-wallet-settings",
-              label: "Get wallet auto top up settings",
+              label: "Get wallet auto top-up settings",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-tenant-wallet-settings",
-              label: "Set wallet auto top up settings",
+              label: "Set wallet auto top-up settings",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-tenant-wallet-service-settings",
+              label: "Get wallet services settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/change-tenant-wallet-service-state",
+              label: "Change wallet service state",
               className: "api-method post",
             },
           ],
@@ -2197,19 +2359,19 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/create-room-tag",
-              label: "Create a tag",
+              label: "Create a room tag",
               className: "api-method post",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-room-tags-info",
-              label: "Get tags",
+              label: "Get the room tags",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/delete-custom-tags",
-              label: "Delete tags",
+              label: "Delete the custom room tags",
               className: "api-method delete",
             },
             {
@@ -2460,6 +2622,18 @@ const sidebar: SidebarsConfig = {
             },
           ],
         },
+        {
+          type: "category",
+          label: "Security / Banners visibility",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-tenant-banner-settings",
+              label: "Set the banners visibility",
+              className: "api-method post",
+            },
+          ],
+        },
       ],
     },
     {
@@ -2637,42 +2811,6 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/update-cookie-settings",
               label: "Update cookies lifetime",
               className: "api-method put",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Custom Navigation",
-          items: [
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-custom-navigation-items",
-              label: "Get the custom navigation items",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-custom-navigation-item-sample",
-              label: "Get a custom navigation item sample",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-custom-navigation-item",
-              label: "Get a custom navigation item by ID",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/create-custom-navigation-item",
-              label: "Add a custom navigation item",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-custom-navigation-item",
-              label: "Delete a custom navigation item",
-              className: "api-method delete",
             },
           ],
         },
@@ -2866,6 +3004,12 @@ const sidebar: SidebarsConfig = {
               label: "Set room notification status",
               className: "api-method post",
             },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-notification-channels",
+              label: "Get notification channels",
+              className: "api-method get",
+            },
           ],
         },
         {
@@ -2900,6 +3044,12 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/save-room-quota-settings",
               label: "Save the room quota settings",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/save-ai-agent-quota-settings",
+              label: "Save the AI Agent quota settings",
               className: "api-method post",
             },
             {
@@ -3344,6 +3494,42 @@ const sidebar: SidebarsConfig = {
               type: "doc",
               id: "docspace/api-backend/usage-api/delete-web-plugin",
               label: "Delete a web plugin",
+              className: "api-method delete",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Settings / Banners visibility",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-tenant-banner-settings",
+              label: "Get the banners visibility",
+              className: "api-method get",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Settings / Telegram",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/check-telegram",
+              label: "Check the Telegram connection",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/link-telegram",
+              label: "Get the Telegram link",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/unlink-telegram",
+              label: "Unlink Telegram",
               className: "api-method delete",
             },
           ],

@@ -30,7 +30,7 @@ Starting from version 5.4, please use [uploaded](#uploaded) instead.
 
 `Type: boolean`
 
-Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is *undefined*, the *Favorite* icon is not displayed at the editor window header.
+Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is *undefined* or *null*, the *Favorite* icon is not displayed at the editor window header.
 
 **Example**: `true`
 

@@ -31,6 +31,6 @@ This example shows how to extract a substring from a string starting from the ri
 // Use a function to return n characters from the right part of a text.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.RIGHTB("Online Office", 2));
 ```

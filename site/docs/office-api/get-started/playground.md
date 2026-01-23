@@ -14,7 +14,7 @@ The Playground serves as an interactive platform for users to explore and test t
 - **Customization**. Switch themes and interface languages for convenience.
 
 ```mdx-code-block
-import {PlaygroundCardsRow} from '@site/src/components/Playground';
+import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
 
 <PlaygroundCardsRow searchParams={[{testType: "office-js-api"}]}/>
 ```

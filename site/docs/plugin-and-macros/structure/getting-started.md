@@ -153,13 +153,13 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
   Read the plugin [customization](../customization/context-menu.md) section to find out how the plugin can be displayed in the editor: as context menu items, toolbar buttons, windows, left or right panels, input helpers. Choose the option that is suitable for your plugin and customize it following our instructions.
 
-  Add the ONLYOFFICE [style sheet](../structure/styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
+  Add the ONLYOFFICE [style sheet](../customization/styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
 
     ``` html
     <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
     ```
 
-2. [Add icons](../structure/icons.md) for you plugin. So that the structure looked like this:
+2. [Add icons](../customization/icons.md) for you plugin. So that the structure looked like this:
 
   ``` ini
   helloworld/
@@ -215,7 +215,7 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
 
   You can edit the plugin and reload it to see the changes.
 
-  To debug the plugin in the desktop editors, follow the instructions [here](../tutorials/developing/for-desktop-editors.md#debugging).
+  To debug the plugin in the desktop editors, follow the instructions [here](../tutorials/debugging/for-desktop-editors.md).
 
 ### To web editors
 
@@ -236,7 +236,7 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json")
    ```
 
-   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed.
+   where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 
@@ -244,4 +244,4 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
 
    The plugin will be displayed within the **Plugins** tab. You can edit the plugin and reload it to see the changes.
 
-   To debug the plugin in the web editors, follow the instructions [here](../tutorials/developing/for-web-editors.md#debugging).
+   To debug the plugin in the web editors, follow the instructions [here](../tutorials/debugging/for-web-editors.md).

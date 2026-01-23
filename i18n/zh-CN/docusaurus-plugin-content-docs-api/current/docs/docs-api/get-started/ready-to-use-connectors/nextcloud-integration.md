@@ -68,7 +68,7 @@ Nextcloud管理员可以从内置应用市场安装集成应用程序。为此�
 https://<文档服务器地址>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Nextcloud服务器访问。Nextcloud服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Nextcloud服务器访问。Nextcloud服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ![本地的](/assets/images/editor/nextcloud-local.jpg)
 
@@ -144,7 +144,9 @@ ONLYOFFICE集成遵循此处记录的API规范：[此处](../basic-concepts.md)�
 
   这将禁用证书验证，允许Nextcloud与ONLYOFFICE文档建立连接。
 
- > 请记住，这是一个临时的不安全解决方案，我们强烈建议您更换为由某些证书颁发机构颁发的证书。完成更换后，不要忘记取消勾选相应的设置框或从Nextcloud配置文件中删除上述部分内容。
+  :::note
+  请记住，这是一个临时的不安全解决方案，我们强烈建议您更换为由某些证书颁发机构颁发的证书。完成更换后，不要忘记取消勾选相应的设置框或从Nextcloud配置文件中删除上述部分内容。
+  :::
 
 -  **后台任务**：如果编辑器在正常运行一段时间后无法打开或保存文档，原因可能是网络设置更改、相关服务被禁用或SSL证书存在问题。
 

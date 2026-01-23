@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -7
 ---
 
 # Go 示例
@@ -8,7 +8,9 @@ sidebar_position: -3
 
 此示例将指导您如何将 ONLYOFFICE 文档集成到使用 Go 编写的网页应用中。
 
-> 示例仅供测试和演示编辑器功能。**请勿**在未进行适当代码调整的情况下直接用于生产环境。如果启用了测试示例，请确保在上线前将其禁用。
+:::note
+示例仅供测试和演示编辑器功能。**请勿**在未进行适当代码调整的情况下直接用于生产环境。如果启用了测试示例，请确保在上线前将其禁用。
+:::
 
 ## 重要安全信息​
 
@@ -44,7 +46,7 @@ JWT_SECRET=secret
 JWT_HEADER=Authorization
 ```
 
-其中，**documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+其中，**documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 **address** 是服务器的地址，**port** 是服务器端口。
 
 若要试验编辑器配置，请修改 *templates/editor.html* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。

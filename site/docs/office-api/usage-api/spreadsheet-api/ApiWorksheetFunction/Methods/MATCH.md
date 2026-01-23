@@ -32,7 +32,7 @@ This example shows how to return the relative position of an item in a range tha
 // Use a function to find an item in a range.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ids = ["ID", 1, 2, 3, 4, 5];
 let clients = ["Client", "John Smith", "Ella Tompson", "Mary Shinoda", "Lily-Ann Bates", "Clara Ray"];
 let phones = ["Phone number", "12054097166", "13343943678", "12568542099", "12057032298", "12052914781"];

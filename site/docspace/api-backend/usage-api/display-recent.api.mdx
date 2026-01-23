@@ -1,0 +1,71 @@
+---
+id: display-recent
+title: "Display the 'Recent' folder"
+description: "Displays the 'Recent' folder."
+sidebar_label: "Display the 'Recent' folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv20YQ/iuLufjCSK5T9MBTHTsBkhZI4AeMwhHiETkUNyZ3N/uwogr878XskhIpubUPvVj07jePncc3swWPKwf5PXyQDTkxF9fkvVQrB4sMtCGLXmr1sYQcSulMg5srKkh5yMDSj0DOv9PlBvItFFp5vsi3gMY0soiS8+9OKz5zRU0t8pffGIIc9PI7FazHWLbjJbmIIz8CLbVuCBVkUJIrrDSsE3K4NlTISpIT65p8TVZ4LRx54WsSrr8s+SQ+RmgrlPYzyIB+YmsagtzbQF2XAZalZK3YfBk5UmHj6NDqDSsfVPbPFwYttuTJOlbvpWflcDkEK4IuvYauY2uWnNHKpbeenZ7yz9TIu/Rk8YRNoFywm0JW8WE7U0I6QQqXDZWQ/V+RH1x7JvwdGwlqnBmpPK3IQgaVti36dPT2jLGNVI9uhEVrcQMZSE+te9mR2lI1QjlvpVqxXixSjI6uYmidRx/cK11M4Atd0qsEun1m+/zcWTSGbG/719NfjjN5qzD4Wlv5N5UQQW+PQX/pIEqtTryo8YkEKR1WtTBkW+mc1IoL25Blh2IN7HoyOuWoCFb6DeT3W0BXfGOL3x6JD8AScnmsrfQEiy7bwjtCSxby+/jfuZF/0GZ39hwenSwG+Ofz4Ouz54GfDUWSuF90i8Ou6VvBRfe/QuKPryAq3ZRkuWla8rVmijEhVgP6GnKYo5Hzs9npvGJqmvf0Ywf6cWSfyLr48mAbyGG7REe3tumO6SJiRaFVJVehj18GT2glN1Esml44ZajC0HD6jzRdpitxe/Unp36xT8E1t1lSNU3Evg1ivI9U3joSF1o/ShIsRMr3HQwZKGyj5FhhBpLFiijCddVnaWen9t4cWXmvmDc2OlgRHFlWLFCVwqBza205n5EoYttHhay5r43XqD5JYLH9dHcjbvQjqe5kojTpyvqPD0OHfbq7YVPTYnwpZueTQDEdlsyLrVRUiuUmltrJed99EXMiasIyOtAHdWKxD2qP6bJdte/JCuPBoScJJ6pGr8Va+lpMrIrIMBnwdSqN8e1AP5PDWIMx0C6fz6PVmVbNRleVLGhW6DYdns137MJzhwP+etEIj9nRZmB/5A68IiwFFgU5F5nHak+Fp1JYcjrYgtyu8XO4498X0IkfB37YRzMeXGil0gQ4CCrfXor++rgtJtKvfzUXvlSV5vz+fOPkSqEPll4uNy7pHZz7pxSVtgd+zQTvBzGyog3OiyUJvfQYa/JJYizKh4HUBtqYZORBkCqNlsrPxEfPZc3tSaVAJ1Ckjk9VxrpiDz+MHvIw21f3+H0HjNFlwLvB1X5/ez8sRf3+FXcjlqp0DE4/+s6N7NcNLOIuMHTSl4/iOhijLacyTPJRU2NKco+HKamLOak3gcuJWpQs4pKK36dIThYTfcrE29lvs1M+Mtr5FtXIi37OPD9mDlM62ldfMaD66vD0089NgzJuRCENizSt7rl0IIOz2Sm3O08sNjmZWYsMau08g7e7WdXx8Y9Alkf2Yj+T0tQdCImHXBwmcJHcfnPDLjG8CalwDxY/nspJ4rwoyPj/xC5GM/jL7Q2TdL/Vt5GiwOKaN35cp5moYxQTb/DZFhpUq4ArxiaVcbUOHJpxc6X51X/wo4YrtRk7OB136Rn8lx/1rMR2mzq363b4dPWvErtpkNCc0kXXdf8AmnqGBQ==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Display the 'Recent' folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/displayrecent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Displays the "Recent" folder.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not.","example":true}},"additionalProperties":false,"description":"The settings request parameters.","title":"DisplayRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

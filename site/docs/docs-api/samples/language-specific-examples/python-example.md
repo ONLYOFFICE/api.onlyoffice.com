@@ -1,5 +1,5 @@
 ---
-sidebar_position: -5
+sidebar_position: -9
 ---
 
 # Python example
@@ -8,7 +8,9 @@ sidebar_position: -5
 
 This example will help you integrate ONLYOFFICE Docs into your web application written on Python.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::note
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::
 
 ## Important security info
 

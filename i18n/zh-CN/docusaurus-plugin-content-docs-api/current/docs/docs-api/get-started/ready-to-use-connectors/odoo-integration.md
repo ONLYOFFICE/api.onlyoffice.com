@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Odoo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="wkLTlJpmLQg"/>
+```
+
 该[应用程序](https://github.com/ONLYOFFICE/onlyoffice-odoo)允许用户在[Odoo](https://www.odoo.com/)的“文档”模块中，借助ONLYOFFICE文档进行办公文档的编辑与协作。
 
 ## 功能特性
@@ -61,7 +67,7 @@ sidebar_custom_props:
 https://<documentserver>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Odoo服务器访问。Odoo服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Odoo服务器访问。Odoo服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Odoo配置页面指定您自己的密钥。**密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 

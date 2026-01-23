@@ -26,7 +26,7 @@ Represents the ApiInlineLvlSdt class.
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current inline text content control. The text content  control is created with one text run present in it by default, so even without any  element added this method will return the value of '1'. |
 | [GetId](./Methods/GetId.md) | string | Returns a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current content control. |
-| [GetLabel](./Methods/GetLabel.md) | string | Returns the label attribute for the current container. |
+| [GetLabel](./Methods/GetLabel.md) | number | Returns the label attribute for the current container. |
 | [GetLock](./Methods/GetLock.md) | [SdtLock](../Enumeration/SdtLock.md) | Returns the lock type of the current container. |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns a content control that contains the current content control. |
 | [GetParentParagraph](./Methods/GetParentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Returns a paragraph that contains the current content control. |

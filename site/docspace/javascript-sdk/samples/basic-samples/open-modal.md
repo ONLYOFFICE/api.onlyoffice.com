@@ -120,7 +120,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [openModal()](/docspace/javascript-sdk/usage-sdk/methods.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready) event to open a specific modal by its ID.
+Use the [openModal()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready) event to open a specific modal by its ID.
 
 ``` ts
 function onAppReady() {

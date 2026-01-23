@@ -10,7 +10,9 @@ sidebar_position: -6
 
 Spring Boot 有很多功能，但它最重要的特性是：依赖管理、自动配置和内置的 servlet 容器。
 
-> 它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入产品之前将其禁用。
+:::note
+它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入产品之前将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -43,7 +45,7 @@ server.port=port
 files.docservice.url.site=https://documentserver/
 ```
 
-其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。
+其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 您可以设置绝对路径。例如，*D:\\\folder*。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。
 
 如果要试验编辑器配置，请修改 *src/main/webapp/editor.jsp* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
@@ -143,7 +145,7 @@ files.docservice.url.site=https://documentserver/
 
 ### 步骤 7. 检查可访问性
 
-如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 **documentserver**。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 **example.com**。
+如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 **documentserver**。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您指定的地址而不是配置文件中的 **example.com**。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ## 对于 Linux
 
@@ -171,7 +173,7 @@ files.docservice.url.site=https://documentserver/
    unzip Java.Spring.Example.zip
    ```
 
-   - 克隆 git 存储库：
+  - 克隆 git 仓库，并直接从 [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 文件夹中获取源代码：
 
    ``` sh
    git clone https://github.com/ONLYOFFICE/document-server-integration.git
@@ -205,7 +207,7 @@ files.docservice.url.site=https://documentserver/
    files.docservice.url.site=https://documentserver/
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。
+   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT： 
  
@@ -301,7 +303,7 @@ files.docservice.url.site=https://documentserver/
    files.docservice.url.site=https://documentserver/ 
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。
+   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。您可以设置绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT： 
  

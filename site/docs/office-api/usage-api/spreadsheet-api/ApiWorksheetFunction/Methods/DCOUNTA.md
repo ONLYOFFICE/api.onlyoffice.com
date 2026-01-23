@@ -32,7 +32,7 @@ This example shows how to count nonblank cells in the field (column) of records 
 // Use function to count numbers from non-empty database records that met a condition specified.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Age");
 worksheet.GetRange("C1").SetValue("Sales");

@@ -126,9 +126,9 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ### 2. Initialize the Manager mode
 
-Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/initialization-modes/manager.md) mode.
+Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initmanager) mode.
 
-1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready), which fires when initialization is successful:
 
     ``` ts
     function onAppReady() {
@@ -136,7 +136,7 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/init
     }
     ```
 
-2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/config.md#rootpath) field, specify the section whose directories you want to display:
+2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameConfig.md#rootpath) field, specify the section whose directories you want to display:
 
     ``` ts
     const config = {
@@ -148,7 +148,7 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/init
     }
     ```
 
-3. Initialize the **Manager** mode with the [initManager](/docspace/javascript-sdk/usage-sdk/methods.md#initmanager) method:
+3. Initialize the **Manager** mode with the [initManager](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initmanager) method:
 
     ``` ts
     const docSpace = DocSpace.SDK.initManager(config)
@@ -156,7 +156,7 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/init
 
 ### 3. Upload a list of folders to the combo box
 
-Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](/docspace/javascript-sdk/usage-sdk/methods.md#getfolders) method, upload the list into the combo box:
+Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfolders) method, upload the list into the combo box:
 
 ``` ts
 const combobox = document.querySelector("#combobox").value
@@ -173,7 +173,7 @@ function onComboboxClick(e) {
 
 ### 4. Add a method to create a file
 
-Add the **onButtonClick()** event handler for the button. Using the [createFile](/docspace/javascript-sdk/usage-sdk/methods.md#createfile) method, create a file in the selected folder:
+Add the **onButtonClick()** event handler for the button. Using the [createFile](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createfile) method, create a file in the selected folder:
 
 ``` ts
 function onButtonClick() {

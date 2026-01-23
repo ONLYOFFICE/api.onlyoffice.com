@@ -367,7 +367,7 @@ sidebar_position: -5
 
 ### 插件变体图标 {#variationsicons}
 
-插件图标图片文件的 URL。该 URL 允许你为主题（名称、类型）、样式（普通、悬停、激活）和缩放设置自定义规则。更多信息见[这里](../icons.md)。
+插件图标图片文件的 URL。该 URL 允许你为主题（名称、类型）、样式（普通、悬停、激活）和缩放设置自定义规则。更多信息见[这里](../../customization/icons.md)。
 
 类型：string
 
@@ -375,7 +375,7 @@ sidebar_position: -5
 
 ### 插件变体图标2 {#variationsicons2}
 
-用于插件扩展的可缩放图标，已废弃。更多信息见[这里](../icons.md)。
+用于插件扩展的可缩放图标，已废弃。更多信息见[这里](../../customization/icons.md)。
 
 类型：array of objects
 

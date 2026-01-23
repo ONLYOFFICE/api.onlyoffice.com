@@ -1,0 +1,49 @@
+# GetMinPointType
+
+Returns the type of the minimum value condition for the data bar.
+
+## Syntax
+
+```javascript
+expression.GetMinPointType();
+```
+
+`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[XlConditionValueTypes](../../Enumeration/XlConditionValueTypes.md) \| null
+
+## Example
+
+This example demonstrates getting the minimum point type from a data bar conditional formatting rule.
+
+```javascript editor-xlsx
+// How to check the type of the minimum condition value.
+
+// Get the minimum point type of a data bar conditional formatting rule.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A2").SetValue(100);
+worksheet.GetRange("A3").SetValue(250);
+worksheet.GetRange("A4").SetValue(150);
+worksheet.GetRange("A5").SetValue(300);
+worksheet.GetRange("A6").SetValue(75);
+
+let dataRange = worksheet.GetRange("A2:A6");
+let formatConditions = dataRange.GetFormatConditions();
+
+let dataBar = formatConditions.AddDatabar();
+
+let minPointType = dataBar.GetMinPointType();
+
+worksheet.GetRange("C1").SetValue("Min Point Type:");
+worksheet.GetRange("C2").SetValue(minPointType);
+
+```

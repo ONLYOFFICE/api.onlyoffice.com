@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -7
 ---
 
 # Go example
@@ -8,7 +8,9 @@ sidebar_position: -3
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Go.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::note
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::
 
 ## Important security info
 
@@ -44,7 +46,7 @@ JWT_SECRET=secret
 JWT_HEADER=Authorization
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 **address** is the address of the server, **port** is the server port.
 
 If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *templates/editor.html* file.

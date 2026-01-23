@@ -1,5 +1,5 @@
 ---
-sidebar_position: -7
+sidebar_position: -8
 ---
 
 # Java 示例
@@ -8,7 +8,9 @@ sidebar_position: -7
 
 此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。
 
-> 它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。I如果您启用了测试示例，请在投入产品之前将其禁用。
+:::note
+它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。I如果您启用了测试示例，请在投入产品之前将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -40,7 +42,7 @@ storage-folder = app_data
 files.docservice.url.site=https://documentserver/
 ```
 
-其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以设置绝对路径。例如，*D:\\\folder*。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。
+其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以设置绝对路径。例如，*D:\\\folder*。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 如果要试验编辑器配置，请修改 *src/main/webapp/editor.jsp* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
@@ -171,6 +173,8 @@ files.docservice.url.site=https://documentserver/
    unzip Java.Example.zip
    ```
 
+   或者直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码。
+
 3. 将当前目录更改为项目目录：
 
    ``` sh
@@ -190,7 +194,7 @@ files.docservice.url.site=https://documentserver/
    files.docservice.url.site=https://documentserver/
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。请注意，您必须具有对该文件夹的读取和写入权限。如果您没有它们，请使用下一个命令：
+   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。请注意，您必须具有对该文件夹的读取和写入权限。如果您没有它们，请使用下一个命令：
 
    ``` sh
    sudo chmod -R ugo+rw /{path}
@@ -283,6 +287,8 @@ files.docservice.url.site=https://documentserver/
    unzip Java.Example.zip
    ```
 
+或者直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码。
+
 3. 将当前目录更改为项目目录：
 
    ``` sh
@@ -302,7 +308,7 @@ files.docservice.url.site=https://documentserver/
    files.docservice.url.site=https://documentserver/
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。
+   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
  

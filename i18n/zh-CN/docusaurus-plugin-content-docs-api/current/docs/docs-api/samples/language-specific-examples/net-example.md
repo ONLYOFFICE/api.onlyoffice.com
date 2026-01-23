@@ -1,6 +1,6 @@
 ---
 sidebar_label: .Net example
-sidebar_position: -8
+sidebar_position: -10
 ---
 
 # .Net 示例
@@ -9,7 +9,9 @@ sidebar_position: -8
 
 本示例将帮助您把ONLYOFFICE文档集成到用.Net（C#）或.Net（C#MVC）编写的Web应用程序中。
 
-> 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::note
+本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -39,7 +41,7 @@ sidebar_position: -8
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
-其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，storage-path是将创建和存储文件的路径。您可以设置一个绝对路径。
+其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，**storage-path**是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 如果您想尝试配置编辑器，请修改*DocEditor.aspx*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 

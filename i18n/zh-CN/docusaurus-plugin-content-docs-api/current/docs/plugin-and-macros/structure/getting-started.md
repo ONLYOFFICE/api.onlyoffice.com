@@ -153,13 +153,13 @@ import TabItem from '@theme/TabItem';
 
   请阅读插件[自定义](../customization/context-menu.md)章节，了解插件在编辑器中的多种呈现方式：可作为上下文菜单项、工具栏按钮、窗口、左右侧面板或输入辅助工具出现。您可以选择适合您插件的呈现方式，按照指南进行自定义。
 
-  在 index.html 文件中添加 ONLYOFFICE [样式表](../structure/styles.md)，使您的插件风格与 ONLYOFFICE 编辑器保持一致：
+  在 index.html 文件中添加 ONLYOFFICE [样式表](../customization/styles.md)，使您的插件风格与 ONLYOFFICE 编辑器保持一致：
 
     ``` html
     <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
     ```
 
-2. [添加图标](../structure/icons.md) 到您的插件，使最终目录结构如下所示：
+2. [添加图标](../customization/icons.md) 到您的插件，使最终目录结构如下所示：
 
   ``` ini
   helloworld/
@@ -236,7 +236,7 @@ import TabItem from '@theme/TabItem';
    Asc.editor.installDeveloperPlugin("https://<documentserver>:<port>/config.json")
    ```
 
-   其中 **documentserver** 是服务器名称， **port** 是安装 ONLYOFFICE 文档的端口号。
+   其中 **documentserver** 是服务器名称，**port** 是安装 ONLYOFFICE 文档的端口号。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 

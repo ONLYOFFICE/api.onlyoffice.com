@@ -17,24 +17,26 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 
    ``` ts
    $("#accept").on("click", () => {
-     connector.executeMethod("AcceptReviewChanges")
-   })
+     connector.executeMethod("AcceptReviewChanges");
+   });
    $("#reject").on("click", () => {
-     connector.executeMethod("RejectReviewChanges")
-   })
+     connector.executeMethod("RejectReviewChanges");
+   });
    ```
 
 2. 当用户单击自定义界面中的箭头按钮时，将执行 MoveToNextReviewChange 方法，在下一次和上一次审阅更改之间移动：
 
    ``` ts
    $("#prev").on("click", () => {
-     connector.executeMethod("MoveToNextReviewChange", [false])
-   })
+     connector.executeMethod("MoveToNextReviewChange", [false]);
+   });
    $("#next").on("click", () => {
-     connector.executeMethod("MoveToNextReviewChange")
-   })
+     connector.executeMethod("MoveToNextReviewChange");
+   });
    ```
 
-> 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**.
->
-> 此类是一项附加功能，默认情况下不包含在ONLYOFFICE文档开发者版中，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
+:::note
+请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**.
+
+此类是一项附加功能，默认情况下不包含在ONLYOFFICE文档开发者版中，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
+:::
