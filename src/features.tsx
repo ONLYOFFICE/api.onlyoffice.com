@@ -93,7 +93,7 @@ export const DocSpaceFeatures: Features = {
   },
   items: [
     {
-      title: 'Backend REST API',
+      title: 'API Reference',
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
@@ -104,7 +104,7 @@ export const DocSpaceFeatures: Features = {
       icon: <DocSpaceApiIcon/>,
     },
     {
-      title: 'JavaScript SDK',
+      title: 'Embed SDK',
       link: 'javascript-sdk/get-started',
       description: (
         <>
