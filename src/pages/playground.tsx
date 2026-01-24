@@ -3,6 +3,7 @@ import styles from './playground.module.css';
 import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import {useLocation} from "react-router-dom";
 import {EditorType, PreviewType, ScriptType} from "@site/src/components/Playground/root/PlaygroundRootContext";
+import Head from '@docusaurus/Head';
 
 const PlaygroundRoute = () => {
     const location = useLocation();
@@ -16,6 +17,9 @@ const PlaygroundRoute = () => {
 
     return (
         <ColorModeProvider>
+            <Head>
+                <title>Playground | ONLYOFFICE</title>
+            </Head>
             <div className={styles.playgroundContainer}>
                 <Playground.Root editorType={editorType ?? undefined} scriptType={connectorType ?? undefined} previewType={previewType ?? undefined} documentServerUrl={documentServerUrl ?? undefined} documentServerSecret={documentServerSecret ?? undefined}>
                     <Playground.Toolbar/>
