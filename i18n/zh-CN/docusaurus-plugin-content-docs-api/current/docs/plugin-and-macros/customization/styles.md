@@ -76,7 +76,9 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
    ![Button 3](/assets/images/plugins/button-3.png)
 
-   > 按钮颜色由开发者自行选择。按钮颜色越深，表示其重要性越高。通常，btn-text-default.submit.primary 类的按钮用于确认操作并提交结果（例如，**确认**按钮）。
+   :::note
+   按钮颜色由开发者自行选择。按钮颜色越深，表示其重要性越高。通常，btn-text-default.submit.primary 类的按钮用于确认操作并提交结果（例如，**确认**按钮）。
+   :::
 
 4. 使用 btn-edit 类可为您的插件添加![Edit button](/assets/images/plugins/edit_button.png) **编辑按钮**： 
 
