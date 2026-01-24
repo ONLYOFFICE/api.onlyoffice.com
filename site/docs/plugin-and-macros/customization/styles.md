@@ -76,7 +76,9 @@ All the available controls are also displayed within the [**Controls example**](
 
    ![Button 3](/assets/images/plugins/button-3.png)
 
-   > The button color is chosen by the developer. The darker the button, the more important it is. As a rule, the button of the *btn-text-default.submit.primary* class is used to confirm the action and send the result (for example, the **Ok** button).
+   :::note
+   The button color is chosen by the developer. The darker the button, the more important it is. As a rule, the button of the *btn-text-default.submit.primary* class is used to confirm the action and send the result (for example, the **Ok** button).
+   :::
 
 4. Use the *btn-edit* class to add ![Edit button](/assets/images/plugins/edit_button.png) **Edit button** to your plugin:
 

@@ -12,7 +12,9 @@ The plugin can be accessed via the context menu.
 
 1. Subscibe to the **onContextMenuShow** event which is called when the context menu has been shown.
 
-   > If a plugin is listening for this event, it must call the **AddContextMenuItem** method (synchronously or not), because the editor waits for responses from all plugins before filling the context menu.
+   :::note
+   If a plugin is listening for this event, it must call the **AddContextMenuItem** method (synchronously or not), because the editor waits for responses from all plugins before filling the context menu.
+   :::
 
    Parameters:
 
