@@ -1,5 +1,6 @@
 ---
 sidebar_position: -1
+description: 了解如何使用提供的 CSS 类和组件来设计 ONLYOFFICE 插件界面的样式。
 ---
 
 # 样式
@@ -12,186 +13,254 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 为了保持用户插件界面的一致性，您可以使用一组专为生成插件 UI 设计的预构建基础组件。您可以在我们的 [Storybook](https://onlyoffice.github.io/storybook/static/) 中探索组件功能，并进行交互。
 
-所有可用的控件也都在[**控件示例**][**Controls example**](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_controls) 插件中展示：
+所有可用的控件也都在[**控件示例**](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_controls)插件中展示：
 
 ![控件示例](/assets/images/plugins/controls.png)
 
 ## 按钮
 
-1. 使用 btn-text-default 类可在您的插件中添加**按钮 2**：
+用于用户交互的按钮组件。
 
-   ``` html
-   <button class="btn-text-default" style="width:75px;">Button 1</button>
-   ```
+:::note
+按钮颜色由开发者自行选择。按钮颜色越深，表示其重要性越高。通常，`btn-text-default.submit.primary` 类的按钮用于确认操作并提交结果（例如，**确认**按钮）。
+:::
 
-   该类具有以下参数：
+### btn-text-default
 
-   ``` css
-   .btn-text-default {
-       background: #fff;
-       border: 1px solid #cfcfcf;
-       border-radius: 2px;
-       color: #444444;
-       font-size: 11px;
-       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-       height: 22px;
-       cursor: pointer;
-   }
-   ```
+`类型: class`
 
-   ![Button 1](/assets/images/plugins/button-1.png)
+为您的插件添加默认的白色按钮样式。
 
-2. 使用 btn-text-default.submit.primary 类可在您的插件中添加**按钮 2**：
+**示例**:
 
-   ``` html
-   <button class="btn-text-default submit primary" style="width:75px;">Button 2</button>
-   ```
+``` html
+<button class="btn-text-default" style="width:75px;">Button 1</button>
+```
 
-   该类具有以下参数：
+**CSS 参数**:
 
-   ``` css
-   .btn-text-default.submit.primary {
-       color: #fff;
-       background-color: #7d858c;
-   }
-   ```
+``` css
+.btn-text-default {
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    color: #444444;
+    font-size: 11px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 22px;
+    cursor: pointer;
+}
+```
 
-   ![Button 2](/assets/images/plugins/button-2.png)
+![Button 1](/assets/images/plugins/button-1.png)
 
-3. 使用 btn-text-default.submit 类可在您的插件中添加**按钮 3**：
+### btn-text-default.submit.primary
 
-   ``` html
-   <button class="btn-text-default submit" style="width:75px;">Button 3</button>
-   ```
+`类型: class`
 
-   该类具有以下参数：
+为您的插件添加主要的深灰色按钮样式。用于确认操作并提交结果。
 
-   ``` css
-   .btn-text-default.submit {
-       font-weight: bold;
-       background-color: #d8dadc;
-       border: 1px solid transparent;
-   }               
-   ```
+**示例**:
 
-   ![Button 3](/assets/images/plugins/button-3.png)
+``` html
+<button class="btn-text-default submit primary" style="width:75px;">Button 2</button>
+```
 
-   :::note
-   按钮颜色由开发者自行选择。按钮颜色越深，表示其重要性越高。通常，btn-text-default.submit.primary 类的按钮用于确认操作并提交结果（例如，**确认**按钮）。
-   :::
+**CSS 参数**:
 
-4. 使用 btn-edit 类可为您的插件添加![Edit button](/assets/images/plugins/edit_button.png) **编辑按钮**： 
+``` css
+.btn-text-default.submit.primary {
+    color: #fff;
+    background-color: #7d858c;
+}
+```
 
-   ``` html
-   <label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
-   ```
+![Button 2](/assets/images/plugins/button-2.png)
 
-   该类具有以下参数：
+### btn-text-default.submit
 
-   ``` css
-   .btn-edit {
-       width: 13px;
-       height: 13px;
-       cursor: pointer;
-       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGZSURBVHgBfZI/y4FRGMavx7+SRQaTTQab74CVlBKL/FukDGQhEgsDNh/Apiw+gcXm70DJoEikKMUk7vec8/Yi75O7Tj2d+/4913Wuc6Tz+UyQqev1itvtBr1e/6+nkgP2+z0qlYr4DgaDsNls36HtdotisYhoNAqLxYJyuSz230HFO7DZbISC0+lEp9OBRqNBLpdDq9XCeDx+DfIz8TWZTIhZodFoRMvlknw+H8XjcdrtdrRarYgpU6/XE7MC4oMc4OB8Pie/30/ZbJba7TYlk0k6HA4CDIVCxNyQYrFYoNFoIJ1OQ5Ik5PN5WK1WpFIprNdr8H61WhVn5X2VisXg8XhoNpvRYDAgt9tNbICOxyOVSiVyuVzU7/epXq9TIBAQtrkzxeVygclkQrfbhd1uRzgcRq1Ww3A4FKparRbspyJRo9H4G4TD4RD06XQS3pkt8nq9NJ1OiSVGsVjsqfC3nvekVCrxeDxgMBgQiUTEa2g2m8hkMi8FuXtSq9VIJBK43+8iHB7GJ8BL4vY+N3U6HQqFAsxmM+TqB5Je/SVNoN18AAAAAElFTkSuQmCC');
-   }                              
-   ```
+`类型: class`
+
+为您的插件添加浅灰色按钮样式。
+
+**示例**:
+
+``` html
+<button class="btn-text-default submit" style="width:75px;">Button 3</button>
+```
+
+**CSS 参数**:
+
+``` css
+.btn-text-default.submit {
+    font-weight: bold;
+    background-color: #d8dadc;
+    border: 1px solid transparent;
+}
+```
+
+![Button 3](/assets/images/plugins/button-3.png)
+
+### btn-edit
+
+`类型: class`
+
+为您的插件添加编辑按钮图标。
+
+**示例**:
+
+``` html
+<label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
+```
+
+**CSS 参数**:
+
+``` css
+.btn-edit {
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGZSURBVHgBfZI/y4FRGMavx7+SRQaTTQab74CVlBKL/FukDGQhEgsDNh/Apiw+gcXm70DJoEikKMUk7vec8/Yi75O7Tj2d+/4913Wuc6Tz+UyQqev1itvtBr1e/6+nkgP2+z0qlYr4DgaDsNls36HtdotisYhoNAqLxYJyuSz230HFO7DZbISC0+lEp9OBRqNBLpdDq9XCeDx+DfIz8TWZTIhZodFoRMvlknw+H8XjcdrtdrRarYgpU6/XE7MC4oMc4OB8Pie/30/ZbJba7TYlk0k6HA4CDIVCxNyQYrFYoNFoIJ1OQ5Ik5PN5WK1WpFIprNdr8H61WhVn5X2VisXg8XhoNpvRYDAgt9tNbICOxyOVSiVyuVzU7/epXq9TIBAQtrkzxeVygclkQrfbhd1uRzgcRq1Ww3A4FKparRbspyJRo9H4G4TD4RD06XQS3pkt8nq9NJ1OiSVGsVjsqfC3nvekVCrxeDxgMBgQiUTEa2g2m8hkMi8FuXtSq9VIJBK43+8iHB7GJ8BL4vY+N3U6HQqFAsxmM+TqB5Je/SVNoN18AAAAAElFTkSuQmCC');
+}
+```
+
+![Edit button](/assets/images/plugins/edit_button.png)
 
 ## 输入控件
 
-1. 使用 textarea 表单元素可在插件中添加一个**文本区域**：
+用于用户数据输入的输入组件。
 
-   ``` html
-   <textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"></textarea>
-   ```
+### textarea
 
-   该类具有以下参数：
+`类型: element`
 
-   ``` css
-   textarea.form-control {
-       resize: none;
-   }               
-   ```
+为您的插件添加文本区域输入字段。
 
-   ![Textarea](/assets/images/plugins/text_area.png)
+**示例**:
 
-2. 使用带有文本类型的输入表单元素，可在插件中添加**文本输入框**：
+``` html
+<textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"></textarea>
+```
 
-   ``` html
-   <input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;">
-   ```
+**CSS 参数**:
 
-   该类具有以下参数：
+``` css
+textarea.form-control {
+    resize: none;
+}
+```
 
-   ``` css
-   .form-control {
-       border: 1px solid #cfcfcf;
-       border-radius: 2px;
-       box-sizing: border-box;
-       color: #444444;
-       font-size: 11px;
-       height: 22px;
-       padding: 1px 3px;
-       -webkit-box-shadow: none;
-       box-shadow: none;
-       -webkit-user-select: text;
-       -moz-user-select: text;
-       -ms-user-select: text;
-       user-select: text;
-   }        
-   ```
+![Textarea](/assets/images/plugins/text_area.png)
 
-   ![Text field](/assets/images/plugins/text_field.png)
+### input[type="text"]
 
-3. 使用带有复选框类型的输入表单元素，可在插件中添加一个 ![Checkbox](/assets/images/plugins/checkbox_example.png) **复选框**:
+`类型: element`
 
-   ``` html
-   <input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
-   ```
+为您的插件添加文本输入字段。
 
-   该类具有以下参数：
+**示例**:
 
-   ``` css
-   input[type='checkbox '].form-control {
-       height: auto;
-       margin: 0;
-   }                          
-   ```
+``` html
+<input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;">
+```
+
+**CSS 参数**:
+
+``` css
+.form-control {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #444444;
+    font-size: 11px;
+    height: 22px;
+    padding: 1px 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+```
+
+![Text field](/assets/images/plugins/text_field.png)
+
+### input[type="checkbox"]
+
+`类型: element`
+
+为您的插件添加复选框输入。
+
+**示例**:
+
+``` html
+<input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
+```
+
+**CSS 参数**:
+
+``` css
+input[type='checkbox '].form-control {
+    height: auto;
+    margin: 0;
+}
+```
+
+![Checkbox](/assets/images/plugins/checkbox_example.png)
 
 ## 标签控件
 
-1. 使用 label.header 类可在插件中添加一个**加粗标题**：
+用于文本显示的标签组件。
 
-   ``` html
-   <label class="header">Header label</label>
-   ```
+### label.header
 
-   该类具有以下参数：
+`类型: class`
 
-   ``` css
-   label.header {
-       font-weight: bold;
-   }                            
-   ```
+为您的插件添加加粗标题标签。
 
-2. 使用 label.link 类可在插件中添加一个链接：
+**示例**:
 
-   ``` html
-   <label class="link">Link label</label>
-   ```
+``` html
+<label class="header">Header label</label>
+```
 
-   该类具有以下参数：
+**CSS 参数**:
 
-   ``` css
-   label.link {
-       border-bottom: 1px dotted #aaa;
-       cursor: pointer;
-   }                            
-   ```
+``` css
+label.header {
+    font-weight: bold;
+}
+```
+
+### label.link
+
+`类型: class`
+
+为您的插件添加链接样式的标签。
+
+**示例**:
+
+``` html
+<label class="link">Link label</label>
+```
+
+**CSS 参数**:
+
+``` css
+label.link {
+    border-bottom: 1px dotted #aaa;
+    cursor: pointer;
+}
+```
 
 ## 下拉组合框
 
-使用 [select2](https://select2.org/) 功能可在插件中添加一个**下拉组合框**:
+`类型: function`
+
+使用 [select2](https://select2.org/) 库为您的插件添加下拉组合框。
+
+**示例**:
 
 ``` html
 <select id="select_example" class="" ></select>
@@ -206,48 +275,42 @@ $('#select_example').select2({
 
 ## 加载器
 
-使用 asc-loader-container 类可在插件中添加一个**加载器容器**：
+`类型: class`
+
+为您的插件添加加载器容器，用于显示加载状态。
+
+**示例**:
 
 ``` html
 <div id="loader-container" class="asc-loader-container" style="margin: 10px; height: 40px; border: 1px solid #cfcfcf;"></div>
 ```
 
-该类具有以下参数：
+**CSS 参数**:
 
 ``` css
 .asc-loader-container {
     position: relative;
-}        
+}
 ```
 
 ![Loader](/assets/images/plugins/loader_example.png)
 
 ## 示例
 
-以下是如何在 YouTube 插件中添加符合 ONLYOFFICE 风格的界面元素。
+此示例演示如何在 YouTube 插件中添加符合 ONLYOFFICE 风格的界面元素。
 
 ![YouTube plugin](/assets/images/plugins/youtube_interface.png)
 
-1. 要添加简单的白色**确认**按钮，请使用 btn-text-default 类（按钮宽度为 30 像素）：
+``` html
+<!-- 默认白色按钮 -->
+<button class="btn-text-default" style="width:30px;">OK</button>
 
-   ``` html
-   <button class="btn-text-default" style="width:30px;">OK</button>
-   ```
+<!-- 文本输入框 -->
+<input type="text" class="form-control" style="width:100%;">
 
-2. 添加输入框时，使用表单控件类（表单宽度为 100%，即根据父元素宽度自适应）：
+<!-- 主要深灰色按钮 -->
+<button class="btn-text-default submit primary" style="width:90px;">Ok</button>
 
-   ``` html
-   <input type="text" class="form-control" style="width:100%;">
-   ```
-
-3. 添加深灰色的**确认**按钮，使用 btn-text-default.submit.primary 类（按钮宽度为 90 像素）：
-
-   ``` html
-   <button class="btn-text-default submit primary" style="width:90px;">Ok</button>
-   ```
-
-4. 添加浅灰色的**取消**按钮，使用 btn-text-default.submit 类（按钮宽度为 90 像素）：
-
-   ``` html
-   <button class="btn-text-default submit" style="margin-left:5px; width:90px;">Cancel</button>
-   ```
+<!-- 浅灰色取消按钮 -->
+<button class="btn-text-default submit" style="margin-left:5px; width:90px;">Cancel</button>
+```
