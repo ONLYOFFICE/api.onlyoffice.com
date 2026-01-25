@@ -122,6 +122,9 @@ export const PlaygroundToolbar = () => {
                                 <Select.Item value="plugin" className={styles.SelectOption}>
                                     <Select.ItemText>Plugin</Select.ItemText>
                                 </Select.Item>
+                                <Select.Item value="builder" className={styles.SelectOption}>
+                                    <Select.ItemText>Builder</Select.ItemText>
+                                </Select.Item>
                             </Select.Viewport>
                         </Select.Content>
                     </Select.Portal>

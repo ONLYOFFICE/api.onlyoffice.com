@@ -176,6 +176,18 @@ export const PlaygroundPreview = () => {
                     ])
                     break
                 }
+                case 'builder': {
+                    var removeMethod = {
+                        "word": "Api.GetDocument().RemoveAllElements();",
+                        "cell": "Api.AddSheet(\"Sheet 1\");var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
+                        "slide": "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());",
+                        "form": "Api.GetDocument().RemoveAllElements();"
+                    };
+                    // var script = removeMethod[Environment.editor] + code.replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
+                    var script = code.replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
+                    window.connector.callCommand(new Function(script));
+                    break;
+                }
                 default:
                     break
             }
