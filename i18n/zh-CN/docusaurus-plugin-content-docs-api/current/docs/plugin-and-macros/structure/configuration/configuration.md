@@ -306,7 +306,7 @@ sidebar_position: -5
 
 `类型: array of editorType`
 
-插件可用的编辑器（**word**、**cell**、**slide** 或 **pdf**）。
+插件可用的编辑器（**word**、**cell**、**slide** 或 **pdf**）。默认值为 **[]**。
 
 **示例**: `["word"]`
 

@@ -306,7 +306,7 @@ Translations for the description field. The object keys are the two letter langu
 
 `Type: array of editorType`
 
-The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**).
+The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**). The default value is **[]**.
 
 **Example**: `["word"]`
 
