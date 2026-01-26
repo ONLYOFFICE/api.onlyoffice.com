@@ -45,6 +45,7 @@ The function called to add an item to the context menu. The process of working w
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
     text: "mainItem",
@@ -106,6 +107,7 @@ The function called to add an item to the toolbar menu. The process of working w
 #### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.addToolbarMenuItem({
   tabs: [
     {
@@ -149,6 +151,7 @@ The function called to add an event listener, a function that will be called whe
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
 });
@@ -181,6 +184,7 @@ This method doesn't return any data.
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.callCommand(() => {
   const oDocument = Api.GetDocument();
   const oParagraph = Api.CreateParagraph();
@@ -202,6 +206,7 @@ Please note that this method should only be called if you have disconnected the 
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.connect();
 ```
 
@@ -212,6 +217,7 @@ The function called to create the [connector modal window](#connector-window) 
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 ```
 
@@ -228,6 +234,7 @@ The function called to remove an event listener.
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.detachEvent("onChangeContentControl");
 ```
 
@@ -238,6 +245,7 @@ The function called to disconnect the connector from the editor.
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.disconnect();
 ```
 
@@ -256,6 +264,7 @@ The function called to execute certain editor methods using the connector. The f
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
 });
@@ -285,6 +294,7 @@ The function called to update an item in the context menu with the specified ite
 ### Example
 
 ``` ts
+const connector = docEditor.createConnector();
 const items = [
   {
     id: "onConvert",
@@ -315,6 +325,8 @@ The function called to add an event listener to the modal window frame. This fun
 #### Example
 
 ``` ts
+const connector = docEditor.createConnector();
+const testConnectorWindow = connector.createWindow();
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
   console.log(`panel message: ${message}`);
 });
@@ -334,6 +346,8 @@ The function called to send an event to the modal window frame. The list of all 
 #### Example
 
 ``` ts
+const connector = docEditor.createConnector();
+const testConnectorWindow = connector.createWindow();
 testConnectorWindow.dispatchEvent("messageName", {
   prop: "value",
 });
@@ -352,10 +366,14 @@ The function called to show a modal window inside the editor.
 #### Example
 
 ``` ts
+const connector = docEditor.createConnector();
+const testConnectorWindow = connector.createWindow();
 testConnectorWindow.show({
   url: "./window/panel.html",
   description: "Panel example!",
   type: "panel",
+  EditorsSupport: ["word", "cell", "slide", "pdf"],
+  isVisual: true,
   buttons: [],
   icons: "./icon.svg",
 });
