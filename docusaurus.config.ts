@@ -322,8 +322,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Ascensio System SIA. All right reserved`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
       additionalLanguages: ["bash", "php", "csharp", "java", "ruby"],
     },
     algolia: {

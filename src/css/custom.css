@@ -252,6 +252,11 @@ html[data-theme='dark'] {
   --ifm-color-put-patch: #9e461a;
   /* END STATUS OPENAPI */
 
+  /* START BACKGROUND COLOR */
+  --ifm-pre-background: rgba(255, 255, 255, 0.1);
+  --prism-background-color: var(--ifm-background-color) !important;
+  /* END BACKGROUND COLOR */
+
   /*--ifm-link-color: var(--c-blue-70);*/
   /*--ifm-link-hover-color: rgba(77, 141, 255, 0.8);*/
 
