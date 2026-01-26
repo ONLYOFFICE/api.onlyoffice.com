@@ -69,7 +69,7 @@ highlightcode/
 ├── index.html
 ```
 
-为每种语言创建对应的 .json 文件，文件名使用语言的四位语言区域码（如 de-DE.json）。这些文件包含一个对象，键为原始英文单词或短语，值为对应语言的翻译。例如，德语翻译文件如下：
+为每种语言创建对应的 _.json_ 文件，文件名使用语言的四位语言区域码（如 _de-DE.json_）。这些文件包含一个对象，键为原始英文单词或短语，值为对应语言的翻译。例如，德语翻译文件如下：
 
 ``` json
 {
@@ -79,7 +79,7 @@ highlightcode/
 }
 ```
 
-从 7.2 版本开始，你可以在翻译文件夹中添加 langs.json 文件。该文件以数组形式列出包含翻译内容的语言文件名：
+从 7.2 版本开始，你可以在翻译文件夹中添加 _langs.json_ 文件。该文件以数组形式列出包含翻译内容的语言文件名：
 
 ``` ini
 [
@@ -90,7 +90,7 @@ highlightcode/
 ]
 ```
 
-系统首先会请求 langs.json 文件，并尝试完整匹配语言码和文件名。如果没有找到完全匹配项，则会检查 "-" 前的前两个字符。如果 langs.json 中不包含所需文件名，插件将使用英文。若未提供 langs.json 或其解析出错，将使用旧的翻译机制。
+系统首先会请求 _langs.json_ 文件，并尝试完整匹配语言码和文件名。如果没有找到完全匹配项，则会检查 _"-"_ 前的前两个字符。如果 _langs.json_ 中不包含所需文件名，插件将使用英文。若未提供 _langs.json_ 或其解析出错，将使用旧的翻译机制。
 
 添加完所有本地化文件后，插件文件结构如下：
 
@@ -123,7 +123,7 @@ highlightcode/
 <button id="button_new">New</button>
 ```
 
-然后在 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中添加 window.Asc.plugin.onTranslate 函数：
+然后在 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中添加 _window.Asc.plugin.onTranslate_ 函数：
 
 ``` ts
 window.Asc.plugin.onTranslate = () => {
@@ -134,17 +134,19 @@ window.Asc.plugin.onTranslate = () => {
 }
 ```
 
-window.Asc.plugin.onTranslate 函数将在插件启动后立即调用，也会在更改插件语言时再次调用。
+_window\.Asc.plugin.onTranslate_ 函数将在插件启动后立即调用，也会在更改插件语言时再次调用。
 
-如果你需要本地化多个词语/短语，window.Asc.plugin.onTranslate 函数可写为如下形式：
+如果你需要本地化多个词语/短语，_window\.Asc.plugin.onTranslate_ 函数可写为如下形式：
 
-``` ts
+```ts
 window.Asc.plugin.onTranslate = () => {
-  document.querySelector("button_delete").innerHTML = window.Asc.plugin.tr("Delete")
-  document.querySelector("button_new").innerHTML = window.Asc.plugin.tr("New")
-  document.querySelector("button_rename").innerHTML = window.Asc.plugin.tr("Rename")
-  document.querySelector("button_run").innerHTML = window.Asc.plugin.tr("Run")
-}
+  document.querySelector("button_delete").innerHTML =
+    window.Asc.plugin.tr("Delete");
+  document.querySelector("button_new").innerHTML = window.Asc.plugin.tr("New");
+  document.querySelector("button_rename").innerHTML =
+    window.Asc.plugin.tr("Rename");
+  document.querySelector("button_run").innerHTML = window.Asc.plugin.tr("Run");
+};
 ```
 
 每一行对应一个待本地化的元素，通过相应的 ID 进行定位。
@@ -154,3 +156,167 @@ window.Asc.plugin.onTranslate = () => {
 :::
 
 现在，当编辑器启动后，将根据当前界面语言判断插件是否具有相应语言的翻译内容。如果匹配，插件语言将自动切换为编辑器界面语言，并应用相应翻译。
+
+## Troubleshooting localization
+
+### Javascript file errors
+
+**Error name:** Incorrect function names
+
+:::warning[Wrong]
+
+```ts
+var language = document.getElementBy("language");
+```
+
+:::
+
+:::tip[Correct]
+
+```ts
+var language = document.getElementById("language");
+```
+
+:::
+
+Error output: _“document.getElementBy is not a function”_ (Dev. tools)
+
+**Error name:** Mismatched element IDs
+
+:::warning[Wrong]
+
+```ts
+var language = document.getElementById("lanuge");
+language.innerHTML = window.Asc.plugin.tr("Language");
+```
+
+:::
+
+:::tip[Correct]
+
+```ts
+var language = document.getElementById("language");
+language.innerHTML = window.Asc.plugin.tr("Language");
+```
+
+:::
+
+Error output: Silent English fallback / ONLYOFFICE takes the default language as English, and no error occurs.
+
+**Error name:** Variable name typos
+
+:::warning[Wrong]
+
+```ts
+var language = document.getElementById("language");
+lanuge.innerHTML = window.Asc.plugin.tr("Language");
+```
+
+:::
+
+:::tip[Correct]
+
+```ts
+var language = document.getElementById("language");
+language.innerHTML = window.Asc.plugin.tr("Language");
+```
+
+:::
+
+Error output: The console shows "lanuge is not defined", pointing you directly to the typo.
+
+**Error name:** Incorrect translation keys
+
+:::warning[Wrong]
+
+```ts
+language.innerHTML = window.Asc.plugin.tr("Lanuge");
+```
+
+:::
+
+:::tip[Correct]
+
+```ts
+language.innerHTML = window.Asc.plugin.tr("Language");
+```
+
+:::
+
+Error output: Instead of showing an error, the plugin displays the incorrect key directly in the UI. Users will see "Lanuge" instead of the translated text.
+
+### Structure errors
+
+**Error name:** Missing or misnamed translation files
+
+:::warning[Wrong]
+
+```ini
+highlightcode/
+├── translations/
+    ├── de-WRONG-NAME.json
+    ├── es-ES.json
+    ├── fr-FR.json
+    ├── langs.json
+├── scripts/
+    ├── pluginCode.js
+├── config.json
+├── index.html
+```
+
+:::
+
+:::tip[Correct]
+
+```ini
+highlightcode/
+├── translations/
+    ├── de-DE.json
+    ├── es-ES.json
+    ├── fr-FR.json
+    ├── langs.json
+├── scripts/
+    ├── pluginCode.js
+├── config.json
+├── index.html
+```
+
+:::
+
+Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
+
+### Configuration file errors
+
+**Error name:** Incorrect language codes in configuration
+
+:::warning[Wrong]
+
+```ini
+{
+  ...
+  "name": "Highlight code",
+  "nameLocale": {
+    "de-WRONG-NAME": "Code hervorheben",
+    "es": "Resaltar el código",
+    "fr": "Code en surbrillance"
+},
+```
+
+:::
+
+:::tip[Correct]
+
+```ini
+{
+  ...
+  "name": "Highlight code",
+  "nameLocale": {
+    "de": "Code hervorheben",
+    "es": "Resaltar el código",
+    "fr": "Code en surbrillance"
+},
+```
+
+:::
+
+Error output: Silent English fallback / ONLYOFFICE takes the default language as English, and no error occurs.
