@@ -61,6 +61,11 @@
   --ifm-color-put-patch: #f46d2a;
   /* END STATUS OPENAPI */
 
+  /* START OPENAPI */
+  --openapi-input-background: var(--ifm-color-emphasis-0) !important;
+  --ifm-pre-background: var(--ifm-color-emphasis-100);
+  /* END OPENAPI */
+
   /* START COLORS LIST */
   --c-blue-0: #f0f6ff;
   --c-blue-70: #4d8dff;
