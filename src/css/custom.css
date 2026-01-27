@@ -273,6 +273,12 @@ html[data-theme='dark'] {
   --button-bg-color-hover: #2033F518;
 }
 
+/* START CODE */
+pre code:not(.openapi-explorer__code-block-lines) {
+  background-color: var(--ifm-code-background);
+}
+/* END CODE */
+
 /* START OPENAPI */
 .api-method {
   > .menu__link {
