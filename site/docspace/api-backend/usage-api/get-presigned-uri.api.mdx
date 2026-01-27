@@ -1,11 +1,11 @@
 ---
 id: get-presigned-uri
-title: "getPresignedUri"
-description: "getPresignedUri"
-sidebar_label: "getPresignedUri"
+title: "Get file download link"
+description: "Returns a pre-signed URL to download a file with the specified ID."
+sidebar_label: "Get file download link"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNVttu20YQ/ZXBvDgFGNFQ2qLlU1wnKZwWSOAL/GAI8YocihuTu+u92FYF/nsxu6QsSmntF1PeneuZMzO7QS9WDosb/CRbcpBD/OIiQ23ICi+1OquwwBX5r5acXCmqrqzEDI2woiNPltU3qERHWGAtWzqrMEOpsEAjfIMZVuRKKw0bwwIvGwIWg6DkfSCQFSkva0l2hhlaug/SUoWFt4EydGVDncBig35t2INUnlZkMcNa2074dPRujhnSk+hMS1j8/tvPv/b9gq05o5Ujxwbmx8f8mUbD+UKlH1WrRQWtVHeYYamVJ+VZWhjTyjICkX93rLI5jEkvv1PpGRTLsHmZHI7edySdt1KtsGcfIXl4Ka8+Qw7L7cgKa8WaQfbUuZfjaCzVP4xBlAmFg6u+7zN0XvjgXhliEj7VFb1Koc/QS8+1wovo89oKY8hG1/0+ZQ7Z15Fv9EDMSEbfYIG5MDKfz45z5peLf/NNomSfm9FCiBYc2YeRvMG2WOBmKRxd2bY/oOxFlIVSq1quQmoLzPBBWCmWbQJ5UE4Mq0VoOdsDSx/SFVyd/82pLjiOMljp1xdMqmRKuPKbCL75dkfr3aob+RetD0xeOYJTre8kAStxM5VjhENXTgwOvVlGFS7dH8LJcsdP47058PJRebKw1sFCcGTZMAhVgRHOPWrLLR/bgg0so0G2TMKSfZ3poyQMm8/Xl3Cp70j1RxOjyVY2/Pg0Eurz9SW7OongHDj8D8xOJkCBdFDxKOukogqWa/ANwRELaSv/iTJH0JCoYgADqBOPA6iDTJ/hF9ae7/amiAf7kSQ5qFv9CI/SNzDxCrGhMuTrRI3d27HbJoeRgxFoV+R59DrTql3rupYlzUrdpcN5PqqxA8+Av141isfqaDPOOsHteE6iAlGW5Bx4DcZqT6WnCiw5HWxJDjN8tNIzJNf8fUE6jYMvhuIeekYzHpxqpdLA2wOVbz/AcH3YFhPt12fNxJeq1lzfp7c8TIQPll6mG1N6K879U0Gt7V5cM+DNGJGFLjgPSwK99CJy8kGKSMrbccKNY2NSkVsgVRktlZ/BmWdac3tSBcKBgNTxiWVsK/bw7U4it7Nndu/mtzcxev6/1jHtYYafGDmsTVHGpTb2yNczuAjGaMtFChOkG2pNRe5uH+ymzEm9DUwU6oRkFZdMvJ9Kchl4hCeM381+mR3zkdHOd0LtRLEiD9v9AWmBTAq0rZ+nJ5+bVkjFlkIa52m53HBxMcP57JgbMj6T0hczLLbvnsmWWWTYaOdZebPdLj0f3weyayxuFs9bJG6iSjr+XWFRi9bRQZzblwm+OR9eSj/B/7+ofpjayFe1jnusDZS2Vdw44yuuX/TZONI4uHR5UpZk/I7awROJ19p2Qf/58RL7/l9fmZd1
+api: eJzFVktvGzcQ/ivEXNwCG0l1giDdU107CZwWSOAHfHCEmNqd9TLeJRlyaFsV9r8XQ+5KWsmNfetFD3JenPm+mVkByVsP+TV8UA16MRXxG+YZGItOkjL6tIQcbpG+OPTqVmN56RRkYKWTLRI6Vl+Bli1CDpVq8LSEDJSGHKykGjIo0RdOWTYGOVzUKFhMBK1+BBSqRE2qUugmkIHDH0E5LCEnFzADX9TYSshXQEvLHpQmvEUHGVTGtZLS0etDyAAfZWsbhPz3d2/edt2crXlrtEfPBg5nM/4aR8PvFaV50I2RpWiUvoMMCqMJNbG0tLZRRUzE9LtnldV+TGbxHQvipDhOG6nkcPC+JenJKX0LHfsIycNz7+oy4LD8lqx0Ti45yYStfz6O2mH1ZAyySFnYu+q6LgNPkoJ/YYhJ+NiU+CKFLgNSxLWC8+jzyklr0fWu38x+2y/VpZaBauPUP1hGCx6L4BQtIwClL77x/bc75ANwKBmHD04RwrzLVvAnSocO8uv478iqv3C5PntKXnpVDOKfjwLVh08LfrYYWXI9Z8yNgz5DCk57IYV1+CoRSFye/S3IbGAnEyEeFNWCahTeYsGMKMXpyeSr+6ovauUFYWuNk24ZYSqsM/eqRC9iGlDIokDv2S71DGM+tUi16RkcWUs15DCVVk0PJ7Mpi/n4OV0l7nZTOxA9RKJ7dPcDy4NrIIfVQnq8dE23x+3zKCsKoyt1G1L/gAzupVNy0SQ09sqpvpUMDcNiz9JJuuJUMSbmm2qfM/uSqXHNN/SIpd0zeelRHBtzp1CwEnedYoiwb18jg30TK6IKY7wHxNpPTWT3vLzXhE4sTXAieHRsWEhdCiu9fzCOoRP7BxtYRINsuYfhS0wfJGGx+nR1IS7MHeruYGQ02cr6Hx8G5n26umBXY9w/l7OjUaKE8qLknt8qhvFiGaF2cNTTMsociBplGQPokzry2Ce1l+myNbE2TUzGg91IkpyoGvOQiDLyKmLnyYCvEzS2b4e2NDqMGIyJ9vl0Gr1OjG6WpqpUgZPCtOnwcLpuO5ABccJfrhrFY3WMHYaCLGNfYN6vKWudISwIS+HQm+AK9Osek8MVfz8jnRrn0Io22YwHx0brNBl2ksq3J6K/3qfFSPvlr2bgK10Zru9jbHqSgsPn4caQXoszf0pRGbcT10TwChEzK9rgSSxQmAXJiMl7JSMob4YON7SNUUVuBOrSGqVpIk6JYc30xFJI7tSJ8Zt2HDl8s/WQm8kG3dvv2+kYHf+vTHx2P+yOrOr3C1nE6T9w5MupOA/WGsdFCqNM19jYEv3dbrLrYor6VWCgYCsVq/hk4o+xJJeBW3jK8evJ28mMj6zx1Eq9FcVHpDSJdheiUZVWm/3ofx9vPZwIH2lqG6k0Pyyk6ZJm3TVjDTI4nMy4P8T1Nn1DBvl6Xx0NvXkGtfHEyqv1sOv4+EdAx+vFfDPU4mAsleffJeSVbDz+JGO/nPUb7q/i55vwk08b6KOXcaw2AdPwjANw2L67eZcNHZaDS5dHRYGWttT2Vluesut94eP7C8hixxzTNk3G/gdbfzKknUGaIuBP3pee1FitUk/ourV8uvpPjfWcSdKcoHnXdf8C1b9rQg==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"getPresignedUri"}
+  children={"Get file download link"}
 >
 </Heading>
 
@@ -36,7 +36,8 @@ import Heading from "@theme/Heading";
 
 
 
-getPresignedUri
+Returns a pre-signed URL to download a file with the specified ID.
+This temporary link provides secure access to the file.
 
 <Heading
   id={"request"}
@@ -62,7 +63,7 @@ getPresignedUri
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}}}}
+  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

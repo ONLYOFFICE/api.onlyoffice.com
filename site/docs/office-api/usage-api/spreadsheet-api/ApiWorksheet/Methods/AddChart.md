@@ -29,7 +29,7 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 ## Returns
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## Example
 

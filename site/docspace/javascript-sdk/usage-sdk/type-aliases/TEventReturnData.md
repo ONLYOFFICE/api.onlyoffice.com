@@ -2,7 +2,7 @@
 
 > **TEventReturnData** = `object`
 
-Defined in: [types/index.ts:349](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L349)
+Defined in: [types/index.ts:349](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L349)
 
 The event return data structure.
 
@@ -12,7 +12,7 @@ The event return data structure.
 
 > `optional` **data**: `object`
 
-Defined in: [types/index.ts:351](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L351)
+Defined in: [types/index.ts:351](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L351)
 
 The event data payload.
 
@@ -22,6 +22,6 @@ The event data payload.
 
 > **event**: `string`
 
-Defined in: [types/index.ts:353](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L353)
+Defined in: [types/index.ts:353](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L353)
 
 The event name.

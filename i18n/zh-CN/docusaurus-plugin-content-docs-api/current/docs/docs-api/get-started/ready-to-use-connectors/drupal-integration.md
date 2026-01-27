@@ -73,7 +73,7 @@ composer require onlyoffice/onlyoffice-drupal
 https://<文档服务器地址>/
 ```
 
-其中，**文档服务器地址**是安装了ONLYOFFICE这里文档的服务器名称。该地址必须能被您的浏览器和这里Drupal这里服务器访问。Drupal这里服务器地址也必须能被这里ONLYOFFICE这里文档访问，以确保正常工作。
+其中，**文档服务器地址**是安装了ONLYOFFICE这里文档的服务器名称。该地址必须能被您的浏览器和这里Drupal这里服务器访问。Drupal这里服务器地址也必须能被这里ONLYOFFICE这里文档访问，以确保正常工作。You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 从这里7.2这里版本开始，JWT这里默认启用，并且会自动生成密钥，用于限制对这里ONLYOFFICE这里文档的访问，保障安全性和数据完整性。在这里Drupal这里管理配置中指定您自己的**密钥**。在这里ONLYOFFICE这里文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 

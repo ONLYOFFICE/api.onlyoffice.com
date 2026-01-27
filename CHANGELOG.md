@@ -1,5 +1,87 @@
 # Change log
 
+## 7.6.2
+
+### New features
+
+#### Docs API
+
+* Added 'Recording macros' page
+* Added AI Agent and AI Plugin pages for Chinese
+
+### Fixes
+
+#### Docspace
+
+* Changed MCP Server section
+
+#### Docs API
+
+* Fixed Getting started page
+
+## 7.6.1
+
+### New features
+
+* Updated the main page
+
+### Fixes
+
+#### Docs API
+
+* Edited the document.info.favorite parameter description
+
+## 7.6.0
+
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.6
+
+#### Docs
+
+* Translated Document Builder section into Chinese
+
+## 7.5.0
+
+### New features
+
+#### Docs
+
+* Updated Office API documentation for version 9.2.0
+
+#### Plugins and macros
+
+* Added the Debugging subsection to the Tutorials section
+* Updated the plugin Icons page with additional info
+* Added the How to customize themes page
+* Added the Troubleshooting section to the Localization page
+
+#### Desktop
+
+* Translated Desktop Editors section into Chinese
+
+### Fixes
+
+#### Plugins and macros
+
+* Added missing links to the samples
+
+## 7.4.0
+
+### New features
+
+* Updated Docusaurus version 3.9.2
+* Added system theme mode
+* Updated documentation start page
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+
 ## 7.3.0
 
 ### New features

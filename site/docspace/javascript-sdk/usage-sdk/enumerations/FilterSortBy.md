@@ -1,6 +1,6 @@
 # Enumeration: FilterSortBy
 
-Defined in: [enums/index.ts:106](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L106)
+Defined in: [enums/index.ts:106](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L106)
 
 The criteria for filtering and sorting items.
 
@@ -10,7 +10,7 @@ The criteria for filtering and sorting items.
 
 > **Author**: `"Author"`
 
-Defined in: [enums/index.ts:108](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L108)
+Defined in: [enums/index.ts:108](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L108)
 
 Sorts items by author name.
 
@@ -20,7 +20,7 @@ Sorts items by author name.
 
 > **CreationDate**: `"DateAndTimeCreation"`
 
-Defined in: [enums/index.ts:110](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L110)
+Defined in: [enums/index.ts:110](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L110)
 
 Sorts items by creation date.
 
@@ -30,7 +30,7 @@ Sorts items by creation date.
 
 > **LastOpened**: `"LastOpened"`
 
-Defined in: [enums/index.ts:112](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L112)
+Defined in: [enums/index.ts:112](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L112)
 
 Sorts items by the last opened date.
 
@@ -40,7 +40,7 @@ Sorts items by the last opened date.
 
 > **ModifiedDate**: `"DateAndTime"`
 
-Defined in: [enums/index.ts:114](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L114)
+Defined in: [enums/index.ts:114](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L114)
 
 Sorts items by modification date.
 
@@ -50,7 +50,7 @@ Sorts items by modification date.
 
 > **Name**: `"AZ"`
 
-Defined in: [enums/index.ts:116](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L116)
+Defined in: [enums/index.ts:116](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L116)
 
 Sorts items by name.
 
@@ -60,7 +60,7 @@ Sorts items by name.
 
 > **Room**: `"Room"`
 
-Defined in: [enums/index.ts:118](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L118)
+Defined in: [enums/index.ts:118](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L118)
 
 Sorts items by room.
 
@@ -70,7 +70,7 @@ Sorts items by room.
 
 > **RoomType**: `"roomType"`
 
-Defined in: [enums/index.ts:120](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L120)
+Defined in: [enums/index.ts:120](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L120)
 
 Sorts items by room type.
 
@@ -80,7 +80,7 @@ Sorts items by room type.
 
 > **Size**: `"Size"`
 
-Defined in: [enums/index.ts:122](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L122)
+Defined in: [enums/index.ts:122](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L122)
 
 Sorts items by size.
 
@@ -90,7 +90,7 @@ Sorts items by size.
 
 > **Tags**: `"Tags"`
 
-Defined in: [enums/index.ts:124](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L124)
+Defined in: [enums/index.ts:124](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L124)
 
 Sorts items by tags.
 
@@ -100,7 +100,7 @@ Sorts items by tags.
 
 > **Type**: `"Type"`
 
-Defined in: [enums/index.ts:126](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L126)
+Defined in: [enums/index.ts:126](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L126)
 
 Sorts items by type.
 
@@ -110,6 +110,6 @@ Sorts items by type.
 
 > **UsedSpace**: `"usedspace"`
 
-Defined in: [enums/index.ts:128](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/enums/index.ts#L128)
+Defined in: [enums/index.ts:128](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/enums/index.ts#L128)
 
 Sorts items by used space.

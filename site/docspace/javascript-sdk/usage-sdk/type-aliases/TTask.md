@@ -2,7 +2,7 @@
 
 > **TTask** = `object`
 
-Defined in: [types/index.ts:359](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L359)
+Defined in: [types/index.ts:359](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L359)
 
 The task object structure.
 
@@ -12,7 +12,7 @@ The task object structure.
 
 > `optional` **data**: `object` \| `null`
 
-Defined in: [types/index.ts:361](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L361)
+Defined in: [types/index.ts:361](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L361)
 
 The task data payload.
 
@@ -22,7 +22,7 @@ The task data payload.
 
 > **methodName**: `string`
 
-Defined in: [types/index.ts:363](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L363)
+Defined in: [types/index.ts:363](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L363)
 
 The method name.
 
@@ -32,6 +32,6 @@ The method name.
 
 > **type**: `string`
 
-Defined in: [types/index.ts:365](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/main/src/types/index.ts#L365)
+Defined in: [types/index.ts:365](https://github.com/ONLYOFFICE/docspace-sdk-js/blob/master/src/types/index.ts#L365)
 
 The task type.
