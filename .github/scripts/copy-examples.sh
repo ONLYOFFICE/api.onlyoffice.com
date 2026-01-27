@@ -28,6 +28,7 @@ cat > site/samples/docspace/javascript-sdk/_category_.json <<EOF
   "label": "JavaScript SDK"
 }
 EOF
+sed -i '1,4d' site/samples/docspace/javascript-sdk/javascript-sdk.md
 
 mkdir -p site/samples/docspace/plugins-sdk
 cp -r site/docspace/plugins-sdk/samples/. site/samples/docspace/plugins-sdk

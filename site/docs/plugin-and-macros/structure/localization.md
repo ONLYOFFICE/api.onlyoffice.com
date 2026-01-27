@@ -151,7 +151,9 @@ window.Asc.plugin.onTranslate = () => {
 
 Where every line will represent the localized element, reached using the appropriate ID.
 
-> Please note, that the translation uses the _.innerHTML_ method and thus can contain not only words and phrases, but also some HTML elements (tags, links, etc.) Do not forget to escape any quotes in the translations (like in any _.json_ file) so that they worked correctly.
+:::note
+The translation uses the *.innerHTML* method and thus can contain not only words and phrases, but also some HTML elements (tags, links, etc.). Do not forget to escape any quotes in the translations (like in any *.json* file) so that they work correctly.
+:::
 
 Now, once the editors are started, the current interface language will be used to determine if the plugin has the same locale translation. If it is so, the plugin language will be changed to fit the editor interface language and the translation will be applied.
 
@@ -216,7 +218,7 @@ lanuge.innerHTML = window.Asc.plugin.tr("Language");
 
 ```ts
 var language = document.getElementById("language");
-lanuge.innerHTML = window.Asc.plugin.tr("Language");
+language.innerHTML = window.Asc.plugin.tr("Language");
 ```
 
 :::

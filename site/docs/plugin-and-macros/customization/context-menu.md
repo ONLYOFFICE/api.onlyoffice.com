@@ -10,17 +10,19 @@ The plugin can be accessed via the context menu.
 
 ## Creating a context menu item
 
-1. Subscibe to the **onContextMenuShow** event which is called when the context menu has been shown.
+1. Subscribe to the **onContextMenuShow** event which is called when the context menu has been shown.
 
-   > If a plugin is listening for this event, it must call the **AddContextMenuItem** method (synchronously or not), because the editor waits for responses from all plugins before filling the context menu.
+   :::note
+   If a plugin is listening for this event, it must call the **AddContextMenuItem** method (synchronously or not), because the editor waits for responses from all plugins before filling the context menu.
+   :::
 
-   Parameters:
+   **Parameters**:
 
-   | Name      | Type                                      | Description                                                |
-   | --------- | ----------------------------------------- | ---------------------------------------------------------- |
-   | *options* | [ContextMenuOptions](#contextmenuoptions) | Defines the information of the selected context menu item. |
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | options | [ContextMenuOptions](#contextmenuoptions) | Defines the information of the selected context menu item. |
 
-   Example:
+   **Example**:
 
    ``` ts
    Asc.plugin.attachEvent("onContextMenuShow", (options) => {
@@ -43,17 +45,17 @@ The plugin can be accessed via the context menu.
 
    Defines the context menu options.
 
-   Type: object
+   `Type: object`
 
-   Properties:
+   **Properties**:
 
-   | Name         | Type                                | Description                                                     |
-   | ------------ | ----------------------------------- | --------------------------------------------------------------- |
-   | *Type*       | [ContextMenuType](#contextmenutype) | The context menu type.                                          |
-   | *header*     | boolean                             | Specifies whether the context menu is opened inside the header. |
-   | *footer*     | boolean                             | Specifies whether the context menu is opened inside the footer. |
-   | *headerArea* | boolean                             | Specifies whether the context menu is opened over the header.   |
-   | *footerArea* | boolean                             | Specifies whether the context menu is opened over the footer.   |
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | Type | [ContextMenuType](#contextmenutype) | The context menu type. |
+   | header | `boolean` | Specifies whether the context menu is opened inside the header. |
+   | footer | `boolean` | Specifies whether the context menu is opened inside the footer. |
+   | headerArea | `boolean` | Specifies whether the context menu is opened over the header. |
+   | footerArea | `boolean` | Specifies whether the context menu is opened over the footer. |
 
    ### ContextMenuType
 
@@ -68,36 +70,36 @@ The plugin can be accessed via the context menu.
 
    Depending on the selection type, different context menu items can be added.
 
-   Type: "None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"
+   `Type: "None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
 
 2. Specify the **AddContextMenuItem** method to add a button to the context menu if necessary.
 
-   Parameters:
+   **Parameters**:
 
-   | Name    | Type                                        | Description                                 |
-   | ------- | ------------------------------------------- | ------------------------------------------- |
-   | *items* | Array.\<[ContextMenuItem](#contextmenuitem)\> | An array containing the context menu items. |
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | items | `Array.<`[ContextMenuItem](#contextmenuitem)`>` | An array containing the context menu items. |
 
-   Returns: This method doesn't return any data.
+   **Returns**: This method doesn't return any data.
 
    ### ContextMenuItem
 
    The context menu item.
 
-   Type: object
+   `Type: object`
 
-   Properties:
+   **Properties**:
 
-   | Name       | Type                     | Description                                                                                 |
-   | ---------- | ------------------------ | ------------------------------------------------------------------------------------------- |
-   | *id*       | string                   | The item ID.                                                                                |
-   | *text*     | string                   | The item caption.                                                                           |
-   | *data*     | string                   | The item data (this data will be sent to the click event callback).                         |
-   | *disabled* | boolean                  | Specifies whether the current item is disabled or not.                                      |
-   | *icons*    | string                   | The item icons (see the plugins [config](../structure/configuration/configuration.md) documentation). |
-   | *items*    | Array.\<ContextMenuItem\> | An array containing the context menu items for the current item.                            |
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | id | `string` | The item ID. |
+   | text | `string` | The item caption. |
+   | data | `string` | The item data (this data will be sent to the click event callback). |
+   | disabled | `boolean` | Specifies whether the current item is disabled or not. |
+   | icons | `string` | The item icons (see the plugins [config](../structure/configuration/configuration.md) documentation). |
+   | items | `Array.<ContextMenuItem>` | An array containing the context menu items for the current item. |
 
-   Example:
+   **Example**:
 
    ``` ts
    Asc.plugin.attachEvent("onContextMenuShow", (options) => {
@@ -120,15 +122,15 @@ The plugin can be accessed via the context menu.
 
 To update the context menu item, specify the **UpdateContextMenuItem** method.
 
-Parameters:
+**Parameters**:
 
-| Name    | Type                                        | Description                                                      |
-| ------- | ------------------------------------------- | ---------------------------------------------------------------- |
-| *items* | Array.\<[ContextMenuItem](#contextmenuitem)\> | An array containing the context menu items for the current item. |
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| items | `Array.<`[ContextMenuItem](#contextmenuitem)`>` | An array containing the context menu items for the current item. |
 
-Returns: This method doesn't return any data.
+**Returns**: This method doesn't return any data.
 
-Example:
+**Example**:
 
 ``` ts
 Asc.plugin.attachEvent("onContextMenuShow", (options) => {
@@ -149,15 +151,15 @@ Asc.plugin.attachEvent("onContextMenuShow", (options) => {
 
 ## Clicking a context menu item
 
-1. [Subscibe](../interacting-with-editors/overview/how-to-attach-events.md) to the **onContextMenuClick** event which is called when the context menu button has been clicked.
+1. [Subscribe](../interacting-with-editors/overview/how-to-attach-events.md) to the **onContextMenuClick** event which is called when the context menu button has been clicked.
 
-   Parameters:
+   **Parameters**:
 
-   | Name | Type   | Description  |
-   | ---- | ------ | ------------ |
-   | *id* | string | The item ID. |
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | id | `string` | The item ID. |
 
-   Example:
+   **Example**:
 
    ``` ts
    window.Asc.plugin.event_onContextMenuClick = (id) => {
@@ -178,16 +180,16 @@ Asc.plugin.attachEvent("onContextMenuShow", (options) => {
 
 2. Specify the **attachContextMenuClickEvent** to add an event listener, a function that will be called whenever the specified button is clicked in the context menu and triggers an event. For each context menu button, you can specify a separate event listener by its ID.
 
-   Parameters:
+   **Parameters**:
 
-   | Name     | Type     | Description         |
-   | -------- | -------- | ------------------- |
-   | *id*     | string   | The event name.     |
-   | *action* | function | The event listener. |
+   | Name | Type | Description |
+   | ---- | ---- | ----------- |
+   | id | `string` | The event name. |
+   | action | `function` | The event listener. |
 
-   Returns: This method doesn't return any data.
+   **Returns**: This method doesn't return any data.
 
-   Example:
+   **Example**:
 
    ``` ts
    Asc.plugin.attachContextMenuClickEvent("onNameClick", (data) => {

@@ -26,6 +26,10 @@ Defines if the spell checker setting will be displayed or not. Spell checker set
 Other fields of the `features` object are available for the standard branding and are described [here](customization-standard-branding.md#features). Only the `features.spellcheck.change` field requires additional payment.
 :::
 
+:::note
+Deprecated since version 9.0.4.
+:::
+
 **Example**: `true`
 
 ## font

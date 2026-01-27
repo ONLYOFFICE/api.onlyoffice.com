@@ -8,314 +8,326 @@ sidebar_position: -5
 
 ![Toolbar item](/assets/images/plugins/toolbar-plugins.png#gh-light-mode-only)![Toolbar item](/assets/images/plugins/toolbar-plugins.dark.png#gh-dark-mode-only)
 
-## 创建工具栏项目 {#creating-a-toolbar-item}
+## AddToolbarMenuItem
 
-1. 如有必要，使用 **AddToolbarMenuItem** 方法向工具栏菜单添加项目。
+`类型：方法`
 
-   参数说明:
+向工具栏菜单添加项目。
 
-   | 名称    | 类型                                                | 描述                                      |
-   | ------- | --------------------------------------------------- | ------------------------------------------------ |
-   | *items* | Array.\<[ToolbarMenuMainItem](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组 |
+### 参数
 
-   返回值：该方法不返回任何数据。
+| 名称    | 类型                                                  | 描述                     |
+|---------|-------------------------------------------------------|--------------------------|
+| *items* | Array.\<[ToolbarMenuMainItem](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组 |
 
-   示例:
+### 返回值
 
-   ``` ts
-   Asc.plugin.executeMethod("AddToolbarMenuItem", [{
-     guid: Asc.plugin.guid,
-     tabs: [
-       {
-         id: "my_tab",
-         text: "MYTAB",
-         items: [
-           {
-             id: "idButton1",
-             type: "big-button",
-             text: "Test item",
-             hint: "test hint",
-             data: "test_data",
-             lockInViewMode: false,
-             icons: "resources/%theme-type%(light|dark)/icon%state%(normal)%scale%(default|*).%extension%(png|svg)",
-             items: [],
-           },
-         ],
-       },
-     ],
-   }])
-   ```
+该方法不返回任何数据。
 
-### 主工具栏菜单项 {#toolbarmenumainitem}
+**示例**：
 
-   主工具栏菜单项.
-
-   类型：对象
-
-   属性：
-
-    | 名称   | 类型                                      | 描述                                                     |
-    | ------ | ----------------------------------------- | --------------------------------------------------------------- |
-    | *guid* | string                                    | 插件的 guid（全局唯一标识符）                                                |
-    | *tabs* | Array.\<[ToolbarMenuTab](#toolbarmenutab)\> | 包含当前菜单项工具栏标签页的数组 |
-
-    示例:
-
-    ``` ts
-    const oToolbarMenuMainItem = {
-      guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
-      tabs: [oToolbarMenuTab],
-    }
-    ```
-
-### 工具栏菜单选项卡 {#toolbarmenutab}
-
-    工具栏菜单选项卡。
-
-    类型: 对象 (object)
-
-    属性:
-
-    | 名称      | 类型                                          | 描述                                                     |
-    | ------- | ------------------------------------------- | ------------------------------------------------------ |
-    | *id*    | string                                      | 标签页 ID。标准工具栏标签页 ID 列表见[下方](#standard-toolbar-tab-ids)。 |
-    | *text*  | string                                      | 标签页文本。                                                 |
-    | *items* | Array.\<[ToolbarMenuItem](#toolbarmenuitem)\> | 包含当前标签页工具栏菜单项的数组。                                      |
-
-   示例:
-
-   ``` ts
-   const oToolbarMenuTab = {
-     id: "ChatGPT",
-     text: "AI Assistant",
-     items: [oToolbarMenuItem],
-   }
-   ```
-
-### 工具栏菜单项 {#toolbarmenuitem}
-
-   工具栏菜单项。
-
-   类型：对象
-
-   属性：
-
-    | 名称             | 种类                                        | 描述                                                                                                                              |
-    | ---------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-    | *id*             | string                                      | 菜单项 ID。                                                                                                                             |
-    | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 菜单项类型。                                                                                                                           |
-    | *text*           | string                                      | 菜单项标题。如果此字段为""，工具栏按钮仅显示图标，不显示标题。                                                                         |
-    | *hint*           | string                                      | 菜单项提示信息。                                                                                                                         |
-    | *icons*          | string / object                             | 菜单项图标（参见插件的[config](../structure/configuration/configuration.md#variationsicons)文档）。                                                |
-    | *disabled*       | boolean                                     | 指定当前菜单项是否被锁定。                                                                                                              |
-    | *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"*）或其上半部分（当 *"split == true"*）是否可切换。                                                 |
-    | *lockInViewMode* | boolean                                     | 指定工具栏菜单项在视图模式下（如预览、查看表单、断开连接等）是否自动锁定。                                                               |
-    | *separator*      | boolean                                     | 指定工具栏菜单项之间是否使用分隔符。                                                                                                    |
-    | *split*          | boolean                                     | 指定工具栏菜单项是否拆分为两部分，并包含下拉菜单。                                                                                      |
-    | *items*          | Array.\<ToolbarMenuItem>                    | 包含当前菜单项上下文菜单项的数组。                                                                                                      |
-
-    示例:
-
-    ``` ts
-    const oToolbarMenuItem = {
-      id: "MeaningItem",
-      type: "button",
-      text: "Meaning",
-      hint: "Meaning",
-      icons: "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)",
-      disabled: false,
-      enableToggle: false,
-      lockInViewMode: false,
-      separator: true,
-      split: true,
+``` ts
+Asc.plugin.executeMethod("AddToolbarMenuItem", [{
+  guid: Asc.plugin.guid,
+  tabs: [
+    {
+      id: "my_tab",
+      text: "MYTAB",
       items: [
         {
-          id: "onMeaningT",
-          text: "Explain text in comment",
-        },
-        {
-          id: "onFixSpelling",
-          text: "Fix spelling & grammar",
-        },
-        {
-          id: "onMakeLonger",
-          text: "Make longer",
-        },
-        {
-          id: "onMakeShorter",
-          text: "Make shorter",
+          id: "idButton1",
+          type: "big-button",
+          text: "Test item",
+          hint: "test hint",
+          data: "test_data",
+          lockInViewMode: false,
+          icons: "resources/%theme-type%(light|dark)/icon%state%(normal)%scale%(default|*).%extension%(png|svg)",
+          items: [],
         },
       ],
-    }
-    ```
+    },
+  ],
+}]);
+```
 
-### 工具栏菜单项类型 {#toolbarmenuitemtype}
+## ToolbarMenuMainItem
 
-   工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
+`类型：对象`
 
-   类型："button" | "big-button"
+主工具栏菜单项。
 
-### 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
+### 属性
 
-   #### 文档编辑器
+| 名称   | 类型                                        | 描述                                 |
+|--------|---------------------------------------------|--------------------------------------|
+| *guid* | string                                      | 插件的 guid（全局唯一标识符）        |
+| *tabs* | Array.\<[ToolbarMenuTab](#toolbarmenutab)\> | 包含当前菜单项工具栏标签页的数组     |
 
-   | 标签页ID | 标签页名称                  |
-   | ------- | -------------------------- |
-   | home    | 主页                       |
-   | ins     | 插入                       |
-   | draw    | 绘图                       |
-   | layout  | 布局                       |
-   | links   | 参考                       |
-   | forms   | 表单（仅限 PDF 表单）       |
-   | review  | 协作                       |
-   | protect | 保护                       |
-   | view    | 视图                       |
-   | plugins | 插件                       |
+**示例**：
 
-   #### 电子表格编辑器
+``` ts
+const oToolbarMenuMainItem = {
+  guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
+  tabs: [oToolbarMenuTab],
+};
+```
 
-   | 标签页 ID  | 标签页名称                                 |
-   | ------- | ---------------------------------------------|
-   | home    | 主页                                         |
-   | ins     | 插入                                         |
-   | draw    | 绘图                                         |
-   | layout  | 布局                                         |
-   | formula | 公式                                         |
-   | data    | 数据                                         |
-   | pivot   | 数据透视表（当光标位于数据透视表时）            |
-   | review  | 协作                                         |
-   | protect | 保护                                         |
-   | view    | 视图                                         |
-   | plugins | 插件                                         |
-    
-   #### 演示文稿编辑器
+## ToolbarMenuTab
 
-   | 标签页 ID | 标签页名称     |
-   | --------- | --------------|
-   | home      | 主页           |
-   | ins       | 插入           |
-   | draw      | 绘图           |
-   | transit   | 切换           |
-   | review    | 协作           |
-   | view      | 视图           |
-   | plugins   | 插件           |
+`类型：对象`
 
-   #### PDF 编辑器
+工具栏菜单选项卡。
 
-   | 标签页 ID | 标签页名称 |
-   | --------- | ---------- |
-   | home      | 主页       |
-   | ins       | 插入       |
-   | comment   | 评论       |
-   | view      | 视图       |
-   | plugins   | 插件       |
+### 属性
 
-   ### 样例
+| 名称    | 类型                                          | 描述                                                               |
+|---------|-----------------------------------------------|--------------------------------------------------------------------|
+| *id*    | string                                        | 标签页 ID。标准工具栏标签页 ID 列表见[下方](#standard-toolbar-tab-ids)。 |
+| *text*  | string                                        | 标签页文本。                                                       |
+| *items* | Array.\<[ToolbarMenuItem](#toolbarmenuitem)\> | 包含当前标签页工具栏菜单项的数组。                                 |
 
-   #### 样例1
+**示例**：
 
-   普通按钮。
-    
-   ``` json
-   {
-     "text": "caption",
-     "split": false,
-     "enableToggle": false
-   }
-   ```
+``` ts
+const oToolbarMenuTab = {
+  id: "ChatGPT",
+  text: "AI Assistant",
+  items: [oToolbarMenuItem],
+};
+```
 
-   ![Regular button](/assets/images/plugins/regular-button.png#gh-light-mode-only)![Regular button](/assets/images/plugins/regular-button.dark.png#gh-dark-mode-only)
+## ToolbarMenuItem
 
-   #### 样例2
+`类型：对象`
 
-   一个被拆分为两部分的按钮：按钮的上半部分可以单独切换，下半部分包含一个下拉菜单。
-    
-   ``` json
-   {
-     "text": "caption",
-     "split": true,
-     "enableToggle": true,
-     "items": []
-   }
-   ```
+工具栏菜单项。
 
-   ![Split and toggled button](/assets/images/plugins/split-toggle-button.png#gh-light-mode-only)![Split and toggled button](/assets/images/plugins/split-toggle-button.dark.png#gh-dark-mode-only)
+### 属性
 
-   #### 样例3
+| 名称             | 类型                                        | 描述                                                                                             |
+|------------------|---------------------------------------------|--------------------------------------------------------------------------------------------------|
+| *id*             | string                                      | 菜单项 ID。                                                                                      |
+| *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 菜单项类型。                                                                                     |
+| *text*           | string                                      | 菜单项标题。如果此字段为""，工具栏按钮仅显示图标，不显示标题。                                   |
+| *hint*           | string                                      | 菜单项提示信息。                                                                                 |
+| *icons*          | string / object                             | 菜单项图标（参见插件的[config](../structure/configuration/configuration.md#variationsicons)文档）。 |
+| *disabled*       | boolean                                     | 指定当前菜单项是否被锁定。                                                                       |
+| *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"*）或其上半部分（当 *"split == true"*）是否可切换。        |
+| *lockInViewMode* | boolean                                     | 指定工具栏菜单项在视图模式下（如预览、查看表单、断开连接等）是否自动锁定。                       |
+| *separator*      | boolean                                     | 指定工具栏菜单项之间是否使用分隔符。                                                             |
+| *split*          | boolean                                     | 指定工具栏菜单项是否拆分为两部分，并包含下拉菜单。                                               |
+| *items*          | Array.\<ToolbarMenuItem>                    | 包含当前菜单项上下文菜单项的数组。                                                               |
 
-   一个拆分为两部分的按钮，每部分可以单独点击，按钮的下半部分包含一个下拉菜单。
-    
-   ``` json
-   {
-     "text": "caption",
-     "split": true,
-     "enableToggle": true,
-     "items": []
-   }
-   ```
+**示例**：
 
-   ![Split button](/assets/images/plugins/split-button.png#gh-light-mode-only)![Split button](/assets/images/plugins/split-button.dark.png#gh-dark-mode-only)
+``` ts
+const oToolbarMenuItem = {
+  id: "MeaningItem",
+  type: "button",
+  text: "Meaning",
+  hint: "Meaning",
+  icons: "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)",
+  disabled: false,
+  enableToggle: false,
+  lockInViewMode: false,
+  separator: true,
+  split: true,
+  items: [
+    {
+      id: "onMeaningT",
+      text: "Explain text in comment",
+    },
+    {
+      id: "onFixSpelling",
+      text: "Fix spelling & grammar",
+    },
+    {
+      id: "onMakeLonger",
+      text: "Make longer",
+    },
+    {
+      id: "onMakeShorter",
+      text: "Make shorter",
+    },
+  ],
+};
+```
 
-   #### 样例4
+## ToolbarMenuItemType
 
-   带有下拉菜单的按钮，点击按钮时会打开该菜单。
-    
-   ``` json
-   {
-     "text": "caption",
-     "split": false,
-     "enableToggle": false,
-     "items": []
-   }
-   ```
+`类型："button" | "big-button"`
 
-   ![Button with menu](/assets/images/plugins/button-with-menu.png#gh-light-mode-only)![Button with menu](/assets/images/plugins/button-with-menu.dark.png#gh-dark-mode-only)
+工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
 
-   #### 样例5
+## 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
 
-   可切换的按钮。
-    
-   ``` json
-   {
-     "text": "caption",
-     "split": false,
-     "enableToggle": true
-   }
-   ```
+### 文档编辑器
 
-   ![Toggled button](/assets/images/plugins/toggled-button.png#gh-light-mode-only)![Toggled button](/assets/images/plugins/toggled-button.dark.png#gh-dark-mode-only)
+| 标签页 ID | 标签页名称                |
+|-----------|---------------------------|
+| home      | 主页                      |
+| ins       | 插入                      |
+| draw      | 绘图                      |
+| layout    | 布局                      |
+| links     | 参考                      |
+| forms     | 表单（仅限 PDF 表单）     |
+| review    | 协作                      |
+| protect   | 保护                      |
+| view      | 视图                      |
+| plugins   | 插件                      |
 
-2. [订阅](../interacting-with-editors/overview/how-to-attach-events.md) **onToolbarMenuClick** 事件，当工具栏菜单按钮被点击时调用。
+### 电子表格编辑器
 
-   参数说明：
+| 标签页 ID | 标签页名称                               |
+|-----------|------------------------------------------|
+| home      | 主页                                     |
+| ins       | 插入                                     |
+| draw      | 绘图                                     |
+| layout    | 布局                                     |
+| formula   | 公式                                     |
+| data      | 数据                                     |
+| pivot     | 数据透视表（当光标位于数据透视表时）     |
+| review    | 协作                                     |
+| protect   | 保护                                     |
+| view      | 视图                                     |
+| plugins   | 插件                                     |
 
-    | 名称  | 类型   | 描述      |
-    | ----- | ------ | --------- |
-    | *id*  | string | 项目 ID。 |
+### 演示文稿编辑器
 
-    示例:
+| 标签页 ID | 标签页名称 |
+|-----------|------------|
+| home      | 主页       |
+| ins       | 插入       |
+| draw      | 绘图       |
+| transit   | 切换       |
+| review    | 协作       |
+| view      | 视图       |
+| plugins   | 插件       |
 
-    <!-- eslint-skip -->
-    
-    ``` ts
-    window.Asc.plugin.event_onToolbarMenuClick = (id) => {
-      this._onCustomMenuClick("toolbarMenuEvents", id)
-    }
-    ```
+### PDF 编辑器
 
-## 更新工具栏菜单项
+| 标签页 ID | 标签页名称 |
+|-----------|------------|
+| home      | 主页       |
+| ins       | 插入       |
+| comment   | 评论       |
+| view      | 视图       |
+| plugins   | 插件       |
 
-要更新工具栏菜单项，请指定**更新工具栏菜单项**方法。
+## 工具栏按钮样例
 
-参数：
+### 样例 1
 
-| 名称    | 类型                                                  | 说明                                      |
-|---------|-------------------------------------------------------|--------------------------------------------------|
-| *items* | Array.\<[工具栏主菜单](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组。 |
+普通按钮。
 
-返回值：此方法不返回任何值。
+``` json
+{
+  "text": "caption",
+  "split": false,
+  "enableToggle": false
+}
+```
 
-示例：
+![Regular button](/assets/images/plugins/regular-button.png#gh-light-mode-only)![Regular button](/assets/images/plugins/regular-button.dark.png#gh-dark-mode-only)
+
+### 样例 2
+
+一个被拆分为两部分的按钮：按钮的上半部分可以单独切换，下半部分包含一个下拉菜单。
+
+``` json
+{
+  "text": "caption",
+  "split": true,
+  "enableToggle": true,
+  "items": []
+}
+```
+
+![Split and toggled button](/assets/images/plugins/split-toggle-button.png#gh-light-mode-only)![Split and toggled button](/assets/images/plugins/split-toggle-button.dark.png#gh-dark-mode-only)
+
+### 样例 3
+
+一个拆分为两部分的按钮，每部分可以单独点击，按钮的下半部分包含一个下拉菜单。
+
+``` json
+{
+  "text": "caption",
+  "split": true,
+  "enableToggle": true,
+  "items": []
+}
+```
+
+![Split button](/assets/images/plugins/split-button.png#gh-light-mode-only)![Split button](/assets/images/plugins/split-button.dark.png#gh-dark-mode-only)
+
+### 样例 4
+
+带有下拉菜单的按钮，点击按钮时会打开该菜单。
+
+``` json
+{
+  "text": "caption",
+  "split": false,
+  "enableToggle": false,
+  "items": []
+}
+```
+
+![Button with menu](/assets/images/plugins/button-with-menu.png#gh-light-mode-only)![Button with menu](/assets/images/plugins/button-with-menu.dark.png#gh-dark-mode-only)
+
+### 样例 5
+
+可切换的按钮。
+
+``` json
+{
+  "text": "caption",
+  "split": false,
+  "enableToggle": true
+}
+```
+
+![Toggled button](/assets/images/plugins/toggled-button.png#gh-light-mode-only)![Toggled button](/assets/images/plugins/toggled-button.dark.png#gh-dark-mode-only)
+
+## onToolbarMenuClick
+
+`类型：事件`
+
+当工具栏菜单按钮被点击时调用的事件。[订阅](../interacting-with-editors/overview/how-to-attach-events.md)此事件以处理工具栏按钮点击。
+
+### 参数
+
+| 名称 | 类型   | 描述      |
+|------|--------|-----------|
+| *id* | string | 项目 ID。 |
+
+**示例**：
+
+<!-- eslint-skip -->
+
+``` ts
+window.Asc.plugin.event_onToolbarMenuClick = (id) => {
+  console.log("Toolbar menu item clicked: " + id);
+};
+```
+
+## UpdateToolbarMenuItem
+
+`类型：方法`
+
+更新工具栏菜单项。
+
+### 参数
+
+| 名称    | 类型                                                  | 描述                     |
+|---------|-------------------------------------------------------|--------------------------|
+| *items* | Array.\<[ToolbarMenuMainItem](#toolbarmenumainitem)\> | 包含主工具栏菜单项的数组 |
+
+### 返回值
+
+此方法不返回任何数据。
+
+**示例**：
 
 ``` ts
 Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
@@ -339,23 +351,27 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
   };
 ```
 
-## 点击工具栏项
+## attachToolbarMenuClickEvent
 
-使用 **attachToolbarMenuClickEvent** 添加事件监听器，即当工具栏菜单中指定按钮被点击并触发事件时调用的函数。对于每个工具栏菜单按钮，可以通过其 ID 指定单独的事件监听器。
+`类型：方法`
 
-参数说明:
+添加事件监听器，即当工具栏菜单中指定按钮被点击并触发事件时调用的函数。对于每个工具栏菜单按钮，可以通过其 ID 指定单独的事件监听器。
 
-| 名称     | 类型      | 描述             |
-| -------- | --------- | ---------------- |
-| *id*     | string    | 事件名称         |
-| *action* | function  | 事件监听器函数   |
+### 参数
 
-返回值：此方法不返回任何数据。
+| 名称     | 类型     | 描述           |
+|----------|----------|----------------|
+| *id*     | string   | 事件名称       |
+| *action* | function | 事件监听器函数 |
 
-示例:
+### 返回值
+
+此方法不返回任何数据。
+
+**示例**：
 
 ``` ts
 plugin.attachToolbarMenuClickEvent("my_tab", (data) => {
-  console.log(data)
-})
+  console.log(data);
+});
 ```

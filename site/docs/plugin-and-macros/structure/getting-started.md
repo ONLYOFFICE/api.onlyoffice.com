@@ -228,7 +228,9 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
 
    where **port** is the port number with ONLYOFFICE Docs installed.
 
-   > CORS requests are needed so that plugin files can be loaded from any server.
+   :::note
+   CORS requests are needed so that plugin files can be loaded from any server.
+   :::
 
 2. Open the developer console in any ONLYOFFICE web editor, go to the **Console** tab, choose the **frameEditor** from the drop-down list, and run the following command:
 
@@ -240,7 +242,9 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 
-   > Please note that this is important to open your plugin in the **Plugin Manager** and check how it looks like in the **My Plugins** tab both in the light and dark themes. Improve the plugin display if necessary.
+   :::note
+   It is important to open your plugin in the **Plugin Manager** and check how it looks in the **My Plugins** tab in both light and dark themes. Improve the plugin display if necessary.
+   :::
 
    The plugin will be displayed within the **Plugins** tab. You can edit the plugin and reload it to see the changes.
 

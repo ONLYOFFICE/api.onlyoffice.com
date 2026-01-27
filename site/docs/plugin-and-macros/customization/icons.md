@@ -1,5 +1,6 @@
 ---
 sidebar_position: -3
+description: Learn how to add and configure icons for your ONLYOFFICE plugins.
 ---
 
 # Icons
@@ -8,12 +9,11 @@ When building a plugin for editor, adding icons can significantly enhance usabil
 
 ## Folder structure
 
-Your plugin should include a */resources* directory to store all images, icons, and other static assets.
-This folder is automatically accessible to editor when the plugin is loaded.
+Your plugin should include a */resources* directory to store all images, icons, and other static assets. This folder is automatically accessible to editor when the plugin is loaded.
 
 Here's a recommended layout:
 
-``` text
+```text
 my-plugin/
 |-- config.json
 |-- index.html
@@ -56,37 +56,28 @@ This hierarchy allows editor to automatically choose the correct icon based on t
 
 Inside your [config.json](../structure/configuration/configuration.md), define your icon using a smart URL pattern that adapts to themes and scaling:
 
-``` json
+```json
 {
-"name": "My Plugin",
- 
-"guid": "asc.{UUID}",
- 
-"version": "1.0.0",
- 
-"description": "Example plugin with adaptive icons",
- 
-"icons": [
- 
-"resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
- 
-],
- 
-"isVisual": true,
- 
-"initDataType": "none",
- 
-"initOnSelectionChanged": false
+  "name": "My Plugin",
+  "guid": "asc.{UUID}",
+  "version": "1.0.0",
+  "description": "Example plugin with adaptive icons",
+  "icons": [
+    "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
+  ],
+  "isVisual": true,
+  "initDataType": "none",
+  "initOnSelectionChanged": false
 }
 ```
 
 This single line dynamically tells the editor where to look for the icon depending on:
 
-* The theme name (classic or dark)
-* The theme type (light or dark)
-* The state (normal, hover)
-* The scale (100%, 125%, 150%, etc.)
-* The extension (png or svg)
+- The theme name (classic or dark)
+- The theme type (light or dark)
+- The state (normal, hover)
+- The scale (100%, 125%, 150%, etc.)
+- The extension (png or svg)
 
 ## How it works
 
@@ -99,7 +90,7 @@ When the plugin loads, editor:
 
 For example, when the editor is set to a dark theme with a zoom level of 150%, the following adjustments are automatically applied:
 
-```
+```text
 resources/dark/icon@1.5x.png
 ```
 
@@ -107,20 +98,17 @@ resources/dark/icon@1.5x.png
 
 You can also use icons inside content control buttons introduced in version 9.0:
 
-``` ts
+```ts
 let button = new Asc.ButtonContentControl();
- 
 button.icons = "/resources/check%scale%(default).png";
- 
 button.attachOnClick(function(contentControlId){
- 
-Asc.plugin.executeMethod("RemoveContentControl", [contentControlId]);
- 
+  Asc.plugin.executeMethod("RemoveContentControl", [contentControlId]);
 });
 ```
+
 This allows you to add interactive buttons directly inside your document content.
 
-## Parameters  
+## Parameters
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
@@ -140,10 +128,15 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
+## Deprecated icon format
+
+:::danger[Deprecated]
+The following icon format can still be used, but it is deprecated. Please use the new icon string format described above.
+:::
 
 This string generates the objects in the old icon format (the [icon2](../structure/configuration/configuration.md#variationsicons2) parameter):
 
-``` ts
+```ts
 [
   {
     "theme": "classic",
@@ -188,4 +181,30 @@ This string generates the objects in the old icon format (the [icon2](../structu
 ]
 ```
 
-This format can still be used, but it is deprecated.
+## Example
+
+```ts
+const config = {
+  name: "My Plugin",
+  guid: "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
+  version: "1.0.0",
+  description: "Example plugin with adaptive icons",
+  icons: [
+    "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
+  ],
+  isVisual: true,
+  initDataType: "none",
+  initOnSelectionChanged: false,
+  variations: [
+    {
+      description: "Example plugin",
+      url: "index.html",
+      icons: [
+        "resources/%theme-name%(classic|dark)/%theme-type%(light|dark)/icon%state%(normal|hover)%scale%(default|*).%extension%(png|svg)"
+      ],
+      isViewer: false,
+      EditorsSupport: ["word", "cell", "slide"],
+    }
+  ]
+};
+```
