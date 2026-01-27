@@ -11,7 +11,7 @@ import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
 export type Features = {
   linkPrefix: string
   items: FeaturesGrid.Item[]
-  button?: FeaturesGrid.Button
+  button: FeaturesGrid.Button
 };
 
 export const DocsFeatures: Features = {
@@ -87,9 +87,13 @@ export const DocsFeatures: Features = {
 
 export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
+  button: {
+    text: "Try DocSpace Cloud",
+    href: "https://www.onlyoffice.com/docspace-registration",
+  },
   items: [
     {
-      title: 'Backend REST API',
+      title: 'API Reference',
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
@@ -100,7 +104,7 @@ export const DocSpaceFeatures: Features = {
       icon: <DocSpaceApiIcon/>,
     },
     {
-      title: 'JavaScript SDK',
+      title: 'Embed SDK',
       link: 'javascript-sdk/get-started',
       description: (
         <>
@@ -121,17 +125,6 @@ export const DocSpaceFeatures: Features = {
         </>
       ),
       icon: <PluginIcon/>,
-    },
-    {
-      title: 'For hosting providers',
-      link: 'for-hosting-providers/get-started/authentication',
-      description: (
-        <>
-          Provide the DocSpace portal as a{" "}
-          SaaS solution on your own servers using our API methods.
-        </>
-      ),
-      icon: <HostingIcon/>,
     },
   ]
 }

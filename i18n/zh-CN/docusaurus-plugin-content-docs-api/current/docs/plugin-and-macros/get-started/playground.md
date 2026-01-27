@@ -14,7 +14,7 @@ Playground 是一个互动平台，用户无需注册或安装任何软件，就
 - **自定义设置**：可切换主题和界面语言，使用方便。
 
 ```mdx-code-block
-import {PlaygroundCardsRow} from '@site/src/components/Playground';
+import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
 
 <PlaygroundCardsRow searchParams={[{testType: "plugin"}]}/>
 ```

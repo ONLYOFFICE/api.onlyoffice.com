@@ -61,6 +61,11 @@
   --ifm-color-put-patch: #f46d2a;
   /* END STATUS OPENAPI */
 
+  /* START OPENAPI */
+  --openapi-input-background: var(--ifm-color-emphasis-0) !important;
+  --ifm-pre-background: var(--ifm-color-emphasis-100);
+  /* END OPENAPI */
+
   /* START COLORS LIST */
   --c-blue-0: #f0f6ff;
   --c-blue-70: #4d8dff;
@@ -247,6 +252,11 @@ html[data-theme='dark'] {
   --ifm-color-put-patch: #9e461a;
   /* END STATUS OPENAPI */
 
+  /* START BACKGROUND COLOR */
+  --ifm-pre-background: rgba(255, 255, 255, 0.1);
+  --prism-background-color: var(--ifm-background-color) !important;
+  /* END BACKGROUND COLOR */
+
   /*--ifm-link-color: var(--c-blue-70);*/
   /*--ifm-link-hover-color: rgba(77, 141, 255, 0.8);*/
 
@@ -262,6 +272,12 @@ html[data-theme='dark'] {
   --button-border-color-hover: #2033F5C0;
   --button-bg-color-hover: #2033F518;
 }
+
+/* START CODE */
+pre code:not(.openapi-explorer__code-block-lines) {
+  background-color: var(--ifm-code-background);
+}
+/* END CODE */
 
 /* START OPENAPI */
 .api-method {
