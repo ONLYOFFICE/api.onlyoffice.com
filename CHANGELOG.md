@@ -14,10 +14,14 @@
 #### Docspace
 
 * Changed MCP Server section
+* Fixed styles for the code  in light/dark mode for VSCode
 
 #### Docs API
 
 * Fixed Getting started page
+* Fixed styles of the right panel of OpenAI
+* Fixed problems in the code examples for plugins due to the lack of required parameters
+* Fixed style for plugins configuration description pages
 
 ## 7.6.1
 
