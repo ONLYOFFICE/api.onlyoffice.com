@@ -10,7 +10,7 @@ sidebar_position: -2
 
 首先，你可以翻译 [config.json](./configuration/configuration.md) 文件。打开该文件，找到其中的所有英文字符串。通常它们位于配置对象的 [name](./configuration/configuration.md#name)、[variations.description](./configuration/configuration.md#variationsdescription) 和 [variations.buttons.text](./configuration/configuration.md#variationsbuttons) 节点中。
 
-为这些键添加新的以 Locale 结尾的节点，值为一个以语言区域码为键、翻译内容为值的对象。例如，对于 name 键，其本地化对象如下所示：
+为这些键添加新的以 _Locale_ 结尾的节点，值为一个以语言区域码为键、翻译内容为值的对象。例如，对于 _name_ 键，其本地化对象如下所示：
 
 ``` json
 {
@@ -58,7 +58,7 @@ sidebar_position: -2
 
 ## 本地化 index.html 和插件代码文件
 
-从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 translations 文件夹，使目录结构如下： 
+从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 _translations_ 文件夹，使目录结构如下： 
 
 ``` ini
 highlightcode/
@@ -117,7 +117,7 @@ highlightcode/
 <button>New</button>
 ```
 
-则需要添加 id 属性，修改为：
+则需要添加 _id_ 属性，修改为：
 
 ``` html
 <button id="button_new">New</button>
@@ -157,13 +157,13 @@ window.Asc.plugin.onTranslate = () => {
 
 现在，当编辑器启动后，将根据当前界面语言判断插件是否具有相应语言的翻译内容。如果匹配，插件语言将自动切换为编辑器界面语言，并应用相应翻译。
 
-## Troubleshooting localization
+## 故障排除：本地化问题 {#troubleshooting-localization}
 
-### Javascript file errors
+### JavaScript 文件错误
 
-**Error name:** Incorrect function names
+**错误名称：** 函数名错误
 
-:::warning[Wrong]
+:::warning[错误示例]
 
 ```ts
 var language = document.getElementBy("language");
@@ -171,7 +171,7 @@ var language = document.getElementBy("language");
 
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 
 ```ts
 var language = document.getElementById("language");
@@ -179,11 +179,11 @@ var language = document.getElementById("language");
 
 :::
 
-Error output: _“document.getElementBy is not a function”_ (Dev. tools)
+错误输出：_"document.getElementBy 不是一个函数"_ (开发者工具)
 
-**Error name:** Mismatched element IDs
+**错误名称：** 元素 ID 不匹配
 
-:::warning[Wrong]
+:::warning[错误示例]
 
 ```ts
 var language = document.getElementById("lanuge");
@@ -192,7 +192,7 @@ language.innerHTML = window.Asc.plugin.tr("Language");
 
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 
 ```ts
 var language = document.getElementById("language");
@@ -201,11 +201,11 @@ language.innerHTML = window.Asc.plugin.tr("Language");
 
 :::
 
-Error output: Silent English fallback / ONLYOFFICE takes the default language as English, and no error occurs.
+错误输出：静默回退为英文 / ONLYOFFICE 将默认语言设为英语，且不报错。
 
-**Error name:** Variable name typos
+**错误名称：** 变量名拼写错误
 
-:::warning[Wrong]
+:::warning[错误示例]
 
 ```ts
 var language = document.getElementById("language");
@@ -214,7 +214,7 @@ lanuge.innerHTML = window.Asc.plugin.tr("Language");
 
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 
 ```ts
 var language = document.getElementById("language");
@@ -223,11 +223,11 @@ language.innerHTML = window.Asc.plugin.tr("Language");
 
 :::
 
-Error output: The console shows "lanuge is not defined", pointing you directly to the typo.
+错误输出：控制台显示 _"lanuge is not defined"_，直接指向拼写错误。
 
-**Error name:** Incorrect translation keys
+**错误名称：** 翻译键名错误
 
-:::warning[Wrong]
+:::warning[错误示例]
 
 ```ts
 language.innerHTML = window.Asc.plugin.tr("Lanuge");
@@ -235,7 +235,7 @@ language.innerHTML = window.Asc.plugin.tr("Lanuge");
 
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 
 ```ts
 language.innerHTML = window.Asc.plugin.tr("Language");
@@ -243,13 +243,13 @@ language.innerHTML = window.Asc.plugin.tr("Language");
 
 :::
 
-Error output: Instead of showing an error, the plugin displays the incorrect key directly in the UI. Users will see "Lanuge" instead of the translated text.
+错误输出：不会显示错误，而是将错误的键名直接显示在用户界面中。用户将看到 "Lanuge" 而不是翻译后的文本。
 
-### Structure errors
+### 结构错误
 
-**Error name:** Missing or misnamed translation files
+**错误名称：** 缺少或错误命名的翻译文件
 
-:::warning[Wrong]
+:::warning[错误示例]
 
 ```ini
 highlightcode/
@@ -266,7 +266,7 @@ highlightcode/
 
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 
 ```ini
 highlightcode/
@@ -283,13 +283,13 @@ highlightcode/
 
 :::
 
-Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
+错误输出：_"ERR_FILE_NOT_FOUND ; translations/de-DE.json"_ (开发者工具)
 
-### Configuration file errors
+### 配置文件错误
 
-**Error name:** Incorrect language codes in configuration
+**错误名称：** 配置中使用了错误的语言代码
 
-:::warning[Wrong]
+:::warning[错误示例]
 
 ```ini
 {
@@ -304,7 +304,7 @@ Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
 
 :::
 
-:::tip[Correct]
+:::tip[正确示例]
 
 ```ini
 {
@@ -319,4 +319,4 @@ Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
 
 :::
 
-Error output: Silent English fallback / ONLYOFFICE takes the default language as English, and no error occurs.
+错误输出：静默回退为英文 / ONLYOFFICE 将默认语言设为英语，且不报错。
