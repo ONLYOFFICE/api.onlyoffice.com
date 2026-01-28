@@ -15,7 +15,7 @@
 
 * Changed `MCP Server` section
 * Fixed styles for the code  in light/dark mode for VSCode
-* Hidden section `For hosting providers`
+* Hidden `For hosting providers` section
 
 #### Docs API
 
