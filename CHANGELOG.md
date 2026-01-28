@@ -6,15 +6,16 @@
 
 #### Docs API
 
-* Added 'Recording macros' page
-* Added AI Agent and AI Plugin pages for Chinese
+* Added `Recording macros` page
+* Added `AI Agent` and `AI Plugin` pages for Chinese
 
 ### Fixes
 
 #### Docspace
 
-* Changed MCP Server section
+* Changed `MCP Server` section
 * Fixed styles for the code  in light/dark mode for VSCode
+* Hidden section `For hosting providers`
 
 #### Docs API
 
