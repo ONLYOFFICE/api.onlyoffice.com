@@ -7,6 +7,7 @@ import HostingIcon from "@site/static/icons/self-hosted-icon.svg";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
 import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
+import MCPServerIcon from "@site/static/icons/mcp-server-icon.svg";
 
 export type Features = {
   linkPrefix: string
@@ -125,6 +126,17 @@ export const DocSpaceFeatures: Features = {
         </>
       ),
       icon: <PluginIcon/>,
+    },
+	{
+      title: 'MCP Server',
+      link: 'mcp-server',
+      description: (
+        <>
+          Connect AI tools directly to ONLYOFFICE DocSpace to execute actions{" "}
+          through natural language interactions.
+        </>
+      ),
+      icon: <MCPServerIcon/>,
     },
   ]
 }
