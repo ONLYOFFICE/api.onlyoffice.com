@@ -502,3 +502,8 @@ video {
 [data-theme='dark'] .light-video {
   display: none;
 }
+
+/* SIDEPANEL */
+.DocSearch-Sidepanel-Title {
+  margin-bottom: 0;
+}
