@@ -8,6 +8,7 @@
 
 * Added `Recording macros` page
 * Added `AI Agent` and `AI Plugin` pages for Chinese
+* Updated `Playground` section
 
 ### Fixes
 
