@@ -8,7 +8,7 @@ import '@docsearch/css/dist/sidepanel.css';
 
 export default function Root({ children }) {
   const { siteConfig } = useDocusaurusContext();
-  const algoliaConfig = siteConfig.themeConfig.algolia;
+  const algoliaConfig = siteConfig.themeConfig.algolia.askAi;
   
   return (
     <>
@@ -22,7 +22,7 @@ export default function Root({ children }) {
               appId={algoliaConfig.appId}
               apiKey={algoliaConfig.apiKey}
               indexName={algoliaConfig.indexName}
-              assistantId={algoliaConfig.askAi}
+              assistantId={algoliaConfig.assistantId}
             />
           </DocSearch>
         )}
