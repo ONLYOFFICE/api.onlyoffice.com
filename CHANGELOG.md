@@ -2,6 +2,9 @@
 
 ## 7.6.2
 
+* Added button Ask AI to chat with LLM
+* Theme colors for the code block changed to similar VSCode
+
 ### New features
 
 #### Docs API
@@ -16,7 +19,6 @@
 #### Docspace
 
 * Changed `MCP Server` section
-* Fixed styles for the code  in light/dark mode for VSCode
 * Hidden `For hosting providers` section
 
 #### Docs API
