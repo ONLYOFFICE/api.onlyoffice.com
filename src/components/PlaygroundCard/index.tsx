@@ -45,7 +45,7 @@ const Playgrounds = [
     name: 'Builder API',
     image: require('@site/static/assets/images/editor/builder-playground.png').default + '#gh-light-mode-only',
     imageDark: require('@site/static/assets/images/editor/builder-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground?editor=builder',
+    url: 'pathname:///playground?editor=word&testType=builder',
     description: 'Interact with Document Builder for working with text documents, spreadsheets, presentations, and forms.',
   },
 ];
