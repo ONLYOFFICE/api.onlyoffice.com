@@ -56,6 +56,7 @@ export const PlaygroundEditor = () => {
                     lineNumbers: 'on',
                     renderLineHighlight: 'all',
                     automaticLayout: true,
+                    fixedOverflowWidgets: true,
                 }}
             />
         </div>
