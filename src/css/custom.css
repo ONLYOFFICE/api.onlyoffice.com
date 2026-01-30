@@ -508,6 +508,21 @@ video {
   margin-bottom: 0;
 }
 
+/* AI Button hover styles - override DocSearch defaults */
+.DocSearch-SidepanelButton.floating {
+  background-color: var(--color-foreground-link) !important;
+}
+
+.DocSearch-SidepanelButton.floating:focus,
+.DocSearch-SidepanelButton.floating:hover {
+  background-color: #e55e31 !important;
+}
+
+html[data-theme='dark'] .DocSearch-SidepanelButton.floating:focus,
+html[data-theme='dark'] .DocSearch-SidepanelButton.floating:hover {
+  background-color: #ff8254 !important;
+}
+
 /* Enhanced CSS syntax highlighting for VSCode-like colors */
 [data-theme='light'] .prism-code.language-css .token.selector {
   color: #800000;
