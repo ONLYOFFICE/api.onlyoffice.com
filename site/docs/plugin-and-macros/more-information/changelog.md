@@ -55,7 +55,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the information about the current position of the context menu plugin event.
 - Added the onToolbarMenuClick event.
 - Added the [ActivateWindow](../customization/windows-and-panels.md#activating-a-window) method to *window\.Asc.plugin.executeMethod*.
-- Added the [AddToolbarMenuItem](../customization/toolbar.md#creating-a-toolbar-item) method to *window\.Asc.plugin.executeMethod*.
+- Added the [AddToolbarMenuItem](../customization/toolbar.md#addtoolbarmenuitem) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetSelectedOleObjects](../interacting-with-editors/text-document-api/Methods/GetSelectedOleObjects.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [SetPluginsOptions](../interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetAllComments](../interacting-with-editors/spreadsheet-api/Methods/GetAllComments.md) method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.

@@ -16,7 +16,7 @@ ONLYOFFICE 选择 JavaScript 作为宏的脚本语言的原因有以下几点：
 
 您可以在[此处](../samples/macro-samples/macro-samples.md)找到可直接使用的宏示例，或编写自己的宏脚本。
 
-## 如何开始编写宏
+## 如何开始编写宏 {#how-to-start-writing-your-macro}
 
 1. 打开 ONLYOFFICE 桌面编辑器。
 2. 导航至顶部工具栏的**视图**标签页。

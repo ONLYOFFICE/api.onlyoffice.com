@@ -193,7 +193,7 @@ export const PlaygroundPreview = () => {
         } catch (error) {
             console.error('Error executing code:', error)
         }
-    }, [])
+    }, [editorType])
 
 
     useEffect(() => {
