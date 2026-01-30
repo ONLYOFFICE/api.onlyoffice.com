@@ -64,11 +64,6 @@ export const PlaygroundToolbar = () => {
         }
     }, [scriptType, isScriptModified, editorType, setScriptType, setScriptValue])
 
-
-    const handleRun = useCallback(() => {
-        window.dispatchEvent(new Event('playground-run'))
-    }, [])
-
     return (
         <div className={styles.Toolbar}>
             <div className={styles.ToolbarGroup}>
@@ -181,10 +176,6 @@ export const PlaygroundToolbar = () => {
                     </Select.Portal>
                 </Select.Root>
             </div>
-
-            <button onClick={handleRun} className={styles.RunButton}>
-                Run
-            </button>
 
             <AlertDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
                 <AlertDialog.Portal>
