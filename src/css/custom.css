@@ -507,3 +507,47 @@ video {
 .DocSearch-Sidepanel-Title {
   margin-bottom: 0;
 }
+
+/* Enhanced CSS syntax highlighting for VSCode-like colors */
+[data-theme='light'] .prism-code.language-css .token.selector {
+  color: #800000;
+}
+
+[data-theme='light'] .prism-code.language-css .token.property {
+  color: #ff0000;
+}
+
+[data-theme='light'] .prism-code.language-css .token.string,
+[data-theme='light'] .prism-code.language-css .token.url,
+[data-theme='light'] .prism-code.language-css .token.attr-value {
+  color: #0451a5;
+}
+
+[data-theme='light'] .prism-code.language-css .token.number,
+[data-theme='light'] .prism-code.language-css .token.color,
+[data-theme='light'] .prism-code.language-css .token.hexcode {
+  color: #005cc5;
+}
+[data-theme='dark'] .prism-code.language-css .token.number,
+[data-theme='dark'] .prism-code.language-css .token.color,
+[data-theme='dark'] .prism-code.language-css .token.hexcode {
+  color: #b5cea8;
+}
+
+[data-theme='light'] .prism-code.language-css .token.important,
+[data-theme='light'] .prism-code.language-css .token.atrule,
+[data-theme='light'] .prism-code.language-css .token.keyword {
+  color: #0000ff;
+}
+
+[data-theme='light'] .prism-code.language-css .token.function {
+  color: #795e26;
+}
+
+/* Color hex values and other plain values in CSS */
+[data-theme='light'] .prism-code.language-css .token.plain {
+  color: #005cc5;
+}
+[data-theme='dark'] .prism-code.language-css .token.plain {
+  color: #b5cea8;
+}
