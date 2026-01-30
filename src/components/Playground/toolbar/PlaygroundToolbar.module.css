@@ -37,6 +37,8 @@
     text-align: left;
     color: var(--ifm-font-color-base);
     transition: all var(--ifm-transition-fast) ease;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .SelectTrigger:hover {
@@ -45,6 +47,7 @@
 
 .SelectTrigger:focus-visible {
     border-color: var(--ifm-color-primary);
+    outline: none;
 }
 
 .SelectContent {
@@ -70,13 +73,19 @@
     cursor: default;
 }
 
-.SelectOption:hover, .SelectOption[data-selected] {
+.SelectOption:hover, .SelectOption[data-state="checked"], .SelectOption[data-highlighted] {
     background-color: var(--ifm-dropdown-hover-background-color);
     color: var(--ifm-dropdown-link-color);
 }
 
 .SelectOption:focus-visible {
     outline: none;
+}
+
+@supports (-moz-appearance: none) {
+    .SelectOption:focus {
+        outline: none;
+    }
 }
 
 .SelectIcon {

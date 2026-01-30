@@ -4,6 +4,8 @@ import MonacoEditor, {OnMount} from '@monaco-editor/react'
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundEditor.module.css';
 import {getFullUrl} from "@site/src/utils/url";
+import {useCallback} from "react";
+import PlayIcon from '@site/static/icons/icon-play.svg';
 
 export const PlaygroundEditor = () => {
     const { scriptValue, setScriptValue, setIsScriptModified, theme, editorType, scriptType } = usePlaygroundRootContext()
@@ -31,8 +33,15 @@ export const PlaygroundEditor = () => {
             })
     }
 
+    const handleRun = useCallback(() => {
+        window.dispatchEvent(new Event('playground-run'))
+    }, [])
+
     return (
         <div className={styles.editorContainer}>
+            <button onClick={handleRun} className={styles.runButton}>
+                <PlayIcon fill='currentColor' />
+            </button>
             <MonacoEditor
                 key={`${editorType}-${scriptType}`}
                 defaultLanguage="javascript"
