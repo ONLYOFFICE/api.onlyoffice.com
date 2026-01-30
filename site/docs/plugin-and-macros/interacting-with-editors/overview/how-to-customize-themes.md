@@ -4,42 +4,11 @@ sidebar_position: -4
 
 # How to customize themes
 
-Plugins can detect and react to the current editor theme to keep their appearance consistent with the interface.
-Use the following API to retrieve the current theme settings:
-
-```ts
-const theme = window.Asc.plugin.getTheme();
-console.log(theme); // Returns object with theme colors and properties
-```
-
-## Applying CSS for different themes
-
-You can apply different CSS styles depending on the active theme. To do this, check the theme id and switch CSS variables or classes accordingly:
-
-```ts
-const currentTheme = window.Asc.plugin.getTheme().type;
-
-if (currentTheme === "dark" || currentTheme === "contrast-dark") {
-  document.body.classList.add("dark-theme");
-} else {
-  document.body.classList.remove("dark-theme");
-}
-```
-
-Then define your CSS rules:
-
-```css
-.dark-theme button {
-  background-color: #333;
-  color: #fff;
-}
-```
-
-This ensures your plugin automatically adapts its styling when users switch between light and dark themes.
+Plugins can detect and react to the current editor theme to keep their appearance consistent with the interface. Theme information is provided through the `onThemeChanged` event, which is triggered when the plugin loads and whenever the user switches themes.
 
 ## Responding to theme changes
 
-To react to theme changes in real-time, use the `onThemeChanged` event. This allows your plugin to update its appearance dynamically when users switch themes without requiring a plugin reload.
+To react to theme changes and get the current theme information, use the `onThemeChanged` event. This event is called both during plugin initialization (to provide the current theme) and whenever users switch themes.
 
 ### Setting up the event handler
 
@@ -105,6 +74,45 @@ function onThemeChanged(theme) {
 // Attach the event handler
 window.Asc.plugin.onThemeChanged = onThemeChanged;
 window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+```
+
+### Applying CSS for different themes
+
+You can apply different CSS styles depending on the active theme. Store the theme information when `onThemeChanged` is called, then use it to apply appropriate styles:
+
+```ts
+let currentTheme = null;
+
+function onThemeChanged(theme) {
+  window.Asc.plugin.onThemeChangedBase(theme);
+
+  // Store the current theme
+  currentTheme = theme;
+
+  // Apply theme-specific classes
+  if (theme.type === "dark" || theme.type === "contrast-dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+}
+
+window.Asc.plugin.onThemeChanged = onThemeChanged;
+window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
+```
+
+Then define your CSS rules:
+
+```css
+.dark-theme button {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  background-color: #f0f0f0;
+  color: #000;
+}
 ```
 
 ### Theme object properties
