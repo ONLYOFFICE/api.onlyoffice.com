@@ -24,6 +24,7 @@ export default function Root({ children }) {
               apiKey={algoliaConfig.apiKey}
               indexName={algoliaConfig.indexName}
               assistantId={algoliaConfig.assistantId}
+              suggestedQuestions={true}
             />
           </DocSearch>
         )}
