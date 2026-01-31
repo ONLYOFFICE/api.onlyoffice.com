@@ -2,7 +2,7 @@
 
 ## 7.6.2
 
-* Added button Ask AI to chat with LLM
+* Added button `Ask AI` to chat with LLM
 * Theme colors for the code block changed to similar VSCode
 
 ### New features
