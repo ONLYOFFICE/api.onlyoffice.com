@@ -153,7 +153,7 @@ export const PlaygroundToolbar = () => {
                 </Select.Root>
             </div>
 
-            <div className={styles.ToolbarGroup}>
+            <div className={`${styles.ToolbarGroup} ${styles.ToolbarGroupRight}`}>
                 <div className={styles.Label}>Theme:</div>
                 <Select.Root value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
                     <Select.Trigger className={styles.SelectTrigger}>
