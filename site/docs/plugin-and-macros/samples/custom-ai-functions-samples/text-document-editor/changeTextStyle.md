@@ -13,35 +13,63 @@ This function modifies the visual style of the selected text. If no text is sele
 ## Function registration {#function-registration}
 
 ```ts
-let func = new RegisteredFunction();
-func.name = "changeTextStyle";
-func.params = [
-    "bold (boolean): whether to make the text bold",
-    "italic (boolean): whether to make the text italic",
-    "underline (boolean): whether to underline the text",
-    "strikeout (boolean): whether to strike out the text",
-    "fontSize (number): font size to apply to the selected text"
-];
-
-func.examples = [
-    "If you need to make selected text bold and italic, respond with:" +
-    "[functionCalling (changeTextStyle)]: {\"bold\": true, \"italic\": true }",
-
-    "If you need to underline the selected text, respond with:" +
-    "[functionCalling (changeTextStyle)]: {\"underline\": true }",
-
-    "If you need to strike out the selected text, respond with:" +
-    "[functionCalling (changeTextStyle)]: {\"strikeout\": true }",
-
-    "If you need to set the font size of selected text to 18, respond with:" +
-    "[functionCalling (changeTextStyle)]: {\"fontSize\": 18 }",
-
-    "If you need to make selected text bold, respond with:" +
-    "[functionCalling (changeTextStyle)]: {\"bold\": true }",
-
-    "If you need to make selected text non-italic, respond with:" +
-    "[functionCalling (changeTextStyle)]: {\"italic\": false }"
-];
+let func = new RegisteredFunction({
+    name: "changeTextStyle",
+    description:
+        "Modifies the visual style of the selected text. If no text is selected, the current word is used by default.",
+    parameters: {
+        type: "object",
+        properties: {
+            bold: {
+                type: "boolean",
+                description: "Whether to make the text bold.",
+            },
+            italic: {
+                type: "boolean",
+                description: "Whether to make the text italic.",
+            },
+            underline: {
+                type: "boolean",
+                description: "Whether to underline the text.",
+            },
+            strikeout: {
+                type: "boolean",
+                description: "Whether to strike out the text.",
+            },
+            fontSize: {
+                type: "number",
+                description: "Font size to apply to the selected text.",
+            },
+        },
+        required: [],
+    },
+    examples: [
+        {
+            prompt: "Make selected text bold and italic",
+            arguments: { bold: true, italic: true },
+        },
+        {
+            prompt: "Underline this text",
+            arguments: { underline: true },
+        },
+        {
+            prompt: "Strike out this text",
+            arguments: { strikeout: true },
+        },
+        {
+            prompt: "Set the font size of this text to 18",
+            arguments: { fontSize: 18 },
+        },
+        {
+            prompt: "Make this text bold",
+            arguments: { bold: true },
+        },
+        {
+            prompt: "Make this text non-italic",
+            arguments: { italic: false },
+        },
+    ],
+});
 ```
 
 ### Parameters
@@ -57,42 +85,99 @@ func.examples = [
 ## Function execution {#function-execution}
 
 ```ts
-func.call = async function(params) {
-    Asc.scope.bold = params.bold;
-    Asc.scope.italic = params.italic;
-    Asc.scope.underline = params.underline;
-    Asc.scope.strikeout = params.strikeout;
-    Asc.scope.fontSize = params.fontSize;
-    await Asc.Editor.callCommand(function(){
-        let doc = Api.GetDocument();
-        let range = doc.GetRangeBySelect();
-        if (!range || "" === range.GetText())
-        {
-            doc.SelectCurrentWord();
-            range = doc.GetRangeBySelect();
-        }
-
-        if (!range)
-            return;
-
-        if (undefined !== Asc.scope.bold)
-            range.SetBold(Asc.scope.bold);
-
-        if (undefined !== Asc.scope.italic)
-            range.SetItalic(Asc.scope.italic);
-
-        if (undefined !== Asc.scope.underline)
-            range.SetUnderline(Asc.scope.underline);
-
-        if (undefined !== Asc.scope.strikeout)
-            range.SetStrikeout(Asc.scope.strikeout);
-
-        if (undefined !== Asc.scope.fontSize)
-            range.SetFontSize(Asc.scope.fontSize);
+(function () {
+    let func = new RegisteredFunction({
+        name: "changeTextStyle",
+        description:
+            "Modifies the visual style of the selected text. If no text is selected, the current word is used by default.",
+        parameters: {
+            type: "object",
+            properties: {
+                bold: {
+                    type: "boolean",
+                    description: "Whether to make the text bold.",
+                },
+                italic: {
+                    type: "boolean",
+                    description: "Whether to make the text italic.",
+                },
+                underline: {
+                    type: "boolean",
+                    description: "Whether to underline the text.",
+                },
+                strikeout: {
+                    type: "boolean",
+                    description: "Whether to strike out the text.",
+                },
+                fontSize: {
+                    type: "number",
+                    description: "Font size to apply to the selected text.",
+                },
+            },
+            required: [],
+        },
+        examples: [
+            {
+                prompt: "Make selected text bold and italic",
+                arguments: { bold: true, italic: true },
+            },
+            {
+                prompt: "Underline this text",
+                arguments: { underline: true },
+            },
+            {
+                prompt: "Strike out this text",
+                arguments: { strikeout: true },
+            },
+            {
+                prompt: "Set the font size of this text to 18",
+                arguments: { fontSize: 18 },
+            },
+            {
+                prompt: "Make this text bold",
+                arguments: { bold: true },
+            },
+            {
+                prompt: "Make this text non-italic",
+                arguments: { italic: false },
+            },
+        ],
     });
-};
 
-return func;
+    func.call = async function (params) {
+        Asc.scope.bold = params.bold;
+        Asc.scope.italic = params.italic;
+        Asc.scope.underline = params.underline;
+        Asc.scope.strikeout = params.strikeout;
+        Asc.scope.fontSize = params.fontSize;
+        await Asc.Editor.callCommand(function () {
+            let doc = Api.GetDocument();
+            let range = doc.GetRangeBySelect();
+            if (!range || "" === range.GetText()) {
+                doc.SelectCurrentWord();
+                range = doc.GetRangeBySelect();
+            }
+
+            if (!range) return;
+
+            if (undefined !== Asc.scope.bold) range.SetBold(Asc.scope.bold);
+
+            if (undefined !== Asc.scope.italic)
+                range.SetItalic(Asc.scope.italic);
+
+            if (undefined !== Asc.scope.underline)
+                range.SetUnderline(Asc.scope.underline);
+
+            if (undefined !== Asc.scope.strikeout)
+                range.SetStrikeout(Asc.scope.strikeout);
+
+            if (undefined !== Asc.scope.fontSize)
+                range.SetFontSize(Asc.scope.fontSize);
+        });
+    };
+
+    return func;
+})();
 ```
 
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [SelectCurrentWord](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/SelectCurrentWord.md), [SetBold](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetBold.md), [SetItalic](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetItalic.md), [SetUnderline](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetUnderline.md), [SetStrikeout](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetStrikeout.md), [SetFontSize](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/SetFontSize.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
