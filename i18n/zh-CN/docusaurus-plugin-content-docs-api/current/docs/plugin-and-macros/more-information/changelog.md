@@ -39,7 +39,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 添加了关于插件触发上下文菜单事件时的位置的信息。
 - 添加了**工具栏菜单点击**事件。
 - 向 *window.Asc.plugin.executeMethod* 添加了[激活窗口](../customization/windows-and-panels.md#activating-a-window)方法。
-- 向 *window.Asc.plugin.executeMethod* 添加了[添加工具栏菜单项](../customization/toolbar.md#creating-a-toolbar-item)方法。
+- 向 *window.Asc.plugin.executeMethod* 添加了[添加工具栏菜单项](../customization/toolbar.md#addtoolbarmenuitem)方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了[获取选中的 OLE 对象](../interacting-with-editors/text-document-api/Methods/GetSelectedOleObjects.md)方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了[设置插件选项](../interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md)方法。
 - 向电子表格 API 中的 *window.Asc.plugin.executeMethod* 添加了**获取所有评论**方法。

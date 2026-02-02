@@ -45,6 +45,7 @@ const connector = docEditor.createConnector();
 ### 示例
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
     text: "mainItem",
@@ -106,6 +107,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 #### 示例
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.addToolbarMenuItem({
   tabs: [
     {
@@ -149,6 +151,7 @@ connector.addToolbarMenuItem({
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
 });
@@ -181,6 +184,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.callCommand(() => {
   const oDocument = Api.GetDocument();
   const oParagraph = Api.CreateParagraph();
@@ -202,6 +206,7 @@ connector.callCommand(() => {
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.connect();
 ```
 
@@ -212,6 +217,7 @@ connector.connect();
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 ```
 
@@ -228,6 +234,7 @@ const testConnectorWindow = connector.createWindow();
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.detachEvent("onChangeContentControl");
 ```
 
@@ -238,6 +245,7 @@ connector.detachEvent("onChangeContentControl");
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.disconnect();
 ```
 
@@ -256,6 +264,7 @@ connector.disconnect();
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
 });
@@ -285,6 +294,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 ### 示例:
 
 ``` ts
+const connector = docEditor.createConnector();
 const items = [
   {
     id: "onConvert",
@@ -315,6 +325,8 @@ Connector window 是一个代表连接器窗口的类。要创建它，请使用
 #### 示例
 
 ``` ts
+const connector = docEditor.createConnector();
+const testConnectorWindow = connector.createWindow();
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
   console.log(`panel message: ${message}`);
 });
@@ -334,6 +346,8 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 ### 示例
 
 ``` ts
+const connector = docEditor.createConnector();
+const testConnectorWindow = connector.createWindow();
 testConnectorWindow.dispatchEvent("messageName", {
   prop: "value",
 });
@@ -352,10 +366,14 @@ testConnectorWindow.dispatchEvent("messageName", {
 #### 示例
 
 ``` ts
+const connector = docEditor.createConnector();
+const testConnectorWindow = connector.createWindow();
 testConnectorWindow.show({
   url: "./window/panel.html",
   description: "Panel example!",
   type: "panel",
+  EditorsSupport: ["word", "cell", "slide", "pdf"],
+  isVisual: true,
   buttons: [],
   icons: "./icon.svg",
 });

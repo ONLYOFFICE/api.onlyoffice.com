@@ -153,13 +153,13 @@ import TabItem from '@theme/TabItem';
 
   请阅读插件[自定义](../customization/context-menu.md)章节，了解插件在编辑器中的多种呈现方式：可作为上下文菜单项、工具栏按钮、窗口、左右侧面板或输入辅助工具出现。您可以选择适合您插件的呈现方式，按照指南进行自定义。
 
-  在 index.html 文件中添加 ONLYOFFICE [样式表](../structure/styles.md)，使您的插件风格与 ONLYOFFICE 编辑器保持一致：
+  在 index.html 文件中添加 ONLYOFFICE [样式表](../customization/styles.md)，使您的插件风格与 ONLYOFFICE 编辑器保持一致：
 
     ``` html
     <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
     ```
 
-2. [添加图标](../structure/icons.md) 到您的插件，使最终目录结构如下所示：
+2. [添加图标](../customization/icons.md) 到您的插件，使最终目录结构如下所示：
 
   ``` ini
   helloworld/
@@ -228,7 +228,9 @@ import TabItem from '@theme/TabItem';
 
    其中 **port** 是安装 ONLYOFFICE 文档的端口号。
 
-   > 需要 CORS 请求才能从任意服务器加载插件文件。
+   :::note
+   需要 CORS 请求才能从任意服务器加载插件文件。
+   :::
 
 2. 在任意 ONLYOFFICE 网页版编辑器中打开开发者控制台，转到**控制台**选项卡，从下拉菜单中选择**框架编辑器**，然后执行以下命令：
 
@@ -240,7 +242,9 @@ import TabItem from '@theme/TabItem';
 
    ![Developer console](/assets/images/plugins/developer-console.png)
 
-   > 请注意：请通过**插件管理器**打开您的插件，并在**我的插件**选项卡中检查其在浅色和深色主题下的显示效果。如有需要，请优化插件显示效果。
+   :::note
+   请通过**插件管理器**打开您的插件，并在**我的插件**选项卡中检查其在浅色和深色主题下的显示效果。如有需要，请优化插件显示效果。
+   :::
 
    插件将显示在**插件**选项卡中。您可以编辑插件并重新加载以查看变更。
    

@@ -61,6 +61,11 @@
   --ifm-color-put-patch: #f46d2a;
   /* END STATUS OPENAPI */
 
+  /* START OPENAPI */
+  --openapi-input-background: var(--ifm-color-emphasis-0) !important;
+  --ifm-pre-background: var(--ifm-color-emphasis-100);
+  /* END OPENAPI */
+
   /* START COLORS LIST */
   --c-blue-0: #f0f6ff;
   --c-blue-70: #4d8dff;
@@ -247,6 +252,11 @@ html[data-theme='dark'] {
   --ifm-color-put-patch: #9e461a;
   /* END STATUS OPENAPI */
 
+  /* START BACKGROUND COLOR */
+  --ifm-pre-background: rgba(255, 255, 255, 0.1);
+  --prism-background-color: var(--ifm-background-color) !important;
+  /* END BACKGROUND COLOR */
+
   /*--ifm-link-color: var(--c-blue-70);*/
   /*--ifm-link-hover-color: rgba(77, 141, 255, 0.8);*/
 
@@ -262,6 +272,12 @@ html[data-theme='dark'] {
   --button-border-color-hover: #2033F5C0;
   --button-bg-color-hover: #2033F518;
 }
+
+/* START CODE */
+pre code:not(.openapi-explorer__code-block-lines) {
+  background-color: var(--ifm-code-background);
+}
+/* END CODE */
 
 /* START OPENAPI */
 .api-method {
@@ -485,4 +501,68 @@ video {
 [data-theme='light'] .dark-video,
 [data-theme='dark'] .light-video {
   display: none;
+}
+
+/* SIDEPANEL */
+.DocSearch-Sidepanel-Title {
+  margin-bottom: 0;
+}
+
+/* AI Button hover styles - override DocSearch defaults */
+.DocSearch-SidepanelButton.floating {
+  background-color: var(--color-foreground-link) !important;
+}
+
+.DocSearch-SidepanelButton.floating:focus,
+.DocSearch-SidepanelButton.floating:hover {
+  background-color: #e55e31 !important;
+}
+
+html[data-theme='dark'] .DocSearch-SidepanelButton.floating:focus,
+html[data-theme='dark'] .DocSearch-SidepanelButton.floating:hover {
+  background-color: #ff8254 !important;
+}
+
+/* Enhanced CSS syntax highlighting for VSCode-like colors */
+[data-theme='light'] .prism-code.language-css .token.selector {
+  color: #800000;
+}
+
+[data-theme='light'] .prism-code.language-css .token.property {
+  color: #ff0000;
+}
+
+[data-theme='light'] .prism-code.language-css .token.string,
+[data-theme='light'] .prism-code.language-css .token.url,
+[data-theme='light'] .prism-code.language-css .token.attr-value {
+  color: #0451a5;
+}
+
+[data-theme='light'] .prism-code.language-css .token.number,
+[data-theme='light'] .prism-code.language-css .token.color,
+[data-theme='light'] .prism-code.language-css .token.hexcode {
+  color: #005cc5;
+}
+[data-theme='dark'] .prism-code.language-css .token.number,
+[data-theme='dark'] .prism-code.language-css .token.color,
+[data-theme='dark'] .prism-code.language-css .token.hexcode {
+  color: #b5cea8;
+}
+
+[data-theme='light'] .prism-code.language-css .token.important,
+[data-theme='light'] .prism-code.language-css .token.atrule,
+[data-theme='light'] .prism-code.language-css .token.keyword {
+  color: #0000ff;
+}
+
+[data-theme='light'] .prism-code.language-css .token.function {
+  color: #795e26;
+}
+
+/* Color hex values and other plain values in CSS */
+[data-theme='light'] .prism-code.language-css .token.plain {
+  color: #005cc5;
+}
+[data-theme='dark'] .prism-code.language-css .token.plain {
+  color: #b5cea8;
 }
