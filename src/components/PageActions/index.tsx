@@ -1,6 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './styles.module.css';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import AIIcon from '@site/static/icons/ai-icon.svg';
+import ClaudeIcon from '@site/static/icons/claude.svg';
+import ChatGPTIcon from '@site/static/icons/chatgpt.svg';
+import MarkdownIcon from '@site/static/icons/markdown.svg';
+import ArowIcon from '@site/static/icons/arrow-down.svg';
+import CopyIcon from '@site/static/icons/copy.svg';
 
 export default function PageActions(): React.JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -150,7 +156,7 @@ export default function PageActions(): React.JSX.Element {
         className={styles.btn}
         onClick={handleAskQuestion}
       >
-        <img src="/icons/ai-icon.svg" className={styles.buttonIcon} alt="" />
+        <AIIcon className={styles.menuIcon}/>
         <span className={styles.label}>Ask a question</span>
       </button>
       <button
@@ -161,28 +167,28 @@ export default function PageActions(): React.JSX.Element {
         aria-controls="split-menu"
         onClick={toggleMenu}
       >
-        <img src="/icons/arrow-down.svg" className={styles.arrowIcon} alt="" />
+        <ArowIcon className={styles.arrowIcon} />
       </button>
       {isMenuOpen && (
         <div id="split-menu" role="menu" className={styles.menu}>
           <button role="menuitem" className={styles.menuItem} onClick={handleSummarizePage}>
-            <img src="/icons/ai-icon.svg" className={styles.buttonIcon} alt="" />
+            <AIIcon className={styles.menuIcon} />
             <span className={styles.label}>Summarize page</span>
           </button>
           <button role="menuitem" className={styles.menuItem} onClick={handleCopyPage}>
-            <img src="/icons/copy.svg" className={styles.menuIconStroke} alt="" />
+            <CopyIcon className={styles.menuIconStroke} />
             <span className={styles.label}>Copy page</span>
           </button>
           <button role="menuitem" className={styles.menuItem} onClick={handleViewAsMarkdown}>
-            <img src="/icons/markdown.svg" className={styles.menuIconStroke} alt="" />
+            <MarkdownIcon className={styles.menuIconStroke} />
             <span className={styles.label}>View as markdown</span>
           </button>
           <button role="menuitem" className={styles.menuItem} onClick={() => handleOpenInAI('https://claude.ai/new')}>
-            <img src="/icons/claude.svg" className={styles.menuIcon} alt="" />
+            <ClaudeIcon className={styles.menuIcon} />
             <span className={styles.label}>Open in Claude</span>
           </button>
           <button role="menuitem" className={styles.menuItem} onClick={() => handleOpenInAI('https://chat.openai.com/')}>
-            <img src="/icons/chatgpt.svg" className={styles.menuIcon} alt="" />
+            <ChatGPTIcon className={styles.menuIcon} />
             <span className={styles.label}>Open in ChatGPT</span>
           </button>
         </div>

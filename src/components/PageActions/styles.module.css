@@ -16,6 +16,9 @@
   padding: .4rem .75rem .5rem;
   font-size: 15px;
   line-height: 1.25rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .btn:hover {
@@ -30,6 +33,7 @@
   padding: 0.5rem;
   border-left: 0;
   border-radius: 0 4px 4px 0;
+  line-height: 1.25rem;
 }
 
 .buttonIcon {
@@ -93,6 +97,7 @@
   height: 16px;
   flex-shrink: 0;
   fill: currentColor;
+  stroke: currentColor;
 }
 
 .menuIconStroke {
@@ -100,4 +105,5 @@
   height: 16px;
   flex-shrink: 0;
   fill: none;
+  stroke: currentColor;
 }
