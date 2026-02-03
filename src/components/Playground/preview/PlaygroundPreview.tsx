@@ -33,8 +33,6 @@ export const PlaygroundPreview = () => {
     const initializingRef = useRef(false)
     const [isApiLoaded, setIsApiLoaded] = useState(false)
 
-    const pluginConfigUrl = getFullUrl("/plugin/config.json");
-
     const createJWT = useCallback(
         async (payload: object): Promise<string> => {
             if (!documentServerSecret) return ''
@@ -127,6 +125,8 @@ export const PlaygroundPreview = () => {
                 events: {
                     onDocumentReady: () => {
                         try {
+                            const pluginConfigUrl = getFullUrl("/plugin/config.json");
+
                             window.connector = window.docEditor.createConnector();
                             window.connector.callCommand(
                                 new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
@@ -149,7 +149,7 @@ export const PlaygroundPreview = () => {
             initializingRef.current = false
         }
 
-    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, pluginConfigUrl, isApiLoaded, destroyEditor])
+    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {

@@ -222,6 +222,9 @@
   --button-text-color-hover: #2033F5;
   --button-border-color-hover: #2033F5;
   --button-bg-color-hover: #f5f5faC0;
+
+  --ifm-button-background-color: white;
+  --ifm-button-background-color-hover: #e8e8ea;
 }
 
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
@@ -271,6 +274,9 @@ html[data-theme='dark'] {
   --button-text-color-hover: #EAF1FEC0;
   --button-border-color-hover: #2033F5C0;
   --button-bg-color-hover: #2033F518;
+
+  --ifm-button-background-color: #1b1b1d;
+  --ifm-button-background-color-hover: #3d3d43;
 }
 
 /* START CODE */
@@ -491,6 +497,19 @@ button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
 @media (max-width: 545px) {
   .hero__title {
     font-size: 2.5rem;
+  }
+}
+
+/* Custom page header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (width <= 640px) {
+  article .theme-doc-markdown header {
+    display: inherit !important;
   }
 }
 

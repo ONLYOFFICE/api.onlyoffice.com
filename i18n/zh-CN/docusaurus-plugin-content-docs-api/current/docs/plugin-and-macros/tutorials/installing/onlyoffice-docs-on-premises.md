@@ -13,7 +13,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="R7gvhLvGL44"/>
 ```
 
-可以通过以下三种方式添加插件：sdkjs-plugins 文件夹、config.json 文件或插件管理器。
+可以通过以下三种方式添加插件：`sdkjs-plugins` 文件夹、`config.json` 文件或插件管理器。
 
 ## 通过 sdkjs-plugins 文件夹添加插件 {#adding-plugins-through-the-plugin-manager-for-all-users}
 
@@ -34,15 +34,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 插件将对 **ONLYOFFICE 文档部署版**的所有用户可见。[某些情况下](https://nodejs.org/docs/latest/api/fs.html#fs_availability)，可能需要重启服务。
 
-调试时可使用共享 sdkjs-plugins 文件夹启动 ONLYOFFICE 文档：
+调试时可使用共享 `sdkjs-plugins` 文件夹启动 ONLYOFFICE 文档：
 
 ``` sh
-docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
+docker run -itd -p 80:80 -v /absolutely_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
 ```
 
 ## 通过 config.json 添加插件
 
-在 [ONLYOFFICE 文档配置](../../../docs-api/usage-api/config/editor/plugins.md)中，将插件的 config.json 相对路径添加到 plugins.pluginsData 参数中：
+在 [ONLYOFFICE 文档配置](../../../docs-api/usage-api/config/editor/plugins.md)中，将插件的 `config.json` 相对路径添加到 `plugins.pluginsData` 参数中：
 
 ``` ts
 const config = {
@@ -67,13 +67,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 `https://example.com/plugin1/config.json` 是插件的路径。
 
-如果配置中已经有一个测试示例，请将 /etc/onlyoffice/documentserver-example/local.json 中的相关行替换为所需插件配置的路径。
+如果配置中已经有一个测试示例，请将 `/etc/onlyoffice/documentserver-example/local.json` 中的相关行替换为所需插件配置的路径。
 
 有关在哪里可以找到配置以及可以在那里进行哪些更改的更多信息，请参阅 [ONLYOFFICE 文档 API](../../../docs-api/usage-api/config/editor/plugins.md) 文档。
 
 ### 注意事项
 
-- 请确保 index.html 中包含对 [plugins.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) 的引用。不要忘记将该文件添加到插件文件夹中。
+- 请确保 `index.html` 中包含对 [plugins.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) 的引用。不要忘记将该文件添加到插件文件夹中。
 - 如果插件同时存在于文件夹中并在配置文件中指定，则优先使用配置文件中指定的插件。
 - 如果您希望将插件上传到 S3 或 Nginx 服务器，您需要允许来自文档服务器地址的跨域请求。或者，你也可以直接允许所有人使用你的插件：
 
@@ -142,7 +142,7 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 
 示例中的路径为默认路径，如有需要，请进行相应修改。
 
-**选项 2.** 进入 sdkjs-plugins 文件夹，并从该目录中删除对应的插件文件夹。
+**选项 2.** 进入 `sdkjs-plugins` 文件夹，并从该目录中删除对应的插件文件夹。
 
 该文件夹的路径取决于您所使用的操作系统：
 
@@ -191,14 +191,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | 代码高亮        | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |
-| 图片编辑器      | \{07FD8DFA-DFE0-4089-AL24-0730933CC80A\} |
+| 图片编辑器      | \{07FD8DFA-DFE0-4089-A124-0730933CC80A\} |
 | 语音合成        | \{D71C2EF0-F15B-47C7-80E9-86D671F9C595\} |
 | 同义词词典      | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9840\} |
 | 翻译           | \{7327FC95-16DA-41D9-9AF2-0E7F449F6800\} |
 | YouTube        | \{38E022EA-AD92-45FC-B22B-49DF39746DB4\} |
 | Zotero         | \{BFC5D5C6-89DE-4168-9565-ABD8D1E48711\} |
 
-> 注意：在更新应用后，默认插件将会重新出现，您需要再次手动卸载。
+:::note
+注意：在更新应用后，默认插件将会重新出现，您需要再次手动卸载。
+:::
 
 **选项 4.** 若要卸载新添加的插件，请按照以下步骤操作：
 

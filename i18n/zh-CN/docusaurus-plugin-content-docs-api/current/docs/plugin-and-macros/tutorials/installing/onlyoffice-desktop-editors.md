@@ -33,9 +33,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 即使处于离线状态，也可以手动添加您自己的插件：
 
-1. 将所有[插件文件](../../structure/configuration/configuration.md)打包为一个 **zip** 压缩包，并将其扩展名改为 .plugin（所有插件文件和子文件夹必须位于压缩包的根目录）。
+1. 将所有[插件文件](../../structure/configuration/configuration.md)打包为一个 **zip** 压缩包，并将其扩展名改为 `.plugin`（所有插件文件和子文件夹必须位于压缩包的根目录）。
 
-   > 如果您是从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins) 下载的插件，请先解压插件文件夹，然后仅对其中的元素进行压缩。
+   :::note
+   如果您是从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins) 下载的插件，请先解压插件文件夹，然后仅对其中的元素进行压缩。
+   :::
 
 2. 打开**插件**选项卡中的**插件管理器**。
 
@@ -49,7 +51,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 通过插件文件夹添加插件
 
-**步骤 1.** 在 sdkjs-plugins 目录中创建一个新文件夹。该路径取决于您使用的操作系统：
+**步骤 1.** 在 `sdkjs-plugins` 目录中创建一个新文件夹。该路径取决于您使用的操作系统：
 
 <Tabs>
   <TabItem value="win" label="Windows">
@@ -59,7 +61,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
   </TabItem>
   <TabItem value="mac" label="macOS">
       ``` bash
-      ~/Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
+      ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
       ```
   </TabItem>
   <TabItem value="lin" label="Linux">
@@ -69,9 +71,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
   </TabItem>
 </Tabs>
 
-**步骤 2.** 使用插件的 **GUID** 作为文件夹名称。你可以在 config.json 文件中找到插件的 GUID。
+**步骤 2.** 使用插件的 **GUID** 作为文件夹名称。你可以在 `config.json` 文件中找到插件的 GUID。
 
-例如，对于**扩展评论**插件，其 guid 参数如下所示：
+例如，对于**扩展评论**插件，其 `guid` 参数如下所示：
 
 ``` json
 {
@@ -80,7 +82,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 }
 ```
 
-因此，该插件的文件夹名称为 *\{91EAC419-EF8B-440C-A960-B451C7DF3A37\}*。
+因此，该插件的文件夹名称为 `{91EAC419-EF8B-440C-A960-B451C7DF3A37}`。
 
 **步骤 3.** 将所有插件文件放入此文件夹中：
 
@@ -98,11 +100,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 2. 进入**插件管理器**。
 3. 点击对应插件下的**移除**按钮。
 
-> 默认插件和通过插件文件夹添加的插件无法通过此方法移除。
+:::note
+默认插件和通过插件文件夹添加的插件无法通过此方法移除。
+:::
 
-如果您需要卸载默认插件，请前往 sdkjs-plugins 文件夹并从中删除相应的插件文件夹。
+如果您需要卸载默认插件，请前往 `sdkjs-plugins` 文件夹并从中删除相应的插件文件夹。
 
-> 请注意，从 macOS 上的 ONLYOFFICE 桌面编辑器中移除默认插件会破坏程序完整性，可能导致应用崩溃。若非绝对必要，请不要这样做。
+:::caution
+请注意，从 macOS 上的 ONLYOFFICE 桌面编辑器中移除默认插件会破坏程序完整性，可能导致应用崩溃。若非绝对必要，请不要这样做。
+:::
 
 下表列出了默认插件的 GUID，供您查找：
 
@@ -113,7 +119,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 | 代码高亮        | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |
-| 图像编辑器      | \{07FD8DFA-DFE0-4089-AL24-0730933CC80A\} |
+| 图像编辑器      | \{07FD8DFA-DFE0-4089-A124-0730933CC80A\} |
 | 语音朗读        | \{D71C2EF0-F15B-47C7-80E9-86D671F9C595\} |
 | 同义词词典      | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9840\} |
 | 翻译           | \{7327FC95-16DA-41D9-9AF2-0E7F449F6800\} |
@@ -121,4 +127,6 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 | Zotero         | \{BFC5D5C6-89DE-4168-9565-ABD8D1E48711\} |
 | 发送文档        | \{B509123E-6335-40BD-B965-91EB799346E3\} |
 
-> 请注意，更新应用后默认插件将再次出现，你需要重新卸载它们。
+:::note
+请注意，更新应用后默认插件将再次出现，你需要重新卸载它们。
+:::
