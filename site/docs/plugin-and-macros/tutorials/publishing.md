@@ -6,11 +6,11 @@ sidebar_position: -2
 
 If you want your plugin to be available to other users in the ONLYOFFICE Plugin Marketplace, suggest it for publishing:
 
-1. Sing in to an existing [GitHub](https://github.com/) account or create a new one.
+1. Sign in to an existing [GitHub](https://github.com/) account or create a new one.
 
-2. Fork the plugin marketplace repository: [onlyoffice.github.io](https://github.com/ONLYOFFICE/onlyoffice.github.io.
+2. Fork the plugin marketplace repository: [onlyoffice.github.io](https://github.com/ONLYOFFICE/onlyoffice.github.io).
 
-   You get a repository with the following address - `https://github.com/YOUR-USERNAME/ONLYOFFICE/onlyoffice.github.io`.
+   You get a repository with the following address - `https://github.com/YOUR-USERNAME/onlyoffice.github.io`.
 
 3. Build your own GitHub Pages site from this repository to test your plugin in the web version later. Explore the official [GitHub documentation](https://docs.github.com/en/pages/quickstart) to learn how to do it.
 

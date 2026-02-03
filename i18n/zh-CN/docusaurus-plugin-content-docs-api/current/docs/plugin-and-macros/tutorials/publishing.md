@@ -10,7 +10,7 @@ sidebar_position: -2
 
 2. 分叉插件市场仓库：[onlyoffice.github.io](https://github.com/ONLYOFFICE/onlyoffice.github.io)。
 
-   您将获得一个仓库，地址如下：`https://github.com/YOUR-USERNAME/ONLYOFFICE/onlyoffice.github.io`。
+   您将获得一个仓库，地址如下：`https://github.com/YOUR-USERNAME/onlyoffice.github.io`。
 
 3. 从该仓库构建您自己的 GitHub 页面网站，以便后续在网页版中测试插件。请查阅官方 [GitHub 文档](https://docs.github.com/zh/pages/quickstart)了解具体操作方法。
 
