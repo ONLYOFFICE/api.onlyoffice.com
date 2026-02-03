@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # For desktop editors
 
-To debug ONLYOFFICE plugins in the desktop editors, use the _--ascdesktop-support-debug-info_ flag. To do this, follow the instructions [here](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) depending on the operating system you use.
+To debug ONLYOFFICE plugins in the desktop editors, use the `--ascdesktop-support-debug-info` flag. To do this, follow the instructions [here](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) depending on the operating system you use.
 
 ![Debug](/assets/images/desktop/debugging.png)
 
@@ -12,7 +12,7 @@ To debug ONLYOFFICE plugins in the desktop editors, use the _--ascdesktop-suppor
 
 **Developer console**
 
-- Open DevTools (F12).
+- Open DevTools (`F12`).
 - Select the plugin iframe in the frame selector so logs run in the correct context.
 - Use console methods to inspect state:
 
@@ -25,7 +25,7 @@ console.error("Error:", errorObj);
 
 **Breakpoints**
 
-- Insert **debugger;** where you want execution to pause.
+- Insert `debugger;` where you want execution to pause.
 - **DevTools** must be open before plugin execution.
 
 ```javascript
@@ -65,7 +65,7 @@ Debugging plugin initialization
 
 ### Debugger use case and scope managing
 
-You can use external variables in your plugins by attaching them to **Asc.scope** object.
+You can use external variables in your plugins by attaching them to `Asc.scope` object.
 
 ```javascript
 (function (window, undefined) {

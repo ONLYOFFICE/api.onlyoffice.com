@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # 桌面编辑器
 
-要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 _--ascdesktop-support-debug-info_ 标志。根据您使用的操作系统，按照[此处](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)的说明进行操作。
+要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 `--ascdesktop-support-debug-info` 标志。根据您使用的操作系统，按照[此处](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)的说明进行操作。
 
 ![Debug](/assets/images/desktop/debugging.png)
 
@@ -12,7 +12,7 @@ sidebar_position: -1
 
 **开发者控制台**
 
-- 打开开发者工具（F12）。
+- 打开开发者工具（`F12`）。
 - 在框架选择器中选择插件 iframe，以便日志在正确的上下文中运行。
 - 使用控制台方法检查状态：
 
@@ -25,7 +25,7 @@ console.error("Error:", errorObj);
 
 **断点**
 
-- 在希望暂停执行的位置插入 **debugger;**。
+- 在希望暂停执行的位置插入 `debugger;`。
 - 必须在插件执行前打开**开发者工具**。
 
 ```javascript
@@ -65,7 +65,7 @@ this.callCommand(function () {
 
 ### 调试器用例和作用域管理
 
-您可以通过将外部变量附加到 **Asc.scope** 对象来在插件中使用它们。
+您可以通过将外部变量附加到 `Asc.scope` 对象来在插件中使用它们。
 
 ```javascript
 (function (window, undefined) {
