@@ -38,7 +38,7 @@ When developing ONLYOFFICE plugins, debugging is essential for identifying and r
 - **Isolated environment -** Plugins run in a separate iframe, which means they have their own JavaScript context
 - **Asynchronous communication -** Plugins interact with the editor through asynchronous API calls
 - **Multiple contexts -** You need to handle both plugin context and editor context
-- **Scope managment -** Variables need careful handling between different scopes
+- **Scope management -** Variables need careful handling between different scopes
 - **Cross-platform considerations -** Web and desktop editors require different debugging approaches
 
 To effectively debug your plugin, you can use various tools and techniques available in modern browsers. The most common approaches include:
@@ -68,16 +68,16 @@ Select the plugin's frame in the Console drop-down before evaluating expressions
 1.  **Programmatic breakpoints** -
     Insert a debugger statement where you want execution to pause.
 
-            ```javascript
-            (function (window, undefined) {
-                window.Asc.plugin.init = function () {
-                    this.callCommand(function () {
-                        debugger;
-                        // Your code
-                    });
-                };
-            })(window, undefined);
-            ```
+    ```javascript
+    (function (window, undefined) {
+        window.Asc.plugin.init = function () {
+            this.callCommand(function () {
+                debugger;
+                // Your code
+            });
+        };
+    })(window, undefined);
+    ```
 
     :::tip
     Make sure DevTools are open before running the plugin script.
@@ -111,7 +111,7 @@ Always ensure the plugin iframe is selected before inspecting variables, setting
 
 ### Common issues
 
-**Cors**
+**CORS**
 
 - Start your local server with the --cors flag (http-server --cors).
 - Ensure [document server](https://www.onlyoffice.com/download-docs#docs-community) is installed and accessible.
