@@ -2,19 +2,19 @@
 sidebar_position: -1
 ---
 
-# For desktop editors
+# 桌面编辑器
 
-To debug ONLYOFFICE plugins in the desktop editors, use the _--ascdesktop-support-debug-info_ flag. To do this, follow the instructions [here](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) depending on the operating system you use.
+要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 _--ascdesktop-support-debug-info_ 标志。根据您使用的操作系统，按照[此处](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)的说明进行操作。
 
 ![Debug](/assets/images/desktop/debugging.png)
 
-### Debugging tools
+### 调试工具
 
-**Developer console**
+**开发者控制台**
 
-- Open DevTools (F12).
-- Select the plugin iframe in the frame selector so logs run in the correct context.
-- Use console methods to inspect state:
+- 打开开发者工具（F12）。
+- 在框架选择器中选择插件 iframe，以便日志在正确的上下文中运行。
+- 使用控制台方法检查状态：
 
 ```javascript
 console.log("Debug:", value);
@@ -23,10 +23,10 @@ console.warn("Warning:", warnValue);
 console.error("Error:", errorObj);
 ```
 
-**Breakpoints**
+**断点**
 
-- Insert **debugger;** where you want execution to pause.
-- **DevTools** must be open before plugin execution.
+- 在希望暂停执行的位置插入 **debugger;**。
+- 必须在插件执行前打开**开发者工具**。
 
 ```javascript
 this.callCommand(function () {
@@ -36,12 +36,12 @@ this.callCommand(function () {
 ```
 
 :::tip
-Alternatively, you can set debug breakpoint manually in DevTools: open Sources > locate your plugin file > click a line number to add a breakpoint (right-click for conditional breakpoints).
+或者，您可以在开发者工具中手动设置调试断点：打开 Sources > 找到您的插件文件 > 点击行号以添加断点（右键单击可添加条件断点）。
 :::
 
-### Best practices
+### 最佳实践
 
-Debugging plugin initialization
+调试插件初始化
 
 ```javascript
 (function (window, undefined) {
@@ -63,9 +63,9 @@ Debugging plugin initialization
 })(window, undefined);
 ```
 
-### Debugger use case and scope managing
+### 调试器用例和作用域管理
 
-You can use external variables in your plugins by attaching them to **Asc.scope** object.
+您可以通过将外部变量附加到 **Asc.scope** 对象来在插件中使用它们。
 
 ```javascript
 (function (window, undefined) {
