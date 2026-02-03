@@ -26,8 +26,7 @@ sidebar_position: -2
 
 3. 打开 **Plugins** 选项卡并运行插件。
    :::tip
-   请注意，**debugger** 命令仅在开发工具打开时才有效。<br/>
-   否则，浏览器将忽略它。
+   请注意，**debugger** 命令仅在开发工具打开时才有效。否则，浏览器将忽略它。
    :::
    ![Builder debugger](/assets/images/plugins/plugin-debugging.png)
 
@@ -105,20 +104,19 @@ console.error("Error:", errorObj);
 ### 调试检查清单
 
 1. 确认插件已安装并启用。
-2. 确保所有文件（index.html、config.json、assets）都存在且可访问。
-3. 验证 config.json 结构和路径。
+2. 确保所有文件（`index.html`、`config.json`、`assets`）都存在且可访问。
+3. 验证 `config.json` 结构和路径。
 4. 在继续之前检查控制台是否有错误。
 
 ### 常见问题
 
 **CORS**
 
-- 使用 --cors 标志启动本地服务器（http-server --cors）。
+- 使用 `--cors` 标志启动本地服务器（`http-server --cors`）。
 - 确保已安装并可访问 [document server](https://www.onlyoffice.com/download-docs#docs-community)。
 - 在编辑器要求时，通过 HTTPS 提供插件资源。
 
 **JWT**
 
-- 验证 Document Server 配置中的密钥：<br/>
-  %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json ( services.CoAuthoring.secret.browser.string )
-- 确保令牌有效（未过期）且格式正确（header.payload.signature）。
+- 验证 Document Server 配置中的密钥：`%ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json` (`services.CoAuthoring.secret.browser.string`)
+- 确保令牌有效（未过期）且格式正确（`header.payload.signature`）。

@@ -26,8 +26,7 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below,
 
 3. Open the **Plugins** tab and run the plugin.
    :::tip
-   Please note that the **debugger** command will only work if the development tools are open.<br/>
-   Otherwise, the browser will ignore it.
+   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it.
    :::
    ![Builder debugger](/assets/images/plugins/plugin-debugging.png)
 
@@ -105,20 +104,19 @@ Always ensure the plugin iframe is selected before inspecting variables, setting
 ### Debugging checklist
 
 1. Confirm the plugin is installed and enabled.
-2. Ensure all files (index.html, config.json, assets) are present and reachable.
-3. Validate config.json structure and paths.
+2. Ensure all files (`index.html`, `config.json`, `assets`) are present and reachable.
+3. Validate `config.json` structure and paths.
 4. Check the console for errors before continuing.
 
 ### Common issues
 
 **CORS**
 
-- Start your local server with the --cors flag (http-server --cors).
+- Start your local server with the `--cors` flag (`http-server --cors`).
 - Ensure [document server](https://www.onlyoffice.com/download-docs#docs-community) is installed and accessible.
 - Serve plugin resources over HTTPS when required by the editor.
 
 **JWT**
 
-- Verify the secret key in Document Server config: <br/>
-  %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json ( services.CoAuthoring.secret.browser.string )
-- Ensure tokens are valid (not expired) and correctly formed ( header.payload.signature ).
+- Verify the secret key in Document Server config: `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json` (`services.CoAuthoring.secret.browser.string`)
+- Ensure tokens are valid (not expired) and correctly formed (`header.payload.signature`).
