@@ -43,7 +43,7 @@ Now you can use this function in the spreadsheet.
 
 The sample of a custom function you can find [here](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md).
 
-## Accessing cell addresses (since v9.0.4)
+## Accessing cell addresses
 
 Starting from version 9.0.4, you can access  cell address information inside custom functions:
 
