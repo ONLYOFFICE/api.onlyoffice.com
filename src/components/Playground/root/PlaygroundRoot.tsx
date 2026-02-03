@@ -19,18 +19,16 @@ export type PlaygroundRootProps = ComponentProps<'div'> & {
 
 export const PlaygroundRoot = ({ editorType = 'word', previewType = 'desktop', scriptType = 'connector', documentServerUrl, documentServerSecret, ...props }: PlaygroundRootProps) => {
     const { colorMode, setColorMode } = useColorMode()
+    const { siteConfig: { customFields } } = useDocusaurusContext()
 
     const initialScript = DEFAULT_SCRIPTS[editorType][scriptType];
 
-    if (!documentServerUrl || !documentServerSecret) {
-        const { siteConfig: { customFields } } = useDocusaurusContext()
-        if (!documentServerUrl) {
-            documentServerUrl = customFields.documentServer as string;
-        }
+    if (!documentServerUrl) {
+        documentServerUrl = customFields.documentServer as string;
+    }
 
-        if (!documentServerSecret) {
-            documentServerSecret = customFields.documentServerSecret as string;
-        }
+    if (!documentServerSecret) {
+        documentServerSecret = customFields.documentServerSecret as string;
     }
 
     const [editorTypeState, setEditorType] = useState<EditorType>(editorType)
