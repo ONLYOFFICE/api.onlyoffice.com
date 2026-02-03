@@ -16,7 +16,7 @@ sidebar_position: -2
 
 4. 将分叉仓库克隆到您的本地计算机。
 
-5. 在 *onlyoffice.github.io/sdkjs-plugins/content/* 目录下添加一个您的插件文件夹。
+5. 在 `onlyoffice.github.io/sdkjs-plugins/content/` 目录下添加一个您的插件文件夹。
 
    ![新建文件夹](/assets/images/plugins/new-folder.png)
 

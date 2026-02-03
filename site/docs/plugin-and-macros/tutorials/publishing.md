@@ -16,7 +16,7 @@ If you want your plugin to be available to other users in the ONLYOFFICE Plugin 
 
 4. Clone the fork to your local computer.
 
-5. Add a folder for your plugin to *onlyoffice.github.io/sdkjs-plugins/content/*.
+5. Add a folder for your plugin to `onlyoffice.github.io/sdkjs-plugins/content/`.
 
    ![New folder](/assets/images/plugins/new-folder.png)
 
