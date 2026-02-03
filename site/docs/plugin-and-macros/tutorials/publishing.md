@@ -20,7 +20,7 @@ If you want your plugin to be available to other users in the ONLYOFFICE Plugin 
 
    ![New folder](/assets/images/plugins/new-folder.png)
 
-6. Push the plugin folder to the remote repository. 
+6. Push the plugin folder to the remote repository. 
 
 7. Add your plugin to the `store/config.json` file in the root of the repository. Add a JSON object with your plugin name and discussion field:
 
@@ -36,4 +36,4 @@ If you want your plugin to be available to other users in the ONLYOFFICE Plugin 
    
    If your plugin works properly, your pull request will be approved and the plugin will appear in the marketplace.
 
-   You can discuss plugin development, request a feature, or report a bug by posting an issue in the [marketplace repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).
+   You can discuss plugin development, request a feature, or report a bug by posting an issue in the [marketplace repository](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).
