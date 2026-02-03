@@ -22,7 +22,15 @@ If you want your plugin to be available to other users in the ONLYOFFICE Plugin 
 
 6. Push the plugin folder to the remote repository. 
 
-7. Create a [pull request](https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls) from your fork to `https://github.com/ONLYOFFICE/onlyoffice.github.io`. You can use the **Submit your own plugin** button in the Plugin Manager window.
+7. Add your plugin to the `store/config.json` file in the root of the repository. Add a JSON object with your plugin name and discussion field:
+
+   ```json
+   { "name": "your-plugin-name", "discussion": "" }
+   ```
+
+   The `"name"` field should match your plugin folder name, and `"discussion"` can be left as an empty string or filled with a discussion ID if applicable.
+
+8. Create a [pull request](https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls) from your fork to `https://github.com/ONLYOFFICE/onlyoffice.github.io`. You can use the **Submit your own plugin** button in the Plugin Manager window.
 
    ![Submit plugin](/assets/images/plugins/submit-plugin.png)
    

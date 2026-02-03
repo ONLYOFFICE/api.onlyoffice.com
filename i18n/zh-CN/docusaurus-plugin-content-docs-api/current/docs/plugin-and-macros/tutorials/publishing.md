@@ -22,7 +22,15 @@ sidebar_position: -2
 
 6. 将插件文件夹推送到远程仓库。
 
-7. 从您的交叉仓库向 `https://github.com/ONLYOFFICE/onlyoffice.github.io` 提交一个 [拉取请求](https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls)。您也可以在插件管理器窗口中点击**提交插件**按钮来提交。
+7. 将您的插件添加到仓库根目录下的 `store/config.json` 文件中。添加一个包含插件名称和讨论字段的 JSON 对象：
+
+   ```json
+   { "name": "your-plugin-name", "discussion": "" }
+   ```
+
+   `"name"` 字段应与您的插件文件夹名称匹配，`"discussion"` 可以留空或填写相应的讨论 ID（如适用）。
+
+8. 从您的交叉仓库向 `https://github.com/ONLYOFFICE/onlyoffice.github.io` 提交一个 [拉取请求](https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls)。您也可以在插件管理器窗口中点击**提交插件**按钮来提交。
 
    ![提交插件](/assets/images/plugins/submit-plugin.png)
    
