@@ -5,6 +5,7 @@ import {useAnchorTargetClassName} from '@docusaurus/theme-common';
 import Link from '@docusaurus/Link';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import type {Props} from '@theme/Heading';
+import PageActions from '@site/src/components/PageActions';
 import './styles.module.css';
 
 export default function Heading({as: As, id, ...props}: Props): ReactNode {
@@ -12,7 +13,19 @@ export default function Heading({as: As, id, ...props}: Props): ReactNode {
   const anchorTargetClassName = useAnchorTargetClassName(id);
 
   // H1 headings do not need an id because they don't appear in the TOC.
-  if (As === 'h1' || !id) {
+  if (As === 'h1') {
+    // Disable PageActions for hero headings and other special pages
+    const shouldShowActions = !props.className?.includes('hero__title');
+
+    return (
+      <>
+        <As {...props} id={undefined} />
+        {shouldShowActions && <PageActions />}
+      </>
+    );
+  }
+
+  if (!id) {
     return <As {...props} id={undefined} />;
   }
 
