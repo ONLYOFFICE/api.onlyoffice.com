@@ -4,28 +4,25 @@ import * as Tabs from '@radix-ui/react-tabs'
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels'
 import { PlaygroundPreview } from '../preview/PlaygroundPreview'
 import styles from './PlaygroundContent.module.css'
-import {useEffect, useState} from "react";
+import { useSyncExternalStore } from "react";
 import {PlaygroundEditor} from "@site/src/components/Playground/editor/PlaygroundEditor";
 
+function useIsMobile(query = '(max-width: 767px)') {
+    return useSyncExternalStore(
+        (callback) => {
+            const matchMedia = window.matchMedia(query);
+            matchMedia.addEventListener('change', callback);
+            return () => matchMedia.removeEventListener('change', callback);
+        },
+        () => window.matchMedia(query).matches,
+        () => false
+    );
+}
+
 export const PlaygroundContent = () => {
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 767px)')
-
-        const handleMediaChange = (e: MediaQueryListEvent | MediaQueryList) => {
-            setIsMobile(e.matches)
-        }
-
-        handleMediaChange(mediaQuery)
-
-        mediaQuery.addEventListener('change', handleMediaChange)
-
-        return () => mediaQuery.removeEventListener('change', handleMediaChange)
-    }, [])
+    const isMobile = useIsMobile()
 
     if (isMobile) {
-
         return (
             <Tabs.Root className={styles.TabsRoot} defaultValue='editor'>
                 <Tabs.List className={styles.TabsList}>

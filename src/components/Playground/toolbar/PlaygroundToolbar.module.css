@@ -246,6 +246,10 @@
         gap: 6px;
     }
 
+    .ToolbarGroupRight {
+        margin-left: unset;
+    }
+
     .Label {
         font-size: 12px;
     }
