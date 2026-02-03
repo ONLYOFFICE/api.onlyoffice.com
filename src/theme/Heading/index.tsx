@@ -16,12 +16,14 @@ export default function Heading({as: As, id, ...props}: Props): ReactNode {
   if (As === 'h1') {
     // Disable PageActions for hero headings and other special pages
     const shouldShowActions = !props.className?.includes('hero__title');
+    const isOpenApiHeading = props.className?.includes('openapi__heading');
+    const Wrapper = isOpenApiHeading ? 'header' : React.Fragment;
 
     return (
-      <>
+      <Wrapper>
         <As {...props} id={undefined} />
         {shouldShowActions && <PageActions />}
-      </>
+      </Wrapper>
     );
   }
 
