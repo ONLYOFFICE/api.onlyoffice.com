@@ -41,7 +41,7 @@ export default function PageActions(): React.JSX.Element {
 
   const handleAskQuestion = () => {
     const currentUrl = window.location.href;
-    const message = `Read ${currentUrl} so I can ask questions about it.`;
+    const message = `[Context: ${currentUrl}] I want to ask questions about this page.`;
 
     // Dispatch custom event to open sidepanel with message
     window.dispatchEvent(new CustomEvent('openDocSearchSidepanel', {
@@ -53,7 +53,7 @@ export default function PageActions(): React.JSX.Element {
 
   const handleSummarizePage = () => {
     const currentUrl = window.location.href;
-    const message = `Summarize the following page: ${currentUrl}`;
+    const message = `[Context: ${currentUrl}] Summarize this page.`;
 
     // Dispatch custom event to open sidepanel with message
     window.dispatchEvent(new CustomEvent('openDocSearchSidepanel', {
