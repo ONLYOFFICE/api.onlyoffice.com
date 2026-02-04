@@ -5,6 +5,13 @@
   margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading));
 }
 
+@media (width <= 640px) {
+  .pageActions {
+    width: 100%;
+    justify-content: right;
+  }
+}
+
 .btn {
   font: inherit;
   border: 1px solid var(--ifm-toc-border-color);

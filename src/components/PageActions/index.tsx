@@ -277,7 +277,7 @@ export default function PageActions(): React.JSX.Element {
         className={styles.btn}
         onClick={handleAskQuestion}
       >
-        <AIIcon className={styles.menuIcon}/>
+        <AIIcon className={styles.menuIconStroke}/>
         <span className={styles.label}>Ask a question</span>
       </button>
       <button
@@ -293,7 +293,7 @@ export default function PageActions(): React.JSX.Element {
       {isMenuOpen && (
         <div id="split-menu" role="menu" className={styles.menu}>
           <button role="menuitem" className={styles.menuItem} onClick={handleSummarizePage}>
-            <AIIcon className={styles.menuIcon} />
+            <AIIcon className={styles.menuIconStroke} />
             <span className={styles.label}>Summarize page</span>
           </button>
           <button role="menuitem" className={styles.menuItem} onClick={handleCopyPage}>
