@@ -2,7 +2,7 @@
 sidebar_position: -3
 ---
 
-# Csharp
+# CSharp
 
 The ONLYOFFICE DocSpace SDK for C# is a library that provides tools for integrating and managing DocSpace features within your applications.
 
