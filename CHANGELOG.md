@@ -1,5 +1,23 @@
 # Change log
 
+## 7.6.3
+
+* Added LLM multi button on all pages
+* Added `Context` option to `Ask AI`
+
+### Fixes
+
+* Update Docusaurus OpenAPI plugin to version 4.7.1
+* Removed unused scripts
+
+#### Docs API
+
+* Fixed typos and formating on some pages
+
+#### Docspace
+
+* Delete generation `for-hosting-providers` section
+
 ## 7.6.2
 
 * Added button `Ask AI` to chat with LLM
