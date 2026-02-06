@@ -2,6 +2,8 @@
 
 ## 7.6.3
 
+### New features
+
 * Added LLM multi button on all pages
 * Added `Context` option to `Ask AI`
 
