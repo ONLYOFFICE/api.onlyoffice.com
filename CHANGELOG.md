@@ -16,7 +16,7 @@
 
 #### Docspace
 
-* Delete generation `for-hosting-providers` section
+* Deleted generation of the `for-hosting-providers` section
 
 ## 7.6.2
 
