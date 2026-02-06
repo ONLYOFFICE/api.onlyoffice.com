@@ -12,12 +12,7 @@ Inserts a particular date it the spreadsheet. The format of the date can be sele
 
 ## Installation
 
-Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
-
-You can remove it following the desktop, on-premises, or cloud installation instructions.
-
-
-The plugin guid: `{409e5493-56ae-45e1-8423-c73c84a06c50}`.
+Install the Date Picker plugin from the plugins marketplace.
 
 ## Usage
 
@@ -36,6 +31,8 @@ The plugin guid: `{409e5493-56ae-45e1-8423-c73c84a06c50}`.
 2. Icons
 
 3. The translations folder contains translations Russian, German, Spanish, Czech, French, Italian, Japanese, Portuguese, Albanian, Serbian, and Chinese.
+
+4. The README.md files contains  
 
 Find the plugin on GitHub: [Date Picker plugin](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/datepicker)
 
