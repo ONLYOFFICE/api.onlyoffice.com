@@ -13,7 +13,9 @@ Search for text and apply highlighting, color, and formatting styles in the docu
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/raza2004/onlyoffice.github.io/tree/master/sdkjs-plugins/content/texthighlighter) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
+
+You can remove it following the desktop, on-premises, or cloud installation instructions.
 
 The plugin guid: `{07FD8DFA-DFE0-4089-AL24-0730933CC804}`.
 
@@ -35,7 +37,7 @@ The plugin guid: `{07FD8DFA-DFE0-4089-AL24-0730933CC804}`.
 
 ## Plugin Structure
 
-Repository on GitHub: [texthighlighter](https://github.com/raza2004/onlyoffice.github.io/tree/master/sdkjs-plugins/content/texthighlighter).
+Repository on GitHub: [texthighlighter](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/texthighlighter).
 
 1. *config.json*, *index.html*, and *code.js* - Core plugin files
 
@@ -131,20 +133,14 @@ Repository on GitHub: [texthighlighter](https://github.com/raza2004/onlyoffice.g
 
 ## Methods and Events
 
-### Methods
-
-- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/#callcommand) - Execute document operations
-- [executeMethod ("Search")](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/Search) - Search for text in the document
-- [executeMethod ("GetRangeBySelect")](/docs/plugin-and-macros/interacting-with-editors/common-api/Methods/GetRangeBySelect) - Get the selected range
-- [executeMethod ("Undo")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/Undo/) - Undo the last operation
-
-### Events
-
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works) - Initialize the plugin
-- [onThemeChanged](/docs/plugin-and-macros/interacting-with-editors/overview/) - Handle theme changes (dark/light mode)
-- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin) - Apply translations
-- [onSelectionChanged](/docs/plugin-and-macros/interacting-with-editors/overview/) - Respond to text selection changes
-- [onCommandCallback](/docs/plugin-and-macros/interacting-with-editors/overview/#oncommandcallback) - Handle results from callCommand
+- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/#callcommand)
+- [executeMethod ("Search")](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/Search)
+- [executeMethod ("Undo")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/Undo/) 
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onThemeChanged](/docs/plugin-and-macros/interacting-with-editors/overview/)
+- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
+- [onSelectionChanged](/docs/plugin-and-macros/interacting-with-editors/overview/)
+- [onCommandCallback](/docs/plugin-and-macros/interacting-with-editors/overview/#oncommandcallback)
 
 ## Support
 

@@ -10,17 +10,22 @@ Find headlines across news sources and open articles in your browser.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/news) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+
+Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
+
+You can remove it following the desktop, on-premises, or cloud installation instructions.
+
+The plugin guid: `{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}`.
 
 ## Usage
 
-1. Choose Provider: Select your preferred news provider (GNews or TheNewsAPI)
-2. Get API Key: Register at your chosen provider's website and get your free API key
-3. Install Plugin: Open the plugin from the Plugins tab in ONLYOFFICE
-4. Setup: Enter your API key when prompted
-5. Search: Use the Search tab to find articles by keywords
-6. Headlines: Use the Top Headlines tab to browse news by category
-7. Open Articles: Click on any article to open it in your browser
+1. Choose Provider: Select your preferred news provider (GNews or TheNewsAPI).
+2. Get API Key: Register at your chosen provider's website and get your free API key.
+3. Find the plugin on the **Plugins** tab.
+4. Enter your API key when prompted.
+5. Search: Use the Search tab to find articles by keywords.
+6. Headlines: Use the Top Headlines tab to browse news by category.
+7. Open Articles: Click on any article to open it in your browser.
 
 
 ## Plugin structure

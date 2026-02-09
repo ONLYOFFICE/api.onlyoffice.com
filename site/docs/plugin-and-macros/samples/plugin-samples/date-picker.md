@@ -12,7 +12,12 @@ Inserts a particular date it the spreadsheet. The format of the date can be sele
 
 ## Installation
 
-Install the Date Picker plugin from the plugins marketplace.
+Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
+
+You can remove it following the desktop, on-premises, or cloud installation instructions.
+
+
+The plugin guid: `{409e5493-56ae-45e1-8423-c73c84a06c50}`.
 
 ## Usage
 
