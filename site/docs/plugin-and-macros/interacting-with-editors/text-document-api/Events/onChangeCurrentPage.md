@@ -8,10 +8,4 @@ The function called when the current page has changed.
 | --------- | ------------- | ----------- |
 | index | number | The index of the newly activated page. |
 
-```javascript
-window.Asc.plugin.attachEditorEvent("onChangeCurrentPage", (page) => {
-    console.log(`The page has been changed to: ${page}`);
-});
-```
-
 
