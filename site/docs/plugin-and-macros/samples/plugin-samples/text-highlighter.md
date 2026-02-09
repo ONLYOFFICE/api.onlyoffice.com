@@ -37,22 +37,17 @@ The plugin guid: `{07FD8DFA-DFE0-4089-AL24-0730933CC804}`.
 
 Repository on GitHub: [texthighlighter](https://github.com/raza2004/onlyoffice.github.io/tree/master/sdkjs-plugins/content/texthighlighter).
 
-1. **config.json**, **index.html**, and **code.js** - Core plugin files
+1. *config.json*, *index.html*, and *code.js* - Core plugin files
 
-2. **Icons** - Light and dark theme icons at multiple resolutions (SVG format):
-   - Standard: 100%, 125%, 150%, 175%, 200%
-   - Supports both flat and flatDark themes
+2. Icons
 
-3. **The translations folder** contains translations into Russian, German, Spanish, Czech, and French.
+3. The *translations* folder contains translations into Russian, German, Spanish, Czech, and French.
 
-4. **styles.css** - Custom styling for the plugin interface including:
-   - Responsive layout
-   - Dark mode support
-   
+4. *styles.css* - Custom styling for the plugin interface including dark mode support and resposive layout.
 
 5. **Third-party libraries**:
    - [Pickr](https://simonwep.github.io/pickr/) - A modern, lightweight color picker library. License: [MIT License](https://github.com/Simonwep/pickr/blob/master/LICENSE).
-   - [OnlyOffice Plugin SDK](https://github.com/ONLYOFFICE/sdkjs-plugins) - Official OnlyOffice plugin API. License: [AGPL-3.0](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/LICENSE).
+
 
 ## Config
 
