@@ -1,6 +1,6 @@
 {
   "name": "api-onlyoffice-com",
-  "version": "7.6.2",
+  "version": "7.6.3",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -30,8 +30,8 @@
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
     "clsx": "^2.0.0",
-    "docusaurus-plugin-openapi-docs": "4.3.3",
-    "docusaurus-theme-openapi-docs": "4.3.3",
+    "docusaurus-plugin-openapi-docs": "4.7.1",
+    "docusaurus-theme-openapi-docs": "4.7.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -61,12 +61,12 @@ ONLYOFFICE Document Builder 允许将文档文件保存为图像文件，创建�
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
 
-        document = api.Call("GetDocument")
-        paragraph = api.Call("CreateParagraph")
-        paragraph.Call("AddText", "Hello, World!")
+        document = api.GetDocument()
+        paragraph = api.CreateParagraph()
+        paragraph.AddText("Hello, World!")
         content = context.CreateArray(1)
         content[0] = paragraph
-        document.Call("InsertContent", content)
+        document.InsertContent(content)
 
         dstPath = os.getcwd() + "/result.docx"
         builder.SaveFile(docbuilder.FileTypes.Graphics.PNG, "images.zip", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")

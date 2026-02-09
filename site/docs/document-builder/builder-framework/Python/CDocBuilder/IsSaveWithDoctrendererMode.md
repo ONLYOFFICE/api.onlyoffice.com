@@ -27,12 +27,12 @@ api = globalObj["Api"]
 
 doctrendererMode = builder.IsSaveWithDoctrendererMode()
 
-document = api.Call("GetDocument")
-paragraph = api.Call("CreateParagraph")
-paragraph.Call("AddText", "ONLYOFFICE Document Builder IsSaveWithDoctrendererMode - " + str(doctrendererMode))
+document = api.GetDocument()
+paragraph = api.CreateParagraph()
+paragraph.AddText("ONLYOFFICE Document Builder IsSaveWithDoctrendererMode - " + str(doctrendererMode))
 content = context.CreateArray(1)
 content[0] = paragraph
-document.Call("InsertContent", content)
+document.InsertContent(content)
 
 dstPath = os.getcwd() + "/result.docx"
 builder.SaveFile("docx", dstPath)

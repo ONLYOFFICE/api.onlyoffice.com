@@ -39,12 +39,12 @@ globalObj = context.GetGlobal()
 api = globalObj["Api"]
 
 # 创建文件内容
-document = api.Call("GetDocument")
-paragraph = api.Call("CreateParagraph")
-paragraph.Call("AddText", "Hello, World!")
+document = api.GetDocument()
+paragraph = api.CreateParagraph()
+paragraph.AddText("Hello, World!")
 content = context.CreateArray(1)
 content[0] = paragraph
-document.Call("InsertContent", content)
+document.InsertContent(content)
 
 # 保存文件并关闭 DocBuilder
 dstPath = os.getcwd() + "/result.docx"
