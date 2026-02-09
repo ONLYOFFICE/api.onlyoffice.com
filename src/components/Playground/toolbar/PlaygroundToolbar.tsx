@@ -64,11 +64,6 @@ export const PlaygroundToolbar = () => {
         }
     }, [scriptType, isScriptModified, editorType, setScriptType, setScriptValue])
 
-
-    const handleRun = useCallback(() => {
-        window.dispatchEvent(new Event('playground-run'))
-    }, [])
-
     return (
         <div className={styles.Toolbar}>
             <div className={styles.ToolbarGroup}>
@@ -158,7 +153,7 @@ export const PlaygroundToolbar = () => {
                 </Select.Root>
             </div>
 
-            <div className={styles.ToolbarGroup}>
+            <div className={`${styles.ToolbarGroup} ${styles.ToolbarGroupRight}`}>
                 <div className={styles.Label}>Theme:</div>
                 <Select.Root value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
                     <Select.Trigger className={styles.SelectTrigger}>
@@ -181,10 +176,6 @@ export const PlaygroundToolbar = () => {
                     </Select.Portal>
                 </Select.Root>
             </div>
-
-            <button onClick={handleRun} className={styles.RunButton}>
-                Run
-            </button>
 
             <AlertDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
                 <AlertDialog.Portal>

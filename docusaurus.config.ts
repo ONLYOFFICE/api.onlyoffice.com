@@ -136,13 +136,6 @@ const config: Config = {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
-          docspaceHosted: {
-            specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
-            outputDir: "site/docspace/for-hosting-providers/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
     ],

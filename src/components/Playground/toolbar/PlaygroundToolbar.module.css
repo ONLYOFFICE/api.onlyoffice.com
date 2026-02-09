@@ -15,6 +15,10 @@
     gap: 8px;
 }
 
+.ToolbarGroupRight {
+    margin-left: auto;
+}
+
 .Label {
     font-size: 13px;
     font-weight: 500;
@@ -37,6 +41,8 @@
     text-align: left;
     color: var(--ifm-font-color-base);
     transition: all var(--ifm-transition-fast) ease;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .SelectTrigger:hover {
@@ -45,6 +51,7 @@
 
 .SelectTrigger:focus-visible {
     border-color: var(--ifm-color-primary);
+    outline: none;
 }
 
 .SelectContent {
@@ -70,13 +77,19 @@
     cursor: default;
 }
 
-.SelectOption:hover, .SelectOption[data-selected] {
+.SelectOption:hover, .SelectOption[data-state="checked"], .SelectOption[data-highlighted] {
     background-color: var(--ifm-dropdown-hover-background-color);
     color: var(--ifm-dropdown-link-color);
 }
 
 .SelectOption:focus-visible {
     outline: none;
+}
+
+@supports (-moz-appearance: none) {
+    .SelectOption:focus {
+        outline: none;
+    }
 }
 
 .SelectIcon {
@@ -177,27 +190,6 @@
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
-}
-
-.RunButton {
-    padding: 6px 16px;
-    background: var(--ifm-color-primary);
-    color: white;
-    border: none;
-    border-radius: var(--ifm-global-radius);
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--ifm-transition-fast) ease;
-    margin-left: auto;
-}
-
-.RunButton:hover {
-    background: var(--ifm-color-primary-dark);
-}
-
-.RunButton:active {
-    background: var(--ifm-color-primary-darker);
 }
 
 .ConfirmButton,
