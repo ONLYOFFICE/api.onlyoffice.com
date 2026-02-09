@@ -5,6 +5,13 @@
   margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading));
 }
 
+@media (width <= 640px) {
+  .pageActions {
+    width: 100%;
+    justify-content: right;
+  }
+}
+
 .btn {
   font: inherit;
   border: 1px solid var(--ifm-toc-border-color);
@@ -69,6 +76,7 @@
   top: 100%;
   right: 0;
   box-shadow: 0 6px 24px #00000014;
+  z-index: 1;
 }
 
 .menuItem {

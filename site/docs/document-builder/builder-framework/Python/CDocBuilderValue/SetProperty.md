@@ -26,7 +26,7 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument")
+document = api.GetDocument()
 document.SetProperty("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"})
 ```
 
@@ -47,7 +47,7 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
    context = builder.GetContext()
    globalObj = context.GetGlobal()
    api = globalObj["Api"]
-   document = api.Call("GetDocument")
+   document = api.GetDocument()
    document.Set("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"})
    ```
 
@@ -66,6 +66,6 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
    context = builder.GetContext()
    globalObj = context.GetGlobal()
    api = globalObj["Api"]
-   document = api.Call("GetDocument")
+   document = api.GetDocument()
    document["color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"}]
    ```

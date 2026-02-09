@@ -26,9 +26,9 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument")
-charts = document.Call("GetAllCharts")
-chart =  api.Call("CreateChart", "bar3D", [
+document = api.GetDocument()
+charts = document.GetAllCharts()
+chart =  api.CreateChart( "bar3D", [
   [200, 240, 280],
   [250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24)
@@ -50,9 +50,9 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument")
-charts = document.Call("GetAllCharts")
-chart =  api.Call("CreateChart", "bar3D", [
+document = api.GetDocument()
+charts = document.GetAllCharts()
+chart =  api.CreateChart( "bar3D", [
   [200, 240, 280],
   [250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24)

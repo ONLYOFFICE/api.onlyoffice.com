@@ -22,14 +22,13 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   // Headers with API key for authentication
   const HEADERS = {
-    Authorization: API_KEY, // если используете PAT, Bearer не нужен
-    // Authorization: `Bearer ${API_KEY}`, // вариант, если токен JWT
+    Authorization: `Bearer ${API_KEY}`,
     'Content-Type': 'application/json',
   };
 
   // Step 1: Create a room
   async function createRoom(roomName, description) {
-    const url = `${BASE_URL}/api/2.0/files/rooms`; // исправлен путь
+    const url = `${BASE_URL}/api/2.0/files/rooms`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -94,7 +93,7 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     }
   }
 
-  // Run (пример)
+  // Run
   (async () => {
     const room_name = 'New Room';                // Replace with actual room name
     const description = 'This is a test room.';  // Replace with actual room description
@@ -106,7 +105,7 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
       await createRoom(room_name, description);
 
       // Step 2
-      await getRoomDetails(room_id); // вставьте актуальный ID
+      await getRoomDetails(room_id);
 
       // Step 3
       await renameRoom(room_id, new_room_name);
@@ -140,11 +139,12 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   # Step 1: Create a room
   def create_room(room_name, description):
-    url = f'{BASE_URL}/api/2.0/files/room'
+    url = f'{BASE_URL}/api/2.0/files/rooms'
     data = {
       'title': room_name,
       'description': description
     }
+    response = requests.post(url, headers=HEADERS, json=data)
     if response.status_code == 200:
       room_id = response.json()['response']['id']
       print(f'Room created successfully: {room_id}')
@@ -155,9 +155,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   # Step 2: Retrieve room details
   def get_room_details(room_id):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
-    response = requests.get(url, headers=headers)
-    room_info = response.json()
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}'
+    response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       room_info = response.json()
       print(f'Room details: {room_info}')
@@ -168,11 +167,11 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   # Step 3: Rename a room
   def rename_room(room_id, new_name):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}/rename'
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}'
     data = {
       'title': new_name
     }
-    requests.put(url, headers=headers, json=data)
+    response = requests.put(url, headers=HEADERS, json=data)
     if response.status_code == 200:
       print(f'Room {room_id} renamed successfully.')
     else:
@@ -180,8 +179,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   # Step 4: Archive a room
   def archive_room(room_id):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}/archive'
-    requests.put(url, headers=headers)
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}/archive'
+    response = requests.put(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'Room {room_id} archived successfully.')
     else:
@@ -189,8 +188,8 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
 
   # Step 5: Delete a room
   def delete_room(room_id):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
-    requests.delete(url, headers=headers)
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}'
+    response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'Room {room_id} deleted successfully.')
     else:
@@ -202,20 +201,23 @@ This example demonstrates how to manage rooms in ONLYOFFICE DocSpace using the A
     new_room_name = 'Updated Room Name' # Replace with actual new room name
     room_id = 1234 # Replace with actual room ID
 
-  #Step 1
-  create_room(room_name, description)
+    #Step 1
+    create_room(room_name, description)
 
-  #Step 2
-  get_room_details(room_id)
+    #Step 2
+    get_room_details(room_id)
 
-  #Step 3
-  rename_room(room_id, new_room_name)
+    #Step 3
+    rename_room(room_id, new_room_name)
 
-  #Step 4
-  archive_room(room_id)
+    #Step 4
+    archive_room(room_id)
 
-  #Step 5
-  delete_room(room_id)
+    #Step 5
+    delete_room(room_id)
+
+  if __name__ == '__main__':
+    main()
   ```
 
   </TabItem>
@@ -231,7 +233,7 @@ A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api
 
   ``` ts
   async function createRoom(roomName, description) {
-    const url = `${BASE_URL}/api/2.0/files/room`;
+    const url = `${BASE_URL}/api/2.0/files/rooms`;
     const res = await fetch(url, {
       method: 'POST',
       headers: HEADERS,
@@ -250,12 +252,12 @@ A POST request is sent to [/api/2.0/files/rooms](/docspace/api-backend/usage-api
 
   ``` py
   def create_room(room_name, description):
-    url = f'{BASE_URL}/api/2.0/files/room'
+    url = f'{BASE_URL}/api/2.0/files/rooms'
     data = {
       'title': room_name,
       'description': description
     }
-    requests.post(url, headers=headers, json=data)
+    response = requests.post(url, headers=HEADERS, json=data)
     if response.status_code == 200:
       room_id = response.json()['response']['id']
       print(f'Room created successfully: {room_id}')
@@ -277,7 +279,7 @@ A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
 
   ``` ts
   async function getRoomDetails(roomId) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, { method: 'GET', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -294,9 +296,8 @@ A GET request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
 
   ``` py
   def get_room_details(room_id):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
-    response = requests.get(url, headers=headers)
-    room_info = response.json()
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}'
+    response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
       room_info = response.json()
       print(f'Room details: {room_info}')
@@ -318,7 +319,7 @@ A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
 
   ``` ts
   async function renameRoom(roomId, newName) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}/rename`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, {
       method: 'PUT',
       headers: HEADERS,
@@ -337,11 +338,11 @@ A PUT request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usage-
 
   ``` py
   def rename_room(room_id, new_name):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}/rename'
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}'
     data = {
       'title': new_name
     }
-    requests.put(url, headers=headers, json=data)
+    response = requests.put(url, headers=HEADERS, json=data)
     if response.status_code == 200:
       print(f'Room {room_id} renamed successfully.')
     else:
@@ -360,7 +361,7 @@ A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backen
 
   ``` ts
   async function archiveRoom(roomId) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}/archive`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}/archive`;
     const res = await fetch(url, { method: 'PUT', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -375,8 +376,8 @@ A PUT request is sent to [/api/2.0/files/rooms/:id/archive](/docspace/api-backen
 
   ``` py
   def archive_room(room_id):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}/archive'
-    requests.put(url, headers=headers)
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}/archive'
+    response = requests.put(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'Room {room_id} archived successfully.')
     else:
@@ -395,7 +396,7 @@ A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usa
 
   ``` ts
   async function deleteRoom(roomId) {
-    const url = `${BASE_URL}/api/2.0/files/room/${roomId}`;
+    const url = `${BASE_URL}/api/2.0/files/rooms/${roomId}`;
     const res = await fetch(url, { method: 'DELETE', headers: HEADERS });
     if (!res.ok) {
       const t = await res.text();
@@ -410,8 +411,8 @@ A DELETE request is sent to [/api/2.0/files/rooms/:id](/docspace/api-backend/usa
 
   ``` py
   def delete_room(room_id):
-    url = f'{BASE_URL}/api/2.0/files/room/{room_id}'
-    requests.delete(url, headers=headers)
+    url = f'{BASE_URL}/api/2.0/files/rooms/{room_id}'
+    response = requests.delete(url, headers=HEADERS)
     if response.status_code == 200:
       print(f'Room {room_id} deleted successfully.')
     else:
