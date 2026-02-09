@@ -76,6 +76,7 @@
   top: 100%;
   right: 0;
   box-shadow: 0 6px 24px #00000014;
+  z-index: 1;
 }
 
 .menuItem {
