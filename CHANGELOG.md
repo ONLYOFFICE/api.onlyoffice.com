@@ -1,23 +1,52 @@
 # Change log
 
+## 7.6.3
+
+### New features
+
+* Added LLM multi button on all pages
+* Added `Context` option to `Ask AI`
+
+### Fixes
+
+* Update Docusaurus OpenAPI plugin to version 4.7.1
+* Removed unused scripts
+
+#### Docs API
+
+* Fixed typos and formating on some pages
+
+#### Docspace
+
+* Deleted generation of the `for-hosting-providers` section
+
 ## 7.6.2
+
+* Added button `Ask AI` to chat with LLM
+* Theme colors for the code block changed to similar VSCode
 
 ### New features
 
 #### Docs API
 
-* Added 'Recording macros' page
-* Added AI Agent and AI Plugin pages for Chinese
+* Added `Recording macros` page
+* Added `AI Agent` and `AI Plugin` pages for Chinese
+* Updated `Playground` section
+* Added `Builder` option to playground script target
 
 ### Fixes
 
 #### Docspace
 
-* Changed MCP Server section
+* Changed `MCP Server` section
+* Hidden `For hosting providers` section
 
 #### Docs API
 
 * Fixed Getting started page
+* Fixed styles of the right panel of OpenAI
+* Fixed problems in the code examples for plugins due to the lack of required parameters
+* Fixed style for plugins configuration description pages
 
 ## 7.6.1
 
