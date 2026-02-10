@@ -31,7 +31,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 
         :::note
 
-        Use `pip` and `python` for Windows. Make sure the executable name is `python.exe` (default on Windows) and Python is added to your `path` environment variable.
+        Use `pip` and `python` for Windows. Make sure the executable name is `python.exe` (default on Windows) and Python is added to your `PATH` environment variable.
 
         :::
 
@@ -57,9 +57,9 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
         - GCC ≥ 4.2.1 for macOS
     </TabItem>
     <TabItem value="java" label="Java">
-        - JDK >= 5. Make sure that the JDK has been added to your `path` environment variable.
+        - JDK >= 8. Make sure that the JDK has been added to your `PATH` environment variable.
     </TabItem>
-    <TabItem value="net" label=".Net">
+    <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website)
     </TabItem>
 </Tabs>
@@ -74,7 +74,7 @@ Download the SDK.
     </TabItem>
     <TabItem value="linux" label="Linux">
         - Download the [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-x86_64.tar.xz) SDK archive.
-        - Extract via `tar xvzf onlyoffice-documentbuilder-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-linux-x86_64.tar.xz`.
+        - Extract via `tar xvJf onlyoffice-documentbuilder-linux-aarch64.tar.xz` or `tar xvJf onlyoffice-documentbuilder-linux-x86_64.tar.xz`.
 
         For example:
         ```bash
@@ -93,7 +93,7 @@ Download the SDK.
     </TabItem>
     <TabItem value="macos" label="macOS">
         - Download the [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-x86_64.tar.xz) SDK archive.
-        - Extract via `tar xvzf onlyoffice-documentbuilder-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-macos-x86_64.tar.xz`.
+        - Extract via `tar xvJf onlyoffice-documentbuilder-macos-arm64.tar.xz` or `tar xvJf onlyoffice-documentbuilder-macos-x86_64.tar.xz`.
 
         For example:
         ```bash
@@ -133,10 +133,10 @@ cd document-builder-samples
 
 <Tabs>
     <TabItem value="python" label="Python">
-        1. Execute `configure.py` with `--test python`:
+        1. Execute `configure/configure.py` with `--test python`:
 
             ```shell
-            python3 configure.py --test python
+            python3 configure/configure.py --test python
             ```
 
             Provide the directory to Document Builder with `--dir` if necessary.
@@ -157,12 +157,14 @@ cd document-builder-samples
         Documents will be created in the test directory.
     </TabItem>
     <TabItem value="c++vs" label="C++ (VS)">
-        > **NOTE:** Only available on Windows.
+        :::note
+        Only available on Windows.
+        :::
 
-        1. Use `configure.py` to generate VS project files. For example:
+        1. Use `configure/configure.py` to generate VS project files. For example:
 
             ```shell
-            python configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
+            python configure/configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
             ```
 
         2. Open the `.sln` file in Visual Studio. It will prompt you to retarget Windows SDK and VS toolset to your installed version – click "OK".
@@ -170,31 +172,33 @@ cd document-builder-samples
         3. The solution is ready to be built and run. Documents will be created in the project files directory.
 
     </TabItem>
-    <TabItem value="c++qt" label="C++ (QT)">
+    <TabItem value="c++qt" label="C++ (Qt)">
         
-        1. Use `configure.py` to generate Qt project files. For example:
+        1. Use `configure/configure.py` to generate Qt project files. For example:
 
             ```shell
-            python configure.py --qt --test cpp
+            python configure/configure.py --qt --test cpp
             ```
 
         2. Open the `.pro` file in Qt Creator.
         3. The project is ready to be built and run. Documents will be created in the `build` directory.
 
-        - Makefile
+        #### Makefile
 
-        > **NOTE:** Only available on Linux and macOS.
+        :::note
+        Only available on Linux and macOS.
+        :::
 
-        1. Use `configure.py` to generate Makefile. For example:
+        1. Use `configure/configure.py` to generate Makefile. For example:
 
             ```shell
-            python configure.py --make --test cpp/filling_spreadsheet
+            python configure/configure.py --make --test cpp/filling_spreadsheet
             ```
 
         2. Go to the directory with generated Makefile:
 
             ```shell
-            cd ../out/cpp/filling_spreadsheet
+            cd out/cpp/filling_spreadsheet
             ```
 
         3. Call:
@@ -206,7 +210,9 @@ cd document-builder-samples
             `make` will build and run the executable. Documents will be created in the same directory as Makefile is.
     </TabItem>
     <TabItem value="java" label="Java">
-        > **NOTE:** JDK 8 or newer is required.
+        :::note
+        JDK 8 or newer is required.
+        :::
 
         1. Go to the test directory:
 
@@ -234,13 +240,15 @@ cd document-builder-samples
 
         Documents will be created in the test directory.
     </TabItem>
-    <TabItem value="net" label=".Net">
-        > **NOTE:** Only available on Windows with Visual Studio and .NET SDK installed.
+    <TabItem value="net" label=".NET">
+        :::note
+        Only available on Windows with Visual Studio and .NET SDK installed.
+        :::
 
-        1. Use `configure.py` to generate VS project files. For example:
+        1. Use `configure/configure.py` to generate VS project files. For example:
 
             ```shell
-            python configure.py --vs --test cs
+            python configure/configure.py --vs --test cs
             ```
 
         2. Open the `.sln` file in Visual Studio. Depending on your installed .NET SDK version, you may need to set different target framework by setting it in Visual Studio project properties or editing it directly in the `.csproj` file.
