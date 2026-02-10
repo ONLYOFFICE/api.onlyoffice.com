@@ -40,9 +40,13 @@ import APITable from '@site/src/components/APITable/APITable';
 
 The server stores all *callbackUrls* and chooses which one to use depending on the user who performed the action.
 
+:::info
 Since version 5.5, [callbackUrl](./config/editor/editor.md#callbackurl) is selected depending on the *status* of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+:::
 
+:::info
 Since version 7.0, *callbackUrl* is used from the last tab of the same user. Prior to version 7.0, *callbackUrl* from the first user tab was used.
+:::
 
 ## Possible document statuses and their description
 
@@ -50,12 +54,14 @@ Since version 7.0, *callbackUrl* is used from the last tab of the same user. Pri
 
 It is received every user connection to or disconnection from document co-editing. Their *callbackUrl* is used.
 
-Please note that the *status* **1** can be also received when the user is returned to the document with no changes after the Internet problems. This situation can be described as follows:
+:::note
+The *status* **1** can be also received when the user is returned to the document with no changes after the Internet problems. This situation can be described as follows:
 
 - When the user opens a document, the *status* **1** is sent.
 - If the Internet connection is lost and the user has not made any changes to the document, the *status* **4** is sent. An error is displayed on the screen and the document is opened in the viewer.
 - Within 100 seconds, the Internet connection is restored, the user is reconnected to the document and the *status* **1** is sent again.
 - Now the user can continue to edit the document. The *status* **2** or **4** will be received depending on whether the user made any changes to the document or not.
+:::
 
 ### Status 2 (3)
 
@@ -150,6 +156,7 @@ It is received when the force saving request is performed. The *callbackUrl* dep
 
 ## Response from the document storage service
 
+:::warning
 The **document storage service** must return the following response, otherwise the **document editor** will display an error message:
 
 ``` json
@@ -157,8 +164,11 @@ The **document storage service** must return the following response, otherwise t
   "error": 0
 }
 ```
+:::
 
+:::info
 The **document manager** and **document storage service** are either included to ONLYOFFICE Workspace or must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
+:::
 
 ## Document save examples
 

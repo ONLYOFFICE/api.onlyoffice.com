@@ -40,9 +40,13 @@ import APITable from '@site/src/components/APITable/APITable';
 
 服务器存储所有*callbackUrl*，并根据执行操作的用户选择使用哪一个。
 
+:::info
 从 5.5 版本开始，根据请求的 *status* 选择 [callbackUrl](./config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 来自最后一个加入共同编辑的用户。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
+:::
 
+:::info
 从 7.0 版开始，*callbackUrl* 来自同一用户的最后一个标签。在 7.0 版之前，*callbackUrl* 来自第一个用户标签。
+:::
 
 ## 可能的文档状态及其描述
 
@@ -50,12 +54,14 @@ import APITable from '@site/src/components/APITable/APITable';
 
 每次用户连接或断开文档共同编辑时都会收到它。他们的 *callbackUrl* 被使用。
 
-请注意，当用户在遭遇Internet 故障后返回到没有更改的文档时也可以收到 *status* **1**。这种情况可以描述如下：
+:::note
+当用户在遭遇Internet 故障后返回到没有更改的文档时也可以收到 *status* **1**。这种情况可以描述如下：
 
 - 当用户打开文档时，会发送 *status* **1**。
 - 如果 Internet 连接丢失并且用户没有对文档进行任何更改，则会发送 *status* **4**。屏幕上显示错误并在查看器中打开文档。
 - 在 100 秒内，互联网连接恢复，用户重新连接到文档并再次发送 *status* **1**。
 - 现在用户可以继续编辑文档。将收到 *status* **2** 或 **4**，具体取决于用户是否对文档进行了任何更改。
+:::
 
 ### 状态 2 (3) {#status-2-3}
 
@@ -150,6 +156,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 来自文档存储服务的响应 {#response-from-the-document-storage-service}
 
+:::warning
 **文档存储服务**必须返回以下响应，否则**文档编辑器**将显示错误消息：
 
 ``` json
@@ -157,8 +164,11 @@ import APITable from '@site/src/components/APITable/APITable';
   "error": 0
 }
 ```
+:::
 
+:::info
 **文档管理器**和**文档存储服务**要么包含在社区版服务器中，要么必须由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施。
+:::
 
 ## 文档保存示例 {#document-save-examples}
 
