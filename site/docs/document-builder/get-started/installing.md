@@ -60,7 +60,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
         - JDK >= 8. Make sure that the JDK has been added to your `PATH` environment variable.
     </TabItem>
     <TabItem value="net" label=".NET">
-        - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website)
+        - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/)
     </TabItem>
 </Tabs>
 
