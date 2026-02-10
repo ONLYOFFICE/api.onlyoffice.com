@@ -591,5 +591,5 @@ html[data-theme='dark'] .DocSearch-SidepanelButton.floating:hover {
 [data-theme='light'] .prism-code.language-typescript .token.function,
 [data-theme='light'] .prism-code.language-js .token.function,
 [data-theme='light'] .prism-code.language-javascript .token.function {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0) !important;
 }
