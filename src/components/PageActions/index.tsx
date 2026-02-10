@@ -172,11 +172,7 @@ export default function PageActions(): React.JSX.Element {
   };
 
   const getMarkdownContent = async () => {
-    if (!docMetadata?.metadata?.source) {
-      throw new Error('Source file path not available');
-    }
-
-    const sourcePath = docMetadata.metadata.source.replace('@site/', '');
+    const sourcePath = docMetadata?.metadata?.source || '';
 
     // For OpenAPI files (.api.mdx), extract and decompress API spec from frontMatter
     if (sourcePath.endsWith('.api.mdx')) {
@@ -189,10 +185,15 @@ export default function PageActions(): React.JSX.Element {
       }
     }
 
-    // For regular markdown files, fetch from GitHub
-    const githubRawUrl = 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master/'
+    // Use editUrl from docMetadata and convert to raw GitHub URL
+    const editUrl = docMetadata?.metadata?.editUrl;
+    if (!editUrl) {
+      throw new Error('Edit URL not available');
+    }
+
+    const githubRawUrl = editUrl
       .replace('github.com', 'raw.githubusercontent.com')
-      .replace('/tree/', '/') + sourcePath;
+      .replace('/tree/', '/');
 
     const response = await fetch(githubRawUrl);
     if (!response.ok) {

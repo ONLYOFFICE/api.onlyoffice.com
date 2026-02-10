@@ -31,7 +31,7 @@ ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加�
 
         :::note
 
-        在 Windows 系统上使用 `pip` 和 `python`。确保可执行文件名为 `python.exe`（Windows 系统默认），且 Python 已添加到 `path` 环境变量中。
+        在 Windows 系统上使用 `pip` 和 `python`。确保可执行文件名为 `python.exe`（Windows 系统默认），且 Python 已添加到 `PATH` 环境变量中。
 
         :::
 
@@ -57,9 +57,9 @@ ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加�
         - 适用于 macOS 的 GCC ≥ 4.2.1
     </TabItem>
     <TabItem value="java" label="Java">
-        - JDK ≥ 5。确保 JDK 已添加到 `path` 环境变量中。
+        - JDK >= 8。确保 JDK 已添加到 `PATH` 环境变量中。
     </TabItem>
-    <TabItem value="net" label=".Net">
+    <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website)
     </TabItem>
 </Tabs>
@@ -74,7 +74,7 @@ ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加�
     </TabItem>
     <TabItem value="linux" label="Linux">
         - 下载 [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-aarch64.tar.xz) 或 [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-x86_64.tar.xz) SDK 压缩包。
-        - 通过 `tar xvzf onlyoffice-documentbuilder-linux-aarch64.tar.xz` 或 `tar xvzf onlyoffice-documentbuilder-linux-x86_64.tar.xz` 命令提取。
+        - 通过 `tar xvJf onlyoffice-documentbuilder-linux-aarch64.tar.xz` 或 `tar xvJf onlyoffice-documentbuilder-linux-x86_64.tar.xz` 命令提取。
 
         例如：
         ```bash
@@ -93,7 +93,7 @@ ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加�
     </TabItem>
     <TabItem value="macos" label="macOS">
         - 下载 [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-arm64.tar.xz) 或 [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-x86_64.tar.xz) SDK 压缩包。
-        - 通过 `tar xvzf onlyoffice-documentbuilder-macos-arm64.tar.xz` 或 `tar xvzf onlyoffice-documentbuilder-macos-x86_64.tar.xz` 命令提取。
+        - 通过 `tar xvJf onlyoffice-documentbuilder-macos-arm64.tar.xz` 或 `tar xvJf onlyoffice-documentbuilder-macos-x86_64.tar.xz` 命令提取。
 
         例如：
         ```bash
@@ -133,10 +133,10 @@ cd document-builder-samples
 
 <Tabs>
     <TabItem value="python" label="Python">
-        1. 执行 `configure.py` 并带上 `--test python` 参数：
+        1. 执行 `configure/configure.py` 并带上 `--test python` 参数：
 
             ```shell
-            python3 configure.py --test python
+            python3 configure/configure.py --test python
             ```
 
             必要时，使用 `--dir` 参数提供 Document Builder 的目录。
@@ -157,12 +157,14 @@ cd document-builder-samples
         文档将在测试目录中创建。
     </TabItem>
     <TabItem value="c++vs" label="C++ (VS)">
-        > **注意：** 仅在 Windows 上可用。
+        :::note
+        仅在 Windows 上可用。
+        :::
 
-        1. 使用 `configure.py` 生成 VS 项目文件。例如：
+        1. 使用 `configure/configure.py` 生成 VS 项目文件。例如：
 
             ```shell
-            python configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
+            python configure/configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
             ```
 
         2. 在 Visual Studio 中打开 `.sln` 文件。它会提示您将 Windows SDK 和 VS 工具集重新定向到您安装的版本 - 点击“确定”。
@@ -170,31 +172,33 @@ cd document-builder-samples
         3. 解决方案已准备好进行构建和运行。文档将在项目文件目录中创建。
 
     </TabItem>
-    <TabItem value="c++qt" label="C++ (QT)">
+    <TabItem value="c++qt" label="C++ (Qt)">
         
-        1. 使用 `configure.py` 生成 Qt 项目文件。例如：
+        1. 使用 `configure/configure.py` 生成 Qt 项目文件。例如：
 
             ```shell
-            python configure.py --qt --test cpp
+            python configure/configure.py --qt --test cpp
             ```
 
         2. 在 Qt Creator 中打开 `.pro` 文件。
         3. 项目已准备好进行构建和运行。文档将在 `build` 目录中创建。
 
-        - Makefile
+        #### Makefile
 
-        > **注意：** 仅在 Linux 和 macOS 上可用。
+        :::note
+        仅在 Linux 和 macOS 上可用。
+        :::
 
-        1. 使用 `configure.py` 生成 Makefile。例如：
+        1. 使用 `configure/configure.py` 生成 Makefile。例如：
 
             ```shell
-            python configure.py --make --test cpp/filling_spreadsheet
+            python configure/configure.py --make --test cpp/filling_spreadsheet
             ```
 
         2. 进入生成的 Makefile 所在目录：
 
             ```shell
-            cd ../out/cpp/filling_spreadsheet
+            cd out/cpp/filling_spreadsheet
             ```
 
         3. 运行：
@@ -206,7 +210,9 @@ cd document-builder-samples
             `make` 将构建并运行可执行文件。文档将在与 Makefile 相同的目录中创建。
     </TabItem>
     <TabItem value="java" label="Java">
-        > **注意：** 需要 JDK 8 或更高版本。
+        :::note
+        需要 JDK 8 或更高版本。
+        :::
 
         1. 进入测试目录：
 
@@ -234,13 +240,15 @@ cd document-builder-samples
 
         文档将在测试目录中创建。
     </TabItem>
-    <TabItem value="net" label=".Net">
-        > **注意：** 仅在安装了 Visual Studio 和 .NET SDK 的 Windows 上可用。
+    <TabItem value="net" label=".NET">
+        :::note
+        仅在安装了 Visual Studio 和 .NET SDK 的 Windows 上可用。
+        :::
 
-        1. 使用 `configure.py` 生成 VS 项目文件。例如：
+        1. 使用 `configure/configure.py` 生成 VS 项目文件。例如：
 
             ```shell
-            python configure.py --vs --test cs
+            python configure/configure.py --vs --test cs
             ```
 
         2. 在 Visual Studio 中打开 `.sln` 文件。根据您安装的 .NET SDK 版本，您可能需要通过在 Visual Studio 项目属性中设置或直接编辑 `.csproj` 文件来更改目标框架。

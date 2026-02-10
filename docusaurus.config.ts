@@ -77,10 +77,27 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
-          editUrl:
-            isDev
-              ? 'https://git.onlyoffice.com/ONLYOFFICE/api.onlyoffice.com/src/branch/master'
-              : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+          editUrl: ({docPath}) => {
+            const baseUrl = 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master/site';
+
+            // Transform sample paths: samples/{category}/{subcategory}/... → {category}/{subcategory}/samples/...
+            if (docPath.startsWith('samples/')) {
+              const parts = docPath.split('/');
+              if (parts.length >= 4) {
+                const [, category, subcategory, ...rest] = parts;
+                let filePath = rest.join('/');
+
+                // Reverse rename: {subcategory}.md → samples.md
+                if (filePath === `${subcategory}.md`) {
+                  filePath = 'samples.md';
+                }
+
+                return `${baseUrl}/${category}/${subcategory}/samples/${filePath}`;
+              }
+            }
+
+            return `${baseUrl}/${docPath}`;
+          },
 
           docItemComponent: '@theme/ApiItem',
 
