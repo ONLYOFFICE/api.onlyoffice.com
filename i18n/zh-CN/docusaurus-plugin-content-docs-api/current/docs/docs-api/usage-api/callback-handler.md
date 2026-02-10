@@ -81,7 +81,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 请求示例
 
-### 当两个用户共同编辑文档时，文档编辑服务发送到"callbackUrl"地址的 JSON 对象示例
+### 状态 1：共同编辑
+
+当两个用户共同编辑文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
 ``` json
 {
@@ -95,7 +97,9 @@ import APITable from '@site/src/components/APITable/APITable';
 }
 ```
 
-### 当用户更改文档并关闭编辑的文档时，文档编辑服务发送到"callbackUrl"地址的 JSON 对象示例
+### 状态 2：更改后保存
+
+当用户更改文档并关闭编辑的文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
 <!-- 'changes'和'serverVersion'字段应保持不变，因为这些属性的类型信息尚不清楚。 -->
 
@@ -122,7 +126,9 @@ import APITable from '@site/src/components/APITable/APITable';
 }
 ```
 
-### 当最后一个用户关闭编辑的无更改的文档时，文档编辑服务发送到 "callbackUrl" 地址的 JSON 对象示例
+### 状态 4：无更改关闭
+
+当最后一个用户关闭编辑的无更改的文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
 ``` json
 {
@@ -131,7 +137,9 @@ import APITable from '@site/src/components/APITable/APITable';
 }
 ```
 
-### 接收到 [forcesave](../additional-api/command-service/forcesave.md) 命令后文档编辑服务发送到 "callbackUrl" 地址的JSON对象示例
+### 状态 6：强制保存
+
+接收到 [forcesave](../additional-api/command-service/forcesave.md) 命令后文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
 <!-- 'changes'和'serverVersion'字段应保持不变，因为这些属性的类型信息尚不清楚。 -->
 

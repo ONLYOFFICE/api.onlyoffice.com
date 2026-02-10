@@ -81,7 +81,9 @@ It is received when the force saving request is performed. The `callbackUrl` dep
 
 ## Examples of requests
 
-### Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document
+### Status 1: co-editing
+
+Sample of JSON object sent to the `callbackUrl` address by document editing service when two users are co-editing the document:
 
 ``` json
 {
@@ -95,7 +97,9 @@ It is received when the force saving request is performed. The `callbackUrl` dep
 }
 ```
 
-### Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing
+### Status 2: saving after changes
+
+Sample of JSON object sent to the `callbackUrl` address by document editing service when the user changed the document and closed it for editing:
 
 <!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
 
@@ -122,7 +126,9 @@ It is received when the force saving request is performed. The `callbackUrl` dep
 }
 ```
 
-### Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes
+### Status 4: closed without changes
+
+Sample of JSON object sent to the `callbackUrl` address by document editing service when the last user closed the document for editing without changes:
 
 ``` json
 {
@@ -131,7 +137,9 @@ It is received when the force saving request is performed. The `callbackUrl` dep
 }
 ```
 
-### Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](../additional-api/command-service/forcesave.md) command had been received
+### Status 6: force saving
+
+Sample of JSON object sent to the `callbackUrl` address by document editing service after the [forcesave](../additional-api/command-service/forcesave.md) command had been received:
 
 <!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
 
