@@ -248,35 +248,21 @@ import APITable from '@site/src/components/APITable/APITable';
   </TabItem>
   <TabItem value="nodejs" label="Node.js">
       ``` ts
-      import {fs} from "node:fs";
-      import {syncRequest} from "sync-request";
+      import fs from "node:fs";
+      import {pipeline} from "node:stream/promises";
 
-      app.post("/track", (req, res) => {
-        function updateFile(response, body, path) {
-          if (body.status === 2) {
-            const file = syncRequest("GET", body.url);
-            fs.writeFileSync(path, file.getBody());
+      // express.json() is registered globally
+
+      app.post("/track", async (req, res) => {
+        try {
+          if (req.body?.status === 2) {
+            const resp = await fetch(req.body.url);
+            if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
+            await pipeline(resp.body, fs.createWriteStream(pathForSave));
           }
-
-          response.write("{\"error\":0}");
-          response.end();
-        }
-
-        function readbody(request, response, path) {
-          let content = "";
-          request.on("data", (data) => {
-            content += data;
-          });
-          request.on("end", () => {
-            const body = JSON.parse(content);
-            updateFile(response, body, path);
-          });
-        }
-
-        if (req.body.hasOwn("status")) {
-          updateFile(res, req.body, pathForSave);
-        } else {
-          readbody(req, res, pathForSave);
+          res.json({error: 0});
+        } catch (err) {
+          res.status(500).json({error: 1});
         }
       });
       ```

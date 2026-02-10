@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Callback handler
 
-The **document editing service** informs the **document storage service** about the status of the document editing using the *callbackUrl* from [JavaScript API](../get-started/basic-concepts.md). The **document editing service** use the POST request with the information in body.
+The **document editing service** informs the **document storage service** about the status of the document editing using the *callbackUrl* from [JavaScript API](../get-started/basic-concepts.md). The **document editing service** uses the POST request with the information in body.
 
 ## Parameters
 
@@ -71,11 +71,11 @@ It is received after the document is closed for editing with no changes by the l
 
 ### Status 6 (7)
 
-It is received when the force saving request is performed.The *callbackUrl* depends on *forcesavetype* parameter:
+It is received when the force saving request is performed. The *callbackUrl* depends on *forcesavetype* parameter:
 
 - If *forcesavetype* parameter is set to **1**, the *callbackUrl* from the user who clicked the **Save** button is used.
 - If *forcesavetype* parameter is set to **0** or **2**, the *callbackUrl* from the user who made the last changes to the file is used.
-- If *forcesavetype* parameter is set to **3**, the *callbackUrl* from the user who clicked the **Submit** button is used.Starting from version 5.5 to version 6.1, the *callbackUrl* from the user who made the last changes to the file is always used.
+- If *forcesavetype* parameter is set to **3**, the *callbackUrl* from the user who clicked the **Submit** button is used. Starting from version 5.5 to version 6.1, the *callbackUrl* from the user who made the last changes to the file is always used.
 
 ## Examples of requests
 
@@ -248,35 +248,21 @@ The **document manager** and **document storage service** are either included to
   </TabItem>
   <TabItem value="nodejs" label="Node.js">
       ``` ts
-      import {fs} from "node:fs";
-      import {syncRequest} from "sync-request";
+      import fs from "node:fs";
+      import {pipeline} from "node:stream/promises";
 
-      app.post("/track", (req, res) => {
-        function updateFile(response, body, path) {
-          if (body.status === 2) {
-            const file = syncRequest("GET", body.url);
-            fs.writeFileSync(path, file.getBody());
+      // express.json() is registered globally
+
+      app.post("/track", async (req, res) => {
+        try {
+          if (req.body?.status === 2) {
+            const resp = await fetch(req.body.url);
+            if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
+            await pipeline(resp.body, fs.createWriteStream(pathForSave));
           }
-
-          response.write("{\"error\":0}");
-          response.end();
-        }
-
-        function readbody(request, response, path) {
-          let content = "";
-          request.on("data", (data) => {
-            content += data;
-          });
-          request.on("end", () => {
-            const body = JSON.parse(content);
-            updateFile(response, body, path);
-          });
-        }
-
-        if (req.body.hasOwn("status")) {
-          updateFile(res, req.body, pathForSave);
-        } else {
-          readbody(req, res, pathForSave);
+          res.json({error: 0});
+        } catch (err) {
+          res.status(500).json({error: 1});
         }
       });
       ```
