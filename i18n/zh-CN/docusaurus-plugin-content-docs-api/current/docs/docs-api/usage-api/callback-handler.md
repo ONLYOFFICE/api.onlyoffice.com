@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 回调处理程序
 
-**文档编辑服务**用 [JavaScript API](../get-started/basic-concepts.md) 的 *callbackUrl* 通知**文档存储服务**有关文档编辑的状态。**文档编辑服务**使用POST 请求，请求信息在正文中。
+**文档编辑服务**用 [JavaScript API](../get-started/basic-concepts.md) 的 `callbackUrl` 通知**文档存储服务**有关文档编辑的状态。**文档编辑服务**使用POST 请求，请求信息在正文中。
 
 ## 参数 {#parameters}
 
@@ -19,18 +19,18 @@ import APITable from '@site/src/components/APITable/APITable';
  
 | 参数          | 类型            | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| actions            | array of object | 定义当用户对文档执行操作时接收到的对象。*type* 字段值可以具有以下值：<br /><br />**0** - 用户断开与文档共同编辑的连接，<br /><br />**1** - 新用户连接到文档共同编辑，<br /><br />**2** - 用户单击[强制保存按钮](./config/editor/customization/customization-standard-branding.md#forcesave)。<br /><br />*userid* 字段值是用户标识符。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| changeshistory     | array of object | 定义具有文档更改历史的对象数组。仅当 *status* 值等于 **2** 或 **3** 时，对象才存在。 必须作为对象的属性 *changes* 以参数形式发送给 [refreshHistory](./methods.md#refreshhistory) 方法。自 4.2 版起已删除，请改用 [history](#history)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| changesurl         | string          | 使用文档编辑数据定义文件的链接，用于跟踪和显示文档更改历史记录。仅当 *status* 等于 **2**, **3**, **6** 或 **7** 时，链接才存在。必须保存文件，并且必须使用 [setHistoryData](./methods.md#sethistorydata) 方法将其地址作为 <i>changesUrl</i> 参数发送，以显示与特定文档版本对应的更改。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| actions            | array of object | 定义当用户对文档执行操作时接收到的对象。`type` 字段值可以具有以下值：<br /><br />**0** - 用户断开与文档共同编辑的连接，<br /><br />**1** - 新用户连接到文档共同编辑，<br /><br />**2** - 用户单击[强制保存按钮](./config/editor/customization/customization-standard-branding.md#forcesave)。<br /><br />`userid` 字段值是用户标识符。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| changeshistory     | array of object | 定义具有文档更改历史的对象数组。仅当 `status` 值等于 **2** 或 **3** 时，对象才存在。 必须作为对象的属性 `changes` 以参数形式发送给 [refreshHistory](./methods.md#refreshhistory) 方法。自 4.2 版起已删除，请改用 [history](#history)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| changesurl         | string          | 使用文档编辑数据定义文件的链接，用于跟踪和显示文档更改历史记录。仅当 `status` 等于 **2**, **3**, **6** 或 **7** 时，链接才存在。必须保存文件，并且必须使用 [setHistoryData](./methods.md#sethistorydata) 方法将其地址作为 <i>changesUrl</i> 参数发送，以显示与特定文档版本对应的更改。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | filetype           | string          | 定义从 [url](#url) 参数指定的链接下载文档的扩展名。文件类型默认为 OOXML，但如果启用了 [assemblyFormatAsOrigin](../get-started/how-it-works/saving-file.md#saving-in-original-format) 服务器设置，则文件将以原始格式保存。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| forcesavetype      | integer         | 定义执行[强制保存](../get-started/how-it-works/saving-file.md#force-saving)请求时的启动器类型。可以有以下值：<br /><br />**0** - 为[命令服务](../additional-api/command-service/forcesave.md)执行强制保存请求，<br /><br />**1** - 每次保存完成时都会执行强制保存请求（例如单击 **保存** 按钮），这仅在 [forcesave](./config/editor/customization/customization-standard-branding.md#forcesave) 选项设置为 *true*时可用，<br /><br />**2** - 强制保存请求由计时器按服务器配置中的设置执行，<br /><br />**3** - 每次提交表单时都会执行强制保存请求 [Complete & Submit](./config/editor/customization/customization-standard-branding.md#submitform) 按钮被点击 )。<br /><br />该类型仅在 *status* 值等于 **6** 或 **7** 时出现。 |
-| formsdataurl       | string          | 定义包含已提交表单数据的 JSON 文件的链接。JSON 文件包含一个对象数组，每个对象的结构在[此处](../../office-api/usage-api/text-document-api/Enumeration/FormData.md)描述。当 *status* 值等于 **6** 并且 *forcesavetype* 值等于 **3** 时，该参数才存在。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| history            | object          | 定义有文档更改历史的对象。仅当 *status* 值等于 **2** 或 **3** 时，对象才存在。它包含对象 *changes* 和 *serverVersion*，它们必须作为对象的属性 *changes* 和 *serverVersion* 以参数形式发送给 [refreshHistory](./methods.md#refreshhistory) 方法。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| forcesavetype      | integer         | 定义执行[强制保存](../get-started/how-it-works/saving-file.md#force-saving)请求时的启动器类型。可以有以下值：<br /><br />**0** - 为[命令服务](../additional-api/command-service/forcesave.md)执行强制保存请求，<br /><br />**1** - 每次保存完成时都会执行强制保存请求（例如单击 **保存** 按钮），这仅在 [forcesave](./config/editor/customization/customization-standard-branding.md#forcesave) 选项设置为 `true`时可用，<br /><br />**2** - 强制保存请求由计时器按服务器配置中的设置执行，<br /><br />**3** - 每次提交表单时都会执行强制保存请求 [Complete & Submit](./config/editor/customization/customization-standard-branding.md#submitform) 按钮被点击 )。<br /><br />该类型仅在 `status` 值等于 **6** 或 **7** 时出现。 |
+| formsdataurl       | string          | 定义包含已提交表单数据的 JSON 文件的链接。JSON 文件包含一个对象数组，每个对象的结构在[此处](../../office-api/usage-api/text-document-api/Enumeration/FormData.md)描述。当 `status` 值等于 **6** 并且 `forcesavetype` 值等于 **3** 时，该参数才存在。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| history            | object          | 定义有文档更改历史的对象。仅当 `status` 值等于 **2** 或 **3** 时，对象才存在。它包含对象 `changes` 和 `serverVersion`，它们必须作为对象的属性 `changes` 和 `serverVersion` 以参数形式发送给 [refreshHistory](./methods.md#refreshhistory) 方法。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | key*               | string          | 定义编辑的文档标识符。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | status*            | integer         | 定义文档的状态。可以有以下值：<br /><br />**1** - 正在编辑文档，<br /> <br />**2** - 文档已准备好保存，<br /><br />**3** - 发生文档保存错误，<br /><br />**4** - 文档已关闭，没有任何更改，<br /><br />**6** - 正在编辑文档，但保存了当前文档状态，<br /><br />**7** - 强制保存文档时发生错误。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| url                | string          | 定义已编辑的要由文档存储服务保存的文档的链接。仅当 *status* 值等于 **2**, **3**, **6** 或 **7** 时，链接才存在。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| url                | string          | 定义已编辑的要由文档存储服务保存的文档的链接。仅当 `status` 值等于 **2**, **3**, **6** 或 **7** 时，链接才存在。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | userdata           | string          | 定义发送到 [forcesave](../additional-api/command-service/forcesave.md) 和 [info](../additional-api/command-service/info.md) 命令的命令服务的自定义信息（如果它在请求中存在）。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| users              | array of string | 定义打开文档进行编辑的用户的标识符列表；当文档被更改时，用户将返回最后编辑文档的用户的标识符（对于 *status* **2** 和 *status* **6** 的应答）。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| users              | array of string | 定义打开文档进行编辑的用户的标识符列表；当文档被更改时，用户将返回最后编辑文档的用户的标识符（对于 `status` **2** 和 `status` **6** 的应答）。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ```mdx-code-block
 </APITable>
@@ -38,46 +38,46 @@ import APITable from '@site/src/components/APITable/APITable';
 
 \* *- 必需参数*
 
-服务器存储所有*callbackUrl*，并根据执行操作的用户选择使用哪一个。
+服务器存储所有`callbackUrl`，并根据执行操作的用户选择使用哪一个。
 
 :::info
-从 5.5 版本开始，根据请求的 *status* 选择 [callbackUrl](./config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 来自最后一个加入共同编辑的用户。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
+从 5.5 版本开始，根据请求的 `status` 选择 [callbackUrl](./config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，`callbackUrl` 来自最后一个加入共同编辑的用户。在 4.4 之前的版本中，在共同编辑时，`callbackUrl` 来自第一次打开文件进行编辑的用户。
 :::
 
 :::info
-从 7.0 版开始，*callbackUrl* 来自同一用户的最后一个标签。在 7.0 版之前，*callbackUrl* 来自第一个用户标签。
+从 7.0 版开始，`callbackUrl` 来自同一用户的最后一个标签。在 7.0 版之前，`callbackUrl` 来自第一个用户标签。
 :::
 
 ## 可能的文档状态及其描述
 
 ### 状态 1
 
-每次用户连接或断开文档共同编辑时都会收到它。他们的 *callbackUrl* 被使用。
+每次用户连接或断开文档共同编辑时都会收到它。他们的 `callbackUrl` 被使用。
 
 :::note
-当用户在遭遇Internet 故障后返回到没有更改的文档时也可以收到 *status* **1**。这种情况可以描述如下：
+当用户在遭遇Internet 故障后返回到没有更改的文档时也可以收到 `status` **1**。这种情况可以描述如下：
 
-- 当用户打开文档时，会发送 *status* **1**。
-- 如果 Internet 连接丢失并且用户没有对文档进行任何更改，则会发送 *status* **4**。屏幕上显示错误并在查看器中打开文档。
-- 在 100 秒内，互联网连接恢复，用户重新连接到文档并再次发送 *status* **1**。
-- 现在用户可以继续编辑文档。将收到 *status* **2** 或 **4**，具体取决于用户是否对文档进行了任何更改。
+- 当用户打开文档时，会发送 `status` **1**。
+- 如果 Internet 连接丢失并且用户没有对文档进行任何更改，则会发送 `status` **4**。屏幕上显示错误并在查看器中打开文档。
+- 在 100 秒内，互联网连接恢复，用户重新连接到文档并再次发送 `status` **1**。
+- 现在用户可以继续编辑文档。将收到 `status` **2** 或 **4**，具体取决于用户是否对文档进行了任何更改。
 :::
 
 ### 状态 2 (3) {#status-2-3}
 
-它在编辑文档关闭后 [10 秒](../get-started/how-it-works/saving-file.md#save-delay)收到，该用户的标识符是最后一个将更改发送到文档编辑服务的用户。对文件进行最后更改的用户的 *callbackUrl* 被使用。
+它在编辑文档关闭后 [10 秒](../get-started/how-it-works/saving-file.md#save-delay)收到，该用户的标识符是最后一个将更改发送到文档编辑服务的用户。对文件进行最后更改的用户的 `callbackUrl` 被使用。
 
 ### Status 4
 
-它是在最后一个用户关闭所编辑的没有更改的文档情况下收到的。他们的 *callbackUrl* 被使用。
+它是在最后一个用户关闭所编辑的没有更改的文档情况下收到的。他们的 `callbackUrl` 被使用。
 
 ### 状态 6 (7) {#status-6-7}
 
-在执行强制保存请求时接收到。*callbackUrl* 依赖于 *forcesavetype* 参数：
+在执行强制保存请求时接收到。`callbackUrl` 依赖于 `forcesavetype` 参数：
 
-- 如果 *forcesavetype* 参数设置为 **1**，则使用点击 **保存** 按钮的用户的 *callbackUrl*。
-- 如果 *forcesavetype* 参数设置为 **0** 或 **2**，则使用对文件进行最后更改的用户的 *callbackUrl*。
-- 如果 *forcesavetype* 参数设置为**3**，则使用点击 **提交** 按钮的用户的 *callbackUrl*。从版本 5.5 到版本 6.1，始终使用对文件进行最后更改的用户的 *callbackUrl*。
+- 如果 `forcesavetype` 参数设置为 **1**，则使用点击 **保存** 按钮的用户的 `callbackUrl`。
+- 如果 `forcesavetype` 参数设置为 **0** 或 **2**，则使用对文件进行最后更改的用户的 `callbackUrl`。
+- 如果 `forcesavetype` 参数设置为**3**，则使用点击 **提交** 按钮的用户的 `callbackUrl`。从版本 5.5 到版本 6.1，始终使用对文件进行最后更改的用户的 `callbackUrl`。
 
 ## 请求示例
 
@@ -195,7 +195,7 @@ import APITable from '@site/src/components/APITable/APITable';
       ```
 
       :::note
-      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      `pathForSave` is the absolute path to your computer folder where the file will be saved including the file name.
       :::
 
       On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
@@ -230,7 +230,7 @@ import APITable from '@site/src/components/APITable/APITable';
       ```
 
       :::note
-      *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
+      `PATH_FOR_SAVE` is the absolute path to your computer folder where the file will be saved including the file name.
       :::
 
       On the [.Net example](../samples/language-specific-examples/net-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
@@ -274,7 +274,7 @@ import APITable from '@site/src/components/APITable/APITable';
       ```
 
       :::note
-      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      `pathForSave` is the absolute path to your computer folder where the file will be saved including the file name.
       :::
 
       On the [Java example](../samples/language-specific-examples/java-example.md) and [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
@@ -304,7 +304,7 @@ import APITable from '@site/src/components/APITable/APITable';
       ```
 
       :::note
-      *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+      `$path_for_save` is the absolute path to your computer folder where the file will be saved including the file name.
       :::
 
       On the [PHP example](../samples/language-specific-examples/php-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
@@ -342,7 +342,7 @@ import APITable from '@site/src/components/APITable/APITable';
       ```
 
       :::note
-      *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+      `path_for_save` is the absolute path to your computer folder where the file will be saved including the file name.
       :::
 
       On the [Ruby example](../samples/language-specific-examples/ruby-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.
