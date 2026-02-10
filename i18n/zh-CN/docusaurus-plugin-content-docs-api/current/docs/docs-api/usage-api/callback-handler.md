@@ -24,11 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | changesurl         | string          | 使用文档编辑数据定义文件的链接，用于跟踪和显示文档更改历史记录。仅当 *status* 等于 **2**, **3**, **6** 或 **7** 时，链接才存在。必须保存文件，并且必须使用 [setHistoryData](./methods.md#sethistorydata) 方法将其地址作为 <i>changesUrl</i> 参数发送，以显示与特定文档版本对应的更改。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | filetype           | string          | 定义从 [url](#url) 参数指定的链接下载文档的扩展名。文件类型默认为 OOXML，但如果启用了 [assemblyFormatAsOrigin](../get-started/how-it-works/saving-file.md#saving-in-original-format) 服务器设置，则文件将以原始格式保存。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | forcesavetype      | integer         | 定义执行[强制保存](../get-started/how-it-works/saving-file.md#force-saving)请求时的启动器类型。可以有以下值：<br /><br />**0** - 为[命令服务](../additional-api/command-service/forcesave.md)执行强制保存请求，<br /><br />**1** - 每次保存完成时都会执行强制保存请求（例如单击 **保存** 按钮），这仅在 [forcesave](./config/editor/customization/customization-standard-branding.md#forcesave) 选项设置为 *true*时可用，<br /><br />**2** - 强制保存请求由计时器按服务器配置中的设置执行，<br /><br />**3** - 每次提交表单时都会执行强制保存请求 [Complete & Submit](./config/editor/customization/customization-standard-branding.md#submitform) 按钮被点击 )。<br /><br />该类型仅在 *status* 值等于 **6** 或 **7** 时出现。 |
-| formsdataurl       | object          | 用提交的表单数据,定义 JSON 文件的 URL。[此处](../../office-api/usage-api/text-document-api/Enumeration/FormData.md)描述了包含表单数据的数组结构。当 *status* 值等于 *6* 并且 *forcesavetype* 值等于 *3* 时,该对象才存在。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| formsdataurl.key   | string          | 表单键。 如果当前表单是单选按钮，则该字段包含表单组键。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| formsdataurl.tag   | string          | 表单标签。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| formsdataurl.value | string          | 当前表单值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| formsdataurl.type  | string          | 表单类型 (**text**, **checkBox**, **picture**, **comboBox**, **dropDownList**, **dateTime**, **radio**)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| formsdataurl       | string          | 定义包含已提交表单数据的 JSON 文件的链接。JSON 文件包含一个对象数组，每个对象的结构在[此处](../../office-api/usage-api/text-document-api/Enumeration/FormData.md)描述。当 *status* 值等于 **6** 并且 *forcesavetype* 值等于 **3** 时，该参数才存在。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | history            | object          | 定义有文档更改历史的对象。仅当 *status* 值等于 **2** 或 **3** 时，对象才存在。它包含对象 *changes* 和 *serverVersion*，它们必须作为对象的属性 *changes* 和 *serverVersion* 以参数形式发送给 [refreshHistory](./methods.md#refreshhistory) 方法。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | key*               | string          | 定义编辑的文档标识符。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | status*            | integer         | 定义文档的状态。可以有以下值：<br /><br />**1** - 正在编辑文档，<br /> <br />**2** - 文档已准备好保存，<br /><br />**3** - 发生文档保存错误，<br /><br />**4** - 文档已关闭，没有任何更改，<br /><br />**6** - 正在编辑文档，但保存了当前文档状态，<br /><br />**7** - 强制保存文档时发生错误。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -167,6 +163,33 @@ import APITable from '@site/src/components/APITable/APITable';
 ## 文档保存示例 {#document-save-examples}
 
 <Tabs>
+  <TabItem value="nodejs" label="Node.js">
+      ``` ts
+      import fs from "node:fs";
+      import {pipeline} from "node:stream/promises";
+
+      // express.json() is registered globally
+
+      app.post("/track", async (req, res) => {
+        try {
+          if (req.body?.status === 2) {
+            const resp = await fetch(req.body.url);
+            if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
+            await pipeline(resp.body, fs.createWriteStream(pathForSave));
+          }
+          res.json({error: 0});
+        } catch (err) {
+          res.status(500).json({error: 1});
+        }
+      });
+      ```
+
+      :::note
+      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
+
+      On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+  </TabItem>
   <TabItem value="csharp" label=".Net (C#)">
       ``` cs
       public class WebEditor : IHttpHandler
@@ -245,33 +268,6 @@ import APITable from '@site/src/components/APITable/APITable';
       :::
 
       On the [Java example](../samples/language-specific-examples/java-example.md) and [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
-  </TabItem>
-  <TabItem value="nodejs" label="Node.js">
-      ``` ts
-      import fs from "node:fs";
-      import {pipeline} from "node:stream/promises";
-
-      // express.json() is registered globally
-
-      app.post("/track", async (req, res) => {
-        try {
-          if (req.body?.status === 2) {
-            const resp = await fetch(req.body.url);
-            if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
-            await pipeline(resp.body, fs.createWriteStream(pathForSave));
-          }
-          res.json({error: 0});
-        } catch (err) {
-          res.status(500).json({error: 1});
-        }
-      });
-      ```
-
-      :::note
-      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
-      :::
-
-      On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
   </TabItem>
   <TabItem value="php" label="PHP">
       ``` php

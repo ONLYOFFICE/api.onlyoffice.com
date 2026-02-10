@@ -24,11 +24,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | changesurl         | string          | Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the *status* value is equal to **2**, **3**, **6**, or **7**. The file must be saved and its address must be sent as *changesUrl* parameter using the [setHistoryData](./methods.md#sethistorydata) method to show the changes corresponding to the specific document version.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | filetype           | string          | Defines an extension of the document that is downloaded from the link specified with the [url](#url) parameter. The file type is OOXML by default but if the [assemblyFormatAsOrigin](../get-started/how-it-works/saving-file.md#servicescoauthoringserverassemblyformatasorigin) server setting is enabled, the file will be saved in its original format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | forcesavetype      | integer         | Defines the type of initiator when the [force saving](../get-started/how-it-works/saving-file.md#force-saving) request is performed. Can have the following values:<br /><br />**0** - the force saving request is performed to the [command service](../additional-api/command-service/forcesave.md);<br /><br />**1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](./config/editor/customization/customization-standard-branding.md#forcesave) option is set to *true*;<br /><br />**2** - the force saving request is performed by timer with the settings from the server config;<br /><br />**3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](./config/editor/customization/customization-standard-branding.md#submitform) button is clicked).<br /><br />The type is present when the *status* value is equal to **6** or **7** only. |
-| formsdataurl       | object          | Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described [here](../../office-api/usage-api/text-document-api/Enumeration/FormData.md). The object is present when the *status* value is equal to **6** and the *forcesavetype* value is equal to **3**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| formsdataurl.key   | string          | The form key. If the current form is a radio button, then this field contains the form group key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| formsdataurl.tag   | string          | The form tag.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| formsdataurl.value | string          | The current form value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| formsdataurl.type  | string          | The form type (**text**, **checkBox**, **picture**, **comboBox**, **dropDownList**, **dateTime**, **radio**).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| formsdataurl       | string          | Defines the link to the JSON file with the submitted form data. The JSON file contains an array of objects, where each object has the structure described [here](../../office-api/usage-api/text-document-api/Enumeration/FormData.md). The parameter is present when the *status* value is equal to **6** and the *forcesavetype* value is equal to **3**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | history            | object          | Defines the object with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. It contains the object *changes* and *serverVersion*, which must be sent as properties *changes* and *serverVersion* of the object sent as the argument to the [refreshHistory](./methods.md#refreshhistory) method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | key*               | string          | Defines the edited document identifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | status*            | integer         | Defines the status of the document. Can have the following values:<br /><br />**1** - document is being edited;<br /> <br />**2** - document is ready for saving;<br /><br />**3** - document saving error has occurred;<br /><br />**4** - document is closed with no changes;<br /><br />**6** - document is being edited, but the current document state is saved;<br /><br />**7** - error has occurred while force saving the document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -167,6 +163,33 @@ The **document manager** and **document storage service** are either included to
 ## Document save examples
 
 <Tabs>
+  <TabItem value="nodejs" label="Node.js">
+      ``` ts
+      import fs from "node:fs";
+      import {pipeline} from "node:stream/promises";
+
+      // express.json() is registered globally
+
+      app.post("/track", async (req, res) => {
+        try {
+          if (req.body?.status === 2) {
+            const resp = await fetch(req.body.url);
+            if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
+            await pipeline(resp.body, fs.createWriteStream(pathForSave));
+          }
+          res.json({error: 0});
+        } catch (err) {
+          res.status(500).json({error: 1});
+        }
+      });
+      ```
+
+      :::note
+      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      :::
+
+      On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+  </TabItem>
   <TabItem value="csharp" label=".Net (C#)">
       ``` cs
       public class WebEditor : IHttpHandler
@@ -245,33 +268,6 @@ The **document manager** and **document storage service** are either included to
       :::
 
       On the [Java example](../samples/language-specific-examples/java-example.md) and [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
-  </TabItem>
-  <TabItem value="nodejs" label="Node.js">
-      ``` ts
-      import fs from "node:fs";
-      import {pipeline} from "node:stream/promises";
-
-      // express.json() is registered globally
-
-      app.post("/track", async (req, res) => {
-        try {
-          if (req.body?.status === 2) {
-            const resp = await fetch(req.body.url);
-            if (!resp.ok) throw new Error(`Download failed: ${resp.status}`);
-            await pipeline(resp.body, fs.createWriteStream(pathForSave));
-          }
-          res.json({error: 0});
-        } catch (err) {
-          res.status(500).json({error: 1});
-        }
-      });
-      ```
-
-      :::note
-      *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
-      :::
-
-      On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
   </TabItem>
   <TabItem value="php" label="PHP">
       ``` php
