@@ -88,8 +88,10 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
 ``` json
 {
   "actions": [
-    {"type": 1,
-      "userid": "78e1e841"}
+    {
+      "type": 1,
+      "userid": "78e1e841"
+    }
   ],
   "key": "Khirz6zTPdfd7",
   "status": 1,
@@ -101,10 +103,6 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
 
 Sample of JSON object sent to the `callbackUrl` address by document editing service when the user changed the document and closed it for editing:
 
-<!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
-
-<!-- eslint-skip -->
-
 ``` json
 {
   "actions": [
@@ -115,8 +113,8 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
   ],
   "changesurl": "https://documentserver/url-to-changes.zip",
   "history": {
-    "changes": changes,
-    "serverVersion": serverVersion
+    "changes": {},
+    "serverVersion": 1
   },
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
@@ -125,6 +123,10 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
   "users": ["6d5a81d0"]
 }
 ```
+
+:::note
+The `history` object is only present when `status` is **2** or **3**. See the [refreshHistory](./methods.md#refreshhistory) method for usage details.
+:::
 
 ### Status 4: closed without changes
 
@@ -141,18 +143,10 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
 
 Sample of JSON object sent to the `callbackUrl` address by document editing service after the [forcesave](../additional-api/command-service/forcesave.md) command had been received:
 
-<!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
-
-<!-- eslint-skip -->
-
 ``` json
 {
   "changesurl": "https://documentserver/url-to-changes.zip",
   "forcesavetype": 0,
-  "history": {
-    "changes": changes,
-    "serverVersion": serverVersion
-  },
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
   "status": 6,

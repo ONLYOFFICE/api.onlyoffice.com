@@ -88,8 +88,10 @@ import APITable from '@site/src/components/APITable/APITable';
 ``` json
 {
   "actions": [
-    {"type": 1,
-      "userid": "78e1e841"}
+    {
+      "type": 1,
+      "userid": "78e1e841"
+    }
   ],
   "key": "Khirz6zTPdfd7",
   "status": 1,
@@ -101,10 +103,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 当用户更改文档并关闭编辑的文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
-<!-- 'changes'和'serverVersion'字段应保持不变，因为这些属性的类型信息尚不清楚。 -->
-
-<!-- eslint-skip -->
-
 ``` json
 {
   "actions": [
@@ -115,8 +113,8 @@ import APITable from '@site/src/components/APITable/APITable';
   ],
   "changesurl": "https://documentserver/url-to-changes.zip",
   "history": {
-    "changes": changes,
-    "serverVersion": serverVersion
+    "changes": {},
+    "serverVersion": 1
   },
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
@@ -125,6 +123,10 @@ import APITable from '@site/src/components/APITable/APITable';
   "users": ["6d5a81d0"]
 }
 ```
+
+:::note
+`history` 对象仅在 `status` 为 **2** 或 **3** 时存在。有关用法详情，请参阅 [refreshHistory](./methods.md#refreshhistory) 方法。
+:::
 
 ### 状态 4：无更改关闭
 
@@ -141,18 +143,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 接收到 [forcesave](../additional-api/command-service/forcesave.md) 命令后文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
-<!-- 'changes'和'serverVersion'字段应保持不变，因为这些属性的类型信息尚不清楚。 -->
-
-<!-- eslint-skip -->
-
 ``` json
 {
   "changesurl": "https://documentserver/url-to-changes.zip",
   "forcesavetype": 0,
-  "history": {
-    "changes": changes,
-    "serverVersion": serverVersion
-  },
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
   "status": 6,
