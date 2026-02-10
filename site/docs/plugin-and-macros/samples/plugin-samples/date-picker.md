@@ -37,8 +37,6 @@ The plugin guid: `{409e5493-56ae-45e1-8423-c73c84a06c50}`.
 
 3. The translations folder contains translations Russian, German, Spanish, Czech, French, Italian, Japanese, Portuguese, Albanian, Serbian, and Chinese.
 
-4. The README.md files contains  
-
 Find the plugin on GitHub: [Date Picker plugin](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/datepicker)
 
 ## Config
