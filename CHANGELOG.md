@@ -1,5 +1,11 @@
 # Change log
 
+## 7.6.4
+
+### Fixes
+
+* Fixed `Copy page` and `View as markdown` actions of the AI multi button
+
 ## 7.6.3
 
 ### New features
@@ -346,7 +352,7 @@
 * Added the diagram document type to the documentType parameter
 
 #### Plugins and macros
- 
+
 * Added a link to the plugins storybook
 * Updated the Tutorials/Samples page of the Plugins and macros
 * Updated the Get started structure of the Plugins and macros
@@ -509,7 +515,7 @@
 
 * Updated Document Builder section
 * Added Playground page for testing the capabilities of the Docs APIs
- 
+
 #### Docspace
 
 * Updated Docspace openAPI docs
@@ -602,7 +608,7 @@
 * Fixed loading for ONLYOFFICE Docs editor tab
 * Fixed anchors
 * Fixed Docspace and Workspace sidebars
- 
+
 #### Docs API
 
 * Updated conversion tables
@@ -618,7 +624,7 @@
 * Added the editorConfig.customization.showVerticalScroll parameter
 * Added logos for connectors
 * Updated documentation in Chinese
-* Updated docs config page 
+* Updated docs config page
 
 #### Docspace
 
@@ -629,7 +635,7 @@
 * Fixed loading for ONLYOFFICE Docs editor tab
 * Fixed ONLYOFFICE Docs editor tab in the dark mode
 * Fixed anchors
- 
+
 ## 4.2.0
 
 ### New features
