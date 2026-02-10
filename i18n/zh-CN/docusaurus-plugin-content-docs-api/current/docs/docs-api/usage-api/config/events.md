@@ -230,7 +230,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onPluginsReady() {};
+function onPluginsReady() {}
 
 const config = {
   events: {
@@ -291,7 +291,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onRequestCreateNew() {};
+function onRequestCreateNew() {}
 
 const config = {
   events: {
@@ -513,10 +513,7 @@ function onRequestOpen(event) {
   const path = event.data.path;
   const referenceData = event.data.referenceData;
   const windowName = event.data.windowName;
-  window.open({
-    path: "https://example.com/external-url.docx",
-    windowName: event.data.windowName,
-  });
+  window.open("https://example.com/external-url.docx", event.data.windowName);
 }
 
 const config = {
@@ -634,7 +631,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ``` ts
 function onRequestRefreshFile() {
-  refreshFile({
+  docEditor.refreshFile({
     document: {
       fileType: "docx",
       key: "Khirz6zTPdfd7",
@@ -787,7 +784,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onRequestSelectDocument() {
+function onRequestSelectDocument(event) {
   docEditor.setRequestedDocument({
     c: event.data.c,
     fileType: "docx",
@@ -820,7 +817,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onRequestSelectSpreadsheet() {
+function onRequestSelectSpreadsheet(event) {
   docEditor.setRequestedSpreadsheet({
     c: event.data.c,
     fileType: "xlsx",

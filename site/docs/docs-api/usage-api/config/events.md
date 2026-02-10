@@ -1,6 +1,6 @@
 # Events
 
-The events section allows to change all the functions pertaining to the events.
+The events section allows you to change all the functions pertaining to the events.
 
 ## onAppReady
 
@@ -24,7 +24,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onCollaborativeChanges
 
-The function called when the document is co-edited by the other user in the *strict* co-editing mode.
+The function called when the document is co-edited by another user in the *strict* co-editing mode.
 
 **Example**:
 
@@ -64,7 +64,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onDocumentStateChange
 
-The function called when the document is modified. It is called with the parameter: *\{"data": true\}* when the current user is editing the document and with the parameter: *\{"data" : false\}* when the current user's changes are sent to the **document editing service**.
+The function called when the document is modified. It is called with the parameter: *\{"data": true\}* when the current user is editing the document and with the parameter: *\{"data": false\}* when the current user's changes are sent to the **document editing service**.
 
 **Example**:
 
@@ -230,7 +230,7 @@ The function called when all plugins are loaded and can be used.
 **Example**:
 
 ``` ts
-function onPluginsReady() {};
+function onPluginsReady() {}
 
 const config = {
   events: {
@@ -291,7 +291,7 @@ The function called when the user is trying to create document by clicking the *
 **Example**:
 
 ``` ts
-function onRequestCreateNew() {};
+function onRequestCreateNew() {}
 
 const config = {
   events: {
@@ -334,7 +334,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the user is trying to show the document version history by clicking the *Version History* button.
 
-To show the document version history you must call the [refreshHistory](../methods.md#refreshhistory) method. If the method and the [onRequestHistoryData](#onrequesthistorydata) method is not declared the *Version History* button will not be displayed.
+To show the document version history you must call the [refreshHistory](../methods.md#refreshhistory) method. If the method and the [onRequestHistoryData](#onrequesthistorydata) method are not declared the *Version History* button will not be displayed.
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png" width="282px" />
 
@@ -410,7 +410,7 @@ The function called when the user is trying to click the specific document versi
 
 The document version number is sent in the *data* parameter.
 
-To show the changes corresponding to the specific document version you must call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onrequesthistory) method is not declared the *Version History* button will not be displayed.
+To show the changes corresponding to the specific document version you must call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onrequesthistory) method are not declared the *Version History* button will not be displayed.
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png)
 
@@ -513,10 +513,7 @@ function onRequestOpen(event) {
   const path = event.data.path;
   const referenceData = event.data.referenceData;
   const windowName = event.data.windowName;
-  window.open({
-    path: "https://example.com/external-url.docx",
-    windowName: event.data.windowName,
-  });
+  window.open("https://example.com/external-url.docx", event.data.windowName);
 }
 
 const config = {
@@ -634,7 +631,7 @@ In these cases, the [refreshFile](../methods.md#refreshfile) method is called an
 
 ``` ts
 function onRequestRefreshFile() {
-  refreshFile({
+  docEditor.refreshFile({
     document: {
       fileType: "docx",
       key: "Khirz6zTPdfd7",
@@ -787,7 +784,7 @@ To select a document for comparing, combining, or inserting text, you must call 
 **Example**:
 
 ``` ts
-function onRequestSelectDocument() {
+function onRequestSelectDocument(event) {
   docEditor.setRequestedDocument({
     c: event.data.c,
     fileType: "docx",
@@ -820,7 +817,7 @@ To select recipient data, you must call the [setRequestedSpreadsheet](../methods
 **Example**:
 
 ``` ts
-function onRequestSelectSpreadsheet() {
+function onRequestSelectSpreadsheet(event) {
   docEditor.setRequestedSpreadsheet({
     c: event.data.c,
     fileType: "xlsx",
@@ -846,7 +843,7 @@ The function called when the user is mentioned in a comment.
 
 The message and the list of emails is sent in the *data* parameter. The comment data is received in the *data.actionLink* parameter and must be then used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter.
 
-The list of users to be mentioned should be completed by [setUsers](../methods.md#setusers) method.
+The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
 
 :::note
 In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
