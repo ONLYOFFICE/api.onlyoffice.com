@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Callback handler
 
-The **document editing service** informs the **document storage service** about the status of the document editing using the `callbackUrl` from [JavaScript API](../get-started/basic-concepts.md). The **document editing service** uses the POST request with the information in body.
+The **document editing service** informs the **document storage service** about the status of the document editing using the [callbackUrl](./config/editor/editor.md#callbackurl) from [JavaScript API](../get-started/basic-concepts.md). The **document editing service** uses the POST request with the information in body.
 
 ## Parameters
 
