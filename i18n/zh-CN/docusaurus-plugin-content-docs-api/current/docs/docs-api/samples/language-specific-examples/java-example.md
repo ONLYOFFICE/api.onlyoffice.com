@@ -8,8 +8,8 @@ sidebar_position: -8
 
 此示例将帮助您将 ONLYOFFICE 文档集成到用 Java 编写的 Web 应用程序中。
 
-:::note
-它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。I如果您启用了测试示例，请在投入产品之前将其禁用。
+:::caution
+它用于测试和演示编辑器的功能。如果没有适当的代码修改，**请不要**在自己的服务器上使用此集成示例。如果您启用了测试示例，请在投入产品之前将其禁用。
 :::
 
 ## 重要安全信息
@@ -42,7 +42,7 @@ storage-folder = app_data
 files.docservice.url.site=https://documentserver/
 ```
 
-其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以设置绝对路径。例如，*D:\\\folder*。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以设置绝对路径。例如，`D:\\folder`。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 如果要试验编辑器配置，请修改 *src/main/webapp/editor.jsp* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
@@ -73,7 +73,7 @@ files.docservice.url.site=https://documentserver/
 
    在**变量名称**字段中，如果您安装了**JDK**（Java 开发工具包），请输入 **JAVA\_HOME**；如果您安装了 **JRE**（Java 运行时环境），请输入**JRE\_HOME**。
 
-   在**变量值**字段中，输入您的 **JDK** 或 **JRE** 安装路径，例如 *C:\Program Files\Java\jdk1.8.0\_65*。
+   在**变量值**字段中，输入您的 **JDK** 或 **JRE** 安装路径，例如 `C:\Program Files\Java\jdk1.8.0_65`。
 
    <img alt="Add new environment variable" src="/assets/images/java/make-var.png" width="832px" />
 
@@ -109,7 +109,7 @@ files.docservice.url.site=https://documentserver/
 
 ### 步骤 5. 配置 JWT
 
-打开*src/main/resouces/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
+打开 *src/main/resources/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
 
  ``` ini
  files.docservice.secret=secret
@@ -147,7 +147,7 @@ files.docservice.url.site=https://documentserver/
 
 ### 步骤 7. 检查可访问性
 
-如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 **documentserver**。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 **example.com** 安装。
+如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 `example.com` 安装。
 
 ## 对于 Linux
 
@@ -194,7 +194,7 @@ files.docservice.url.site=https://documentserver/
    files.docservice.url.site=https://documentserver/
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。请注意，您必须具有对该文件夹的读取和写入权限。如果您没有它们，请使用下一个命令：
+   其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。请注意，您必须具有对该文件夹的读取和写入权限。如果您没有它们，请使用下一个命令：
 
    ``` sh
    sudo chmod -R ugo+rw /{path}
@@ -237,7 +237,7 @@ files.docservice.url.site=https://documentserver/
    <user username="USERNAME" password="PASSWORD" roles="manager-gui"/>
    ```
 
-   其中 **USERNAME** 和 **PASSWORD** 是您自己的凭据数据。
+   其中 `USERNAME` 和 `PASSWORD` 是您自己的凭据数据。
 
    重启 Tomcat:
 
@@ -261,7 +261,7 @@ files.docservice.url.site=https://documentserver/
 
 ### 步骤 3. 检查可访问性
 
-如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 **documentserver**。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 **example.com** 安装。
+如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以访问您指定地址的 ONLYOFFICE 文档，而不是配置文件中的 `documentserver`。确保 ONLYOFFICE 文档能够访问安装了示例的服务器，该示例使用您在配置文件中 指定的地址而不是 `example.com` 安装。
 
 ## 对于 Docker
 
@@ -308,7 +308,7 @@ files.docservice.url.site=https://documentserver/
    files.docservice.url.site=https://documentserver/
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**storage-folder** 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
  
@@ -326,4 +326,4 @@ files.docservice.url.site=https://documentserver/
 
 ### 步骤 3. 检查可访问性
 
-如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以使用您在配置文件中指定的地址（而不是 **documentserver** ）访问ONLYOFFICE 文档。确保 ONLYOFFICE 文档可以访问安装了示例的服务器，该示例的地址是您在配置文件中指定的地址，而不是 **example.com**。
+如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器可以使用您在配置文件中指定的地址（而不是 `documentserver` ）访问ONLYOFFICE 文档。确保 ONLYOFFICE 文档可以访问安装了示例的服务器，该示例的地址是您在配置文件中指定的地址，而不是 `example.com`。
