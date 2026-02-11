@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE Docs [uses](../../get-started/how-it-works/security.md) tokens generated using the JSON Web Tokens standard. The tokens are sent when performing the client-side [browser requests](browser.md) to ONLYOFFICE Docs or the [HTTP requests](request/request.md) to or from ONLYOFFICE Docs.
 
-> This feature is used in ONLYOFFICE Docs starting with version 4.2
+:::info
+This feature is used in ONLYOFFICE Docs starting with version 4.2.
+:::
 
 For the validation setup, it is necessary to edit the [secret key](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey) and [token](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token) parameters in the configuration file, which can be found (or created) at the following path:
 
@@ -22,19 +24,21 @@ For the validation setup, it is necessary to edit the [secret key](https://helpc
   </TabItem>
 </Tabs>
 
-> The default values are available in the `default.json` configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade ONLYOFFICE Docs to a new version and all your changes will be lost.
+:::caution
+The default values are available in the `default.json` configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade ONLYOFFICE Docs to a new version and all your changes will be lost.
+:::
 
 Restart the services for the config changes to take effect:
 
 <Tabs>
-  <TabItem value="rpm-deb" label="RPM/DEB packages">
-      ``` bash
-      systemctl restart ds-*
-      ```
-  </TabItem>
   <TabItem value="docker" label="Docker">
       ``` bash
       supervisorctl restart all
+      ```
+  </TabItem>
+  <TabItem value="rpm-deb" label="RPM/DEB packages">
+      ``` bash
+      systemctl restart ds-*
       ```
   </TabItem>
 </Tabs>
@@ -57,6 +61,9 @@ Restart the services for the config changes to take effect:
   "services": {
     "CoAuthoring": {
       "secret": {
+        "browser": {
+          "string": "secret"
+        },
         "inbox": {
           "string": "secret"
         },
@@ -80,9 +87,53 @@ Restart the services for the config changes to take effect:
 
 ## Code samples for signature generation
 
-Below you can find examples of signature generation for init config and requests. They are taken from [test samples](../../samples/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
+Below you can find examples of signature generation for initialization config and requests. They are taken from [test samples](../../samples/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
 
 <Tabs>
+  <TabItem value="nodejs" label="Node.js">
+      ``` ts
+      import config from "config"
+
+      const configServer = config.get("server")
+      const cfgSignatureSecretExpiresIn = configServer.get("token.expiresIn")
+      const cfgSignatureSecret = configServer.get("token.secret")
+      const cfgSignatureSecretAlgorithmRequest = configServer.get("token.algorithmRequest")
+      documentService.getToken = function getToken(data) {
+        const options = {algorithm: cfgSignatureSecretAlgorithmRequest,
+          expiresIn: cfgSignatureSecretExpiresIn}
+        return jwt.sign(data, cfgSignatureSecret, options)
+      }
+      ```
+  </TabItem>
+  <TabItem value="javascript" label="JavaScript">
+      ``` javascript
+      (async () => {
+          config.token = await createJWT(config, "JWT_SECRET");
+      })();
+
+      async function createJWT(json, secret) {
+          if (!secret) return null;
+          let header = {
+              typ: "JWT",
+              alg: "HS256"
+          }
+
+          let base64EncodeURL = function(str) {
+              return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
+          }
+
+          let encodedHeader = base64EncodeURL(JSON.stringify(header));
+          let encodedPayload = base64EncodeURL(JSON.stringify(json));
+          let encoder = new TextEncoder();
+          let algorithm = { name: "HMAC", hash: "SHA-256" };
+          let key = await crypto.subtle.importKey("raw", encoder.encode(secret), algorithm, false, ["sign", "verify"]);
+          let buf = encoder.encode(encodedHeader + "." + encodedPayload);
+          let sign = await crypto.subtle.sign(algorithm.name, key, buf);
+          let hash = base64EncodeURL(String.fromCharCode(...new Uint8Array(sign)));
+          return encodedHeader + "." + encodedPayload + "." + hash;
+      }
+      ```
+  </TabItem>
   <TabItem value="csharp" label="C#">
       ``` cs
       public static class JwtManager
@@ -108,7 +159,7 @@ Below you can find examples of signature generation for init config and requests
   </TabItem>
   <TabItem value="java" label="Java">
       ``` java
-      public static String CreateToken(Map payloadClaims)
+      public static String CreateToken(Map<String, Object> payloadClaims)
       {
           try
           {
@@ -128,26 +179,11 @@ Below you can find examples of signature generation for init config and requests
       }
       ```
   </TabItem>
-  <TabItem value="nodejs" label="Node.js">
-      ``` ts
-      import config from "config"
-
-      const configServer = config.get("server")
-      const cfgSignatureSecretExpiresIn = configServer.get("token.expiresIn")
-      const cfgSignatureSecret = configServer.get("token.secret")
-      const cfgSignatureSecretAlgorithmRequest = configServer.get("token.algorithmRequest")
-      documentService.getToken = function getToken(data) {
-        const options = {algorithm: cfgSignatureSecretAlgorithmRequest,
-          expiresIn: cfgSignatureSecretExpiresIn}
-        return jwt.sign(data, cfgSignatureSecret, options)
-      }
-      ```
-  </TabItem>
   <TabItem value="php" label="PHP">
       ``` php
       <?php
       function jwtEncode($payload) {
-          return \Firebase\JWT\JWT::encode($payload, $GLOBALS["DOC_SERV_JWT_SECRET"]);
+          return \Firebase\JWT\JWT::encode($payload, $GLOBALS["DOC_SERV_JWT_SECRET"], "HS256");
       }
       ?>
       ```
@@ -186,35 +222,6 @@ Below you can find examples of signature generation for init config and requests
           }
 
           return ss, nil
-      }
-      ```
-  </TabItem>
-  <TabItem value="javascript" label="JavaScript">
-      ``` javascript
-      (async () => {
-          config.token = await createJWT(config, "JWT_SECRET");
-      })();
-
-      async function createJWT(json, secret) {
-          if (!secret) return null;
-          let header = {
-              typ: "JWT",
-              alg: "HS256"
-          }
-
-          let base64EncodeURL = function(str) {
-              return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
-          }
-
-          let encodedHeader = base64EncodeURL(JSON.stringify(header));
-          let encodedPayload = base64EncodeURL(JSON.stringify(json));
-          let encoder = new TextEncoder();
-          let algorithm = { name: "HMAC", hash: "SHA-256" };
-          let key = await crypto.subtle.importKey("raw", encoder.encode(secret), algorithm, false, ["sign", "verify"]);
-          let buf = encoder.encode(encodedHeader + "." + encodedPayload);
-          let sign = await crypto.subtle.sign(algorithm.name, key, buf);
-          let hash = base64EncodeURL(String.fromCharCode(...new Uint8Array(sign)));
-          return encodedHeader + "." + encodedPayload + "." + hash;
       }
       ```
   </TabItem>
