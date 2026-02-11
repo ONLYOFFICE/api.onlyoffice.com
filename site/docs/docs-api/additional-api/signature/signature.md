@@ -12,14 +12,14 @@ This feature is used in ONLYOFFICE Docs starting with version 4.2.
 For the validation setup, it is necessary to edit the [secret key](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey) and [token](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token) parameters in the configuration file, which can be found (or created) at the following path:
 
 <Tabs>
-  <TabItem value="windows" label="Windows">
-      ``` bash
-      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
-      ```
-  </TabItem>
   <TabItem value="linux" label="Linux">
       ``` bash
       /etc/onlyoffice/documentserver/local.json
+      ```
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
       ```
   </TabItem>
 </Tabs>
