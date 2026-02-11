@@ -27,7 +27,7 @@ sidebar_position: -8
 
 下载并安装 ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取 ONLYOFFIC E文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+[获取 ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
 请参阅详细指南以了解如何安装[适用于 Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
 
@@ -86,7 +86,7 @@ files.docservice.url.site=https://documentserver/
 2. 运行**命令提示符**更改 **Apache Tomcat** 安装目录的当前目录：
 
    ``` sh
-   cd /d C:\Apache Tomcat\apache-tomcat-7.0.67\bin
+   cd /d C:\Apache Tomcat\apache-tomcat-9.0.x\bin
    ```
 
 3. 使用 *startup.bat* 脚本启动 Apache Tomcat：
@@ -111,9 +111,9 @@ files.docservice.url.site=https://documentserver/
 
 打开 *src/main/resources/settings.properties* 文件，并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
 
- ``` ini
- files.docservice.secret=secret
- ```
+``` ini
+files.docservice.secret=secret
+```
 
 ### 步骤 6. 运行 Java 代码
 
@@ -200,11 +200,11 @@ files.docservice.url.site=https://documentserver/
    sudo chmod -R ugo+rw /{path}
    ```
 
-   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT： 
- 
- 	``` ini
- 	files.docservice.secret=secret
- 	```
+   与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
+
+   ``` ini
+   files.docservice.secret=secret
+   ```
 
 5. 安装 **Maven**:
 
@@ -287,7 +287,7 @@ files.docservice.url.site=https://documentserver/
    unzip Java.Example.zip
    ```
 
-或者直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码。
+   或者直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java) 获取源代码。
 
 3. 将当前目录更改为项目目录：
 
@@ -311,10 +311,10 @@ files.docservice.url.site=https://documentserver/
    其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称，`storage-folder` 是创建和存储文件的路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)以启用 JWT：
- 
- 	``` ini
- 	files.docservice.secret=secret
- 	```
+
+   ``` ini
+   files.docservice.secret=secret
+   ```
 
 5. 在 Java 示例目录中运行下一个命令：
 
