@@ -6,9 +6,9 @@ sidebar_position: -9
 
 ## Overview
 
-This example will help you integrate ONLYOFFICE Docs into your web application written on Python.
+This example will help you integrate ONLYOFFICE Docs into your web application written in Python.
 
-:::note
+:::caution
 It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 :::
 
@@ -43,7 +43,7 @@ cd "Python Example"
 make compose-prod
 ```
 
-By default, the server starts at *localhost:80*.
+By default, the server starts at `localhost:80`.
 
 To configure the example, you can edit the environment variables in [compose-base.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/compose-base.yml). See [below](#step-3-configure-the-python-example) for more information about environment variables.
 
@@ -57,7 +57,7 @@ Check the detailed guide to learn how to install it on [Windows](https://helpcen
 
 To run the example on your local machine, you will need [Python 3.11.4](https://www.python.org/) with [pip 23.1.2](https://pip.pypa.io/en/stable/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python):
+Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python):
 
 ``` sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
@@ -72,15 +72,15 @@ make prod
 make server-prod
 ```
 
-By default, the server starts at *0.0.0.0:8000*.
+By default, the server starts at `0.0.0.0:8000`.
 
 To configure the example, you can pass the environment variables before the command that starts the server. See [below](#step-3-configure-the-python-example) for more information about environment variables.
 
 ## Step 2. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
 
 ## Step 3. Configure the Python example
 
@@ -88,10 +88,10 @@ The example is configured by changing environment variables.
 
 | Parameter                      | Example                 | Description                                                             |
 | ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| DEBUG                          | false                   | Disable or enable debug mode.                                           |
-| ADDRESS                        | 0.0.0.0                 | The address where the server should be started.                         |
-| PORT                           | 80                      | The port on which the server should be running.                         |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs  |
+| DEBUG                          | `false`                 | Disable or enable debug mode.                                           |
+| ADDRESS                        | `0.0.0.0`               | The address where the server should be started.                         |
+| PORT                           | `80`                    | The port on which the server should be running.                         |
+| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
 | DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
 | EXAMPLE\_URL                   | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
-| JWT\_SECRET                    | your-256-bit-secret     | JWT authorization secret. Leave blank to disable authorization.         |
+| JWT\_SECRET                    | `your-256-bit-secret`   | JWT authorization secret. Leave blank to disable authorization.         |
