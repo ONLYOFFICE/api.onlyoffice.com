@@ -4,11 +4,11 @@ sidebar_position: -4
 
 # Docs API integration samples
 
-With ONLYOFFICE Docs, any of collaborative solutions can be enhanced with document editing and co-editing. In this section, you will learn how to integrate ONLYOFFICE Docs into your own website.
+With ONLYOFFICE Docs, any collaborative solution can be enhanced with document editing and co-editing. In this section, you will learn how to integrate ONLYOFFICE Docs into your own website.
 
 Each ONLYOFFICE Docs instance includes online editors for text documents, spreadsheets, presentations, PDFs, and fillable forms, plus a test example.
 
-Test example is simple document management system that can be built into your application for testing. The test example included by default is written on Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.
+The test example is a simple document management system that can be built into your application for testing. The test example included by default is written in Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.
 
 :::note
 The integration examples are used to demonstrate document editors functions and the ways to connect **ONLYOFFICE Docs** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**! If you enabled any of the test examples, disable it before going for production.
@@ -42,9 +42,9 @@ To start integrating document editors into your own website you need to do the f
    - [Ruby.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip)
    - [Go.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip)
 
-   or find source code: [integration example](https://github.com/ONLYOFFICE/document-server-integration).
+   You can also find the source code on GitHub: [integration example](https://github.com/ONLYOFFICE/document-server-integration).
 
-3. Edit the configuration files in the sample changing the default path for the one to the editors installed at step 1 and other parameters available for editor configuration.
+3. Edit the configuration files in the sample changing the default path to the editors installed at step 1 and other parameters available for editor configuration.
 
    You can find the configuration files at the following paths:
 
