@@ -61,6 +61,12 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
     </TabItem>
     <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/)
+
+        :::note
+
+        The .NET integration for Document Builder is currently only available on Windows. There is no pre-built .NET integration for Linux or macOS at this time.
+
+        :::
     </TabItem>
 </Tabs>
 

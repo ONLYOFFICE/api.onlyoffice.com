@@ -61,6 +61,12 @@ ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加�
     </TabItem>
     <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website)
+
+        :::note
+
+        Document Builder 的 .NET 集成目前仅在 Windows 上可用。目前没有为 Linux 或 macOS 提供预构建的 .NET 集成。
+
+        :::
     </TabItem>
 </Tabs>
 
