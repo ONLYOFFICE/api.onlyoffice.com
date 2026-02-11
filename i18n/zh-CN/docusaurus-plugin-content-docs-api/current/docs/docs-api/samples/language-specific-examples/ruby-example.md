@@ -53,7 +53,7 @@ make compose-prod
 
 [获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example)，[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example)，和[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example)上安装它。
+查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example)、[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example)或[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example)上安装它。
 
 要在您的本地计算机上运行示例，您将需要[Ruby 3.2.2](https://www.ruby-lang.org/en/)和[Bundler 2.4.10](https://bundler.io/)。另外，您可能需要考虑安装[GNU Make 4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
 
@@ -86,11 +86,11 @@ make server-prod
 
 通过更改环境变量来配置示例。
 
-| 参数                      | 示例                 | 描述                                                             |
-| ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| BINDING                        | `0.0.0.0`               | 服务器应启动的地址。                                        |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。                             |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。                               |
-| EXAMPLE\_URL                   | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。                               |
-| JWT\_SECRET                    | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                                          |
-| PORT                           | `80`                    | 服务器应运行的端口。                                              |
+| 名称                             | 示例                    | 描述                                             |
+| -------------------------------- | ----------------------- | ------------------------------------------------ |
+| `BINDING`                        | `0.0.0.0`               | 服务器应启动的地址。                             |
+| `DOCUMENT_SERVER_PRIVATE_URL`    | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。     |
+| `DOCUMENT_SERVER_PUBLIC_URL`     | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。       |
+| `EXAMPLE_URL`                    | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。      |
+| `JWT_SECRET`                     | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                   |
+| `PORT`                           | `80`                    | 服务器应运行的端口。                             |

@@ -6,9 +6,9 @@ sidebar_position: -3
 
 ## Overview
 
-This is an example application written on PHP with [Laravel Framework](https://laravel.com/docs/11.x/installation#meet-laravel) that integrates ONLYOFFICE Docs.
+This is an example application written in PHP with [Laravel Framework](https://laravel.com/docs/11.x/installation#meet-laravel) that integrates ONLYOFFICE Docs.
 
-:::note
+:::caution
 It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 :::
 
@@ -126,21 +126,21 @@ Before diving into the example, you will need to install ONLYOFFICE Docs. Check 
 
 The PHP (Laravel) example is configured by changing environment variables.
 
-| Name                           | Description                                                                 | Example                 |
-| ------------------------------ | --------------------------------------------------------------------------- | ----------------------- |
-| `USER`                         | The user name in the system.                                                | `user`                  |
-| `UID`                          | The user ID number (UID) in the system.                                     | `1000`                  |
-| `DOCUMENT_STORAGE_PUBLIC_URL`  | The URL address used by the client to communicate with the server.          | `http://localhost`      |
-| `DOCUMENT_STORAGE_PRIVATE_URL` | The URL address used by the ONLYOFFICE Docs to communicate with the server. | `http://proxy`          |
-| `DOCUMENT_SERVER_PUBLIC_URL`   | The URL address used by the client to communicate with the ONLYOFFICE Docs. | `http://localhost:8080` |
-| `DOCUMENT_SERVER_PRIVATE_URL`  | The URL address used by the server to communicate with the ONLYOFFICE Docs. | `http://proxy:8080`     |
-| `DOCUMENT_SERVER_JWT_SECRET`   | The JWT authorization secret.                                                   | `your-256-bit-secret`   |
+| Name                           | Example                 | Description                                                                 |
+| ------------------------------ | ----------------------- | --------------------------------------------------------------------------- |
+| `USER`                         | `user`                  | The user name in the system.                                                |
+| `UID`                          | `1000`                  | The user ID number (UID) in the system.                                     |
+| `DOCUMENT_STORAGE_PUBLIC_URL`  | `http://localhost`      | The URL address used by the client to communicate with the server.          |
+| `DOCUMENT_STORAGE_PRIVATE_URL` | `http://proxy`          | The URL address used by the ONLYOFFICE Docs to communicate with the server. |
+| `DOCUMENT_SERVER_PUBLIC_URL`   | `http://localhost:8080` | The URL address used by the client to communicate with the ONLYOFFICE Docs. |
+| `DOCUMENT_SERVER_PRIVATE_URL`  | `http://proxy:8080`     | The URL address used by the server to communicate with the ONLYOFFICE Docs. |
+| `DOCUMENT_SERVER_JWT_SECRET`   | `your-256-bit-secret`   | The JWT authorization secret.                                               |
 
 ## Step 4. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. 
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files. 
 
-Make sure that the ONLYOFFICE Docs has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+Make sure that the ONLYOFFICE Docs has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
 
 ## Troubleshooting
 

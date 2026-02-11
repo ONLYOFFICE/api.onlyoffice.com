@@ -86,12 +86,12 @@ Make sure that the ONLYOFFICE Docs in its turn has access to the server with the
 
 The example is configured by changing environment variables.
 
-| Parameter                      | Example                 | Description                                                             |
-| ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| DEBUG                          | `false`                 | Disable or enable debug mode.                                           |
-| ADDRESS                        | `0.0.0.0`               | The address where the server should be started.                         |
-| PORT                           | `80`                    | The port on which the server should be running.                         |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
-| EXAMPLE\_URL                   | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
-| JWT\_SECRET                    | `your-256-bit-secret`   | JWT authorization secret. Leave blank to disable authorization.         |
+| Name                             | Example                 | Description                                                             |
+| -------------------------------- | ----------------------- | ----------------------------------------------------------------------- |
+| `DEBUG`                          | `false`                 | Disable or enable debug mode.                                           |
+| `ADDRESS`                        | `0.0.0.0`               | The address where the server should be started.                         |
+| `PORT`                           | `80`                    | The port on which the server should be running.                         |
+| `DOCUMENT_SERVER_PRIVATE_URL`    | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
+| `DOCUMENT_SERVER_PUBLIC_URL`     | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
+| `EXAMPLE_URL`                    | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
+| `JWT_SECRET`                     | `your-256-bit-secret`   | JWT authorization secret. Leave blank to disable authorization.         |

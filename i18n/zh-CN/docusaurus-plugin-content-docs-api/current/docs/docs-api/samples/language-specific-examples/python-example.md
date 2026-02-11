@@ -86,12 +86,12 @@ make server-prod
 
 通过更改环境变量来配置示例。
 
-| 参数                      | 示例                 | 描述                                                             |
-| ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| DEBUG                          | `false`                 | 禁用或启用调试模式。                                              |
-| ADDRESS                        | `0.0.0.0`               | 服务器应启动的地址。                                       |
-| PORT                           | `80`                    | 服务器应运行的端口。                                              |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。                               |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。                              |
-| EXAMPLE\_URL                   | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。                                |
-| JWT\_SECRET                    | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                                          |
+| 名称                             | 示例                    | 描述                                             |
+| -------------------------------- | ----------------------- | ------------------------------------------------ |
+| `DEBUG`                          | `false`                 | 禁用或启用调试模式。                             |
+| `ADDRESS`                        | `0.0.0.0`               | 服务器应启动的地址。                             |
+| `PORT`                           | `80`                    | 服务器应运行的端口。                             |
+| `DOCUMENT_SERVER_PRIVATE_URL`    | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。     |
+| `DOCUMENT_SERVER_PUBLIC_URL`     | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。       |
+| `EXAMPLE_URL`                    | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。      |
+| `JWT_SECRET`                     | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                   |
