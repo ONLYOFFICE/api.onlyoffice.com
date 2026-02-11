@@ -10,8 +10,8 @@ This example will help you integrate ONLYOFFICE Docs into your web application w
 
 Spring Boot has a lot of functionality, but its most significant features are: dependency management, auto-configuration, and built-in servlet containers.
 
-:::note
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::caution
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
 :::
 
 ## Important security info
@@ -37,7 +37,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](htt
 
 Download the [Java-Spring example](./language-specific-examples.md) from our site, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring).
 
-To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *src/main/resources/application.properties* file:
+To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the `src/main/resources/application.properties` file:
 
 ``` ini
 files.storage=
@@ -45,10 +45,10 @@ server.port=port
 files.docservice.url.site=https://documentserver/
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console. 
-You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
+where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+You can set an absolute path. For example, `D:\\folder`. Please note that on Windows OS the double backslash must be used as a separator.
 
-If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *src/main/webapp/editor.jsp* file.
+If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the `src/main/webapp/editor.jsp` file.
 
 ### Step 3. Install the prerequisites
 
@@ -77,7 +77,7 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
    In the **Variable Name** field, enter **JAVA\_HOME** if you installed the **JDK** (Java Development Kit) or **JRE\_HOME** if you installed the **JRE** (Java Runtime Environment).
 
-   In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example *C:\Program Files\Java\jdk11*.
+   In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example `C:\Program Files\Java\jdk11`.
 
    Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
@@ -103,9 +103,9 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
    In the **Variable Name** field, enter **MAVEN_HOME**.
 
-   In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example *C:\apache-maven-3.8.1*.
+   In the **Variable Value** field, enter your Maven installation path, for example `C:\apache-maven-3.8.1`.
 
-   In the system variables, find **PATH**, click the **Edit...** button. In the **Edit environment variable** dialog, click the **New** button and add *C:\apache-maven-3.8.1\bin* to the **PATH** system variable.
+   In the system variables, find **PATH**, click the **Edit...** button. In the **Edit environment variable** dialog, click the **New** button and add `C:\apache-maven-3.8.1\bin` to the **PATH** system variable.
 
    Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
@@ -115,15 +115,15 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
 ### Step 5. Configure JWT
 
-Open the *src/main/resouces/application.properties* file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
- ``` ini
- docservice.security.key=secret
- ```
+Open the `src/main/resources/application.properties` file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
+
+``` ini
+docservice.security.key=secret
+```
 
 ### Step 6. Start application with Maven
 
-1. Open a console and go to the *java-spring* folder using the **cd** command:
+1. Open a console and go to the `java-spring` folder using the **cd** command:
 
    ``` sh
    cd C:\Program Files\document-server-integration\web\documentserver-example\java-spring
@@ -145,7 +145,9 @@ Open the *src/main/resouces/application.properties* file and [specify the same s
 
 ### Step 7. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
+
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ## For Linux
 
@@ -193,7 +195,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
    cd document-server-integration/web/documentserver-example/java-spring
    ```
 
-4. Edit the *src/main/resources/application.properties* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
+4. Edit the `src/main/resources/application.properties` configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
    ``` sh
    nano src/main/resources/application.properties
@@ -207,13 +209,13 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
    files.docservice.url.site=https://documentserver/
    ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
-     ``` ini
-     docservice.security.key=secret
-     ```
+   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
+
+   ``` ini
+   docservice.security.key=secret
+   ```
 
 5. Install **Maven**:
 
@@ -241,7 +243,9 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 ### Step 3. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
+
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
 
 ## For Docker
 
@@ -289,7 +293,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
    cd document-server-integration/web/documentserver-example/java-spring
    ```
 
-4. Edit the *src/main/resources/application.properties* configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
+4. Edit the `src/main/resources/application.properties` configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
 
    ``` sh
    nano src/main/resources/application.properties
@@ -300,16 +304,16 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
    ``` ini
    files.storage=
    server.port=port
-   files.docservice.url.site=https://documentserver/ 
+   files.docservice.url.site=https://documentserver/
    ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
-     ``` ini
-     docservice.security.key=secret
-     ```
+   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
+
+   ``` ini
+   docservice.security.key=secret
+   ```
 
 5. Run the next command in the Java-Spring example directory:
 
@@ -325,4 +329,6 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 ### Step 3. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
+
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
