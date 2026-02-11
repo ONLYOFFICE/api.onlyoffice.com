@@ -124,7 +124,7 @@ func.call = async function (params) {
       })
       .join("\n");
 
-    let argPromt =
+    let argPrompt =
       "Find column index for header '" +
       fieldName +
       "' in the following CSV data.\n\n" +
@@ -161,7 +161,7 @@ func.call = async function (params) {
     await Asc.Editor.callMethod("StartAction", ["GroupActions"]);
 
     let result = await requestEngine.chatRequest(
-      argPromt,
+      argPrompt,
       false,
       async function (data) {
         if (!data) return;

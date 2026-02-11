@@ -8,4 +8,3 @@ The function called when the current page has changed.
 | --------- | ------------- | ----------- |
 | index | number | The index of the newly activated page. |
 
-

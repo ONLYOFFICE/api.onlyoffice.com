@@ -46,7 +46,7 @@ let func = new RegisteredFunction({
         description: "Second cell for subtract/divide operations (e.g., 'B7')",
       },
     },
-    required: ["prompt"],
+    required: [],
   },
   examples: [
     {

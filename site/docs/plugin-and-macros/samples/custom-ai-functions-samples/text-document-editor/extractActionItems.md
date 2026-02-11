@@ -29,7 +29,7 @@ let func = new RegisteredFunction({
           "how to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet')",
       },
     },
-    required: ["prompt"],
+    required: [],
   },
   examples: [
     {

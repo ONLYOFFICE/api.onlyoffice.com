@@ -22,7 +22,7 @@ let func = new RegisteredFunction({
       range: {
         type: "string",
         description:
-          "Cell range to apply autofilter (e.g., 'A1:D10'). If omitted, uses active/selected range",
+          "Cell range for pivot table data (e.g., 'A1:D10'). If omitted, uses active/selected range",
       },
       columns: {
         type: "array",
@@ -64,7 +64,7 @@ let func = new RegisteredFunction({
 
 | Name        | Type             | Example                | Description                                                                               |
 | ----------- | ---------------- | ---------------------- | ----------------------------------------------------------------------------------------- |
-| range       | string           | "A1:D10"               | The cell range to apply the autofilter. If omitted, the active or selected range is used. |
+| range       | string           | "A1:D10"               | The cell range for pivot table data. If omitted, the active or selected range is used.    |
 | columns     | array of strings | ["Column1", "Column2"] | An array of column names used for pivot rows (categorical/grouping).                      |
 | valueColumn | string           | "Column3"              | The column name used for pivot values (numeric/aggregate).                                |
 

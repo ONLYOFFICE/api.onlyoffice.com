@@ -50,39 +50,7 @@ let func = new RegisteredFunction({
 ## Function execution {#function-execution}
 
 ```ts
-(function () {
-    let func = new RegisteredFunction({
-        name: "changeParagraphStyle",
-        description: "Modifies the visual style of the specified paragraph.",
-        parameters: {
-            type: "object",
-            properties: {
-                parNumber: {
-                    type: "number",
-                    description:
-                        "The paragraph number to apply style changes to.",
-                },
-                style: {
-                    type: "string",
-                    description:
-                        "The style name to apply to the paragraph (e.g., 'Heading 1').",
-                },
-            },
-            required: ["parNumber", "style"],
-        },
-        examples: [
-            {
-                prompt: "Change the style of paragraph 3 to Heading 1",
-                arguments: { parNumber: 3, style: "Heading 1" },
-            },
-            {
-                prompt: "Change the style of paragraph 2 to Heading 1",
-                arguments: { parNumber: 2, style: "Heading 1" },
-            },
-        ],
-    });
-
-    func.call = async function (params) {
+func.call = async function (params) {
         Asc.scope.parNumber = params.parNumber;
         Asc.scope.styleName = params.style;
         await Asc.Editor.callCommand(function () {
@@ -92,11 +60,8 @@ let func = new RegisteredFunction({
 
             let style = doc.GetStyle(Asc.scope.styleName);
             par.SetStyle(style);
-        });
-    };
-
-    return func;
-})();
+    });
+};
 ```
 
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetElement.md), [GetStyle](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)

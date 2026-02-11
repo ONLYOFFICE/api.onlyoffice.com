@@ -42,7 +42,7 @@ func.call = async function (params) {
     let currentSlide = presentation.GetCurrentSlide();
     let master;
 
-    if (currentSlide) {
+    if (!currentSlide) {
       currentSlide = presentation.GetSlideByIndex(0);
       let curLayout = currentSlide.GetLayout();
       master = curLayout.GetMaster();

@@ -10,7 +10,7 @@ This function analyzes the currently selected image and generates a title, capti
 
 ## Function registration
 
-```js
+```ts
  let func = new RegisteredFunction({
     "name": "describeImage",
     "description": "Allows users to select an image and generate a meaningful title, description, caption, or alt text for it using AI.",
@@ -33,7 +33,7 @@ This function analyzes the currently selected image and generates a title, capti
 });
 ```
 ## Function execution
-```js
+```ts
   func.call = async function (params) {
     async function insertMessage(message) {
       Asc.scope._message = String(message || "");

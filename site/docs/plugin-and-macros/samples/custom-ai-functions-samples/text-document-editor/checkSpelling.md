@@ -72,9 +72,8 @@ let func = new RegisteredFunction({
             return par.GetText();
         });
 
-        let argPromt =
-            "Check spelling and grammar for text:" +
-            ":\n" +
+        let argPrompt =
+            "Check spelling and grammar for text:\n" +
             text +
             "\n Answer with only the new corrected text, no need of any explanations.";
 
@@ -108,7 +107,7 @@ let func = new RegisteredFunction({
         let resultText = "";
 
         let result = await requestEngine.chatRequest(
-            argPromt,
+            argPrompt,
             false,
             async function (data) {
                 if (!data) return;
