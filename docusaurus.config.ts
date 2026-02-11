@@ -37,7 +37,8 @@ const config: Config = {
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
-    }
+    },
+    mermaid: true,
   },
 
   customFields: {
@@ -380,7 +381,7 @@ const config: Config = {
     ],
   } satisfies Preset.ThemeConfig,
 
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
 };
 
 export default config;

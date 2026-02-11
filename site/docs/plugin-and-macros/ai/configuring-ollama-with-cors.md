@@ -456,12 +456,14 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ## Solution architecture
 
-```
-┌─────────────────┐     HTTPS      ┌─────────────────┐     HTTP      ┌─────────────────┐
-│   ONLYOFFICE    │ ──────────────── │      Nginx      │ ───────────── │     Ollama      │
-│   (Browser/     │    :443        │  (Reverse Proxy │   :11434      │    (LLM API)    │
-│    Desktop)     │                │   + TLS + CORS) │               │                 │
-└─────────────────┘                └─────────────────┘               └─────────────────┘
+```mermaid
+flowchart LR
+    A["`ONLYOFFICE
+(Browser/Desktop)`"] -->|"HTTPS :443"| B["`Nginx
+(Reverse Proxy
++ TLS + CORS)`"]
+    B -->|"HTTP :11434"| C["`Ollama
+(LLM API)`"]
 ```
 
 Component interaction follows this scheme:
