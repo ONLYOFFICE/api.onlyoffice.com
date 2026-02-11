@@ -163,36 +163,17 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-2. There are two ways to get the Java-Spring example:
-
-   - download the archive with the Java-Spring example and unpack it:
+2. Download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring):
 
    ``` sh
-   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-   ```
-
-   ``` sh
+   curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
    unzip Java.Spring.Example.zip
-   ```
-
-   - clone the git repository and get the source code directly from the [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) folder:
-
-   ``` sh
-   git clone https://github.com/ONLYOFFICE/document-server-integration.git
    ```
 
 3. Change the current directory for the project directory:
 
-   - in the archive:
-
    ``` sh
-   cd Java\ Spring\ Example/
-   ```
-
-   - in the git repository:
-
-   ``` sh
-   cd document-server-integration/web/documentserver-example/java-spring
+   cd "Java Spring Example"
    ```
 
 4. Edit the `src/main/resources/application.properties` configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
@@ -261,36 +242,17 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-2. There are two ways to get the Java-Spring example:
-
-   - download the archive with the Java-Spring example and unpack it:
+2. Download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring):
 
    ``` sh
-   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-   ```
-
-   ``` sh
+   curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
    unzip Java.Spring.Example.zip
-   ```
-
-   - clone the git repository and get the source code directly from the [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) folder:
-
-   ``` sh
-   git clone https://github.com/ONLYOFFICE/document-server-integration.git
    ```
 
 3. Change the current directory for the project directory:
 
-   - in the archive:
-
    ``` sh
-   cd Java\ Spring\ Example/
-   ```
-
-   - in the git repository:
-
-   ``` sh
-   cd document-server-integration/web/documentserver-example/java-spring
+   cd "Java Spring Example"
    ```
 
 4. Edit the `src/main/resources/application.properties` configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:

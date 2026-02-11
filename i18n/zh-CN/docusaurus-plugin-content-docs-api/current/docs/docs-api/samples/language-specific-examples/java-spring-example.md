@@ -163,36 +163,17 @@ docservice.security.key=secret
 
 1. 按照[此处](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8)说明安装 **Java**。
 
-2. 获取 Java-Spring 示例的方法有两种：
-
-   - 下载包含 Java-Spring 示例的压缩文件并解压缩：
+2. 下载发布存档并解压，或从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 克隆源代码：
 
    ``` sh
-   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-   ```
-
-   ``` sh
+   curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
    unzip Java.Spring.Example.zip
-   ```
-
-  - 克隆 git 仓库，并直接从 [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 文件夹中获取源代码：
-
-   ``` sh
-   git clone https://github.com/ONLYOFFICE/document-server-integration.git
    ```
 
 3. 将当前目录更改为项目目录：
 
-   - 在归档中：
-
    ``` sh
-   cd Java\ Spring\ Example/
-   ```
-
-   - 在 git 存储库中：
-
-   ``` sh
-   cd document-server-integration/web/documentserver-example/java-spring
+   cd "Java Spring Example"
    ```
 
 4. 编辑 `src/main/resources/application.properties` 配置文件。指定安装了 ONLYOFFICE 文档的本地服务器的名称。
@@ -261,36 +242,17 @@ docservice.security.key=secret
 
 1. 按照[此处](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8)说明安装 **Java**。
 
-2. 有两种方式获取 Java-Spring 示例：
-
-   - 下载包含 Java-Spring 示例的存档并解压它：
+2. 下载发布存档并解压，或从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 克隆源代码：
 
    ``` sh
-   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-   ```
-
-   ``` sh
+   curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
    unzip Java.Spring.Example.zip
-   ```
-
-   - 克隆 git 存储库，并直接从 [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) 文件夹中获取源代码：
-
-   ``` sh
-   git clone https://github.com/ONLYOFFICE/document-server-integration.git
    ```
 
 3. 将当前目录更改为项目目录：
 
-   - 在存档中：
-
    ``` sh
-   cd Java\ Spring\ Example/
-   ```
-
-   - 在 git 存储库中：
-
-   ``` sh
-   cd document-server-integration/web/documentserver-example/java-spring
+   cd "Java Spring Example"
    ```
 
 4. 编辑 `src/main/resources/application.properties` 配置文件。指定安装了 ONLYOFFICE Docs 的本地服务器的名称：
