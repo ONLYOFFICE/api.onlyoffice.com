@@ -10,7 +10,7 @@
 环境变量必须在启动 Ollama 服务之前设置。如果 Ollama 已在运行，则必须在设置变量后重新启动它。
 :::
 
-#### Linux（systemd 服务）
+#### Linux (systemd 服务)
 
 大多数 Linux 安装将 Ollama 作为 systemd 服务运行。要配置环境变量：
 
@@ -38,7 +38,7 @@ sudo systemctl restart ollama
 systemctl show ollama --property=Environment
 ```
 
-#### Linux（手动启动）
+#### Linux (手动启动)
 
 如果不使用 systemd 手动运行 Ollama：
 
@@ -51,7 +51,7 @@ ollama serve
 
 Ollama 在 macOS 上作为独立应用程序运行。有几种设置环境变量的方法：
 
-**方法一：使用 launchctl（推荐）**
+**方法一：使用 launchctl (推荐)**
 
 ```bash
 launchctl setenv OLLAMA_ORIGINS "http://*,https://*,onlyoffice://*"
@@ -71,14 +71,14 @@ export OLLAMA_ORIGINS=http://*,https://*,onlyoffice://*
 
 #### Windows
 
-**PowerShell（仅当前会话）：**
+**PowerShell (仅当前会话)：**
 
 ```powershell
 $env:OLLAMA_ORIGINS = "http://*,https://*,onlyoffice://*"
 ollama serve
 ```
 
-**PowerShell（永久设置，需要新会话）：**
+**PowerShell (永久设置，需要新会话)：**
 
 ```powershell
 setx OLLAMA_ORIGINS "http://*,https://*,onlyoffice://*"
@@ -100,7 +100,7 @@ docker run -d \
 
 - `http://*` - 允许来自任何 HTTP 域的请求
 - `https://*` - 允许来自任何 HTTPS 域的请求
-- `onlyoffice://*` - 允许来自 ONLYOFFICE 嵌入式 WebView 的请求（用于 AI 插件功能）
+- `onlyoffice://*` - 允许来自 ONLYOFFICE 嵌入式 WebView 的请求 (用于 AI 插件功能)
 
 ### 验证 CORS 配置
 
@@ -139,7 +139,7 @@ curl -v http://localhost:11434/api/tags \
 
 ### 安全建议
 
-使用通配符值（`*`）会开放来自所有域的 API 访问，不建议在公共服务器上使用。对于生产环境，请指定明确的域：
+使用通配符值 (`*`) 会开放来自所有域的 API 访问，不建议在公共服务器上使用。对于生产环境，请指定明确的域：
 
 ```bash
 OLLAMA_ORIGINS=http://localhost:3000,https://ollama.example.com
@@ -159,7 +159,7 @@ OLLAMA_ORIGINS=http://localhost:3000,https://ollama.example.com
 
 默认情况下，Ollama 仅监听 localhost。要启用网络访问，请指定：
 
-#### Linux（systemd）
+#### Linux (systemd)
 
 ```bash
 sudo systemctl edit ollama
@@ -176,7 +176,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart ollama
 ```
 
-#### Linux（手动）/ macOS
+#### Linux (手动) / macOS
 
 ```bash
 export OLLAMA_HOST=0.0.0.0
@@ -195,7 +195,7 @@ docker run -d \
 ```
 
 :::warning
-此配置会将 API 暴露给整个网络。必须采取额外的安全措施（反向代理、身份验证）。
+此配置会将 API 暴露给整个网络。必须采取额外的安全措施 (反向代理、身份验证)。
 :::
 
 ### 配置允许的 SSL 来源
@@ -241,7 +241,7 @@ ollama serve --host 0.0.0.0 --port 11434
 ### 要求
 
 - 已安装 Nginx
-- 有效的 SSL 证书（Let's Encrypt 或其他 CA）
+- 有效的 SSL 证书 (Let's Encrypt 或其他 CA)
 - 运行在 11434 端口的 Ollama 实例
 
 ### 基本 Nginx 配置
@@ -278,7 +278,7 @@ server {
     location / {
         proxy_pass http://localhost:11434;
 
-        # CORS 头（always 标志确保为所有响应代码添加头）
+        # CORS 头 (always 标志确保为所有响应代码添加头)
         add_header 'Access-Control-Allow-Origin' '*' always;
         add_header 'Access-Control-Allow-Credentials' 'true' always;
         add_header 'Access-Control-Allow-Headers' 'Authorization,Origin,Accept,Content-Type' always;
@@ -353,11 +353,11 @@ sudo systemctl reload nginx
 
 ### 关键配置方面
 
-- **带有 `always` 标志的 CORS 头**对于正确处理来自 ONLYOFFICE 和其他浏览器客户端的跨域请求是必需的。`always` 标志确保即使对于错误响应（4xx、5xx）也添加头。
+- **带有 `always` 标志的 CORS 头**对于正确处理来自 ONLYOFFICE 和其他浏览器客户端的跨域请求是必需的。`always` 标志确保即使对于错误响应 (4xx、5xx) 也添加头。
 - **`proxy_read_timeout` 参数**增加到 300 秒，以处理语言模型的长时间运行操作，这些操作可能需要大量时间来生成响应。
 - **SSL/TLS 加密**确保网络 API 访问期间的流量保护。
 - **WebSocket 支持**对于模型实时流式响应功能的正常工作是必要的。
-- **禁用缓冲**（`proxy_buffering off`）允许流式响应立即发送到客户端。
+- **禁用缓冲** (`proxy_buffering off`) 允许流式响应立即发送到客户端。
 
 ---
 
@@ -390,18 +390,18 @@ docker restart <container_name>
 2. 浏览器正在缓存之前失败的 CORS 响应
 
 **解决方案：**
-1. 检查浏览器开发者工具（网络选项卡）以查看正在发送的确切 `Origin`
+1. 检查浏览器开发者工具 (网络选项卡) 以查看正在发送的确切 `Origin`
 2. 清除浏览器缓存或在隐身模式下测试
-3. 确保您的 `OLLAMA_ORIGINS` 包含确切的来源（协议 + 域 + 端口）
+3. 确保您的 `OLLAMA_ORIGINS` 包含确切的来源 (协议 + 域 + 端口)
 
 ### 如何检查当前环境变量
 
-**Linux（systemd）：**
+**Linux (systemd)：**
 ```bash
 systemctl show ollama --property=Environment
 ```
 
-**Linux（运行中的进程）：**
+**Linux (运行中的进程)：**
 ```bash
 cat /proc/$(pgrep ollama)/environ | tr '\0' '\n' | grep OLLAMA
 ```
@@ -416,7 +416,7 @@ docker inspect <container_name> | grep -A 10 "Env"
 **症状：**无法从另一台计算机连接到 Ollama。
 
 **解决方案：**
-1. 确保设置了 `OLLAMA_HOST=0.0.0.0`（不仅仅是 localhost）
+1. 确保设置了 `OLLAMA_HOST=0.0.0.0` (不仅仅是 localhost)
 2. 检查防火墙规则：
    ```bash
    sudo ufw allow 11434/tcp
@@ -434,7 +434,7 @@ docker inspect <container_name> | grep -A 10 "Env"
 1. 验证 Ollama 是否正在运行：`systemctl status ollama`
 2. 检查 Ollama 是否可在本地访问：`curl http://localhost:11434/api/tags`
 3. 检查 Nginx 错误日志：`tail -f /var/log/nginx/error.log`
-4. 确保 SELinux 没有阻止连接（在 RHEL/CentOS 上）：
+4. 确保 SELinux 没有阻止连接 (在 RHEL/CentOS 上)：
    ```bash
    sudo setsebool -P httpd_can_network_connect 1
    ```
