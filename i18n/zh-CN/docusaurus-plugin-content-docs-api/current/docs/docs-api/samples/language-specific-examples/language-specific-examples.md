@@ -48,15 +48,15 @@ sidebar_position: -5
 
    您可以在以下路径找到配置文件：
 
-   - **.Net (C# MVC)** - *web/documentserver-example/csharp-mvc/web.appsettings.config*
-   - **.Net (C#)** - *web/documentserver-example/csharp/settings.config*
-   - **Go** - *web/documentserver-example/go/config/configuration.json*
-   - **Java** - *web/documentserver-example/java/src/main/resources/settings.properties*
-   - **Java Spring** - *web/documentserver-example/java-spring/src/main/resources/application.properties*
-   - **Node.js** - *web/documentserver-example/nodejs/config/default.json*
-   - **PHP** - *web/documentserver-example/php/src/configuration/ConfigurationManager.php*
-   - **PHP (Laravel)** - *web/documentserver-example/php-laravel/.env.example*
-   - **Python** - *web/documentserver-example/python/manage.py*
-   - **Ruby** - *web/documentserver-example/ruby/config/application.rb*
+   - **.Net (C# MVC)** - `web/documentserver-example/csharp-mvc/web.appsettings.config`
+   - **.Net (C#)** - `web/documentserver-example/csharp/settings.config`
+   - **Go** - `web/documentserver-example/go/config/configuration.json`
+   - **Java** - `web/documentserver-example/java/src/main/resources/settings.properties`
+   - **Java Spring** - `web/documentserver-example/java-spring/src/main/resources/application.properties`
+   - **Node.js** - `web/documentserver-example/nodejs/config/default.json`
+   - **PHP** - `web/documentserver-example/php/src/configuration/ConfigurationManager.php`
+   - **PHP (Laravel)** - `web/documentserver-example/php-laravel/.env.example`
+   - **Python** - `web/documentserver-example/python/manage.py`
+   - **Ruby** - `web/documentserver-example/ruby/config/application.rb`
 
-4. 如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。并且您还必须确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。
+4. 如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的(替换 `documentserver`) 的地址的ONLYOFFICE文档。并且您还必须确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的 (替换 `example.com`) 的地址。

@@ -48,15 +48,15 @@ To start integrating document editors into your own website you need to do the f
 
    You can find the configuration files at the following paths:
 
-   - **.Net (C# MVC)** - *web/documentserver-example/csharp-mvc/web.appsettings.config*
-   - **.Net (C#)** - *web/documentserver-example/csharp/settings.config*
-   - **Go** - *web/documentserver-example/go/config/configuration.json*
-   - **Java** - *web/documentserver-example/java/src/main/resources/settings.properties*
-   - **Java Spring** - *web/documentserver-example/java-spring/src/main/resources/application.properties*
-   - **Node.js** - *web/documentserver-example/nodejs/config/default.json*
-   - **PHP** - *web/documentserver-example/php/src/configuration/ConfigurationManager.php*
-   - **PHP (Laravel)** - *web/documentserver-example/php-laravel/.env.example*
-   - **Python** - *web/documentserver-example/python/manage.py*
-   - **Ruby** - *web/documentserver-example/ruby/config/application.rb*
+   - **.Net (C# MVC)** - `web/documentserver-example/csharp-mvc/web.appsettings.config`
+   - **.Net (C#)** - `web/documentserver-example/csharp/settings.config`
+   - **Go** - `web/documentserver-example/go/config/configuration.json`
+   - **Java** - `web/documentserver-example/java/src/main/resources/settings.properties`
+   - **Java Spring** - `web/documentserver-example/java-spring/src/main/resources/application.properties`
+   - **Node.js** - `web/documentserver-example/nodejs/config/default.json`
+   - **PHP** - `web/documentserver-example/php/src/configuration/ConfigurationManager.php`
+   - **PHP (Laravel)** - `web/documentserver-example/php-laravel/.env.example`
+   - **Python** - `web/documentserver-example/python/manage.py`
+   - **Ruby** - `web/documentserver-example/ruby/config/application.rb`
 
-4. In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+4. In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files. And you must also make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
