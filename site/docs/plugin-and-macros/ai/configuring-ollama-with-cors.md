@@ -1,21 +1,14 @@
-# Configuring Ollama with CORS support and Nginx
+# Configuring Ollama with CORS
 
-## Table of contents
+## Configuring OLLAMA_ORIGINS for local requests
 
-1. [Configuring OLLAMA_ORIGINS for local requests](#1-configuring-ollama_origins-for-local-requests)
-2. [Configuring OLLAMA_ORIGINS for network requests via SSL](#2-configuring-ollama_origins-for-network-requests-via-ssl)
-3. [Nginx configuration as HTTPS reverse proxy](#3-nginx-configuration-as-https-reverse-proxy)
-4. [Troubleshooting](#4-troubleshooting)
-
----
-
-## 1. Configuring OLLAMA_ORIGINS for local requests
-
-To enable proper handling of requests from local applications and browsers, you need to configure the OLLAMA_ORIGINS environment variable, which defines allowed Origin header values.
+To enable proper handling of requests from local applications and browsers, you need to configure the `OLLAMA_ORIGINS` environment variable, which defines allowed Origin header values.
 
 ### Setting the environment variable
 
-> **Note:** The environment variable must be set before starting Ollama service. If Ollama is already running, you must restart it after setting the variable.
+:::note
+The environment variable must be set before starting Ollama service. If Ollama is already running, you must restart it after setting the variable.
+:::
 
 #### Linux (systemd service)
 
@@ -154,13 +147,15 @@ OLLAMA_ORIGINS=http://localhost:3000,https://ollama.example.com
 
 ---
 
-## 2. Configuring OLLAMA_ORIGINS for network requests via SSL
+## Configuring OLLAMA_ORIGINS for network requests via SSL
 
 To accept requests from other machines on the network via HTTPS protocol, the following configuration is required.
 
 ### Network interface configuration
 
-> **Note:** These environment variables must be set before starting Ollama service.
+:::note
+These environment variables must be set before starting Ollama service.
+:::
 
 By default, Ollama listens only on localhost. To enable network access, specify:
 
@@ -199,11 +194,15 @@ docker run -d \
   ollama/ollama
 ```
 
-> **Warning:** This configuration exposes the API to the entire network. Additional security measures (reverse proxy, authentication) are mandatory.
+:::warning
+This configuration exposes the API to the entire network. Additional security measures (reverse proxy, authentication) are mandatory.
+:::
 
 ### Configuring allowed SSL origins
 
-> **Note:** The OLLAMA_ORIGINS variable must be set before starting Ollama service.
+:::note
+The `OLLAMA_ORIGINS` variable must be set before starting Ollama service.
+:::
 
 For access from web interfaces on other domains/servers, for example `https://ollama-ui.my.local`:
 
@@ -235,7 +234,7 @@ Direct access to Ollama via public IP/HTTPS without additional protection presen
 
 ---
 
-## 3. Nginx configuration as HTTPS reverse proxy
+## Nginx configuration as HTTPS reverse proxy
 
 This configuration provides secure HTTPS access to Ollama API through Nginx with CORS support.
 
@@ -362,7 +361,7 @@ sudo systemctl reload nginx
 
 ---
 
-## 4. Troubleshooting
+## Troubleshooting
 
 ### Environment variable is set but CORS doesn't work
 
