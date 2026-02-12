@@ -6,11 +6,13 @@ sidebar_position: -4
 
 For the interaction with the **document conversion service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/converter` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
+:::tip
+Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
+:::
+
 :::note
 Please note that prior to version 5.5, the `https://documentserver/ConvertService.ashx` address was used to send requests.
 :::
-
-Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
 
 :::note
 In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the *QueryString* were used.
@@ -58,7 +60,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | spreadsheetLayout.pageSize.height | string | optional | Sets the page height of the output PDF file. The default value is **297mm**. |
 | spreadsheetLayout.pageSize.width | string | optional | Sets the page width of the output PDF file. The default value is **210mm**. |
 | spreadsheetLayout.scale | integer | optional | Allows to set the scale of the output PDF file. The default value is **100**. |
-| thumbnail | object | optional | Defines the settings for the thumbnail when specifying the image formats (*bmp*, *gif*, *jpg*, *png*) as **outputtype**. |
+| thumbnail | object | optional | Defines the settings for the thumbnail when specifying the image formats (*bmp*, *gif*, *jpg*, *png*) as *outputtype*. |
 | thumbnail.aspect | integer | optional | Defines the mode to fit the image to the height and width specified: **0** - stretch file to fit height and width, **1** - keep the aspect for the image, **2** - metric sizes of the page are converted into pixels with 96dpi. The default value is **2**. |
 | thumbnail.first | boolean | optional | Defines if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is **true**. |
 | thumbnail.height | integer | optional | Defines the thumbnail height in pixels. The default value is **100**. |

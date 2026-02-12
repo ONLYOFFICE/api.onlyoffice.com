@@ -6,11 +6,13 @@ sidebar_position: -4
 
  对于与**文档转换服务**的交互，使用 POST 请求。请求参数在请求正文中以 JSON。格式输入请求被发送到`https://documentserver/converter` 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
+:::tip
+从 8.1 版开始，建议将 [shardkey](../../get-started/configuration/shard-key.md) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
+:::
+
 :::note
 请注意，在 5.5 版本之前，使用`https://documentserver/ConvertService.ashx`地址发送请求。
 :::
-
-从 8.1 版开始，建议将 [shardkey](../../get-started/configuration/shard-key.md) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
 
 :::note
 **ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求,请求参数在 *QueryString* 中。
@@ -58,7 +60,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | spreadsheetLayout.pageSize.height | string | optional | 设置输出 PDF 文件的页面高度。默认值为 **297mm**。 |
 | spreadsheetLayout.pageSize.width | string | optional | 设置输出 PDF 文件的页面宽度。默认值为 **210mm**。 |
 | spreadsheetLayout.scale | integer | optional | 允许设置输出 PDF 文件的缩放比例。默认值为 **100**。 |
-| thumbnail | object | optional | 在将图像格式（*bmp*、*gif*、*jpg*、*png*）指定为 **outputtype** 时，定义缩略图的设置。 |
+| thumbnail | object | optional | 在将图像格式（*bmp*、*gif*、*jpg*、*png*）指定为 *outputtype* 时，定义缩略图的设置。 |
 | thumbnail.aspect | integer | optional | 定义使图像适合指定的高度和宽度的模式：**0** - 拉伸文件以适应高度和宽度，**1** - 保持图像的外观，**2** - 页面的米制尺寸被转换为 96dpi 的像素。默认值为 **2**。 |
 | thumbnail.first | boolean | optional | 定义是否应仅为首页或所有文档页面生成缩略图。如果为 false，将创建包含所有页面缩略图的 zip 存档。默认值为 **true**。 |
 | thumbnail.height | integer | optional | 以像素为单位定义缩略图高度。默认值为 **100**。 |
