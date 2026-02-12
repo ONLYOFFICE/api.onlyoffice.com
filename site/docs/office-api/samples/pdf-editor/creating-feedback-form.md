@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# Feedback form
+# Creating feedback form
 
 Creates a customer feedback form with rating tables:
 

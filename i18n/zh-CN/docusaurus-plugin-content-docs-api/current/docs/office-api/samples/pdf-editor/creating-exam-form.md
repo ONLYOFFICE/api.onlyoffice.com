@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# 考试表单
+# 创建考试表单
 
 创建包含选择题的学校考试表单：
 

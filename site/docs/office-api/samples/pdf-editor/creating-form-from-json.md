@@ -1,4 +1,4 @@
-# Generating forms from JSON
+# Creating form from JSON
 
 Create forms automatically from simple JSON objects where field types and structure are determined automatically based on data context and values:
 

@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# Exam form
+# Creating exam form
 
 Creates a school exam form with multiple-choice questions:
 
