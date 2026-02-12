@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# Auto comment based on form input
+# Adding comment based on form input
 
 Add contextual comments to a document automatically based on form field selections, useful for triggering follow-up actions or flagging responses that need attention:
 
