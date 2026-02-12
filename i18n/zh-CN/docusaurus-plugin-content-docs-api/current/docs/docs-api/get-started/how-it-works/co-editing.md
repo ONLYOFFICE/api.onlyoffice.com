@@ -32,12 +32,12 @@ sidebar_position: -20
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   其中**documentserver**是安装了ONLYOFFICE文档的服务器名称
+   其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。 您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 4. 为*div*元素添加初始化**文档编辑器**的脚本，并配置要打开的文档。使用本地链接时务必添加[令牌](../../additional-api/signature/signature.md)，否则会出现错误。
 
    ``` ts
-   const docEditor = DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -52,10 +52,12 @@ sidebar_position: -20
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiSm9obiBTbWl0aCJ9fX0.6AcBUCbys9kQ7S982Qm4w1romVg86kZ4ECNsxDff5zU",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 5. 在浏览器中打开您的*html*文件。
 
@@ -64,7 +66,7 @@ sidebar_position: -20
 7. 在复制的*html*文件中更改初始化**文档编辑器**的脚本。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -79,10 +81,12 @@ sidebar_position: -20
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiRjg5ZDgwNjliYTJiIiwibmFtZSI6IkthdGUgQ2FnZSJ9fX0.rdmhKLzXwXXVTABioKy3R2-HGMBY5u4pbZ_TVhW2rJs",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 8. 在浏览器中打开您复制并编辑后的*html*文件。
 
@@ -107,7 +111,7 @@ sidebar_position: -20
    关闭**文档编辑器**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -116,15 +120,17 @@ sidebar_position: -20
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifX0.GcpcY8sLCUDqbgqCLvPs6Z0xfBtayOy-GHEXYiZCpfs",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 2. 添加使用相同的*密钥1*初始化**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开，因此不会使用新的URL。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -133,17 +139,19 @@ sidebar_position: -20
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IDIuZG9jeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQyLmRvY3gifX0.aegFVaZpkqc5bEYmF-PQYf3MMFg7QvAfWeOnfDJeuTg",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 3. 添加使用*密钥2*初始化另一个**文档编辑器**的脚本。此时密钥未知，并且指定了打开文件的URL。即使这个URL与第一种情况中的URL相同，它们也是两个独立的编辑会话。
 
    关闭**文档编辑器**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Mgetl3dYUppf2",
@@ -152,17 +160,19 @@ sidebar_position: -20
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJNZ2V0bDNkWVVwcGYyIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.5YvlbNVbXFddzKBdz_qPpqgUX_JrUHBWCGRQ5YgVp_w",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 4. 添加使用*密钥1*初始化另一个**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开。因为这个密钥与第二种情况中的密钥相同，所以文档将以协同编辑模式打开。
 
    在不关闭文档的情况下获取当前文档状态。在编辑器初始化的自定义部分中，[强制文件](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave)参数可让您实现这一点。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -176,17 +186,19 @@ sidebar_position: -20
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjdXN0b21pemF0aW9uIjp7ImZvcmNlc2F2ZSI6dHJ1ZX19fQ.dlIJqq6tH9ncQmXQV-gCi4Zc7sqYhGS5RwvpiIZGZXA",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 5. 添加初始化另一个**文档编辑器**的脚本。在成功进行[强制保存](./saving-file.md#force-saving)操作后，当前编辑会话的新用户的密钥不会更改。因此，要进入与第二种和第四种情况中的用户相同的协同编辑会话，必须使用*密钥1*。
 
    关闭所有使用*密钥1**的三个编辑会话。所有更改都已成功保存。由于文档已保存，必须重新生成密钥。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -198,15 +210,17 @@ sidebar_position: -20
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.L53bCRlJyvIf-C7bcKYM2WMfmk4FeZIoeDaEpc5IxXA",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 6. 添加初始化**文档编辑器**以查看所创建文档的脚本。可以使用*密钥1*。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -218,17 +232,19 @@ sidebar_position: -20
        mode: "view",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoidmlldyJ9fQ.wpEk-zrrGq5hKHCm6sAhl_tb51n56th-q-K52Oeq1a4",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
 7. 添加初始化**文档编辑器**以编辑所创建文档的脚本。不能使用*密钥1*，因为在保存文件后该密钥已更改，此时会出现[错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed)。
 
    关闭**文档编辑器**。
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -240,26 +256,30 @@ sidebar_position: -20
        mode: "edit",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoiZWRpdCJ9fQ.rSc0yYe3_2u7N_uaxZcDQ6vC_d5ZWU5LFkkGSow5UDY",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
 
-## 协同编辑模式
+## 协同编辑模式 {#co-editing-modes}
 
 有两种实时协作处理文档的模式：**快速**模式和**严格**模式
 
 您可以使用[editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting)参数来更改协同编辑模式：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     coEditing: {
       mode: "fast",
       change: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ### 自动模式

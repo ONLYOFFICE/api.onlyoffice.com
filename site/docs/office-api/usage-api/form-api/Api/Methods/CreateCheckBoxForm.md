@@ -5,7 +5,7 @@ Creates a checkbox / radio button with the specified checkbox / radio button pro
 ## Syntax
 
 ```javascript
-expression.CreateCheckBoxForm(oFormPr);
+expression.CreateCheckBoxForm(formPr);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.CreateCheckBoxForm(oFormPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oFormPr | Required | [CheckBoxFormPr](../../Enumeration/CheckBoxFormPr.md) |  | Checkbox / radio button properties. |
+| formPr | Required | [CheckBoxFormPr](../../Enumeration/CheckBoxFormPr.md) |  | Checkbox / radio button properties. |
 
 ## Returns
 
@@ -22,16 +22,46 @@ expression.CreateCheckBoxForm(oFormPr);
 
 ## Example
 
-This example creates two checkboxes.
+This example creates two radiobuttons and the checkbox.
 
 ```javascript editor-pdf
+// How to create a radiobutton or a checkbox form and add it to the paragraph.
+
+// Add two radiobuttons and the checkbox to the ApiDocument object.
+
 let doc = Api.GetDocument();
-let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
 let paragraph = doc.GetElement(0);
+
+let checkBoxForm = Api.CreateCheckBoxForm({
+	"key": "Marital status",
+	"tip": "Specify your marital status",
+	"required": true,
+	"placeholder": "Marital status",
+	"radio": true
+});
 paragraph.AddElement(checkBoxForm);
 paragraph.AddText(" Married");
 paragraph.AddLineBreak();
-checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
+
+checkBoxForm = Api.CreateCheckBoxForm({
+	"key": "Marital status",
+	"tip": "Specify your marital status",
+	"required": true,
+	"placeholder": "Marital status",
+	"radio": true
+});
 paragraph.AddElement(checkBoxForm);
 paragraph.AddText(" Single");
+paragraph.AddLineBreak();
+
+checkBoxForm = Api.CreateCheckBoxForm({
+	"key": "Children",
+	"tip": "Indicate if you have children",
+	"required": false,
+	"placeholder": "Children",
+	"radio": false
+});
+paragraph.AddElement(checkBoxForm);
+paragraph.AddText(" Single");
+
 ```

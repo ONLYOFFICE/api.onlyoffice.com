@@ -10,7 +10,7 @@ The customization section allows you to customize the editor interface according
 On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
 
 :::note
-Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile).
+Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uitheme).
 :::
 
 ## anonymous
@@ -418,6 +418,14 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `false`
 
+## forceWesternFontSize
+
+`Type: boolean`
+
+Defines if the Western (**true**) or Chinese (**false**) font size is used in the Chinese (Simplified) UI. The default value is **false**.
+
+**Example**: `false`
+
 ## goback
 
 `Type: object`
@@ -564,7 +572,7 @@ const logo = {
 
 `Type: string`
 
-Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 172x40.
+Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/logo.png"`
 
@@ -572,7 +580,7 @@ Path to the image file used to show in the common work mode (i.e. in view and ed
 
 `Type: string`
 
-Path to the image file used for the dark header (for example, in a dark theme or in a theme with a colored header). The image must have the following size: 172x40.
+Path to the image file used for the dark header (for example, in a dark theme or in a theme with a colored header). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/dark-logo.png"`
 
@@ -580,7 +588,7 @@ Path to the image file used for the dark header (for example, in a dark theme or
 
 `Type: string`
 
-Path to the image file used for the light header (for example, in the Gray theme). The image must have the following size: 172x40.
+Path to the image file used for the light header (for example, in the Gray theme). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/light-logo.png"`
 
@@ -616,7 +624,10 @@ Shows or hides the logo. The default value is **true**.
 
 `Type: boolean`
 
-Defines if document macros will be automatically run when the editor opens. The default value is **true**. The **false** value hides the [macros settings](#macrosmode) from the user.
+Defines if document macros will be automatically run when the editor opens. The default value is **true**.
+
+- **Before version 9.0.3**: the **false** value disables the automatic startup of macros and hides the [macros settings](#macrosmode) from the user.
+- **Since version 9.0.3**: the **false** value completely disables macros — they cannot be run, added, or edited. The **Macros** button is also hidden from the **View** tab.
 
 **Example**: `true`
 
@@ -627,8 +638,8 @@ Defines if document macros will be automatically run when the editor opens. The 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
 - **disable** - don't run macros at all;
-- **enable** - run all macros automatically;
-- **warn** - warn about macros and ask permission to run them.
+- **warn** - warn about macros and ask permission to run them;
+- **enable** - run all macros automatically.
 
 The default value is **warn**.
 
@@ -717,7 +728,7 @@ Starting from version 8.2, please use the [mobile](#mobile) parameter instead.
 
 `Type: boolean`
 
-Defines if [plugins](../../../../../plugin-and-macros/get-started/overview.md) will be launched and available. The default value is **true**.
+Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md) will be launched and available. The default value is **true**.
 
 **Example**: `true`
 
@@ -908,6 +919,14 @@ Defines a message displayed after forms are submitted. The following values are 
 
 **Example**: `"text"`
 
+## suggestFeature
+
+`Type: boolean`
+
+Defines whether the **Suggest a Feature** menu button will be displayed or hidden. The default value is **true**.
+
+**Example**: `true`
+
 ## toolbarHideFileName
 
 `Type: boolean`
@@ -915,7 +934,11 @@ Defines a message displayed after forms are submitted. The following values are 
 Defines if the document title is visible on the top toolbar (**false**) or hidden (**true**). The default value is **false**.
 
 :::note
-This setting is used when the [compactHeader](#compactheader) and [toolbarNoTabs](#toolbarnotabs) parameters are set to **true**.
+This setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
+:::
+
+:::note
+Starting from version 9.0.3, this parameter is also available for the mobile editors.
 :::
 
 **Example**: `false`
@@ -952,7 +975,7 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 Defines the editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**, **theme-white**, **theme-night**);
 - **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
 
 The first option has higher priority.
@@ -961,6 +984,10 @@ Apart from the available editor themes, the user can also customize their own [c
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.uiTheme* parameter.
+:::
+
+:::note
+Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: **theme-light**, **theme-dark**, **default-light**, **default-dark**.
 :::
 
 **Example**: `"theme-dark"`
@@ -1054,6 +1081,7 @@ const config = {
         visible: true,
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -1095,6 +1123,7 @@ const config = {
         visible: true,
         resultMessage: "text",
       },
+      suggestFeature: true,
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",

@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the current cell content.
 
 ```javascript editor-docx
+// How to get the value from the cell.
+
+// Retrieve the content of the table cell.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

@@ -1,0 +1,63 @@
+---
+id: get-payment-currencies
+title: "Get currencies"
+description: "Returns the available portal currencies."
+sidebar_label: "Get currencies"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVt9T2zgQ/lc0+8KLm3D05h78dDnodeh1ClNgeGAyRZE3sYot6aQ1kGb8v9+sZCdxQku4F2Kk/b3ffqsVkFwEyO/g0nqSlRiLS7ms0RBMM7AOvSRtzXkBOSyQurvTxns0SmOADDwGZ03AAPkKTo6P+afAoLx2rAo5fNaBhJ0L+Sh1JWcVCpecqW07yhpiv/kKpHOVVtHz+HtgGysIqsRa8hctHUIOdvYdFUEGznOcpFMEfThbktJ7uYQMNGEdXreggz21jSG/PLXFtp1AXpsFZDvpXZcozq8uhEpKQtkCR5CBaaqYLeTkG8wAn2XtqmjI1igInwnaLLpLdVheLeuZrd7gsdMTISq+wWmv+UWSfsQvsj4wz7VHExWFkfXhubYZyKLQbE5Wl1s1n8sq4C/caQzCSS9rJPSB/ZGmaH2DxDOy0UPswlYy2hAu0EMGc+trSeno/QlXodLmIfx/oJQe5/tl4yxVymHvquUIA0lqwoEhJuEdIP5coX2pNBNO69ZL59B3Mfx+/Nv+nN4Y2VBpvf6BRTQVUDVe0xLyuxXIoL7x/bcH5APwKAvI4MlrQpi22Qr+QunRQ34X/5s4/Q8u12cvycugVS9+MWmoPHlZ8MJhpKC7aTvdhclXpMabIKjEXxEMg6ZGKm3HZNxMSSXkMJZOj09Gx+OkM3aJ48YDcgroH9GHWIjGV5DDaiYD3viq3ZuTqygrlDVzvWgSgUIGj9Jrji12vlNOPZjLpuIe7lk6S1fi5utn7tt005ErZsNkatiXDZZj+fdM3gQUp9Y+aBSshIY6ouUhjjQwNJiBZjUVVRiQXdPWfkoit+flgyH0YmkbL5qAng0LaQrhZAhP1nN7I5+zgVk0yJY7qBxi+igJi9Wn22txbR/QtEcDo8lW1n383Y/Jp9trdjXE5ms1mwwKJXQQBRNRrQ0WYraM0DuadKMTZY5EibKIAXRFHXjsitrJtNka/BvGkfFgN5IkJ+aVfRJPmkox8CoiTWTA1wka27c9hwwOIwZjoUM+HkevI2uqpZ3PtcKRsnU6PBmvqYHZlwt+uGoUj92xrl/SsoizKwshlcIQBFnhvCVUhIXwGGzjVRy9xAM53PLvK9KJ3Hq62FQzHpxaYxKN7xSVb89Ed70/FgPtw7Nm4Gszt9zf53dBL4ykxuPrcGNIr8V5fgoxt34nrpHg/RgrK+omkJihsDOSEZOPWkZQ3vfU1tPGoCP3Ak3hrDY0EufEsObxxELIIKRIE59QxrbiDN9vJXI/2qB7O78dxuAXDleB0+4208Tp7r0nVVzV/YxcnourxjEPQ9bRbF/pEitXYHjYLXapxmjeNQwUrKVmlZBM/DmU5DYwhacavx/9MTrmI2cD1dJsRfERafgwHXRntXmnvmX1dB3nd9DYVVIb9t2kBZD20B3DATI4GR3zbopG4pJKr/H1k41jmmZQ2kCstFrvoZaP/23Q83aebvZNWrA92fACi4sCJkqho7iYqibBcefVzQtnvTM/friGLJLHEMFpSXQfbL2/Mstt28OdkiLgv7zeX9RYrdJ4tO1aPl39VGNNuUmaazxt2/Y/DT54bA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get currencies"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/currencies"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the available portal currencies.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of available portal currencies","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"isoCountryCode":{"type":"string","description":"The ISO country code.","nullable":true,"example":"some text"},"isoCurrencySymbol":{"type":"string","description":"The ISO currency symbol.","nullable":true,"example":"some text"},"currencyNativeName":{"type":"string","description":"The currency native name.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The currencies parameters.","title":"CurrenciesDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CurrenciesArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

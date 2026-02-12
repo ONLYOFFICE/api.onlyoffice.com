@@ -25,11 +25,15 @@ number
 
 ## Example
 
-
+This example shows how to count a number of cells specified by a given set of conditions or criteria.
 
 ```javascript editor-xlsx
+// How to find a number of cells that satisfy a list of conditions.
+
+// Use function to get cells if conditions are met.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let buyer = ["Buyer", "Tom", "Bob", "Ann", "Kate", "John"];
 let product = ["Product", "Apples", "Red apples", "ranges", "Green apples", "ranges"];
 let quantity = ["Quantity", 12, 45, 18, 26, 10];

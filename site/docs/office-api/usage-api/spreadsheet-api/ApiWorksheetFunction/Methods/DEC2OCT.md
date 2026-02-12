@@ -23,10 +23,14 @@ number
 
 ## Example
 
-
+This example shows how to convert a decimal number to octal.
 
 ```javascript editor-xlsx
+// How to get decimal number from octal.
+
+// Use function to convert a decimal number to octal.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DEC2OCT(-100));
 ```

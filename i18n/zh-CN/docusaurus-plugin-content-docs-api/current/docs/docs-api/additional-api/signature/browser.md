@@ -2,7 +2,7 @@
 
 在向 ONLYOFFICE 文档服务器执行客户端浏览器请求时，必须将令牌添加到参数中以验证数据。
 
-## 打开文件
+## 打开文件 {#opening-file}
 
 在 ONLYOFFICE 文档中[打开](../../get-started/how-it-works/opening-file.md)文件进行编辑时，必须将[令牌](../../usage-api/config/config.md#token)添加到配置中以验证参数。
 
@@ -42,7 +42,7 @@
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理] (../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 示例令牌
 
@@ -52,7 +52,7 @@
 }
 ```
 
-## 方法
+## 方法 {#methods}
 
 ### insertImage
 
@@ -120,7 +120,7 @@ JWT 令牌的有效载荷（JSON 格式）必须与 [config](../../usage-api/adv
   }
   ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理] (../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。请参阅“工作原理”部分，了解有关 ONLYOFFICE Docs 服务客户端-服务器交互的更多信息。
 
 示例令牌:
 
@@ -149,7 +149,7 @@ JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结�
   }
   ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理] (../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 示例令牌:
 
@@ -254,7 +254,7 @@ JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结�
   }
   ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理] (../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 示例令牌:
 
@@ -301,7 +301,7 @@ JSON 格式的 JWT 令牌的有效负载须与方法参数具有相同的结构�
   }
   ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理] (../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 示例令牌：
 

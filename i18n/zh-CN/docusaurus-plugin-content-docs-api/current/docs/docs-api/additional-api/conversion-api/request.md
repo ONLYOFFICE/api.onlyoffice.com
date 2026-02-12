@@ -8,7 +8,7 @@ sidebar_position: -4
 
 > 请注意，在 5.5 版本之前，使用`https://documentserver/ConvertService.ashx`地址发送请求。
 
-从 8.1 版开始，建议将 [shardkey](../../get-started/how-it-works/how-it-works.md#shard-key) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
+从 8.1 版开始，建议将 [shardkey](../../get-started/configuration/shard-key.md) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
 
 > **ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求,请求参数在 *QueryString* 中。
 
@@ -135,7 +135,7 @@ sidebar_position: -4
 
 定义文档标识符,用于明确标识文档文件。
 
-Type: string
+类型: string
 
 是否必填: 必填
 
@@ -578,7 +578,7 @@ Type: string
 
 ## 请求示例
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式
+### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式 {#sample-of-json-object-sent-to-document-conversion-service-used-to-generate-png-thumbnail-of-file-in-docx-format}
 
 ``` json
 {
@@ -591,7 +591,7 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将受密码保护的文件从 *docx* 格式转换为 *pdf* 格式
 
@@ -607,7 +607,7 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式
 
@@ -625,7 +625,7 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为插入水印的 *pdf* 格式
 
@@ -674,7 +674,7 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于生成 *docx* 格式的文件 *png* 缩略图
 
@@ -694,7 +694,7 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### 发送到**文档转换服务**的 JSON 对象示例，用于将 *电子表格* 文件转换为 *pdf* 格式
 
@@ -728,7 +728,7 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ### JSON 对象示例包含发送到**文档转换服务**的 JSON Web Token，用于将文件从 *docx* 格式转换为 *pdf* 格式
 
@@ -738,4 +738,4 @@ Type: string
 }
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。

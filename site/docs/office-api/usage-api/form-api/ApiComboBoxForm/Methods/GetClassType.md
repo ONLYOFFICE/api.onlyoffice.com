@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiFormBase class.
+Returns a type of the ApiComboBoxForm class.
 
 ## Syntax
 
@@ -16,18 +16,22 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"form"
+"comboBoxForm"
 
 ## Example
 
 This example gets a class type and inserts it into the document.
 
 ```javascript editor-pdf
+// How get a class type of ApiComboBoxForm.
+
+// Retrieve class type of a created combobox object and display it.
+
 let doc = Api.GetDocument();
-let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);
-paragraph.AddElement(textForm);
-let classType = textForm.GetClassType();
+paragraph.AddElement(comboBoxForm);
+let classType = comboBoxForm.GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);

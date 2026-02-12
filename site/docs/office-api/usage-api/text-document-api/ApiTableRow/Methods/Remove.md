@@ -23,6 +23,10 @@ boolean
 This example removes the table row.
 
 ```javascript editor-docx
+// Delete the row from the table.
+
+// How to remove the first row.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

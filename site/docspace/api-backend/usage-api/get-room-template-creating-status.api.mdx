@@ -1,0 +1,63 @@
+---
+id: get-room-template-creating-status
+title: "Get status of room template creation"
+description: "Returns the progress status of the room template creation process."
+sidebar_label: "Get status of room template creation"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV01v2zgQ/SvEXHJR7NTtLhY+bTbpFuku0KJJkENgNLQ0sthIJEsOm7qG/vtiSMmWbLfJYS+xQ873vJlHb4DkysP8Hj4Z03hYZGAsOknK6KsC5rBC4psbbGwtCS8cSlJ6dU2SgocMHHprtEcP8w3Mzs74o0CfO2XZBsxhK5obTaiJJaS1tcqjl+kXz2Ib8HmFjeRvtLYIczDLL5gTZGAdx0QqOek9pu9fg3JYcALKX5jG1khYJJ2VQ89+qYv9quD0fm18ILsLRGnCFTrI9jK7qVA4YxrRa4mrywlkUBrXSEqKr2eQAX6XHBnMX81ev2kHwe186NAsf+KilxamFHTgMo8dMZrFcvR+FEBhwrLGYQSnf0x+azNA54wbuPfklF4ddR9FRYPeyxUKqiQJ5YVHTeKpQn0kJOWFNpQiw0L4kHNgZajrNUenQ11LDmtOLuAgNvCmQUH4naDNRv3cBbo0pkapDyK9tpirUqHnoKhCF+PqasKVyzvkHo83711NhsXi+No2A1kUiv3I+uMALaWsPT6PCR/xz3ZJUUxzOFBpOi7JcMq5CWk+DoC3B6k2g1rpxyGApHNyDRkowsY/P0WVw/Kw/5xrnjI5uGq5EimZF4aYhC9MgS9SaH9VoTsnrUXXhfHm7NXhornVMlBlnPqBRbTmMQ9O0Rrm9xuQPv/M958fkQ/AoeQ98eQUISzabAN/oXToYH4f/zu36h9cb8+OyUuv8l78w3mganZc8IPFuEzvF+1iHy+fkILTvkdrGvRUuJfPe4NUmW5bc6clVTCHqbRqOpucTUtVo5+ymd7K1PdL2aP7hs7HEgVXwxw2S+nx1tXt4YxFWZEbXapVSCQBGXyTTvE8R1h0yqk7pQw1N/jA0mW6Eref/uWOLna9umYWSKbGHdsBPTbmwOStR3FhzKNCwUqoqSMY3jiyiZpDgxkoVsujCqO1a+fWT0VkD7y81YROrE1wInh0bFhIXQgrvX8yjhsfeSyuqmiQLXcgeonpkyQsNu/vbsSNeUTdnoyMJltZ9+Xvfobe392wqzFqn6vZ+ahQvAcLJHSN0liI5Tqi7+S8G6oocyIqlEUMoCvqyGNX1E6mzbZjsVtHMh7sR5LkRFmbJ/GkqBIjryLukAz4OkFjeNsvmNFhxGAstJ9Pp9HrxOh6bcpS5TjJTZMOZ9Pt0uANzQV/uWoUj90xtn+cyCJOtSyEjLQnyPCoEubMhQ69CS5Hv90Qc7jjz2ek09rrF8mumvHgwmiddvxeUfn2UnTXh2Mx0n551gx8pcvIWN9PvVppScHh83BjSG/FeX4KURq3F9dEMIXGyoomeBJLFGZJMmLym5IRlA/9auvXxqgjDwJ1YY3SNBFX8bXC44mFkF5IkSY+oYxtxRl+GCTyMNmhe5jf3sbgJwpXgdPuaOvcqu6dK/PI4/2MfLwS18Fa47hJYVTpCmtboH/cL3aVT1Gfxh2NjVSs4pOJP8eS3AZe4anGrye/T874yBpPjdSDKN4hDZjlOKvs92yze7X/P1TVIYQfeVNbS6U51pAII/HWPcMHMphNznjkmbv4d8aAvWD7DllkUBlPrLTZ8lbLx18DOub5xY6fElX3y4kJLxILnOc5WopEVocE371fJ0xQW4599/YGsrhsxohPpNJ9Yev9lV4PbY85KEXAf/mhcFRjs0nj1LZb+XT1U43tik7SXONF27b/AZ+C1+M=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get status of room template creation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/roomtemplate/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress status of the room template creation process.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["isCompleted","progress","templateId"],"type":"object","properties":{"templateId":{"type":"integer","description":"The room template ID.","format":"int32","example":1234},"progress":{"type":"number","description":"The progress of the room template creation process.","format":"double","example":-8.5},"error":{"type":"string","description":"The error message that is sent when the room template is not created successfully.","nullable":true,"example":"some text"},"isCompleted":{"type":"boolean","description":"Specifies whether the process of creating the room template is completed.","example":true}},"additionalProperties":false,"description":"The room template status.","title":"RoomTemplateStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomTemplateStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

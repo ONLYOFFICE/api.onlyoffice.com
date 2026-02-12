@@ -1,0 +1,63 @@
+---
+id: get-portal-used-space
+title: "Get the portal used space"
+description: "Returns the used space of the current portal."
+sidebar_label: "Get the portal used space"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVk1z2zYQ/SuYvfjCiKrS6UGnqnaacdqZpLE9Png0MQSuRMQkgAILO6qG/72zACmJsjt2L/oA3n5w9+0+7oDkJsD8Dr5YT7IRpfgrWpKwLMA69JK0NZcVzGGDlCE3AasrJxVCAR6DsyZggPkOZtMpf1UYlNeODWEOjBYu+w69lbKG0BCDpXONVilK+T2wxQ6CqrGV/Iu2DmEOdvUdFUEBznNOpHO8IfgR0sR2hR46jhFzhP5GG8INeihgbX0rKR+9nzG20eYhHGGl93ILBWjCNryeR+1xfYQK5LXZsF+pchGeXXVdV0AgSTG8McUMPrcVvsmgK4A0NQy6sHHV4K2XznFlUuifpz+90CkjI9XW63+wSh4Cqug1bWF+twMZ1De+//aAfAAeZQUFPHlNCMuu2MFvKD16mN+lfwun/8Dt/uwlvAxaDfDPi0j17GXgZ4eJgnfLblmcJP0VKXoTBNUoIlMtcUzYdTpR0Xs01PNvAgW0SLXt6cyNlFTDHErpdDmbTMsMLNnTQNaA/hF9SEWIvoE57FYy4I1vOjjN5iphhbJmrTcxDw8U8Ci9lqsms6U3zvVfy9hw2555ushX4ubrn9yz5aEbVzwd2dW4Jwf6ptI/c3kTUJxb+6BRsBEa6gcPCjCyTZbHDgvQbKaSCXOwb9g+Tk3knkX5YAi92NrouR+eHQtpKuFkCE/Wc2vTfLODVXLInnuavMX1WQaL3afba3FtH9B0ZyOn2VfR//h9mIxPt9ccaszL12q2GBVK6CAqJPStNliJ1TaR7GzRj03CnIkaZZUS6Is6itgXtcd0xZ74hyUj08FpJhkn1o19Ek+aajGKKtJmKICvMzWOb4e1MTpMHEyFDvOyTFEn1jRbu15rhRNl23w4K/drAQogLvjbTRM8dce6YWnLKs2trIRUCkMQZIXzllARVsJjsNErDPsdMIdb/n4FnRfbsCoO1UwH59aYvLlPisq3F6K/fj4WI+u3PzUTX5u15f7+eBf0xkiKHl+nG1N6D8/7bG39SV4TcV2jSJUVbQwkVijsimTi5KOWiZT3w0Yb1saoI/cCTeWsNjQRl8S05vHESsggpMgTn1nGvtIM3x89yP3kwO7j5zvZGB3/X9v02L0YLZzu9V+qpM7DjHy5FFfR8fqFol+zQ6VrbFyF4eG02LUq0byLTBRspWaTkF38OkZyG3iF5xq/n/wymfKRs4FaaY6y+IiUHrh/XTnoyWmjdodXmP+tQD0DCH9Q6RqpDecSsyBkObpjekABs8mUJSpZclX2orQsoLaBGLnbi1HHx39H9CzPy4PoZIUdNg6rWFILWCiFjpI6NTFz8uRVjFVnr5cfP1xDkTbImMZZKfof7H24Mttj32NhyRnwJ+v7ixa7XZ6Rrtvj89V/Wuz3bkZzYZdd1/0LTNzATQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the portal used space"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/usedspace"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the used space of the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Used portal space","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"number"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"DoubleWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

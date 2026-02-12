@@ -19,8 +19,19 @@ Enumeration
 
 ## Example
 
-This example returns data of all forms in the document.
+Set the "text" form type to the first form of the current document.
 
 ```javascript editor-docx
-let formsData = doc.GetFormsData();
+// How to specify the form type.
+
+// Create the form data with the "text" form type and set it to the first form in the document.
+
+const formSpecificType = "text";
+const formData = {
+	"key": "CompanyName",
+	"value": "ONLYOFFICE",
+	"type": formSpecificType
+};
+doc.SetFormsData([formData]);
+
 ```

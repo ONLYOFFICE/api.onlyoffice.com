@@ -1,0 +1,71 @@
+---
+id: create-room-tag
+title: "Create a room tag"
+description: "Creates a custom room tag with the parameters specified in the request."
+sidebar_label: "Create a room tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zYQ/iuYvfhCS6rS9MBTFSedcZqpM7Y8no5HE6/IpYiYBBAAtKxq+N87C1CUKLmxD71IJLAv7OP7wC14XDlI7+Fa69rBIgFtyKKXWl3mkEJmCT3x5hxXkIClHw05/0HnG0i3kGnlSXl+RGMqmQXN8XenFa+5rKQa+Yn1pKWcXSmsiT35jSFIQS+/U+YhAWPZt5fkWCNIpVuo8fkLqZUvIZ2+f59ALdXufdLbcN5KxfHl5DIrDUcBKcxLEh5Xgm2NIAHVVBUuK4LU24YSoGesDb/CnVSFpCoXt8ZrBW2bAOa5ZDtYfT0IrMDK0Ut+uswIgxZr8mSdKLQVIYFSrQRyJByElz64vAipnePqOmp+9Bralj1bckYrF/MwnUz4b+jwL1r3B4Pk7WX4ecp3fk8lW/bRRA/djlSeVmQhgULbGn1cejdl2UqqR3cgi9biBhKQnmr3ehylpeJAqisulySL5z/ZCmlzHn3j3hhiFL7QOb1Jod3X7SoEfWfRGLKd618nv5wW6VZh40tt5T+UQxB6dyr0t25ErtWZFyU+kSClm1UpDNlaOie1El7zG8cjfEmiH88Qk6OssdJvIL3fArrsG3v89ki8AJYwhwTWVnqCRZts4QOhJQvpfXibGfknbfq1l+TRyWwnfjVrfDl9WfDKUMCL+0W7OB6O2OdOoMga53UtrNZ16N619GU41MHMOEOZLCTlQqqw180VT05NvtSMSka70DXIKABjNHI8HU3GhazIjQOicWrsE1kXMtPYClLYLtHRra3aE5y4CbIi06qQq6bLbwJPaCXDReipTjlWsMCm4u44sfQxbonb6y/cGot9iW54CKOpYaH2UxLqcWLy1pG40PpRkmAlUr6bbwa0AJJDgwlIVsuCCvddV8XeT+m9OfHySXmyYqMbKxpHlg0LVLkw6NxaW653gBE2sAwG2XLXO28xfRaFxfbz3VzM9SOp9mxgNNpKuoc/dgP4+W7OrobN+lrOZoNECelEzu1VS0W5WG5CY53NuukMMmeiJMxDAF1SBx67pHYybdJPwx7LMCwcRxLlRFHpdez3gVcRACgB3o6tcbi7Q6fBYujBkGiXjsfB60iraqOLQmY0ynQdF6fjHn2YdDjhb1cN4qE62uy4AXnyrglzgVlGzgVkstpT5ikXlpxubEauB4YU7vj/FemInzv82GczLFxopSJBHCWVdz+Kbvt0LAbabz81N75Uheb6Pp87uVLoG0uvtxu3dC/O85MH7h/GNRLhOsKZFXXjvFiS0EuPoSefJIamfNhh2Q42BhV5EKRyo6XyI3Hpua15PCkXGOA1gkSPqmGGHw4O8jDad/fh+Y4Qo02Abw7X+6vep909aXctO7kvsYlCh0x1NDkzsruZYOYPNGdfL8VNY4y2XNdmUJySKpOTezyuT5mNSZ033FtUo2QVF038PpTkQBj1Y1nejX4bTXiJ+aJGdRBFJCWBPRkd1/Tgbvs/MljXRp6e/dhUKEPmmsgqkc3uuccggelowrjAjMZ6zGmLBEomvvQetj2Xtbz8oyHLlL/Yc1Zk7R1gMQkGsoGLeKrzOUfC4lUTG/vo2sisHjVmWUbG/1R2ccDNX69u5ozi3RdCHTAMLK756wHXkTR1yHIEFl7bQoVq1eCKZaPNcAVvOCWH0xcJrnvgU+221OYwwiEfxnPwL5/qRY3tNo522/byces/NXq6iNJcykXbtv8CvsWZww==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a room tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a custom room tag with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["name"],"type":"object","properties":{"name":{"maxLength":255,"minLength":0,"type":"string","description":"The tag name.","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"description":"The request parameters for creating a tag.","title":"CreateTagRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New tag name","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-report-folder-history
+title: "Generates folder history"
+description: "Generates the activity history of a folder."
+sidebar_label: "Generates folder history"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVm1v2zYQ/iuH+5INUC3PKfZBn+aly5auQIu8IBgMo6Glk8VGJlmSSuoa+u/DkZJt2e6SffELeXe8l+fuuQ16sXSYzfBS1uQghUtdF2QdzhPUhqzwUqurAjPMLQlP12S09VHoL+m8tmtM0AgrVuRZL5ttUIkVYYZlkLoqMEGpMEMjfIUJWvraSEsFZt42lKDLK1oJzDbo14b1pPK0JIsJltquhI9H5xNs2zmrO6OVI8cak/GYvwpyuZWGfcUM764/gNfgKwIb3IVS1oQJ5lp5Up41hDG1zEN06RfHaptjR/TiC+We47OcCy/jo70He5LOW6mW2PIbTXzhxWASrKV6dHuywlrB6ZSeVu5lPypL5UkfRB4zcXTVtm2CzgvfuFe6GIUvdEGvK1CCXvqahW7Cm/dWGEO2e/rt+JcT5VKi8ZW28jsVGITOj4X+0Q0UWp15qMQTASndLCswZFfSOakVF9yQZX9C4bfYjRbfHlu8DfCIUIQIVXgWDpT2UOpGFSEaR3ljpV8HXAuXf2ZfPz8SH6AlweB+ttITzttkg7+TsGQxm4V/UyP/pvX27JS8cDLvxT9OG19NTgt+NBTacDbnHhhG8icpDpZciJyL/yT9GqrYnqBLEF2AI0xwRb7S3NBGu4Ap7soMU2FkOhmNU+4Vl0b5dNP3cJvWepnGdkJOi33qu72xNWa4WQhHd7Zu8dC9myALuValXDZdVRJ8ElaKRR2h3CnHKpWiqRlTR5bexSu4u/7AgJrvynPDrRtNDYu0661QiyOTd47gQutHScBKpHw3FTDpx9jAYDfK8qDC2OoquH2n8t4cvfKH8mRhrRsLjSPLhkGoAoxw7llbrnUYPmxgEQyy5Q43rzF9FoVh8/7+Fm71I6n2bGA02kq6H5d9276/v+WnhkB9KWfTQaJAOih49q+kogIW64DCs2nX00HmDCoSRXCgS+rgxS6pnUybbDthNwFFODj0JMpBWetneJa+gsGrEMZWgnwdobF/28+0wWHAYEi0y9I0vDrSql7rspQ5jXK9ioeTdDuzMEHPCX+9ahAP1dGmZxTBHXlNogCR5+RcmGdWe8o9FWDJ6cbm5LZDIcN7/n5BOk7dfnbsshkOLrRSkVYOksq376C7Pm6Lgfbro2bgS1Vqru+3N04ulfCNpZfhxpDeinP/8Li2B36NgOd5yCysGudhQaAXXgRMPkkRQPnQz7h+bAwq8gCkCqOl8iO48gxrbk8qQDgQEDs+ooxthR5+2AvkYbRD9358BxOj5f+lDmF3TDk1sltORB5Wh75HPl3BTWO6kdsMMl1RbQpyj4fJrvKU1JuGgUIrIVnFRRO/DSW5DDzCY47PR7+OxnzEpLASas+LHbt0JFlt175BnTa79ep/MlJXfk/ffGpqIQNnN5ENIjvNGBuY4GQ05n5mhgrLRx1nSra3adZ6GXbMkLV5ghWzXDbDzZagWj7+2pBlDp/viCiQWSEd/y4wK0Xt6D9i/Om6Wx5+hh/F0ONarQPf1Q1FVgvMtFuP23mb9MOPfYjX0zwn4/cUj1ZWJsAtm3/6eHOLSZhmw5aKrNX9YPMnvToguegCf/LycVJjs4n92rZb+Xj1Q40tB0RpztG8bdt/AY1pT0k=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generates folder history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/folder/{folderId}/log/report"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates the activity history of a folder.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","required":true,"schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"URL to the report file","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"},"404":{"description":"The required folder was not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

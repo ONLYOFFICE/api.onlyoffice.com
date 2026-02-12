@@ -20,9 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create a text properties and use it.
+This example shows how to create a text properties and use them.
 
 ```javascript editor-docx
+// Creates the empty text properties object and sets the bold property, font size, capitalized letters, color, and font family to it.
+
+// How to create the ApiTextPr object and apply it to the Text Art object.
+
+// Creates a Text Art object using the specified text properties.
+
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();
 textPr.SetFontSize(30);

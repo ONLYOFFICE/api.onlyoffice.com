@@ -18,8 +18,17 @@ Object
 
 ## Example
 
-Report on all review changes that contains two review records for every user.
+Specify the form data that can be used to create the form.
 
 ```javascript editor-pdf
-let formData = {key: "CompanyName", value: "OnlyOffice", type: "text"};
+// How to create a form data indicating its key and value.
+
+// Create a data to add it to the form.
+
+let formData = {
+	key: "CompanyName",
+	value: "OnlyOffice",
+	type: "text"
+};
+
 ```

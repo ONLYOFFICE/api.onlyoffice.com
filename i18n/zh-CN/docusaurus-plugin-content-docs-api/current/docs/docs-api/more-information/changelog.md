@@ -2,10 +2,22 @@
 
 ONLYOFFICE 文档 API 的更改列表。
 
-## 版本 8.3
+## 版本 9.0
 
-<!--- 添加了从 [vsdm、vsdx、vssm、vssx、vstm、vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) 格式的转换。
-- 将 *diagram* 文档类型添加到 [documentType](../usage-api/config.md#documenttype) 参数。-->
+- 添加了 [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) 参数。
+- 更改了 [editorConfig.customization.macros](../usage-api/config/editor/customization/customization-standard-branding.md#macros)：在 9.0.3 版本中，此参数将完全禁用运行、添加和编辑宏（而不仅仅是自动启动）。
+- [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) 参数现已可用于移动编辑器。
+- 在 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中新增浅色主题和深色主题的主题 ID。
+- 新增对 [odg](../usage-api/config/document/document.md#filetype) 格式的打开支持。
+- 新增对 [md](../usage-api/config/document/document.md#filetype) 格式的打开支持。
+- 新增[预加载](../get-started/configuration/preload.md)编辑器静态资源的能力。
+- 针对简体中文界面，新增 [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) 参数。
+- 新增 [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) 参数。
+- 新增对 [vsdm、vsdx、vssm、vssx、vstm、vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) 格式的转换能力。
+- 在 [文档类型](../usage-api/config/config.md#documenttype) 参数中新增*diagram*文档类型。
+
+## 版本 8.3 {#version-83}
+
 - 添加了 [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) 参数。
 - 添加了 [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) 和 [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) 参数。
 - 添加了 [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) 参数。
@@ -43,9 +55,8 @@ ONLYOFFICE 文档 API 的更改列表。
 - 向 WOPI 主机页面的 *form* 元素添加了 [docs\_api\_config](../using-wopi/host-page.md#parameters) 参数。
 - 向转换请求添加了 [pdf](../additional-api/conversion-api/request.md#pdf) 字段。
 - 添加了 [events.onSubmit](../usage-api/config/events.md#onsubmit) 事件。
-- 将 *oform* 格式的 [documentType](../usage-api/config/config.md#documenttype) 更改为 *pdf*。
 - 将 *roles* 字段添加到 [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) 参数。
-- 发送时将 [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
+- 发送时将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
 - 向 *Automation API* 添加了 [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) 和 [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) 方法。
 - 向 Conversion API 添加了 [-10 错误代码](../additional-api/conversion-api/error-codes.md)。
 - [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数现在可用于移动编辑器。
@@ -108,7 +119,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [Connector](../usage-api/automation-api.md) 类，以与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
 - 将*theme-contrast-dark*主题id添加到 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数中。
 - 将 *phone* 字段添加到 [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) 参数中。
-- 向许可证响应添加 *connections\_view*, *users\_view\_count* 和 *users\_view* [license response](../additional-api/command-service/license.md#response-parameters)。
+- 向许可证响应添加 [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) 和 [users\_view](../additional-api/command-service/license.md#quota.users_view)。
 - 在文本文档、电子表格和演示文稿编辑器中添加了 [实时查看器](../get-started/how-it-works/viewing.md) 模式。
 - 将 [embedview](../using-wopi/wopi-discovery.md#embedview) 操作添加到 wopi 发现中。
 - [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) 参数已弃用，请改用 [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) 参数。
@@ -132,7 +143,6 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 7.0
 
-- 添加了 *.oform* [文档格式](../usage-api/config/config.md#documenttype)。
 - 使用来自同一用户的最后一个标签的 [callbackUrl](../usage-api/callback-handler.md)。
 - 在 [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) 参数中添加了 *logoDark* 字段。
 - 在 [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数中添加了 *imageDark* 字段。
@@ -151,7 +161,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了 [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) 字段。
 - 添加了查看电子表格文件的 [文档历史记录](../get-started/how-it-works/document-history.md) 的可能性。
-- 为 PostMessage WOPI 协议添加了 [UI\_InsertGraphic](../using-wopi/postmessage.md#ui_insertgraphic) 消息。
+- 为 PostMessage WOPI 协议添加了 [UI\_InsertGraphic](../using-wopi/postmessage.md#UI_InsertGraphic) 消息。
 
 ## 版本 6.4
 

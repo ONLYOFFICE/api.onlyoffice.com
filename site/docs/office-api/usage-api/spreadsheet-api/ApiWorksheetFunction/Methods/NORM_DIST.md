@@ -17,7 +17,7 @@ expression.NORM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value for which the distribution will be returned. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The arithmetic mean of the distribution. |
 | arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The standard deviation of the distribution, a positive number. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (-**true** or -**false**) that determines the function form. If it is -**true**, the function returns the cumulative distribution function. If it is -**false**, the function returns the probability mass function. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability mass function. |
 
 ## Returns
 
@@ -25,9 +25,13 @@ number
 
 ## Example
 
-
+This example shows how to return the normal distribution for the specified mean and standard deviation.
 
 ```javascript editor-xlsx
+// How to calculate the normal distribution.
+
+// Use a function to get the normal distribution knowing the mean and standard deviation.
+
 const worksheet = Api.GetActiveSheet();
 let valueArr = [36, 6, 7, false];
 
@@ -41,8 +45,7 @@ let x = worksheet.GetRange("A1").GetValue();
 let mean = worksheet.GetRange("A2").GetValue();
 let standardDeviation = worksheet.GetRange("A3").GetValue();
 let cumulative = worksheet.GetRange("A4").GetValue();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let normalDist = func.NORM_DIST(x, mean, standardDeviation, cumulative);
 worksheet.GetRange("C1").SetValue(normalDist);
-
 ```

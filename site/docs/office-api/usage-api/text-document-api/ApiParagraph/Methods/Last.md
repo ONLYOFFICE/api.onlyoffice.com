@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the last element of the paragraph which is not empty.
 
 ```javascript editor-docx
+// How to get the last paragraph.
+
+// Get the last paragraph and make it bold.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run1 = Api.CreateRun();

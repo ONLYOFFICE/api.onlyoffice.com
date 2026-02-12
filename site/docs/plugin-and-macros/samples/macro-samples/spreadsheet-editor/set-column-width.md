@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Set column width
 
 Sets the width for the column **B**.
@@ -13,7 +17,7 @@ Sets the width for the column **B**.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [SetColumnWidth](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetColumnWidth.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [SetColumnWidth](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetColumnWidth.md)
 
 ## Reference Microsoft VBA macro code
 

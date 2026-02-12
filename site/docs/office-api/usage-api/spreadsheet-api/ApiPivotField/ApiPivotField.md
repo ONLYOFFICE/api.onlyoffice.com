@@ -6,6 +6,8 @@ Represents the ApiPivotField class.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
+| AutoSortField | string | Returns the name of the field that is used to sort the specified field. |
+| AutoSortOrder | [SortOrder](../Enumeration/SortOrder.md) | Returns the sort order for the specified field. |
 | Caption | string | Returns or sets a value that represents the label text for the pivot field. |
 | CurrentPage | string \| number | Returns the current page which is displayed for the page field (valid only for page fields). |
 | DragToColumn | boolean | Returns or sets the setting which specifies whether the specified field can be dragged to the column position. |
@@ -24,6 +26,7 @@ Represents the ApiPivotField class.
 | NumberFormat | string \| null | Returns or sets a value that represents the format code for the object. |
 | Orientation | number | Returns or sets a pivot field orientation value that represents the location of the field in the specified pivot table report. |
 | Parent | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Returns the parent object for the current field. |
+| PivotFilters | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | Returns an object that represents the filters for the specified field. |
 | PivotItems | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] | Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field. |
 | Position | number | Returns or sets a value that represents the position of the field (first, second, third, and so on) among all the fields in its orientation (Rows, Columns, Pages, Data). |
 | RepeatLabels | boolean | Returns or sets the setting which specifies whether to repeat items labels at each row. |
@@ -39,6 +42,7 @@ Represents the ApiPivotField class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [AutoSort](./Methods/AutoSort.md) | None | Establishes automatic field-sorting rules for the pivot table reports. |
 | [ClearAllFilters](./Methods/ClearAllFilters.md) | None | Deletes all filters currently applied to the pivot field. |
 | [ClearLabelFilters](./Methods/ClearLabelFilters.md) | None | Deletes all label filters or all date filters from the pivot filters collection. |
 | [ClearManualFilters](./Methods/ClearManualFilters.md) | None | Deletes all manual filters from the pivot filters collection. |
@@ -59,6 +63,7 @@ Represents the ApiPivotField class.
 | [GetName](./Methods/GetName.md) | string | Returns a value representing the object name. |
 | [GetOrientation](./Methods/GetOrientation.md) | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | Returns a pivot field orientation value that represents the location of the field in the specified pivot table report. |
 | [GetParent](./Methods/GetParent.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Returns the parent object for the current field. |
+| [GetPivotFilters](./Methods/GetPivotFilters.md) | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | Returns the collection of pivot filters applied to the specified pivot field. |
 | [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field. |
 | [GetPosition](./Methods/GetPosition.md) | number | Returns a value that represents the position of the field (first, second, third, and so on) among all the fields in its orientation (Rows, Columns, Pages, Data). |
 | [GetRepeatLabels](./Methods/GetRepeatLabels.md) | boolean | Returns the setting which specifies whether to repeat items labels at each row. |

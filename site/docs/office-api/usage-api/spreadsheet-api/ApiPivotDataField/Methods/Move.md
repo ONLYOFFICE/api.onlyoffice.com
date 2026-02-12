@@ -23,9 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to move a data field.
 
 ```javascript editor-xlsx
+// How to change a table element position by moving it by rows.
+
+// Create a pivot table, add data to it then move data field's by rows.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -65,5 +69,4 @@ pivotWorksheet.GetRange('A16').SetValue('Sum of Price will be moved soon');
 setTimeout(function() {
     dataField.Move("Rows");
 }, 5000);
-
 ```

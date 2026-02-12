@@ -18,13 +18,17 @@ expression.SetHorFlip(bFlip);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example flips the drawing horizontally.
 
 ```javascript editor-docx
+// How to set the horizontal flip property of the shape.
+
+// Create a drawing, add text to it and flip it horizontally.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

@@ -27,13 +27,15 @@ sidebar_position: -16
    ``` ts
    function onRequestRename(event) {
      const title = event.data
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestRename,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. 为了更新所有协作编辑器的文档名称，请将 *c* 参数的值设置为 [meta](../../additional-api/command-service/meta.md)，然后将请求发送到[文档命令服务](../../additional-api/command-service/command-service.md)。
@@ -53,11 +55,13 @@ sidebar_position: -16
    ``` ts
    function onMetaChange(event) {
      const title = event.data.title
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onMetaChange,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```

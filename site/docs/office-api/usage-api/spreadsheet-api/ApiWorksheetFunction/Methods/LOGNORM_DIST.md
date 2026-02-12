@@ -17,7 +17,7 @@ expression.LOGNORM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value at which to evaluate the function, a positive number. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The mean of ln(x). |
 | arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The standard deviation of ln(x), a positive number. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (-**true** or -**false**) that determines the function form. If it is -**true**, the function returns the cumulative distribution function. If it is -**false**, the function returns the probability density function. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability density function. |
 
 ## Returns
 
@@ -25,9 +25,13 @@ number
 
 ## Example
 
-
+This example shows how to return the lognormal distribution of x, where ln(x) is normally distributed with the specified parameters.
 
 ```javascript editor-xlsx
+// How to get the lognormal distribution of x.
+
+// Use a function to return the lognormal distribution.
+
 const worksheet = Api.GetActiveSheet();
 
 //configure function parameters
@@ -45,10 +49,9 @@ let standardDeviation = worksheet.GetRange("A3");
 let cummulative = true;
 
 //invoke LOGNORM.DIST method
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.LOGNORM_DIST(xValue, mean, standardDeviation, cummulative);
 
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

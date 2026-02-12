@@ -20,9 +20,14 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get a table cell that contains the current content control.
+This example shows how to get a table cell that contains the current content control.
 
 ```javascript editor-docx
+// Creates a block content control in the table cell, returns this cell as a parent of the container, and sets a black top border to this cell.
+
+// How to return a parent table cell of the ApiBlockLvlSdt object.
+
+// Creates a block level container, adds it to the table in the current document, and returns the parent ApiTableCell object.
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

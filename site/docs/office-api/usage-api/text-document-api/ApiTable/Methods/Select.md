@@ -23,6 +23,10 @@ boolean
 This example selects the current table.
 
 ```javascript editor-docx
+// How to select a table with a cursor.
+
+// Add text to the table cell and select it.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

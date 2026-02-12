@@ -1,6 +1,6 @@
 # FACT
 
-Returns the factorial of a number, which is equal to &lt;em&gt;1*2*3*...*&lt;/em&gt; number.
+Returns the factorial of a number, which is equal to *1*2*3*...** number.
 
 ## Syntax
 
@@ -22,10 +22,14 @@ number
 
 ## Example
 
-
+This example shows how to return the factorial of a number, which is equal to 123 *...* number.
 
 ```javascript editor-xlsx
+// How to calculate a number factorial.
+
+// Use function to calculate the factorial of a number.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.FACT(123));
 ```

@@ -1,14 +1,18 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating chart presentation
 
 Create a chart presentation:
 
-- get the first slide in the current presentation ([Api/GetPresentation](../../usage-api/presentation-api/Api/Methods/GetPresentation.md), [ApiPresentation/GetSlideByIndex](../../usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md));
-- set the gradient background ([Api/CreateGradientStop](../../usage-api/presentation-api/Api/Methods/CreateGradientStop.md), [ApiSlide/SetBackground](../../usage-api/presentation-api/ApiSlide/Methods/SetBackground.md));
-- set the slide title and text in the specified style ([Api/CreateShape](../../usage-api/presentation-api/Api/Methods/CreateShape.md), [ApiRun/AddText](../../usage-api/presentation-api/ApiRun/Methods/AddText.md), [ApiParagraph/SetJc](../../usage-api/presentation-api/ApiParagraph/Methods/SetJc.md), [ApiTextPr/SetFill](../../usage-api/presentation-api/ApiTextPr/Methods/SetFill.md), [ApiTextPr/SetFontFamily](../../usage-api/presentation-api/ApiTextPr/Methods/SetFontFamily.md), [ApiTextPr/SetFontSize](../../usage-api/presentation-api/ApiTextPr/Methods/SetFontSize.md),  [ApiShape/GetDocContent](../../usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [ApiSlide/AddObject](../../usage-api/presentation-api/ApiSlide/Methods/AddObject.md));
-- create a chart and add it to the specified slide ([Api/CreateChart](../../usage-api/presentation-api/Api/Methods/CreateChart.md), [ApiSlide/AddObject](../../usage-api/presentation-api/ApiSlide/Methods/AddObject.md))
+- get the first slide in the current presentation ([Api/GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [ApiPresentation/GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md));
+- set the gradient background ([Api/CreateGradientStop](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateGradientStop.md), [ApiSlide/SetBackground](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md));
+- set the slide title and text in the specified style ([Api/CreateShape](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateShape.md), [ApiRun/AddText](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/AddText.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/SetJc.md), [ApiTextPr/SetFill](/docs/office-api/usage-api/presentation-api/ApiTextPr/Methods/SetFill.md), [ApiTextPr/SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiTextPr/Methods/SetFontFamily.md), [ApiTextPr/SetFontSize](/docs/office-api/usage-api/presentation-api/ApiTextPr/Methods/SetFontSize.md),  [ApiShape/GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [ApiSlide/AddObject](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md));
+- create a chart and add it to the specified slide ([Api/CreateChart](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateChart.md), [ApiSlide/AddObject](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md))
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework-samples/builder-framework-samples.md) page.
+Download the sample and get more information on the [Builder framework samples](/docs/document-builder/samples/samples.md) page.
 
 ```ts editor-pptx
 let presentation = Api.GetPresentation();

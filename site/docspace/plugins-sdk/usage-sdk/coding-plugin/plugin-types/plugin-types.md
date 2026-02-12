@@ -2,7 +2,7 @@
 sidebar_position: -5
 ---
 
-# Plugin types
+# Types
 
 The following plugin types can be distinguished:
 

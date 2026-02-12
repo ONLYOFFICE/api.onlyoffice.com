@@ -9,15 +9,15 @@ Now that you know how macros work, try to write your own macro. We have a table 
 1. Open ONLYOFFICE editors and create a new spreadsheet.
 2. Now open the **View** tab and select **Macros**. The macros window will pop up. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
 
-<!-- This code is related to macros. -->
+    <!-- This code is related to macros. -->
 
-<!-- eslint-skip -->
+    <!-- eslint-skip -->
 
-   ``` ts
-   (function () {
-     // ... your code goes here ...
-   })()
-   ```
+    ``` ts
+    (function () {
+      // ... your code goes here ...
+    })()
+    ```
 
 3. Let's consult the [Office API documentation](../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md) to see what we need to complete our task:
 
@@ -75,6 +75,26 @@ Now let's sum it up with the complete script code:
 Paste the code above to the macros window and click ![Play icon](/assets/images/plugins/play.svg). The table rows from 1 to 200 will be colored alternately in less than a second.
 
 ![Alternate raws](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate raws](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
+
+## Generating macros using AI plugin
+
+If you want to speed up the process, starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically generate ONLYOFFICE macros from their descriptions:
+
+1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](/docs/plugin-and-macros/ai/ai-plugin.md#configuring).
+2. Open the **View** tab and click **Macros**.
+3. Click the **AI** icon in the **Macros** window and select **Create from description**.
+
+    ![AI plugin](/assets/images/plugins/ai-plugin.png#gh-light-mode-only)![AI plugin](/assets/images/plugins/ai-plugin.dark.png#gh-dark-mode-only)
+
+4. Input a prompt into the **Create macros from description** window and click **Create**. The generated macro sample will be inserted into the **Macros** window.
+
+    ![Create from description](/assets/images/plugins/create-from-description.png#gh-light-mode-only)![Create from description](/assets/images/plugins/create-from-description.dark.png#gh-dark-mode-only)
+
+5. Review the code and make adjustments if necessary.
+
+    > While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+
+6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
 
 ## Subscribing to events
 

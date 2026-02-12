@@ -23,6 +23,10 @@ string
 This example shows how to get the table title.
 
 ```javascript editor-docx
+// How to get the table title.
+
+// Display the title of the table in the document.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

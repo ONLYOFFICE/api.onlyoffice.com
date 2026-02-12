@@ -1,7 +1,7 @@
 # SetPlaceholderText
 
 Sets the placeholder text to the current inline content control.
-Can't be set to checkbox or radio button*
+*Can't be set to checkbox or radio button*
 
 ## Syntax
 
@@ -26,6 +26,10 @@ boolean
 This example sets the placeholder text to the inline content control.
 
 ```javascript editor-docx
+// How to set placeholder text for the inline content control.
+
+// Display the placeholder set for inline text element.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

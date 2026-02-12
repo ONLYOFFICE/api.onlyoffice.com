@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example accepts all changes made in review mode.
 
 ```javascript editor-docx
+// How to apply all changes and fixes after review.
+
+// Change the status of the document to the review mode and apply all changes.
+
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 doc.SetTrackRevisions(true);

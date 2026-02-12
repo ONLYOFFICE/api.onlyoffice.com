@@ -5,7 +5,7 @@ This example demonstrates how to open a predefined modal window in DocSpace usin
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -19,7 +19,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
     <title>Open Modal</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -85,7 +85,7 @@ Create an HTML page with a button and an embedded DocSpace iframe.
     <title>Open Modal</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -115,12 +115,12 @@ Create an HTML page with a button and an embedded DocSpace iframe.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Use the [openModal()](../../usage-sdk/methods.md#openmodal) method inside the [onAppReady](../../usage-sdk/events.md#onappready) event to open a specific modal by its ID.
+Use the [openModal()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready) event to open a specific modal by its ID.
 
 ``` ts
 function onAppReady() {

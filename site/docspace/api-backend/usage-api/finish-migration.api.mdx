@@ -1,0 +1,71 @@
+---
+id: finish-migration
+title: "Finish migration"
+description: "Finishes the migration process."
+sidebar_label: "Finish migration"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVktz2zgM/isYXHJR7Wy6swedNk3amXYf6eQxOWQ8DSzBFhuJZEkqruvRf98BKcuWnZ3kksgkXgQ+4MMGAy095g/4j1o6CsponGVoLKcfn0vMcaG08tVOIEPHP1r24YMp15hvsDA6sA7ySdbWqohy0+/eaDnzRcUNyZfoKcelOFT+hnV5z3VhGv7YkKrFc1hbxhzN/DsXATO0TmIJir3ov6CTb7Y6c2NqJgmvZF84ZWOwOd5YLtRCsYdVxaFiB8GAZ10CwSqZAhZbYBxoEyaYIf+kxtaMeXAtd12GVJZK7FH9dS+iBdWeD/3dVgyWHDUc2HlYGAeBXaM0BaWXQGCdKdh7cTckWpwGFcQlfor5vgwGu058O/bWaJ9ScHZ6Kv/GLq+esMvw99Pfjq/uNLWhMk794jIJvT8W+teAlRC9V0Z7yY9ltzCugVApD1REOYnFc9E6FdaYP2yQfPFNrH97YjlAx1RihiunAuOsyzb4gcmxw/wh/jq36i9eD2cvyZNXxVb86rwN1dnLgleWIzgfZt3ssAApf+whVAzNFrbbtEumGw6VEWhb4yPKKFSY45Ssmp5NTqeD0jRhH+Xh7pmdj+9uXY05bubk+c7V3THioiwURi/Ush265pmconmd6tgrp1osqK0D5nhk6TJdwd313wKG2a4AN9JUydS4DEM/UMz2kck7z3BhzJNiECXWoe9XzFBTEzX3DWaoRK2IKoKgvkaDnyoEe+Tlow7sYG1aB61nJ4aBdAmWvF8ZJ9WMYyE2bjQolntkvMX0SRKGzZf7W7g1T6y7k5HRZCvrPz4Z15Ck+Mv9rbgaQ/G1nJ2PEgXKQ8mpp7mE+ToC7eS877MocwIVUxkD6JM68tgntZfpsgHrQySG4sFhJEkOFrVZwUqFCkZe4cKUjBnKdYLG/m28PDyMGIyJ9vl0Gr1OjK7XZrFQBU8K06TDs+kwR2RUScLfrhrFY3WMTZiNHZ3jNVMJVMRxKFPHmcBF4BIce9O6gv3Q9jney/9XpNPE3E6HXTbjwYXROtHKQVLl9hL66+O2GGm//dUCfKUXRur7851XS02hdfw63ATSg7j0TxlZZBzXBIRoYmahaX2AOYOZB4qYfFYUQfm4nWjbsTGqyCOwLq1ROkzgcxBYS3tyCeSBIHV8QpnYij38uPeQx8kO3fvvO5gYXYayCVzvdoaPW3Z9mdEj54qRhYm56mnx3CrM4q5BRdw1to319TPctNYaJ5VtR+WpuLYl+6fDClXFlPW7VtDFySn6ZOLPsaTUTuZ+Ksz7yR+TUzkS3mhI70WRSGdHN4dF3duS3kBQPT4C/wxTW5PS4rRNdJHI6kHAgxmeTU6F0Pbc9pQ1y7ASdssfcDNQVSfHP1p2wtezHSUlyt3OI+G4yCV4kWJ+dyvxiHjdJtwebHnCTAOpfr26uZXB22+HTRw76GglmyOtEs+ZmJc0C+RsgzXpZUtLkU02497VymP3GyZxUv8hkW6v9Ho/wjGFpdfIX1keXtTYbFI3dt0gn67+V2OY8ElaijTruu4/I4HvJQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Finish migration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/migration/finish"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Finishes the migration process.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["isSendWelcomeEmail"],"type":"object","properties":{"isSendWelcomeEmail":{"type":"boolean","description":"Specifies whether to send a welcome email or not.","example":true}},"additionalProperties":false,"description":"The parameters for terminating a process or operation.","title":"FinishDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

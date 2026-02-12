@@ -1,18 +1,22 @@
-# Adding watermark
+---
+hide_table_of_contents: true
+---
 
-Create a document with a watermark with custom settings:
+# Adding image watermark
 
-- create an empty page with a watermark ([Api](../../usage-api/text-document-api/Api/), [ApiDocument/InsertWatermark](../../usage-api/text-document-api/ApiDocument/Methods/InsertWatermark.md));
-- edit watermark settings, set an image, specify size, direction and opacity ([ApiWatermarkSettings](../../usage-api/text-document-api/ApiWatermarkSettings/ApiWatermarkSettings.md));
+Create a document with an image watermark with custom settings:
+
+- create an empty page with a watermark ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument/InsertWatermark](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/InsertWatermark.md));
+- edit watermark sewatermarkSettingsttings, set an image, specify size, direction and opacity ([ApiWatermarkSettings](/docs/office-api/usage-api/text-document-api/ApiWatermarkSettings/ApiWatermarkSettings.md));
 
 ``` ts editor-docx zoom=60
 let doc = Api.GetDocument();
 doc.InsertWatermark("Watermark", true);
-let settings = doc.GetWatermarkSettings();
-settings.SetType("image");
-settings.SetImageURL("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png");
-settings.SetImageSize(40 * 36_000, 40 * 36_000);
-settings.SetDirection("horizontal");
-settings.SetOpacity(100);
-doc.SetWatermarkSettings(settings);
+let watermarkSettings = doc.GetWatermarkSettings();
+watermarkSettings.SetType("image");
+watermarkSettings.SetImageURL("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png");
+watermarkSettings.SetImageSize(40 * 36_000, 40 * 36_000);
+watermarkSettings.SetDirection("horizontal");
+watermarkSettings.SetOpacity(100);
+doc.SetWatermarkSettings(watermarkSettings);
 ```

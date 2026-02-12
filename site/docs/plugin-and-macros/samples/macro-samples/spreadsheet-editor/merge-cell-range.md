@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Merge cell range
 
 Merges the selected cell range.
@@ -13,7 +17,7 @@ Merges the selected cell range.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Merge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Merge.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Merge](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Merge.md)
 
 ## Reference Microsoft VBA macro code
 

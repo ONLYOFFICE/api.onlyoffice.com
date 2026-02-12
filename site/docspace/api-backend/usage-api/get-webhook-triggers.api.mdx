@@ -1,0 +1,63 @@
+---
+id: get-webhook-triggers
+title: "Get webhook triggers"
+description: "Returns a list of triggers for a webhook."
+sidebar_label: "Get webhook triggers"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVk1z2zYQ/SuYvfjCiKrS6YGnqk6acZqZdGJ5fPBoYohciogoAAWWVlQO/3tnAYoSJTd2LhKJ/eTu231ogeTaQ/YAt0ik9NqLVNzjqjJm42GZgLHoJCmjbwrIYI3UCxdOrdfoPCTg0FujPXrIWphNp/xXoM+dsmwIGXxSnoQpBfVGojROSLGLriCB3GhCTWwpra1VHkKm3zybt+DzCreSn2hvETIwq2+YEyRgHSdIKgY/ZHKp2XGMJkboJUoTrtFBAqVxW0nx6O2MdWulN/5EVzon95CAItz6l/OoHJYnWp6c0mv2K/NYkQtR13UJeJLU+FemGJWvTYGvMugSIEU1K93pjTY7fe+ktej62L9Of7ns252WDVXGqX+xCC485o1TtIfsoQXp868s/7pBPgCHsoAEdk4RwrJLWvgDpUMH2UN4m1v1F+6Hs+f0pVf5Qf3zvKFq9rziZ4sBkA/LbpmcJf0FqXHaCynqH8JuAglskSrTA5u7KKmCDFJpVTqbTFPfz0Tam6R0RL1H98RPXInG1ZBBu5Ie71zdwXlKt0FX5EaXat3EeYIEnqRTclVHzPTGsQmlbGpu3oWnd1Ek7r584sYtjy255RmJrsaNOYI41P/C5Z1HcW3MRqFgI9TUjx8koOU2WJ46TECxWR5MGIl914Y4FZG9iPJeEzqxN40TjUfHjoXUhbDS+51x3N8w5exgFRyy5x4rr3F9FZVF+/F+IRZmg7q7GjmNvpL+4c/DfHy8X3CoMThfqtl8VCihvCiQ0G2VxkKs9oIqFFfzfnaCzpWoUBYhgb6oo4h9UXudLhnQf1w1MhycZxL1RFmbndgpqsQoqgj7IQEWR2icSg/LY3QYMBgK7bM0DVEnRtd7U5Yqx0lutvFwlg67ARIgLvjrTYN66I6xh9UtizC8shAyz9F7QUZYZwhzwkI49KZxOfphEWRwz/8vaMftdtgXx2qGg2ujddzfZ0Vl6TvRiy/HYmT9+q9m4CtdGu7v9zderbWkxuHLcGNID+o8P0VcZaO8JmJRoQiVFdvGk1ihMCuSAZNPSgZQPh5XW1wbo448CtSFNUrTRNwQw5rHEwsheZ3GiY8oY19hhh9PPuRxckT36fedbYyO30sTPrunpLlV/S1A5oGjDzPy9424baw1jpvUjCpdYW0L9JvzYld5ivpNw0DBrVRs4qOL38ea3AZe4bHGbye/TaZ8ZI2nrdQnWXxAOpCGOGGAUY/a4x3mpxiobzzhd0ptLZXmFJrIA5GOHhgVkMBsMg20EymJx2C4Pg1JLROojCc2agc66vj4nwYds/TySDuRaA87h3ks8AXM8xwtBX6qm4jKsysZ885AnR/eLyAJO2QM5MgV/QN7P4j0/tT3mFpiBvzLNP+sRdvGKem6QT+K/tdi2LxRm2u87LruP2JlylE=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get webhook triggers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webhook/triggers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of triggers for a webhook.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of triggers for a webhook","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"UnknownWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

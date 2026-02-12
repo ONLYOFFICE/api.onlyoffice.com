@@ -24,11 +24,15 @@ number
 
 ## Example
 
-
+This example shows how to add the numbers in the field (column) of records in the database that match the conditions you specify.
 
 ```javascript editor-xlsx
+// How to calculate the sum.
+
+// Use function to add values from a range.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Month");
 worksheet.GetRange("C1").SetValue("Sales");

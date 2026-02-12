@@ -5,12 +5,18 @@ sidebar_custom_props:
 
 # Odoo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="wkLTlJpmLQg"/>
+```
+
 This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit and collaborate on office documents within [Odoo](https://www.odoo.com/) Documents using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, DOCXF, XLSX, PPTX.
-- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OFORM, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
+- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The app will create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Odoo.
 
 ## Installing ONLYOFFICE Docs
@@ -61,7 +67,7 @@ To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sideba
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Odoo server. The Odoo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Odoo server. The Odoo server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Odoo configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 

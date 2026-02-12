@@ -14,9 +14,9 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The comment text (required). |
-| sAuthor | Required | string |  | The author's name (optional). |
-| sUserId | Required | string |  | The user ID of the comment author (optional). |
+| sText | Required | string |  | The comment text. |
+| sAuthor | Optional | string |  | The author's name. |
+| sUserId | Optional | string |  | The user ID of the comment author. |
 
 ## Returns
 
@@ -27,6 +27,10 @@ expression.AddComment(sText, sAuthor, sUserId);
 This example adds a comment to the document.
 
 ```javascript editor-docx
+// How to comment the document.
+
+// Add comment to the document indicating the author.
+
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 
 paragraph.AddText("This is just a sample text.");

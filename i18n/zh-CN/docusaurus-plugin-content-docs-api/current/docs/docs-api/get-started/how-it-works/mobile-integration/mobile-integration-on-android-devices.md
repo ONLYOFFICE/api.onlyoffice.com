@@ -8,7 +8,7 @@ sidebar_label: Android
 
 ## 基于 ONLYOFFICE 测试示例的集成
 
-本示例演示如何将 ONLYOFFICE 移动端网页编辑器与 ONLYOFFICE [测试或 DMS 示例](../../language-specific-examples/language-specific-examples.md)集成。
+本示例演示如何将 ONLYOFFICE 移动端网页编辑器与 ONLYOFFICE [测试或 DMS 示例](../../../samples/language-specific-examples/language-specific-examples.md)集成。
 
 ![通过测试示例的 Android 集成](/assets/images/editor/android-test-sample.png)
 
@@ -26,7 +26,7 @@ sidebar_label: Android
    buildConfigField("String", "DOCUMENT_SERVER_URL", "https://documentserver/")
    ```
 
-   其中 **documentserver** 是已安装 ONLYOFFICE 文档的服务器名称。
+   其中 **documentserver** 是已安装 ONLYOFFICE 文档的服务器名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    若未指定 **DOCUMENT\_SERVER\_URL**，将出现错误提示：
 

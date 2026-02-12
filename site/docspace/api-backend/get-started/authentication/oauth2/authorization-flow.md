@@ -38,11 +38,11 @@ If the authorization link contains non-existent [client_id](auth-button.md#clien
 
    > If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
 
-   To send a consent request, you can also send POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/o-auth-2-consent-endpoint.api.mdx) address.
+   To send a consent request, you can also send POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/submit-consent.api.mdx) address.
 
 2. The application exchanges the user code for the access token and refresh token, save them to its storage, and use these tokens to get the access to the DocSpace API.
 
-3. The application sends the [POST request](../../../../../docspace/api-backend/usage-api/o-auth-2-token-endpoint.api.mdx):
+3. The application sends the [POST request](../../../../../docspace/api-backend/usage-api/exchange-token.api.mdx):
 
 ``` ini
 {{docspace_address}}/oauth2/token
@@ -52,42 +52,36 @@ The parameters that must be specified in the request body depends on the client 
 
 ### For client_secret_post
 
-#### client_id
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-The ID of the client that will be used for authorization.
+<APITable>
+```
 
-Example: 695d37b7-18aa-4033-91b4-09690178e99a
+| Parameter     | Type   | Example                                                                                                                            | Description                                                                                |
+|---------------|--------|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| client_id     | string | `695d37b7-18aa-4033-91b4-09690178e99a`                                                                                             | The ID of the client that will be used for authorization.                                  |
+| client_secret | string | `49487362-7d4a-471f-bbf3-c04e2e1c541f`                                                                                             | The secret of the client that will be used for authorization.                              |
+| grant_type    | string | `authorization_code`                                                                                                               | The OAuth grant type.                                                                      |
+| code          | string | `OENBaHXhZStQ9eDVIq-1NlHu6luruKqJtCp6Rhg-OFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318mihPflIpV` | A temporary authorization code that is sent to the client to be exchanged for a token.     |
+| redirect_uri  | string | `https://redirect-url.com`                                                                                                         | The URL where the user will be redirected after successful or unsuccessful authentication. |
 
-#### client_secret
-
-The secret of the client that will be used for authorization.
-
-Example: 49487362-7d4a-471f-bbf3-c04e2e1c541f
-
-#### grant_type
-
-The OAuth grant type.
-
-Example: authorization_code
-
-#### code
-
-A temporary authorization code that is sent to the client to be exchanged for a token.
-
-Example: OENBaHXhZStQ9eDVIq1NlHu6luruKqJtCp6RhgOFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHZuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318JmihPflIpV
-
-#### redirect_uri
-
-The URL where the user will be redirected after successful or unsuccessful authentication.
-
-Example: `https://redirect-url.com`
+```mdx-code-block
+</APITable>
+```
 
 ### For client with PKCE
 
 For the client with PKCE, the parameters are the same as for **client_secret_post**, but the [client_secret](#client_secret) must be replaced with the **code_verifier**.
 
-#### code_verifier
+```mdx-code-block
+<APITable>
+```
 
-The code verifier, a cryptographically random string between 43 and 128 characters long.
+| Parameter     | Type   | Example                                                                    | Description                                                                              |
+|---------------|--------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| code_verifier | string | `a50883696b67d1e91-e52be26d8b78ae902b354-a4b3a8965affbe30f-c8056c89afa066` | The code verifier, a cryptographically random string between 43 and 128 characters long. |
 
-Example: a50883696b67d1e91e52be26d86b78ae902b354a4b3a8965aaffbe30fc8056c8b9afa066
+```mdx-code-block
+</APITable>
+```

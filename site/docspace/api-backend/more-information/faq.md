@@ -16,7 +16,3 @@ As for the request, only date can be send in it: 2008-04-10.
 If you use the date/time in URL request, colons must be avoided and replaced by hyphens: 2008-04-10T06-30-00.000Z.
 
 Please note that the UTC date and time without the offset are used in this case.
-
-## Is the response data pagination supported?
-
-Yes. More information you can find in the [Request filtering](./filtering.md) section.

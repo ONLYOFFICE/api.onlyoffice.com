@@ -17,7 +17,7 @@ The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into
 
   - [**customization**](./config/editor/customization/customization-standard-branding.md) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
   - [**embedded**](./config/editor/embedded.md) - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
-  - [**plugins**](./config/editor/plugins.md) - is used to connect the necessary [plugins](../../plugin-and-macros/get-started/overview.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
+  - [**plugins**](./config/editor/plugins.md) - is used to connect the necessary [plugins](../../plugin-and-macros/get-started/get-started.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
 
 - [**events**](./config/events.md) - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
 
@@ -134,6 +134,7 @@ const config = {
         size: "11px",
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -148,6 +149,7 @@ const config = {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
@@ -218,6 +220,7 @@ const config = {
         visible: true,
         resultMessage: "text",
       },
+      suggestFeature: true,
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",
@@ -323,7 +326,7 @@ const config = {
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
   type: "desktop",
   width: "100%",
-}
+};
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

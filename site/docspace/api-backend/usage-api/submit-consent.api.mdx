@@ -1,0 +1,71 @@
+---
+id: submit-consent
+title: "OAuth2 consent endpoint"
+description: "Sends a consent request with the specified parameters."
+sidebar_label: "OAuth2 consent endpoint"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVt1P4zgQ/1dGfuEl/aCwcJenY7u3EnsnsaJFPKAKHHtCfCR21nYKvSr/+2ns9CPtokXHA3Xs8W++fjPjNfP82bH0gd1cNb6AyXAMI6Clsepf7pXRbJEwiU5YVYfPlM1QSwcchNEOtQeLPxp0Hl6VL8AXCK5GoXKFEmpueYUerRuyhJkabcC8lixlrskq5acRhCWsg/ls5IqlayaM9nSQrlnVlF7V3PpRbmw1kNxz2naiwCqs/KpGljKT/YOCoGpLqrxCF5BKhdo/Krkn6rxV+pkdujYvEKI4KInakxcWlHMNSvAmeNedy4YQwOKzcj66RT7iG6/qklRciEuRn15mg9NMng3OL+Wnwe/n4mKQ4USefboc4+nFb6xNmPPc48dMs1xLU0GUgMZFo5wplxhMm85uv8KyKTVanqlS+RXU1mQlVn3TeCYkBt3C1B/U7WoucOCQUupRQqmcB5Nvso8SAhjUaCvlnDLa9ZXmqkSXWuSSteGPUu5qyn9I09l4Qj99zbcolUXh+8E/cWA3B3e315F5fJ+1IEz08Hw8Pka91kteKrll7o6mjMxyKBqr/IqlD2vGnXgk6McXpA0WHEjYq1Ue2aJdJKxCXxhidG1cYB/3BUvZyNC1yWhjFzJCtkvSQsCNLVnK1hl3eGfL9ijosyBLVZar5yYyjCVsya3iWRlj1l2OHua8KT1L2RHSl3gEd7d/U+gXOw9nVEIRqu/nlhG8Vn/h6gjyziFMjXlRGOJOpSI2FmpehZv7gAlTdE2EK5SXz9wpsaen8L4+0vKn9mhhZRpLZLcEDFxTW3Hu1VjKQ2gCBJAFQEJGbtF+DPokCsP62/0c5uYFdXvSA41YSbf4amzFKcTf7uek6ioE50jhOzG76gUKlANJnKuURgnZKvD7pNd7T6BALoMBXVB7GrugdjJtEpv4ZL8jBgoeWRLlIC/Na6ydnlaYUu0kjI4jNfZPw+HhZuBgCLRLR5H4Q6PLlclzJXAoTPWzavAU8I9fDeKsa1rBsFCL1CS4BC4EOkd9orbGo6COZNGZxgp024JN2T39/kI6dqebGsOk2kUzbEyN1nHMHASVTr9Ad3xcFr3bH/eaiK90bii/bwOnnjX3jcVf040ovRWPwyI39sCuIVBvD5GFqnEeMgSTeR44uVQ8kPKJ12o0GY5Hm7bRy8gToJa1UdoP4doTrak8UQKPj4TQJLZvg1DDT3uOPA137N7376BjtPSdm+C28mVXCywJ7wQuwjthUyPfr2HW1LWxlKSmF+kCy1qiezkMdiFGqAcNEQUrrsrwPgkQf/QlKQ3UwmOMz4YXwzFtUeuvuN6zoquxzSNpE6PDNO09dP7/w6ojgsc3P6pLrjSZ1MS5EKfRw64V7CpwkbCCRlb6wNbbOdTS9o8GLU27xW7e0FebbJoNDbAwKNg0mj+Ykw0kXjZky8/ebL1h+f1mNqfG2j33qtBWGAkH2WS3jIrJ7D7p41zpFmTQ5kiv9gw5GEPRaPrfJu/cWK9jRbXtVj4evXtj26WjNMV/0bbtfx4e89g=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OAuth2 consent endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/oauth2/authorize"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a consent request with the specified parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"client_id":{"type":"string","description":"The client identifier issued to the client during registration.","example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"},"state":{"type":"string","description":"The random string used to solve the CSRF vulnerability problem.","example":"abcde"},"scope":{"type":"string","description":"The space-separated list of requested scope permissions.","example":"files:read"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"302":{"description":"Redirect to the client's redirect URI with authorization code"},"400":{"description":"Invalid request parameters"}}}
+>
+  
+</StatusCodes>
+
+
+      

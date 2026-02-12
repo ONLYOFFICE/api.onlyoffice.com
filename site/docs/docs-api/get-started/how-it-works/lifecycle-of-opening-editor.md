@@ -4,6 +4,10 @@ sidebar_position: -1
 
 # Lifecycle of opening editor
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+```
+
 The lifecycle of [opening](./opening-file.md) an editor can be defined by the sequence of the events.
 
 Add the script initializing the Document Editor with the configuration for the document you want to open:
@@ -27,42 +31,46 @@ Specify there the following events:
 
 1. When the application is loaded into the browser, the [onAppReady](../../usage-api/config/events.md#onappready) event is executed:
 
-   ``` ts
-   function onAppReady() {
-     console.log("ONLYOFFICE Document Editor is ready")
-   };
+     ``` ts
+     function onAppReady() {
+       console.log("ONLYOFFICE Document Editor is ready")
+     }
 
-   const config = {
-     events: {
-       onAppReady,
-     },
-   };
+     const config = {
+       events: {
+         onAppReady,
+       },
+     };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
+     const docEditor = new DocsAPI.DocEditor("placeholder", config);
+     ```
 
-   After that, the [showMessage](../../usage-api/methods.md#showmessage) method can be called which displays a tooltip with a message:
+     After that, the [showMessage](../../usage-api/methods.md#showmessage) method can be called which displays a tooltip with a message:
 
-   ``` ts
-   docEditor.showMessage(message);
-   ```
+     ``` ts
+     docEditor.showMessage(message);
+     ```
 
-   ## message
+     ```mdx-code-block
+     <APITable>
+     ```
+      | Parameter | Type   | Presence | Description               |
+      | --------- | ------ | -------- | ------------------------- |
+      | message   | string | required | Defines the message text. |
 
-   Defines the message text.
-
-   Type: string
-
-   Presence: required
-
-  > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
+     ```mdx-code-block
+     </APITable>
+     ```
+   :::note
+   Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
+   :::
 
 2. When an error or some other specific event occurs, the [onError](../../usage-api/config/events.md#onerror)  event is executed:
 
    ``` ts
    function onError(event) {
-     console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-   };
+     console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
+   }
 
    const config = {
      events: {
@@ -79,8 +87,8 @@ Specify there the following events:
 
    ``` ts
    function onOutdatedVersion() {
-     location.reload(true)
-   };
+     location.reload(true);
+   }
 
    const config = {
      events: {
@@ -111,8 +119,8 @@ Specify there the following events:
          mode: "edit",
        },
        token: "...",
-     })
-   };
+     });
+   }
 
    const config = {
      events: {
@@ -129,8 +137,8 @@ Specify there the following events:
 
    ``` ts
    function onUserActionRequired() {
-     console.log("Enter a password")
-   };
+     console.log("Enter a password");
+   }
 
    const config = {
      events: {
@@ -147,8 +155,8 @@ Specify there the following events:
 
    ``` ts
    function onDocumentReady() {
-     console.log("Document is loaded")
-   };
+     console.log("Document is loaded");
+   }
 
    const config = {
      events: {
@@ -159,8 +167,8 @@ Specify there the following events:
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   After that, the requests to the [Automation API](../../usage-api/automation-api.md) can be sent.
-   
+   After that, the requests to the [Automation API](/docs/docs-api/usage-api/automation-api.md) can be sent.
+
    The `onOutdatedVersion` or `onRequestRefreshFile` events can be also called after the `onDocumentReady` event in the following case:
 
    1. the document has been modified;
@@ -173,11 +181,11 @@ Specify there the following events:
    ```ts
    function onRequestClose() {
      if (window.opener) {
-       window.close()
-       return
+       window.close();
+       return;
      }
-     docEditor.destroyEditor()
-   };
+     docEditor.destroyEditor();
+   }
 
    const config = {
      events: {

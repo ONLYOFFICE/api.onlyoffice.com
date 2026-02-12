@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Automatic bookmark generation
 
 Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.
@@ -22,7 +26,7 @@ Automatically generates bookmarks for all heading paragraphs in the document, us
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllHeadingParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllHeadingParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
 
 ## Result
 

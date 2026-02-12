@@ -33,7 +33,7 @@ Represents the ApiWorksheet class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [AddChart](./Methods/AddChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart of the specified type from the selected data range of the current sheet. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
+| [AddChart](./Methods/AddChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Creates a chart of the specified type from the selected data range of the current sheet. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
 | [AddDefName](./Methods/AddDefName.md) | boolean | Adds a new name to the current worksheet. |
 | [AddImage](./Methods/AddImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Adds an image to the current sheet with the parameters specified. |
 | [AddOleObject](./Methods/AddOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | Adds an OLE object to the current sheet with the parameters specified. |
@@ -54,6 +54,7 @@ Represents the ApiWorksheet class.
 | [GetCells](./Methods/GetCells.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use). |
 | [GetCols](./Methods/GetCols.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object that represents all the cells on the columns range. |
 | [GetComments](./Methods/GetComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | Returns all comments from the current worksheet. |
+| [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the current sheet. This manager allows manipulation and access to custom XML parts within the current sheet. |
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) \| null | Returns the ApiName object by the worksheet name. |
 | [GetDefNames](./Methods/GetDefNames.md) | [ApiName](../ApiName/ApiName.md)[] | Returns an array of ApiName objects. |
 | [GetFreezePanes](./Methods/GetFreezePanes.md) | [ApiFreezePanes](../ApiFreezePanes/ApiFreezePanes.md) | Returns the freeze panes from the current worksheet. |
@@ -65,8 +66,8 @@ Represents the ApiWorksheet class.
 | [GetPrintGridlines](./Methods/GetPrintGridlines.md) | boolean | Returns the page PrintGridlines property which specifies whether the current sheet gridlines must be printed or not. |
 | [GetPrintHeadings](./Methods/GetPrintHeadings.md) | boolean | Returns the page PrintHeadings property which specifies whether the current sheet row/column headings must be printed or not. |
 | [GetProtectedRange](./Methods/GetProtectedRange.md) | [ApiProtectedRange](../ApiProtectedRange/ApiProtectedRange.md) \| null | Returns a protected range object by its title. |
-| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns an object that represents the selected range of the current sheet. Can be a single cell - -**A1**, or cells from a single row - -**A1:E1**, or cells from a single column - -**A1:A10**, or cells from several rows and columns - -**A1:E10**. |
-| [GetRangeByNumber](./Methods/GetRangeByNumber.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range of the current sheet using the -**row/column** coordinates for the cell selection. |
+| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns an object that represents the selected range of the current sheet. Can be a single cell - **A1**, or cells from a single row - **A1:E1**, or cells from a single column - **A1:A10**, or cells from several rows and columns - **A1:E10**. |
+| [GetRangeByNumber](./Methods/GetRangeByNumber.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range of the current sheet using the **row/column** coordinates for the cell selection. |
 | [GetRightMargin](./Methods/GetRightMargin.md) | number | Returns the right margin of the sheet. |
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents all the cells on the rows range. |
 | [GetSelection](./Methods/GetSelection.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range. |

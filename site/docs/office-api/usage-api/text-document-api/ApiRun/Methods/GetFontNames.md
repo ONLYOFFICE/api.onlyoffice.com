@@ -23,6 +23,10 @@ string[]
 This example shows how to get all font names from all elements inside the run.
 
 ```javascript editor-docx
+// How to get all font names from the ApiRun object elements.
+
+// Get all font names from a text run as an array and display it in the worksheet.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

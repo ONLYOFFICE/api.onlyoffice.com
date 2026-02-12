@@ -8,13 +8,17 @@ Connects a Zotero account for adding references to the document in full accordan
 
 **Analogues:** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley), [EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib).
 
-![Zotero](/assets/images/plugins/gifs/zotero.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="y6RKGiBHiG8" />
+```
 
 ## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/zotero) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md) installation instruction.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/zotero) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) installation instruction.
 
 ## Connect ONLYOFFICE to Zotero account
 
@@ -60,12 +64,6 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 4. The *translations* folder contains translations into Russian, German, Spanish, Czech, Italian, Japanese, Dutch, Portuguese, Chinese, and French.
 
 5. *zotero.js* allows the user to get access to their Zotero account.
-
-6. Third-party services:
-
-   - [fetch-polyfill](https://github.com/github/fetch) - a project that implements a subset of the standard Fetch specification, enough to make fetch a viable replacement for most uses of XMLHttpRequest in traditional web applications. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/fetch-polyfill.license)
-   - [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) - lightweight ES6 Promise polyfill for the browser and node. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/promise-polyfill.license).
-   - [url-polyfill](https://github.com/lifaon74/url-polyfill) - Polyfill URL and URLSearchParams to match last WHATWG specifications. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/url-polyfill.license).
 
 ## Config
 
@@ -163,10 +161,10 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## Methods and events
 
-- button
-- init
-- onTranslate
-- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 
 ## Support
 

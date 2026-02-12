@@ -117,7 +117,7 @@ ng version
 
    Replace the following lines with your own data:
 
-   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
    - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
@@ -134,7 +134,7 @@ ng version
    ></document-editor>
    ```
 
-   Replace the `http://documentserver/` line with the URL of your server.
+   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ### Versions 17.0.0 and above
 
@@ -186,7 +186,7 @@ ng version
 
    Replace the following lines with your own data:
 
-   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
    - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
@@ -203,7 +203,7 @@ ng version
    ></document-editor>
    ```
 
-   Replace the `http://documentserver/` line with the URL of your server.
+   Replace the `http://documentserver/` line with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Test the application using the Node.js development server:
 
@@ -309,40 +309,40 @@ To deploy the application to a production environment, create the build-specific
 
    You can add additional configurations. For example, to add a *staging* environment, copy the *src/environments/environment.ts* file with the *src/environments/environment.staging.ts* title, then add a *staging* configuration to *angular.json*:
 
-  ``` json
-  {
-    "configurations": {
-      "production": {},
-      "staging": {
-        "fileReplacements": [
-          {
-            "replace": "src/environments/environment.ts",
-            "with": "src/environments/environment.staging.ts"
-          }
-        ]
-      }
-    }
-  }
-  ```
-
-4. Configure the *serve* command to use the targeted build configuration by adding it to the *serve.configurations* section of *angular.json*:
-
-  ``` json
-  {
-    "serve": {
-      "builder": "@angular-devkit/build-angular:dev-server",
+    ``` json
+    {
       "configurations": {
-        "production": {
-          "browserTarget": "document-editor-angular-workspace:build:production"
-        },
-        "development": {
-          "browserTarget": "document-editor-angular-workspace:build:development"
+        "production": {},
+        "staging": {
+          "fileReplacements": [
+            {
+              "replace": "src/environments/environment.ts",
+              "with": "src/environments/environment.staging.ts"
+            }
+          ]
         }
       }
     }
-  }
-   
-  ```
+    ```
+
+4. Configure the *serve* command to use the targeted build configuration by adding it to the *serve.configurations* section of *angular.json*:
+
+    ``` json
+    {
+      "serve": {
+        "builder": "@angular-devkit/build-angular:dev-server",
+        "configurations": {
+          "production": {
+            "browserTarget": "document-editor-angular-workspace:build:production"
+          },
+          "development": {
+            "browserTarget": "document-editor-angular-workspace:build:development"
+          }
+        }
+      }
+    }
+    
+    ```
 
 Now you can deploy the application to the created server:
 

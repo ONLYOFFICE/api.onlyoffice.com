@@ -14,10 +14,10 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | String |  | The comment reply text (required). |
-| sAuthorName | Required | String |  | The name of the comment reply author (optional). |
-| sUserId | Required | String |  | The user ID of the comment reply author (optional). |
-| nPos | Optional | Number | this.GetRepliesCount() | The comment reply position. |
+| sText | Required | String |  | The comment reply text. |
+| sAuthorName | Optional | String |  | The name of the comment reply author. |
+| sUserId | Optional | String |  | The user ID of the comment reply author. |
+| nPos | Optional | Number | -1 | The comment reply position. If nPos=-1 add to the end. |
 
 ## Returns
 
@@ -28,6 +28,10 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 This example adds a comment and makes a reply for it.
 
 ```javascript editor-docx
+// How to reply to the comment.
+
+// Create a comment from a paragraph and add a reply to its first one.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

@@ -18,7 +18,7 @@ The steps below explain the process of connecting several editors to the same ht
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 3. Add the *div* element as shown below. In order to connect several editors to the same *html* page, each of them can be initialized separately:
 
@@ -43,7 +43,7 @@ The steps below explain the process of connecting several editors to the same ht
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
    };
-   const documentEditor docEditor = new DocsAPI.DocEditor("placeholder1", config);
+   const documentEditor = new DocsAPI.DocEditor("placeholder1", config);
 
    const config = {
      document: {
@@ -55,7 +55,7 @@ The steps below explain the process of connecting several editors to the same ht
      documentType: "cell",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6Inhsc3giLCJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ0aXRsZSI6IkV4YW1wbGUgU3ByZWFkc2hlZXQgVGl0bGUueGxzeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtc3ByZWFkc2hlZXQueGxzeCJ9LCJkb2N1bWVudFR5cGUiOiJjZWxsIn0.8CklPIjYSEkgM7swGAC7-85ICcq_42be3WTWNOuvhlg",
    };
-   const spreadsheetEditor docEditor = new DocsAPI.DocEditor("placeholder2", config);
+   const spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", config);
 
    const config = {
      document: {
@@ -67,7 +67,7 @@ The steps below explain the process of connecting several editors to the same ht
      documentType: "slide",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6InBwdHgiLCJrZXkiOiJidjQ4TTVyNjRTZjkiLCJ0aXRsZSI6IkV4YW1wbGUgUHJlc2VudGF0aW9uIFRpdGxlLnBwdHgiLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXByZXNlbnRhdGlvbi5wcHR4In0sImRvY3VtZW50VHlwZSI6InNsaWRlIn0.FKaDWfJE-OuODhtpq-8Qv6BdDy_evgdpaBw616T7zOs",
    };
-   const presentationEditor docEditor = new DocsAPI.DocEditor("placeholder3", config);
+   const presentationEditor = new DocsAPI.DocEditor("placeholder3", config);
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed.

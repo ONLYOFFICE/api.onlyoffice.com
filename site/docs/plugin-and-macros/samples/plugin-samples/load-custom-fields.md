@@ -12,7 +12,7 @@ Loads custom fields from the document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
@@ -100,11 +100,11 @@ Repository on GitHub: [example_customfields_load](https://github.com/ONLYOFFICE/
 
 ## Methods and events
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("GetAllContentControls")
-- executeMethod ("InsertAndReplaceContentControls")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## Support
 

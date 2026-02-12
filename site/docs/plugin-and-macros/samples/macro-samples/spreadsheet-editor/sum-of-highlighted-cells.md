@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Sum of highlighted cells
 
 Sums the answer of all highlighted cells in a spreadsheet.
@@ -37,7 +41,7 @@ Sums the answer of all highlighted cells in a spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetFillColor.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetRGB](../../../../office-api/usage-api/spreadsheet-api/ApiColor/Methods/GetRGB.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFillColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetFillColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetFillColor.md), [ForEach](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetRGB](/docs/office-api/usage-api/spreadsheet-api/ApiColor/Methods/GetRGB.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md)
 
 ## Reference Microsoft VBA macro code
 

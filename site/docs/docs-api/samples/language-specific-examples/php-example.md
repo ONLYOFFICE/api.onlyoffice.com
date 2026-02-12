@@ -1,14 +1,16 @@
 ---
-sidebar_position: -7
+sidebar_position: -5
 ---
 
 # PHP example
 
 ## Overview
 
-This example will help you integrate ONLYOFFICE Docs into your web application written on PHP.
+This example will help you integrate ONLYOFFICE Docs into your web application written in PHP.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::caution
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
+:::
 
 ## Important security info
 
@@ -27,21 +29,21 @@ The PHP example offers various installation options, but we highly recommend usi
 
 To run the example using [Docker](https://www.docker.com/), you will need [Docker Desktop 4.17.0](https://docs.docker.com/desktop/) or [Docker Engine 20.10.23](https://docs.docker.com/engine/) with [Docker Compose 2.15.1](https://docs.docker.com/compose/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it:
+Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php):
 
 ``` sh
 curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
 unzip PHP.Example.zip
 ```
 
-Then open the example directory and [up containers](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L60):
+Then open the example directory and [start containers](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L60):
 
 ``` sh
 cd "PHP Example"
 make compose-prod
 ```
 
-By default, the server starts at *localhost:80*.
+By default, the server starts at `localhost:80`.
 
 To configure the example, you can edit the environment variables in [docker-compose.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/docker-compose.yml). See [below](#step-3-configure-the-php-example) for more information about environment variables.
 
@@ -55,7 +57,7 @@ Check the detailed guide to learn how to install it on [Windows](https://helpcen
 
 To run the example on your local machine, you will need [PHP 8.2.11](https://www.php.net/) with [Composer 2.6.5](https://getcomposer.org/). Additionally, you might want to consider installing [GNU Make 4.4.1](https://www.gnu.org/software/make/), although it is optional. These are the minimum versions required for the tools.
 
-Once you have everything installed, download the release archive and unarchive it:
+Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php):
 
 ``` sh
 curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
@@ -70,25 +72,25 @@ make prod
 make server-prod
 ```
 
-By default, the server starts at *0.0.0.0:9000*.
+By default, the server starts at `0.0.0.0:9000`.
 
 To configure the example, you can pass the environment variables before the command that starts the server. See [below](#step-3-configure-the-php-example) for more information about environment variables.
 
 ## Step 2. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
 
 ## Step 3. Configure the PHP example
 
 The example is configured by changing environment variables.
 
-| Parameter                      | Example                 | Description                                                             |
+| Name                           | Example                 | Description                                                             |
 | ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| ADDRESS                        | 0.0.0.0                 | The address where the server should be started.                         |
-| PORT                           | 80                      | The port on which the server should be running.                         |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
-| EXAMPLE\_URL                   | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
-| JWT\_SECRET                    | your-256-bit-secret     | JWT authorization secret. Leave blank to disable authorization.         |
+| `ADDRESS`                      | `0.0.0.0`               | The address where the server should be started.                         |
+| `PORT`                         | `80`                    | The port on which the server should be running.                         |
+| `DOCUMENT_SERVER_PRIVATE_URL`  | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
+| `DOCUMENT_SERVER_PUBLIC_URL`   | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
+| `EXAMPLE_URL`                  | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
+| `JWT_SECRET`                   | `your-256-bit-secret`   | JWT authorization secret. Leave blank to disable authorization.         |

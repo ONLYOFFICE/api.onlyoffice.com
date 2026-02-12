@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Adding plugins
 
-**ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory) or create your own ones using our [Plugins and macros API documentation](../../plugin-and-macros/get-started/getting-started.md).
+**ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en) or create your own ones using our [Plugins and macros API documentation](../../plugin-and-macros/structure/getting-started.md).
 
 There are two ways to add plugins: through the plugin manager and through the plugin folder.
 
@@ -29,7 +29,7 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 
 If you want to add your own plugin, you can do it manually, even if you are offline:
 
-1. Pack all the [plugin files](../../plugin-and-macros/structure/manifest/manifest.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
+1. Pack all the [plugin files](../../plugin-and-macros/structure/configuration/configuration.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
 
    > If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
 

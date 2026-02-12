@@ -5,7 +5,7 @@ This example demonstrates how to retrieve both files and folders from a DocSpace
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -19,7 +19,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
     <title>Get List</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -86,7 +86,7 @@ Create an HTML page with an embedded DocSpace iframe and a button to trigger lis
     <title>Get List</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -117,12 +117,12 @@ Create an HTML page with an embedded DocSpace iframe and a button to trigger lis
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getList()](../../usage-sdk/methods.md#getlist) method to fetch files and folders from the room and output them to the console.
+Use the [getList()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getlist) method to fetch files and folders from the room and output them to the console.
 
 ``` ts
 const roomId = "71234"; // Replace with your actual public room ID

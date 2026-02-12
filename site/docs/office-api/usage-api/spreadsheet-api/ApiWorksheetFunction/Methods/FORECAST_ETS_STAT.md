@@ -27,11 +27,15 @@ number
 
 ## Example
 
-
+This example shows how to return the requested statistic for the forecast.
 
 ```javascript editor-xlsx
+// How to return the requested forecast statistic.
+
+// Use function to return the forecast.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let dates = ["10/1/2017", "11/1/2017", "12/1/2017", "1/1/2018", "2/1/2018"];
 let numbers = [12558, 14356, 16345, 18678, 14227];
 

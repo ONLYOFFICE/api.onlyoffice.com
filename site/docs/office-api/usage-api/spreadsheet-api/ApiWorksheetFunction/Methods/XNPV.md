@@ -24,11 +24,15 @@ number
 
 ## Example
 
-
+This example shows how to return the net present value for a schedule of cash flows.
 
 ```javascript editor-xlsx
+// How to return the net present value for a schedule of cash flows.
+
+// Use a function to return the net present value.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Rate");
 worksheet.GetRange("A2").SetValue(0.05);
 

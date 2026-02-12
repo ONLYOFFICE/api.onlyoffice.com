@@ -5,7 +5,7 @@ This example demonstrates how to open a document in the ONLYOFFICE DocSpace edit
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -19,7 +19,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
     <title>Init Editor</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
   </head>
 
   <body>
@@ -66,7 +66,7 @@ Create a basic HTML page with an iframe where the ONLYOFFICE document editor wil
     <title>Init Editor</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
   </head>
 
   <body>
@@ -77,12 +77,12 @@ Create a basic HTML page with an iframe where the ONLYOFFICE document editor wil
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Use the [initEditor()](../../usage-sdk/methods.md#initeditor) method to embed the ONLYOFFICE document editor for a specified file ID.
+Use the [initEditor()](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) method to embed the ONLYOFFICE document editor for a specified file ID.
 
 ``` ts
 function onAppReady() {

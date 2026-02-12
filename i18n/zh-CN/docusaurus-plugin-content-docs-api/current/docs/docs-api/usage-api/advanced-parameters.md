@@ -17,7 +17,7 @@ ONLYOFFICE 文档可以更改的参数可以细分为以下主要部分：
 
   - [**customization**](./config/editor/customization/customization-standard-branding.md) - 允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改附加按钮、链接、更改徽标和编辑器所有者详细信息的显示或不显示；
   - [**embedded**](./config/editor/embedded.md) - 仅用于嵌入式文档类型，并允许更改用于控制嵌入式模式的按钮的行为；
-  - [**plugins**](./config/editor/plugins.md)- 用于将必要的 [plugins](../../plugin-and-macros/get-started/overview.md) 连接到您的文档，以便它们对所有文档编辑器用户可见；
+  - [**plugins**](./config/editor/plugins.md)- 用于将必要的 [plugins](../../plugin-and-macros/get-started/get-started.md) 连接到您的文档，以便它们对所有文档编辑器用户可见；
 
 - [**events**](./config/events.md) - 是在对文档进行某些操作时调用的特殊事件列表，这些操作包括加载、修改等。
 
@@ -27,6 +27,7 @@ ONLYOFFICE 文档可以更改的参数可以细分为以下主要部分：
 const config = {
   document: {
     fileType: "docx",
+    isForm: true,
     info: {
       favorite: true,
       folder: "Example Files",
@@ -109,6 +110,7 @@ const config = {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,
@@ -132,6 +134,7 @@ const config = {
         size: "11px",
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -146,6 +149,7 @@ const config = {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
@@ -209,11 +213,14 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
         resultMessage: "text",
       },
+      suggestFeature: true,
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",
@@ -319,7 +326,7 @@ const config = {
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
   type: "desktop",
   width: "100%",
-}
+};
 ```
 
 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关文档服务器服务客户机-服务器交互的更多信息，有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。

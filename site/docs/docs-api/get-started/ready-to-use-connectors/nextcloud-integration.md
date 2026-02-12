@@ -17,7 +17,7 @@ The latest connector signed versions are available in the official store for [Ne
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.
+- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
 - The following format is available for viewing only: PDF.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
@@ -54,9 +54,9 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
 3. Change the owner to update the application right from Nextcloud web interface:
 
-  ``` sh
-  chown -R www-data:www-data onlyoffice
-  ```
+    ``` sh
+    chown -R www-data:www-data onlyoffice
+    ```
 
 4. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
@@ -68,7 +68,7 @@ In Nextcloud, open the *\~/settings/admin/onlyoffice* page with administrative s
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ![Local](/assets/images/editor/nextcloud-local.jpg)
 
@@ -144,7 +144,9 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs.
 
-  > Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  :::note
+  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  :::
 
 - **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
 

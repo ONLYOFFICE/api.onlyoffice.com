@@ -19,7 +19,7 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 | sDataRange | Required | string |  | The selected cell range which will be used to get the data for the chart, formed specifically and including the sheet name. |
 | bInRows | Required | boolean |  | Specifies whether to take the data from the rows or from the columns. If true, the data from the rows will be used. |
 | sType | Required | [ChartType](../../Enumeration/ChartType.md) |  | The chart type used for the chart display. |
-| nStyleIndex | Required | number |  | The chart color style index (can be -**1 - 48**, as described in OOXML specification). |
+| nStyleIndex | Required | number |  | The chart color style index (can be **1 - 48**, as described in OOXML specification). |
 | nExtX | Required | [EMU](../../Enumeration/EMU.md) |  | The chart width in English measure units |
 | nExtY | Required | [EMU](../../Enumeration/EMU.md) |  | The chart height in English measure units. |
 | nFromCol | Required | number |  | The number of the column where the beginning of the chart will be placed. |
@@ -29,13 +29,17 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 ## Returns
 
-[ApiChart](../../ApiChart/ApiChart.md)
+[ApiChart](../../ApiChart/ApiChart.md) \| null
 
 ## Example
 
 This example creates a chart of the specified type from the selected data range of the sheet.
 
 ```javascript editor-xlsx
+// How to add chart to the worksheet.
+
+// Create a chart using data from a range from a worksheet.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

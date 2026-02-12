@@ -24,11 +24,15 @@ number \| string \| boolean
 
 ## Example
 
-
+This example shows how to look up a value either from a one-row or one-column range. Provided for backwards compatibility.
 
 ```javascript editor-xlsx
+// How to look up a value from a one-row or one-column range.
+
+// Use a function to find a value from a row or a column range.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ids = ["ID", 1, 2, 3, 4, 5];
 let clients = ["Client", "John Smith", "Ella Tompson", "Mary Shinoda", "Lily-Ann Bates", "Clara Ray"];
 let phones = ["Phone number", "12054097166", "13343943678", "12568542099", "12057032298", "12052914781"];

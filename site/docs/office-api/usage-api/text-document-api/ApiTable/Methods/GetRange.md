@@ -26,6 +26,10 @@ expression.GetRange(Start, End);
 This example shows how to get a Range object that represents the part of the document contained in the specified table.
 
 ```javascript editor-docx
+// How to get a range object using an address.
+
+// Update a rabge knowing its cell address.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

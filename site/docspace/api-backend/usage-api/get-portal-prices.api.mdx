@@ -1,0 +1,63 @@
+---
+id: get-portal-prices
+title: "Get prices"
+description: "Returns the available portal prices."
+sidebar_label: "Get prices"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVk1v2zgQ/SvEXHJRLa+72INO6027RboFGjQxcgiMhpZGFmuZ5JKjpF5B/30xpGRbdor4YkucNx+aeTPDFkiuPWSPcGscyVqk4lbutqgJlgkYi06SMvqmgAzWSBF061SOHhJw6K3RHj1kLcymU/4r0OdOWdaCDL4oT8KUQj5LVctVjcJGP3awkRtN7C5rQVpbqzw4TH941m/B5xVuJT/RziJkYFY/MCdIwDoOj1T0PoRyjuzYRxM99BKlCdfoIIHSuK2kePR+xtha6Y0/wkrn5A4SUIRb/3YclcPyCOXJKb1muzKPKTkTdV2XgCdJjb8wxAi+NgVepNAlQIpqBi30RpsX/eCkteh6379Pfzsv3ELLhirj1H9YBBMe88Yp2kH22IL0+XeWf98gH4BDWUACL04RwrJLWvgLpUMH2WN4m1v1D+72Z6/hpVf5AP86b6iavQ78ajHQ8XHZLZOToL8hNU57QRX+inETSGCLVJme0VxASRVkkEqr0tlkmkZ8amMfpHumenTP6HxIQONqyKBdSY8LV3dwGsldwIrc6FKtm9hEkMCzdIpjCpXulWPuS9nUXLMzSx+iSCy+feF6LQ+VuOPWiKbG9ThwN6T9zOTCo7g2ZqNQsBJq6rsOEtByGzSPDSagWC0PKkzAvlh7PxWRPfPyURM6sTONE41Hx4aF1IWw0vsX47isobnZwCoYZMs9RS4xfRXBov38cC/uzQZ1dzUyGm0l/cPfQ1t8frhnV2NOvpWz+ShRQnlRIKHbKo2FWO0C5a7mfcsEzJWoUBYhgD6pI499UntMl+xJf5gwMhycRhJxoqzNi3hRVImRVxHGQgIsjtQ4lg4zY3QYOBgS7bM0DV4nRtc7U5Yqx0lutvFwlu5HAiRAnPDLVQM8VMfYYWLLIvSsLITMc/RekBHWGcKcsBAOvWlcbL3Y/xk88P8b6DjUhjFxyGY4uDZax7F9klSWfhC9+LwtRtqXfzUTX+nScH1/vvNqrSU1Dt+mG1N6D+f+KURp3ElcE3FfoQiZFdvGk1ihMCuSgZPPSgZSPg1jbRgbo4o8CdSFNUrTRNwQ05rbEwshvZAidnxkGdsKPfx09CFPkwO7j7/vZGJ0/F6a8Nn9Jppb1S9/mYfVPPTI7Y24ayzPYEj6MTtkusLaFug3p8mu8hT1u4aJglupWMVHE3+OkVwGHuExx+8nf0ymfGSNp63UR1F8QjrcUEaVaQ8XlkvXTV9pwp+U2loqzT6bOPjj7nlkGkACs8mU91EwEBZTvInxHSPEskygMp5Yod3vno6P/23Q8SZeHnZMXKbDgOGlFZYDzPMcLYVlVDeRgifXLl4y+x356eM9JGFgjFkbF0P/wNYHkd4d2x7vkRgB//Iqf1WjbWNLdN0eH0W/1NiP2Yjm/C67rvsfzn2+bQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get prices"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/prices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the available portal prices.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of available portal prices","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"UnknownWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

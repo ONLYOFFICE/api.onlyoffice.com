@@ -22,10 +22,14 @@ number
 
 ## Example
 
-
+This example shows how to return the square root of a number.
 
 ```javascript editor-xlsx
+// How to calculate the square root of a number.
+
+// Use a function to get the square root of a number.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SQRT(100));
 ```

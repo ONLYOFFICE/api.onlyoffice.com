@@ -8,7 +8,7 @@ For the interaction with the **document conversion service** the POST requests a
 
 > Please note that prior to version 5.5, the `https://documentserver/ConvertService.ashx` address was used to send requests.
 
-Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
 
 > In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the *QueryString* were used.
 
@@ -170,7 +170,7 @@ Presence: optional
 
 #### pdf.form
 
-Defines whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document. If has not, the converted document will not contain them either. For example, you don't need to specify this parameter when converting *oform* format to *pdf*. It will always be converted to *pdf* forms.
+Defines whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document. If has not, the converted document will not contain them either.
 
 Type: boolean
 
@@ -386,7 +386,7 @@ Presence: required
 
 ### watermark
 
-Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion.
+Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion.
 
 Type: object
 
@@ -591,7 +591,7 @@ Presence: optional
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Sample of JSON object sent to **document conversion service** used to convert the password-protected file from *docx* format to *pdf* format
 
@@ -607,7 +607,7 @@ Where **example.com** is the name of the server where **document manager** and *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Sample of JSON object sent to **document conversion service** used to convert the file from *docx* format to *pdf* form
 
@@ -625,7 +625,7 @@ Where **example.com** is the name of the server where **document manager** and *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Sample of JSON object sent to **document conversion service** used to convert the file from *docx* format to *pdf* format with a watermark inserted
 
@@ -674,7 +674,7 @@ Where **example.com** is the name of the server where **document manager** and *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Sample of JSON object sent to **document conversion service** used to generate *png* thumbnail of file in *docx* format
 
@@ -694,7 +694,7 @@ Where **example.com** is the name of the server where **document manager** and *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Sample of JSON object sent to **document conversion service** used to convert the *spreadsheet* file to *pdf* format
 
@@ -728,7 +728,7 @@ Where **example.com** is the name of the server where **document manager** and *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Sample of JSON object contains the JSON Web Token sent to **document conversion service** used to convert the file from *docx* format to *pdf* format
 
@@ -738,4 +738,4 @@ Where **example.com** is the name of the server where **document manager** and *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

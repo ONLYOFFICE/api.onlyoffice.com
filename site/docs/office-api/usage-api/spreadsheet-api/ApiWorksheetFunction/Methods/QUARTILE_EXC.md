@@ -23,9 +23,13 @@ number
 
 ## Example
 
-
+This example shows how to return the quartile of a data set, based on percentile values from 0..1, exclusive.
 
 ```javascript editor-xlsx
+// How to get the exclusive quartile of a data set.
+
+// Use a function to calculate an exclusive fourth part of a data set.
+
 const worksheet = Api.GetActiveSheet();
 
 let valueArr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -39,9 +43,8 @@ for (let i = 0; i < valueArr1.length; i++) {
 //method params
 let array = worksheet.GetRange("A1:A12");
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.QUARTILE_EXC(array, quart); //0...1 exclusive
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

@@ -25,6 +25,10 @@ boolean
 This example pushes 5 paragraphs to actually add its to the document content.
 
 ```javascript editor-xlsx
+// How to insert paragraphs into a document.
+
+// Add text to a newly created paragraph and add this paragraph into document.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

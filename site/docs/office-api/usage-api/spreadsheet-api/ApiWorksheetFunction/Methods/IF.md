@@ -14,9 +14,9 @@ expression.IF(arg1, arg2, arg3);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | Any value or expression that can be evaluated to -**true** or -**false**. |
-| arg2 | Required | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | The value that is returned if the condition is -**true**. If omitted, -**true** is returned. You can nest up to seven IF functions. |
-| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The value that is returned if the condition is -**false**. If omitted, -**false** is returned. |
+| arg1 | Required | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | Any value or expression that can be evaluated to **true** or **false**. |
+| arg2 | Required | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | The value that is returned if the condition is **true**. If omitted, **true** is returned. You can nest up to seven IF functions. |
+| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The value that is returned if the condition is **false**. If omitted, **false** is returned. |
 
 ## Returns
 
@@ -24,10 +24,14 @@ number \| string \| boolean
 
 ## Example
 
-
+This example shows how to check whether a condition is met, and returns one value if true, and another value if false.
 
 ```javascript editor-xlsx
+// How to check a condition.
+
+// Use a function to use IF condition checker.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IF("12<100", 0, 1));
 ```

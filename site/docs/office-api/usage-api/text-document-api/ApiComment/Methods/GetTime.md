@@ -23,6 +23,10 @@ Number
 This example shows how to get the timestamp of the comment creation in the current time zone format.
 
 ```javascript editor-docx
+// How to know when a comment was added.
+
+// Get all comments from the presentation and the first one's time of creation.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

@@ -5,7 +5,7 @@ This example demonstrates how to change the file list display mode in DocSpace u
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -19,7 +19,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
     <title>Set List View</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -85,7 +85,7 @@ Create an HTML page with a button and an embedded DocSpace frame.
     <title>Set List View</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -115,12 +115,12 @@ Create an HTML page with a button and an embedded DocSpace frame.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Use the [setListView()](../../usage-sdk/methods.md#setlistview) method to toggle the document list layout. The parameter `1` sets the list view mode.
+Use the [setListView()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#setlistview) method to toggle the document list layout. The parameter `1` sets the list view mode.
 
 ``` ts
 function onAppReady() {

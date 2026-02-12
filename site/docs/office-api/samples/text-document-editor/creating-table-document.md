@@ -1,10 +1,14 @@
+---
+hide_table_of_contents: true
+---
+
 # Creating table document
 
 Create a document with a styled table filled with array-based values:
 
-- create an empty document with a table ([Api](../../usage-api/text-document-api/Api/Api.md), [Api/CreateTable](../../usage-api/text-document-api/Api/Methods/CreateTable.md))
-- create a custom style for the table ([ApiDocument/GetStyle](../../usage-api/text-document-api/ApiDocument/Methods/GetStyle.md), [ApiStyle](../../usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiTableCellPr](../../usage-api/text-document-api/ApiTableCellPr/ApiTableCellPr.md), [ApiTableRow](../../usage-api/text-document-api/ApiTableRow/ApiTableRow.md));
-- populate the table with the array-based data cell by cell ([ApiTableCell](../../usage-api/text-document-api/ApiTableCell/ApiTableCell.md)).
+- create an empty document with a table ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
+- create a custom style for the table ([ApiDocument/GetStyle](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetStyle.md), [ApiStyle](/docs/office-api/usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiTableCellPr](/docs/office-api/usage-api/text-document-api/ApiTableCellPr/ApiTableCellPr.md), [ApiTableRow](/docs/office-api/usage-api/text-document-api/ApiTableRow/ApiTableRow.md));
+- populate the table with the array-based data cell by cell ([ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();
@@ -65,5 +69,5 @@ function setTextColor(paragraph, value) {
   }
 }
 
-doc.Push(table);
+doc.AddElement(0, table);
 ```

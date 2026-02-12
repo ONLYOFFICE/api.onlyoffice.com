@@ -22,11 +22,15 @@ To install it on your local server:
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`).
+   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 
-   Starting from version 8.1, it is recommended to add the [shardkey](../how-it-works/how-it-works.md#shard-key) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+   :::info
+   Starting from version 8.1, it is recommended to add the [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+
+   Starting from version 9.0, you can [preload](/docs/docs-api/get-started/configuration/preload.md) static assets (HTML, CSS, JS, fonts) into the browser cache before opening a document to speed up the first-time loading of the document editor.
+   :::
 
 3. Specify the page code containing the changeable parameters:
 
@@ -47,15 +51,15 @@ To install it on your local server:
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](/docs/docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-   From now the *docEditor* object can be used to call the **document editor** [Methods](../../usage-api/methods.md).
+   From now the *docEditor* object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
 
    The example above includes all the parameters necessary for ONLYOFFICE Docs correct startup.
 
-4. Specify the additional non-obligatory parameters that can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.). See the [Advanced parameters](../../usage-api/advanced-parameters.md) section to find out what these parameters are and how you can change them.
+4. Specify the additional non-obligatory parameters that can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.). See the [Advanced parameters](/docs/docs-api/usage-api/advanced-parameters.md) section to find out what these parameters are and how you can change them.
 
-5. Add an encrypted signature to the requests in the form of [token](../../additional-api/signature/signature.md) to prevent the substitution of important parameters. 
+5. Add an encrypted signature to the requests in the form of [token](/docs/docs-api/additional-api/signature/signature.md) to prevent the substitution of important parameters. 
 
 ## Before you start
 
@@ -77,7 +81,7 @@ If something went wrong, make sure that you have followed the installation instr
 
 ## Next steps
 
-- [How to enable document forcesaving](../how-it-works/saving-file.md#force-saving)
-- [How to customize the editor](../../usage-api/config/editor/customization/customization-standard-branding.md)
-- [How to manage the editor through Automation API](../../usage-api/automation-api.md)
-- [How to install / disable plugins](../../usage-api/config/editor/plugins.md)
+- [How to enable document forcesaving](/docs/docs-api/get-started/how-it-works/saving-file.md#force-saving)
+- [How to customize the editor](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md)
+- [How to manage the editor through Automation API](/docs/docs-api/usage-api/automation-api.md)
+- [How to install / disable plugins](/docs/docs-api/usage-api/config/editor/plugins.md)

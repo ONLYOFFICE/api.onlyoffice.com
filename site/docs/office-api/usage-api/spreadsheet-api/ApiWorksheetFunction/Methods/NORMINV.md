@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the inverse of the normal cumulative distribution for the specified mean and standard deviation.
 
 ```javascript editor-xlsx
+// How to calculate the inverse of the normal cumulative distribution.
+
+// Use a function to get the inverse of the normal cumulative distribution.
+
 const worksheet = Api.GetActiveSheet();
 let valueArr = [0.34, 7, 3];
 
@@ -39,8 +43,7 @@ for (let i = 0; i < valueArr.length; i++) {
 let probability = worksheet.GetRange("A1").GetValue();
 let mean = worksheet.GetRange("A2").GetValue();
 let standardDeviation = worksheet.GetRange("A3").GetValue();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let inv = func.NORMINV(probability, mean, standardDeviation);
 worksheet.GetRange("C1").SetValue(inv);
-
 ```

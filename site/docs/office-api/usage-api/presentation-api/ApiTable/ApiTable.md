@@ -8,12 +8,13 @@ Represents the ApiTable class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddColumn](./Methods/AddColumn.md) | None | Adds a new column to the end of the current table. |
-| [AddElement](./Methods/AddElement.md) | None | Adds a paragraph or a table or a blockLvl content control using its position in the cell. |
+| [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the cell. |
 | [AddRow](./Methods/AddRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | Adds a new row to the current table. |
 | [Copy](./Methods/Copy.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a copy of the current table. |
 | [GetClassType](./Methods/GetClassType.md) | "table" | Returns the type of the ApiTable object. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current table. |
 | [GetRow](./Methods/GetRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | Returns a row by its index. |
-| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null". -**Warning**: The number of cells in any row and the number of rows in the current table may be changed. |
+| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null". **Warning**: The number of cells in any row and the number of rows in the current table may be changed. |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | Removes a table column with the specified cell. |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | Removes a table row with the specified cell. |
 | [SetShd](./Methods/SetShd.md) | None | Specifies the shading which shall be applied to the extents of the current table. |

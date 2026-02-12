@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example converts the current form to an inline form.
 
 ```javascript editor-docx
+// How to find out whether a text is bold or not.
+
+// Get the bold property of the text.
+
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

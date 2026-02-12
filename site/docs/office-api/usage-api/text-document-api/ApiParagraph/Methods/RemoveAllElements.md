@@ -18,13 +18,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes all the elements from the current paragraph.
 
 ```javascript editor-docx
+// How to delete the paragraph.
+
+// Delete all ellements from the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

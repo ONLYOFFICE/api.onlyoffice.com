@@ -1,6 +1,6 @@
 # GetId
 
-Gets a unique ID for the current content control.
+Returns a unique ID for the current content control.
 
 ## Syntax
 

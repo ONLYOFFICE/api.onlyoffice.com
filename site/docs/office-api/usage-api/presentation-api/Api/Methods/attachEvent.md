@@ -26,7 +26,12 @@ This method doesn't return any data.
 This example shows how to subscribe on hyperlink click event.
 
 ```javascript editor-pptx
+// How to trigger an event on hyperlink click.
+
+// Subscribe to the hyperlink click event.
+
 Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");
 });
+
 ```

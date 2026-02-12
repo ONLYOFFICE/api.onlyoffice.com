@@ -10,7 +10,7 @@ Some plugins are installed by default. Switch to the **Plugins** tab to see the 
 
 ## How to adjust my plugin to the ONLYOFFICE style?
 
-ONLYOFFICE offers its own style sheet in the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) file connected to the *index.html* file. Detailed instructions on connecting ONLYOFFICE styles to the editors can be found [here](../structure/styles.md).
+ONLYOFFICE offers its own style sheet in the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) file connected to the *index.html* file. Detailed instructions on connecting ONLYOFFICE styles to the editors can be found [here](../customization/styles.md).
 
 ## How to localize a plugin?
 
@@ -24,11 +24,11 @@ Further information about the localization can be found [at this page](../struct
 
 ## How can I create an About window for my plugin?
 
-Use the [plugin variations](../structure/manifest/variations.md) or *subplugins* to create an **About** window for your plugin or add extra plugin settings. Have a look at the plugin example with two variations [here](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld). In addition to two variations in the config, you also need to create an additional *index\_about.html* file.
+Use the [plugin variations](../structure/configuration/variations.md) or *subplugins* to create an **About** window for your plugin or add extra plugin settings. Have a look at the plugin example with two variations [here](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld). In addition to two variations in the config, you also need to create an additional *index\_about.html* file.
 
 ## Where to find the existing plugins available for integration?
 
-All ready-to-use plugins are available in the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory).
+All ready-to-use plugins are available in the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en).
 
 More plugin samples are listed [on GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins). Feel free to fork them and use them as examples to create your own plugin.
 
@@ -50,4 +50,4 @@ Macros use JavaScript language syntax and [Office JavaScript API](../../office-a
 
 ## Can I make a macro global?
 
-Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../structure/manifest/manifest.md) that will be loaded for all the users.
+Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../structure/configuration/configuration.md) that will be loaded for all the users.

@@ -17,17 +17,17 @@ Represents the ApiWorksheetFunction class.
 | [AGGREGATE](./Methods/AGGREGATE.md) | number | Returns an aggregate in a list or database. |
 | [AMORDEGRC](./Methods/AMORDEGRC.md) | number | Returns the prorated linear depreciation of an asset for each accounting period. |
 | [AMORLINC](./Methods/AMORLINC.md) | number | Returns the prorated linear depreciation of an asset for each accounting period. |
-| [AND](./Methods/AND.md) | boolean | Checks whether all conditions in a test are -**true**. |
+| [AND](./Methods/AND.md) | boolean | Checks whether all conditions in a test are **true**. |
 | [ARABIC](./Methods/ARABIC.md) | number | Converts a Roman numeral to Arabic. |
 | [ASC](./Methods/ASC.md) | string | For double-byte character set (DBCS) languages, the function changes full-width (double-byte) characters to half-width (single-byte) characters. |
-| [ASIN](./Methods/ASIN.md) | number | Returns the arcsine of a number in radians, in the range from &lt;em&gt;-Pi/2&lt;/em&gt; to &lt;em&gt;Pi/2&lt;/em&gt;. |
+| [ASIN](./Methods/ASIN.md) | number | Returns the arcsine of a number in radians, in the range from *-Pi/2* to *Pi/2*. |
 | [ASINH](./Methods/ASINH.md) | number | Returns the inverse hyperbolic sine of a number. |
-| [ATAN](./Methods/ATAN.md) | number | Returns the arctangent of a number in radians, in the range from &lt;em&gt;-Pi/2&lt;/em&gt; to &lt;em&gt;Pi/2&lt;/em&gt;. |
+| [ATAN](./Methods/ATAN.md) | number | Returns the arctangent of a number in radians, in the range from *-Pi/2* to *Pi/2*. |
 | [ATAN2](./Methods/ATAN2.md) | number | Returns the arctangent of the specified x and y coordinates, in radians between -Pi and Pi, excluding -Pi. |
 | [ATANH](./Methods/ATANH.md) | number | Returns the inverse hyperbolic tangent of a number. |
 | [AVEDEV](./Methods/AVEDEV.md) | number | Returns the average of the absolute deviations of data points from their mean. |
 | [AVERAGE](./Methods/AVERAGE.md) | number | Returns the average (arithmetic mean) of the specified arguments. |
-| [AVERAGEA](./Methods/AVERAGEA.md) | number | Returns the average (arithmetic mean) of the specified arguments, evaluating text and -**false** in arguments as 0; -**true** evaluates as 1. |
+| [AVERAGEA](./Methods/AVERAGEA.md) | number | Returns the average (arithmetic mean) of the specified arguments, evaluating text and **false** in arguments as 0; **true** evaluates as 1. |
 | [AVERAGEIF](./Methods/AVERAGEIF.md) | number | Finds the average (arithmetic mean) for the cells specified by a given condition or criteria. |
 | [AVERAGEIFS](./Methods/AVERAGEIFS.md) | number | Finds the average (arithmetic mean) for the cells specified by a given set of conditions or criteria. |
 | [BASE](./Methods/BASE.md) | number | Converts a number into a text representation with the given radix (base). |
@@ -135,13 +135,13 @@ Represents the ApiWorksheetFunction class.
 | [ERF_PRECISE](./Methods/ERF_PRECISE.md) | number | Returns the error function integrated between 0 and the specified lower limit. |
 | [ERROR_TYPE](./Methods/ERROR_TYPE.md) | number | Returns a number matching an error value. |
 | [EVEN](./Methods/EVEN.md) | number | Rounds a positive number up and negative number down to the nearest even integer. |
-| [EXACT](./Methods/EXACT.md) | boolean | Checks whether two text strings are exactly the same, and returns -**true** or -**false**. This function is case-sensitive. |
-| [EXP](./Methods/EXP.md) | number | Returns the -**e** constant raised to the power of a given number. The -**e** constant is equal to -**2.71828182845904**, the base of the natural logarithm. |
+| [EXACT](./Methods/EXACT.md) | boolean | Checks whether two text strings are exactly the same, and returns **true** or **false**. This function is case-sensitive. |
+| [EXP](./Methods/EXP.md) | number | Returns the **e** constant raised to the power of a given number. The **e** constant is equal to **2.71828182845904**, the base of the natural logarithm. |
 | [EXPONDIST](./Methods/EXPONDIST.md) | number | Returns the exponential distribution. |
 | [EXPON_DIST](./Methods/EXPON_DIST.md) | number | Returns the exponential distribution. |
-| [FACT](./Methods/FACT.md) | number | Returns the factorial of a number, which is equal to &lt;em&gt;1*2*3*...*&lt;/em&gt; number. |
+| [FACT](./Methods/FACT.md) | number | Returns the factorial of a number, which is equal to *1*2*3*...** number. |
 | [FACTDOUBLE](./Methods/FACTDOUBLE.md) | number | Returns the double factorial of a number. |
-| [FALSE](./Methods/FALSE.md) | boolean | Returns the -**false** logical value. |
+| [FALSE](./Methods/FALSE.md) | boolean | Returns the **false** logical value. |
 | [FDIST](./Methods/FDIST.md) | number | Returns the (right-tailed) F probability distribution (degree of diversity) for two data sets. |
 | [FIND](./Methods/FIND.md) | number | Returns the starting position of one text string within another text string. This function is case-sensitive. |
 | [FINDB](./Methods/FINDB.md) | number | Finds the specified substring within another string and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc. |
@@ -184,9 +184,9 @@ Represents the ApiWorksheetFunction class.
 | [HYPERLINK](./Methods/HYPERLINK.md) | string | Creates a shortcut that jumps to another location in the current workbook, or opens a document stored on your hard drive, a network server, or on the Internet. |
 | [HYPGEOMDIST](./Methods/HYPGEOMDIST.md) | number | Returns the hypergeometric distribution. |
 | [HYPGEOM_DIST](./Methods/HYPGEOM_DIST.md) | number | Returns the hypergeometric distribution. |
-| [IF](./Methods/IF.md) | number \| string \| boolean | Checks whether a condition is met, and returns one value if -**true**, and another value if -**false**. |
+| [IF](./Methods/IF.md) | number \| string \| boolean | Checks whether a condition is met, and returns one value if **true**, and another value if **false**. |
 | [IFERROR](./Methods/IFERROR.md) | number \| string \| boolean | Checks if there is an error in the formula in the first argument. The function returns the result of the formula if there is no error, or the value specified in the second argument if there is one. |
-| [IFNA](./Methods/IFNA.md) | number \| string \| boolean | Checks if there is an error in the formula in the first argument. The function returns the specified value if the formula returns the &lt;em&gt;#N/A&lt;/em&gt; error value, otherwise returns the result of the formula. |
+| [IFNA](./Methods/IFNA.md) | number \| string \| boolean | Checks if there is an error in the formula in the first argument. The function returns the specified value if the formula returns the *#N/A* error value, otherwise returns the result of the formula. |
 | [IMABS](./Methods/IMABS.md) | number | Returns the absolute value (modulus) of a complex number. |
 | [IMAGINARY](./Methods/IMAGINARY.md) | number | Returns the imaginary coefficient of a complex number. |
 | [IMARGUMENT](./Methods/IMARGUMENT.md) | number | Returns the argument Theta, an angle expressed in radians. |
@@ -209,7 +209,7 @@ Represents the ApiWorksheetFunction class.
 | [IMSIN](./Methods/IMSIN.md) | number | Returns the sine of a complex number. |
 | [IMSINH](./Methods/IMSINH.md) | number | Returns the hyperbolic sine of a complex number. |
 | [IMSQRT](./Methods/IMSQRT.md) | number | Returns the square root of a complex number. |
-| [IMSUB](./Methods/IMSUB.md) | number | Returns the difference of two complex numbers expressed in the &lt;em&gt;x + yi&lt;/em&gt; or &lt;em&gt;x + yj&lt;/em&gt; form. |
+| [IMSUB](./Methods/IMSUB.md) | number | Returns the difference of two complex numbers expressed in the *x + yi* or *x + yj* form. |
 | [IMSUM](./Methods/IMSUM.md) | number | Returns the sum of the specified complex numbers. |
 | [IMTAN](./Methods/IMTAN.md) | number | Returns the tangent of a complex number. |
 | [INDEX](./Methods/INDEX.md) | number \| string | Returns a value or reference of the cell at the intersection of a particular row and column, in a given range. |
@@ -217,20 +217,20 @@ Represents the ApiWorksheetFunction class.
 | [INTRATE](./Methods/INTRATE.md) | number | Returns the interest rate for a fully invested security. |
 | [IPMT](./Methods/IPMT.md) | number | Returns the interest payment for a given period for an investment, based on periodic, constant payments and a constant interest rate. |
 | [IRR](./Methods/IRR.md) | number | Returns the internal rate of return for a series of cash flows. |
-| [ISERR](./Methods/ISERR.md) | boolean | Checks whether a value is an error other than &lt;em&gt;#N/A&lt;/em&gt;, and returns -**true** or -**false**. |
-| [ISERROR](./Methods/ISERROR.md) | boolean | Checks whether a value is an error, and returns -**true** or -**false**. |
-| [ISEVEN](./Methods/ISEVEN.md) | boolean | Returns -**true** if a number is even. |
-| [ISFORMULA](./Methods/ISFORMULA.md) | boolean | Checks whether a reference to a cell contains a formula, and returns -**true** or -**false**. |
-| [ISLOGICAL](./Methods/ISLOGICAL.md) | boolean | Checks whether a value is a logical value (-**true** or -**false**), and returns -**true** or -**false**. |
-| [ISNA](./Methods/ISNA.md) | boolean | Checks whether a value is &lt;em&gt;#N/A&lt;/em&gt;, and returns -**true** or -**false**. |
-| [ISNONTEXT](./Methods/ISNONTEXT.md) | boolean | Checks whether a value is not text (blank cells are not text), and returns -**true** or -**false**. |
-| [ISNUMBER](./Methods/ISNUMBER.md) | boolean | Checks whether a value is a number, and returns -**true** or -**false**. |
-| [ISODD](./Methods/ISODD.md) | boolean | Returns -**true** if a number is odd. |
+| [ISERR](./Methods/ISERR.md) | boolean | Checks whether a value is an error other than *#N/A*, and returns **true** or **false**. |
+| [ISERROR](./Methods/ISERROR.md) | boolean | Checks whether a value is an error, and returns **true** or **false**. |
+| [ISEVEN](./Methods/ISEVEN.md) | boolean | Returns **true** if a number is even. |
+| [ISFORMULA](./Methods/ISFORMULA.md) | boolean | Checks whether a reference to a cell contains a formula, and returns **true** or **false**. |
+| [ISLOGICAL](./Methods/ISLOGICAL.md) | boolean | Checks whether a value is a logical value (**true** or **false**), and returns **true** or **false**. |
+| [ISNA](./Methods/ISNA.md) | boolean | Checks whether a value is *#N/A*, and returns **true** or **false**. |
+| [ISNONTEXT](./Methods/ISNONTEXT.md) | boolean | Checks whether a value is not text (blank cells are not text), and returns **true** or **false**. |
+| [ISNUMBER](./Methods/ISNUMBER.md) | boolean | Checks whether a value is a number, and returns **true** or **false**. |
+| [ISODD](./Methods/ISODD.md) | boolean | Returns **true** if a number is odd. |
 | [ISOWEEKNUM](./Methods/ISOWEEKNUM.md) | number | Returns the ISO week number in the year for a given date. |
 | [ISO_CEILING](./Methods/ISO_CEILING.md) | number | Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance regardless of the sign of the number. The number is always rounded up regardless of its sing. |
 | [ISPMT](./Methods/ISPMT.md) | number | Returns the interest paid during a specific period of an investment. |
-| [ISREF](./Methods/ISREF.md) | boolean | Checks whether a value is a reference, and returns -**true** or -**false**. |
-| [ISTEXT](./Methods/ISTEXT.md) | boolean | Checks whether a value is text, and returns -**true** or -**false**. |
+| [ISREF](./Methods/ISREF.md) | boolean | Checks whether a value is a reference, and returns **true** or **false**. |
+| [ISTEXT](./Methods/ISTEXT.md) | boolean | Checks whether a value is text, and returns **true** or **false**. |
 | [KURT](./Methods/KURT.md) | number | Returns the kurtosis of a data set. |
 | [LARGE](./Methods/LARGE.md) | number | Returns the k-th largest value in a data set. For example, the fifth largest number. |
 | [LCM](./Methods/LCM.md) | number | Returns the least common multiple. |
@@ -265,8 +265,8 @@ Represents the ApiWorksheetFunction class.
 | [MROUND](./Methods/MROUND.md) | number | Returns a number rounded to the desired multiple. |
 | [MULTINOMIAL](./Methods/MULTINOMIAL.md) | number | Returns the ratio of the factorial of a sum of numbers to the product of factorials. |
 | [MUNIT](./Methods/MUNIT.md) | number | Returns the unit matrix for the specified dimension. |
-| [N](./Methods/N.md) | number | Converts a value to a number, dates to serial numbers, -**true** to 1, error to [ErrorValue](../Enumeration/ErrorValue.md), anything else to 0 (zero). |
-| [NA](./Methods/NA.md) | string | Returns the &lt;em&gt;#N/A&lt;/em&gt; error value which means "no value is available". |
+| [N](./Methods/N.md) | number | Converts a value to a number, dates to serial numbers, **true** to 1, error to [ErrorValue](../Enumeration/ErrorValue.md), anything else to 0 (zero). |
+| [NA](./Methods/NA.md) | string | Returns the *#N/A* error value which means "no value is available". |
 | [NEGBINOMDIST](./Methods/NEGBINOMDIST.md) | number | Returns the negative binomial distribution, the probability that there will be the specified number of failures before the last success, with the specified probability of a success. |
 | [NEGBINOM_DIST](./Methods/NEGBINOM_DIST.md) | number | Returns the negative binomial distribution, the probability that there will be the specified number of failures before the last success, with the specified probability of a success. |
 | [NETWORKDAYS](./Methods/NETWORKDAYS.md) | number | Returns the number of whole workdays between two dates. |
@@ -280,8 +280,8 @@ Represents the ApiWorksheetFunction class.
 | [NORM_INV](./Methods/NORM_INV.md) | number | Returns the inverse of the normal cumulative distribution for the specified mean and standard deviation. |
 | [NORM_S_DIST](./Methods/NORM_S_DIST.md) | number | Returns the standard normal distribution (has a mean of zero and a standard deviation of one). |
 | [NORM_S_INV](./Methods/NORM_S_INV.md) | number | Returns the inverse of the standard normal cumulative distribution (has a mean of zero and a standard deviation of one). |
-| [NOT](./Methods/NOT.md) | boolean | Checks if the specified logical value is -**true** or -**false**. The function returns -**true** if the argument is -**false** and -**false** if the argument is -**true**. |
-| [NOW](./Methods/NOW.md) | number | Returns the current date and time in the &lt;em&gt;MM/dd/yy hh:mm&lt;/em&gt; format. |
+| [NOT](./Methods/NOT.md) | boolean | Checks if the specified logical value is **true** or **false**. The function returns **true** if the argument is **false** and **false** if the argument is **true**. |
+| [NOW](./Methods/NOW.md) | number | Returns the current date and time in the *MM/dd/yy hh:mm* format. |
 | [NPER](./Methods/NPER.md) | number | Returns the number of periods for an investment based on periodic, constant payments and a constant interest rate. |
 | [NPV](./Methods/NPV.md) | number | Returns the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values). |
 | [NUMBERVALUE](./Methods/NUMBERVALUE.md) | number | Converts text to a number, in a locale-independent way. |
@@ -293,7 +293,7 @@ Represents the ApiWorksheetFunction class.
 | [ODDFYIELD](./Methods/ODDFYIELD.md) | number | Returns the yield of a security with an odd first period. |
 | [ODDLPRICE](./Methods/ODDLPRICE.md) | number | Returns the price per $100 face value of a security with an odd last period. |
 | [ODDLYIELD](./Methods/ODDLYIELD.md) | number | Returns the yield of a security with an odd last period. |
-| [OR](./Methods/OR.md) | boolean | Checks whether any of the arguments are -**true**. Returns -**false** only if all arguments are -**false**. |
+| [OR](./Methods/OR.md) | boolean | Checks whether any of the arguments are **true**. Returns **false** only if all arguments are **false**. |
 | [PDURATION](./Methods/PDURATION.md) | number | Returns the number of periods required by an investment to reach a specified value. |
 | [PERCENTILE](./Methods/PERCENTILE.md) | number | Returns the k-th percentile of values in a range. |
 | [PERCENTILE_EXC](./Methods/PERCENTILE_EXC.md) | number | Returns the k-th percentile of values in a range, where k is in the range 0..1, exclusive. |
@@ -304,7 +304,7 @@ Represents the ApiWorksheetFunction class.
 | [PERMUT](./Methods/PERMUT.md) | number | Returns the number of permutations for a given number of objects that can be selected from the total objects. |
 | [PERMUTATIONA](./Methods/PERMUTATIONA.md) | number | Returns the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects. |
 | [PHI](./Methods/PHI.md) | number | Returns the value of the density function for a standard normal distribution. |
-| [PI](./Methods/PI.md) | number | Returns the mathematical constant -**pi**, equal to -**3.14159265358979**, accurate to 15 digits. |
+| [PI](./Methods/PI.md) | number | Returns the mathematical constant **pi**, equal to **3.14159265358979**, accurate to 15 digits. |
 | [PMT](./Methods/PMT.md) | number | Calculates the payment for a loan based on constant payments and a constant interest rate. |
 | [POISSON](./Methods/POISSON.md) | number | Returns the Poisson distribution. |
 | [POISSON_DIST](./Methods/POISSON_DIST.md) | number | Returns the Poisson distribution. |
@@ -347,7 +347,7 @@ Represents the ApiWorksheetFunction class.
 | [SERIESSUM](./Methods/SERIESSUM.md) | number | Returns the sum of a power series based on the formula. |
 | [SHEET](./Methods/SHEET.md) | number | Returns the sheet number of the reference sheet. |
 | [SHEETS](./Methods/SHEETS.md) | number | Returns the number of sheets in a reference. |
-| [SIGN](./Methods/SIGN.md) | number | Returns the sign of a number: -**1** if the number is positive, -**0** if the number is zero, or -**-1** if the number is negative. |
+| [SIGN](./Methods/SIGN.md) | number | Returns the sign of a number: **1** if the number is positive, **0** if the number is zero, or **-1** if the number is negative. |
 | [SIN](./Methods/SIN.md) | number | Returns the sine of an angle. |
 | [SINH](./Methods/SINH.md) | number | Returns the hyperbolic sine of a number. |
 | [SKEW](./Methods/SKEW.md) | number | Returns the skewness of a distribution: a characterization of the degree of asymmetry of a distribution around its mean. |
@@ -358,9 +358,9 @@ Represents the ApiWorksheetFunction class.
 | [SQRTPI](./Methods/SQRTPI.md) | number | Returns the square root of (number * pi). |
 | [STANDARDIZE](./Methods/STANDARDIZE.md) | number | Returns a normalised value from a distribution characterised by a mean and standard deviation. |
 | [STDEV](./Methods/STDEV.md) | number | Estimates standard deviation based on a sample (ignores logical values and text in the sample). |
-| [STDEVA](./Methods/STDEVA.md) | number | Estimates standard deviation based on a sample, including logical values and text. Text and the -**false** logical value have the value 0; the -**true** logical value has the value 1. |
+| [STDEVA](./Methods/STDEVA.md) | number | Estimates standard deviation based on a sample, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
 | [STDEVP](./Methods/STDEVP.md) | number | Calculates standard deviation based on the entire population given as arguments (ignores logical values and text). |
-| [STDEVPA](./Methods/STDEVPA.md) | number | Calculates standard deviation based on the entire population, including logical values and text. Text and the -**false** logical value have the value 0; the -**true** logical value has the value 1. |
+| [STDEVPA](./Methods/STDEVPA.md) | number | Calculates standard deviation based on the entire population, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
 | [STDEV_P](./Methods/STDEV_P.md) | number | Calculates standard deviation based on the entire population given as arguments (ignores logical values and text). |
 | [STDEV_S](./Methods/STDEV_S.md) | number | Estimates standard deviation based on a sample (ignores logical values and text in the sample). |
 | [SUBSTITUTE](./Methods/SUBSTITUTE.md) | string | Replaces existing text with new text in a text string. |
@@ -381,12 +381,12 @@ Represents the ApiWorksheetFunction class.
 | [TIME](./Methods/TIME.md) | number | Converts hours, minutes and seconds given as numbers to a serial number, formatted with the time format. |
 | [TIMEVALUE](./Methods/TIMEVALUE.md) | number | Converts a text time to a serial number for a time, a number from 0 (12:00:00 AM) to 0.999988426 (11:59:59 PM). Format the number with a time format after entering the formula. |
 | [TINV](./Methods/TINV.md) | number | Returns the two-tailed inverse of the Student's t-distribution. |
-| [TODAY](./Methods/TODAY.md) | number | Returns the current date in the &lt;em&gt;MM/dd/yy&lt;/em&gt; format. |
+| [TODAY](./Methods/TODAY.md) | number | Returns the current date in the *MM/dd/yy* format. |
 | [TRANSPOSE](./Methods/TRANSPOSE.md) | [ApiRange](../ApiRange/ApiRange.md) | Converts a vertical range of cells to a horizontal range, or vice versa. |
 | [TREND](./Methods/TREND.md) | number | Returns numbers in a linear trend matching known data points, using the least squares method. |
 | [TRIM](./Methods/TRIM.md) | string | Removes all spaces from a text string except for single spaces between words. |
 | [TRIMMEAN](./Methods/TRIMMEAN.md) | number | Returns the mean of the interior portion of a set of data values. |
-| [TRUE](./Methods/TRUE.md) | boolean | Returns the -**true** logical value. |
+| [TRUE](./Methods/TRUE.md) | boolean | Returns the **true** logical value. |
 | [TRUNC](./Methods/TRUNC.md) | number | Truncates a number to an integer by removing the decimal, or fractional, part of the number. |
 | [TYPE](./Methods/TYPE.md) | number | Returns an integer representing the data type of a value: number = 1; text = 2; logical value = 4; error value = 16; array = 64; compound data = 128. |
 | [T_DIST](./Methods/T_DIST.md) | number | Returns the left-tailed Student's t-distribution. |
@@ -399,9 +399,9 @@ Represents the ApiWorksheetFunction class.
 | [UPPER](./Methods/UPPER.md) | string | Converts a text string to all uppercase letters. |
 | [VALUE](./Methods/VALUE.md) | number | Converts a text string that represents a number to a number. |
 | [VAR](./Methods/VAR.md) | number | Estimates variance based on a sample (ignores logical values and text in the sample). |
-| [VARA](./Methods/VARA.md) | number | Estimates variance based on a sample, including logical values and text. Text and the -**false** logical value have the value 0; the -**true** logical value has the value 1. |
+| [VARA](./Methods/VARA.md) | number | Estimates variance based on a sample, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
 | [VARP](./Methods/VARP.md) | number | Calculates variance based on the entire population (ignores logical values and text in the population). |
-| [VARPA](./Methods/VARPA.md) | number | Calculates variance based on the entire population, including logical values and text. Text and the -**false** logical value have the value 0; the -**true** logical value has the value 1. |
+| [VARPA](./Methods/VARPA.md) | number | Calculates variance based on the entire population, including logical values and text. Text and the **false** logical value have the value 0; the **true** logical value has the value 1. |
 | [VAR_P](./Methods/VAR_P.md) | number | Calculates variance based on the entire population (ignores logical values and text in the population). |
 | [VAR_S](./Methods/VAR_S.md) | number | Estimates variance based on a sample (ignores logical values and text in the sample). |
 | [VDB](./Methods/VDB.md) | number | Returns the depreciation of an asset for any specified period, including partial periods, using the double-declining balance method or some other method specified. |
@@ -414,7 +414,7 @@ Represents the ApiWorksheetFunction class.
 | [WORKDAY_INTL](./Methods/WORKDAY_INTL.md) | number | Returns the serial number of the date before or after a specified number of workdays with custom weekend parameters. |
 | [XIRR](./Methods/XIRR.md) | number | Returns the internal rate of return for a schedule of cash flows. |
 | [XNPV](./Methods/XNPV.md) | number | Returns the net present value for a schedule of cash flows. |
-| [XOR](./Methods/XOR.md) | boolean | Returns the logical -**Exclusive Or** value of all arguments. The function returns -**true** when the number of -**true** inputs is odd and -**false** when the number of -**true** inputs is even. |
+| [XOR](./Methods/XOR.md) | boolean | Returns the logical **Exclusive Or** value of all arguments. The function returns **true** when the number of **true** inputs is odd and **false** when the number of **true** inputs is even. |
 | [YEAR](./Methods/YEAR.md) | number | Returns the year of a date, an integer in the range 1900-9999. |
 | [YEARFRAC](./Methods/YEARFRAC.md) | number | Returns the year fraction representing the number of whole days between the start date and end date. |
 | [YIELD](./Methods/YIELD.md) | number | Returns the yield on a security that pays periodic interest. |

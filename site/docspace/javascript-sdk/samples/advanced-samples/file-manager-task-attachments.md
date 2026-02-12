@@ -5,7 +5,7 @@ This example demonstrates how to integrate the DocSpace file selector into a tas
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -16,7 +16,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
   <head>
     <meta charset="UTF-8" />
     <title>Task Attachments</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
     <style>
       /* CSS omitted for brevity */
     </style>

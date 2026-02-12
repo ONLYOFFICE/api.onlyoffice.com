@@ -4,7 +4,7 @@ sidebar_position: -7
 
 # 定制问题
 
-## 如何对 ONLYOFFICE 文档进行白标？
+## 如何对 ONLYOFFICE 文档进行白标？ {#how-to-whitelabel-onlyoffice-docs}
 
 以下选项可用于定制 ONLYOFFICE 文档版本（白标化），修改**关于**页面显示信息（所有编辑器用户可见）：
 
@@ -29,7 +29,7 @@ sidebar_position: -7
 填写所有上述字段后，*定制*配置将如下所示：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       customer: {
@@ -48,114 +48,130 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       },
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 有关定制的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md)。
 
-## 如何更改 ONLYOFFICE 文档界面的默认语言？
+## 如何更改 ONLYOFFICE 文档界面的默认语言？ {#how-to-change-the-default-language-of-the-onlyoffice-docs-interface}
 
 如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     lang: "de",
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文档[此文](https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx)了解如何将其安装到 ONLYOFFICE 文档中。
 
 有关语言设置的更多信息，请参见[此页](../../usage-api/config/editor/editor.md)。
 
-## 如何启用或禁用编辑器中的聊天和/或评论面板？
+## 如何启用或禁用编辑器中的聊天和/或评论面板？ {#how-to-enable-or-disable-the-chat-andor-the-comments-panel-in-the-editors}
 
 默认情况下聊天和评论是被启用的。要禁用它们，请使用 *document.permissions.comment* 和 *document.permissions.chat* 参数，并在配置文件中将它们的值分别设置为 **false**:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       chat: false,
       comment: false,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 这将禁用**聊天**和**评论**按钮及其功能。
 
 有关定制的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md)。
 
-## 如何自定义编辑器界面，例如调整顶部工具栏视图？
+## 如何自定义编辑器界面，例如调整顶部工具栏视图？ {#how-to-customize-the-editors-interface-eg-adjust-the-top-toolbar-view}
 
 您可以显示完整的顶部工具栏或其紧凑版本。为了控制这一点，使用 *editorConfig.customization.compactToolbar* 参数。使用默认的 **false** 值，顶部工具栏将具有其通常的视图。如果要显示其紧凑型变体，则配置必须如下所示：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       compactToolbar: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 有关定制的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md)。
 
-## 如何查看和更改文档的附加参数，例如其所有者或上传日期？
+## 如何查看和更改文档的附加参数，例如其所有者或上传日期？ {#how-to-view-and-change-the-document-additional-parameters-eg-its-owner-or-uploading-date}
 
 文档所有者和上传日期分别受 *document.info.owner* 和 *document.info.uploaded* 参数影响。您可以通过以下方式将这些设置从您的某个数据库传递到文档配置文件：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     info: {
       owner: "John Smith",
       uploaded: "2010-07-07 3:46 PM",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 该值将显示在**文件** > **文档信息...**菜单选项中。
 
 有关这些设置的更多信息，请参见[此页面](../../usage-api/config/document/info.md)。
 
-## 如何优化桌面计算机、移动设备或嵌入网页的编辑器的外观？
+## 如何优化桌面计算机、移动设备或嵌入网页的编辑器的外观？ {#how-to-optimize-the-appearance-of-editors-for-a-desktop-computer-or-for-a-mobile-device-or-for-embedding-into-a-web-page}
 
 编辑器有三种主要外观，针对不同用途进行了优化：
 
 - **desktop**, 针对桌面计算机浏览器中的显示进行了优化:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "desktop",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 - **mobile**, 针对移动设备浏览器中的显示进行了优化:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "mobile",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 - **embedded**, 针对将文档嵌入到网页进行了优化:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "embedded",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 您可以为移动设备使用任何外观或将文档嵌入到您的网页中，但使用特定的显示类型更符合逻辑。
 
 有关显示类型的更多信息，请参见[此页面](../../usage-api/config/config.md#type)。
 
-## 如何将插件连接到 ONLYOFFICE 文档以便所有编辑器用户都可以看到它们？
+## 如何将插件连接到 ONLYOFFICE 文档以便所有编辑器用户都可以看到它们？ {#how-to-connect-plugins-to-onlyoffice-docs-so-that-they-become-visible-for-all-editor-users}
 
 要为所有 ONLYOFFICE 文档用户启用插件，您需要参考以下内容：
 
@@ -164,7 +180,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 - 通过以下方式更改配置文件：
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -177,9 +193,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       ],
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugin-and-macros/structure/manifest/manifest.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
+其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugin-and-macros/structure/configuration/configuration.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
 
 有关启用 ONLYOFFICE 文档插件的更多信息，请参见[此页面](../../usage-api/config/editor/plugins.md)。

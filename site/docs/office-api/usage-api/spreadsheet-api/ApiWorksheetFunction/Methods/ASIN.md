@@ -1,6 +1,6 @@
 # ASIN
 
-Returns the arcsine of a number in radians, in the range from &lt;em&gt;-Pi/2&lt;/em&gt; to &lt;em&gt;Pi/2&lt;/em&gt;.
+Returns the arcsine of a number in radians, in the range from *-Pi/2* to *Pi/2*.
 
 ## Syntax
 
@@ -22,10 +22,14 @@ number
 
 ## Example
 
-
+This example shows how to return the arcsine of a number in radians, in the range from Pi/2 to Pi/2.
 
 ```javascript editor-xlsx
+// How to get an arcsine of a number in radians.
+
+// Use function to get an arcsine of a number and display it in the worksheet.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ASIN(0.25));
 ```

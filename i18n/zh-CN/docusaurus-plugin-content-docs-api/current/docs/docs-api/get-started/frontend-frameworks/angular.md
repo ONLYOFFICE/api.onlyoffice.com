@@ -51,10 +51,10 @@ ng version
 1. 打开 *onlyoffice-angular-demo* 项目中的 *./src/app/app.module.ts* 文件并导入 **DocumentEditorModule**：
 
    ``` ts
-   import {NgModule} from "@angular/core"
-   import {BrowserModule} from "@angular/platform-browser"
-   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular"
-   import {AppComponent} from "./app.component"
+   import {NgModule} from "@angular/core";
+   import {BrowserModule} from "@angular/platform-browser";
+   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
+   import {AppComponent} from "./app.component";
    
    @NgModule({
      declarations: [
@@ -74,8 +74,8 @@ ng version
 2. 打开 *onlyoffice-angular-demo* 项目中的 *./src/app/app.component.ts* 文件，并在您的使用组件中定义选项：
 
    ``` ts
-   import {Component} from "@angular/core"
-   import {type IConfig} from "@onlyoffice/document-editor-angular"
+   import {Component} from "@angular/core";
+   import {type IConfig} from "@onlyoffice/document-editor-angular";
    
    @Component({
      selector: "app-root",
@@ -95,21 +95,21 @@ ng version
        },
      }
      onDocumentReady = () => {
-       console.log("Document is loaded")
+       console.log("Document is loaded");
      }
      onLoadComponentError = (errorCode, errorDescription) => {
        switch (errorCode) {
        case -1: // Unknown error loading component
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
   
        case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
   
        case -3: // DocsAPI is not defined
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        }
      }
    }
@@ -117,7 +117,7 @@ ng version
 
    将以下行替换为您自己的数据：
 
-   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；
+   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
    - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 TypeScript 文件将创建 *AppComponent* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
@@ -134,7 +134,7 @@ ng version
    ></document-editor>
    ```
 
-   将 `http://documentserver/` 行替换为您的服务器的 URL。
+   将 `http://documentserver/` 行替换为您的服务器的 URL。You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ### 17.0.0 及更高版本
 
@@ -143,8 +143,8 @@ ng version
    > 请注意，从 Angular v17.0.0 开始，默认情况下，*app.module.ts* 文件不会添加到新项目中。您必须在 *Component* 装饰器的 *imports* 属性中指定 *DocumentEditorModule*，并将 *standalone* 设置为 *true*。
 
    ``` ts
-   import {Component} from "@angular/core"
-   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular"
+   import {Component} from "@angular/core";
+   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
 
    @Component({
      selector: "app-root",
@@ -166,19 +166,19 @@ ng version
        },
      }
      onDocumentReady = () => {
-       console.log("Document is loaded")
+       console.log("Document is loaded");
      }
      onLoadComponentError = (errorCode, errorDescription) => {
        switch (errorCode) {
        case -1: // Unknown error loading component
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        case -3: // DocsAPI is not defined
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        }
      }
    }
@@ -186,7 +186,7 @@ ng version
 
    将以下行替换为您自己的数据：
 
-   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；
+   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
    - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 TypeScript 文件将创建 *AppComponent* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
@@ -203,7 +203,7 @@ ng version
    ></document-editor>
    ```
 
-   将 `http://documentserver/` 行替换为您的服务器的 URL。
+   将 `http://documentserver/` 行替换为您的服务器的 URL。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 使用 Node.js 开发服务器测试应用程序：
 
@@ -362,6 +362,12 @@ onDocumentReady = () => {
 
 ### 属性
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | 名称                                 | 类型                    | 默认 | 描述                                                                                                                                                |
 | ------------------------------------ | ----------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                  | null    | 组件唯一标识符。                                                                                                                               |
@@ -392,6 +398,10 @@ onDocumentReady = () => {
 | events\_onRequestHistoryClose        | (event: object) => void | null    | 当用户试图通过单击**关闭历史记录**按钮从查看文档版本历史记录返回到文档时调用的函数。 |
 | events\_onRequestHistoryData         | (event: object) => void | null    | 当用户试图单击文档版本历史记录中的特定文档版本时调用的函数。                                        |
 | events\_onRequestRestore             | (event: object) => void | null    | 当用户尝试通过单击版本历史记录中的**恢复**按钮来恢复文件版本时调用的函数。                         |
+
+```mdx-code-block
+</APITable>
+```
 
 \* *- 必填字段*
 

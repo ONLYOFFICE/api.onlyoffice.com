@@ -22,10 +22,14 @@ number
 
 ## Example
 
-
+This example shows how to return the hyperbolic secant of an angle.
 
 ```javascript editor-xlsx
+// How to get angle's hyperbolic secant.
+
+// Use a function to calculate the hyperbolic secant of an angle.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SECH(0.785398));
 ```

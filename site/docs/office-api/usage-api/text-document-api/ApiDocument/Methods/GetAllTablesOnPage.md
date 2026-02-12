@@ -16,7 +16,7 @@ expression.GetAllTablesOnPage(nPage);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | Required | number |  | The page number. |
+| nPage | Required | number |  | The page index. |
 
 ## Returns
 
@@ -27,6 +27,10 @@ expression.GetAllTablesOnPage(nPage);
 This example shows how to get a collection of tables on a given absolute page.
 
 ```javascript editor-docx
+// Get all tables added to the page.
+
+// How to retrieve all tables and add delete its first row.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");
 let table = Api.CreateTable(3, 3);

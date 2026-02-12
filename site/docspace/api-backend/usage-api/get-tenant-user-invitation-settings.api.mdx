@@ -1,0 +1,63 @@
+---
+id: get-tenant-user-invitation-settings
+title: "Get the user invitation settings"
+description: "Returns the portal user invitation settings."
+sidebar_label: "Get the user invitation settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVk1vGzcQ/SvEXHzZSIYC9KBTXTsNnLZIEMvwwTDiEXekZbxLMuSsZVXY/x4MubK+HFtFT1qR8/H4+GaGK2CcRxjfwhUxGzuPaqjOXdM4q2K/AncFOE8B2Th7WcIY5sQTsmj5OlK4tI+G0946BBQQKHpnI0UYr2B0eio/JUUdjBdLGIN3gbFWbaSgzHOITdICtLNMlsUVva+NThbD71H8VxB1RQ3KFy89wRjc9DtphgJ8ELhscvY1lPz9ozWBSjkw1rVbJPDGzj+2FFmS7qz+Q82UQiLg9Rwvem2QTZ2rCS0UexxcedJmZiiqRUVcUVDsVIqVKTF2riwt1IXTVx41qSaHVlwF184rxRWpc2cZNUcVSUvcARRAT9j4mmDMoaWuePGs/wse1vULqFyGTYqemILFWs1TLtkRqMG5Jh7iE4BlaSQr1l+2iJ1hHWkf1aSiX6pGYrNhiQyvKfSCHXSisDbrqyfCWKY5BShg5kKDnJfej8S2NvZhmzQMAZdQgGFq4tsqrALNtqwiB2PnEhd1PtfBVie8REZu45EQs/G5K+koh+44rm4Cek8hAer2L+MrcRtsTLf7RkXL3TTEles7iFCEXMEYhujNcDQ4Ha5Nhxv3rX4QKTymurpdQRtqGMNqipGuQ90dSjfZKu3szMzb3LqggEcMBqd1vpLeObemGba1cHMQ6SJvqeuvfwsFd4JDt8Hw8koaUF//UX/DlqtvD7Tc1og3f9HyIOR1lKp1D4aUOJHlvrdBARab5LkdsAAjbjq5yEX/gdHorTwVsz/I8sEyBbV0bUhXIoEV2lJ5jHHhQimMphNIB0gBJTJhoHBc6JNsrFafbiZq4h7Idic7QXOsov/4cy2/TzcTSXWWyDlI+AvOznaIUiaqkphCYyyVarpMAjwRIxfMv8nmRFWEZQLQk7qTsSe1t+kK+Czeo+1KxrSwjyTbqZm0wYXhSu1kVan8CpDtLI3t3XVt7iwmDSai43g4TFkHztZLN5sZTQPtmrw4Gq7dJAEL4ce7JvN0O86v5yKWqYKxVKg1xdSmfXBMmqlUgaJrgyYpvUUwLJTcyO8b1rlNfPaU3gobNtPCubM2t8c9UmX3QvXbh2Wx4338qUX4xs5Ss396F83cIreB3pabSPrZXOqnVDMX9nANlMyixKxq2shqSspNGZMmHw0mUd5vmltuGzs3cq/Ilt4ZywN1ySJrKU8qFUaFKld8VpnESjV8v3WQ+8FG3dvn2+sYnfyfuXTsvuOfedM/sVCnEbiukS+X6qr10suh6NvsmumKal9SfNgnu9JDsu9aEQo1aMQl5hC/71rKNUgLzxy/H/w2OJUl7yI3aLdQfCROB37ldbhzX6vNY/G/jqReB0xPPPQ1GiuI2jwW8ny6FZFAAaPBaZpCzxBemFJ3BVQusjitnqdTJ8s/WgpLGN/ebaaQ/OuKdQuSsZbGB5xpTZ7TuKrbLNK956+MoedZ+vHDBLruJ/ReKQs=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the user invitation settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/invitationsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal user invitation settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"portal user invitation settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["allowInvitingGuests","allowInvitingMembers"],"type":"object","properties":{"allowInvitingMembers":{"type":"boolean","description":"Specifies whether to allow inviting new DocSpace members through the Contacts section.","example":true},"allowInvitingGuests":{"type":"boolean","description":"Specifies whether to allow all DocSpace members to invite external guests to the rooms.","example":true}},"additionalProperties":false,"description":"The user invitation settings.","title":"TenantUserInvitationSettingsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantUserInvitationSettingsWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

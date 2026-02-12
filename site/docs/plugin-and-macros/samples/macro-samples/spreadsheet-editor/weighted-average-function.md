@@ -1,6 +1,10 @@
+---
+hide_table_of_contents: true
+---
+
 # Weighted average function
 
-Creates a custom function to calculate a weighted average.
+Creates a [custom function](/docs/plugin-and-macros/macros/adding-custom-functions.md) to calculate a weighted average.
 
 <!-- This code snippet is shown in the screenshot. -->
 
@@ -59,7 +63,7 @@ Creates a custom function to calculate a weighted average.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

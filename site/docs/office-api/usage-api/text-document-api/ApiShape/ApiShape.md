@@ -9,7 +9,9 @@ Represents the ApiShape class.
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns a type of the ApiShape class. |
 | [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the shape inner contents where a paragraph or text runs can be inserted. |
+| [GetGeometry](./Methods/GetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | Returns the geometry object from the current shape. |
 | [GetNextShape](./Methods/GetNextShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null | Returns the next inline shape if exists. |
 | [GetPrevShape](./Methods/GetPrevShape.md) | [ApiShape](../ApiShape/ApiShape.md) \| null | Returns the previous inline shape if exists. |
-| [SetPaddings](./Methods/SetPaddings.md) | None | Sets the text paddings to the current shape. |
-| [SetVerticalTextAlign](./Methods/SetVerticalTextAlign.md) | None | Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted. |
+| [SetGeometry](./Methods/SetGeometry.md) | boolean | Sets a custom geometry for the current shape. |
+| [SetPaddings](./Methods/SetPaddings.md) | boolean | Sets the text paddings to the current shape. |
+| [SetVerticalTextAlign](./Methods/SetVerticalTextAlign.md) | boolean | Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted. |

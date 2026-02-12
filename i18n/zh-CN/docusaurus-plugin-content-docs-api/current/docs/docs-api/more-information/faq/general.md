@@ -4,17 +4,17 @@ sidebar_position: -12
 
 # 一般问题
 
-## 我是 ONLYOFFICE 文档 API 的新手。我应该从哪里开始？
+## 我是 ONLYOFFICE 文档 API 的新手。我应该从哪里开始？ {#i-am-new-to-onlyoffice-docs-api-where-should-i-start}
 
 如果您不知道如何开始使用 ONLYOFFICE 文档 API，我们建议您首先阅读[基本概念](../../get-started/basic-concepts.md)和[工作原理](../../get-started/how-it-works/how-it-works.md)部分，以便更好地了解 ONLYOFFICE 文档 API 的构建方式。熟悉了主要概念后，您可以访问[立即试用](../../get-started/try-docs/try-docs.md)部分，查看 ONLYOFFICE 文档主要功能的实际示例。
 
-如果您对特定的编程语言示例感兴趣，请参阅[特定于语言的示例](../../get-started/language-specific-examples/language-specific-examples.md) ，它们是以多种编程语言编写，解释了如何安装 ONLYOFFICE 文档、从何处获取示例源文件以及如何安装它们和连接 ONLYOFFICE 文档。
+如果您对特定的编程语言示例感兴趣，请参阅[特定于语言的示例](../../samples/language-specific-examples/language-specific-examples.md) ，它们是以多种编程语言编写，解释了如何安装 ONLYOFFICE 文档、从何处获取示例源文件以及如何安装它们和连接 ONLYOFFICE 文档。
 
 使用某些文档管理系统（如 Nextcloud、ownCloud、SharePoint 等）并希望了解如何将 ONLYOFFICE 文档连接到这些系统的用户，可以访问[即用型连接器](../../get-started/ready-to-use-connectors/nextcloud-integration.md)部分。该部分详细介绍了与 ONLYOFFICE 文档配合使用的主要插件。
 
 每个API方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在[高级参数](../../usage-api/advanced-parameters.md)部分中可以找到。
 
-## 如何查看ONLYOFFICE 文档的当前版本号？
+## 如何查看ONLYOFFICE 文档的当前版本号？ {#how-to-find-out-the-current-version-number-of-onlyoffice-docs}
 
 当前的ONLYOFFICE 文档版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的**关于**页面上找到，位于徽标和编辑器名称的正下方。
 
@@ -37,7 +37,7 @@ sidebar_position: -12
 
 有关与**文档命令服务**交互以及使用各种命令执行此操作的更多详细信息，请访问[此页面](../../additional-api/command-service/command-service.md)。
 
-## 我想从 default.json 配置文件中更改一些 ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？
+## 我想从 default.json 配置文件中更改一些 ONLYOFFICE 文档参数。我该怎么做才能使我的更改在更新后不会丢失？ {#i-want-to-change-some-onlyoffice-docs-parameters-from-the-defaultjson-configuration-file-how-can-i-do-that-so-that-my-changes-were-not-lost-after-update}
 
 ONLYOFFICE 文档的所有主要设置都存储在 *default.json* 配置文件中，该文件位于 */etc/onlyoffice/documentserver* /文件夹（适用于 Linux）或 *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\* （适用于 Windows）中。在同一文件夹中还有特定于平台的 *production.json* 文件，其中存储了与 Linux 或 Windows 相关的设置。
 

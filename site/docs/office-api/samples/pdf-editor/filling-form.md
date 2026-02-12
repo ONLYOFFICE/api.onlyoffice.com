@@ -1,12 +1,18 @@
+---
+hide_table_of_contents: true
+---
+
 # Filling form
 
 Fill a form with the data stored in the object:
 
-- open an existing form document and get all forms ([ApiDocument/GetAllForms](../../usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md));
-- run a loop for each form, check the form type and set the data corresponding to the form key ([ApiFormBase/GetFormType](../../usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md),  [ApiFormBase/GetFormKey](../../usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md), [ApiPictureForm/SetImage](../../usage-api/text-document-api/ApiPictureForm/Methods/SetImage.md), [ApiComboBoxForm/SetText](../../usage-api/text-document-api/ApiComboBoxForm/Methods/SetText.md))
+- open an existing form document and get all forms ([ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md));
+- run a loop for each form, check the form type and set the data corresponding to the form key ([ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md),  [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [ApiPictureForm/SetImage](/docs/office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md), [ApiTextForm/SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md))
 
-This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework-samples/builder-framework-samples.md) page.
+:::tip
+This sample is also available for **Document Builder**.
+Download the sample and get more information on the [Document Builder samples](/docs/document-builder/samples/samples.md) page.
+:::
 
 ```ts editor-pdf zoom=60 templateUrl=https://static.onlyoffice.com/assets/docs/samples/purchase_order.pdf
 let doc = Api.GetDocument();

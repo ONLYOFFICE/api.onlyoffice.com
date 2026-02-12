@@ -22,13 +22,17 @@ expression.SetShd(sType, r, g, b, isAuto);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the shading applied to the contents of the paragraph.
 
 ```javascript editor-docx
+// How to add shading to the paragraph.
+
+// Apply the clear shading to the paragraph.
+
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();

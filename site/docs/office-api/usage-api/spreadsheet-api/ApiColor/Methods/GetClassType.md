@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a class type and inserts it into the table.
 
 ```javascript editor-xlsx
+// How to get a color class type.
+
+// Get an RGB color type.
+
 let worksheet = Api.GetActiveSheet();
 let color = Api.CreateColorFromRGB(255, 111, 61);
 worksheet.GetRange("A2").SetValue("Text with color");

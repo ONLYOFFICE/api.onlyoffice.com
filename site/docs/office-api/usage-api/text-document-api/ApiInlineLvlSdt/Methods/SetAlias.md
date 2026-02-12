@@ -18,13 +18,17 @@ expression.SetAlias(sAlias);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the alias attribute to the container.
 
 ```javascript editor-docx
+// How to set a "№1" alias to the inline content control.
+
+// Display the alias set for inline text element.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

@@ -33,9 +33,11 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 
 If you want to add your own plugin, you can do it manually, even if you are offline:
 
-1. Pack all the [plugin files](../../structure/manifest/manifest.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
+1. Pack all the [plugin files](../../structure/configuration/configuration.md) within the plugin folder into a **zip** archive and change its extension to `.plugin` (all the plugin files and subfolders must be at the archive root).
 
-   > If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   :::note
+   If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   :::
 
 2. Open the **Plugin Manager** on the **Plugins** tab.
 
@@ -45,11 +47,11 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 ![Install plugin manually](/assets/images/plugins/plugin-install-manually.png#gh-light-mode-only)![Install plugin manually](/assets/images/plugins/plugin-install-manually.dark.png#gh-dark-mode-only)
 
-The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
+The plugin will be added to the opened editors and all the editors you will open afterwards and displayed within the **Plugins** tab.
 
 ## Adding plugins through the plugin folder
 
-**Step 1.** Create a new folder in the *sdkjs-plugins* directory. The path to the folder depends on the operating system you use:
+**Step 1.** Create a new folder in the `sdkjs-plugins` directory. The path to the folder depends on the operating system you use:
 
 <Tabs>
   <TabItem value="win" label="Windows">
@@ -59,7 +61,7 @@ The plugin will be added to the opened editors and all the editors you will open
   </TabItem>
   <TabItem value="mac" label="macOS">
       ``` bash
-      ~/Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
+      ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
       ```
   </TabItem>
   <TabItem value="lin" label="Linux">
@@ -69,9 +71,9 @@ The plugin will be added to the opened editors and all the editors you will open
   </TabItem>
 </Tabs>
 
-**Step 2.** Use a plugin **GUID** as the folder name. You can find the plugin GUID in the *config.json* file.
+**Step 2.** Use a plugin **GUID** as the folder name. You can find the plugin GUID in the `config.json` file.
 
-For example, for the **Extended comments** plugin the *guid* parameter will look the following way:
+For example, for the **Extended comments** plugin the `guid` parameter will look the following way:
 
 ``` json
 {
@@ -80,7 +82,7 @@ For example, for the **Extended comments** plugin the *guid* parameter will look
 }
 ```
 
-So, the folder name of this plugin will be *\{91EAC419-EF8B-440C-A960-B451C7DF3A37\}*.
+So, the folder name of this plugin will be `{91EAC419-EF8B-440C-A960-B451C7DF3A37}`.
 
 **Step 3.** Put all the plugin files to this folder:
 
@@ -98,22 +100,26 @@ To uninstall the newly added plugins, proceed in the following way:
 2. Go to **Plugin Manager**.
 3. Click the **Remove** button under the corresponding plugin.
 
-> This option is not available for the default plugins and the plugins added via the plugin folder.
+:::note
+This option is not available for the default plugins and the plugins added via the plugin folder.
+:::
 
-If you need to uninstall the default plugins, go to the *sdkjs-plugins* folder and remove the corresponding plugin folder from this directory.
+If you need to uninstall the default plugins, go to the `sdkjs-plugins` folder and remove the corresponding plugin folder from this directory.
 
-> Please note that removing the default plugins from ONLYOFFICE Desktop Editors on macOS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
+:::caution
+Please note that removing the default plugins from ONLYOFFICE Desktop Editors on macOS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
+:::
 
 The table below contains default plugins guids to make it easier for you to find them:
 
-## Default plugins guid’s
+## Default plugins GUIDs
 
 |                |                                        |
 | -------------- | -------------------------------------- |
 | Highlight code | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |
-| Photo editor   | \{07FD8DFA-DFE0-4089-AL24-0730933CC80A\} |
+| Photo editor   | \{07FD8DFA-DFE0-4089-A124-0730933CC80A\} |
 | Speech         | \{D71C2EF0-F15B-47C7-80E9-86D671F9C595\} |
 | Thesaurus      | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9840\} |
 | Translator     | \{7327FC95-16DA-41D9-9AF2-0E7F449F6800\} |
@@ -121,4 +127,6 @@ The table below contains default plugins guids to make it easier for you to find
 | Zotero         | \{BFC5D5C6-89DE-4168-9565-ABD8D1E48711\} |
 | Send           | \{B509123E-6335-40BD-B965-91EB799346E3\} |
 
-> Please note that after app updating the default plugins will appear again and you will need to uninstall them.
+:::note
+Please note that after app updating the default plugins will appear again and you will need to uninstall them.
+:::

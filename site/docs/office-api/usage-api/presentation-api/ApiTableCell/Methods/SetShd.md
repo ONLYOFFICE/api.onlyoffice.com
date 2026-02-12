@@ -28,13 +28,20 @@ This method doesn't return any data.
 This example specifies the shading which shall be applied to the extents of the current table cell.
 
 ```javascript editor-pptx
-var oPresentation = Api.GetPresentation();
-var oTable = Api.CreateTable(2, 4);
-var oRow = oTable.GetRow(0);
-var oCell = oRow.GetCell(0);
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
-oCell.SetShd(oFill);
-var oSlide = oPresentation.GetSlideByIndex(0);
-oSlide.RemoveAllObjects();
-oSlide.AddObject(oTable);
+// How to set shading fill to the cell.
+
+// Create table and set its cell shading color.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+
+const table = Api.CreateTable(2, 4);
+const row = table.GetRow(0);
+const cell = row.GetCell(0);
+const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+cell.SetShd(fill);
+
+slide.RemoveAllObjects();
+slide.AddObject(table);
+
 ```

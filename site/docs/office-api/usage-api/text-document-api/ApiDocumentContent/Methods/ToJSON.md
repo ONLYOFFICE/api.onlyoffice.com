@@ -26,6 +26,10 @@ JSON
 This example converts the ApiDocumentContent object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON object from the document content.
+
+// Convert the document to json file and print its class type.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

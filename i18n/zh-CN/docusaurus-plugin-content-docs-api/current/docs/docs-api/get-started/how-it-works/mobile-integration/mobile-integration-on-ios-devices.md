@@ -8,7 +8,7 @@ sidebar_label: iOS
 
 ## 基于 ONLYOFFICE 测试样本的集成
 
-本示例演示如何将 ONLYOFFICE 移动编辑器与[测试或 DMS 样本](../../language-specific-examples/language-specific-examples.md)集成。
+本示例演示如何将 ONLYOFFICE 移动编辑器与[测试或 DMS 样本](../../../samples/language-specific-examples/language-specific-examples.md)集成。
 
 ![iOS 测试样本集成示意图](/assets/images/editor/ios-test-sample.png)
 
@@ -29,7 +29,7 @@ sidebar_label: iOS
    </dict>
    ```
 
-   其中 **documentserver** 为安装 ONLYOFFICE 文档的服务器名称。
+   其中 **documentserver** 为安装 ONLYOFFICE 文档的服务器名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
    若未指定 **DocumentServerURL** 将出现错误提示：
 
@@ -185,13 +185,13 @@ func webView(_ webView: WKWebView,
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 7. 添加初始化 **Document Editor** 的脚本，用于 *div* 元素，并配置您要打开的文档：
 
    <!-- eslint-skip -->
    ``` ts
-   window.docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      {external_config},
      type: "mobile",
      events: {
@@ -205,7 +205,9 @@ func webView(_ webView: WKWebView,
        onRequestUsers,
        onWarning,
      },
-   })
+   };
+
+   window.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 8. 要开始在移动设备上处理文档，请通过 WKWebView 组件显示 ONLYOFFICE 编辑器。为此，指定 **EditorViewController** 控制器。请求 *editor.html* file, 文件的 URL，获取其内容，并将 *"\{external\_config\}"* 参数替换为 *samples.plist* 文件中的配置，其中所有示例配置均根据 [API 文档 Try 页面](../../try-docs/try-docs.md)进行分类：

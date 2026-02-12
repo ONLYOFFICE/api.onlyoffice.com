@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Content alignment tool
 
 Consistently aligns text boxes and images throughout the entire presentation.
@@ -45,7 +49,7 @@ Consistently aligns text boxes and images throughout the entire presentation.
 })();
 ```
 
-Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetWidth](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetWidth.md), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetWidth](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetWidth.md), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetHeight.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md)
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetWidth](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/GetWidth.md), [GetHeight](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight.md), [GetAllDrawings](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetWidth](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetWidth.md), [GetHeight](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetHeight.md), [SetPosition](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md)
 
 ## Result
 

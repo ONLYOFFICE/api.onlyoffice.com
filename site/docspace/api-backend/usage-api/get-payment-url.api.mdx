@@ -1,0 +1,71 @@
+---
+id: get-payment-url
+title: "Get the payment page URL"
+description: "Returns the URL to the payment page."
+sidebar_label: "Get the payment page URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zYQ/iuYvfjCSI6c6YGnOnbaSdppPH6MDxpNvCJXImISQPCIomr43zsLkJJoKbEOvVgysC/sfvvtagMelw7yKdxo67EWY3GD64aUh1kG2pBFL7X6WEIOS/Ld3YOtIQNL3wI5/16Xa8g3UGjlWS/fABpTyyJqjr86rfjMFRU1yN/82hDkoOdfqfCQgbHsx0tyfDvH4pnt7wSdt1ItIYOSXGGlYbOQw31F4uH2b7GqyJLwFYngyIqVrGsxJ2GplJYKT6XAhScrTIpdGKsLck6q5QgyUKGucV4T5N4GyoB+YGPq6FY3JDz98NBm8C2g8tKvj8WPZSk5JqxvBi/p5KTytCQLGSy0bdCno4sJmz18UR9l7/CXMU438EzrQawZfMc6EORvJxfv2lnb/iy+BdaOjkXQlVUYtNiQJ+vEQtuY4D44Tnuh1UIuQ8KHWElfbWMWUqWnSq04fi99zOgOPbfJh7v2GtqWg7TkjFYuZW5yfs4fx+vt9SAWg0uC7P9CXx/GIfxa9hGShxMqW0v1vI8CtBbXkIH01LjX46gsLY7GgEVKx8FVzKLz6MOp4EvCV7qkkxTaXSHvos9Hi8aQ7Vy/O397WLMHhcFX2sp/qYQodHEo9I8WhmwjnZNaOa6vIcveha+kE92L4/OoCDZ24XQD6IovbP1LbIEpWMISMlhZ6QlmbbaB94SWLOTT+N+lkX/Rent2TB6dLHrxz5fBV5Pjgp8NRUqcztrZyxa6JR8sP+PncOWeaMhXmlnVhFh99BXkMEYjx5PR+dhENh53WuMQCdeR/U7WxdfzSQ6bOTp6sHV7wI53UXbYpZEcrGQq6ag2KqeKLDDUXO0DS9fpih/DpZ7tynDHTZVMDYuxQ33M+YHJB0fiSutnSYKVSPmuX5nssIma+wYzkKxWRBXGUVeprZ/Ke3Pg5YNi2l/rYONkYMMCVSkMOrfSlmsaaYENzKNBttzh4xTTZ0lYbD493ot7/UyqPRsYTbay7ssffUN9erxnV0NAvpazy0GihHSiZHJupKJSzNcRZGeXXbdFmTNREZYxgC6pA49dUjuZNtsifsdNGA9eRpLkxKLWq8T7A68iEkoGfJ2gsX/bs83gMGIwJtrl43H0OtKqXuvFQhY0KnSTDifjLZvwVOGEn64axWN1tOm5HsvYsFgKLHgniNxjtU9rgyWngy3IbZs/h0f+fEU68WHPEbtsxoMrrVQi/BdJ5dtr0V0ftsVA+/RXM/B5GnN9f7xxcqnQB0uvw40hvRXn/injFjCMayR4KMfMiiY4z3uXnnuMmPwuMYLyqee0njYGFXkSpEqjpfIj8dEzrLk9eWlzAkXq+IQythV7+GnvIU+jHbr33/eCMdoMeBO43W2sH/odam/jHKxRu43vhC2L3S10zGo3Ii+N7LYSLOLO0LfgzUdxFwzzO2Qdi/eFrKg2Jbnnl7WsijGpN4FxSA3KGGky8ftQkqvMEyKV8GL02+icj4x2vkG1F8Wf5A+mUiT4FzDY2+pPHWwdrDhNY1OjVBxBSFMmTbkpYw4ymIzOefLFSRdHYPrdkaRnGVTaeZbebKdcy8ffAlmuymw3zdLM7qlsV7CrFPybe45pW7PDBZFnetK4LAoy/peys73hffNwz/Te/QJqIrmBxRX/OsJVmqY65jIxDp9toEa1DLy25pBMxi09cG722zJNvu4LP6q/Uuv9AIeDMj2D//KjjmpsNqnn23Yrn65+qrGdI0maazpr2/Y/GAvsrw==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the payment page URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/payment/url"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the URL to the payment page.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"backUrl":{"type":"string","description":"The URL where the user will be redirected after payment processing.","nullable":true,"example":"some text"},"quantity":{"type":"object","additionalProperties":{"type":"integer","format":"int32"},"description":"The payment quantity.","nullable":true,"example":[{"key":"some text","value":1234}]}},"additionalProperties":false,"description":"The request parameters for the payment URL configuration with quantity information.","title":"PaymentUrlRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The URL to the payment page","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

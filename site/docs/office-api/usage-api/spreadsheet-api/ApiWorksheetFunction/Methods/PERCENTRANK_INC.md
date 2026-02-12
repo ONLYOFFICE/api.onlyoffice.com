@@ -24,11 +24,15 @@ number
 
 ## Example
 
-
+This example shows how to return the rank of a value in a data set as a percentage (0..1, inclusive) of the data set.
 
 ```javascript editor-xlsx
+// How to return the rank of a value in a data set as a percentage.
+
+// Use a function to get a rank of a value in a data set.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let column1 = [1, 0, 7, 10];
 let column2 = [3, 2, 5, 8];
 let column3 = [5, 4, 3, 6];

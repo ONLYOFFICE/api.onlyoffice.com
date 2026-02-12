@@ -25,6 +25,10 @@ boolean
 This example recalculates all formulas in the active workbook.
 
 ```javascript editor-xlsx
+// How to recalculate all formulas in a worksheet.
+
+// Reset all values calculated by formulas.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(1);
 worksheet.GetRange("C1").SetValue(2);

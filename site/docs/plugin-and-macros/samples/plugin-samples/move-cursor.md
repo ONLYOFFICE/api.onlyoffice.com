@@ -10,7 +10,7 @@ Moves the text cursor to the document start/end.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_move_cursor) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_move_cursor) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
@@ -97,10 +97,10 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 
 ## Methods and events
 
-- button
-- init
-- executeMethod ("MoveCursorToStart")
-- executeMethod ("MoveCursorToEnd")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[MoveCursorToStart](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToStart.md)")
+- executeMethod ("[MoveCursorToEnd](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToEnd.md)")
 
 ## Support
 

@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set source of a pivot table.
 
 ```javascript editor-xlsx
+// How to set source of a table.
+
+// Create a pivot table, add data to it then set its source.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -50,8 +54,8 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: 'Region',
-	columns: 'Style',
+    rows: 'Region',
+    columns: 'Style',
 });
 
 pivotTable.AddDataField('Price');
@@ -64,7 +68,6 @@ pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetSource().GetAddress(true, 
 Api.GetActiveSheet().GetRange('D12').SetValue('Source range will be changed soon');
 
 setTimeout(function () {
-	pivotTable.SetSource(worksheet.GetRange('C1:D5'));
+    pivotTable.SetSource(worksheet.GetRange('C1:D5'));
 }, 5000);
-
 ```

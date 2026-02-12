@@ -22,21 +22,17 @@ A folder for storing plugin images. Nesting is not supported. The number of icon
 
   ![Main button icon](/assets/images/docspace/main-button-icon.png)
 
-  The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/plugin-items/fileitem.md#filerowicon) is 32x32 px.
+  The **Draw.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](coding-plugin/plugin-items/fileitem.md#fileRowIcon) is 32x32 px.
 
   ![File icon](/assets/images/docspace/file-icon.png)
 
-  It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/plugin-items/fileitem.md#filetileicon).
+  It is recommended to add another icon of the 96x96 px size for the file [tile view](coding-plugin/plugin-items/fileitem.md#fileTileIcon).
 
   ![File icon tile](/assets/images/docspace/file-icon-tile.png)
 
 ## dist
 
 A folder for storing the compiled plugin version.
-
-## scripts
-
-A folder for storing script files for building the plugin. The *createZip.js* script is added to this folder. The script is executed when building the plugin to automatically archive it and create the *config.json* file.
 
 ## src
 

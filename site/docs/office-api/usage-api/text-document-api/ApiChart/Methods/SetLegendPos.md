@@ -18,13 +18,17 @@ expression.SetLegendPos(sLegendPos);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the chart legend position.
 
 ```javascript editor-docx
+// How to set legend position of the chart.
+
+// Create a chart and move its legend to the bottom.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

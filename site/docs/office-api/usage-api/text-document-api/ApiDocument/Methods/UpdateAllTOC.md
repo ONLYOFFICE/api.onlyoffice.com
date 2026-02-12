@@ -18,13 +18,17 @@ expression.UpdateAllTOC(bOnlyPageNumbers);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example updates all tables of contents in the current document.
 
 ```javascript editor-docx
+// How to update all table of contents.
+
+// Edit document content and update the table of contents.
+
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");
 let paragraph = doc.GetElement(0);

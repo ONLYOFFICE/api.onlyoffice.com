@@ -17,7 +17,7 @@ To build the **Encryption** plugin, you need to create three files:
 - JS file with code,
 - JSON file with config.
 
-More information about the plugin structure can be found [here](../../../plugin-and-macros/structure/manifest/manifest.md).
+More information about the plugin structure can be found [here](../../../plugin-and-macros/structure/configuration/configuration.md).
 
 Let’s have a look at the config:
 
@@ -50,7 +50,7 @@ Let’s have a look at the config:
 }
 ```
 
-All the config parameters are described in the [documentation](../../../plugin-and-macros/structure/manifest/manifest.md).
+All the config parameters are described in the [documentation](../../../plugin-and-macros/structure/configuration/configuration.md).
 
 After the config file is ready, create the plugin code file with the following contents:
 
@@ -83,7 +83,7 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
+As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
 
 > Please note that the *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
 

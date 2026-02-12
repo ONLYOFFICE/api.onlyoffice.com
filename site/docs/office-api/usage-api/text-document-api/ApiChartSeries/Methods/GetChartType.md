@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets the first series of ApiChart class and inserts its type into the document.
 
 ```javascript editor-docx
+// How to get a chart type and show it on the slide.
+
+// Change a chart type to the "area" type.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("comboBarLine", [

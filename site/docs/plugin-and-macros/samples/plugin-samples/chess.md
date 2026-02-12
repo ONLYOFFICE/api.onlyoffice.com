@@ -6,11 +6,15 @@ Inserts a Chess Board object into the document editor. The object makes it possi
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Chess](/assets/images/plugins/gifs/chess.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="PV5TSRvKKU0" />
+```
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
@@ -20,7 +24,7 @@ Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 
 ## Plugin structure
 
-Repository on GitHub: [chess](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess).
+Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess).
 
 1. *config.json*, *index.html*, and *chess.js*
 2. Icons
@@ -158,19 +162,19 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/m
 
 ## Methods and events
 
-- button
-- init
-- onExternalMouseUp
-- [executeMethod ("AddOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/EditOleObject.md)
-- [info.data](../../interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](../../interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.height](../../interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](../../interacting-with-editors/overview/how-to-call-commands.md#imgsrc)
-- [info.mmToPx](../../interacting-with-editors/overview/how-to-call-commands.md#mmtopx)
-- [info.objectId](../../interacting-with-editors/overview/how-to-call-commands.md#objectid)
-- [info.resize](../../interacting-with-editors/overview/how-to-call-commands.md#resize)
-- [info.width](../../interacting-with-editors/overview/how-to-call-commands.md#width)
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
+- [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.height](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)
+- [info.imgSrc](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
+- [info.mmToPx](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
+- [info.objectId](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#objectId)
+- [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
+- [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## Support
 

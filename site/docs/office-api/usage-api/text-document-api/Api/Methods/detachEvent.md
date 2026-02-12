@@ -18,12 +18,16 @@ expression.detachEvent(eventName);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example shows how to unsubscribe on hyperlink click event.
+This example shows how to unsubscribe from the hyperlink click event.
 
 ```javascript editor-docx
+// How to detach from the "asc_onHyperlinkClick" event.
+
+// Unsubscribes from the "asc_onHyperlinkClick" event.
+
 Api.detachEvent("asc_onHyperlinkClick");
 ```

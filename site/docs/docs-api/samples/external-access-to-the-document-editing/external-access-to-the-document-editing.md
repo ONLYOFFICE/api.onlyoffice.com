@@ -1,12 +1,14 @@
 ---
 sidebar_position: -1
+hide_table_of_contents: true
 ---
 
-import DocCardList from '@theme/DocCardList';
+# Automation API samples
 
+The following examples will show you how to edit text documents, spreadsheets, presentations, PDFs, and fillable forms from an external source. To achieve this, use our [Automation API](/docs/docs-api/usage-api/automation-api.md).
 
-# External access to the document editing
+```mdx-code-block
+import {AutomationAPISamplesCardsRow} from '@site/src/components/AutomationAPISamples';
 
-The following examples will show you how to edit text documents, spreadsheets, presentations, PDFs, and fillable forms from an external source. To achieve this, use our [Automation API](../../usage-api/automation-api.md).
-
-<DocCardList />
+<AutomationAPISamplesCardsRow />
+```

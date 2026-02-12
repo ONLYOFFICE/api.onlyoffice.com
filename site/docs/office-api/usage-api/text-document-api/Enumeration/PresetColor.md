@@ -205,5 +205,9 @@ Enumeration
 This example creates a scheme color using the 'lightYellow' color preset.
 
 ```javascript editor-docx
+// How to create a preset color.
+
+// Create light yellow preset color.
+
 let schemeColor = Api.CreatePresetColor("lightYellow");
 ```

@@ -5,7 +5,7 @@ This example demonstrates how to generate a secure hash from a plain-text passwo
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -19,7 +19,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
     <title>Create Hash</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -89,7 +89,7 @@ Create a basic HTML page with a DocSpace iframe and a button to trigger the hash
     <title>Create Hash</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -119,12 +119,12 @@ Create a basic HTML page with a DocSpace iframe and a button to trigger the hash
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to initialize the SDK and trigger the [createHash()](../../usage-sdk/methods.md#createhash) method using settings returned by [getHashSettings()](../../usage-sdk/methods.md#gethashsettings).
+Create a script block to initialize the SDK and trigger the [createHash()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createhash) method using settings returned by [getHashSettings()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#gethashsettings).
 ``` ts
 document.getElementById("button").onclick = async () => {
   let password = "qwerty12345";

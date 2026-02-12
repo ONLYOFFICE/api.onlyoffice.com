@@ -16,18 +16,26 @@ There are several reasons why ONLYOFFICE uses JavaScript for macros:
 
 You can find ready-to-use macros [here](../samples/macro-samples/macro-samples.md) or create your own ones.
 
-How to start writing your macro:
+## How to start writing your macro
 
-1. Open the **View** tab and click **Macros**.
-2. Consult the [API documentation](../../office-api/get-started/overview.md) to write the script.
-3. [Write](./writing-macros.md) code for your macro.
-4. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.
-5. When ready, click ![Play icon](/assets/images/plugins/play.svg) to run your code in the document.
+1. Open ONLYOFFICE Desktop Editors.
+2. Navigate to the **View** tab on the top toolbar.
+3. Click the **Macros** button to open the macro editor.
 
+![Macro button](/assets/images/plugins/macro-button.png#gh-light-mode-only)![Macro button](/assets/images/plugins/macro-button.dark.png#gh-dark-mode-only)
+
+4. Consult the [API documentation](../../office-api/get-started/overview.md) to write the script.
+5. [Write](./writing-macros.md) code for your macro or copy an example macro code from the [macro samples](../samples/macro-samples/macro-samples.md) and paste it into the macro editor's workspace.
 ![Macros window](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Macros window](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
 
-To add more macros, click ![Plus icon](/assets/images/plugins/plus.svg).
+7. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.
+8. When ready, click ![Play icon](/assets/images/plugins/play.svg) to run your code in the document.
 
-If you want to delete an unnecessary macro, click ![Dots icon](/assets/images/plugins/dots.svg) next to the macro name and select **Delete**.
 
-You can also copy your macro. To do this, click ![Dots icon](/assets/images/plugins/dots.svg) next to the macro name and select **Copy**.
+![Run macro](/assets/images/plugins/run-macro.png#gh-light-mode-only)![Run macro](/assets/images/plugins/run-macro.dark.png#gh-dark-mode-only)
+
+To add more macros, click ![Plus icon](/assets/images/plugins/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/plugins/plus.dark.svg#gh-dark-mode-only).
+
+If you want to delete an unnecessary macro, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the macro name and select **Delete**.
+
+You can also copy your macro. To do this, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the macro name and select **Copy**.

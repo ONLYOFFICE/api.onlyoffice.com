@@ -28,6 +28,10 @@ expression.SetColor(r, g, b, isAuto);
 This example sets the text color to the text Range in the RGB format.
 
 ```javascript editor-docx
+// How to color the text of the range.
+
+// Set the text color to middle washed rose.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

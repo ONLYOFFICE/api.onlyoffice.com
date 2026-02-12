@@ -26,6 +26,10 @@ expression.MergeCells(aCells);
 This example merges an array of cells.
 
 ```javascript editor-docx
+// How to merge cells of the table into one.
+
+// Create a table and merge cells into another one.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

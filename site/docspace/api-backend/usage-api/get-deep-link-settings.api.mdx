@@ -1,0 +1,63 @@
+---
+id: get-deep-link-settings
+title: "Get the deep link settings"
+description: "Returns the deep link settings."
+sidebar_label: "Get the deep link settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVk1v2zgQ/SvEXHJY2lacoljotNmk2223RYLGQQ5B0NDSyGItkVySSuIa+u+LISVHsptNfLAtcmbezJsvbcGLlYP0Fq7Qe6lWjs3Yma5rrZjrTuCOgzZohZdafcohhRX6c0TzRap1rwYcLDqjlUMH6RbmSUI/ObrMSkOakMLFGjhkWnlUnm6FMZXMgt3ZD0ciW3BZibWgf35jEFLQyx+YeeBgLHnhZQTo0V6XLIXKK6lWX3UepLXCiwLS2y2gamqK/dLqB5njWallhsDhBpfA4dQYCr0z7ryVagV8L6TbkS6bsO6ZZeGAsxtcsgl9c3ZqDJvQ9x1wwCdRm4osj9FbvvMr4cd8/uyBVB5XaA9dSH4Be9yDzn8BmXB4mhDI5EFYJWp0r7LQyQ+Qhzod7Fipvdv3dFEiyxENq6Rasz4vrNY5TmGHcRCulz4Q1dfc38OEthwq4fxXnctCYj4oh13GCm1r4SGFXHiceFnjiP95kvw+Sd5NjpNF8j49SdIkmSbx81vyLk0SaFsOIs8lhSGqy0F1FaJy+P9h9m00HUSyQCXUYQ+11B1N7I0DFnZRSOVP5iFuqdZuICusFRvgID3W7g19YbE4pItCzWIgB1ctEeG88I17o4tR+KzrvFcV2tcourHCGLTBlXaf92/oG6sc8y/yX6MvdTfBiA/hS0hhJoyczafJrBedkTYpAweH9gGtC/OisRWksF0Kh9e2ag868SrIskyrQq6aODCBw4OwUiyryHqnHIdjIZqKwj+wdB6v2PW3LxTrHfmRNVb6zRXNx2hKuOy7aHz5fY2bYRkY+Q9uDkxeO2RnWq8lMlJC5bvRCxxoBpDm0CAHSWpZUKFc/imczAY4pffmAOWD8mjZRjeWNQ7DcGFC5cwI5x61zYnREAGkRIXMgmUUFu3bTB9FYbb9fLNgC71G1R6NjEZbvPvzV19hn28WBHUayDkAfIGz0xFRTDqWo0dbS4U5W25CpR2RkLbyZ5A5YiWKPDjQkTpC7EjtZFoOF6Q9HzarCAf7nkQ5VlT6kT1KX7IRKgsdxoGuY2kMb/v2Gx2GGgxEu3Q2C6hTraqNLgqZ4TTTdTycz3o1AvBE+NtVg3jIjjb92hZ5aFWRM5Fl6BzzmhmrPWYec2bR6cZmSC8Uj1Z6ouSGfl+RjvPgwmB4Q3lmMxycaaXiBNwjlW7PWXd92BYj7bdHTYUvVaEpv08TJ1dK+Mbi6+VGJb0Tp/7JWaHtnl9TRvslMMvqxnm2RKaXXoSafJAiFOX980iLY2OUkXuGKjdaKj9lnzyVNbUn5kw4Jljs+FhlZCv08P0gkPvpc3UP49ubGC09FzqE3Q31UyO7N0CRhS3X98jlJ3bVGKMtJakZMV1iZXJ0632yy2yGatJQoWAtJKm4aOKPsSSlgUZ45Phk+n6a0JHRztdCDbz4iP6F3bGfqe3zW+wbtk6XdI9PfmYqIRXBN3EHxBV0SxUBHObTJKycAWq3iO44lNp5Et3uFlBLx/82aDeQ3t49Lxp6ank/ZWhzhQ0Bp1mGxoeNVDWxDvdewGnT7Jbkxw8LaNv/AIbRKbc=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the deep link settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/deeplink"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the deep link settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"handlingMode":{"oneOf":[{"enum":["ProvideChoice","Web","App"],"type":"string","description":"[ProvideChoice - Provide choice, Web - Web, App - App]","example":"ProvideChoice"},{"enum":[0,1,2],"type":"integer","description":"[0 - Provide choice, 1 - Web, 2 - App]","example":0,"x-enum-varnames":["ProvideChoice","Web","App"],"x-enum-descriptions":["Provide choice","Web","App"]}],"description":"The deep link handling mode.","x-enum-type":"integer","title":"DeepLinkHandlingMode"},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The deep link settings.","title":"TenantDeepLinkSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantDeepLinkSettingsWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

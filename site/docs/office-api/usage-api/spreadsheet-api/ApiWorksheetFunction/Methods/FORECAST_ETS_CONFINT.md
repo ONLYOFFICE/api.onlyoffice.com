@@ -28,11 +28,15 @@ number
 
 ## Example
 
-
+This example shows how to return a confidence interval for the forecast value at the specified target date.
 
 ```javascript editor-xlsx
+// How to calculate or predict a confidence interval for the forecast value.
+
+// Use a function to get a confidence interval for the forecast value at target date.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let dates = ["10/1/2017", "11/1/2017", "12/1/2017", "1/1/2018", "2/1/2018", "3/1/2018"];
 let numbers = [12558, 14356, 16345, 18678, 14227];
 

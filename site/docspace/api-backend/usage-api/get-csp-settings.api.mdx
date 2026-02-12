@@ -1,0 +1,63 @@
+---
+id: get-csp-settings
+title: "Get CSP settings"
+description: "Returns the CSP (Content Security Policy) settings for the current portal."
+sidebar_label: "Get CSP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv2zgQ/ivEXLILqFbgAnvwabNOt0h3gQR1ghyMoKGpkcVaIllylMRr6L8XQ8qxbDePw54sk/P85psZboDkMsBkDjNUrde0FrmYzq7gLgPr0EvS1lwUMIEl0jS4GRJpswyQgcfgrAkYYLKB8ekp/xQYlNeOlWAClyvIQFlDaIhvpXO1VtFk/j2wyAaCqrCR/EVrhzABu/iOiiAD5zkA0snB1lv6/tFqjwWHXdhGasPxVCgL9Bz465a2GjuX0nu5hgw0YTM8D+S1WUKXHeR1XaGodSBhS8ZK9BZHkIFp61ouaoQJ+RYzwCfZOP47h2AbFIRPBHfdc7RHzn7li30k+VddDDx0XQayKDQbkfXVIP9S1gFfcvLbNBVLPJPhytZarX8XTnrZIKGPWZKm6HAa3DlZBkjZNtW4z0YbwiV6yKC0vpGUjj6OWbbWZvUe+F+oX+Wx/GWRpErpHF11DEcgSW14Z4hJeGoLfJdCtwfJrZfOoY9+j7jzFan1Jgh6E/LQt5oorY/iqvWeJZ31JGuuQ4NU2b45GSdJFUwgl07n49FpHnqTuQoOMgjoH9Bzs2+g9TVMYLOQAW983R3RbhZlhbKm1Ms2jQHI4EF6zdyLOPbKqe9L2daMyJGl83Qlbr7+y4jccRwprBm3fjIlg/omW6q+rXA9ZIbT/+D6yORNQDG1dqVRsBIa6qcKd4dsoubQYAaa1VRU4fL+JYNWAz8VkTvy8skQerG2rRdtQM+GhTSFcDKER+sLRjRmABOGQqtoGaXfa+tXTJ8kYbH5cnstru0KTXeyZzTZyvqPv7ek+3J7za7OIjhHDl/A7GwPKKGDKLidG22wEIt1JNgJC1mv/4syJ/3M2YG657EHtZfpMrhk7fGwf2U8OIwkyYmyto/iUVMl9ryK2HQZ8HWixvB225F7h5GDEegwyfPodWRNvbZlqRWOlG3S4TjfqrEDYsDfrxrFY3Ws224kWcSGloWQSmEIgqxw3hIqwkJ4DLb1Cnk3PXpNDMkt/74hnabGpcO4d3doxoOpNSYNxQNQ+fZc9NfHbbGn/f6smfjalHHEP30IemkktR7fphtT+lmc+6eIY2w/rpHgxRORFU0bSCxQ2AXJyMkHLSMp74+m2bAi9wJN4aw2NBIXxLTm9sRCyCCkSB2fWMa2Yg/fDxK5H+3YPczvYGJ0/L+0Me1+zp853T9upIqLb9sjVxdi1jqe0ZD1Y3aLdIW1KzCsDsGuVI7mQ8tEwUZqVgnJxJ/7klwGHuEJ44+jP0anfORsoEaaQRSfkeJ2Cbvn2l59Nrtn2f+7kXpW8CMkd7XUhuNr05JI62nOlIEMxqNT2O0CxjI4frxVNhBLbZ6XU8fHP1r0a5jM73ZLiP8NXlLzDcTtAWdKoaO4reo2cfTg3clb6Hl3fv50DV33EyFT0Tc=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get CSP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/csp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the CSP (Content Security Policy) settings for the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"required":["domains","header"],"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"The list of CSP domains.","nullable":true,"example":["some text"]},"header":{"type":"string","description":"The CSP header.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The CSP (Content Security Policy) parameters.","title":"CspDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CspWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

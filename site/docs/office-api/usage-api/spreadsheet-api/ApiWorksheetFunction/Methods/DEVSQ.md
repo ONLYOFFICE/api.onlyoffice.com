@@ -22,9 +22,13 @@ number
 
 ## Example
 
-
+This example shows how to get the sum of squares of deviations of data points from their sample mean.
 
 ```javascript editor-xlsx
+// How to get sum of squares of deviations.
+
+// Use function to get the sum of squares of deviations of data points from their sample mean.
+
 let worksheet = Api.GetActiveSheet();
 let argumentsArrA = [34, 244];
 let argumentsArrB = [769, 445];
@@ -50,7 +54,7 @@ for (let e = 0; e < argumentsArrE.length; e++) {
 }
 
 // Analyze the range of data 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.DEVSQ(worksheet.GetRange("A1:E2"));
 worksheet.GetRange("E3").SetValue(ans);
 ```

@@ -19,13 +19,17 @@ expression.SetEvenAndOddHdrFtr(isEvenAndOdd);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies whether sections in this document will have different headers and footers for even and odd pages.
 
 ```javascript editor-docx
+// How to make headers and footers different for even and odd pages.
+
+// Set a boolean value that indicates whether to keep the headers and footers same for odd/even pages or not.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.CreateSection(paragraph);

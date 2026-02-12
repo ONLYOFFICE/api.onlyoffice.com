@@ -5,11 +5,17 @@ sidebar_custom_props:
 
 # Chamilo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="gl3gmhOKFk8"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to edit office documents within [Chamilo](https://chamilo.org/en/) using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX, DOCXF, OFORM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX.
 - The following formats are available for viewing only: PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
 - The plugin will create a new **Open with ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Chamilo.
 
@@ -84,7 +90,7 @@ On the **Plugins** page, find ONLYOFFICE and click **Configure**. You'll see the
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Chamilo server. The Chamilo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Chamilo server. The Chamilo server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Chamilo **Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 

@@ -25,6 +25,10 @@ boolean
 This example adds a oRun to the paragraph.
 
 ```javascript editor-docx
+// How to insert text to the paragraph.
+
+// Get the last paragraph and make it bold.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

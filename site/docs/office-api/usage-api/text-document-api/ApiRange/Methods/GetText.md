@@ -21,7 +21,7 @@ expression.GetText(oPr);
 | oPr.TableCellSeparator | Optional | string | '\t' | Defines how the table cell separator will be specified in the resulting string. Any symbol can be used. The default separator is "\t". |
 | oPr.TableRowSeparator | Optional | string | '\r\n' | Defines how the table row separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r\n". |
 | oPr.ParaSeparator | Optional | string | '\r\n' | Defines how the paragraph separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r\n". |
-| oPr.TabSymbol | Optional | string | '\t' | Defines how the tab will be specified in the resulting string (does not apply to numbering). Any symbol can be used. The default symbol is "\t". |
+| oPr.TabSymbol | Optional | string | ' ' | Defines how the tab will be specified in the resulting string (does not apply to numbering). Any symbol can be used. The default symbol is " ". |
 
 ## Returns
 
@@ -32,6 +32,10 @@ String
 This example shows how to get a text from the specified range.
 
 ```javascript editor-docx
+// How to get a raw text from the characters.
+
+// Retrieve a text from the character collection.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("\tONLYOFFICE Document Builder");

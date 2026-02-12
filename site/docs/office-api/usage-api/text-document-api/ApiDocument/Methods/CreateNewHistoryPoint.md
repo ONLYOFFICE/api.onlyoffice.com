@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example creates a new history point.
 
 ```javascript editor-docx
+// How to add a history point after adding the text.
+
+// Add a text to the paragraph, create a history point and change its text.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a sample text.");

@@ -24,11 +24,15 @@ number
 
 ## Example
 
-
+This example shows how to calculate the standard deviation based on the entire population of the selected database entries.
 
 ```javascript editor-xlsx
+// How to estimate the standard deviation based on an entire population.
+
+// Use function to estimate the standard deviation based on the entire population from a range.
+
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Month");
 worksheet.GetRange("C1").SetValue("Sales");

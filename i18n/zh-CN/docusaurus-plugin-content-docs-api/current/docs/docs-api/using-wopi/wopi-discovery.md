@@ -4,7 +4,7 @@ sidebar_position: -8
 
 # WOPI发现
 
-[WOPI discovery](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公软件请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公软件进行交互。请求被发送到 `https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+[WOPI discovery](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公软件请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公软件进行交互。请求被发送到 `https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ## WOPI 发现操作
 
@@ -13,7 +13,7 @@ sidebar_position: -8
 - online office中可用的文档操作，
 - 支持的文件格式（扩展名）。
 
-### WOPI 操作
+### WOPI 操作 {#wopi-actions}
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
@@ -53,7 +53,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 **发现查询参数**是可以通过 *urlsrc* 属性中的文件存储公开的参数，以自定义编辑器行为。例如，更改语言、主题或聊天。
 
-## WOPI标准
+## WOPI标准 {#wopi-standard}
 
 ### 参数
 

@@ -2,16 +2,37 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.1
+
+- The document is opened in viewer mode with an error message if it cannot be [locked](../using-wopi/key-concepts.md#lock) in WOPI.
+- Added the [UserCanOnlyComment](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanOnlyComment) property to the *CheckFileInfo* WOPI operation.
+- The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
+- Added opening for [hml](../usage-api/config/document/document.md#filetype) format.
+- Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to *txt*.
+- Changed the [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
+
+## Version 9.0
+
+- Added the [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) parameter.
+- Changed [editorConfig.customization.macros](../usage-api/config/editor/customization/customization-standard-branding.md#macros): in version 9.0.3, this parameter completely disables running, adding, and editing macros (not just automatic startup).
+- The [editorConfig.customization.toolbarHideFileName](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarhidefilename) parameter is now available for the mobile editors.
+- Added the *theme-white* and *theme-night* theme ids to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
+- Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
+- Added opening for [md](../usage-api/config/document/document.md#filetype) format.
+- Added the ability to [preload](../get-started/configuration/preload.md) the editor static resources.
+- Added the [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) parameter for the Chinese (Simplified) UI.
+- Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
+- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
+- Added the *diagram* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
+
 ## Version 8.3
 
-<!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
-- Added the *diagram* document type to the [documentType](../usage-api/config.md#documenttype) parameter.-->
 - Added the [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) parameter.
 - Added the [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) and [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) parameters.
 - Added the [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../usage-api/config/editor/customization/customization-standard-branding.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../usage-api/config/editor/customization/customization-standard-branding.md#mobileinfo) parameter.
-- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/config.md#documenttype) formats.
+- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/document/document.md#filetype) formats.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
@@ -43,9 +64,8 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the *form* element of the WOPI host page.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
-- Changed the [documentType](../usage-api/config/config.md#documenttype) of the *oform* formats to *pdf*.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
-- Added the [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
+- Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) methods to the *Automation API*.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.
@@ -108,7 +128,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [Connector](../usage-api/automation-api.md) class to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 - Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
-- Added the *connections\_view*, *users\_view\_count* and *users\_view* parameters to the [license response](../additional-api/command-service/license.md#response-parameters).
+- Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the text document, spreadsheet and presentation editors.
 - Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
 - The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
@@ -132,7 +152,6 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.0
 
-- Added the *.oform* [document format](../usage-api/config/config.md#documenttype).
 - The [callbackUrl](../usage-api/callback-handler.md) is used from the last tab of the same user.
 - Added the *logoDark* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the *imageDark* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
@@ -151,7 +170,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) of the spreadsheet files.
-- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#ui_insertgraphic) message for the PostMessage WOPI protocol.
+- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#UI_InsertGraphic) message for the PostMessage WOPI protocol.
 
 ## Version 6.4
 

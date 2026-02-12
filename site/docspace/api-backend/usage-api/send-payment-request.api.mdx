@@ -1,0 +1,71 @@
+---
+id: send-payment-request
+title: "Send a payment request"
+description: "Sends a request for the portal payment."
+sidebar_label: "Send a payment request"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV99P3DgQ/leseeEl7HJ7baXLUyn0JHrVgfghHtCqzMazG5fETm2nkFvlfz+NnYRkl2vpvUCwZ8afZz5/M2zB48ZBegcXxnosxFxcYFOS9rBMwFRk0SujzySk4EjLbvOSvtXkPCRg49cHIxtIt5AZ7dk53QJWVaGy4D7/6ozmNZflVCJ/sZ+yJPloKlEVkEBJzuGG+GTfVAQpmNVXyviYyjIWr8ixc+3I/o0l8XeJT59Jb3wO6eLt28HTeav0BhKQ5DKrKoYBKVznJDSWJMxa+JwERxKuXpXKe6U3Yc1hQU50F5tBArouClwVBKm3NSVAT1hWRTjFlCQ8PXlok+4aU0jv3rwGEWcNMy9CBIFSWnJOrI0d4VGaE9b8GM9VIzU1Xy7Niqx3b97nxnPIWWZKRtgn+H+lTZJHVbg+cxNUwlhRRWr8cuLaBFBKxSdhcTGq8xoLRy8h6U4QFVosyZONucpRy4KLGKGhlgOmCFMFwAF9FdjOGL3yMXXs1PHanXoDbcvQLLnKaBd5tzg64l9TROcPnNo3L22d6cxYS0NljRVdCcLdhXKCyso3McBv+wFuNNY+N1b9QzIYLf7YN+pAi0KVKsZ8yogke7QJOMpqq3wD6d0W0GVfOOKXB+IFsIQSEni0yhMs22QLHwgtWUjvwl/HlfqLmmHtJXt0KuvNz49rny9eNjyvKMjI3bJd7hb1irR0AofC9syPVeqrOAsS4XPDYlSZID8VMoNhjpWaL2ZH8+gx7zzmdtApR/Y7WReyUNsCUtiu0NGNLdo9tl8FW36Va7WpowJCAt/RKmZzoELnHKuxxrrwkMJepNO4JW4uPzOfls/luGIljKGmRdn2TxFD7vdC3jgSJ8Y8KBLsRNp3IsvvLWjiNGACit2y4MIc6io2nJN7X+2d8lF7sqIxtQ0SGSQzPijnHo3l2gYt5wCrEJAjdzx5TeiDaCy2n26vxbV5IN0eTILGWEn38aexJXKKP91e81FTYv4sZ8eTRPETkSwbpdIkxaoJXDs47l5asDkQOaEMALqkTk7sktrZtMnA/AGJwbCwiyTaiXVhHsWj8rmYnCpOjCRIgLcjNca7YXN3MXAwJNql83k4dWZ00Zj1WmXEwh8XF/NBSVj0OOGvdw3moTqmipwN75ulB6XALON25Y2orPGUeZLCkjO1zcgNIpDCLf/+iXUU3V4rnrMZFk6M1nEc2Ekq756Kbnv/WUy8X39rJr7Sa8P1fTp0aqPR15Z+Tjem9GDO70cGRZvimgluZSGzoqydFysSZuUxcPK7wkDK+17XetmYVORekJaVUdrPxFlQfn6eJAWymMYXH1nm+7HnfnSR+9kzu8f321GMNgEe3y6fB72PfRsfT2Kjlj6MQj+cR0bjyHSOCjnnJHed+bhSkEA3I/FG/yIvzsRVXbHkQ9KJel/XnIpKknvYLW2ezUkf1m6E0cUQ76eWDIQbRqzo77N3syNe4rZToh6h4N4lcHf62eXEaDL+hW7X0YwTM68KVJoh1LHrxM53xxyEBBazI+6GIUJoi3GGH+ZznqlzbpnpHWyHztfy8reaLA8Dy+cOF/t5L2/cMkNrgpN4h8NrxsXmRR2fwc6kz41u6NQX51fXrOPdfwhlUDGw+Mjo8DG2TRPyFKWF17ZQoN7UkR0xZhgUa770+P3FFtd9MNJ+SzdjhNOOGG/DP3kyedFju42Pu20H+7j1nx5Dw4jWXKxl27b/AoQapR0=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send a payment request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/payment/request"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a request for the portal payment.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["email","message"],"type":"object","properties":{"userName":{"maxLength":255,"type":"string","description":"The name of the user submitting the sales request.","nullable":true,"example":"some text"},"email":{"maxLength":64,"type":"string","description":"The contact email address for the sales inquiry.","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"message":{"maxLength":255,"type":"string","description":"The details of the sales inquiry or payment request.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The request parameters for handling sales and payment inquiries in the portal.","title":"SalesRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"400":{"description":"Incorrect email or message text is empty"},"401":{"description":"Unauthorized"},"429":{"description":"Request limit is exceeded"}}}
+>
+  
+</StatusCodes>
+
+
+      

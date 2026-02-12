@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # SharePoint integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="5rN7CksWE-w"/>
+```
+
 This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from SharePoint using ONLYOFFICE Docs.
 
 ## Features
@@ -39,13 +45,15 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
    https://<yoursharepointsite>
    ```
 
-   > Alternatively to steps **3** and **4** you can type the following command:
-   >
-   >   ``` ps1
-   >   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
-   >   ```
-   >   
-   > On the **SharePoint Central Administration** home page, click **System Settings -> Farm Management -> Manage farm solutions**. On the **Solution Management** page, click **onlyoffice.wsp -> Deploy Solution**.
+   :::note
+   Alternatively to steps **3** and **4** you can type the following command:
+
+   ``` ps1
+   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
+   ```
+   
+   On the **SharePoint Central Administration** home page, click **System Settings -> Farm Management -> Manage farm solutions**. On the **Solution Management** page, click **onlyoffice.wsp -> Deploy Solution**.
+   :::
 
 5. On the **SharePoint Central Administration** home page, under **Application Management**, click **Manage web applications**.
 
@@ -67,9 +75,11 @@ In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with admin
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-> Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
+:::note
+Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
+:::
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 

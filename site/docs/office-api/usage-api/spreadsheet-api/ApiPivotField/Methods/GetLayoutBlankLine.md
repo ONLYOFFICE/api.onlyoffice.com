@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to get a layout blank line of a pivot field.
 
 ```javascript editor-xlsx
+// How to get a blank line layout of a pivot field.
+
+// Create a pivot table, add data to it then get a layout blank line of a specified pivot field.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -59,5 +63,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 
 pivotWorksheet.GetRange('A14').SetValue('Region blank line');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutBlankLine());
-
 ```

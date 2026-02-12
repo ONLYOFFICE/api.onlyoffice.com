@@ -1,0 +1,71 @@
+---
+id: get-group-by-user-id
+title: "Get user groups"
+description: "Returns a list of groups for the user with the ID specified in the request."
+sidebar_label: "Get user groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/isEv2QDFNtx26Hzp7lNV7gb1qJJEGCB0Zylk8VaIlny1NQ19N+HIyXbit0kBeYPfiGPd8fnnntO3kiCpZeTG/nWmdrKeSKNRQekjJ5lciKXSGHn1frKo5tlMpEWHFRI6PjcRmqoUE5k7dEp3lZaTqQFKmQiM/SpU5a9yYm8LFCwmZidD2QiHX6plcNMTsjVmEifFliBnGwkrS279OSUXspE5sZVQBykDiHwG1S2ZBMAPMOz0bPTRQovTn/P4ex0AS/T0+fj0YuXi+ewyMcvZdPMOZq3Rnv0HGA8GvFHP72/lSdhcrHk+3qZyNRoQk1sCdaWKg2wDD97Nt8c5msWnzElRsgxiKRisC7yniU4B2vGirBqbTosbmS4YkB1njziWmXH4DpEPVyphf3HYG5G7ev0yFv3amTTZvcTkdmeY+u6LGHBwWLJd7EDycQ/7LdJZAUaluh+JkR75OEo72CFg3/he6HIrxRHUv5i7QmrvVALY0oEfRBrpjOmAHpxVyAV6ARtoysvQPjgKa48mAf/bJpEQpYpdg7lh72y5lB6/PFFfV1V4NZi14YcixTtcLyIJudkJIdJTR1Z3F5QaUJGd48LStOzMeNRKr3yDzH1YUIWDvPDqvFV03iRg62GM/QEVPsnphiNX5sMn3SgOQ7OlC927cBadG0Wz0dnh6pwpaGmwjj1HbPgzGNaO0XrIH7g00+8/2mFvCAdAvfUnVOEct4kG/kKwTGTb8KvqVV/4Xq7dswevEo78/fTmorxccP3FoNE38xZ3vpJf0SqnWZOlj1RE7mJrA0yfKeoCL9m58JbTFWuMBNKhzVWJPTE3KqQCtMOg6D/VMiJHIJVw/FgNAyuh+xxuIlToJEMk/vajYjalSwvC/B45crmoLMugq1Ijc7Vso7TRybyKzjF/ROI0R6OBcqhLrnEB57O45a4+vg3F3W+K9cFq3V01S/ajuqhNgcurzyK18asFAo+hJraQdCp9KTvsJ2AaTjCfG0ruo1TENmDKG80oRNrU7tQG3YsQGfCgvd3xnHtw7wJAhUcsueWR09xfRKNxebd9aW4NCvUzUnPafSVtF/+7Lro3fUlh+oT9zHMpj2gWB0zVqpKaczEYh0IdjJt+yrYnIgCIQsJtKD2IragtjZNsu2MnSBBWLifSbQTeWnuIt97UUVQkUTydqTG/m4nMb3FwMEAtJ8MhyHqwOhybfJcpThITRUXx8OtbrA8M+BPPxrMQ3WM7R4iIAuNDZmANEXvBRlhnSFMCTPh0Jvapei3IjGR1/z5iHVUvk5LdmiGhddG66jy90Dl3XPRbh+2Re/0028dxEPnhuv77dSrpQaqHT5ON6b01pz7JwtC189rIHiGBmRFVXsSCxRmQRA4+VVBIOVtJ2qdbPQqcitQZ9YoTQMxI6Y1tydmAlhqY8fvVDX08O3eRW4HO3bv3++eYvBTCaPA124H19Sq9nkU0jDJux75MBMXtbXGcZHqHtIFljZDv7oPdpEOUZ/WTBSsQPERH1380bfkMrCER4yfDX4bjHjJGk8V6L0s3iLFgbJ9cu6VZ7N7kP6fB1PLCsJvNLQlKM351XFIxCl1w5SRiRwPRjKRIRYD5YOkTNr/LPNEFsYTW2+2Q6rh5S81Op7r890wCgMtU56/Z8cf1vYv/MvH9sn+V3Hv78/R5Due63WYf2WNccqFSdX9x2rmTdJJIWcTN6dpipb2jh38Z+FxuJ3lb99cyiRIW7+/4ghrv7D3oyndm3gxA37nJ5OjJzab2LxNs7WPWz88sR0I0ZoBmjdN8x/TogdP
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/group/user/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of groups for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"The user ID.","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of groups","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"required":["id","name"],"type":"object","properties":{"id":{"type":"string","description":"The group ID.","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"The group name.","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"The group manager.","nullable":true,"example":"Jake.Zazhitski"},"isSystem":{"type":"boolean","description":"Indicates whether the group is a system group.","nullable":true,"example":true}},"additionalProperties":false,"description":"The group summary parameters.","title":"GroupSummaryDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"GroupSummaryArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

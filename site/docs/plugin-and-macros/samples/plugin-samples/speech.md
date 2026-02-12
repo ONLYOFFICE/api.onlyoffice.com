@@ -6,13 +6,17 @@ Converts the selected text into speech. The plugin uses [guessLanguage](https://
 
 **Supported editors:** documents.
 
-![Speech](/assets/images/plugins/gifs/speech.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="ZALRpPomZrA" />
+```
 
 ## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/speech).
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/speech).
 
 ## Usage
 
@@ -181,8 +185,8 @@ Repository on GitHub: [speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## Methods and events
 
-- buttons
-- init
+- [button](/docs/plugin-and-macros/customization/buttons.md)s
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 
 ## Support
 

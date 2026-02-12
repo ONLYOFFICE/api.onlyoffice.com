@@ -2,6 +2,1093 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.2
+
+### CheckBoxForm methods
+
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Form API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Form API.
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Text document API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Text document API.
+
+### Form methods
+
+- Added the [ApiCheckBoxForm/Delete](../usage-api/form-api/ApiCheckBoxForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiCheckBoxForm/GetInternalId](../usage-api/form-api/ApiCheckBoxForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/form-api/ApiComboBoxForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiComboBoxForm/GetInternalId](../usage-api/form-api/ApiComboBoxForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiComplexForm/Delete](../usage-api/form-api/ApiComplexForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiComplexForm/GetInternalId](../usage-api/form-api/ApiComplexForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiDateForm/Delete](../usage-api/form-api/ApiDateForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiDateForm/GetInternalId](../usage-api/form-api/ApiDateForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiFormBase/Delete](../usage-api/form-api/ApiFormBase/Methods/Delete.md) method to the Form API.
+- Added the [ApiFormBase/GetInternalId](../usage-api/form-api/ApiFormBase/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiPictureForm/Delete](../usage-api/form-api/ApiPictureForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiPictureForm/GetInternalId](../usage-api/form-api/ApiPictureForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiTextForm/Delete](../usage-api/form-api/ApiTextForm/Methods/Delete.md) method to the Form API.
+- Added the [ApiTextForm/GetInternalId](../usage-api/form-api/ApiTextForm/Methods/GetInternalId.md) method to the Form API.
+- Added the [ApiCheckBoxForm/Delete](../usage-api/text-document-api/ApiCheckBoxForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiCheckBoxForm/GetInternalId](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/text-document-api/ApiComboBoxForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiComboBoxForm/GetInternalId](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiComplexForm/Delete](../usage-api/text-document-api/ApiComplexForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiComplexForm/GetInternalId](../usage-api/text-document-api/ApiComplexForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiDateForm/Delete](../usage-api/text-document-api/ApiDateForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiDateForm/GetInternalId](../usage-api/text-document-api/ApiDateForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiFormBase/Delete](../usage-api/text-document-api/ApiFormBase/Methods/Delete.md) method to the Text document API.
+- Added the [ApiFormBase/GetInternalId](../usage-api/text-document-api/ApiFormBase/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiPictureForm/Delete](../usage-api/text-document-api/ApiPictureForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiPictureForm/GetInternalId](../usage-api/text-document-api/ApiPictureForm/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiTextForm/Delete](../usage-api/text-document-api/ApiTextForm/Methods/Delete.md) method to the Text document API.
+- Added the [ApiTextForm/GetInternalId](../usage-api/text-document-api/ApiTextForm/Methods/GetInternalId.md) method to the Text document API.
+
+### Paragraph methods
+
+- Added the [ApiParagraph/GetFontNames](../usage-api/presentation-api/ApiParagraph/Methods/GetFontNames.md) method to the Presentation API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/presentation-api/ApiParagraph/Methods/GetInternalId.md) method to the Presentation API.
+- Added the [ApiParagraph/GetLastRunWithText](../usage-api/presentation-api/ApiParagraph/Methods/GetLastRunWithText.md) method to the Presentation API.
+- Added the [ApiParagraph/InsertParagraph](../usage-api/presentation-api/ApiParagraph/Methods/InsertParagraph.md) method to the Presentation API.
+- Added the [ApiParagraph/Last](../usage-api/presentation-api/ApiParagraph/Methods/Last.md) method to the Presentation API.
+- Added the [ApiParagraph/Push](../usage-api/presentation-api/ApiParagraph/Methods/Push.md) method to the Presentation API.
+- Added the [ApiParagraph/SetBold](../usage-api/presentation-api/ApiParagraph/Methods/SetBold.md) method to the Presentation API.
+- Added the [ApiParagraph/SetCaps](../usage-api/presentation-api/ApiParagraph/Methods/SetCaps.md) method to the Presentation API.
+- Added the [ApiParagraph/SetColor](../usage-api/presentation-api/ApiParagraph/Methods/SetColor.md) method to the Presentation API.
+- Added the [ApiParagraph/SetDoubleStrikeout](../usage-api/presentation-api/ApiParagraph/Methods/SetDoubleStrikeout.md) method to the Presentation API.
+- Added the [ApiParagraph/SetFontFamily](../usage-api/presentation-api/ApiParagraph/Methods/SetFontFamily.md) method to the Presentation API.
+- Added the [ApiParagraph/SetFontSize](../usage-api/presentation-api/ApiParagraph/Methods/SetFontSize.md) method to the Presentation API.
+- Added the [ApiParagraph/SetItalic](../usage-api/presentation-api/ApiParagraph/Methods/SetItalic.md) method to the Presentation API.
+- Added the [ApiParagraph/SetSmallCaps](../usage-api/presentation-api/ApiParagraph/Methods/SetSmallCaps.md) method to the Presentation API.
+- Added the [ApiParagraph/SetSpacing](../usage-api/presentation-api/ApiParagraph/Methods/SetSpacing.md) method to the Presentation API.
+- Added the [ApiParagraph/SetStrikeout](../usage-api/presentation-api/ApiParagraph/Methods/SetStrikeout.md) method to the Presentation API.
+- Added the [ApiParagraph/SetTextPr](../usage-api/presentation-api/ApiParagraph/Methods/SetTextPr.md) method to the Presentation API.
+- Added the [ApiParagraph/SetUnderline](../usage-api/presentation-api/ApiParagraph/Methods/SetUnderline.md) method to the Presentation API.
+- Added the [ApiParagraph/ToJSON](../usage-api/presentation-api/ApiParagraph/Methods/ToJSON.md) method to the Presentation API.
+- Added the [ApiParagraph/GetFontNames](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetFontNames.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetInternalId.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetLastRunWithText](../usage-api/spreadsheet-api/ApiParagraph/Methods/GetLastRunWithText.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/InsertParagraph](../usage-api/spreadsheet-api/ApiParagraph/Methods/InsertParagraph.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/Last](../usage-api/spreadsheet-api/ApiParagraph/Methods/Last.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/Push](../usage-api/spreadsheet-api/ApiParagraph/Methods/Push.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetBold](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetBold.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetCaps](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetCaps.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetColor](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetColor.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetDoubleStrikeout](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetDoubleStrikeout.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetFontFamily](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetFontFamily.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetFontSize](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetFontSize.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetItalic](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetItalic.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetSmallCaps](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetSmallCaps.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetSpacing](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetSpacing.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetStrikeout](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetStrikeout.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetTextPr](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetTextPr.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/SetUnderline](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetUnderline.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/ToJSON](../usage-api/spreadsheet-api/ApiParagraph/Methods/ToJSON.md) method to the Spreadsheet API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/text-document-api/ApiParagraph/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiParagraph/GetParaId](../usage-api/text-document-api/ApiParagraph/Methods/GetParaId.md) method to the Text document API.
+- Added the [ApiParagraph/SetParaId](../usage-api/text-document-api/ApiParagraph/Methods/SetParaId.md) method to the Text document API.
+
+### Presentation methods
+
+- Added the [Api/EmusToMillimeters](../usage-api/presentation-api/Api/Methods/EmusToMillimeters.md) method to the Presentation API.
+- Added the [Api/MillimetersToEmus](../usage-api/presentation-api/Api/Methods/MillimetersToEmus.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetAllParagraphs](../usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/presentation-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/presentation-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to the Presentation API.
+- Added the [ApiDocumentContent/GetText](../usage-api/presentation-api/ApiDocumentContent/Methods/GetText.md) method to the Presentation API.
+- Added the [ApiTable/GetInternalId](../usage-api/presentation-api/ApiTable/Methods/GetInternalId.md) method to the Presentation API.
+
+### Spreadsheet methods
+
+- Added the [Api/EmusToMillimeters](../usage-api/spreadsheet-api/Api/Methods/EmusToMillimeters.md) method to the Spreadsheet API.
+- Added the [Api/MillimetersToEmus](../usage-api/spreadsheet-api/Api/Methods/MillimetersToEmus.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetAllParagraphs](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetAllParagraphs.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to the Spreadsheet API.
+- Added the [ApiDocumentContent/GetText](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetText.md) method to the Spreadsheet API.
+- Added the [ApiTable/GetInternalId](../usage-api/spreadsheet-api/ApiTable/Methods/GetInternalId.md) method to the Spreadsheet API.
+
+### Document methods
+
+- Added the [Api/EmusToMillimeters](../usage-api/text-document-api/Api/Methods/EmusToMillimeters.md) method to the Text document API.
+- Added the [Api/MillimetersToEmus](../usage-api/text-document-api/Api/Methods/MillimetersToEmus.md) method to the Text document API.
+- Added the [ApiDocument/EnterText](../usage-api/text-document-api/ApiDocument/Methods/EnterText.md) method to the Text document API.
+- Added the [ApiDocument/InsertParagraphBreak](../usage-api/text-document-api/ApiDocument/Methods/InsertParagraphBreak.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorDown](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorDown.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorLeft](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorLeft.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorRight](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorRight.md) method to the Text document API.
+- Added the [ApiDocument/MoveCursorUp](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorUp.md) method to the Text document API.
+- Added the [ApiTable/GetInternalId](../usage-api/text-document-api/ApiTable/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiTableCell/GetInternalId](../usage-api/text-document-api/ApiTableCell/Methods/GetInternalId.md) method to the Text document API.
+- Added the [ApiTableRow/GetInternalId](../usage-api/text-document-api/ApiTableRow/Methods/GetInternalId.md) method to the Text document API.
+
+## Version 9.1
+
+### Conditional formatting methods
+
+- Added the [ApiFormatCondition](../usage-api/spreadsheet-api/ApiFormatCondition/ApiFormatCondition.md) class to the Spreadsheet API.
+- Added the [ApiFormatCondition/Delete](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/Modify](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/Modify.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetAppliesTo](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetDateOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetDateOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFillColor](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFont](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFont.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFormula1](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFormula1.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetFormula2](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetFormula2.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetNumberFormat](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetParent](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetPTCondition](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetScopeType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetText](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetText.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetTextOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetTextOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/GetType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetBorders](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetBorders.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetDateOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetDateOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetFillColor](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetFirstPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetLastPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetNumberFormat](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetPriority](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetScopeType](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetText](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetText.md) method to the Spreadsheet API.
+- Added the [ApiFormatCondition/SetTextOperator](../usage-api/spreadsheet-api/ApiFormatCondition/Methods/SetTextOperator.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions](../usage-api/spreadsheet-api/ApiFormatConditions/ApiFormatConditions.md) class to the Spreadsheet API.
+- Added the [ApiFormatConditions/Add](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/Add.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/AddAboveAverage](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddAboveAverage.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/AddColorScale](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddColorScale.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/AddDatabar](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddDatabar.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/AddIconSetCondition](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddIconSetCondition.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/AddTop10](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddTop10.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/AddUniqueValues](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/AddUniqueValues.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/Delete](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/GetCount](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetCount.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/GetItem](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetItem.md) method to the Spreadsheet API.
+- Added the [ApiFormatConditions/GetParent](../usage-api/spreadsheet-api/ApiFormatConditions/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetFormatConditions](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormatConditions.md) method to the Spreadsheet API.
+- Added the *FormatConditions* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the [XlContainsOperator](../usage-api/spreadsheet-api/Enumeration/XlContainsOperator.md) type to the simple type definitions.
+- Added the [XlFormatConditionOperator](../usage-api/spreadsheet-api/Enumeration/XlFormatConditionOperator.md) type to the simple type definitions.
+- Added the [XlFormatConditionType](../usage-api/spreadsheet-api/Enumeration/XlFormatConditionType.md) type to the simple type definitions.
+- Added the [XlPivotConditionScope](../usage-api/spreadsheet-api/Enumeration/XlPivotConditionScope.md) type to the simple type definitions.
+- Added the [XlTimePeriods](../usage-api/spreadsheet-api/Enumeration/XlTimePeriods.md) type to the simple type definitions.
+
+### Above average methods
+
+- Added the [ApiAboveAverage](../usage-api/spreadsheet-api/ApiAboveAverage/ApiAboveAverage.md) class to the Spreadsheet API.
+- Added the [ApiAboveAverage/Delete](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetAboveBelow](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetAboveBelow.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetAppliesTo](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetFillColor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetFont](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetFont.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetNumberFormat](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetNumStdDev](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetNumStdDev.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetParent](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetPTCondition](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetScopeType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/GetType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetAboveBelow](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetAboveBelow.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetFillColor](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetFirstPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetLastPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetNumStdDev](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetNumStdDev.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetNumberFormat](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetPriority](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiAboveAverage/SetScopeType](../usage-api/spreadsheet-api/ApiAboveAverage/Methods/SetScopeType.md) method to the Spreadsheet API.
+
+### Color scale methods
+
+- Added the [ApiColorScale](../usage-api/spreadsheet-api/ApiColorScale/ApiColorScale.md) class to the Spreadsheet API.
+- Added the [ApiColorScale/Delete](../usage-api/spreadsheet-api/ApiColorScale/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetAppliesTo](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetColorScaleCriteria](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetColorScaleCriteria.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetParent](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetPTCondition](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetScopeType](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/GetType](../usage-api/spreadsheet-api/ApiColorScale/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiColorScale/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/SetFirstPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/SetLastPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/SetPriority](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiColorScale/SetScopeType](../usage-api/spreadsheet-api/ApiColorScale/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion](../usage-api/spreadsheet-api/ApiColorScaleCriterion/ApiColorScaleCriterion.md) class to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetColor](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetColor.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetIndex](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetIndex.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetType](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/GetValue](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/GetValue.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/SetColor](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetColor.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/SetType](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetType.md) method to the Spreadsheet API.
+- Added the [ApiColorScaleCriterion/SetValue](../usage-api/spreadsheet-api/ApiColorScaleCriterion/Methods/SetValue.md) method to the Spreadsheet API.
+- Added the [XlConditionValueTypes](../usage-api/spreadsheet-api/Enumeration/XlConditionValueTypes.md) type to the simple type definitions.
+
+### Databar methods
+
+- Added the [ApiDatabar](../usage-api/spreadsheet-api/ApiDatabar/ApiDatabar.md) class to the Spreadsheet API.
+- Added the [ApiDatabar/Delete](../usage-api/spreadsheet-api/ApiDatabar/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetAppliesTo](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetAxisColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAxisColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetAxisPosition](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetAxisPosition.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetBarBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarBorderColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetBarFillType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetBarFillType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetDirection](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetDirection.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetFormula](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetFormula.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMaxPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMaxPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMaxPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMaxPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMinPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMinPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetMinPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetMinPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetNegativeBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetNegativeBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetNegativeBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetNegativeBorderColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetParent](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetPercentMax](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPercentMax.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetPercentMin](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPercentMin.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetPTCondition](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetScopeType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetShowValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetShowValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/GetType](../usage-api/spreadsheet-api/ApiDatabar/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiDatabar/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetAxisColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetAxisColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetAxisPosition](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetAxisPosition.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetBarBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarBorderColor.md) method to the Spreadsheet API.v
+- Added the [ApiDatabar/SetBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetBarFillType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetBarFillType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetDirection](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetDirection.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetFirstPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetLastPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMaxPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMaxPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMaxPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMaxPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMinPointType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMinPointType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetMinPointValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetMinPointValue.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetNegativeBarColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetNegativeBarColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetNegativeBorderColor](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetNegativeBorderColor.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetPercentMax](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPercentMax.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetPercentMin](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPercentMin.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetPriority](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetScopeType](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiDatabar/SetShowValue](../usage-api/spreadsheet-api/ApiDatabar/Methods/SetShowValue.md) method to the Spreadsheet API.
+- Added the [XlDataBarAxisPosition](../usage-api/spreadsheet-api/Enumeration/XlDataBarAxisPosition.md) type to the simple type definitions.
+- Added the [XlDataBarFillType](../usage-api/spreadsheet-api/Enumeration/XlDataBarFillType.md) type to the simple type definitions.
+- Added the [XlReadingOrder](../usage-api/spreadsheet-api/Enumeration/XlReadingOrder.md) type to the simple type definitions.
+
+### Icon set methods
+
+- Added the [ApiIconCriterion](../usage-api/spreadsheet-api/ApiIconCriterion/ApiIconCriterion.md) class to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetIcon](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetIcon.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetIndex](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetIndex.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetOperator](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetOperator.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetType](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/GetValue](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/GetValue.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetIcon](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetIcon.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetOperator](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetOperator.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetType](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetType.md) method to the Spreadsheet API.
+- Added the [ApiIconCriterion/SetValue](../usage-api/spreadsheet-api/ApiIconCriterion/Methods/SetValue.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition](../usage-api/spreadsheet-api/ApiIconSetCondition/ApiIconSetCondition.md) class to the Spreadsheet API.
+- Added the [ApiIconSetCondition/Delete](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetAppliesTo](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetFormula](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetFormula.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetIconCriteria](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetIconCriteria.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetIconSet](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetIconSet.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetParent](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetPercentileValues](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPercentileValues.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetPTCondition](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetReverseOrder](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetReverseOrder.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetScopeType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetShowIconOnly](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetShowIconOnly.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/GetType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetFirstPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetIconSet](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetIconSet.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetLastPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetPercentileValues](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetPercentileValues.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetPriority](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetReverseOrder](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetReverseOrder.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetScopeType](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiIconSetCondition/SetShowIconOnly](../usage-api/spreadsheet-api/ApiIconSetCondition/Methods/SetShowIconOnly.md) method to the Spreadsheet API.
+- Added the [XlIcon](../usage-api/spreadsheet-api/Enumeration/XlIcon.md) type to the simple type definitions.
+- Added the [XlIconSet](../usage-api/spreadsheet-api/Enumeration/XlIconSet.md) type to the simple type definitions.
+
+### Top 10 methods
+
+- Added the [ApiTop10](../usage-api/spreadsheet-api/ApiTop10/ApiTop10.md) class to the Spreadsheet API.
+- Added the [ApiTop10/Delete](../usage-api/spreadsheet-api/ApiTop10/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetAppliesTo](../usage-api/spreadsheet-api/ApiTop10/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetFillColor](../usage-api/spreadsheet-api/ApiTop10/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetFont](../usage-api/spreadsheet-api/ApiTop10/Methods/GetFont.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetNumberFormat](../usage-api/spreadsheet-api/ApiTop10/Methods/GetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetParent](../usage-api/spreadsheet-api/ApiTop10/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetPercent](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPercent.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetPTCondition](../usage-api/spreadsheet-api/ApiTop10/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetRank](../usage-api/spreadsheet-api/ApiTop10/Methods/GetRank.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetScopeType](../usage-api/spreadsheet-api/ApiTop10/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetTopBottom](../usage-api/spreadsheet-api/ApiTop10/Methods/GetTopBottom.md) method to the Spreadsheet API.
+- Added the [ApiTop10/GetType](../usage-api/spreadsheet-api/ApiTop10/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiTop10/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiTop10/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetFillColor](../usage-api/spreadsheet-api/ApiTop10/Methods/SetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetFirstPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetLastPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetNumberFormat](../usage-api/spreadsheet-api/ApiTop10/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetPercent](../usage-api/spreadsheet-api/ApiTop10/Methods/SetPercent.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetPriority](../usage-api/spreadsheet-api/ApiTop10/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetRank](../usage-api/spreadsheet-api/ApiTop10/Methods/SetRank.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetScopeType](../usage-api/spreadsheet-api/ApiTop10/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiTop10/SetTopBottom](../usage-api/spreadsheet-api/ApiTop10/Methods/SetTopBottom.md) method to the Spreadsheet API.
+- Added the [XlTopBottom](../usage-api/spreadsheet-api/Enumeration/XlTopBottom.md) type to the simple type definitions.
+
+### Unique values methods
+
+- Added the [ApiUniqueValues](../usage-api/spreadsheet-api/ApiUniqueValues/ApiUniqueValues.md) class to the Spreadsheet API.
+- Added the [ApiUniqueValues/Delete](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/Delete.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetAppliesTo](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetAppliesTo.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetDupeUnique](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetDupeUnique.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetFillColor](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetFont](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetFont.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetNumberFormat](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetParent](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetParent.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetPTCondition](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetPTCondition.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetScopeType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetScopeType.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/GetType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/ModifyAppliesToRange](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/ModifyAppliesToRange.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetDupeUnique](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetDupeUnique.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetFillColor](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetFillColor.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetFirstPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetFirstPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetLastPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetLastPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetNumberFormat](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetNumberFormat.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetPriority](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetPriority.md) method to the Spreadsheet API.
+- Added the [ApiUniqueValues/SetScopeType](../usage-api/spreadsheet-api/ApiUniqueValues/Methods/SetScopeType.md) method to the Spreadsheet API.
+- Added the [XlDuplicateValues](../usage-api/spreadsheet-api/Enumeration/XlDuplicateValues.md) type to the simple type definitions.
+
+### Geometry methods
+
+- Added the [Api/CreateCustomGeometry](../usage-api/text-document-api/Api/Methods/CreateCustomGeometry.md) method to the Text document API.
+- Added the [Api/CreatePresetGeometry](../usage-api/text-document-api/Api/Methods/CreatePresetGeometry.md) method to the Text document API.
+- Added the [ApiGeometry](../usage-api/text-document-api/ApiGeometry/ApiGeometry.md) class to the Text document API.
+- Added the [ApiGeometry/AddAdj](../usage-api/text-document-api/ApiGeometry/Methods/AddAdj.md) method to the Text document API.
+- Added the [ApiGeometry/AddConnectionPoint](../usage-api/text-document-api/ApiGeometry/Methods/AddConnectionPoint.md) method to the Text document API.
+- Added the [ApiGeometry/AddGuide](../usage-api/text-document-api/ApiGeometry/Methods/AddGuide.md) method to the Text document API.
+- Added the [ApiGeometry/AddPath](../usage-api/text-document-api/ApiGeometry/Methods/AddPath.md) method to the Text document API.
+- Added the [ApiGeometry/GetAdjValue](../usage-api/text-document-api/ApiGeometry/Methods/GetAdjValue.md) method to the Text document API.
+- Added the [ApiGeometry/GetPath](../usage-api/text-document-api/ApiGeometry/Methods/GetPath.md) method to the Text document API.
+- Added the [ApiGeometry/GetPathCount](../usage-api/text-document-api/ApiGeometry/Methods/GetPathCount.md) method to the Text document API.
+- Added the [ApiGeometry/GetPaths](../usage-api/text-document-api/ApiGeometry/Methods/GetPaths.md) method to the Text document API.
+- Added the [ApiGeometry/GetPreset](../usage-api/text-document-api/ApiGeometry/Methods/GetPreset.md) method to the Text document API.
+- Added the [ApiGeometry/IsCustom](../usage-api/text-document-api/ApiGeometry/Methods/IsCustom.md) method to the Text document API.
+- Added the [ApiGeometry/SetAdjValue](../usage-api/text-document-api/ApiGeometry/Methods/SetAdjValue.md) method to the Text document API.
+- Added the [ApiGeometry/SetTextRect](../usage-api/text-document-api/ApiGeometry/Methods/SetTextRect.md) method to the Text document API.
+- Added the [ApiShape/GetGeometry](../usage-api/text-document-api/ApiShape/Methods/GetGeometry.md) method to the Text document API.
+- Added the [ApiShape/SetGeometry](../usage-api/text-document-api/ApiShape/Methods/SetGeometry.md) method to the Text document API.
+- Added the [Api/CreateCustomGeometry](../usage-api/spreadsheet-api/Api/Methods/CreateCustomGeometry.md) method to the Spreadsheet API.
+- Added the [Api/CreatePresetGeometry](../usage-api/spreadsheet-api/Api/Methods/CreatePresetGeometry.md) method to the Spreadsheet API.
+- Added the [ApiGeometry](../usage-api/spreadsheet-api/ApiGeometry/ApiGeometry.md) class to the Spreadsheet API.
+- Added the [ApiGeometry/AddAdj](../usage-api/spreadsheet-api/ApiGeometry/Methods/AddAdj.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/AddConnectionPoint](../usage-api/spreadsheet-api/ApiGeometry/Methods/AddConnectionPoint.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/AddGuide](../usage-api/spreadsheet-api/ApiGeometry/Methods/AddGuide.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/AddPath](../usage-api/spreadsheet-api/ApiGeometry/Methods/AddPath.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/GetAdjValue](../usage-api/spreadsheet-api/ApiGeometry/Methods/GetAdjValue.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/GetPath](../usage-api/spreadsheet-api/ApiGeometry/Methods/GetPath.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/GetPathCount](../usage-api/spreadsheet-api/ApiGeometry/Methods/GetPathCount.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/GetPaths](../usage-api/spreadsheet-api/ApiGeometry/Methods/GetPaths.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/GetPreset](../usage-api/spreadsheet-api/ApiGeometry/Methods/GetPreset.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/IsCustom](../usage-api/spreadsheet-api/ApiGeometry/Methods/IsCustom.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/SetAdjValue](../usage-api/spreadsheet-api/ApiGeometry/Methods/SetAdjValue.md) method to the Spreadsheet API.
+- Added the [ApiGeometry/SetTextRect](../usage-api/spreadsheet-api/ApiGeometry/Methods/SetTextRect.md) method to the Spreadsheet API.
+- Added the [ApiShape/GetGeometry](../usage-api/spreadsheet-api/ApiShape/Methods/GetGeometry.md) method to the Spreadsheet API.
+- Added the [ApiShape/SetGeometry](../usage-api/spreadsheet-api/ApiShape/Methods/SetGeometry.md) method to the Spreadsheet API.
+- Added the [Api/CreateCustomGeometry](../usage-api/presentation-api/Api/Methods/CreateCustomGeometry.md) method to the Presentation API.
+- Added the [Api/CreatePresetGeometry](../usage-api/presentation-api/Api/Methods/CreatePresetGeometry.md) method to the Presentation API.
+- Added the [ApiGeometry](../usage-api/presentation-api/ApiGeometry/ApiGeometry.md) class to the Presentation API.
+- Added the [ApiGeometry/AddAdj](../usage-api/presentation-api/ApiGeometry/Methods/AddAdj.md) method to the Presentation API.
+- Added the [ApiGeometry/AddConnectionPoint](../usage-api/presentation-api/ApiGeometry/Methods/AddConnectionPoint.md) method to the Presentation API.
+- Added the [ApiGeometry/AddGuide](../usage-api/presentation-api/ApiGeometry/Methods/AddGuide.md) method to the Presentation API.
+- Added the [ApiGeometry/AddPath](../usage-api/presentation-api/ApiGeometry/Methods/AddPath.md) method to the Presentation API.
+- Added the [ApiGeometry/GetAdjValue](../usage-api/presentation-api/ApiGeometry/Methods/GetAdjValue.md) method to the Presentation API.
+- Added the [ApiGeometry/GetPath](../usage-api/presentation-api/ApiGeometry/Methods/GetPath.md) method to the Presentation API.
+- Added the [ApiGeometry/GetPathCount](../usage-api/presentation-api/ApiGeometry/Methods/GetPathCount.md) method to the Presentation API.
+- Added the [ApiGeometry/GetPaths](../usage-api/presentation-api/ApiGeometry/Methods/GetPaths.md) method to the Presentation API.
+- Added the [ApiGeometry/GetPreset](../usage-api/presentation-api/ApiGeometry/Methods/GetPreset.md) method to the Presentation API.
+- Added the [ApiGeometry/IsCustom](../usage-api/presentation-api/ApiGeometry/Methods/IsCustom.md) method to the Presentation API.
+- Added the [ApiGeometry/SetAdjValue](../usage-api/presentation-api/ApiGeometry/Methods/SetAdjValue.md) method to the Presentation API.
+- Added the [ApiGeometry/SetTextRect](../usage-api/presentation-api/ApiGeometry/Methods/SetTextRect.md) method to the Presentation API.
+- Added the [ApiShape/GetGeometry](../usage-api/presentation-api/ApiShape/Methods/GetGeometry.md) method to the Presentation API.
+- Added the [ApiShape/SetGeometry](../usage-api/presentation-api/ApiShape/Methods/SetGeometry.md) method to the Presentation API.
+- Added the [GeometryFormulaType](../usage-api/text-document-api/Enumeration/GeometryFormulaType.md) type to the simple type definitions.
+
+### Path methods
+
+- Added the [ApiPath](../usage-api/text-document-api/ApiPath/ApiPath.md) class to the Text document API.
+- Added the [ApiPath/ArcTo](../usage-api/text-document-api/ApiPath/Methods/ArcTo.md) method to the Text document API.
+- Added the [ApiPath/CubicBezTo](../usage-api/text-document-api/ApiPath/Methods/CubicBezTo.md) method to the Text document API.
+- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/Close.md) method to the Text document API.
+- Added the [ApiPath/GetCommand](../usage-api/text-document-api/ApiPath/Methods/GetCommand.md) method to the Text document API.
+- Added the [ApiPath/GetCommandCount](../usage-api/text-document-api/ApiPath/Methods/GetCommandCount.md) method to the Text document API.
+- Added the [ApiPath/GetCommands](../usage-api/text-document-api/ApiPath/Methods/GetCommands.md) method to the Text document API.
+- Added the [ApiPath/GetFill](../usage-api/text-document-api/ApiPath/Methods/GetFill.md) method to the Text document API.
+- Added the [ApiPath/GetHeight](../usage-api/text-document-api/ApiPath/Methods/GetHeight.md) method to the Text document API.
+- Added the [ApiPath/GetStroke](../usage-api/text-document-api/ApiPath/Methods/GetStroke.md) method to the Text document API.
+- Added the [ApiPath/GetWidth](../usage-api/text-document-api/ApiPath/Methods/GetWidth.md) method to the Text document API.
+- Added the [ApiPath/LineTo](../usage-api/text-document-api/ApiPath/Methods/LineTo.md) method to the Text document API.
+- Added the [ApiPath/MoveTo](../usage-api/text-document-api/ApiPath/Methods/MoveTo.md) method to the Text document API.
+- Added the [ApiPath/QuadBezTo](../usage-api/text-document-api/ApiPath/Methods/QuadBezTo.md) method to the Text document API.
+- Added the [ApiPath/SetFill](../usage-api/text-document-api/ApiPath/Methods/SetFill.md) method to the Text document API.
+- Added the [ApiPath/SetHeight](../usage-api/text-document-api/ApiPath/Methods/SetHeight.md) method to the Text document API.
+- Added the [ApiPath/SetStroke](../usage-api/text-document-api/ApiPath/Methods/SetStroke.md) method to the Text document API.
+- Added the [ApiPath/SetWidth](../usage-api/text-document-api/ApiPath/Methods/SetWidth.md) method to the Text document API.
+- Added the [ApiPath](../usage-api/spreadsheet-api/ApiPath/ApiPath.md) class to the Spreadsheet API.
+- Added the [ApiPath/ArcTo](../usage-api/spreadsheet-api/ApiPath/Methods/ArcTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/CubicBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/CubicBezTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/Close.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetCommand](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommand.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetCommandCount](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommandCount.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetCommands](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommands.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetFill](../usage-api/spreadsheet-api/ApiPath/Methods/GetFill.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetHeight](../usage-api/spreadsheet-api/ApiPath/Methods/GetHeight.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetStroke](../usage-api/spreadsheet-api/ApiPath/Methods/GetStroke.md) method to the Spreadsheet API.
+- Added the [ApiPath/GetWidth](../usage-api/spreadsheet-api/ApiPath/Methods/GetWidth.md) method to the Spreadsheet API.
+- Added the [ApiPath/LineTo](../usage-api/spreadsheet-api/ApiPath/Methods/LineTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/MoveTo](../usage-api/spreadsheet-api/ApiPath/Methods/MoveTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/QuadBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/QuadBezTo.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetFill](../usage-api/spreadsheet-api/ApiPath/Methods/SetFill.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetHeight](../usage-api/spreadsheet-api/ApiPath/Methods/SetHeight.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetStroke](../usage-api/spreadsheet-api/ApiPath/Methods/SetStroke.md) method to the Spreadsheet API.
+- Added the [ApiPath/SetWidth](../usage-api/spreadsheet-api/ApiPath/Methods/SetWidth.md) method to the Spreadsheet API.
+- Added the [ApiPath](../usage-api/presentation-api/ApiPath/ApiPath.md) class to the Presentation API.
+- Added the [ApiPath/ArcTo](../usage-api/presentation-api/ApiPath/Methods/ArcTo.md) method to the Presentation API.
+- Added the [ApiPath/CubicBezTo](../usage-api/presentation-api/ApiPath/Methods/CubicBezTo.md) method to the Presentation API.
+- Added the [ApiPath/Close](../usage-api/presentation-api/ApiPath/Methods/Close.md) method to the Presentation API.
+- Added the [ApiPath/GetCommand](../usage-api/presentation-api/ApiPath/Methods/GetCommand.md) method to the Presentation API.
+- Added the [ApiPath/GetCommandCount](../usage-api/presentation-api/ApiPath/Methods/GetCommandCount.md) method to the Presentation API.
+- Added the [ApiPath/GetCommands](../usage-api/presentation-api/ApiPath/Methods/GetCommands.md) method to the Presentation API.
+- Added the [ApiPath/GetFill](../usage-api/presentation-api/ApiPath/Methods/GetFill.md) method to the Presentation API.
+- Added the [ApiPath/GetHeight](../usage-api/presentation-api/ApiPath/Methods/GetHeight.md) method to the Presentation API.
+- Added the [ApiPath/GetStroke](../usage-api/presentation-api/ApiPath/Methods/GetStroke.md) method to the Presentation API.
+- Added the [ApiPath/GetWidth](../usage-api/presentation-api/ApiPath/Methods/GetWidth.md) method to the Presentation API.
+- Added the [ApiPath/LineTo](../usage-api/presentation-api/ApiPath/Methods/LineTo.md) method to the Presentation API.
+- Added the [ApiPath/MoveTo](../usage-api/presentation-api/ApiPath/Methods/MoveTo.md) method to the Presentation API.
+- Added the [ApiPath/QuadBezTo](../usage-api/presentation-api/ApiPath/Methods/QuadBezTo.md) method to the Presentation API.
+- Added the [ApiPath/SetFill](../usage-api/presentation-api/ApiPath/Methods/SetFill.md) method to the Presentation API.
+- Added the [ApiPath/SetHeight](../usage-api/presentation-api/ApiPath/Methods/SetHeight.md) method to the Presentation API.
+- Added the [ApiPath/SetStroke](../usage-api/presentation-api/ApiPath/Methods/SetStroke.md) method to the Presentation API.
+- Added the [ApiPath/SetWidth](../usage-api/presentation-api/ApiPath/Methods/SetWidth.md) method to the Presentation API.
+- Added the [PathFillType](../usage-api/text-document-api/Enumeration/PathFillType.md) type to the simple type definitions.
+
+### Path command methods
+
+- Added the [ApiPathCommand](../usage-api/text-document-api/ApiPathCommand/ApiPathCommand.md) class to the Text document API.
+- Added the [ApiPathCommand/GetType](../usage-api/text-document-api/ApiPathCommand/Methods/GetType.md) method to the Text document API.
+- Added the [ApiPathCommand/GetX](../usage-api/text-document-api/ApiPathCommand/Methods/GetX.md) method to the Text document API.
+- Added the [ApiPathCommand/GetY](../usage-api/text-document-api/ApiPathCommand/Methods/GetY.md) method to the Text document API.
+- Added the [ApiPathCommand/GetX0](../usage-api/text-document-api/ApiPathCommand/Methods/GetX0.md) method to the Text document API.
+- Added the [ApiPathCommand/GetY0](../usage-api/text-document-api/ApiPathCommand/Methods/GetY0.md) method to the Text document API.
+- Added the [ApiPathCommand/GetX1](../usage-api/text-document-api/ApiPathCommand/Methods/GetX1.md) method to the Text document API.
+- Added the [ApiPathCommand/GetY1](../usage-api/text-document-api/ApiPathCommand/Methods/GetY1.md) method to the Text document API.
+- Added the [ApiPathCommand/GetX2](../usage-api/text-document-api/ApiPathCommand/Methods/GetX2.md) method to the Text document API.
+- Added the [ApiPathCommand/GetY2](../usage-api/text-document-api/ApiPathCommand/Methods/GetY2.md) method to the Text document API.
+- Added the [ApiPathCommand/GetWR](../usage-api/text-document-api/ApiPathCommand/Methods/GetWR.md) method to the Text document API.
+- Added the [ApiPathCommand/GetHR](../usage-api/text-document-api/ApiPathCommand/Methods/GetHR.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetStartAngle](../usage-api/text-document-api/ApiPathCommand/Methods/GetStartAngle.md) method to the Text document API.
+- Added the [ApiPathCommand/GetSweepAngle](../usage-api/text-document-api/ApiPathCommand/Methods/GetSweepAngle.md) method to the Text document API.
+- Added the [ApiPathCommand](../usage-api/spreadsheet-api/ApiPathCommand/ApiPathCommand.md) class to the Spreadsheet API.
+- Added the [ApiPathCommand/GetType](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetType.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetX](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetX.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetY](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetY.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetX0](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetX0.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetY0](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetY0.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetX1](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetX1.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetY1](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetY1.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetX2](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetX2.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetY2](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetY2.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetWR](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetWR.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetHR](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetHR.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetStartAngle](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetStartAngle.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand/GetSweepAngle](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetSweepAngle.md) method to the Spreadsheet API.
+- Added the [ApiPathCommand](../usage-api/presentation-api/ApiPathCommand/ApiPathCommand.md) class to the Presentation API.
+- Added the [ApiPathCommand/GetType](../usage-api/presentation-api/ApiPathCommand/Methods/GetType.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetX](../usage-api/presentation-api/ApiPathCommand/Methods/GetX.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetY](../usage-api/presentation-api/ApiPathCommand/Methods/GetY.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetX0](../usage-api/presentation-api/ApiPathCommand/Methods/GetX0.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetY0](../usage-api/presentation-api/ApiPathCommand/Methods/GetY0.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetX1](../usage-api/presentation-api/ApiPathCommand/Methods/GetX1.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetY1](../usage-api/presentation-api/ApiPathCommand/Methods/GetY1.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetX2](../usage-api/presentation-api/ApiPathCommand/Methods/GetX2.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetY2](../usage-api/presentation-api/ApiPathCommand/Methods/GetY2.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetWR](../usage-api/presentation-api/ApiPathCommand/Methods/GetWR.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetHR](../usage-api/presentation-api/ApiPathCommand/Methods/GetHR.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetStartAngle](../usage-api/presentation-api/ApiPathCommand/Methods/GetStartAngle.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetSweepAngle](../usage-api/presentation-api/ApiPathCommand/Methods/GetSweepAngle.md) method to the Presentation API.
+- Added the [PathCommandType](../usage-api/text-document-api/Enumeration/PathCommandType.md) type to the simple type definitions.
+
+### Custom XML methods
+
+- Added the [ApiCustomXmlNode](../usage-api/spreadsheet-api/ApiCustomXmlNode/ApiCustomXmlNode.md) class to Spreadsheet API.
+- Added the [ApiCustomXmlNode/Add](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/Add.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/Delete](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/Delete.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/DeleteAttribute](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/DeleteAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetAttribute](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetAttributes](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetAttributes.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetClassType](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetClassType.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetNodeName](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetNodeName.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetNodes](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetNodes.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetNodeValue](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetNodeValue.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetParent](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetParent.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetText](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetText.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetXml](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetXml.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/GetXPath](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/GetXPath.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/SetAttribute](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/SetAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/SetNodeValue](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/SetNodeValue.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/SetText](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/SetText.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/SetXml](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/SetXml.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode/UpdateAttribute](../usage-api/spreadsheet-api/ApiCustomXmlNode/Methods/UpdateAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart](../usage-api/spreadsheet-api/ApiCustomXmlPart/ApiCustomXmlPart.md) class to Spreadsheet API.
+- Added the [ApiCustomXmlPart/Delete](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/Delete.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/DeleteAttribute](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/DeleteAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/DeleteElement](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/DeleteElement.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/GetAttribute](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/GetAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/GetClassType](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/GetClassType.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/GetId](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/GetId.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/GetNodes](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/GetNodes.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/GetXml](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/GetXml.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/InsertAttribute](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/InsertAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/InsertElement](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/InsertElement.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/UpdateAttribute](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/UpdateAttribute.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlPart/UpdateElement](../usage-api/spreadsheet-api/ApiCustomXmlPart/Methods/UpdateElement.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlParts](../usage-api/spreadsheet-api/ApiCustomXmlParts/ApiCustomXmlParts.md) class to Spreadsheet API.
+- Added the [ApiCustomXmlParts/Add](../usage-api/spreadsheet-api/ApiCustomXmlParts/Methods/Add.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlParts/GetAll](../usage-api/spreadsheet-api/ApiCustomXmlParts/Methods/GetAll.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlParts/GetById](../usage-api/spreadsheet-api/ApiCustomXmlParts/Methods/GetById.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlParts/GetByNamespace](../usage-api/spreadsheet-api/ApiCustomXmlParts/Methods/GetByNamespace.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlParts/GetClassType](../usage-api/spreadsheet-api/ApiCustomXmlParts/Methods/GetClassType.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlParts/GetCount](../usage-api/spreadsheet-api/ApiCustomXmlParts/Methods/GetCount.md) method to Spreadsheet API.
+- Added the [ApiWorksheet/GetCustomXmlParts](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCustomXmlParts.md) method to Spreadsheet API.
+- Added the [ApiCustomXmlNode](../usage-api/presentation-api/ApiCustomXmlNode/ApiCustomXmlNode.md) class to Presentation API.
+- Added the [ApiCustomXmlNode/Add](../usage-api/presentation-api/ApiCustomXmlNode/Methods/Add.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/Delete](../usage-api/presentation-api/ApiCustomXmlNode/Methods/Delete.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/DeleteAttribute](../usage-api/presentation-api/ApiCustomXmlNode/Methods/DeleteAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetAttribute](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetAttributes](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetAttributes.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetClassType](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetClassType.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetNodeName](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetNodeName.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetNodes](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetNodes.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetNodeValue](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetNodeValue.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetParent](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetParent.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetText](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetText.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetXml](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetXml.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/GetXPath](../usage-api/presentation-api/ApiCustomXmlNode/Methods/GetXPath.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/SetAttribute](../usage-api/presentation-api/ApiCustomXmlNode/Methods/SetAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/SetNodeValue](../usage-api/presentation-api/ApiCustomXmlNode/Methods/SetNodeValue.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/SetText](../usage-api/presentation-api/ApiCustomXmlNode/Methods/SetText.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/SetXml](../usage-api/presentation-api/ApiCustomXmlNode/Methods/SetXml.md) method to Presentation API.
+- Added the [ApiCustomXmlNode/UpdateAttribute](../usage-api/presentation-api/ApiCustomXmlNode/Methods/UpdateAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlPart](../usage-api/presentation-api/ApiCustomXmlPart/ApiCustomXmlPart.md) class to Presentation API.
+- Added the [ApiCustomXmlPart/Delete](../usage-api/presentation-api/ApiCustomXmlPart/Methods/Delete.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/DeleteAttribute](../usage-api/presentation-api/ApiCustomXmlPart/Methods/DeleteAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/DeleteElement](../usage-api/presentation-api/ApiCustomXmlPart/Methods/DeleteElement.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/GetAttribute](../usage-api/presentation-api/ApiCustomXmlPart/Methods/GetAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/GetClassType](../usage-api/presentation-api/ApiCustomXmlPart/Methods/GetClassType.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/GetId](../usage-api/presentation-api/ApiCustomXmlPart/Methods/GetId.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/GetNodes](../usage-api/presentation-api/ApiCustomXmlPart/Methods/GetNodes.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/GetXml](../usage-api/presentation-api/ApiCustomXmlPart/Methods/GetXml.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/InsertAttribute](../usage-api/presentation-api/ApiCustomXmlPart/Methods/InsertAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/InsertElement](../usage-api/presentation-api/ApiCustomXmlPart/Methods/InsertElement.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/UpdateAttribute](../usage-api/presentation-api/ApiCustomXmlPart/Methods/UpdateAttribute.md) method to Presentation API.
+- Added the [ApiCustomXmlPart/UpdateElement](../usage-api/presentation-api/ApiCustomXmlPart/Methods/UpdateElement.md) method to Presentation API.
+- Added the [ApiCustomXmlParts](../usage-api/presentation-api/ApiCustomXmlParts/ApiCustomXmlParts.md) class to Presentation API.
+- Added the [ApiCustomXmlParts/Add](../usage-api/presentation-api/ApiCustomXmlParts/Methods/Add.md) method to Presentation API.
+- Added the [ApiCustomXmlParts/GetAll](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetAll.md) method to Presentation API.
+- Added the [ApiCustomXmlParts/GetById](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetById.md) method to Presentation API.
+- Added the [ApiCustomXmlParts/GetByNamespace](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetByNamespace.md) method to Presentation API.
+- Added the [ApiCustomXmlParts/GetClassType](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetClassType.md) method to Presentation API.
+- Added the [ApiCustomXmlParts/GetCount](../usage-api/presentation-api/ApiCustomXmlParts/Methods/GetCount.md) method to Presentation API.
+- Added the [ApiPresentation/GetCustomXmlParts](../usage-api/presentation-api/ApiPresentation/Methods/GetCustomXmlParts.md) method to Presentation API.
+
+### Conversion methods
+
+- Added the [Api/CentimetersToPoints](../usage-api/text-document-api/Api/Methods/CentimetersToPoints.md) method to the Text document API.
+- Added the [Api/EmusToPoints](../usage-api/text-document-api/Api/Methods/EmusToPoints.md) method to the Text document API.
+- Added the [Api/InchesToPoints](../usage-api/text-document-api/Api/Methods/InchesToPoints.md) method to the Text document API.
+- Added the [Api/LinesToPoints](../usage-api/text-document-api/Api/Methods/LinesToPoints.md) method to the Text document API.
+- Added the [Api/MillimetersToPixels](../usage-api/text-document-api/Api/Methods/MillimetersToPixels.md) method to the Text document API.
+- Added the [Api/MillimetersToPoints](../usage-api/text-document-api/Api/Methods/MillimetersToPoints.md) method to the Text document API.
+- Added the [Api/PicasToPoints](../usage-api/text-document-api/Api/Methods/PicasToPoints.md) method to the Text document API.
+- Added the [Api/PixelsToEmus](../usage-api/text-document-api/Api/Methods/PixelsToEmus.md) method to the Text document API.
+- Added the [Api/PixelsToPoints](../usage-api/text-document-api/Api/Methods/PixelsToPoints.md) method to the Text document API.
+- Added the [Api/PointsToCentimeters](../usage-api/text-document-api/Api/Methods/PointsToCentimeters.md) method to the Text document API.
+- Added the [Api/PointsToEmus](../usage-api/text-document-api/Api/Methods/PointsToEmus.md) method to the Text document API.
+- Added the [Api/PointsToInches](../usage-api/text-document-api/Api/Methods/PointsToInches.md) method to the Text document API.
+- Added the [Api/PointsToLines](../usage-api/text-document-api/Api/Methods/PointsToLines.md) method to the Text document API.
+- Added the [Api/PointsToMillimeters](../usage-api/text-document-api/Api/Methods/PointsToMillimeters.md) method to the Text document API.
+- Added the [Api/PointsToPicas](../usage-api/text-document-api/Api/Methods/PointsToPicas.md) method to the Text document API.
+- Added the [Api/PointsToPixels](../usage-api/text-document-api/Api/Methods/PointsToPixels.md) method to the Text document API.
+- Added the [Api/PointsToTwips](../usage-api/text-document-api/Api/Methods/PointsToTwips.md) method to the Text document API.
+- Added the [Api/TwipsToPoints](../usage-api/text-document-api/Api/Methods/TwipsToPoints.md) method to the Text document API.
+- Added the [Api/CentimetersToPoints](../usage-api/spreadsheet-api/Api/Methods/CentimetersToPoints.md) method to the Spreadsheet API.
+- Added the [Api/EmusToPoints](../usage-api/spreadsheet-api/Api/Methods/EmusToPoints.md) method to the Spreadsheet API.
+- Added the [Api/InchesToPoints](../usage-api/spreadsheet-api/Api/Methods/InchesToPoints.md) method to the Spreadsheet API.
+- Added the [Api/LinesToPoints](../usage-api/spreadsheet-api/Api/Methods/LinesToPoints.md) method to the Spreadsheet API.
+- Added the [Api/MillimetersToPixels](../usage-api/spreadsheet-api/Api/Methods/MillimetersToPixels.md) method to the Spreadsheet API.
+- Added the [Api/MillimetersToPoints](../usage-api/spreadsheet-api/Api/Methods/MillimetersToPoints.md) method to the Spreadsheet API.
+- Added the [Api/PicasToPoints](../usage-api/spreadsheet-api/Api/Methods/PicasToPoints.md) method to the Spreadsheet API.
+- Added the [Api/PixelsToEmus](../usage-api/spreadsheet-api/Api/Methods/PixelsToEmus.md) method to the Spreadsheet API.
+- Added the [Api/PixelsToPoints](../usage-api/spreadsheet-api/Api/Methods/PixelsToPoints.md) method to the Spreadsheet API.
+- Added the [Api/PointsToCentimeters](../usage-api/spreadsheet-api/Api/Methods/PointsToCentimeters.md) method to the Spreadsheet API.
+- Added the [Api/PointsToEmus](../usage-api/spreadsheet-api/Api/Methods/PointsToEmus.md) method to the Spreadsheet API.
+- Added the [Api/PointsToInches](../usage-api/spreadsheet-api/Api/Methods/PointsToInches.md) method to the Spreadsheet API.
+- Added the [Api/PointsToLines](../usage-api/spreadsheet-api/Api/Methods/PointsToLines.md) method to the Spreadsheet API.
+- Added the [Api/PointsToMillimeters](../usage-api/spreadsheet-api/Api/Methods/PointsToMillimeters.md) method to the Spreadsheet API.
+- Added the [Api/PointsToPicas](../usage-api/spreadsheet-api/Api/Methods/PointsToPicas.md) method to the Spreadsheet API.
+- Added the [Api/PointsToPixels](../usage-api/spreadsheet-api/Api/Methods/PointsToPixels.md) method to the Spreadsheet API.
+- Added the [Api/PointsToTwips](../usage-api/spreadsheet-api/Api/Methods/PointsToTwips.md) method to the Spreadsheet API.
+- Added the [Api/TwipsToPoints](../usage-api/spreadsheet-api/Api/Methods/TwipsToPoints.md) method to the Spreadsheet API.
+- Added the [Api/CentimetersToPoints](../usage-api/presentation-api/Api/Methods/CentimetersToPoints.md) method to the Presentation API.
+- Added the [Api/EmusToPoints](../usage-api/presentation-api/Api/Methods/EmusToPoints.md) method to the Presentation API.
+- Added the [Api/InchesToPoints](../usage-api/presentation-api/Api/Methods/InchesToPoints.md) method to the Presentation API.
+- Added the [Api/LinesToPoints](../usage-api/presentation-api/Api/Methods/LinesToPoints.md) method to the Presentation API.
+- Added the [Api/MillimetersToPixels](../usage-api/presentation-api/Api/Methods/MillimetersToPixels.md) method to the Presentation API.
+- Added the [Api/MillimetersToPoints](../usage-api/presentation-api/Api/Methods/MillimetersToPoints.md) method to the Presentation API.
+- Added the [Api/PicasToPoints](../usage-api/presentation-api/Api/Methods/PicasToPoints.md) method to the Presentation API.
+- Added the [Api/PixelsToEmus](../usage-api/presentation-api/Api/Methods/PixelsToEmus.md) method to the Presentation API.
+- Added the [Api/PixelsToPoints](../usage-api/presentation-api/Api/Methods/PixelsToPoints.md) method to the Presentation API.
+- Added the [Api/PointsToCentimeters](../usage-api/presentation-api/Api/Methods/PointsToCentimeters.md) method to the Presentation API.
+- Added the [Api/PointsToEmus](../usage-api/presentation-api/Api/Methods/PointsToEmus.md) method to the Presentation API.
+- Added the [Api/PointsToInches](../usage-api/presentation-api/Api/Methods/PointsToInches.md) method to the Presentation API.
+- Added the [Api/PointsToLines](../usage-api/presentation-api/Api/Methods/PointsToLines.md) method to the Presentation API.
+- Added the [Api/PointsToMillimeters](../usage-api/presentation-api/Api/Methods/PointsToMillimeters.md) method to the Presentation API.
+- Added the [Api/PointsToPicas](../usage-api/presentation-api/Api/Methods/PointsToPicas.md) method to the Presentation API.
+- Added the [Api/PointsToPixels](../usage-api/presentation-api/Api/Methods/PointsToPixels.md) method to the Presentation API.
+- Added the [Api/PointsToTwips](../usage-api/presentation-api/Api/Methods/PointsToTwips.md) method to the Presentation API.
+- Added the [Api/TwipsToPoints](../usage-api/presentation-api/Api/Methods/TwipsToPoints.md) method to the Presentation API.
+
+### Methods for managing properties
+
+- Added the [Api/CreateParaPr](../usage-api/text-document-api/Api/Methods/CreateParaPr.md) method to the Text document API.
+- Added the [Api/CreateTableCellPr](../usage-api/text-document-api/Api/Methods/CreateTableCellPr.md) method to the Text document API.
+- Added the [Api/CreateTablePr](../usage-api/text-document-api/Api/Methods/CreateTablePr.md) method to the Text document API.
+- Added the [Api/CreateTableRowPr](../usage-api/text-document-api/Api/Methods/CreateTableRowPr.md) method to the Text document API.
+- Added the [Api/CreateTableStylePr](../usage-api/text-document-api/Api/Methods/CreateTableStylePr.md) method to the Text document API.
+- Added the [ApiStyle/SetConditionalTableStyle](../usage-api/text-document-api/ApiStyle/Methods/SetConditionalTableStyle.md) method to the Text document API.
+- Added the [ApiStyle/SetParaPr](../usage-api/text-document-api/ApiStyle/Methods/SetParaPr.md) method to the Text document API.
+- Added the [ApiStyle/SetTableCellPr](../usage-api/text-document-api/ApiStyle/Methods/SetTableCellPr.md) method to the Text document API.
+- Added the [ApiStyle/SetTablePr](../usage-api/text-document-api/ApiStyle/Methods/SetTablePr.md) method to the Text document API.
+- Added the [ApiStyle/SetTableRowPr](../usage-api/text-document-api/ApiStyle/Methods/SetTableRowPr.md) method to the Text document API.
+- Added the [ApiStyle/SetTextPr](../usage-api/text-document-api/ApiStyle/Methods/SetTextPr.md) method to the Text document API.
+- Added the [ApiTableStylePr/SetParaPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetParaPr.md) method to the Text document API.
+- Added the [ApiTableStylePr/SetTableCellPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTableCellPr.md) method to the Text document API.
+- Added the [ApiTableStylePr/SetTablePr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTablePr.md) method to the Text document API.
+- Added the [ApiTableStylePr/SetTableRowPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTableRowPr.md) method to the Text document API.
+- Added the [ApiTableStylePr/SetTextPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTextPr.md) method to the Text document API.
+
+### Section methods
+
+- Added the [ApiSection/GetFooterDistance](../usage-api/text-document-api/ApiSection/Methods/GetFooterDistance.md) method to the Text document API.
+- Added the [ApiSection/GetHeaderDistance](../usage-api/text-document-api/ApiSection/Methods/GetHeaderDistance.md) method to the Text document API.
+- Added the [ApiSection/GetPageMarginBottom](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginBottom.md) method to the Text document API.
+- Added the [ApiSection/GetPageMarginLeft](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginLeft.md) method to the Text document API.
+- Added the [ApiSection/GetPageMarginRight](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginRight.md) method to the Text document API.
+- Added the [ApiSection/GetPageMarginTop](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginTop.md) method to the Text document API.
+
+### Workbook methods
+
+- Added the [ApiWorkbook/GetActiveChart](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetActiveChart.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/GetActiveSheet](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetActiveSheet.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/GetAllPivotTables](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetAllPivotTables.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/GetCustomProperties](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetCustomProperties.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/GetName](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetName.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/GetSheets](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetSheets.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/GetTheme](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetTheme.md) method to the Spreadsheet API.
+- Added the [ApiWorkbook/Save](../usage-api/spreadsheet-api/ApiWorkbook/Methods/Save.md) method to the Spreadsheet API.
+
+### Pivot tables methods
+
+- Added the [ApiPivotField/AutoSort](../usage-api/spreadsheet-api/ApiPivotField/Methods/AutoSort.md) method to the Spreadsheet API.
+- Added the [ApiPivotField/GetPivotFilters](../usage-api/spreadsheet-api/ApiPivotField/Methods/GetPivotFilters.md) method to the Spreadsheet API.
+- Added the [ApiPivotFilters](../usage-api/spreadsheet-api/ApiPivotFilters/ApiPivotFilters.md) class to the Spreadsheet API.
+- Added the [ApiPivotFilters/Add](../usage-api/spreadsheet-api/ApiPivotFilters/Methods/Add.md) method to the Spreadsheet API.
+- Added the [ApiPivotItem/GetVisible](../usage-api/spreadsheet-api/ApiPivotItem/Methods/GetVisible.md) method to the Spreadsheet API.
+- Added the [ApiPivotItem/SetVisible](../usage-api/spreadsheet-api/ApiPivotItem/Methods/SetVisible.md) method to the Spreadsheet API.
+- Added the *AutoSortField* property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
+- Added the *AutoSortOrder* property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
+- Added the *PivotFilters* property to the [ApiPivotField](../usage-api/spreadsheet-api/ApiPivotField/ApiPivotField.md) object of Spreadsheet API.
+- Added the *Visible* property to the [ApiPivotItem](../usage-api/spreadsheet-api/ApiPivotItem/ApiPivotItem.md) object of Spreadsheet API.
+- Added the [XlPivotFilterType](../usage-api/spreadsheet-api/Enumeration/XlPivotFilterType.md) type to the simple type definitions.
+
+### Range methods
+
+- Added the [ApiRange/ClearContents](../usage-api/spreadsheet-api/ApiRange/Methods/ClearContents.md) method to the Spreadsheet API.
+- Added the [ApiRange/ClearFormats](../usage-api/spreadsheet-api/ApiRange/Methods/ClearFormats.md) method to the Spreadsheet API.
+- Added the [ApiRange/ClearHyperlinks](../usage-api/spreadsheet-api/ApiRange/Methods/ClearHyperlinks.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetCellsCount](../usage-api/spreadsheet-api/ApiRange/Methods/GetCellsCount.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetColumnsCount](../usage-api/spreadsheet-api/ApiRange/Methods/GetColumnsCount.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetCurrentRegion](../usage-api/spreadsheet-api/ApiRange/Methods/GetCurrentRegion.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetEntireColumn](../usage-api/spreadsheet-api/ApiRange/Methods/GetEntireColumn.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetEntireRow](../usage-api/spreadsheet-api/ApiRange/Methods/GetEntireRow.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetRange](../usage-api/spreadsheet-api/ApiRange/Methods/GetRange.md) method to the Spreadsheet API.
+- Added the [ApiRange/GetRowsCount](../usage-api/spreadsheet-api/ApiRange/Methods/GetRowsCount.md) method to the Spreadsheet API.
+- Added the [ApiRange/Offset](../usage-api/spreadsheet-api/ApiRange/Methods/Offset.md) method to the Spreadsheet API.
+- Added the [ApiRange/Resize](../usage-api/spreadsheet-api/ApiRange/Methods/Resize.md) method to the Spreadsheet API.
+- Added the [ApiRange/SetReadingOrder](../usage-api/spreadsheet-api/ApiRange/Methods/SetReadingOrder.md) method to the Spreadsheet API.
+- Added the *CellsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the *ColumnsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the *CurrentRegion* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the *EntireColumn* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the *EntireRow* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+- Added the *RowsCount* property to the [ApiRange](../usage-api/spreadsheet-api/ApiRange/ApiRange.md) object of Spreadsheet API.
+
+### Presentation methods
+
+- Added the [ApiLayout/GetAllTables](../usage-api/presentation-api/ApiLayout/Methods/GetAllTables.md) method to the Presentation API.
+- Added the [ApiMaster/GetAllTables](../usage-api/presentation-api/ApiMaster/Methods/GetAllTables.md) method to the Presentation API.
+- Added the [ApiNotesPage/GetBodyShapeText](../usage-api/presentation-api/ApiNotesPage/Methods/GetBodyShapeText.md) method to the Presentation API.
+- Added the [ApiPresentation/GetAllTables](../usage-api/presentation-api/ApiPresentation/Methods/GetAllTables.md) method to the Presentation API.
+- Added the [ApiSlide/GetAllTables](../usage-api/presentation-api/ApiSlide/Methods/GetAllTables.md) method to the Presentation API.
+
+### Other methods
+
+- Added the [ApiDocument/GetDocumentVisitor](../usage-api/text-document-api/ApiDocument/Methods/GetDocumentVisitor.md) method to the Text document API.
+- Added the [ApiDocument/GoToPage](../usage-api/text-document-api/ApiDocument/Methods/GoToPage.md) method to the Text document API.
+- Added the [ApiDocumentContent/GetDocumentVisitor](../usage-api/text-document-api/ApiDocumentContent/Methods/GetDocumentVisitor.md) method to the Text document API.
+- Added the [ApiParagraph/SetReadingOrder](../usage-api/text-document-api/ApiParagraph/Methods/SetReadingOrder.md) method to the Text document API.
+- Added the [ApiDrawing/Select](../usage-api/spreadsheet-api/ApiDrawing/Methods/Select.md) method to the Spreadsheet API.
+- Added the [ApiTheme/GetClassType](../usage-api/spreadsheet-api/ApiTheme/Methods/GetClassType.md) method to the Spreadsheet API.
+- Added the [ApiTheme/GetName](../usage-api/spreadsheet-api/ApiTheme/Methods/GetName.md) method to the Spreadsheet API.
+- Added the [ApiFormBase/GetPlaceholderText](../usage-api/form-api/ApiFormBase/Methods/GetPlaceholderText.md) method to Form API.
+- Added the [ReadingOrder](../usage-api/text-document-api/Enumeration/ReadingOrder.md) type to the simple type definitions.
+- Added the [XlPivotFilterType](../usage-api/spreadsheet-api/Enumeration/XlPivotFilterType.md) type to the simple type definitions.
+
+## Version 9.0
+
+### Content control methods
+
+- Added the [Api/CreateCheckBoxContentControl](../usage-api/text-document-api/Api/Methods/CreateCheckBoxContentControl.md) method to Text document API.
+- Added the [Api/CreateComboBoxContentControl](../usage-api/text-document-api/Api/Methods/CreateComboBoxContentControl.md) method to Text document API.
+- Added the [Api/CreateDatePickerContentControl](../usage-api/text-document-api/Api/Methods/CreateDatePickerContentControl.md) method to Text document API.
+- Added the [Api/CreateDropDownListContentControl](../usage-api/text-document-api/Api/Methods/CreateDropDownListContentControl.md) method to Text document API.
+- Added the [Api/CreatePictureContentControl](../usage-api/text-document-api/Api/Methods/CreatePictureContentControl.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetAppearance](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAppearance.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetBackgroundColor.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetBorderColor.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDataBinding.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetDataForXmlMapping](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDataForXmlMapping.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetId.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/IsPicture](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/IsPicture.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetAppearance](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetAppearance.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBackgroundColor.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBorderColor.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetDataBinding](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetDataBinding.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetId.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/SetPicture](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetPicture.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/UpdateFromXmlMapping](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/UpdateFromXmlMapping.md) method to Text document API.
+- Added the [ApiDocument/AddCheckBoxContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddCheckBoxContentControl.md) method to Text document API.
+- Added the [ApiDocument/AddComboBoxContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddComboBoxContentControl.md) method to Text document API.
+- Added the [ApiDocument/AddDatePickerContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddDatePickerContentControl.md) method to Text document API.
+- Added the [ApiDocument/AddDropDownListContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddDropDownListContentControl.md) method to Text document API.
+- Added the [ApiDocument/AddPictureContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddPictureContentControl.md) method to Text document API.
+- Added the [ApiDocumentContent/GetCurrentContentControl](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentContentControl.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/AddListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/AddListItem.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBackgroundColor.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataBinding.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetDataForXmlMapping](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataForXmlMapping.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetDate](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDate.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetId.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsCheckBox](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsCheckBox.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsCheckBoxChecked](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsCheckBoxChecked.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsComboBox](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsComboBox.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsDatePicker](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDatePicker.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsDropDownList](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDropDownList.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsPicture](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsPicture.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/RemoveListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/RemoveListItem.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBackgroundColor.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBorderColor.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetCheckBoxChecked](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetCheckBoxChecked.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetDate](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetDate.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetDateFormat](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetDateFormat.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetPicture](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetPicture.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetPictureSize](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetPictureSize.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/Select](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/Select.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SelectListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SelectListItem.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetDataBinding](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetDataBinding.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/SetId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetId.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/UpdateFromXmlMapping](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/UpdateFromXmlMapping.md) method to Text document API.
+- Added the [ContentControlCheckBoxPr](../usage-api/text-document-api/Enumeration/ContentControlCheckBoxPr.md) type to the simple type definitions.
+- Added the [ContentControlDatePr](../usage-api/text-document-api/Enumeration/ContentControlDatePr.md) type to the simple type definitions.
+- Added the [ContentControlListItem](../usage-api/text-document-api/Enumeration/ContentControlListItem.md) type to the simple type definitions.
+
+### Custom XML methods
+
+- Added the [ApiCustomXmlNode](../usage-api/text-document-api/ApiCustomXmlNode/ApiCustomXmlNode.md) class to Text document API.
+- Added the [ApiCustomXmlNode/Add](../usage-api/text-document-api/ApiCustomXmlNode/Methods/Add.md) method to Text document API.
+- Added the [ApiCustomXmlNode/Delete](../usage-api/text-document-api/ApiCustomXmlNode/Methods/Delete.md) method to Text document API.
+- Added the [ApiCustomXmlNode/DeleteAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/DeleteAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetAttributes](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetAttributes.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetClassType](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetClassType.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetNodeName](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetNodeName.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetNodes](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetNodes.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetNodeValue](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetNodeValue.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetParent](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetParent.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetText](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetText.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetXml](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetXml.md) method to Text document API.
+- Added the [ApiCustomXmlNode/GetXPath](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetXPath.md) method to Text document API.
+- Added the [ApiCustomXmlNode/SetAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlNode/SetNodeValue](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetNodeValue.md) method to Text document API.
+- Added the [ApiCustomXmlNode/SetText](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetText.md) method to Text document API.
+- Added the [ApiCustomXmlNode/SetXml](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetXml.md) method to Text document API.
+- Added the [ApiCustomXmlNode/UpdateAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/UpdateAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlPart](../usage-api/text-document-api/ApiCustomXmlPart/ApiCustomXmlPart.md) class to Text document API.
+- Added the [ApiCustomXmlPart/Delete](../usage-api/text-document-api/ApiCustomXmlPart/Methods/Delete.md) method to Text document API.
+- Added the [ApiCustomXmlPart/DeleteAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/DeleteAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlPart/DeleteElement](../usage-api/text-document-api/ApiCustomXmlPart/Methods/DeleteElement.md) method to Text document API.
+- Added the [ApiCustomXmlPart/GetAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlPart/GetClassType](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetClassType.md) method to Text document API.
+- Added the [ApiCustomXmlPart/GetId](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetId.md) method to Text document API.
+- Added the [ApiCustomXmlPart/GetNodes](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetNodes.md) method to Text document API.
+- Added the [ApiCustomXmlPart/GetXml](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetXml.md) method to Text document API.
+- Added the [ApiCustomXmlPart/InsertAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/InsertAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlPart/InsertElement](../usage-api/text-document-api/ApiCustomXmlPart/Methods/InsertElement.md) method to Text document API.
+- Added the [ApiCustomXmlPart/UpdateAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/UpdateAttribute.md) method to Text document API.
+- Added the [ApiCustomXmlPart/UpdateElement](../usage-api/text-document-api/ApiCustomXmlPart/Methods/UpdateElement.md) method to Text document API.
+- Added the [ApiCustomXmlParts](../usage-api/text-document-api/ApiCustomXmlParts/ApiCustomXmlParts.md) class to Text document API.
+- Added the [ApiCustomXmlParts/Add](../usage-api/text-document-api/ApiCustomXmlParts/Methods/Add.md) method to Text document API.
+- Added the [ApiCustomXmlParts/GetAll](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetAll.md) method to Text document API.
+- Added the [ApiCustomXmlParts/GetById](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetById.md) method to Text document API.
+- Added the [ApiCustomXmlParts/GetByNamespace](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetByNamespace.md) method to Text document API.
+- Added the [ApiCustomXmlParts/GetClassType](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetClassType.md) method to Text document API.
+- Added the [ApiCustomXmlParts/GetCount](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetCount.md) method to Text document API.
+- Added the [ApiDocument/GetCustomXmlParts](../usage-api/text-document-api/ApiDocument/Methods/GetCustomXmlParts.md) method to Text document API.
+- Added the [CustomXmlNodeAttribute](../usage-api/text-document-api/Enumeration/CustomXmlNodeAttribute.md) type to the simple type definitions.
+- Added the [XmlMapping](../usage-api/text-document-api/Enumeration/XmlMapping.md) type to the simple type definitions.
+
+### Form methods
+
+- Added the [ApiCheckBoxForm/GetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetChoiceName.md) method to Text document API.
+- Added the [ApiCheckBoxForm/SetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChoiceName.md) method to Text document API.
+- Added the [ApiComplexForm/Add](../usage-api/text-document-api/ApiComplexForm/Methods/Add.md) method to Text document API.
+- Added the [ApiComplexForm/ClearContent](../usage-api/text-document-api/ApiComplexForm/Methods/ClearContent.md) method to Text document API.
+- Added the [ApiComplexForm/GetSubForms](../usage-api/text-document-api/ApiComplexForm/Methods/GetSubForms.md) method to Text document API.
+- Added the [ApiDateForm/GetDate](../usage-api/text-document-api/ApiDateForm/Methods/GetDate.md) method to Text document API.
+- Added the [ApiDateForm/SetDate](../usage-api/text-document-api/ApiDateForm/Methods/SetDate.md) method to Text document API.
+- Added the [ApiDocument/GetFormsByKey](../usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md) method to Text document API.
+- Added the [ApiDocument/GetFormsByRole](../usage-api/text-document-api/ApiDocument/Methods/GetFormsByRole.md) method to Text document API.
+- Added the [ApiDocument/GetFormKeysByRole](../usage-api/text-document-api/ApiDocument/Methods/GetFormKeysByRole.md) method to Text document API.
+- Added the [ApiDocument/GetFormValueByKey](../usage-api/text-document-api/ApiDocument/Methods/GetFormValueByKey.md) method to Text document API.
+- Added the [ApiFormBase/GetRole](../usage-api/text-document-api/ApiFormBase/Methods/GetRole.md) method to Text document API.
+- Added the [ApiFormBase/GetTag](../usage-api/text-document-api/ApiFormBase/Methods/GetTag.md) method to Text document API.
+- Added the [ApiFormBase/SetRole](../usage-api/text-document-api/ApiFormBase/Methods/SetRole.md) method to Text document API.
+- Added the [ApiFormBase/SetTag](../usage-api/text-document-api/ApiFormBase/Methods/SetTag.md) method to Text document API.
+- Added the [Api/CreateComplexForm](../usage-api/form-api/Api/Methods/CreateComplexForm.md) method to Form API.
+- Added the [ApiDocument/GetFormRoles](../usage-api/form-api/ApiDocument/Methods/GetFormRoles.md) method to Form API.
+- Added the [ApiFormRoles](../usage-api/form-api/ApiFormRoles/ApiFormRoles.md) class to Form API.
+- Added the [ApiFormRoles/Add](../usage-api/form-api/ApiFormRoles/Methods/Add.md) method to Form API.
+- Added the [ApiFormRoles/GetAllRoles](../usage-api/form-api/ApiFormRoles/Methods/GetAllRoles.md) method to Form API.
+- Added the [ApiFormRoles/GetCount](../usage-api/form-api/ApiFormRoles/Methods/GetCount.md) method to Form API.
+- Added the [ApiFormRoles/GetRoleColor](../usage-api/form-api/ApiFormRoles/Methods/GetRoleColor.md) method to Form API.
+- Added the [ApiFormRoles/HaveRole](../usage-api/form-api/ApiFormRoles/Methods/HaveRole.md) method to Form API.
+- Added the [ApiFormRoles/MoveDown](../usage-api/form-api/ApiFormRoles/Methods/MoveDown.md) method to Form API.
+- Added the [ApiFormRoles/MoveUp](../usage-api/form-api/ApiFormRoles/Methods/MoveUp.md) method to Form API.
+- Added the [ApiFormRoles/Remove](../usage-api/form-api/ApiFormRoles/Methods/Remove.md) method to Form API.
+- Added the [ApiFormRoles/SetRoleColor](../usage-api/form-api/ApiFormRoles/Methods/SetRoleColor.md) method to Form API.
+- Added the *role* property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
+- Added the [DateFormPr](../usage-api/form-api/Enumeration/DateFormPr.md) type to the simple type definitions.
+- Added the [RoleProperties](../usage-api/form-api/Enumeration/RoleProperties.md) type to the simple type definitions.
+
+### Custom properties methods
+
+- Added the [ApiCustomProperties](../usage-api/text-document-api/ApiCustomProperties/ApiCustomProperties.md) class to Text document API.
+- Added the [ApiDocument/GetCustomProperties](../usage-api/text-document-api/ApiDocument/Methods/GetCustomProperties.md) method to Text document API.
+- Added the [ApiCustomProperties/Add](../usage-api/text-document-api/ApiCustomProperties/Methods/Add.md) method to Text document API.
+- Added the [ApiCustomProperties/GetClassType](../usage-api/text-document-api/ApiCustomProperties/Methods/GetClassType.md) method to Text document API.
+- Added the [ApiCustomProperties/Get](../usage-api/text-document-api/ApiCustomProperties/Methods/Get.md) method to Text document API.
+- Added the [Api/GetCustomProperties](../usage-api/spreadsheet-api/Api/Methods/GetCustomProperties.md) method to Spreadsheet API.
+- Added the [ApiCustomProperties](../usage-api/spreadsheet-api/ApiCustomProperties/ApiCustomProperties.md) class to Spreadsheet API.
+- Added the [ApiCustomProperties/Add](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/Add.md) method to Spreadsheet API.
+- Added the [ApiCustomProperties/GetClassType](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/GetClassType.md) method to Spreadsheet API.
+- Added the [ApiCustomProperties/Get](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/Get.md) method to Spreadsheet API.
+- Added the [ApiCustomProperties](../usage-api/presentation-api/ApiCustomProperties/ApiCustomProperties.md) class to Presentation API.
+- Added the [ApiCustomProperties/Add](../usage-api/presentation-api/ApiCustomProperties/Methods/Add.md) method to Presentation API.
+- Added the [ApiCustomProperties/GetClassType](../usage-api/presentation-api/ApiCustomProperties/Methods/GetClassType.md) method to Presentation API.
+- Added the [ApiCustomProperties/Get](../usage-api/presentation-api/ApiCustomProperties/Methods/Get.md) method to Presentation API.
+- Added the [ApiPresentation/GetCustomProperties](../usage-api/presentation-api/ApiPresentation/Methods/GetCustomProperties.md) method to Presentation API.
+
+### Core methods
+
+- Added the [ApiCore](../usage-api/text-document-api/ApiCore/ApiCore.md) class to Text document API.
+- Added the [ApiCore/GetCategory](../usage-api/text-document-api/ApiCore/Methods/GetCategory.md) method to Text document API.
+- Added the [ApiCore/GetClassType](../usage-api/text-document-api/ApiCore/Methods/GetClassType.md) method to Text document API.
+- Added the [ApiCore/GetContentStatus](../usage-api/text-document-api/ApiCore/Methods/GetContentStatus.md) method to Text document API.
+- Added the [ApiCore/GetCreated](../usage-api/text-document-api/ApiCore/Methods/GetCreated.md) method to Text document API.
+- Added the [ApiCore/GetCreator](../usage-api/text-document-api/ApiCore/Methods/GetCreator.md) method to Text document API.
+- Added the [ApiCore/GetDescription](../usage-api/text-document-api/ApiCore/Methods/GetDescription.md) method to Text document API.
+- Added the [ApiCore/GetIdentifier](../usage-api/text-document-api/ApiCore/Methods/GetIdentifier.md) method to Text document API.
+- Added the [ApiCore/GetKeywords](../usage-api/text-document-api/ApiCore/Methods/GetKeywords.md) method to Text document API.
+- Added the [ApiCore/GetLanguage](../usage-api/text-document-api/ApiCore/Methods/GetLanguage.md) method to Text document API.
+- Added the [ApiCore/GetLastModifiedBy](../usage-api/text-document-api/ApiCore/Methods/GetLastModifiedBy.md) method to Text document API.
+- Added the [ApiCore/GetLastPrinted](../usage-api/text-document-api/ApiCore/Methods/GetLastPrinted.md) method to Text document API.
+- Added the [ApiCore/GetModified](../usage-api/text-document-api/ApiCore/Methods/GetModified.md) method to Text document API.
+- Added the [ApiCore/GetRevision](../usage-api/text-document-api/ApiCore/Methods/GetRevision.md) method to Text document API.
+- Added the [ApiCore/GetSubject](../usage-api/text-document-api/ApiCore/Methods/GetSubject.md) method to Text document API.
+- Added the [ApiCore/GetTitle](../usage-api/text-document-api/ApiCore/Methods/GetTitle.md) method to Text document API.
+- Added the [ApiCore/GetVersion](../usage-api/text-document-api/ApiCore/Methods/GetVersion.md) method to Text document API.
+- Added the [ApiCore/SetCategory](../usage-api/text-document-api/ApiCore/Methods/SetCategory.md) method to Text document API.
+- Added the [ApiCore/SetContentStatus](../usage-api/text-document-api/ApiCore/Methods/SetContentStatus.md) method to Text document API.
+- Added the [ApiCore/SetCreated](../usage-api/text-document-api/ApiCore/Methods/SetCreated.md) method to Text document API.
+- Added the [ApiCore/SetCreator](../usage-api/text-document-api/ApiCore/Methods/SetCreator.md) method to Text document API.
+- Added the [ApiCore/SetDescription](../usage-api/text-document-api/ApiCore/Methods/SetDescription.md) method to Text document API.
+- Added the [ApiCore/SetIdentifier](../usage-api/text-document-api/ApiCore/Methods/SetIdentifier.md) method to Text document API.
+- Added the [ApiCore/SetKeywords](../usage-api/text-document-api/ApiCore/Methods/SetKeywords.md) method to Text document API.
+- Added the [ApiCore/SetLanguage](../usage-api/text-document-api/ApiCore/Methods/SetLanguage.md) method to Text document API.
+- Added the [ApiCore/SetLastModifiedBy](../usage-api/text-document-api/ApiCore/Methods/SetLastModifiedBy.md) method to Text document API.
+- Added the [ApiCore/SetLastPrinted](../usage-api/text-document-api/ApiCore/Methods/SetLastPrinted.md) method to Text document API.
+- Added the [ApiCore/SetModified](../usage-api/text-document-api/ApiCore/Methods/SetModified.md) method to Text document API.
+- Added the [ApiCore/SetRevision](../usage-api/text-document-api/ApiCore/Methods/SetRevision.md) method to Text document API.
+- Added the [ApiCore/SetSubject](../usage-api/text-document-api/ApiCore/Methods/SetSubject.md) method to Text document API.
+- Added the [ApiCore/SetTitle](../usage-api/text-document-api/ApiCore/Methods/SetTitle.md) method to Text document API.
+- Added the [ApiCore/SetVersion](../usage-api/text-document-api/ApiCore/Methods/SetVersion.md) method to Text document API.
+- Added the [ApiDocument/GetCore](../usage-api/text-document-api/ApiDocument/Methods/GetCore.md) method to Text document API.
+- Added the [Api/GetCore](../usage-api/spreadsheet-api/Api/Methods/GetCore.md) method to Spreadsheet API.
+- Added the [ApiCore](../usage-api/spreadsheet-api/ApiCore/ApiCore.md) class to Spreadsheet API.
+- Added the [ApiCore/GetCategory](../usage-api/spreadsheet-api/ApiCore/Methods/GetCategory.md) method to Spreadsheet API.
+- Added the [ApiCore/GetClassType](../usage-api/spreadsheet-api/ApiCore/Methods/GetClassType.md) method to Spreadsheet API.
+- Added the [ApiCore/GetContentStatus](../usage-api/spreadsheet-api/ApiCore/Methods/GetContentStatus.md) method to Spreadsheet API.
+- Added the [ApiCore/GetCreated](../usage-api/spreadsheet-api/ApiCore/Methods/GetCreated.md) method to Spreadsheet API.
+- Added the [ApiCore/GetCreator](../usage-api/spreadsheet-api/ApiCore/Methods/GetCreator.md) method to Spreadsheet API.
+- Added the [ApiCore/GetDescription](../usage-api/spreadsheet-api/ApiCore/Methods/GetDescription.md) method to Spreadsheet API.
+- Added the [ApiCore/GetIdentifier](../usage-api/spreadsheet-api/ApiCore/Methods/GetIdentifier.md) method to Spreadsheet API.
+- Added the [ApiCore/GetKeywords](../usage-api/spreadsheet-api/ApiCore/Methods/GetKeywords.md) method to Spreadsheet API.
+- Added the [ApiCore/GetLanguage](../usage-api/spreadsheet-api/ApiCore/Methods/GetLanguage.md) method to Spreadsheet API.
+- Added the [ApiCore/GetLastModifiedBy](../usage-api/spreadsheet-api/ApiCore/Methods/GetLastModifiedBy.md) method to Spreadsheet API.
+- Added the [ApiCore/GetLastPrinted](../usage-api/spreadsheet-api/ApiCore/Methods/GetLastPrinted.md) method to Spreadsheet API.
+- Added the [ApiCore/GetModified](../usage-api/spreadsheet-api/ApiCore/Methods/GetModified.md) method to Spreadsheet API.
+- Added the [ApiCore/GetRevision](../usage-api/spreadsheet-api/ApiCore/Methods/GetRevision.md) method to Spreadsheet API.
+- Added the [ApiCore/GetSubject](../usage-api/spreadsheet-api/ApiCore/Methods/GetSubject.md) method to Spreadsheet API.
+- Added the [ApiCore/GetTitle](../usage-api/spreadsheet-api/ApiCore/Methods/GetTitle.md) method to Spreadsheet API.
+- Added the [ApiCore/GetVersion](../usage-api/spreadsheet-api/ApiCore/Methods/GetVersion.md) method to Spreadsheet API.
+- Added the [ApiCore/SetCategory](../usage-api/spreadsheet-api/ApiCore/Methods/SetCategory.md) method to Spreadsheet API.
+- Added the [ApiCore/SetContentStatus](../usage-api/spreadsheet-api/ApiCore/Methods/SetContentStatus.md) method to Spreadsheet API.
+- Added the [ApiCore/SetCreated](../usage-api/spreadsheet-api/ApiCore/Methods/SetCreated.md) method to Spreadsheet API.
+- Added the [ApiCore/SetCreator](../usage-api/spreadsheet-api/ApiCore/Methods/SetCreator.md) method to Spreadsheet API.
+- Added the [ApiCore/SetDescription](../usage-api/spreadsheet-api/ApiCore/Methods/SetDescription.md) method to Spreadsheet API.
+- Added the [ApiCore/SetIdentifier](../usage-api/spreadsheet-api/ApiCore/Methods/SetIdentifier.md) method to Spreadsheet API.
+- Added the [ApiCore/SetKeywords](../usage-api/spreadsheet-api/ApiCore/Methods/SetKeywords.md) method to Spreadsheet API.
+- Added the [ApiCore/SetLanguage](../usage-api/spreadsheet-api/ApiCore/Methods/SetLanguage.md) method to Spreadsheet API.
+- Added the [ApiCore/SetLastModifiedBy](../usage-api/spreadsheet-api/ApiCore/Methods/SetLastModifiedBy.md) method to Spreadsheet API.
+- Added the [ApiCore/SetLastPrinted](../usage-api/spreadsheet-api/ApiCore/Methods/SetLastPrinted.md) method to Spreadsheet API.
+- Added the [ApiCore/SetModified](../usage-api/spreadsheet-api/ApiCore/Methods/SetModified.md) method to Spreadsheet API.
+- Added the [ApiCore/SetRevision](../usage-api/spreadsheet-api/ApiCore/Methods/SetRevision.md) method to Spreadsheet API.
+- Added the [ApiCore/SetSubject](../usage-api/spreadsheet-api/ApiCore/Methods/SetSubject.md) method to Spreadsheet API.
+- Added the [ApiCore/SetTitle](../usage-api/spreadsheet-api/ApiCore/Methods/SetTitle.md) method to Spreadsheet API.
+- Added the [ApiCore/SetVersion](../usage-api/spreadsheet-api/ApiCore/Methods/SetVersion.md) method to Spreadsheet API.
+- Added the [ApiCore](../usage-api/presentation-api/ApiCore/ApiCore.md) class to Presentation API.
+- Added the [ApiCore/GetCategory](../usage-api/presentation-api/ApiCore/Methods/GetCategory.md) method to Presentation API.
+- Added the [ApiCore/GetClassType](../usage-api/presentation-api/ApiCore/Methods/GetClassType.md) method to Presentation API.
+- Added the [ApiCore/GetContentStatus](../usage-api/presentation-api/ApiCore/Methods/GetContentStatus.md) method to Presentation API.
+- Added the [ApiCore/GetCreated](../usage-api/presentation-api/ApiCore/Methods/GetCreated.md) method to Presentation API.
+- Added the [ApiCore/GetCreator](../usage-api/presentation-api/ApiCore/Methods/GetCreator.md) method to Presentation API.
+- Added the [ApiCore/GetDescription](../usage-api/presentation-api/ApiCore/Methods/GetDescription.md) method to Presentation API.
+- Added the [ApiCore/GetIdentifier](../usage-api/presentation-api/ApiCore/Methods/GetIdentifier.md) method to Presentation API.
+- Added the [ApiCore/GetKeywords](../usage-api/presentation-api/ApiCore/Methods/GetKeywords.md) method to Presentation API.
+- Added the [ApiCore/GetLanguage](../usage-api/presentation-api/ApiCore/Methods/GetLanguage.md) method to Presentation API.
+- Added the [ApiCore/GetLastModifiedBy](../usage-api/presentation-api/ApiCore/Methods/GetLastModifiedBy.md) method to Presentation API.
+- Added the [ApiCore/GetLastPrinted](../usage-api/presentation-api/ApiCore/Methods/GetLastPrinted.md) method to Presentation API.
+- Added the [ApiCore/GetModified](../usage-api/presentation-api/ApiCore/Methods/GetModified.md) method to Presentation API.
+- Added the [ApiCore/GetRevision](../usage-api/presentation-api/ApiCore/Methods/GetRevision.md) method to Presentation API.
+- Added the [ApiCore/GetSubject](../usage-api/presentation-api/ApiCore/Methods/GetSubject.md) method to Presentation API.
+- Added the [ApiCore/GetTitle](../usage-api/presentation-api/ApiCore/Methods/GetTitle.md) method to Presentation API.
+- Added the [ApiCore/GetVersion](../usage-api/presentation-api/ApiCore/Methods/GetVersion.md) method to Presentation API.
+- Added the [ApiCore/SetCategory](../usage-api/presentation-api/ApiCore/Methods/SetCategory.md) method to Presentation API.
+- Added the [ApiCore/SetContentStatus](../usage-api/presentation-api/ApiCore/Methods/SetContentStatus.md) method to Presentation API.
+- Added the [ApiCore/SetCreated](../usage-api/presentation-api/ApiCore/Methods/SetCreated.md) method to Presentation API.
+- Added the [ApiCore/SetCreator](../usage-api/presentation-api/ApiCore/Methods/SetCreator.md) method to Presentation API.
+- Added the [ApiCore/SetDescription](../usage-api/presentation-api/ApiCore/Methods/SetDescription.md) method to Presentation API.
+- Added the [ApiCore/SetIdentifier](../usage-api/presentation-api/ApiCore/Methods/SetIdentifier.md) method to Presentation API.
+- Added the [ApiCore/SetKeywords](../usage-api/presentation-api/ApiCore/Methods/SetKeywords.md) method to Presentation API.
+- Added the [ApiCore/SetLanguage](../usage-api/presentation-api/ApiCore/Methods/SetLanguage.md) method to Presentation API.
+- Added the [ApiCore/SetLastModifiedBy](../usage-api/presentation-api/ApiCore/Methods/SetLastModifiedBy.md) method to Presentation API.
+- Added the [ApiCore/SetLastPrinted](../usage-api/presentation-api/ApiCore/Methods/SetLastPrinted.md) method to Presentation API.
+- Added the [ApiCore/SetModified](../usage-api/presentation-api/ApiCore/Methods/SetModified.md) method to Presentation API.
+- Added the [ApiCore/SetRevision](../usage-api/presentation-api/ApiCore/Methods/SetRevision.md) method to Presentation API.
+- Added the [ApiCore/SetSubject](../usage-api/presentation-api/ApiCore/Methods/SetSubject.md) method to Presentation API.
+- Added the [ApiCore/SetTitle](../usage-api/presentation-api/ApiCore/Methods/SetTitle.md) method to Presentation API.
+- Added the [ApiCore/SetVersion](../usage-api/presentation-api/ApiCore/Methods/SetVersion.md) method to Presentation API.
+- Added the [ApiPresentation/GetCore](../usage-api/presentation-api/ApiPresentation/Methods/GetCore.md) method to Presentation API.
+
+### Range methods
+
+- Added the [ApiRange/AddField](../usage-api/text-document-api/ApiRange/Methods/AddField.md) method to Text document API.
+- Added the [ApiRange/MoveCursorToPos](../usage-api/text-document-api/ApiRange/Methods/MoveCursorToPos.md) method to Text document API.
+- Added the [ApiRange/GetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormulaArray.md) method to Spreadsheet API.
+- Added the [ApiRange/SetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/SetFormulaArray.md) method to Spreadsheet API.
+
+### Document methods
+
+- Added the [ApiDocument/GetInternalId](../usage-api/text-document-api/ApiDocument/Methods/GetInternalId.md) method to Text document API.
+- Added the [ApiDocument/InsertBlankPage](../usage-api/text-document-api/ApiDocument/Methods/InsertBlankPage.md) method to Text document API.
+- Added the [ApiDocument/MoveCursorToEnd](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToEnd.md) method to Text document API.
+- Added the [ApiDocument/MoveCursorToStart](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToStart.md) method to Text document API.
+- Added the [ApiDocument/SetAssistantTrackRevisions](../usage-api/text-document-api/ApiDocument/Methods/SetAssistantTrackRevisions.md) method to Text document API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to Text document API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to Text document API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/text-document-api/ApiDocumentContent/Methods/GetInternalId.md) method to Text document API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetInternalId.md) method to Spreadsheet API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/presentation-api/ApiDocumentContent/Methods/GetInternalId.md) method to Presentation API.
+
+### Drawing methods
+
+- Added the [ApiDrawing/GetRotation](../usage-api/text-document-api/ApiDrawing/Methods/GetRotation.md) method to Text document API.
+- Added the [ApiDrawing/SetRotation](../usage-api/text-document-api/ApiDrawing/Methods/SetRotation.md) method to Text document API.
+- Added the [ApiDrawing/GetRotation](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetRotation.md) method to Spreadsheet API.
+- Added the [ApiDrawing/SetRotation](../usage-api/spreadsheet-api/ApiDrawing/Methods/SetRotation.md) method to Spreadsheet API.
+- Added the [ApiDrawing/GetRotation](../usage-api/presentation-api/ApiDrawing/Methods/GetRotation.md) method to Presentation API.
+- Added the [ApiDrawing/SetRotation](../usage-api/presentation-api/ApiDrawing/Methods/SetRotation.md) method to Presentation API.
+
+### Comment methods
+
+- Added the [ApiDocument/ShowComment](../usage-api/text-document-api/ApiDocument/Methods/ShowComment.md) method to Text document API.
+- Added the [ApiComment/GetPosition](../usage-api/presentation-api/ApiComment/Methods/GetPosition.md) method to Presentation API.
+- Added the [ApiComment/SetPosition](../usage-api/presentation-api/ApiComment/Methods/SetPosition.md) method to Presentation API.
+- Added the *posX* and *posY* parameters to the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method of Presentation API.
+
+### Presentation methods
+
+- Added the [ApiPresentation/AddMathEquation](../usage-api/presentation-api/ApiPresentation/Methods/AddMathEquation.md) method to Presentation API.
+- Added the [ApiPresentation/GetAllCharts](../usage-api/presentation-api/ApiPresentation/Methods/GetAllCharts.md) method to Presentation API.
+- Added the [ApiPresentation/GetAllDrawings](../usage-api/presentation-api/ApiPresentation/Methods/GetAllDrawings.md) method to Presentation API.
+- Added the [ApiPresentation/GetAllImages](../usage-api/presentation-api/ApiPresentation/Methods/GetAllImages.md) method to Presentation API.
+- Added the [ApiPresentation/GetAllOleObjects](../usage-api/presentation-api/ApiPresentation/Methods/GetAllOleObjects.md) method to Presentation API.
+- Added the [ApiPresentation/GetAllShapes](../usage-api/presentation-api/ApiPresentation/Methods/GetAllShapes.md) method to Presentation API.
+- Added the *nIndex* parameter to the [ApiPresentation/AddSlide](../usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md) method of Presentation API.
+
+### Layout methods
+
+- Added the [ApiLayout/GetLayoutType](../usage-api/presentation-api/ApiLayout/Methods/GetLayoutType.md) method to Presentation API.
+- Added the [ApiMaster/GetAllLayouts](../usage-api/presentation-api/ApiMaster/Methods/GetAllLayouts.md) method to Presentation API.
+- Added the [ApiMaster/GetLayoutByType](../usage-api/presentation-api/ApiMaster/Methods/GetLayoutByType.md) method to Presentation API.
+- Added the [LayoutType](../usage-api/presentation-api/Enumeration/LayoutType.md) type to the simple type definitions.
+
+### Notes page methods
+
+- Added the [ApiNotesPage](../usage-api/presentation-api/ApiNotesPage/ApiNotesPage.md) class to Presentation API.
+- Added the [ApiNotesPage/AddBodyShapeText](../usage-api/presentation-api/ApiNotesPage/Methods/AddBodyShapeText.md) method to Presentation API.
+- Added the [ApiNotesPage/GetBodyShape](../usage-api/presentation-api/ApiNotesPage/Methods/GetBodyShape.md) method to Presentation API.
+- Added the [ApiNotesPage/GetClassType](../usage-api/presentation-api/ApiNotesPage/Methods/GetClassType.md) method to Presentation API.
+- Added the [ApiSlide/AddNotesText](../usage-api/presentation-api/ApiSlide/Methods/AddNotesText.md) method to Presentation API.
+- Added the [ApiSlide/GetNotesPage](../usage-api/presentation-api/ApiSlide/Methods/GetNotesPage.md) method to Presentation API.
+
+### Other methods
+
+- Added the [Api/GetByInternalId](../usage-api/text-document-api/Api/Methods/GetByInternalId.md) method to Text document API.
+- Added the [ApiRun/GetParentParagraph](../usage-api/text-document-api/ApiRun/Methods/GetParentParagraph.md) method to Text document API.
+- Added the [ApiTablePr/SetTableBorderAll](../usage-api/text-document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Text document API.
+- Added the *fontSlot* parameter to the [ApiTextPr/GetFontFamily](../usage-api/text-document-api/ApiTextPr/Methods/GetFontFamily.md) method of Text document API.
+- Added the [ApiParagraph/Select](../usage-api/presentation-api/ApiParagraph/Methods/Select.md) method to Presentation API.
+- Added the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method to Presentation API.
+- Added the [Base64Img](../usage-api/text-document-api/Enumeration/Base64Img.md) type to the simple type definitions.
+
+
 ## Version 8.3
 
 ### Bookmark methods

@@ -1,0 +1,63 @@
+---
+id: update-tfa-app-codes
+title: "Update the TFA codes"
+description: "Requests the new backup codes for the two-factor authentication application."
+sidebar_label: "Update the TFA codes"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVkuTGjcQ/iuqvuxlFghOcuAUso6r1kllXV6oPWxRXqHpYWQGSZZ6FhNq/nuqpRlgYFPmkAsP9VPdX/enPZBcBZg8wyMSabMKYihmH6YitH9hkYF16CVpa+5zmEDtckk4K+TUuTubY4AMPAZnTcAAkz2MRyP+yjEorx3bwQT+xq1YSrWunVCtkbKG0BDrSucqrWKM4dfABnsIqsSN5F+0cwgTsMuvqAgycJ4zIp3CdbFPNKX3cgcZaMJNuPTQNBy8TqFbkTaEK/SQQWH9RlI6ejeGJoNKm3W43v15gqXH4kQrkNdmxX6lSsW5EDWcYSBJdbgyxaTM7bjKoMmANFWs9BCTnvKVnrx0Dn0b/+fRT5dtnBtZU2m9/gdziEq/XCoxfk46esCSkB6FsSTkq9SVXFYYMwmoaq9pB5PnPcigvnCIL2vkA/Aoc8hg6zUhLJpsD7+j9Ohh8hz/TZ3+E3eHs7f0ZdCqU3+Y1lSO31Z8cBgR/rxoFtnZlT7jtxoDBUElCnOGZVFYHwW0tbeFVGS94Dugoa4EJ+UYQAYbpNLyMLk64kVSCRMYSqeH48Fo2BVsSIWUzhncdjMT0L+iD7FUta9gAvulDDj3VQPnOT9GXaGsKfSqThMMGbxKr7n2EVqtcephIeuKQXLh6X0Sifnnvxgci2PPHnlIk6t+547DEht04XIeUNxZu9Z4VirIwMhNtDx1mIFmMxVNGHltWw9xSiJ3EeUPQ+jFztZe1AE9OxbS5MLJELbWMwDimmEHy+iQPbdgusb1TVIW+49PMzGzazTNTc9p8pW1Pz50c/jxacah+uj9Uc2mfUzpIHIk9BttMBfLXYTgzbSdz6hzI0qUeUygLWovYlvUVqfJDuNxXGkyHpxnkvREUdmt2GoqRS+qiHsoAxYnaJxKuyXVO4wYjIUOk+EwRh1YU+1sUWiFA2U36XA8POwfyIC44NebRvXYHes67pB5nG6ZC6kUhiDICuctoSLMhcdga6/i6KVNMYEn/v6Bdtqg3UI5VjMe3FljEk+cFZWl70UrvhyLnvX1t2bga1NY7u/326BXRlLt8cdwY0gf1Hl+8rjo+nkNxIwXH1dWbOpAYonCLklGTL5qGUH5clxsaW30OvIi0OTOakMDcU8Max5PzIUMQoo08QllcfnyDL+cXORlcET36f3ONkbD/wsbr91S39Tp9hkiVXwLdDPy6V481s5Zz02qe5UusXI5hvV5sUs1RHNbM1BwIzWbhOTit74mt4FXeKrxu8GvgxEfORtoI81JFvP4zop3ZkLtGKDXo/3xEfV/U1SLDcLvNHSV1IazrBNVJL56ZuBABuPBKDJT+2DM4Iy1FhmUNhAb7A9s1fDxtxo9s/ziyEqJqLuVxDQX6QSmSqGjSF9VnUB79mRkWjrw6qf5DLK4Yvo4T1TS/mDvncjsTn33mSdlwJ/8THjTYr9PQ9Q0B/0k+k+Lw2JO2lzfRdM0/wJ+8gAy
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the TFA codes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tfaappnewcodes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Requests the new backup codes for the two-factor authentication application.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New backup codes","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

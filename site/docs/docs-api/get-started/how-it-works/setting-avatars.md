@@ -36,45 +36,45 @@ The reference figure and the steps below explain the process of setting the avat
 
 3. In the configuration script for Document Editor initialization, specify the event handler for setting the users' avatars. When the user opens the comments or a list of the co-editors, the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is called with the *data.id* parameter. The *data.c* parameter with the *info* operation type is also passed in this event.
 
-  <img alt="Avatars in comments" src="/assets/images/editor/avatars-comments.png" width="295px" />
+    <img alt="Avatars in comments" src="/assets/images/editor/avatars-comments.png" width="295px" />
 
-  <img alt="Co-editors avatars" src="/assets/images/editor/avatars-coediting.png" width="298px" />
+    <img alt="Co-editors avatars" src="/assets/images/editor/avatars-coediting.png" width="298px" />
 
-  ``` ts
-  function onRequestUsers(event) {
-    const c = event.data.c
-    const id = event.data.id
-  };
+    ``` ts
+    function onRequestUsers(event) {
+      const c = event.data.c
+      const id = event.data.id
+    };
 
-  const config = {
-    events: {
-      onRequestUsers,
-    },
-  };
+    const config = {
+      events: {
+        onRequestUsers,
+      },
+    };
 
-  const docEditor = new DocsAPI.DocEditor("placeholder", config);
-  ```
+    const docEditor = new DocsAPI.DocEditor("placeholder", config);
+    ```
 
 4. In order to set the users' avatars, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
 
-  ``` ts
-  docEditor.setUsers({
-    c: "info",
-    users: [
-      {
-        email: "john@example.com",
-        id: "78e1e841",
-        image: "https://example.com/url-to-user-avatar1.png",
-        name: "John Smith",
-      },
-      {
-        email: "kate@example.com",
-        id: "F89d8069ba2b",
-        image: "https://example.com/url-to-user-avatar2.png",
-        name: "Kate Cage",
-      },
-    ],
-  });
-  ```
+    ``` ts
+    docEditor.setUsers({
+      c: "info",
+      users: [
+        {
+          email: "john@example.com",
+          id: "78e1e841",
+          image: "https://example.com/url-to-user-avatar1.png",
+          name: "John Smith",
+        },
+        {
+          email: "kate@example.com",
+          id: "F89d8069ba2b",
+          image: "https://example.com/url-to-user-avatar2.png",
+          name: "Kate Cage",
+        },
+      ],
+    });
+    ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

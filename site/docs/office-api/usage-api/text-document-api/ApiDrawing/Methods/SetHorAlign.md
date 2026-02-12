@@ -19,13 +19,17 @@ expression.SetHorAlign(sRelativeFrom, sAlign);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies how the floating object will be horizontally aligned.
 
 ```javascript editor-docx
+// How to set the drawing to the center of the page.
+
+// Create a drawing and align it horizontaly to the center.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with a shape. ");

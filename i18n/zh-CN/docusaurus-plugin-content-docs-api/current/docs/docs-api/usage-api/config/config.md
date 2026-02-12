@@ -16,8 +16,7 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 - **cell** - 电子表格 (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
 - **slide** - 演示文稿 (*.dps, .dpt, .fodp, .key, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
 - **pdf** - 可移植文档格式 (*.djvu, .docxf, .oform, .oxps, .pdf, .xps*).
-
-<!--- **diagram** - 图表文档（*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*)-->
+- **diagram** - 图表文档（*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
 :::请注意
 自 6.1 版起，**text**、**spreadsheet** 和 **presentation**值已被弃用。请使用新值。
@@ -33,7 +32,7 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 
 **示例**: `"100%"`
 
-## 令牌
+## 令牌 {#token}
 
 `类型: string`
 
@@ -41,7 +40,7 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 
 **示例**: `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"`
 
-## 类型
+## 类型 {#type}
 
 `类型: string`
 
@@ -66,11 +65,13 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 ## 示例
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   documentType: "word",
   type: "desktop",
   height: "550px",
   width: "100%",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

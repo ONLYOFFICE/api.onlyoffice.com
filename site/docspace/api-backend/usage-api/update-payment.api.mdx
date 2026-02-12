@@ -1,0 +1,71 @@
+---
+id: update-payment
+title: "Update the payment quantity"
+description: "Updates the payment quantity with the parameters specified in the request."
+sidebar_label: "Update the payment quantity"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zYQ/iuYvfjCSI6c6YGn2k4647TTuI49Pmg0MUQuRcQkAONhR9Xwv3cWACVScmodcrElYHexj2+/XW3A8ZWFfA7XyjjesCm75usWpYNFBkqj4U4oeVVCDl6X3GF/nYHBJ4/WXahyDfkGCiUdXeQb4Fo3ogia0+9WSTqzRY0tp09urRFyUMvvWJAdbegdJ9DS7ZPn0gm3fk2Sl6Ugo7y5HukkOSEdrtBABpUyLXfx6GwGXQYl2sIITdqQw22NrOVaC7liqmLCYctEidKJSqCxzCnmahSGGbQaCyeekSXHBFomJF0zHVMxgQykbxq+bBByZzxmgD94q+nrfAOPuIYcrGqROfxBcTzzxiPk72dnH7pF1/0ssIo3Fl9zPWWeaW54i448rpRh5Kqo1hRUcq13ek0+OuHII/gnnd1EKx+dgq4jLyhYJW3M6ez0lP6NH79QqkEuWQggZxQrE1VIxhYrTFhmfVGgtZVvIPtVwOi9G0guoztU30L5+MQRWGiEfBzihhvD15ABwcC+7UhtsBpIWWeEXJFdXsQ0HVyF7FrHnT8WrlH4UpV4lEK3q24q0b3hWqNJb384fX9YzDvJvauVEf9iCUHo7FDob8U0mlZYK5QMjaHR0PPM1cKyFHKIDwtvQuPON8Bt8Y2sfwvgn4NBXkIGL0Y4hEWXbeACuUED+Tx8O9fiT1xvz16T51YUvfiXc+/q2euCXzQGvpovusV+89wFCrPD7t22CHsRrk4327aKLSWw7Hs+tR71U4uuVkSM2geQcFdDDlOuxXQ2OZ3qQKjT9Mw0sidQnswzGhvS5E0DOWyW3OKdaTrY9/drkGWFkpVY+dhfgT+MILYJaErKsXQV9w3h4sDSx3jF7m7+IkwsdvX6Sv0XTY2rtuuPUJwDk3cW2aVSjwIZKRF7Fr2HkrdBc2gwA0FqRVAhwKWSbt+pndMHr3ySDg1bK2+Yt2jIMOOyZJpb+6IMFT8wSOCDYJAsJyAdY/okCrPN5/tbdqseUXYnI6PRVpY+/NG33uf7W3pqjNy3cnY+ShRRZUlAa4XEki3XAWIn56ktg8wJq5GXwYGU1NGLKalJpsu2rbFjMR4O9j2Jcqxq1EtE/uhVFqgnA7qO0Bje9rw0OgwYDIm2+XQaXp0o2axVVYkCJ4Vq4+FsuqUdGkqU8ONVg3iojtL9WODUgzfIS8bD1AkkZZTDwmFJE1x5U6DdskQO9/T/DelInD2Z7LIZDi6VlHE07CWVbj+ydH3YFiPt46Mm4AtZKarvj3dWrCR33uDbcCNIb8Wpf8qwKIz9mjDaKUJmWeutY0tkaul4wOSz4AGUDz2t9bQxqsgDQ1lqJaSbsCtHsKb2xJJxyziLHb/j19DDD4NAHiY7dA/j22OMLgNaGm52e+enfs0a7o1HrFxkuFIhf2lsnmuRVhVehD2ib7brK/bVayJzyBJf9yWrsdEl2sf9qtXFFOU7T4jDlgtSsdHE72NJqifNgliss8lvk1M60sq6lsuBF3FuvTq29ms+WMR/7bhLSKN8TnXDRVi7fBw8cfbNCYaQwWxySvMwzL8wGPtfDGkGLjKolXWksNnOvo6OnzwaquBiN+PiyO8Jblfcyxjlu1tya1vfww2TVoKocV4UqN3/yi4GU/367pZIP/26aQPlgeEv9MuHv8QZq0LSIw/R2QYaLleer0g2mgzrvaf0DJs1zsP0gYLqr+R66OB4fMYw6C8F9arGZhOZoOu28vHqpxrb6RKlqayLruv+A1765ws=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the payment quantity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/payment/update"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the payment quantity with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"quantity":{"type":"object","additionalProperties":{"type":"integer","format":"int32"},"description":"The mapping of item identifiers to their respective quantities in the payment.","nullable":true,"example":[{"key":"some text","value":1234}]}},"additionalProperties":false,"description":"The request parameters for specifying payment quantity.","title":"QuantityRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

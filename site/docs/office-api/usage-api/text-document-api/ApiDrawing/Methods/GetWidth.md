@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the width of the drawing.
 
 ```javascript editor-docx
+// How to print the width of the drawing.
+
+// Create a rectangle and then show its width in mm.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

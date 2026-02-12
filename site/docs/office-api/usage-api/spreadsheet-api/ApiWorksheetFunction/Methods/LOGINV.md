@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the inverse of the lognormal cumulative distribution function of x, where ln(x) is normally distributed with the specified parameters.
 
 ```javascript editor-xlsx
+// How to get the lognormal cumulative distribution function of x.
+
+// Use a function to return the lognormal cumulative distribution function.
+
 const worksheet = Api.GetActiveSheet();
 
 //configure function parameters
@@ -43,7 +47,7 @@ let mean = worksheet.GetRange("A2");
 let standardDeviation = worksheet.GetRange("A3");
 
 //invoke LOGINV method
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.LOGINV(probability, mean, standardDeviation);
 
 //print answer

@@ -25,6 +25,10 @@ expression.GetBookmarkRange(sName);
 This example showh how to get a bookmark range.
 
 ```javascript editor-docx
+// Get a range with a bookmark with specific name.
+
+// How to retrieve a range bookmarked and set it bold.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

@@ -15,7 +15,7 @@ Instructions for creating and configuring webhooks can be found [here](https://h
 
 API methods for working with webhooks are detailed [in this section](../../../../docspace/api-backend/usage-api/get-tenant-webhooks.api.mdx).
 
-A full list of available triggers can be obtained via [this method](https://api.onlyoffice.com/docspace/api-backend/usage-api/get-triggers/).
+A full list of available triggers can be obtained via [this method](../../../../docspace/api-backend/usage-api/get-webhook-triggers.api.mdx).
 
 The Node.js and Python examples demonstrating how to configure and handle events with webhooks can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/webhooks).
 

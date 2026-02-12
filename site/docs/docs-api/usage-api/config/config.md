@@ -12,12 +12,11 @@ The config base section allows to change the platform type used, document displa
 
 Defines the document type to be opened:
 
-- **word** - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .htm, .html, .hwp, .hwpx, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
+- **word** - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .md, .hwp, .hwpx, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
 - **cell** - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
-- **slide** - presentation (*.dps, .dpt, .fodp, .key, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
-- **pdf** - portable document format (*.djvu, .oform, .oxps, .pdf, .xps*).
-
-<!--- **diagram** - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*)-->
+- **slide** - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
+- **pdf** - portable document format (*.djvu, .oxps, .pdf, .xps*);
+- **diagram** - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
 :::note
 **text**, **spreadsheet** and **presentation** values are deprecated since version 6.1. Please use new values instead.

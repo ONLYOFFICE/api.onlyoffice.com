@@ -21,7 +21,7 @@ The reference figure and the steps below explain the process of saving a documen
 
 5. The **document editing service** informs the **document storage service** about the end of the document editing using the *callbackUrl* from [JavaScript API](../basic-concepts.md) and returns the link to the modified document.
 
-   > Please note that since version 5.5, [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl) is selected based on [status](../../usage-api/callback-handler.md#status) of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+   > Please note that since version 5.5, [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl) is selected based on [status](../../usage-api/callback-handler.md#status*) of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
 
 6. The **document storage service** downloads the document file with all the saved changes from the **document editing service** and stores it.
 

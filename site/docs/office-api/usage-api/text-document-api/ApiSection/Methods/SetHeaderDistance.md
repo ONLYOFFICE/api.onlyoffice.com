@@ -18,17 +18,21 @@ expression.SetHeaderDistance(nDistance);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the distance from the top edge of the page to the top edge of the header.
 
 ```javascript editor-docx
+// How to set header distance of the section.
+
+// Specify the distance between the page end and the header.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a page with a header. ");
-paragraph.AddText("Scroll down the page to see it.");
+paragraph.AddText("Scroll up the page to see it.");
 let section = doc.GetFinalSection();
 let header = section.GetHeader("default", true);
 section.SetHeaderDistance(1440);

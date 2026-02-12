@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Generate table of contents
 
 Generates a table of contents by scanning the document for headings.
@@ -14,8 +18,8 @@ Generates a table of contents by scanning the document for headings.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md),
-[AddTableOfContents](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md),
+[AddTableOfContents](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## Reference Microsoft VBA macro code
 

@@ -5,7 +5,7 @@ This example demonstrates how to log in to DocSpace using the JavaScript SDK by 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -19,7 +19,7 @@ You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the
     <title>Login</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -90,7 +90,7 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
     <title>Login</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
 
     <style>
       #button {
@@ -120,12 +120,12 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the system. Then use the [getHashSettings()](../../usage-sdk/methods.md#gethashsettings) and [createHash()](../../usage-sdk/methods.md#createhash) methods to securely hash the password, followed by [login()](../../usage-sdk/methods.md#login) to authenticate the user.
+Configure and initialize the system. Then use the [getHashSettings()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#gethashsettings) and [createHash()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createhash) methods to securely hash the password, followed by [login()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) to authenticate the user.
 
 ``` ts
 document.getElementById("button").onclick = async () => {
