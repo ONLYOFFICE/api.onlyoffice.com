@@ -1,0 +1,32 @@
+.TabsList {
+    color: var(--ifm-tabs-color);
+    font-weight: var(--ifm-font-weight-bold);
+    padding-left: 0;
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.TabsItem {
+    background: transparent;
+    border: none;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+
+    border-radius: var(--ifm-global-radius);
+    cursor: pointer;
+    padding: var(--ifm-tabs-padding-vertical) var(--ifm-tabs-padding-horizontal);
+    transition: background-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+    border-bottom: 3px solid #0000;
+    display: inline-flex;
+
+}
+
+.TabsItem[data-state="active"] {
+    border-bottom-color: var(--ifm-tabs-color-active-border);
+    color: var(--ifm-tabs-color-active);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}

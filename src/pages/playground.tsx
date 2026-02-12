@@ -13,6 +13,7 @@ const PlaygroundRoute = () => {
     const editorType = params.get('editor') as EditorType | null;
     const connectorType = params.get('testType') as ScriptType | null;
     const previewType = params.get('preview') as PreviewType | null;
+    const code = params.get('code') as string | null;
     const documentServerUrl = params.get('documentServerUrl') as string | null;
     const documentServerSecret = params.get('documentServerSecret') as string | null;
 
@@ -24,10 +25,13 @@ const PlaygroundRoute = () => {
             <BrowserOnly>
                 {() => (
                     <div className={styles.playgroundContainer}>
-                        <Playground.Root editorType={editorType ?? undefined} scriptType={connectorType ?? undefined}
+                        <Playground.Root editorType={editorType ?? undefined}
+                                         scriptType={connectorType ?? undefined}
                                          previewType={previewType ?? undefined}
                                          documentServerUrl={documentServerUrl ?? undefined}
-                                         documentServerSecret={documentServerSecret ?? undefined}>
+                                         documentServerSecret={documentServerSecret ?? undefined}
+                                         initialScript={code ?? undefined}
+                        >
                             <Playground.Toolbar/>
                             <Playground.Content/>
                         </Playground.Root>
