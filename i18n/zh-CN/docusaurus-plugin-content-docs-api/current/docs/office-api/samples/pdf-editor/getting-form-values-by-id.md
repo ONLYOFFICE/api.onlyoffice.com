@@ -2,33 +2,33 @@
 hide_table_of_contents: true
 ---
 
-# Getting form values by ID
+# 通过ID获取表单值
 
-Extract values from specific form fields using their unique identifiers for validation and dynamic processing:
+使用唯一标识符从特定表单字段中提取值，用于验证和动态处理：
 
-- create a form with various input types and unique identifiers ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- retrieve specific form values by their key/ID ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
-- validate form data and highlight required fields ([ApiTextForm/GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md), [ApiFormBase/SetBorderColor](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/SetBorderColor.md)).
+- 创建具有各种输入类型和唯一标识符的表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
+- 通过键/ID检索特定表单值（[ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)）；
+- 验证表单数据并高亮显示必填字段（[ApiTextForm/GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md)、[ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md)、[ApiFormBase/SetBorderColor](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/SetBorderColor.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
-// Create a registration form with various field types
+// 创建包含各种字段类型的注册表单
 function createRegistrationForm() {
   let paragraph = doc.GetElement(0);
-  paragraph.AddText("User Registration Form");
+  paragraph.AddText("用户注册表");
   paragraph.SetFontSize(18 * 2);
   paragraph.SetBold(true);
   paragraph.SetJc("center");
 
-  // Email field (required)
+  // 电子邮件字段（必填）
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Email (required): ");
+  paragraph.AddText("电子邮件（必填）：");
   paragraph.SetFontSize(14 * 2);
   let emailForm = Api.CreateTextForm({
     key: "email",
     required: true,
-    placeholder: "Enter your email address",
+    placeholder: "请输入您的电子邮件地址",
     maxCharacters: 50,
     multiLine: false,
     autoFit: true,
@@ -36,14 +36,14 @@ function createRegistrationForm() {
   paragraph.AddElement(emailForm);
   doc.Push(paragraph);
 
-  // Full name field
+  // 姓名字段
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Full Name: ");
+  paragraph.AddText("姓名：");
   paragraph.SetFontSize(14 * 2);
   let nameForm = Api.CreateTextForm({
     key: "full_name",
     required: false,
-    placeholder: "Enter your full name",
+    placeholder: "请输入您的姓名",
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -51,14 +51,14 @@ function createRegistrationForm() {
   paragraph.AddElement(nameForm);
   doc.Push(paragraph);
 
-  // Age selection
+  // 年龄段选择
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Age Group: ");
+  paragraph.AddText("年龄段：");
   paragraph.SetFontSize(14 * 2);
   let ageForm = Api.CreateComboBoxForm({
     key: "age_group",
     required: false,
-    placeholder: "Select age group",
+    placeholder: "请选择年龄段",
     editable: false,
     autoFit: true,
     items: ["18-25", "26-35", "36-45", "46-55", "55+"]
@@ -66,141 +66,141 @@ function createRegistrationForm() {
   paragraph.AddElement(ageForm);
   doc.Push(paragraph);
 
-  // Terms agreement checkbox (required)
+  // 条款同意复选框（必填）
   paragraph = Api.CreateParagraph();
   let termsCheckbox = Api.CreateCheckBoxForm({
     key: "terms_agreed",
     required: true,
-    tip: "You must agree to terms and conditions",
+    tip: "您必须同意条款和条件",
     checked: false
   });
   paragraph.AddElement(termsCheckbox);
-  paragraph.AddText(" I agree to the terms and conditions (required)");
+  paragraph.AddText(" 我同意条款和条件（必填）");
   paragraph.SetFontSize(14 * 2);
   doc.Push(paragraph);
 
-  // Newsletter subscription checkbox (optional)
+  // 新闻通讯订阅复选框（可选）
   paragraph = Api.CreateParagraph();
   let newsletterCheckbox = Api.CreateCheckBoxForm({
     key: "newsletter_subscription",
     required: false,
-    tip: "Subscribe to our newsletter",
+    tip: "订阅我们的新闻通讯",
     checked: false
   });
   paragraph.AddElement(newsletterCheckbox);
-  paragraph.AddText(" Subscribe to newsletter");
+  paragraph.AddText(" 订阅新闻通讯");
   paragraph.SetFontSize(14 * 2);
   doc.Push(paragraph);
 }
 
-// Function to validate form and get values by ID
+// 通过ID验证表单并获取值的函数
 function validateFormById() {
   let validationResults = {};
   let isFormValid = true;
 
-  // Check email field (required)
+  // 检查电子邮件字段（必填）
   let emailForms = doc.GetFormsByKey("email");
   if (emailForms.length > 0) {
     let emailValue = emailForms[0].GetText();
     validationResults.email = emailValue;
-    
+
     if (!emailValue || emailValue.trim() === "") {
-      // Highlight field in red if empty
+      // 如果为空，将字段高亮为红色
       emailForms[0].SetBorderColor(255, 0, 0);
       isFormValid = false;
     } else if (!emailValue.includes("@")) {
-      // Highlight field in orange if invalid format
+      // 如果格式无效，将字段高亮为橙色
       emailForms[0].SetBorderColor(255, 165, 0);
       isFormValid = false;
     } else {
-      // Set green border if valid
+      // 如果有效，设置绿色边框
       emailForms[0].SetBorderColor(0, 255, 0);
     }
   }
 
-  // Check full name field
+  // 检查姓名字段
   let nameForms = doc.GetFormsByKey("full_name");
   if (nameForms.length > 0) {
     let nameValue = nameForms[0].GetText();
     validationResults.full_name = nameValue;
-    
+
     if (nameValue && nameValue.trim() !== "") {
       nameForms[0].SetBorderColor(0, 255, 0);
     }
   }
 
-  // Check age group selection
+  // 检查年龄段选择
   let ageForms = doc.GetFormsByKey("age_group");
   if (ageForms.length > 0) {
     let ageValue = ageForms[0].GetText();
     validationResults.age_group = ageValue;
-    
+
     if (ageValue && ageValue.trim() !== "") {
       ageForms[0].SetBorderColor(0, 255, 0);
     }
   }
 
-  // Check terms agreement (required)
+  // 检查条款同意（必填）
   let termsForms = doc.GetFormsByKey("terms_agreed");
   if (termsForms.length > 0) {
     let termsChecked = termsForms[0].IsChecked();
     validationResults.terms_agreed = termsChecked;
-    
+
     if (!termsChecked) {
-      // Highlight checkbox in red if not checked
+      // 如果未勾选，将复选框高亮为红色
       termsForms[0].SetBorderColor(255, 0, 0);
       isFormValid = false;
     } else {
-      // Set green border if checked
+      // 如果已勾选，设置绿色边框
       termsForms[0].SetBorderColor(0, 255, 0);
     }
   }
 
-  // Check newsletter subscription (optional)
+  // 检查新闻通讯订阅（可选）
   let newsletterForms = doc.GetFormsByKey("newsletter_subscription");
   if (newsletterForms.length > 0) {
     let newsletterChecked = newsletterForms[0].IsChecked();
     validationResults.newsletter_subscription = newsletterChecked;
-    
-    // Always green border for optional field
+
+    // 可选字段始终显示绿色边框
     newsletterForms[0].SetBorderColor(0, 255, 0);
   }
 
   return { isValid: isFormValid, data: validationResults };
 }
 
-// Create the form
+// 创建表单
 createRegistrationForm();
 
-// Add some spacing
+// 添加一些间距
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
-// Add validation section
+// 添加验证部分
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form Validation Results:");
+paragraph.AddText("表单验证结果：");
 paragraph.SetFontSize(16 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
-// Perform validation and display results
+// 执行验证并显示结果
 let validation = validateFormById();
 
 paragraph = Api.CreateParagraph();
 if (validation.isValid) {
-  paragraph.AddText("✓ Form is valid and ready for submission");
+  paragraph.AddText("✓ 表单有效，可以提交");
   paragraph.SetColor(0, 128, 0);
 } else {
-  paragraph.AddText("✗ Form has validation errors (check highlighted fields)");
+  paragraph.AddText("✗ 表单存在验证错误（请检查高亮显示的字段）");
   paragraph.SetColor(255, 0, 0);
 }
 paragraph.SetFontSize(14 * 2);
 doc.Push(paragraph);
 
-// Display extracted values
+// 显示提取的值
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Extracted Values:");
+paragraph.AddText("提取的值：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -209,9 +209,9 @@ for (let key in validation.data) {
   paragraph = Api.CreateParagraph();
   let value = validation.data[key];
   if (typeof value === 'boolean') {
-    value = value ? 'Yes' : 'No';
+    value = value ? '是' : '否';
   }
-  paragraph.AddText(`${key}: ${value || 'Not provided'}`);
+  paragraph.AddText(`${key}: ${value || '未提供'}`);
   paragraph.SetFontSize(12 * 2);
   doc.Push(paragraph);
 }
