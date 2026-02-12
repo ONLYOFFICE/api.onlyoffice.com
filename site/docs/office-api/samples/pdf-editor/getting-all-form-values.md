@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Getting all form values
 
 Collect all form field values into a single JSON object after form completion for analysis, server submission, or database storage:
