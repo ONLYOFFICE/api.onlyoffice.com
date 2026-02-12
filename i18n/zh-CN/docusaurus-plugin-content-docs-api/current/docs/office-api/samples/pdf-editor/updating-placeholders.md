@@ -2,26 +2,26 @@
 hide_table_of_contents: true
 ---
 
-# Updating placeholders
+# 更新占位符
 
-Adapt placeholder text in form fields based on user language or usage context for better user experience in multilingual systems:
+根据用户语言或使用环境调整表单字段中的占位符文本，以在多语言系统中提供更好的用户体验：
 
-- create forms with localizable placeholder text ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- implement language detection and placeholder updates ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
-- manage multilingual placeholder dictionaries ([ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)).
+- 创建带有可本地化占位符文本的表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
+- 实现语言检测和占位符更新（[ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md)、[ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)）；
+- 管理多语言占位符字典（[ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)、[ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
-// Simulate user language preference
+// 模拟用户语言偏好
 let currentUser = {
   username: "marie.dubois",
-  language: "fr",  // Can be "en", "fr", "de", "es", "ru"
+  language: "fr",  // 可以是 "en", "fr", "de", "es", "ru"
   country: "France",
   department: "HR"
 };
 
-// Multilingual placeholder dictionary
+// 多语言占位符字典
 let placeholderDictionary = {
   "en": {
     "full_name": "Enter your full name",
@@ -85,29 +85,29 @@ let placeholderDictionary = {
   }
 };
 
-// Create HR employee registration form with default English placeholders
+// 创建带有默认英语占位符的人力资源员工注册表单
 function createEmployeeRegistrationForm() {
   let paragraph = doc.GetElement(0);
-  paragraph.AddText("Employee Registration Form");
+  paragraph.AddText("员工注册表");
   paragraph.SetFontSize(18 * 2);
   paragraph.SetBold(true);
   paragraph.SetJc("center");
 
-  // Personal Information Section
+  // 个人信息部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Personal Information");
+  paragraph.AddText("个人信息");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Full Name
+  // 全名
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Full Name: ");
+  paragraph.AddText("全名：");
   paragraph.SetFontSize(12 * 2);
   let nameForm = Api.CreateTextForm({
     key: "full_name",
     required: true,
-    placeholder: "Enter your full name",  // Default English
+    placeholder: "Enter your full name",  // 默认英语
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -115,14 +115,14 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(nameForm);
   doc.Push(paragraph);
 
-  // Email
+  // 电子邮件
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Email: ");
+  paragraph.AddText("电子邮件：");
   paragraph.SetFontSize(12 * 2);
   let emailForm = Api.CreateTextForm({
     key: "email",
     required: true,
-    placeholder: "Work email address",  // Default English
+    placeholder: "Work email address",  // 默认英语
     maxCharacters: 80,
     multiLine: false,
     autoFit: true,
@@ -130,14 +130,14 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(emailForm);
   doc.Push(paragraph);
 
-  // Phone
+  // 电话
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Phone: ");
+  paragraph.AddText("电话：");
   paragraph.SetFontSize(12 * 2);
   let phoneForm = Api.CreateTextForm({
     key: "phone",
     required: false,
-    placeholder: "Phone number with country code",  // Default English
+    placeholder: "Phone number with country code",  // 默认英语
     maxCharacters: 20,
     multiLine: false,
     autoFit: true,
@@ -145,36 +145,36 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(phoneForm);
   doc.Push(paragraph);
 
-  // Work Information Section
+  // 工作信息部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Work Information");
+  paragraph.AddText("工作信息");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Department
+  // 部门
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Department: ");
+  paragraph.AddText("部门：");
   paragraph.SetFontSize(12 * 2);
   let deptForm = Api.CreateComboBoxForm({
     key: "department",
     required: true,
-    placeholder: "Select your department",  // Default English
+    placeholder: "Select your department",  // 默认英语
     editable: false,
     autoFit: true,
-    items: ["HR", "IT", "Sales", "Marketing", "Finance", "Operations"]
+    items: ["人力资源", "信息技术", "销售", "市场", "财务", "运营"]
   });
   paragraph.AddElement(deptForm);
   doc.Push(paragraph);
 
-  // Position
+  // 职位
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Position: ");
+  paragraph.AddText("职位：");
   paragraph.SetFontSize(12 * 2);
   let positionForm = Api.CreateTextForm({
     key: "position",
     required: true,
-    placeholder: "Your job title",  // Default English
+    placeholder: "Your job title",  // 默认英语
     maxCharacters: 50,
     multiLine: false,
     autoFit: true,
@@ -182,14 +182,14 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(positionForm);
   doc.Push(paragraph);
 
-  // Start Date
+  // 入职日期
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Start Date: ");
+  paragraph.AddText("入职日期：");
   paragraph.SetFontSize(12 * 2);
   let startDateForm = Api.CreateTextForm({
     key: "start_date",
     required: true,
-    placeholder: "Employment start date (DD.MM.YYYY)",  // Default English
+    placeholder: "Employment start date (DD.MM.YYYY)",  // 默认英语
     maxCharacters: 10,
     multiLine: false,
     autoFit: true,
@@ -197,14 +197,14 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(startDateForm);
   doc.Push(paragraph);
 
-  // Salary (sensitive field)
+  // 薪资（敏感字段）
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Annual Salary: ");
+  paragraph.AddText("年薪：");
   paragraph.SetFontSize(12 * 2);
   let salaryForm = Api.CreateTextForm({
     key: "salary",
     required: false,
-    placeholder: "Annual salary amount",  // Default English
+    placeholder: "Annual salary amount",  // 默认英语
     maxCharacters: 15,
     multiLine: false,
     autoFit: true,
@@ -212,21 +212,21 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(salaryForm);
   doc.Push(paragraph);
 
-  // Emergency Contact Section
+  // 紧急联系人部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Emergency Contact");
+  paragraph.AddText("紧急联系人");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Emergency Contact Name
+  // 紧急联系人姓名
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Contact Name: ");
+  paragraph.AddText("联系人姓名：");
   paragraph.SetFontSize(12 * 2);
   let emergencyContactForm = Api.CreateTextForm({
     key: "emergency_contact",
     required: false,
-    placeholder: "Emergency contact name",  // Default English
+    placeholder: "Emergency contact name",  // 默认英语
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -234,14 +234,14 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(emergencyContactForm);
   doc.Push(paragraph);
 
-  // Emergency Phone
+  // 紧急联系电话
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Contact Phone: ");
+  paragraph.AddText("联系人电话：");
   paragraph.SetFontSize(12 * 2);
   let emergencyPhoneForm = Api.CreateTextForm({
     key: "emergency_phone",
     required: false,
-    placeholder: "Emergency contact phone",  // Default English
+    placeholder: "Emergency contact phone",  // 默认英语
     maxCharacters: 20,
     multiLine: false,
     autoFit: true,
@@ -249,14 +249,14 @@ function createEmployeeRegistrationForm() {
   paragraph.AddElement(emergencyPhoneForm);
   doc.Push(paragraph);
 
-  // Comments
+  // 备注
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Additional Comments: ");
+  paragraph.AddText("附加备注：");
   paragraph.SetFontSize(12 * 2);
   let commentsForm = Api.CreateTextForm({
     key: "comments",
     required: false,
-    placeholder: "Additional comments or notes",  // Default English
+    placeholder: "Additional comments or notes",  // 默认英语
     maxCharacters: 300,
     multiLine: true,
     autoFit: true,
@@ -265,14 +265,14 @@ function createEmployeeRegistrationForm() {
   doc.Push(paragraph);
 }
 
-// Function to detect user language (simulated)
+// 检测用户语言的函数（模拟）
 function detectUserLanguage(user) {
-  // In a real application, this could check:
-  // - User profile language setting
-  // - Browser language preference
-  // - System locale
-  // - Geographic location
-  
+  // 在实际应用中，可以检查：
+  // - 用户配置文件中的语言设置
+  // - 浏览器语言偏好
+  // - 系统区域设置
+  // - 地理位置
+
   let languageMap = {
     "marie.dubois": "fr",
     "hans.mueller": "de",
@@ -280,75 +280,75 @@ function detectUserLanguage(user) {
     "anna.petrov": "ru",
     "john.smith": "en"
   };
-  
+
   return languageMap[user.username] || user.language || "en";
 }
 
-// Function to update form placeholders based on language
+// 根据语言更新表单占位符的函数
 function updatePlaceholdersForLanguage(language) {
   let updatedCount = 0;
   let dictionary = placeholderDictionary[language] || placeholderDictionary["en"];
-  
-  // Get all forms in the document
+
+  // 获取文档中的所有表单
   let forms = doc.GetAllForms();
-  
+
   for (let form of forms) {
     let key = form.GetFormKey();
     let formType = form.GetFormType();
-    
-    // Update placeholder if translation exists
+
+    // 如果存在翻译则更新占位符
     if (dictionary[key]) {
       if (formType === "textForm" || formType === "comboBoxForm") {
-        // Note: In the actual API, placeholder updates might be done differently
-        // This is a conceptual demonstration
+        // 注意：在实际 API 中，占位符更新可能以不同方式完成
+        // 这是一个概念演示
         try {
-          // For demonstration, we'll update the form by recreating it with new placeholder
-          // In a real implementation, you'd use the appropriate API method
+          // 为了演示，我们将通过使用新占位符重新创建来更新表单
+          // 在实际实现中，您将使用适当的 API 方法
           form.SetPlaceholderText(dictionary[key]);
           updatedCount++;
         } catch (e) {
-          // If SetPlaceholder is not available, we could update the text content
-          // or use other available methods
-          console.log(`Could not update placeholder for ${key}`);
+          // 如果 SetPlaceholder 不可用，我们可以更新文本内容
+          // 或使用其他可用的方法
+          console.log(`无法更新 ${key} 的占位符`);
         }
       }
     }
   }
-  
+
   return { updatedCount, language, dictionary };
 }
 
-// Function to get language name for display
+// 获取语言名称用于显示的函数
 function getLanguageName(languageCode) {
   let languageNames = {
     "en": "English",
     "fr": "Français",
-    "de": "Deutsch", 
+    "de": "Deutsch",
     "es": "Español",
     "ru": "Русский"
   };
-  
+
   return languageNames[languageCode] || languageCode;
 }
 
-// Create the employee registration form
+// 创建员工注册表单
 createEmployeeRegistrationForm();
 
-// Add spacing
+// 添加间距
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
-// Add localization demonstration
+// 添加本地化演示
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Placeholder Localization Demo");
+paragraph.AddText("占位符本地化演示");
 paragraph.SetFontSize(16 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
-// Step 1: Detect user language
+// 第一步：检测用户语言
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 1: User Language Detection");
+paragraph.AddText("第一步：用户语言检测");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -357,43 +357,43 @@ let detectedLanguage = detectUserLanguage(currentUser);
 currentUser.language = detectedLanguage;
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ User: ${currentUser.username}`);
+paragraph.AddText(`✓ 用户：${currentUser.username}`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Detected Language: ${getLanguageName(detectedLanguage)} (${detectedLanguage})`);
+paragraph.AddText(`✓ 检测到的语言：${getLanguageName(detectedLanguage)} (${detectedLanguage})`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Country: ${currentUser.country}`);
+paragraph.AddText(`✓ 国家：${currentUser.country}`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Step 2: Load placeholder dictionary
+// 第二步：加载占位符字典
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 2: Placeholder Dictionary Loading");
+paragraph.AddText("第二步：占位符字典加载");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 let availableLanguages = Object.keys(placeholderDictionary);
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Available languages: ${availableLanguages.join(", ")}`);
+paragraph.AddText(`✓ 可用语言：${availableLanguages.join(", ")}`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 let currentDictionary = placeholderDictionary[detectedLanguage];
 let dictionarySize = Object.keys(currentDictionary).length;
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Loaded ${dictionarySize} placeholder translations for ${getLanguageName(detectedLanguage)}`);
+paragraph.AddText(`✓ 已加载 ${dictionarySize} 个 ${getLanguageName(detectedLanguage)} 占位符翻译`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Step 3: Update form placeholders
+// 第三步：更新表单占位符
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 3: Form Placeholder Update");
+paragraph.AddText("第三步：表单占位符更新");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -401,14 +401,14 @@ doc.Push(paragraph);
 let updateResult = updatePlaceholdersForLanguage(detectedLanguage);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Updated ${updateResult.updatedCount} form field placeholders`);
+paragraph.AddText(`✓ 已更新 ${updateResult.updatedCount} 个表单字段占位符`);
 paragraph.SetFontSize(12 * 2);
 paragraph.SetColor(0, 128, 0);
 doc.Push(paragraph);
 
-// Show sample translations
+// 显示示例翻译
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Sample Translations:");
+paragraph.AddText("示例翻译：");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -423,108 +423,108 @@ for (let fieldKey of sampleFields) {
   doc.Push(paragraph);
 }
 
-// Add implementation guide
+// 添加实施指南
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Implementation Guide:");
+paragraph.AddText("实施指南：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("1. User Language Detection");
+paragraph.AddText("1. 用户语言检测");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Check user profile language settings");
+paragraph.AddText("• 检查用户配置文件语言设置");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Detect browser language preferences");
+paragraph.AddText("• 检测浏览器语言偏好");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Use system locale or geographic location");
+paragraph.AddText("• 使用系统区域设置或地理位置");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("2. Placeholder Dictionary Management");
+paragraph.AddText("2. 占位符字典管理");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Maintain translations for all supported languages");
+paragraph.AddText("• 维护所有支持语言的翻译");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Use structured JSON format for easy maintenance");
+paragraph.AddText("• 使用结构化 JSON 格式便于维护");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Implement fallback to default language (English)");
+paragraph.AddText("• 实现回退到默认语言（英语）");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("3. Dynamic Placeholder Updates");
+paragraph.AddText("3. 动态占位符更新");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Update placeholders before form display");
+paragraph.AddText("• 在表单显示之前更新占位符");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Handle different form types appropriately");
+paragraph.AddText("• 适当处理不同的表单类型");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Provide error handling for missing translations");
+paragraph.AddText("• 为缺失的翻译提供错误处理");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
-// Add benefits section
+// 添加优势部分
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Benefits:");
+paragraph.AddText("优势：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Improved user experience in multilingual environments");
+paragraph.AddText("• 改善多语言环境中的用户体验");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Reduced form completion errors");
+paragraph.AddText("• 减少表单填写错误");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Increased user trust and engagement");
+paragraph.AddText("• 增加用户信任度和参与度");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Better accessibility for international users");
+paragraph.AddText("• 为国际用户提供更好的可访问性");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 ```
