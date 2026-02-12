@@ -2,9 +2,9 @@
 hide_table_of_contents: true
 ---
 
-# Creating employee onboarding checklist
+# Creating onboarding checklist
 
-Creates an employee onboarding checklist form with document tracking:
+Creates an onboarding checklist form with document tracking:
 
 - create text fields for employee information ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
 - create checkbox table for signed documents tracking ([Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md));

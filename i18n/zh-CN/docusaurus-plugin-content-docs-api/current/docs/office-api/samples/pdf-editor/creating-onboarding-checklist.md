@@ -2,9 +2,9 @@
 hide_table_of_contents: true
 ---
 
-# 创建员工入职清单
+# 创建入职清单
 
-创建带有文档跟踪功能的员工入职清单表单：
+创建带有文档跟踪功能的入职清单表单：
 
 - 为员工信息创建文本字段（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
 - 创建用于跟踪已签署文档的复选框表格（[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md)）；
