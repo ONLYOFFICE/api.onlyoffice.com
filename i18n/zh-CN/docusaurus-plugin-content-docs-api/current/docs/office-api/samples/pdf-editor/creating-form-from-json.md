@@ -2,36 +2,36 @@
 hide_table_of_contents: true
 ---
 
-# Creating form from JSON
+# 从JSON创建表单
 
-Create forms automatically from simple JSON objects where field types and structure are determined automatically based on data context and values:
+根据数据上下文和值自动确定字段类型和结构，从简单的JSON对象自动创建表单：
 
-- analyze JSON data and determine appropriate field types ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- generate form fields with intelligent type detection ([ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [ApiParagraph/AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md));
-- create labels and initial values from JSON structure ([Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)).
+- 分析JSON数据并确定适当的字段类型（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
+- 通过智能类型检测生成表单字段（[ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md)、[ApiParagraph/AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md)）；
+- 从JSON结构创建标签和初始值（[Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md)、[ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
-// Sample JSON data from different sources
+// 来自不同来源的示例JSON数据
 let employeeData = {
-  "name": "Alice Johnson",
-  "email": "alice.johnson@company.com",
-  "phone": "+1-555-0123",
+  "name": "张明",
+  "email": "zhang.ming@company.com",
+  "phone": "+86-138-0000-1234",
   "start_date": "2024-09-01",
   "department": "Engineering",
   "salary": 75000,
   "is_manager": false,
   "subscribe_newsletter": true,
-  "emergency_contact": "Bob Johnson",
-  "notes": "Experienced software developer with React expertise",
+  "emergency_contact": "张伟",
+  "notes": "具有React专业知识的资深软件开发工程师",
   "years_experience": 5,
   "remote_work": true
 };
 
 let projectData = {
-  "project_name": "Mobile App Redesign",
-  "description": "Complete redesign of the mobile application user interface",
+  "project_name": "移动应用重新设计",
+  "description": "移动应用用户界面的全面重新设计",
   "start_date": "2024-10-15",
   "end_date": "2025-03-30",
   "budget": 150000,
@@ -42,137 +42,137 @@ let projectData = {
   "requires_approval": false
 };
 
-// Function to analyze value and determine field type
+// 分析值并确定字段类型的函数
 function determineFieldType(key, value) {
-  // Check by value type first
+  // 首先按值类型检查
   if (typeof value === 'boolean') {
     return 'checkbox';
   }
-  
+
   if (typeof value === 'number') {
     return 'number';
   }
-  
+
   if (typeof value === 'string') {
-    // Check key patterns for more specific types
+    // 检查键模式以获取更具体的类型
     let lowerKey = key.toLowerCase();
-    
+
     if (lowerKey.includes('email')) {
       return 'email';
     }
-    
+
     if (lowerKey.includes('phone') || lowerKey.includes('tel')) {
       return 'phone';
     }
-    
+
     if (lowerKey.includes('date')) {
       return 'date';
     }
-    
+
     if (lowerKey.includes('password')) {
       return 'password';
     }
-    
+
     if (lowerKey.includes('url') || lowerKey.includes('website')) {
       return 'url';
     }
-    
+
     if (lowerKey.includes('description') || lowerKey.includes('notes') || lowerKey.includes('comment')) {
       return 'textarea';
     }
-    
-    // Check for predefined options based on key
+
+    // 根据键检查预定义选项
     if (lowerKey.includes('priority')) {
       return 'select';
     }
-    
+
     if (lowerKey.includes('department')) {
       return 'select';
     }
-    
-    // Check string length for textarea vs text
+
+    // 检查字符串长度以确定文本区域或文本
     if (value.length > 100) {
       return 'textarea';
     }
-    
+
     return 'text';
   }
-  
-  return 'text'; // Default fallback
+
+  return 'text'; // 默认回退
 }
 
-// Function to generate human-readable label from key
+// 从键生成人类可读标签的函数
 function generateLabel(key) {
   return key
-    .replace(/_/g, ' ')           // Replace underscores with spaces
-    .replace(/([A-Z])/g, ' $1')   // Add space before capital letters
-    .replace(/\b\w/g, l => l.toUpperCase()) // Capitalize first letter of each word
+    .replace(/_/g, ' ')           // 将下划线替换为空格
+    .replace(/([A-Z])/g, ' $1')   // 在大写字母前添加空格
+    .replace(/\b\w/g, l => l.toUpperCase()) // 将每个单词的首字母大写
     .trim();
 }
 
-// Function to get placeholder text based on field type and key
+// 根据字段类型和键获取占位符文本的函数
 function generatePlaceholder(key, fieldType) {
   let lowerKey = key.toLowerCase();
-  
+
   switch (fieldType) {
     case 'email':
-      return 'Enter email address';
+      return '请输入电子邮件地址';
     case 'phone':
-      return 'Enter phone number';
+      return '请输入电话号码';
     case 'date':
-      return 'DD.MM.YYYY';
+      return 'YYYY-MM-DD';
     case 'number':
       if (lowerKey.includes('salary') || lowerKey.includes('budget')) {
-        return 'Enter amount';
+        return '请输入金额';
       }
       if (lowerKey.includes('year')) {
-        return 'Enter year';
+        return '请输入年份';
       }
-      return 'Enter number';
+      return '请输入数字';
     case 'textarea':
-      return 'Enter detailed information...';
+      return '请输入详细信息...';
     case 'url':
       return 'https://example.com';
     case 'password':
-      return 'Enter password';
+      return '请输入密码';
     default:
-      return `Enter ${generateLabel(key).toLowerCase()}`;
+      return `请输入${generateLabel(key).toLowerCase()}`;
   }
 }
 
-// Function to get select options based on key
+// 根据键获取选择选项的函数
 function getSelectOptions(key) {
   let lowerKey = key.toLowerCase();
-  
+
   if (lowerKey.includes('priority')) {
-    return ['Low', 'Medium', 'High', 'Critical'];
+    return ['低', '中', '高', '紧急'];
   }
-  
+
   if (lowerKey.includes('department')) {
-    return ['Engineering', 'Marketing', 'Sales', 'HR', 'Finance', 'Operations'];
+    return ['工程部', '市场部', '销售部', '人力资源部', '财务部', '运营部'];
   }
-  
+
   if (lowerKey.includes('status')) {
-    return ['Active', 'Inactive', 'Pending', 'Completed'];
+    return ['活跃', '非活跃', '待处理', '已完成'];
   }
-  
+
   return [];
 }
 
-// Function to create form field based on type
+// 根据类型创建表单字段的函数
 function createFormField(key, value, fieldType) {
   let label = generateLabel(key);
   let placeholder = generatePlaceholder(key, fieldType);
-  
+
   switch (fieldType) {
     case 'checkbox':
       return Api.CreateCheckBoxForm({
         key: key,
         required: false,
-        tip: `Toggle ${label.toLowerCase()}`,
+        tip: `切换${label.toLowerCase()}`,
         checked: Boolean(value)
       });
-      
+
     case 'select':
       let options = getSelectOptions(key);
       return Api.CreateComboBoxForm({
@@ -183,7 +183,7 @@ function createFormField(key, value, fieldType) {
         autoFit: true,
         items: options
       });
-      
+
     case 'textarea':
       return Api.CreateTextForm({
         key: key,
@@ -193,7 +193,7 @@ function createFormField(key, value, fieldType) {
         multiLine: true,
         autoFit: true
       });
-      
+
     case 'number':
       return Api.CreateTextForm({
         key: key,
@@ -203,7 +203,7 @@ function createFormField(key, value, fieldType) {
         multiLine: false,
         autoFit: true
       });
-      
+
     default: // text, email, phone, date, url, password
       return Api.CreateTextForm({
         key: key,
@@ -216,64 +216,64 @@ function createFormField(key, value, fieldType) {
   }
 }
 
-// Function to generate form from JSON data
+// 从JSON数据生成表单的函数
 function generateFormFromJSON(jsonData, formTitle) {
-  // Create form title
+  // 创建表单标题
   let paragraph = doc.GetElement(0);
   paragraph.AddText(formTitle);
   paragraph.SetFontSize(18 * 2);
   paragraph.SetBold(true);
   paragraph.SetJc("center");
-  
-  // Add form generation info
+
+  // 添加表单生成信息
   paragraph = Api.CreateParagraph();
-  paragraph.AddText(`Auto-generated from JSON (${Object.keys(jsonData).length} fields)`);
+  paragraph.AddText(`从JSON自动生成（${Object.keys(jsonData).length}个字段）`);
   paragraph.SetFontSize(12 * 2);
   paragraph.SetJc("center");
   paragraph.SetColor(128, 128, 128);
   doc.Push(paragraph);
-  
-  // Add spacing
+
+  // 添加间距
   paragraph = Api.CreateParagraph();
   paragraph.AddText("");
   doc.Push(paragraph);
-  
+
   let fieldCount = 0;
   let fieldTypes = {};
-  
-  // Process each key-value pair
+
+  // 处理每个键值对
   for (let [key, value] of Object.entries(jsonData)) {
     let fieldType = determineFieldType(key, value);
     let label = generateLabel(key);
-    
+
     fieldTypes[key] = fieldType;
     fieldCount++;
-    
-    // Create label paragraph
+
+    // 创建标签段落
     paragraph = Api.CreateParagraph();
-    
+
     if (fieldType === 'checkbox') {
-      // For checkboxes, create the checkbox first, then add label text
+      // 对于复选框，先创建复选框，然后添加标签文本
       let checkboxForm = createFormField(key, value, fieldType);
       paragraph.AddElement(checkboxForm);
       paragraph.AddText(` ${label}`);
     } else {
-      // For other fields, add label text first, then the form field
+      // 对于其他字段，先添加标签文本，然后添加表单字段
       paragraph.AddText(`${label}: `);
       let formField = createFormField(key, value, fieldType);
       paragraph.AddElement(formField);
     }
-    
+
     paragraph.SetFontSize(12 * 2);
     doc.Push(paragraph);
-    
-    // Set initial value if not checkbox
+
+    // 如果不是复选框，则设置初始值
     if (fieldType !== 'checkbox' && value !== null && value !== undefined) {
       let forms = doc.GetFormsByKey(key);
       if (forms.length > 0) {
         let form = forms[0];
         if (fieldType === 'select') {
-          // For select fields, set the value if it exists in options
+          // 对于选择字段，如果值存在于选项中则设置该值
           let options = getSelectOptions(key);
           if (options.includes(String(value))) {
             form.SetText(String(value));
@@ -284,44 +284,44 @@ function generateFormFromJSON(jsonData, formTitle) {
       }
     }
   }
-  
+
   return { fieldCount, fieldTypes };
 }
 
-// Generate form from employee data
-let employeeResult = generateFormFromJSON(employeeData, "Employee Information Form");
+// 从员工数据生成表单
+let employeeResult = generateFormFromJSON(employeeData, "员工信息表");
 
-// Add spacing and analysis section
+// 添加间距和分析部分
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Form Generation Analysis");
+paragraph.AddText("表单生成分析");
 paragraph.SetFontSize(16 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
-// Step 1: Data Analysis
+// 步骤1：数据分析
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 1: JSON Data Analysis");
+paragraph.AddText("步骤1：JSON数据分析");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Processed ${employeeResult.fieldCount} fields from JSON`);
+paragraph.AddText(`✓ 从JSON处理了${employeeResult.fieldCount}个字段`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Analyzed data types and key patterns");
+paragraph.AddText("✓ 分析了数据类型和键模式");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Step 2: Field Type Detection
+// 步骤2：字段类型检测
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 2: Automatic Field Type Detection");
+paragraph.AddText("步骤2：自动字段类型检测");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -333,136 +333,136 @@ for (let fieldType of Object.values(employeeResult.fieldTypes)) {
 
 for (let [type, count] of Object.entries(typeCount)) {
   paragraph = Api.CreateParagraph();
-  paragraph.AddText(`• ${type}: ${count} field${count > 1 ? 's' : ''}`);
+  paragraph.AddText(`• ${type}：${count}个字段`);
   paragraph.SetFontSize(10 * 2);
   doc.Push(paragraph);
 }
 
-// Step 3: Form Generation
+// 步骤3：表单生成
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 3: Dynamic Form Creation");
+paragraph.AddText("步骤3：动态表单创建");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Generated labels from JSON keys");
+paragraph.AddText("✓ 从JSON键生成标签");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Applied initial values from JSON data");
+paragraph.AddText("✓ 从JSON数据应用初始值");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Created appropriate placeholders for each field type");
+paragraph.AddText("✓ 为每种字段类型创建适当的占位符");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Add second example with project data
+// 添加第二个示例：项目数据
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Second Example: Project Data");
+paragraph.AddText("第二个示例：项目数据");
 paragraph.SetFontSize(16 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
-let projectResult = generateFormFromJSON(projectData, "Project Information Form");
+let projectResult = generateFormFromJSON(projectData, "项目信息表");
 
-// Add implementation guide
+// 添加实施指南
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Implementation Guide:");
+paragraph.AddText("实施指南：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("1. Data Reception");
+paragraph.AddText("1. 数据接收");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Accept JSON from user input, API, or database");
+paragraph.AddText("• 从用户输入、API或数据库接收JSON");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Validate JSON structure and data types");
+paragraph.AddText("• 验证JSON结构和数据类型");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("2. Analysis and Interpretation");
+paragraph.AddText("2. 分析和解释");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Analyze value types (string, boolean, number)");
+paragraph.AddText("• 分析值类型（字符串、布尔值、数字）");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Use key patterns for intelligent field type detection");
+paragraph.AddText("• 使用键模式进行智能字段类型检测");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Consider context and business logic");
+paragraph.AddText("• 考虑上下文和业务逻辑");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("3. Form Generation");
+paragraph.AddText("3. 表单生成");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Create appropriate form fields based on detected types");
+paragraph.AddText("• 根据检测到的类型创建适当的表单字段");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Generate human-readable labels from keys");
+paragraph.AddText("• 从键生成人类可读的标签");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Set initial values and appropriate placeholders");
+paragraph.AddText("• 设置初始值和适当的占位符");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
-// Add field type detection rules
+// 添加字段类型检测规则
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Field Type Detection Rules:");
+paragraph.AddText("字段类型检测规则：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 let detectionRules = [
-  "Boolean values → Checkbox fields",
-  "Number values → Number input fields", 
-  "Keys containing 'email' → Email fields",
-  "Keys containing 'phone' → Phone fields",
-  "Keys containing 'date' → Date fields",
-  "Keys containing 'description/notes' → Textarea fields",
-  "Keys containing 'priority/department' → Select fields",
-  "Long strings (>100 chars) → Textarea fields",
-  "Default → Text input fields"
+  "布尔值 → 复选框字段",
+  "数字值 → 数字输入字段",
+  "包含'email'的键 → 电子邮件字段",
+  "包含'phone'的键 → 电话字段",
+  "包含'date'的键 → 日期字段",
+  "包含'description/notes'的键 → 文本区域字段",
+  "包含'priority/department'的键 → 选择字段",
+  "长字符串（>100字符） → 文本区域字段",
+  "默认 → 文本输入字段"
 ];
 
 for (let rule of detectionRules) {
@@ -472,34 +472,34 @@ for (let rule of detectionRules) {
   doc.Push(paragraph);
 }
 
-// Add benefits
+// 添加优势
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Benefits:");
+paragraph.AddText("优势：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Rapid form prototyping from existing data");
+paragraph.AddText("• 从现有数据快速创建表单原型");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Automatic field type detection reduces manual work");
+paragraph.AddText("• 自动字段类型检测减少手动工作");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Consistent form generation across applications");
+paragraph.AddText("• 跨应用程序一致的表单生成");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Easy integration with APIs and databases");
+paragraph.AddText("• 易于与API和数据库集成");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 ```
