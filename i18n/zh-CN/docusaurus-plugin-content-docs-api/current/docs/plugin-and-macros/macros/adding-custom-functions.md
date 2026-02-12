@@ -4,7 +4,11 @@ sidebar_position: -4
 
 # 添加自定义函数
 
-从 8.1 版本起，您可以使用**宏**插件向电子表格添加自定义函数：
+:::note
+
+从 8.1 版本起，您可以使用**宏**插件向电子表格添加自定义函数。
+
+:::
 
 ## 创建自定义函数
 
@@ -43,17 +47,23 @@ sidebar_position: -4
 
 您可以在[此处](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md)找到自定义函数的示例。
 
-## 访问单元格地址（自 v9.0.4 起） {#accessing-cell-addresses-since-v904}
+## 访问单元格地址
 
-从 9.0.4 版本开始，您可以在自定义函数中访问单元格地址信息：
+:::note
+
+从 9.0.4 版本开始，您可以在自定义函数中访问单元格地址信息。
+
+:::
+
+以下属性可用：
 
 - `this.address` — 自定义函数正在计算的单元格的地址（例如，`"C5"`）；
-- `this.args` — 输入参数的数组。每个参数对象包含一个 `address` 字段，表示源单元格的地址（例如，`"A1"`）。该数组具有以下结构：
+- `this.args` — 输入参数的数组。每个参数对象包含一个 `value` 字段（参数值）和一个 `address` 字段（源单元格的地址，例如 `"A1"`）。该数组具有以下结构：
 
   ``` ts
   [
-    {"address": "arg1_address"},
-    {"address": "arg2_address"},
+    {"value": "arg1_value", "address": "arg1_address"},
+    {"value": "arg2_value", "address": "arg2_address"},
     ...
   ]
   ```
@@ -90,9 +100,13 @@ sidebar_position: -4
 
 ![自定义功能菜单](/assets/images/plugins/custom-function-menu.png#gh-light-mode-only)![自定义功能菜单](/assets/images/plugins/custom-function-menu.dark.png#gh-dark-mode-only)
 
-## 异步函数 {#asynchronous-functions}
+## 异步函数
 
-从 9.0 版本开始，您可以添加异步自定义函数，以便在函数体中管理任何请求：
+:::note
+
+从 9.0 版本开始，您可以添加异步自定义函数，以便在函数体中管理任何请求。
+
+:::
 
 <!-- 此代码与宏相关。 -->
 
