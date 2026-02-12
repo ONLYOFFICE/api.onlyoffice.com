@@ -111,7 +111,9 @@ In the tables below you can see possibility of conversion your documents into th
 
 ## Examples of requests
 
-### Sample of JSON object sent to **document conversion service** used to convert the file from *docx* format to *pdf* format
+### Converting docx to pdf
+
+This example shows a basic request to convert a *docx* file to *pdf* format.
 
 ``` json
 {
@@ -126,7 +128,9 @@ In the tables below you can see possibility of conversion your documents into th
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Sample of JSON object sent to **document conversion service** used to convert the password-protected file from *docx* format to *pdf* format
+### Converting password-protected docx to pdf
+
+This example shows how to convert a password-protected *docx* file to *pdf* format using the *password* parameter.
 
 ``` json
 {
@@ -142,7 +146,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Sample of JSON object sent to **document conversion service** used to convert the file from *docx* format to *pdf* form
+### Converting docx to pdf form
+
+This example shows how to convert a *docx* file to a fillable *pdf* form using the *pdf.form* parameter.
 
 ``` json
 {
@@ -160,7 +166,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Sample of JSON object sent to **document conversion service** used to convert the file from *docx* format to *pdf* format with a watermark inserted
+### Converting docx to pdf with watermark
+
+This example shows how to convert a *docx* file to *pdf* format with a watermark inserted using the *watermark* parameter.
 
 ``` json
 {
@@ -209,7 +217,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Sample of JSON object sent to **document conversion service** used to generate *png* thumbnail of file in *docx* format
+### Generating png thumbnail from docx
+
+This example shows how to generate a *png* thumbnail from a *docx* file using the *thumbnail* parameter.
 
 ``` json
 {
@@ -229,7 +239,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Sample of JSON object sent to **document conversion service** used to convert the *spreadsheet* file to *pdf* format
+### Converting spreadsheet to pdf
+
+This example shows how to convert a spreadsheet file to *pdf* format using the *spreadsheetLayout* parameter.
 
 ``` json
 {
@@ -263,7 +275,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.xlsx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Sample of JSON object contains the JSON Web Token sent to **document conversion service** used to convert the file from *docx* format to *pdf* format
+### Converting docx to pdf with JWT
+
+This example shows how to convert a *docx* file to *pdf* format using a JSON Web Token for authentication.
 
 ``` json
 {

@@ -111,7 +111,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 请求示例
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式 {#sample-of-json-object-sent-to-document-conversion-service-used-to-generate-png-thumbnail-of-file-in-docx-format}
+### 将 docx 转换为 pdf
+
+此示例展示了将 *docx* 文件转换为 *pdf* 格式的基本请求。
 
 ``` json
 {
@@ -126,7 +128,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将受密码保护的文件从 *docx* 格式转换为 *pdf* 格式
+### 将受密码保护的 docx 转换为 pdf
+
+此示例展示了如何使用 *password* 参数将受密码保护的 *docx* 文件转换为 *pdf* 格式。
 
 ``` json
 {
@@ -142,7 +146,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为 *pdf* 格式
+### 将 docx 转换为 pdf 表单
+
+此示例展示了如何使用 *pdf.form* 参数将 *docx* 文件转换为可填写的 *pdf* 表单。
 
 ``` json
 {
@@ -160,7 +166,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将文件从 *docx* 格式转换为插入水印的 *pdf* 格式
+### 将 docx 转换为带水印的 pdf
+
+此示例展示了如何使用 *watermark* 参数将 *docx* 文件转换为带水印的 *pdf* 格式。
 
 ``` json
 {
@@ -209,7 +217,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于生成 *docx* 格式的文件 *png* 缩略图
+### 从 docx 生成 png 缩略图
+
+此示例展示了如何使用 *thumbnail* 参数从 *docx* 文件生成 *png* 缩略图。
 
 ``` json
 {
@@ -229,7 +239,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
-### 发送到**文档转换服务**的 JSON 对象示例，用于将 *电子表格* 文件转换为 *pdf* 格式
+### 将电子表格转换为 pdf
+
+此示例展示了如何使用 *spreadsheetLayout* 参数将电子表格文件转换为 *pdf* 格式。
 
 ``` json
 {
@@ -263,7 +275,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。您可以使用示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.xlsx` 进行测试。有关 ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
-### JSON 对象示例包含发送到**文档转换服务**的 JSON Web Token，用于将文件从 *docx* 格式转换为 *pdf* 格式
+### 使用 JWT 将 docx 转换为 pdf
+
+此示例展示了如何使用 JSON Web Token 进行身份验证，将 *docx* 文件转换为 *pdf* 格式。
 
 ``` json
 {
