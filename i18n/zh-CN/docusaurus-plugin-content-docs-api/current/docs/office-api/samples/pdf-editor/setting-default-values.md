@@ -2,84 +2,84 @@
 hide_table_of_contents: true
 ---
 
-# Setting default values
+# 设置默认值
 
-Automatically populate form fields based on user authentication data to reduce manual input and speed up form completion in personal dashboards, internal portals, and surveys:
+根据用户身份验证数据自动填充表单字段，以减少手动输入并加速个人仪表板、内部门户和调查问卷中的表单填写：
 
-- retrieve user data from authentication system ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md));
-- populate form fields programmatically ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiTextForm/SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md), [ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetChecked.md));
-- handle different field types with appropriate default values ([ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [ApiComboBoxForm/SetText](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetText.md)).
+- 从身份验证系统获取用户数据（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)）；
+- 以编程方式填充表单字段（[ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md)、[ApiTextForm/SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)、[ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetChecked.md)）；
+- 使用适当的默认值处理不同的字段类型（[ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)、[ApiComboBoxForm/SetText](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetText.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
-// Simulated user authentication data
+// 模拟用户身份验证数据
 let authenticatedUser = {
   id: "emp_12345",
-  full_name: "Emily Johnson",
-  email: "emily.johnson@example.com",
-  phone: "+1-555-0198",
-  department: "Marketing",
-  position: "Senior Marketing Manager",
+  full_name: "张伟",
+  email: "zhang.wei@example.com",
+  phone: "+86-138-0013-8000",
+  department: "市场部",
+  position: "高级市场经理",
   employee_id: "EMP-2024-0198",
   start_date: "2022-03-15",
-  manager: "Sarah Wilson",
-  office_location: "New York",
-  work_schedule: "Full-time",
+  manager: "李娜",
+  office_location: "北京",
+  work_schedule: "全职",
   has_company_car: true,
-  emergency_contact: "Michael Johnson",
-  emergency_phone: "+1-555-0199",
-  preferred_language: "English",
+  emergency_contact: "张明",
+  emergency_phone: "+86-139-0013-9000",
+  preferred_language: "中文",
   newsletter_subscription: true,
   training_completed: false
 };
 
-// Additional user preferences and settings
+// 附加用户偏好设置
 let userPreferences = {
   notification_email: true,
   sms_alerts: false,
   work_from_home: true,
   parking_space: "A-15",
-  dietary_restrictions: "Vegetarian",
+  dietary_restrictions: "素食",
   t_shirt_size: "M"
 };
 
-// Create employee profile update form
+// 创建员工资料更新表单
 function createEmployeeProfileForm() {
   let paragraph = doc.GetElement(0);
-  paragraph.AddText("Employee Profile Update Form");
+  paragraph.AddText("员工资料更新表");
   paragraph.SetFontSize(18 * 2);
   paragraph.SetBold(true);
   paragraph.SetJc("center");
 
-  // Add auto-fill notice
+  // 添加自动填充提示
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Pre-filled with your current information - modify as needed");
+  paragraph.AddText("已预填您的当前信息 - 如需修改请直接编辑");
   paragraph.SetFontSize(12 * 2);
   paragraph.SetJc("center");
   paragraph.SetColor(128, 128, 128);
   doc.Push(paragraph);
 
-  // Add spacing
+  // 添加间距
   paragraph = Api.CreateParagraph();
   paragraph.AddText("");
   doc.Push(paragraph);
 
-  // Personal Information Section
+  // 个人信息部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Personal Information");
+  paragraph.AddText("个人信息");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Full Name
+  // 姓名
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Full Name: ");
+  paragraph.AddText("姓名：");
   paragraph.SetFontSize(12 * 2);
   let nameForm = Api.CreateTextForm({
     key: "full_name",
     required: true,
-    placeholder: "Enter your full name",
+    placeholder: "请输入您的姓名",
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -87,14 +87,14 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(nameForm);
   doc.Push(paragraph);
 
-  // Email
+  // 电子邮件
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Email: ");
+  paragraph.AddText("电子邮件：");
   paragraph.SetFontSize(12 * 2);
   let emailForm = Api.CreateTextForm({
     key: "email",
     required: true,
-    placeholder: "Enter your email address",
+    placeholder: "请输入您的电子邮件地址",
     maxCharacters: 80,
     multiLine: false,
     autoFit: true,
@@ -102,14 +102,14 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(emailForm);
   doc.Push(paragraph);
 
-  // Phone
+  // 电话
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Phone: ");
+  paragraph.AddText("电话：");
   paragraph.SetFontSize(12 * 2);
   let phoneForm = Api.CreateTextForm({
     key: "phone",
     required: false,
-    placeholder: "Enter your phone number",
+    placeholder: "请输入您的电话号码",
     maxCharacters: 20,
     multiLine: false,
     autoFit: true,
@@ -117,36 +117,36 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(phoneForm);
   doc.Push(paragraph);
 
-  // Work Information Section
+  // 工作信息部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Work Information");
+  paragraph.AddText("工作信息");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Department
+  // 部门
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Department: ");
+  paragraph.AddText("部门：");
   paragraph.SetFontSize(12 * 2);
   let deptForm = Api.CreateComboBoxForm({
     key: "department",
     required: true,
-    placeholder: "Select your department",
+    placeholder: "请选择您的部门",
     editable: false,
     autoFit: true,
-    items: ["Marketing", "Sales", "Engineering", "HR", "Finance", "Operations", "Legal"]
+    items: ["市场部", "销售部", "工程部", "人力资源部", "财务部", "运营部", "法务部"]
   });
   paragraph.AddElement(deptForm);
   doc.Push(paragraph);
 
-  // Position
+  // 职位
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Position: ");
+  paragraph.AddText("职位：");
   paragraph.SetFontSize(12 * 2);
   let positionForm = Api.CreateTextForm({
     key: "position",
     required: true,
-    placeholder: "Enter your job title",
+    placeholder: "请输入您的职位名称",
     maxCharacters: 80,
     multiLine: false,
     autoFit: true,
@@ -154,14 +154,14 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(positionForm);
   doc.Push(paragraph);
 
-  // Employee ID
+  // 员工编号
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Employee ID: ");
+  paragraph.AddText("员工编号：");
   paragraph.SetFontSize(12 * 2);
   let empIdForm = Api.CreateTextForm({
     key: "employee_id",
     required: false,
-    placeholder: "Employee ID",
+    placeholder: "员工编号",
     maxCharacters: 20,
     multiLine: false,
     autoFit: true,
@@ -169,14 +169,14 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(empIdForm);
   doc.Push(paragraph);
 
-  // Manager
+  // 直属经理
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Direct Manager: ");
+  paragraph.AddText("直属经理：");
   paragraph.SetFontSize(12 * 2);
   let managerForm = Api.CreateTextForm({
     key: "manager",
     required: false,
-    placeholder: "Manager name",
+    placeholder: "经理姓名",
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -184,97 +184,97 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(managerForm);
   doc.Push(paragraph);
 
-  // Office Location
+  // 办公地点
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Office Location: ");
+  paragraph.AddText("办公地点：");
   paragraph.SetFontSize(12 * 2);
   let locationForm = Api.CreateComboBoxForm({
     key: "office_location",
     required: false,
-    placeholder: "Select office location",
+    placeholder: "请选择办公地点",
     editable: false,
     autoFit: true,
-    items: ["New York", "Los Angeles", "Chicago", "Boston", "Austin", "Seattle", "Remote"]
+    items: ["北京", "上海", "广州", "深圳", "杭州", "成都", "远程办公"]
   });
   paragraph.AddElement(locationForm);
   doc.Push(paragraph);
 
-  // Work Schedule
+  // 工作安排
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Work Schedule: ");
+  paragraph.AddText("工作安排：");
   paragraph.SetFontSize(12 * 2);
   let scheduleForm = Api.CreateComboBoxForm({
     key: "work_schedule",
     required: false,
-    placeholder: "Select work schedule",
+    placeholder: "请选择工作安排",
     editable: false,
     autoFit: true,
-    items: ["Full-time", "Part-time", "Contract", "Intern"]
+    items: ["全职", "兼职", "合同制", "实习生"]
   });
   paragraph.AddElement(scheduleForm);
   doc.Push(paragraph);
 
-  // Preferences Section
+  // 偏好设置部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Preferences & Settings");
+  paragraph.AddText("偏好设置");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Company Car
+  // 公司车辆
   paragraph = Api.CreateParagraph();
   let carCheckbox = Api.CreateCheckBoxForm({
     key: "has_company_car",
     required: false,
-    tip: "Company car assigned",
+    tip: "已分配公司车辆",
     checked: false
   });
   paragraph.AddElement(carCheckbox);
-  paragraph.AddText(" Company car assigned");
+  paragraph.AddText(" 已分配公司车辆");
   paragraph.SetFontSize(12 * 2);
   doc.Push(paragraph);
 
-  // Work from Home
+  // 居家办公
   paragraph = Api.CreateParagraph();
   let wfhCheckbox = Api.CreateCheckBoxForm({
     key: "work_from_home",
     required: false,
-    tip: "Work from home option",
+    tip: "居家办公选项",
     checked: false
   });
   paragraph.AddElement(wfhCheckbox);
-  paragraph.AddText(" Work from home enabled");
+  paragraph.AddText(" 启用居家办公");
   paragraph.SetFontSize(12 * 2);
   doc.Push(paragraph);
 
-  // Newsletter Subscription
+  // 新闻通讯订阅
   paragraph = Api.CreateParagraph();
   let newsletterCheckbox = Api.CreateCheckBoxForm({
     key: "newsletter_subscription",
     required: false,
-    tip: "Subscribe to company newsletter",
+    tip: "订阅公司新闻通讯",
     checked: false
   });
   paragraph.AddElement(newsletterCheckbox);
-  paragraph.AddText(" Subscribe to company newsletter");
+  paragraph.AddText(" 订阅公司新闻通讯");
   paragraph.SetFontSize(12 * 2);
   doc.Push(paragraph);
 
-  // Emergency Contact Section
+  // 紧急联系人部分
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Emergency Contact");
+  paragraph.AddText("紧急联系人");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // Emergency Contact Name
+  // 紧急联系人姓名
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Contact Name: ");
+  paragraph.AddText("联系人姓名：");
   paragraph.SetFontSize(12 * 2);
   let emergencyContactForm = Api.CreateTextForm({
     key: "emergency_contact",
     required: false,
-    placeholder: "Emergency contact name",
+    placeholder: "紧急联系人姓名",
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -282,14 +282,14 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(emergencyContactForm);
   doc.Push(paragraph);
 
-  // Emergency Phone
+  // 紧急联系电话
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Contact Phone: ");
+  paragraph.AddText("联系人电话：");
   paragraph.SetFontSize(12 * 2);
   let emergencyPhoneForm = Api.CreateTextForm({
     key: "emergency_phone",
     required: false,
-    placeholder: "Emergency contact phone",
+    placeholder: "紧急联系人电话",
     maxCharacters: 20,
     multiLine: false,
     autoFit: true,
@@ -297,21 +297,21 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(emergencyPhoneForm);
   doc.Push(paragraph);
 
-  // Additional Preferences
+  // 其他信息
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Additional Information");
+  paragraph.AddText("其他信息");
   paragraph.SetFontSize(14 * 2);
   paragraph.SetBold(true);
   doc.Push(paragraph);
 
-  // T-Shirt Size
+  // T恤尺码
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("T-Shirt Size: ");
+  paragraph.AddText("T恤尺码：");
   paragraph.SetFontSize(12 * 2);
   let tshirtForm = Api.CreateComboBoxForm({
     key: "t_shirt_size",
     required: false,
-    placeholder: "Select size",
+    placeholder: "请选择尺码",
     editable: false,
     autoFit: true,
     items: ["XS", "S", "M", "L", "XL", "XXL"]
@@ -319,14 +319,14 @@ function createEmployeeProfileForm() {
   paragraph.AddElement(tshirtForm);
   doc.Push(paragraph);
 
-  // Dietary Restrictions
+  // 饮食限制
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("Dietary Restrictions: ");
+  paragraph.AddText("饮食限制：");
   paragraph.SetFontSize(12 * 2);
   let dietForm = Api.CreateTextForm({
     key: "dietary_restrictions",
     required: false,
-    placeholder: "Any dietary restrictions",
+    placeholder: "任何饮食限制",
     maxCharacters: 100,
     multiLine: false,
     autoFit: true,
@@ -335,18 +335,18 @@ function createEmployeeProfileForm() {
   doc.Push(paragraph);
 }
 
-// Function to populate form with user default values
+// 使用用户默认值填充表单的函数
 function populateFormWithDefaults(userData, preferences) {
   let populatedCount = 0;
   let allData = { ...userData, ...preferences };
-  
+
   for (let [key, value] of Object.entries(allData)) {
     let forms = doc.GetFormsByKey(key);
-    
+
     if (forms.length > 0) {
       let form = forms[0];
       let formType = form.GetFormType();
-      
+
       if (formType === "textForm") {
         if (value !== null && value !== undefined) {
           form.SetText(String(value));
@@ -363,11 +363,11 @@ function populateFormWithDefaults(userData, preferences) {
       }
     }
   }
-  
+
   return populatedCount;
 }
 
-// Function to get user data summary
+// 获取用户数据摘要的函数
 function getUserDataSummary(userData) {
   return {
     totalFields: Object.keys(userData).length,
@@ -378,24 +378,24 @@ function getUserDataSummary(userData) {
   };
 }
 
-// Create the employee profile form
+// 创建员工资料表单
 createEmployeeProfileForm();
 
-// Add spacing
+// 添加间距
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
-// Add auto-population demonstration
+// 添加自动填充演示
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Default Values Population Demo");
+paragraph.AddText("默认值填充演示");
 paragraph.SetFontSize(16 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
-// Step 1: User Authentication Data
+// 第一步：用户身份验证数据
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 1: User Authentication Data");
+paragraph.AddText("第一步：用户身份验证数据");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -403,23 +403,23 @@ doc.Push(paragraph);
 let userSummary = getUserDataSummary(authenticatedUser);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ User: ${authenticatedUser.full_name} (${authenticatedUser.employee_id})`);
+paragraph.AddText(`✓ 用户：${authenticatedUser.full_name}（${authenticatedUser.employee_id}）`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Department: ${authenticatedUser.department}`);
+paragraph.AddText(`✓ 部门：${authenticatedUser.department}`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Available data fields: ${userSummary.totalFields}`);
+paragraph.AddText(`✓ 可用数据字段：${userSummary.totalFields}`);
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Step 2: Form Population
+// 第二步：表单填充
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 2: Automatic Form Population");
+paragraph.AddText("第二步：自动表单填充");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -427,181 +427,181 @@ doc.Push(paragraph);
 let populatedCount = populateFormWithDefaults(authenticatedUser, userPreferences);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText(`✓ Populated ${populatedCount} form fields with default values`);
+paragraph.AddText(`✓ 已用默认值填充 ${populatedCount} 个表单字段`);
 paragraph.SetFontSize(12 * 2);
 paragraph.SetColor(0, 128, 0);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Text fields filled with user profile data");
+paragraph.AddText("✓ 文本字段已填入用户资料数据");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Dropdown selections set to current values");
+paragraph.AddText("✓ 下拉选项已设置为当前值");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Checkboxes set according to user preferences");
+paragraph.AddText("✓ 复选框已根据用户偏好设置");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Step 3: User Flexibility
+// 第三步：用户灵活性
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Step 3: User Modification Flexibility");
+paragraph.AddText("第三步：用户修改灵活性");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ All fields remain editable for user modifications");
+paragraph.AddText("✓ 所有字段仍可供用户修改");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Pre-filled values serve as starting point");
+paragraph.AddText("✓ 预填值作为起始点");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("✓ Reduces manual input while maintaining flexibility");
+paragraph.AddText("✓ 减少手动输入同时保持灵活性");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Add sample data display
+// 添加示例数据展示
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Sample Default Values Applied:");
+paragraph.AddText("已应用的示例默认值：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 let sampleFields = [
-  ["full_name", authenticatedUser.full_name, "Text Field"],
-  ["email", authenticatedUser.email, "Text Field"],
-  ["department", authenticatedUser.department, "Dropdown"],
-  ["has_company_car", authenticatedUser.has_company_car ? "Yes" : "No", "Checkbox"],
-  ["work_from_home", userPreferences.work_from_home ? "Yes" : "No", "Checkbox"]
+  ["full_name", authenticatedUser.full_name, "文本字段"],
+  ["email", authenticatedUser.email, "文本字段"],
+  ["department", authenticatedUser.department, "下拉列表"],
+  ["has_company_car", authenticatedUser.has_company_car ? "是" : "否", "复选框"],
+  ["work_from_home", userPreferences.work_from_home ? "是" : "否", "复选框"]
 ];
 
 for (let [field, value, type] of sampleFields) {
   paragraph = Api.CreateParagraph();
-  paragraph.AddText(`• ${field}: "${value}" (${type})`);
+  paragraph.AddText(`• ${field}："${value}"（${type}）`);
   paragraph.SetFontSize(10 * 2);
   doc.Push(paragraph);
 }
 
-// Add implementation guide
+// 添加实施指南
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Implementation Guide:");
+paragraph.AddText("实施指南：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("1. User Data Retrieval");
+paragraph.AddText("1. 用户数据获取");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Obtain user data from authentication system");
+paragraph.AddText("• 从身份验证系统获取用户数据");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Include profile information, preferences, and settings");
+paragraph.AddText("• 包含个人资料、偏好设置和系统设置");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Validate data completeness and accuracy");
+paragraph.AddText("• 验证数据的完整性和准确性");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("2. Form Field Population");
+paragraph.AddText("2. 表单字段填充");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Use GetFormsByKey() to locate specific fields");
+paragraph.AddText("• 使用 GetFormsByKey() 定位特定字段");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Apply SetText() for text and dropdown fields");
+paragraph.AddText("• 对文本和下拉字段使用 SetText()");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Use SetChecked() for checkbox fields");
+paragraph.AddText("• 对复选框字段使用 SetChecked()");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("3. Flexibility Maintenance");
+paragraph.AddText("3. 保持灵活性");
 paragraph.SetFontSize(12 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Keep all fields editable for user modifications");
+paragraph.AddText("• 保持所有字段可供用户修改");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Provide clear indication of pre-filled data");
+paragraph.AddText("• 明确标识预填数据");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Handle cases where default data may be outdated");
+paragraph.AddText("• 处理默认数据可能过时的情况");
 paragraph.SetFontSize(10 * 2);
 doc.Push(paragraph);
 
-// Add benefits section
+// 添加优势部分
 paragraph = Api.CreateParagraph();
 paragraph.AddText("");
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Benefits:");
+paragraph.AddText("优势：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Significantly reduces form completion time");
+paragraph.AddText("• 显著减少表单填写时间");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Improves user experience in personal dashboards");
+paragraph.AddText("• 改善个人仪表板的用户体验");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Reduces data entry errors");
+paragraph.AddText("• 减少数据输入错误");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Increases form completion rates");
+paragraph.AddText("• 提高表单完成率");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-paragraph.AddText("• Enhances user satisfaction with internal systems");
+paragraph.AddText("• 提升用户对内部系统的满意度");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 ```
