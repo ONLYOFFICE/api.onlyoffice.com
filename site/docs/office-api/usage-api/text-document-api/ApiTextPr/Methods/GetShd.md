@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to find out the shading type of the text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the shading of the text and display it in the document.
 
 // How to know the text shading type.

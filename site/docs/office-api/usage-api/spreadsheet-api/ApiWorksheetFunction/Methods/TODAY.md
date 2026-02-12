@@ -22,7 +22,7 @@ number
 
 This example shows how to return the current date in the MM/dd/yy format.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a current date.
 
 // Use a function to get current date in MM/dd/yy format.

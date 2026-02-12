@@ -22,7 +22,7 @@ JSON
 
 This example converts the shape into JSON.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to convert a drawing object to a JSON object.
 
 // Get a shape object from a slide and convert to JSON.

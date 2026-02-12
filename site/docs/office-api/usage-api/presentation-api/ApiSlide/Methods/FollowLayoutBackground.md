@@ -22,7 +22,7 @@ boolean
 
 This example sets the layout background as the background of the slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a slide's background same as the layout's.
 
 // Get a slide by its index and set its background as its layout.

@@ -24,7 +24,7 @@ string
 
 This example shows how to return the character specified by the code number from your computer's character set.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the character specified by the code number from your computer's character set.
 
 // Use function to return the character specified by the code number from your computer's character set.

@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of elements in the current document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get elements count and push it to the paragraph.
 
 // Count the number of elements in the document.

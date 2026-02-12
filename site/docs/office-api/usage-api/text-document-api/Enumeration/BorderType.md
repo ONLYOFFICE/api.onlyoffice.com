@@ -18,7 +18,7 @@ Enumeration
 
 The paragraph has a single green bottom border of 3 point wide with a zero offset from the bottom paragraph edge.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set a bottom border specifying its type and color.
 
 // Use a border index to set borders with properties.

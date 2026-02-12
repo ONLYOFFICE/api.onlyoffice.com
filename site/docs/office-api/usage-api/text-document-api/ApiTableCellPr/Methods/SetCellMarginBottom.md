@@ -25,7 +25,7 @@ boolean
 
 This example specifies an amount of space which will be left between the bottom extent of the cell contents and the border of a specific table cell within a table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add margin to the bottom of the cell.
 
 // Create a 3x3 table and add the bottom cell margin.

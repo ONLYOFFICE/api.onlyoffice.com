@@ -32,7 +32,7 @@ number
 
 This example shows how to return the yield of a security with an odd first period.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the yield of a security.
 
 // Use a function to return a security yield.

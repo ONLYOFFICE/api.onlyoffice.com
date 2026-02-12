@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example specifies an amount of space which shall be left between the right extent of the current cell contents and the right edge border of a specific individual table cell within a table.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the cell right margin for the current table cell.
 
 // Specify the right margin value for the ApiTableCell object.

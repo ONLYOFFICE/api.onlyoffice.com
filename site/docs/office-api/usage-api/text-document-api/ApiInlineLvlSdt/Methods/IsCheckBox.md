@@ -22,7 +22,7 @@ boolean
 
 This example shows how to check if an inline content control is a checkbox.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let inlineControl = doc.AddCheckBoxContentControl();
 let isCheckBox = inlineControl.IsCheckBox();

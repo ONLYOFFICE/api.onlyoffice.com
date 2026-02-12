@@ -24,7 +24,7 @@ number
 
 This example shows how to estimate variance based on a sample (ignores logical values and text in the sample).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to estimate variance based on a sample.
 
 // Use a function to estimate variance ignoring logical and text values.

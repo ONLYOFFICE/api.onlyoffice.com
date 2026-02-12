@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to creates a copy of the specified slide master object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a copy of a master.
 
 // Copy the ApiMaster object.

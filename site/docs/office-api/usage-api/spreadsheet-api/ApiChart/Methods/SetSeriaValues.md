@@ -25,7 +25,7 @@ boolean
 
 This example sets values from the specified range to the specified series.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add values to series from the indicated range using addresses.
 
 // Fill series with values obtained from the worksheet cells.

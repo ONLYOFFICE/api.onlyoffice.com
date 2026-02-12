@@ -26,7 +26,7 @@ number
 
 This example shows how to return the number of the character at which a specific character or text string is first found, reading left to right (not case-sensitive).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get number of characters counting from first occurance of search text.
 
 // Use a function to count characters starting from the index at which the search text appears.

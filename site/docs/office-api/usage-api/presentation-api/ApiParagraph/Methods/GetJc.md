@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph contents justification.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a justification of a paragraph property.
 
 // Change a justification type of a text property from the slide.

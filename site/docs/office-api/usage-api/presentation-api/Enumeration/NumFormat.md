@@ -42,7 +42,7 @@ Enumeration
 
 Set the "0.00" numeric format to the chart data point.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to use the specified numeric format for the ApiChart object.
 
 // Set the chart data point to the "0.00" numeric format.

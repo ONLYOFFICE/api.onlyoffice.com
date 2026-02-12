@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph first line indentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a size of the first line indentation using a paragraph properties.
 
 // Create a paragraph setting its first line indentation.

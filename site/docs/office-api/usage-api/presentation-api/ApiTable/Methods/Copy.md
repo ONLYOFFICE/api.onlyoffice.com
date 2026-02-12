@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of the table.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to copy a table and add it to the slide.
 
 // Create a 2x4 table, its copy and add them to the presentation.

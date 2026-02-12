@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph contents justification.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to center a paragraph text.
 
 // Get a paragraph from the shape's content then add a text specifying its justification type.

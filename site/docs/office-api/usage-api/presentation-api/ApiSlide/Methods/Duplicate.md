@@ -24,7 +24,7 @@ expression.Duplicate(nPos);
 
 This example creates a duplicate of the specified slide object, adds the new slide to the slides collection.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a duplicate slide.
 
 // Get a slide by its index and create its copy.

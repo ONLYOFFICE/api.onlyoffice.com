@@ -22,7 +22,7 @@ boolean
 
 This example demonstrates getting the show value setting from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check if the data bar shows the value.
 
 // Get the show value setting of a data bar conditional formatting rule.

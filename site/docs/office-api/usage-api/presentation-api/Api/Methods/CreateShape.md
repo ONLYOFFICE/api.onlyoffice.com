@@ -28,7 +28,7 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 This example creates a shape using the 'flowChartMagneticTape' preset.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a new flowchart shape.
 
 // Add a new shape indicating its properties.

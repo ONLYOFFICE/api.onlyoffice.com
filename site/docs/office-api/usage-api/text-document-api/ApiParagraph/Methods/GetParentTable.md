@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table that contains the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the parent table of the paragraph.
 
 // Remove the cell from the parent element.

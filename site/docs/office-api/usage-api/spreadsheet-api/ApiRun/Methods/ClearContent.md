@@ -22,7 +22,7 @@ boolean
 
 This example clears the content from the run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a text run object, add a text to it and clear its value.
 
 // Clear content of an ApiRun object.

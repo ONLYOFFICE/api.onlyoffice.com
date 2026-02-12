@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to retrieve all custom XML parts in the document and display them.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText1 = '<products><item><name>Laptop</name><price>999</price></item></products>';

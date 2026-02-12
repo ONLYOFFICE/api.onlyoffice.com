@@ -22,7 +22,7 @@ string \| null
 
 Extracts control points from a cubic bezier curve command.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Displays all bezier control points coordinates in spreadsheet cells.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

@@ -26,7 +26,7 @@ boolean
 
 This example converts the form to a fixed size form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to fix the size of the text form.
 
 // Create a text form and make the size of it fixed.

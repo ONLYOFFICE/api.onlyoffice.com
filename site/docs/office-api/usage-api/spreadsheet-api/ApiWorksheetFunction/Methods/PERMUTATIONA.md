@@ -25,7 +25,7 @@ number
 
 This example shows how to return the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the number of permutations for a given number of objects with duplicates.
 
 // Use a function to claculate the number of permutations including duplicates.

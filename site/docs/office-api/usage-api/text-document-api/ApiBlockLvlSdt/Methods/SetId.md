@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set the ID of the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.SetId("4815162342");

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the hyperlink display text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to show the display text of the hyperlink in the document.
 
 // Add a hyperlink to the paragraph and get its visible text.

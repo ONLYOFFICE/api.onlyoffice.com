@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a shape in which the form is placed to control the position and size of the fixed size form frame.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get wrapper shape of the text form.
 
 // Set outline to the shape which contains the current form.

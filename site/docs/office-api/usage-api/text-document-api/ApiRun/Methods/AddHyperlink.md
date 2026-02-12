@@ -25,7 +25,7 @@ expression.AddHyperlink(sLink, sScreenTipText);
 
 This example adds a hyperlink to the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a link to the text.
 
 // Insert a hyperlink to the run indicating its link and title.

@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of cells in the row.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to count the cells of the row.
 
 // Display the number of row cells.

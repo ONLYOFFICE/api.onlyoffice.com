@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties for the major vertical gridlines.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a stroke as major vertical gridlines.
 
 // Create a chart, set its properties and its vertical gridlines properties.

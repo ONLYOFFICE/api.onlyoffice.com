@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the paragraph ID.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText('This paragraph will have a custom ID.');

@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the title of the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetTitle("My Document Title");

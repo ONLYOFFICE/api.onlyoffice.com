@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of shape objects in the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve all shapes from the document.
 
 // Get all shapes and color the first one.

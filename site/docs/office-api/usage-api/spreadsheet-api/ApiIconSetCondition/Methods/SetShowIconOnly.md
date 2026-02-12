@@ -24,7 +24,7 @@ boolean
 
 This example shows how to display only icons without cell values.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to configure icon set to hide cell values and show only icons.
 
 // Set the icon set rule to display only icons.

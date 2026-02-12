@@ -24,7 +24,7 @@ boolean
 
 This example shows how to check whether a value is a logical value (true or false), and returns true or false.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check if the cell contains a logical value.
 
 // Use a function to check whether a range data is a logical value.

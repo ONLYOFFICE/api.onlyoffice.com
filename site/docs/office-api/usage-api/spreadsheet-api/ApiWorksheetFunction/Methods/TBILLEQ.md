@@ -26,7 +26,7 @@ number
 
 This example shows how to return the bond-equivalent yield for a treasury bill.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the bond-equivalent yield for a treasury bill.
 
 // Use a function to calculate the bond-equivalent yield.

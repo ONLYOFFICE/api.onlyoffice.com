@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to check if only icons are displayed.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine if icon set displays only icons without cell values.
 
 // Check if the icon set rule shows only icons.

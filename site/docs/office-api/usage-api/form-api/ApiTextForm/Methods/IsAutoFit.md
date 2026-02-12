@@ -22,7 +22,7 @@ boolean
 
 This example checks if the text field content is autofit.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to know whether the first text form from this document is autofit.
 
 // Get the boolean that represents the autofit property of the text form.

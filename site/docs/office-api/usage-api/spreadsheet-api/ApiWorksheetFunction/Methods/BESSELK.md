@@ -25,7 +25,7 @@ number
 
 This example shows how to return the modified Bessel function Kn(x).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from Bessel function Kn(x).
 
 // Use function to get the Bessel function Kn(x).

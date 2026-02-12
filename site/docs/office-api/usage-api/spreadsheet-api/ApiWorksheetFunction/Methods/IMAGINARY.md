@@ -24,7 +24,7 @@ number
 
 This example shows how to return the imaginary coefficient of a complex number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the imaginary part of the complex number.
 
 // Use a function to get an imaginary coefficient of the complex number. 

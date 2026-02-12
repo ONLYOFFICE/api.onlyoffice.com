@@ -29,7 +29,7 @@ JSON[]
 
 This example shows how to convert the slides from the current ApiPresentation object into the JSON objects.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to convert slides to JSON objects.
 
 // Get JSON representations of each slide from the presentation.

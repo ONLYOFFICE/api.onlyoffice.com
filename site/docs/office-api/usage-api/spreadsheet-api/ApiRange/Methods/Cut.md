@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example cuts a range to the clipboard.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to cut a range.
 
 // Get a range, set some value for it and cut it to the clipboard.

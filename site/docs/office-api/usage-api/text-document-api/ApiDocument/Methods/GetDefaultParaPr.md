@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a set of default paragraph properties in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update the default paragraph properties such as spacing, justification, etc.
 
 // Display the paragraph text after changing its default properties.

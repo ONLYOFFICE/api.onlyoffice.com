@@ -24,7 +24,7 @@ number
 
 This example shows how to calculate the geometric mean of positive numeric data.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the geometric mean.
 
 // Use a function to calculate the geometric mean of positive numeric data.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get a type of the ApiName class.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve name of ApiName class object.
 
 // Get name of a specified object.

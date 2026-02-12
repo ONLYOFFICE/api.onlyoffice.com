@@ -22,7 +22,7 @@ boolean
 
 This example gets a text italic property.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out whether a text is italic or not.
 
 // Get a text italic property as a boolean value.

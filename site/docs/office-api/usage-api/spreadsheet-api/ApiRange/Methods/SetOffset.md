@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the cell offset.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set an offset of cells.
 
 // Get a range and specify its cells offset.

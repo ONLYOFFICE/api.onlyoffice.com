@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example specifies the page margins for all the pages in this section and returns it back.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get right page margin.
 
 let doc = Api.GetDocument();

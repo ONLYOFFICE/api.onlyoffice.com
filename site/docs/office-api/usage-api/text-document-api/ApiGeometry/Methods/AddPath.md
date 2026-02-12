@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 Creates a custom triangle geometry and applies it to a shape.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Uses basic path drawing commands: MoveTo, LineTo and Close.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

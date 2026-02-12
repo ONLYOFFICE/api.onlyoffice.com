@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set a tag attribute for a container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control and sets a tag to it.
 
 // How to add a tag to the ApiBlockLvlSdt object.

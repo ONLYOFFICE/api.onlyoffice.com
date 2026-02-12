@@ -29,7 +29,7 @@ number
 
 This example shows how to calculate or predict a future value based on existing (historical) values by using the AAA version of the Exponential Smoothing (ETS) algorithm.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate or predict a future value based on existing (historical) values.
 
 // Use an AAA version of the Exponential Smoothing (ETS) algorithm to calculate or predict a future value based on existing values.

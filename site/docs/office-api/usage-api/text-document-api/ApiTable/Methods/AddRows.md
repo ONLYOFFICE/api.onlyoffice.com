@@ -26,7 +26,7 @@ expression.AddRows(oCell, nCount, isBefore);
 
 This example adds the new rows to the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add rows to the table.
 
 // Get a table cell and insert two new rows after it.

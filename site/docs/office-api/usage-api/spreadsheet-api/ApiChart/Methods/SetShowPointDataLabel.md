@@ -29,7 +29,7 @@ boolean
 
 This example specifies the show options for the chart data labels.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to hide chart data labels using options.
 
 // Show only values as chart lables with series index equal to 1 from the array of the data used to build the chart from.

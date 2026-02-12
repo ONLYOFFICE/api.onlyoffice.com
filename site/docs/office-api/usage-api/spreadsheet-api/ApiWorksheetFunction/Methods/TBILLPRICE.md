@@ -26,7 +26,7 @@ number
 
 This example shows how to return the price per $100 face value for a Treasury bill.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the price per $100 face value for a Treasury bill.
 
 // Use a function to calculate the price per $100 face value.

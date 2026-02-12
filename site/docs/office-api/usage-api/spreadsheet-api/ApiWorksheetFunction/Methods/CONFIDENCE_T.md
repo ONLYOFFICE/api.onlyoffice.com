@@ -26,7 +26,7 @@ number
 
 This example shows how to return the confidence interval for a population mean, using a Student's t distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the confidence interval for a population mean, using a Student's t distribution.
 
 // Use function to get the confidence interval for a population mean.

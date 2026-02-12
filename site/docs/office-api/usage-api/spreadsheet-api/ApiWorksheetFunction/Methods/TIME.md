@@ -26,7 +26,7 @@ number
 
 This example shows how to convert hours, minutes and seconds given as numbers to a serial number, formatted with the time format.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a serial number indicating hours, minutes and seconds.
 
 // Use a function to convert hours, minutes and seconds to serial numbers.

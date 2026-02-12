@@ -22,7 +22,7 @@ string \| null
 
 Analyzes arc command parameters in a presentation shape.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Retrieves and displays arc radii and angle information.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

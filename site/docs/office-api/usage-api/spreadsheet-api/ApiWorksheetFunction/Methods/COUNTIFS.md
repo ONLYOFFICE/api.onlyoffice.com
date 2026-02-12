@@ -27,7 +27,7 @@ number
 
 This example shows how to count a number of cells specified by a given set of conditions or criteria.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a number of cells that satisfy a list of conditions.
 
 // Use function to get cells if conditions are met.

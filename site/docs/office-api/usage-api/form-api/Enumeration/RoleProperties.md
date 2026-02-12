@@ -17,7 +17,7 @@ Object
 
 Create properties and add a new role with the specified properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 let rolePr = {"color": "#ffefbf"};
 formRoles.Add("customer", rolePr);
 ```

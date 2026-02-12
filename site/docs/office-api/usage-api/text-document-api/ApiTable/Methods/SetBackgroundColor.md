@@ -27,7 +27,7 @@ boolean
 
 This example sets the background color to all cells in the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color a background of the table.
 
 // Color background to the middle washed rose color.

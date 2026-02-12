@@ -25,7 +25,7 @@ JSON
 
 This example converts the ApiDrawing object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON object from the drawing.
 
 // Convert the shape to json and add it to the paragraph.

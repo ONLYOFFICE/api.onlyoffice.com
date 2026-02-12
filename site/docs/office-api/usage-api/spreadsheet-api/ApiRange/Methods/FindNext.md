@@ -24,7 +24,7 @@ expression.FindNext(After);
 
 This example finds the next cell that matches those same conditions.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the next cell from a range that meets search requirements.
 
 // Get a range, find the next cell that satisfies search conditions and fill it with color.

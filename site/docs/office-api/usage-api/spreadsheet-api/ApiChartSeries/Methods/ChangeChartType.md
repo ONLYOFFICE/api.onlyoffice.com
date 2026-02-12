@@ -24,7 +24,7 @@ boolean
 
 This example changes the type of the first series of ApiChart class and inserts the new type into the document.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a chart type to an area one.
 
 // Change a chart type.

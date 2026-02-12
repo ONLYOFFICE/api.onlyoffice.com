@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove the specified series from the current chart.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete a chart seria indicating its index.
 
 // Create a chart then delete a seria from it.

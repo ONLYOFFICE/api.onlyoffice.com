@@ -29,7 +29,7 @@ number
 
 This example shows how to return the interest payment for a given period for an investment, based on periodic, constant payments and a constant interest rate.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the interest payment for a given period for an investment.
 
 // Use a function to get the interest payment.

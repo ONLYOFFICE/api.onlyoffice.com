@@ -25,7 +25,7 @@ boolean
 
 This example sets a category name for chart.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to rename category of the chart.
 
 // Create a chart and set a name for its first category.

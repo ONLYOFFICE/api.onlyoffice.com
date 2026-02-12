@@ -22,7 +22,7 @@ string[]
 
 This example shows how to get all font names from all elements inside the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get all font names used in the text.
 
 // Retrieve ApiRun font names and display them in the slide.

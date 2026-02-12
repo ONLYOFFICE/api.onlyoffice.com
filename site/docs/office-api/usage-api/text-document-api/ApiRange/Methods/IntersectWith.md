@@ -24,7 +24,7 @@ expression.IntersectWith(oRange);
 
 This example returns a new range as the intersection of the current range with another range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to intersect two ranges into the new one.
 
 // Create a range by intersection of two and make its text bold.

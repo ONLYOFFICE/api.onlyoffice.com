@@ -22,7 +22,7 @@ Number
 
 This example shows how to set and get the outline level of the specified paragraph via paragraph properties.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());

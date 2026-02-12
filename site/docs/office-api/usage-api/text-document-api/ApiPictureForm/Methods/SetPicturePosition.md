@@ -28,7 +28,7 @@ boolean
 
 This example sets the picture position inside the form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to move the picture inside the form.
 
 // Specify the picture position of the form.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all comments from the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all comments added to the document.
 
 // How to retrieve all comments and display the class type of the first one.

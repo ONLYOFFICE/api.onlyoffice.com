@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the current scaling condition of the picture form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to enable a picture scaling.
 
 // Set picture scale flag to true.

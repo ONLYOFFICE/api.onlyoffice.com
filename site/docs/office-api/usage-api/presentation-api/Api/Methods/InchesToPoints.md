@@ -24,7 +24,7 @@ number
 
 This example shows how to convert inches to points.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const inches = 100;
 const points = Api.InchesToPoints(inches);
 

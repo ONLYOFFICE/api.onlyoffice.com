@@ -24,7 +24,7 @@ number
 
 This example shows how to calculate standard deviation based on the entire population given as arguments (ignores logical values and text).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate standard deviation based on the entire population.
 
 // Use a function to get the standard deviation.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies whether the sheet row/column headers must be displayed or not.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set whether sheet headings should be displayed or not.
 
 // Set a boolean value representing whether to display row/column headings or not.

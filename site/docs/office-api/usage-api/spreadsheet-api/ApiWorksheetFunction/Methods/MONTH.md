@@ -24,7 +24,7 @@ number
 
 This example shows how to return the month, a number from 1 (January) to 12 (December).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the month from a date.
 
 // Use a function to get a month.

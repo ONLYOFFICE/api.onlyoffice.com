@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to set and get the type of a section in a document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 
 const firstParagraph = doc.GetElement(0);

@@ -24,7 +24,7 @@ expression.CreateRadialGradientFill(gradientStops);
 
 This example creates a radial gradient fill to apply to the object using the selected radial gradient as the object background.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a radial gradient background for a shape.
 
 // Add a shape with a radial gradient color.

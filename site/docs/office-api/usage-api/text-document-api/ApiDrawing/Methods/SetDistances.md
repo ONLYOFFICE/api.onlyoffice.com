@@ -28,7 +28,7 @@ boolean
 
 This example specifies the minimum distance which will be maintained between the edges of the drawing object and any subsequent text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create drawings and set the distance between them.
 
 // Create a rectangle, square and set the minimum distance between them.

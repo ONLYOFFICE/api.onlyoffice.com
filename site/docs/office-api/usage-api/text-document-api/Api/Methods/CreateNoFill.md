@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates no fill and removes the fill from the element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create the ApiNoFill object and applies it to the shape stroke.
 
 // Creates a stroke with no fill.

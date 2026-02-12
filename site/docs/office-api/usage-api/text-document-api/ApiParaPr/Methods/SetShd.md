@@ -28,7 +28,7 @@ boolean
 
 This example specifies the shading applied to the contents of the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add shading to the paragraph.
 
 // Apply the clear shading to the paragraph.

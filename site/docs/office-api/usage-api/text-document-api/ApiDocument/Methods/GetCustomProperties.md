@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to use ApiCustomProperties to configure custom properties in a document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 

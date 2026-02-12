@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the nested tables of the specified table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get all tables from the table object.
 
 // Get array of tables and update their width.

@@ -24,7 +24,7 @@ boolean
 
 This example sets a limit to the text field characters.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to specify the characters limit of the text form.
 
 // Set the maximum number of characters that can be inserted to the text form.

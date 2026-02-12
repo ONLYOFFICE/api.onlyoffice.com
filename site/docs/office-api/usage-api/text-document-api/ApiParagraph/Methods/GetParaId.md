@@ -22,7 +22,7 @@ number
 
 This example shows how to get the paragraph ID.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText('This is the first paragraph.');

@@ -27,7 +27,7 @@ boolean
 
 This example removes an element using the position specified.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove an element from the paragraph using its position index.
 
 // Delete an element from the paragraph.

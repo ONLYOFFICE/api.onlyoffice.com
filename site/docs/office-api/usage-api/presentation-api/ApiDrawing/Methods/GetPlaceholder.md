@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a placeholder from the current drawing object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a placeholder of a slide shape.
 
 // Get a placeholder of a slide shape.

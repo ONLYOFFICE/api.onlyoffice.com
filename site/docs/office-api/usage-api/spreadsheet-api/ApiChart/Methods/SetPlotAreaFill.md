@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart plot area.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color chart plot area.
 
 // Fill plot area with a solid fill.

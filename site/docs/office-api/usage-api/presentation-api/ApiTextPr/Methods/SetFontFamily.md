@@ -24,7 +24,7 @@ expression.SetFontFamily(sFontFamily);
 
 This example sets all 4 font slots with the specified font family.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a text font family.
 
 // Get the text properties of the run and set its font family.

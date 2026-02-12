@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to get the superscript property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine a font superscript property.
 
 // Get a boolean value that represents whether a font has a superscript property or not and show the value in the worksheet.

@@ -25,7 +25,7 @@ expression.GetRange(Start, End);
 
 This example shows how to get a Range object that represents the document part contained in the specified range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the range from the range indicating its start and end positions.
 
 // Retrieve a range and make them italic.

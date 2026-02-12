@@ -25,7 +25,7 @@ boolean
 
 This example specifies that the current paragraph references a numbering definition instance in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add numbering to the paragraph.
 
 // Make the paragraph bulleted.

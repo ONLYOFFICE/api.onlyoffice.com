@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table that contains the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get a parent table of the text.
 
 // How to remove the row of the table that contains a text run.

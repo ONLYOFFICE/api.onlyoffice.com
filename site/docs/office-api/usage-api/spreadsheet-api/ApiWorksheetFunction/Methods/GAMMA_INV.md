@@ -26,7 +26,7 @@ number
 
 This example shows how to return the inverse of the gamma cumulative distribution: if p = GAMMA.DIST(x,...), then GAMMA.INV(p,...) = x.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the inverse of the gamma cumulative distribution.
 
 // Use a function to get the inverse of the gamma cumulative distribution.

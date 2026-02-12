@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the negative bar border color from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the border color of negative value bars.
 
 // Get the negative bar border color of a data bar conditional formatting rule.

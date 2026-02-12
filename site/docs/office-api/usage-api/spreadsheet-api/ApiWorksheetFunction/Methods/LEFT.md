@@ -25,7 +25,7 @@ string
 
 This example shows how to return the specified number of characters from the start of a text string.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the number of characters starting from the index.
 
 // Use a function to get a length of a text starting from the index.

@@ -24,7 +24,7 @@ number
 
 This example shows how to convert pixels to points.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 

@@ -25,7 +25,7 @@ number
 
 This example shows how to return the number of combinations for a given number of items.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a number of combinations.
 
 // Use function to count possible combinations for a given number of items.

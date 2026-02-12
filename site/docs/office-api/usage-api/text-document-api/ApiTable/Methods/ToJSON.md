@@ -25,7 +25,7 @@ JSON
 
 This example converts the table object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the table object.
 
 // Convert the table to json and add it to the document.

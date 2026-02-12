@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all styles of the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all styles added to the document.
 
 // How to retrieve all styles and display their names.

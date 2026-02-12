@@ -22,7 +22,7 @@ string
 
 This example shows how to get the hyperlink address.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the raw link of the hyperlink.
 
 // Add a hyperlink to the paragraph and show its address as a text.

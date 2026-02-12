@@ -22,7 +22,7 @@ boolean
 
 This example shows how to find out whether a text is capitalized.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to know whether the text letters are uppercase or not.
 
 // Get the text properties of the run and find whether it is capitalized or not.

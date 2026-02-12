@@ -26,7 +26,7 @@ number
 
 This example shows how to return the straight-line depreciation of an asset for one period.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the straight-line depreciation of an asset.
 
 // Use a function to get the straight-line depreciation of an asset.

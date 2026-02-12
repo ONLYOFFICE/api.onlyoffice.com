@@ -22,7 +22,7 @@ boolean
 
 This example clears the content from the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to clear a content of a table.
 
 // Get a table and remove everything from it.

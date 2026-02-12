@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the first series of ApiChart class and inserts its type into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a chart type and show it on the slide.
 
 // Change a chart type to the "area" type.

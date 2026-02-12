@@ -25,7 +25,7 @@ string
 
 This example shows how to the specified number of characters from the end of a text string.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get characters from the end of a string.
 
 // Use a function to return n characters from the right part of a text.

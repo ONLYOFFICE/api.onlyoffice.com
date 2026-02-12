@@ -28,7 +28,7 @@ number
 
 This example shows how to return an interest rate for a fully invested security.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate an interest rate for a fully invested security.
 
 // Use a function to get a fully invested security's interest rate.

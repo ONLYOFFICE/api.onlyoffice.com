@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a class type of ApiStroke.
 
 // Retrieve class type of ApiStroke object and insert it to the slide.

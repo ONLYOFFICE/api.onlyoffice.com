@@ -24,7 +24,7 @@ boolean
 
 This example replaces the current table with a paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to replace table with a paragraph.
 
 // Create paragraph and put it instead of the table.

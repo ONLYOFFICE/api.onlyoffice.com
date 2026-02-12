@@ -22,7 +22,7 @@ string \| null
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the URL of the image.
 
 // Get the watermark image link address.

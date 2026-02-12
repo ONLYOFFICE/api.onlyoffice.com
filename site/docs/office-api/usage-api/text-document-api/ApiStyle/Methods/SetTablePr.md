@@ -24,7 +24,7 @@ expression.SetTablePr(tablePr);
 
 This example shows how to set the table properties to the style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create table properties for style and set its cells margins.
 
 // Update table properties in the style.

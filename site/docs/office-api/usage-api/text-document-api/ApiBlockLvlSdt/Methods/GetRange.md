@@ -25,7 +25,7 @@ expression.GetRange(start, end);
 
 This example shows how to get a Range object that represents the part of the document contained in the specified content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, adds a text to it, and returns a range between positions 10 and 16 of the element.
 
 // How to get the ApiRange object from the ApiBlockLvlSdt object.

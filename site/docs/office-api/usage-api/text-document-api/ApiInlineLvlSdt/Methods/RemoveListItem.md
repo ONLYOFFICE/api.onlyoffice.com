@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove an item from a combobox or dropdown list content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddComboBoxContentControl();

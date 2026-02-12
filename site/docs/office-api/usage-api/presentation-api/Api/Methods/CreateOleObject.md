@@ -28,7 +28,7 @@ expression.CreateOleObject(sImageSrc, nWidth, nHeight, sData, sAppId);
 
 This example creates an Ole object and inserts it into the slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create an Ole object.
 
 // Add an Ole object to the slide.

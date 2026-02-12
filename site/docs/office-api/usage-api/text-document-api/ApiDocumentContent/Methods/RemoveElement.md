@@ -24,7 +24,7 @@ boolean
 
 This example removes an element using the position specified.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Remove the element using its index.
 
 // Delete document item.

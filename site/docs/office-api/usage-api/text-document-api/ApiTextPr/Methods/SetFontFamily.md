@@ -24,7 +24,7 @@ expression.SetFontFamily(sFontFamily);
 
 This example sets all 4 font slots with the specified font family.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the text font family.
 
 // Create a text run object and set the "Comic Sans MS" font faminy to it.

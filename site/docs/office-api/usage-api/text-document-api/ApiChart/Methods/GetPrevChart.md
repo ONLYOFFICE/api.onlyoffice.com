@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show how to get the previous chart.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update minor horizontal gridlines of the previous chart.
 
 // Get the previous chart and set its horizontal lines as a stroke. 

@@ -24,7 +24,7 @@ boolean
 
 This example removes all the elements from the current document or from the current document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Clear entire document.
 
 // Remove each document element.

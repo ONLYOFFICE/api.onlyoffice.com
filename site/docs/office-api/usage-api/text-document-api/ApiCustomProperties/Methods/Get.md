@@ -24,7 +24,7 @@ string \| number \| Date \| boolean \| null
 
 This example demonstrates how to get the value of a custom property by its name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 

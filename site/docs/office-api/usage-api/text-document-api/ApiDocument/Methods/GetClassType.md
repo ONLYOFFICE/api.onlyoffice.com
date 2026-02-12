@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How get a class type of ApiDocument.
 
 // Retrieve class type of a created document object and display it.

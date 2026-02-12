@@ -28,7 +28,7 @@ number
 
 This example shows how to add the cells specified by a given set of conditions or criteria.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to sum up all elements under conditions.
 
 // Use a function to estimate a sum from the cells by a given condition.

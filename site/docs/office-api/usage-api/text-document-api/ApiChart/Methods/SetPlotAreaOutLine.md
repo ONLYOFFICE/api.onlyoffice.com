@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline to the chart plot area.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set an outline color for the plot area.
 
 // Create a chart, set its properties and its plot area outline.

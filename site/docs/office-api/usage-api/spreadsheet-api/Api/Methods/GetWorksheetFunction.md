@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to use built-in functions using worksheet function objects.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to use system functions in a spreadsheets.
 
 // Use built-in functions in a worksheet.

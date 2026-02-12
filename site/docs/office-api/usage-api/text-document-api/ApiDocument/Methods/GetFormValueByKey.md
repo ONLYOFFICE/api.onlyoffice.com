@@ -24,7 +24,7 @@ null \| boolean \| string
 
 This example showh how to get the value of the specified form using a key.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});

@@ -29,7 +29,7 @@ boolean
 
 This example sets the border which will be displayed at the bottom of the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out a style that will be applied to the table elements whish satisfy the condition.
 
 // Retrieve a conditional table style.

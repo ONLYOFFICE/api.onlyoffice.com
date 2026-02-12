@@ -24,7 +24,7 @@ expression.SetHighlight(sColor);
 
 This example sets highlight color "lightGray" for the paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a paragraph and highlight it with color.
 
 // Set a light gray highlight color to a paragraph and insert it to the slide shape.

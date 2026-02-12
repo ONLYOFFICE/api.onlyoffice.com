@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 Creates a complex curve using cubic bezier, quadratic bezier and arc commands.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Demonstrates different types of curve drawing methods.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

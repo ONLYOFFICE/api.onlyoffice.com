@@ -24,7 +24,7 @@ expression.SetFill(oApiFill);
 
 This example sets the text color to the current text run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color a text object.
 
 // Create a text run object, add a color to it using RGB format.

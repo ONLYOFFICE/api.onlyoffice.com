@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of elements in the hyperlink.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the number of elements of the hyperlink.
 
 // Add a hyperlink to the paragraph and show its elements count.

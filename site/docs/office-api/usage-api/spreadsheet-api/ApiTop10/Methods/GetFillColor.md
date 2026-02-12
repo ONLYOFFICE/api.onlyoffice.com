@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the background color from a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve background colors from conditional formatting rules.
 
 // Get conditional formatting rule background color.

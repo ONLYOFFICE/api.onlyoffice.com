@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a type of the form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to know the type of a text form.
 
 // Create a text form and diplay its type in the document.

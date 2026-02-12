@@ -24,7 +24,7 @@ expression.SetHighlight(sColor);
 
 This example specifies a highlighting color which is added to the text properties and applied as a background to the contents of the current run/range/paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color a text object background.
 
 // Create a text run object, add color to its background.

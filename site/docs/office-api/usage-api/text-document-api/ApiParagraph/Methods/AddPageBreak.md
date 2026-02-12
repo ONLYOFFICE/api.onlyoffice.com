@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a page break and starts the next element from the next page.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a page break to the text.
 
 // Add a break between the text of a paragraph. 

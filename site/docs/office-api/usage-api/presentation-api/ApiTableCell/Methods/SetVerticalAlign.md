@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies the vertical alignment for text within the current table cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the cell text vertical alignment.
 
 // Create a table and set the text alignment of its cell from the row.

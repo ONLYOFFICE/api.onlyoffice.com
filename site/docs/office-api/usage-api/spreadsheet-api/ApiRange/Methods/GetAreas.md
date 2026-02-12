@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of the ranges.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get range areas.
 
 // Get range areas, count them and display the result in the worksheet.

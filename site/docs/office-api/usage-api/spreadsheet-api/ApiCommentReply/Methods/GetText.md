@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment reply text.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a raw text of a reply.
 
 // Display a reply text to a range of the worksheet.

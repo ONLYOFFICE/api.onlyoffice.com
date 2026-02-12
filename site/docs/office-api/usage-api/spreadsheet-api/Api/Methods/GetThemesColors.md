@@ -22,7 +22,7 @@ string[]
 
 This example shows how to get a list of all the available theme colors for the spreadsheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Get all theme colors from the worksheet.
 
 // List all available theme colors.

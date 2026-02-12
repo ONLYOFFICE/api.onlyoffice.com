@@ -27,7 +27,7 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 This example shows how to add a reply to the comment.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to reply to the comment.
 
 // Get all comments from the presentation and reply to the first one.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get a name of the current style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get name of the table style.
 
 // Display the table style name.

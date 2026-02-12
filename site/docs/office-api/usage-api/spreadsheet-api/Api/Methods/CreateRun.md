@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a new smaller text block to be inserted to the paragraph or table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Create a text to construct a paragraph.
 
 // Add a text in a paragraph.

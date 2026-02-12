@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all worksheets from the workbook.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 Api.AddSheet('new_sheet_name');
 
 const workbook = Api.GetActiveWorkbook();

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a set of the table cell properties which will be applied to all the cells within a table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the table cell properties.
 
 // Get the table cell properties and set shading to its background.

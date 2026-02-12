@@ -25,7 +25,7 @@ expression.GetFooter(sType, isCreate);
 
 This example shows how to get the content for the specified footer type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the footer of the page.
 
 // Get the default footer from the final section. 

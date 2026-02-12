@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to change the icon of a criterion.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to modify the icon assigned to an icon set criterion.
 
 // Set a custom icon for this criterion threshold.

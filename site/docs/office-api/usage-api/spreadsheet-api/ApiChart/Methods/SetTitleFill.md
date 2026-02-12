@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart title.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color a chart title.
 
 // Add a solid color for a chart title.

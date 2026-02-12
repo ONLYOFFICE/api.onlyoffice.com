@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph left side indentation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a left indent of a paragraph.
 
 // Get the left paragraph indent by the side.

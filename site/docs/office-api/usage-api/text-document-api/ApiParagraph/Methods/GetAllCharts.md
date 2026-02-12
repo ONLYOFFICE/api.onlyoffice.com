@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of chart objects in the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve all charts from the document.
 
 // Get all charts and set minor horizontal gridlines.

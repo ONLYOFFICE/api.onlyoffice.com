@@ -22,7 +22,7 @@ string
 
 This example shows how to get the string data from the OLE object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get raw data from the OLE object content.
 
 // Retrieve content of the OLE object and insert it to the document.

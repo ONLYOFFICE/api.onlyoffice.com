@@ -24,7 +24,7 @@ number
 
 This example shows how to return the inverse of the standard normal cumulative distribution (has a mean of zero and a standard deviation of one).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the inverse of the standard normal cumulative distribution.
 
 // Use a function to get the inverse of the standard normal cumulative distribution.

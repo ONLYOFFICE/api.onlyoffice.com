@@ -27,7 +27,7 @@ expression.SetVertAlign(sType);
 
 This example creates two paragraphs. One with vertical aligment "subscript" and another one with vertical aligment "superscript".
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a vertical alignment of a text run.
 
 // Create a new text run and make it subscript, baseline or superscript.

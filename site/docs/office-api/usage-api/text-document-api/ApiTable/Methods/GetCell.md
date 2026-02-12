@@ -25,7 +25,7 @@ expression.GetCell(nRow, nCell);
 
 This example shows how to get a cell by its position.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get cell from the table.
 
 // Get the first table cell and add text to it.

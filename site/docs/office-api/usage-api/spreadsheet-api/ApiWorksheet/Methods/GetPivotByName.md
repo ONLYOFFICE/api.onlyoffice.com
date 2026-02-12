@@ -24,7 +24,7 @@ expression.GetPivotByName(name);
 
 This example shows how to get a pivot table by its name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a pivot table.
 
 // Get a pivot table and by its name and update its fields.

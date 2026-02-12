@@ -24,7 +24,7 @@ boolean
 
 This example removes an element using the position specified from the inline text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove an element from the inline text control.
 
 // Delete the element using its position index from the inline text control.

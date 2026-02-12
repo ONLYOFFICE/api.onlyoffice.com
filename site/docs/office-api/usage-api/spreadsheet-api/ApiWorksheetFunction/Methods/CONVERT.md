@@ -26,7 +26,7 @@ number
 
 This example shows how to convert a number from one measurement system to another.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to convert a number from one measurement system to another.
 
 // Use function to convert a number from one measurement system to another.

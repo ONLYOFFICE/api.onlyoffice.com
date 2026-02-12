@@ -22,7 +22,7 @@ number
 
 This example shows how to get the level index.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve the index of the numbering level.
 
 // Get the number of the level.

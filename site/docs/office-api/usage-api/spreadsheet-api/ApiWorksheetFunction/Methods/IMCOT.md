@@ -24,7 +24,7 @@ number
 
 This example shows how to return the cotangent of a complex number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the cotangent.
 
 // Use a function to get the cotangent of a complex number.

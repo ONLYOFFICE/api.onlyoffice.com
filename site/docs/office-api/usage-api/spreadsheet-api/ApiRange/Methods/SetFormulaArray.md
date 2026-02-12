@@ -24,7 +24,7 @@ boolean
 
 This example sets the array formula of a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set the array formula value.
 
 // Set the array formula.

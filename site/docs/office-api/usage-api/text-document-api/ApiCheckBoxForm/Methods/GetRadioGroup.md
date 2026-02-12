@@ -22,7 +22,7 @@ string
 
 This example shows how to get the radio group key if the checkbox is a radio button.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get checkbox form radio group.
 
 // Retrieve type of a created checkbox object and display it.

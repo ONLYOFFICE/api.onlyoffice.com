@@ -24,7 +24,7 @@ number
 
 This example shows how to return the complex conjugate of a complex number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the complex conjugate.
 
 // Use a function to get the complex conjugate of a complex number.

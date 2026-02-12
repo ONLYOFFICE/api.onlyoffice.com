@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to specify an amount of space which shall be left between the bottom extent of the cell contents and the border of a specific individual table cell within a table.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the cell bottom margin for the current table cell.
 
 // Specify the bottom margin value for the ApiTableCell object.

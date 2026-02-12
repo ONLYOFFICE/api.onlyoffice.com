@@ -26,7 +26,7 @@ boolean
 
 This example sets an image to the current picture form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set image of the picture form.
 
 // Set the url of the image to the picture form.

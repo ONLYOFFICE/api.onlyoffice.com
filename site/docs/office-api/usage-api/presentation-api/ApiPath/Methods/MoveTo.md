@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 Creates a custom shape and adds it to a slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Applies custom geometry with specific fill and stroke properties.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

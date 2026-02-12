@@ -24,7 +24,7 @@ expression.CreateRadialGradientFill(gradientStops);
 
 This example shows how to create a radial gradient fill.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates the ApiFill object which represents a radial gradient fill and applies it to the created shape.
 
 // How to create a radial gradient fill and apply it to the object using the selected radial gradient as the object background.

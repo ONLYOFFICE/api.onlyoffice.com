@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the paragraph position within its parent element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the position of the paragraph in the control that contains it.
 
 // Get the paragraph position inside the parent control.

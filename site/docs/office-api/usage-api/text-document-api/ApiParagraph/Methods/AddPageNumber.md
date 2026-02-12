@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example inserts a number of the current document page into the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a page number to the text.
 
 // Insert a page number to the paragraph.

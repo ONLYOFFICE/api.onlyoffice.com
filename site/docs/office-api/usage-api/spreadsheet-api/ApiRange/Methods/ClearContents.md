@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example clears all the contents in the range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to clear contents for a range.
 
 // Get a range, clear contents and show the result.

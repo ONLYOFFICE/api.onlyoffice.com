@@ -24,7 +24,7 @@ boolean
 
 This example sets the radio group key to the radio button.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to add a radio group to the form.
 
 // Set a radio group to the form.

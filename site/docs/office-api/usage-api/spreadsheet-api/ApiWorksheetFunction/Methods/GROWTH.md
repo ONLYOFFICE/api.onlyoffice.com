@@ -27,7 +27,7 @@ number
 
 This example shows how to calculate predicted exponential growth by using existing data.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate predicted exponential growth by using existing data.
 
 // Use a function to calculate predicted exponential growth.

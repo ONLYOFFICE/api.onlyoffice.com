@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the page orientation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get orientation of the sheet.
 
 // Get a sheet orientation.

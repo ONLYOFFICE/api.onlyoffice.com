@@ -24,7 +24,7 @@ expression.AddDrawing(oDrawing);
 
 This example adds a chart to the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a drawing to the paragraph.
 
 // Add a chart to the paragraph.

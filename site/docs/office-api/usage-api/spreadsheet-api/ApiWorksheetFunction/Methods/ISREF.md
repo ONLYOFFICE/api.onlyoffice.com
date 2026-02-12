@@ -24,7 +24,7 @@ boolean
 
 This example shows how to check whether a value is a reference, and returns true or false.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know whether a value is a reference.
 
 // Use a function to find out whether a value is a reference.

@@ -24,7 +24,7 @@ boolean
 
 This example adds some text to the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a sentence to the text run.
 
 // Add text to the document. 

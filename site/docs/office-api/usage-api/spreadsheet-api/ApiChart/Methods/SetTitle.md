@@ -26,7 +26,7 @@ boolean
 
 This example specifies the chart title with the specified parameters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add chart title indicating its font size.
 
 // Add title for a chart with its font size and style.

@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties for the minor vertical gridlines.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set minor vertical gridlines of the chart.
 
 // Create a chart, set its properties and its minor gridlines as a stroke.

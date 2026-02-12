@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the current paragraph from the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 

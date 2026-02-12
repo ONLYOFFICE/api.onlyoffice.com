@@ -24,7 +24,7 @@ number
 
 This example shows how to return the hyperbolic secant of an angle.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get angle's hyperbolic secant.
 
 // Use a function to calculate the hyperbolic secant of an angle.

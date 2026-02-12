@@ -24,7 +24,7 @@ expression.GetRow(nPos);
 
 This example shows how to get a row by its index.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a second row from the table.
 
 // Add a row from the another one.

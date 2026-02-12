@@ -22,7 +22,7 @@ boolean
 
 This example checks if the aspect ratio of the current picture form is locked or not.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out whether a picture form is fixed or not.
 
 // Find out whether a picture form's size is fixed.

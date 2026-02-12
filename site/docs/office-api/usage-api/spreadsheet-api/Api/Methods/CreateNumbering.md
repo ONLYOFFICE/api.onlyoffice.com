@@ -25,7 +25,7 @@ expression.CreateNumbering(numType, startAt);
 
 This example creates a bullet for a paragraph with the numbering character or symbol specified with the sType parameter.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a numbered paragraphs or sentences.
 
 // Create number bullets to number paragraphs.

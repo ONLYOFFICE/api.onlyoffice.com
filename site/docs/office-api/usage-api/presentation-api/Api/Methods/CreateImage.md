@@ -26,7 +26,7 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 This example creates an image and pastes it into the document.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create an image object using a url and specifying its width and height.
 
 // Create an image and insert it to the slide.

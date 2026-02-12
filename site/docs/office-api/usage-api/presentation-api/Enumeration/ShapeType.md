@@ -201,7 +201,7 @@ Enumeration
 
 This example creates a shape using the 'diamond' preset.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a shape type of a drawing.
 
 // Create a diamond shaped drawing with indicationg its size and color.

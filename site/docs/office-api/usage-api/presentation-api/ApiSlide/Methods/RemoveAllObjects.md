@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example removes all the objects from the current slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove all elements from the slide.
 
 // Get a current slide, remove all its objects and add a new one.

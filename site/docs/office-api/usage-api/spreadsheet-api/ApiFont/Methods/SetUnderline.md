@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets an underline of the type specified in the request to the font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a regular text to an underlined one.
 
 // Get a font object of characters and make it underlined.

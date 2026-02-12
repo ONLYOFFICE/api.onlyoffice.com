@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get a layout blank line of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a blank line layout of a pivot field.
 
 // Create a pivot table, add data to it then get a layout blank line of a specified pivot field.

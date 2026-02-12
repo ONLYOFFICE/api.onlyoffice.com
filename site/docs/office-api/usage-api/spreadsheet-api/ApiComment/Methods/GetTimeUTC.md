@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the timestamp of the comment creation in UTC format.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a time in UTC when a comment was created.
 
 // Add a comment creation timestamp UTC to a range of the worksheet.

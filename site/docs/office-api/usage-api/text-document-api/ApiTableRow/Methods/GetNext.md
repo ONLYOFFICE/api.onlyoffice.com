@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the next row.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the next row of the current row.
 
 // Display the first and the second row.

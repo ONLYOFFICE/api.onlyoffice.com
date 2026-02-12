@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a text to the content control and gets its appearance.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = Api.CreateBlockLvlSdt();

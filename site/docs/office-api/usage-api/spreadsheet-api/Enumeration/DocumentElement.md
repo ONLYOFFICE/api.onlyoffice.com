@@ -15,7 +15,7 @@ Enumeration
 
 This example adds a document element called "paragraph" to the document.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a paragraph element to the document.
 
 // Add elements to the document.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set the reading order of the text in the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B2").SetValue("Hello, أهلاً, 你好");
 const range = worksheet.GetRange("A1:C3");

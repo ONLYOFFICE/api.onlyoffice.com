@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get an element by its position in the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get element knowing its index.
 
 // Get the first paragraph and add text to it.

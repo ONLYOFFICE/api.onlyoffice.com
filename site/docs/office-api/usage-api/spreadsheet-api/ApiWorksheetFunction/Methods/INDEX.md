@@ -27,7 +27,7 @@ number \| string
 
 This example shows how to return an index of a complex numbers.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an index of a complex numbers.
 
 // Use a function to get the index.

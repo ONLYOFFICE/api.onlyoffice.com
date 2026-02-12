@@ -24,7 +24,7 @@ boolean
 
 This example shows how to load data for the mail merge.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Wraps the text runs in the mail merge fields, loads the mail merge data into the document, and starts the mail merge process.
 
 // How to load the data source for mail merge into the document.

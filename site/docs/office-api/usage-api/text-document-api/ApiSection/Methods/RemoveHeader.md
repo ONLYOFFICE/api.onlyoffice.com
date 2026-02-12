@@ -25,7 +25,7 @@ boolean
 
 This example removes the header of the specified type from the section.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove the header of the current section.
 
 // Create section from the paragraph and remove its header.

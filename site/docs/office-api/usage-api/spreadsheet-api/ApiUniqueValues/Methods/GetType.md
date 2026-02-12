@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the type of the unique values conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the formatting rule type from unique values conditional formatting.
 
 // Get the type of the unique values rule.

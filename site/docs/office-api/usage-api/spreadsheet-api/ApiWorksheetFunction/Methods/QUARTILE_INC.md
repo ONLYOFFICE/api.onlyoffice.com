@@ -25,7 +25,7 @@ number
 
 This example shows how to return the quartile of a data set, based on percentile values from 0..1, inclusive.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the inclusive quartile of a data set.
 
 // Use a function to calculate an inclusive fourth part of a data set.

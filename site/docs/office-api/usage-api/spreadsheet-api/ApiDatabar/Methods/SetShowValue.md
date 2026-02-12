@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the show value setting of a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to control whether the data bar shows the value.
 
 // Set the show value setting of a data bar conditional formatting rule.

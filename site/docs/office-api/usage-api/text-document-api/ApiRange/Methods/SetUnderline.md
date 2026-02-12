@@ -25,7 +25,7 @@ expression.SetUnderline(isUnderline);
 
 This example specifies that the contents of the current Range are displayed along with a line appearing directly below the character.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Underline the range.
 
 // Get a range and underline it with one line.

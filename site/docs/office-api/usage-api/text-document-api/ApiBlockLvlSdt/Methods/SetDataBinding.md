@@ -24,7 +24,7 @@ boolean
 
 This example demonstrates how to set a data binding on a content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

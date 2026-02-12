@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the type of a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the type of existing conditional formatting rules.
 
 // Get conditional formatting rule type.

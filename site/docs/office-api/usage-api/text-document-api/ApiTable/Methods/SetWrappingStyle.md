@@ -24,7 +24,7 @@ boolean
 
 This example sets the table wrapping style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the wrapping to the table.
 
 // Resize table by making its the width 100 percent.

@@ -25,7 +25,7 @@ expression.SetSmallCaps(isSmallCaps);
 
 This example specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make text uncapitalized.
 
 // Create a new text run and make its letters lowercase.

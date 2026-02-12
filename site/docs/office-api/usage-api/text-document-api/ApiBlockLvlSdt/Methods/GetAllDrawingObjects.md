@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of drawing objects in the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

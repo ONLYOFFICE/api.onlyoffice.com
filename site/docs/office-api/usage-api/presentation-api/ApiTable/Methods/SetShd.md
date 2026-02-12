@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 This example specifies the shading which shall be applied to the extents of the table.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a shading to the table background.
 
 // Create a table, set its shading color and add it to the slide.

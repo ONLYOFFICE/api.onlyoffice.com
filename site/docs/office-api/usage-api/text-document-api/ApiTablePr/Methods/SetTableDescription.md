@@ -24,7 +24,7 @@ boolean
 
 This example sets the table description.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to display the table description in the document.
 
 // Get the table description from the table properties.

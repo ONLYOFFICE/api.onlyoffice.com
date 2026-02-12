@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the axis color from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the axis color of a data bar.
 
 // Get the axis color of a data bar conditional formatting rule.

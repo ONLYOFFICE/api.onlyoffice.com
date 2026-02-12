@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 Gets geometry information from a star shape on a presentation slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Displays preset type and custom status in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

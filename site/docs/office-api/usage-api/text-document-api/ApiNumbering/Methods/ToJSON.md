@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiNumbering object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the numbering object.
 
 // Convert the bullet numbering to json and add it to the paragraph.

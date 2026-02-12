@@ -29,7 +29,7 @@ boolean
 
 This example specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the border between paragraphs.
 
 // Create a paragraph, add text to it and the single border between the text.

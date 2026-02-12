@@ -22,7 +22,7 @@ boolean
 
 This example moves the current item in the parent drop-down list or combo box content control up one element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let contentControlList = cc.GetDropdownList();

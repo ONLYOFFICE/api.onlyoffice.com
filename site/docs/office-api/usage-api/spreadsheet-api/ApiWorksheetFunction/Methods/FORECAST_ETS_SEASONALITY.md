@@ -27,7 +27,7 @@ number
 
 This example shows how to return the length of the repetitive pattern an application detects for the specified time series.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the length of the repetitive pattern.
 
 // Use function to return the length of the repetitive pattern for the specified time series.

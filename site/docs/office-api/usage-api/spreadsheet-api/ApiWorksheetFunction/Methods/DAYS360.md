@@ -26,7 +26,7 @@ number
 
 This example shows how to return the number of days between two dates based on a 360-day year (twelve 30-day months).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get number of days between two dates using 360-day year.
 
 // Use function to get days count between two dates on a 360-day year.

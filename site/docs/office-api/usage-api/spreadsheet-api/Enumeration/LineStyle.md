@@ -28,7 +28,7 @@ Enumeration
 
 This example sets a bottom black dotted border for a cell.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a style of a border line.
 
 // Get a range and change its border line style to dotted.

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example saves changes to the specified document.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to save changes of the spreadsheets.
 
 // Save all applied changes.

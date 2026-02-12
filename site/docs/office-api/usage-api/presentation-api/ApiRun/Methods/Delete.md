@@ -22,7 +22,7 @@ boolean
 
 This example deletes the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete a text run object.
 
 // Remove text from the slide.

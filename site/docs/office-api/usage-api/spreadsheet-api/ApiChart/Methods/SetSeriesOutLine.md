@@ -26,7 +26,7 @@ boolean
 
 This example sets the outline to the specified chart series.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to outline chart series.
 
 // Add colored stroke for a chart seria.

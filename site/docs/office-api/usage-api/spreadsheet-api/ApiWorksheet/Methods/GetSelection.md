@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an object that represents the selected range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get selected range.
 
 // Get selection from the worksheet and set its value.

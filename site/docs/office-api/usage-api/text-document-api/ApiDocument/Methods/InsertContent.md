@@ -26,7 +26,7 @@ boolean
 
 This example inserts an array of elements into the current position of the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to insert the paragraph to the document.
 
 // Create a paragraph and show it.

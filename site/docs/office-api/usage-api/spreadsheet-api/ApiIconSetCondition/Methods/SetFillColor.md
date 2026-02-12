@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the background color for a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to apply background colors to conditional formatting rules.
 
 // Set conditional formatting rule background color.

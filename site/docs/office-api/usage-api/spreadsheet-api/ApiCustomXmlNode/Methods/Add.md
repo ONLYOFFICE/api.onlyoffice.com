@@ -24,7 +24,7 @@ expression.Add(nodeName);
 
 This example shows how to create a new child node and insert it as a child of the current XML node.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a child node to an XML node.
 
 // Add a new child node.

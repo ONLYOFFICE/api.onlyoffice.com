@@ -25,7 +25,7 @@ number
 
 This example shows how to return the quartile of a data set.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the quartile of a data set.
 
 // Use a function to calculate a part divided by four of a data set.

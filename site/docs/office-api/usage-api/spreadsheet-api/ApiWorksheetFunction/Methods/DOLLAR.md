@@ -25,7 +25,7 @@ string
 
 This example shows how to convert a number to text, using a currency format $#.##.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to convert a number to text.
 
 // Use function to get text from a number using dollar format.

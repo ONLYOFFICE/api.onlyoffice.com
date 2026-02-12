@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph first line indentation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the first sentence indentation of the paragraph.
 
 // Get a paragraph from the shape's content then add a text specifying the first line indentation.

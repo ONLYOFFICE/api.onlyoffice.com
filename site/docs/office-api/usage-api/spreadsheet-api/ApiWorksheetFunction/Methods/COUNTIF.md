@@ -25,7 +25,7 @@ number
 
 This example shows how to count a number of cells within a range that meet the given condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a number of cells that satisfies some condition.
 
 // Use function to get cells if a condition is met.

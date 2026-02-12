@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the name of the last user who modified the current workbook.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

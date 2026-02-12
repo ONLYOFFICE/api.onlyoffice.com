@@ -24,7 +24,7 @@ number
 
 This example shows how to return the inverse hyperbolic tangent.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get return the inverse hyperbolic tangent.
 
 // Use function to get an inverse hyperbolic tangent.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to get all subforms of a complex form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Email", "placeholder": "Start to fill complex form"});
 complexForm.Add(Api.CreateTextForm({"placeholder" : "username"}));

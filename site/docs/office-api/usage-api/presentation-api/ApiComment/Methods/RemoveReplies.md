@@ -26,7 +26,7 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 This example shows how to remove replies from a comment.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete specified comment reply.
 
 // Get all comments from the presentation and remove a reply from the first one's.

@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the custom XML manager, add a new XML part, and retrieve it by its ID.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get custom XML parts from the presentation.
 
 // Get the custom XML parts manager.

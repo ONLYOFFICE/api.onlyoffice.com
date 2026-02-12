@@ -22,7 +22,7 @@ boolean
 
 This example adds a page break and starts the next element from a new page.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to start a sentence from the new page.
 
 // Break two lines of a text run with a page break. 

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a color property of the text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a text color and apply it to the paragraph.
 
 // Retrieve color properties of the text.

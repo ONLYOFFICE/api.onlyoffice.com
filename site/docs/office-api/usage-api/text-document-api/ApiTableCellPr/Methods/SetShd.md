@@ -28,7 +28,7 @@ boolean
 
 This example specifies the shading applied to the contents of the table cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Create a 3x3 table and add an orange shading to cell #1.
 
 // Set shading to the table cell.

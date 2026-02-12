@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies whether the sheet gridlines must be printed or not.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set whether sheet gridlines should be printed or not.
 
 // Set a boolean value representing whether to print gridlines or not.

@@ -25,7 +25,7 @@ expression.AddPictureContentControl(width, height);
 
 This example shows how to add a picture content control to a document:
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 doc.AddPictureContentControl();
 ```

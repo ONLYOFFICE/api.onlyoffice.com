@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to clear a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove all elements from a pivot table.
 
 // Create a pivot table, add data to it then delete all its content.

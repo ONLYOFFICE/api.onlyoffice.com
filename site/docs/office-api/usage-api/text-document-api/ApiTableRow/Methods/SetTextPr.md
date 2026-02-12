@@ -24,7 +24,7 @@ boolean
 
 This example sets the text properties to the current row.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Make the row text bold.
 
 // How to apply new text properties to the table row.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the sheet number of the reference sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a sheet number.
 
 // Use a function to get a sheet index.

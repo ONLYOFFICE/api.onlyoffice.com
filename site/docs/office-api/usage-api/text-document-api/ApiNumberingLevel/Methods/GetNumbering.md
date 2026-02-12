@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the numbering definition.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve the numbering.
 
 // Get the numbering of the level.

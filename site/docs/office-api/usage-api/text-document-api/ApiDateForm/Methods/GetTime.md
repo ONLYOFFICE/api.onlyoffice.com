@@ -22,7 +22,7 @@ undefined \| number
 
 This example shows how to get the date timestamp from a date form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a time enetered to the date form.
 
 // Display the time from the date and time answer.

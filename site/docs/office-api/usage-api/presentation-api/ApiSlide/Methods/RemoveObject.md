@@ -25,7 +25,7 @@ boolean
 
 This example removes objects (image, shape or chart) from the current slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove a specific object from the slide.
 
 // Get a slide by its index, remove its object at the given index.

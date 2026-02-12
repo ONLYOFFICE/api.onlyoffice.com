@@ -25,7 +25,7 @@ boolean
 
 This example shows how to replace the current sentence.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the text to another one.
 
 // Add the new run instead of another sentence.

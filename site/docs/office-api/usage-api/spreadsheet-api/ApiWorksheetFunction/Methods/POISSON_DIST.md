@@ -26,7 +26,7 @@ number
 
 This example shows how to calculate the Poisson distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the Poisson distribution.
 
 // Use a function to calculate the Poisson distribution.

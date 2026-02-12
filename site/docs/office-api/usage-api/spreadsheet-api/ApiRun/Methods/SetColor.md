@@ -27,7 +27,7 @@ expression.SetColor(r, g, b, isAuto);
 
 This example sets the text color for the current text run in the RGB format.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change text color.
 
 // Create a text run object, update its font color using RGB format values.

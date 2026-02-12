@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph line spacing value.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 /// How to get the spacing line value between sentences of a paragraph.
 
 // Create a paragraph, set the spacing line between the sentences and retrieve the value.

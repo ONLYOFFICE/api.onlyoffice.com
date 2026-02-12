@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a set of the paragraph properties which will be applied to all the paragraphs within a table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the paragraph properties.
 
 // Get the table properties of the first row and obtain its paragraph properties.

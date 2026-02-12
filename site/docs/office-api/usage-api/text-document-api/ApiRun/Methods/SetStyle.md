@@ -24,7 +24,7 @@ expression.SetStyle(oStyle);
 
 This example sets a style to the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update the style of the text run.
 
 // Create a new style and apply it to the run.

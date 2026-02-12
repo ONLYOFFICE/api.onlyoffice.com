@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how get ApiCore instance and use its methods to manage document metadata.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 

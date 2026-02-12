@@ -24,7 +24,7 @@ string
 
 This example shows how to combine multiple text strings into one text string.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add multiple text strings into one text string.
 
 // Use function to create one text string from multiple ones.

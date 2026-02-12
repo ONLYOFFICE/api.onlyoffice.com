@@ -24,7 +24,7 @@ boolean
 
 This example sets a label attribute to the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control and sets a label to it.
 
 // How to set a label to the ApiBlockLvlSdt object.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph first line indentation.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the indentation size for the paragraph first line.
 
 // Create a new paragraph and set its first line indentation.

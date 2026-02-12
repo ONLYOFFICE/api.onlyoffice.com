@@ -24,7 +24,7 @@ expression.GetParagraph(nPos);
 
 This example shows how to get a paragraph from all the paragraphs that are in the range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get a paragraph using its index position.
 
 // Make bold the second paragraph of the range.

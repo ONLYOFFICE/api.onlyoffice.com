@@ -30,7 +30,7 @@ number
 
 This example shows how to return the yield on a security that pays periodic interest.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the yield on a security.
 
 // Use a function to calculate the yield on a security that pays periodic interest.

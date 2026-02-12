@@ -26,7 +26,7 @@ boolean
 
 This example replaces text from two paragraphs with another text.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to replace a substring with another one.
 
 // Replace text from an array with another one.

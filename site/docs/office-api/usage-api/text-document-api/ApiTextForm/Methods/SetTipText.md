@@ -24,7 +24,7 @@ boolean
 
 This example sets the tip text to the form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Add text as a tip of the form.
 
 // Create a text form and set its tip text (text that appears on hold).

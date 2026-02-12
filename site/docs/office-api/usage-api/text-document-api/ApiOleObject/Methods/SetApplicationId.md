@@ -24,7 +24,7 @@ boolean
 
 This example sets the application ID to the current OLE object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set application ID of the OLE object.
 
 // Update the application ID of the OLE object.

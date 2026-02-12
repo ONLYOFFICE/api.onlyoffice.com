@@ -18,7 +18,7 @@ Enumeration
 
 This example gets type of a current selection.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const selectionType = Api.GetSelection().GetType();
 
 ```

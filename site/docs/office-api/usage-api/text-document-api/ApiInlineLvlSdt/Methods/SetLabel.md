@@ -24,7 +24,7 @@ boolean
 
 This example sets a string label to the inline text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set label for the inline content control.
 
 // Display the label set for inline text element.

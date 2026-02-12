@@ -25,7 +25,7 @@ number
 
 This example shows how to return the internal rate of return for a series of cash flows.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the internal rate of the return for a series of cash flows.
 
 // Use a function to get the internal rate.

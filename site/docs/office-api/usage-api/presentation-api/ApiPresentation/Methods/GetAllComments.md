@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example returns all comments from the current presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return an array of all comments from the ApiPresentation object and add a text of the first comment to the created shape.
 
 // Get the ApiComment objects from the current presentation.

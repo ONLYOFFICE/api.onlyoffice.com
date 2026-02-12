@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiFill object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON object from the fill object.
 
 // Convert the radial gradient fill to json and add it to the paragraph.

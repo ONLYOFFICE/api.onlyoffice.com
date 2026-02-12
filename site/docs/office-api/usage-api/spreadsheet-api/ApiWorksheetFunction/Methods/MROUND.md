@@ -25,7 +25,7 @@ number
 
 This example shows how to return a number rounded to the desired multiple.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to round the number.
 
 // Use a function to round the number.

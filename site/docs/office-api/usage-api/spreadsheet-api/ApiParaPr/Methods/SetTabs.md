@@ -26,7 +26,7 @@ boolean
 
 This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change sizes of tabs between paragraphs.
 
 // Customize all kind of tabs indicating sizes.

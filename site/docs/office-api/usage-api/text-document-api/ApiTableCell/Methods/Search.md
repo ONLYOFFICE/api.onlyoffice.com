@@ -25,7 +25,7 @@ expression.Search(sText, isMatchCase);
 
 This example shows how to make search in table cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Search the word from the cell.
 
 // Get the first cell from the table and search a word from it.

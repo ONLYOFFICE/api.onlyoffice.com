@@ -26,7 +26,7 @@ boolean
 
 This example adds a paragraph using its position in the cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add text to the cell.
 
 // Insert a paragraph object to the table cell.

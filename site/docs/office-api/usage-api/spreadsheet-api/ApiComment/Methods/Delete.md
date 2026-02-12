@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example deletes the ApiComment object.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove a comment from a range.
 
 // Get a range add a comment to it and then remove it.

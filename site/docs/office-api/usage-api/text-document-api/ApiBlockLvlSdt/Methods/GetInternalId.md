@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the internal ID of a block-level container
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");

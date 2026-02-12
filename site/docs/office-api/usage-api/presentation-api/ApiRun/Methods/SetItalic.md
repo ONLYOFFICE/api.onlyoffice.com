@@ -24,7 +24,7 @@ expression.SetItalic(isItalic);
 
 This example sets the italic property to the text character.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to make text run italic.
 
 // Create a new text run and make its style italic.

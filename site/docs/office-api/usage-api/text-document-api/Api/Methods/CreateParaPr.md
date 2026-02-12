@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to create and use the paragraph properties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set paragraph properties to the table style.
 
 let doc = Api.GetDocument();

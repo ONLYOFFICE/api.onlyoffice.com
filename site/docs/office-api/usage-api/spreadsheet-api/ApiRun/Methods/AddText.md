@@ -24,7 +24,7 @@ boolean
 
 This example adds some text to the run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a text to the run.
 
 // Get a paragraph and add a text to it.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a type of the current table conditional style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the table style type and display it in the document.
 
 // Retrieve the type of the style.

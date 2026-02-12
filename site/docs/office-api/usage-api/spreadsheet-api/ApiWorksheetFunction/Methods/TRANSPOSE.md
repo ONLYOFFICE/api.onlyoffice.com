@@ -24,7 +24,7 @@ expression.TRANSPOSE(arg1);
 
 This example shows how to convert a vertical range of cells to a horizontal range, or vice versa.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change orientation of cells to vertical/horizontal.
 
 // Use a function to transpose a range.

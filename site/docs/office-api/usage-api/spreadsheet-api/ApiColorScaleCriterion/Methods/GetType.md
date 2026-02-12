@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the type of color scale criterion.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check the type of a color scale criterion.
 
 // Get the type of a color scale criterion.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to find out the position of the text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the location index of the text properties.
 
 // How to know the text position.

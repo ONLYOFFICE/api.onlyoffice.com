@@ -22,7 +22,7 @@ number
 
 Analyzes path commands of a star shape.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Retrieves information about the first command including type and coordinates.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

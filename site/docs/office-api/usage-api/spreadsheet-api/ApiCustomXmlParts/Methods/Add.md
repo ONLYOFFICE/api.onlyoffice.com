@@ -24,7 +24,7 @@ expression.Add(xml);
 
 This example shows how to add a new custom XML part and then access it.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a custom XML part to the workbook.
 
 // Add a new XML part.

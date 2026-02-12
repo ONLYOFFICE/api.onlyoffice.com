@@ -25,7 +25,7 @@ expression.CreatePictureContentControl(width, height);
 
 This example shows how to create a picture content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let cc = Api.CreatePictureContentControl(2000000, 2000000);
 let paragraph = Api.CreateParagraph();

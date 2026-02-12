@@ -24,7 +24,7 @@ expression.SetOutLine(oStroke);
 
 This example sets the text outline to the current text run
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to outline a text with a stroke.
 
 // Add text ouline using colored stroke.

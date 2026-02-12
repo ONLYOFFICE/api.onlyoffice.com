@@ -16,7 +16,7 @@ Enumeration
 
 This example specify that the first row contains header information.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to specify a sorting header for a range.
 
 // Sort a range of cells indicating sorting header.

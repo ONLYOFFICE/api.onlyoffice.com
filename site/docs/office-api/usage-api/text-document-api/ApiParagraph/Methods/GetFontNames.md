@@ -22,7 +22,7 @@ string[]
 
 This example shows how to get all font names from all elements inside the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the font names of the paragraph.
 
 // Print all font names separated by a colon.

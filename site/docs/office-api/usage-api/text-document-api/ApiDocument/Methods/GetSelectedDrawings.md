@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all the selected drawings in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the drawing selected on the document.
 
 // Select a drawing and make it bigger.

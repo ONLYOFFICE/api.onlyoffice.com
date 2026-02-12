@@ -22,7 +22,7 @@ string
 
 This example shows how to get bookmark name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a bookmark indicating its name and then display it.
 
 // Show current bookmark name.

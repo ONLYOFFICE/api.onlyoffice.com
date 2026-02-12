@@ -22,7 +22,7 @@ string
 
 This example shows how to get a sheet name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get name of the sheet.
 
 // Get a sheet name.

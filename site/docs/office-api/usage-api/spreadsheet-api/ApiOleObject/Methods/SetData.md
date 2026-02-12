@@ -24,7 +24,7 @@ boolean
 
 This example sets the data to the current OLE object.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change content of OLE object.
 
 // Add Ole object, set its data and display it in the worksheet.

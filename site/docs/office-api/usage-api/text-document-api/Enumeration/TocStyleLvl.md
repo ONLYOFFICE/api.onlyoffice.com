@@ -18,7 +18,7 @@ Object
 
 This example adds a table of contents which is generated from the specified styles to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a table of contents properties indicating its style levels.
 
 // Add a table of contents with styles for different elements (Heading 1, 2, etc.).

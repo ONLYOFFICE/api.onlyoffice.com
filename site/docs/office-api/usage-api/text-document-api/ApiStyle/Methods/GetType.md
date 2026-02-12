@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a type of the current style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get type of the table style.
 
 // Display the name of the table style.

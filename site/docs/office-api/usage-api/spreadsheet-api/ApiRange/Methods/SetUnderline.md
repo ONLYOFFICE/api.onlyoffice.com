@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies that the contents of the current cell is displayed along with a line appearing directly below the character.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add underline to the cell value.
 
 // Get a range and add underline to its text.

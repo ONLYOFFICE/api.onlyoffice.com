@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to create and use the table cell properties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create the table cell properties and set it to table style.
 
 let doc = Api.GetDocument();

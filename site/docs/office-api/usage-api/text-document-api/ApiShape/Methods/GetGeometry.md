@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 Gets geometry information from a preset star shape.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Displays the preset type and checks if the geometry is custom.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

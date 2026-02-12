@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to get the date when the current workbook was printed last time.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

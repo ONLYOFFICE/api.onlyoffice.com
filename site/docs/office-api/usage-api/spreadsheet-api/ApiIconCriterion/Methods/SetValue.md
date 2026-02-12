@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set the value of an icon criterion.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to modify the threshold value for an icon set criterion.
 
 // Set the value used for criterion threshold comparison.

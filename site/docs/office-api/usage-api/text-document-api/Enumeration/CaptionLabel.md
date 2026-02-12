@@ -17,7 +17,7 @@ Enumeration
 
 This example add a cross-reference to the page containing a table caption.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add reference to the page with caption.
 
 // Use caption to create a cross-reference.

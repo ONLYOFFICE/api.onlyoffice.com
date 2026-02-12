@@ -24,7 +24,7 @@ number
 
 This example shows how to return the hyperbolic sine of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calaculate the hyperbolic sine of a number.
 
 // Use a function to get a hyperbolic sine of a number.

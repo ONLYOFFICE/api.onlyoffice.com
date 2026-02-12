@@ -22,7 +22,7 @@ boolean
 
 This example finds out whether the current form is capitalized or not.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out whether a text is capitalized or not.
 
 // Get the property of the text that shows whether a text is in uppercase.

@@ -25,7 +25,7 @@ expression.MergeCells(aCells);
 
 This example merges an array of cells.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get two cells by their position index and merge them into one.
 
 // Create a table, create cells and merge them into one.

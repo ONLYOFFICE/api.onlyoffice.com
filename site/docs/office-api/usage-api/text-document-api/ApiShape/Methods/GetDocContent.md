@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the shape inner contents where a paragraph or text runs can be inserted.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the doc content of the drawing.
 
 // Retrieve the content of the shape add the paragraph to it.

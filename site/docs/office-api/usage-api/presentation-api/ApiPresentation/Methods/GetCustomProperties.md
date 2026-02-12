@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to use ApiCustomProperties to configure custom properties in a presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

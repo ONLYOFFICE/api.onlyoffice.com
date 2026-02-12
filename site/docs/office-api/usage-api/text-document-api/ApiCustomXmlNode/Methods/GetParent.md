@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the parent of a custom XML node and display its value.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

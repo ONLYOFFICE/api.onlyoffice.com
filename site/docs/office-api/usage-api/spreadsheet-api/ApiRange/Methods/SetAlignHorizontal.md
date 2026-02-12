@@ -24,7 +24,7 @@ boolean
 
 This example sets the horizontal alignment of the text in the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the horizontal alignment of the cell content.
 
 // Change the horizontal alignment of the ApiRange content to center.

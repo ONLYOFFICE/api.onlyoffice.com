@@ -24,7 +24,7 @@ number
 
 This example shows how to return the arccotangent of a number, in radians in the range from 0 to Pi.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an arccotangent of a number and display it in the worksheet.
 
 // Get a function that gets arccotangent of a number.

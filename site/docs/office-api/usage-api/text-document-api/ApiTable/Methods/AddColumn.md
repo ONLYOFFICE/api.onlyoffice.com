@@ -25,7 +25,7 @@ boolean
 
 This example adds a new column to the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to insert a column to the table.
 
 // Get a table cell from the row and add it as a column.

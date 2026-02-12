@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the timestamp of the comment reply creation in UTC format.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a timestamp in UTC when a reply was created.
 
 // Add a reply then update its creation time in UTC format and show it in the worksheet.

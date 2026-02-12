@@ -24,7 +24,7 @@ boolean
 
 This example specifies the major tick mark for the vertical axis.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a major tick as a cross for the vertical axis labels.
 
 // Specifies major tick mark for the vertical axis.

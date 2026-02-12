@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the text content of a custom XML node.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set text content on an XML node.
 
 // Set XML node text.

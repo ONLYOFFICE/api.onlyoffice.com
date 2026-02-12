@@ -24,7 +24,7 @@ boolean
 
 This example elects the specified value from the combo box list values.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know whether a combobox form is required or not.
 
 // Display a boolean representing whether a combobox is required.

@@ -24,7 +24,7 @@ expression.SetTextPr(oTextPr);
 
 This example sets the text properties to the current run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create text property for a text object.
 
 // Create a text run object, add properties like font size, style, color, etc.

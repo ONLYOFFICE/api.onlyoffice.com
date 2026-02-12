@@ -25,7 +25,7 @@ number
 
 This example shows how to truncate a number to an integer by removing the decimal, or fractional, part of the number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to truncate a number to an integer.
 
 // Use a function to truncate a number.

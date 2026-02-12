@@ -22,7 +22,7 @@ boolean
 
 This example removes all the elements from the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to clear the text run.
 
 // Delete all elements from the run.

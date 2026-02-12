@@ -32,7 +32,7 @@ boolean
 
 This example adds a caption paragraph after (or before) the current content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Adds a figure caption after the block content control and sets the Arabic caption numbering format.
 
 // How to add a caption for the ApiBlockLvlSdt object.

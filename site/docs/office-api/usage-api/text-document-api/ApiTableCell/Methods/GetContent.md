@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the current cell content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the value from the cell.
 
 // Retrieve the content of the table cell.

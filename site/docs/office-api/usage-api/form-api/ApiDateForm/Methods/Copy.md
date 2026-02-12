@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to make a copy of the form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create the same text form.
 
 // Create two same text forms to the document separated by a line break.

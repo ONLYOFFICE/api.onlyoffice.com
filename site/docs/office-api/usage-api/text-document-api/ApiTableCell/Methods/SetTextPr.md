@@ -24,7 +24,7 @@ boolean
 
 This example applies the text settings to the entire contents of the cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Set text properties to the table cell.
 
 // Make the table cell bold and with bigger font.

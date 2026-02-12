@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all the OLE objects from the current presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

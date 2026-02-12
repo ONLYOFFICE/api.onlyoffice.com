@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an array with all the shape objects from the slide master.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get all shapes from the presentation slide master.
 
 // Get all shapes from the presentation master as an array.

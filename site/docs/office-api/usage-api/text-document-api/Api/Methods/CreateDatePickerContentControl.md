@@ -24,7 +24,7 @@ expression.CreateDatePickerContentControl(datePickerPr);
 
 This example shows how to create a datepicker content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let cc = Api.CreateDatePickerContentControl({format: 'yyyy.mm.dd'});
 let paragraph = Api.CreateParagraph();

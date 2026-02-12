@@ -24,7 +24,7 @@ expression.SetTableRowPr(tableRowPr);
 
 This example shows how to set the table row properties to the current style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create table row properties for style and set its height.
 
 // Update table row properties in the style.

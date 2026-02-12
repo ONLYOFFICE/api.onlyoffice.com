@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the color scale criteria collection.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to access and display color scale criteria information.
 
 // Get the collection of color scale criteria from a color scale conditional formatting rule.

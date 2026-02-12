@@ -26,7 +26,7 @@ number
 
 This example shows how to calculate variance based on the entire population of the selected database entries.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to estimate variance form the entire population.
 
 // Use function to calculate entire population variance.

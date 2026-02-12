@@ -26,7 +26,7 @@ boolean
 
 This example replaces a drawing with a new drawing.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the image to another one.
 
 // Add the new drawing instead of another one.

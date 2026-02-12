@@ -24,7 +24,7 @@ expression.SetFontSize(nSize);
 
 This example sets the font size to the characters of the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set font size to the text.
 
 // Create a new paragraph and resize its font.

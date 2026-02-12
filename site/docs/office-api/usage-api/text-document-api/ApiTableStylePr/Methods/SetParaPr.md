@@ -24,7 +24,7 @@ expression.SetParaPr(oParaPr);
 
 This example shows how to create and set the paragraph properties which will be applied to all the paragraphs within a table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set paragraph properties to the table style.
 
 // Update the table style paragraph properties.

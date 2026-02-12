@@ -24,7 +24,7 @@ expression.SetItalic(isItalic);
 
 This example sets the italic property to the text character.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make text italic.
 
 // Create a paragraph and make its text style italic.

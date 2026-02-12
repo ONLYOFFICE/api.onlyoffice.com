@@ -24,7 +24,7 @@ number
 
 This example shows how to convert a hexadecimal number to decimal.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a decimal from hexadecimal number.
 
 // Use a function to convert a hexadecimal number to decimal.

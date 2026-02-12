@@ -40,7 +40,7 @@ Enumeration
 
 This example applys the created style (set shadow) to the top left cell of the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a style of the specific part of the table.
 
 // Get table part style by condition and update it.

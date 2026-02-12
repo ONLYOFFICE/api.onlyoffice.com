@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the background color to the cell range with the previously created color object.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color a cell.
 
 // Get a range and apply a solid fill to its background color.

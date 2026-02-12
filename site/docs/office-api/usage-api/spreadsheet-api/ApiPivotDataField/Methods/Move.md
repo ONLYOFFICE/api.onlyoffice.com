@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to move a data field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a table element position by moving it by rows.
 
 // Create a pivot table, add data to it then move data field's by rows.

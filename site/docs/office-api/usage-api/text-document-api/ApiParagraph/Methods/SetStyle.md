@@ -25,7 +25,7 @@ boolean
 
 This example sets a style for the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Set the style of the paragraph to "Heading 6".
 
 // Create a text in a paragraph styled with the 'Heading 6' style.

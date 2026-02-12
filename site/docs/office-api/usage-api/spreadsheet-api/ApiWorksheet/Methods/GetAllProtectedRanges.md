@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an object that represents all protected ranges.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get all protected ranges.
 
 // Get all protected ranges as an array.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the second, a number from 0 to 59.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get seconds from time.
 
 // Use a function to return seconds from time object.

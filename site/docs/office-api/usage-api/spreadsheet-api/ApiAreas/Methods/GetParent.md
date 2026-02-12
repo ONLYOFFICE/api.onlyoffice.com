@@ -22,7 +22,7 @@ number
 
 This example shows how to get the parent object for the specified collection.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a parent of the collection.
 
 // Find a collection parent of the selected range.

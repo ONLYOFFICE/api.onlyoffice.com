@@ -29,7 +29,7 @@ boolean
 
 This example sets the border which will be displayed on the right of the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a 3x3 table and add the right 4 point black border.
 
 // Add right border to the table.

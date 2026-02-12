@@ -26,7 +26,7 @@ number
 
 This example shows how to return the left-tailed probability of the chi-squared distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the left-tailed probability of the chi-squared distribution.
 
 // Use function to return the left-tailed probability of the chi-squared distribution.
