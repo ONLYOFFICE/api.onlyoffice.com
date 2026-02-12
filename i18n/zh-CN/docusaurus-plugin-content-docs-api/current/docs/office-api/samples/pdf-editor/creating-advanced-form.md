@@ -2,23 +2,23 @@
 hide_table_of_contents: true
 ---
 
-# Creating advanced form
+# 创建高级表单
 
-Create an advanced form with a table structure:
+创建具有表格结构的高级表单：
 
-- create a new document, create tables for the text and form inputs ([Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [ApiDocumentContent/GetElement](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [ApiTable/GetRow](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetRow.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md));
-- style tables ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md), [ApiTable/SetWidth](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetWidth.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md));
-- create the text and image forms and add them to the tables ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)).
+- 创建新文档，为文本和表单输入创建表格（[Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md)、[Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md)、[ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md)、[ApiDocumentContent/GetElement](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md)、[ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)、[ApiTable/GetRow](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetRow.md)、[ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md)、[ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md)）；
+- 设置表格样式（[ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md)、[ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md)、[ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md)、[ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md)、[ApiTable/SetWidth](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetWidth.md)、[ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md)）；
+- 创建文本和图片表单并添加到表格中（[Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md)、[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)）。
 
 :::tip
-This sample is also available for **Document Builder**.
-Download the sample and get more information on the [Document Builder samples](/docs/document-builder/samples/samples.md) page.
+此示例也适用于 **Document Builder**。
+下载示例并在 [Document Builder 示例](/docs/document-builder/samples/samples.md) 页面获取更多信息。
 :::
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
-// Helper functions for form creation
+// 表单创建辅助函数
 function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border, required) {
   let textForm = Api.CreateTextForm({
     key,
@@ -29,11 +29,11 @@ function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharac
     multiLine: false,
     autoFit: true,
   });
-  
+
   if (border) {
     textForm.SetBorderColor(200, 200, 200);
   }
-  
+
   paragraph.AddElement(textForm);
   paragraph.SetFontSize(fontSize);
   paragraph.SetJc(jc);
@@ -48,7 +48,7 @@ function addComboBoxToParagraph(paragraph, fontSize, key, placeholder, items, jc
     autoFit: true,
     items: items
   });
-  
+
   paragraph.AddElement(comboForm);
   paragraph.SetFontSize(fontSize);
   paragraph.SetJc(jc);
@@ -61,7 +61,7 @@ function addCheckBoxToParagraph(paragraph, fontSize, key, tip, checked) {
     tip,
     checked: checked || false
   });
-  
+
   paragraph.AddElement(checkboxForm);
   paragraph.SetFontSize(fontSize);
 }
@@ -98,45 +98,45 @@ function createFullWidthTable(rows, cols, borderColor, marginTop) {
   return table;
 }
 
-// Create document header
+// 创建文档标题
 let paragraph = doc.GetElement(0);
-paragraph.AddText("PURCHASE ORDER FORM");
+paragraph.AddText("采购订单表");
 paragraph.SetFontSize(20 * 2);
 paragraph.SetBold(true);
 paragraph.SetJc("center");
 
-// Header information table
+// 表头信息表格
 let headerTable = createFullWidthTable(3, 3, 100, 50);
 
-// Row 1: PO Number and Date
+// 第1行：订单编号和日期
 paragraph = getTableCellParagraph(headerTable, 0, 0, 2000);
-addTextToParagraph(paragraph, "PO Number:", 12 * 2, true, "left");
+addTextToParagraph(paragraph, "订单编号：", 12 * 2, true, "left");
 paragraph = getTableCellParagraph(headerTable, 0, 1, 2000);
-addTextFormToParagraph(paragraph, 12 * 2, "po_number", "Enter PO Number", 15, "left", true, true, true);
+addTextFormToParagraph(paragraph, 12 * 2, "po_number", "输入订单编号", 15, "left", true, true, true);
 paragraph = getTableCellParagraph(headerTable, 0, 2, 2000);
-addTextToParagraph(paragraph, "Date:", 12 * 2, true, "left");
+addTextToParagraph(paragraph, "日期：", 12 * 2, true, "left");
 
-// Row 2: Serial and Date field
+// 第2行：序列号和日期字段
 paragraph = getTableCellParagraph(headerTable, 1, 0);
-addTextToParagraph(paragraph, "Serial #:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "序列号：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(headerTable, 1, 1);
-addTextFormToParagraph(paragraph, 12 * 2, "serial_number", "Serial", 10, "left", true, true, false);
+addTextFormToParagraph(paragraph, 12 * 2, "serial_number", "序列号", 10, "left", true, true, false);
 paragraph = getTableCellParagraph(headerTable, 1, 2);
 addTextFormToParagraph(paragraph, 12 * 2, "order_date", "DD.MM.YYYY", 10, "left", true, true, true);
 
-// Row 3: Priority and Status
+// 第3行：优先级和状态
 paragraph = getTableCellParagraph(headerTable, 2, 0);
-addTextToParagraph(paragraph, "Priority:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "优先级：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(headerTable, 2, 1);
-addComboBoxToParagraph(paragraph, 12 * 2, "priority", "Select Priority", ["Low", "Medium", "High", "Urgent"], "left");
+addComboBoxToParagraph(paragraph, 12 * 2, "priority", "选择优先级", ["低", "中", "高", "紧急"], "left");
 paragraph = getTableCellParagraph(headerTable, 2, 2);
-addTextToParagraph(paragraph, "Status: Draft", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "状态：草稿", 12 * 2, false, "left");
 
 doc.Push(headerTable);
 
-// Company logo section
+// 公司徽标部分
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Company Logo:");
+paragraph.AddText("公司徽标：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -144,9 +144,9 @@ doc.Push(paragraph);
 paragraph = Api.CreateParagraph();
 let pictureForm = Api.CreatePictureForm({
   key: "company_logo",
-  tip: "Upload Company Logo",
+  tip: "上传公司徽标",
   required: false,
-  placeholder: "Click to upload logo",
+  placeholder: "点击上传徽标",
   scaleFlag: "tooBig",
   lockAspectRatio: true,
   respectBorders: false,
@@ -154,36 +154,36 @@ let pictureForm = Api.CreatePictureForm({
 paragraph.AddElement(pictureForm);
 doc.Push(paragraph);
 
-// Vendor information section
+// 供应商信息部分
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Vendor Information:");
+paragraph.AddText("供应商信息：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 let vendorTable = createFullWidthTable(3, 2, 150, 50);
 
-// Vendor details
+// 供应商详情
 paragraph = getTableCellParagraph(vendorTable, 0, 0);
-addTextToParagraph(paragraph, "Company Name:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "公司名称：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(vendorTable, 0, 1);
-addTextFormToParagraph(paragraph, 12 * 2, "vendor_company", "Company Name", 50, "left", false, false, true);
+addTextFormToParagraph(paragraph, 12 * 2, "vendor_company", "公司名称", 50, "left", false, false, true);
 
 paragraph = getTableCellParagraph(vendorTable, 1, 0);
-addTextToParagraph(paragraph, "Contact Person:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "联系人：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(vendorTable, 1, 1);
-addTextFormToParagraph(paragraph, 12 * 2, "vendor_contact", "Contact Name", 40, "left", false, false, false);
+addTextFormToParagraph(paragraph, 12 * 2, "vendor_contact", "联系人姓名", 40, "left", false, false, false);
 
 paragraph = getTableCellParagraph(vendorTable, 2, 0);
-addTextToParagraph(paragraph, "Email Address:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "电子邮箱：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(vendorTable, 2, 1);
 addTextFormToParagraph(paragraph, 12 * 2, "vendor_email", "email@company.com", 50, "left", false, false, false);
 
 doc.Push(vendorTable);
 
-// Shipping information
+// 配送信息
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Shipping Information:");
+paragraph.AddText("配送信息：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -191,20 +191,20 @@ doc.Push(paragraph);
 let shippingTable = createFullWidthTable(2, 2, 150, 50);
 
 paragraph = getTableCellParagraph(shippingTable, 0, 0);
-addTextToParagraph(paragraph, "Ship To:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "收货地址：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(shippingTable, 0, 1);
-addTextFormToParagraph(paragraph, 12 * 2, "ship_to_address", "Shipping Address", 60, "left", false, false, true);
+addTextFormToParagraph(paragraph, 12 * 2, "ship_to_address", "配送地址", 60, "left", false, false, true);
 
 paragraph = getTableCellParagraph(shippingTable, 1, 0);
-addTextToParagraph(paragraph, "Delivery Method:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "配送方式：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(shippingTable, 1, 1);
-addComboBoxToParagraph(paragraph, 12 * 2, "delivery_method", "Select Method", ["Standard", "Express", "Overnight", "Pickup"], "left");
+addComboBoxToParagraph(paragraph, 12 * 2, "delivery_method", "选择方式", ["标准配送", "快递", "次日达", "自提"], "left");
 
 doc.Push(shippingTable);
 
-// Items table
+// 订单项目表格
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Order Items:");
+paragraph.AddText("订单项目：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -212,8 +212,8 @@ doc.Push(paragraph);
 let itemsTable = createFullWidthTable(8, 5, 100, 50);
 itemsTable.GetRow(0).SetBackgroundColor(230, 230, 230, false);
 
-// Header row
-let headerCells = ["Item #", "Description", "Qty", "Unit Price", "Total"];
+// 表头行
+let headerCells = ["项目 #", "描述", "数量", "单价", "合计"];
 let cellWidths = [800, 3000, 800, 1200, 1200];
 
 for (let i = 0; i < headerCells.length; i++) {
@@ -221,54 +221,54 @@ for (let i = 0; i < headerCells.length; i++) {
   addTextToParagraph(paragraph, headerCells[i], 12 * 2, true, "center");
 }
 
-// Data rows
+// 数据行
 for (let i = 1; i < 8; i++) {
   paragraph = getTableCellParagraph(itemsTable, i, 0);
   addTextFormToParagraph(paragraph, 10 * 2, `item_${i}`, `${i}`, 5, "center", true, false, false);
-  
+
   paragraph = getTableCellParagraph(itemsTable, i, 1);
-  addTextFormToParagraph(paragraph, 10 * 2, `description_${i}`, "Item description", 40, "left", false, false, false);
-  
+  addTextFormToParagraph(paragraph, 10 * 2, `description_${i}`, "项目描述", 40, "left", false, false, false);
+
   paragraph = getTableCellParagraph(itemsTable, i, 2);
   addTextFormToParagraph(paragraph, 10 * 2, `qty_${i}`, "0", 5, "center", true, false, false);
-  
+
   paragraph = getTableCellParagraph(itemsTable, i, 3);
-  addTextFormToParagraph(paragraph, 10 * 2, `price_${i}`, "$0.00", 10, "right", false, false, false);
-  
+  addTextFormToParagraph(paragraph, 10 * 2, `price_${i}`, "¥0.00", 10, "right", false, false, false);
+
   paragraph = getTableCellParagraph(itemsTable, i, 4);
-  addTextFormToParagraph(paragraph, 10 * 2, `total_${i}`, "$0.00", 10, "right", false, false, false);
+  addTextFormToParagraph(paragraph, 10 * 2, `total_${i}`, "¥0.00", 10, "right", false, false, false);
 }
 
 doc.Push(itemsTable);
 
-// Terms and conditions
+// 条款和条件
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Terms and Conditions:");
+paragraph.AddText("条款和条件：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-addCheckBoxToParagraph(paragraph, 12 * 2, "terms_net30", "Net 30 payment terms", false);
-paragraph.AddText(" Net 30 payment terms");
+addCheckBoxToParagraph(paragraph, 12 * 2, "terms_net30", "30天账期付款条款", false);
+paragraph.AddText(" 30天账期付款条款");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-addCheckBoxToParagraph(paragraph, 12 * 2, "terms_fob", "FOB destination", false);
-paragraph.AddText(" FOB destination");
+addCheckBoxToParagraph(paragraph, 12 * 2, "terms_fob", "目的地交货", false);
+paragraph.AddText(" 目的地交货");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
 paragraph = Api.CreateParagraph();
-addCheckBoxToParagraph(paragraph, 12 * 2, "terms_warranty", "Standard warranty applies", true);
-paragraph.AddText(" Standard warranty applies");
+addCheckBoxToParagraph(paragraph, 12 * 2, "terms_warranty", "适用标准保修", true);
+paragraph.AddText(" 适用标准保修");
 paragraph.SetFontSize(12 * 2);
 doc.Push(paragraph);
 
-// Approval section
+// 审批部分
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Approval:");
+paragraph.AddText("审批：");
 paragraph.SetFontSize(14 * 2);
 paragraph.SetBold(true);
 doc.Push(paragraph);
@@ -276,16 +276,16 @@ doc.Push(paragraph);
 let approvalTable = createFullWidthTable(2, 3, 150, 50);
 
 paragraph = getTableCellParagraph(approvalTable, 0, 0);
-addTextToParagraph(paragraph, "Requested by:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "申请人：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(approvalTable, 0, 1);
-addTextFormToParagraph(paragraph, 12 * 2, "requested_by", "Name", 30, "left", false, false, true);
+addTextFormToParagraph(paragraph, 12 * 2, "requested_by", "姓名", 30, "left", false, false, true);
 paragraph = getTableCellParagraph(approvalTable, 0, 2);
-addTextToParagraph(paragraph, "Date:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "日期：", 12 * 2, false, "left");
 
 paragraph = getTableCellParagraph(approvalTable, 1, 0);
-addTextToParagraph(paragraph, "Approved by:", 12 * 2, false, "left");
+addTextToParagraph(paragraph, "审批人：", 12 * 2, false, "left");
 paragraph = getTableCellParagraph(approvalTable, 1, 1);
-addTextFormToParagraph(paragraph, 12 * 2, "approved_by", "Manager Name", 30, "left", false, false, false);
+addTextFormToParagraph(paragraph, 12 * 2, "approved_by", "经理姓名", 30, "left", false, false, false);
 paragraph = getTableCellParagraph(approvalTable, 1, 2);
 addTextFormToParagraph(paragraph, 12 * 2, "approval_date", "DD.MM.YYYY", 10, "left", true, true, false);
 
