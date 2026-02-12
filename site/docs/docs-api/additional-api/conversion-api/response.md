@@ -4,80 +4,54 @@ sidebar_position: -3
 
 # Response
 
-The request result is returned in XML format. To receive a response in JSON format you need to specify the *Accept* header with the **application/json** value in the HTTP request (available from version 4.3). When forming the link to the resulting file, the same server name is used which was made the conversion request to.
+The request result is returned in XML format. To receive a response in JSON format you need to specify the `Accept` header with the `application/json` value in the HTTP request. When forming the link to the resulting file, the same server name is used to which the conversion request was made.
+
+:::note
+JSON response format is available from version 4.3.
+:::
 
 ## Response parameters and their description
 
-### endConvert
-
-Defines if the conversion is completed or not.
-
-Type: boolean
-
-Example: true
-
-### error
-
-Defines an error occurred during the conversion. Possible error codes can be found [here](./error-codes.md).
-
-Type: integer
-
-Example: -3
-
-### fileType
-
-Defines an extension of the converted file.
-
-Type: string
-
-Example: "docm"
-
-### fileUrl
-
-Defines the link to the converted document. This parameter will be received only when the *endConvert* parameter is set to **true**.
-
-Type: string
-
-Example: `https://documentserver/url-to-converted-document.pdf`
-
-### percent
-
-Defines the percentage of the file conversion. If the *endConvert* parameter is set to **true**, the *percent* is equal to **100**.
-
-Type: integer
-
-Example: 100 
+| Parameter | Type | Example | Description |
+| --------- | ---- | ------- | ----------- |
+| endConvert | boolean | `true` | Defines if the conversion is completed or not. |
+| error | integer | `-3` | Defines an error that occurred during the conversion. Possible error codes can be found [here](./error-codes.md). |
+| fileType | string | `pdf` | Defines an extension of the converted file. |
+| fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | Defines the link to the converted document. This parameter will be received only when the `endConvert` parameter is set to `true`. |
+| percent | integer | `100` | Defines the percentage of the file conversion. If the `endConvert` parameter is set to `true`, the `percent` is equal to `100`. |
 
 ## Examples of responses
 
-### Sample of the response in XML format
+### Completed conversion (XML)
 
-When forming the link to the resulting file, the same server name is used which was made the conversion request to.
+When forming the link to the resulting file, the same server name is used to which the conversion request was made.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <FileResult>
     <EndConvert>True</EndConvert>
-    <FileType>docm</FileType>
+    <FileType>pdf</FileType>
     <FileUrl>https://documentserver/url-to-converted-document.pdf</FileUrl>
     <Percent>100</Percent>
 </FileResult>
 ```
 
-### Sample of the response in JSON format
+### Completed conversion (JSON)
 
-When forming the link to the resulting file, the same server name is used which was made the conversion request to.
+When forming the link to the resulting file, the same server name is used to which the conversion request was made.
 
 ``` json
 {
   "endConvert": true,
-  "fileType": "docm",
+  "fileType": "pdf",
   "fileUrl": "https://documentserver/url-to-converted-document.pdf",
   "percent": 100
 }
 ```
 
-### Sample of the intermediate response to the asynchronous request (with the parameter *async=true*) in XML format
+### Async intermediate response (XML)
+
+Returned when the `async` parameter is set to `true` and the conversion is still in progress.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -89,7 +63,9 @@ When forming the link to the resulting file, the same server name is used which 
 </FileResult>
 ```
 
-### Sample of the intermediate response to the asynchronous request (with the parameter *async=true*) in JSON format
+### Async intermediate response (JSON)
+
+Returned when the `async` parameter is set to `true` and the conversion is still in progress.
 
 ```json
 {
@@ -98,7 +74,9 @@ When forming the link to the resulting file, the same server name is used which 
 }
 ```
 
-### Sample of the response when an error occurred in XML format
+### Error response (XML)
+
+Returned when an error occurs during the conversion.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,7 +85,9 @@ When forming the link to the resulting file, the same server name is used which 
 </FileResult>
 ```
 
-### Sample of the response when an error occurred in JSON format
+### Error response (JSON)
+
+Returned when an error occurs during the conversion.
 
 ``` json
 {
