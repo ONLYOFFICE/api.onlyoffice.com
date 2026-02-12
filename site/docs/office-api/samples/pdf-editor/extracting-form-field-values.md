@@ -7,8 +7,8 @@ hide_table_of_contents: true
 Demonstrates extracting values from form fields programmatically:
 
 - create a registration form with text inputs and radio button groups ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md));
-- pre-fill form fields with sample data for demonstration ([ApiTextForm/SetText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md));
-- retrieve entered data using utility functions ([ApiDocument/GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md)).
+- pre-fill form fields with sample data for demonstration ([ApiTextForm/SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md));
+- retrieve entered data using utility functions ([ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)).
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
