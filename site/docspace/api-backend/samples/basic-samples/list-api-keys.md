@@ -5,6 +5,8 @@ import TabItem from '@theme/TabItem';
 
 This example demonstrates how to retrieve all API keys associated with the current user in ONLYOFFICE DocSpace. The response includes metadata such as name, permissions, status, and expiration date.
 
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/list-api-keys.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/list-api-keys.py)
+
 ## Before you start
 
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
