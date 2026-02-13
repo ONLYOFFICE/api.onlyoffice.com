@@ -12,6 +12,12 @@ JSON response format is available from version 4.3.
 
 ## Response parameters and their description
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Parameter | Type | Example | Description |
 | --------- | ---- | ------- | ----------- |
 | endConvert | boolean | `true` | Defines if the conversion is completed or not. |
@@ -19,6 +25,10 @@ JSON response format is available from version 4.3.
 | fileType | string | `pdf` | Defines an extension of the converted file. |
 | fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | Defines the link to the converted document. This parameter will be received only when the `endConvert` parameter is set to `true`. |
 | percent | integer | `100` | Defines the percentage of the file conversion. If the `endConvert` parameter is set to `true`, the `percent` is equal to `100`. |
+
+```mdx-code-block
+</APITable>
+```
 
 ## Examples of responses
 

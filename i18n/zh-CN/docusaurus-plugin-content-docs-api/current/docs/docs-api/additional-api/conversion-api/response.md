@@ -12,6 +12,12 @@ JSON 响应格式从 4.3 版开始提供。
 
 ## 响应参数及其描述
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Parameter | Type | Example | Description |
 | --------- | ---- | ------- | ----------- |
 | endConvert | boolean | `true` | 定义转换是否完成。 |
@@ -19,6 +25,10 @@ JSON 响应格式从 4.3 版开始提供。
 | fileType | string | `pdf` | 定义转换文件的扩展名。 |
 | fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | 定义到已转换文档的链接。仅当 `endConvert` 参数设置为 `true` 时才会接收到此参数。 |
 | percent | integer | `100` | 定义文件转换的百分比。如果 `endConvert` 参数设置为 `true`，则 `percent` 等于 `100`。 |
+
+```mdx-code-block
+</APITable>
+```
 
 ## 响应示例
 
