@@ -15,6 +15,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [onClickAnnotation](../interacting-with-editors/text-document-api/Events/onClickAnnotation.md) event for Text document Api.
 - Added the [onFocusAnnotation](../interacting-with-editors/text-document-api/Events/onFocusAnnotation.md) event for Text document Api.
 - Added the [onParagraphText](../interacting-with-editors/text-document-api/Events/onParagraphText.md) event for Text document Api.
+- Updated [Adding plugins through the plugin manager for all users](../tutorials/installing/onlyoffice-docs-on-premises.md) instruction according Help center info.
 
 ## Version 9.1
 
