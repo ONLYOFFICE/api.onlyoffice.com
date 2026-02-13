@@ -121,8 +121,8 @@ These settings are available through the Nextcloud admin interface or via `occ` 
 | `about`                                     | Shows About section.                                                       |
 
 > You can also use the `occ` command-line interface to get/set these parameters:
-> ```
-> php occ config:app:set onlyoffice {setting_key} --value={setting_value}
+> ```sh
+> php occ config:app:set onlyoffice customizationChat --value=false
 > ```
 
 #### Advanced Configuration (`config/config.php` only)
@@ -146,12 +146,15 @@ You can define the following parameters in the `config/config.php` file to custo
 | `disable_download`         | If `true`, disables file download functionality.                                               |
 | `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
 
-The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation.
+The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation:
 
 ```php
-"onlyoffice" => array (
-    {setting_key} => {setting_value},
+<?php
+'onlyoffice' => array (
+    'jwt_secret' => 'your_secret_key',
+    'jwt_header' => 'Authorization',
 )
+?>
 ```
 
 ## Checking the connection
