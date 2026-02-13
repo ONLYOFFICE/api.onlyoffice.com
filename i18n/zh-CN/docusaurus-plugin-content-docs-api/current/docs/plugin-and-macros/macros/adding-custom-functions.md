@@ -47,7 +47,7 @@ sidebar_position: -4
 
 您可以在[此处](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md)找到自定义函数的示例。
 
-## 访问单元格地址
+## 访问单元格地址 {#accessing-cell-addresses}
 
 :::note
 
