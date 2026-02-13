@@ -100,7 +100,7 @@ sidebar_position: -4
 
 ![自定义功能菜单](/assets/images/plugins/custom-function-menu.png#gh-light-mode-only)![自定义功能菜单](/assets/images/plugins/custom-function-menu.dark.png#gh-dark-mode-only)
 
-## 异步函数
+## 异步函数 {#asynchronous-functions}
 
 :::note
 
