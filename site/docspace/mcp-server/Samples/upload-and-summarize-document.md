@@ -20,66 +20,57 @@ Before sending a request, decide:
 - **Room name** where the document should be stored
 - **Folder name** inside the room (for example, "Legal" or "Contracts")
 - **Document** you want to upload
-- **Summary format** you want to receive (bullet points, short paragraph, sections)
+- **Summary format** you want to receive (bullet points, short paragraph, or sections)
 
-This makes the request clear and helps avoid follow-up questions.
+This makes the request clear and reduces the need for follow-up questions.
 
-### 2. Send a request to upload the document
+### 2. Upload the document to DocSpace
 
-In your MCP client, send a request that includes the room name, folder name, and what file you are uploading.
+Send a request that includes the room name, folder name, and the file you want to upload.
 
 **Example request:** Upload the attached contract to the "Legal" folder in the "Website Redesign" room.
 
 What you should expect:
-- The client locates the target room and folder.
+- The destination room and folder are located.
 - The document is uploaded to DocSpace.
-- The client confirms the upload result (file name and destination folder).
+- The upload result is confirmed (file name and destination folder).
 
 If the folder might not exist yet, include it in the request:
 
 **Example request:** Upload the attached contract to the "Legal" folder in the "Website Redesign" room. Create the folder if it does not exist.
 
-### 3. Request content extraction
-
-To summarize a document, the MCP client needs to access its textual content.
-
-**Example request:** Extract the text content of the uploaded document.
-
-What you should expect:
-- The client reads the document content and prepares it for further processing.
-- If the document contains mostly images or scanned pages, text extraction may be limited.
-
-### 4. Generate a structured summary
+### 3. Generate a structured summary
 
 Request a summary in a clear format so it is easy to reuse (for example, to share with a team).
 
 **Example request:** Summarize the document in bullet points grouped by "Obligations", "Deadlines", and "Risks".
 
 What you should expect:
-- A structured summary based on the extracted content.
-- A clear separation of key points, deadlines, and any risk-related clauses.
+- A structured summary based on the document text.
+- Clear separation of key points, deadlines, and risk-related clauses.
 
 If you need a shorter output, specify it:
 
 **Example request:** Summarize the document in 5 bullet points, focusing only on deadlines and responsibilities.
 
-### 5. Verify the outcome
+:::note
+If the document is a scanned file or contains mostly images, the available text for summarization may be limited.
+:::
+
+### 4. Verify the outcome
 
 Request a short confirmation that the file is stored correctly and the summary is complete.
 
-**Example request:** Confirm the document is stored in "Website Redesign" → "Legal", and provide the file link.
+**Example request:** Confirm the document is stored in the "Legal" folder of the "Website Redesign" room, and provide the file link.
 
 What you should expect in the response:
 - Room and folder name where the file is stored
 - File name
 - (Optional) a direct link to open the file in DocSpace
-- The generated summary (if requested)
-
----
+- The generated summary
 
 ## Result
 
 - The document is uploaded to the correct room folder in DocSpace.
-- The document content is extracted as text.
 - A structured summary is generated in the requested format.
 - The user receives confirmation and can continue the workflow (share, review, or store the output).

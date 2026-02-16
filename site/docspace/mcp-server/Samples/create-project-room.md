@@ -15,14 +15,14 @@ If you are not sure which server option to use, start from the [DocSpace MCP Ser
 
 ### 1. Decide what you want to set up
 
-Before you send the request to your MCP client, prepare these inputs:
+Before you send the request to your MCP client, prepare the following details:
 
 - **Room name** (project name)
-- **Room type** (optional, if you know which one you need)
+- **Room type** (optional)
 - **Folder structure** (a short list is enough)
-- **Team members and roles** (who should edit, who should only view)
+- **Team members and roles** (who can edit and who can view)
 
-This helps avoid follow-up questions and makes the setup faster.
+This makes the request clear and reduces the need for follow-up questions.
 
 ### 2. Send a request to create the room
 
@@ -32,53 +32,51 @@ In your MCP client, send a request that includes at least the room name.
 
 What you should expect:
 - A new room is created in DocSpace.
-- The client confirms the room name and returns basic room information (and often a link, depending on the client UI).
+- The client confirms the room name and returns basic room information (the exact output depends on the client UI).
 
-If you are not sure which room type to use, you can request a default type:
+If you want to specify the room type, include it in the request.
 
-> Create a room called "Website Redesign" using the default project room type.
+**Example request:** Create a "Website Redesign" room using a Collaboration room type.
 
 ### 3. Create the folder structure inside the room
 
 Add folders to organize project documents from the start.
 
-**Example request:** Inside "Website Redesign", create folders: "Brief", "Design", "Legal", and "Deliverables".
+**Example request:** Inside "Website Redesign", create folders "Brief", "Design", "Legal", and "Deliverables".
 
 What you should expect:
 - Each folder is created inside the room.
-- The client confirms the final folder structure.
+- The client confirms the created folder structure.
 
 ### 4. Invite people and assign roles
 
-Invite team members and define access permissions.
+Invite team members and assign access roles.
 
 **Example request:** Invite Anna as Editor and Mark as Viewer.
 
 What you should expect:
 - Users are added to the room.
-- Access roles are applied as requested.
+- The specified roles are applied.
 
-If a name is ambiguous (for example, several users share the same name), уточните the user identity:
+If multiple users match the same name, provide additional details in your request (for example, the full name) so the correct user can be selected.
 
-> Invite Anna Smith (anna.smith@example.com) as Editor.
+**Example request:** Invite Anna Smith as Editor and Mark Johnson as Viewer.
 
 ### 5. Verify the outcome
 
 Request a short summary to confirm everything is set correctly.
 
-**Example request:** Show a summary of what was created: room, folders, and invited users with roles.
+**Example request:** Show a summary of the created room, folders, and invited users with their roles.
 
 What you should expect in the response:
-- Room name (and optionally room type)
+- Room name (and room type, if specified)
 - Folder list
 - Invited users and assigned roles
 - (Optional) a link to open the room in DocSpace
-
----
 
 ## Result
 
 - A new project room is created in DocSpace.
 - The folder structure is ready.
-- The team has correct access permissions.
+- Team members have the correct access permissions.
 - The workspace is ready for collaboration.
