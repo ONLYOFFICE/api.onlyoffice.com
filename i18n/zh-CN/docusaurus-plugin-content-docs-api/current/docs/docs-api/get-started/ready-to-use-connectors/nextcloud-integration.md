@@ -82,6 +82,81 @@ https://<文档服务器地址>/
 
 **在ONLYOFFICE中打开**操作将添加到文件上下文菜单中。您可以将此操作设置为默认操作，这样在点击选定文件类型的文件名时，就会使用该操作。
 
+### ONLYOFFICE Nextcloud连接器：配置参数
+
+以下是ONLYOFFICE Nextcloud集成应用程序的所有可用配置参数。
+根据配置方式，这些参数分为两类：
+
+- 基本设置：通过Nextcloud管理界面或OCC命令配置。
+- 高级设置：**仅通过`config/config.php`**文件配置。
+
+#### 基本配置（UI / OCC）
+
+这些设置可通过Nextcloud管理界面或`occ`命令进行配置。
+
+| 参数                                         | 描述                                                                        |
+|---------------------------------------------|-----------------------------------------------------------------------------|
+| `DocumentServerUrl`                         | ONLYOFFICE文档服务器的公共地址（通过UI或`occ`设置）。                           |
+| `Open in same tab`                          | 定义文档是否在同一浏览器标签页中打开。                                          |
+| `Enable JWT`                                | 启用JWT验证以实现安全通信。                                                    |
+| `Secret key`                                | 用于签名请求的JWT密钥（config中`jwt_secret`的替代方案）。                        |
+| `Advanced server settings`                  | 启用内部服务器URL的配置。                                                      |
+| `DocumentServerInternalUrl`                 | ONLYOFFICE文档的内部地址（启用高级设置时使用）。                                 |
+| `StorageUrl`                                | Nextcloud的内部地址（启用高级设置时使用）。                                     |
+| `def_formats`                               | 定义默认文件格式。                                                            |
+| `editable`                                  | 启用对某些文件类型的编辑。                                                     |
+| `review`                                    | 启用仅审阅模式。                                                              |
+| `forcesave`                                 | 启用强制保存文档到存储。                                                       |
+| `customizationChat`                         | 启用或禁用聊天面板。                                                          |
+| `customizationFeedback`                     | 启用反馈和支持链接。                                                          |
+| `customizationHelp`                         | 启用帮助链接。                                                                |
+| `customizationToolbarNoTabs`                | 显示无标签页的工具栏。                                                         |
+| `customizationCompactHeader`                | 启用紧凑标题模式。                                                            |
+| `customizationToolbarHideSettings`          | 隐藏编辑器中的"设置"菜单。                                                     |
+| `customizationFeedbackSuggestion`           | 允许用户提交建议。                                                            |
+| `customizationFeedbackBug`                  | 允许用户报告错误。                                                            |
+| `customizationAutosave`                     | 启用自动保存模式。                                                            |
+| `SameTab`                                   | 在同一标签页中打开文件（已弃用的UI设置）。                                       |
+| `preview`                                   | 启用文档预览生成。                                                            |
+| `about`                                     | 显示"关于"部分。                                                              |
+
+> 您也可以使用`occ`命令行界面来获取/设置这些参数：
+> ```sh
+> php occ config:app:set onlyoffice customizationChat --value=false
+> ```
+
+#### 高级配置（仅限`config/config.php`）
+
+您可以在`config/config.php`文件中定义以下参数来自定义ONLYOFFICE连接器的行为：
+
+| 参数                        | 描述                                                                                            |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| `DocumentServerUrl`         | ONLYOFFICE文档服务器的公共地址。                                                                  |
+| `DocumentServerInternalUrl`| ONLYOFFICE文档用于服务器到服务器通信的内部地址。                                                    |
+| `StorageUrl`               | ONLYOFFICE文档使用的Nextcloud服务器内部地址。                                                      |
+| `jwt_secret`               | 用于生成和验证JWT令牌的密钥。                                                                      |
+| `jwt_secret_path`          | 包含JWT密钥的文件路径。                                                                           |
+| `jwt_header`               | 用于发送JWT的HTTP头名称。默认为`Authorization`。                                                   |
+| `jwt_in_body`              | 如果为`true`，JWT令牌将在请求体中发送，而不是在头中。                                                |
+| `jwt_disable`              | 如果为`true`，禁用JWT签名验证。                                                                    |
+| `jwt_leeway`               | 验证JWT令牌时用于处理时钟偏差的容差时间（秒）。                                                      |
+| `jwt_expiration`           | JWT令牌过期时间（秒）。                                                                           |
+| `verify_peer_off`          | 如果为`true`，禁用连接的SSL对等验证。                                                              |
+| `limit_thumb_size`         | 生成缩略图的最大文件大小（字节）。                                                                  |
+| `disable_download`         | 如果为`true`，禁用文件下载功能。                                                                   |
+| `editors_check_interval`   | 检查ONLYOFFICE文档可用性的时间间隔（分钟）。默认为`1440`。                                           |
+
+`config/config.php`配置示例：
+
+```php
+<?php
+'onlyoffice' => array (
+    'jwt_secret' => 'your_secret_key',
+    'jwt_header' => 'Authorization',
+)
+?>
+```
+
 ## 检查连接
 
 您可以使用以下occ命令检查与ONLYOFFICE文档的连接：

@@ -13,21 +13,60 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="R7gvhLvGL44"/>
 ```
 
-There are three ways to add plugins: through the `sdkjs-plugins` folder, through the `config.json` file or through the plugin manager.
+There are three ways to add plugins: through the plugin manager, through the `sdkjs-plugins` folder, or through the `config.json` file.
+
+## Adding plugins through the plugin manager for all users
+
+Starting from version 7.4, the **pluginsmanager** utility can be used to manage the plugins in ONLYOFFICE Docs on-premises. Commands are available for installing, removing, restoring, updating and more. For example:
+
+<Tabs>
+  <TabItem value="docker" label="Docker, DEB, and RPM">
+      ``` bash
+      cd /usr/bin
+      ./documentserver-pluginsmanager.sh --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --install="zotero"
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
+      documentserver-pluginsmanager.bat --directory="%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins" --install="zotero"
+      ```
+  </TabItem>
+</Tabs>
+
+:::info
+The `--directory` parameter specifies the plugin folder location. The paths in the examples are default values, please modify them if necessary.
+:::
+
+A full list of server commands can be found [here](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands).
+
+## Adding plugins through the plugin manager for a single user
+
+Starting from version 7.2, you can download ready-to-use plugins from **ONLYOFFICE Plugin Marketplace**.
+
+Follow the steps below to add the plugins to the editor using plugin manager:
+
+1. Open the **Plugins** tab.
+2. Click **Plugin Manager**.
+3. Find the plugin you need and click **Install**.
+
+![Plugins manager](/assets/images/plugins/plugin-manager.png#gh-light-mode-only)![Plugins manager](/assets/images/plugins/plugin-manager.dark.png#gh-dark-mode-only)
+
+The plugin will be added to the opened editors and all the editors you will open afterwards and displayed within the **Plugins** tab.
 
 ## Adding plugins through the sdkjs-plugins folder
 
 Put the folder with the plugin code to the **ONLYOFFICE Docs** folder. The path to the folder depends on the operating system you use:
 
 <Tabs>
-  <TabItem value="win" label="Windows">
-      ``` bash
-      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
-      ```
-  </TabItem>
   <TabItem value="lin" label="Linux">
       ``` bash
       /var/www/onlyoffice/documentserver/sdkjs-plugins/
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
       ```
   </TabItem>
 </Tabs>
@@ -82,43 +121,6 @@ add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 ```
 
-## Adding plugins through the plugin manager for a single user
-
-Starting from version 7.2, you can download ready-to-use plugins from **ONLYOFFICE Plugin Marketplace**.
-
-Follow the steps below to add the plugins to the editor using plugin manager:
-
-1. Open the **Plugins** tab.
-2. Click **Plugin Manager**.
-3. Find the plugin you need and click **Install**.
-
-![Plugins manager](/assets/images/plugins/plugin-manager.png#gh-light-mode-only)![Plugins manager](/assets/images/plugins/plugin-manager.dark.png#gh-dark-mode-only)
-
-The plugin will be added to the opened editors and all the editors you will open afterwards and displayed within the **Plugins** tab.
-
-## Adding plugins through the plugin manager for all users 
-
-Starting from version 7.4, the **pluginsmanager** utility can be used to manage the plugins in ONLYOFFICE Docs on-premises. Commands are available for installing, removing, restoring, updating and more. For example:
-
-<Tabs>
-  <TabItem value="docker" label="Docker, DEB, and RPM">
-      ``` bash
-      cd /var/www/onlyoffice/documentserver/server/tools/
-      ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --install="zotero"
-      ```
-  </TabItem>
-  <TabItem value="win" label="Windows">
-      ``` bash
-      cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
-      documentserver-pluginsmanager.bat --install="zotero"
-      ```
-  </TabItem>
-</Tabs>
-
-The paths in the examples are default values, please modify them if necessary.
-
-A full list of server commands can be found [here](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands).
-
 ## Removing plugins from ONLYOFFICE Docs on-premises
 
 You can uninstall plugins in four ways:
@@ -128,14 +130,14 @@ You can uninstall plugins in four ways:
 <Tabs>
   <TabItem value="docker" label="Docker, DEB, and RPM">
       ``` bash
-      cd /var/www/onlyoffice/documentserver/server/tools/
-      ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --remove="zotero"
+      cd /usr/bin
+      ./documentserver-pluginsmanager.sh --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --remove="zotero"
       ```
   </TabItem>
   <TabItem value="win" label="Windows">
       ``` bash
       cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
-      documentserver-pluginsmanager.bat --remove="zotero"
+      documentserver-pluginsmanager.bat --directory="%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins" --remove="zotero"
       ```
   </TabItem>
 </Tabs>
@@ -147,14 +149,14 @@ The paths in the examples are default ones, please change them if necessary.
 The path to the folder depends on the operating system you use:
 
 <Tabs>
-  <TabItem value="win" label="Windows">
-      ``` bash
-      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
-      ```
-  </TabItem>
   <TabItem value="lin" label="Linux">
       ``` bash
       /var/www/onlyoffice/documentserver/sdkjs-plugins/
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
       ```
   </TabItem>
 </Tabs>

@@ -15,6 +15,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [onClickAnnotation](../interacting-with-editors/text-document-api/Events/onClickAnnotation.md) event for Text document Api.
 - Added the [onFocusAnnotation](../interacting-with-editors/text-document-api/Events/onFocusAnnotation.md) event for Text document Api.
 - Added the [onParagraphText](../interacting-with-editors/text-document-api/Events/onParagraphText.md) event for Text document Api.
+- Updated [Adding plugins through the plugin manager for all users](../tutorials/installing/onlyoffice-docs-on-premises.md) instruction according Help center info.
 
 ## Version 9.1
 
@@ -23,7 +24,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.0
 
-- Added the ability to access [cell address information](../macros/adding-custom-functions.md#accessing-cell-addresses-since-v904) inside custom functions.
+- Added the ability to access [cell address information](../macros/adding-custom-functions.md#accessing-cell-addresses) inside custom functions.
 - Added the ability to add [asynchronous custom functions](../macros/adding-custom-functions.md#asynchronous-functions) to the spreadsheets using the **Macros** plugin.
 - Added the ability to [automatically convert](../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin) VBA code into ONLYOFFICE macros using AI plugin.
 - Added the ability to [automatically generate](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE macros using AI plugin.

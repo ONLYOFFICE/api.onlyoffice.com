@@ -2,6 +2,8 @@
 
 This example opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) using the [file selector](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initfileselector).
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/open-file-in-onlyoffice-editors.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
