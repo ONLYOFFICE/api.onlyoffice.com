@@ -22,11 +22,11 @@ The DocSpace MCP Server connects AI tools directly to ONLYOFFICE DocSpace. This 
 - **Content discovery**: Retrieve "My documents" or "Rooms" folders, get folder contents, download files as text, and monitor ongoing file operations.
 - **People Directory**: List all people in the portal to streamline invitations and access management.
 
-## Getting started with the mcp server
+## Getting started with the MCP server
 
 Before accessing the DocSpace MCP server, ensure you have the following:
 
-- A DocSpace instance. Access one by [signing up to DocSpace](https://www.onlyoffice.com/docspace-registration)
+- A DocSpace instance. Access one by [signing up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver)
 - Your choice MCP client
 
 Follow these steps to [connect and perform your first DocSpace MCP server-client interaction](quickstart.md). 

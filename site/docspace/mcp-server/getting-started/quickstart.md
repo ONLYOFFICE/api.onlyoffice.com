@@ -6,7 +6,7 @@ title: Getting started with the DocSpace MCP server
 
 import ThemedImage from '@theme/ThemedImage';
 
-This guide will demonstrate how the [DocSpace MCP server](mcp-server.md) works with mcp clients like Claude desktop, and how to establish this connection to enable seamless exchange of information between ONLYOFFICE DocSpace and AI models.
+This guide will demonstrate how the [DocSpace MCP server](index.md) works with mcp clients like Claude desktop, and how to establish this connection to enable seamless exchange of information between ONLYOFFICE DocSpace and AI models.
 
 This guide will help you achieve the following:
 
@@ -16,7 +16,7 @@ This guide will help you achieve the following:
 
 ### Step 1: Connect to MCP client 
 
-[MCP clients](clients.md) like ChatGPT, Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and [connects to a local mcp server](mcp-server.md#installing-the-docspace-mcp-server). You can also [access via a remote server](mcp-server.md#installing-the-docspace-mcp-server). 
+[MCP clients](clients.md) like ChatGPT, Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and [connects to a local mcp server](installation.md#install-with-docker-image). You can also [access via a remote server](installation.md#public-instance). 
 
 :::note
 Ensure Docker is installed on your system.
@@ -137,5 +137,5 @@ Now we have our connection, let us interact with DocSpace via Claude:
 
 ## Next steps
 
-- [Discover other features of our DocSpace MCP server](overview.md)
+- [Discover other ways to connect to DocSpace MCP server](installation.md)
 - [Learn how to connect other mcp clients to our DocSpace MCP server](clients.md)

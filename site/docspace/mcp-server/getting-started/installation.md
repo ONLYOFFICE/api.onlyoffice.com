@@ -16,7 +16,7 @@ This page provides a step by step approach to installing the MCP server using th
 
 ## Before you start
 
-- Ensure you have a DocSpace Instance. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration) to access your instance and get an API key
+- Ensure you have a DocSpace Instance. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to access your instance and get an API key
 - Choose your desired client. You can build a custom client or [choose from the different MCP clients](clients.md) available based on your integration, features, user interface, or security needs. 
 
 <Tabs>
@@ -56,6 +56,16 @@ Insert the following block into the `mcpServers` section of your `.json` configu
     }
 }
 ```
+
+**Configuration options**
+
+| Option | Description |
+|--------|-------------|
+| `docker` | The executable to run |
+| `run` | Command to create and start a container |
+| `rmv` | Automatically remove the container when it exits|
+| `env` | Flag to pass environment variables 
+| `onlyoffice/docspace-mcp` | Docker image name to run|
 
 ## Install with Docker MCP Server
 
