@@ -2,6 +2,15 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.1
+
+- The document is opened in viewer mode with an error message if it cannot be [locked](../using-wopi/key-concepts.md#lock) in WOPI.
+- Added the [UserCanOnlyComment](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanOnlyComment) property to the *CheckFileInfo* WOPI operation.
+- The [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter is now available for the mobile editors.
+- Added opening for [hml](../usage-api/config/document/document.md#filetype) format.
+- Added conversion from [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format to *txt*.
+- Changed the [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) size requirement to 300x20.
+
 ## Version 9.0
 
 - Added the [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) parameter.
@@ -134,8 +143,8 @@ The list of changes of ONLYOFFICE Docs API.
 - The parameter list in the initialization config [signature](../additional-api/signature/browser.md#opening-file) has become strictly regulated.
 - The [editorConfig.customization.spellcheck](../usage-api/config/editor/customization/customization-standard-branding.md#spellcheck) field is deprecated, please use the [editorConfig.customization.features.spellcheck](../usage-api/config/editor/customization/customization-standard-branding.md#features) field instead.
 - Added the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter section.
-- Added the [documentLayout](../additional-api/conversion-api/request.md#documentlayout) parameter to the conversion request.
-- Added the [documentRenderer](../additional-api/conversion-api/request.md#documentrenderer) parameter to the conversion request.
+- Added the [documentLayout](../additional-api/conversion-api/request.md#documentLayout) parameter to the conversion request.
+- Added the [documentRenderer](../additional-api/conversion-api/request.md#documentRenderer) parameter to the conversion request.
 - Added conversion from [pdf/xps/oxps](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) formats to *docx*.
 - Added the [document.permissions.userInfoGroups](../usage-api/config/document/permissions.md#userinfogroups) parameter.
 - Added conversion from [djvu](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format to *pdf*.
@@ -155,7 +164,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *ooxml* and *odf* values to the [outputtype](../additional-api/conversion-api/request.md#outputtype) parameter of the conversion request.
 - Added the *fileType* and *previous.fileType* parameters to the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
 - Added the [filetype](../usage-api/callback-handler.md#filetype) parameter to the *Callback handler*.
-- Added the [fileType](../additional-api/conversion-api/response.md#filetype) field to the conversion response.
+- Added the [fileType](../additional-api/conversion-api/response.md#fileType) field to the conversion response.
 - Added conversion to [docm, dotm, xlsm, xltm, pptm, potm](../additional-api/conversion-api/conversion-tables.md) formats.
 - The [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) parameters are deprecated, please use the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
@@ -228,7 +237,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onRequestSharingSettings](../usage-api/config/events.md#onrequestsharingsettings) event.
 - Added the [editorConfig.customization.unit](../usage-api/config/editor/customization/customization-standard-branding.md#unit) field.
 - Added the [region](../additional-api/conversion-api/request.md#region) field.
-- Added the [spreadsheetLayout](../additional-api/conversion-api/request.md#spreadsheetlayout) field.
+- Added the [spreadsheetLayout](../additional-api/conversion-api/request.md#spreadsheetLayout) field.
 - Added [input error](../additional-api/conversion-api/error-codes.md) for conversion.
 - The [events.onRequestSendNotify](../usage-api/config/events.md#onrequestsendnotify) event and the [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event can be set independently.
 - Added the [editorConfig.customization.mentionShare](../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) field.
@@ -272,7 +281,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [document.permissions.fillForms](../usage-api/config/document/permissions.md#fillforms) field.
 - Added the [editorConfig.customization.help](../usage-api/config/editor/customization/customization-standard-branding.md#help) field.
 - Added the possibility to make the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) not clickable.
-- Added for the [aspect](../additional-api/conversion-api/request.md#thumbnailaspect) field value *2* for the conversion.
+- Added for the [aspect](../additional-api/conversion-api/request.md#thumbnail.aspect) field value *2* for the conversion.
 
 ## Version 5.1
 
@@ -325,7 +334,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.autosave](../usage-api/config/editor/customization/customization-standard-branding.md#autosave) field.
 - The [changeshistory](../usage-api/callback-handler.md#changeshistory) field is removed, please use the [history](../usage-api/callback-handler.md#history) field instead.
 - Changed the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
-- Added the possibility to convert files to [thumbnail](../additional-api/conversion-api/request.md#sample-of-json-object-sent-to-document-conversion-service-used-to-generate-png-thumbnail-of-file-in-docx-format) in the [document conversion service](../additional-api/conversion-api/request.md).
+- Added the possibility to convert files to [thumbnail](../additional-api/conversion-api/request.md#generating-png-thumbnail-from-docx) in the [document conversion service](../additional-api/conversion-api/request.md).
 - The POST requests are now used for the interaction with the [document command service](../additional-api/command-service/command-service.md) and the [document conversion service](../additional-api/conversion-api/request.md).
 - Added the [version](../additional-api/command-service/version.md) command.
 - Added the [signature](../additional-api/signature/signature.md) for the editor opening and for the incoming and outgoing requests.

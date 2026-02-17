@@ -31,6 +31,6 @@ This example shows how to repeat text a given number of times. Use this function
 // Use a function to repeat a text n times.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.REPT("Text", 3));
 ```

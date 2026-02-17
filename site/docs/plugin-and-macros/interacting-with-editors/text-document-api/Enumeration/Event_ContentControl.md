@@ -1,6 +1,6 @@
 # Event_ContentControl
 
-Content control object.
+The content control object.
 
 ## Properties
 

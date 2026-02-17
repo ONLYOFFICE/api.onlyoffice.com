@@ -23,19 +23,26 @@ jobs:
         with:
           path: api.onlyoffice.com
     
-      - name: Check if branch exists and set checkout branch
+      - name: Check if branch exists and set checkout branch for examples
         run: |
           BRANCH_EXISTS=$(git ls-remote --heads https://github.com/ONLYOFFICE/office-js-api ${{ github.ref_name }} | wc -l)
-          BRANCH=$([ "$BRANCH_EXISTS" == "1" ] && echo "${{ github.ref_name }}" || echo "")
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          echo "Using branch: ${BRANCH:-default branch}"
+          BRANCH_EXAMPLES=$([ "$BRANCH_EXISTS" == "1" ] && echo "${{ github.ref_name }}" || echo "")
+          echo "BRANCH_EXAMPLES=$BRANCH_EXAMPLES" >> $GITHUB_ENV
+          echo "Using branch: ${BRANCH_EXAMPLES:-default branch}"
+      
+      - name: Check if branch exists and set checkout branch for sdk
+        run: |
+          BRANCH_EXISTS=$(git ls-remote --heads https://github.com/ONLYOFFICE/build_tools ${{ github.ref_name }} | wc -l)
+          BRANCH_SDK=$([ "$BRANCH_EXISTS" == "1" ] && echo "${{ github.ref_name }}" || echo "")
+          echo "BRANCH_SDK=$BRANCH_SDK" >> $GITHUB_ENV
+          echo "Using branch: ${BRANCH_SDK:-default branch}"
     
       - name: Checkout office-js-api repository
         uses: actions/checkout@v4
         with:
           repository: ONLYOFFICE/office-js-api
           token: ${{ secrets.READ_PAT }}
-          ref: ${{ env.BRANCH }}
+          ref: ${{ env.BRANCH_EXAMPLES }}
           path: office-js-api
       
       - name: Checkout build_tools repository
@@ -43,8 +50,7 @@ jobs:
         with:
           repository: ONLYOFFICE/build_tools
           token: ${{ secrets.READ_PAT }}
-#         ref: ${{ env.BRANCH }}
-          ref: release/v9.0.0
+          ref: ${{ env.BRANCH_SDK }}
           path: build_tools
     
       - name: Checkout sdkjs repository
@@ -52,7 +58,7 @@ jobs:
         with:
           repository: ONLYOFFICE/sdkjs
           token: ${{ secrets.READ_PAT }}
-          ref: ${{ env.BRANCH }}
+          ref: ${{ env.BRANCH_SDK }}
           path: sdkjs
 
       - name: Checkout sdkjs-forms repository
@@ -60,7 +66,7 @@ jobs:
         with:
           repository: ONLYOFFICE/sdkjs-forms
           token: ${{ secrets.READ_PAT }}
-          ref: ${{ env.BRANCH }}
+          ref: ${{ env.BRANCH_SDK }}
           path: sdkjs-forms
       
       - name: Set up Git
@@ -72,9 +78,9 @@ jobs:
         run: |
           cd build_tools/scripts/sdkjs_common/jsdoc
           npm install
-          python generate_docs_md_site.py
-          python generate_docs_plugins_md_site.py
-          python generate_docs_plugins_events_md_site.py
+          python office-api/generate_docs_md.py
+          python plugins/generate_docs_methods_md.py
+          python plugins/generate_docs_events_md.py
           cd ../../../../api.onlyoffice.com
 
           if ! git diff --exit-code; then

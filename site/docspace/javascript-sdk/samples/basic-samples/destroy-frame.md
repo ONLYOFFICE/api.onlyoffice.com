@@ -2,6 +2,8 @@
 
 This example demonstrates how to destroy (remove) the embedded DocSpace iframe using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/destroy-frame.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -121,7 +123,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [destroyFrame()](/docspace/javascript-sdk/usage-sdk/methods.md#destroyframe)  method to remove the DocSpace instance from the DOM.
+Use the [destroyFrame()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#destroyframe)  method to remove the DocSpace instance from the DOM.
 
 ``` ts
 function onAppReady() {

@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Odoo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="wkLTlJpmLQg"/>
+```
+
 This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit and collaborate on office documents within [Odoo](https://www.odoo.com/) Documents using ONLYOFFICE Docs.
 
 ## Features
@@ -25,7 +31,7 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
 **Option 1**. Installation from the administration panel
 
-1. [Log into](https://www.odoo.com/web/login) your exisiting Odoo account or [sign up](https://www.odoo.com/web/signup) for a new account.
+1. [Log into](https://www.odoo.com/web/login) your existing Odoo account or [sign up](https://www.odoo.com/web/signup) for a new account.
 2. Go to the Odoo administration panel and click **Apps** on the top menu bar.
 3. Search for ONLYOFFICE in the **Apps** catalog.
 4. Click the **Install** button.
@@ -65,12 +71,31 @@ To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sideba
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Odoo server. The Odoo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Odoo server. The Odoo server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
+:::caution
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Odoo configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+:::
 
 ## How it works
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
 Download the ONLYOFFICE app for Odoo [here](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop).
+
+## Working with forms
+
+You can create, upload, and use fillable form templates within the **ONLYOFFICE Templates** module in Odoo. The module allows you to generate documents with fields that can be automatically filled with data from Odoo records.
+
+**Requirements**
+- An instance of **ONLYOFFICE Docs** with support for fillable forms.
+- A valid **ONLYOFFICE license** with the **Automation API** option enabled.
+- The **ONLYOFFICE Templates** module in Odoo (automatically installs the main ONLYOFFICE module).
+  
+:::info
+For Odoo integration specifics, see the [ONLYOFFICE Odoo connector guide](https://helpcenter.onlyoffice.com/integration/odoo.aspx).
+:::
+
+:::note
+If you are planning to deploy fillable form workflows in Odoo, make sure that your edition of ONLYOFFICE Docs supports PDF forms. For exact minimal supported versions in your environment (Community, Enterprise, Cloud), please check the [ONLYOFFICE release notes](https://github.com/ONLYOFFICE/DocumentServer/releases) or contact the support team.
+:::

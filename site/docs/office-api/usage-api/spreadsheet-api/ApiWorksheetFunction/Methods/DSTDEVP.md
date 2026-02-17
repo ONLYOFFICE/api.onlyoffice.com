@@ -32,7 +32,7 @@ This example shows how to calculate the standard deviation based on the entire p
 // Use function to estimate the standard deviation based on the entire population from a range.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Month");
 worksheet.GetRange("C1").SetValue("Sales");

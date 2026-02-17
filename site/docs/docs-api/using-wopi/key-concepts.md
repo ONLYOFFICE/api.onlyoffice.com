@@ -50,6 +50,8 @@ Therefore, WOPI locks must:
 - expire after 30 minutes unless refreshed ([RefreshLock](./wopi-rest-api/refreshlock.md));
 - not be associated with a particular user.
 
+Starting from version 9.1, if the document is already opened in another editor and cannot be locked, it opens in viewer mode with an error message.
+
 All WOPI operations that modify files, such as [PutFile](./wopi-rest-api/putfile.md), include a lock ID as a parameter in their request. Usually the expected lock ID is passed in the `X-WOPI-Lock` request header.
 
 WOPI requires that hosts compare the lock ID passed in a WOPI request with the lock ID currently on a file and respond appropriately when the lock IDs don't match. In particular, WOPI clients expect that when a lock ID does not match the current lock, the host sends back the current lock ID in the `X-WOPI-Lock` response header. This behavior is critical, because WOPI clients use the current lock ID in order to determine what further WOPI calls to make to the host.

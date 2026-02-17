@@ -1,10 +1,14 @@
+---
+hide_table_of_contents: true
+---
+
 # Setting default values
 
 Automatically populate form fields based on user authentication data to reduce manual input and speed up form completion in personal dashboards, internal portals, and surveys:
 
 - retrieve user data from authentication system ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md));
-- populate form fields programmatically ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md), [ApiTextForm/SetText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md), [ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChecked.md));
-- handle different field types with appropriate default values ([ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md), [ApiComboBoxForm/SetText](/docs/office-api/usage-api/text-document-api/ApiComboBoxForm/Methods/SetText.md)).
+- populate form fields programmatically ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiTextForm/SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md), [ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetChecked.md));
+- handle different field types with appropriate default values ([ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [ApiComboBoxForm/SetText](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetText.md)).
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

@@ -2,6 +2,8 @@
 
 This example demonstrates how to change the file list display mode in DocSpace using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/set-list-view.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -120,7 +122,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [setListView()](/docspace/javascript-sdk/usage-sdk/methods.md#setlistview) method to toggle the document list layout. The parameter `1` sets the list view mode.
+Use the [setListView()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#setlistview) method to toggle the document list layout. The parameter `1` sets the list view mode.
 
 ``` ts
 function onAppReady() {

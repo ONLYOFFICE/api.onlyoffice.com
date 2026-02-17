@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Redmine integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="_1Q86nRnumo"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-redmine) enables users to edit attachments from [Redmine](https://www.redmine.org/) using ONLYOFFICE Docs.
 
 The plugin is available in the official [Redmine Plugins Directory](https://www.redmine.org/plugins/onlyoffice_redmine).

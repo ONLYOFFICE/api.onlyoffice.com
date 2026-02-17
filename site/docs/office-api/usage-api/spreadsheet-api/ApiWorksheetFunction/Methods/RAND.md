@@ -28,6 +28,6 @@ This example shows how to return a random number greater than or equal to 0 and 
 // Use a function to return a random value more or equal to zero and less than one.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.RAND());
 ```

@@ -92,8 +92,8 @@ ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-v
 
    将以下行替换为您自己的数据：
 
-   - `http://documentserver/` - 替换为您的服务器的 URL；
-   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；
+   - `http://documentserver/` - 替换为您的服务器的 URL；您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
    - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
 5. 使用 Vue 开发服务器测试应用程序：
@@ -110,19 +110,19 @@ ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-v
 
 1. 将`DocEditor.instances` 参数添加到`window` 对象中，并通过编辑器 ID 从该对象中获取编辑器对象：
 
-   ```vue
+   ```js
    const documentEditor = window.DocEditor.instances["docEditor"]
    ```
 
 2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md):
 
-   ```vue
+   ```js
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
    ```
 
 示例:
 
-```vue
+```js
 onDocumentReady() {
   const documentEditor = window.DocEditor.instances["docEditor"]
 
@@ -232,7 +232,7 @@ import APITable from '@site/src/components/APITable/APITable';
    }
    ```
 
-   其中 **documentserver** 是安装了 **ONLYOFFICE 文档** 的服务器的名称。
+   其中 **documentserver** 是安装了 **ONLYOFFICE 文档** 的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 2. 使用以下命令生成 Storybook：
 

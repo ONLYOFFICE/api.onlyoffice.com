@@ -1,5 +1,193 @@
 # Change log
 
+## 7.6.4
+
+### Fixes
+
+* Fixed `Copy page` and `View as markdown` actions of the AI multi button
+
+## 7.6.3
+
+### New features
+
+* Added LLM multi button on all pages
+* Added `Context` option to `Ask AI`
+
+### Fixes
+
+* Update Docusaurus OpenAPI plugin to version 4.7.1
+* Removed unused scripts
+
+#### Docs API
+
+* Fixed typos and formating on some pages
+
+#### Docspace
+
+* Deleted generation of the `for-hosting-providers` section
+
+## 7.6.2
+
+* Added button `Ask AI` to chat with LLM
+* Theme colors for the code block changed to similar VSCode
+
+### New features
+
+#### Docs API
+
+* Added `Recording macros` page
+* Added `AI Agent` and `AI Plugin` pages for Chinese
+* Updated `Playground` section
+* Added `Builder` option to playground script target
+
+### Fixes
+
+#### Docspace
+
+* Changed `MCP Server` section
+* Hidden `For hosting providers` section
+
+#### Docs API
+
+* Fixed Getting started page
+* Fixed styles of the right panel of OpenAI
+* Fixed problems in the code examples for plugins due to the lack of required parameters
+* Fixed style for plugins configuration description pages
+
+## 7.6.1
+
+### New features
+
+* Updated the main page
+
+### Fixes
+
+#### Docs API
+
+* Edited the document.info.favorite parameter description
+
+## 7.6.0
+
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.6
+
+#### Docs
+
+* Translated Document Builder section into Chinese
+
+## 7.5.0
+
+### New features
+
+#### Docs
+
+* Updated Office API documentation for version 9.2.0
+
+#### Plugins and macros
+
+* Added the Debugging subsection to the Tutorials section
+* Updated the plugin Icons page with additional info
+* Added the How to customize themes page
+* Added the Troubleshooting section to the Localization page
+
+#### Desktop
+
+* Translated Desktop Editors section into Chinese
+
+### Fixes
+
+#### Plugins and macros
+
+* Added missing links to the samples
+
+## 7.4.0
+
+### New features
+
+* Updated Docusaurus version 3.9.2
+* Added system theme mode
+* Updated documentation start page
+
+### Fixes
+
+#### Docs
+
+* Updated documentation in Chinese
+
+## 7.3.0
+
+### New features
+
+#### Docspace
+
+* Updated JavaScript SDK section
+
+## 7.2.0
+
+### New features
+
+#### Docspace
+
+* Added new API Backend samples
+* Added error handling in API Backend samples
+* Added js language to API Backend samples
+* Added JavaScript SDK react samples
+
+#### Docs API
+
+* Added YouTube videos to ready-to-use connectors
+* Added additional examples for documentserver and api instructions
+
+### Fixes
+
+* Restructured parameters description to tables
+
+#### Docs
+
+* Fixed Office API documentation
+
+#### Docs API
+
+* Fixed note style
+* Fixed code samples
+* Fixed sorting for Docs API integration samples
+
+## 7.1.0
+
+### New features
+
+#### Docspace
+
+* Updated DocSpace version 3.5
+* Updated documentation for Plugins SDK 2.0.0
+
+#### Docs
+
+* Updated Office API documentation for version 9.1.0
+
+#### Docs API
+
+* The editorConfig.customization.uitheme parameter is now available for the mobile editors
+* Added the UserCanOnlyComment property to the CheckFileInfo WOPI operation
+* Changed the required size of the logo customization parameter
+* Added opening for hml format
+* Added conversion from pptx format to txt
+
+## 7.0.0
+
+### New features
+
+* Updated Docusaurus version 3.9.1
+* Added AskAI feature
+
+#### Plugins and macros
+
+* Added samples for custom AI functions
+* Updated documentation in Chinese in the Interacting with editors section
+
 ## 6.6.0
 
 ### New features
@@ -164,7 +352,7 @@
 * Added the diagram document type to the documentType parameter
 
 #### Plugins and macros
- 
+
 * Added a link to the plugins storybook
 * Updated the Tutorials/Samples page of the Plugins and macros
 * Updated the Get started structure of the Plugins and macros
@@ -327,7 +515,7 @@
 
 * Updated Document Builder section
 * Added Playground page for testing the capabilities of the Docs APIs
- 
+
 #### Docspace
 
 * Updated Docspace openAPI docs
@@ -420,7 +608,7 @@
 * Fixed loading for ONLYOFFICE Docs editor tab
 * Fixed anchors
 * Fixed Docspace and Workspace sidebars
- 
+
 #### Docs API
 
 * Updated conversion tables
@@ -436,7 +624,7 @@
 * Added the editorConfig.customization.showVerticalScroll parameter
 * Added logos for connectors
 * Updated documentation in Chinese
-* Updated docs config page 
+* Updated docs config page
 
 #### Docspace
 
@@ -447,7 +635,7 @@
 * Fixed loading for ONLYOFFICE Docs editor tab
 * Fixed ONLYOFFICE Docs editor tab in the dark mode
 * Fixed anchors
- 
+
 ## 4.2.0
 
 ### New features

@@ -2,6 +2,8 @@
 
 This example demonstrates how to retrieve the current selection in the DocSpace interface using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-selection.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -120,7 +122,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getSelection()](/docspace/javascript-sdk/usage-sdk/methods.md#getselection) method to fetch selected files or folders currently active in the DocSpace UI. The selection will be printed to the console.
+Use the [getSelection()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getselection) method to fetch selected files or folders currently active in the DocSpace UI. The selection will be printed to the console.
 
 ``` ts
 function onAppReady() {

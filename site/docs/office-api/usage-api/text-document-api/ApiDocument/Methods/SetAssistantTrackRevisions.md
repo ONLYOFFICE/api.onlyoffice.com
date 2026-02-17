@@ -1,6 +1,6 @@
 # SetAssistantTrackRevisions
 
-Special method for AI track revisions.
+Enables or disables AI-assisted change tracking in the document.
 
 ## Syntax
 
@@ -14,8 +14,8 @@ expression.SetAssistantTrackRevisions(isTrack, assistantName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isTrack | Required | boolean |  | Specifies if the change tracking mode is set or not. |
-| assistantName | Required | string |  | Specifies if the change tracking mode is set or not. |
+| isTrack | Required | boolean |  | Specifies whether the change tracking mode is set or not. |
+| assistantName | Required | string |  | The AI assistant name. |
 
 ## Returns
 

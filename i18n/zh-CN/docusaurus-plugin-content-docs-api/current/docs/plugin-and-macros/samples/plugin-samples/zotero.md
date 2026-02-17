@@ -11,14 +11,14 @@
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
-<YoutubeVideo videoId="k1vyDlQbdEU" start={154} />
+<YoutubeVideo videoId="y6RKGiBHiG8" />
 ```
 
 ## 安装
 
 默认包含于 ONLYOFFICE 企业版、社区版（文档 + 工作区）及 ONLYOFFICE 云端。
 
-您也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/en/app-directory/zotero)下载该插件，并根据[桌面](../../tutorials/installing/onlyoffice-desktop-editors.md)安装说明进行安装。
+您也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en/zotero)下载该插件，并根据[桌面](../../tutorials/installing/onlyoffice-desktop-editors.md)安装说明进行安装。
 
 ## 将 ONLYOFFICE 连接到 Zotero 账户
 

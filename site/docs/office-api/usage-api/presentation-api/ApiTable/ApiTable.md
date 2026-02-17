@@ -12,6 +12,7 @@ Represents the ApiTable class.
 | [AddRow](./Methods/AddRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | Adds a new row to the current table. |
 | [Copy](./Methods/Copy.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a copy of the current table. |
 | [GetClassType](./Methods/GetClassType.md) | "table" | Returns the type of the ApiTable object. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current table. |
 | [GetRow](./Methods/GetRow.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) | Returns a row by its index. |
 | [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null". **Warning**: The number of cells in any row and the number of rows in the current table may be changed. |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | Removes a table column with the specified cell. |

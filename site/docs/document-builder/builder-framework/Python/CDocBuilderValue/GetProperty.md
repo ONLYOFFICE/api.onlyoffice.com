@@ -25,7 +25,7 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument")
+document = api.GetDocument()
 docPr = document.GetProperty("color")
 ```
 
@@ -46,7 +46,7 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
    context = builder.GetContext()
    globalObj = context.GetGlobal()
    api = globalObj["Api"]
-   document = api.Call("GetDocument")
+   document = api.GetDocument()
    docPr = document.Get("color")
    ```
 
@@ -65,6 +65,6 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
    context = builder.GetContext()
    globalObj = context.GetGlobal()
    api = globalObj["Api"]
-   document = api.Call("GetDocument")
+   document = api.GetDocument()
    docPr = document["color"]
    ```

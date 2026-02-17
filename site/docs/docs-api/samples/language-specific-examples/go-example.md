@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -7
 ---
 
 # Go example
@@ -8,7 +8,9 @@ sidebar_position: -3
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Go.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::caution
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
+:::
 
 ## Important security info
 
@@ -29,9 +31,20 @@ See the detailed guide to learn how to install Document Server [for Windows](htt
 
 ## Step 2. Download the Go code for the editors integration
 
-Download the [Go example](./language-specific-examples.md) from our site, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/go).
+Download the archive with the Go example and unpack the archive, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/go):
 
-To connect the editors to your website, specify the path to the editors installation, server protocol, address and port  in the *configuration.env* file:
+``` sh
+curl --output Go.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip
+unzip Go.Example.zip
+```
+
+Change the current directory for the project directory:
+
+``` sh
+cd "Go Example"
+```
+
+To connect the editors to your website, specify the path to the editors installation, server protocol, address and port in the *configuration.env* file:
 
 ``` ini
 SERVER_ADDRESS=http(s)://address (optional)
@@ -44,8 +57,8 @@ JWT_SECRET=secret
 JWT_HEADER=Authorization
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
-**address** is the address of the server, **port** is the server port.
+where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+`address` is the address of the server, `port` is the server port.
 
 If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *templates/editor.html* file.
 
@@ -70,7 +83,7 @@ Open the *config/configuration.json* file and enable JWT:
 
 ``` json
 {
-    "JWT_IS_ENABLED" : true,
+    "JWT_IS_ENABLED": true
 }
 ```
 
@@ -78,7 +91,7 @@ Also, [specify the same secret key](https://helpcenter.onlyoffice.com/installati
 
 ``` json
 {
-    "JWT_SECRET" : "secret",
+    "JWT_SECRET": "secret"
 }
 ```
 
@@ -91,8 +104,8 @@ Also, [specify the same secret key](https://helpcenter.onlyoffice.com/installati
     go run main.go
     ```
 
-3. In your browser go to **server.address** and **server.port**.
+3. In your browser go to `server.address` and `server.port`.
 
 ## Step 7. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.

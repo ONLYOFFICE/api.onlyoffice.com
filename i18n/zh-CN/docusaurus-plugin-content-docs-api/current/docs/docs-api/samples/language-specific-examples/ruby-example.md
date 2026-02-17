@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: -4
 ---
 
 # Ruby 示例
@@ -8,7 +8,9 @@ sidebar_position: -2
 
 本示例将帮助您把ONLYOFFICE文档集成到用Ruby编写的Web应用程序中。
 
-> 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::caution
+本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -27,7 +29,7 @@ Ruby示例提供了多种安装选项，但我们强烈建议为此使用Docker�
 
 要使用[Docker](https://www.docker.com/)运行实例，您将需要[Docker Desktop 4.17.0](https://docs.docker.com/desktop/)或[Docker Engine 20.10.23](https://docs.docker.com/engine/)以及[Docker Compose 2.15.1](https://docs.docker.com/compose/)。另外，您可能需要考虑安装[GNU Make 4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
 
-安装好所有内容后，下载发行版压缩包并解压：
+安装好所有内容后，下载发行版压缩包并解压，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/ruby)克隆源代码：
 
 ``` sh
 curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
@@ -41,7 +43,7 @@ cd "Ruby Example"
 make compose-prod
 ```
 
-默认情况下，服务器在*localhost:80*启动。
+默认情况下，服务器在`localhost:80`启动。
 
 要配置示例，您可以编辑[compose-base.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/compose-base.yml)中的环境变量。有关环境变量的更多信息，请参见[下面](#step-3-configure-the-ruby-example)。
 
@@ -51,11 +53,11 @@ make compose-prod
 
 [获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example)，[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example)，和[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_php_example)上安装它。
+查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example)、[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example)或[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example)上安装它。
 
-要在您的本地计算机上运行示例，您将需要[Ruby 3.2.2](https://www.ruby-lang.org/en/)和[Bundler 2.4.10](https://bundler.io/)。另外，您可能需要考虑安装[GNU Make4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
+要在您的本地计算机上运行示例，您将需要[Ruby 3.2.2](https://www.ruby-lang.org/en/)和[Bundler 2.4.10](https://bundler.io/)。另外，您可能需要考虑安装[GNU Make 4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
 
-安装好所有内容后，下载发行版压缩包并解压：
+安装好所有内容后，下载发行版压缩包并解压，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/ruby)克隆源代码：
 
 ``` sh
 curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
@@ -70,25 +72,25 @@ make prod
 make server-prod
 ```
 
-默认情况下，服务器在*0.0.0.0:9000*启动。
+默认情况下，服务器在`0.0.0.0:3000`启动。
 
 要配置示例，您可以在启动服务器的命令之前传递环境变量。有关环境变量的更多信息，请参见[下面](#step-3-configure-the-ruby-example)。
 
 ## 步骤2.检查可访问性
 
-如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。
+如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE文档。
 
-同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。
+同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
 
 ## 步骤3.配置Ruby示例 {#step-3-configure-the-ruby-example}
 
 通过更改环境变量来配置示例。
 
-| 参数                      | 示例                 | 描述                                                             |
-| ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| BINDING                        | 0.0.0.0                 | 服务器应启动的地址。                                        |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。                             |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。                               |
-| EXAMPLE\_URL                   | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。                               |
-| JWT\_SECRET                    | your-256-bit-secret     | JWT 授权密钥。留空以禁用授权。                                          |
-| PORT                           | 80                      | 服务器应运行的端口。                                              |
+| 名称                             | 示例                    | 描述                                             |
+| -------------------------------- | ----------------------- | ------------------------------------------------ |
+| `BINDING`                        | `0.0.0.0`               | 服务器应启动的地址。                             |
+| `DOCUMENT_SERVER_PRIVATE_URL`    | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。     |
+| `DOCUMENT_SERVER_PUBLIC_URL`     | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。       |
+| `EXAMPLE_URL`                    | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。      |
+| `JWT_SECRET`                     | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                   |
+| `PORT`                           | `80`                    | 服务器应运行的端口。                             |

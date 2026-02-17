@@ -33,7 +33,7 @@ This example shows how to return the year fraction representing the number of wh
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.YEARFRAC("12/7/1981", "11/5/2018");
 
 worksheet.GetRange("C1").SetValue(ans);

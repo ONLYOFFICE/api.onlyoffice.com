@@ -1,0 +1,63 @@
+---
+id: get-tenant-banner-settings
+title: "Get the banners visibility"
+description: "Returns the visibility settings of the promotional banners in the portal."
+sidebar_label: "Get the banners visibility"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVlFv2zYQ/ivEveRhiq06QTHoaW7aFek2NGgc5CEwGlo6WWwkUiNPSTxD/304UrYl21s8YH6wZfLu4/Huu++0BpJLB8kD3CKR0ksnxuKD1BqtE8/KqYUqFa1gHoGp0UpSRl9nkMASaYZaagrGG2+IwKKrjXboIFnDJI75J0OXWlWzNyRwY01l+FmWYnFwlnA7rNRoQk0MIeu6VKkPYPzDMc4aXFpgJfmJVjVCAmbxA1OCCGrL4ZIKUWxCetuyUFmGume3MKZEqSHau8OswGOx56VcjiACfJVVXSIkZBtsIyiloz9MpnKFWQ/dkVV6CRHkxlaSIIFMEp6TqrAPwmn8+Ty+PH8Xz+L3yUWcxPEoDp+f4sskjqFtI5BZpkJab3qXymXp8Fj4R1IuTC6oQFEfVohvRYp8OEcr33K5mlCs7npKEy7R9u+nNF1M2LZU+sn1bKW1cgURKMLKnVAoi/lhIjkJabjiwVbLKXIkqXEnhhiMr0yGJzm0/56geyvrGm0XyGX87rAx7rRsqDBW/YWZx3OYNpb7L3lYg3Tpd97//oS8ABZlBhG8WEUI8zZawweUFi0kD/7ftFa/4Wq7dsxeOpVuzL9OGyomxw2/1ujb/mHezvep9A2psdp53vw3Sgmlw5axJEsmWIVUmE5euOSSCkhgLGs1nozi8QZzHACAE2Sf0Tqfn8aWkMB6IR3e2bI9aNlbbytSo3O1bIKWQQTP0iq5KAOtOudQmlw2Jdf3AOlj2BJ3337ncs53hbplRQpQw3LteO6rcgB551BcGfOkULATaurEDiLQsvKefcAIFLul3oXJ2tVye05BVB+c8kkTWrEyjRWNQ8vAQupM1NK5F2O56l5TvfJ5QEbuGHQK9FkwFusv9zMxM0+o27MBaMCKuodfNy305X7GRw0p+1bOpoNECeVEhoS2UhozsVh5bp1Nu47yNmeiQJn5ALqkDk7sktrZtNG2J3ZqJP3CfiTBTuSleREvigoxOFV4CYmAtwM1+rsbfRkseg76RLtkPPanjowuVybPVYqj1FRhcTLeKgbrMyf8dFdv7qtj6s2glJlvaZkJmabonCDDrUuYEmbCojONTdFt5SGBe/59wzpo3kZFdtn0C1dG6yDxe0nl3Y+i2z5si4H36bdm4iudG67v67lTSy2psfg23ZjSW3Pun0zkxu7FNRI8Wn1mRdU4EgsUZkHSc/JZSU/Kx52gBdkYVORRoM5qozSNxDUxrbk9MRPSCSlCxweWMZbv4cfeRR5HO3b377enGC3/z42/dje1prXq3rlk6sf4pkdursVtU7NMQ9TJ7CbTBZZ1hu5pP9lFOkZ93jBRsJKKXVyA+GVoyWVgCQ85vhi9H8W8VBtHldS9KD4j+QsfvnXtV2q9e2/8X6dTRw/CVxrXpVSaA23CtAij6oG5AxFMRrEfTtsX2W5gzSMojCM2XG8HVcvLfzZoearPdwMpDOaNGvGE85MEpmmKNfnJVTaBr3uvxjyRtqP086cZRF5dhhQPU6R7YPTNll71sYdDJ0TA3/xacNRjvQ7907Zb+7D1jx5bTQ7WnNd527Z/AydHXfs=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the banners visibility"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/banner"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the visibility settings of the promotional banners in the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Promotional banners visibility settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"hidden":{"type":"boolean","description":"The banners visibility flag.","example":true},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The visibility settings of the promotional banners.","title":"TenantBannerSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantBannerSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

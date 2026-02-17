@@ -1,5 +1,5 @@
 ---
-sidebar_position: -6
+sidebar_position: -3
 ---
 
 # PHP (Laravel) 示例
@@ -8,7 +8,9 @@ sidebar_position: -6
 
 这是一个使用 PHP 和 [Laravel 框架](https://laravel.com/docs/11.x/installation#meet-laravel)编写的示例应用，集成了 ONLYOFFICE文档。
 
-> 该示例应用仅用于测试和演示编辑器功能，**请勿**在未修改代码的情况下直接用于生产环境。如需启用测试示例，务必在上线前将其禁用。
+:::caution
+该示例应用仅用于测试和演示编辑器功能，**请勿**在未修改代码的情况下直接用于生产环境。如需启用测试示例，务必在上线前将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -34,7 +36,7 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
 首先，您需要安装 [Docker 桌面应用](https://www.docker.com/products/docker-desktop/)。
 该应用已内置 Docker 配置文件，只需运行几条命令即可启动项目，您也可根据个人需求自行修改这些配置。
 
-1. 下载并解压发布压缩包到以下目录：
+1. 下载并解压发布压缩包到以下目录，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel)克隆源代码：
 
   ```sh
   cd /my/php-laravel/project
@@ -43,7 +45,9 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
   cd "PHP Laravel Example"
   ```
 
-  > 您应该修改`.env`文件中的`DOCUMENT_SERVER_JWT_SECRET`环境变量，因为`docker-compose.yml`使用它在 ONLYOFFICE 文档中设置 JWT 机密。
+  :::note
+  您应该修改`.env`文件中的`DOCUMENT_SERVER_JWT_SECRET`环境变量，因为`docker-compose.yml`使用它在 ONLYOFFICE 文档中设置 JWT 机密。
+  :::
 
 2. 要运行容器，可以使用`make compose-start`命令来构建并启动项目，也可以手动执行相应命令：
 
@@ -67,11 +71,15 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
      docker compose exec example php artisan key:generate
      ```
 
-   > 要停止 Docker 容器，可以运行`make compose-stop`或`docker compose down`命令。
+   :::note
+   要停止 Docker 容器，可以运行`make compose-stop`或`docker compose down`命令。
+   :::
 
    如果安装和配置顺利完成，您现在可以通过访问`localhost:80`来试用示例应用程序。
 
-   > 同时，您可以根据需要调整 [nginx](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel/docker) 配置和应用运行的[端口](https://github.com/ONLYOFFICE/document-server-integration/blob/master/web/documentserver-example/php-laravel/docker-compose.yml)。
+   :::note
+   同时，您可以根据需要调整 [nginx](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel/docker) 配置和应用运行的[端口](https://github.com/ONLYOFFICE/document-server-integration/blob/master/web/documentserver-example/php-laravel/docker-compose.yml)。
+   :::
 
 ### 选项 2. 本地安装
 
@@ -83,7 +91,7 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
    - [Node.js (16+) and NPM](https://laravel.com/docs/11.x/vite#installing-node)
    - [Laravel (11) Server Requirements](https://laravel.com/docs/11.x/deployment#server-requirements)
 
-2. 下载发布压缩包并解压至您选择的目录：
+2. 下载发布压缩包并解压至您选择的目录，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php-laravel)克隆源代码：
 
   ```sh
   cd /path/to/my/projects
@@ -118,21 +126,21 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
 
 PHP（Laravel）示例是通过更改环境变量来配置的。
 
-| 变量名称                           | 描述                                                                 | 示例                 |
-| ------------------------------ | --------------------------------------------------------------------------- | ----------------------- |
-| `USER`                         | 系统中的用户名。                                               | `user`                  |
-| `UID`                          | 系统中的用户 ID 号 (UID)。                            | `1000`                  |
-| `DOCUMENT_STORAGE_PUBLIC_URL`  | 客户端用于与服务器通信的 URL 地址。          | `http://localhost`      |
-| `DOCUMENT_STORAGE_PRIVATE_URL` | ONLYOFFICE 文档用于与服务器通信的 URL 地址。 | `http://proxy`          |
-| `DOCUMENT_SERVER_PUBLIC_URL`   | 客户端用于与 ONLYOFFICE 文档通信的 URL 地址。 | `http://localhost:8080` |
-| `DOCUMENT_SERVER_PRIVATE_URL`  | 服务器用于与 ONLYOFFICE 文档通信的 URL 地址。 | `http://proxy:8080`     |
-| `DOCUMENT_SERVER_JWT_SECRET`   | JWT 授权密钥。                                              | `your-256-bit-secret`   |
+| 变量名称                           | 示例                    | 描述                                                 |
+| ------------------------------ | ----------------------- | ---------------------------------------------------- |
+| `USER`                         | `user`                  | 系统中的用户名。                                     |
+| `UID`                          | `1000`                  | 系统中的用户 ID 号 (UID)。                           |
+| `DOCUMENT_STORAGE_PUBLIC_URL`  | `http://localhost`      | 客户端用于与服务器通信的 URL 地址。                  |
+| `DOCUMENT_STORAGE_PRIVATE_URL` | `http://proxy`          | ONLYOFFICE 文档用于与服务器通信的 URL 地址。         |
+| `DOCUMENT_SERVER_PUBLIC_URL`   | `http://localhost:8080` | 客户端用于与 ONLYOFFICE 文档通信的 URL 地址。        |
+| `DOCUMENT_SERVER_PRIVATE_URL`  | `http://proxy:8080`     | 服务器用于与 ONLYOFFICE 文档通信的 URL 地址。        |
+| `DOCUMENT_SERVER_JWT_SECRET`   | `your-256-bit-secret`   | JWT 授权密钥。                                       |
 
 ## 步骤 4. 检查可访问性
 
-如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保示例服务器能通过配置文件中指定的地址访问 ONLYOFFICE 文档，而不是使用默认的 **documentserver**。
+如果示例和 ONLYOFFICE 文档安装在不同的计算机上，请确保示例服务器能通过配置文件中指定的地址访问 ONLYOFFICE 文档，而不是使用默认的 `documentserver`。
 
-ONLYOFFICE 文档能通过配置文件中指定的地址访问示例服务器，而不是默认的 **example.com**。
+ONLYOFFICE 文档能通过配置文件中指定的地址访问示例服务器，而不是默认的 `example.com`。
 
 ## 故障排除
 

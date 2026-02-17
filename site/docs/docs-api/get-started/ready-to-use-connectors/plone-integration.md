@@ -35,7 +35,9 @@ You could also install plugin via Docker:
 docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 start
 ```
 
-> **Please note:** If you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
+:::note
+Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
+:::
 
 ## Configuring Plone ONLYOFFICE integration plugin
 
@@ -50,7 +52,9 @@ Run this command to install the addon from the local repository:
    docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
    ```
 
-> For more information, check [Developing packages variable](https://6.dev-docs.plone.org/install/containers/images/backend.html#developing-packages-variable).
+:::note
+For more information, check [Developing packages variable](https://6.dev-docs.plone.org/install/containers/images/backend.html#developing-packages-variable).
+:::
 
 ## Upgrade Plone ONLYOFFICE integration plugin
 

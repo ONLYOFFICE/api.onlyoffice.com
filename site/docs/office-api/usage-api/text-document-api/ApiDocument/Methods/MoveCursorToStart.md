@@ -1,6 +1,6 @@
 # MoveCursorToStart
 
-Moves cursor to the start of the document.
+Moves a cursor to the start of the document.
 
 ## Syntax
 

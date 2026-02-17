@@ -31,7 +31,7 @@ This example shows how to return the internal rate of return for a series of cas
 // Use a function to get the internal rate.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let values = ["Values", "-$40,000.00", "$10,000.00", "$15,000.00", "$20,000.00"];
 
 for (let i = 0; i < values.length; i++) {

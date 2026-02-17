@@ -36,7 +36,7 @@ To start using the plugin, you need to set up an AI provider:
 6. In the row of icons, select what the model is used for: *Text*, *Images*, *Embeddings*, *Audio Processing*, *Content Moderation*, *Realtime Tasks*, *Coding Help*, *Visual Analysis*.
 7. Click **OK** to save your settings and complete the connection process.
 
-For details on adding a custom provider, refer to this [instructions](custom-providers.md).
+For details on adding a custom provider, refer to these [instructions](custom-providers.md).
 
 ## Using
 

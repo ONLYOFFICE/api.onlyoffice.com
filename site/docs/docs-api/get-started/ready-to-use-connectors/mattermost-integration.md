@@ -34,7 +34,10 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
    ``` sh
    npm install --legacy-peer-deps
    ```
-   > Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.
+
+   :::note
+   Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.
+   :::
 
 4. Run the following command:
 
@@ -58,7 +61,7 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
   https://<documentserver>:<port>/
   ```
 
-  where **documentserver** is the name of the server and **port** is the port number with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Mattermost server. The Mattermost server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+  where **documentserver** is the name of the server and **port** is the port number with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Mattermost server. The Mattermost server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 - **Secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key in the Mattermost plugin configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 

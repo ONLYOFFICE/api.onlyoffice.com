@@ -167,11 +167,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 }
 ```
 
-Also, verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
-
 ## Step 3: Review and extend plugin code
 
 By default, the plugin template includes a basic implementation in the `src/index.ts` file. Here's an example of a [main button plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/mainbuttonplugin):
@@ -331,7 +326,7 @@ const modalDialogProps: IModalDialog = {
 
 ## Step 7: Append the modal dialog to the main button
 
-Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onclick) function with the modal display behavior:
+Update the main button's [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/mainbuttonitem.md#onClick) function with the modal display behavior:
 
 ```ts
 const mainButtonItem: IMainButtonItem = {

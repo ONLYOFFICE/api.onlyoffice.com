@@ -1,0 +1,55 @@
+name: ReBuild docspace-sdk-js
+
+run-name: "ReBuild docspace-sdk-js"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Checkout api.onlyoffice.com repository
+        uses: actions/checkout@v4
+        with:
+          path: api.onlyoffice.com
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      
+      - name: Checkout docspace-sdk-js repository
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/docspace-sdk-js
+          token: ${{ secrets.READ_PAT }}
+          path: docspace-sdk-js
+      
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Build docspace-sdk-js
+        run: |
+          cd docspace-sdk-js
+          pnpm install
+          pnpm run docs
+          cd ..
+          
+          rm -rf api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/*
+          cp -r docspace-sdk-js/docs/* api.onlyoffice.com/site/docspace/javascript-sdk/usage-sdk/
+          
+          cd api.onlyoffice.com
+          if ! git diff --exit-code; then
+              git add .
+              git commit -m "Update DocSpace SDK documentation from GitHub Actions"
+              git push origin ${REF}
+            else
+              echo "Nothing to commit"
+            fi

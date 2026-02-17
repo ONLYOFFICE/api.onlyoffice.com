@@ -1,6 +1,11 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Create a text file
 
 This example demonstrates how to create a `.txt` file in a specified folder in ONLYOFFICE DocSpace using the API. You can set a custom title and content for the file when uploading it to a folder.
+
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/create-text-file.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/create-text-file.py)
 
 ## Before you start
 
@@ -9,47 +14,105 @@ This example demonstrates how to create a `.txt` file in a specified folder in O
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const HEADERS = {
+    Authorization: `Bearer ${API_KEY}`,
+    'Content-Type': 'application/json',
+  };
 
-# Headers with API key for authentication
-HEADERS = {
+  // Step 1: Create a text file in a folder
+  function createTextFile(folderId, title, content) {
+    const url = `${API_HOST}/api/2.0/files/${folderId}/text`;
+    const data = {
+      title: title,
+      content: content,
+    };
+
+    return fetch(url, {
+      method: 'POST',
+      headers: HEADERS,
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.status === 200) return res.json();
+        return res.text().then((t) => {
+          console.log(`File creation failed. Status code: ${res.status}, Message: ${t}`);
+          return null;
+        });
+      })
+      .then((fileInfo) => {
+        if (!fileInfo) return null;
+        console.log('File created successfully:', fileInfo);
+        return fileInfo;
+      })
+      .catch((err) => {
+        console.log(`File creation error: ${err.message}`);
+        return null;
+      });
+  }
+
+  // Run
+  const folderId = '123456'; // Replace with your target folder ID
+  const title = 'ExampleFile.txt'; // Desired file name
+  const content = 'This is the content of the example text file.'; // File content
+
+  console.log('\nCreating a text file with specified content:');
+  createTextFile(folderId, title, content);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  HEADERS = {
     'Authorization': f'Bearer {API_KEY}',
     'Content-Type': 'application/json'
-}
+  }
 
-# Step 1: Create a text file in a folder
-def create_text_file(folder_id, title, content):
-    url = f'https://{API_HOST}/api/2.0/files/{folder_id}/text'
+  # Step 1: Create a text file in a folder
+  def create_text_file(folder_id, title, content):
+    url = f'{API_HOST}/api/2.0/files/{folder_id}/text'
     data = {
-        'title': title,
-        'content': content
+      'title': title,
+      'content': content
     }
 
     response = requests.post(url, json=data, headers=HEADERS)
 
     if response.status_code == 200:
-        file_info = response.json()
-        print(f'File created successfully: {file_info}')
-        return file_info
+      file_info = response.json()
+      print(f'File created successfully: {file_info}')
+      return file_info
     else:
-        print(f'Failed to create file: {response.status_code} - {response.text}')
-        return None
+      print(f"File creation failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     folder_id = '123456'  # Replace with your target folder ID
     title = 'ExampleFile.txt'  # Desired file name
     content = 'This is the content of the example text file.'  # File content
 
     print('\nCreating a text file with specified content:')
     create_text_file(folder_id, title, content)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## How it works

@@ -2,6 +2,8 @@
 
 This example demonstrates how to create a new custom tag in DocSpace using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/create-tag.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -121,7 +123,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to configure and initialize the SDK. Use the [createTag()](/docspace/javascript-sdk/usage-sdk/methods.md#createtag) method to create a new tag with a unique name.
+Create a script block to configure and initialize the SDK. Use the [createTag()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#createtag) method to create a new tag with a unique name.
 
 ``` ts
 function onAppReady() {

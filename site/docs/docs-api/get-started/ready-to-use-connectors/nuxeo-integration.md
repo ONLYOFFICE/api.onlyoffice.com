@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Nuxeo integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="W6z0475IxCU"/>
+```
+
 This [package](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to edit office documents from [Nuxeo](https://www.nuxeo.com/) using ONLYOFFICE Docs.
 
 ## Features
@@ -38,7 +44,7 @@ Open the [nuxeo.conf](https://doc.nuxeo.com/nxdoc/configuration-parameters-index
 onlyoffice.docserv.url=http://documentserver/
 ```
 
-where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Nuxeo server. The Nuxeo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Nuxeo server. The Nuxeo server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key by adding the **onlyoffice.jwt.secret=yoursecret** line to the *nuxeo.conf* file. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
