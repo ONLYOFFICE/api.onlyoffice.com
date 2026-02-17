@@ -1,12 +1,15 @@
 ---
-sidebar_label: Connect to MCP clients
+sidebar_label: Configuring clients
 sidebar_position: 4
 title: Connect DocSpace MCP server to MCP clients
 ---
 
-The DocSpace MCP server allows you to connect numerous mcp clients, offering flexibility to choose between interfaces when interacting with your DocSpace. These clients are:
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-- [ChatGPT-web]()
+The DocSpace MCP server allows you to connect numerous mcp clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
+
+- [ChatGPT](#connect-to-chatgpt)
 - [Claude-desktop](#connect-to-claude-desktop)
 - [Claude-web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
@@ -14,34 +17,30 @@ The DocSpace MCP server allows you to connect numerous mcp clients, offering fle
 - [VSCode](#connect-to-vscode)
 - [Windsurf](#connect-to-windsurf)
 
-This guide demonstrates how to connect these clients to your newly connected DocSpace MCP server. 
 
-## Connect to clients
+## Client configuration
 
-Follow these steps assigned with the client to connect to the MCP server;
+Follow the steps to connect to your client of choice
 
-:::note
-Ensure you have Docker installed to connect to the local MCP servers
-::: 
+<Tabs groupId="mcp-clients" queryString="client">
+  <TabItem value="chatgpt" label="ChatGPT" default>
 
-<details>
-<summary>ChatGPT</summary>
+## Connect to ChatGPT
 
 1. Open ChatGPT Web
-2. Navigate to Settings;
-3. Navigate to Apps;
-4. Navigate to Advanced Settings;
-5. Toggle on Developer Mode;
-7. Click "Create App";
-8. Enter a name (e.g., "ONLYOFFICE DocSpace MCP");
-9. Enter a URL (e.g., https://mcp.onlyoffice.com/mcp);
-10. Select "OAuth" in Authentication;
-11. Click "Create"; This redirects you to the ONLYOFFICE DocSpace login to authenticate your account
-12. Login to complete the OAuth authentication process.
+2. Navigate to **Settings** > **Apps** > **Advanced Settings**;
+3. Toggle on Developer Mode;
+4. Click "Create App";
+5. Enter a name (e.g., "ONLYOFFICE DocSpace MCP");
+6. Enter a URL (e.g., https://mcp.onlyoffice.com/mcp);
+7. Select "OAuth" in Authentication;
+8. Click "Create"; This redirects you to the ONLYOFFICE DocSpace login to authenticate your account
+9. Login to complete the OAuth authentication process.
 
-</details>
-<details>
-<summary>Claude Desktop</summary>
+</TabItem>
+<TabItem value="claude-desktop" label="Claude Desktop" default>
+
+## Connect to Claude Desktop
 
 Claude desktop offers three different ways to connect to the DocSpace MCP server:
 
@@ -60,7 +59,7 @@ Connect to the MCP server running remotely using Claude's Connectors. This is th
 5. Enter a name for the connector (e.g., "ONLYOFFICE DocSpace MCP").
 6. Enter the connection URL (e.g., https://mcp.onlyoffice.com/mcp).
 7. Click "Advanced settings".
-8. In the "OAuth Client ID" field, enter the Client ID from your DocSpace OAuth application.
+8. In the "OAuth Client ID" field, enter the Client ID from your [DocSpace OAuth application](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/).
 9. In the "OAuth Client Secret" field, enter the Client Secret from your DocSpace OAuth application.
 10. Click "Add".
 11. Click "Connect" next to the newly added connector.
@@ -119,10 +118,10 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
    ```
 7. Save the file.
 
-</details>
+</TabItem>
+<TabItem value="claude-web" label="Claude web" default>
 
-<details>
-<summary>Claude Web</summary>
+## Connect to Claude web
 
 1.  Open Claude Web in your web browser.
 2. Navigate to Settings.
@@ -136,11 +135,10 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
    - Replace `your-instance.onlyoffice.com` with your actual DocSpace domain
 7. Click "Add".
 
-</details>
+</TabItem>
+<TabItem value="cursor" label="Cursor" default>
 
-<details>
-
-<summary>Cursor</summary>
+## Connect to Cursor
 
 Cursor allows you connect to the DocSpace mcp server either via:
 
@@ -205,11 +203,10 @@ Connect to the locally running MCP server using stdio transport.
    ```
 6. Save the file.
 
-</details>
+</TabItem>
+<TabItem value="le-chat" label="Le-chat" default>
 
-<details>
-
-<summary>Le Chat</summary>
+## Connect to Le chat
 
 1. Open Le Chat  in your web browser.
 2. Navigate to Intelligence.
@@ -220,15 +217,14 @@ Connect to the locally running MCP server using stdio transport.
 7. Enter the server URL with your DocSpace instance as a query parameter:
    `https://mcp.onlyoffice.com/mcp?base_url=https://your-instance.onlyoffice.com`
    (replace the base_url value with your actual DocSpace URL).
-8. Select "API Token Authentification" in the "Authentication Methods" section.
+8. Select "API Token Authentication" in the "Authentication Methods" section.
 9. In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
 10. Click "Connect".
 
-</details>
+</TabItem>
+<TabItem value="vscode" label="VSCode" default>
 
-<details>
-
-<summary>VSCode</summary>
+## Connect to VSCode
 
 VSCode client also connects to DocSpace MCP server using:
 
@@ -297,11 +293,10 @@ Connect to the locally running MCP server using stdio transport.
 8. Select "onlyoffice-docspace";
 9. Select "Start Server".
 
-</details>
+</TabItem>
+<TabItem value="Windsurf" label="Windsurf" default>
 
-<details>
-
-<summary>Windsurf</summary>
+## Connect to Windsurf
 
 Windsurf offers two ways to connect to the DocSpace MCP server:
 
@@ -369,4 +364,5 @@ This method uses stdio transport to connect to a local running MCP server.
 9. Open **Cascade**. 
 10. Click **Actions(...)**. You'll find **onlyoffice-docspace** under MCP section if connection was successful. Toggle to enable the connection. 
 
-</details>
+</TabItem>
+</Tabs>

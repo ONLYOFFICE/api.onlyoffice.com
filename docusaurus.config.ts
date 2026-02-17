@@ -43,6 +43,9 @@ const config: Config = {
   customFields: {
     documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
     documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+    markdown: {
+    mermaid: true,
+  },
   },
 
   future: {
@@ -370,7 +373,7 @@ const config: Config = {
     ],
   } satisfies Preset.ThemeConfig,
 
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs", '@docusaurus/theme-mermaid'],
 };
 
 export default config;
