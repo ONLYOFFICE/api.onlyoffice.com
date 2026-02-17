@@ -182,7 +182,7 @@ jobs:
              # Execute the sync command
              eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} --include \"*\" --delete $EXCLUDE_STR"
           elif [ "${mode}" = "testing" ]; then
-             echo "🔹 Step 1: Sync HTML files with short cache"
+             echo "Step 1: Sync HTML files with short cache"
              eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
                   --exclude \"*\" \
                   --include \"*.html\" \
@@ -191,18 +191,20 @@ jobs:
                   --delete \
                   $EXCLUDE_STR"
 
-             echo "🔹 Step 2: Sync hashed assets (JS/CSS) with long cache"
+             echo "Step 2: Sync hashed assets (JS/CSS) with long cache"
              eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
                   --exclude \"*\" \
-                  --include \"assets/*\" \
+                  --include \"*.js\" \
+                  --include \"*.css\" \
                   --cache-control \"public, max-age=31536000, immutable\" \
                   --delete \
                   $EXCLUDE_STR"
 
-             echo "🔹 Step 3: Sync all other files"
+             echo "Step 3: Sync all other files"
              eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} \
                   --exclude \"*.html\" \
-                  --exclude \"assets/*\" \
+                  --exclude \"*.js\" \
+                  --exclude \"*.css\" \
                   --include \"*\" \
                   --cache-control \"public, max-age=86400\" \
                   --delete \
@@ -210,16 +212,16 @@ jobs:
           fi
 
           # Compress files more than 10mb manually
-          echo "🔹 Find files that more than 10MB"
+          echo "Find files that more than 10MB"
           BUILD_DIR="."
           find "$BUILD_DIR" -type f \( -name "*.js" -o -name "*.json" -o -name "*.htm" \
             -o -name "*.html" -o -name "*.css" -o -name "*.bin" -o -name "*.wasm" -o -name "*.dic" -o -name "*.aff" -o -name "*.svg" \) \
             -size +10M \
             | while read -r file; do
-            echo "📦 Compress: $file"
+            echo "Compress: $file"
             gzip -9 -c "$file" > "$file.gz" && mv "$file.gz" "$file"
             MIME_TYPE=$(file --mime-type -b "$file")
-            echo "🚀 Upload compressed file to s3: $file"
+            echo "Upload compressed file to s3: $file"
             aws s3 cp "$file" "${{ env.AWS_BUCKET_URL }}/${file#./}" \
             --content-encoding gzip --content-type "$MIME_TYPE"
           done
