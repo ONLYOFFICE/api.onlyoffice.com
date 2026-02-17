@@ -9,6 +9,35 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE 桌面编辑器 9.2 及更高版本支持连接 MCP（模型上下文协议）服务器，以通过自定义工具和集成扩展 AI 功能。MCP 允许 AI 代理通过标准化协议与各种服务和数据源交互。
 
+## AI 代理功能
+
+桌面编辑器中的 AI 代理提供多项强大功能：
+
+1. **聊天界面** - 与文档和数据进行自然语言交互
+2. **网络搜索** - 集成网络搜索功能，获取实时信息
+3. **MCP 服务器** - 连接自定义或社区 MCP 服务器以扩展功能
+4. **内置工具** - 桌面编辑器包含用于文档操作的原生工具（生成、表单、演示文稿）
+
+### 查看可用工具
+
+要查看所有可用工具（包括内置工具和 MCP）：
+
+**方法 1：控制台命令**
+
+在桌面编辑器中打开浏览器控制台并执行：
+
+```javascript
+JSON.parse(AscDesktopEditor.getToolFunctions());
+```
+
+这将返回一个包含所有可用函数描述的对象。
+
+**方法 2：源代码**
+
+在[桌面 SDK 存储库](https://github.com/ONLYOFFICE/desktop-sdk/blob/master/ChromiumBasedEditors/lib/tools/functions)中查看内置工具定义。
+
+每个文件夹（`internal` 除外）都包含一个带有函数描述的 JSON 文件。
+
 ## 先决条件
 
 在连接 MCP 服务器之前，请确保您具有：
@@ -57,7 +86,11 @@ ONLYOFFICE 桌面编辑器 9.2 及更高版本支持连接 MCP（模型上下文
       }
     }
     ```
-    **注意：** 必须安装并运行 Docker。
+
+    :::note
+    必须安装并运行 Docker。
+    :::
+
   </TabItem>
   <TabItem value="node" label="Node.js">
     ```json
@@ -89,6 +122,26 @@ ONLYOFFICE 桌面编辑器 9.2 及更高版本支持连接 MCP（模型上下文
     }
     ```
   </TabItem>
+  <TabItem value="npx" label="npx">
+    ```json
+    {
+      "mcpServers": {
+        "server-name": {
+          "command": "npx",
+          "args": ["--yes", "package-name"],
+          "env": {
+            "API_KEY": "your-api-key"
+          }
+        }
+      }
+    }
+    ```
+
+    :::note
+    使用 npx 运行包而无需全局安装。`--yes` 标志会在包不存在时自动安装。
+    :::
+
+  </TabItem>
 </Tabs>
 
 ### 配置参数
@@ -110,6 +163,88 @@ import APITable from '@site/src/components/APITable/APITable';
 ```mdx-code-block
 </APITable>
 ```
+
+## 实际示例
+
+#### ONLYOFFICE DocSpace MCP
+
+连接到 DocSpace 进行文档管理操作：
+
+```json
+{
+  "mcpServers": {
+    "onlyoffice-docspace": {
+      "env": {
+        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_API_KEY": "your-api-key-here"
+      },
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@onlyoffice/docspace-mcp"
+      ]
+    }
+  }
+}
+```
+
+#### 本地自定义 MCP 服务器
+
+从本地计算机运行自定义 Node.js MCP 服务器：
+
+```json
+{
+  "mcpServers": {
+    "mcp_local": {
+      "command": "node",
+      "args": [
+        "D:/MCP_EXAMPLE/index.js"
+      ]
+    }
+  }
+}
+```
+
+:::tip
+创建自己的自定义 MCP 服务器：
+1. 在系统上安装 Node.js
+2. 为 MCP 服务器创建新目录
+3. 运行 `npm install` 安装依赖项
+4. 按照 MCP 协议实现自定义工具
+5. 在配置中引用服务器入口点的路径
+:::
+
+#### 多个 MCP 服务器
+
+同时配置多个服务器：
+
+```json
+{
+  "mcpServers": {
+    "mcp_local": {
+      "command": "node",
+      "args": [
+        "D:/MCP_EXAMPLE/index.js"
+      ]
+    },
+    "onlyoffice-docspace": {
+      "env": {
+        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_API_KEY": "your-api-key-here"
+      },
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@onlyoffice/docspace-mcp"
+      ]
+    }
+  }
+}
+```
+
+:::note
+配置多个服务器时，用逗号分隔每个服务器配置。
+:::
 
 ### 步骤 3：保存并启用工具
 

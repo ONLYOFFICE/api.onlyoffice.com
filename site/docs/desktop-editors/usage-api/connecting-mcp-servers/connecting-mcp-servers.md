@@ -9,6 +9,35 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE Desktop Editors version 9.2 and later supports connecting MCP (Model Context Protocol) servers to extend AI capabilities with custom tools and integrations. MCP allows AI agents to interact with various services and data sources through standardized protocols.
 
+## AI Agent capabilities
+
+The AI agent in Desktop Editors provides several powerful features:
+
+1. **Chat interface** - Natural language interaction with documents and data
+2. **Web search** - Integrated web search capabilities for real-time information
+3. **MCP servers** - Connect custom or community MCP servers for extended functionality
+4. **Built-in tools** - Desktop Editors includes native tools for document operations (generation, forms, presentations)
+
+### Viewing available tools
+
+To see all available tools (both built-in and MCP):
+
+**Method 1: Console command**
+
+Open the browser console in Desktop Editors and execute:
+
+```javascript
+JSON.parse(AscDesktopEditor.getToolFunctions());
+```
+
+This returns an object with descriptions of all available functions.
+
+**Method 2: Source code**
+
+View the built-in tool definitions in the [Desktop SDK repository](https://github.com/ONLYOFFICE/desktop-sdk/blob/master/ChromiumBasedEditors/lib/tools/functions).
+
+Each folder (except `internal`) contains a JSON file with function descriptions.
+
 ## Prerequisites
 
 Before connecting MCP servers, ensure you have:
@@ -57,7 +86,11 @@ Enter your MCP server configuration in JSON format. The configuration structure 
       }
     }
     ```
-    **Note:** Docker must be installed and running.
+
+    :::note
+    Docker must be installed and running.
+    :::
+
   </TabItem>
   <TabItem value="node" label="Node.js">
     ```json
@@ -89,6 +122,26 @@ Enter your MCP server configuration in JSON format. The configuration structure 
     }
     ```
   </TabItem>
+  <TabItem value="npx" label="npx">
+    ```json
+    {
+      "mcpServers": {
+        "server-name": {
+          "command": "npx",
+          "args": ["--yes", "package-name"],
+          "env": {
+            "API_KEY": "your-api-key"
+          }
+        }
+      }
+    }
+    ```
+
+    :::note
+    Uses npx to run packages without global installation. The `--yes` flag automatically installs the package if not present.
+    :::
+
+  </TabItem>
 </Tabs>
 
 ### Configuration parameters
@@ -110,6 +163,88 @@ import APITable from '@site/src/components/APITable/APITable';
 ```mdx-code-block
 </APITable>
 ```
+
+## Practical examples
+
+#### ONLYOFFICE DocSpace MCP
+
+Connect to DocSpace for document management operations:
+
+```json
+{
+  "mcpServers": {
+    "onlyoffice-docspace": {
+      "env": {
+        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_API_KEY": "your-api-key-here"
+      },
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@onlyoffice/docspace-mcp"
+      ]
+    }
+  }
+}
+```
+
+#### Local custom MCP server
+
+Run a custom Node.js MCP server from your local machine:
+
+```json
+{
+  "mcpServers": {
+    "mcp_local": {
+      "command": "node",
+      "args": [
+        "D:/MCP_EXAMPLE/index.js"
+      ]
+    }
+  }
+}
+```
+
+:::tip
+To create your own custom MCP server:
+1. Install Node.js on your system
+2. Create a new directory for your MCP server
+3. Run `npm install` to install dependencies
+4. Implement your custom tools following the MCP protocol
+5. Reference the path to your server's entry point in the configuration
+:::
+
+#### Multiple MCP servers
+
+Configure multiple servers simultaneously:
+
+```json
+{
+  "mcpServers": {
+    "mcp_local": {
+      "command": "node",
+      "args": [
+        "D:/MCP_EXAMPLE/index.js"
+      ]
+    },
+    "onlyoffice-docspace": {
+      "env": {
+        "DOCSPACE_BASE_URL": "https://your-docspace-instance.onlyoffice.com",
+        "DOCSPACE_API_KEY": "your-api-key-here"
+      },
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@onlyoffice/docspace-mcp"
+      ]
+    }
+  }
+}
+```
+
+:::note
+When configuring multiple servers, separate each server configuration with a comma.
+:::
 
 ### Step 3: Save and enable tools
 
