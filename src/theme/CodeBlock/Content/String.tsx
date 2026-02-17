@@ -10,10 +10,7 @@ import type {Props} from '@theme/CodeBlock/Content/String';
 import CodeBlockLayout from '@theme/CodeBlock/Layout';
 import * as Tabs from '@radix-ui/react-tabs';
 
-// import Tabs from '@theme/Tabs';
-// import TabItem from '@theme/TabItem';
 import OnlyOfficeEditor from '@site/src/components/BrowserWindow/OnlyofficeEditor';
-import {useLocation} from "react-router-dom";
 import {EditorType} from "@site/src/components/Playground/root/PlaygroundRootContext";
 import styles from './String.module.css'
 
@@ -29,6 +26,12 @@ function useCodeBlockMetadata(props: Props): CodeBlockMetadata {
     title: props.title,
     showLineNumbers: props.showLineNumbers,
   });
+}
+
+const EDITOR_TYPE_MAP: Record<string, EditorType> = {
+  'docx': 'word',
+  'pptx': 'slide',
+  'xlsx': 'cell',
 }
 
 // TODO Docusaurus v4: move this component at the root?
@@ -67,22 +70,18 @@ export default function CodeBlockString({
   const templateUrl = res ? res[1] : undefined;
 
   const handlePlaygroundClick = () => {
-    const editorTypeMapper: { [key: string]: EditorType } = {
-      'docx': 'word',
-      'pptx': 'slide',
-      'xlsx': 'cell',
-    }
-
-    let _editorType: EditorType | null = editorType.length ? editorTypeMapper[editorType] : null;
-    if (isForm && editorType === 'pdf') {
-      _editorType = 'form'
-    }
-
     const params = new URLSearchParams({
       code: metadata.code,
-      editorType: _editorType,
-      testType: 'office-js-api'
+      editorType: isForm ? 'form' : (editorType.length ? EDITOR_TYPE_MAP[editorType] : null),
+      testType: 'office-js-api',
     });
+
+    if (templateUrl) {
+      params.set('templateUrl', templateUrl);
+    } else {
+      params.set('emptyTemplateUrl', '');
+    }
+
     window.open(`/playground?${params}`, '_blank');
   };
 

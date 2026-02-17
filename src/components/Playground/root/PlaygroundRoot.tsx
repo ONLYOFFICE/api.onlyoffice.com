@@ -4,10 +4,11 @@ import {
     PreviewType,
     ScriptType
 } from "./PlaygroundRootContext"
-import {ComponentProps, useEffect, useMemo, useState} from "react";
+import {ComponentProps, useMemo, useReducer} from "react";
 import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 import {useColorMode} from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import {playgroundReducer, PlaygroundState} from "@site/src/components/Playground/root/reducer";
 
 export type PlaygroundRootProps = ComponentProps<'div'> & {
     editorType?: EditorType
@@ -16,59 +17,45 @@ export type PlaygroundRootProps = ComponentProps<'div'> & {
     initialScript?: string
     documentServerUrl?: string
     documentServerSecret?: string
+    templateUrl?: string | null
 }
 
-export const PlaygroundRoot = ({ editorType = 'word', previewType = 'desktop', scriptType = 'connector', documentServerUrl, documentServerSecret, initialScript: initialScriptProp, ...props }: PlaygroundRootProps) => {
+export const PlaygroundRoot = ({
+    editorType = 'word',
+    previewType = 'desktop',
+    scriptType = 'connector',
+    initialScript: initialScriptProp,
+    documentServerUrl: documentServerUrlProp,
+    documentServerSecret: documentServerSecretProp,
+    templateUrl,
+    ...props
+}: PlaygroundRootProps) => {
     const { colorMode, setColorMode } = useColorMode()
+    const { siteConfig: { customFields } } = useDocusaurusContext()
 
-    const initialScript = initialScriptProp || DEFAULT_SCRIPTS[editorType][scriptType];
+    const documentServerUrl = documentServerUrlProp ?? (customFields.documentServer as string)
+    const documentServerSecret = documentServerSecretProp ?? (customFields.documentServerSecret as string)
 
-    if (!documentServerUrl || !documentServerSecret) {
-        const { siteConfig: { customFields } } = useDocusaurusContext()
-        if (!documentServerUrl) {
-            documentServerUrl = customFields.documentServer as string;
-        }
+    const [state, dispatch] = useReducer(playgroundReducer, {
+        editorType,
+        previewType,
+        scriptType,
+        scriptValue: initialScriptProp ?? DEFAULT_SCRIPTS[editorType][scriptType],
+        isScriptModified: false,
+    } satisfies PlaygroundState)
 
-        if (!documentServerSecret) {
-            documentServerSecret = customFields.documentServerSecret as string;
-        }
-    }
-
-    const [editorTypeState, setEditorType] = useState<EditorType>(editorType)
-    const [previewTypeState, setPreviewType] = useState<PreviewType>(previewType)
-    const [scriptTypeState, setScriptType] = useState<ScriptType>(scriptType)
-    const [scriptValue, setScriptValue] = useState(initialScript)
-    const [isScriptModified, setIsScriptModified] = useState(false)
-
-    const contextValue = useMemo(() => ({
-        editorType: editorTypeState,
-        setEditorType,
-        previewType: previewTypeState,
-        setPreviewType,
-        scriptType: scriptTypeState,
-        setScriptType,
+    const contextValue = useMemo<PlaygroundRootContext>(() => ({
+        ...state,
+        dispatch,
         theme: colorMode,
         setTheme: setColorMode,
-        scriptValue,
-        setScriptValue,
-        isScriptModified,
-        setIsScriptModified,
         documentServerUrl,
-        documentServerSecret
-    }), [editorTypeState, previewTypeState, scriptTypeState, colorMode, documentServerUrl, documentServerSecret, scriptValue, isScriptModified])
+        documentServerSecret,
+        templateUrl,
+        hasInitialScript: !!initialScriptProp,
+    }), [state, colorMode, documentServerUrl, documentServerSecret, templateUrl, initialScriptProp])
 
-    useEffect(() => {
-        if (!isScriptModified && !initialScriptProp) {
-            const newScript = DEFAULT_SCRIPTS[editorTypeState]?.[scriptTypeState];
-            if (newScript) {
-                setScriptValue(newScript);
-            }
-        }
-    }, [editorTypeState, scriptTypeState, isScriptModified]);
-
-    return (
-        <PlaygroundRootContext.Provider value={contextValue} {...props}/>
-    )
+    return <PlaygroundRootContext.Provider value={contextValue} {...props}/>
 }
 
 export namespace PlaygroundRoot {

@@ -1,4 +1,5 @@
-import {SetStateAction, Dispatch, createContext, useContext} from "react";
+import { Dispatch, createContext, useContext } from "react";
+import { PlaygroundState, PlaygroundAction } from "./reducer";
 
 export const PlaygroundRootContext = createContext<PlaygroundRootContext | undefined>(undefined)
 
@@ -12,22 +13,15 @@ export function usePlaygroundRootContext() {
 }
 
 export type EditorType = 'word' | 'cell' | 'slide' | 'form'
-export type ScriptType = 'office-js-api' | 'connector' | 'plugin'
+export type ScriptType = 'office-js-api' | 'connector' | 'plugin' | 'builder'
 export type PreviewType = 'desktop' | 'mobile' | 'embedded'
 
-export interface PlaygroundRootContext {
-    editorType: EditorType
-    setEditorType: Dispatch<SetStateAction<EditorType>>
-    previewType: PreviewType
-    setPreviewType: Dispatch<SetStateAction<PreviewType>>
-    scriptType: ScriptType
-    setScriptType: Dispatch<SetStateAction<ScriptType>>
+export interface PlaygroundRootContext extends PlaygroundState {
+    dispatch: Dispatch<PlaygroundAction>
     theme: 'light' | 'dark'
-    setTheme: Dispatch<SetStateAction<'light' | 'dark'>>
-    scriptValue: string
-    setScriptValue: Dispatch<SetStateAction<string>>
-    isScriptModified: boolean
-    setIsScriptModified: Dispatch<SetStateAction<boolean>>
+    setTheme: (theme: 'light' | 'dark') => void
     documentServerUrl: string
     documentServerSecret: string
+    templateUrl: string | null | undefined
+    hasInitialScript: boolean
 }

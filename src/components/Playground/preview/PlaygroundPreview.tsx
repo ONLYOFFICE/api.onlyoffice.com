@@ -2,6 +2,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
 import {getFullUrl} from "@site/src/utils/url";
+import { EditorType } from "@site/src/components/Playground/root/PlaygroundRootContext";
 
 declare global {
     interface Window {
@@ -26,12 +27,30 @@ const FILE_CONFIGS = {
     },
 }
 
+const getDocumentUrl = (
+    templateUrl: string | null | undefined,
+    fileConfig: { ext: string; url: string },
+    editorType: EditorType
+): string => {
+    if (templateUrl === null) {
+        const name = editorType === 'form' ? 'demo-invoice' : 'new'
+        return `https://static.onlyoffice.com/assets/docs/samples/${name}.${fileConfig.ext}`
+    }
+
+    if (templateUrl) {
+        return templateUrl
+    }
+
+    return fileConfig.url
+}
+
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
     const initializingRef = useRef(false)
     const [isApiLoaded, setIsApiLoaded] = useState(false)
+    const initialScriptExecutedRef = useRef(!hasInitialScript)
 
     const createJWT = useCallback(
         async (payload: object): Promise<string> => {
@@ -102,7 +121,7 @@ export const PlaygroundPreview = () => {
                     fileType: fileConfig.ext,
                     key: "0" + Math.random(),
                     title: `Example Document Title.${fileConfig.ext}`,
-                    url: fileConfig.url,
+                    url: getDocumentUrl(templateUrl, fileConfig, editorType),
                 },
                 documentType: fileConfig.docType,
                 type: previewType,
@@ -131,6 +150,11 @@ export const PlaygroundPreview = () => {
                             window.connector.callCommand(
                                 new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
                             );
+
+                            if (!initialScriptExecutedRef.current) {
+                                initialScriptExecutedRef.current = true
+                                executeCode(scriptValue, scriptType)
+                            }
                         } catch (error) {
                             console.error('Failed to initialize connector:', error)
                         }
@@ -149,7 +173,7 @@ export const PlaygroundPreview = () => {
             initializingRef.current = false
         }
 
-    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor])
+    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor, templateUrl])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
