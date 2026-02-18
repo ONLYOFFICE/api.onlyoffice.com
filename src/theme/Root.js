@@ -12,15 +12,6 @@ export default function Root({ children }) {
   const algoliaConfig = siteConfig.themeConfig.algolia.askAi;
   const docSearchRef = useRef(null);
 
-  const onSidepanelOpen = () => {
-    setTimeout(() => {
-      const textarea = document.querySelector('.DocSearch-Sidepanel-Prompt--textarea');
-      if (textarea) {
-        textarea.focus();
-      }
-    }, 100);
-  };
-
   const openDocSearchSidepanel = (event) => {
     if (docSearchRef.current && event.detail) {
       docSearchRef.current.openSidepanel(event.detail);
@@ -41,10 +32,7 @@ export default function Root({ children }) {
 
       <BrowserOnly>
         {() => (
-          <DocSearch
-              ref={docSearchRef}
-              onSidepanelOpen={onSidepanelOpen}
-            >
+          <DocSearch ref={docSearchRef}>
             <SidepanelButton icon={<AIIcon />} />
             <Sidepanel
               appId={algoliaConfig.appId}

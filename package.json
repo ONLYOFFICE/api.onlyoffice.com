@@ -15,10 +15,10 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docsearch/core": "^4.5.3",
-    "@docsearch/css": "^4.5.3",
-    "@docsearch/modal": "^4.5.3",
-    "@docsearch/sidepanel": "^4.5.3",
+    "@docsearch/core": "^4.6.0",
+    "@docsearch/css": "^4.6.0",
+    "@docsearch/modal": "^4.6.0",
+    "@docsearch/sidepanel": "^4.6.0",
     "@docusaurus/core": "^3.9.2",
     "@docusaurus/faster": "^3.9.2",
     "@docusaurus/plugin-google-gtag": "^3.9.2",
