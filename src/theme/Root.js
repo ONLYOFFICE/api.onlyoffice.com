@@ -12,17 +12,26 @@ export default function Root({ children }) {
   const algoliaConfig = siteConfig.themeConfig.algolia.askAi;
   const docSearchRef = useRef(null);
 
-  useEffect(() => {
-    const handleOpenSidepanel = (event) => {
-      if (docSearchRef.current && event.detail) {
-        docSearchRef.current.openSidepanel(event.detail);
+  const onSidepanelOpen = () => {
+    setTimeout(() => {
+      const textarea = document.querySelector('.DocSearch-Sidepanel-Prompt--textarea');
+      if (textarea) {
+        textarea.focus();
       }
-    };
+    }, 100);
+  };
 
-    window.addEventListener('openDocSearchSidepanel', handleOpenSidepanel);
+  const openDocSearchSidepanel = (event) => {
+    if (docSearchRef.current && event.detail) {
+      docSearchRef.current.openSidepanel(event.detail);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('openDocSearchSidepanel', openDocSearchSidepanel);
 
     return () => {
-      window.removeEventListener('openDocSearchSidepanel', handleOpenSidepanel);
+      window.removeEventListener('openDocSearchSidepanel', openDocSearchSidepanel);
     };
   }, []);
 
@@ -32,7 +41,10 @@ export default function Root({ children }) {
 
       <BrowserOnly>
         {() => (
-          <DocSearch ref={docSearchRef}>
+          <DocSearch
+              ref={docSearchRef}
+              onSidepanelOpen={onSidepanelOpen}
+            >
             <SidepanelButton icon={<AIIcon />} />
             <Sidepanel
               appId={algoliaConfig.appId}
