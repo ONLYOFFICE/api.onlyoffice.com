@@ -1,5 +1,52 @@
 # Change log
 
+## 7.6.5
+
+### New features
+
+#### Desktop
+
+* Added MCP server connection documentation for Desktop Editors v9.2
+
+#### Docspace
+
+* Enhanced MCP server documentation with AI agent capabilities and examples
+
+#### Docs API
+
+* Updated parameters of NextCloud integration
+* Added configuration parameters section to Chinese Nextcloud docs
+* Added Working with forms info to Odoo connector page
+
+#### Document Builder
+
+* Added `Creating form from JSON` sample
+* Added `Getting form values by ID` sample
+* Added `Removing individual fields` sample
+* Added `Setting default values` sample
+* Added `Updating placeholders` sample
+* Added `Creating multiple NDA documents` sample
+* Added `Creating employee onboarding checklist` sample
+* Added `Creating purchase order` sample
+* Added `Creating event form` sample
+* Added `Validating exam form` sample
+* Added Chinese translations for new samples
+
+#### Plugins and macros
+
+* Updated plugin installation docs with correct paths
+* Updated plugin-and-macros changelog with v9.1 and v9.2 changes
+* Improved adding custom functions documentation
+* Edited 'Creating plugin template' page (moved info about old template to the Migration section)
+
+### Fixes
+
+* Updated Docusaurus to 3.9.2
+* Updated DocSearch to 4.6.0
+* Fixed broken links across documentation
+* Fixed incorrect DOM selector methods and code formatting in localization docs
+* Improved conversion API documentation formatting
+
 ## 7.6.4
 
 ### Fixes
