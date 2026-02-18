@@ -5,13 +5,13 @@ This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an 
 ## Before you start
 
 Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](/docspace/mcp-server/connecting-clients/) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](/docspace/mcp-server/) and choose one of the installation modes:
-- use the public [Remote Server](/docspace/mcp-server/installation/remote-server/) if your client supports remote MCP servers;
-- run the [Local Server](/docspace/mcp-server/installation/local-server/) if your client requires a locally hosted MCP server.
+If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+- use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
+- run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
-## Script execution steps
+## Workflow steps
 
 ### 1. Decide what you want to set up
 
