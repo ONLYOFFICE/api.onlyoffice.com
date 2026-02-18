@@ -24,7 +24,7 @@ You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and
 
 The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing Moodle ONLYOFFICE integration plugin
+## Installing ONLYOFFICE plugin for Moodle
 
 This plugin is an **activity module**.
 
@@ -32,7 +32,7 @@ Follow the usual Moodle plugin installation steps to install this plugin into yo
 
 The latest compiled package files are available [here](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor/releases).
 
-## Configuring Moodle ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE plugin for Moodle
 
 Once the plugin is installed, the plugin settings page will be opened. Alternatively, you can find the uploaded app on the **Plugins overview** page and click **Settings**.
 
@@ -46,7 +46,7 @@ Once the plugin is installed, the plugin settings page will be opened. Alternati
 
 - Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Document Server Secret** on the Moodle **Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Using Moodle ONLYOFFICE integration plugin
+## Using ONLYOFFICE plugin for Moodle
 
 Once the plugin is installed and configured, you can add instances of ONLYOFFICE activity to your course pages as per usual Moodle practice:
 
@@ -64,4 +64,4 @@ Clicking the activity name/link in the course page opens the *ONLYOFFICE editor*
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the Moodle ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor).
+Download the ONLYOFFICE plugin for Moodle [here](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor).

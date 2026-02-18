@@ -25,7 +25,7 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing ONLYOFFICE SharePoint integration solution
+## Installing ONLYOFFICE solution for SharePoint
 
 To start using ONLYOFFICE Docs with SharePoint, the following steps must be performed:
 
@@ -67,7 +67,7 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 10. Under **Anonymous Access Restrictions**, select your **Zone**, set the **Permissions** to *None – No policy* and click **Save**.
 
-## Configuring SharePoint ONLYOFFICE integration solution
+## Configuring ONLYOFFICE solution for SharePoint
 
 In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with administrative settings. Enter the following address to connect ONLYOFFICE Docs:
 
@@ -85,9 +85,9 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../additional-api/signature/signature.md).
 
-## Compiling ONLYOFFICE SharePoint integration solution
+## Compiling ONLYOFFICE solution for SharePoint
 
-There are two ways to compile ONLYOFFICE SharePoint integration solution:
+There are two ways to compile ONLYOFFICE solution for SharePoint:
 
 1. Using **MS Visual Studio**:
 
@@ -129,8 +129,8 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
-8. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
+8. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting ONLYOFFICE solution for SharePoint know that the clients have finished editing the document and closed it.
 
 9. SharePoint downloads a new version of the document, replacing the old one.
 
-Download the ONLYOFFICE SharePoint integration solution [here](https://github.com/ONLYOFFICE/onlyoffice-sharepoint).
+Download the ONLYOFFICE solution for SharePoint [here](https://github.com/ONLYOFFICE/onlyoffice-sharepoint).

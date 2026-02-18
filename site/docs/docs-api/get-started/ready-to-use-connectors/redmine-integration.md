@@ -40,7 +40,7 @@ Before you proceed to the plugin installation, make sure you have an instance of
 
 We recommend using [Docker](https://github.com/onlyoffice/Docker-DocumentServer) to install ONLYOFFICE Docs. Alternatively, you can follow [these instructions](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx) for Debian, Ubuntu, or derivatives.
 
-## Installing Redmine ONLYOFFICE integration plugin
+## Installing ONLYOFFICE plugin for Redmine
 
 To install the plugin, you will need Redmine version 4.2 or higher, or version 5.0 or higher. It is also important to note that the plugin is compatible with Ruby version 2.7.2 or higher, or 3.0.0 or higher. We recommend using Redmine 5 along with Ruby 3.
 
@@ -76,7 +76,7 @@ Additionally, you may need [zstd](https://github.com/facebook/zstd) to unzip the
 
 Read more about the plugin installation on the Redmine [Wiki page](https://www.redmine.org/projects/redmine/wiki/plugins#Installing-a-plugin).
 
-## Configuring Redmine ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE plugin for Redmine
 
 Configure the plugin via the Redmine interface. Go to **Administration -> Plugins**, find the ONLYOFFICE integration plugin for Redmine and click **Configure**:
 

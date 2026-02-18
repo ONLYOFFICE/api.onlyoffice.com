@@ -19,7 +19,7 @@ You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and
 
 The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing Strapi ONLYOFFICE integration plugin
+## Installing ONLYOFFICE plugin for Strapi
 
 To start using ONLYOFFICE Docs with Strapi, follow these steps:
 
@@ -62,14 +62,14 @@ To start using ONLYOFFICE Docs with Strapi, follow these steps:
    npm run develop
    ```
 
-## Configuring Strapi ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE plugin for Strapi
 
-You can configure ONLYOFFICE app via Strapi **Dashboard -> Settings -> Global settings -> ONLYOFFICE**. On the settings page, enter:
+You can configure the ONLYOFFICE plugin via Strapi **Dashboard -> Settings -> Global settings -> ONLYOFFICE**. On the settings page, enter:
 
 - **Document server address**. The URL of the installed ONLYOFFICE Docs.
 - **Document server JWT secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key on the Strapi settings page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Using Strapi ONLYOFFICE integration plugin
+## Using ONLYOFFICE plugin for Strapi
 
 Users are able to view, edit, and co-author documents added to the Strapi Media Library. Documents available for viewing/editing can be found and sorted on the ONLYOFFICE file page within Strapi. The editor opens by clicking on the file name.
 
@@ -82,4 +82,4 @@ Users are able to view, edit, and co-author documents added to the Strapi Media 
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the Strapi ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-strapi).
+Download the ONLYOFFICE plugin for Strapi [here](https://github.com/ONLYOFFICE/onlyoffice-strapi).

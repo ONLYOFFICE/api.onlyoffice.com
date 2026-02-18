@@ -9,8 +9,8 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-mattermost) enables users
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, XLSB, XLTX.
-- The following formats are available for viewing only: XLS, CSV, XLSM, XLT, XLTM, ODS, FODS, OTS, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP, DOC, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF.
+- Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, XLSB, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
+- The following formats are available for viewing only: DOC, DOT, EPUB, FB2, FODT, HTM, HTML, HWP, HWPX, MD, MHT, MHTML, ODT, OTT, PAGES, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, NUMBERS, ODS, OTS, SXC, XLS, XLT, DPS, DPT, FODP, KEY, ODG, ODP, OTP, POT, PPS, PPT, SXI, DJVU, OXPS, XPS, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX.
 - The plugin will create a new **Open in ONLYOFFICE** menu option within the document library for office documents. This allows multiple users to collaborate in real time and save back those changes to Mattermost.
 
 ## Installing ONLYOFFICE Docs
@@ -21,41 +21,35 @@ ONLYOFFICE Docs and Mattermost can be installed either on different computers, o
 
 The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing ONLYOFFICE app for Mattermost plugin
+## Installing ONLYOFFICE app for Mattermost
 
 To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
-1. Clone the [master branch](https://github.com/ONLYOFFICE/onlyoffice-mattermost).
+1. Install Node.js. [Check instructions](https://github.com/nodesource/distributions#installation-instructions)
+2. Install Go. [Check instructions](https://go.dev/doc/install)
+3. Install make: 
 
-2. Go to the project root.
+    ```sh
+    sudo apt install make
+    ```
+4. Clone the plugin branch: 
 
-3. Install the dependencies:
+    ```sh
+    git clone https://github.com/ONLYOFFICE/onlyoffice-mattermost.git
+    ```
+5. Go to the project root and start the build:
+    ```sh
+    cd onlyoffice-mattermost/
+    make
+    ```
 
-   ``` sh
-   npm install --legacy-peer-deps
-   ```
-
-   :::note
-   Please note that you need to have Node.js v.15.14.0 installed on your machine to build the plugin.
-   :::
-
-4. Run the following command:
-
-   ``` sh
-   make dist
-   ```
-
-5. Go to `<your_mattermost_host>/admin_console/plugins/plugin_management`.
-
-6. Choose the compiled plugin from your *dist* folder and press **Upload**.
-
-## Configuring ONLYOFFICE app for Mattermost plugin
+## Configuring ONLYOFFICE app for Mattermost
 
 ![Mattermost settings](/assets/images/editor/mattermost-settings.png)
 
-- **Enable Plugin**. Enable the ONLYOFFICE app for Mattermost plugin by setting this parameter to **true**.
+As a Mattermost administrator, configure the app via the System Console. App Marketplace -> find ONLYOFFICE app -> click the Configure button.
 
-- **Document Editing Service address**. To connect ONLYOFFICE Docs, enter the following address:
+- **ONLYOFFICE Docs address**. To connect ONLYOFFICE Docs, enter the following address:
 
   ``` sh
   https://<documentserver>:<port>/
@@ -63,15 +57,17 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
   where **documentserver** is the name of the server and **port** is the port number with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Mattermost server. The Mattermost server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-- **Secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key in the Mattermost plugin configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+- **Document Server JWT Secret**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key in the Mattermost plugin configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 - **JWT Header**. If JWT protection is enabled, it is necessary to specify a custom header name since the Mattermost security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../additional-api/signature/signature.md).
 
 - **JWT Prefix**. Specify the ONLYOFFICE Docs prefix.
 
-## Using ONLYOFFICE app for Mattermost plugin
+You can also connect to the public test server of ONLYOFFICE Docs for one month by checking the corresponding box.
 
-Users are able to open files sent in personal and group Mattermost chats for viewing and co-editing.
+## Using ONLYOFFICE app for Mattermost
+
+### Context menu
 
 When files are sent in the chat message, the following actions are available in the file context menu by clicking the ⋮ symbol:
 
@@ -80,15 +76,39 @@ When files are sent in the chat message, the following actions are available in 
 
 ![Mattermost actions](/assets/images/editor/mattermost-actions.png)
 
-When clicking on the **Open file in ONLYOFFICE** button, the corresponding ONLYOFFICE editor opens in the same window.
+### Creating a new file
+
+Users can create new files directly in the chat:  click on the paperclip icon in the message input field and click ONLYOFFICE. Next, specify the file name, select the file format (Document, Spreadsheet, Presentation), and click the Create button.  A message with the created file will be sent to the chat.
+
+### Opening the editors
+
+Clicking on the file name opens a preview of the file with the Open button. 
+
+When clicking on the _Open file in ONLYOFFICE_ button, the corresponding ONLYOFFICE editor opens in the same window.
 
 ![Mattermost editor](/assets/images/editor/mattermost-editor.png)
 
-The author of the message with attached documents is able to change access rights to the file via the context menu using the **Change access rights** option. This action is available both in personal and group chats.
+You can also open the file via the file context menu in the message.
+
+### Setting file access rights
 
 <img alt="Mattermost share" src="/assets/images/editor/mattermost-share.png" width="400px" />
 
+By default, the sender of a message has full editing access to the file, while all recipients are granted read-only access. Only the sender can modify user access rights through the context menu by selecting the *Change access rights* option.
+
+**In personal chats:** Access rights can be adjusted using a drop-down menu. When the access level is changed, the ONLYOFFICE bot will send a notification to the chat.
+
+**In group chats:** A *Default access rights* option is available for quickly setting permissions for all participants. To grant specific access rights to an individual, simply type their name in the search bar and click Add.
+
+The user will then appear in a list where you can assign their desired access level. To remove a user, click the cross icon next to their name. Their access will revert to the permissions set under *Default access rights*.
+
+Whenever access levels are updated, the ONLYOFFICE bot will notify the chat. For individual changes, the bot will send a personal notification to the affected participant.
+
+### Tracking changes
+
 ONLYOFFICE bot sends notifications about changes in the document specifying the name of the user who made those changes.
+
+All change notifications can be found within the message's discussion thread. Simply click the arrow on the right edge of the message to open a panel on the right, where the full history of the message's discussion is displayed.
 
 <img alt="Mattermost bot" src="/assets/images/editor/mattermost-bot.png" width="300px" />
 

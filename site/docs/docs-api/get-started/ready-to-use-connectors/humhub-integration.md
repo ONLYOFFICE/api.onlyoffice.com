@@ -22,11 +22,11 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing HumHub ONLYOFFICE connector
+## Installing ONLYOFFICE module for HumHub
 
 Either install it from [HumHub Marketplace](https://marketplace.humhub.com/module/onlyoffice) or simply clone the [repository](https://github.com/ONLYOFFICE/onlyoffice-humhub) inside one of the folder specified by *moduleAutoloadPaths* parameter. Please see [HumHub Documentation](https://docs.humhub.org/docs/develop/environment#module-loader-path) for more information.
 
-## Configuring HumHub ONLYOFFICE connector
+## Configuring ONLYOFFICE module for HumHub
 
 In order to configure plugin, you must navigate to **Administation -> Modules**. Find ONLYOFFICE plugin and click **Configure**.
 
@@ -67,4 +67,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 12. HumHub downloads a new version of the document, replacing the old one.
 
-Download the HumHub ONLYOFFICE connector [here](https://github.com/ONLYOFFICE/onlyoffice-humhub).
+Download the ONLYOFFICE module for HumHub [here](https://github.com/ONLYOFFICE/onlyoffice-humhub).

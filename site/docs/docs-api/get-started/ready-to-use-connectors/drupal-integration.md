@@ -20,7 +20,17 @@ You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and
 
 The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Installing Drupal ONLYOFFICE connector module
+## Requirements
+
+- **firebase/php-jwt**: 6.0.0 or higher
+
+Make sure to run:
+
+``` sh
+composer require firebase/php-jwt:^6.0
+```
+
+## Installing ONLYOFFICE module for Drupal
 
 To start using ONLYOFFICE Docs with Drupal, follow these steps:
 
@@ -65,7 +75,7 @@ There are two options to enable the Drupal module.
 
 2. Follow the instructions on the screen.
 
-## Configuring Drupal ONLYOFFICE connector module
+## Configuring ONLYOFFICE module for Drupal
 
 In Drupal, open *\~/config/system/onlyoffice-settings* page with administrative settings for **ONLYOFFICE** section. Or follow *Configuration –> MEDIA –> ONLYOFFICE Connector settings*. Enter the address to connect ONLYOFFICE Docs:
 
@@ -77,7 +87,7 @@ where **documentserver** is the name of the server with the ONLYOFFICE Docs inst
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Drupal administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Using Drupal ONLYOFFICE connector module
+## Using ONLYOFFICE module for Drupal
 
 ### Edit files already uploaded to Drupal
 
@@ -133,4 +143,4 @@ In the *Manage → Content → ONLYOFFICE form → Submitted forms* section, Dru
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the Drupal ONLYOFFICE connector module [here](https://github.com/ONLYOFFICE/onlyoffice-drupal).
+Download the ONLYOFFICE module for Drupal [here](https://github.com/ONLYOFFICE/onlyoffice-drupal).

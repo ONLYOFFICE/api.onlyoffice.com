@@ -28,9 +28,13 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 ## Installing ONLYOFFICE addon package for Nuxeo
 
-Install it from [marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
+You have two options:
 
-You can also install it using [nuxeoctl](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/).
+**Option 1**. Nuxeo Marketplace (recommended)
+
+Install directly from [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace)
+
+**Option 2**. [nuxeoctl](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/)
 
 ``` sh
 nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip
@@ -79,5 +83,22 @@ To build Nuxeo package, the following steps must be performed for Ubuntu:
 ## How it works
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
+
+### Create a new file
+
+1. Open the target workspace/folder.
+2. Click Create new (ONLYOFFICE icon).
+3. Choose Document / Spreadsheet / Presentation, name it, and confirm.
+4. The editor opens - start working immediately.
+
+### Open an existing file
+
+1. Locate your file in *Nuxeo*.
+2. Click **Open with ONLYOFFICE** (or the editor icon).
+3. The file opens in the embedded editor for viewing or editing (per your permissions).
+
+### Auto-save & versioning
+
+Changes are sent back to Nuxeo; Nuxeo handles repository updates/versioning.
 
 Download the ONLYOFFICE addon package for Nuxeo [here](https://github.com/ONLYOFFICE/onlyoffice-nuxeo).

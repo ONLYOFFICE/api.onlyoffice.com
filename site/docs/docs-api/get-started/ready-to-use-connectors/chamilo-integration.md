@@ -15,8 +15,8 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, ODT, ODS, ODP.
+- The following formats are available for viewing only: PDF, DJVU, TXT, CSV, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
 - The plugin will create a new **Open with ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Chamilo.
 
 ## Installing ONLYOFFICE Docs
@@ -27,7 +27,12 @@ ONLYOFFICE Docs and Chamilo can be installed either on different computers, or o
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
-## Collecting Chamilo ONLYOFFICE integration plugin
+## Download a more recent version of the ONLYOFFICE plugin for Chamilo
+
+When approved by Chamilo and integrated as official plugin, the Chamilo team strives to provide the latest 
+stable version of the plugin within the Chamilo package. Downloading another version of the plugin might have
+negative effects on your installation. However, if you believe you need to download a more recent version from
+the third party, here is the recommended procedure:
 
 1. Get the latest version of the [repository](https://github.com/ONLYOFFICE/onlyoffice-chamilo) running the command:
 
@@ -35,7 +40,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
    git clone https://github.com/ONLYOFFICE/onlyoffice-chamilo cd onlyoffice-chamilo
    ```
 
-2. Get a submodule:
+2. Get submodules:
 
    ``` sh
    git submodule update --init --recursive
@@ -64,7 +69,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
    zip onlyoffice.zip -r onlyoffice
    ```
 
-## Installing Chamilo ONLYOFFICE integration plugin
+## Installing ONLYOFFICE plugin for Chamilo
 
 To start using ONLYOFFICE Docs with Chamilo, the following steps must be performed:
 
@@ -85,9 +90,9 @@ If your Chamilo version is lower than 1.11.16:
 1. Go to Chamilo **Administration**, choose the **Plugins** section, and click the **Upload plugin** button.
 2. Upload *onlyoffice.zip* from the **Releases** section. You'll see the plugin list.
 3. Launch *composer install* from the Chamilo root folder.
-4. Return to the plugin list, select the ONLYOFFICE plugin, and click the **Enable the selected plugins** button.
+4. Return to the plugin list, select the ONLYOFFICE plugin, and click the **Enable** button.
 
-## Configuring Chamilo ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE plugin for Chamilo
 
 On the **Plugins** page, find ONLYOFFICE and click **Configure**. You'll see the **Settings** page. Enable the plugin and specify ONLYOFFICE Docs address:
 
@@ -103,11 +108,13 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-1. To create a new file, the teacher opens the necessary folder and clicks the **Create new** ONLYOFFICE icon.
+### For teachers/trainers
+
+1. To create a new file, teachers can open the documents folder and clicks the **Create new** ONLYOFFICE icon.
 
 2. The user is redirected to the file creation page where they need to enter the file name and format (text document, spreadsheet, or presentation). The browser calls the */plugin/onlyoffice/create.php* method. It adds a copy of an empty file to the course folder.
 
-3. To open an existing file, the user chooses the **Open with ONLYOFFICE** icon.
+3. To open an existing file, the user chooses the **Open with ONLYOFFICE** icon next to the normal edit icon.
 
 4. The request is sent to */plugin/onlyoffice/editor.php?docId="document identificator"*. The server processes the request, generates the editor initialization configuration with the following properties:
 
@@ -132,4 +139,10 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 12. Chamilo loads a new version of the document and overwrites the file.
 
-Download the Chamilo ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-chamilo/tree/master).
+### For learners
+
+1. Learners have access to a new ONLYOFFICE icon next to all documents supported by ONLYOFFICE in the documents tool.
+
+2. In the learning paths, the viewer seamlessly integrates with Chamilo to open the supported documents.
+
+Download the ONLYOFFICE plugin for Chamilo [here](https://github.com/ONLYOFFICE/onlyoffice-chamilo/tree/master).

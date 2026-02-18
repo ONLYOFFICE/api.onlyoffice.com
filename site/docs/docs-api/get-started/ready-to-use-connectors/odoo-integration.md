@@ -15,8 +15,8 @@ This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit 
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PDF.
-- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, XLSB, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
+- The following formats are available for viewing only: DOC, DOT, EPUB, FB2, FODT, HTM, HTML, HWP, HWPX, MD, MHT, MHTML, ODT, OTT, PAGES, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, NUMBERS, ODS, OTS, SXC, XLS, XLT, DPS, DPT, FODP, KEY, ODG, ODP, OTP, POT, PPS, PPT, SXI, DJVU, DOCXF, OFORM, OXPS, XPS, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX.
 - The app will create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Odoo.
 
 ## Installing ONLYOFFICE Docs

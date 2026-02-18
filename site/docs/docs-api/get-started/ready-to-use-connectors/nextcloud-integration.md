@@ -38,8 +38,11 @@ The Nextcloud administrator can install the integration app from the in-built ap
 
 If the server with the Nextcloud installed does not have the Internet access, or if you need it for some other reason, the administrator can install the application manually. To start using ONLYOFFICE Docs with Nextcloud, the following steps must be performed:
 
-1. Go to the Nextcloud server *apps/* directory (or some other directory [used](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories) to connect applications): cd apps/
+1. Go to the Nextcloud server *apps/* directory (or some other directory [used](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories) to connect applications): 
 
+   ``` sh
+   cd apps/
+   ```
 2. Get the ONLYOFFICE app for Nextcloud. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
