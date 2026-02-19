@@ -12,17 +12,17 @@ export default function Root({ children }) {
   const algoliaConfig = siteConfig.themeConfig.algolia.askAi;
   const docSearchRef = useRef(null);
 
-  useEffect(() => {
-    const handleOpenSidepanel = (event) => {
-      if (docSearchRef.current && event.detail) {
-        docSearchRef.current.openSidepanel(event.detail);
-      }
-    };
+  const openDocSearchSidepanel = (event) => {
+    if (docSearchRef.current && event.detail) {
+      docSearchRef.current.openSidepanel(event.detail);
+    }
+  };
 
-    window.addEventListener('openDocSearchSidepanel', handleOpenSidepanel);
+  useEffect(() => {
+    window.addEventListener('openDocSearchSidepanel', openDocSearchSidepanel);
 
     return () => {
-      window.removeEventListener('openDocSearchSidepanel', handleOpenSidepanel);
+      window.removeEventListener('openDocSearchSidepanel', openDocSearchSidepanel);
     };
   }, []);
 

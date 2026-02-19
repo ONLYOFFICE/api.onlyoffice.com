@@ -6,10 +6,10 @@ sidebar_position: -4
 
 ## Overview
 
-This example will help you integrate ONLYOFFICE Docs into your web application written on Ruby.
+This example will help you integrate ONLYOFFICE Docs into your web application written in Ruby.
 
-:::note
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::caution
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
 :::
 
 ## Important security info
@@ -36,14 +36,14 @@ curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document
 unzip Ruby.Example.zip
 ```
 
-Then open the example directory and [up containers](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L46):
+Then open the example directory and [start containers](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L46):
 
 ``` sh
 cd "Ruby Example"
 make compose-prod
 ```
 
-By default, the server starts at *localhost:80*.
+By default, the server starts at `localhost:80`.
 
 To configure the example, you can edit the environment variables in [compose-base.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/compose-base.yml). See [below](#step-3-configure-the-ruby-example) for more information about environment variables.
 
@@ -72,25 +72,25 @@ make prod
 make server-prod
 ```
 
-By default, the server starts at *0.0.0.0:3000*.
+By default, the server starts at `0.0.0.0:3000`.
 
 To configure the example, you can pass the environment variables before the command that starts the server. See [below](#step-3-configure-the-ruby-example) for more information about environment variables.
 
 ## Step 2. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
 
 ## Step 3. Configure the Ruby example
 
 The example is configured by changing environment variables.
 
-| Parameter                      | Example                 | Description                                                             |
-| ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| BINDING                        | 0.0.0.0                 | The address where the server should be started.                         |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
-| EXAMPLE\_URL                   | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
-| JWT\_SECRET                    | your-256-bit-secret     | JWT authorization secret. Leave blank to disable authorization.         |
-| PORT                           | 80                      | The port on which the server should be running.                         |
+| Name                             | Example                 | Description                                                             |
+| -------------------------------- | ----------------------- | ----------------------------------------------------------------------- |
+| `BINDING`                        | `0.0.0.0`               | The address where the server should be started.                         |
+| `DOCUMENT_SERVER_PRIVATE_URL`    | `http://proxy:8080`     | The URL through which the server will communicate with ONLYOFFICE Docs. |
+| `DOCUMENT_SERVER_PUBLIC_URL`     | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
+| `EXAMPLE_URL`                    | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
+| `JWT_SECRET`                     | `your-256-bit-secret`   | JWT authorization secret. Leave blank to disable authorization.         |
+| `PORT`                           | `80`                    | The port on which the server should be running.                         |

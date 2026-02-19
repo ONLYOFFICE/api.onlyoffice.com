@@ -2,6 +2,8 @@
 
 This example demonstrates how to embed ONLYOFFICE DocSpace in a tabbed interface, where each tab runs its own DocSpace instance in manager mode.
 
+Complete source code on GitHub: [Source](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/create-tabbed-docspace-manager.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.

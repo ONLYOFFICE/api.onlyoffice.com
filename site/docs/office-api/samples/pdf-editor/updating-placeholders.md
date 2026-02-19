@@ -1,10 +1,14 @@
+---
+hide_table_of_contents: true
+---
+
 # Updating placeholders
 
 Adapt placeholder text in form fields based on user language or usage context for better user experience in multilingual systems:
 
 - create forms with localizable placeholder text ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- implement language detection and placeholder updates ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md));
-- manage multilingual placeholder dictionaries ([ApiDocument/GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md)).
+- implement language detection and placeholder updates ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
+- manage multilingual placeholder dictionaries ([ApiDocument/GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)).
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

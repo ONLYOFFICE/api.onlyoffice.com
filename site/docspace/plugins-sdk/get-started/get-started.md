@@ -41,12 +41,6 @@ Now, the **npx** command is available, which will be used to create a plugin.
 
 ### Step 2. Creating plugin template
 
-For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
-
-   ```json
-   "build": "webpack && npx build-docspace-plugin"
-   ```
-
 1. To create a plugin template, run the following command:
 
    ``` sh

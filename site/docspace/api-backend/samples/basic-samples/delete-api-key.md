@@ -5,6 +5,8 @@ import TabItem from '@theme/TabItem';
 
 This example demonstrates how to delete an existing API key in ONLYOFFICE DocSpace by its unique identifier (UUID). Use this operation to revoke a key that is no longer needed or compromised.
 
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/delete-api-key.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/delete-api-key.py)
+
 ## Before you start
 
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
