@@ -100,6 +100,7 @@ Represents the ApiRange class.
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the rows in the specified range. If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row. |
 | [GetRowsCount](./Methods/GetRowsCount.md) | number | Returns a number of rows in the current range. |
 | [GetText](./Methods/GetText.md) | string \| string[][] | Returns the text of the specified range. |
+| [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | Returns a collection of the ranges. |
 | [GetValue](./Methods/GetValue.md) | string \| string[][] | Returns a value of the specified range. |
 | [GetValue2](./Methods/GetValue2.md) | string \| string[][] | Returns the Value2 property (value without format) of the specified range. |
 | [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode. |

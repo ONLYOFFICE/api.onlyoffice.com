@@ -1,7 +1,7 @@
 # AddChart
 
-Creates a chart of the specified type from the selected data range of the current sheet.
-💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
+Creates a chart of the specified type from the selected data range of the current sheet.\
+💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and\
 row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
 
 ## Syntax
@@ -54,8 +54,8 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```

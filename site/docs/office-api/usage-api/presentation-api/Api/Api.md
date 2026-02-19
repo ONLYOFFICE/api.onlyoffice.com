@@ -14,6 +14,7 @@ Represents the Api class.
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | Creates a new custom geometry. |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | Creates a gradient stop used for different types of gradients. |
 | [CreateGroup](./Methods/CreateGroup.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Creates a group of drawings. |
+| [CreateHyperlink](./Methods/CreateHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) | Creates a new hyperlink object to be used for setting hyperlinks on drawing objects (shapes or images). |
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Creates an image with the parameters specified. |
 | [CreateLayout](./Methods/CreateLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) | Creates a new slide layout and adds it to the slide master if it is specified. |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background. |
@@ -32,6 +33,7 @@ Represents the Api class.
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | Creates a complex color scheme selecting from one of the available schemes. |
 | [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a shape with the parameters specified. |
 | [CreateSlide](./Methods/CreateSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Creates a new slide. |
+| [CreateSlideShowTransition](./Methods/CreateSlideShowTransition.md) | [ApiSlideShowTransition](../ApiSlideShowTransition/ApiSlideShowTransition.md) | Creates a new slide show transition object. |
 | [CreateSolidFill](./Methods/CreateSolidFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a solid fill to apply to the object using a selected solid color as the object background. |
 | [CreateStroke](./Methods/CreateStroke.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Creates a stroke adding shadows to the element. |
 | [CreateTable](./Methods/CreateTable.md) | [ApiTable](../ApiTable/ApiTable.md) | Creates a table. |

@@ -1,6 +1,6 @@
 # GetAttribute
 
-Retrieves the attribute value from the custom XML node.
+Retrieves the attribute value from the custom XML node.\
 If the attribute doesn't exist, it returns `false`.
 
 ## Syntax
@@ -39,7 +39,7 @@ let name = productNode.GetAttribute("name");
 let price = productNode.GetAttribute("price");
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

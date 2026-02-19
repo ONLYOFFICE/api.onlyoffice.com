@@ -1,6 +1,6 @@
 # MillimetersToEmus
 
-Converts millimeters to English Metric Units (EMUs).
+Converts millimeters to English Metric Units (EMUs).\
 The result is an integer value.
 
 ## Syntax

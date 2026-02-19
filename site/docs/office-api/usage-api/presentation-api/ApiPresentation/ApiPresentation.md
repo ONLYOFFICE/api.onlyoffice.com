@@ -30,6 +30,7 @@ Represents the ApiPresentation class.
 | [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the presentation. This manager allows manipulation and access to custom XML parts within the presentation. |
 | [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: **Application** - the application the document has been created with. **CreatedRaw** - the date and time when the file was created. **Created** - the parsed date and time when the file was created. **LastModifiedRaw** - the date and time when the file was last modified. **LastModified** - the parsed date and time when the file was last modified. **LastModifiedBy** - the name of the user who has made the latest change to the document. **Authors** - the persons who has created the file. **Title** - this property allows you to simplify your documents classification. **Tags** - this property allows you to simplify your documents classification. **Subject** - this property allows you to simplify your documents classification. **Comment** - this property allows you to simplify your documents classification. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the presentation height in English measure units. |
+| [GetLoopUntilStopped](./Methods/GetLoopUntilStopped.md) | boolean | Returns whether the presentation loops continuously until the user stops it. |
 | [GetMaster](./Methods/GetMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Returns a slide master by its position in the presentation. |
 | [GetMastersCount](./Methods/GetMastersCount.md) | number | Returns a number of slide masters. |
 | [GetSlideByIndex](./Methods/GetSlideByIndex.md) | [ApiSlide](../ApiSlide/ApiSlide.md) | Returns a slide by its position in the presentation. |
@@ -38,6 +39,7 @@ Represents the ApiPresentation class.
 | [RemoveSlides](./Methods/RemoveSlides.md) | boolean | Removes a range of slides from the presentation. Deletes all the slides from the presentation if no parameters are specified. |
 | [ReplaceCurrentImage](./Methods/ReplaceCurrentImage.md) | None | Replaces the current image with an image specified. |
 | [SetLanguage](./Methods/SetLanguage.md) | boolean | Specifies the languages which will be used to check spelling and grammar (if requested). |
+| [SetLoopUntilStopped](./Methods/SetLoopUntilStopped.md) | boolean | Sets whether the presentation loops continuously until the user stops it. |
 | [SetSizes](./Methods/SetSizes.md) | None | Sets the size to the current presentation. |
 | [SlidesToJSON](./Methods/SlidesToJSON.md) | JSON[] | Converts the slides from the current ApiPresentation object into the JSON objects. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiPresentation object into the JSON object. |

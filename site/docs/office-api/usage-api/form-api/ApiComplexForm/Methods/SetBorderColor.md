@@ -5,7 +5,7 @@ Sets the border color to the current form.
 ## Syntax
 
 ```javascript
-expression.SetBorderColor(r, g, b, bNone);
+expression.SetBorderColor(color);
 ```
 
 `expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
@@ -14,10 +14,7 @@ expression.SetBorderColor(r, g, b, bNone);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| bNone | Required | boolean |  | Defines that border color will not be set. |
+| color | Optional | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 
@@ -27,7 +24,7 @@ boolean
 
 This example sets the border color to the form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
 
 // Define the border color of the date form.

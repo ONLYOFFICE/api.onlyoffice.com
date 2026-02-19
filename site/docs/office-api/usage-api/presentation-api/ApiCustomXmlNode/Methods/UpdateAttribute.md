@@ -1,6 +1,6 @@
 # UpdateAttribute
 
-Updates the value of an existing attribute in the custom XML node.
+Updates the value of an existing attribute in the custom XML node.\
 If the attribute doesn't exist, the update will not occur.
 
 ## Syntax

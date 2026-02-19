@@ -1,6 +1,6 @@
 # FormType
 
-Form type.
+Form type.\
 The available form types.
 
 ## Type
@@ -23,7 +23,7 @@ Enumeration
 
 This example returns a type of the current form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to get a form type.
 
 // Return a type from the ApiTextForm object.

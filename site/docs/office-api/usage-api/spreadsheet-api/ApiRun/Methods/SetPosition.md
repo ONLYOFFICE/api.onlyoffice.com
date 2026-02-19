@@ -1,6 +1,6 @@
 # SetPosition
 
-Specifies an amount by which text is raised or lowered for this run in relation to the default
+Specifies an amount by which text is raised or lowered for this run in relation to the default\
 baseline of the surrounding non-positioned text.
 
 ## Syntax
@@ -31,7 +31,7 @@ This example specifies an amount by which text is raised or lowered for this run
 // Create a text run object, specify its position to move down or up.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

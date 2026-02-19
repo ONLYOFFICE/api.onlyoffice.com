@@ -1,0 +1,21 @@
+# GetElement
+
+Returns a paragraph element using the position specified.
+
+## Syntax
+
+```javascript
+expression.GetElement(nPos);
+```
+
+`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPos | Required | number |  | The position where the element which content we want to get must be located. |
+
+## Returns
+
+[ParagraphContent](../../Enumeration/ParagraphContent.md)

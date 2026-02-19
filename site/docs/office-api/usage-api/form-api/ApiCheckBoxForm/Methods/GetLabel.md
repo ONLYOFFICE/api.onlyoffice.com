@@ -22,7 +22,7 @@ string
 
 This example gets the label text from the checkbox form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to retrieve a label from the checkbox form.
 
 // Get the label text from the checkbox.

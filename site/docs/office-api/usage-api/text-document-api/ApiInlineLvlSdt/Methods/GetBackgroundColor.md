@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-null \| Object
+[ApiColor](../../ApiColor/ApiColor.md)
 
 ## Example
 

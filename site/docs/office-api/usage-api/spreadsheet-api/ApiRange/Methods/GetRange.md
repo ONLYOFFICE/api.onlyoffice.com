@@ -1,6 +1,6 @@
 # GetRange
 
-Returns a Range object that represents a cell or a range of cells.
+Returns a Range object that represents a cell or a range of cells.\
 When applied to a Range object, the property is relative to that Range object.
 
 ## Syntax

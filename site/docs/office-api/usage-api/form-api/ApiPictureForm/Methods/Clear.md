@@ -22,7 +22,7 @@ boolean
 
 This example clears the current form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to remove texy from the form.
 
 // Clear answer from the text form.

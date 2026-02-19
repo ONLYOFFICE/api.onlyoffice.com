@@ -1,7 +1,7 @@
 # SetSpacingBefore
 
-Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then 
-any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then 
+Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then \
+any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then \
 it will be interpreted as false.
 
 ## Syntax
@@ -33,7 +33,7 @@ This example sets the spacing before the current paragraph.
 // Get a paragraph from the shape's content then add a text specifying the spacing before a custom text.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

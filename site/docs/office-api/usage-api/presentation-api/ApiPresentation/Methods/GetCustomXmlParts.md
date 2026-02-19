@@ -1,6 +1,6 @@
 # GetCustomXmlParts
 
-Retrieves the custom XML manager associated with the presentation.
+Retrieves the custom XML manager associated with the presentation.\
 This manager allows manipulation and access to custom XML parts within the presentation.
 
 ## Syntax
@@ -36,7 +36,7 @@ let xmlId = xmlPart.GetId();
 let retrievedXml = xmlManager.GetById(xmlId);
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

@@ -8,6 +8,7 @@ Represents the ApiDocumentContent class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the document content. |
+| [ApiPresentation#GetDrawingsByName](./Methods/ApiPresentation#GetDrawingsByName.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects from the document content filtered by their names. |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns an array of all paragraphs from the current document content. |
 | [GetClassType](./Methods/GetClassType.md) | "documentContent" | Returns a type of the ApiDocumentContent class. |
 | [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the current paragraph where the cursor is located. |

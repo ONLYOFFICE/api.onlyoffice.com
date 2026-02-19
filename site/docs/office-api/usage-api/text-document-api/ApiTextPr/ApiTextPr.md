@@ -10,7 +10,7 @@ Represents the ApiTextPr class.
 | [GetBold](./Methods/GetBold.md) | boolean | Gets the bold property from the current text properties. |
 | [GetCaps](./Methods/GetCaps.md) | boolean | Specifies whether the text with the current text properties are capitalized. |
 | [GetClassType](./Methods/GetClassType.md) | "textPr" | Returns a type of the ApiTextPr class. |
-| [GetColor](./Methods/GetColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | Gets the RGB color from the current text properties. |
+| [GetColor](./Methods/GetColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets the RGB color from the current text properties. |
 | [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean | Gets the double strikeout property from the current text properties. |
 | [GetFontFamily](./Methods/GetFontFamily.md) | string | Returns the font family from the current text properties. The method automatically calculates the font from the theme if the font was set via the theme. |
 | [GetFontSize](./Methods/GetFontSize.md) | [hps](../Enumeration/hps.md) | Gets the font size from the current text properties. |
@@ -19,7 +19,7 @@ Represents the ApiTextPr class.
 | [GetLanguage](./Methods/GetLanguage.md) | string | Gets the language from the current text properties. |
 | [GetOutLine](./Methods/GetOutLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Gets the text outline from the current text properties. |
 | [GetPosition](./Methods/GetPosition.md) | [hps](../Enumeration/hps.md) | Gets the text position from the current text properties measured in half-points (1/144 of an inch). |
-| [GetShd](./Methods/GetShd.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | Gets the text shading from the current text properties. |
+| [GetShd](./Methods/GetShd.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets the text shading from the current text properties. |
 | [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean | Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
 | [GetSpacing](./Methods/GetSpacing.md) | [twips](../Enumeration/twips.md) | Gets the text spacing from the current text properties measured in twentieths of a point. |
 | [GetStrikeout](./Methods/GetStrikeout.md) | boolean | Gets the strikeout property from the current text properties. |
@@ -29,7 +29,7 @@ Represents the ApiTextPr class.
 | [GetVertAlign](./Methods/GetVertAlign.md) | string | Gets the vertical alignment type from the current text properties. |
 | [SetBold](./Methods/SetBold.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the bold property to the text character. |
 | [SetCaps](./Methods/SetCaps.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents. |
-| [SetColor](./Methods/SetColor.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text color to the current text run in the RGB format. |
+| [SetColor](./Methods/SetColor.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the text color to the current text run. |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line. |
 | [SetFontFamily](./Methods/SetFontFamily.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets all 4 font slots with the specified font family. |
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Sets the font size to the characters of the current text run. |

@@ -1,11 +1,11 @@
 # SetColor
 
-Sets the text color for the current text run in the RGB format.
+Sets the text color for the current text run.
 
 ## Syntax
 
 ```javascript
-expression.SetColor(r, g, b, isAuto);
+expression.SetColor(color);
 ```
 
 `expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
@@ -14,10 +14,7 @@ expression.SetColor(r, g, b, isAuto);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| isAuto | Optional | boolean | false | If this parameter is set to "true", then r,g,b parameters will be ignored. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 
@@ -25,20 +22,25 @@ expression.SetColor(r, g, b, isAuto);
 
 ## Example
 
-This example sets the text color for the current text run in the RGB format.
+This example sets the text color for the current text run.
 
 ```javascript editor-docx
 // How to change text color.
 
 // Create a new text run and change its font color.
 
-let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-let run = Api.CreateRun();
-run.AddText("This is just a sample text. ");
-paragraph.AddElement(run);
-run = Api.CreateRun();
-run.SetColor(255, 111, 61);
-run.AddText("This is a text run with the font color set to orange.");
-paragraph.AddElement(run);
+const doc = Api.GetDocument();
+const paragraph = doc.GetElement(0);
+
+const firstRun = Api.CreateRun();
+firstRun.AddText('This is a text run with the font color set to orange.');
+firstRun.SetColor(255, 111, 61);
+paragraph.AddElement(firstRun);
+
+const secondRun = Api.CreateRun();
+secondRun.AddText('The text uses a bluish color created with HexColor method.');
+const hexColor = Api.HexColor('#219ebc');
+secondRun.SetColor(hexColor);
+paragraph.AddElement(secondRun);
+
 ```

@@ -1,6 +1,6 @@
 # SetText
 
-Sets the text to the current combo box.
+Sets the text to the current combo box.\
 *Available only for editable combo box forms.*
 
 ## Syntax
@@ -25,7 +25,7 @@ boolean
 
 This example sets the text to the current combo box.
 
-```javascript editor-pdf
+```javascript editor-forms
 // Add text to the combobox.
 
 // How to create a combobox and change its content text.

@@ -1,6 +1,6 @@
 # SetSmallCaps
 
-Specifies that all the small letter characters in this text run are formatted for display only as their capital
+Specifies that all the small letter characters in this text run are formatted for display only as their capital\
 letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ## Syntax
@@ -31,7 +31,7 @@ This example specifies that all the small letter characters in this text run are
 // Create a text run object, update its style by making its letters uncapitalized.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

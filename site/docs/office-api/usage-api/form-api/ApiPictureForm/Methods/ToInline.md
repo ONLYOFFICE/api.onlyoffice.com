@@ -1,6 +1,6 @@
 # ToInline
 
-Converts the current form to an inline form.
+Converts the current form to an inline form.\
 *Picture form can't be converted to an inline form, it's always a fixed size object.*
 
 ## Syntax
@@ -23,7 +23,7 @@ boolean
 
 This example converts the form to an inline form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to make the form inline.
 
 // Create a text form and make its position inline.

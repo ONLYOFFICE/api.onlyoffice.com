@@ -1,6 +1,6 @@
 # SetTabs
 
-Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.
+Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\
 -**Warning**: The lengths of aPos array and aVal array -**MUST BE** equal to each other.
 
 ## Syntax
@@ -32,7 +32,7 @@ This example sets a sequence of custom tab stops which will be used for any tab 
 // Customize all kind of tabs indicating sizes.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 150 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

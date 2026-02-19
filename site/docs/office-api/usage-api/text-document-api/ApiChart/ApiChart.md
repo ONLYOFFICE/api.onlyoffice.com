@@ -14,13 +14,14 @@ Represents the ApiChart class.
 | [GetNextChart](./Methods/GetNextChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Returns the next inline chart if exists. |
 | [GetPrevChart](./Methods/GetPrevChart.md) | [ApiChart](../ApiChart/ApiChart.md) \| null | Returns the previous inline chart if exists. |
 | [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) | Returns the series with a specific index. |
+| [GetTitle](./Methods/GetTitle.md) | string \| null | Returns the chart title text. |
 | [RemoveSeria](./Methods/RemoveSeria.md) | boolean | Removes the specified series from the current chart. |
 | [SetAxieNumFormat](./Methods/SetAxieNumFormat.md) | boolean | Sets the specified numeric format to the axis values. |
 | [SetCategoryName](./Methods/SetCategoryName.md) | boolean | Sets a name to the specified chart category. |
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | Sets the fill to the data point in the specified chart series. |
 | [SetDataPointNumFormat](./Methods/SetDataPointNumFormat.md) | boolean | Sets the specified numeric format to the chart data point. |
 | [SetDataPointOutLine](./Methods/SetDataPointOutLine.md) | boolean | Sets the outline to the data point in the specified chart series. |
-| [SetHorAxisLablesFontSize](./Methods/SetHorAxisLablesFontSize.md) | boolean | Specifies font size for labels of the horizontal axis. |
+| [SetHorAxisLabelsFontSize](./Methods/SetHorAxisLabelsFontSize.md) | boolean | Specifies font size for labels of the horizontal axis. |
 | [SetHorAxisMajorTickMark](./Methods/SetHorAxisMajorTickMark.md) | boolean | Specifies major tick mark for the horizontal axis. |
 | [SetHorAxisMinorTickMark](./Methods/SetHorAxisMinorTickMark.md) | boolean | Specifies minor tick mark for the horizontal axis. |
 | [SetHorAxisOrientation](./Methods/SetHorAxisOrientation.md) | boolean | Specifies the horizontal axis orientation. |
@@ -50,7 +51,7 @@ Represents the ApiChart class.
 | [SetTitleOutLine](./Methods/SetTitleOutLine.md) | boolean | Sets the outline to the chart title. |
 | [SetVerAxisOrientation](./Methods/SetVerAxisOrientation.md) | boolean | Specifies the vertical axis orientation. |
 | [SetVerAxisTitle](./Methods/SetVerAxisTitle.md) | boolean | Specifies the chart vertical axis title. |
-| [SetVertAxisLablesFontSize](./Methods/SetVertAxisLablesFontSize.md) | boolean | Specifies font size for labels of the vertical axis. |
+| [SetVertAxisLabelsFontSize](./Methods/SetVertAxisLabelsFontSize.md) | boolean | Specifies font size for labels of the vertical axis. |
 | [SetVertAxisMajorTickMark](./Methods/SetVertAxisMajorTickMark.md) | boolean | Specifies major tick mark for the vertical axis. |
 | [SetVertAxisMinorTickMark](./Methods/SetVertAxisMinorTickMark.md) | boolean | Specifies minor tick mark for the vertical axis. |
 | [SetVertAxisTickLabelPosition](./Methods/SetVertAxisTickLabelPosition.md) | boolean | Spicifies tick labels position for the vertical axis. |

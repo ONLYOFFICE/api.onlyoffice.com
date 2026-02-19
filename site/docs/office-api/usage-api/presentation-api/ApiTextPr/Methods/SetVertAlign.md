@@ -1,8 +1,8 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:\
+-**"baseline"** - the characters in the current text run will be aligned by the default text baseline.\
+-**"subscript"** - the characters in the current text run will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
@@ -36,7 +36,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

@@ -1,6 +1,6 @@
 # SetTextPr
 
-Sets the text properties to the current form.
+Sets the text properties to the current form.\
 *Used if possible for this type of form*
 
 ## Syntax
@@ -25,7 +25,7 @@ boolean
 
 This example sets the text properties to the form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // Add text properties to the text form.
 
 // How to create a text form and make its text bold and bigger.
