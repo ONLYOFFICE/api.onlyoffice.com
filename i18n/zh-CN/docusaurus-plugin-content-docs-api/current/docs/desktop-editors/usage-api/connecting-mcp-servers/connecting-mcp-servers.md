@@ -166,7 +166,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 实际示例
 
-#### ONLYOFFICE DocSpace MCP
+### ONLYOFFICE DocSpace MCP
 
 连接到 DocSpace 进行文档管理操作：
 
@@ -188,7 +188,7 @@ import APITable from '@site/src/components/APITable/APITable';
 }
 ```
 
-#### 本地自定义 MCP 服务器
+### 本地自定义 MCP 服务器
 
 从本地计算机运行自定义 Node.js MCP 服务器：
 
@@ -214,7 +214,7 @@ import APITable from '@site/src/components/APITable/APITable';
 5. 在配置中引用服务器入口点的路径
 :::
 
-#### 多个 MCP 服务器
+### 多个 MCP 服务器
 
 同时配置多个服务器：
 

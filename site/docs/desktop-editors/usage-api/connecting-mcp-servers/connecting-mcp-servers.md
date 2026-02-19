@@ -166,7 +166,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## Practical examples
 
-#### ONLYOFFICE DocSpace MCP
+### ONLYOFFICE DocSpace MCP
 
 Connect to DocSpace for document management operations:
 
@@ -188,7 +188,7 @@ Connect to DocSpace for document management operations:
 }
 ```
 
-#### Local custom MCP server
+### Local custom MCP server
 
 Run a custom Node.js MCP server from your local machine:
 
@@ -214,7 +214,7 @@ To create your own custom MCP server:
 5. Reference the path to your server's entry point in the configuration
 :::
 
-#### Multiple MCP servers
+### Multiple MCP servers
 
 Configure multiple servers simultaneously:
 
