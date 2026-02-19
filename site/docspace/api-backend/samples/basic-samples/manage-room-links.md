@@ -1,6 +1,11 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Manage room links
 
 This example demonstrates how to set and retrieve room invitation or external links in ONLYOFFICE DocSpace using the API. These links provide access to rooms based on specified permissions.
+
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/manage-room-links.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/manage-room-links.py)
 
 ## Before you start
 
@@ -9,52 +14,121 @@ This example demonstrates how to set and retrieve room invitation or external li
 
 <details>
   <summary>Full example</summary>
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
 
-``` py
-import requests
+  ``` ts
+  // Set API base URL
+  const API_HOST = 'https://yourportal.onlyoffice.com';
+  const API_KEY = 'your_api_key';
 
-# Set API base URL
-API_HOST = 'yourportal.onlyoffice.com'
-API_KEY = 'your_api_key'
+  // Headers with API key for authentication
+  const HEADERS = {
+    Authorization: `Bearer ${API_KEY}`,
+    'Content-Type': 'application/json',
+  };
 
-# Headers with API key for authentication
-HEADERS = {
+  // Step 1: Set a room access link
+  async function setRoomLink(roomId, accessLevel = 2, expirationDate = null, internal = true, primary = false) {
+    const url = `${API_HOST}/api/2.0/files/rooms/${roomId}/links`;
+    const body = JSON.stringify({
+      access: accessLevel,
+      expirationDate,
+      internal,
+      primary,
+    });
+
+    const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
+    }
+    return res.json();
+  }
+
+  // Step 2: Retrieve all links for a room
+  async function getRoomLinks(roomId) {
+    const url = `${API_HOST}/api/2.0/files/rooms/${roomId}/links`;
+    const res = await fetch(url, { method: 'GET', headers: HEADERS });
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
+    }
+    return res.json();
+  }
+
+  // Run example
+  (async () => {
+    try {
+      const roomId = '123456'; // Replace with your actual room ID
+
+      const setResp = await setRoomLink(roomId, 2, null, true, false);
+      console.log('Link set:', setResp);
+
+      const links = await getRoomLinks(roomId);
+      console.log('Links:', links);
+    } catch (err) {
+      console.error(err.message);
+    }
+  })();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  import requests
+
+  # Set API base URL
+  API_HOST = 'https://yourportal.onlyoffice.com'
+  API_KEY = 'your_api_key'
+
+  # Headers with API key for authentication
+  HEADERS = {
     'Authorization': f'Bearer {API_KEY}',
     'Content-Type': 'application/json'
-}
+  }
 
-# Step 1: Set a room access link
-def set_room_link(room_id, access_level=2, expiration_date=None, internal=True, primary=False):
-    url = f'https://{API_HOST}/api/2.0/files/rooms/{room_id}/links'
+  # Step 1: Set a room access link
+  def set_room_link(room_id, access_level=2, expiration_date=None, internal=True, primary=False):
+    url = f'{API_HOST}/api/2.0/files/rooms/{room_id}/links'
     data = {
-        'access': access_level,
-        'expirationDate': expiration_date,
-        'internal': internal,
-        'primary': primary
+      'access': access_level,
+      'expirationDate': expiration_date,
+      'internal': internal,
+      'primary': primary
     }
 
     response = requests.put(url, headers=HEADERS, json=data)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"Room link set failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-# Step 2: Retrieve all links for a room
-def get_room_links(room_id):
-    url = f'https://{API_HOST}/api/2.0/files/rooms/{room_id}/links'
+  # Step 2: Retrieve all links for a room
+  def get_room_links(room_id):
+    url = f'{API_HOST}/api/2.0/files/rooms/{room_id}/links'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
-        return response.json()
-    return None
+      return response.json()
+    else:
+      print(f"Room links retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
 
-if __name__ == "__main__":
+  if __name__ == "__main__":
     room_id = '123456'  # Replace with your actual room ID
 
     set_room_link(room_id, access_level=2, internal=True, primary=False)
     get_room_links(room_id)
-```
+  ```
 
+  </TabItem>
+</Tabs>
 </details>
 
 ## Step 1: Set a room link
@@ -66,33 +140,88 @@ A PUT request is sent to [/api/2.0/files/rooms/:roomId/links](/docspace/api-back
 - `internal`: Indicates if the link is internal.
 - `primary`: Marks the link as primary if `true`.
 
-``` py
-def set_room_link(room_id, access_level=2, expiration_date=None, internal=True, primary=False):
-    url = f'https://{API_HOST}/api/2.0/files/rooms/{room_id}/links'
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  async function setRoomLink(roomId, accessLevel = 2, expirationDate = null, internal = true, primary = false) {
+    const url = `${API_HOST}/api/2.0/files/rooms/${roomId}/links`;
+    const body = JSON.stringify({
+      access: accessLevel,
+      expirationDate,
+      internal,
+      primary,
+    });
+
+    const res = await fetch(url, { method: 'PUT', headers: HEADERS, body });
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
+    }
+    return res.json();
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+    def set_room_link(room_id, access_level=2, expiration_date=None, internal=True, primary=False):
+    url = f'{API_HOST}/api/2.0/files/rooms/{room_id}/links'
     data = {
-        'access': access_level,
-        'expirationDate': expiration_date,
-        'internal': internal,
-        'primary': primary
+      'access': access_level,
+      'expirationDate': expiration_date,
+      'internal': internal,
+      'primary': primary
     }
 
     response = requests.put(url, headers=HEADERS, json=data)
 
     if response.status_code == 200:
-        return response.json()
-    return None
-```
+      return response.json()
+    else:
+      print(f"Room link set failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Step 2: Get all room links
 
 A GET request is sent to the same endpoint to retrieve all configured room links.
 
-``` py
-def get_room_links(room_id):
-    url = f'https://{API_HOST}/api/2.0/files/rooms/{room_id}/links'
+<Tabs>
+  <TabItem value="nodejs" label="Node.js">
+
+  ``` ts
+  async function getRoomLinks(roomId) {
+    const url = `${API_HOST}/api/2.0/files/rooms/${roomId}/links`;
+    const res = await fetch(url, { method: 'GET', headers: HEADERS });
+    if (!res.ok) {
+      const text = await res.text();
+      console.log(`Room link set failed. Status code: ${res.status}, Message: ${text}`);
+      return null;
+    }
+    return res.json();
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ``` py
+  def get_room_links(room_id):
+    url = f'{API_HOST}/api/2.0/files/rooms/{room_id}/links'
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code == 200:
-        return response.json()
-    return None
-```
+      return response.json()
+    else:
+      print(f"Room links retrieval failed. Status code: {response.status_code}, Message: {response.text}")
+      return None
+  ```
+
+  </TabItem>
+</Tabs>

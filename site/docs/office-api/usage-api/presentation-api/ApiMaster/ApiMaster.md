@@ -11,7 +11,7 @@ Represents the ApiMaster class.
 | [AddObject](./Methods/AddObject.md) | boolean | Adds an object (image, shape or chart) to the current slide master. |
 | [ClearBackground](./Methods/ClearBackground.md) | boolean | Clears the slide master background. |
 | [Copy](./Methods/Copy.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Creates a copy of the specified slide master object. |
-| [Delete](./Methods/Delete.md) | boolean | Deletes the specified object from the parent if it exists. |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified object from the parent if it exists. Note: Master can't be deleted if it's the last one in the presentation. |
 | [Duplicate](./Methods/Duplicate.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | Creates a duplicate of the specified slide master object, adds the new slide master to the slide masters collection. |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns an array with all the chart objects from the slide master. |
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array with all the drawing objects from the slide master. |
@@ -19,10 +19,11 @@ Represents the ApiMaster class.
 | [GetAllLayouts](./Methods/GetAllLayouts.md) | [ApiLayout](../ApiLayout/ApiLayout.md)[] | Returns all layouts from the slide master. |
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns an array with all the OLE objects from the slide master. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide master. |
+| [GetAllTables](./Methods/GetAllTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns an array with all tables from the slide master. |
 | [GetClassType](./Methods/GetClassType.md) | "master" | Returns the type of the ApiMaster class. |
 | [GetDrawingsByPlaceholderType](./Methods/GetDrawingsByPlaceholderType.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array of drawings by the specified placeholder type. |
 | [GetLayout](./Methods/GetLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the specified slide master by its position. |
-| [GetLayoutByType](./Methods/GetLayoutByType.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the specified slide master by its position. |
+| [GetLayoutByType](./Methods/GetLayoutByType.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns the layout corresponding to the specified layout type of the slide master. |
 | [GetLayoutsCount](./Methods/GetLayoutsCount.md) | number | Returns a number of layout objects. |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) \| null | Returns a theme of the slide master. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide master. |

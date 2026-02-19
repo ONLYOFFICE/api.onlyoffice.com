@@ -33,6 +33,6 @@ This example shows how to return the individual term binomial distribution proba
 // Use function to get an individual term binomial distribution probability.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BINOMDIST(50, 67, 0.45, false));
 ```

@@ -2,6 +2,8 @@
 
 This example demonstrates how to explicitly mark the iframe as loaded using the JavaScript SDK method.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/mark-iframe-as-loaded.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -119,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [setIsLoaded()](/docspace/javascript-sdk/usage-sdk/methods.md#setisloaded) method after the iframe is fully initialized to inform the system that loading is complete.
+Use the [setIsLoaded()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#setisloaded) method after the iframe is fully initialized to inform the system that loading is complete.
 
 ``` ts
 function onAppReady() {

@@ -10,13 +10,7 @@ The desktop app can send text messages to be displayed to the user. To do so, de
 window.onSystemMessage = function onSystemMessage(e) {};
 ```
 
-## e
-
-Defines the message parameters.
-
-Type: object
-
-Example:
+The `e` object has the following structure:
 
 ``` json
 {
@@ -26,29 +20,22 @@ Example:
 }
 ```
 
-### e.type
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-Checks if the message type is *operation*. If not, then no messages are displayed to the user.
+<APITable>
+```
 
-Type: string
+| Parameter   | Type    | Description                                                                                                                                                                             |
+|-------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| e           | object  | Defines the message parameters.                                                                                                                                                         |
+| e.type      | string  | Checks if the message type is *operation*. If not, then no messages are displayed to the user.                                                                                          |
+| e.opMessage | string  | Defines the message that will be displayed to the user.                                                                                                                                 |
+| e.opType    | integer | Defines the message by the operation type if the `opMessage` parameter is undefined. Set it to **0** to inform the user about file upload, or to **1** to inform about file encryption. |
 
-Example: "operation"
-
-### e.opMessage
-
-Defines the message that will be displayed to the user.
-
-Type: string
-
-Example: "Loading..."
-
-### e.opType
-
-Defines the message by the operation type if the *opMessage* parameter is undefined. Set it to **0** to inform the user about file upload, or to **1** to inform about file encryption.
-
-Type: integer
-
-Example: 1
+```mdx-code-block
+</APITable>
+```
 
 ## Example
 

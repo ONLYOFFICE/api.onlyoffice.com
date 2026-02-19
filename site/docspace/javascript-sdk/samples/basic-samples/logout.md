@@ -2,6 +2,8 @@
 
 This example demonstrates how to log out a user from the DocSpace session using the JavaScript SDK method.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/logout.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -123,7 +125,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [logout()](/docspace/javascript-sdk/usage-sdk/methods.md#logout) method to end the current user session from the embedded DocSpace.
+Use the [logout()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#logout) method to end the current user session from the embedded DocSpace.
 
 ``` ts
 function onAppReady() {

@@ -7,6 +7,7 @@ export namespace FeaturesGrid {
   export type Props = {
     items: Item[];
     linkPrefix: string;
+    button?: Button;
   }
 
   export type Item = {
@@ -15,6 +16,11 @@ export namespace FeaturesGrid {
     description: ReactNode;
     icon: ReactNode;
   };
+
+  export type Button = {
+    text: string;
+    href: string;
+  }
 }
 
 const Feature: FC<FeaturesGrid.Item & { linkPrefix: string }> = ({ title, link, description, linkPrefix, icon }) => {

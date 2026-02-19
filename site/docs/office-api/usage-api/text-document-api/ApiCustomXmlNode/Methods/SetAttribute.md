@@ -1,6 +1,6 @@
 # SetAttribute
 
-Sets an attribute for the custom XML node.\
+Sets an attribute for the custom XML node.
 If the attribute already exists, it will not be modified.
 
 ## Syntax

@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -7
 ---
 
 # Go 示例
@@ -8,7 +8,9 @@ sidebar_position: -3
 
 此示例将指导您如何将 ONLYOFFICE 文档集成到使用 Go 编写的网页应用中。
 
-> 示例仅供测试和演示编辑器功能。**请勿**在未进行适当代码调整的情况下直接用于生产环境。如果启用了测试示例，请确保在上线前将其禁用。
+:::caution
+示例仅供测试和演示编辑器功能。**请勿**在未进行适当代码调整的情况下直接用于生产环境。如果启用了测试示例，请确保在上线前将其禁用。
+:::
 
 ## 重要安全信息​
 
@@ -29,7 +31,18 @@ sidebar_position: -3
 
 ## 步骤 2. 下载用于编辑器集成的 Go 代码​
 
-从我们的网站下载 [Go 示例](./language-specific-examples.md)。
+下载 Go 示例压缩包并解压，或直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/go) 获取源代码：
+
+``` sh
+curl --output Go.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip
+unzip Go.Example.zip
+```
+
+切换到项目目录：
+
+``` sh
+cd "Go Example"
+```
 
 要将编辑器连接到您的网站，请在 *configuration.env* 文件中指定编辑器的安装路径、服务器协议、地址和端口：
 
@@ -44,8 +57,8 @@ JWT_SECRET=secret
 JWT_HEADER=Authorization
 ```
 
-其中，**documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
-**address** 是服务器的地址，**port** 是服务器端口。
+其中，`documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+`address` 是服务器的地址，`port` 是服务器端口。
 
 若要试验编辑器配置，请修改 *templates/editor.html* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
@@ -70,7 +83,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 ``` json
 {
-    "JWT_IS_ENABLED" : true,
+    "JWT_IS_ENABLED": true
 }
 ```
 
@@ -78,7 +91,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 ``` json
 {
-    "JWT_SECRET" : "secret",
+    "JWT_SECRET": "secret"
 }
 ```
 
@@ -91,8 +104,8 @@ export PATH=$PATH:/usr/local/go/bin
     go run main.go
     ```
 
-3. 在浏览器中转到 **server.address** 和 **server.port**。
+3. 在浏览器中转到 `server.address` 和 `server.port`。
 
 ## 步骤 7. 检查可访问性
 
-如果示例与 ONLYOFFICE 文档分别部署在不同服务器上，请确保示例所在服务器能通过配置文件中指定的地址（而非默认的 **documentserver**）访问 ONLYOFFICE 文档。
+如果示例与 ONLYOFFICE 文档分别部署在不同服务器上，请确保示例所在服务器能通过配置文件中指定的地址（而非默认的 `documentserver`）访问 ONLYOFFICE 文档。

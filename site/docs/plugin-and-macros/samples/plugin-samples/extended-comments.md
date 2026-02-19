@@ -107,16 +107,16 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 ## Methods and events
 
-- button
-- init
-- onAddComment
-- onChangeCommentData
-- onRemoveComment
-- executeMethod ("AddComment")
-- executeMethod ("ChangeComment")
-- executeMethod ("GetAllComments")
-- executeMethod ("MoveToComment")
-- executeMethod ("RemoveComments")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onAddComment](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onAddComment.md)
+- [onChangeCommentData](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onRemoveComment.md)
+- executeMethod ("[AddComment](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
+- executeMethod ("[ChangeComment](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RemoveComments.md)")
 
 ## Support
 

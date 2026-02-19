@@ -8,29 +8,31 @@ You can add a plugin to the **Cloud service** as an **extension**. It can be don
 
 ## Step 1. Creating extensions
 
-1. To create an extension, you need an account on [GitHub](https://github.com/). Sing in to an existing account or create a new one.
+1. To create an extension, you need an account on [GitHub](https://github.com/). Sign in to an existing account or create a new one.
 
 2. Fork the plugin marketplace repository: [onlyoffice.github.io](https://github.com/ONLYOFFICE/onlyoffice.github.io).
 
-   You get a repository with the following address - `https://github.com/YOUR-USERNAME/ONLYOFFICE/onlyoffice.github.io`.
+   You get a repository with the following address - `https://github.com/YOUR-USERNAME/onlyoffice.github.io`.
 
 3. Build your own GitHub Pages site from this repository. Explore the official [GitHub documentation](https://docs.github.com/en/pages/quickstart) to learn how to do it.
 
 4. Clone the fork to your local computer.
 
-5. Add the plugin folder to *onlyoffice.github.io/sdkjs-plugins/content/* and push it to the remote repository.
+5. Add the plugin folder to `onlyoffice.github.io/sdkjs-plugins/content/` and push it to the remote repository.
 
    ![New folder](/assets/images/plugins/new-folder.png)
 
-6. Open the *onlyoffice.github.io/store/plugin-dev/extension/inject.js* file and assign the path to your plugin on GitHub Pages site to the **URL\_TO\_PLUGIN** variable:
+6. Open the `onlyoffice.github.io/store/plugin-dev/extension/inject.js` file and assign the path to your plugin on GitHub Pages site to the `URL_TO_PLUGIN` variable:
 
    ``` ts
    const URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
    ```
 
-The *onlyoffice.github.io/store/plugin-dev/extension* folder is a new extension.
+The `onlyoffice.github.io/store/plugin-dev/extension` folder is a new extension.
 
-> Please note that when adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the *manifest.json* file. You cannot change them later in the store.
+:::note
+Please note that when adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the `manifest.json` file. You cannot change them later in the store.
+:::
 
 ## Step 2. Uploading extensions to the browser
 
@@ -38,7 +40,7 @@ After your extension is ready, upload it to the browser. Follow the instructions
 
 ### Installing extensions to Google Chrome
 
-1. Launch your Chrome browser and go to *chrome://extensions/*.
+1. Launch your Chrome browser and go to `chrome://extensions/`.
 
 2. Turn on the **Developer mode** and click the **Load unpacked** button:
 
@@ -74,7 +76,7 @@ The plugin will be removed from ONLYOFFICE Cloud after page reload.
 
 3. Turn on the **Developer mode** and click the **Load unpacked** button:
 
-   ![Opera develoer mode](/assets/images/plugins/opera-developer-mode.png)
+   ![Opera developer mode](/assets/images/plugins/opera-developer-mode.png)
 
 4. Select the created main extension folder:
 
@@ -106,7 +108,7 @@ The plugin will be removed from ONLYOFFICE Cloud after page reload.
 
 ### Installing extensions to Microsoft Edge
 
-1. Launch your Microsoft Edge browser and go to *edge://extensions/*.
+1. Launch your Microsoft Edge browser and go to `edge://extensions/`.
 
 2. Go to the **Extensions** tab, turn on the **Developer mode** and click the **Load unpacked** button:
 

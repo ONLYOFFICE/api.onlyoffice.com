@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Liferay integration
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="U20aA97JglI"/>
+```
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to edit office documents from [Liferay](https://www.liferay.com/) using ONLYOFFICE Docs.
 
 ## Features

@@ -1,0 +1,71 @@
+---
+id: toggle-file-favorite
+title: "Change the file favorite status"
+description: "Changes the favorite status of the file with the ID specified in the request."
+sidebar_label: "Change the file favorite status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/iuH+5INUO0sKYpNn5YmzZBuQIu8IBgCo6Glk8VGIlmSSuIZ+u/DkZJs2V6TDfuS2OS9PLyX584r9GLhML3Dc1mRgymE/zhLUBuywkutLnJM0evFoiK+PBeP2kpPmKARVtTkybKFFSpRE6ZYyIouckxQKkzRCF9igjm5zErD9jDF65KAxeDibIIJWvrWSEs5pt42lKDLSqoFpiv0S8MmpfK0IIsJFtrWwsej4yNMkJ5FbSrC9Jef375r22QNY40zAPnWkF3uILkylMlCkgNZgO9hSQe1sA+Ug3DQGwJtQWnPgHcAzrWuSKhNPPyUtp3x65zRypFj+aPDQ/43BvE+asOjqBpKgTXhzQhNjyGBQlRu+1ZpDxvPzbTypDz7EcZUMgtpnH517Gy1C17Pv1LmOZ+Wk+5lhNrj3vPMlp000cVLKWoTrKR6cBuywlrBqZCeavcykNJSsSHlvJVqwXZFFgO4c9W2bYLOC9+4V0KMwqc6p1cptAl66TnNffJurTCGbOf77eFPu2m+UaLxpbbyL8oxCB3vCv2pG8i1OvBQikcCUrpZlGDI1tI5qRV4zd8YUKiBoU0DKEdZY6Vfhn4ULvvCHr88EB+gJcFt+RTKZMat8p6EJYvpXfh2YuTvtBzO9skLJ7Ne/NNJ48uj/YKfDAXeuJtxB4xfeFoKtSAXK7jvrRh/0BtN+CR9Gb5dnIHr2jQHqcIZUwa50Iw1+VIzRy0o1A4TTopTYeT0aHI4ZVtu2jty01Xkp5bbmOxjT16NrTDF1Vw4urFVu0sUQRYyrQq5aLqQJ/gorBTzKhZqpxyTWoim4orZsXQWr+Dm8g+ultk6a1fcmdHUOHfrzgkp2jF54whOtX6QBKxEyndNj0lPhyODHSVmQYVLsUvs4Kf03ux4+aA8WVjqxkLjyLJhECoHI5x70jbviTEwRTDIlrtyeo3pgygMq4+313CtH0i1ByOj0VbSfTjvm/Lj7TW7GtfvSzE7GQWKaTTnUVZLRTnMl6HKDk66hg0yB1CSyAOALqgjj11QO5k2GRpkzW8iHGwjiXJQVPopFv3IKwRSSpCvY2ls3vaMNToMNRgC7dLpNHidaFUtdVHIjCaZruPh0XQgJEzQc8BfrxrEQ3a06QeG4Da8JJGDyDJyLpCV1Z4yTzlYcrqxGbmBK1K8Dd3/felIqT2lrKMZDk61UnFobAWVb8+gu95ti5H261/NhS9VoTm/z2+cXCjhG0svlxuX9CDO/ZNDoe0WrgnwZhQiC3XjPMwJ9NyLUJOPUoSivO+ZraeNUUbugVRutFR+Aheey5rbM24yAmLHr6k19PD9xkPuJ+vq3nzfFmO0/L3Q4dndHDwxsts9RBYWg75HPl/AVWOMtpykZhTpkiqTk3vYDnaZTUm9abhQqBaSVVw08etYktPAFB5jfDx5NznkI6Odr4XaQBGHznq4bA2e7XSt1kvU/z6vujrx9OynphIyrFNNHBtxeN1xEWGCR5NDbvywkSfDQsuf027JniVYaudZZTXMrpaP47rLky2XjidUjmnYHb/z0v+2DO99Txhbmzt42G15HPLA66fmv8T3w2X3Q+FH2PoFsRdD35Bquel/wBYj2M7apOdsRhMvT7KMjN9Q21mk+RnD5vHbh2tMAgePiSDO2u4DW98LaWs0RwT8lzepvRqrVWSZth3k49U/agyTK0pzgGZt2/4N9kLPqg==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the file favorite status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/favorites/{fileId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the favorite status of the file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID.","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"favorite","in":"query","description":"Specifies if the file is marked as favorite or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - the file is favorite, false - the file is not favorite","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

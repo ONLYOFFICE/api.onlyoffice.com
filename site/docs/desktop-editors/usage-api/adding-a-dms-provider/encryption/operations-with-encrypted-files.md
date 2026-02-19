@@ -6,23 +6,20 @@ To perform operations with encrypted files, including file encryption, decryptio
 
 To upload encrypted files in the desktop app, replace the standard *input type = file* call with the *cloudCryptoCommand* function with the *upload* type. The *params* object has the following values:
 
-### cryptoEngineId
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-Defines the **Encryption** plugin ID.
+<APITable>
+```
 
-Type: string
+| Name           | Type   | Example                                    | Description                                                                                                                                |
+| -------------- | ------ | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` | Defines the **Encryption** plugin ID.                                                                                                      |
+| filter         | string | `"*.docx *.xlsx *.pptx"`                   | Defines the document types that can be encrypted. Currently, it is possible to encrypt only OOXML formats, which are DOCX, XLSX, and PPTX. |
 
-Example: `{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}`
-
-### filter
-
-Defines the document types that can be encrypted.
-
-> Currently, it is possible to encrypt only OOXML formats, which are DOCX, XLSX, and PPTX.
-
-Type: string
-
-Example: `*.docx *.xlsx *.pptx`
+```mdx-code-block
+</APITable>
+```
 
 ### Example
 
@@ -47,29 +44,19 @@ callback({
 
 To share the encrypted document, call the *cloudCryptoCommand* function with the *share* type. The *params* object has the following values:
 
-### cryptoEngineId
+```mdx-code-block
+<APITable>
+```
 
-Defines the **Encryption** plugin ID.
+| Name           | Type   | Example                                              | Description                                               |
+| -------------- | ------ | ---------------------------------------------------- | --------------------------------------------------------- |
+| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`           | Defines the **Encryption** plugin ID.                     |
+| file           | string | `"https://example.com/url-to-example-document.docx"` | Defines the absolute url to the document.                 |
+| keys           | array  | `[{"userId":"78e1e841","publicKey":"yyy"}, ...]`     | Defines the pairs of user ids and associated public keys. |
 
-Type: string
-
-Example: `{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}`
-
-### file
-
-Defines the absolute url to the document.
-
-Type: string
-
-Example: `https://example.com/url-to-example-document.docx`
-
-### keys
-
-Defines the pairs of user ids and associated public keys.
-
-Type: array
-
-Example: `[{"userId":"78e1e841","publicKey":"yyy"}, ...]`
+```mdx-code-block
+</APITable>
+```
 
 ### Example
 

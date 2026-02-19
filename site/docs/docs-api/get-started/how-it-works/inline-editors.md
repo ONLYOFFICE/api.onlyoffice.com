@@ -18,7 +18,7 @@ The steps below explain the process of connecting several editors to the same ht
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 3. Add the *div* element as shown below. In order to connect several editors to the same *html* page, each of them can be initialized separately:
 

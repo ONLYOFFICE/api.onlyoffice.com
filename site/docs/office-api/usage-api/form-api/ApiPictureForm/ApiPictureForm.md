@@ -9,11 +9,14 @@ Represents the ApiPictureForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
 | [GetClassType](./Methods/GetClassType.md) | "pictureForm" | Returns a type of the ApiPictureForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetImage](./Methods/GetImage.md) | [Base64Img](../Enumeration/Base64Img.md) | Returns an image in the base64 format from the current picture form. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current form. |
 | [GetPicturePosition](./Methods/GetPicturePosition.md) | [percentage](../Enumeration/percentage.md)[] | Returns the picture position inside the current form. |
+| [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
 | [GetScaleFlag](./Methods/GetScaleFlag.md) | [ScaleFlag](../Enumeration/ScaleFlag.md) | Returns the current scaling condition of the picture form. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |

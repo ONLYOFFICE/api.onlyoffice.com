@@ -34,6 +34,6 @@ This example shows how to return the accrued interest for a security that pays i
 // Get a function that gets accrued interest for a security at maturity.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ACCRINTM("1/1/2018", "10/15/2018", "3.50%", 1000, 1));
 ```

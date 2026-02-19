@@ -6,6 +6,20 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const isDev = process.env.NODE_ENV === 'development';
 
+let keyPath = '';
+function sidebarRecursive(item) {
+  if (!item.key) {
+    item.key = keyPath + item.label;
+  }
+  
+  if (item.type === 'category') {
+    const prevPath = keyPath;
+    keyPath = (keyPath + item.key) + '.';
+    item.items.forEach(sidebarRecursive);
+    keyPath = prevPath;
+  }
+}
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -19,7 +33,13 @@ const config: Config = {
   noIndex: isDev,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+    mermaid: true,
+  },
 
   customFields: {
     documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
@@ -27,14 +47,19 @@ const config: Config = {
   },
 
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true
+    },
     experimental_faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
+      ssgWorkerThreads: true,
 
-      swcJsLoader: false,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
-      rspackBundler: false,
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      rspackBundler: true,
+      rspackPersistentCache: true
     }
   },
 
@@ -53,12 +78,36 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
-          editUrl:
-            isDev
-              ? 'https://git.onlyoffice.com/ONLYOFFICE/api.onlyoffice.com/src/branch/master'
-              : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+          editUrl: ({docPath}) => {
+            const baseUrl = 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master/site';
+
+            // Transform sample paths: samples/{category}/{subcategory}/... → {category}/{subcategory}/samples/...
+            if (docPath.startsWith('samples/')) {
+              const parts = docPath.split('/');
+              if (parts.length >= 4) {
+                const [, category, subcategory, ...rest] = parts;
+                let filePath = rest.join('/');
+
+                // Reverse rename: {subcategory}.md → samples.md
+                if (filePath === `${subcategory}.md`) {
+                  filePath = 'samples.md';
+                }
+
+                return `${baseUrl}/${category}/${subcategory}/samples/${filePath}`;
+              }
+            }
+
+            return `${baseUrl}/${docPath}`;
+          },
 
           docItemComponent: '@theme/ApiItem',
+
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+            keyPath = args.item.dirName;
+            sidebarItems.forEach(sidebarRecursive);
+            return sidebarItems;
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -105,13 +154,6 @@ const config: Config = {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
-          docspaceHosted: {
-            specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
-            outputDir: "site/docspace/for-hosting-providers/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
     ],
@@ -125,6 +167,10 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/favicon.png',
+    colorMode: {
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       logo: {
         alt: 'ONLYOFFICE',
@@ -141,13 +187,13 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docspaceApiBackend',
-              label: 'Backend REST API',
+                label: 'API Reference',
               docsPluginId: 'api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspaceJSSdk',
-              label: 'JavaScript SDK',
+                label: 'Embed SDK',
               docsPluginId: 'api',
             },
             {
@@ -155,13 +201,13 @@ const config: Config = {
               sidebarId: 'docspacePlugins',
               label: 'Plugins SDK',
               docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceHosting',
-              label: 'For hosting providers',
-              docsPluginId: 'api',
-            },
+             },
+             {
+               type: 'docSidebar',
+               sidebarId: 'docspaceMCPServer',
+               label: 'MCP Server',
+               docsPluginId: 'api',
+             },
           ],
         },
         {
@@ -287,8 +333,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Ascensio System SIA. All right reserved`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
       additionalLanguages: ["bash", "php", "csharp", "java", "ruby"],
     },
     algolia: {
@@ -297,6 +343,8 @@ const config: Config = {
 
       indexName: 'api-onlyoffice',
       contextualSearch: true,
+
+      askAi: 'SWpvi77fTWXN'
     },
     languageTabs: [
       {
@@ -333,7 +381,7 @@ const config: Config = {
     ],
   } satisfies Preset.ThemeConfig,
 
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
 };
 
 export default config;

@@ -31,6 +31,6 @@ This example shows how to convert a dollar price, expressed as a decimal number,
 // Use function to get fraction from decimal price.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DOLLARFR(1.1875, 16));
 ```

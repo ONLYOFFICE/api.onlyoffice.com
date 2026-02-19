@@ -45,7 +45,7 @@ sidebar_label: Cloud
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   此处 **example.com** 是您的云服务提供的公共 IP 或公共 DNS，需确保已在此地址部署**文档管理器**和**文档存储服务**。关于 ONLYOFFICE 文档服务端与客户端的交互细节，请参阅[工作原理](/docs/docs-api/get-started/how-it-works/how-it-works.md)章节。
+   此处 **example.com** 是您的云服务提供的公共 IP 或公共 DNS，需确保已在此地址部署**文档管理器**和**文档存储服务**。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。关于 ONLYOFFICE 文档服务端与客户端的交互细节，请参阅[工作原理](/docs/docs-api/get-started/how-it-works/how-it-works.md)章节。
 
    此后，*docEditor* 对象即可用于调用**文档编辑器**[方法](/docs/docs-api/usage-api/methods.md).
 

@@ -19,21 +19,20 @@ This method returns an object with the following parameters:
 }
 ```
 
-## widgetType
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-The widget type (*"window"* or *"tab"*).
+<APITable>
+```
 
-Type: string
+| Parameter     | Type    | Example    | Description                              |
+| ------------- | ------- | ---------- | ---------------------------------------- |
+| widgetType    | string  | `"window"` | The widget type (*"window"* or *"tab"*). |
+| captionHeight | integer | `100`      | The caption height.                      |
 
-Example: "window"
-
-## captionHeight
-
-The caption height.
-
-Type: integer
-
-Example: 100
+```mdx-code-block
+</APITable>
+```
 
 You can also subscribe to the *onViewportSettingsChanged* event which is called every time the viewport settings are changed:
 

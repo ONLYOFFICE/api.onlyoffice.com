@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # Adding plugin
 
-You can upload your own plugins to your server. For the DocSpace Saas solution, only system plugins created by our developers are available.
+You can upload your own plugins to your server. Starting from DocSpace version 3.5, plugins can also be uploaded in the SaaS version — not just in self-hosted instances.
 
 ## Enabling system plugins
 

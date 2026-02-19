@@ -2,6 +2,8 @@
 
 This example demonstrates how to initialize the DocSpace manager using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/init-manager.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -79,7 +81,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the manager using the [initManager()](/docspace/javascript-sdk/usage-sdk/methods.md#initmanager) method. Attach an event listener to handle the app readiness.
+Configure and initialize the manager using the [initManager()](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initmanager) method. Attach an event listener to handle the app readiness.
 
 ``` ts
 function onAppReady() {

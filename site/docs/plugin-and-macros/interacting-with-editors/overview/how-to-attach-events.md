@@ -10,18 +10,18 @@ There are two options to attach events from the editor.
 
 Starting from version 8.2, in the plugin code, define the **attachEditorEvent** method to add an event listener, a function that will be called whenever the specified event is delivered to the target.
 
-### Parameters:
+### Parameters
 
 | Name     | Type     | Description         |
 | -------- | -------- | ------------------- |
 | *id*     | string   | The event name.     |
 | *action* | function | The event listener. |
 
-### Returns:
+### Returns
 
 This method doesn't return any data.
 
-### Example:
+### Example
 
 ``` ts
 Asc.plugin.attachEditorEvent("onAddComment", (data) => {
@@ -49,18 +49,18 @@ Starting from version 8.2, please use the [attachEditorEvent](#option-1-using-th
    Asc.plugin.attachEvent(id, action);
    ```
 
-   ### Parameters:
+   ### Parameters
 
    | Name     | Type     | Description         |
    | -------- | -------- | ------------------- |
    | *id*     | string   | The event name.     |
    | *action* | function | The event listener. |
 
-   ### Returns:
+   ### Returns
 
    This method doesn't return any data.
 
-   ### Example:
+   ### Example
 
    ``` ts
    Asc.plugin.attachEvent("onAddComment", (data) => {
