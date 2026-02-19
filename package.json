@@ -1,6 +1,6 @@
 {
   "name": "api-onlyoffice-com",
-  "version": "7.6.4",
+  "version": "7.6.5",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
