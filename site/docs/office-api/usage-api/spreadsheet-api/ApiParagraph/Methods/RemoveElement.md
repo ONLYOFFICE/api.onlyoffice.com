@@ -1,8 +1,8 @@
 # RemoveElement
 
-Removes an element using the position specified.
-💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),
-a new empty run is automatically created. If you want to add
+Removes an element using the position specified.\
+💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),\
+a new empty run is automatically created. If you want to add\
 content to this run, use the [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) method.
 
 ## Syntax
@@ -33,7 +33,7 @@ This example removes an element using the position specified.
 // Change the content of a shape by removing elements.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

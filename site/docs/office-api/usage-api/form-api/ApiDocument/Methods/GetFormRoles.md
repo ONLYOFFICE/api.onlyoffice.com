@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 This example shows how to get roles manager.
 
 ```javascript editor-pdf
-let doc = editor.GetDocument();
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");

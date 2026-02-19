@@ -1,8 +1,8 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:\
+-**"baseline"** - the characters in the current text run will be aligned by the default text baseline.\
+-**"subscript"** - the characters in the current text run will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
@@ -33,7 +33,7 @@ This example specifies the alignment which will be applied to the contents of th
 // Make text superscript.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

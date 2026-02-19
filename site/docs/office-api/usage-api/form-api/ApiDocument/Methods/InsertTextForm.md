@@ -29,7 +29,7 @@ This example inserts a text box with the specified text box properties over the 
 
 // Add a text form to the ApiDocument object, set its properties like characters limit, autofit, etc.
 
-let doc = editor.GetDocument();
+let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("First name");
 paragraph.Select();

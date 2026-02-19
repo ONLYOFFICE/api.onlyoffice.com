@@ -1,7 +1,7 @@
 # SetSpacingAfter
 
-Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then 
-any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it 
+Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then \
+any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it \
 will be interpreted as false.
 
 ## Syntax
@@ -33,7 +33,7 @@ This example sets the spacing after the current paragraph.
 // Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

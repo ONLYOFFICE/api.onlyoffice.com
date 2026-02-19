@@ -1,6 +1,6 @@
 # GetCore
 
-Returns the core properties interface for the workbook.
+Returns the core properties interface for the workbook.\
 This method is used to view or modify standard metadata such as title, author, and keywords.
 
 ## Syntax
@@ -59,7 +59,7 @@ let subject = core.GetSubject();
 let title = core.GetTitle();
 let version = core.GetVersion();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",

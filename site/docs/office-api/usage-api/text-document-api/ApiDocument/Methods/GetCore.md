@@ -1,6 +1,6 @@
 # GetCore
 
-Retrieves the core properties interface for the current document.
+Retrieves the core properties interface for the current document.\
 This method is used to view or modify standard metadata such as title, author, and keywords.
 
 ## Syntax

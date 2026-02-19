@@ -5,7 +5,7 @@ Sets the border color to the current form.
 ## Syntax
 
 ```javascript
-expression.SetBorderColor(r, g, b, bNone);
+expression.SetBorderColor(color);
 ```
 
 `expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
@@ -14,10 +14,7 @@ expression.SetBorderColor(r, g, b, bNone);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| bNone | Required | boolean |  | Defines that border color will not be set. |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 

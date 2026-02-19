@@ -1,6 +1,6 @@
 # GetOrientation
 
-Returns a pivot field orientation value that represents the location
+Returns a pivot field orientation value that represents the location\
 of the field in the specified pivot table report.
 
 ## Syntax
