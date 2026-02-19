@@ -34,7 +34,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 3. 转到 **AI 代理** → **MCP 服务器**
 4. 点击 **编辑配置**
 
-![访问 MCP 配置](/assets/images/desktop/step1.png#gh-light-mode-only)![API keys](/assets/images/desktop/step1.dark.png#gh-dark-mode-only)
+![访问 MCP 配置](/assets/images/desktop/step1.png#gh-light-mode-only)![访问 MCP 配置](/assets/images/desktop/step1.dark.png#gh-dark-mode-only)
 
 ### 步骤 2：添加 DocSpace 服务器配置
 
@@ -67,7 +67,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 - **DOCSPACE_BASE_URL**：DocSpace 实例的完整 URL（例如 `https://your-company.onlyoffice.com`）
 - **DOCSPACE_API_KEY**：从开发者工具部分获取的 DocSpace API 密钥
 
-![添加 DocSpace 服务器配置](/assets/images/desktop/step2.png#gh-light-mode-only)![API keys](/assets/images/desktop/step2.dark.png#gh-dark-mode-only)
+![添加 DocSpace 服务器配置](/assets/images/desktop/step2.png#gh-light-mode-only)![添加 DocSpace 服务器配置](/assets/images/desktop/step2.dark.png#gh-dark-mode-only)
 
 ### 步骤 3：保存并验证
 
@@ -76,7 +76,7 @@ ONLYOFFICE DocSpace MCP 服务器允许桌面编辑器中的 AI 代理与您的 
 3. 验证服务器状态显示为已连接
 4. 启用您想要使用的工具
 
-![保存并验证](/assets/images/desktop/step3.png#gh-light-mode-only)![API keys](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
+![保存并验证](/assets/images/desktop/step3.png#gh-light-mode-only)![保存并验证](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
 
 ## 可用工具
 

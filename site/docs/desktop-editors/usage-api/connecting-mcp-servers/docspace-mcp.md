@@ -34,7 +34,7 @@ To obtain an API key from your DocSpace instance:
 3. Go to **AI agent** → **MCP Servers**
 4. Click **Edit configuration**
 
-![Access MCP configuration](/assets/images/desktop/step1.png#gh-light-mode-only)![API keys](/assets/images/desktop/step1.dark.png#gh-dark-mode-only)
+![Access MCP configuration](/assets/images/desktop/step1.png#gh-light-mode-only)![Access MCP configuration](/assets/images/desktop/step1.dark.png#gh-dark-mode-only)
 
 ### Step 2: Add DocSpace server configuration
 
@@ -67,7 +67,7 @@ Enter the following JSON configuration, replacing the placeholder values with yo
 - **DOCSPACE_BASE_URL**: The full URL to your DocSpace instance (e.g., `https://your-company.onlyoffice.com`)
 - **DOCSPACE_API_KEY**: Your DocSpace API key obtained from the Developer Tools section
 
-![Add DocSpace server configuration](/assets/images/desktop/step2.png#gh-light-mode-only)![API keys](/assets/images/desktop/step2.dark.png#gh-dark-mode-only)
+![Add DocSpace server configuration](/assets/images/desktop/step2.png#gh-light-mode-only)![Add DocSpace server configuration](/assets/images/desktop/step2.dark.png#gh-dark-mode-only)
 
 ### Step 3: Save and verify
 
@@ -76,7 +76,7 @@ Enter the following JSON configuration, replacing the placeholder values with yo
 3. Verify that the server status shows as connected
 4. Enable the tools you want to use
 
-![Save and verify](/assets/images/desktop/step3.png#gh-light-mode-only)![API keys](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
+![Save and verify](/assets/images/desktop/step3.png#gh-light-mode-only)![Save and verify](/assets/images/desktop/step3.dark.png#gh-dark-mode-only)
 
 ## Available tools
 
