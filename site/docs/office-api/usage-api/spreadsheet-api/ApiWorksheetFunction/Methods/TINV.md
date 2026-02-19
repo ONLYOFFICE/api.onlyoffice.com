@@ -31,7 +31,7 @@ This example shows how to return the two-tailed inverse of the Student's t-distr
 // Use a function to get two-tailed inverse of the Student's t-distribution.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let result = func.TINV(0.5, 10);
 worksheet.GetRange("B2").SetValue(result);
 

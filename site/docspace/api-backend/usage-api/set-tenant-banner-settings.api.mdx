@@ -1,0 +1,71 @@
+---
+id: set-tenant-banner-settings
+title: "Set the banners visibility"
+description: "Sets the visibility settings of the promotional banners in the portal."
+sidebar_label: "Set the banners visibility"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFV0tv20YQ/iuLufhQWmKcICh4quOkQNIWMSIZPhhCPCJH4sbkLrM7tKMK/O/F7FISZamxGwSoD7a889h5fPPNag2MSw/ZDUwob53mlRqrN2gMOa/utddzXWlewSwB25BD1ta8LyADTzwlg4aj8oSYtVl6SMDR15Y8v7HFCrI15NYwGZaP2DSVzoOP8RdvjZz5vKQa5ROvGoIM7PwL5QwJNE5uZE1epKUuCjIDvbm1FaGBBAryudONuIUMpiWp+UECalHhcgQJ0Desm4ogY9dS1yWARaHFFKvLwYULrDwdc91npxp0WBPLLQvrVI0Gl9osFZc0vNb3dVF2EUSNs7WN122jFHuR5a1zZFhxqKsEy5olVDhW6bdsoeskA0e+scbHOp2lqfzZD/zyyK1HgoTkZ3VrE9L/1dcEKvT8ly30QlMx8O7ZabOEBBbW1ciQQYFMp6xrGjqRMv56mr46fZFO09fZyzRL01Eaf35JX2VpCj+Anf+Gi6cAAJ20q43N6tPThmlJbpifNvzyTHQrbe78QBedwxUkoJlq/4xGOVocFlKKkMcUD0QBnJ6RW//MEKPyhS3oWQbd9wt07bBpyPWBvEpfHA7GlcGWS+v031QEf75nQchu1oA+/yzyz3ckB+AIC0jgwWkmmHXJGt4QOnKQ3YT/zhv9B622Z8f00et8o/7xvOXy7Ljix4YCz97MutljKE2I/Y/wjDZRZB1jJeiqiUsrZN5YHxqOXEIGY2z0+GyUjjdOx9EDSHncPTkfqtO6CjJYz9HTlau6g4GdBF2VW7PQyzauDkjgHp3GeRVB1RvHxiywraS7B57eRpG6+vSnNHO2a9NE+Ci62m/WDuWhJwcurzypC2vvNCkxIsM91UECButgOXSYgBazPJgIVPtObu8pmZuDW94ZJqdWtnWq9eTEsUJTqAa9f7BOeh4YNfBecCiee/w8x/VJVFbrD9dTNbV3ZLqTPafRV9J/+H0zQB+up3LVPmCfqtn5XqGU9qqQBVhrQ4WarwK4Ts77eQo6J6okLEIAfVH3buyL2ut0yXYidlyE4eBxJFFPLSr7oB40l2rvVhUIJAERR2gMpRt22TsMGAyF9tl4HG4dWVOt7GKhcxrlto6HZ+MtXwg7S8GfbxrUQ3dss1mTKOP3ibBQmOfkvWIrs8uUMxXKkbety8lvySGDa/n7hHZkvA2H7KoZDi6sMZHgHxVVpG9VLz4ciz3r52ctwNdmYaW/3069Xhrk1tHTcBNIb9VlforwUtqPa6RksYbKqrr1rOak7JwxYPJeYwDl7Y7QIm3sdeRWkSkaqw2P1HsWWMt4UqHQK1Rx4iPKxFeY4dtBIrejHbqH+T1ijC4BeUR92j2O320eG7tHUP92CeWS+vTL7bzR/dMM87DtN8N0+V5N2kYIHZKejzctKalqCvJ3j7tS5mMyp60gimrUYuKji9/2NaVfwvWxGS9Hr0epHMmqqNEMopgQh8ocPs4et3TwZeDnLbEeREzfeNxUqI1E2cadEhfajSAMEjgbpWGFbR+7/VqbJVDKAsxuYL1dZ50cf23Jyeaf7dZWXN4bzpI9GPYNXMTMTqcSjqhXbcT2o0e0LPdocZ7n1PB3dWeDHX35cTKVmPuvVXWgMXD4IF+58CHuTRsqHblFztZQoVm2uBTd6DO8W1upy3AA447rP0hWG5FZDSPcX4kxD/ktWR21WK/jdHfdVj+K/tViuzGitvRz1nXdP9wkGiA=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the banners visibility"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/banner"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the visibility settings of the promotional banners in the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"hidden":{"type":"boolean","description":"The banners visibility flag.","example":true}},"additionalProperties":false,"description":"The request parameters for managing the visibility settings of the promotional banners for the current tenant.","title":"TenantBannerSettingsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Promotional banners visibility settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"hidden":{"type":"boolean","description":"The banners visibility flag.","example":true},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The visibility settings of the promotional banners.","title":"TenantBannerSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantBannerSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

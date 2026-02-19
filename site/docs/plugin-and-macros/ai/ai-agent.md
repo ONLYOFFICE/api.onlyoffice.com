@@ -50,6 +50,9 @@ The AI agent is now installed and ready to start.
 To invoke the AI agent:
 
 1. Press `Ctrl + /` in any editor to open the AI agent input.
+
+   ![commentText execution](/assets/images/plugins/inline-ai-agent.png#gh-light-mode-only)![commentText execution](/assets/images/plugins/inline-ai-agent.dark.png#gh-dark-mode-only)
+
 2. Type your request and press `Enter` to receive an immediate response.
 
 The editor supports request history, so you can continue the conversation, giving instructions step by step.

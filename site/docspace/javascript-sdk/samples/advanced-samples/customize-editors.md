@@ -2,6 +2,8 @@
 
 This example customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/customize-editors.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -93,9 +95,9 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ### 2. Initialize the editors
 
-Add a script to initialize the [editors](/docspace/javascript-sdk/usage-sdk/initialization-modes/editor.md).
+Add a script to initialize the [editors](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor).
 
-1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready), which fires when initialization is successful:
 
     ``` ts
     function onAppReady() {
@@ -103,7 +105,7 @@ Add a script to initialize the [editors](/docspace/javascript-sdk/usage-sdk/init
     }
     ```
 
-2. Create a configuration for the **Editor** mode. Go to the [editorCustomization](/docspace/javascript-sdk/usage-sdk/config.md#editorcustomization) section and configure the editors as needed.
+2. Create a configuration for the **Editor** mode. Go to the [editorCustomization](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameConfig.md#editorcustomization) section and configure the editors as needed.
 After that, copy the resulting config and paste it into the [customization](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md) section, as shown below. In the config, pass the id of the file that will be opened in the editors:
 
     ``` ts
@@ -138,7 +140,7 @@ After that, copy the resulting config and paste it into the [customization](/doc
     }
     ```
 
-1. Initialize the <b>Editors</b> mode with the [initEditor](/docspace/javascript-sdk/usage-sdk/methods.md#initeditor) method:
+1. Initialize the <b>Editors</b> mode with the [initEditor](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) method:
 
     ```ts
     const docSpace = DocSpace.SDK.initEditor(config)

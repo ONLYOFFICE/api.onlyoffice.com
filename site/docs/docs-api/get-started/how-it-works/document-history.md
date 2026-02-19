@@ -222,6 +222,6 @@ If the document version was created with the **document editor**, then the docum
   })
   ```
 
-  > The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header.
+  > The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
   ![changesurl](/assets/images/editor/changesurl.png)

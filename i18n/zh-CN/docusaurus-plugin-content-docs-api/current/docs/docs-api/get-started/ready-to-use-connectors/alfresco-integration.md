@@ -8,6 +8,12 @@ import TabItem from '@theme/TabItem';
 
 # Alfresco 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="pQPm00oUqOE"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share中用ONLYOFFICE文档编辑办公文档。
 
 该插件在官方[Alfresco附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。
@@ -40,7 +46,10 @@ import TabItem from '@theme/TabItem';
 
    - 对于Alfresco存储库，将*onlyoffice-alfresco/repo/target/*中的文件上传到*/usr/local/tomcat/amps/*目录
    - 对于Share，将*onlyoffice-alfresco/share/target/*中的文件上传到*/usr/local/tomcat/amps\_share/*目录。
-   > 您可以在此处下载已编译的包文件，并将它们放置到相应的目录中：[此处](https://github.com/onlyoffice/onlyoffice-alfresco/releases)。
+
+   :::note
+   您可以在此处下载已编译的包文件，并将它们放置到相应的目录中：[此处](https://github.com/onlyoffice/onlyoffice-alfresco/releases)。
+   :::
 
 2. 使用**模块管理工具(MMT)**安装模块，运行以下命令：
 
@@ -73,7 +82,9 @@ import TabItem from '@theme/TabItem';
    share.protocol=https
    ```
 
-   > 该文件可能位于 */usr/local/tomcat/shared/classes/alfresco-global.properties*。
+   :::note
+   该文件可能位于 */usr/local/tomcat/shared/classes/alfresco-global.properties*。
+   :::
 
 2. 重启Alfresco:
 
@@ -88,7 +99,9 @@ import TabItem from '@theme/TabItem';
 
 模块配置可以在**Alfresco管理控制台**中找到，或者直接导航到*http\://\<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config*。
 
-> 您也可以将*onlyoffice.url*添加到**alfresco-global.properties**中。通过设置页面进行的配置将覆盖**alfresco-global.properties**中的设置。
+:::note
+您也可以将*onlyoffice.url*添加到**alfresco-global.properties**中。通过设置页面进行的配置将覆盖**alfresco-global.properties**中的设置。
+:::
 
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Alfresco配置页面指定您自己的**密钥**，或者通过在**alfresco-global.properties**中添加*onlyoffice.jwtsecret*来设置。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 

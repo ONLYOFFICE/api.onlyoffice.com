@@ -7,9 +7,11 @@ Represents the Api class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
 | [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart with the parameters specified. |
+| [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | Creates a new custom geometry. |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | Creates a gradient stop used for different types of gradients. |
 | [CreateGroup](./Methods/CreateGroup.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Creates a group of drawings. |
 | [CreateImage](./Methods/CreateImage.md) | [ApiImage](../ApiImage/ApiImage.md) | Creates an image with the parameters specified. |
@@ -23,6 +25,7 @@ Represents the Api class.
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a pattern fill to apply to the object using the selected pattern as the object background. |
 | [CreatePlaceholder](./Methods/CreatePlaceholder.md) | [ApiPlaceholder](../ApiPlaceholder/ApiPlaceholder.md) | Creates a new placeholder. |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | Creates a color selecting it from one of the available color presets. |
+| [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | Creates a geometry using one of the available preset shapes. |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | Creates an RGB color setting the appropriate values for the red, green and blue color components. |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a radial gradient fill to apply to the object using the selected radial gradient as the object background. |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Creates a new smaller text block to be inserted to the current paragraph or table. |
@@ -38,11 +41,30 @@ Represents the Api class.
 | [CreateThemeFontScheme](./Methods/CreateThemeFontScheme.md) | [ApiThemeFontScheme](../ApiThemeFontScheme/ApiThemeFontScheme.md) | Creates a new theme font scheme. |
 | [CreateThemeFormatScheme](./Methods/CreateThemeFormatScheme.md) | [ApiThemeFormatScheme](../ApiThemeFormatScheme/ApiThemeFormatScheme.md) | Creates a new theme format scheme. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
+| [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | None | Converts the specified JSON object into the Document Builder object of the corresponding type. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
 | [GetPresentation](./Methods/GetPresentation.md) | [ApiPresentation](../ApiPresentation/ApiPresentation.md) | Returns the main presentation. |
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | Returns the selection from the current presentation. |
+| [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
+| [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
+| [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
+| [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
+| [PicasToPoints](./Methods/PicasToPoints.md) | number | Converts picas to points. |
+| [PixelsToEmus](./Methods/PixelsToEmus.md) | number | Converts pixels to EMUs (English Metric Units). |
+| [PixelsToPoints](./Methods/PixelsToPoints.md) | number | Converts pixels to points. |
+| [PointsToCentimeters](./Methods/PointsToCentimeters.md) | number | Converts points to centimeters. |
+| [PointsToEmus](./Methods/PointsToEmus.md) | number | Converts points to EMUs (English Metric Units). |
+| [PointsToInches](./Methods/PointsToInches.md) | number | Converts points to inches. |
+| [PointsToLines](./Methods/PointsToLines.md) | number | Converts points to lines (1 line = 12 points). |
+| [PointsToMillimeters](./Methods/PointsToMillimeters.md) | number | Converts points to millimeters. |
+| [PointsToPicas](./Methods/PointsToPicas.md) | number | Converts points to picas (1 pica = 12 points). |
+| [PointsToPixels](./Methods/PointsToPixels.md) | number | Converts points to pixels. |
+| [PointsToTwips](./Methods/PointsToTwips.md) | number | Converts points to twips. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [Save](./Methods/Save.md) | None | Saves changes to the specified document. |
+| [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
 | [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
 | [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |

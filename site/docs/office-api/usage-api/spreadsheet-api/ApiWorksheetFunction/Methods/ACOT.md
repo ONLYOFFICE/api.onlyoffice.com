@@ -30,6 +30,6 @@ This example shows how to return the arccotangent of a number, in radians in the
 // Get a function that gets arccotangent of a number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ACOT(0));
 ```

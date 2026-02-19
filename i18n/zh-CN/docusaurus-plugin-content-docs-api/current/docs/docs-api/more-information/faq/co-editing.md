@@ -10,7 +10,7 @@ sidebar_position: -8
 
 因此，如果您确定您的所有用户都将同时使用文档服务器，则连接数的盈余至少等于您的用户数的两倍，否则缺少连接的用户将只能以仅查看模式打开文档。
 
-此页面[此页面](https://www.onlyoffice.com/integration-edition-prices.aspx)上提供了所有可用的连接定价计划。
+此页面[此页面](https://www.onlyoffice.com/docs-enterprise-prices)上提供了所有可用的连接定价计划。
 
 ## 如何找到当前正在编辑文档的用户的信息？ {#how-to-find-the-information-about-users-who-are-currently-editing-the-document}
 

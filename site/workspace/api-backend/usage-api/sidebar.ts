@@ -5034,8 +5034,8 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "workspace/api-backend/usage-api/get-my-tasks-by-status",
-              label: "Get my tasks by status",
+              id: "workspace/api-backend/usage-api/get-my-tasks-by-status-in-the-project",
+              label: "Get my tasks by status in the project",
               className: "api-method get",
             },
           ],

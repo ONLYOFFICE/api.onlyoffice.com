@@ -40,7 +40,7 @@ sidebar_custom_props:
   http://documentserver/
   ```
 
-  这里的**documentserver**指的是安装了**ONLYOFFICE文档**的服务器名称。该地址要确保用户浏览器和SuiteCRM服务器均可访问，同时，SuiteCRM服务器地址也需能被**ONLYOFFICE文档**访问，以保证系统正常运行。
+  这里的**documentserver**指的是安装了**ONLYOFFICE文档**的服务器名称。该地址要确保用户浏览器和SuiteCRM服务器均可访问，同时，SuiteCRM服务器地址也需能被**ONLYOFFICE文档**访问，以保证系统正常运行。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 - **文档服务器密钥**。从7.2版本开始，JWT会默认开启，并自动生成一个密钥，用于限制对ONLYOFFICE文档的访问，保障系统安全和数据完整。ONLYOFFICE文档的访问，以确保安全性和数据完整性。在SuiteCRM的**ONLYOFFICE设置**中.在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 

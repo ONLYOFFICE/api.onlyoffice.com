@@ -51,6 +51,14 @@ In the *package.json* file, you can also specify the addresses of the third-part
 
 You can create a plugin in any project by adding the *@onlyoffice/docspace-plugin-sdk* npm package as the dependency and specifying all the necessary fields in the *package.json* file.
 
+### Migration
+
+For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
+
+   ```json
+   "build": "webpack && npx build-docspace-plugin"
+   ```
+
 ## Example
 
 ``` json

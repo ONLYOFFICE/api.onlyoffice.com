@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Clearing all form values
 
 Reset all filled form fields and return the form to its initial state for reuse, input cancellation, or quick clearing:

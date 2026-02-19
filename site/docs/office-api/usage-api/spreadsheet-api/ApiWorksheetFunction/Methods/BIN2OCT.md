@@ -31,6 +31,6 @@ This example shows how to convert a binary number to octal.
 // Use function to convert a binary to octal.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BIN2OCT(1110011100, 4));
 ```

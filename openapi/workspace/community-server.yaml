@@ -26858,7 +26858,7 @@ paths:
         - AuthorizationHeader:
             - read
             - write
-      summary: Get my tasks by status
+      summary: Get my tasks by status in the project
       description: >-
         Returns a list of all the tasks for the current user with the selected
         status in the project with the ID specified in the request.

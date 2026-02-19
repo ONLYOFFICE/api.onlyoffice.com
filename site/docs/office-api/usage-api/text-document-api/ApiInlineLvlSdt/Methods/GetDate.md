@@ -1,7 +1,7 @@
 # GetDate
 
-Retrieves the selected date value from a date picker content control and returns it as a Date object.\
-\
+Retrieves the selected date value from a date picker content control and returns it as a Date object.
+
 Throws: Error if the content control is not a date picker.
 
 ## Syntax

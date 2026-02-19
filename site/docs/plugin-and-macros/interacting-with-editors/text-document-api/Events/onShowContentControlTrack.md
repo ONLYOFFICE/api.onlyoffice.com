@@ -1,12 +1,12 @@
 # onShowContentControlTrack
 
-The function called when the track of the content control appears.
+The function called when the content control receives focus and its track appears.
 
 ## Parameters
 
 | **Name** | **Data type** | **Description** |
 | --------- | ------------- | ----------- |
-| ids | string[] | array with ids of controls that received focus |
+| ids | string[] | An array of content control IDs that have received focus. |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onHideContentControlTrack", (ids) => {

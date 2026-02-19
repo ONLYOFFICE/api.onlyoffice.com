@@ -32,6 +32,6 @@ This example shows how to return the characters from the middle of a text string
 // Use a function to get an array of characters from the middle of a string.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.MID("Online Office", 3, 4));
 ```

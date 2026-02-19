@@ -20,6 +20,22 @@ Type: boolean
 
 Example: true
 
+### withoutBodyPadding
+
+Specifies whether the modal dialog body has no inner padding.
+
+Type: boolean
+
+Example: false
+
+### withoutHeaderMargin
+
+Specifies whether the modal dialog header has no bottom margin.
+
+Type: boolean
+
+Example: false
+
 ## Example
 
 ``` ts
@@ -80,5 +96,6 @@ export const drawIoModalDialogProps: IModalDialog = {
   },
   autoMaxHeight: true,
   autoMaxWidth: true,
+  withoutBodyPadding: false,
 }
 ```

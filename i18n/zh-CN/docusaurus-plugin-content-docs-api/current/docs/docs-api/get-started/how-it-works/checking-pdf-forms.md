@@ -19,35 +19,35 @@ PDF 表单在表单元数据方面与标准 PDF 文件有所不同。这种差�
 ```ts
 function isExtendedPDFFile(text) {
   if (!text) {
-    return false
+    return false;
   }
-  const indexFirst = text.indexOf("%\u00CD\u00CA\u00D2\u00A9\u000D")
+  const indexFirst = text.indexOf("%\u00CD\u00CA\u00D2\u00A9\u000D");
   if (indexFirst === -1) {
-    return false
+    return false;
   }
-  let pFirst = text.slice(indexFirst + 6)
+  let pFirst = text.slice(indexFirst + 6);
   if (!(pFirst.lastIndexOf("1 0 obj\u000A<<\u000A", 0) === 0)) {
-    return false
+    return false;
   }
-  pFirst = pFirst.slice(11)
-  const signature = "ONLYOFFICEFORM"
-  const indexStream = pFirst.indexOf("stream\u000D\u000A")
-  const indexMeta = pFirst.indexOf(signature)
+  pFirst = pFirst.slice(11);
+  const signature = "ONLYOFFICEFORM";
+  const indexStream = pFirst.indexOf("stream\u000D\u000A");
+  const indexMeta = pFirst.indexOf(signature);
   if (indexStream === -1 || indexMeta === -1 || indexStream < indexMeta) {
-    return false
+    return false;
   }
-  let pMeta = pFirst.slice(indexMeta)
-  pMeta = pMeta.slice(signature.length + 3)
-  let indexMetaLast = pMeta.indexOf(" ")
+  let pMeta = pFirst.slice(indexMeta);
+  pMeta = pMeta.slice(signature.length + 3);
+  let indexMetaLast = pMeta.indexOf(" ");
   if (indexMetaLast === -1) {
-    return false
+    return false;
   }
-  pMeta = pMeta.slice(indexMetaLast + 1)
-  indexMetaLast = pMeta.indexOf(" ")
+  pMeta = pMeta.slice(indexMetaLast + 1);
+  indexMetaLast = pMeta.indexOf(" ");
   if (indexMetaLast === -1) {
-    return false
+    return false;
   }
-  return true
+  return true;
 }
 ```
 
@@ -55,43 +55,43 @@ function isExtendedPDFFile(text) {
 
 ```ts
 DocManager.prototype.isExtendedPDFFile = function isExtendedPDFFile(fileName) {
-  let filePath = this.forcesavePath(fileName, null, false)
+  let filePath = this.forcesavePath(fileName, null, false);
   if (filePath === "") {
-    filePath = this.storagePath(fileName)
+    filePath = this.storagePath(fileName);
   }
-  const bufferSize = 300
-  const buffer = Buffer.alloc(bufferSize)
-  const fd = fileSystem.openSync(filePath, "r")
-  fileSystem.readSync(fd, buffer, 0, bufferSize)
-  fileSystem.closeSync(fd)
-  const pBuffer = buffer.toString("latin1")
-  const indexFirst = pBuffer.indexOf("%\u00CD\u00CA\u00D2\u00A9\u000D")
+  const bufferSize = 300;
+  const buffer = Buffer.alloc(bufferSize);
+  const fd = fileSystem.openSync(filePath, "r");
+  fileSystem.readSync(fd, buffer, 0, bufferSize);
+  fileSystem.closeSync(fd);
+  const pBuffer = buffer.toString("latin1");
+  const indexFirst = pBuffer.indexOf("%\u00CD\u00CA\u00D2\u00A9\u000D");
   if (indexFirst === -1) {
-    return false
+    return false;
   }
-  let pFirst = pBuffer.slice(indexFirst + 6)
+  let pFirst = pBuffer.slice(indexFirst + 6);
   if (!pFirst.startsWith("1 0 obj\u000A<<\u000A")) {
-    return false
+    return false;
   }
-  pFirst = pFirst.slice(11)
-  const indexStream = pFirst.indexOf("stream\u000D\u000A")
-  const indexMeta = pFirst.indexOf(configServer.get("gFormatOformPdfMetaTag"))
+  pFirst = pFirst.slice(11);
+  const indexStream = pFirst.indexOf("stream\u000D\u000A");
+  const indexMeta = pFirst.indexOf(configServer.get("gFormatOformPdfMetaTag"));
   if (indexStream === -1 || indexMeta === -1 || indexStream < indexMeta) {
-    return false
+    return false;
   }
-  let pMeta = pFirst.slice(indexMeta)
-  pMeta = pMeta.slice(configServer.get("gFormatOformPdfMetaTag").length + 3)
-  let indexMetaLast = pMeta.indexOf(" ")
+  let pMeta = pFirst.slice(indexMeta);
+  pMeta = pMeta.slice(configServer.get("gFormatOformPdfMetaTag").length + 3);
+  let indexMetaLast = pMeta.indexOf(" ");
   if (indexMetaLast === -1) {
-    return false
+    return false;
   }
-  pMeta = pMeta.slice(indexMetaLast + 1)
-  indexMetaLast = pMeta.indexOf(" ")
+  pMeta = pMeta.slice(indexMetaLast + 1);
+  indexMetaLast = pMeta.indexOf(" ");
   if (indexMetaLast === -1) {
-    return false
+    return false;
   }
-  return true
-}
+  return true;
+};
 ```
 
 ## Java Spring

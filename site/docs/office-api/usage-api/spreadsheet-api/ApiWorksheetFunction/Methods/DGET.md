@@ -32,7 +32,7 @@ This example shows how to extract from a database a single record that matches t
 // Use function to get a record after applying condition.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Month");
 worksheet.GetRange("C1").SetValue("Sales");

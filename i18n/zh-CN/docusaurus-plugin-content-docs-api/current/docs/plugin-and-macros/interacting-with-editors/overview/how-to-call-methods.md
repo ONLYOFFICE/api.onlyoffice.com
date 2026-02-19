@@ -28,11 +28,11 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-### 返回值：
+### 返回值
 
 boolean 类型
 
-### 示例：
+### 示例
 
 ``` ts
 Asc.plugin.executeMethod("methodName", [param1, param2], (returnValue) => {

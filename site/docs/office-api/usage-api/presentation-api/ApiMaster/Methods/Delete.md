@@ -1,6 +1,7 @@
 # Delete
 
 Deletes the specified object from the parent if it exists.
+Note: Master can't be deleted if it's the last one in the presentation.
 
 ## Syntax
 

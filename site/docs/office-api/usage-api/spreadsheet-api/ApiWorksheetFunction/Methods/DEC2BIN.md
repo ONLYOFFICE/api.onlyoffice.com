@@ -31,7 +31,7 @@ This example shows how to convert a decimal number to binary.
 // Use function to convert a decimal number to binary.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DEC2BIN(-100));
 
 ```

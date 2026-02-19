@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Chamilo 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="gl3gmhOKFk8"/>
+```
+
 该[插件](https://github.com/ONLYOFFICE/onlyoffice-chamilo)支持您在[Chamilo](https://chamilo.org/en/)中使用ONLYOFFICE文档直接编辑办公文档。
 
 ## 功能特性
@@ -84,7 +90,7 @@ ONLYOFFICE文档和Chamilo可以安装在不同的计算机上，也可以安装
 https://<文档服务器地址>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被您的浏览器和Chamilo服务器访问。Chamilo服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被您的浏览器和Chamilo服务器访问。Chamilo服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Chamilo的**设置**页面指定您自己的**密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)，中，指定相同的密钥并启用验证。
 

@@ -41,11 +41,13 @@ Represents the ApiParagraph class.
 | [GetIndFirstLine](./Methods/GetIndFirstLine.md) | [twips](../Enumeration/twips.md) \| undefined | Returns the paragraph first line indentation. |
 | [GetIndLeft](./Methods/GetIndLeft.md) | [twips](../Enumeration/twips.md) \| undefined | Returns the paragraph left side indentation. |
 | [GetIndRight](./Methods/GetIndRight.md) | [twips](../Enumeration/twips.md) \| undefined | Returns the paragraph right side indentation. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current content paragraph. |
 | [GetJc](./Methods/GetJc.md) | "left" \| "right" \| "both" \| "center" \| undefined | Returns the paragraph contents justification. |
 | [GetLastRunWithText](./Methods/GetLastRunWithText.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the last Run with text in the current paragraph. |
 | [GetNext](./Methods/GetNext.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Returns the next paragraph. |
 | [GetNumbering](./Methods/GetNumbering.md) | [ApiNumberingLevel](../ApiNumberingLevel/ApiNumberingLevel.md) | Returns the numbering definition and numbering level for the numbered list. |
 | [GetOutlineLvl](./Methods/GetOutlineLvl.md) | Number | Returns the outline level of the specified properties. |
+| [GetParaId](./Methods/GetParaId.md) | number | Returns a unique ID for the current paragraph. |
 | [GetParaPr](./Methods/GetParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | Returns the paragraph properties. |
 | [GetParagraphMarkTextPr](./Methods/GetParagraphMarkTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the text properties of the paragraph mark which is used to mark the paragraph end. The mark can also acquire common text properties like bold, italic, underline, etc. |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | Returns a content control that contains the current paragraph. |
@@ -94,7 +96,9 @@ Represents the ApiParagraph class.
 | [SetNumbering](./Methods/SetNumbering.md) | boolean | Specifies that the current paragraph references the numbering definition instance in the current document. |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | Sets the outline level for the specified properties. |
 | [SetPageBreakBefore](./Methods/SetPageBreakBefore.md) | boolean | Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document. |
+| [SetParaId](./Methods/SetParaId.md) | boolean | Specifies a unique ID for the current paragraph. |
 | [SetPosition](./Methods/SetPosition.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies an amount by which text is raised or lowered for this paragraph in relation to the default baseline of the surrounding non-positioned text. |
+| [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies the reading order for the current paragraph. Possible values are: **null** - use the standart direction parameter; **"ltr"** - left-to-right text direction; **"rtl"** - right-to-left text direction. |
 | [SetRightBorder](./Methods/SetRightBorder.md) | boolean | Specifies the border which will be displayed at the right side of the page around the specified paragraph. |
 | [SetSection](./Methods/SetSection.md) | boolean | Sets the specified section to the current paragraph. |
 | [SetShd](./Methods/SetShd.md) | boolean | Specifies the shading applied to the contents of the paragraph. |

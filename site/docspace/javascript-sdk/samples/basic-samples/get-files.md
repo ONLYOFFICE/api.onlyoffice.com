@@ -2,6 +2,8 @@
 
 This example demonstrates how to retrieve a list of files from a room using the JavaScript SDK method.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-files.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -125,7 +127,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getFiles()](/docspace/javascript-sdk/usage-sdk/methods.md#getfiles) method to retrieve files in the current view.
+Use the [getFiles()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getfiles) method to retrieve files in the current view.
 
 ``` ts
 const roomId = "71234"; // Replace with your room ID

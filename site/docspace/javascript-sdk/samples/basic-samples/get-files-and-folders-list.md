@@ -2,6 +2,8 @@
 
 This example demonstrates how to retrieve both files and folders from a DocSpace room using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-files-and-folders-list.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -122,7 +124,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getList()](/docspace/javascript-sdk/usage-sdk/methods.md#getlist) method to fetch files and folders from the room and output them to the console.
+Use the [getList()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#getlist) method to fetch files and folders from the room and output them to the console.
 
 ``` ts
 const roomId = "71234"; // Replace with your actual public room ID

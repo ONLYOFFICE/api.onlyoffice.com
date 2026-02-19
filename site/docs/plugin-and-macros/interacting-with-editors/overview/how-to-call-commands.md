@@ -33,11 +33,11 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-### Returns:
+### Returns
 
 This method doesn't return any data.
 
-### Example:
+### Example
 
 ``` ts
 Asc.plugin.callCommand(() => {
@@ -54,7 +54,7 @@ This method is executed in its own context isolated from other JavaScript data. 
 
 > The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
 
-### Example:
+### Example
 
 ``` ts
 Asc.scope.text = text;

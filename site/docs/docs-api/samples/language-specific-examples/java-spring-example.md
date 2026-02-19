@@ -1,6 +1,9 @@
 ---
-sidebar_position: -9
+sidebar_position: -6
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Java Spring example
 
@@ -10,7 +13,9 @@ This example will help you integrate ONLYOFFICE Docs into your web application w
 
 Spring Boot has a lot of functionality, but its most significant features are: dependency management, auto-configuration, and built-in servlet containers.
 
-> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::caution
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
+:::
 
 ## Important security info
 
@@ -21,306 +26,297 @@ Please keep in mind the following security aspects when you are using test examp
 - There are no data checks in requests of saving the file after editing, since each test example is intended for requests only from ONLYOFFICE Docs.
 - There are no prohibitions on using test examples from other sites, since they are intended to interact with ONLYOFFICE Docs from another domain.
 
-## For Windows
+## Installation
 
-### Step 1. Install ONLYOFFICE Docs
+<Tabs>
+    <TabItem value="windows" label="Windows">
+        ### Step 1. Install ONLYOFFICE Docs
 
-Download and install ONLYOFFICE Docs (packaged as Document Server):
+        Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example).
+        See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example).
 
-### Step 2. Download the Java code for the editors integration
+        ### Step 2. Download the Java code for the editors integration
 
-Download the [Java-Spring example](./language-specific-examples.md) from our site, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring).
+        Download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring):
 
-To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *src/main/resources/application.properties* file:
+        ``` sh
+        curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
+        tar -xf Java.Spring.Example.zip
+        ```
 
-``` ini
-files.storage=
-server.port=port
-files.docservice.url.site=https://documentserver/
-```
+        Change the current directory for the project directory:
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default).
-You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
+        ``` sh
+        cd "Java Spring Example"
+        ```
 
-If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *src/main/webapp/editor.jsp* file.
+        ### Step 3. Install the prerequisites
 
-### Step 3. Install the prerequisites
+        Install the Java version 11 appropriate for your OS and framework **Apache Maven**:
 
-To run the Java-Spring example code, install the Java version 11 appropriate for your OS and framework **Apache Maven**:
+        - **Java** (download from [the Oracle official website](https://www.oracle.com/java/technologies/downloads/#java11));
+        - **Apache Maven** (download from [the official website](https://maven.apache.org/download.cgi)).
 
-- **Java** (download from [the Oracle official website](https://www.oracle.com/java/technologies/downloads/#java11));
-- **Apache Maven** (download from [the official website](https://maven.apache.org/download.cgi)).
+        After you have installed Java on Windows, set the **JAVA\_HOME** environment variable to point to the Java installation directory.
 
-### Step 4. Set environment variables
+        Find out where Java is installed. If you didn't change the path during installation, it will be something like this:
 
-1. After you have installed Java on Windows, set the **JAVA\_HOME** environment variable to point to the Java installation directory.
+        ``` sh
+        C:\Program Files\Java\jdk11
+        ```
 
-   Find out where Java is installed. If you didn't change the path during installation, it will be something like this:
+        In **Windows 7**, right click **My Computer** and select **Properties**, then click **Advanced**.
 
-   ``` sh
-   C:\Program Files\Java\jdk11
-   ```
+        In **Windows 8**, go to **Control Panel** and select **System**, then click **Advanced System Settings**.
 
-   In **Windows 7**, right click **My Computer** and select **Properties**, then click **Advanced**.
+        Click the **Environment Variables** button.
 
-   In **Windows 8**, go to **Control Panel** and select **System**, then click **Advanced System Settings**.
+        Under **System Variables**, click **New**.
 
-   Click the **Environment Variables** button.
+        In the **Variable Name** field, enter **JAVA\_HOME** if you installed the **JDK** (Java Development Kit) or **JRE\_HOME** if you installed the **JRE** (Java Runtime Environment).
 
-   Under **System Variables**, click **New**.
+        In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example `C:\Program Files\Java\jdk11`.
 
-   In the **Variable Name** field, enter **JAVA\_HOME** if you installed the **JDK** (Java Development Kit) or **JRE\_HOME** if you installed the **JRE** (Java Runtime Environment).
+        Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
-   In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example *C:\Program Files\Java\jdk11*.
+        ``` sh
+        echo %JAVA_HOME%
+        ```
 
-   Check if the variable created successfully by **echo** command in the **Command Prompt**:
+        Set the **MAVEN_HOME** environment variable:
 
-   ``` sh
-   echo %JAVA_HOME%
-   ```
+        Unzip the downloaded archive with Maven to any directory. It will be something like this:
 
-2. Set the **MAVEN_HOME** environment variable:
+        ``` sh
+        C:\apache-maven-3.8.1
+        ```
 
-   Unzip the downloaded archive with Maven to any directory. It will be something like this:
+        In **Windows 7**, right click **My Computer** and select **Properties**, then click **Advanced**.
 
-   ``` sh
-   C:\apache-maven-3.8.1
-   ```
+        In **Windows 8**, go to **Control Panel** and select **System**, then click **Advanced System Settings**.
 
-   In **Windows 7**, right click **My Computer** and select **Properties**, then click **Advanced**.
+        Click the **Environment Variables** button.
 
-   In **Windows 8**, go to **Control Panel** and select **System**, then click **Advanced System Settings**.
+        Under **System Variables**, click **New**.
 
-   Click the **Environment Variables** button.
+        In the **Variable Name** field, enter **MAVEN_HOME**.
 
-   Under **System Variables**, click **New**.
+        In the **Variable Value** field, enter your Maven installation path, for example `C:\apache-maven-3.8.1`.
 
-   In the **Variable Name** field, enter **MAVEN_HOME**.
+        In the system variables, find **PATH**, click the **Edit...** button. In the **Edit environment variable** dialog, click the **New** button and add `C:\apache-maven-3.8.1\bin` to the **PATH** system variable.
 
-   In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example *C:\apache-maven-3.8.1*.
+        Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
-   In the system variables, find **PATH**, click the **Edit...** button. In the **Edit environment variable** dialog, click the **New** button and add *C:\apache-maven-3.8.1\bin* to the **PATH** system variable.
+        ``` sh
+        echo %MAVEN_HOME%
+        ```
 
-   Check if the variable created successfully by **echo** command in the **Command Prompt**:
+        ### Step 4. Configure the application
 
-   ``` sh
-   echo %MAVEN_HOME%
-   ```
+        To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the `src/main/resources/application.properties` file:
 
-### Step 5. Configure JWT
+        ``` ini
+        files.storage=
+        server.port=port
+        files.docservice.url.site=https://documentserver/
+        ```
 
-Open the *src/main/resouces/application.properties* file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
- ``` ini
- docservice.security.key=secret
- ```
+        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+        You can set an absolute path. For example, `D:\\folder`. Please note that on Windows OS the double backslash must be used as a separator.
 
-### Step 6. Start application with Maven
+        If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the `src/main/webapp/editor.jsp` file.
 
-1. Open a console and go to the *java-spring* folder using the **cd** command:
+        ### Step 5. Configure JWT
 
-   ``` sh
-   cd C:\Program Files\document-server-integration\web\documentserver-example\java-spring
-   ```
+        Open the `src/main/resources/application.properties` file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
 
-2. In the open console, enter the following commands:
+        ``` ini
+        docservice.security.key=secret
+        ```
 
-   ``` sh
-   mvn clean
-   mvn package
-   mvn spring-boot:run
-   ```
+        ### Step 6. Build and run
 
-3. Open your browser using **server.address** and **server.port**:
+        In the project directory, enter the following commands:
 
-   ``` sh
-   http://server.address:server.port/
-   ```
+        ``` sh
+        mvn clean
+        mvn package
+        mvn spring-boot:run
+        ```
 
-### Step 7. Check accessibility
+        Open your browser using **server.address** and **server.port**:
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+        ``` sh
+        http://server.address:server.port/
+        ```
 
-## For Linux
+        ### Step 7. Check accessibility
 
-### Step 1. Install ONLYOFFICE Docs
+        In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-Download and install ONLYOFFICE Docs (packaged as Document Server):
+        Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+    </TabItem>
+    <TabItem value="linux" label="Linux">
+        ### Step 1. Install ONLYOFFICE Docs
 
-[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example).
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-### Step 2. Install the prerequisites and run the website with the editors
+        See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example).
 
-1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
+        ### Step 2. Download the Java code for the editors integration
 
-2. There are two ways to get the Java-Spring example:
+        Download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring):
 
-   - download the archive with the Java-Spring example and unpack it:
+        ``` sh
+        curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
+        unzip Java.Spring.Example.zip
+        ```
 
-   ``` sh
-   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-   ```
+        Change the current directory for the project directory:
 
-   ``` sh
-   unzip Java.Spring.Example.zip
-   ```
+        ``` sh
+        cd "Java Spring Example"
+        ```
 
-   - clone the git repository and get the source code directly from the [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) folder:
+        ### Step 3. Install the prerequisites
 
-   ``` sh
-   git clone https://github.com/ONLYOFFICE/document-server-integration.git
-   ```
+        Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-3. Change the current directory for the project directory:
+        Install **Maven**:
 
-   - in the archive:
+        ``` sh
+        sudo apt-get install maven
+        ```
 
-   ``` sh
-   cd Java\ Spring\ Example/
-   ```
+        ### Step 4. Configure the application
 
-   - in the git repository:
+        Edit the `src/main/resources/application.properties` configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
-   ``` sh
-   cd document-server-integration/web/documentserver-example/java-spring
-   ```
+        ``` sh
+        nano src/main/resources/application.properties
+        ```
 
-4. Edit the *src/main/resources/application.properties* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
+        Edit the following lines:
 
-   ``` sh
-   nano src/main/resources/application.properties
-   ```
+        ``` ini
+        files.storage=
+        server.port=port
+        files.docservice.url.site=https://documentserver/
+        ```
 
-   Edit the following lines:
+        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-   ``` ini
-   files.storage=
-   server.port=port
-   files.docservice.url.site=https://documentserver/
-   ```
+        ### Step 5. Configure JWT
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can set an absolute path.
+        Open the `src/main/resources/application.properties` file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
 
-   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
-     ``` ini
-     docservice.security.key=secret
-     ```
+        ``` ini
+        docservice.security.key=secret
+        ```
 
-5. Install **Maven**:
+        ### Step 6. Build and run
 
-   ``` sh
-   sudo apt-get install maven
-   ```
+        Build the project:
 
-6. Build:
+        ``` sh
+        mvn package
+        ```
 
-   ``` sh
-   mvn package
-   ```
+        Start the Java-Spring example:
 
-7. Start Java-Spring example:
+        ``` sh
+        ./mvnw spring-boot:run
+        ```
 
-   ``` sh
-   ./mvnw spring-boot:run
-   ```
+        Open your browser using **server.address** and **server.port**:
 
-8. Open your browser using **server.address** and **server.port**:
+        ``` sh
+        http://server.address:server.port/
+        ```
 
-   ``` sh
-   http://server.address:server.port/
-   ```
+        ### Step 7. Check accessibility
 
-### Step 3. Check accessibility
+        In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+        Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
+    </TabItem>
+    <TabItem value="docker" label="Docker">
+        ### Step 1. Install ONLYOFFICE Docs
 
-## For Docker
+        Download and install ONLYOFFICE Docs (packaged as Document Server):
 
-### Step 1. Install ONLYOFFICE Docs
+        [Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-Download and install ONLYOFFICE Docs (packaged as Document Server):
+        See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example).
 
-[Get ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+        ### Step 2. Download the Java code for the editors integration
 
-See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example).
+        Download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring):
 
-### Step 2. Install the prerequisites and run the website with the editors
+        ``` sh
+        curl --output Java.Spring.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
+        unzip Java.Spring.Example.zip
+        ```
 
-1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
+        Change the current directory for the project directory:
 
-2. There are two ways to get the Java-Spring example:
+        ``` sh
+        cd "Java Spring Example"
+        ```
 
-   - download the archive with the Java-Spring example and unpack it:
+        ### Step 3. Install the prerequisites
 
-   ``` sh
-   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
-   ```
+        Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-   ``` sh
-   unzip Java.Spring.Example.zip
-   ```
+        ### Step 4. Configure the application
 
-   - clone the git repository and get the source code directly from the [`java-spring`](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/java-spring) folder:
+        Edit the `src/main/resources/application.properties` configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
 
-   ``` sh
-   git clone https://github.com/ONLYOFFICE/document-server-integration.git
-   ```
+        ``` sh
+        nano src/main/resources/application.properties
+        ```
 
-3. Change the current directory for the project directory:
+        Edit the following lines:
 
-   - in the archive:
+        ``` ini
+        files.storage=
+        server.port=port
+        files.docservice.url.site=https://documentserver/
+        ```
 
-   ``` sh
-   cd Java\ Spring\ Example/
-   ```
+        where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed, `port` is any available port and `files.storage` is the path where files will be created and stored (in the project folder by default). You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-   - in the git repository:
+        ### Step 5. Configure JWT
 
-   ``` sh
-   cd document-server-integration/web/documentserver-example/java-spring
-   ```
+        Open the `src/main/resources/application.properties` file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
 
-4. Edit the *src/main/resources/application.properties* configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
+        ``` ini
+        docservice.security.key=secret
+        ```
 
-   ``` sh
-   nano src/main/resources/application.properties
-   ```
+        ### Step 6. Build and run
 
-   Edit the following lines:
+        Run the following command in the Java-Spring example directory:
 
-   ``` ini
-   files.storage=
-   server.port=port
-   files.docservice.url.site=https://documentserver/ 
-   ```
+        ``` sh
+        docker-compose up
+        ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can set an absolute path.
+        Open your browser using **server.address** and **server.port**:
 
-   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
-     ``` ini
-     docservice.security.key=secret
-     ```
+        ``` sh
+        http://server.address:server.port/
+        ```
 
-5. Run the next command in the Java-Spring example directory:
+        ### Step 7. Check accessibility
 
-   ``` sh
-   docker-compose up
-   ```
+        In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
 
-6. Open your browser using **server.address** and **server.port**:
-
-   ``` sh
-   http://server.address:server.port/
-   ```
-
-### Step 3. Check accessibility
-
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+        Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.
+    </TabItem>
+</Tabs>

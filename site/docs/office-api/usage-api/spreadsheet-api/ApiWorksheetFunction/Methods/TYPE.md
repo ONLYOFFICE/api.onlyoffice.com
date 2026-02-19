@@ -30,7 +30,7 @@ This example shows how to return an integer representing the data type of a valu
 // Use a function to return the data type of a value.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.TYPE(255));
 worksheet.GetRange("A2").SetValue(func.TYPE(true));
 worksheet.GetRange("A3").SetValue(func.TYPE("Online Office"));

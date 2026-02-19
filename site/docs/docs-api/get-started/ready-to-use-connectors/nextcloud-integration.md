@@ -68,7 +68,7 @@ In Nextcloud, open the *\~/settings/admin/onlyoffice* page with administrative s
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ![Local](/assets/images/editor/nextcloud-local.jpg)
 
@@ -81,6 +81,81 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 Enable or disable the **Open file in the same tab** setting.
 
 The **Open in ONLYOFFICE** action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.
+
+### ONLYOFFICE Connector for Nextcloud: Configuration Parameters
+
+These are all available configuration parameters for the ONLYOFFICE integration app for Nextcloud.
+The parameters are grouped into two categories depending on how they can be configured:
+
+- Basic settings: configured via the Nextcloud admin UI or OCC commands.
+- Advanced settings: configured **only via `config/config.php`** file.
+
+#### Basic Configuration (UI / OCC)
+
+These settings are available through the Nextcloud admin interface or via `occ` commands.
+
+| Parameter                                    | Description                                                                 |
+|---------------------------------------------|-----------------------------------------------------------------------------|
+| `DocumentServerUrl`                         | Public address of ONLYOFFICE Docs server (set via UI or `occ`).            |
+| `Open in same tab`                          | Defines whether documents open in the same browser tab.                    |
+| `Enable JWT`                                | Enables JWT validation for secure communication.                           |
+| `Secret key`                                | JWT secret used to sign requests (alternative to `jwt_secret` in config). |
+| `Advanced server settings`                  | Enables configuration of internal server URLs.                             |
+| `DocumentServerInternalUrl`                 | Internal address of ONLYOFFICE Docs (used if advanced settings enabled).   |
+| `StorageUrl`                                | Internal address of Nextcloud (used if advanced settings enabled).         |
+| `def_formats`                               | Defines default file formats.                                              |
+| `editable`                                  | Enables editing of certain file types.                                     |
+| `review`                                    | Enables review-only mode.                                                  |
+| `forcesave`                                 | Enables force saving documents to storage.                                 |
+| `customizationChat`                         | Enables or disables chat panel.                                            |
+| `customizationFeedback`                     | Enables feedback and support links.                                        |
+| `customizationHelp`                         | Enables help link.                                                         |
+| `customizationToolbarNoTabs`                | Shows toolbar without tabs.                                                |
+| `customizationCompactHeader`                | Enables compact header mode.                                               |
+| `customizationToolbarHideSettings`          | Hides the “Settings” menu in the editor.                                   |
+| `customizationFeedbackSuggestion`           | Allows users to submit suggestions.                                        |
+| `customizationFeedbackBug`                  | Allows users to report bugs.                                               |
+| `customizationAutosave`                     | Enables autosave mode.                                                     |
+| `SameTab`                                   | Opens files in the same tab (deprecated UI setting).                       |
+| `preview`                                   | Enables document preview generation.                                       |
+| `about`                                     | Shows About section.                                                       |
+
+> You can also use the `occ` command-line interface to get/set these parameters:
+> ```sh
+> php occ config:app:set onlyoffice customizationChat --value=false
+> ```
+
+#### Advanced Configuration (`config/config.php` only)
+
+You can define the following parameters in the `config/config.php` file to customize the behavior of the ONLYOFFICE connector:
+
+| Parameter                   | Description                                                                                     |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| `DocumentServerUrl`         | Public address of the ONLYOFFICE Docs server.                                                  |
+| `DocumentServerInternalUrl`| Internal address of ONLYOFFICE Docs used for server-to-server communication.                   |
+| `StorageUrl`               | Internal address of the Nextcloud server used by ONLYOFFICE Docs.                              |
+| `jwt_secret`               | Secret key used to generate and validate JWT tokens.                                           |
+| `jwt_secret_path`          | Path to a file containing the JWT secret.                                                      |
+| `jwt_header`               | Name of the HTTP header used to send the JWT. Default is `Authorization`.                     |
+| `jwt_in_body`              | If `true`, the JWT token is sent in the request body instead of the header.                    |
+| `jwt_disable`              | If `true`, disables JWT signature verification.                                                |
+| `jwt_leeway`               | Leeway in seconds to account for clock skew when validating JWT tokens.                        |
+| `jwt_expiration`           | JWT token expiration time in seconds.                                                          |
+| `verify_peer_off`          | If `true`, disables SSL peer verification for connections.                                     |
+| `limit_thumb_size`         | Maximum file size in bytes for which thumbnails will be generated.                             |
+| `disable_download`         | If `true`, disables file download functionality.                                               |
+| `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
+
+The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation:
+
+```php
+<?php
+'onlyoffice' => array (
+    'jwt_secret' => 'your_secret_key',
+    'jwt_header' => 'Authorization',
+)
+?>
+```
 
 ## Checking the connection
 
@@ -144,7 +219,9 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs.
 
-  > Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  :::note
+  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  :::
 
 - **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
 

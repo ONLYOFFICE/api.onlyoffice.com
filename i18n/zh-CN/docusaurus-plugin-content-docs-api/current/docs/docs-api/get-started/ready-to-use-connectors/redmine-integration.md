@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Redmine 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="_1Q86nRnumo"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助ONLYOFFICE文档，在[Redmine](https://www.redmine.org/)中编辑附件。
 
 该插件可在官方的[Redmine插件目录](https://www.redmine.org/plugins/onlyoffice_redmine)中获取。

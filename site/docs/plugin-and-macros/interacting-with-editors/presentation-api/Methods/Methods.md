@@ -44,6 +44,7 @@ Represents the Api class.
 | [PauseSlideShow](./PauseSlideShow.md) | None | Pauses the current slide show. |
 | [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
+| [RemoveOleObject](./RemoveOleObject.md) | None | Removes the OLE object from the presentation by its internal ID. |
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [ResumeSlideShow](./ResumeSlideShow.md) | None | Resumes the current slide show. |

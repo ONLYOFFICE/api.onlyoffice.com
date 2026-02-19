@@ -1,6 +1,6 @@
 # MoveCursorToEnd
 
-Moves cursor to the end of the document.
+Moves a cursor to the end of the document.
 
 ## Syntax
 

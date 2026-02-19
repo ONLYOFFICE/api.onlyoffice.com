@@ -31,7 +31,7 @@ This example shows how to return the second, a number from 0 to 59.
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.SECOND("16:39:35"); 
 
 worksheet.GetRange("C1").SetValue(ans);

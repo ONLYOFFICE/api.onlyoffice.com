@@ -31,7 +31,7 @@ This example shows how to convert a text time to a serial number for a time, a n
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.TIMEVALUE("11/5/18 11:17:00 am"); 
 
 worksheet.GetRange("C1").SetValue(ans);

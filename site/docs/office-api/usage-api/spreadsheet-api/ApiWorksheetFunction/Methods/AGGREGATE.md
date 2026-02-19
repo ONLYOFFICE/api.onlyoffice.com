@@ -33,6 +33,6 @@ This example shows how to return an aggregate in a list or database.
 // Get a function that gets an aggregate from a list of numbers.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.AGGREGATE(9, 4, 10, 30, 50, 5));
 ```

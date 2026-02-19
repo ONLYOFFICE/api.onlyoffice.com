@@ -6,7 +6,9 @@ sidebar_position: -1
 
 You can upload your own plugins to your server. Starting from version 3.5, the plugins can be also uploaded to the DocSpace Saas solution. System plugins created by our developers are available by default in both the server and SaaS versions of ONLYOFFICE DocSpace.
 
-> The total number of plugins on the portal, including system plugins, must not exceed 10.
+:::note
+The total number of plugins on the portal, including system plugins, must not exceed 10.
+:::
 
 ## Enabling system plugins
 
@@ -46,7 +48,9 @@ Now the plugin is available to use.
 
 ## Uploading plugins
 
-> You can upload your own plugins in the DocSpace on-premises solution. In the SaaS solution, this option is available starting from version 3.5.
+:::note
+You can upload your own plugins in the DocSpace on-premises solution. In the SaaS solution, this option is available starting from version 3.5.
+:::
 
 To upload your own plugins to the DocSpace portal:
 
@@ -64,7 +68,9 @@ To upload your own plugins to the DocSpace portal:
 
 5. Choose the plugin archive and click **Open**.
 
-   > The maximum size of the plugin archive and each file within it must not exceed 5 MB. The number of plugin icons must not exceed 10.
+   :::note
+   The maximum size of the plugin archive and each file within it must not exceed 5 MB. The number of plugin icons must not exceed 10.
+   :::
 
    ![Plugin archive](/assets/images/docspace/plugin-archive.png)
 

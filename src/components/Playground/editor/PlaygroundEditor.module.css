@@ -1,0 +1,40 @@
+.editorContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.runButton {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--ifm-global-radius);
+    cursor: pointer;
+    transition: all var(--ifm-transition-fast) ease;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.runButton:hover {
+    background: #e55e31;
+}
+
+html[data-theme='dark'] .runButton:hover {
+    background: #ff8254;
+}
+
+.runButton:active {
+    background: var(--ifm-color-primary-darker);
+}
+
+.runButton > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}

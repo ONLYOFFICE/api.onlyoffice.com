@@ -32,6 +32,6 @@ This example shows how to find the specified substring within another string and
 // Use function to find out a starting position of a substring containing in another text and its character set (DBCS).
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.FINDB("line", "Online Office"));
 ```

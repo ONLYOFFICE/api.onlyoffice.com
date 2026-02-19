@@ -25,8 +25,8 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument")
-charts = document.Call("GetAllCharts")
+document = api.GetDocument()
+charts = document.GetAllCharts()
 chart = charts.Get(1)
 ```
 
@@ -45,7 +45,7 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument")
-charts = document.Call("GetAllCharts")
+document = api.GetDocument()
+charts = document.GetAllCharts()
 chart = charts[1]
 ```

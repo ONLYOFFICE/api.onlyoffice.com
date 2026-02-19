@@ -1,0 +1,37 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# createFile
+
+创建一个新文件。需要设置将要创建的文件类型。
+
+## 语法
+
+```java
+boolean createFile(int | String type);
+```
+
+## 参数
+
+| 参数   | 类型         | 描述                                                                                                                                                                                                                                              |
+| ------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type   | int \| String | 要创建的文件类型，在Java代码中设置为十六进制整数，在.docbuilder脚本文件中设置为`docx`、`xlsx`、`pptx`或`pdf`（请参阅[OFFICESTUDIO_FILE_XXX](../../../get-started/supported-formats.md)值）。 |
+
+## 示例
+
+
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.createFile(FileTypes.Document.DOCX);
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.CreateFile("docx");
+        ```
+    </TabItem>
+</Tabs>

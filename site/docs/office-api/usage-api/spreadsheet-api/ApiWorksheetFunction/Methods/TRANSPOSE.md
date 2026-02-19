@@ -30,7 +30,7 @@ This example shows how to convert a vertical range of cells to a horizontal rang
 // Use a function to transpose a range.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Ann");
 worksheet.GetRange("A2").SetValue("Bob");
 worksheet.GetRange("B1").SetValue("Apples");

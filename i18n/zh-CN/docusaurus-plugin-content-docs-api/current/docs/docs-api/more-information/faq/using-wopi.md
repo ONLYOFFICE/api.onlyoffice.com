@@ -37,7 +37,7 @@ sidebar_position: -1
 - 在线办公室中可用的文档操作，
 - 支持的文件格式（扩展名）。
 
-请求被发送到`https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+请求被发送到`https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 有关 WOPI discovery的更多信息，请参见[此处](../../using-wopi/wopi-discovery.md)。
 

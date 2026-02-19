@@ -42,7 +42,7 @@ The `payload` for the JWT token in the JSON format must have the same structure 
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Sample token:
 
@@ -120,7 +120,7 @@ The `payload` for the JWT token in the JSON format must have the same structure 
   }
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Sample token:
 
@@ -149,7 +149,7 @@ The `payload` for the JWT token in the JSON format must have the same structure 
   }
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Sample token:
 
@@ -254,7 +254,7 @@ The `payload` for the JWT token in the JSON format must have the same structure 
   }
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Sample token:
 
@@ -301,7 +301,7 @@ The `payload` for the JWT token in the JSON format must have the same structure 
   }
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Sample token:
 

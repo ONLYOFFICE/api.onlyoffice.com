@@ -20,6 +20,7 @@ Represents the ApiPivotDataField class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [AutoSort](./Methods/AutoSort.md) | None | Establishes automatic field-sorting rules for the pivot table reports. |
 | [ClearAllFilters](./Methods/ClearAllFilters.md) | None | Deletes all filters currently applied to the pivot field. |
 | [ClearLabelFilters](./Methods/ClearLabelFilters.md) | None | Deletes all label filters or all date filters from the pivot filters collection. |
 | [ClearManualFilters](./Methods/ClearManualFilters.md) | None | Deletes all manual filters from the pivot filters collection. |
@@ -43,6 +44,7 @@ Represents the ApiPivotDataField class.
 | [GetOrientation](./Methods/GetOrientation.md) | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | Returns a data field orientation value that represents the data field location in the specified pivot table report. |
 | [GetParent](./Methods/GetParent.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Returns the parent object for the current field. |
 | [GetPivotField](./Methods/GetPivotField.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | Returns the pivot field from which the data field was created. |
+| [GetPivotFilters](./Methods/GetPivotFilters.md) | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | Returns the collection of pivot filters applied to the specified pivot field. |
 | [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | Returns an object that represents either a single pivot table item (the ApiPivotItem object) or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field. |
 | [GetPosition](./Methods/GetPosition.md) | number | Returns a value that represents the data field position within a category. |
 | [GetRepeatLabels](./Methods/GetRepeatLabels.md) | boolean | Returns the setting which specifies whether to repeat items labels at each row. |

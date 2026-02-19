@@ -1,6 +1,6 @@
 # GetLayoutByType
 
-Returns a layout of the specified slide master by its position.
+Returns the layout corresponding to the specified layout type of the slide master.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.GetLayoutByType(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [LayoutType](../../Enumeration/LayoutType.md) |  | Layout position. |
+| sType | Required | [LayoutType](../../Enumeration/LayoutType.md) |  | The layout type. |
 
 ## Returns
 

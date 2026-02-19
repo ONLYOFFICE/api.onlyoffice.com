@@ -31,7 +31,7 @@ This example shows how to return the year of a date, an integer in the range 190
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.YEAR("3/16/2018");
 
 worksheet.GetRange("C1").SetValue(ans);

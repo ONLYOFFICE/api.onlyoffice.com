@@ -31,7 +31,7 @@ This example shows how to return the k-th percentile of values in a range, where
 // Use a function to get the k-th percentile of values.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let column1 = [1, 0, 7, 10];
 let column2 = [3, 2, 5, 8];
 let column3 = [5, 4, 3, 6];

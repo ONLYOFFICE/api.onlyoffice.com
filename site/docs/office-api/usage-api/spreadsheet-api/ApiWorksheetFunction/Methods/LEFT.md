@@ -31,6 +31,6 @@ This example shows how to return the specified number of characters from the sta
 // Use a function to get a length of a text starting from the index.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LEFT("Online Office", 6));
 ```

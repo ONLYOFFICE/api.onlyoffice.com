@@ -111,10 +111,10 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 
 ## Methods and events
 
-- button
-- init
-- onExternalMouseUp
-- onTranslate
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
 - [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)

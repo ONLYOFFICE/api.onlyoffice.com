@@ -1,6 +1,6 @@
 # GetAttribute
 
-Retrieves the attribute value from the custom XML node.\
+Retrieves the attribute value from the custom XML node.
 If the attribute doesn't exist, it returns `false`.
 
 ## Syntax

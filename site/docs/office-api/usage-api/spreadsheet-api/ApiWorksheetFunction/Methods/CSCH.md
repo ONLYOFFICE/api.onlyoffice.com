@@ -30,6 +30,6 @@ This example shows how to the hyperbolic cosecant of an angle.
 // Use function to get the hyperbolic cosecant of an angle.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.CSCH(0.785398));
 ```

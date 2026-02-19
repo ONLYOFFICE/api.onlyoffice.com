@@ -37,7 +37,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此方法不返回任何值。
 
-### 示例：
+### 示例
 
 ``` ts
 Asc.plugin.callCommand(() => {
@@ -54,7 +54,7 @@ Asc.plugin.callCommand(() => {
 
 > 不能通过 Asc.scope 对象将函数传递给调用命令方法
 
-### 示例：
+### 示例
 
 ``` ts
 Asc.scope.text = text

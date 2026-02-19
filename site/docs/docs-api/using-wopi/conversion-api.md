@@ -37,7 +37,7 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 </form>
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ### Sample of conversion request with the *format* parameter
 
@@ -45,7 +45,7 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ### Sample of conversion request with the *format* parameter in the HTML format
 
@@ -57,4 +57,4 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 </form>
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.

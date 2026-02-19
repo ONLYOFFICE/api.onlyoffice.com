@@ -2,6 +2,8 @@
 
 This example demonstrates how to open a predefined modal window in DocSpace using the JavaScript SDK.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/open-modal.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -120,7 +122,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [openModal()](/docspace/javascript-sdk/usage-sdk/methods.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready) event to open a specific modal by its ID.
+Use the [openModal()](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/type-aliases/TFrameEvents.md#onappready) event to open a specific modal by its ID.
 
 ``` ts
 function onAppReady() {

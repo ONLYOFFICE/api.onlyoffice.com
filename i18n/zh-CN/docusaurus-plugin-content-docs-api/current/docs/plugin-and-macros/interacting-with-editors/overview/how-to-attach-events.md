@@ -10,18 +10,18 @@ sidebar_position: -1
 
 从 8.2 版本开始，在插件代码中定义**绑定编辑器事件**方法，以添加事件监听器。该事件监听器是一个函数，每当指定事件传递到目标时，该函数将被调用。
 
-### 参数说明：
+### 参数说明
 
    | 名称     | 类型     | 描述         |
    | -------- | -------- | ------------------- |
    | *id*     | string   | 事件名称。     |
    | *action* | function | 事件监听函数。 |
 
-   ### 返回值：
+   ### 返回值
 
    此方法无返回值。
 
-   ### 示例：
+   ### 示例
 
 ``` ts
 Asc.plugin.attachEditorEvent("onAddComment", (data) => {
@@ -49,14 +49,14 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
    Asc.plugin.attachEvent(id, action);
    ```
 
-### 参数：
+### 参数
 
 | 名称     | 类型     | 描述         |
 | -------- | -------- | ------------------- |
 | *id*     | string   | 事件名称。     |
 | *action* | function | 事件监听函数。 |
 
-### 返回值：
+### 返回值
 
 此方法无返回值。
 

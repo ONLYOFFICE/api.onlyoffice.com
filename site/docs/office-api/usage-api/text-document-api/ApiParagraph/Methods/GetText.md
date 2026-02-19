@@ -18,7 +18,7 @@ expression.GetText(oPr);
 | oPr.Numbering | Optional | boolean | false | Defines if the resulting string will include numbering or not. |
 | oPr.Math | Optional | boolean | false | Defines if the resulting string will include mathematical expressions or not. |
 | oPr.NewLineSeparator | Optional | string | '\r' | Defines how the line separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r". |
-| oPr.TabSymbol | Optional | string | '\t' | Defines how the tab will be specified in the resulting string (does not apply to numbering). Any symbol can be used. The default symbol is "\t". |
+| oPr.TabSymbol | Optional | string | ' ' | Defines how the tab will be specified in the resulting string (does not apply to numbering). Any symbol can be used. The default symbol is " ". |
 
 ## Returns
 

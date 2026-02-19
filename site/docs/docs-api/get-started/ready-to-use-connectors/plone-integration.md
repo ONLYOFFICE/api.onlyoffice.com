@@ -42,7 +42,9 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
 
 Both options will automatically install plugin from [PyPi](https://pypi.org/project/onlyoffice.plone/).
 
-> Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
+:::note
+Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
+:::
 
 ## Configuring Plone ONLYOFFICE integration plugin
 
@@ -99,7 +101,9 @@ If you have a working Plone instance, you can install plugin by adding the proje
 
 5. Then start or restart your Plone instance.
 
-> Plone is based on **Zope server** and will not run as *root* user. If you intend to run it as *root* user, you must supply [effective-user directive](https://zope.readthedocs.io/en/2.12/SETUID.html). In order to do so, add *effective-user \<username>* line to *./parts/instance/etc/zope.conf*.
+:::note
+Plone is based on **Zope server** and will not run as *root* user. If you intend to run it as *root* user, you must supply [effective-user directive](https://zope.readthedocs.io/en/2.12/SETUID.html). In order to do so, add *effective-user \<username>* line to *./parts/instance/etc/zope.conf*.
+:::
 
 ## Upgrade Plone ONLYOFFICE integration plugin
 

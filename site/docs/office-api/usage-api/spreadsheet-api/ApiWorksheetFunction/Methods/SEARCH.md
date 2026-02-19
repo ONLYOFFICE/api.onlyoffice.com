@@ -32,6 +32,6 @@ This example shows how to return the number of the character at which a specific
 // Use a function to count characters starting from the index at which the search text appears.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SEARCH("line", "Online Office"));
 ```

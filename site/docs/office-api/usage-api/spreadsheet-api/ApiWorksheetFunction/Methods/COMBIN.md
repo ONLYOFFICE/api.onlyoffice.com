@@ -31,6 +31,6 @@ This example shows how to return the number of combinations for a given number o
 // Use function to count possible combinations for a given number of items.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.COMBIN(67, 7));
 ```

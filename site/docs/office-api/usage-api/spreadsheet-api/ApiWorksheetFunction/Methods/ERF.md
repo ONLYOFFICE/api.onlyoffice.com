@@ -31,6 +31,6 @@ This example shows how to return the error function integrated between the speci
 // Use function to get an error function set between upper and lower limits.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ERF(-2));
 ```

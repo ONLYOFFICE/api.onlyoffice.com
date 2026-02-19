@@ -88,8 +88,8 @@ Repository on GitHub: [clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/
 
 ## Methods and events
 
-- button
-- init
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 
 ## Support
 

@@ -16,6 +16,7 @@ Represents the Api class.
 | [AddContentControlList](./AddContentControlList.md) | None | Adds an empty content control list to the document. |
 | [AddContentControlPicture](./AddContentControlPicture.md) | None | Adds an empty content control picture to the document. |
 | [AddOleObject](./AddOleObject.md) | None | Adds an OLE object to the current document position. |
+| [AnnotateParagraph](./AnnotateParagraph.md) | None | Adds annotations to the specified paragraph. |
 | [CanRedo](./CanRedo.md) | boolean | Checks if it possible to revert the user's last undone action. |
 | [CanUndo](./CanUndo.md) | boolean | Checks if it is possible to undo the user's last action. |
 | [ChangeComment](./ChangeComment.md) | None | Changes the specified comment. |
@@ -71,6 +72,7 @@ Represents the Api class.
 | [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
 | [Redo](./Redo.md) | None | Reverts the user's last undone action. |
 | [RejectReviewChanges](./RejectReviewChanges.md) | None | Rejects review changes. |
+| [RemoveAnnotationRange](./RemoveAnnotationRange.md) | None | Remove a specific annotation range from the document. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
 | [RemoveContentControl](./RemoveContentControl.md) | [ContentControlParentPr](../Enumeration/ContentControlParentPr.md) | Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed. |
 | [RemoveContentControls](./RemoveContentControls.md) | None | Removes several content controls. |
@@ -84,6 +86,7 @@ Represents the Api class.
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SearchAndReplace](./SearchAndReplace.md) | None | Finds and replaces the text. |
 | [SearchNext](./SearchNext.md) | boolean | Finds and selects the next occurrence of the text starting at the current position. |
+| [SelectAnnotationRange](./SelectAnnotationRange.md) | None | Selects text in a document using a given annotation. |
 | [SelectContentControl](./SelectContentControl.md) | None | Selects the specified content control. |
 | [SelectOleObject](./SelectOleObject.md) | None | Selects the specified OLE object. |
 | [SetDisplayModeInReview](./SetDisplayModeInReview.md) | None | Sets the display mode for track changes. |

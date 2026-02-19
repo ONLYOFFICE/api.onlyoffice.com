@@ -1,0 +1,273 @@
+.Toolbar {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background: var(--ifm-background-surface-color);
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ToolbarGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ToolbarGroupRight {
+    margin-left: auto;
+}
+
+.Label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-600);
+    white-space: nowrap;
+}
+
+.SelectTrigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 6px 12px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    cursor: pointer;
+    font-size: 13px;
+    min-width: 130px;
+    text-align: left;
+    color: var(--ifm-font-color-base);
+    transition: all var(--ifm-transition-fast) ease;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.SelectTrigger:hover {
+    border-color: var(--ifm-color-primary);
+}
+
+.SelectTrigger:focus-visible {
+    border-color: var(--ifm-color-primary);
+    outline: none;
+}
+
+.SelectContent {
+    z-index: 1500;
+}
+
+.SelectPopup {
+    background-color: var(--ifm-dropdown-background-color);
+    border-radius: var(--ifm-global-radius);
+    box-shadow: var(--ifm-global-shadow-md);
+    padding: 0.5rem;
+    min-width: 130px;
+}
+
+.SelectOption {
+    border-radius: 0.25rem;
+    color: var(--ifm-dropdown-link-color);
+    display: block;
+    font-size: 0.875rem;
+    margin-top: 0.2rem;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.SelectOption:hover, .SelectOption[data-state="checked"], .SelectOption[data-highlighted] {
+    background-color: var(--ifm-dropdown-hover-background-color);
+    color: var(--ifm-dropdown-link-color);
+}
+
+.SelectOption:focus-visible {
+    outline: none;
+}
+
+@supports (-moz-appearance: none) {
+    .SelectOption:focus {
+        outline: none;
+    }
+}
+
+.SelectIcon {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: var(--dropdown-icon-width);
+    height: var(--dropdown-icon-height);
+    margin-block-end: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+    color: var(--ifm-font-color-base);
+}
+
+.SelectIcon::before {
+    content: ' ';
+    /*background: url('/icons/arrow-sidebar.svg') center / var(--dropdown-icon-width) var(--dropdown-icon-height);*/
+    /*background-repeat: no-repeat;*/
+    background-color: currentColor;
+    mask-image: url('/icons/arrow-sidebar.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    height: var(--dropdown-icon-height);
+    margin-block-end: 0;
+    margin-inline-end: var(--dropdown-icon-gap);
+    margin-inline-start: unset;
+    min-width: auto;
+    width: var(--dropdown-icon-width);
+    flex-shrink: 0;
+    transform: rotate(180deg);
+}
+
+/* Radix UI AlertDialog Styles */
+.DialogOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--ifm-background-surface-color);
+    padding: 24px;
+    border-radius: var(--ifm-global-radius);
+    max-width: 420px;
+    width: 90%;
+    box-shadow: var(--ifm-global-shadow-lg);
+    z-index: 2001;
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent:focus {
+    outline: none;
+}
+
+.DialogTitle {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ifm-font-color-base);
+}
+
+.DialogDescription {
+    margin: 0 0 20px 0;
+    color: var(--ifm-color-emphasis-700);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.DialogActions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes contentShow {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.ConfirmButton,
+.KeepButton,
+.CancelButton {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.ConfirmButton {
+    background: var(--ifm-color-primary);
+    color: white;
+}
+
+.ConfirmButton:hover {
+    background: var(--ifm-color-primary-dark);
+}
+
+.ConfirmButton:active {
+    background: var(--ifm-color-primary-darker);
+}
+
+.KeepButton {
+    background: var(--ifm-color-success);
+    color: white;
+}
+
+.KeepButton:hover {
+    opacity: 0.9;
+}
+
+.CancelButton {
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.CancelButton:hover {
+    background: var(--ifm-hover-overlay);
+}
+
+@media (max-width: 767px) {
+    .Toolbar {
+        gap: 12px;
+        padding: 8px 12px;
+    }
+
+    .ToolbarGroup {
+        gap: 6px;
+    }
+
+    .Label {
+        font-size: 12px;
+    }
+
+    .SelectTrigger {
+        min-width: 100px;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .DialogContent {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .DialogActions {
+        flex-direction: column;
+    }
+
+    .ConfirmButton,
+    .KeepButton,
+    .CancelButton {
+        width: 100%;
+    }
+}

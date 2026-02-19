@@ -30,6 +30,6 @@ This example shows how to return the error function integrated between 0 and the
 // Use function to get an error function set between 0 and lower limits.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ERFC_PRECISE(0.745));
 ```

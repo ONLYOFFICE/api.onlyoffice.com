@@ -1,6 +1,6 @@
 # Event_comment
 
-Comment object.
+The comment object.
 
 ## Properties
 

@@ -8,7 +8,7 @@ The events from the [Actions](./plugin-message.md#actions) collection are proces
 
 ## updateProps
 
-The function called when updating the state of the item which action was passed. It does not work if the [newProps](./plugin-message.md#newprops) parameter is not passed to the message.
+The function called when updating the state of the item which action was passed. It does not work if the [newProps](./plugin-message.md#newProps) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -20,7 +20,7 @@ The function called when updating the state of the item which action was passed.
 
 ## updateContext
 
-The function called when updating the state of the the parent or child items which were passed. It does not work if the [contextProps](./plugin-message.md#contextprops) parameter is not passed to the message.
+The function called when updating the state of the the parent or child items which were passed. It does not work if the [contextProps](./plugin-message.md#contextProps) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -112,7 +112,7 @@ The function called when updating all the event listener items.
 
 ## showToast
 
-The function called when displaying a toast notification after the user actions. It does not work if the [toastProps](./plugin-message.md#toastprops) parameter is not passed to the message.
+The function called when displaying a toast notification after the user actions. It does not work if the [toastProps](./plugin-message.md#toastProps) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -124,7 +124,7 @@ The function called when displaying a toast notification after the user actions.
 
 ## showCreateDialogModal
 
-The function called when opening a modal window for creating certain item (file, folder, etc.). It does not work if the [createDialogProps](./plugin-message.md#createdialogprops) parameter is not passed to the message.
+The function called when opening a modal window for creating certain item (file, folder, etc.). It does not work if the [createDialogProps](./plugin-message.md#createDialogProps) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -148,9 +148,22 @@ The function called when opening a modal window for creating certain item (file,
   }
   ```
 
+## updateCreateDialogModal
+
+The function called to update the **CreateDialog** component. It does not work if the [createDialogProps](./plugin-message.md#createDialogProps) parameter is not passed to the message.
+
+  ``` ts
+  const message: IMessage = {
+    actions: [Actions.updateCreateDialogModal],
+    createDialogProps: {
+      title: "some title value",
+    },
+  };
+  ```
+
 ## showModal
 
-The function called when opening a modal window. It does not work if the [modalDialogProps](./plugin-message.md#modaldialogprops) parameter is not passed to the message.
+The function called when opening a modal window. It does not work if the [modalDialogProps](./plugin-message.md#modalDialogProps) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -171,7 +184,7 @@ The function called when closing a modal window.
 
 ## sendPostMessage
 
-The function called when sending a message to a frame. It does not work if the [postMessage](./plugin-message.md#postmessage) parameter is not passed to the message or the specified frame is not found.
+The function called when sending a message to a frame. It does not work if the [postMessage](./plugin-message.md#postMessage) parameter is not passed to the message or the specified frame is not found.
 
   ``` ts
   const message: IMessage = {

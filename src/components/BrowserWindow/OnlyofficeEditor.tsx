@@ -139,7 +139,7 @@ const addScript = async (server: string, secret: string, fileType: string, code:
       document: documentConfig,
       documentType: getDocumentType(fileType),
       editorConfig: {
-        callbackUrl: server + "dummyCallback",
+        callbackUrl: "",
         customization: {
           anonymous: { request: false },
           uiTheme: theme === "dark" ? "default-dark" : "default-light",

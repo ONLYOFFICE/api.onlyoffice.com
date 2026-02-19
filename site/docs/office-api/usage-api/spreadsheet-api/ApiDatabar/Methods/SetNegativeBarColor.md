@@ -1,0 +1,55 @@
+# SetNegativeBarColor
+
+Sets the negative bar color for the data bar.
+
+## Syntax
+
+```javascript
+expression.SetNegativeBarColor(oColor);
+```
+
+`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The ApiColor object for the negative bars. |
+
+## Returns
+
+This method doesn't return any data.
+
+## Example
+
+This example demonstrates setting the negative bar color of a data bar conditional formatting rule.
+
+```javascript editor-xlsx
+// How to change the color of negative value bars.
+
+// Set the negative bar color of a data bar conditional formatting rule.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A2").SetValue(-50);
+worksheet.GetRange("A3").SetValue(250);
+worksheet.GetRange("A4").SetValue(-25);
+worksheet.GetRange("A5").SetValue(300);
+worksheet.GetRange("A6").SetValue(75);
+
+let dataRange = worksheet.GetRange("A2:A6");
+let formatConditions = dataRange.GetFormatConditions();
+
+let dataBar = formatConditions.AddDatabar();
+
+worksheet.GetRange("C1").SetValue("Before:");
+worksheet.GetRange("C2").SetValue(dataBar.GetNegativeBarColor() ? "Set" : "None");
+
+let negativeColor = Api.CreateColorFromRGB(255, 0, 0);
+dataBar.SetNegativeBarColor(negativeColor);
+
+worksheet.GetRange("C3").SetValue("After:");
+worksheet.GetRange("C4").SetValue(dataBar.GetNegativeBarColor() ? "Set" : "None");
+
+```

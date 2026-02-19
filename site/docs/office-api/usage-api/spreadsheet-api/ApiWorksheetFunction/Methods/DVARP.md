@@ -32,7 +32,7 @@ This example shows how to calculate variance based on the entire population of t
 // Use function to calculate entire population variance.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue("Name");
 worksheet.GetRange("B1").SetValue("Month");
 worksheet.GetRange("C1").SetValue("Sales");

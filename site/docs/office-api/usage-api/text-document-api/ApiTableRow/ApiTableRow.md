@@ -13,6 +13,7 @@ Represents the ApiTableRow class.
 | [GetCellsCount](./Methods/GetCellsCount.md) | number | Returns a number of cells in the current row. |
 | [GetClassType](./Methods/GetClassType.md) | "tableRow" | Returns a type of the ApiTableRow class. |
 | [GetIndex](./Methods/GetIndex.md) | Number | Returns the current row index. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current table row. |
 | [GetNext](./Methods/GetNext.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) \| null | Returns the next row if exists. |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Returns the parent table of the current row. |
 | [GetPrevious](./Methods/GetPrevious.md) | [ApiTableRow](../ApiTableRow/ApiTableRow.md) \| null | Returns the previous row if exists. |

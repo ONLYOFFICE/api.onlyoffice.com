@@ -30,6 +30,6 @@ This example shows how to get the hyperbolic cosine of a number.
 // Use function to get the hyperbolic cosine of an angle.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.COSH(3));
 ```

@@ -22,7 +22,7 @@ To install it on your local server:
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`).
+   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. In this case, this is an address of you local server (`http://localhost`). You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 
@@ -51,7 +51,7 @@ To install it on your local server:
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/docs/docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](/docs/docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
    From now the *docEditor* object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
 

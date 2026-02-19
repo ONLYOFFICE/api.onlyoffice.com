@@ -31,7 +31,7 @@ This example shows how to return the ISO week number in the year for a given dat
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.ISOWEEKNUM("9/1/2017"); 
 
 worksheet.GetRange("C1").SetValue(ans);

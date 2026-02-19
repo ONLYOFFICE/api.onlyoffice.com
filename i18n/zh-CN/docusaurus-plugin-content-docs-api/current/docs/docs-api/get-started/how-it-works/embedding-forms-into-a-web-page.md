@@ -73,7 +73,7 @@ ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现�
          edit: true,
        },
        title: "Form Template",
-       url,
+       url: url
      },
      documentType: "pdf",
    };
@@ -174,7 +174,7 @@ ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现�
             fillForms: true,
          },
          title: "Form",
-         url,
+         url: url
       },
       documentType: "pdf",
    };

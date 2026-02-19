@@ -32,7 +32,7 @@ The reference figure and the steps below explain the process of co-editing a doc
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](../../additional-api/signature/signature.md) when using local links. Otherwise, an error will occur.
 
@@ -57,7 +57,7 @@ The reference figure and the steps below explain the process of co-editing a doc
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 5. Open your *html* file in the browser.
 
@@ -86,7 +86,7 @@ The reference figure and the steps below explain the process of co-editing a doc
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 8. Open your copied and edited *html* file in the browser.
 
@@ -125,7 +125,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 2. Add the script initializing the **Document Editor** with the same *key 1*. The new URL is not used because the key is known and the document is reopened from the editor cache.
 
@@ -144,7 +144,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 3. Add the script initializing another **Document Editor** with *key 2*. The key is unknown and the URL for opening the file is specified. Even if this URL and the URL from the first scenario are the same, there are two independent editing sessions.
 
@@ -165,7 +165,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 4. Add the script initializing another **Document Editor** with *key 1*. The key is known and the document is reopened from the editor cache. As this key and the key from the second scenario are the same, the document are opened in the co-editing mode.
 
@@ -191,7 +191,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 5. Add the script initializing another **Document Editor**. The key is not changed for the new users of the current editing session after the successful procedure of [force saving](./saving-file.md#force-saving). Therefore, *key 1* must be used to get to the same co-editing session as the users from the second and the fourth scenarios.
 
@@ -215,7 +215,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 6. Add the script initializing the **Document Editor** for viewing the document created. *Key 1* can be used.
 
@@ -237,7 +237,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 7. Add the script initializing the **Document Editor** for editing the document created. *Key 1* cannot be used as it was changed after saving the file. An [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) occurs.
 
@@ -261,7 +261,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
 
 ## Co-editing modes
 

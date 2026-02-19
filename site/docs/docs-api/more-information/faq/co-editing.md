@@ -10,7 +10,7 @@ The minimal number of connections you might need should be equal to the number o
 
 So if you are sure that all your users are going to use ONLYOFFICE Docs at one and the same time, have a surplus for the connection number equal of at least two times of your user number, otherwise the users with the lack of connections will be able to open the document in view-only mode.
 
-All the available pricing plans for the connections are available at [this page](https://www.onlyoffice.com/integration-edition-prices.aspx).
+All the available pricing plans for the connections are available at [this page](https://www.onlyoffice.com/docs-enterprise-prices).
 
 ## How to find the information about users who are currently editing the document?
 

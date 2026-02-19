@@ -1,6 +1,6 @@
 # AddFootnoteCrossRef
 
-Adds a footnote cross-reference to the current paragraph.\
+Adds a footnote cross-reference to the current paragraph.
 💡 Please note that this paragraph must be in the document.
 
 ## Syntax

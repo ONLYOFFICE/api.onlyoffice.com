@@ -4,15 +4,17 @@ sidebar_position: -2
 
 # Types
 
-The plugin type is specified with the [type](./configuration.md#variationstype) parameter in the *config.json* file. The following plugin types can be distinguished.
+The plugin type is specified with the [type](./configuration.md#variationstype) parameter in the *config.json* file. The available values are **system**, **background**, **window**, **panel**, **panelRight**, and **unvisible**.
 
-## System
+## system
 
-The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don’t need to run such plugins. And unlike background plugins, they cannot be disabled. Samples of system plugins: [Settings](../../samples/plugin-samples/settings.md), [Search and replace on start](../../samples/plugin-samples/search-and-replace-on-start.md).
+The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don't need to run such plugins. And unlike background plugins, they cannot be disabled.
 
-## Background
+**Samples**: [Settings](../../samples/plugin-samples/settings.md), [Search and replace on start](../../samples/plugin-samples/search-and-replace-on-start.md)
 
-Launch such a plugin and it will work until you disable it in all opened documents and documents that will be opened later. Samples of background plugins: [AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai), [QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR). The plugin state (enabled / disabled) persists between sessions. To access background plugins, click the **Background Plugins** button on the top toolbar.
+## background
+
+The background plugin works until you disable it in all opened documents and documents that will be opened later. The plugin state (enabled / disabled) persists between sessions. To access background plugins, click the **Background Plugins** button on the top toolbar.
 
 A background plugin is considered as **bundled** if it has the following characteristics:
 
@@ -21,30 +23,54 @@ A background plugin is considered as **bundled** if it has the following charact
 
 ![Background plugin](/assets/images/plugins/bundled-plugin.png#gh-light-mode-only)![Background plugin](/assets/images/plugins/bundled-plugin.dark.png#gh-dark-mode-only)
 
-If a plugin is **bundled** and **background**, it now starts immediately (from version 9.0.4).
+If a plugin is **bundled** and **background**, it starts immediately (from version 9.0.4).
 
-## Window
+**Samples**: [AI](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai), [QR Code Generator](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/insertQR)
 
-The plugin operates as a standalone window upon launch, like [Highlight code](../../samples/plugin-samples/highlight-code.md), [Photo editor](../../samples/plugin-samples/photo-editor.md), [OCR](../../samples/plugin-samples/ocr.md).
+## window
+
+The plugin operates as a standalone window upon launch.
 
 ![Plugin window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Plugin window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-## Panel
+**Samples**: [Highlight code](../../samples/plugin-samples/highlight-code.md), [Photo editor](../../samples/plugin-samples/photo-editor.md), [OCR](../../samples/plugin-samples/ocr.md)
 
-The plugin is opened in the left-side panel, like [Translator](../../samples/plugin-samples/translator.md), [Thesaurus](../../samples/plugin-samples/thesaurus.md), [Zotero](../../samples/plugin-samples/zotero.md). You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the left toolbar.
+## panel
 
-<img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only" width="300px" /><img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only" width="300px" />
+The plugin is opened in the left-side panel. You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the left toolbar.
 
-## PanelRight
+![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
-The plugin is opened in the right-side panel, like [Translator](../../samples/plugin-samples/translator.md), [Thesaurus](../../samples/plugin-samples/thesaurus.md), [Zotero](../../samples/plugin-samples/zotero.md). You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the right toolbar.
+**Samples**: [Translator](../../samples/plugin-samples/translator.md), [Thesaurus](../../samples/plugin-samples/thesaurus.md), [Zotero](../../samples/plugin-samples/zotero.md)
+
+## panelRight
+
+The plugin is opened in the right-side panel. You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the right toolbar.
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
-## Unvisible
+**Samples**: [Translator](../../samples/plugin-samples/translator.md), [Thesaurus](../../samples/plugin-samples/thesaurus.md), [Zotero](../../samples/plugin-samples/zotero.md)
 
-The plugin that does not display any windows or panels upon launch but can create them later during its operation. It provides a button (or buttons) to apply some transformations or manipulations to the document, like [Hello world](../../samples/plugin-samples/hello-world.md), [Speech](../../samples/plugin-samples/speech.md). For example, it can be used when the plugin displays different windows depending on the document content.
+## unvisible
 
-![Insisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Insisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
+The plugin does not display any windows or panels upon launch but can create them later during its operation. It provides a button (or buttons) to apply some transformations or manipulations to the document. For example, it can be used when the plugin displays different windows depending on the document content.
 
-> Please note that a plugin of any type can create windows and tabs during its work.
+![Invisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Invisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
+
+**Samples**: [Hello world](../../samples/plugin-samples/hello-world.md), [Speech](../../samples/plugin-samples/speech.md)
+
+:::note
+A plugin of any type can create windows and tabs during its work.
+:::
+
+## Example
+
+``` json
+{
+  "variations": [
+    {
+      "type": "window"
+    }
+  ]
+}
+```

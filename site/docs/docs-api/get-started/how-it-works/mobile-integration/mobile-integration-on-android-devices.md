@@ -26,7 +26,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    buildConfigField("String", "DOCUMENT_SERVER_URL", "https://documentserver/")
    ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
    If **DOCUMENT\_SERVER\_URL** is specified, the DMS main page is loaded. Otherwise, an error occurs:
 

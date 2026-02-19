@@ -12,25 +12,27 @@ sidebar_position: -1
 
 2. 分叉插件市场仓库：[onlyoffice.github.io](https://github.com/ONLYOFFICE/onlyoffice.github.io)。
 
-   你将获得一个地址为 `https://github.com/YOUR-USERNAME/ONLYOFFICE/onlyoffice.github.io` 的仓库。
+   你将获得一个地址为 `https://github.com/YOUR-USERNAME/onlyoffice.github.io` 的仓库。
 
 3. 从该仓库构建你自己的 GitHub 页面网站。请参考官方 [GitHub 文档](https://docs.github.com/en/pages/quickstart) 了解详细操作。
 
 4. 将分叉仓库克隆到本地计算机。
 
-5. 将插件文件夹添加到 *onlyoffice.github.io/sdkjs-plugins/content/* 并推送到远程仓库。
+5. 将插件文件夹添加到 `onlyoffice.github.io/sdkjs-plugins/content/` 并推送到远程仓库。
 
    ![新文件夹](/assets/images/plugins/new-folder.png)
 
-6. 打开 *onlyoffice.github.io/store/plugin-dev/extension/inject.js* 文件，将 GitHub Pages 网站中插件的路径赋值给 **URL\_TO\_PLUGIN** 变量：
+6. 打开 `onlyoffice.github.io/store/plugin-dev/extension/inject.js` 文件，将 GitHub Pages 网站中插件的路径赋值给 `URL_TO_PLUGIN` 变量：
 
    ``` ts
    const URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
    ```
 
-*onlyoffice.github.io/store/plugin-dev/extension* 文件夹即为新的扩展。
+`onlyoffice.github.io/store/plugin-dev/extension` 文件夹即为新的扩展。
 
-> 请注意，当您将扩展程序添加至 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh)时，**标题**和 **总结**会根据 *manifest.json* 文件中的**名字**和**介绍**参数自动填写。您之后将无法在商店中修改这些信息。
+:::note
+请注意，当您将扩展程序添加至 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh)时，**标题**和 **总结**会根据 `manifest.json` 文件中的**名字**和**介绍**参数自动填写。您之后将无法在商店中修改这些信息。
+:::
 
 ## 第二步：将扩展程序上传到浏览器
 
@@ -38,7 +40,7 @@ sidebar_position: -1
 
 ### 在 Google Chrome 中安装扩展程序
 
-1. 启动 Chrome 浏览器，访问 chrome://extensions/。
+1. 启动 Chrome 浏览器，访问 `chrome://extensions/`。
 
 2. 打开**开发者模式**，点击**加载已解压的扩展程序**按钮：
 
@@ -106,7 +108,7 @@ sidebar_position: -1
 
 ### 在 Microsoft Edge 中安装扩展程序
 
-1. 启动 Microsoft Edge 浏览器，访问 *edge://extensions/*。
+1. 启动 Microsoft Edge 浏览器，访问 `edge://extensions/`。
 
 2. 进入**扩展**标签，打开**开发者模式**，点击**加载已解压的扩展程序**按钮：
 

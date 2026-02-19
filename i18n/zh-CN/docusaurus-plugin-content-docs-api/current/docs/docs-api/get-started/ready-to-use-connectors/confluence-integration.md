@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Confluence 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="pGd06HLkWU4"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-confluence)允许用户在[Confluence](https://www.atlassian.com/software/confluence/)中使用ONLYOFFICE文档直接编辑办公文档。
 
 该连接器可在官方的[Atlassian应用市场](https://marketplace.atlassian.com/1218214)获取。
@@ -17,7 +23,7 @@ sidebar_custom_props:
 
 ## 安装ONLYOFFICE文档
 
-您需要有一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Moodle和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Moodle发送POST请求。
+您需要有一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Confluence和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Confluence发送POST请求。
 
 使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是安装ONLYOFFICE文档实例的最简单方法。
 
@@ -44,9 +50,9 @@ sidebar_custom_props:
 https://documentserver/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Moodle服务器访问。Moodle服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Confluence服务器访问。Confluence服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Moodle的**设置**页面指定您自己的**文档服务器密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)，中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Confluence的**设置**页面指定您自己的**文档服务器密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)，中，指定相同的密钥并启用验证。
 
 ## 编译Confluence ONLYOFFICE集成应用程序
 

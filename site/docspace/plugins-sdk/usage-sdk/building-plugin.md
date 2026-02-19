@@ -24,11 +24,7 @@ To build a plugin, you need the *yarn* package manager to be installed. After th
    yarn build
    ```
 
-This command generates the obfuscated code from the entire project and collects it into the *plugin.js* file using the *webpack* npm package. After that the plugin builder from the *createZip.js* file generates the [config.json](./config.md) file from the *package.json* data and creates an archive that contains the following items:
-
-- the `config.json` file;
-- the `plugin.js` file;
-- the `assets` folder with the plugin icons.
+This command generates the obfuscated code from the entire project and collects it into the *plugin.js* file using the *webpack* npm package.
 
 The maximum size of the plugin archive and each file within it must not exceed 5 MB.
 

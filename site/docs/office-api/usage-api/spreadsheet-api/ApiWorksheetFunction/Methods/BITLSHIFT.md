@@ -31,6 +31,6 @@ This example shows how to return a number shifted left by the specified number o
 // Use function to calculate bitwise left shift operation.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BITLSHIFT(4, 2));
 ```

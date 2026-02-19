@@ -30,6 +30,6 @@ This example shows how to return the arccosine of a number, in radians in the ra
 // Get a function that gets arccosine of a number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ACOS(0));
 ```

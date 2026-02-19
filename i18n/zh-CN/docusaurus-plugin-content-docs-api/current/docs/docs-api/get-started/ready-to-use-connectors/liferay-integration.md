@@ -5,6 +5,12 @@ sidebar_custom_props:
 
 # Liferay 集成
 
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="U20aA97JglI"/>
+```
+
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-liferay)允许用户使用ONLYOFFICE文档在[Liferay](https://www.liferay.com/)中编辑办公文档。
 
 ## 功能特性

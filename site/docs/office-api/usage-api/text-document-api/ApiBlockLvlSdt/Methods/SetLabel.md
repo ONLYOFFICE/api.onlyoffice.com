@@ -14,7 +14,7 @@ expression.SetLabel(label);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| label | Required | string |  | The label which will be added to the current container. Can be a positive or negative integer from **-2147483647** to **2147483647**. |
+| label | Required | number |  | The label which will be added to the current container. Can be a positive or negative integer from **-2147483647** to **2147483647**. |
 
 ## Returns
 
@@ -32,7 +32,7 @@ This example sets a label attribute to the container.
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with a label set to it.");
-blockLvlSdt.SetLabel("2147483647");
+blockLvlSdt.SetLabel(2147483647);
 doc.AddElement(0, blockLvlSdt);
 let label = blockLvlSdt.GetLabel();
 let paragraph = doc.GetElement(1);

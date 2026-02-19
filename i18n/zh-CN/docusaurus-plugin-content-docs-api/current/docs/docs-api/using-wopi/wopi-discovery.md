@@ -4,7 +4,7 @@ sidebar_position: -8
 
 # WOPI发现
 
-[WOPI discovery](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公软件请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公软件进行交互。请求被发送到 `https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
+[WOPI discovery](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公软件请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公软件进行交互。请求被发送到 `https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ## WOPI 发现操作
 

@@ -31,6 +31,6 @@ This example shows how to convert an arabic numeral to a roman numeral in the st
 // Use a function to convert numbers from arabic numeral to roman.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ROMAN(1250, 4));
 ```

@@ -32,11 +32,6 @@ Ensure `package.json` includes all the necessary fields. Most importantly, make 
 }
 ```
 
-Also verify that the `scripts/createZip.js` file is present. This script will:
-
-- compile your plugin;
-- package everything into `dist/plugin.zip`.
-
 ## Step 3: Review and extend plugin code
 
 By default, the plugin template includes a base implementation in the `src/index.ts` file. Here's an example of a [file plugin](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-types/fileplugin.md) for supporting `.md` (Markdown) files:
@@ -112,7 +107,7 @@ From the root of your plugin, run the following command:
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
+This compiles `src/index.ts` to `dist/plugin.js`.
 
 ## Step 6: Upload to DocSpace
 
@@ -130,5 +125,5 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 ## Notes
 
 - The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
-- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filerowicon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#filetileicon).
-- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onclick) logic instead.
+- You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileTileIcon).
+- Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onClick) logic instead.

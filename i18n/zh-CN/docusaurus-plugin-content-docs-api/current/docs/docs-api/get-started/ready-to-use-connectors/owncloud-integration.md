@@ -8,7 +8,7 @@ sidebar_custom_props:
 ```mdx-code-block
 import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
-<YoutubeVideo videoId="IAjhUxBWKkQ"/>
+<YoutubeVideo videoId="33w03FcPWTo"/>
 ```
 
 这个[应用](https://github.com/ONLYOFFICE/onlyoffice-owncloud)允许用户借助ONLYOFFICE文档，在[ownCloud](https://owncloud.com)中编辑办公文档。
@@ -56,7 +56,9 @@ ownCloud管理员可以从内置的应用市场安装集成应用程序。为此
    git submodule update --init --recursive
    ```
 
-   > ownCloud无法使用未签名的应用程序，并会给出警告，所以您需要使用选项**a**或**b**来获取应用程序。
+   :::note
+   ownCloud无法使用未签名的应用程序，并会给出警告，所以您需要使用选项**a**或**b**来获取应用程序。
+   :::
 
 3. 修改所有者，以便可以从ownCloud Web界面更新应用程序：
 
@@ -74,7 +76,7 @@ ownCloud管理员可以从内置的应用市场安装集成应用程序。为此
 https://<documentserver>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE文档** 的服务器名称。该地址必须能被用户浏览器和ownCloud服务器访问。ownCloud服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。
+其中，**文档服务器地址**是安装了**ONLYOFFICE文档** 的服务器名称。该地址必须能被用户浏览器和ownCloud服务器访问。ownCloud服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 ![本地的](/assets/images/editor/owncloud-local.jpg)
 
@@ -160,7 +162,9 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
 - **加密文件存储**：ownCloud提供了加密文件存储的选项。但是，如果启用了*每个用户的加密密钥*加密(ownCloud**默认加密模块**应用默认使用)，ONLYOFFICE文档将无法打开加密文件进行编辑，也无法在编辑后保存。管理设置页面的ONLYOFFICE部分将显示相关通知。不过，如果设置了*主密钥*加密，ONLYOFFICE应用将按预期工作。启用*主密钥*加密的说明可在ownCloud官方文档网站的[ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line)获取。
 
-  > ownCloud建议仅在没有现有数据的全新安装或尚未启用加密的系统上使用*主加密密钥*，因为在已使用*每个用户的加密密钥*加密的文件上启用*主密钥*加密后，这些文件**可能会永久丢失**。
+  :::note
+  ownCloud建议仅在没有现有数据的全新安装或尚未启用加密的系统上使用*主加密密钥*，因为在已使用*每个用户的加密密钥*加密的文件上启用*主密钥*加密后，这些文件**可能会永久丢失**。
+  :::
 
 - **证书验证**：如果文档服务器使用自签名证书，ownCloud将不会验证此类证书，并且不允许与ONLYOFFICE文档进行连接。这个问题可以通过两种方式解决：
 
@@ -177,7 +181,9 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
   这将禁用证书验证，允许ownCloud与ONLYOFFICE文档建立连接。
 
-  > 请记住，这是一个临时的不安全解决方案，我们强烈建议您更换为由某些证书颁发机构颁发的证书。完成更换后，不要忘记取消勾选相应的设置框或从ownCloud配置文件中删除上述部分内容。
+  :::note
+  请记住，这是一个临时的不安全解决方案，我们强烈建议您更换为由某些证书颁发机构颁发的证书。完成更换后，不要忘记取消勾选相应的设置框或从ownCloud配置文件中删除上述部分内容。
+  :::
 
 - **后台任务**：如果编辑器在正常运行一段时间后无法打开或保存文档，原因可能是网络设置更改、相关服务被禁用或SSL证书存在问题。
 

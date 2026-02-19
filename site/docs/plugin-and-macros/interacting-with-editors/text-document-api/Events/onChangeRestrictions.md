@@ -1,12 +1,12 @@
 # onChangeRestrictions
 
-The function called when the restrictions in the editor is changed.
+The function called when the restrictions in the editor are changed.
 
 ## Parameters
 
 | **Name** | **Data type** | **Description** |
 | --------- | ------------- | ----------- |
-| value | number | restrictions value. |
+| value | number | The restrictions value. |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {

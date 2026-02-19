@@ -4,7 +4,7 @@ sidebar_position: -8
 
 # WOPI discovery
 
-[WOPI discovery](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery) is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. WOPI hosts use the discovery XML to specify how to interact with the online office. The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+[WOPI discovery](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery) is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. WOPI hosts use the discovery XML to specify how to interact with the online office. The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ## WOPI discovery actions
 

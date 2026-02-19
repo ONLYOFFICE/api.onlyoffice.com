@@ -30,6 +30,6 @@ This example shows how to return the double factorial of a number.
 // Use function to calculate the double factorial of a number.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.FACTDOUBLE(123));
 ```

@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: -5
 ---
 
 # PHP 示例
@@ -8,7 +8,9 @@ sidebar_position: -4
 
 本示例将帮助您把ONLYOFFICE文档集成到用PHP编写的Web应用程序中。
 
-> 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::caution
+本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
+:::
 
 ## 重要安全信息
 
@@ -41,7 +43,7 @@ cd "PHP Example"
 make compose-prod
 ```
 
-默认情况下，服务器在*localhost:80*启动。
+默认情况下，服务器在`localhost:80`启动。
 
 要配置示例，您可以编辑[docker-compose.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/docker-compose.yml)中的环境变量。有关环境变量的更多信息，请参见[下面](#step-3-configure-the-php-example)。
 
@@ -70,25 +72,25 @@ make prod
 make server-prod
 ```
 
-默认情况下，服务器在*0.0.0.0:9000*启动。
+默认情况下，服务器在`0.0.0.0:9000`启动。
 
 要配置示例，您可以在启动服务器的命令之前传递环境变量。有关环境变量的更多信息，请参见[下面](#step-3-configure-the-php-example)。
 
 ## 步骤2.检查可访问性
 
-如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。
+如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE文档。
 
-同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。
+同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
 
 ## 步骤3.配置PHP示例 {#step-3-configure-the-php-example}
 
 通过更改环境变量来配置示例。
 
-| 参数                      | 示例                 | 描述                                                             |
+| 名称                           | 示例                    | 描述                                                             |
 | ------------------------------ | ----------------------- | ----------------------------------------------------------------------- |
-| ADDRESS                        | 0.0.0.0                 | 服务器应启动的地址。                                               |
-| PORT                           | 80                      | 服务器应运行的端口。                                               |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。                              |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。                              |
-| EXAMPLE\_URL                   | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。                              |
-| JWT\_SECRET                    | your-256-bit-secret     | JWT 授权密钥。留空以禁用授权。                                              |
+| `ADDRESS`                      | `0.0.0.0`               | 服务器应启动的地址。                                               |
+| `PORT`                         | `80`                    | 服务器应运行的端口。                                               |
+| `DOCUMENT_SERVER_PRIVATE_URL`  | `http://proxy:8080`     | 服务器将通过其与 ONLYOFFICE 文档通信的 URL。                              |
+| `DOCUMENT_SERVER_PUBLIC_URL`   | `http://localhost:8080` | 用户将通过其与 ONLYOFFICE 文档通信的 URL。                              |
+| `EXAMPLE_URL`                  | `http://proxy`          | ONLYOFFICE 文档将通过其与服务器通信的 URL。                              |
+| `JWT_SECRET`                   | `your-256-bit-secret`   | JWT 授权密钥。留空以禁用授权。                                              |

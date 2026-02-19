@@ -31,7 +31,7 @@ This example shows how to return the month, a number from 1 (January) to 12 (Dec
 
 const worksheet = Api.GetActiveSheet();
 
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 let ans = func.MONTH("3/16/2018"); 
 
 worksheet.GetRange("C1").SetValue(ans);

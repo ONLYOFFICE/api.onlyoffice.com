@@ -73,7 +73,7 @@ To open an online form in the PDF format for editing from your website, follow t
          edit: true,
        },
        title: "Form Template",
-       url,
+       url: url
      },
      documentType: "pdf",
    };
@@ -174,7 +174,7 @@ To make an online form in the PDF format available for filling in, follow the st
             fillForms: true,
          },
          title: "Form",
-         url,
+         url: url
       },
       documentType: "pdf",
    };

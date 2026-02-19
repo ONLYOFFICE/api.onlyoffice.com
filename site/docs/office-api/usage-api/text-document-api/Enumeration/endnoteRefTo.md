@@ -1,9 +1,9 @@
 # endnoteRefTo
 
-Available values of the "endnote" reference type:\
--**"endnoteNum"** - the endnote number;\
--**"pageNum"** - the endnote page number;\
--**"aboveBelow"** - the words "above" or "below" depending on the item position;\
+Available values of the "endnote" reference type:
+-**"endnoteNum"** - the endnote number;
+-**"pageNum"** - the endnote page number;
+-**"aboveBelow"** - the words "above" or "below" depending on the item position;
 -**"formEndnoteNum"** - the form number formatted as an endnote. The numbering of the actual endnotes is not affected.
 
 ## Type

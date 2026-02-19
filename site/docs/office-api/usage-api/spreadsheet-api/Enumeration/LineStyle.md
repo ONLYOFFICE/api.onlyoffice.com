@@ -33,5 +33,7 @@ This example sets a bottom black dotted border for a cell.
 
 // Get a range and change its border line style to dotted.
 
-worksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(0, 0, 0));
+const color = Api.CreateColorFromRGB(0, 0, 0);
+worksheet.GetRange("E2").SetBorders("Bottom", "Dotted", color);
+
 ```

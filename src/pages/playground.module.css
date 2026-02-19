@@ -1,0 +1,7 @@
+.playgroundContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--ifm-background-color);
+    overflow: hidden;
+}

@@ -31,6 +31,6 @@ This example shows how to return the integer portion of a division.
 // Use a function to integer part from division.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.QUOTIENT(1698, 30));
 ```

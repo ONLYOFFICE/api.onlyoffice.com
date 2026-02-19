@@ -28,7 +28,7 @@ Represents the ApiBlockLvlSdt class.
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / drop-down list content control. |
 | [GetId](./Methods/GetId.md) | string | Returns a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current content control. |
-| [GetLabel](./Methods/GetLabel.md) | string | Returns the label attribute for the current container. |
+| [GetLabel](./Methods/GetLabel.md) | number | Returns the label attribute for the current container. |
 | [GetLock](./Methods/GetLock.md) | [SdtLock](../Enumeration/SdtLock.md) | Returns the lock type of the current container. |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | Returns a content control that contains the current content control. |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Returns a table that contains the current content control. |

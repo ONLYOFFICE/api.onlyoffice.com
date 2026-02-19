@@ -30,6 +30,6 @@ This example shows how to round a positive number up and negative number down to
 // Use a function round a negative/positive number the nearest odd integer.
 
 let worksheet = Api.GetActiveSheet();
-let func = Api.GetWorksheetFunction();
+let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ODD(7.675));
 ```

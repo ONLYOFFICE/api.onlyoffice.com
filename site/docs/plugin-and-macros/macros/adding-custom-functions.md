@@ -4,7 +4,11 @@ sidebar_position: -4
 
 # Adding custom functions
 
+:::note
+
 Starting from version 8.1, you can add custom functions to the spreadsheets using the **Macros** plugin.
+
+:::
 
 ## Creating custom functions
 
@@ -41,19 +45,25 @@ Now you can use this function in the spreadsheet.
 
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
-The sample of a custom function you can find [here](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md).
+You can find a sample of a custom function [here](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md).
 
-## Accessing cell addresses (since v9.0.4)
+## Accessing cell addresses
 
-Starting from version 9.0.4, you can access  cell address information inside custom functions:
+:::note
+
+Starting from version 9.0.4, you can access cell address information inside custom functions.
+
+:::
+
+The following properties are available:
 
 - `this.address` — the address of the cell where the custom function is being calculated (e.g., `"C5"`);
-- `this.args` — an array of input arguments. Each argument object includes an `address` field with the address of the source cell (e.g., `"A1"`). This array has the following structure:
+- `this.args` — an array of input arguments. Each argument object includes a `value` field with the argument value and an `address` field with the address of the source cell (e.g., `"A1"`). This array has the following structure:
 
   ``` ts
   [
-    {"address": "arg1_address"},
-    {"address": "arg2_address"},
+    {"value": "arg1_value", "address": "arg1_address"},
+    {"value": "arg2_value", "address": "arg2_address"},
     ...
   ]
   ```
@@ -92,7 +102,11 @@ You can also copy your function. To do this, click ![Dots icon](/assets/images/p
 
 ## Asynchronous functions
 
-Starting from version 9.0, you can add asynchronous custom functions to manage any request within the function body:
+:::note
+
+Starting from version 9.0, you can add asynchronous custom functions to manage any request within the function body.
+
+:::
 
 <!-- This code is related to macros. -->
 
@@ -105,7 +119,7 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
   * Function that returns the argument
   * @customfunction
   * @param {any} arg Any data.
-  * @returns {any} The argumet of the function.
+  * @returns {any} The argument of the function.
   */
   async function myFunction(arg) {
     return arg;
@@ -114,4 +128,4 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 })();
 ```
 
-The sample of an asynchronous custom function you can find [here](../samples/macro-samples/spreadsheet-editor/calculate-world-bank-indicator.md).
+You can find a sample of an asynchronous custom function [here](../samples/macro-samples/spreadsheet-editor/calculate-world-bank-indicator.md).

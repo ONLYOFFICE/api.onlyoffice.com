@@ -20,6 +20,7 @@ Represents the ApiDocumentContent class.
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns the currently selected content control. |
 | [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the current paragraph where the cursor is located. |
 | [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the current run where the cursor is located. |
+| [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | Returns a visitor object for traversing the elements of the current document. |
 | [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current document. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current document content. |
