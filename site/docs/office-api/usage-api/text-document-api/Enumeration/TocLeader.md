@@ -1,8 +1,8 @@
 # TocLeader
 
-Possible values for the table of contents leader:
--**"dot"** - "......."
--**"dash"** - "-------"
+Possible values for the table of contents leader:\
+-**"dot"** - "......."\
+-**"dash"** - "-------"\
 -**"underline"** - "_______"
 
 ## Type

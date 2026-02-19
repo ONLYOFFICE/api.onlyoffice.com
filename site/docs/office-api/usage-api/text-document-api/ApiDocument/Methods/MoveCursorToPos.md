@@ -1,6 +1,6 @@
 # MoveCursorToPos
 
-Moves a cursor to a specified position of the current document.
+Moves a cursor to a specified position of the current document.\
 If there is any selection in the document, it will be removed.
 
 ## Syntax

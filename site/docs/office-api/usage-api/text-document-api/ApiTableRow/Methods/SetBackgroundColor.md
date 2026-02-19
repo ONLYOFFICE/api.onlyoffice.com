@@ -5,7 +5,7 @@ Sets the background color to all cells in the current table row.
 ## Syntax
 
 ```javascript
-expression.SetBackgroundColor(r, g, b, bNone);
+expression.SetBackgroundColor(color);
 ```
 
 `expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
@@ -14,10 +14,7 @@ expression.SetBackgroundColor(r, g, b, bNone);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| bNone | Required | boolean |  | Defines that background color will not be set. |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | If not passed, the background color will be cleared. |
 
 ## Returns
 

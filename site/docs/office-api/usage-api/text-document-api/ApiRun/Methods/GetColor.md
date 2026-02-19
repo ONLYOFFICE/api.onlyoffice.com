@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRGBColor](../../ApiRGBColor/ApiRGBColor.md)
+[ApiColor](../../ApiColor/ApiColor.md)
 
 ## Example
 

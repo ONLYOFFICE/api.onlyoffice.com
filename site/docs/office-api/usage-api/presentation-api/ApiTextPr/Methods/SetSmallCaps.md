@@ -1,6 +1,6 @@
 # SetSmallCaps
 
-Specifies that all the small letter characters in the text run are formatted for display only as their capital
+Specifies that all the small letter characters in the text run are formatted for display only as their capital\
 letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ## Syntax
@@ -34,7 +34,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

@@ -5,7 +5,7 @@ Adds some text to the current run.
 ## Syntax
 
 ```javascript
-expression.AddText(sText);
+expression.AddText(text);
 ```
 
 `expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
@@ -14,7 +14,7 @@ expression.AddText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The text which will be added to the current run. |
+| text | Required | string |  | The text which will be added to the current run. |
 
 ## Returns
 
