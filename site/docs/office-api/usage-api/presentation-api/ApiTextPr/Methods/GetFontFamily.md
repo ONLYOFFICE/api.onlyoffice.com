@@ -1,6 +1,6 @@
 # GetFontFamily
 
-Returns the font family from the current text properties.
+Returns the font family from the current text properties.\
 The method automatically calculates the font from the theme if the font was set via the theme.
 
 ## Syntax
@@ -32,7 +32,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

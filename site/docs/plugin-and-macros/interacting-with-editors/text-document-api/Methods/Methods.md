@@ -32,6 +32,7 @@ Represents the Api class.
 | [GetAllContentControls](./GetAllContentControls.md) | [ContentControl](../Enumeration/ContentControl.md)[] | Returns information about all the content controls that have been added to the page. |
 | [GetAllForms](./GetAllForms.md) | [ContentControl](../Enumeration/ContentControl.md)[] | Returns information about all the forms that have been added to the document. |
 | [GetAllOleObjects](./GetAllOleObjects.md) | [OLEObjectData](../Enumeration/OLEObjectData.md)[] | Returns all OLE object data for objects which can be opened by the specified plugin. If *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document. |
+| [GetCurrentAddinField](./GetCurrentAddinField.md) | [AddinFieldData](../Enumeration/AddinFieldData.md) | Returns the current addin field from the document. |
 | [GetCurrentBookmark](./GetCurrentBookmark.md) | string \| null | Returns the current bookmark. |
 | [GetCurrentContentControl](./GetCurrentContentControl.md) | string | Returns an identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned). |
 | [GetCurrentContentControlPr](./GetCurrentContentControlPr.md) | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | Returns the current content control properties. |
@@ -57,6 +58,10 @@ Represents the Api class.
 | [InsertAndReplaceContentControls](./InsertAndReplaceContentControls.md) | [ContentControlProperties](../Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document](https://api.onlyoffice.com/docs/office-api/usage-api/text-document-api/), or by a link to the shared document. |
 | [InsertOleObject](./InsertOleObject.md) | None | Inserts the OLE object at the current document position. |
 | [InstallPlugin](./InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
+| [IsEditingOFormMode](./IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |
+| [IsFillingFormMode](./IsFillingFormMode.md) | boolean | Checks if the document is in the filling form mode. |
+| [IsFillingOFormMode](./IsFillingOFormMode.md) | boolean | Checks if the document is in the filling OForm mode. |
+| [IsFormSigned](./IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
 | [MoveCursorToContentControl](./MoveCursorToContentControl.md) | None | Moves a cursor to the specified content control. |
@@ -72,6 +77,7 @@ Represents the Api class.
 | [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
 | [Redo](./Redo.md) | None | Reverts the user's last undone action. |
 | [RejectReviewChanges](./RejectReviewChanges.md) | None | Rejects review changes. |
+| [RemoveAddinField](./RemoveAddinField.md) | None | Removes the specified add-in field. |
 | [RemoveAnnotationRange](./RemoveAnnotationRange.md) | None | Remove a specific annotation range from the document. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
 | [RemoveContentControl](./RemoveContentControl.md) | [ContentControlParentPr](../Enumeration/ContentControlParentPr.md) | Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed. |
@@ -86,6 +92,7 @@ Represents the Api class.
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SearchAndReplace](./SearchAndReplace.md) | None | Finds and replaces the text. |
 | [SearchNext](./SearchNext.md) | boolean | Finds and selects the next occurrence of the text starting at the current position. |
+| [SelectAddinField](./SelectAddinField.md) | None | Selects the specified add-in field. |
 | [SelectAnnotationRange](./SelectAnnotationRange.md) | None | Selects text in a document using a given annotation. |
 | [SelectContentControl](./SelectContentControl.md) | None | Selects the specified content control. |
 | [SelectOleObject](./SelectOleObject.md) | None | Selects the specified OLE object. |

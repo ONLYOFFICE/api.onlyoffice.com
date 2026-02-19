@@ -1,11 +1,11 @@
 # SetColor
 
-Sets the text color to the current text Range in the RGB format.
+Sets the text color to the current text Range.
 
 ## Syntax
 
 ```javascript
-expression.SetColor(r, g, b, isAuto);
+expression.SetColor(color);
 ```
 
 `expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
@@ -14,10 +14,7 @@ expression.SetColor(r, g, b, isAuto);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| isAuto | Optional | boolean | false | If this parameter is set to "true", then r,g,b parameters will be ignored. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 
@@ -25,16 +22,22 @@ expression.SetColor(r, g, b, isAuto);
 
 ## Example
 
-This example sets the text color to the text Range in the RGB format.
+This example sets the text color to the text Range.
 
 ```javascript editor-docx
 // How to color the text of the range.
 
 // Set the text color to middle washed rose.
 
-let doc = Api.GetDocument();
-let paragraph = doc.GetElement(0);
-paragraph.AddText("ONLYOFFICE Document Builder");
-let range = doc.GetRange(0, 24);
-range.SetColor(255, 111, 61);
+const doc = Api.GetDocument();
+const firstParagraph = doc.GetElement(0);
+firstParagraph.AddText('ONLYOFFICE Document Builder');
+
+const companyRange = doc.GetRange(1, 11);
+companyRange.SetColor(255, 111, 61);
+
+const productRange = doc.GetRange(12, 30);
+const themeColor = Api.ThemeColor('accent1');
+productRange.SetColor(themeColor);
+
 ```

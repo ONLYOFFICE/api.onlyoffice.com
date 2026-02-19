@@ -8,4 +8,5 @@ Represents the ApiFill class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "fill" | Returns a type of the ApiFill class. |
+| [GetType](./Methods/GetType.md) | [FillType](../Enumeration/FillType.md) | Gets the fill type. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiFill object into the JSON object. |

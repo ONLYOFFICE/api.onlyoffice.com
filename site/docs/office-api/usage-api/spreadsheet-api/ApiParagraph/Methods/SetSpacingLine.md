@@ -1,8 +1,8 @@
 # SetSpacingLine
 
-Sets the paragraph line spacing. If the value of the sLineRule parameter is either 
-"atLeast" or "exact", then the value of nLine will be interpreted as twentieths of a point. If 
-the value of the sLineRule parameter is "auto", then the value of the 
+Sets the paragraph line spacing. If the value of the sLineRule parameter is either \
+"atLeast" or "exact", then the value of nLine will be interpreted as twentieths of a point. If \
+the value of the sLineRule parameter is "auto", then the value of the \
 nLine parameter will be interpreted as 240ths of a line.
 
 ## Syntax
@@ -34,7 +34,7 @@ This example sets the paragraph line spacing.
 // Get a paragraph from the shape's content then add a text specifying spacing between text lines.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

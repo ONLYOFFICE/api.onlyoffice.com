@@ -1,6 +1,6 @@
 # GetText
 
-Returns the inner text of the current node and its child nodes.
+Returns the inner text of the current node and its child nodes.\
 For example: `&lt;text&gt;123&lt;one&gt;4&lt;/one&gt;&lt;/text&gt;` returns `"1234"`.
 
 ## Syntax

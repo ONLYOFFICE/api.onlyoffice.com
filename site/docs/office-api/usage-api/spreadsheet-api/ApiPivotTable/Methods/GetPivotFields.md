@@ -1,6 +1,6 @@
 # GetPivotFields
 
-Returns a collection that represents either a single pivot table field
+Returns a collection that represents either a single pivot table field\
 or a collection of both the visible and hidden fields in the pivot table report.
 
 ## Syntax

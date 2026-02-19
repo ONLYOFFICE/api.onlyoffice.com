@@ -17,7 +17,7 @@ Represents the ApiParagraph class.
 | [AddEndnoteCrossRef](./Methods/AddEndnoteCrossRef.md) | boolean | Adds an endnote cross-reference to the current paragraph. 💡 Please note that this paragraph must be in the document. |
 | [AddFootnoteCrossRef](./Methods/AddFootnoteCrossRef.md) | boolean | Adds a footnote cross-reference to the current paragraph. 💡 Please note that this paragraph must be in the document. |
 | [AddHeadingCrossRef](./Methods/AddHeadingCrossRef.md) | boolean | Adds a heading cross-reference to the current paragraph. 💡 Please note that this paragraph must be in the document. |
-| [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null | Adds a hyperlink to a paragraph. |
+| [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) | Adds a hyperlink to a paragraph. |
 | [AddInlineLvlSdt](./Methods/AddInlineLvlSdt.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds an inline container. |
 | [AddLineBreak](./Methods/AddLineBreak.md) | [ApiRun](../ApiRun/ApiRun.md) | Adds a line break to the current position and starts the next element from a new line. |
 | [AddNumberedCrossRef](./Methods/AddNumberedCrossRef.md) | boolean | Adds a numbered cross-reference to the current paragraph. 💡 Please note that this paragraph must be in the document. |
@@ -57,7 +57,7 @@ Represents the ApiParagraph class.
 | [GetPrevious](./Methods/GetPrevious.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the previous paragraph. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified paragraph. |
 | [GetSection](./Methods/GetSection.md) | [ApiSection](../ApiSection/ApiSection.md) | Returns the paragraph section. |
-| [GetShd](./Methods/GetShd.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | Returns the shading applied to the contents of the paragraph. |
+| [GetShd](./Methods/GetShd.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the shading applied to the contents of the paragraph. |
 | [GetSpacingAfter](./Methods/GetSpacingAfter.md) | [twips](../Enumeration/twips.md) | Returns the spacing after value of the current paragraph. |
 | [GetSpacingBefore](./Methods/GetSpacingBefore.md) | [twips](../Enumeration/twips.md) | Returns the spacing before value of the current paragraph. |
 | [GetSpacingLineRule](./Methods/GetSpacingLineRule.md) | "auto" \| "atLeast" \| "exact" \| undefined | Returns the paragraph line spacing rule. |
@@ -67,7 +67,7 @@ Represents the ApiParagraph class.
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the text properties for a paragraph end mark. |
 | [InsertInContentControl](./Methods/InsertInContentControl.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Wraps the paragraph object with a rich text content control. |
 | [InsertParagraph](./Methods/InsertParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Inserts a paragraph at the specified position. |
-| [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns the last element of the paragraph which is not empty. |
+| [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns the last element of the paragraph. |
 | [Push](./Methods/Push.md) | boolean | Adds an element to the current paragraph. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current paragraph. 💡 When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add content to this run, use the [ApiParagraph#GetElement](../ApiParagraph/Methods/GetElement.md) method. |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | Removes an element using the position specified. 💡 If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph), a new empty run is automatically created. If you want to add content to this run, use the [ApiParagraph#GetElement](../ApiParagraph/Methods/GetElement.md) method. |
@@ -78,7 +78,7 @@ Represents the ApiParagraph class.
 | [SetBold](./Methods/SetBold.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets the bold property to the text character. |
 | [SetBottomBorder](./Methods/SetBottomBorder.md) | boolean | Specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings. 💡 The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block. |
 | [SetCaps](./Methods/SetCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents. |
-| [SetColor](./Methods/SetColor.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets the text color to the current paragraph in the RGB format. |
+| [SetColor](./Methods/SetColor.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets the text color to the current paragraph. |
 | [SetContextualSpacing](./Methods/SetContextualSpacing.md) | boolean | Specifies that any space before or after this paragraph set using the  [ApiParaPr#SetSpacingBefore](../ApiParaPr/Methods/SetSpacingBefore.md) or [ApiParaPr#SetSpacingAfter](../ApiParaPr/Methods/SetSpacingAfter.md) spacing element, should not be applied when the preceding and  following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively. |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Specifies that the contents of this paragraph are displayed with two horizontal lines through each character displayed on the line. |
 | [SetFontFamily](./Methods/SetFontFamily.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Sets all 4 font slots with the specified font family. |

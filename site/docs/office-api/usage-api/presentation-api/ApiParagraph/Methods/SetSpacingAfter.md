@@ -1,7 +1,7 @@
 # SetSpacingAfter
 
-Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then 
-any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it 
+Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then \
+any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it \
 will be interpreted as false.
 
 ## Syntax
@@ -36,8 +36,8 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);

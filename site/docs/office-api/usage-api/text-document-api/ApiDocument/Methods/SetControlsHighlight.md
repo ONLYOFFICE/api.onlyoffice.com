@@ -5,7 +5,7 @@ Sets the highlight to the content controls from the current document.
 ## Syntax
 
 ```javascript
-expression.SetControlsHighlight(r, g, b, bNone);
+expression.SetControlsHighlight(color);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,10 +14,7 @@ expression.SetControlsHighlight(r, g, b, bNone);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| bNone | Optional | boolean | false | Defines that highlight will not be set. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 

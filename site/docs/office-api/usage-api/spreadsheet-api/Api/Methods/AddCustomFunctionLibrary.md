@@ -1,8 +1,8 @@
 # AddCustomFunctionLibrary
 
-Registers a new custom functions library (see the -**SetCustomFunctions** plugin method).
-The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.
-Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.
+Registers a new custom functions library (see the -**SetCustomFunctions** plugin method).\
+The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.\
+Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.\
 Parameters can be required or optional. A user can also set a default value.
 
 ## Syntax
