@@ -1,10 +1,14 @@
+---
+hide_table_of_contents: true
+---
+
 # Getting form values by ID
 
 Extract values from specific form fields using their unique identifiers for validation and dynamic processing:
 
 - create a form with various input types and unique identifiers ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- retrieve specific form values by their key/ID ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md));
-- validate form data and highlight required fields ([ApiTextForm/GetText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/GetText.md), [ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/text-document-api/ApiCheckBoxForm/Methods/IsChecked.md), [ApiFormBase/SetBorderColor](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/SetBorderColor.md)).
+- retrieve specific form values by their key/ID ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
+- validate form data and highlight required fields ([ApiTextForm/GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md), [ApiFormBase/SetBorderColor](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/SetBorderColor.md)).
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

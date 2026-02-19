@@ -6,11 +6,13 @@ hide_table_of_contents: true
 
 Create a basic form with the image and text inputs:
 
-- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiStyle](/docs/office-api/usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
+- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
 - create an image form and a text form, and add the form to the document ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
-This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](/docs/document-builder/samples/samples.md) page.
+:::tip
+This sample is also available for **Document Builder**.
+Download the sample and get more information on the [Document Builder samples](/docs/document-builder/samples/samples.md) page.
+:::
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
@@ -141,7 +143,6 @@ doc.Push(paragraph);
 
 // Add spacing
 paragraph = Api.CreateParagraph();
-paragraph.AddText("");
 doc.Push(paragraph);
 
 // Add instructions

@@ -2,6 +2,8 @@
 
 This example demonstrates a two-step verification process using a phone number and 4-digit code before granting access to DocSpace via the SDK. Once verified, users are redirected to a file management interface embedded in an iframe.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/two-factor-authentication.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.

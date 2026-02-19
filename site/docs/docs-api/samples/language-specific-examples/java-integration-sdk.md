@@ -58,7 +58,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 
    ``` java
    @Override
-   public String getDocumentKey(final  String fileId, final boolean embedded) {
+   public String getDocumentKey(final String fileId, final boolean embedded) {
        return String.valueOf(fileId.hashCode());
    }
 
@@ -84,7 +84,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
    }
    ```
 
-   The full example code can be found [here](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/UrlMangerImpl.java).
+   The full example code can be found [here](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/UrlManagerImpl.java).
 
 4. Initialize the **JwtManager** and **RequestManager** Spring beans and add them to the DI container. This allows you to call the registered beans anywhere in the application:
 

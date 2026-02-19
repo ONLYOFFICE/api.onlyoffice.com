@@ -9,8 +9,8 @@ sidebar_position: -10
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in .Net (C#) or .Net (C# MVC).
 
-:::note
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+:::caution
+It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going to production.
 :::
 
 ## Important security info
@@ -32,18 +32,32 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](htt
 
 ## Step 2. Download the .Net (C#) / .Net (C# MVC) code for the editors integration
 
-Download the [.Net (C#) or .Net (C# MVC) example](./language-specific-examples.md) from our site, or get the source code directly from GitHub for [.Net (C#)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp) or [.Net (C# MVC)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp-mvc).
+Download the release archive and unarchive it, or clone the source code from GitHub for [.Net (C#)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp) or [.Net (C# MVC)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp-mvc).
 
-To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *settings.config* file (or *web.appsettings.config* file for MVC version):
+For .Net (C#):
+
+``` sh
+curl --output DotNet.Csharp.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip
+unzip DotNet.Csharp.Example.zip
+```
+
+For .Net (C# MVC):
+
+``` sh
+curl --output DotNet.Csharp.MVC.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip
+unzip DotNet.Csharp.MVC.Example.zip
+```
+
+To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the `settings.config` file (or `web.appsettings.config` file for MVC version):
 
 ``` xml
 <add key="storage-path" value=""/>
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
-where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-path** is the path where files will be created and stored. You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the `documentserver` is the name of the server with the ONLYOFFICE Docs installed and the `storage-path` is the path where files will be created and stored. You can set an absolute path. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *DocEditor.aspx* file.
+If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the `DocEditor.aspx` file.
 
 ## Step 3. Install the prerequisites
 
@@ -64,11 +78,11 @@ Configure the IIS components for the server to work correctly:
 
 ## Step 4. Configure JWT
 
-Open the *settings.config* file (or *web.appsettings.config* file for MVC version) and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
- 
- ``` xml
- <add key="files.docservice.secret" value="secret" />
- ```
+Open the `settings.config` file (or `web.appsettings.config` file for MVC version) and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
+
+``` xml
+<add key="files.docservice.secret" value="secret" />
+```
 
 ## Step 5. Run your website with the editors
 
@@ -90,7 +104,7 @@ Open the *settings.config* file (or *web.appsettings.config* file for MVC versio
 
    <img alt="Add website" src="/assets/images/csharp/sitename.png" width="583px" />
 
-4. Check for the .NET platform version specified in IIS Manager for you website. Choose **v4.0.** version.
+4. Check for the .NET platform version specified in IIS Manager for you website. Choose **v4.0** version.
 
    **Application Pools** -> right-click the platform name -> **Set application Pool defaults** -> **.NET CLR version**
 
@@ -104,4 +118,6 @@ Open the *settings.config* file (or *web.appsettings.config* file for MVC versio
 
 ## Step 6. Check accessibility
 
-In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
+In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of `documentserver` in the configuration files.
+
+Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of `example.com` in the configuration files.

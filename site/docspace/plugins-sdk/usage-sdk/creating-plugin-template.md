@@ -4,11 +4,7 @@ sidebar_position: -6
 
 # Creating plugin template
 
-Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings. For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
-
-   ```json
-   "build": "webpack && npx build-docspace-plugin"
-   ```
+Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings.
 
 1. Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
@@ -54,6 +50,14 @@ All the specified parameters can be changed later in the *package.json* file.
 In the *package.json* file, you can also specify the addresses of the third-party websites to add them to the CSP header and prevent these addresses from being blocked.
 
 You can create a plugin in any project by adding the *@onlyoffice/docspace-plugin-sdk* npm package as the dependency and specifying all the necessary fields in the *package.json* file.
+
+### Migration
+
+For plugins created with the old template (SDK 1.1.1), replace the build script in *package.json* with the following:
+
+   ```json
+   "build": "webpack && npx build-docspace-plugin"
+   ```
 
 ## Example
 

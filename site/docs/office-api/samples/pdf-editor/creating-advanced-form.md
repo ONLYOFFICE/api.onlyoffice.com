@@ -10,8 +10,10 @@ Create an advanced form with a table structure:
 - style tables ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md), [ApiTable/SetWidth](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetWidth.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md));
 - create the text and image forms and add them to the tables ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
-This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](/docs/document-builder/samples/samples.md) page.
+:::tip
+This sample is also available for **Document Builder**.
+Download the sample and get more information on the [Document Builder samples](/docs/document-builder/samples/samples.md) page.
+:::
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

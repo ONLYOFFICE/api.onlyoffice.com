@@ -13,21 +13,60 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="R7gvhLvGL44"/>
 ```
 
-可以通过以下三种方式添加插件：`sdkjs-plugins` 文件夹、`config.json` 文件或插件管理器。
+可以通过以下三种方式添加插件：插件管理器、`sdkjs-plugins` 文件夹或 `config.json` 文件。
 
-## 通过 sdkjs-plugins 文件夹添加插件 {#adding-plugins-through-the-plugin-manager-for-all-users}
+## 通过插件管理器为所有用户添加插件 {#adding-plugins-through-the-plugin-manager-for-all-users}
+
+从 7.4 版本开始，可以使用**插件管理器**工具管理 ONLYOFFICE 文档本地部署版中的插件。该工具支持安装、删除、恢复、更新等操作。例如：
+
+<Tabs>
+  <TabItem value="docker" label="Docker, DEB, and RPM">
+      ``` bash
+      cd /usr/bin
+      ./documentserver-pluginsmanager.sh --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --install="zotero"
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
+      documentserver-pluginsmanager.bat --directory="%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins" --install="zotero"
+      ```
+  </TabItem>
+</Tabs>
+
+:::info
+`--directory` 参数指定插件文件夹的位置。示例中的路径为默认值，如有需要，请根据实际情况修改。
+:::
+
+完整的服务器命令列表可参考[此处](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands)。
+
+## 通过插件管理器为单个用户添加插件 {#adding-plugins-through-the-plugin-manager-for-a-single-user}
+
+从 7.2 版本开始，您可以从 **ONLYOFFICE 插件市场**下载现成的插件。
+
+按照以下步骤，使用插件管理器将插件添加到编辑器中：
+
+1. 打开**插件**选项卡。
+2. 点击**插件管理器**。
+3. 找到你需要的插件并点击**安装**。
+
+![插件管理器](/assets/images/plugins/plugin-manager.png)
+
+插件将添加到当前已打开的编辑器中，并会显示在**插件**选项卡中，后续打开的所有编辑器也会显示该插件。
+
+## 通过 sdkjs-plugins 文件夹添加插件
 
 将插件代码文件夹放入 **ONLYOFFICE 文档**指定路径中，路径依操作系统而异：
 
 <Tabs>
-  <TabItem value="win" label="Windows">
-      ``` bash
-      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
-      ```
-  </TabItem>
   <TabItem value="lin" label="Linux">
       ``` bash
       /var/www/onlyoffice/documentserver/sdkjs-plugins/
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
       ```
   </TabItem>
 </Tabs>
@@ -82,43 +121,6 @@ add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 ```
 
-## 通过插件管理器为单个用户添加插件 {#adding-plugins-through-the-plugin-manager-for-a-single-user}
-
-从 7.2 版本开始，您可以从 **ONLYOFFICE 插件市场**下载现成的插件。
-
-按照以下步骤，使用插件管理器将插件添加到编辑器中：
-
-1. 打开**插件**选项卡。  
-2. 点击**插件管理器**。  
-3. 找到你需要的插件并点击**安装**。
-
-![插件管理器](/assets/images/plugins/plugin-manager.png)
-
-插件将添加到当前已打开的编辑器中，并会显示在**插件**选项卡中，后续打开的所有编辑器也会显示该插件。
-
-## 通过插件管理器为所有用户添加插件
-
-从 7.4 版本开始，可以使用**插件管理器**工具管理 ONLYOFFICE 文档本地部署版中的插件。该工具支持安装、删除、恢复、更新等操作。例如：
-
-<Tabs>
-  <TabItem value="docker" label="Docker, DEB, and RPM">
-      ``` bash
-      cd /var/www/onlyoffice/documentserver/server/tools/
-      ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --install="zotero"
-      ```
-  </TabItem>
-  <TabItem value="win" label="Windows">
-      ``` bash
-      cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
-      documentserver-pluginsmanager.bat --install="zotero"
-      ```
-  </TabItem>
-</Tabs>
-
-示例中的路径为默认值，如有需要，请根据实际情况修改。
-
-完整的服务器命令列表可参考[此处](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands)。
-
 ## 从 ONLYOFFICE 文档本地部署版中移除插件
 
 您可以通过以下四种方式卸载插件：
@@ -128,14 +130,14 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 <Tabs>
   <TabItem value="docker" label="Docker, DEB, and RPM">
       ``` bash
-      cd /var/www/onlyoffice/documentserver/server/tools/
-      ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --remove="zotero"
+      cd /usr/bin
+      ./documentserver-pluginsmanager.sh --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --remove="zotero"
       ```
   </TabItem>
   <TabItem value="win" label="Windows">
       ``` bash
       cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
-      documentserver-pluginsmanager.bat --remove="zotero"
+      documentserver-pluginsmanager.bat --directory="%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins" --remove="zotero"
       ```
   </TabItem>
 </Tabs>
@@ -147,14 +149,14 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 该文件夹的路径取决于您所使用的操作系统：
 
 <Tabs>
-  <TabItem value="win" label="Windows">
-      ``` bash
-      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
-      ```
-  </TabItem>
   <TabItem value="lin" label="Linux">
       ``` bash
       /var/www/onlyoffice/documentserver/sdkjs-plugins/
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
       ```
   </TabItem>
 </Tabs>
