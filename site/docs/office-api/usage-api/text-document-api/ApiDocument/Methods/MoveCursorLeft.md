@@ -26,7 +26,7 @@ boolean
 
 This example shows how to move the cursor left in the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to move the cursor left by a specified number of characters.
 
 // Add text, move cursor right, then move it left.

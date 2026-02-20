@@ -24,7 +24,7 @@ expression.GetReply(nIndex);
 
 This example shows how to get the specified comment reply.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a reply to the comment.
 
 // Add a cooment reply text to a range of the worksheet.

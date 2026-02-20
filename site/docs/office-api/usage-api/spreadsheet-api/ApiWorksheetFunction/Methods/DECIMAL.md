@@ -25,7 +25,7 @@ number
 
 This example shows how to convert a text representation of a number in a given base into a decimal number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a decimal value from a text.
 
 // Use function to convert a text value to decimal using base.

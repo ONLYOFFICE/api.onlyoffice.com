@@ -26,7 +26,7 @@ number
 
 This example shows how to return the inverse of the (left-tailed) F probability distribution: if p = F.DIST(x,...), then F.INV(p,...) = x.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the inverse of the (left-tailed) F probability distribution.
 
 // Use function to calculate an inverse of the F probability distribution.

@@ -24,7 +24,7 @@ expression.SetStrikeout(isStrikeout);
 
 This example specifies that the contents of the current Range are displayed with a single horizontal line through the range center.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to cross the range with one line.
 
 // Strike out the range content.

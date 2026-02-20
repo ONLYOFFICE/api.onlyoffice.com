@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties for the minor horizontal gridlines.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Set a stroke as a minor horizontal gridline.
 
 // How to add gridlines for the chart.

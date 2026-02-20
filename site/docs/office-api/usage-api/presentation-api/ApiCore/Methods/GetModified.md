@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to set and get the date when the current presentation was modified last time.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetModified(new Date("10 March 1990"));

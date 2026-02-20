@@ -24,7 +24,7 @@ expression.SetFontSize(nSize);
 
 This example sets the font size to the characters of the text run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a text font size.
 
 // Get the text properties of the run and set its font size.

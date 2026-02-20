@@ -24,7 +24,7 @@ boolean
 
 This example locks the aspect ratio of the picture form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to lock an aspect ratio of the picture form in this document.
 
 // Lock the aspect ratio of the picture form.

@@ -24,7 +24,7 @@ expression.CreateCheckBoxContentControl(checkBoxPr);
 
 This example shows how to create a checkbox content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let cc = Api.CreateCheckBoxContentControl({checked: true});
 let paragraph = Api.CreateParagraph();

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a value for data field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a value of a table element.
 
 // Create a pivot table, add data to it then set a custom data field's value.

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to refresh all pivot tables.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to refresh field values of all pivot tables.
 
 // Refresh pivot tables from the worksheet.

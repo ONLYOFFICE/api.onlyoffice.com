@@ -22,7 +22,7 @@ string
 
 This example shows how to get the name of the current workbook (filename)
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const workbook = Api.GetActiveWorkbook();
 const workbookName = workbook.GetName();
 const worksheet = workbook.GetActiveSheet();

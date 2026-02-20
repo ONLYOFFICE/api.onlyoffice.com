@@ -25,7 +25,7 @@ boolean
 
 This example shows how to move the cursor up through the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to move the cursor up by a specified number of paragraphs.
 
 // Create multiple paragraphs, move cursor down, then move it up with selection.

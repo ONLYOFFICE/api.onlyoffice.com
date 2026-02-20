@@ -25,7 +25,7 @@ boolean
 
 This example shows how to delete an attribute from the current XML node.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

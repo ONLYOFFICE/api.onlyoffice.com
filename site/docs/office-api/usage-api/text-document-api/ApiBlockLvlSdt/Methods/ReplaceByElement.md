@@ -24,7 +24,7 @@ boolean
 
 This example replaces the content control with a paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to replace the block content control with another document element (paragraph, table, or block content control).
 
 // Creates the ApiBlockLvlSdt object and replaces it with the ApiParagraph object.

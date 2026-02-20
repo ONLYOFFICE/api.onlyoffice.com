@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a parent content control that contains the graphic object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get an element's parent control.
 
 // How to show the shape's wrapper control.

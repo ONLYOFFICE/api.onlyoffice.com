@@ -24,7 +24,7 @@ number
 
 This example shows how to return the natural logarithm of a complex number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the natural logarithm of a comlex numbers.
 
 // Use a function to get the natural logarithm.

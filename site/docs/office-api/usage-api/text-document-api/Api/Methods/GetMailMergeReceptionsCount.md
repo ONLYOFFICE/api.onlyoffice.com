@@ -22,7 +22,7 @@ number
 
 This example shows how to get the mail merge receptions count.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Wraps the text runs in the mail merge fields, loads the mail merge data into the document and counts the mail merge receptions.
 
 // Returns a number of the mail merge receptions.

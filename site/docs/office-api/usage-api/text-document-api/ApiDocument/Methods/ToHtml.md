@@ -27,7 +27,7 @@ string
 
 This example converts a document to HTML.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get an HTML from the document content.
 
 // Convert the document indicating "html" parameter.

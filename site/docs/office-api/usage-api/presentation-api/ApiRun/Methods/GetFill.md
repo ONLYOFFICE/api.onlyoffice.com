@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to find out a text color.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to know with which color a text is filled.
 
 // Get the text properties of the run and get its font color.

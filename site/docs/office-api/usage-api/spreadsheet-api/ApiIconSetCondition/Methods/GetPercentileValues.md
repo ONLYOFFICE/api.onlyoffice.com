@@ -22,7 +22,7 @@ boolean
 
 This example shows how to check if icon set uses percentile values.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine if percentile values are used for icon set thresholds.
 
 // Check if the icon set rule uses percentile values for criteria.

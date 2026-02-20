@@ -29,7 +29,7 @@ number
 
 This example shows how to return the annual yield of a security that pays interest at maturity.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return annual yield of a security.
 
 // Use a function to get a security annual yield.

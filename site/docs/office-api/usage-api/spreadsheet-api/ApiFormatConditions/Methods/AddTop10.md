@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds top 10 conditional formatting to a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add top 10 conditional formatting rules to highlight highest values.
 
 // Add top 10 conditional formatting to cells.

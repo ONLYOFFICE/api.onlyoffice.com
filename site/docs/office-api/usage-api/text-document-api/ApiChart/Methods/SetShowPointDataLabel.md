@@ -29,7 +29,7 @@ boolean
 
 This example specifies the show options for the chart data labels.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to show specific chart data labels with options.
 
 // Create a chart, set its properties and the visibility of its data labels options.

@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the content control position within its parent element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, adds it to the current document, and returns its position in the document.
 
 // How to get the position of the ApiBlockLvlSdt object within the ApiDocument class.

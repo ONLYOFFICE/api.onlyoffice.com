@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to paste date from clipboard.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to paste a copied or cut data from the clipboard.
 
 // Paste to the worksheet.

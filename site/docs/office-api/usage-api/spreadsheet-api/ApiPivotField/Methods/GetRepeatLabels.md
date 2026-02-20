@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get repeate labels value of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field's repeate labels boolean value.
 
 // Create a pivot table, add data to it then get repeate labels of a specified pivot field.

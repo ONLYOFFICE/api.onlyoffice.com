@@ -24,7 +24,7 @@ boolean
 
 This example shows how to get the lock value for the specified lock type of the drawing.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set lock value of the shape.
 
 // Get a boolean that shows that drawing can be selected or not.

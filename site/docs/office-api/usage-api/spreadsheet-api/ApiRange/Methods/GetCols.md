@@ -24,7 +24,7 @@ expression.GetCols(nCol);
 
 This example shows how to get a Range object that represents the columns in the specified range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get columns from a range.
 
 // Get a range, get its first two columns and fill them with a color.

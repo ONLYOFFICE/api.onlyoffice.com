@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to select a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to select a table.
 
 // Create a pivot table, add data to it then select it.

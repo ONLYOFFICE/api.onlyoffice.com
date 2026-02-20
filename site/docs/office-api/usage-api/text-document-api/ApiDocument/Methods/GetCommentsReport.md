@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a report about all the comments added to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Retrieve each comment reports and display their contents one by one.
 
 // Create a table and insert the comment reports to its cells.

@@ -24,7 +24,7 @@ expression.GetDefName(defName);
 
 This example shows how to get the ApiName object by the worksheet name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get def name object.
 
 // Get ApiName object using its name.

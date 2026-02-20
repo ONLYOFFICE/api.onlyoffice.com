@@ -24,7 +24,7 @@ boolean
 
 This example sets the screen tip text of the hyperlink.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to specify the hyperlink screen tip text.
 
 // Set the screen tip text of the link.

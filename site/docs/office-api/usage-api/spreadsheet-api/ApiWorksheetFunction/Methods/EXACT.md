@@ -25,7 +25,7 @@ boolean
 
 This example shows how to check whether two text strings are exactly the same, and returns true or false. This function is case-sensitive.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to compare strings.
 
 // Use function to compare two texts (case-sensitive).

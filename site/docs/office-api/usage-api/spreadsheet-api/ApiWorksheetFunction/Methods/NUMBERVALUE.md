@@ -26,7 +26,7 @@ number
 
 This example shows how to convert text to a number, in a locale-independent way.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a number from text.
 
 // Use a function to convert a text to a number.

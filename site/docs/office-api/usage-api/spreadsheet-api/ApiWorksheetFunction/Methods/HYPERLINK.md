@@ -25,7 +25,7 @@ string
 
 This example shows how create a shortcut that jumps to another location in the current workbook, or opens a document stored on your hard drive, a network server, or on the Internet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a hyperlink.
 
 // Use a function to add url to the text.

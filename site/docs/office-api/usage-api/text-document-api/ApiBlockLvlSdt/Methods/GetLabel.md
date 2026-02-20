@@ -22,7 +22,7 @@ number
 
 This example shows how to get a label attribute for the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, sets a label to it, and returns this label to insert it into the second paragraph of the document.
 
 // How to get a label from the ApiBlockLvlSdt object.

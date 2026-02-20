@@ -24,7 +24,7 @@ boolean
 
 Creates a custom triangle shape and adds it to the worksheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Applies custom geometry to a shape with specific fill and stroke.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

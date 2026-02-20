@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiGradientStop object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON object from the gradient stop object.
 
 // Convert the radial gradient stop object to json and add it to the paragraph.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the table title.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the table title.
 
 // Display the title of the table in the document.

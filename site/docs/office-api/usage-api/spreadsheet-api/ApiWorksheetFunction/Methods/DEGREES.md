@@ -24,7 +24,7 @@ number
 
 This example shows how to convert radians to degrees.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to convert radians to degrees.
 
 // Use function to get degrees from radians.

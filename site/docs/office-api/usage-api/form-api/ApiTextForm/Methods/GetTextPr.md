@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the text properties from the form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get a text properties of a text form.
 
 // How to make italic the text of the form.

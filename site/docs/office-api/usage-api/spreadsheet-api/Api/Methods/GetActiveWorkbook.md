@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an object that represents the active workbook.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 const cell = worksheet.GetActiveCell();

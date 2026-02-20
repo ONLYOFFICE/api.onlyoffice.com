@@ -24,7 +24,7 @@ boolean
 
 This example sets the list values to the current combo box.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to set items of the dropdown.
 
 // Create a combobox and add its list values.

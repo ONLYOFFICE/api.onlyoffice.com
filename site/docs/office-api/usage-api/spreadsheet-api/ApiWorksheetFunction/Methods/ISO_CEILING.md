@@ -26,7 +26,7 @@ number
 
 This example shows how to return a number that is rounded up to the nearest integer or to the nearest multiple of significance regardless of the sign of the number. The number is always rounded up regardless of its sing.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to round up a number to the nearest integer.
 
 // Use a function to round up a number to the nearest integer.

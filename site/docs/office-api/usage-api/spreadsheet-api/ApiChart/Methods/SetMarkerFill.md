@@ -27,7 +27,7 @@ boolean
 
 This example sets the fill to the marker in the specified chart series.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Create the "scatter" chart and apply an RGB color to its markers.
 
 // How to use the ApiFill object as a color of the chart markers.

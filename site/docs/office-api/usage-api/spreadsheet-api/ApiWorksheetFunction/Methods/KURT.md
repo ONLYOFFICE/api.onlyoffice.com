@@ -24,7 +24,7 @@ number
 
 This example shows how to return the kurtosis of a data set.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know a data set kurtosis.
 
 // Use a function to find out kurtosis of a data set.

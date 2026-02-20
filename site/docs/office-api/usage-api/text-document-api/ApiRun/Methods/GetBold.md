@@ -22,7 +22,7 @@ boolean
 
 This example converts the current form to an inline form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out whether a text is bold or not.
 
 // Get the bold property of the text.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the height of the drawing.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know a height of a drawing.
 
 // Get a drawing's height and display it in the worksheet.

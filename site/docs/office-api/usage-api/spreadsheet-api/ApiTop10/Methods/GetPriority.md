@@ -22,7 +22,7 @@ number
 
 This example gets the priority of a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the priority value from conditional formatting rules.
 
 // Get conditional formatting rule priority.

@@ -26,7 +26,7 @@ boolean
 
 This example shows how to move the cursor right in the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to move the cursor right by a specified number of characters.
 
 // Add text and move cursor right with selection.

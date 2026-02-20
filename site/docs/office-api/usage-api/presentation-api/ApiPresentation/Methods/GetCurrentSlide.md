@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the current slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a current slide as an object.
 
 // Get current working slide and update its content.

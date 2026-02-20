@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example sets the header distance and then reads it back.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get header distance of the section.
 
 // Retrieve the current distance between the top of the page and the header.

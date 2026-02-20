@@ -24,7 +24,7 @@ expression.InsertInContentControl(nType);
 
 This example wraps the current table object with a content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add the table to the block level control.
 
 // Create a table and then insert it to the another content control.

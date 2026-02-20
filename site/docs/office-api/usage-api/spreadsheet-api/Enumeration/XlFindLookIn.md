@@ -16,7 +16,7 @@ Enumeration
 
 This example specify that the whole text match will be searched in the range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to indicate from where the text should be searched.
 
 // Search inside a range specifying which values to look in.

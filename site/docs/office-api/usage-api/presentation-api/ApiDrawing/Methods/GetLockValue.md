@@ -24,7 +24,7 @@ boolean
 
 This example gets a lock value of a shape and inserts it into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a slide shape's lock value and display it in the slide.
 
 // Get a slide shape's lock value.

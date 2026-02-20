@@ -31,7 +31,7 @@ expression.CreateWordArt(textPr, text, transform, fill, stroke, rotAngle, width,
 
 This example creates a Text Art object with the "textArchUp" text transform type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a Text Art object using the specified text properties.
 
 // How to create the ApiWordArt object and add it to the first paragraph of the document.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the table title.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to rename the table title.
 
 // Create a table and indicate its title.

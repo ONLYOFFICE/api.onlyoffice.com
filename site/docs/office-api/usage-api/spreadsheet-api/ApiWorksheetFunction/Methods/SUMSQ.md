@@ -24,7 +24,7 @@ number
 
 This example shows how to return the sum of the squares of the arguments.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the sum of the squares.
 
 // Use a function to estimate the sum of the squares.

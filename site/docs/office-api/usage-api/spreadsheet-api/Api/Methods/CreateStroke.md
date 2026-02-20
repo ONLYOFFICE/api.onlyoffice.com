@@ -25,7 +25,7 @@ expression.CreateStroke(width, fill);
 
 This example creates a stroke adding shadows to the element.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a stroke with a gradient fill.
 
 // Set a gradient stroke for a shape.

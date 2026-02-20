@@ -24,7 +24,7 @@ boolean
 
 This example pushes a run to actually add it to the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to insert the text into the inline content control.
 
 // Add the text run to the inline text element.

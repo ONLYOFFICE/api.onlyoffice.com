@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets all series of ApiChart class and inserts their types into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get types of all series of a chart.
 
 // Get all series from a chart.

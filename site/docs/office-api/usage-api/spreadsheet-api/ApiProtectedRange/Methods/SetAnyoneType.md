@@ -24,7 +24,7 @@ boolean
 
 This example changes access type for anyone for protected range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set access type to the "can view" one.
 
 // Make a protected range viewable for anyone.

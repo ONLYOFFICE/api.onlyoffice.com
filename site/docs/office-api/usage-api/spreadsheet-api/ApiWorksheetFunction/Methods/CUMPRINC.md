@@ -29,7 +29,7 @@ number
 
 This example shows how to get the cumulative principal paid on a loan between two periods.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the cumulative principal paid on a loan between two periods.
 
 // Use function to get the cumulative principal paid on a loan between two periods.

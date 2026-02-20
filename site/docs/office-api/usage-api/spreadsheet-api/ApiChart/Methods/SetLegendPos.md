@@ -24,7 +24,7 @@ boolean
 
 This example specifies the chart legend position.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Change the positions of the chart legend.
 
 // How to set right the chart legend.

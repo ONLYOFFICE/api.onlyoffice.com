@@ -24,7 +24,7 @@ expression.CreatePictureForm(formPr);
 
 This example creates a picture form with the common and specific picture form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a picture form and add it to the paragraph.
 
 // Add the ApiPictureForm object to the document to upload a photo and set its image by a URL.

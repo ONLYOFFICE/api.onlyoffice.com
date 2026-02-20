@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of elements in the current document content.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a number of elements of a shape from a document content.
 
 // Get a shape than count number of elements and display it using paragraph.

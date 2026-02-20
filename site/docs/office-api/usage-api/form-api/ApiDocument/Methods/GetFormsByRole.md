@@ -24,7 +24,7 @@ expression.GetFormsByRole(role);
 
 This example shows how to get a list of all forms in the document with the specified role.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");

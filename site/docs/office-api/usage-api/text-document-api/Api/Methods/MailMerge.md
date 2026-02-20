@@ -25,7 +25,7 @@ boolean
 
 This example shows how to start the mail merge process.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Wraps the text runs in the mail merge fields, loads the mail merge data into the document, and starts the mail merge process.
 
 // How to use the mail merge feature starting from the first mail merge record.

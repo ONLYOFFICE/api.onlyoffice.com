@@ -24,7 +24,7 @@ number
 
 This example shows how to get absolute value of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add absolute value to the worksheet.
 
 // Get a function that gets absolute value.

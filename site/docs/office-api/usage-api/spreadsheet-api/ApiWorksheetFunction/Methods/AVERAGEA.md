@@ -24,7 +24,7 @@ number
 
 This example shows how to return the average (arithmetic mean) of the specified arguments.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find an average (arithmetic mean).
 
 // Use function to get the find an average (arithmetic mean).

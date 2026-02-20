@@ -29,7 +29,7 @@ number
 
 This example shows how to return the price per $100 face value for a security that pays interest at maturity.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the price per $100 face value by interest at maturity.
 
 // Use a function to return the price per $100 face value for a security that pays maturity interest.

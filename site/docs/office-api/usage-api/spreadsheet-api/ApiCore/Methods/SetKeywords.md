@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the string of keywords of the workbook using the ApiCore.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

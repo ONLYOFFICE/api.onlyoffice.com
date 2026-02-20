@@ -18,7 +18,7 @@ Enumeration
 
 Set the "column" freeze pane type to the current worksheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Specify the freeze pane type.
 
 // How to freeze columns in the current worksheet.

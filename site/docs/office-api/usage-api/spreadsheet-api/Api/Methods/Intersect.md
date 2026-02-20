@@ -25,7 +25,7 @@ expression.Intersect(Range1, Range2);
 
 This example shows how to get the ApiRange object that represents the rectangular intersection of two or more ranges.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find intersection of two ranges and highlight it.
 
 // Find common cells of two ranges and fill them with a color.

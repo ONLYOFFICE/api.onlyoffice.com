@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to set an orientation of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a pivot field orientation.
 
 // Create a pivot table, add data to it then change an orientation a specified pivot.

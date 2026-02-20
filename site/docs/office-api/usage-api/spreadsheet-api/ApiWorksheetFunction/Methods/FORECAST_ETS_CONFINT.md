@@ -30,7 +30,7 @@ number
 
 This example shows how to return a confidence interval for the forecast value at the specified target date.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate or predict a confidence interval for the forecast value.
 
 // Use a function to get a confidence interval for the forecast value at target date.

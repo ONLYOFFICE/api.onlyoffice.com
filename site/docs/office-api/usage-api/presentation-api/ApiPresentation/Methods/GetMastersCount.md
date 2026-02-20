@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of slide masters.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a master count from the presentation.
 
 // Count masters of the presentation.

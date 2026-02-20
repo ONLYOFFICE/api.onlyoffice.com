@@ -24,7 +24,7 @@ boolean
 
 This example removes a table row with the specified cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove the row from the table.
 
 // Create a table, get one of its cells and delete the row.

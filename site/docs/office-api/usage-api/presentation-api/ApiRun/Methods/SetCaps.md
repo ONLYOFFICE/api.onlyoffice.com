@@ -24,7 +24,7 @@ expression.SetCaps(isCaps);
 
 This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to make a text capitalized.
 
 // Create a new text run and make each letters capitalized.

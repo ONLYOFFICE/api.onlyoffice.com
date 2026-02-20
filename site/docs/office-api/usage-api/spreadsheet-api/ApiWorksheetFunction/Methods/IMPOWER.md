@@ -25,7 +25,7 @@ number
 
 This example shows how to return a complex number raised to an integer power.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the result from raising into power of a complex number.
 
 // Use a function to get the result from the power.

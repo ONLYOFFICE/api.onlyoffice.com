@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the user ID to the comment reply author.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a reply author ID.
 
 // Replace a reply author ID to a new one.

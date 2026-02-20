@@ -27,7 +27,7 @@ number
 
 This example shows how to return the gamma distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the gamma distribution.
 
 // Use a function to get the result from a gamma distribution.

@@ -24,7 +24,7 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 This example specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to strike out a text with two lines.
 
 // Cross out a text with two lines.

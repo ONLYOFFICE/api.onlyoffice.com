@@ -22,7 +22,7 @@ boolean
 
 Analyzes cloud shape path properties on a slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Displays comprehensive path information in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

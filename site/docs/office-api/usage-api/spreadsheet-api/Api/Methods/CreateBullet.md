@@ -24,7 +24,7 @@ expression.CreateBullet(sSymbol);
 
 This example creates a bullet for a paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Add paragraph with a custom bullet.
 
 // How to create a custom bullet for a paragraph.

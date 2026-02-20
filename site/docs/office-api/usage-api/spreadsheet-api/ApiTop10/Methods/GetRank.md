@@ -22,7 +22,7 @@ number
 
 This example shows how to get the rank value for top 10 condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the number of top or bottom values to highlight in the condition.
 
 // Get the rank value for the top 10 rule.

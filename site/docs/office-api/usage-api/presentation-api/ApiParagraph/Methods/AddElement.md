@@ -25,7 +25,7 @@ boolean
 
 This example adds a run to the paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Insert a text run to the ApiParagraph object.
 
 // How to add the ApiRun object to the slide.

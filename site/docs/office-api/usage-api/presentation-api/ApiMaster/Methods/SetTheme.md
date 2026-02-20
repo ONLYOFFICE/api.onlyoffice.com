@@ -25,7 +25,7 @@ boolean
 
 This example sets a theme to the slide master. Sets a copy of the theme object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a theme of a slide master.
 
 // Create a theme, set its properties and apply it to a slide master.

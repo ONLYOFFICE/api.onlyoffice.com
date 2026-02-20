@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the type of above average conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to identify the type of conditional formatting rule.
 
 // Get the type of the above average conditional formatting rule.

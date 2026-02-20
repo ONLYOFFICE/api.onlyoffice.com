@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the scope type of a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the scope type of conditional formatting rules.
 
 // Set conditional formatting rule scope type.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the bullet or numbering to the current paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a dash bullet to the paragraph.
 
 // Numbering and adding custom bullet points to the text.

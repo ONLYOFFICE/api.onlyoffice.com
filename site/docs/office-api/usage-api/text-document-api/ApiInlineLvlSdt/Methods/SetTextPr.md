@@ -24,7 +24,7 @@ expression.SetTextPr(oTextPr);
 
 This example applies text settings to the content of the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set text properties for the inline content control.
 
 // Display the text properties set for inline text element.

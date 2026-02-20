@@ -24,7 +24,7 @@ JSON
 
 This example converts the table object into the JSON object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get JSON object from the table.
 
 // Get a slide by its index, convert its table to JSON and create another one from the JSON.

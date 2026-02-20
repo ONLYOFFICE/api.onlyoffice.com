@@ -25,7 +25,7 @@ number
 
 This example shows how to return a bitwise "AND" of two numbers.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a two numbers bitwise AND.
 
 // Use function to calculate bitwise AND opertation.

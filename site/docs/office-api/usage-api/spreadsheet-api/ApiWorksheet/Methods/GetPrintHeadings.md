@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get the page PrintHeadings property which specifies whether the sheet row/column headings must be printed or not.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out whether sheet headings should be printed or not.
 
 // Get a boolean value representing whether to print row and column headings or not.

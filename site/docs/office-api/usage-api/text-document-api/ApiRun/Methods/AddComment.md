@@ -27,7 +27,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 This example adds a comment to the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to comment a specific text.
 
 // Insert a comment into the run and add an author to it.

@@ -24,7 +24,7 @@ expression.GetMaster(nPos);
 
 This example shows how to get a slide master by its position in the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a slide master from the presentation.
 
 // Get a slide master of the presentation using its index.

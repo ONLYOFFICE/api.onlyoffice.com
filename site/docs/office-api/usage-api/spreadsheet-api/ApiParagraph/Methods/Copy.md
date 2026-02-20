@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a paragraph copy.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create an identical paragraph.
 
 // Get a paragraph from the content of the shape create its copy and add it to the shape.

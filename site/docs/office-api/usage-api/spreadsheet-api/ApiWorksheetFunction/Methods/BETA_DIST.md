@@ -29,7 +29,7 @@ number
 
 This example shows how to return the cumulative beta probability density function.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from cumulative beta probability density function.
 
 // Use function to get the cumulative beta probability density function.

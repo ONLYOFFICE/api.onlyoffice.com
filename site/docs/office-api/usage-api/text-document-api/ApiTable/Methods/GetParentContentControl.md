@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a content control that contains the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the parent element of the table and set its alias.
 
 // Retrieve the parent content control of the table.

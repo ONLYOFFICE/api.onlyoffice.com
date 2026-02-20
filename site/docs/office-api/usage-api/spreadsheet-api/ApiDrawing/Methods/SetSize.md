@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the size of the shape bounding box.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the size of the drawing.
 
 // Resize a drawing by setting its width and height.

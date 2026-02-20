@@ -26,7 +26,7 @@ boolean
 
 This example sets your own customized numbering type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the custom type of the numbering.
 
 // Apply the lower roman style to the numbering level.

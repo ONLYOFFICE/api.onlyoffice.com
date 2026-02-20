@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example appends a new slide to the end of the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a new slide to the presentation.
 
 // Create a slide and add it to the end of presentation.

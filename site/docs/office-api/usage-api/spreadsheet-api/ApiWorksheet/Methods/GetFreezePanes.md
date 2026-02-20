@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example freezes first column and get pastes a freezed range address into the table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get freezed panes.
 
 // Get all freezed panes, its location and show it on the worksheet.

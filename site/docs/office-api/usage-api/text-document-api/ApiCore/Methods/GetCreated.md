@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to get the creation date of the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCreated(new Date('20 January 2000'));

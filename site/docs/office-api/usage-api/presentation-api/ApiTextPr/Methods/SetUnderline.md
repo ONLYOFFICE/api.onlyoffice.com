@@ -25,7 +25,7 @@ expression.SetUnderline(isUnderline);
 
 This example specifies that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to underline a text.
 
 // Get the text properties of the run and underline its text.

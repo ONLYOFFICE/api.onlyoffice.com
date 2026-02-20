@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to get the class type of ApiCustomProperties.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 const classType = customProps.GetClassType();

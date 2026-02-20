@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get a class type of ApiDateForm.
 
 // Retrieve class type of ApiDateForm object and insert it to the slide.

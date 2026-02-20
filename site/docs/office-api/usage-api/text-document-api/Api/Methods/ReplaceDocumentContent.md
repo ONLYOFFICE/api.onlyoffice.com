@@ -24,7 +24,7 @@ boolean
 
 This example shows how to replace the document content with the mail merge data.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Starts the mail merge process and replaces the resulting document content with the mail merge template document.
 
 // How to replace the main document content with another document content.

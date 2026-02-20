@@ -27,7 +27,7 @@ boolean
 
 This example sets the background color to all cells in the table row.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Color the row background.
 
 // How to set the rose color as a row background.

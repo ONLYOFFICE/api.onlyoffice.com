@@ -16,7 +16,7 @@ Enumeration
 
 This example creates a date form with the common and specific date form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a date form with its properties.
 
 // Create the properties and apply them to the ApiDateForm object.

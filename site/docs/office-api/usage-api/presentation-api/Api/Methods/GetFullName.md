@@ -22,7 +22,7 @@ string
 
 This example gets a presentation name and inserts it into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a presentation name.
 
 // Retrieve name of presentation.

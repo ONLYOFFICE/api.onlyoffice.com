@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the line styles to the current theme format scheme.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change line styles of a format scheme.
 
 // Get format scheme and update its line styles.

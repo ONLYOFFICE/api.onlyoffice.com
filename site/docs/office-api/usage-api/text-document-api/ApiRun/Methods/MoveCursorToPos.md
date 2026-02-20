@@ -26,7 +26,7 @@ boolean
 
 This example shows how to place cursor in the specifed position in the text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to move the cursor to the specific position of the text.
 
 // Add text to the paragraph and move the cursor to the 16 position.

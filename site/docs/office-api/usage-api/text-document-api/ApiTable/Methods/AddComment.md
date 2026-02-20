@@ -27,7 +27,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 This example adds a comment to all contents of the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add comment to the table indicating its author name.
 
 // Insert a comment into a table.

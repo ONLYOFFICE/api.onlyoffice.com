@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of elements in the current paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return a number of paragraph elements.
 
 // Find out how many elements a paragraph has.

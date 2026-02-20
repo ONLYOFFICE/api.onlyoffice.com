@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties of the major vertical gridline.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Set a stroke as a major vertical gridline.
 
 // How to add gridlines for the chart.

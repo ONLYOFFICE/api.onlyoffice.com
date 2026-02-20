@@ -24,7 +24,7 @@ boolean
 
 This example removes a table column with the specified cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete a column from the table.
 
 // Create a table, create cells and remove the whole column by its cell.

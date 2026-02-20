@@ -25,7 +25,7 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 This example shows how to create a blip fill to apply to the object using the selected image as the object background.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a shape with the "star10" type and a tiled blip fill and add it to the first paragraph of the document.
 
 // Creates a blip fill with the specified image ur and the "tile" fill type and uses it to fill the created shape in the document.

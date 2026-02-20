@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph contents justification.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set justification using a paragraph properties.
 
 // Create a paragraph setting its justification property.

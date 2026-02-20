@@ -22,7 +22,7 @@ number
 
 This example shows how to get the label attribute for the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to display the label of the inline text control in the document.
 
 // Set the label of the inline text element and print it.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all numbered paragraphs from the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all paragraphs with numbering added to the document.
 
 // How to retrieve all paragraphs with numbering and make the first one bold.

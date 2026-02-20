@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the parent range of conditional formatting rules.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the range that contains conditional formatting rules.
 
 // Get parent range of conditional formatting rules.

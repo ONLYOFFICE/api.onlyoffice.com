@@ -22,7 +22,7 @@ boolean
 
 This example shows how to delete a comment.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove a comment.
 
 // Get all comments from the presentation and remove the first one.

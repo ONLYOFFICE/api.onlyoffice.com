@@ -26,7 +26,7 @@ boolean
 
 This example specifies the chart horizontal axis title.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a position of a horizontal axis title.
 
 // Create a chart and move its horizontal axis title.

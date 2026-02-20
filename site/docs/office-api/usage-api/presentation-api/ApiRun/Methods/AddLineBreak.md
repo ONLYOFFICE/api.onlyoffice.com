@@ -22,7 +22,7 @@ boolean
 
 This example adds a line break to the run position and starts the next element from a new line.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a line break after a sentence in a text run.
 
 // How to split a text with a line break.

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to delete a data field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove a table element.
 
 // Create a pivot table, add data to it then delete a custom data field.

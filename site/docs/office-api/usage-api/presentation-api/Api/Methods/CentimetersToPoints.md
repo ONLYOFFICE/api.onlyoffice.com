@@ -24,7 +24,7 @@ number
 
 This example shows how to convert centimeters to points.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const centimeters = 1000;
 const points = Api.CentimetersToPoints(centimeters);
 

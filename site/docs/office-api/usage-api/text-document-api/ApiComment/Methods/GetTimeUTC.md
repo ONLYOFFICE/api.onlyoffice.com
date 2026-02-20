@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the timestamp of the comment creation in UTC format.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know when a comment was added.
 
 // Get all comments from the presentation and the first one's time of creation in UTC format.

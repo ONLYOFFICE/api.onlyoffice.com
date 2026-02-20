@@ -26,7 +26,7 @@ boolean
 
 This example shows how to add items to the content control list.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let contentControlList = cc.GetDropdownList();

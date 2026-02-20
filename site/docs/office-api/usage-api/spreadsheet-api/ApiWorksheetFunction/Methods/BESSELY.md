@@ -25,7 +25,7 @@ number
 
 This example shows how to return the modified Bessel function Yn(x).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from Bessel function Yn(x).
 
 // Use function to get the Bessel function Yn(x).

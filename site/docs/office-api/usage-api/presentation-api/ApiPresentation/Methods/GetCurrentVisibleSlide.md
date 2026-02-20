@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an object for a Slide that is currently visible.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentVisibleSlide();
 

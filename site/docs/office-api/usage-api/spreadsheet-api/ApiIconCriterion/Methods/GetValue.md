@@ -22,7 +22,7 @@ string \| number \| null
 
 This example shows how to get the value of an icon criterion.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the threshold value from an icon set criterion.
 
 // Get the value used for criterion threshold comparison.

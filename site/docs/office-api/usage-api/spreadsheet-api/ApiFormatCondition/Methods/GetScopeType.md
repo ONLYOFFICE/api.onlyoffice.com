@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the scope type of a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the scope type from conditional formatting rules.
 
 // Get conditional formatting rule scope type.

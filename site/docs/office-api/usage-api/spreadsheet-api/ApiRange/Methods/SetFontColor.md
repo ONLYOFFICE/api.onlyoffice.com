@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the text color to the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color a cell text.
 
 // Get a range and apply an RGB color to its text color.

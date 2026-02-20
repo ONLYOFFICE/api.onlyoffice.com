@@ -24,7 +24,7 @@ expression.SetSpacing(nSpacing);
 
 This example sets the text spacing measured in twentieths of a point.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to specify the spacing value of paragraph.
 
 // Indicate the paragraph text space.

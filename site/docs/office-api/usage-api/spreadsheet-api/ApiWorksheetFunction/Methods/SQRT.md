@@ -24,7 +24,7 @@ number
 
 This example shows how to return the square root of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the square root of a number.
 
 // Use a function to get the square root of a number.

@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of slide layout and apply it for other slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a copy of a layout.
 
 // Copy a layout of a presentation master.

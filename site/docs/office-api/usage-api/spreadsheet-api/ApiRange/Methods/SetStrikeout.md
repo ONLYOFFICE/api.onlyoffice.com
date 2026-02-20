@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies that the contents of the cell is displayed with a single horizontal line through the center of the contents.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add strikeout to the cell value.
 
 // Get a range and add strikeout to its text.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the presentation height in English measure units.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a height of the presentation.
 
 // Get a height of the ApiPresentation object.

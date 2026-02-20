@@ -19,7 +19,7 @@ Object
 
 This example creates a combo box form with the specific combo box form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a combo box form with its base properties.
 
 // Create the base properties and apply them to the ApiComboBoxForm object.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example modifies the range where a conditional formatting rule applies.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the cell range for existing conditional formatting rules.
 
 // Modify conditional formatting rule range.

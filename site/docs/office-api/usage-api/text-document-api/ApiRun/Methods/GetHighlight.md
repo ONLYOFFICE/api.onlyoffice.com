@@ -22,7 +22,7 @@ string
 
 This example shows how to get the highlight property of the text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know the highlight type of the form.
 
 // Retrieve text properties of the form to find out its highlight type.

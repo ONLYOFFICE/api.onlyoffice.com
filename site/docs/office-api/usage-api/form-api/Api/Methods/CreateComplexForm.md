@@ -24,7 +24,7 @@ expression.CreateComplexForm(formPr);
 
 This example creates a complex form with the common complex form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a complex form and add it to the paragraph.
 
 // Add a complex form with the state options to the ApiDocument object.

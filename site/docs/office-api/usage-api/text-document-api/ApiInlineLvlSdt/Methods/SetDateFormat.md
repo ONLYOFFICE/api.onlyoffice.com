@@ -26,7 +26,7 @@ boolean
 
 This example demonstrates how to set a custom date format for a datepicker content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 let paragraph1 = Api.CreateParagraph();

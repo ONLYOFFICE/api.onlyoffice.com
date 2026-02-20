@@ -22,7 +22,7 @@ number
 
 This example demonstrates getting the index of color scale criterion.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine which threshold a criterion represents.
 
 // Get the index of a color scale criterion.

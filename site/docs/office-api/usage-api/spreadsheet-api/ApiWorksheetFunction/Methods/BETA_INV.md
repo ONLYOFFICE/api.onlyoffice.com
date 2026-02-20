@@ -28,7 +28,7 @@ number
 
 This example shows how to return the inverse of the cumulative beta probability density function for a specified beta distribution (BETADIST).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from inverse of the cumulative beta probability density function.
 
 // Use function to get the cumulative beta probability density function.

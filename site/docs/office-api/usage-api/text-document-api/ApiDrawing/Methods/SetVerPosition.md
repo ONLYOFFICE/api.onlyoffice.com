@@ -25,7 +25,7 @@ boolean
 
 This example sets the absolute measurement for the vertical positioning of the floating object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the vertical position at page in points.
 
 // Move the shape vertically on the page.

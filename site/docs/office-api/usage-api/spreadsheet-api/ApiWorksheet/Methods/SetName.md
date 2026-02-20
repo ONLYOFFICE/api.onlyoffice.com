@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets a name to the active sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set name of the sheet.
 
 // Rename the sheet.

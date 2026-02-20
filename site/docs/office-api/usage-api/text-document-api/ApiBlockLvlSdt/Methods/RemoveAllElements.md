@@ -22,7 +22,7 @@ boolean
 
 This example clears the contents of the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, adds a text to it, and clears its contents.
 
 // Removes all elements from the block level content control.

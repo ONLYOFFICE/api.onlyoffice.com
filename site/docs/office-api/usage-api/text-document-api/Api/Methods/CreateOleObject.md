@@ -28,7 +28,7 @@ expression.CreateOleObject(imageSrc, width, height, data, appId);
 
 This example creates an Ole object and inserts it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates the ApiOleObject object and adds it to the first paragraph of the document.
 
 // How to create an Ole object using the specified image source, width, height, Ole data, application ID and insert it into the ApiParagraph class. 

@@ -22,7 +22,7 @@ boolean
 
 This example checks if the current checkbox is a radio button.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to know whether the checkbox form is radio button.
 
 // Get a boolean value representing whether a current form is a radio button or not.

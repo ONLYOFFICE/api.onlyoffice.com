@@ -24,7 +24,7 @@ expression.SetStrikeout(isStrikeout);
 
 This example specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to strike out a text with one line.
 
 // Create a text run object, cross out it.

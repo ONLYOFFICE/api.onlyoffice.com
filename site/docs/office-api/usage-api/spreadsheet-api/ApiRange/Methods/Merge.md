@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example merges the selected cell range into a single cell or a cell row.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a range using cell addresses and merge them into one.
 
 // Get a range, merge its cells into one cell.

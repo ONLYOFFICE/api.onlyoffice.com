@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 This example sets borders for a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to apply border formatting to conditional formatting rules.
 
 // Set conditional formatting rule borders.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the content of the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let paragraph = Api.CreateParagraph();

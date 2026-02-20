@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the font size property to the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the font size.
 
 // Get a font object of characters and resize it.

@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the custom XML manager, add a new XML part, and retrieve it by its ID.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get custom XML parts from a worksheet.
 
 // Get the custom XML parts manager.

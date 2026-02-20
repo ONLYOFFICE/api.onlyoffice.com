@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a drag to page of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to rename a pivot field drag to page.
 
 // Create a pivot table, add data to it then set drag to page of a specified pivot using boolean value.

@@ -22,7 +22,7 @@ number
 
 This example shows how to get a count of cells in the specified range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a count of cells in the range.
 
 // Get a count of cells in the range and display it in another cell.

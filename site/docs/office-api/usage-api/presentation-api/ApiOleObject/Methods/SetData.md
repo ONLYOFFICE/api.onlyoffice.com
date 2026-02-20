@@ -24,7 +24,7 @@ boolean
 
 This example sets the data to the current OLE object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Set data to an OLE object.
 
 // How to insert a url address to the OLE object.

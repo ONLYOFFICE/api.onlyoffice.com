@@ -20,7 +20,7 @@ Enumeration
 
 This example removes the header of the 'title' type from the final document section.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to delete a header from the title type.
 
 // Remove a header from the specified type of the section.

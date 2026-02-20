@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to clear all filters from a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove previously applied pivot table filters.
 
 // Create a pivot table, add data to it then delete all filters from it.

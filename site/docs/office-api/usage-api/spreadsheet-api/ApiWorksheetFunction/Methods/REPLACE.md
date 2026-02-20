@@ -27,7 +27,7 @@ string
 
 This example shows how to replace a part of a text string with a different text string.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to replace a substring with another one.
 
 // Use a function to replace one part of a text with another one.

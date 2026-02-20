@@ -24,7 +24,7 @@ boolean
 
 This example sets the hyperlink display text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to specify the hyperlink text that is displayed.
 
 // Set the visible text of the link.

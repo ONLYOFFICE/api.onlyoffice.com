@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the top/bottom setting for top 10 condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine if the condition evaluates top or bottom values.
 
 // Get the top/bottom direction setting from the top 10 rule.

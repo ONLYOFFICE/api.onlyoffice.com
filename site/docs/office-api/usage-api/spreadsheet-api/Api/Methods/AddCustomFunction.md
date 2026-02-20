@@ -31,7 +31,7 @@ This method doesn't return any data.
 
 This example calculates custom function result.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add custom function.
 
 // How to use custom function.

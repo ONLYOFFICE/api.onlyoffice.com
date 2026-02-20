@@ -24,7 +24,7 @@ expression.GetNodes(xPath);
 
 This example shows how to get child nodes of a custom XML node using XPath.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve child nodes from custom XML node elements using XPath.
 
 // Get book nodes from library.

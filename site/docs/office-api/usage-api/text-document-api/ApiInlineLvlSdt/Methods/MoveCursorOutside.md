@@ -24,7 +24,7 @@ boolean
 
 This example shows how to move the cursor outside of the inline content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to move the cursor out of the form.
 
 // Move the cursor out of the inline text control.

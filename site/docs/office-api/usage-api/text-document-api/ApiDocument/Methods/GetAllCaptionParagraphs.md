@@ -24,7 +24,7 @@ expression.GetAllCaptionParagraphs(sCaption);
 
 This example shows how to get all caption paragraphs of the specified type from the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all caption paragraphs with the name 'Figure' and make the first one capitalized.
 
 // Make the caption text letters uppercase.

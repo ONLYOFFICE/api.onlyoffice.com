@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph text properties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Add text properties to the paragraph.
 
 // Make paragraph text bold and bigger.

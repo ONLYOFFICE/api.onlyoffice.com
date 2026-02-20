@@ -24,7 +24,7 @@ number
 
 This example shows how to get the hyperbolic cotangent of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a hyperbolic cotangent.
 
 // Use function to get the hyperbolic cotangent of an angle.

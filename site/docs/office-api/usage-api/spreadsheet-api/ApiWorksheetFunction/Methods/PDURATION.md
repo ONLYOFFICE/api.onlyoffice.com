@@ -26,7 +26,7 @@ number
 
 This example shows how to return the number of periods required by an investment to reach a specified value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get periods required to get a value of an investment.
 
 // Use a function to get the number of periods required by an investment to reach a specified value.

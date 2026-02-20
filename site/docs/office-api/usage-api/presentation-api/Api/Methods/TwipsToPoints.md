@@ -24,7 +24,7 @@ number
 
 This example shows how to convert twips to points.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const twips = 100;
 const points = Api.TwipsToPoints(twips);
 

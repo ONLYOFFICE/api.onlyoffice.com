@@ -17,7 +17,7 @@ Enumeration
 
 This example adds an element called 'text run' to the paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add an element to paragraph.
 
 // Insert an element to paragraph.

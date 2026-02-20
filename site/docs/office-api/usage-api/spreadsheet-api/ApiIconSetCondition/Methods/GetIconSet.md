@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the icon set type from conditional formatting.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the current icon set type used in conditional formatting.
 
 // Get the icon set type assigned to the formatting rule.

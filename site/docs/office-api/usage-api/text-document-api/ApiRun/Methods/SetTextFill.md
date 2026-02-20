@@ -24,7 +24,7 @@ expression.SetTextFill(oApiFill);
 
 In this example, the WordArt text has a text fill.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color a text object.
 
 // Create a text run object, add color to it using solid fill.

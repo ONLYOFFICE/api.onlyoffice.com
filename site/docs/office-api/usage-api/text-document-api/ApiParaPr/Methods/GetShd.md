@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the shading applied to the contents of the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the shading type of the paragraph.
 
 // Get the paragraph shading and fill the drawing with it.

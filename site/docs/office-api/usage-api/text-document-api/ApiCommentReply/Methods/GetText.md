@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment reply text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a raw text of a comment reply.
 
 // Get all comments from the presentation, get the first one's reply and return its text.

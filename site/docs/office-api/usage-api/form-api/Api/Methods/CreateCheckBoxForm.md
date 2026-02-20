@@ -24,7 +24,7 @@ expression.CreateCheckBoxForm(formPr);
 
 This example creates two radiobuttons and the checkbox.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a radiobutton or a checkbox form and add it to the paragraph.
 
 // Add two radiobuttons and the checkbox to the ApiDocument object.

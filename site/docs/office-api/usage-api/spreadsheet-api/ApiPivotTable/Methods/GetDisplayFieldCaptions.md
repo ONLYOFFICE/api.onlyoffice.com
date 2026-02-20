@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get a display field captions of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get pivot table display field captions.
 
 // Create a pivot table, add data to it then get its display field captions.

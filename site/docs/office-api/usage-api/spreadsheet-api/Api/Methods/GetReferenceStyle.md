@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets reference style.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Get style of a reference.
 
 // Insert a reference style into the cell.

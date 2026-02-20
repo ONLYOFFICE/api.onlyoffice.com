@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example reates a copy of the run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a text run object and its copy.
 
 // Create an ApiRun and its copy and add it into paragraph.

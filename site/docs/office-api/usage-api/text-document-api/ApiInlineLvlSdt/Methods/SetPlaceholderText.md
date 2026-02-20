@@ -25,7 +25,7 @@ boolean
 
 This example sets the placeholder text to the inline content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set placeholder text for the inline content control.
 
 // Display the placeholder set for inline text element.

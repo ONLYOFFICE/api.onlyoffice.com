@@ -24,7 +24,7 @@ boolean
 
 This example adds an object (image, shape or chart) to the current slide master.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Create a shape and add it to the presentation master.
 
 // Add an element like paragraph, image or chart and etc. to the slide master.

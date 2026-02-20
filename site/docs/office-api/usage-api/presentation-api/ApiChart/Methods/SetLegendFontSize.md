@@ -24,7 +24,7 @@ boolean
 
 This example specifies the chart legend font size.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to resize a font of a chart legend.
 
 // Create a chart, set its properties and its legend's font size.

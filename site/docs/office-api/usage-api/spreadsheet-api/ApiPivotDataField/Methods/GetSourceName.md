@@ -22,7 +22,7 @@ string
 
 This example shows how to get a source name of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field's source name.
 
 // Create a pivot table, add data to it then get source name of a specified pivot field.

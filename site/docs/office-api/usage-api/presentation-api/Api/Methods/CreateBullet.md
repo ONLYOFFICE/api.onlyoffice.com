@@ -24,7 +24,7 @@ expression.CreateBullet(sSymbol);
 
 This example show how to create a bullet.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a bullet to the paragraph.
 
 // Add bulleted paragraph.

@@ -21,7 +21,7 @@ Object
 
 This example creates a text form with the specific text form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a text form with adding base properties like max characters limit, cell width, etc. to it.
 
 // Create a text form with base properties.

@@ -30,7 +30,7 @@ number
 
 This example shows how to return the price per $100 face value for a security that pays periodic interest.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the price per $100 face value.
 
 // Use a function to return the price per $100 face value for a security.

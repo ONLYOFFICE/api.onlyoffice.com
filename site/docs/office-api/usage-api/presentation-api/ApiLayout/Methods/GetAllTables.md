@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show how to get an array with all tables from the slide layout.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

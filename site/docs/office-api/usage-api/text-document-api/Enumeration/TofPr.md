@@ -23,7 +23,7 @@ Object
 
 This example adds a table of figures with the specified properties to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a table of figures properties.
 
 // Add a table of figures from created properties.

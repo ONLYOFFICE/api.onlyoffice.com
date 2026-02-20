@@ -24,7 +24,7 @@ expression.SetCaps(isCaps);
 
 This example specifies that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Make capitalized the paragraph text.
 
 // Create a paragraph with the font set to capitalized letters.

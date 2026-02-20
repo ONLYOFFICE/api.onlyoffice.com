@@ -29,7 +29,7 @@ number
 
 This example shows how to return the payment on the principal for a given investment based on periodic, constant payments and a constant interest rate.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the payment on the principal for a given investment.
 
 // Use a function to calculate the payment on the principal for a given investment based on parameters.

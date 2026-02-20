@@ -27,7 +27,7 @@ object
 
 This example shows how to get the document statistics represented as an object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the document statistics showing pages count, words count, etc.
 
 // Display words, pages, symbols, paragraphs count of the document.

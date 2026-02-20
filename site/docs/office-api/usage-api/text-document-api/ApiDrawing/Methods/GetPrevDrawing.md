@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the previous inline drawing object if exists.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set vertical flip for the previous drawing.
 
 // Get the previous drawing and update its properties.

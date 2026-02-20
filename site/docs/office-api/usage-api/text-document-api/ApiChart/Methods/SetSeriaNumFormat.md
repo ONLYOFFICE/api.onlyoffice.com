@@ -25,7 +25,7 @@ boolean
 
 This example sets the specified numeric format to the chart series.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the "0.00" numeric format to the chart seria.
 
 // Create a chart, set its properties and its series numeric format.

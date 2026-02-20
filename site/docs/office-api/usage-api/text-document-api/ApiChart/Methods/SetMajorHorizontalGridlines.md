@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties for the major horizontal gridlines.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set major horizontal gridlines of the chart.
 
 // Create a chart, set its properties and its major gridlines as a stroke.

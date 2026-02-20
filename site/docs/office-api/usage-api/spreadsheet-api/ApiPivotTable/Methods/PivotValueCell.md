@@ -25,7 +25,7 @@ number \| string \| null
 
 This example shows how to get a pivot value cell using its position.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot value cell.
 
 // Create a pivot table, add data to it then get its value cell.

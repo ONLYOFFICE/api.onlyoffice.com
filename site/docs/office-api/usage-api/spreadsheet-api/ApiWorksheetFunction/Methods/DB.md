@@ -28,7 +28,7 @@ number
 
 This example shows how to return the depreciation of an asset for a specified period using the fixed-declining balance method.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the depreciation of an asset for a specified period.
 
 // Use function to return the depreciation of an asset for a specified period using the fixed-declining balance method.

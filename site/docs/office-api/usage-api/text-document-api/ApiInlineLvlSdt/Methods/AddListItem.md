@@ -26,7 +26,7 @@ boolean
 
 This example shows how to add a list item to a combobox.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddComboBoxContentControl();

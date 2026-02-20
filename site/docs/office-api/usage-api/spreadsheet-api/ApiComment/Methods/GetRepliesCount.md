@@ -22,7 +22,7 @@ Number
 
 This example shows how to get a number of the comment replies.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a number of replies to the comment.
 
 // Add a comment to the range and display its replies count in the worksheet.

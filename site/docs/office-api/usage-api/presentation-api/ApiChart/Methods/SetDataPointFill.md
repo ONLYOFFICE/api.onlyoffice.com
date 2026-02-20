@@ -27,7 +27,7 @@ boolean
 
 This example shows how to set the fill to the data point.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to color a data point.
 
 // Create a chart then color its data points.

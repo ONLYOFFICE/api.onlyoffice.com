@@ -24,7 +24,7 @@ boolean
 
 This example sets a placeholder for the shape.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a placeholder for a shape.
 
 // Select a shape object from a slide and change its placeholder.

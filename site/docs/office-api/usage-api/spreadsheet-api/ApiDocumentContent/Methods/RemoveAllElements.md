@@ -24,7 +24,7 @@ boolean
 
 This example removes all the elements from the current document or from the current document content.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to clear a document.
 
 // Delete all elements from a document.

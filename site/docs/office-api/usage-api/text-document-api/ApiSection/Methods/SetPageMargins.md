@@ -27,7 +27,7 @@ boolean
 
 This example specifies the page margins for all the pages in this section.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set page margins.
 
 // Update the margins of the page.

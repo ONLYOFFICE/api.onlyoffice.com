@@ -22,7 +22,7 @@ number
 
 This example shows how to get the current locale ID.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set and get current locale ID.
 
 // Get region ID and insert information into the cell.

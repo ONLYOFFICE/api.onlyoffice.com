@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of content control objects in the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve all content controls from the document.
 
 // Get all content controls and show the class type of the first one.

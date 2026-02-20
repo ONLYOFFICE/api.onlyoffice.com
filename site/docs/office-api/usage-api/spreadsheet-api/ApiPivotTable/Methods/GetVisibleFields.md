@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a visible fields of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an unhidden fields of a table.
 
 // Create a pivot table, add data to it then get its visible fields.

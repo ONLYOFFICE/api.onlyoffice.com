@@ -28,7 +28,7 @@ boolean
 
 This example adds an endnote cross-reference to the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create an endnote reference to the paragraph.
 
 // Add a cross-reference to the endnote of the paragraph.

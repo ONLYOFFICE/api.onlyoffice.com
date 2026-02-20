@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get an element by its position in the document content.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an element of the document content knowing its index position.
 
 // Get a document element then change its position and content.

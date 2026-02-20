@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the spacing before value of the current paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get the size of a spacing before a text from a paragraph.
 
 // Return a property of the spacing size before a paragraph.

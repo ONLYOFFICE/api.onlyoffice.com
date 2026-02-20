@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set the top/bottom direction for top 10 condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to configure whether the condition evaluates top or bottom values.
 
 // Set the top/bottom direction for the top 10 rule.

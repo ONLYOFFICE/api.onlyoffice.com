@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get a class type of ApiFormBase.
 
 // Retrieve class type of ApiFormBase object and insert it to the slide.

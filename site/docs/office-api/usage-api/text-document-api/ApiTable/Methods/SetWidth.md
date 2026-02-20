@@ -26,7 +26,7 @@ boolean
 
 This example sets the preferred width to the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the width of the table.
 
 // Set the table width in percentage.

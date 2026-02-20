@@ -22,7 +22,7 @@ number
 
 This example shows how to get an index of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field's index.
 
 // Create a pivot table, add data to it then get an index of a specified pivot field.

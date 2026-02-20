@@ -24,7 +24,7 @@ string
 
 This example shows how to get the current word.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a word where the cursor is set.
 
 // Display the parts of the word before or after the cursor.

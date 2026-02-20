@@ -26,7 +26,7 @@ expression.InsertPivotExistingWorksheet(dataRef, pivotRef, confirmation);
 
 This example shows how to insert PivotTable on existing worksheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to insert a pivot table into a range of an existing worksheet using references.
 
 // Get a pivot table and insert it to the range.

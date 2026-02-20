@@ -22,7 +22,7 @@ string
 
 This example shows how to get the text from the form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get a raw text of a text form.
 
 // Display the answer of the form as a raw text.

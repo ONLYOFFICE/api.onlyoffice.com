@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to get the bold property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know whether a font style of characters is bold.
 
 // Get a boolean value that represents whether a font is bold or not and show the value in the worksheet.

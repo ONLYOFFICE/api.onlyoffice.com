@@ -24,7 +24,7 @@ expression.GetStyle(sStyleName);
 
 This example shows how to get a style by its name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the style of the heading.
 
 // Display the style name of the "Heading 6".

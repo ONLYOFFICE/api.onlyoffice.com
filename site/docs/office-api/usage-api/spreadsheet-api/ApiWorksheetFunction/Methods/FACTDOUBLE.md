@@ -24,7 +24,7 @@ number
 
 This example shows how to return the double factorial of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate a double factorial.
 
 // Use function to calculate the double factorial of a number.

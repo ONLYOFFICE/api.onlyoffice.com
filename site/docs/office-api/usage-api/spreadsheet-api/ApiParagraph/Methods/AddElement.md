@@ -25,7 +25,7 @@ boolean
 
 This example adds a Run to the paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add text to the paragraph.
 
 // Get the paragraph from the shape and change its text.

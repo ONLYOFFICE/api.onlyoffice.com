@@ -24,7 +24,7 @@ boolean
 
 This example pushes 5 paragraphs to actually add its to the document content.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to insert paragraphs into a document.
 
 // Add text to a newly created paragraph and add this paragraph into document.

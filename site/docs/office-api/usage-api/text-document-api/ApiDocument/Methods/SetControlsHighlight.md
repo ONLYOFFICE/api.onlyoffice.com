@@ -27,7 +27,7 @@ boolean
 
 This example sets the highlight to the content controls from the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to highlight thw controls with rose color.
 
 // Add elements to the document and color their background.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example finds out the current form spacing value.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out th text spacing.
 
 // Get the property of the text that shows the size of spacing.

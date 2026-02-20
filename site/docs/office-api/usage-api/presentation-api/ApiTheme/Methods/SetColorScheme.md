@@ -24,7 +24,7 @@ boolean
 
 This example sets the color scheme to the current presentation theme.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a theme and set a new color scheme.
 
 // Create a new color scheme and apply it to the slide theme.

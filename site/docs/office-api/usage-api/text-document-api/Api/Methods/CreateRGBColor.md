@@ -26,7 +26,7 @@ expression.CreateRGBColor(r, g, b);
 
 This example shows how to create an RGB color for the gradient stop.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates an RGB color setting the appropriate values for the red, green and blue color components.
 
 // How to create the ApiRGBColor object and use it to create a gradient stop.

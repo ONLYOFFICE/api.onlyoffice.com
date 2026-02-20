@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiPresetColor object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the preset color object.
 
 // Convert the preset color element to json and add it to the paragraph.

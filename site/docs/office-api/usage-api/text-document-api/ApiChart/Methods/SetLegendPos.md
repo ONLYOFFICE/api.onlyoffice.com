@@ -24,7 +24,7 @@ boolean
 
 This example specifies the chart legend position.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set legend position of the chart.
 
 // Create a chart and move its legend to the bottom.

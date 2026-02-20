@@ -28,7 +28,7 @@ number
 
 This example shows how to return the amount received at maturity for a fully invested security.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to estimate the amount received at maturity.
 
 // Use a function to calculate the funds got at maturity for a fully invested security.

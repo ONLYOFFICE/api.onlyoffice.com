@@ -24,7 +24,7 @@ number
 
 This example shows how to return the value of the density function for a standard normal distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the value of the density function.
 
 // Use a function to claculate the value of the density function.

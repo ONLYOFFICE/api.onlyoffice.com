@@ -24,7 +24,7 @@ expression.AddDataField(field);
 
 This example shows how to a data field to a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add new field to the table.
 
 // Create a pivot table, add data to it then add new data field to it.

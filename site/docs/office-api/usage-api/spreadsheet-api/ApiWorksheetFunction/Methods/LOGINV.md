@@ -26,7 +26,7 @@ number
 
 This example shows how to return the inverse of the lognormal cumulative distribution function of x, where ln(x) is normally distributed with the specified parameters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the lognormal cumulative distribution function of x.
 
 // Use a function to return the lognormal cumulative distribution function.

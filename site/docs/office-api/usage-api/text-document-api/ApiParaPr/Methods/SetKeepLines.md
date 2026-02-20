@@ -24,7 +24,7 @@ boolean
 
 This example specifies that when rendering the document using a page view, all lines of the paragraph are maintained on a single page whenever possible.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set keep lines property of the paragraph content.
 
 // Keep all lines of the paragraph on the same page.

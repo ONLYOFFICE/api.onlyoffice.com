@@ -25,7 +25,7 @@ expression.GetPivotItems(index);
 
 This example shows how to get items of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field items.
 
 // Create a pivot table, add data to it then get items of a specified pivot field as an array.

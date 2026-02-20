@@ -22,7 +22,7 @@ string \| string[][]
 
 This example shows how to get the text of the specified range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a cell raw text value.
 
 // Get a range, get its text value and show it in the worksheet.

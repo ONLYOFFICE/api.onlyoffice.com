@@ -24,7 +24,7 @@ expression.GetById(xmlPartId);
 
 This example shows how to get a custom XML part by its ID.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve a custom XML part using its ID.
 
 // Get an XML part by its ID.

@@ -25,7 +25,7 @@ boolean
 
 This example specifies whether sections in this document will have different headers and footers for even and odd pages.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make headers and footers different for even and odd pages.
 
 // Set a boolean value that indicates whether to keep the headers and footers same for odd/even pages or not.

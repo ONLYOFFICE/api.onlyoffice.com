@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a tab stop to the paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to insert a text separated by a tab.
 
 // Get the paragraph from the shape and add two sentences separated by three tabs.

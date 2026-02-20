@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example deletes all conditional formatting from a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete conditional formatting rules from cells.
 
 // Delete all conditional formatting from cells.

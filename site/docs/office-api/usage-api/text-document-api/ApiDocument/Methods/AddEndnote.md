@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds an endnote for the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add endnote to the document.
 
 // Get all endnotes first paragraphs and make the first one bold.

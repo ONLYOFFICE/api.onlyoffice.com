@@ -20,7 +20,7 @@ Enumeration
 
 This example adds a table of figures of the distinctive style to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a table of figures with distinctive style property.
 
 // Create a property for table of figures indicating its style.

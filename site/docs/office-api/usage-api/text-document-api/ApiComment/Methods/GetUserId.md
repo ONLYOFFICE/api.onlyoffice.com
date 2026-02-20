@@ -22,7 +22,7 @@ string
 
 This example shows how to get the user ID of the comment author.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get ID of the user who left the first comment.
 
 // Get the comment author ID.

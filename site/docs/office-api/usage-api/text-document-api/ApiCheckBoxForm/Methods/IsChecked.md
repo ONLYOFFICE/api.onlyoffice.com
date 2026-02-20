@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get the state of the checkbox.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know whether the checkbox form is checked.
 
 // Get a boolean value representing whether a current form is checked or not.

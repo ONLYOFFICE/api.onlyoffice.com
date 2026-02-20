@@ -27,7 +27,7 @@ boolean
 
 This example shows how to make search and replace.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to search for a specific word and replace it with another one.
 
 // Search the first string and replace it with the second one.

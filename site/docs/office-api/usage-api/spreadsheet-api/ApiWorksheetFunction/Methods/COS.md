@@ -24,7 +24,7 @@ number
 
 This example shows how to get the cosine of an angle.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a cosine.
 
 // Use function to get the cosine of an angle.

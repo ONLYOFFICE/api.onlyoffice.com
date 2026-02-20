@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the first series of ApiChart class and inserts its type into the document.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out a chart type.
 
 // Display a chart type inserting it in a range.

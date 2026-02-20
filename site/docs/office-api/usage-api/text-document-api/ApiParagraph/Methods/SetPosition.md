@@ -25,7 +25,7 @@ expression.SetPosition(nPosition);
 
 This example specifies an amount by which text is raised or lowered for this paragraph in relation to the default baseline of the surrounding non-positioned text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the line position of the text.
 
 // Lower the paragraph by 15 points.

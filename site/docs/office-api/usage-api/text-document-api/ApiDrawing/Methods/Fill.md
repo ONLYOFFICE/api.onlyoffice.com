@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill formatting properties to the current graphic object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color a drawing with a radiant fill.
 
 // Change the background color of the shape.

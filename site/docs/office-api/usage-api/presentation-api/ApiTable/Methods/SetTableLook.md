@@ -35,7 +35,7 @@ This method doesn't return any data.
 
 This example shows how to set a table look.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a table look with options.
 
 // Create the ApiTable object and set its look.

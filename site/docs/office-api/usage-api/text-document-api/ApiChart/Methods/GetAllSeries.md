@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets all series of ApiChart class and inserts their types into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get all series from the chart and show each one's type in the document.
 
 // Display each chart series type in the document.

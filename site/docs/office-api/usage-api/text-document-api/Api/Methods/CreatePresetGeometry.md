@@ -24,7 +24,7 @@ expression.CreatePresetGeometry(sPreset);
 
 This example demonstrates creating a preset geometry.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

@@ -26,7 +26,7 @@ boolean
 
 This example shows how to set an attribute value on a custom XML node.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set an attribute on an XML node.
 
 // Set an XML node attribute.

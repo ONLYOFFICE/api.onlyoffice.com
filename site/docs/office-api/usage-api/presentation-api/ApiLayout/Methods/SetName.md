@@ -24,7 +24,7 @@ boolean
 
 This example sets a name to the current layout.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set name for a layout.
 
 // Rename a slide layout.

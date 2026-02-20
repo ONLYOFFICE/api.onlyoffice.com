@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the priority of a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the priority value of conditional formatting rules.
 
 // Set conditional formatting rule priority.

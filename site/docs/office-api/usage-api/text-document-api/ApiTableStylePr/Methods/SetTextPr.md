@@ -24,7 +24,7 @@ expression.SetTextPr(oTextPr);
 
 This example shows how to create and set text run properties which will be applied to all the text runs within the table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set text properties to the table style and make it bold.
 
 // Update the table style text properties.

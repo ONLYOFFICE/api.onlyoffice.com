@@ -25,7 +25,7 @@ boolean
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the image size of the watermark.
 
 // Resize the image using the watermark settings.

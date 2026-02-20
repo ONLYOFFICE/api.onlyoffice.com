@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart plot area.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a background color for the plot area.
 
 // Create a chart, set its properties and its plot area color.

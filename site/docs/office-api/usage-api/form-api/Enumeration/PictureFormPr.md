@@ -16,7 +16,7 @@ Enumeration
 
 This example creates a picture form with the common and specific picture form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to set the properties to the ApiPictureForm object.
 
 // Specify the picture form properties like placeholder, tip text, position, key, etc.

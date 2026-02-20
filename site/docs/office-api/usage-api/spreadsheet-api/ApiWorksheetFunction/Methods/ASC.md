@@ -24,7 +24,7 @@ string
 
 This example shows for double-byte character set (DBCS) languages, the function changes full-width (double-byte) characters to half-width (single-byte) characters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to make characters half-width (single-byte) characters.
 
 // Use function to make characters half-width.

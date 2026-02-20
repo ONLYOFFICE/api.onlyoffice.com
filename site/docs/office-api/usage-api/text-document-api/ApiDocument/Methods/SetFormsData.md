@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set data to forms.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set forms data in the document.
 
 // Set forms answers using their keys.

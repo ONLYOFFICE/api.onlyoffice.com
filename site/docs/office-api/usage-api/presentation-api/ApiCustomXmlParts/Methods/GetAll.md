@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all custom XML parts.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to retrieve all custom XML parts from the presentation.
 
 // Get all XML parts.

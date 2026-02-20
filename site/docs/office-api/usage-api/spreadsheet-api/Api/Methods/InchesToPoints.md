@@ -24,7 +24,7 @@ number
 
 This example shows how to convert inches to points.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const inches = 100;
 const points = Api.InchesToPoints(inches);
 const text = inches + ' inches are equal to ' + points + ' points.';

@@ -22,7 +22,7 @@ boolean
 
 This example checks if the current form is required.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to know whether a text form is required or not.
 
 // Display a boolean representing whether a text form is required.

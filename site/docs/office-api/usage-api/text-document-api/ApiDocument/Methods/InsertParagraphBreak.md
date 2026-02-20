@@ -22,7 +22,7 @@ boolean
 
 This example shows how to enter a paragraph at the current cursor position.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a paragraph at the cursor position.
 
 // Add text and create a new paragraph.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a type of the ApiBullet class and insert it into the table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a class type of a bullet and show it in the sheet.
 
 // Get a class type of an object.

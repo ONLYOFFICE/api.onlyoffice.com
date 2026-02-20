@@ -22,7 +22,7 @@ string
 
 This example gets the application ID from the current OLE object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return an application ID of the current OLE object.
 
 // Get an application ID of a specified OLE object.

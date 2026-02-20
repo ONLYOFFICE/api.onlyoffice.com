@@ -29,7 +29,7 @@ This method doesn't return any data.
 
 Creates a complex curved shape using various bezier and arc commands.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Demonstrates different curve types in a single path on a slide.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

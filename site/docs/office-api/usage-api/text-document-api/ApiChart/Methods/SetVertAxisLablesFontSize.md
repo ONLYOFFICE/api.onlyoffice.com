@@ -24,7 +24,7 @@ boolean
 
 This example specifies font size for the labels of the vertical axis.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to resize a font size of the vertical axis labels.
 
 // Create a chart then change a font size of axis labels.

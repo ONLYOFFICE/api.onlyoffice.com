@@ -24,7 +24,7 @@ boolean
 
 This example shows how to enter text at the current cursor position.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a line break at the cursor position.
 
 // Enter text in a paragraph and add a line break.

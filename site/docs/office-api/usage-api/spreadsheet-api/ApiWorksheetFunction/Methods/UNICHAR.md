@@ -24,7 +24,7 @@ string
 
 This example shows how to return the Unicode character referenced by the given numeric value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a Unicode character.
 
 // Use a function to return the Unicode character knowing its reference number.

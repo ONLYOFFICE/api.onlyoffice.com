@@ -22,7 +22,7 @@ string \| null
 
 Extracts control points from a cubic bezier curve in a presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Displays all control point coordinates in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

@@ -24,7 +24,7 @@ boolean
 
 This example removes a table row with the specified cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete a row from the table.
 
 // Create a table, create cells and remove the whole row by its cell.

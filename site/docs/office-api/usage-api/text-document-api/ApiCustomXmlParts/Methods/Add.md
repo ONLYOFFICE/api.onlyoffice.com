@@ -24,7 +24,7 @@ expression.Add(xml);
 
 This example shows how to add a new custom XML part and then access it.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let newXml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

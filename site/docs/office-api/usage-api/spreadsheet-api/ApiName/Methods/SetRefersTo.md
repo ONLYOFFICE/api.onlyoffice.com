@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets a formula that the name is defined to refer to.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a name and refer it to the formula.
 
 // Create new ranges and a formula, refer a name to the formula then display it in the worksheet.

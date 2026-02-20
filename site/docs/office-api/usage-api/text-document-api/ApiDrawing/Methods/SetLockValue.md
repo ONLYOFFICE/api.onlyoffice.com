@@ -25,7 +25,7 @@ boolean
 
 This example sets the lock value to the specified lock type of the current drawing.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the lock value to "noSelect" of the drawing.
 
 // Create a drawing and lock it.
