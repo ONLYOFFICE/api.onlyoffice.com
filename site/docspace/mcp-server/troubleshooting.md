@@ -1,6 +1,6 @@
 ---
 sidebar_label: Troubleshooting
-sidebar_position: 6
+sidebar_position: 10
 ---
 
 # Troubleshooting
@@ -8,15 +8,9 @@ sidebar_position: 6
 This document describes common configuration issues when working with the
 DocSpace MCP server.
 
-## Contents
-
-- [Parsing Errors](#parsing-errors)
-- [References](#references)
-
 ## Parsing Errors
 
-If an error occurs during global configuration parsing, the DocSpace MCP server
-will automatically fall back to using the stdio transport and defer the
+If an error occurs during global configuration parsing, the DocSpace MCP server will automatically fall back to using the stdio transport and defer the
 configuration error until tool execution:
 
 0. Encounter an error while parsing global configuration.
@@ -28,13 +22,9 @@ This fallback behavior is implemented to ensure compatibility with the Docker
 MCP Registry, which requires servers to start successfully even with
 configuration issues.
 
-## References
+## Unable to create DocSpace room with connected MCP client
 
-- [Docker Docs: MCP Catalog and Toolkit]
-- [DocSpace MCP: Global Configuration]
+This error may arise due to the a wrong connection. To fix this:
 
-<!-- Definitions -->
-
-[Docker Docs: MCP Catalog and Toolkit]: https://docs.docker.com/ai/mcp-catalog-and-toolkit/
-
-[DocSpace MCP: Global Configuration]: ./global-configuration.md
+- Check your DocSpace MCP server-client connection
+- Reach out to support if issue persists.

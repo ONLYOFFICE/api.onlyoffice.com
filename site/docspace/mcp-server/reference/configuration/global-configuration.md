@@ -1,8 +1,12 @@
 # Global Configuration
 
-This document describes all available configuration options for the DocSpace MCP
-server. Configuration can be provided through environment variables, and options
-are organized by their functional area.
+This document describes all available configuration options for the DocSpace MCP server. Configuration can be provided through environment variables, and options are organized by their functional area.
+
+- [MCP options](#mcp-options): This group controls the behavior of the DocSpace MCP server. 
+- [API options](#api-options): Variables in this group configures the behavior of API requests
+- [OAuth options](#oauth-options): This group contains variables that controls the behavior of the OAuth server
+- [Server Options](#server-options): Variables in this group configures the behavior of the HTTP server. 
+
 
 ## Contents
 
@@ -82,130 +86,91 @@ The following options are used to configure the behavior of the MCP server.
 
 #### DOCSPACE_TRANSPORT
 
-The transport protocol to use for communication with the MCP server.
+Transport protocol for MCP server communication. The `http` variant is a composite of `sse` and `streamable-http`.
 
-The `sse` variant is deprecated since MCP version 2025-03-26, however it is
-still supported for backward compatibility with older clients.
+:::note
+`sse` is deprecated since MCP 2025-03-26 but remains supported for backward compatibility.
+:::
 
-The `http` variant is composite of `sse` and `streamable-http`.
-
-##### Signature
-
-- Type: union of transport names
-- Variants: `stdio`, `sse`, `streamable-http`, `http`
-- Attributes: trimmable, case-insensitive
-- Default: `stdio`
-
-##### References
-
-- [MCP: Transports]
+| | |
+|---|---|
+| **Type** | string (union) |
+| **Default** | `stdio` |
+| **Variants** | `stdio` `sse` `streamable-http` `http` |
+| **Attributes** | trimmable, case-insensitive |
 
 #### DOCSPACE_DYNAMIC
 
-The flag that indicates whether the MCP server should use meta tools.
+Enables meta tools for dynamic tool selection. Complementary to `DOCSPACE_TOOLSETS`, `DOCSPACE_ENABLED_TOOLS`, and `DOCSPACE_DISABLED_TOOLS`.
 
-This option is complementary to [`DOCSPACE_TOOLSETS`],
-[`DOCSPACE_ENABLED_TOOLS`], and [`DOCSPACE_DISABLED_TOOLS`].
+| | |
+|---|---|
+| **Type** | boolean |
+| **Default** | `0` (false) |
+| **True** | `yes` `y` `true` `1` |
+| **False** | `no` `n` `false` `0` |
+| **Attributes** | trimmable, case-insensitive |
+| **Transports** | all |
 
-##### Signature
-
-- Type: boolean
-- Variants (true): `yes`, `y`, `true`, `1`
-- Variants (false): `no`, `n`, `false`, `0`
-- Attributes: trimmable, case-insensitive
-- Default: `0` (false)
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace MCP: Meta Tools]
 
 #### DOCSPACE_TOOLSETS
 
-The list of toolsets to enable for the MCP server.
+Comma-separated list of toolsets to enable. Use `all` to include every available tool.
 
-The `all` is a special value that includes all available tools.
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Default** | `all` |
+| **Example** | `files,people` |
+| **Attributes** | trimmable, case-insensitive |
+| **Transports** | all |
 
-##### Signature
-
-- Type: comma-separated list of toolset names
-- Attributes: trimmable, case-insensitive
-- Default: `all`
-- Example: `files,people`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace MCP: Toolsets]
-- [DocSpace MCP: Tools Resolution]
 
 #### DOCSPACE_ENABLED_TOOLS
 
-The list of tools to enable for the MCP server.
+Comma-separated list of tools to explicitly enable.
 
-##### Signature
-
-- Type: comma-separated list of tool names
-- Attributes: trimmable, case-insensitive
-- Example: `get_file,get_all_people`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace MCP: Tools]
-- [DocSpace MCP: Tools Resolution]
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `get_file,get_all_people` |
+| **Attributes** | trimmable, case-insensitive |
+| **Transports** | all |
 
 #### DOCSPACE_DISABLED_TOOLS
 
-The list of tools to disable for the MCP server.
+Comma-separated list of tools to explicitly disable.
 
-##### Signature
-
-- Type: comma-separated list of tool names
-- Attributes: trimmable, case-insensitive
-- Example: `get_file,get_all_people`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace MCP: Tools]
-- [DocSpace MCP: Tools Resolution]
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `get_file,get_all_people` |
+| **Attributes** | trimmable, case-insensitive |
+| **Transports** | all |
 
 #### DOCSPACE_SESSION_TTL
 
-The time-to-live (TTL) for HTTP sessions in milliseconds.
+TTL for HTTP sessions in milliseconds. Set to `0` to disable session expiration.
 
-The `0` is a special value that prevents session expiration.
-
-##### Signature
-
-- Type: number
-- Attributes: trimmable
-- Minimum: `0`
-- Default: `28800000` (8 hours)
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [MCP: Session Management]
+| | |
+|---|---|
+| **Type** | number |
+| **Default** | `28800000` (8 hours) |
+| **Minimum** | `0` |
+| **Attributes** | trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_SESSION_INTERVAL
 
-The interval for checking HTTP sessions for expiration in milliseconds.
+Interval for checking HTTP sessions for expiration in milliseconds. Set to `0` to disable session cleanup entirely.
 
-The `0` is a special value that disables session cleanup.
-
-##### Signature
-
-- Type: number
-- Attributes: trimmable
-- Minimum: `0`
-- Default: `240000` (4 minutes)
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [MCP: Session Management]
+| | |
+|---|---|
+| **Type** | number |
+| **Default** | `240000` (4 minutes) |
+| **Minimum** | `0` |
+| **Attributes** | trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 ### API Options
 
@@ -213,67 +178,41 @@ The following options are used to configure the behavior for API requests.
 
 #### DOCSPACE_USER_AGENT
 
-The user agent to include in the `User-Agent` header for API requests.
+User agent sent in the `User-Agent` header for API requests.
 
-##### Signature
+| | |
+|---|---|
+| **Type** | string |
+| **Default** | `@onlyoffice/docspace-mcp v3.1.0` |
+| **Attributes** | trimmable |
+| **Transports** | all |
 
-- Type: string
-- Attributes: trimmable
-- Default: `@onlyoffice/docspace-mcp v3.1.0`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [MDN: User-Agent Header]
 
 #### DOCSPACE_BASE_URL
 
-The base URL of the DocSpace instance for API requests.
+Base URL of the DocSpace instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication option is set.
 
-The base URL must use HTTP or HTTPS scheme without search parameters or hash
-fragments.
-
-This option is required if either [`DOCSPACE_AUTHORIZATION`],
-[`DOCSPACE_API_KEY`], [`DOCSPACE_AUTH_TOKEN`], or the
-[`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair is set.
-
-##### Signature
-
-- Type: url
-- Attributes: trimmable
-- Example: `https://your-instance.onlyoffice.com/`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
+| | |
+|---|---|
+| **Type** | url |
+| **Example** | `https://your-instance.onlyoffice.com/` |
+| **Attributes** | trimmable |
+| **Transports** | all |
 
 #### DOCSPACE_AUTHORIZATION
 
-The raw value to include in the `Authorization` header for API requests.
+Raw value sent in the `Authorization` header for API requests. Required for `stdio` if no other authentication option is set. Mutually exclusive with all other authentication options on HTTP transports.
 
-This option is required if [`DOCSPACE_TRANSPORT`] is set to `stdio` and neither
-[`DOCSPACE_API_KEY`], [`DOCSPACE_AUTH_TOKEN`], nor the
-[`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair is set.
-
-This option is mutually exclusive with [`DOCSPACE_API_KEY`],
-[`DOCSPACE_AUTH_TOKEN`], the [`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair,
-and the [`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
-[`DOCSPACE_TRANSPORT`] is set to `sse`, `streamable-http`, or `http`.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `Bearer sk-a499e...`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace API: API Keys]
-- [DocSpace API: Personal Access Tokens]
-- [DocSpace API: Basic Authentication]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `Bearer sk-a499e...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | all |
 
 #### DOCSPACE_API_KEY
 
-The API key for accessing the API.
+Raw value sent in the `Authorization` header for API requests. 
 
 This option is required if [`DOCSPACE_TRANSPORT`] is set to `stdio` and neither
 [`DOCSPACE_AUTHORIZATION`], [`DOCSPACE_AUTH_TOKEN`], nor the
@@ -284,74 +223,39 @@ This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
 and the [`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
 [`DOCSPACE_TRANSPORT`] is set to `sse`, `streamable-http`, or `http`.
 
-##### Signature
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `Bearer sk-a499e...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | all |
 
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `sk-a499e...`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace API: API Keys]
-- [DocSpace MCP: Authentication Resolution]
 
 #### DOCSPACE_AUTH_TOKEN
 
-The Personal Access Token (PAT) for accessing the API.
+Personal Access Token (PAT) for accessing the API. Required for `stdio` if no other authentication option is set. Mutually exclusive with all other authentication options on HTTP transports.
 
-This option is required if [`DOCSPACE_TRANSPORT`] is set to `stdio` and neither
-[`DOCSPACE_AUTHORIZATION`], [`DOCSPACE_API_KEY`], nor the
-[`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair is set.
-
-This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
-[`DOCSPACE_API_KEY`], the [`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair, and
-the [`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
-[`DOCSPACE_TRANSPORT`] is set to `sse`, `streamable-http`, or `http`.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `Fe4Hrgl6...`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace API: Personal Access Tokens]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `Fe4Hrgl6...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | all |
 
 #### DOCSPACE_USERNAME
 
-The username for accessing the API using basic authentication.
+Username for basic authentication. Used together with `DOCSPACE_PASSWORD`. Required for `stdio` if no other authentication option is set. Mutually exclusive with all other authentication options on HTTP transports.
 
-This option is used in conjunction with [`DOCSPACE_PASSWORD`].
-
-This option is required if [`DOCSPACE_TRANSPORT`] is set to `stdio` and neither
-[`DOCSPACE_AUTHORIZATION`], [`DOCSPACE_API_KEY`], nor [`DOCSPACE_AUTH_TOKEN`] is
-set.
-
-This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
-[`DOCSPACE_API_KEY`], [`DOCSPACE_AUTH_TOKEN`], and the
-[`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
-[`DOCSPACE_TRANSPORT`] is set to `sse`, `streamable-http`, or `http`.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `henry.milton@onlyoffice.com`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace API: Basic Authentication]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `henry.milton@onlyoffice.com` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | all |
 
 #### DOCSPACE_PASSWORD
 
-The password for accessing the API using basic authentication.
-
+Password for basic authentication. Used together with `DOCSPACE_USERNAME`. 
 This option is used in conjunction with [`DOCSPACE_USERNAME`].
 
 This option is required if [`DOCSPACE_TRANSPORT`] is set to `stdio` and neither
@@ -363,87 +267,54 @@ This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
 [`DOCSPACE_OAUTH_CLIENT_ID`]/[`DOCSPACE_OAUTH_CLIENT_SECRET`] pair if
 [`DOCSPACE_TRANSPORT`] is set to `sse`, `streamable-http`, or `http`.
 
-##### Signature
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `ditgor-p...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | all |
 
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `ditgor-p...`
-- Transports: `stdio`, `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace API: Basic Authentication]
-- [DocSpace MCP: Authentication Resolution]
 
 #### DOCSPACE_OAUTH_BASE_URL
 
-The base URL of the DocSpace OAuth service for OAuth requests.
+Base URL of the DocSpace OAuth service. Must use HTTP or HTTPS with no search parameters or hash fragments. Set to an empty string to disable OAuth authentication.
 
-The base URL must use HTTP or HTTPS scheme without search parameters or hash
-fragments.
-
-The empty string is a special value that disables OAuth authentication.
-
-##### Signature
-
-- Type: url
-- Attributes: trimmable
-- Example: `https://oauth-instance.onlyoffice.com/`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | url |
+| **Example** | `https://oauth-instance.onlyoffice.com/` |
+| **Attributes** | trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_CLIENT_ID
 
-The client ID of the OAuth application.
-
-The empty string is a special value that disables client registration.
-
-This options is used in conjunction with [`DOCSPACE_OAUTH_CLIENT_SECRET`].
-
+Client ID of the OAuth application. Used together with `DOCSPACE_OAUTH_CLIENT_SECRET`. Set to an empty string to disable client registration. 
 This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
 [`DOCSPACE_API_KEY`], [`DOCSPACE_AUTH_TOKEN`], and the
 [`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair if [`DOCSPACE_TRANSPORT`] is
 set to `sse`, `streamable-http`, or `http`.
 
-##### Signature
-
-- Type: string
-- Attributes: trimmable
-- Example: `68cf0a49...`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7591: Client Metadata]
-- [DocSpace API: OAuth]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `68cf0a49...` |
+| **Attributes** | trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_CLIENT_SECRET
 
-The client secret of the OAuth application.
-
-This option is used in conjunction with [`DOCSPACE_OAUTH_CLIENT_ID`].
-
+Client secret of the OAuth application. Used together with `DOCSPACE_OAUTH_CLIENT_ID`. 
 This option is mutually exclusive with [`DOCSPACE_AUTHORIZATION`],
 [`DOCSPACE_API_KEY`], [`DOCSPACE_AUTH_TOKEN`], and the
 [`DOCSPACE_USERNAME`]/[`DOCSPACE_PASSWORD`] pair if [`DOCSPACE_TRANSPORT`] is
 set to `sse`, `streamable-http`, or `http`.
 
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `vEHLGi5...`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7591: Client Metadata]
-- [DocSpace API: OAuth]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `vEHLGi5...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 ### OAuth Options
 
@@ -451,120 +322,73 @@ The following options are used to configure the behavior of the OAuth server.
 
 #### DOCSPACE_OAUTH_AUTH_TOKEN_ALGORITHM
 
-The algorithm to use for signing OAuth access tokens.
+Algorithm for signing OAuth access tokens. Used together with `DOCSPACE_OAUTH_AUTH_TOKEN_SECRET_KEY`. Set to an empty string to disable token signing.
 
-The empty string is a special value that disables signing of access tokens.
-
-This option is used in conjunction with
-[`DOCSPACE_OAUTH_AUTH_TOKEN_SECRET_KEY`].
-
-##### Signature
-
-- Type: union of algorithm names
-- Variants: `HS256`, `HS384`, `HS512`
-- Attributes: trimmable, case-insensitive
-- Default: `HS256`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7518: Cryptographic Algorithms for Digital Signatures and MACs]
+| | |
+|---|---|
+| **Type** | string (union) |
+| **Default** | `HS256` |
+| **Variants** | `HS256` `HS384` `HS512` |
+| **Attributes** | trimmable, case-insensitive |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_AUTH_TOKEN_TTL
 
-The time-to-live (TTL) for OAuth access tokens in milliseconds.
+TTL for OAuth access tokens in milliseconds. Set to `0` to disable token expiration.
 
-The `0` is a special value that prevents token expiration.
-
-##### Signature
-
-- Type: number
-- Attributes: trimmable
-- Minimum: `0`
-- Default: `3600000` (1 hour)
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7591: "exp" (Expiration Time) Claim]
+| | |
+|---|---|
+| **Type** | number |
+| **Default** | `3600000` (1 hour) |
+| **Minimum** | `0` |
+| **Attributes** | trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_AUTH_TOKEN_SECRET_KEY
 
-The secret key to use for signing OAuth access tokens.
+Secret key for signing OAuth access tokens. Used together with `DOCSPACE_OAUTH_AUTH_TOKEN_ALGORITHM`. Set to an empty string to disable token signing.
 
-The empty string is a special value that disables signing of access tokens.
-
-This option is used in conjunction with [`DOCSPACE_OAUTH_AUTH_TOKEN_ALGORITHM`].
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `Qynnyd-b...`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7518: HMAC with SHA-2 Functions]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `Qynnyd-b...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_STATE_TOKEN_ALGORITHM
 
-The algorithm to use for signing OAuth state tokens.
+Algorithm for signing OAuth state tokens. Used together with `DOCSPACE_OAUTH_STATE_TOKEN_SECRET_KEY`. Set to an empty string to disable state token signing.
 
-The empty string is a special value that disables signing of state tokens.
-
-This option is used in conjunction with
-[`DOCSPACE_OAUTH_STATE_TOKEN_SECRET_KEY`].
-
-##### Signature
-
-- Type: union of algorithm names
-- Variants: `HS256`, `HS384`, `HS512`
-- Attributes: trimmable, case-insensitive
-- Default: `HS256`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7518: Cryptographic Algorithms for Digital Signatures and MACs]
+| | |
+|---|---|
+| **Type** | string (union) |
+| **Default** | `HS256` |
+| **Variants** | `HS256` `HS384` `HS512` |
+| **Attributes** | trimmable, case-insensitive |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_STATE_TOKEN_TTL
 
-The time-to-live (TTL) for OAuth state tokens in milliseconds.
+TTL for OAuth state tokens in milliseconds. Set to `0` to disable token expiration.
 
-The `0` is a special value that prevents token expiration.
-
-##### Signature
-
-- Type: number
-- Attributes: trimmable
-- Minimum: `0`
-- Default: `3600000` (1 hour)
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7591: "exp" (Expiration Time) Claim]
+| | |
+|---|---|
+| **Type** | number |
+| **Default** | `3600000` (1 hour) |
+| **Minimum** | `0` |
+| **Attributes** | trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 #### DOCSPACE_OAUTH_STATE_TOKEN_SECRET_KEY
 
-The secret key to use for signing OAuth state tokens.
+Secret key for signing OAuth state tokens. Used together with `DOCSPACE_OAUTH_STATE_TOKEN_ALGORITHM`. Set to an empty string to disable state token signing.
 
-The empty string is a special value that disables signing of state tokens.
-
-This option is used in conjunction with
-[`DOCSPACE_OAUTH_STATE_TOKEN_ALGORITHM`].
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `hoPkun-6...`
-- Transports: `sse`, `streamable-http`, `http`
-
-##### References
-
-- [RFC 7518: HMAC with SHA-2 Functions]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `hoPkun-6...` |
+| **Attributes** | sensitive, trimmable |
+| **Transports** | `sse` `streamable-http` `http` |
 
 ### Server Options
 

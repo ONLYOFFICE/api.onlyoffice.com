@@ -217,9 +217,15 @@ Connect to the locally running MCP server using stdio transport.
 7. Enter the server URL with your DocSpace instance as a query parameter:
    `https://mcp.onlyoffice.com/mcp?base_url=https://your-instance.onlyoffice.com`
    (replace the base_url value with your actual DocSpace URL).
-8. Select "API Token Authentication" in the "Authentication Methods" section.
-9. In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
-10. Click "Connect".
+8. Authenticate the connection with any of these auth methods 
+    - **OAuth**: 
+        - Select **OAuth 2.1** from **Authentication method**. 
+        - Enter your **Client ID** and **Client Secret** gotten from [creating your custom app on DocSpace](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/)
+    - **API Token**: 
+        - Select "API Token Authentication" from "Authentication Methods" section and 
+        - In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
+9. Click "Connect".
+10. Confirm connection by enabling the docspace mcp server in the **Enable tools** section of the chat bar. 
 
 </TabItem>
 <TabItem value="vscode" label="VSCode" default>
