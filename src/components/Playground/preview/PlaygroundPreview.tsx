@@ -114,6 +114,9 @@ export const PlaygroundPreview = () => {
                     },
                     customization: {
                         uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
+                        mobile: {
+                            disableForceDesktop:true,
+                        },
                         features: {
                             featuresTips: false,
                         },
