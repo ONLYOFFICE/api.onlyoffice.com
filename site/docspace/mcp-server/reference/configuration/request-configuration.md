@@ -1,40 +1,15 @@
-# Request Configuration
+# Request configuration
 
-This document describes how to configure the DocSpace MCP server behavior on the
-request level using query parameters and custom headers. Request configuration
-is only available for HTTP-like transports.
+This document lists and describes the variables used to configure the DocSpace MCP server behavior at the request level using [query parameters](#query-options) and [custom headers](#header-options). 
 
-## Contents
-
-- [Query Options](#query-options)
-  - [MCP Options](#mcp-options)
-    - [dynamic](#dynamic)
-    - [toolsets](#toolsets)
-    - [enabled_tools](#enabled_tools)
-    - [disabled_tools](#disabled_tools)
-  - [API Options](#api-options-1)
-    - [base_url](#base_url)
-- [Header Options](#header-options)
-  - [MCP Options](#mcp-options-1)
-    - [X-Mcp-Dynamic](#x-mcp-dynamic)
-    - [X-Mcp-Toolsets](#x-mcp-toolsets)
-    - [X-Mcp-Enabled-Tools](#x-mcp-enabled-tools)
-    - [X-Mcp-Disabled-Tools](#x-mcp-disabled-tools)
-  - [API Options](#api-options-2)
-    - [X-Mcp-Base-Url](#x-mcp-base-url)
-    - [Authorization](#authorization)
-    - [X-Mcp-Api-Key](#x-mcp-api-key)
-    - [X-Mcp-Auth-Token](#x-mcp-auth-token)
-    - [X-Mcp-Username](#x-mcp-username)
-    - [X-Mcp-Password](#x-mcp-password)
-- [Examples](#examples)
-  - [Authentication with API Key](#authentication-with-api-key)
-  - [Custom Tool Selection](#custom-tool-selection)
+:::note
+The request configuration parameters are only available for HTTP-like transports
+:::
 
 ## Query Options
 
-The following options can be configured using query parameters in the request
-URL.
+These options can be configured using query parameters in the request
+URL and are divided into the MCP and API options.
 
 Query parameters are only available if the MCP server is configured to accept
 configuration via query parameters.
@@ -45,83 +20,44 @@ The following options are used to configure the behavior of the MCP server.
 
 #### dynamic
 
-The flag that indicates whether the MCP server should use meta tools.
+Enables meta tools for dynamic tool selection. Complementary to `toolsets`, `enabled_tools`, and `disabled_tools`. Mutually exclusive with `X-Mcp-Dynamic`.
 
-This option is complementary to [`toolsets`], [`enabled_tools`], and
-[`disabled_tools`].
-
-This option is mutually exclusive with [`X-Mcp-Dynamic`].
-
-##### Signature
-
-- Type: boolean
-- Variants (true): `yes`, `y`, `true`, `1`
-- Variants (false): `no`, `n`, `false`, `0`
-- Attributes: trimmable, case-insensitive
-
-##### References
-
-- [DocSpace MCP: Meta Tools]
+| | |
+|---|---|
+| **Type** | boolean |
+| **True** | `yes` `y` `true` `1` |
+| **False** | `no` `n` `false` `0` |
+| **Attributes** | trimmable, case-insensitive |
 
 #### toolsets
 
-The list of toolsets to enable for the MCP server.
+Comma-separated list of toolsets to enable. Available toolsets depend on the global server configuration. Mutually exclusive with `X-Mcp-Toolsets`.
 
-The available list of toolsets for this options depends on the MCP server global
-configuration.
-
-This option is mutually exclusive with [`X-Mcp-Toolsets`].
-
-##### Signature
-
-- Type: comma-separated list of toolset names
-- Attributes: trimmable, case-insensitive
-- Example: `files,people`
-
-##### References
-
-- [DocSpace MCP: Toolsets]
-- [DocSpace MCP: Tools Resolution]
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `files,people` |
+| **Attributes** | trimmable, case-insensitive |
 
 #### enabled_tools
 
-The list of tools to enable for the MCP server.
+Comma-separated list of tools to explicitly enable. Available tools depend on the global server configuration. Mutually exclusive with `X-Mcp-Enabled-Tools`.
 
-The available list of tools for this options depends on the MCP server global
-configuration.
-
-This option is mutually exclusive with [`X-Mcp-Enabled-Tools`].
-
-##### Signature
-
-- Type: comma-separated list of tool names
-- Attributes: trimmable, case-insensitive
-- Example: `get_file,get_all_people`
-
-##### References
-
-- [DocSpace MCP: Tools]
-- [DocSpace MCP: Tools Resolution]
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `get_file,get_all_people` |
+| **Attributes** | trimmable, case-insensitive |
 
 #### disabled_tools
 
-The list of tools to disable for the MCP server.
+Comma-separated list of tools to explicitly disable. Available tools depend on the global server configuration. Mutually exclusive with `X-Mcp-Disabled-Tools`.
 
-The available list of tools for this options depends on the MCP server global
-configuration.
-
-This option is mutually exclusive with [`X-Mcp-Disabled-Tools`].
-
-##### Signature
-
-- Type: comma-separated list of tool names
-- Attributes: trimmable, case-insensitive
-- Example: `get_file,get_all_people`
-
-##### References
-
-- [DocSpace MCP: Tools]
-- [DocSpace MCP: Tools Resolution]
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `get_file,get_all_people` |
+| **Attributes** | trimmable, case-insensitive |
 
 ### API Options
 
@@ -129,18 +65,13 @@ The following options are used to configure the behavior for API requests.
 
 #### base_url
 
-The base URL of the DocSpace instance for API requests.
+Base URL of the DocSpace instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Mutually exclusive with `X-Mcp-Base-Url`.
 
-The base URL must use HTTP or HTTPS scheme without search parameters or hash
-fragments.
-
-This option is mutually exclusive with [`X-Mcp-Base-Url`].
-
-##### Signature
-
-- Type: url
-- Attributes: trimmable
-- Example: `https://your-instance.onlyoffice.com/`
+| | |
+|---|---|
+| **Type** | url |
+| **Example** | `https://your-instance.onlyoffice.com/` |
+| **Attributes** | trimmable |
 
 ## Header Options
 
@@ -155,83 +86,55 @@ The following options are used to configure the behavior of the MCP server.
 
 #### X-Mcp-Dynamic
 
-The flag that indicates whether the MCP server should use meta tools.
+Enables meta tools for dynamic tool selection. Complementary to `X-Mcp-Toolsets`, `X-Mcp-Enabled-Tools`, and `X-Mcp-Disabled-Tools`. Mutually exclusive with `dynamic`.
 
-This option is complementary to [`X-Mcp-Toolsets`], [`X-Mcp-Enabled-Tools`], and
-[`X-Mcp-Disabled-Tools`].
-
-This option is mutually exclusive with [`dynamic`].
-
-##### Signature
-
-- Type: boolean
-- Variants (true): `yes`, `y`, `true`, `1`
-- Variants (false): `no`, `n`, `false`, `0`
-- Attributes: trimmable, case-insensitive
-
-##### References
-
-- [DocSpace MCP: Meta Tools]
+| | |
+|---|---|
+| **Type** | boolean |
+| **True** | `yes` `y` `true` `1` |
+| **False** | `no` `n` `false` `0` |
+| **Attributes** | trimmable, case-insensitive |
 
 #### X-Mcp-Toolsets
 
-The list of toolsets to enable for the DocSpace MCP server.
+Comma-separated list of toolsets to enable. Available toolsets depend on the global server configuration. Mutually exclusive with `toolsets`.
 
-The available list of toolsets for this options depends on the MCP server global
-configuration.
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `files,people` |
+| **Attributes** | trimmable, case-insensitive |
 
-This option is mutually exclusive with [`toolsets`].
-
-##### Signature
-
-- Type: comma-separated list of toolset names
-- Attributes: trimmable, case-insensitive
-- Example: `files,people`
-
-##### References
-
-- [DocSpace MCP: Toolsets]
-- [DocSpace MCP: Tools Resolution]
 
 #### X-Mcp-Enabled-Tools
 
-The list of tools to enable for the MCP server.
+Comma-separated list of tools to explicitly enable. Available tools depend on the global server configuration. Mutually exclusive with `enabled_tools`.
 
-The available list of tools for this options depends on the MCP server global
-configuration.
-
-This option is mutually exclusive with [`enabled_tools`].
-
-##### Signature
-
-- Type: comma-separated list of tool names
-- Attributes: trimmable, case-insensitive
-- Example: `get_file,get_all_people`
-
-##### References
-
-- [DocSpace MCP: Tools]
-- [DocSpace MCP: Tools Resolution]
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `get_file,get_all_people` |
+| **Attributes** | trimmable, case-insensitive |
 
 #### X-Mcp-Disabled-Tools
 
-The list of tools to disable for the MCP server.
+Comma-separated list of tools to explicitly disable. Available tools depend on the global server configuration. Mutually exclusive with `disabled_tools`.
 
-The available list of tools for this options depends on the MCP server global
-configuration.
+| | |
+|---|---|
+| **Type** | comma-separated list |
+| **Example** | `get_file,get_all_people` |
+| **Attributes** | trimmable, case-insensitive |
 
-This option is mutually exclusive with [`disabled_tools`].
+### Sample custom tool selection
 
-##### Signature
+This sample configuration restricts the available tools to a specific set.
 
-- Type: comma-separated list of tool names
-- Attributes: trimmable, case-insensitive
-- Example: `get_file,get_all_people`
-
-##### References
-
-- [DocSpace MCP: Tools]
-- [DocSpace MCP: Tools Resolution]
+```http
+X-Mcp-Toolsets: files
+X-Mcp-Enabled-Tools: get_all_people
+X-Mcp-Disabled-Tools: delete_file,delete_folder
+```
 
 ### API Options
 
@@ -239,166 +142,76 @@ The following options are used to configure the behavior for API requests.
 
 #### X-Mcp-Base-Url
 
-The base URL of the DocSpace instance for API requests.
+Base URL of the DocSpace instance for API requests. Must use HTTP or HTTPS with no search parameters or hash fragments. Required if any authentication header is set. Mutually exclusive with `base_url`.
 
-The base URL must use HTTP or HTTPS scheme without search parameters or hash
-fragments.
-
-This option is required if either [`Authorization`], [`X-Mcp-Api-Key`],
-[`X-Mcp-Auth-Token`], or the [`X-Mcp-Username`]/[`X-Mcp-Password`] pair is set.
-
-This option is mutually exclusive with [`base_url`].
-
-##### Signature
-
-- Type: url
-- Attributes: trimmable
-- Example: `https://your-instance.onlyoffice.com/`
+| | |
+|---|---|
+| **Type** | url |
+| **Example** | `https://your-instance.onlyoffice.com/` |
+| **Attributes** | trimmable |
 
 #### Authorization
 
-The raw value to include in the `Authorization` header for API requests.
+Raw value sent in the `Authorization` header for API requests. Available only if the server is configured to accept this header. Required if the server has no authentication configured and no other authentication option is set. Mutually exclusive with `X-Mcp-Api-Key`, `X-Mcp-Auth-Token`, the `X-Mcp-Username`/`X-Mcp-Password` pair, and the OAuth flow.
 
-This option is available only if the MCP server is configured to accept the
-`Authorization` header in incoming requests.
-
-This option is required if the MCP server is configured without authentication,
-and neither [`X-Mcp-Api-Key`], [`X-Mcp-Auth-Token`], nor the
-[`X-Mcp-Username`]/[`X-Mcp-Password`] pair is set, and the OAuth flow is not
-initialized.
-
-This option is mutually exclusive with [`X-Mcp-Api-Key`], [`X-Mcp-Auth-Token`],
-the [`X-Mcp-Username`]/[`X-Mcp-Password`] pair, and the OAuth flow.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `Bearer sk-a499e...`
-
-##### References
-
-- [DocSpace API: API Keys]
-- [DocSpace API: Personal Access Tokens]
-- [DocSpace API: Basic Authentication]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `Bearer sk-a499e...` |
+| **Attributes** | sensitive, trimmable |
 
 #### X-Mcp-Api-Key
 
-The API key for accessing the API.
+API key for accessing the API. Required if the server has no authentication configured and no other authentication option is set. Mutually exclusive with `Authorization`, `X-Mcp-Auth-Token`, the `X-Mcp-Username`/`X-Mcp-Password` pair, and the OAuth flow.
 
-This option is required if the MCP server is configured without authentication,
-and neither [`Authorization`], [`X-Mcp-Auth-Token`], nor the
-[`X-Mcp-Username`]/[`X-Mcp-Password`] pair is set, and the OAuth flow is not
-initialized.
-
-This option is mutually exclusive with [`Authorization`], [`X-Mcp-Auth-Token`],
-the [`X-Mcp-Username`]/[`X-Mcp-Password`] pair, and the OAuth flow.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `sk-a499e...`
-
-##### References
-
-- [DocSpace API: API Keys]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `sk-a499e...` |
+| **Attributes** | sensitive, trimmable |
 
 #### X-Mcp-Auth-Token
 
-The Personal Access Token (PAT) for accessing the API.
+Personal Access Token (PAT) for accessing the API. Required if the server has no authentication configured and no other authentication option is set. Mutually exclusive with `Authorization`, `X-Mcp-Api-Key`, the `X-Mcp-Username`/`X-Mcp-Password` pair, and the OAuth flow.
 
-This option is required if the MCP server is configured without authentication,
-and neither [`Authorization`], [`X-Mcp-Api-Key`], nor the
-[`X-Mcp-Username`]/[`X-Mcp-Password`] pair is set, and the OAuth flow is not
-initialized.
-
-This option is mutually exclusive with [`Authorization`], [`X-Mcp-Api-Key`],
-the [`X-Mcp-Username`]/[`X-Mcp-Password`] pair, and the OAuth flow.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `Fe4Hrgl6...`
-
-##### References
-
-- [DocSpace API: Personal Access Tokens]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `Fe4Hrgl6...` |
+| **Attributes** | sensitive, trimmable |
 
 #### X-Mcp-Username
 
-The username for accessing the API using basic authentication.
+Username for basic authentication. Used together with `X-Mcp-Password`. Required if the server has no authentication configured and no other authentication option is set. Mutually exclusive with `Authorization`, `X-Mcp-Api-Key`, `X-Mcp-Auth-Token`, and the OAuth flow.
 
-This option is used in conjunction with [`X-Mcp-Password`].
-
-This option is required if the MCP server is configured without authentication,
-and neither [`Authorization`], [`X-Mcp-Api-Key`], nor [`X-Mcp-Auth-Token`] is
-set, and the OAuth flow is not initialized.
-
-This option is mutually exclusive with [`Authorization`], [`X-Mcp-Api-Key`],
-[`X-Mcp-Auth-Token`], and the OAuth flow.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `henry.milton@onlyoffice.com`
-
-##### References
-
-- [DocSpace API: Basic Authentication]
-- [DocSpace MCP: Authentication Resolution]
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `henry.milton@onlyoffice.com` |
+| **Attributes** | sensitive, trimmable |
 
 #### X-Mcp-Password
 
-The password for accessing the API using basic authentication.
+Password for basic authentication. Used together with `X-Mcp-Username`. Required if the server has no authentication configured and no other authentication option is set. Mutually exclusive with `Authorization`, `X-Mcp-Api-Key`, `X-Mcp-Auth-Token`, and the OAuth flow.
 
-This option is used in conjunction with [`X-Mcp-Username`].
+| | |
+|---|---|
+| **Type** | string |
+| **Example** | `ditgor-p...` |
+| **Attributes** | sensitive, trimmable |
 
-This option is required if the MCP server is configured without authentication,
-and neither [`Authorization`], [`X-Mcp-Api-Key`], nor [`X-Mcp-Auth-Token`] is
-set, and the OAuth flow is not initialized.
-
-This option is mutually exclusive with [`Authorization`], [`X-Mcp-Api-Key`],
-[`X-Mcp-Auth-Token`], and the OAuth flow.
-
-##### Signature
-
-- Type: string
-- Attributes: sensitive, trimmable
-- Example: `ditgor-p...`
-
-##### References
-
-- [DocSpace API: Basic Authentication]
-- [DocSpace MCP: Authentication Resolution]
-
-## Examples
+## Example
 
 The following examples show how to use request configuration headers to
 customize server behavior for specific requests.
 
 ### Authentication with API Key
 
-This configuration uses an API key for authentication.
+This sample configuration uses an API key for authentication.
 
 ```http
 X-Mcp-Base-Url: https://your-instance.onlyoffice.com/
 X-Mcp-Api-Key: sk-a499e...
-```
-
-### Custom Tool Selection
-
-This configuration restricts the available tools to a specific set.
-
-```http
-X-Mcp-Toolsets: files
-X-Mcp-Enabled-Tools: get_all_people
-X-Mcp-Disabled-Tools: delete_file,delete_folder
 ```
 
 <!-- Definitions -->
