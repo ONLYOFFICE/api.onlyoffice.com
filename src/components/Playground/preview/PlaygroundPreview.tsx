@@ -133,6 +133,9 @@ export const PlaygroundPreview = () => {
                     },
                     customization: {
                         uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
+                        mobile: {
+                            disableForceDesktop:true,
+                        },
                         features: {
                             featuresTips: false,
                         },
@@ -164,6 +167,26 @@ export const PlaygroundPreview = () => {
 
             if (!!documentServerSecret?.length) {
                 (config as any).token = await createJWT(config)
+            }
+
+            if (previewType === 'mobile') {
+                // NOTE:  Fixed positioning removes the element from normal document flow and positions it relative to the viewport, not the parent container.
+                const observer = new MutationObserver(() => {
+                    const iframe = containerRef.current?.querySelector('iframe')
+                    if (iframe) {
+                        iframe.style.position = 'absolute'
+                        iframe.style.top = '0'
+                        iframe.style.left = '0'
+                        observer.disconnect()
+                    }
+                })
+
+                if (containerRef.current) {
+                    observer.observe(containerRef.current, {
+                        childList: true,
+                        subtree: true
+                    })
+                }
             }
 
             window.docEditor = new window.DocsAPI.DocEditor('placeholder', config)
