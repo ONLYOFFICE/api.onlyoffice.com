@@ -23,42 +23,40 @@ import TabItem from '@theme/TabItem';
 ## 示例
 
 <Tabs>
-    <TabItem value="python" label="Python">
-        ``` py
-        import os
-        import docbuilder
+  <TabItem value="python" label="Python">
+    ``` py
+    import os
+    import docbuilder
 
-        builder = docbuilder.CDocBuilder()
-        builder.CreateFile("docx")
+    builder = docbuilder.CDocBuilder()
+    builder.CreateFile("docx")
 
-        context = builder.GetContext()
-        globalObj = context.GetGlobal()
-        api = globalObj["Api"]
+    context = builder.GetContext()
+    globalObj = context.GetGlobal()
+    api = globalObj["Api"]
 
-        document = api.Call("GetDocument")
-        paragraph = api.Call("CreateParagraph")
-        paragraph.Call("SetSpacingAfter", 1000, False)
-        paragraph.Call("AddText", "Hello, World!")
-        content = context.CreateArray(1)
-        content[0] = paragraph
-        document.Call("InsertContent", content)
+    document = api.GetDocument()
+    paragraph = api.CreateParagraph()
+    paragraph.AddText("Hello, World!")
+    content = context.CreateArray(1)
+    content[0] = paragraph
+    document.InsertContent(content)
 
-        dstPath = os.getcwd() + "/result.docx"
-        builder.SaveFile("docx", dstPath)
-        builder.CloseFile()
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
-        builder.SetTmpFolder("DocBuilderTemp");
-        builder.CreateFile("docx");
-        let doc = Api.GetDocument();
-        let paragraph = Api.CreateParagraph();
-        paragraph.SetSpacingAfter(1000, false);
-        paragraph.AddText("Hello, World!");
-        doc.InsertContent([paragraph]);
-        builder.SaveFile("docx", "result.docx");
-        builder.CloseFile();
-        ```
-    </TabItem>
+    dstPath = os.getcwd() + "/result.docx"
+    builder.SaveFile("docx", dstPath)
+    builder.CloseFile()
+    ```
+  </TabItem>
+  <TabItem value="builder" label=".docbuilder">
+    ```ts
+    builder.CreateFile("docx");
+    let doc = Api.GetDocument();
+    let paragraph = Api.CreateParagraph();
+    paragraph.SetSpacingAfter(1000, false);
+    paragraph.AddText("Hello, World!");
+    doc.InsertContent([paragraph]);
+    builder.SaveFile("docx", "result.docx");
+    builder.CloseFile();
+    ```
+  </TabItem>
 </Tabs>

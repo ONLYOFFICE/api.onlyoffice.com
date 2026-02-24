@@ -5,6 +5,8 @@ import TabItem from '@theme/TabItem';
 
 This example demonstrates how to retrieve and update IP restriction settings in ONLYOFFICE DocSpace using API requests. IP restrictions enhance security by controlling which IP addresses are allowed access, ensuring that only authorized users can log in from designated networks.
 
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/manage-ip-restrictions.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/manage-ip-restrictions.py)
+
 ## Before you start
 
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.

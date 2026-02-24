@@ -5,6 +5,8 @@ import TabItem from '@theme/TabItem';
 
 This example demonstrates how to manage groups in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, updating, and deleting groups through API requests. The script follows a logical sequence to demonstrate how to interact with the group management system in a real-world scenario.
 
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/manage-groups.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/manage-groups.py)
+
 ## Before you start
 
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.

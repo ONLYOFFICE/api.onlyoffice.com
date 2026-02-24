@@ -8,6 +8,8 @@ This example demonstrates how to manage a guest user in ONLYOFFICE DocSpace usin
 - Approving a guest who was invited via sharing.
 - Deleting the guest by their unique ID.
 
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/manage-guests.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/manage-guests.py)
+
 ## Before you start
 
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.

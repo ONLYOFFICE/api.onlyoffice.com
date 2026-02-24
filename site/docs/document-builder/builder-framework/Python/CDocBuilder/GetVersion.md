@@ -27,12 +27,12 @@ api = globalObj["Api"]
 
 version = builder.GetVersion()
 
-document = api.Call("GetDocument")
-paragraph = api.Call("CreateParagraph")
-paragraph.Call("AddText", "ONLYOFFICE Document Builder Version - " + version.decode("utf-8"))
+document = api.GetDocument()
+paragraph = api.CreateParagraph()
+paragraph.AddText("ONLYOFFICE Document Builder Version - " + version.decode("utf-8"))
 content = context.CreateArray(1)
 content[0] = paragraph
-document.Call("InsertContent", content)
+document.InsertContent(content)
 
 dstPath = os.getcwd() + "/result.docx"
 builder.SaveFile("docx", dstPath)

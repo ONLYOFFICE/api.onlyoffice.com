@@ -3,6 +3,8 @@
 Embed DocSpace inside draggable and resizable modal windows built with Create React App, TypeScript, and Tailwind CSS.
 This example shows how to embed multiple DocSpace instances, automatically log in via the SDK, and manage them dynamically.
 
+Complete source code on GitHub: [Source](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/create-draggable-and-resize-modals.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.

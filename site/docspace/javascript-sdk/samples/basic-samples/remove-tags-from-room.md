@@ -2,6 +2,8 @@
 
 This example demonstrates how to remove one or more tags from a room using the JavaScript SDK method.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/remove-tags-from-room.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.

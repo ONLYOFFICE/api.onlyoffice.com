@@ -5,6 +5,8 @@ import TabItem from '@theme/TabItem';
 
 This example demonstrates how to invite a user to ONLYOFFICE DocSpace using the API, check their registration status, and send them a welcome message after successful activation.
 
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/invite-user-with-welcome-message.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/invite-user-with-welcome-message.py)
+
 ## Before you start
 
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.

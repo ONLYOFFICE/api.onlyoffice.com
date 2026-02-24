@@ -1,10 +1,14 @@
+---
+hide_table_of_contents: true
+---
+
 # Removing individual fields
 
 Remove unnecessary fields from forms by their ID or index for interface simplification, hiding internal fields, or dynamic form customization based on user roles:
 
 - create a form with role-specific fields ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- implement field removal functionality ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md));
-- customize forms based on user permissions ([ApiDocument/GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md)).
+- implement field removal functionality ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
+- customize forms based on user permissions ([ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)).
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

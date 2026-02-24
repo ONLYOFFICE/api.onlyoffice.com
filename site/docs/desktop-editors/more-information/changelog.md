@@ -6,6 +6,11 @@ sidebar_position: -2
 
 The list of changes for ONLYOFFICE Desktop Editors API.
 
+## Version 9.2
+
+- Added support for [connecting MCP servers](../usage-api/connecting-mcp-servers/connecting-mcp-servers.md) to extend AI capabilities with custom tools and integrations.
+- Added the ability to connect [ONLYOFFICE DocSpace MCP server](../usage-api/connecting-mcp-servers/docspace-mcp.md) for document management operations through AI agents.
+
 ## Version 8.1
 
 - Added the [getViewportSettings](../usage-api/adding-a-dms-provider/getting-viewport-settings.md) method to the *AscDesktopEditor* object.

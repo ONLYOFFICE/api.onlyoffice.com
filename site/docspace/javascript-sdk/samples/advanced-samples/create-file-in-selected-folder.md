@@ -2,6 +2,8 @@
 
 This example creates a file in the selected folder and opens it in the editors.
 
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/create-file-in-selected-folder.html)
+
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.

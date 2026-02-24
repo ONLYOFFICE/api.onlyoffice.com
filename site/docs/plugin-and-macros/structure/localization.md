@@ -81,7 +81,7 @@ Create the language _.json_ files for each language you want to add the translat
 
 Starting from version 7.2, you can add the _langs.json_ file to the translations folder. It contains the names of files with translations into a specific language in the array format:
 
-```ini
+```json
 [
   "cs-CZ",
   "de-DE",
@@ -127,7 +127,7 @@ After that add the _window.Asc.plugin.onTranslate_ function to the [pluginCode.j
 
 ```ts
 window.Asc.plugin.onTranslate = () => {
-  const label = document.querySelector("button_new");
+  const label = document.getElementById("button_new");
   if (label) {
     label.innerHTML = window.Asc.plugin.tr("New");
   }
@@ -140,12 +140,12 @@ If you need to localize more than one word/phrase, the _window\.Asc.plugin.onTra
 
 ```ts
 window.Asc.plugin.onTranslate = () => {
-  document.querySelector("button_delete").innerHTML =
+  document.getElementById("button_delete").innerHTML =
     window.Asc.plugin.tr("Delete");
-  document.querySelector("button_new").innerHTML = window.Asc.plugin.tr("New");
-  document.querySelector("button_rename").innerHTML =
+  document.getElementById("button_new").innerHTML = window.Asc.plugin.tr("New");
+  document.getElementById("button_rename").innerHTML =
     window.Asc.plugin.tr("Rename");
-  document.querySelector("button_run").innerHTML = window.Asc.plugin.tr("Run");
+  document.getElementById("button_run").innerHTML = window.Asc.plugin.tr("Run");
 };
 ```
 
@@ -291,7 +291,7 @@ Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
 
 :::warning[Wrong]
 
-```ini
+```json
 {
   ...
   "name": "Highlight code",
@@ -306,7 +306,7 @@ Error output: _“ERR_FILE_NOT_FOUND ; translations/de-DE.json”_ (Dev. tools)
 
 :::tip[Correct]
 
-```ini
+```json
 {
   ...
   "name": "Highlight code",

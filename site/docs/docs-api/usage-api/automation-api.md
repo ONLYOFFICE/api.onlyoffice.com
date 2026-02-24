@@ -89,7 +89,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                           |
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                             |
 | *hint*           | string                                      | The item hint.                                                                                                                           |
-| *icons*          | string                                      | object                                                                                                                                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
+| *icons*          | string \| object                            | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                            |
 | *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.               |
 | *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.). |
@@ -164,7 +164,7 @@ To call commands and send the data back to the editor, define the callCommand me
 *The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
 
 :::info
-**Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the [*Api.GetDocument().InsertContent(...))*](../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md). This limitation exists due to the co-editing feature in the online editors.
+**Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the [*Api.GetDocument().InsertContent(...)*](../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)). This limitation exists due to the co-editing feature in the online editors.
 :::
 
 ### Parameters
@@ -172,8 +172,8 @@ To call commands and send the data back to the editor, define the callCommand me
 | Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | func | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../office-api/get-started/overview.md) syntax. |
-| callback | function | The result that the method returns. Only the js standart types are available (any objects will be replaced with undefined).                                                                                                                                                                                                                                                                                                                 |
-| isNoCalc | boolean  | Defines whether the document will be recalculated or not. The *true* value is used to recalculate the document after executing the function in the *func* parameter. The *false* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is *false*.                                    |
+| callback | function | The result that the method returns. Only the js standard types are available (any objects will be replaced with undefined).                                                                                                                                                                                                                                                                                                                 |
+| isNoCalc | boolean  | Defines whether the document will be recalculated or not. The *true* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The *false* value is used to recalculate the document after executing the function in the *func* parameter. The default value is *false*.                                    |
 
 This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
 
@@ -278,7 +278,7 @@ The function called to update an item in the context menu with the specified ite
 
 | Name  | Type                                         | Description                                           |
 | ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | array of [ContextMenuItem](#contextmenuitem) | An array containing the context menu item parameters. |
+| items | Array.\<[ContextMenuItem](#contextmenuitem)\> | An array containing the context menu item parameters. |
 
 ### ContextMenuItem
 
@@ -289,7 +289,7 @@ The function called to update an item in the context menu with the specified ite
 | data     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | disabled | boolean                  | Specifies if the current item is disabled or not.                                                                          |
 | icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
-| items    | array of ContextMenuItem | An array containing the context menu items for the current item.                                                           |
+| items    | Array.\<ContextMenuItem\> | An array containing the context menu items for the current item.                                                           |
 
 ### Example
 
@@ -341,7 +341,7 @@ The function called to send an event to the modal window frame. The list of all 
 | Name | Type            | Description     |
 | ---- | --------------- | --------------- |
 | name | string          | The event name. |
-| data | string / object | The event data. |
+| data | string \| object | The event data. |
 
 #### Example
 

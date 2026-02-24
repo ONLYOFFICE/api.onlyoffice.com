@@ -54,4 +54,4 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 支持
 
-如果想请求该插件的新功能或报告相关漏洞，请使用 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 上的问题反馈区。
+如果想请求该插件的新功能或报告错误，请使用 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 上的问题反馈区。

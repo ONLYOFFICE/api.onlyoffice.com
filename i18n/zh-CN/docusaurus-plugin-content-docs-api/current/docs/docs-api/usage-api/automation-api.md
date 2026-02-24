@@ -89,7 +89,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | 项目类型。                                                                                                                           |
 | *text*           | string                                      | 项目标题。如果此字段为""，则工具栏按钮仅显示图标，不显示标题。                             |
 | *hint*           | string                                      | 项目提示。                                                                                                                           |
-| *icons*          | string                                      | 对象                                                                                                                                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
+| *icons*          | string \| object                            | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
 | *disabled*       | boolean                                     | 指定当前项目是否已锁定。                                                                                          |
 | *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"* 时）或其顶部（当 *"split == true"* 时）是否可以切换。               |
 | *lockInViewMode* | boolean                                     | 指定工具栏菜单项是否在视图模式（预览、查看表单、断开连接等时）中自动锁定。 |
@@ -164,7 +164,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 *callback* 是命令返回的结果，是一个可选参数。如果未提供该参数，则将使用 *window.Asc.plugin.onCommandCallback* 函数返回命令执行结果。
 
 :::信息
-**ONLYOFFICE 文档生成器** 命令只能用于创建内容并将其插入文档编辑器 (使用 *Api.GetDocument().InsertContent(...))*。由于在线编辑器中的联合编辑功能，存在此限制。
+**ONLYOFFICE 文档生成器** 命令只能用于创建内容并将其插入文档编辑器 (使用 *Api.GetDocument().InsertContent(...)*)。由于在线编辑器中的联合编辑功能，存在此限制。
 :::
 
 ### 参数:
@@ -173,7 +173,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | command  | function | 定义用JavaScript编写的命令，其目的是形成可插入结果文档文件（格式化段落、表格、文本部分和单独单词等）的结构化数据。然后将数据发送给编辑器。该命令必须与 [Office JavaScript API](../../office-api/get-started/overview.md) 语法兼容。|
 | callback | function | 方法返回的结果。这是一个可选参数。                                                                                                                                                                                                                                                                                                                 |
-| isNoCalc | boolean  | 定义是否可以重新计算文档。**true** 值用于在执行 *command* 参数中的函数后重新计算文档。**false** 值不会重新计算文档 （仅当您的编辑肯定不需要重新计算文档时才使用它）。默认值为 **false**。                                    |
+| isNoCalc | boolean  | 定义是否可以重新计算文档。**true** 值不会重新计算文档（仅当您的编辑肯定不需要重新计算文档时才使用它）。**false** 值用于在执行 *command* 参数中的函数后重新计算文档。默认值为 **false**。                                    |
 
 此方法在与其他JavaScript数据隔离的上下文中执行。此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
 
@@ -278,7 +278,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 
 | 名称  | 类型                                         | 描述                                           |
 | ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | array of [ContextMenuItem](#contextmenuitem) | 包含上下文菜单项参数的数组。 |
+| items | Array.\<[ContextMenuItem](#contextmenuitem)\> | 包含上下文菜单项参数的数组。 |
 
 ### ContextMenuItem
 
@@ -289,7 +289,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 | data     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | disabled | boolean                  | 指定当前项目是否已禁用。                                                                          |
 | icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
-| items    | array of ContextMenuItem | 包含当前项的上下文菜单项的数组。                                                         |
+| items    | Array.\<ContextMenuItem\> | 包含当前项的上下文菜单项的数组。                                                         |
 
 ### 示例:
 
@@ -341,7 +341,7 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 | 名称 | 类型            | 描述     |
 | ---- | --------------- | --------------- |
 | name | string          | 事件名称。 |
-| data | string / object | 事件数据。 |
+| data | string \| object | 事件数据。 |
 
 ### 示例
 

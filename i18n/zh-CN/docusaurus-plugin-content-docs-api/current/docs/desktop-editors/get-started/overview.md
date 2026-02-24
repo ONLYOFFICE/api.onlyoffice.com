@@ -11,6 +11,7 @@ sidebar_position: -2
 - 如何启用[调试模式](../usage-api/debugging/running-in-debug-mode-on-windows.md)以检测和修复所有可能的错误
 - 如何使用现成的[插件](../usage-api/adding-plugins.md)扩展编辑器功能或创建自己的插件
 - 如何将桌面编辑器集成到[文档管理系统（DMS）提供商](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md)中，在其中[打开](../usage-api/adding-a-dms-provider/opening-documents.md)和[加密](../usage-api/adding-a-dms-provider/encryption/encryption.md)文档
+- 如何[连接 MCP 服务器](../usage-api/connecting-mcp-servers/connecting-mcp-servers.md)以通过自定义工具和集成扩展 AI 功能
 
 ## 如何安装
 

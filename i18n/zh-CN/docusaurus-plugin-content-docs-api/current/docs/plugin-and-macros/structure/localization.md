@@ -12,7 +12,7 @@ sidebar_position: -2
 
 为这些键添加新的以 _Locale_ 结尾的节点，值为一个以语言区域码为键、翻译内容为值的对象。例如，对于 _name_ 键，其本地化对象如下所示：
 
-``` json
+```json
 {
   "name": "Highlight code",
   "nameLocale": {
@@ -25,7 +25,7 @@ sidebar_position: -2
 
 [highlighting 插件代码](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode)的完整 [config.json](./configuration/configuration.md) 翻译如下：
 
-``` json
+```json
 {
   "name": "Highlight code",
   "nameLocale": {
@@ -58,9 +58,9 @@ sidebar_position: -2
 
 ## 本地化 index.html 和插件代码文件
 
-从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 _translations_ 文件夹，使目录结构如下： 
+从 [index.html](./entry-point.md) 和 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中找出你希望本地化的所有字符串并创建一个列表。然后在插件目录中创建 _translations_ 文件夹，使目录结构如下：
 
-``` ini
+```ini
 highlightcode/
 ├── translations/
 ├── scripts/
@@ -71,7 +71,7 @@ highlightcode/
 
 为每种语言创建对应的 _.json_ 文件，文件名使用语言的四位语言区域码（如 _de-DE.json_）。这些文件包含一个对象，键为原始英文单词或短语，值为对应语言的翻译。例如，德语翻译文件如下：
 
-``` json
+```json
 {
   "Language": "Sprache",
   "Highlight": "Hervorheben",
@@ -81,7 +81,7 @@ highlightcode/
 
 从 7.2 版本开始，你可以在翻译文件夹中添加 _langs.json_ 文件。该文件以数组形式列出包含翻译内容的语言文件名：
 
-``` ini
+```json
 [
   "cs-CZ",
   "de-DE",
@@ -94,7 +94,7 @@ highlightcode/
 
 添加完所有本地化文件后，插件文件结构如下：
 
-``` ini
+```ini
 highlightcode/
 ├── translations/
     ├── de-DE.json
@@ -113,25 +113,25 @@ highlightcode/
 
 为了应用翻译，你需要为每个包含待翻译字符串的元素添加唯一 ID。例如，若想本地化以下代码中的 New 按钮：
 
-``` html
+```html
 <button>New</button>
 ```
 
 则需要添加 _id_ 属性，修改为：
 
-``` html
+```html
 <button id="button_new">New</button>
 ```
 
 然后在 [pluginCode.js](../interacting-with-editors/overview/overview.md) 文件中添加 _window.Asc.plugin.onTranslate_ 函数：
 
-``` ts
+```ts
 window.Asc.plugin.onTranslate = () => {
-  const label = document.querySelector("button_new")
+  const label = document.getElementById("button_new");
   if (label) {
-    label.innerHTML = window.Asc.plugin.tr("New")
+    label.innerHTML = window.Asc.plugin.tr("New");
   }
-}
+};
 ```
 
 _window\.Asc.plugin.onTranslate_ 函数将在插件启动后立即调用，也会在更改插件语言时再次调用。
@@ -140,12 +140,12 @@ _window\.Asc.plugin.onTranslate_ 函数将在插件启动后立即调用，也�
 
 ```ts
 window.Asc.plugin.onTranslate = () => {
-  document.querySelector("button_delete").innerHTML =
+  document.getElementById("button_delete").innerHTML =
     window.Asc.plugin.tr("Delete");
-  document.querySelector("button_new").innerHTML = window.Asc.plugin.tr("New");
-  document.querySelector("button_rename").innerHTML =
+  document.getElementById("button_new").innerHTML = window.Asc.plugin.tr("New");
+  document.getElementById("button_rename").innerHTML =
     window.Asc.plugin.tr("Rename");
-  document.querySelector("button_run").innerHTML = window.Asc.plugin.tr("Run");
+  document.getElementById("button_run").innerHTML = window.Asc.plugin.tr("Run");
 };
 ```
 
@@ -291,7 +291,7 @@ highlightcode/
 
 :::warning[错误示例]
 
-```ini
+```json
 {
   ...
   "name": "Highlight code",
@@ -306,7 +306,7 @@ highlightcode/
 
 :::tip[正确示例]
 
-```ini
+```json
 {
   ...
   "name": "Highlight code",

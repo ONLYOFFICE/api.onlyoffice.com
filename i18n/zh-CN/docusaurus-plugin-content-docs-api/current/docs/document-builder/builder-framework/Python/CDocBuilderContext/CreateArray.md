@@ -31,13 +31,12 @@ context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
 
-document = api.Call("GetDocument")
-paragraph = api.Call("CreateParagraph")
-paragraph.Call("SetSpacingAfter", 1000, False)
-paragraph.Call("AddText", "Hello, World!")
+document = api.GetDocument()
+paragraph = api.CreateParagraph()
+paragraph.AddText("Hello, World!")
 content = context.CreateArray(1)
 content[0] = paragraph
-document.Call("InsertContent", content)
+document.InsertContent(content)
 
 dstPath = os.getcwd() + "/result.docx"
 builder.SaveFile("docx", dstPath)

@@ -6,6 +6,11 @@ sidebar_position: -2
 
 ONLYOFFICE 桌面编辑器 API 的变更列表。
 
+## 版本 9.2
+
+- 添加了对[连接 MCP 服务器](../usage-api/connecting-mcp-servers/connecting-mcp-servers.md)的支持，以通过自定义工具和集成扩展 AI 功能。
+- 添加了连接 [ONLYOFFICE DocSpace MCP 服务器](../usage-api/connecting-mcp-servers/docspace-mcp.md)的功能，用于通过 AI 代理进行文档管理操作。
+
 ## 版本 8.1
 
 - 向 *AscDesktopEditor* 对象添加了 [getViewportSettings](../usage-api/adding-a-dms-provider/getting-viewport-settings.md) 方法。
