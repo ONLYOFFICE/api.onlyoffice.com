@@ -26,5 +26,5 @@ configuration issues.
 
 This error may arise due to the a wrong connection. To fix this:
 
-- Check your DocSpace MCP server-client connection
+- Check your DocSpace MCP server-client connection. If you're using API authentication, check the validity of your API key, and retry connection.
 - Reach out to support if issue persists.

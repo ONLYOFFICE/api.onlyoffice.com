@@ -1,6 +1,6 @@
 # Request configuration
 
-This document lists and describes the variables used to configure the DocSpace MCP server behavior at the request level using [query parameters](#query-options) and [custom headers](#header-options). 
+This document lists and describes the variables used to configure the DocSpace MCP server behavior at the request level using query parameters and custom header. 
 
 :::note
 The request configuration parameters are only available for HTTP-like transports
