@@ -19,3 +19,13 @@ expression.RemovePage(nPos);
 ## Returns
 
 boolean
+
+## Example
+
+This example shows how to remove page from document.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+doc.AddPage(1);
+doc.RemovePage(0);
+```

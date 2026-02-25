@@ -19,3 +19,17 @@ expression.SetCheckStyle(sStyle);
 ## Returns
 
 boolean
+
+## Example
+
+This example sets checkbox widget check style.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);
+page.AddObject(radiobuttonField);
+
+let widgets = radiobuttonField.GetAllWidgets();
+widgets[0].SetCheckStyle('square');
+```

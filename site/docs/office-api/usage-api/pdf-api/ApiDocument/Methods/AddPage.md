@@ -21,3 +21,12 @@ expression.AddPage(nPos, nWidth, nHeight);
 ## Returns
 
 [ApiPage](../../ApiPage/ApiPage.md)
+
+## Example
+
+This example adds new page into document after 0 index page.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+doc.AddPage(1);
+```
