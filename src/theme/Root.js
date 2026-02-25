@@ -4,11 +4,14 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import React, { useRef, useEffect } from 'react';
 import AIIcon from '@site/static/icons/ai-icon.svg';
+import { OOAdventAnnounce } from 'onlyoffice-react-ui-kit/advent-announce';
+import 'onlyoffice-react-ui-kit/advent-announce/css';
 
 import '@docsearch/css/dist/sidepanel.css';
 
 export default function Root({ children }) {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig, i18n } = useDocusaurusContext();
+  const locale = i18n.currentLocale === 'zh-CN' ? 'zh' : 'en';
   const algoliaConfig = siteConfig.themeConfig.algolia.askAi;
   const docSearchRef = useRef(null);
 
@@ -28,6 +31,7 @@ export default function Root({ children }) {
 
   return (
     <>
+      <OOAdventAnnounce locale={locale} />
       {children}
 
       <BrowserOnly>

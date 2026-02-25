@@ -593,3 +593,15 @@ html[data-theme='dark'] .DocSearch-SidepanelButton.floating:hover {
 [data-theme='light'] .prism-code.language-javascript .token.function {
   color: rgb(0, 0, 0) !important;
 }
+
+/* START ADVENT ANNOUNCE - reset Docusaurus/Infima overrides */
+.oo-advent-announce {
+  font-family: "Open Sans", sans-serif;
+}
+
+a.oo-advent-announce-wrapper,
+a.oo-advent-announce-wrapper:visited,
+a.oo-advent-announce-wrapper:hover {
+  text-decoration: none;
+}
+/* END ADVENT ANNOUNCE */

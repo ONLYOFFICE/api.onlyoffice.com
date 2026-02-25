@@ -4,7 +4,7 @@ import * as Tabs from '@radix-ui/react-tabs'
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels'
 import { PlaygroundPreview } from '../preview/PlaygroundPreview'
 import styles from './PlaygroundContent.module.css'
-import {useEffect, useState, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 function useIsMobile(query = '(max-width: 767px)') {
     return useSyncExternalStore(
@@ -20,8 +20,6 @@ function useIsMobile(query = '(max-width: 767px)') {
 const PlaygroundEditor = lazy(() =>
     import('../editor/PlaygroundEditor').then(m => ({ default: m.PlaygroundEditor }))
 )
-
-}
 
 export const PlaygroundContent = () => {
     const isMobile = useIsMobile()

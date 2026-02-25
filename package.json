@@ -38,6 +38,7 @@
     "react-dom": "^19.0.0",
     "react-lite-youtube-embed": "^2.4.0",
     "react-resizable-panels": "^3.0.6",
+    "onlyoffice-react-ui-kit": "ONLYOFFICE/onlyoffice-react-ui-kit#207599cf2fade281d076354221abea45be95e828",
     "react-router-dom": "^5.3.4"
   },
   "devDependencies": {

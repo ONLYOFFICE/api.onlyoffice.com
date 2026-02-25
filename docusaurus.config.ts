@@ -28,6 +28,24 @@ const config: Config = {
   url: 'https://api.onlyoffice.com',
   baseUrl: '/',
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap',
+      },
+    },
+  ],
+
   trailingSlash: true,
 
   noIndex: isDev,
