@@ -1,6 +1,6 @@
 # MoveCursorToPos
 
-Moves a cursor to a specified position of the current range object.\
+Moves a cursor to a specified position of the current range object.
 If there is any selection in the document, it will be removed.
 
 ## Syntax

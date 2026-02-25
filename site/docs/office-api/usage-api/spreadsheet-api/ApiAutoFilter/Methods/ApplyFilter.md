@@ -1,10 +1,10 @@
 # ApplyFilter
 
-Reapplies the AutoFilter to the worksheet using the existing filter criteria.\
-\
-This method corresponds to the Excel AutoFilter.ApplyFilter behavior:\
-it does not change the currently defined filter conditions; it only\
-reevaluates which rows should be visible based on the active filters.\
+Reapplies the AutoFilter to the worksheet using the existing filter criteria.
+
+This method corresponds to the Excel AutoFilter.ApplyFilter behavior:
+it does not change the currently defined filter conditions; it only
+reevaluates which rows should be visible based on the active filters.
 If no AutoFilter is defined for the worksheet, the method does nothing.
 
 ## Syntax

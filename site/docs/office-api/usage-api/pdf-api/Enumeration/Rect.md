@@ -1,9 +1,9 @@
 # Rect
 
-Axis-aligned rectangle represented as a tuple.\
-\
-Invariants:\
- - rect[0] &lt; rect[2] (x1 &lt; x2)\
+Axis-aligned rectangle represented as a tuple.
+
+Invariants:
+ - rect[0] &lt; rect[2] (x1 &lt; x2)
  - rect[1] &lt; rect[3] (y1 &lt; y2)
 
 ## Type

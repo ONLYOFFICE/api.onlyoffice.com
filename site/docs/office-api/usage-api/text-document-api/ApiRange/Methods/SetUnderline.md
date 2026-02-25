@@ -1,6 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of the current Range are displayed along with a line appearing directly below the character\
+Specifies that the contents of the current Range are displayed along with a line appearing directly below the character
 (less than all the spacing above and below the characters on the line).
 
 ## Syntax

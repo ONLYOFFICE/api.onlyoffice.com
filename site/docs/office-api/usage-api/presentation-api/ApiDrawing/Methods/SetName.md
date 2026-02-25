@@ -1,6 +1,6 @@
 # SetName
 
-Sets the name of the current drawing.\
+Sets the name of the current drawing.
 If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name.
 
 ## Syntax

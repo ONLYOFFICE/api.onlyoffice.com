@@ -1,9 +1,9 @@
 # GetSpeed
 
-Returns the transition speed (similar to PowerPoint VBA Speed property).\
-Maps duration to speed based on OOXML spd attribute logic:\
-- fast: duration &lt;= 500ms\
-- medium: 500ms &lt; duration &lt;= 750ms\
+Returns the transition speed (similar to PowerPoint VBA Speed property).
+Maps duration to speed based on OOXML spd attribute logic:
+- fast: duration &lt;= 500ms
+- medium: 500ms &lt; duration &lt;= 750ms
 - slow: duration &gt; 750ms
 
 ## Syntax

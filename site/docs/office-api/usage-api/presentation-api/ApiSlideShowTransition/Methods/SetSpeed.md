@@ -1,9 +1,9 @@
 # SetSpeed
 
-Sets the transition speed (similar to PowerPoint VBA Speed property).\
-Converts speed to duration based on standard values:\
-- fast = 500ms\
-- medium = 750ms\
+Sets the transition speed (similar to PowerPoint VBA Speed property).
+Converts speed to duration based on standard values:
+- fast = 500ms
+- medium = 750ms
 - slow = 1000ms
 
 ## Syntax

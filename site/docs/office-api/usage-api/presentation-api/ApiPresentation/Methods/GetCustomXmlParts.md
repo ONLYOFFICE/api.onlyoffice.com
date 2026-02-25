@@ -1,6 +1,6 @@
 # GetCustomXmlParts
 
-Retrieves the custom XML manager associated with the presentation.\
+Retrieves the custom XML manager associated with the presentation.
 This manager allows manipulation and access to custom XML parts within the presentation.
 
 ## Syntax

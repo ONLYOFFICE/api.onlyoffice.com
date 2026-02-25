@@ -19,13 +19,3 @@ expression.SetRotation(nAngle);
 ## Returns
 
 boolean
-
-## Example
-
-This example sets rotate for first page in document.
-
-```javascript editor-pdf
-let doc = Api.GetDocument();
-let page = doc.GetPage(0);
-page.SetRotation(90);
-```

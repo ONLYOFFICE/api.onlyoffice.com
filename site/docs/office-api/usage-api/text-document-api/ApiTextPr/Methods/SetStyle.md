@@ -1,7 +1,7 @@
 # SetStyle
 
-The text style base method.\
-💡 This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets\
+The text style base method.
+💡 This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets
 the selected or created style to the text.
 
 ## Syntax

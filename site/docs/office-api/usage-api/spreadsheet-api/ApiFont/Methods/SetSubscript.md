@@ -1,6 +1,6 @@
 # SetSubscript
 
-Sets the subscript property to the specified font.\
+Sets the subscript property to the specified font.
 💡 This method will work only with the text format of the cell.
 
 ## Syntax

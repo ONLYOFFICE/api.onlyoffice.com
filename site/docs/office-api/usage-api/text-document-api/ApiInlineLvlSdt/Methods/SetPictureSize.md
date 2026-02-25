@@ -1,6 +1,6 @@
 # SetPictureSize
 
-Sets the size for the picture in a content control.\
+Sets the size for the picture in a content control.
 This method adjusts the width and height of the image if the content control is a picture.
 
 ## Syntax

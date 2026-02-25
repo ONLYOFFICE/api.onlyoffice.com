@@ -1,10 +1,10 @@
 # ShowAllData
 
-Clears all filters and displays all rows in the AutoFilter range.\
-\
-This method corresponds to the Excel AutoFilter.ShowAllData behavior:\
-it removes any active filtering from the worksheet while preserving the\
-AutoFilter drop-downs on the header row. If no AutoFilter is defined\
+Clears all filters and displays all rows in the AutoFilter range.
+
+This method corresponds to the Excel AutoFilter.ShowAllData behavior:
+it removes any active filtering from the worksheet while preserving the
+AutoFilter drop-downs on the header row. If no AutoFilter is defined
 for the worksheet, the method does nothing.
 
 ## Syntax

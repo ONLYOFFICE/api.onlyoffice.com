@@ -1,6 +1,6 @@
 # SetHyperlink
 
-Sets a hyperlink to the current drawing object (shape or image).\
+Sets a hyperlink to the current drawing object (shape or image).
 Pass null to remove the hyperlink.
 
 ## Syntax
