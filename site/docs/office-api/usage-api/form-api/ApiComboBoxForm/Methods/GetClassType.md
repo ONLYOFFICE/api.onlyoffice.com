@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 // How get a class type of ApiComboBoxForm.
 
 // Retrieve class type of a created combobox object and display it.

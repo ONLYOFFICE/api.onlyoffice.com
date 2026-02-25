@@ -25,7 +25,7 @@ boolean
 
 This example specifies if the text field should be a comb of characters with the same cell width.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 // How to specify the comb property of the text form.
 
 // Set the comb property of the text form.

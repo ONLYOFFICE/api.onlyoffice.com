@@ -10,7 +10,7 @@ Generate multiple personalized NDA documents in one file with individual section
 - create inline text form fields prefilled with user-specific data ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md));
 - add manual signature lines and separate each NDA with page breaks ([ApiParagraph/AddPageBreak](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddPageBreak.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // User data for personalized NDAs

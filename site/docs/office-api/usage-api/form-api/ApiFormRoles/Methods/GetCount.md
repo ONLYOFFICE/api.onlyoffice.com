@@ -22,7 +22,7 @@ number
 
 This example shows how to get the number of roles.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 let doc = editor.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");

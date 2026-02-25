@@ -10,7 +10,7 @@ Reset all filled form fields and return the form to its initial state for reuse,
 - implement form clearing functionality ([ApiDocument/GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [ApiTextForm/SetText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md), [ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChecked.md));
 - restore fields to their default state ([ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md), [ApiComboBoxForm/SetText](/docs/office-api/usage-api/text-document-api/ApiComboBoxForm/Methods/SetText.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Create a registration form with various field types

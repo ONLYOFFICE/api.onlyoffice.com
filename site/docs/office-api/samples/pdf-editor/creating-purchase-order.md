@@ -11,7 +11,7 @@ Creates a purchase order template with company details and line items:
 - add text forms for editable fields ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md));
 - style table headers and borders ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Utility function: Set table borders
