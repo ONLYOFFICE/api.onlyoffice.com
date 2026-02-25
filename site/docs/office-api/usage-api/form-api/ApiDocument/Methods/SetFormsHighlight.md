@@ -27,7 +27,7 @@ boolean
 
 This example sets the highlight to the forms in the document.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 // How to set color for forms background.
 
 // Highlight the forms color.

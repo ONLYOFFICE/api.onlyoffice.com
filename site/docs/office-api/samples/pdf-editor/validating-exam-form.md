@@ -12,7 +12,7 @@ Validates and scores exam answers from a multiple-choice test (continuation of [
 - check selected options and compare with correct answers ([ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
 - retrieve form tooltips for detailed feedback ([ApiFormBase/GetTipText](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetTipText.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Define correct answers for the exam
