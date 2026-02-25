@@ -19,3 +19,18 @@ expression.SetMultiline(bMultiline);
 ## Returns
 
 boolean
+
+## Example
+
+This example adds text field and sets multiline for it.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let textField = Api.CreateTextField([10, 10, 160, 30]);
+page.AddObject(textField);
+
+textField.SetMultiline(true);
+textField.SetValue('Multiline is: ' + textField.IsMultiline());
+
+```
