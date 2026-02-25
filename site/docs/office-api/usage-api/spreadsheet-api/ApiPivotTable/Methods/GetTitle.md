@@ -22,7 +22,7 @@ string
 
 This example shows how to get a title pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get table title.
 
 // Create a pivot table, add data to it then get its title.

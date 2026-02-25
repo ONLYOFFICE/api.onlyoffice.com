@@ -24,7 +24,7 @@ number
 
 This example shows how to return the hyperbolic cosecant of a complex number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the hyperbolic cosecant.
 
 // Use a function to get the hyperbolic cosecant of a complex number.

@@ -24,7 +24,7 @@ boolean
 
 This example spicifies tick label position for the horizontal axis.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a position of a horizontal axis tick label.
 
 // Create a chart and move its horizontal axis tick label.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the slide height in English measure units.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to find a slide's height and display it on the slide.
 
 // Get a height ofthe  ApiSlide object and show it in the slide.

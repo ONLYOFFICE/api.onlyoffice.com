@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get table style row stripes of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get table style row stripes.
 
 // Create a pivot table, add data to it then get its table style row stripes.

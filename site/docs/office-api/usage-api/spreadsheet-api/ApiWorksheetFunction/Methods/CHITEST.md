@@ -25,7 +25,7 @@ number
 
 This example shows how to return the test for independence: the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
 
 // Use function to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.

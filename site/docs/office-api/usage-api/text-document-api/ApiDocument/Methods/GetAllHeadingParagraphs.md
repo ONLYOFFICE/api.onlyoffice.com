@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all heading paragraphs from the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all heading paragraphs added to the document.
 
 // How to retrieve all heading paragraphs and make capitalized the first one.

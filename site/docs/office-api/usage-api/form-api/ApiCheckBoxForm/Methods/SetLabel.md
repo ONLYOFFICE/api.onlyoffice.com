@@ -24,7 +24,7 @@ boolean
 
 This example sets the label text to the checkbox form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to add a label to the checkbox form.
 
 // Set a label text to the checkbox.

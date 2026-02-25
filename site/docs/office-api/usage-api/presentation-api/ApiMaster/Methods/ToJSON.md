@@ -24,7 +24,7 @@ JSON
 
 This example converts the ApiMaster object into the JSON object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to convert a slide master object to a JSON object.
 
 // Get a slide master object from a slide and convert to JSON.

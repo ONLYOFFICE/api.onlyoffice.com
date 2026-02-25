@@ -24,7 +24,7 @@ expression.AddDatePickerContentControl(datePickerPr);
 
 This example shows how to add a date picker content control to a document:
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 doc.AddDatePickerContentControl();
 ```

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the base-10 logarithm of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the logarithm to the base 10.
 
 // Use a function to return the logarithm with the base-10.

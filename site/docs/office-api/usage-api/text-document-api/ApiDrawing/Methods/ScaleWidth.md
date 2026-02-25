@@ -24,7 +24,7 @@ boolean
 
 This example scales the width of the figure using the specified coefficient.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to increase the width of the drawing.
 
 // Make the cube wider.

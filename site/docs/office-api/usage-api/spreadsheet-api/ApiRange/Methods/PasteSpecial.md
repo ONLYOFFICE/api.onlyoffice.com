@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 This example pastes data from theclipboard (if it is possible) with the specified options.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to paste the copied or cut data from the clipboard using the special paste options.
 
 // Create a range, copy its value and paste it into another one with the specified properties.

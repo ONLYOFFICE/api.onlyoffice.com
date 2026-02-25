@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a class type of ApiUniColor.
 
 // Get a class type of ApiUniColor and display it in the worksheet.

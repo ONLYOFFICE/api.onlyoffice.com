@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of elements in the current paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Get paragraph elements count.
 
 // How to get number of elements of the paragraph and show it in the worksheet.

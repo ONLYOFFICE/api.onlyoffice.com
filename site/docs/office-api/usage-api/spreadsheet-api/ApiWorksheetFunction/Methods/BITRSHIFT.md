@@ -25,7 +25,7 @@ number
 
 This example shows how to return a number shifted right by the specified number of bits.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from bits right shift.
 
 // Use function to calculate bitwise right shift operation.

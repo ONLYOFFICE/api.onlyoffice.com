@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the class type of the custom XML parts manager.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get the class type of the XML parts manager.
 
 // Get the class type.

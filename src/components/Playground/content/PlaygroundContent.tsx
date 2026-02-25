@@ -4,28 +4,29 @@ import * as Tabs from '@radix-ui/react-tabs'
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels'
 import { PlaygroundPreview } from '../preview/PlaygroundPreview'
 import styles from './PlaygroundContent.module.css'
-import {useEffect, useState} from "react";
-import {PlaygroundEditor} from "@site/src/components/Playground/editor/PlaygroundEditor";
+import {useEffect, useState, lazy, Suspense } from "react";
+
+function useIsMobile(query = '(max-width: 767px)') {
+    return useSyncExternalStore(
+        (callback) => {
+            const matchMedia = window.matchMedia(query);
+            matchMedia.addEventListener('change', callback);
+            return () => matchMedia.removeEventListener('change', callback);
+        },
+        () => window.matchMedia(query).matches,
+        () => false
+    );
+}
+const PlaygroundEditor = lazy(() =>
+    import('../editor/PlaygroundEditor').then(m => ({ default: m.PlaygroundEditor }))
+)
+
+}
 
 export const PlaygroundContent = () => {
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 767px)')
-
-        const handleMediaChange = (e: MediaQueryListEvent | MediaQueryList) => {
-            setIsMobile(e.matches)
-        }
-
-        handleMediaChange(mediaQuery)
-
-        mediaQuery.addEventListener('change', handleMediaChange)
-
-        return () => mediaQuery.removeEventListener('change', handleMediaChange)
-    }, [])
+    const isMobile = useIsMobile()
 
     if (isMobile) {
-
         return (
             <Tabs.Root className={styles.TabsRoot} defaultValue='editor'>
                 <Tabs.List className={styles.TabsList}>
@@ -37,7 +38,9 @@ export const PlaygroundContent = () => {
                     </Tabs.Trigger>
                 </Tabs.List>
                 <Tabs.Content value="editor" className={styles.TabPanel}>
-                    <PlaygroundEditor />
+                    <Suspense>
+                        <PlaygroundEditor />
+                    </Suspense>
                 </Tabs.Content>
                 <Tabs.Content value="preview" className={styles.TabPanel}>
                     <PlaygroundPreview />
@@ -49,7 +52,9 @@ export const PlaygroundContent = () => {
     return (
         <PanelGroup direction="horizontal" className={styles.DesktopContent}>
             <Panel minSize={20} defaultSize={40}>
-                <PlaygroundEditor />
+                <Suspense>
+                    <PlaygroundEditor />
+                </Suspense>
             </Panel>
             <PanelResizeHandle className={styles.ResizeHandle}>
                 <div className={styles.ResizeHandleGrip}>

@@ -22,7 +22,7 @@ Enumeration
 
 This example sets a bottom black dotted border for a cell.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a border to the cell.
 
 // Use a border index to set borders with properties.

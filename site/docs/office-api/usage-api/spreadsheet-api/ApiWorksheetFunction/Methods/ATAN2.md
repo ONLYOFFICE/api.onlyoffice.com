@@ -25,7 +25,7 @@ number
 
 This example shows how to return the arctangent of the specified x and y coordinates, in radians between -Pi and Pi, excluding -Pi.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an arctangent of the specified x and y coordinates.
 
 // Use function to get an arctangent of the specified x and y coordinates in radians.

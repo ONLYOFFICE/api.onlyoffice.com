@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the slide master of the theme.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a master from a theme.
 
 // Get a theme master and display its class type.

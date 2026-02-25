@@ -22,7 +22,7 @@ boolean
 
 This example shows how to check if the content control is a dropdown list.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let inlineControl = doc.AddDropDownListContentControl();
 let isDropDown = inlineControl.IsDropDownList();

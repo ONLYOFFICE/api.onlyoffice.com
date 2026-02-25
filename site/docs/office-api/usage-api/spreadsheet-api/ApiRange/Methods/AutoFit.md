@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example changes the width of the columns or the height of the rows in the range to achieve the best fit.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set an autofit for width or height for a range.
 
 // Get a range and apply autofit property.

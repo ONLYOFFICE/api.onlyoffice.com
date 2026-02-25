@@ -24,7 +24,7 @@ expression.GroupDrawings(aDrawings);
 
 This example shows how to group drawings on master slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to group drawings on master slide.
 
 // Create two shapes and group them. on master slide

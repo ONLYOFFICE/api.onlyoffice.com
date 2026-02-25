@@ -22,7 +22,7 @@ boolean
 
 This example rejects all changes made in review mode.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to reset all changes after review.
 
 // Do not apply edited text in the review mode.

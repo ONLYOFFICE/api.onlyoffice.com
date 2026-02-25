@@ -22,7 +22,7 @@ Number
 
 This example shows how to get a time of a comment creation in UTC.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to know when a comment was added.
 
 // Get all comments from the presentation and the first one's time of creation in UTC format.

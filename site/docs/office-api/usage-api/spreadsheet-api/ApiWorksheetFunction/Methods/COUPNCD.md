@@ -27,7 +27,7 @@ number
 
 This example shows how to return the next coupon date after the settlement date.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the next coupon date.
 
 // Use function to get the next coupon date after the settlement date.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to create a text properties and use them.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates the empty text properties object and sets the bold property, font size, capitalized letters, color, and font family to it.
 
 // How to create the ApiTextPr object and apply it to the Text Art object.

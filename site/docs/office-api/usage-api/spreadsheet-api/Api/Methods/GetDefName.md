@@ -24,7 +24,7 @@ expression.GetDefName(defName);
 
 This example shows how to get the ApiName object by the range name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to work with named ranges in a spreadsheet using the API.
 
 // Get name of an object using a range name. 

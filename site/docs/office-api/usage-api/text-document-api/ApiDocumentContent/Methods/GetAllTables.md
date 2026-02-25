@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example showh how to get an array of all tables from the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all tables added to the document.
 
 // How to retrieve all tables and add a text to its first cell.

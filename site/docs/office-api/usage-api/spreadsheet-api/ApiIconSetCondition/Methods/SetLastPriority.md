@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example sets a conditional formatting rule as last priority.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the priority order of conditional formatting rules.
 
 // Set conditional formatting rule as last priority.

@@ -24,7 +24,7 @@ number
 
 This example shows how to convert points to millimeters.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 

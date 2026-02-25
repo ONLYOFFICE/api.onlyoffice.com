@@ -24,7 +24,7 @@ number
 
 This example shows how to return the largest value in a set of values. Ignores logical values and text.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a maximum number from a list of numbers.
 
 // Use a function to find a maximum from a list.

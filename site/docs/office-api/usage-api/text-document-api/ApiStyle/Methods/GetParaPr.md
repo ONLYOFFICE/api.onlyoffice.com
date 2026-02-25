@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how ot get the paragraph properties of the current style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get properties of the paragraph.
 
 // Display the table properties from the default paragraph style.

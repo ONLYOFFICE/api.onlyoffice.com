@@ -26,7 +26,7 @@ boolean
 
 This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the size of a spacing tabs from a paragraph properties.
 
 // Change a tabs size property of a paragraph properties.

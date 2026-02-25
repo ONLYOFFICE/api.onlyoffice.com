@@ -24,7 +24,7 @@ boolean
 
 This example adds some text to the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a text to a text run object.
 
 // How to add a text to the slide.

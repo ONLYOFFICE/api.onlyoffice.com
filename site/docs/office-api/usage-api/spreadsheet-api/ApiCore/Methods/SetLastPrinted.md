@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the date when the workbook was printed last time.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

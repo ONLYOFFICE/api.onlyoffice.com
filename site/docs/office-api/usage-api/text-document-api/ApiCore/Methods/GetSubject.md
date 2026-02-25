@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the subject of the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetSubject("ApiCore Method Showcase");

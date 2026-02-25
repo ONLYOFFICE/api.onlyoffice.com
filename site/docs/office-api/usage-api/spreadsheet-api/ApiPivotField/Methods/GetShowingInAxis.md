@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get showing in axis of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field's showing in axis.
 
 // Create a pivot table, add data to it then get showing in axis of a specified pivot field.

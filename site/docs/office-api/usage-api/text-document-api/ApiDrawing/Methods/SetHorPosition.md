@@ -25,7 +25,7 @@ boolean
 
 This example sets the absolute measurement for the horizontal positioning of the floating object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the horizontal position property of the shape.
 
 // Create a drawing, add text to it and set its horizontal position.

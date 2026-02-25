@@ -24,7 +24,7 @@ boolean
 
 This example deletes a content control and its content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates the ApiBlockLvlSdt object in the current document, adds a text to it, and deletes it and its content from the document.
 
 // How to delete the block level container from the ApiDocument class.

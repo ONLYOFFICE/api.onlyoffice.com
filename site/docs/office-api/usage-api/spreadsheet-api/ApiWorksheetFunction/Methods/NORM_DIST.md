@@ -27,7 +27,7 @@ number
 
 This example shows how to return the normal distribution for the specified mean and standard deviation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the normal distribution.
 
 // Use a function to get the normal distribution knowing the mean and standard deviation.

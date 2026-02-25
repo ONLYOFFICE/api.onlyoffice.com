@@ -22,7 +22,7 @@ string \| number \| null
 
 This example demonstrates getting the minimum point value from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the value of the minimum condition.
 
 // Get the minimum point value of a data bar conditional formatting rule.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates the empty text properties.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set custom properties for an empty text.
 
 // Change a new text properties like font size, font style, etc.

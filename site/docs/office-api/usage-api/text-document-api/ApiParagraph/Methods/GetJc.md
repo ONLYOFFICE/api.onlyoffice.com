@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph contents justification.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the justification of the paragraph and show it in the document.
 
 // How to know the justification type of the paragraph.

@@ -27,7 +27,7 @@ boolean
 
 This example sets the spacing before the current paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add the spacing before the paragraphs using points.
 
 // Get a paragraph from the shape's content then add a text specifying the spacing before a custom text.

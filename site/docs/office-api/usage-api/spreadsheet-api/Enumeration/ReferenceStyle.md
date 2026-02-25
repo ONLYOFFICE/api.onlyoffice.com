@@ -16,7 +16,7 @@ Enumeration
 
 This example gets reference style.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve a reference style and display it in the worksheet.
 
 // Get a reference style.

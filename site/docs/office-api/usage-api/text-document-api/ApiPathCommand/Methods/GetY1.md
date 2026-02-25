@@ -22,7 +22,7 @@ string \| null
 
 Retrieves control points and end point from a cubic bezier curve command.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Displays all control points coordinates of the bezier curve.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

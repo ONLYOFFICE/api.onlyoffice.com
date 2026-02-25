@@ -27,7 +27,7 @@ number
 
 This example shows how to return the number of days from the settlement date to the next coupon date.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the number of days from the settlement date to the next coupon date.
 
 // Use function to get the number of days from the settlement date to the next coupon date.

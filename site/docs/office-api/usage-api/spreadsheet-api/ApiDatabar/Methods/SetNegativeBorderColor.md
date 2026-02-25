@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the negative bar border color of a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the border color of negative value bars.
 
 // Set the negative bar border color of a data bar conditional formatting rule.

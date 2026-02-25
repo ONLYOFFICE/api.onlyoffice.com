@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the next paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the next paragraph from the current one.
 
 // Add two paragraphs into the shape content then get the second one using the GetNext method.

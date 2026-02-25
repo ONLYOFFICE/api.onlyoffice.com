@@ -24,7 +24,7 @@ boolean
 
 This example sets a string tag to the inline text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set tag for the inline content control.
 
 // Display the tag set for inline text element.

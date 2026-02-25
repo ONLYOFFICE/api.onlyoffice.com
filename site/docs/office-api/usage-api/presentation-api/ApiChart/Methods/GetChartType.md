@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a type of a chart
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 

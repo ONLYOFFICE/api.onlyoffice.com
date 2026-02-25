@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to insert a range or a cell into a worksheet.
 
 // Insert a range or a cell into a worksheet specifying its shift direction.

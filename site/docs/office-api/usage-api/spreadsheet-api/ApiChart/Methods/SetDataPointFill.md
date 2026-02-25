@@ -27,7 +27,7 @@ boolean
 
 This example show how to set the fill to the data point.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Sets the fill to the data point in the specified chart series.
 
 // How to set data point fill filling it with a solid color.

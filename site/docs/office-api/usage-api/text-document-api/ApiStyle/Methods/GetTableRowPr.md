@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the table row properties of the current style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get table row and set its height.
 
 // Resize the row of the table.

@@ -25,7 +25,7 @@ boolean
 
 This example specifies that all the text columns in the current section are of equal width.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to split the text into 3 equal columns.
 
 // Get the final section and set its columns.

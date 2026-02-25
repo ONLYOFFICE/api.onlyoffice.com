@@ -24,7 +24,7 @@ boolean
 
 This example spicifies tick label position for the vertical axis.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a position of tick label.
 
 // Create a chart, set its properties and its vertical axis tick label position.

@@ -24,7 +24,7 @@ expression.CreateSolidFill(uniColor);
 
 This example shows how to create a solid fill.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to color a background.
 
 // Add solid fill color as a shape background.

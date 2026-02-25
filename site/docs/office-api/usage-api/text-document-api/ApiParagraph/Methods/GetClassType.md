@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the class type of the ApiParagraph.
 
 // Get the class type of the paragraph object.

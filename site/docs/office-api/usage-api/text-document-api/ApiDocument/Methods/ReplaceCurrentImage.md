@@ -26,7 +26,7 @@ boolean
 
 This example replaces the current image with an image specified.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the image to another one.
 
 // Add the new image instead of another using the URL.

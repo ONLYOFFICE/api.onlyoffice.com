@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph line spacing rule.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get the size of a spacing line rule of a text from a paragraph.
 
 // Return a spacing line rule property of a paragraph.

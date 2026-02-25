@@ -26,7 +26,7 @@ boolean
 
 Creates a shape with adjustable parameters and guides.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Sets up text rectangle and connection points for the custom geometry.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

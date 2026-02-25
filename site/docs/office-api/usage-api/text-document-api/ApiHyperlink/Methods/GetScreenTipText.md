@@ -22,7 +22,7 @@ string
 
 This example shows how to get the screen tip text of the hyperlink.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to show the screen tip text of the hyperlink.
 
 // Set and display the hyperlink tip text appearing on the screen.

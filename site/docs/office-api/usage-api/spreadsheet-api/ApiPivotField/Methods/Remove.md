@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to remove a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete a pivot field.
 
 // Create a pivot table, add data to it then remove a specified pivot field.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table that contains the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to display the parent table of the inline text control.
 
 // Update the parent table of inline content control.

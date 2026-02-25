@@ -24,7 +24,7 @@ boolean
 
 This example shows how to apply a style for chart.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a style of a chart.
 
 // Update chart style.

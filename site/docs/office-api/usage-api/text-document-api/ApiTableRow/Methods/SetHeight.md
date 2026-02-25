@@ -25,7 +25,7 @@ boolean
 
 This example sets the height to the current table row within the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Resize the height of the row.
 
 // How to set a minimum row height of the table.

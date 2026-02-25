@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set the percentage mode for top 10 condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to configure if the condition uses percentage values instead of count values.
 
 // Set the percentage mode for the top 10 rule.

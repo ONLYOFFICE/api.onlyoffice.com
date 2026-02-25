@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show how to get an array with all the drawing objects from the slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get all drawings from the slide.
 
 // Get all drawings from the slide as an array.

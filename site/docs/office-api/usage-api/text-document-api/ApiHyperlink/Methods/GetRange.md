@@ -25,7 +25,7 @@ expression.GetRange(Start, End);
 
 This example shows how to get a Range object that represents the document part contained in the specified hyperlink.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the range where the hyperlink is located.
 
 // Make the hyperlink range bold.

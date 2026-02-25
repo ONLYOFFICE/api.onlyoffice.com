@@ -26,7 +26,7 @@ number
 
 This example shows how to return the internal rate of return for a series of periodic cash flows, considering both cost of investment and interest on reinvestment of cash.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the internal rate of return for a series of periodic cash flows.
 
 // Use a function to calculate the internal rate of return.

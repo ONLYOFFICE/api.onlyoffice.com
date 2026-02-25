@@ -21,7 +21,7 @@ Enumeration
 
 This example adds a table of contents with the dot leader to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a table of contents properties indicating its leader type.
 
 // Add a table of contents with dot leader type.

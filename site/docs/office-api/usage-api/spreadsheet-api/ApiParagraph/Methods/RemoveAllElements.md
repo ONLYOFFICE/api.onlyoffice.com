@@ -24,7 +24,7 @@ boolean
 
 This example removes all the elements from the current paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to clear a content from the paragraph.
 
 // Create a paragraph, add a text to it then delete all elements from it.

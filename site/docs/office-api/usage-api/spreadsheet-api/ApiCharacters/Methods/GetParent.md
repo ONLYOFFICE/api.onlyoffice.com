@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the parent object of the specified characters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a parent of the characters.
 
 // Find a characters parent of the selected range.

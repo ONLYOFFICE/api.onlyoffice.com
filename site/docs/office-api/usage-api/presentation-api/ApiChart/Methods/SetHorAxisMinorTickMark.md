@@ -24,7 +24,7 @@ boolean
 
 This example specifies the minor tick mark for the horizontal axis.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a minor tick mark using predefined symbols.
 
 // Create a chart, set its properties and minor tick mark for horizontal axis.

@@ -24,7 +24,7 @@ expression.CreateComboBoxForm(formPr);
 
 This example creates a combo box form with the common and specific combo box form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a combo box form and add it to the paragraph.
 
 // Add a combo box with the state options to the ApiDocument object.

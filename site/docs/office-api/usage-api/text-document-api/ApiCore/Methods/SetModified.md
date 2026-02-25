@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to get the date when the current document was last modified.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetModified(new Date('1990-03-10'));

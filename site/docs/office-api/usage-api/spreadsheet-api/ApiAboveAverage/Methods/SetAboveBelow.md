@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting whether the rule looks for above or below average values.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to switch between above average and below average conditions.
 
 // Toggle between above and below average conditional formatting.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the number of sheets in a reference.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to count sheets.
 
 // Use a function to get how many sheets are present in the worksheet.

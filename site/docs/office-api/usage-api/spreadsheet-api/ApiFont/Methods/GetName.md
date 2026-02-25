@@ -22,7 +22,7 @@ string \| null
 
 This example shows how to get the font name property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine a font name.
 
 // Apply a font to the characters then get its name and add it in the range.

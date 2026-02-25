@@ -22,7 +22,7 @@ string
 
 This example shows how to get the application ID from the OLE object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get an application ID of the OLE object.
 
 // Display the application ID of the OLE object.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of a block level content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control in the current document, copies it, and adds a copy to the same document.
 
 // How to create a copy of the ApiBlockLvlSdt object.

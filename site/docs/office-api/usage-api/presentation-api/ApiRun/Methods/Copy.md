@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to copy a text run object and insert it to the paragraph.
 
 // Create a duplicate of a text.

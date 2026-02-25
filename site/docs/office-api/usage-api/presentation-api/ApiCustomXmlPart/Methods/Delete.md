@@ -22,7 +22,7 @@ boolean
 
 This example demonstrates how to delete a custom XML part.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete a custom XML part from the presentation.
 
 // Delete an XML part.

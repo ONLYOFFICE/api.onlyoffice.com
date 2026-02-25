@@ -22,7 +22,7 @@ string
 
 This example shows how to get the control data just as it would be filled in mapped xml
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let contentControl = Api.CreateBlockLvlSdt();
 contentControl.GetContent().GetElement(0).AddText("This is a block text content control.");

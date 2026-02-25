@@ -24,7 +24,7 @@ expression.SetFontSize(nSize);
 
 This example sets the font size to the characters of the current text run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the text font size.
 
 // Create a text run object, resize its font.

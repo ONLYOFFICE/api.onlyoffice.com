@@ -24,7 +24,7 @@ expression.SetTextPr(oTextPr);
 
 This example sets the text properties to the Range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get text property from a paragraph and apply it for a range.
 
 // Get a range, add properties like font style to it.

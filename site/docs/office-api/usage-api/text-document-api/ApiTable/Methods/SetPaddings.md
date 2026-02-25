@@ -28,7 +28,7 @@ boolean
 
 This example sets the table paddings.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set paddings of the table.
 
 // Create a table and specify its paddings.

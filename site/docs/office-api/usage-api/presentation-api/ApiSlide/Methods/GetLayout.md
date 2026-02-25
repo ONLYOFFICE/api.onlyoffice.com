@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a layout of the current slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return a slide layout.
 
 // Get a slide layout and set its background color.

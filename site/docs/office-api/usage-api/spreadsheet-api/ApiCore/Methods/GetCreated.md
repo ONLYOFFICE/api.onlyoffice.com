@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to get the creation date of a workbook using the ApiCore.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

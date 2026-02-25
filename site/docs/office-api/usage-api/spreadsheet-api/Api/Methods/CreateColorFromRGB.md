@@ -26,7 +26,7 @@ expression.CreateColorFromRGB(r, g, b);
 
 This example creates an RGB color setting the appropriate values for the red, green and blue color components.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create color using RGB values.
 
 // Use RGB color to change object colors.

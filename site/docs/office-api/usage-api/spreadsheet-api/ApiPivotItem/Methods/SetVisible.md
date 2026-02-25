@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to set the visibility of a pivot item.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to show/hide pivot items using SetVisible method and Visible property.
 
 // Create a pivot table, add data to it then demonstrate setting visibility of pivot items.

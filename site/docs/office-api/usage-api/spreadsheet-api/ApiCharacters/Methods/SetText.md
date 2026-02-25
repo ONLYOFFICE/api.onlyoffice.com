@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the text for the specified characters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Update characters collection by setting a new text.
 
 // Set text for the characters of the range.

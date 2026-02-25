@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates no fill and removes the fill from the element.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove fill from the element.
 
 // Set no fill color for the element.

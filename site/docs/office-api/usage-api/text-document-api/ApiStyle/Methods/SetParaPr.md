@@ -24,7 +24,7 @@ expression.SetParaPr(paraPr);
 
 This example applies paragraph settings to the specified style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a paragraph, adds a text to it, and sets the line spacing and justify.
 
 // Specifies the ApiTextPr object and applies its settings to the ApiStyle object.

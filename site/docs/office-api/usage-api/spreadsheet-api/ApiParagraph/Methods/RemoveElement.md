@@ -27,7 +27,7 @@ boolean
 
 This example removes an element using the position specified.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete a paragraph element knowing its index.
 
 // Change the content of a shape by removing elements.

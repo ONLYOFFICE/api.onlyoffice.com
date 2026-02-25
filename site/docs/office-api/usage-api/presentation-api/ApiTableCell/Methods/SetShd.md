@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 This example specifies the shading which shall be applied to the extents of the current table cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set shading fill to the cell.
 
 // Create table and set its cell shading color.

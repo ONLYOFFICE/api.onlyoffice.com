@@ -24,7 +24,7 @@ expression.SetUserId(sUserId);
 
 This example shows how to set a user ID.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change an author's user ID of a comment.
 
 // Get all comments from the presentation and change its first one's user ID.

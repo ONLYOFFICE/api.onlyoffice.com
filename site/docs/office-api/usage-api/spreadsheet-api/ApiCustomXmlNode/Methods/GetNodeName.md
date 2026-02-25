@@ -22,7 +22,7 @@ string
 
 This example shows how to get the node name of a custom XML node.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve node names from custom XML node elements.
 
 // Get node name from item element.

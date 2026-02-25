@@ -24,7 +24,7 @@ boolean
 
 This example specifies the major tick mark "cross" for the horizontal axis.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to specify major tick mark for the horizontal axis.
 
 // Major mark the horizontal axis of the chart.

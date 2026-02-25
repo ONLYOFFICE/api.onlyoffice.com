@@ -22,7 +22,7 @@ number
 
 This example shows how to get a position of the current slide in the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return a slide index.
 
 // Get a slide and return its index.

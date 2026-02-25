@@ -25,7 +25,7 @@ number
 
 This example shows how to return the two-tailed Student's t-distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the two-tailed Student's t-distribution.
 
 // Use a function to estimate the Student's t-distribution right-tailed.

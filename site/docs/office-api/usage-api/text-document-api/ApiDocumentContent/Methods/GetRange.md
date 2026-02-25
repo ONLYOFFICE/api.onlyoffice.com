@@ -25,7 +25,7 @@ expression.GetRange(Start, End);
 
 This example shows how to get a Range object that represents the part of the document contained in the specified document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the range using row and column indexes.
 
 // Make a range text bold.

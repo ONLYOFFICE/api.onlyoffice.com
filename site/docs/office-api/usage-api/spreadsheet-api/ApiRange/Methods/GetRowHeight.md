@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the row height value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a cell row height.
 
 // Get a range and display its row height in the worksheet.

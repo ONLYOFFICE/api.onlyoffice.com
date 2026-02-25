@@ -25,7 +25,7 @@ boolean
 
 This example sets section break type "continuous".
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update a section type.
 
 // Create a section from a paragraph and make it continuous.

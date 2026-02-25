@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the minimum percentage length of a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the minimum length setting of a data bar.
 
 // Set the minimum percentage length of a data bar conditional formatting rule.

@@ -22,7 +22,7 @@ boolean
 
 This example removes the current selection.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove the selected part of the document.
 
 // Select the range and delete it.

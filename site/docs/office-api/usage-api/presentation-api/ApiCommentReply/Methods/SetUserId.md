@@ -24,7 +24,7 @@ expression.SetUserId(sUserId);
 
 This example shows how to set a user ID to a comment reply.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a user ID of a comment reply.
 
 // Get all comments from the presentation and change its first one's reply user ID.

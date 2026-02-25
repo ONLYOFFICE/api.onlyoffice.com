@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an array of all paragraphs from the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all paragraphs added to the document.
 
 // How to retrieve all paragraphs and make the first one bold.

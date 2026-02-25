@@ -25,7 +25,7 @@ number
 
 This example shows how to return a subtotal in a list or database.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate a subtotal.
 
 // Use a function to estimate a subtotal from the list.

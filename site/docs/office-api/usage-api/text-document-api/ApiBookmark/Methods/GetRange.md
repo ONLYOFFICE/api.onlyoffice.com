@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get bookmark range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a bookmark and then make its range bold.
 
 // Highlight the range of a bookmark.

@@ -24,7 +24,7 @@ number
 
 This example shows how to estimate standard deviation based on a sample, including logical values and text. Text and the false logical value have the value 0; the true logical value has the value 1.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to estimate standard deviation based on a sample considering logical and text data types.
 
 // Use a function to get the standard deviation.

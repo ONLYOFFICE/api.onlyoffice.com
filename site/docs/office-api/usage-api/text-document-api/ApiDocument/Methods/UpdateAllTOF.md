@@ -24,7 +24,7 @@ boolean
 
 This example updates all tables of figures in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update all table of figures.
 
 // Edit document content, add drawings and update the table of figures.

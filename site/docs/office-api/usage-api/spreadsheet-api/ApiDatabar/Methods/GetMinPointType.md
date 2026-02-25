@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the minimum point type from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check the type of the minimum condition value.
 
 // Get the minimum point type of a data bar conditional formatting rule.

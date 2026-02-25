@@ -28,7 +28,7 @@ string \| null
 
 This example shows how to get the range address.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an address of a range.
 
 // Get an address of one range and set it for another one.

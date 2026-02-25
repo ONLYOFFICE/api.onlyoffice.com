@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example showh how to get the first paragraphs from all footnotes in the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the first footnote paragraph, add text to it and make it bold.
 
 // Retrieve all footnote first paragraph for further manipulation.

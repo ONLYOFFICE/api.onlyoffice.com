@@ -25,7 +25,7 @@ boolean
 
 This example sets the properties from another drawing to the drawing.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to apply the properties of one shape to another.
 
 // Create the second drawing with the same style.

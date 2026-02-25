@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to refresh a table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to refresh table values.
 
 // Create a pivot table, add data to it then refresh it.

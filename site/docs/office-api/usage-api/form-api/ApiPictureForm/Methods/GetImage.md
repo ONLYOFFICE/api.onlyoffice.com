@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an image in the base64 format from the picture form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get an image from the picture form.
 
 // Get the image of the picture form and display it in the document.

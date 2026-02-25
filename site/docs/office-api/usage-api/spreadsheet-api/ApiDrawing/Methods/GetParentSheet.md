@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show get drawing parent sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know a parent sheet of a shape.
 
 // Get a shape's parent sheet and display it in the worksheet.

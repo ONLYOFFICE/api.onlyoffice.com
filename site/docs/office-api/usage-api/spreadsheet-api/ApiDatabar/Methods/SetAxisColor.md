@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the axis color of a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the axis color of a data bar.
 
 // Set the axis color of a data bar conditional formatting rule.

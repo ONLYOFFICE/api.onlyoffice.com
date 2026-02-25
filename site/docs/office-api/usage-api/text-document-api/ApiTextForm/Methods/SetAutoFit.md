@@ -24,7 +24,7 @@ boolean
 
 This example specifies if the text field content should be autofit.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make the first text form from this document autofit.
 
 // Set the text of the text form autofit.

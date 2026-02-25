@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a content control that contains the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to display the parent control of the inline text control.
 
 // Set the alias to the parent inline content control.

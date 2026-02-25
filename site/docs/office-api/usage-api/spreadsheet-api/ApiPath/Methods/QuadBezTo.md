@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 Creates a complex curve shape using different bezier and arc commands.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Combines multiple curve types in a single path.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

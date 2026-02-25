@@ -26,7 +26,7 @@ string
 
 This example shows how to return the characters from the middle of a text string, given a starting position and length.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get characters from the middle of the string indicating an index and length.
 
 // Use a function to get an array of characters from the middle of a string.

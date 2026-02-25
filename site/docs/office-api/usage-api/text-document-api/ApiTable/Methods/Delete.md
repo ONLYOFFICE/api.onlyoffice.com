@@ -22,7 +22,7 @@ boolean
 
 This example deletes the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove a table from the document.
 
 // Get a table and delete it.

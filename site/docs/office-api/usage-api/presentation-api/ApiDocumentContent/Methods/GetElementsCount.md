@@ -22,7 +22,7 @@ number
 
 This example gets elements count and inserts this value into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a number of elements a slide shape contains.
 
 // Get a slide shape's content and display its elements count.

@@ -25,7 +25,7 @@ expression.MergeCells(aCells);
 
 This example merges an array of cells.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to merge cells of the table into one.
 
 // Create a table and merge cells into another one.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets an outline property of a text.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out whether a text is outlined or not.
 
 // Get a text outline property type, for example as a stroke.

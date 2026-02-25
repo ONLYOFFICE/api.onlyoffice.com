@@ -22,7 +22,7 @@ boolean
 
 This example deletes the paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove a paragraph from the slide.
 
 // Delete a text.

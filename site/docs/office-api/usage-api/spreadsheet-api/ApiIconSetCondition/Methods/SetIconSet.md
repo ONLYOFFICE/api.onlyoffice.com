@@ -24,7 +24,7 @@ boolean
 
 This example shows how to change the icon set type for conditional formatting.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to modify the icon set type used in conditional formatting.
 
 // Set a different icon set type for the formatting rule.

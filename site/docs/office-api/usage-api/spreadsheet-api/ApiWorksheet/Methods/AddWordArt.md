@@ -35,7 +35,7 @@ expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWi
 
 This example adds a Text Art object to the sheet with the parameters specified.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a word art to the worksheet specifying its properties, color, size, etc.
 
 // Insert a word art to the worksheet.

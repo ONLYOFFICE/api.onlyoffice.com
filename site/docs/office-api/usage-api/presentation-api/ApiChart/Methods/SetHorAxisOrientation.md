@@ -24,7 +24,7 @@ boolean
 
 This example specifies the horizontal axis orientation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set an orientation of horizontal axis.
 
 // Create a chart, set its properties and its horizontal axis orientation.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies the direction of the text flow for the current table cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set text direction of the table cell.
 
 // Create a table and set the text direction for the ApiTableCell object.

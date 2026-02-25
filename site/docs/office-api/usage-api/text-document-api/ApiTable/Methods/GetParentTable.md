@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table that contains the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the parent table and delete its row.
 
 // Retrieve the parent table, get its cell and remove the row of it.

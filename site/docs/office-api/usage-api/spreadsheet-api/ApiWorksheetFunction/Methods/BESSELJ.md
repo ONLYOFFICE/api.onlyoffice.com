@@ -25,7 +25,7 @@ number
 
 This example shows how to return the Bessel function Jn(x).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from Bessel function Jn(x).
 
 // Use function to get the Bessel function Jn(x).

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How get a class type of ApiCheckBoxForm.
 
 // Retrieve class type of a created checkbox object and display it.

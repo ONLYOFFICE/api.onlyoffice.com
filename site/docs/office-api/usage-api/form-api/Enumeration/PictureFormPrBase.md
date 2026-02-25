@@ -21,7 +21,7 @@ Object
 
 Create a picture form with the specific picture form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a picture form with its base properties.
 
 // Create the base properties and apply them to the ApiPictureForm object.

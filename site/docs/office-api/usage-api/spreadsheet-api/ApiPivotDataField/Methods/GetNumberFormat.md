@@ -22,7 +22,7 @@ string \| null
 
 This example shows how to get a number format of a data field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a table element format.
 
 // Create a pivot table, add data to it then display a custom data field's number format.

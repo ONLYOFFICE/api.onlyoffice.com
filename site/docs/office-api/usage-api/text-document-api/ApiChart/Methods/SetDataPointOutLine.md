@@ -27,7 +27,7 @@ boolean
 
 This example show how to set the outline to the data point.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set a numeric format of the data points.
 
 // Create a chart and set its data points number format to round to two decimal places.

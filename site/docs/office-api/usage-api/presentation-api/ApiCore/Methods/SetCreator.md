@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set and get the creator of the current presentation using the ApiCore.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreator("John Smith");

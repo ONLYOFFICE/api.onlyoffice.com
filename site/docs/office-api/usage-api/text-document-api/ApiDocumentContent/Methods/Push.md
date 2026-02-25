@@ -24,7 +24,7 @@ boolean
 
 This example removes all contents of the shape and adds a new paragraph inside it.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Insert an element to the document.
 
 // Push the paragraph to the content of the document. 

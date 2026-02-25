@@ -24,7 +24,7 @@ expression.SetStrikeout(isStrikeout);
 
 This example specifies that the contents of this paragraph are displayed with a single horizontal line through the center of the line.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to cross the paragraph with onle line.
 
 // Create a paragraph with the text struck out with a single line.

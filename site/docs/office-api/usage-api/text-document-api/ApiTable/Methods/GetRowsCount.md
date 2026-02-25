@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of rows in the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to count the number of rows of the table and display it in the document.
 
 // Add text showing the rows count of two tables.

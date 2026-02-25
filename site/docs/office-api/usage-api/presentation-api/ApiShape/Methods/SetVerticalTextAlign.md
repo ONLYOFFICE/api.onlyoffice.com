@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set vertical alignment of the shape content.
 
 // Adjust vertical alignment of the text inside the shape.

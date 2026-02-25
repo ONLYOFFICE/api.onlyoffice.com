@@ -27,7 +27,7 @@ number
 
 This example shows how to return the sum-of-years' digits depreciation of an asset for a specified period.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the sum-of-years' digits depreciation.
 
 // Use a function to estimate the sum-of-years' digits depreciation of an asset.

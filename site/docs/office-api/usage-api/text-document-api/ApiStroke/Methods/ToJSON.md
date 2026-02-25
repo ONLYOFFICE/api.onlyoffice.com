@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiStroke object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the stroke object.
 
 // Convert the stroke to json and add it to the document.

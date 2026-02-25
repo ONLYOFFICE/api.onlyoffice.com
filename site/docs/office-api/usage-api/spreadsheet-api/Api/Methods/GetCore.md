@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to use ApiCore to manage spreadsheet metadata.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 
 const core = Api.GetCore();

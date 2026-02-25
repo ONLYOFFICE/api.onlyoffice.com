@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a class type of ApiGradientStop.
 
 // Retrieve class type of ApiGradientStop object and insert it to the slide.

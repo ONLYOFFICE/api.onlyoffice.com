@@ -22,7 +22,7 @@ boolean
 
 This example adds a tab stop to the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to start a sentence after a tab stop.
 
 // Break two lines of a text with a tab. 

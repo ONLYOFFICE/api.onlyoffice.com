@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the spacing after value of the current paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get spacing information which is after the paragraph.
 
 // Get two consecutive paragraphs add spacing between them then get the spacing after first one and display it in the worksheet. 

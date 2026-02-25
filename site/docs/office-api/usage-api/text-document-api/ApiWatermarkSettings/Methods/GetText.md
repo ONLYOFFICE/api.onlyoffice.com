@@ -22,7 +22,7 @@ string \| null
 
 This example gets a watermark text and pastes it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve the text from the watermark and display it in the document.
 
 // Get the text form the watermark settings.

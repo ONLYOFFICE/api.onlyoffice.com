@@ -24,7 +24,7 @@ boolean
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the type of the watermark.
 
 // Change the watermark type to "text" using its settings.

@@ -24,7 +24,7 @@ boolean
 
 This example sets a name to the theme font scheme.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a font scheme name.
 
 // Create new font scheme and set its name.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of section objects in the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get all sections from the document.
 
 // Get all sections and display the class type of the first one.

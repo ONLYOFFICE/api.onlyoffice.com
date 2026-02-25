@@ -22,7 +22,7 @@ boolean
 
 This example deletes the run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete a text run object.
 
 // Create the ApiRun object, add it into the paragraph and remove it from it.

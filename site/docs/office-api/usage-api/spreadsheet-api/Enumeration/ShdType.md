@@ -16,7 +16,7 @@ Enumeration
 
 This example adds a green shadow to the table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a table shadow type.
 
 // Indicate a clear shadow type of the table.

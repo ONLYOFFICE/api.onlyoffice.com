@@ -22,7 +22,7 @@ boolean
 
 This example shows how to find out whether a text is strikethrough with one line.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to know whether a text is crossed with one horizontal line.
 
 // Get the text properties of the run and find whether it is strikethrough or not.

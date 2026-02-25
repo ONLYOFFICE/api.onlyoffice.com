@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example moves the sheet to another location in the workbook.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change an order of the sheet.
 
 // Move a sheet.

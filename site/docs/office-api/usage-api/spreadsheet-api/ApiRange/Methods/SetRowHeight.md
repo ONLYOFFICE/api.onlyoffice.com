@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the row height value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a row height of cells.
 
 // Get a range and specify its row height.

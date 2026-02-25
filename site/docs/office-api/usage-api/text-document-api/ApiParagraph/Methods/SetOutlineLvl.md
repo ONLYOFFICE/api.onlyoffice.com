@@ -24,7 +24,7 @@ boolean
 
 This example shows how to get the outline level of the specified paragraph via paragraph properties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 
 const paragraph = doc.GetElement(0);

@@ -22,7 +22,7 @@ boolean
 
 This example shows how to return the false logical value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get false value.
 
 // Use function to get a boolean false.

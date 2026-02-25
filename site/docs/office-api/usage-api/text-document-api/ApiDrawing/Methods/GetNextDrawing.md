@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the next inline drawing object if exists.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set horizontal flip for the next drawing.
 
 // Get the next drawing and update its properties.

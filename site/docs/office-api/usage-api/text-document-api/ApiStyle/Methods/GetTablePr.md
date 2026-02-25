@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the table properties of the style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get table properties and set its cells margins.
 
 // Update the table cell margin sizes.

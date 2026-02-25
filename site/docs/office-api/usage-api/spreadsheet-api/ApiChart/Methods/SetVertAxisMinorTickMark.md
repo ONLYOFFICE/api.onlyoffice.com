@@ -24,7 +24,7 @@ boolean
 
 This example specifies the minor tick mark for the vertical axis.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a minor tick as a out for the vertical axis labels.
 
 // Specifies minor tick mark for the vertical axis.

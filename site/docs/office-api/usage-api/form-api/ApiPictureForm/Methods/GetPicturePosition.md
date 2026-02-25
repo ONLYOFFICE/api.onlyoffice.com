@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the picture position inside the current form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get a picture position.
 
 // Get the image position in the picture form and display it in the document.

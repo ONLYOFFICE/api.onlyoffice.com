@@ -22,7 +22,7 @@ PTCondition \| null
 
 This example gets the pivot table condition from a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve pivot table conditions from conditional formatting rules.
 
 // Get conditional formatting rule pivot table condition.

@@ -24,7 +24,7 @@ expression.GetByNamespace(namespace);
 
 This example shows how to get custom XML parts by their namespace.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to retrieve custom XML parts using their namespace.
 
 // Get XML parts by namespace.

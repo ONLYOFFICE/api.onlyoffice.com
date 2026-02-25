@@ -27,7 +27,7 @@ number
 
 This example shows how to return numbers in a linear trend matching known data points, using the least squares method.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get numbers in a linear trend using the least squares method.
 
 // Use a function to find a linear trend using data points by the least squares method.

@@ -22,7 +22,7 @@ boolean
 
 This example clears the contents from the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove all elements from the inline text control.
 
 // Delete text from the inline content control.

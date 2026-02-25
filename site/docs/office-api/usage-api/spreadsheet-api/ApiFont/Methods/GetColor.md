@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the font color property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know a font color of the characters.
 
 // Get a color value represented in RGB format and show it in the worksheet.

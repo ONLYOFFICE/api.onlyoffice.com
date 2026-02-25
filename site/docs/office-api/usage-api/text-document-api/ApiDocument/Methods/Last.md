@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the last document element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to bold the final element of the document.
 
 // Find the last paragraph and update its text properties.

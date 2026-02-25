@@ -25,7 +25,7 @@ expression.Offset(rowOffset, columnOffset);
 
 This example shows how to get a range offset from the current range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to offset a range by rows and columns.
 
 // Get a range, offset it and fill the offset range with color.

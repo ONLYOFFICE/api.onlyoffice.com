@@ -24,7 +24,7 @@ boolean
 
 This example adds a shape to slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a shape object to the master layout.
 
 // Add a drawing to the ApiLayout object.

@@ -24,7 +24,7 @@ expression.GetContent(bGetCopies);
 
 This example shows how to get an array of document elements from the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Retrieve each document element.
 
 // Update properties of document elements knowing their order position.

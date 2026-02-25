@@ -25,7 +25,7 @@ number
 
 This example shows how to return the quotient of two complex numbers.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the quotient of two comlex numbers.
 
 // Use a function to get the quotient.

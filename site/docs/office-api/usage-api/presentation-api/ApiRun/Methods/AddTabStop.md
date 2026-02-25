@@ -22,7 +22,7 @@ boolean
 
 This example adds a tab stop to the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a tab after a string in a text run.
 
 // How to split a text with a tab.

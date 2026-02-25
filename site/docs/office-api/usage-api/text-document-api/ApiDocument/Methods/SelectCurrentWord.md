@@ -22,7 +22,7 @@ object
 
 This example shows how to select the current word.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to select the word at the specific cursor position.
 
 // Move the cursor to the position 16 and select the word.

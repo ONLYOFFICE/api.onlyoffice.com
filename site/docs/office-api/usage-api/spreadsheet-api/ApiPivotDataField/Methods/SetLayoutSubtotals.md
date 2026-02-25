@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a layout subtotals of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a pivot field layout subtotals.
 
 // Create a pivot table, add data to it then set layout subtotals of a specified pivot.

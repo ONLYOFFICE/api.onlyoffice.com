@@ -24,7 +24,7 @@ boolean
 
 This example specifies the reference to the parent style which this style inherits from in the style hierarchy.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the specific style from the document and create table style based on it.
 
 // Inherit bordered style of the document.

@@ -25,7 +25,7 @@ number
 
 This example shows how to return the error function integrated between the specified lower and upper limits.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an error function.
 
 // Use function to get an error function set between upper and lower limits.

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example makes the sheet active.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set an active sheet.
 
 // Set a current sheet active.

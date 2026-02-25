@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the mail merge template and pastes its data into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Wraps the text runs in the mail merge fields and returns the mail merge template document.
 
 // Returns the ApiDocumentContent object whith represents the mail merge template document.

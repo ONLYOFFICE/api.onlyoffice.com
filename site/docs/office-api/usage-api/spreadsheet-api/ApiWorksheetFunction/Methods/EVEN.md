@@ -24,7 +24,7 @@ number
 
 This example shows how to round a positive number up and negative number down to the nearest even integer.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to round up a number.
 
 // Use function to round up positive/negative numbers.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to show class type on the worksheet.
 
 // Get class type of the chart and insert it in the range.

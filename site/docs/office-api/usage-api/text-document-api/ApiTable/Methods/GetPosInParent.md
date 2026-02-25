@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the table position within its parent element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out the location of the table in its parent one.
 
 // Get the position index of the table.

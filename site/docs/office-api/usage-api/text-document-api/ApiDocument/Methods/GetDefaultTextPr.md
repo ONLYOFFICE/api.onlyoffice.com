@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a set of default properties for the text run in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get default text properties of a document.
 
 // Update the default text properties of the text elements.

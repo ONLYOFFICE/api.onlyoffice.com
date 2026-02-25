@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the duplicate/unique value setting for a unique values conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change between highlighting unique or duplicate values.
 
 // Set unique values rule to highlight duplicates instead.

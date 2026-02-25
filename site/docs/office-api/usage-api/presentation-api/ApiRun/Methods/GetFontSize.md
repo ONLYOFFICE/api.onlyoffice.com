@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to find out a text font size.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to know font size of a text run.
 
 // Get the text properties of the run and display its font size.

@@ -27,7 +27,7 @@ number
 
 This example shows how to return the serial number of the date before or after a specified number of workdays with custom weekend parameters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the serial number of the date adding some workdays.
 
 // Use a function to calculate the serial number of the date.

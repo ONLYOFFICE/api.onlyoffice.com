@@ -24,7 +24,7 @@ boolean
 
 This example scales the height of the figure using the specified coefficient.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to increase the height of the drawing.
 
 // Make the cube longer.

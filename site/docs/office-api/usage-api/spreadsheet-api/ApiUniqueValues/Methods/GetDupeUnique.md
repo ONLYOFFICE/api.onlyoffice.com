@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the duplicate/unique value setting from a unique values conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check whether rule highlights unique or duplicate values.
 
 // Get the duplicate/unique setting from unique values rule.

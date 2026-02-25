@@ -24,7 +24,7 @@ number
 
 This example shows how to calculate the greatest common divisor.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the greatest common divisor.
 
 // Use a function to calculate the greatest common divisor.

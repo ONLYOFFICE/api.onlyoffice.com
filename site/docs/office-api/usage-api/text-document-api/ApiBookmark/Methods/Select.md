@@ -22,7 +22,7 @@ boolean
 
 This example shows how to go to bookmark and select it.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Select a bookmark.
 
 // Select a bookmark from the documnet by getting it by its name.

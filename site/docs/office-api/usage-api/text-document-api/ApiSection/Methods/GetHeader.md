@@ -25,7 +25,7 @@ expression.GetHeader(sType, isCreate);
 
 This example shows how to get the content for the specified header type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the header of the page.
 
 // Get the default header from the final section.

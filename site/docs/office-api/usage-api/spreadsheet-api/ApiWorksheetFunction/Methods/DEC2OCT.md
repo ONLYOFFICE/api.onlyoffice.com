@@ -25,7 +25,7 @@ number
 
 This example shows how to convert a decimal number to octal.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get decimal number from octal.
 
 // Use function to convert a decimal number to octal.

@@ -25,7 +25,7 @@ number
 
 This example shows how to return the integer portion of a division.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the integer part from the result of division.
 
 // Use a function to integer part from division.

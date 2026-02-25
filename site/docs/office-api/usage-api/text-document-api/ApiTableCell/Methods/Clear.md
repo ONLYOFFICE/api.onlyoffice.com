@@ -22,7 +22,7 @@ boolean
 
 This example clears the content from the cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Remove the content of the table cell.
 
 // Get the table cell and clear its value.

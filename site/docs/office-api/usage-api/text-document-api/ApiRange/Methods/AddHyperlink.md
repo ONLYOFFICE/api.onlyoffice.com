@@ -25,7 +25,7 @@ expression.AddHyperlink(sLink, sScreenTipText);
 
 This example adds a hyperlink to the specified range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Insert a link to the range.
 
 // Get range and add a hyperlink to it. 

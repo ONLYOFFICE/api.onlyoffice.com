@@ -22,7 +22,7 @@ string
 
 This example shows how to get the date format from a date form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get a date form format.
 
 // Retrieve the format of the date and display it.

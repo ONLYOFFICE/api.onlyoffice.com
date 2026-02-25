@@ -22,7 +22,7 @@ string
 
 This example shows how to return the N/A error value which means "no value is available".
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the N/A.
 
 // Use a function to get a N/A error value.

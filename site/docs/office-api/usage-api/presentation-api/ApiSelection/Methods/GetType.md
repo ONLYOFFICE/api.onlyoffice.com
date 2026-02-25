@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the type of the selection in different scenarios.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

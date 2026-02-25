@@ -24,7 +24,7 @@ expression.AddColorScale(ColorScaleType);
 
 This example adds color scale conditional formatting to a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add color scale conditional formatting rules to highlight cells with gradient colors.
 
 // Add color scale conditional formatting to cells.

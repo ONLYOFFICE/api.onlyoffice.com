@@ -22,7 +22,7 @@ boolean
 
 This example clears the slide master background.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove a background from a master.
 
 // Clear background from a master object.

@@ -22,7 +22,7 @@ string
 
 This example demonstrates getting the formula from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the formula string from a data bar.
 
 // Get the formula of a data bar conditional formatting rule.

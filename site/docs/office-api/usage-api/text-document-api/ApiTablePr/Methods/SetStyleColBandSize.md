@@ -24,7 +24,7 @@ boolean
 
 This example specifies a number of columns which will comprise each table column band for this table style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set column band size.
 
 // How to style a column band size.

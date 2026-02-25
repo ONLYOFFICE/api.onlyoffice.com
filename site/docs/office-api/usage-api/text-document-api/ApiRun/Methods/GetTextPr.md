@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the text properties of the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the text properties.
 
 // Create a text object, set its font size, justification, etc.

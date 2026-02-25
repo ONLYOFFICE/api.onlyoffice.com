@@ -22,7 +22,7 @@ string
 
 This example shows how to get a grand total name of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a grand total name of a table.
 
 // Create a pivot table, add data to it then get its grand total name.

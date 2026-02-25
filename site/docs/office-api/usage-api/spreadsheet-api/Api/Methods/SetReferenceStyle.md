@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets reference style.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a style of a reference.
 
 // Set reference style using ID.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example inserts a number of pages in the current document into the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add the number of pages to the text.
 
 // Insert a pages count to the pxaragraph.

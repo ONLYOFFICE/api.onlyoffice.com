@@ -24,7 +24,7 @@ expression.Duplicate(nPos);
 
 This example creates a duplicate of the specified slide master object, adds the new slide master to the slide masters collection.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a duplicate of a slide master.
 
 // Add a duplicate master.

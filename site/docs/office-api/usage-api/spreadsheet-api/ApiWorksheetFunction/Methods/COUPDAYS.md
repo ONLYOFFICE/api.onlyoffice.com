@@ -27,7 +27,7 @@ number
 
 This example shows how to return the number of days in the coupon period that contains the settlement date.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the the number of days in the coupon period that contains the settlement date.
 
 // Use function to get the number of days in the coupon period that contains the settlement date.

@@ -27,7 +27,7 @@ number
 
 This example shows how to return the individual term binomial distribution probability.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an individual term binomial distribution probability.
 
 // Use function to get an individual term binomial distribution probability.

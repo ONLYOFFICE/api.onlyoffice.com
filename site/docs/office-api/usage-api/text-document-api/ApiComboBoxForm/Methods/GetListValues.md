@@ -22,7 +22,7 @@ string[]
 
 This example shows how to get the list values from the combo box.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get list values of a combobox form.
 
 // Display each combobox item in the document.

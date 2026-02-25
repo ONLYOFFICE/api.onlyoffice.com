@@ -27,7 +27,7 @@ number
 
 This example shows how to return an aggregate in a list or database.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an aggregate of a numbers and display it in the worksheet.
 
 // Get a function that gets an aggregate from a list of numbers.

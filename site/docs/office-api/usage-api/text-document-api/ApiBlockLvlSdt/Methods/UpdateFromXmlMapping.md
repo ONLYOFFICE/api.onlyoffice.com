@@ -22,7 +22,7 @@ boolean
 
 This example shows how to synchronize data from a mapped XML file with a content control using data binding.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

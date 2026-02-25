@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the parent table of the row.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the parent table of the table row.
 
 // Display the first and the second row.

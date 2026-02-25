@@ -22,7 +22,7 @@ string
 
 This example shows how to find out how a text is aligned vertically.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know whether a text is subscript, superscript or baseline.
 
 // Get the text properties of the run and find its vertical alignment.

@@ -24,7 +24,7 @@ boolean
 
 This example shows how to move the cursor outside.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to know whether the cursor should be moved out of the text form.
 
 // Place the cursor after the current form.

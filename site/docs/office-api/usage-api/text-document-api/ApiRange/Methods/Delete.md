@@ -22,7 +22,7 @@ boolean
 
 This example deletes all the contents from the range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to clear the content of the range.
 
 // Delete the text from the content.

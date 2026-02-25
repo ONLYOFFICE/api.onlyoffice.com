@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set title of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set table title.
 
 // Create a pivot table, add data to it then set its table title.

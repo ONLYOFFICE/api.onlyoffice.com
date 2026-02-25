@@ -22,7 +22,7 @@ string
 
 This example shows how to get a formula that the name is defined to refer to.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a defname that refers to the formula from the specified range.
 
 // Add a defname for the formula and then display it in the worksheet.

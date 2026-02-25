@@ -25,7 +25,7 @@ expression.AddComment(sText, sAuthor);
 
 This example adds a comment to the document.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add comments in a worksheet.
 
 // Insert a comment into a cell.

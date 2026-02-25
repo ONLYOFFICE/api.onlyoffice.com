@@ -24,7 +24,7 @@ boolean
 
 This example sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to specify a vertical alignment of a shape content.
 
 // Set text vertical alignment of a shape to bottom.

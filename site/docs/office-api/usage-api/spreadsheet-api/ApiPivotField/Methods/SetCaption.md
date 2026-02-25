@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a pivot field caption.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to rename a pivot field caption.
 
 // Create a pivot table, add data to it then rename a specified pivot field's caption.

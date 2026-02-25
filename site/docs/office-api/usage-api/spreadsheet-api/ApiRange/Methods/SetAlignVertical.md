@@ -24,7 +24,7 @@ boolean
 
 This example sets the vertical alignment of the text in the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the vertical alignment of the cell content.
 
 // Change the vertical alignment of the ApiRange content to distributed.

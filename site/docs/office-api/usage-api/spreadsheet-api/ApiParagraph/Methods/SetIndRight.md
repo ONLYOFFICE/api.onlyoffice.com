@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph right side indentation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the sentence's right side indentation of the paragraph.
 
 // Get a paragraph from the shape's content then add a text specifying the right side indentation.

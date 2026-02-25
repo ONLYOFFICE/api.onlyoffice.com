@@ -24,7 +24,7 @@ boolean
 
 This example shows how to add text to the notes page of a slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

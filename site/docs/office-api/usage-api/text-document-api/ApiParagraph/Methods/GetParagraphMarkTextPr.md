@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the text properties of the paragraph mark which is used to mark the paragraph end.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the mark text properties of the paragraph.
 
 // How to update the text properties of the paragraph mark.

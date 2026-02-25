@@ -25,7 +25,7 @@ boolean
 
 This example specifies the indentation which will be added before the leading edge of the table in the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to display the table description in the document.
 
 // Get the table description from the table properties.

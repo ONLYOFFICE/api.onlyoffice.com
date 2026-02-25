@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get the percentage mode for top 10 condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check if the condition uses percentage values instead of count values.
 
 // Get the percentage mode setting for the top 10 rule.

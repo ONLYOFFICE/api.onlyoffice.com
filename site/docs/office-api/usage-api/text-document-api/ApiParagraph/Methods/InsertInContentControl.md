@@ -24,7 +24,7 @@ expression.InsertInContentControl(nType);
 
 This example wraps the paragraph object with a rich text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to insert the paragraph object into the another element.
 
 // Add paragraph to the content control.

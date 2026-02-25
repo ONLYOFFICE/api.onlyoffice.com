@@ -24,7 +24,7 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 This example specifies that the contents of the current Range are displayed with two horizontal lines through each character displayed on the line.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to strikethrough a text with two lines.
 
 // Create a text run object, double cross out it.

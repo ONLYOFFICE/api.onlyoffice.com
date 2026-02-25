@@ -27,7 +27,7 @@ expression.SetColor(r, g, b, isAuto);
 
 This example sets the text color to the current paragraph in the RGB format.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Color the paragraph text with orange.
 
 // Get the first paragraph and make its font color orange.

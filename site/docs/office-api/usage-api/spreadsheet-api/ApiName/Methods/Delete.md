@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example deletes the DefName object.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove custom DefName from a worksheet.
 
 // Delete previously added DefName. 

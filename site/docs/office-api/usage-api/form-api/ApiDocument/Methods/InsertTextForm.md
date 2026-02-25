@@ -24,7 +24,7 @@ expression.InsertTextForm(formPr);
 
 This example inserts a text box with the specified text box properties over the selected text.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a text form and add it to the paragraph.
 
 // Add a text form to the ApiDocument object, set its properties like characters limit, autofit, etc.

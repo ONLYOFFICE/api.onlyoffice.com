@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to find out a text is spacing size.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to know a text spacing.
 
 // Get the text properties of the run and display its spacing size.

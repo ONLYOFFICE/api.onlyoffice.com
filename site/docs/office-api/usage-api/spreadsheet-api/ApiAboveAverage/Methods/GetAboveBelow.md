@@ -22,7 +22,7 @@ boolean
 
 This example demonstrates getting the above/below setting from an above average conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check if the rule is looking for above or below average values.
 
 // Get whether the rule is checking for above or below average values.

@@ -27,7 +27,7 @@ boolean
 
 This example sets the spacing before the current paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the size of a spacing before a text from a paragraph properties.
 
 // Change the size property of a spacing before a paragraph.

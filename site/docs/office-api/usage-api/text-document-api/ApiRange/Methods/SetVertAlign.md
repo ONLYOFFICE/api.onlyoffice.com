@@ -27,7 +27,7 @@ expression.SetVertAlign(sType);
 
 This example sets vertical aligment "superscript" for [ApiRange](../ApiRange.md).
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set vertical alignment of a text.
 
 // Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript".

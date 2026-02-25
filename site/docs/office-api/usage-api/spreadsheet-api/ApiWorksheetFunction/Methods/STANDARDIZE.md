@@ -26,7 +26,7 @@ number
 
 This example shows how to return a normalised value from a distribution characterised by a mean and standard deviation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the normalised value from a distribution.
 
 // Use a function to get the normalised value from a distribution by different parameters.

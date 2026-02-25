@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get icon criteria collection.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve icon criteria for conditional formatting.
 
 // Get the collection of icon criteria from the formatting rule.

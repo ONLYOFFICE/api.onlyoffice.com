@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the slide width in English measure units.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to find a slide's width and display it on the slide.
 
 // Get a width of the ApiSlide object and show it in the slide.

@@ -28,7 +28,7 @@ expression.SetReadingOrder(readingOrder);
 
 This example shows how to set the reading order of the text in the specified paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText('Hello! مرحبا! 你好!');

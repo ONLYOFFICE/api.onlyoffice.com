@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example specifies an amount of space which shall be left between the top extent of the current cell contents and the top edge border of a specific individual table cell within a table.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the cell top margin for the current table cell.
 
 // Specify the top margin value for the ApiTableCell object.

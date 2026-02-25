@@ -53,7 +53,7 @@ Enumeration
 
 This example shows how to create the "bar3D" chart.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Specify the "ChartType" property of the ApiChart object used in text documents.
 
 // How to create a chart specifying its type.

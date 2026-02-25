@@ -24,7 +24,7 @@ boolean
 
 This example removes an element using the position specified.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove an element from a document knowing its position in the document content.
 
 // Delete an element from a document and prove it by showing the difference.

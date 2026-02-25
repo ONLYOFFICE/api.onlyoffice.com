@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds unique values conditional formatting to a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add unique values conditional formatting rules to highlight unique or duplicate values.
 
 // Add unique values conditional formatting to cells.

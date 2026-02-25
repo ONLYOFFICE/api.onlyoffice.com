@@ -26,7 +26,7 @@ boolean
 
 This example shows how to set an attribute value on a custom XML node.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set attributes on custom XML node elements.
 
 // Set attributes on product node.

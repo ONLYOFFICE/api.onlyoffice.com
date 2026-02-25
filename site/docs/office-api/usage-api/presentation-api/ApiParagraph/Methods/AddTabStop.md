@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a tab stop to the paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a tab after a sentence in a paragraph.
 
 // How to split a text string with a tab.

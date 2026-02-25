@@ -24,7 +24,7 @@ number
 
 This example shows how to return the hyperbolic tangent of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the hyperbolic tangent of a number.
 
 // Use a function to calculate angle's hyperbolic tangent.

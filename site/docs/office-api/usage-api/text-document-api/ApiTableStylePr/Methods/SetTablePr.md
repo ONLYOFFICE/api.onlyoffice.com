@@ -24,7 +24,7 @@ expression.SetTablePr(oTablePr);
 
 This example shows how to create and set the table properties which will be applied to all the regions within a table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set table properties to table style and set its bottom border.
 
 // Update the table style table properties.

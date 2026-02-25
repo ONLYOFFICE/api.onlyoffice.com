@@ -22,7 +22,7 @@ boolean
 
 This example checks if a comment is solved or not.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out whether a comment is resolved.
 
 // Add a comment resolved status to a range of the worksheet.

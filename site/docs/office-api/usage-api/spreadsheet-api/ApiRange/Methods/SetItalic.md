@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the italic property to the text characters in the cell.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to make a text value of cells italic.
 
 // Get a range and make specified cells font style italic.

@@ -24,7 +24,7 @@ string
 
 This example shows how to convert a text string to all uppercase letters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to make a string characters uppercase.
 
 // Use a function to convert all letters to uppercase.

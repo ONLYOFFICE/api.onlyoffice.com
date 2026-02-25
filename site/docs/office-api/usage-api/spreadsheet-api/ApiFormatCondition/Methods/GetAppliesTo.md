@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the range where a conditional formatting rule applies.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the cell range of existing conditional formatting rules.
 
 // Get conditional formatting rule range.

@@ -16,7 +16,7 @@ Enumeration
 
 This example specify that the whole text match will be searched in the range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to search a text indicating search order.
 
 // Find a text from a range with column wise search order.

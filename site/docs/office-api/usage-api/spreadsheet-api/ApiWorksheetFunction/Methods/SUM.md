@@ -24,7 +24,7 @@ number
 
 This example shows how to add all the numbers in a range of cells.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to sum up all values from the list.
 
 // Use a function to estimate a sum from the cells.

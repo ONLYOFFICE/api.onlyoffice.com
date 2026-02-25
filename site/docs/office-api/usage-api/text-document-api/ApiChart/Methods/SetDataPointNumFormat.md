@@ -27,7 +27,7 @@ boolean
 
 This example sets "0.00" numeric format for chart.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set a numeric format of the data points.
 
 // Create a chart and set its data points number format to two decimal places.

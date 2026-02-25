@@ -24,7 +24,7 @@ boolean
 
 This example sets the theme colors to the current spreadsheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get all theme colors and apply one of them.
 
 // Apply one of the theme colors from the array of available ones.

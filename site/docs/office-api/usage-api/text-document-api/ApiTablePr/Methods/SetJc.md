@@ -24,7 +24,7 @@ boolean
 
 This example specifies the alignment of the table with respect to the text margins in the current section.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set justification of the paragraph content.
 
 // Change the justification of the paragraph.

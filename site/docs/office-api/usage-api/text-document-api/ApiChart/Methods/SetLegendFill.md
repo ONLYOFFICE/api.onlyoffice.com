@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart legend.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color a chart legend.
 
 // Create a chart and set a solid fill to its legend.

@@ -26,7 +26,7 @@ number
 
 This example shows how to estimate the standard deviation based on a sample from the selected database entries.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the standard deviation based on a sample.
 
 // Use function to estimate the standard deviation based on a range sample.

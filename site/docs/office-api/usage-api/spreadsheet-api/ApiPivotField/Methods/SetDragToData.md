@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a drag to data of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to rename a pivot field drag to data.
 
 // Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value.

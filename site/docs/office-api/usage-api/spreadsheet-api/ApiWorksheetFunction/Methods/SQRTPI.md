@@ -24,7 +24,7 @@ number
 
 This example shows how to return the square root of (number * pi).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the square root of a number multiplied by aa constant Pi.
 
 // Use a function to get the square root of (number * pi).

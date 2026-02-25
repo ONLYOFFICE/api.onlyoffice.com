@@ -25,7 +25,7 @@ boolean
 
 This example sets the specified numeric format to the axis values.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set number format style to the axis. 
 
 // Create a chart and format its axis numbering.

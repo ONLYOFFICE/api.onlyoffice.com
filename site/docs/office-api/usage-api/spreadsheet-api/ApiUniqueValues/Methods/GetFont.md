@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the font applied by a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve font settings from conditional formatting rules.
 
 // Get conditional formatting rule font.

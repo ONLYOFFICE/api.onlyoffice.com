@@ -24,7 +24,7 @@ number
 
 This example shows how to return the natural logarithm of a number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the natural logarithm.
 
 // Use a function to return a natural logarithm.

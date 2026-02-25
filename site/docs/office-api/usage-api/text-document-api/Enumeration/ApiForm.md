@@ -20,7 +20,7 @@ Enumeration
 
 This example copies a text form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get a form and create its copy. 
 
 // How to duplicate a text form object.

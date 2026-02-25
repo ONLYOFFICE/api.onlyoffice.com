@@ -22,7 +22,7 @@ boolean
 
 This example checks if the content control is a form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know whether the inline text control is a form or not.
 
 // Check whether the inline text control is a fomrm and display it.

@@ -29,7 +29,7 @@ number
 
 This example shows how to return the annual duration of a security with periodic interest payments.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an annual duration of a security with periodic interest payments.
 
 // Use function to find an annual duration of a security.

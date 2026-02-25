@@ -23,7 +23,7 @@ string
 
 This example shows how to get the font family of the text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know the font name of the form.
 
 // Retrieve text properties of the form to find out its font family.

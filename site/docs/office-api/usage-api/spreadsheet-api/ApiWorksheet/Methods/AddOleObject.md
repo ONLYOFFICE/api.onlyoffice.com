@@ -32,7 +32,7 @@ expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nCo
 
 This example adds an OLE object to the sheet with the parameters specified.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add an OLE object to the worksheet specifying its url, size, etc.
 
 // Insert an OLE object to the worksheet.

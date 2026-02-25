@@ -24,7 +24,7 @@ number
 
 This example shows how to convert millimeters to points.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const millimeters = 100;
 const points = Api.MillimetersToPoints(millimeters);
 

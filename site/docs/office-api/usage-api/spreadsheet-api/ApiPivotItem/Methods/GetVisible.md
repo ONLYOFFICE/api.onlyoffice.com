@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get the visibility status of pivot items.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check which pivot items are currently visible or hidden.
 
 // Create a pivot table, add data to it then get the visibility of specified pivot items.

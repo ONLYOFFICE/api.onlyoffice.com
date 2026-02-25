@@ -25,7 +25,7 @@ boolean
 
 This example sets the text properties to the form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Add text properties to the text form.
 
 // How to create a text form and make its text bold and bigger.

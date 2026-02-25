@@ -27,7 +27,7 @@ expression.CreateRange(element, start, end);
 
 This example creates a range and sets bold for the first 10 characters.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates the ApiRange object from the ApiParagraph class and sets the range to bold.
 
 // How to create a range from the paragraph and set a bold property to it.

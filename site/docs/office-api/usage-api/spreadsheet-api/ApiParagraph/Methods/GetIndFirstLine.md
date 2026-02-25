@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph first line indentation.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get first line indent of a paragraph.
 
 // Get paragraph lines using the indent order.

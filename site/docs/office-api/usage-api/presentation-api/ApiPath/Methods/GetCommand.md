@@ -24,7 +24,7 @@ expression.GetCommand(nIndex);
 
 Analyzes path commands of a star shape on a presentation slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // Shows command count and first command details in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

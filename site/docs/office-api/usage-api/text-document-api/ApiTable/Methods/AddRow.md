@@ -25,7 +25,7 @@ expression.AddRow(oCell, isBefore);
 
 This example adds a new row to the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add row to the table.
 
 // Get row cell and add it as row. 

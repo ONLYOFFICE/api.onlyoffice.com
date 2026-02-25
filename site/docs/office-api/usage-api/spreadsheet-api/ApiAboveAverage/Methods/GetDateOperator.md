@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the date operator from a time period conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve date operators from time period conditional formatting rules.
 
 // Get conditional formatting rule date operator.

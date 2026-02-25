@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of elements in the current paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the number of elements of the paragraph.
 
 // Count words of the paragraph and print it in the document.

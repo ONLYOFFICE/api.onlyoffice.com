@@ -27,7 +27,7 @@ boolean
 
 This example removes an element using the position specified.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to remove the element at the index from the paragraph.
 
 // Delete a third element from the paragraph.

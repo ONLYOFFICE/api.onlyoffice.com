@@ -22,7 +22,7 @@ null \| Object
 
 This example shows how to get the background color of the block-level container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 
 function colorToText(color){

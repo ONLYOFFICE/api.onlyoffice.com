@@ -25,7 +25,7 @@ boolean
 
 This example specifies an amount of space which will be left between the top extent of the cell contents and the top border of all table cells within the parent table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add margin to the top of the cell.
 
 // Create a 3x3 table and add the top cell margin.

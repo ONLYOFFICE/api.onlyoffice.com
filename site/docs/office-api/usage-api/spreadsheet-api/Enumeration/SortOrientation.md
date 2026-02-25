@@ -16,7 +16,7 @@ Enumeration
 
 This example specify that the sort should be by column.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to specify a sorting orientation (column wise or row wise) for each range.
 
 // Sort a range of cells indicating sorting orientation for sub ranges.

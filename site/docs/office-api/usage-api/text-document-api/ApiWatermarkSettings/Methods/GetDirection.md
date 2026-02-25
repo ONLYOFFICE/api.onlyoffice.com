@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a watermark settings direction and pastes it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the direction of the text in watermark. 
 
 // Get the angle and the direction (for example, "clockwise45") of the watermark text.

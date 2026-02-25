@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a line break to the current position and starts the next element from a new line.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to insert a text from a new line.
 
 // Get the paragraph from the shape and add two sentences separated by a linebreak.

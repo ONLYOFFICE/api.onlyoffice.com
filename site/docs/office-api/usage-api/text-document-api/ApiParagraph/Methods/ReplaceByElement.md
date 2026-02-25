@@ -24,7 +24,7 @@ boolean
 
 This example replaces the paragraph with a block level content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to replace paragraph with another element.
 
 // Add a block level content control instead of the paragraph.

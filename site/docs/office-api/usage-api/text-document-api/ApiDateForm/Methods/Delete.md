@@ -24,7 +24,7 @@ boolean
 
 This example shows how to delete the checkbox form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({
 	'key': 'Marital status',

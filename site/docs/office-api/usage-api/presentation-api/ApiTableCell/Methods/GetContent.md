@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the current cell content.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a content of the ApiTableCell object.
 
 // Return the ApiDocumentContent object from the table cell.

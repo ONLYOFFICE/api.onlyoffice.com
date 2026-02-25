@@ -22,7 +22,7 @@ boolean
 
 This example removes all the elements from the run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove all text elements.
 
 // Create a text run object, add a text to it and clear its content.

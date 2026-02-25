@@ -22,7 +22,7 @@ number
 
 This example shows how to get the column width value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get width of a range column.
 
 // Get a range, get its column width and show it in the worksheet.

@@ -27,7 +27,7 @@ number
 
 This example shows how to return the number of coupons payable between the settlement date and maturity date.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the number of coupons payable between the settlement date and maturity date.
 
 // Use function to get the number of coupons payable between the settlement date and maturity date.

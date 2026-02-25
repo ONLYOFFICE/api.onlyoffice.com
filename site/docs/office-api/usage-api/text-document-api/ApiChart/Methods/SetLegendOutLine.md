@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline to the chart legend.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to ouline a chart legend.
 
 // Create a chart and set ouline of its legend with a stroke.

@@ -27,7 +27,7 @@ number
 
 This example shows how to return the number of whole workdays between two dates with custom weekend parameters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the number of whole dates with parameters.
 
 // Use a function to get number of days between two dates.

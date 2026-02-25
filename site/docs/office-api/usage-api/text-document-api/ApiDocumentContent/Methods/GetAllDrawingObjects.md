@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of drawing objects from the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all drawing objects added to the document.
 
 // How to retrieve all drawing objects and fill with color its first one.

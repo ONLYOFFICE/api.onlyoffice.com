@@ -24,7 +24,7 @@ expression.SetTextFill(oApiFill);
 
 This example sets the text fill to the current text run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color a text with solid fill.
 
 // Set color a text using solid color fill.

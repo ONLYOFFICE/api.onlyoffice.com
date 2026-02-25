@@ -12,7 +12,7 @@ number
 
 This example sets a gradient stop position in 100%.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a gradient stop using positive percentage.
 
 // Set percentage for gradient stop.

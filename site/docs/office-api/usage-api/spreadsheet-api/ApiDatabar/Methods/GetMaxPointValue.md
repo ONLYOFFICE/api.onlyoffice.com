@@ -22,7 +22,7 @@ string \| number \| null
 
 This example demonstrates getting the maximum point value from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the value of the maximum condition.
 
 // Get the maximum point value of a data bar conditional formatting rule.

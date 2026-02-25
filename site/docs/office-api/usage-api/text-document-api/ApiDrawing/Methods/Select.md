@@ -22,7 +22,7 @@ boolean
 
 This example selects the current graphic object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to select the drawing with the cursor.
 
 // Create a shape add the text to it and select it.

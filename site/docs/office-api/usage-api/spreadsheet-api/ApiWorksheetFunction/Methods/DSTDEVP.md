@@ -26,7 +26,7 @@ number
 
 This example shows how to calculate the standard deviation based on the entire population of the selected database entries.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to estimate the standard deviation based on an entire population.
 
 // Use function to estimate the standard deviation based on the entire population from a range.

@@ -55,7 +55,7 @@ Enumeration
 
 This example creates a Text Art object with the "textArchUp" text transform type.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a word art with adding properties like fill color, size, and transform type to it.
 
 // Create a text art with transform type.

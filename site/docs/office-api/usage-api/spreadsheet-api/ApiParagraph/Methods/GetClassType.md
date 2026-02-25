@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a class type of ApiParagraph.
 
 // Get a class type of ApiParagraph and display it in the worksheet.

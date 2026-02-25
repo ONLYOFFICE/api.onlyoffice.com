@@ -25,7 +25,7 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 
 This example creates a linear gradient fill to apply to the drawing using the selected linear gradient as the object background.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates the ApiLinearGradientFill object using two gradient stops and applies it to the created shape.
 
 // How to create a shape using a linear gradient fill.

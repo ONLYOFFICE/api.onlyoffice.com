@@ -25,7 +25,7 @@ expression.CreateThemeColorScheme(arrColors, sName);
 
 This example shows how to create a new theme color scheme.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change color scheme of the theme.
 
 // Add color scheme to the theme.

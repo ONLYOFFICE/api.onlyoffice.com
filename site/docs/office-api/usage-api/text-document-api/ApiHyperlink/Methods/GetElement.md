@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get the hyperlink element using the position specified.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the element of the hyperlink knowing its index.
 
 // Add a hyperlink to the paragraph and get its element.

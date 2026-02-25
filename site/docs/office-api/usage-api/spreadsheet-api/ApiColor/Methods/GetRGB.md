@@ -22,7 +22,7 @@ number
 
 This example gets an RGB format of a color and inserts it into the table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a RGB color format.
 
 // Convert a color to the RGB values.

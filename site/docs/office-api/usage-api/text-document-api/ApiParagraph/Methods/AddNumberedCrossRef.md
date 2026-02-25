@@ -29,7 +29,7 @@ boolean
 
 This example adds a numbered cross-reference to the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a numbered reference to the paragraph.
 
 // Add a cross-reference to the numbered paragraph.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the date operator for a time period conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change date operators in time period conditional formatting rules.
 
 // Set conditional formatting rule date operator.

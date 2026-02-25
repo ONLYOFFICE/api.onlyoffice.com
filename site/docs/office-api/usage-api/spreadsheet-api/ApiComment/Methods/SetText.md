@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the comment text.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a comment text.
 
 // Replace a comment text with a new text.

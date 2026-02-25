@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a height of a shape and inserts it into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to find a shape's height and display it on the slide.
 
 // Get a slide shape's height.

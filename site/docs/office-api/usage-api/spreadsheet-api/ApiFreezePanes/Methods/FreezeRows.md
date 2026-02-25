@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example freezes the the top row.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to freeze rows using their indices.
 
 // Get freeze panes and freeze a row using its index.

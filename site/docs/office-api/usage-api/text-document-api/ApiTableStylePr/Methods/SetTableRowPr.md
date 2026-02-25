@@ -24,7 +24,7 @@ expression.SetTableRowPr(oTableRowPr);
 
 This example shows how to create and set the table row properties which will be applied to all the rows within a table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set table row properties to table style and set its height.
 
 // Update the table style table row properties.

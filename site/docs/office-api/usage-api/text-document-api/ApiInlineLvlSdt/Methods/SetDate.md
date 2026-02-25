@@ -24,7 +24,7 @@ boolean
 
 This example demonstrates how to set a date for a datepicker content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 contentControl.SetDate(new Date(1998, 4, 10));

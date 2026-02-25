@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates creating a custom geometry.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 let worksheet = Api.GetActiveSheet();
 // Airplane shape in EMU units
 let customGeometry = Api.CreateCustomGeometry();

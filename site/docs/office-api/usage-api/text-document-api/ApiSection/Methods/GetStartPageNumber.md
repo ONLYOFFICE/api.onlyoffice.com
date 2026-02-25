@@ -22,7 +22,7 @@ number
 
 This example gets a start page index of section.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the start page number for the current section.
 
 // Get a section from the paragraph and its first page number.

@@ -24,7 +24,7 @@ JSON
 
 This example converts the ApiParaPr object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the paragraph properties.
 
 // Convert the paragraph properties to json and add it to the paragraph.

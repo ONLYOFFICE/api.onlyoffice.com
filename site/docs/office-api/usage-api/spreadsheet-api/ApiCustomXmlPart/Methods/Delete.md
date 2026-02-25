@@ -22,7 +22,7 @@ boolean
 
 This example demonstrates how to delete a custom XML part.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete a custom XML part from the workbook.
 
 // Delete an XML part.

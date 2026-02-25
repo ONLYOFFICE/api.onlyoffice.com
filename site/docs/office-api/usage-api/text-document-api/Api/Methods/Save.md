@@ -22,7 +22,7 @@ boolean
 
 This example saves changes to the specified document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Adds a text to the first paragraph of the document and saves these changes.
 
 // How to save changes made to the ApiParagraph object.

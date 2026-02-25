@@ -25,7 +25,7 @@ expression.SetPosition(nPosition);
 
 This example specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set an inline position of a text.
 
 // Create a text run object, specify its position to move down or up.

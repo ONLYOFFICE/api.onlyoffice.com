@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table cell that contains the current content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control in the table cell, returns this cell as a parent of the container, and sets a black top border to this cell.
 
 // How to return a parent table cell of the ApiBlockLvlSdt object.

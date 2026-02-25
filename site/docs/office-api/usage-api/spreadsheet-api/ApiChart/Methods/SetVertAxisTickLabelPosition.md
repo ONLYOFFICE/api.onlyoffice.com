@@ -24,7 +24,7 @@ boolean
 
 This example sets the possible values for the position of the chart tick labels in relation to the main vertical label or the chart data values.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a tick position to the high of the vertical axis labels.
 
 // Specifies tick mark position for the vertical axis.

@@ -25,7 +25,7 @@ string
 
 This example shows how to get a class formatted according to the instructions contained in the format expression.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a format for a cell or a range using a format expression.
 
 // Change a format of a range using an expression.

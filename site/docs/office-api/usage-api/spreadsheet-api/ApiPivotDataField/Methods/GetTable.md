@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get table object of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field's table.
 
 // Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it.

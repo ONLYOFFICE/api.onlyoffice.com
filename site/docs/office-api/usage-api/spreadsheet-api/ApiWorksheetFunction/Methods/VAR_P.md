@@ -24,7 +24,7 @@ number
 
 This example shows how to calculate variance based on the entire population (ignores logical values and text in the population).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get variance based on the population.
 
 // Use a function to calculate variance based on the entire population.

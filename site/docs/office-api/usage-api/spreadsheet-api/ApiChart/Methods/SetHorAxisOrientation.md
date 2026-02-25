@@ -24,7 +24,7 @@ boolean
 
 This example specifies the direction of the data displayed on the horizontal axis.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Set the orientation of the values on the horizontal axis.
 
 // How to change the direction of the values on the horizontal axis.

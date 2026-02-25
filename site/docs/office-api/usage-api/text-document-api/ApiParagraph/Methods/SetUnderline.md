@@ -25,7 +25,7 @@ expression.SetUnderline(isUnderline);
 
 This example specifies that the contents of this paragraph are displayed along with a line appearing directly below the character.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a new text and underline it.
 
 // Create a new text run and underline it.

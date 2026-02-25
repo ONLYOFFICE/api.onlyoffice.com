@@ -24,7 +24,7 @@ number
 
 This example shows how to get a number of elements in the inline text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the number of elements of the inline control.
 
 // Create an inline text content control and show its elements count.

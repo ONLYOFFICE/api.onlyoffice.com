@@ -25,7 +25,7 @@ number
 
 This example shows how to return the number of combinations with repetitions for a given number of items.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find a number of combinations with repetitions.
 
 // Use function to count possible combinations with duplicates for a given number of items.

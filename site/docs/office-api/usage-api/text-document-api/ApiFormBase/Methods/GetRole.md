@@ -22,7 +22,7 @@ string
 
 This example show how to get the role of a form element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

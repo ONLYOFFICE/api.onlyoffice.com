@@ -27,7 +27,7 @@ boolean
 
 This example sets the text paddings to the current shape.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update paddings of the drawing.
 
 // Create a shape and set its paddings.

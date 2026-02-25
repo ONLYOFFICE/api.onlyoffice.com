@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline properties to the specified graphic object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to outline the drawing with the stroke.
 
 // Set the borders of the shape.

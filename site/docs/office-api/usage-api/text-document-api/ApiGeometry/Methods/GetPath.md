@@ -24,7 +24,7 @@ expression.GetPath(nIndex);
 
 Analyzes path properties of a cloud shape.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Retrieves and displays path dimensions, stroke and fill information.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

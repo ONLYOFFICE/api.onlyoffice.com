@@ -24,7 +24,7 @@ expression.GetRowFields(field);
 
 This example shows how to get row fields of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get table row fields as an array of fields.
 
 // Create a pivot table, add data to it then get its row fields.

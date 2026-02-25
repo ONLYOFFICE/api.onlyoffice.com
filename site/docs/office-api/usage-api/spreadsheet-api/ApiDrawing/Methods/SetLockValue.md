@@ -25,7 +25,7 @@ boolean
 
 This example sets the lock value to the specified lock type of the current drawing.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a lock type of a drawing.
 
 // Create a drawing, set its lock value and display it in the worksheet.

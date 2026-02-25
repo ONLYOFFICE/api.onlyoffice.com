@@ -24,7 +24,7 @@ boolean
 
 This example specifies a one-based index which determines when a numbering level should restart to its starting value.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to restart the numbering.
 
 // Reset the numbering of the bulleted text.

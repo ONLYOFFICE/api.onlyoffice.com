@@ -24,7 +24,7 @@ expression.SetSolved(bSolved);
 
 This example marks a comment as solved.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make a comment solved.
 
 // Get all comments from the presentation and set it solved.

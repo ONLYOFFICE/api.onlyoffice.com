@@ -24,7 +24,7 @@ boolean
 
 This example sets the start position of a given range object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change the starting index of the range.
 
 // Resize the range by setting new start position.

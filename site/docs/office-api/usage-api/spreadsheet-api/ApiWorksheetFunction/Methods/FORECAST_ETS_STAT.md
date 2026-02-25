@@ -29,7 +29,7 @@ number
 
 This example shows how to return the requested statistic for the forecast.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the requested forecast statistic.
 
 // Use function to return the forecast.

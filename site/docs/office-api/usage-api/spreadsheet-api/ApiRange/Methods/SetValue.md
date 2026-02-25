@@ -24,7 +24,7 @@ boolean
 
 This example sets a value to cells.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add underline to the cell value.
 
 // Get a range and add underline its text.

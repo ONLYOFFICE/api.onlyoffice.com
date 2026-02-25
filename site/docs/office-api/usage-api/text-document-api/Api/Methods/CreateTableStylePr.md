@@ -24,7 +24,7 @@ expression.CreateTableStylePr(sType);
 
 This example shows how to create and use the conditional table style properties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a style that will be applied to the table elements whish satisfy the condition.
 
 // Create a conditional table style properties.

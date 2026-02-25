@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to get the italic property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to know whether a font style of characters is italic.
 
 // Get a boolean value that represents whether a font is italic or not and show the value in the worksheet.

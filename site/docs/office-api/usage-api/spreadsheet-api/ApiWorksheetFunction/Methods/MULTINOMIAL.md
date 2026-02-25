@@ -24,7 +24,7 @@ number
 
 This example shows how to return the ratio of the factorial of a sum of numbers to the product of factorials.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from the ratio of the factorial of a sum of numbers to the product of factorials.
 
 // Use a function to find the ratio of the factorial of a sum of numbers to the product of factorials.

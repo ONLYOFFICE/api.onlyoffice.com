@@ -28,7 +28,7 @@ number
 
 This example shows how to return the beta probability distribution function.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from beta probability distribution function.
 
 // Use function to get the beta probability distribution function.

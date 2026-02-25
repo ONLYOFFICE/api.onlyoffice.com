@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a class type of ApiTableRowPr.
 
 // Retrieve class type of ApiTableRowPr object and insert it to the document.

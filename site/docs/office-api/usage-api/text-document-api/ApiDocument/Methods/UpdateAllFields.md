@@ -24,7 +24,7 @@ boolean
 
 This example updates all fields in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to update all forms in the document.
 
 // Edit document fields and then update all of them.

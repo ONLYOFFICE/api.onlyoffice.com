@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get row grand of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get table row grand.
 
 // Create a pivot table, add data to it then get its row grand.

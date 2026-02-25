@@ -25,7 +25,7 @@ number
 
 This example shows how to round a number to a specified number of digits.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to round a number.
 
 // Use a function to round a number to indicated number of digits.

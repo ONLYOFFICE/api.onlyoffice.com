@@ -22,7 +22,7 @@ boolean
 
 This example deletes the specified item in a combo box or drop-down list content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let contentControlList = cc.GetDropdownList();

@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiThemeFormatScheme object into the JSON object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to convert a ApiThemeFormatScheme object to a JSON object.
 
 // Create a ApiThemeFormatScheme, convert it to JSON and create a new object from it.

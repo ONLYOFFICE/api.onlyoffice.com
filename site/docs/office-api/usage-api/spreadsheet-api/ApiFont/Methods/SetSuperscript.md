@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the superscript property to the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a regular text to a superscript.
 
 // Get a font object of characters and make it superscript.

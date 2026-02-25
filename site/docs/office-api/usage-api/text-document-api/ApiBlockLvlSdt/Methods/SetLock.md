@@ -28,7 +28,7 @@ boolean
 
 This example sets the lock to the block text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control and sets its lock to "sdtContentLocked", which means that the content cannot be edited and the container cannot be deleted.
 
 // How to set the lock to the ApiBlockLvlSdt object.

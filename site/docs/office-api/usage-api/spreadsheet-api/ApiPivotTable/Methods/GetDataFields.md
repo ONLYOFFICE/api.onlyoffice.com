@@ -25,7 +25,7 @@ expression.GetDataFields(field);
 
 This example shows how to get data fields.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get data fields from a pivot table.
 
 // Create a pivot table, add data to it then get data fields from it.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the cell width to the applied comb of characters.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to set the width of the cell of the text form.
 
 // Resize the text form cell.

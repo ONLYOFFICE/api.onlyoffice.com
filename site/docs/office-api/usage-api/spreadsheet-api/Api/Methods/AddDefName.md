@@ -26,7 +26,7 @@ boolean
 
 This example adds a new name to a range of cells.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to name a range of cells.
 
 // Name a range according its purpose.

@@ -23,7 +23,7 @@ boolean
 
 This example deletes the specified object from the parent if it exists.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to delete a master.
 
 // Remove a master from a presentation.

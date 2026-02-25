@@ -24,7 +24,7 @@ number
 
 This example shows how to get a number of pages in the current document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to count the number of pages in the document.
 
 // Display the number of pages of the document.

@@ -22,7 +22,7 @@ number
 
 This example shows how to get the count of custom XML parts in the XML manager.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 xmlManager.Add("<products><item><name>Laptop</name><price>999</price></item></products>");

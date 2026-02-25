@@ -24,7 +24,7 @@ expression.CreateLayout(oMaster);
 
 This example shows how to create layout.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create and apply a layout for a slide.
 
 // Change a slide layout.

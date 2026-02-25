@@ -24,7 +24,7 @@ boolean
 
 This example flips the drawing vertically.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the vertical flip property of the shape.
 
 // Create a drawing, add text to it and flip it vertically.

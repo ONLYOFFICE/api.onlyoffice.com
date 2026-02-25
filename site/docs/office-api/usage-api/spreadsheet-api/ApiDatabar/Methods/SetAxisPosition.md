@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the axis position of a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the axis position setting of a data bar.
 
 // Set the axis position of a data bar conditional formatting rule.

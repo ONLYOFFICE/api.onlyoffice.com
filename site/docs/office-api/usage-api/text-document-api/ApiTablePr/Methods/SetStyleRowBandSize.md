@@ -24,7 +24,7 @@ boolean
 
 This example specifies a number of rows which will comprise each table row band for this table style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set row band size.
 
 // How to style a row band size.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the sine of an angle.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calaculate the sine of a number.
 
 // Use a function to get a sine of a number.

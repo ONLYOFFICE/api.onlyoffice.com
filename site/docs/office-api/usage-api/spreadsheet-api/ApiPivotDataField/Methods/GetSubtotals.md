@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get subtotals of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field's subtotals.
 
 // Create a pivot table, add data to it then get subtotals of a specified pivot field as an array.

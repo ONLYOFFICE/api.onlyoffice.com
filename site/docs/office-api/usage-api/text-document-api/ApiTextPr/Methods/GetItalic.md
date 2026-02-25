@@ -22,7 +22,7 @@ boolean
 
 This example shows how to find out whether the text italic or not.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know if the text of the form is italic.
 
 // Retrieve text properties of the form and get whether a text style changed or not.

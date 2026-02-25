@@ -26,7 +26,7 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 This example creates a pattern fill to apply to the object using the selected pattern as the object background.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Create customized pattern to fill background of a shape.
 
 // Set a shape background using a pattern fill.

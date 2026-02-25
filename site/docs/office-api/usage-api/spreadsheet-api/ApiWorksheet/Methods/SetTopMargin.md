@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the top margin of the sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set margin of the top side.
 
 // Resize the top margin of the sheet.

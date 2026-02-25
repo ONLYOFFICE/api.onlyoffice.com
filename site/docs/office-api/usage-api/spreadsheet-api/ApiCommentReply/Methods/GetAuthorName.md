@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment reply author's name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the name of who wrote a reply.
 
 // Get reply author's name and display it in the worksheet. 

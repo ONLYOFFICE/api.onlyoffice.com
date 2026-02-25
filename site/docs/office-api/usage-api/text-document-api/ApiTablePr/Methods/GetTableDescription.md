@@ -22,7 +22,7 @@ string
 
 This example shows how to get the table description.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the table description and display it in the document.
 
 // Add text showing the description of the table.

@@ -26,7 +26,7 @@ number
 
 This example shows how to return the starting position of one text string within another text string. This function is case-sensitive.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an index of a substring from a string.
 
 // Use function to find out a starting position of a substring containing in another text.

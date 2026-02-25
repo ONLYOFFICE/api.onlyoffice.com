@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how get ApiCore instance and use its methods to manage presentation metadata.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

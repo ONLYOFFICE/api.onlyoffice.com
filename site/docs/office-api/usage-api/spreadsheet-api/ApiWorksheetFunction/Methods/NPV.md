@@ -25,7 +25,7 @@ number
 
 This example shows how to return the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the net present value of an investment.
 
 // Use a function to get the net present value of an investment based on different parameters.

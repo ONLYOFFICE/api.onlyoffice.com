@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds an inline container to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create an inline text content control, add a text run to it, and add this container to the document.
 
 // Creates an inline container and adds it to the ApiParagraph class.

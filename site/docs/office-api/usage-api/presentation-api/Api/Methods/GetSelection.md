@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get current selection
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 
 const rgb = Api.CreateRGBColor(50, 100, 150);

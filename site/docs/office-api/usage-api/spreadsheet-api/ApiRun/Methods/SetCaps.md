@@ -24,7 +24,7 @@ expression.SetCaps(isCaps);
 
 This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to make text characters capitalized.
 
 // Create a text run object, update its style by making its letters capitalized.

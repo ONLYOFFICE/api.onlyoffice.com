@@ -24,7 +24,7 @@ boolean
 
 This example adds a text to the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add text run to the inline text element.
 
 // Add text to the inline control indicating the starting index.

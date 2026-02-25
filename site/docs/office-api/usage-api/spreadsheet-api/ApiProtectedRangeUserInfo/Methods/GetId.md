@@ -22,7 +22,7 @@ string \| null
 
 This example gets an Id of a protected range user.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a user info of a protected range and show its Id.
 
 // Get a user id of a protected range and add it to the worksheet.

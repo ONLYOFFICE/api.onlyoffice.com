@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the text operator for a text-based conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change text operators in text-based conditional formatting rules.
 
 // Set conditional formatting rule text operator.

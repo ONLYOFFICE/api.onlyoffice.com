@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example clears all the hyperlinks in the range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to clear hyperlinks for a range.
 
 // Get a range, clear hyperlinks and show the result.

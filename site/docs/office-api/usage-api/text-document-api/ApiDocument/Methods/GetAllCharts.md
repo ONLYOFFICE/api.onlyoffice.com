@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of chart objects from the document content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get all charts from the document.
 
 // How to retrieve all charts and set horizontal gridlines to the first one.

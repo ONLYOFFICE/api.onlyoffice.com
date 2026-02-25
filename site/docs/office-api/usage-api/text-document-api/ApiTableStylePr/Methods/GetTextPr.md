@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a set of the text run properties which will be applied to all the text runs within the table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get text properties of the table style and make it bold.
 
 // Make the table text bold.

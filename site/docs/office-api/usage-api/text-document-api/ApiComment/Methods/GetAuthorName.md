@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment author's name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out a comment's author.
 
 // Get all comments from the presentation and display the first one's author name.

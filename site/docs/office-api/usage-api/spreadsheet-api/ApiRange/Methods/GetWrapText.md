@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get the information about the wrapping cell style.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a cell value wrapping type.
 
 // Get a wrapping type of a cell from its range and show it.

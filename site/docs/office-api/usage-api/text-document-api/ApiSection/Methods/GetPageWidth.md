@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the page width.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the page width.
 
 // Get the final section of the page and get its width.

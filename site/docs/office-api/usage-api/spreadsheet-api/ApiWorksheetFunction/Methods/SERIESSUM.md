@@ -27,7 +27,7 @@ number
 
 This example shows how to return the sum of a power series based on the formula.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the sum of a power series.
 
 // Use a function to sum up a power series using a formula.

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example deletes the ApiCharacters object.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete characters from an array.
 
 // Remove all characters.

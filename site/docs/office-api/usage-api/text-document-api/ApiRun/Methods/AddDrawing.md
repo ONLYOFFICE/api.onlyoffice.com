@@ -24,7 +24,7 @@ boolean
 
 This example adds a chart to the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add a drawing into the text.
 
 // Insert a drawing to the text run.

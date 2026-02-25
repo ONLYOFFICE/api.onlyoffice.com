@@ -24,7 +24,7 @@ number
 
 This example shows how to return the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calaculate the skewness of a distribution based on a population.
 
 // Use a function to get a characterization of the degree of asymmetry of a distribution around its mean.

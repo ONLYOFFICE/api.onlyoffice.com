@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to get the strikethrough property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine a font strikethrough property.
 
 // Get a boolean value that represents whether a font is strikethrough or not and show the value in the worksheet.

@@ -24,7 +24,7 @@ expression.CreatePresetColor(presetColor);
 
 This example creates a color selecting it from one of the available color presets.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a color from a preset.
 
 // Color a shape background using a color from a preset. 

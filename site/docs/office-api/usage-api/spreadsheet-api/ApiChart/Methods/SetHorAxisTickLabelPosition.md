@@ -24,7 +24,7 @@ boolean
 
 This sets the possible values for the position of the chart tick labels in relation to the main horizontal label or the chart data values.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change position of the tick label of horizontal axis.
 
 // Set position of the tick label from horizontal axis.

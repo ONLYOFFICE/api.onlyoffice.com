@@ -23,7 +23,7 @@ string
 
 This example shows how to get the text content of a custom XML node and its children.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

@@ -28,7 +28,7 @@ number
 
 This example shows how to return the annual yield for a discounted security. For example, a Treasury bill.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return an annual yield for a discounted security.
 
 // Use a function to get an annual yield.

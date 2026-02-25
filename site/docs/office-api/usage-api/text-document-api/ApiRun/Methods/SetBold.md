@@ -24,7 +24,7 @@ expression.SetBold(isBold);
 
 This example sets the bold property to the text character.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make a text run bold.
 
 // Create new run and set its font style.

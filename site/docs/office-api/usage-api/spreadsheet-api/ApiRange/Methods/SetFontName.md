@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the specified font family as the font name for the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a cell font family.
 
 // Get a range and set its font family using its name.

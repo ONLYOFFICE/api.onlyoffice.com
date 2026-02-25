@@ -25,7 +25,7 @@ number
 
 This example shows how to return the annual nominal interest rate.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the annual nominal interest rate.
 
 // Use a function to get the annual nominal interest rate.

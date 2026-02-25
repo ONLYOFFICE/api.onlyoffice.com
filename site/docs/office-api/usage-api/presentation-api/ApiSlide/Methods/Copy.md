@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of the current slide object.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a copy of the slide.
 
 // Create a duplicate slide and add it to the presentation.

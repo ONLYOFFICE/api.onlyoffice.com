@@ -24,7 +24,7 @@ boolean
 
 This example deletes the the user protected range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to close an access for the protected range to user specifing user id, name and access type.
 
 // Get an active sheet, add protected range to it, add users with rights then delete one of them. 

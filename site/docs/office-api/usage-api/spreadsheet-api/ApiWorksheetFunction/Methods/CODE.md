@@ -24,7 +24,7 @@ number
 
 This example shows how to return the code number from your computer's character set for the first character in the specified text string.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the code number from your computer's character set.
 
 // Use function to get a code number from your computer's character set.

@@ -26,7 +26,7 @@ boolean
 
 This example specifies that any space before or after this paragraph set using the [ApiParaPr#SetSpacingBefore](./SetSpacingBefore.md) or [ApiParaPr#SetSpacingAfter](./SetSpacingAfter.md) spacing element, should not be applied when the preceding and following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Set the contextual spacing for paragraph.
 
 // Get the first paragraph and set the spacing for its two ends.

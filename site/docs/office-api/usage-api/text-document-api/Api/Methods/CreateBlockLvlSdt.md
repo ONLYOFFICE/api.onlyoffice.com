@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to add a block level container to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a block text content control, add a text to it, and add this container to the document.
 
 // Creates a block level container and adds it to the ApiDocument class.

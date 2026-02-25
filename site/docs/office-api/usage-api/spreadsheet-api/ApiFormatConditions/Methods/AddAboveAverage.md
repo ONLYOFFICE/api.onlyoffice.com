@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds above average conditional formatting to a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add above average conditional formatting rules to highlight cells.
 
 // Add above average conditional formatting to cells.

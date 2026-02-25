@@ -23,7 +23,7 @@ string
 
 This example shows how to get the text content of a custom XML node.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get text content from an XML node.
 
 // Get XML node text.

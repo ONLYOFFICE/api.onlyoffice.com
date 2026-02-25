@@ -26,7 +26,7 @@ number \| string \| boolean
 
 This example shows how to look up a value either from a one-row or one-column range. Provided for backwards compatibility.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to look up a value from a one-row or one-column range.
 
 // Use a function to find a value from a row or a column range.

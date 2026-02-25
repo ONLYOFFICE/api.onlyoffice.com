@@ -26,7 +26,7 @@ number
 
 This example shows how to find the inverse of the (right-tailed) F probability distribution: if p = FDIST(x,...), then FINV(p,...) = x.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an inverse of the (right-tailed) F probability distribution.
 
 // Use function to find out a F probability distribution.

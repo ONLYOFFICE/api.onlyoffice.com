@@ -24,7 +24,7 @@ boolean
 
 This example specifies if the current form should be required.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make a text form required.
 
 // Make sure that there is an answer to the text form.

@@ -25,7 +25,7 @@ number
 
 This example shows how to round a number down, toward zero.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to round a number down.
 
 // Use a function to round a number towards zero.

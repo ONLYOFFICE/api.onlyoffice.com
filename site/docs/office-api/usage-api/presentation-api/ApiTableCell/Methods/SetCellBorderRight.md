@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the border which shall be displayed at the right of the table cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set cell right border with its fill color.
 
 // Create table and set its cell right border.

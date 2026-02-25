@@ -24,7 +24,7 @@ expression.GetFormsByTag(sTag);
 
 This example shows how to get a list of all forms in the document with the specified tag name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get all forms with a specific tag.
 
 // Update the forms knowing their tag (add text or list values).

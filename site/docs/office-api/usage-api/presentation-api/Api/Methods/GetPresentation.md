@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show how to get a presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get the ApiPresentation object.
 
 // Retrieve the current presentation object and work with its slides.

@@ -24,7 +24,7 @@ number
 
 This example shows how to convert a Roman numeral to Arabic.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to convert numbers to Arabic numerical.
 
 // Use function to convert numbers to Arabic numerical.

@@ -31,7 +31,7 @@ boolean
 
 This example specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Add the bottom border to the paragraph.
 
 // Get the first paragraph and set its border.

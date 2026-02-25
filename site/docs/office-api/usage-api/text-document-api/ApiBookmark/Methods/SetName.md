@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set bookmark name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to rename a bookmark.
 
 // Get a bookmark from the document by its name then set a new name to it.

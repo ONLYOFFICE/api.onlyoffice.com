@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the right margin of the sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set margin of the right side.
 
 // Resize the right margin of the sheet.

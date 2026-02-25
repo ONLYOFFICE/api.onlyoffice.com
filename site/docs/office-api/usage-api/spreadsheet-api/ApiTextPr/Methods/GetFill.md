@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a text color property.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out a text color type.
 
 // Get a text solid color fill.

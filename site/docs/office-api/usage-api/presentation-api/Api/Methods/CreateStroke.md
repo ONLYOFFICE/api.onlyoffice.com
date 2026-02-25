@@ -25,7 +25,7 @@ expression.CreateStroke(width, fill);
 
 This example shows how to crate a stroke.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add a stroke to the shape.
 
 // Add solid fill and stroke to the shape properties.

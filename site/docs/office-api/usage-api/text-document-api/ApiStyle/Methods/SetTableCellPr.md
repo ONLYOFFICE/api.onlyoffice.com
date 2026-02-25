@@ -24,7 +24,7 @@ expression.SetTableCellPr(tableCellPr);
 
 This example shows how set get the table cell properties to the style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create table cell properties for style and add shading to it.
 
 // Update the table cell properties in the style.

@@ -24,7 +24,7 @@ number
 
 This example shows how to convert a date in the form of text to a number that represents the date in the date-time code.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to convert a date from the form of text.
 
 // Use function to get the date from a text.

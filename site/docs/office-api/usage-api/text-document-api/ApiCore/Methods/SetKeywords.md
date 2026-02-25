@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the keywords of the current document using the ApiCore.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetKeywords("Example; ApiCore; Document");

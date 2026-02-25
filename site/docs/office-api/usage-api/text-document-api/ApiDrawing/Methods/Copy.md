@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example copies the current graphic object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a duplicate of a drawing.
 
 // Add two similar shapes into the document.

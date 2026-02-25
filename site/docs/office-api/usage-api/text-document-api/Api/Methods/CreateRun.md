@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a run and inserts it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a run, adds a text to it, and inserts it into the first paragraph of the document.
 
 // How to create the ApiRun object and adds it to the ApiParagraph class.

@@ -26,7 +26,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 This example adds a comment to the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to comment the document.
 
 // Add comment to the document indicating the author.

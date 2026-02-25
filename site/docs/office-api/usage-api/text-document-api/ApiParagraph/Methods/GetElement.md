@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get a paragraph element using the position specified.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the second element of the paragraph.
 
 // Get the word from paragraph using its index and make it bold.

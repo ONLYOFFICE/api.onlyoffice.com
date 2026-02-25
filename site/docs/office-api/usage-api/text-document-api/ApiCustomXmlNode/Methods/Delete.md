@@ -22,7 +22,7 @@ boolean
 
 This example shows how to delete the current XML node.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add('<content><text>First</text><text>Second</text></content>');

@@ -22,7 +22,7 @@ boolean
 
 This example removes a column containing the cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to delete the column with Cell 1.
 
 // Get the first cell and remove its column. 

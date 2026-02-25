@@ -24,7 +24,7 @@ boolean
 
 This example specifies the distance from the bottom edge of the page to the bottom edge of the footer.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set footer distance of the section.
 
 // Specify the distance between the page end and the footer.

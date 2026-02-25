@@ -26,7 +26,7 @@ boolean
 
 This example sets the fill to the specified chart series.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color a chart seria.
 
 // Create a chart, set its properties and its series background.

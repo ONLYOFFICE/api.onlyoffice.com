@@ -24,7 +24,7 @@ expression.InsertInContentControl(nType);
 
 This example wraps the graphic object with a rich text content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add the drawing to the paragraph.
 
 // Create a rectangle and then insert it to the another content control.

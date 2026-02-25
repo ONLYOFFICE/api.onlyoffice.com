@@ -22,7 +22,7 @@ boolean
 
 This example wraps a run in a mail merge field.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a run wrapped in 'Mail Merge Field'.
 
 // Add a text run to the mail merge field.

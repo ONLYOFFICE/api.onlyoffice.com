@@ -22,7 +22,7 @@ string
 
 This example shows how to get a tag attribute for the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, sets a tag to it, and returns this tag to insert it into the second paragraph of the document.
 
 // How to get a tag from the ApiBlockLvlSdt object.

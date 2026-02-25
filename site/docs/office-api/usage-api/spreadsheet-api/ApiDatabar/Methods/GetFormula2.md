@@ -22,7 +22,7 @@ string
 
 This example gets the second formula of a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the second formula from conditional formatting rules.
 
 // Get conditional formatting rule second formula.

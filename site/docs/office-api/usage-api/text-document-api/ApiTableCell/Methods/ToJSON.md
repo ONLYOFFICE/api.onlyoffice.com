@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiTableCellPr object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the table cell object.
 
 // Convert the cell to json and add it to the document.

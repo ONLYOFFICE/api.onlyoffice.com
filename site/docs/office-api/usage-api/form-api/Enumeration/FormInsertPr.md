@@ -18,7 +18,7 @@ Object
 
 This example inserts a text box with the specified text box properties over the selected text.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a text form with its properties and insert it into the ApiDocument object.
 
 // Create the ApiTextForm object and insert it into the document using the specified properties.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the font size to the characters of the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to resize a cell font size.
 
 // Get a range and set its font size.

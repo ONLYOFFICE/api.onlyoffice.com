@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a range object by the selection.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the range selected on the document.
 
 // Select a range and make it bold.

@@ -20,7 +20,7 @@ Enumeration
 
 This example set vertical aligment for a drawing object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to align a drawing to the center.
 
 // Set a drawing vertical aligment.

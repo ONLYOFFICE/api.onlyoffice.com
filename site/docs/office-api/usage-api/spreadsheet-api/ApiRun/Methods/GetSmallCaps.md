@@ -22,7 +22,7 @@ boolean
 
 This example gets a text capitalization using its property.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out whether a text is uncapitalized or not.
 
 // Find whether a text characters are in small caps or not.

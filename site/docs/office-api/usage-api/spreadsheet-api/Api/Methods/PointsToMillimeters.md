@@ -24,7 +24,7 @@ number
 
 This example shows how to convert points to millimeters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const points = 100;
 const millimeters = Api.PointsToMillimeters(points);
 const text = points + ' points are equal to ' + millimeters + ' millimeters.';

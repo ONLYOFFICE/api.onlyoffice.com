@@ -25,7 +25,7 @@ number
 
 This example shows how to return the modified Bessel function In(x).
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a resutl from Bessel function In(x).
 
 // Use function to get the modified Bessel function In(x).

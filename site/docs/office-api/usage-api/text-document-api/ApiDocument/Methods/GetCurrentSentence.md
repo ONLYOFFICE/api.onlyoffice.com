@@ -24,7 +24,7 @@ string
 
 This example shows how to get the current sentence.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get current sentence of the document.
 
 // Find the current position sentence and add it to the paragraph.

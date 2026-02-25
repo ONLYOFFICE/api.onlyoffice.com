@@ -21,7 +21,7 @@ Enumeration
 
 Set the "text" form type to the first form of the current document.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to specify the form type.
 
 // Create the form data with the "text" form type and set it to the first form in the document.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the entire columns containing a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to select entire columns from a range.
 
 // Get a range, get its entire columns and fill them with color.

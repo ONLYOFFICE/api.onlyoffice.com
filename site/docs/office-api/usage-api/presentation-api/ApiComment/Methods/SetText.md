@@ -24,7 +24,7 @@ expression.SetText(sText);
 
 This example shows how to set a comment text.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a text of a comment.
 
 // Get all comments from the presentation and set its first one's text.

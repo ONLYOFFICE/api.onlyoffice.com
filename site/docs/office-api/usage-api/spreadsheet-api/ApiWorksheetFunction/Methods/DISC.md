@@ -28,7 +28,7 @@ number
 
 This example shows how to get the discount rate for a security.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a security discount rate.
 
 // Use function to find security discount rate.

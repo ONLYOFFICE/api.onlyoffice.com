@@ -31,7 +31,7 @@ number
 
 This example shows how to return the yield of a security with an odd last period.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the yield of a security with specified odd last period.
 
 // Use a function to return the yield of a security.

@@ -29,7 +29,7 @@ boolean
 
 This example sets the border which will be displayed to the right of the table cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add margin to the right of the cell.
 
 // Create a 3x3 table and add the right cell margin.

@@ -25,7 +25,7 @@ number
 
 This example shows how to return the two-tailed inverse of the Student's t-distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to create a serial number from the two-tailed inverse.
 
 // Use a function to get two-tailed inverse of the Student's t-distribution.

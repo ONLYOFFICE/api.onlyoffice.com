@@ -22,7 +22,7 @@ string[]
 
 This example shows how to get a list of all roles in the filling order.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 let doc = editor.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");

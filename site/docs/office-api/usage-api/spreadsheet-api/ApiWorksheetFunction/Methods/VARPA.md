@@ -24,7 +24,7 @@ number
 
 This example shows how to calculate variance based on the entire population, including logical values and text. Text and the false logical value have the value 0; the true logical value has the value 1.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to estimate variance based on the entire population considering logical values and text.
 
 // Use a function to estimate variance based on population not ignoring logical values and text.

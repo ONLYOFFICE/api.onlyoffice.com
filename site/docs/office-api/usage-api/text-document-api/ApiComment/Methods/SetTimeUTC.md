@@ -24,7 +24,7 @@ expression.SetTimeUTC(nTimeStamp);
 
 This example sets the timestamp of the comment creation in UTC format.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a creation time of a comment in UTC format.
 
 // Get all comments from the presentation and change its first one's creation UTC time.

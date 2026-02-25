@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiTableRowPr object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the table row properties.
 
 // Convert the table row properties to json and add it to the document.

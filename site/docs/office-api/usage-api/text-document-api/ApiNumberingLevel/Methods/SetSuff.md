@@ -24,7 +24,7 @@ boolean
 
 This example specifies the content which will be added between the given numbering level text and the text of every numbered paragraph which references that numbering level.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set separating symbol between numbering and numbered text.
 
 // Set space between numbering level text and the text itself.

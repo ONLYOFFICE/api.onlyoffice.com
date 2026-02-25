@@ -30,7 +30,7 @@ boolean
 
 This example specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge of the parent table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set inside vertical border to the table.
 
 // How to create a 3x3 table and add the inside vertical 4 point orange borders.

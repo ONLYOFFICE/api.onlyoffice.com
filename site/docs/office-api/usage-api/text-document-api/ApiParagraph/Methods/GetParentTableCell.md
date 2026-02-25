@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table cell that contains the current paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the parent table cell of the paragraph.
 
 // Set shading to the cell of the parent table.

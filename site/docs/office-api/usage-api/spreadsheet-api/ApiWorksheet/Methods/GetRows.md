@@ -24,7 +24,7 @@ expression.GetRows(value);
 
 This example shows how to get the ApiRange object that represents all the cells on the rows range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get all row cells.
 
 // Get all row cells from the worksheet.

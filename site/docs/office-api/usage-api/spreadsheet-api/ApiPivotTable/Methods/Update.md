@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example shows how to update a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to update a table.
 
 // Create a pivot table, add data to it then update it. 

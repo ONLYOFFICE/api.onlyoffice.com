@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a position for data field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change a position of a table element.
 
 // Create a pivot table, add data to it then move a custom data field chnaging its position.

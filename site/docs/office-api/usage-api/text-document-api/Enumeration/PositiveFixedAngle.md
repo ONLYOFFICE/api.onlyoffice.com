@@ -12,7 +12,7 @@ number
 
 This example sets the resulting gradient direction angle in 90 degrees.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a gradient fill using positive fixed angle.
 
 // Set gradient direction angle.

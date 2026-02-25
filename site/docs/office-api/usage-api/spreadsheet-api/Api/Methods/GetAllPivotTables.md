@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get pivot tables from the worksheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to  get pivot tables.
 
 // How to work with pivot tables.

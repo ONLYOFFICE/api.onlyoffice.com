@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get content of the drawing.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

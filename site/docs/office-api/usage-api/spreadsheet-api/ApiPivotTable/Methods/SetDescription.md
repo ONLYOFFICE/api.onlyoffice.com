@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a description of a table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to rename a description of a table.
 
 // Create a pivot table, add data to it then set its description.

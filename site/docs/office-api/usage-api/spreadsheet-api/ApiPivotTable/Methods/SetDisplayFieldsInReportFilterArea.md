@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to set display fields in report filter area value of a table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a display fields in report filter area of a table.
 
 // Create a pivot table, add data to it then set a display fields in report filter area.

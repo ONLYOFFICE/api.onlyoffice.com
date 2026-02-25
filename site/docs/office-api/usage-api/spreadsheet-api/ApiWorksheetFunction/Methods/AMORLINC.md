@@ -30,7 +30,7 @@ number
 
 This example shows how to return the prorated linear depreciation of an asset for each accounting period.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a prorated linear depreciation of an asset for each accounting period and display it in the worksheet.
 
 // Get a function that gets prorated linear depreciation of an asset for each accounting period.

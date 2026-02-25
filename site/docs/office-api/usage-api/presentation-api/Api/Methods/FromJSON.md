@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example transforms font scheme to JSON then restore it from JSON.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a font scheme from JSON file.
 
 // Parse JSON file to get an object like font scheme.

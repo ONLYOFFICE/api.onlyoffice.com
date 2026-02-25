@@ -25,7 +25,7 @@ number
 
 This example shows how to return the logarithm of a number to the specified base.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the logarithm to the specified base.
 
 // Use a function to return the logarithm.

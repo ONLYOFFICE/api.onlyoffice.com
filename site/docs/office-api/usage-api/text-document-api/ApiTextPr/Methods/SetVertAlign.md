@@ -27,7 +27,7 @@ expression.SetVertAlign(sType);
 
 This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set vertical alignment of a text object.
 
 // Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript".

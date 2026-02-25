@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph section.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the section where the paragraph is located.
 
 // Get the paragraph section and set its page size.

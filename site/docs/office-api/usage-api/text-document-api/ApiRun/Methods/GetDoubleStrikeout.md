@@ -22,7 +22,7 @@ boolean
 
 This example finds out whether a text has the double strikeout property set.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know whether a text is crossed by two horizontal lines.
 
 // Retrieve text properties of the form to find out whether it is double stroke out.

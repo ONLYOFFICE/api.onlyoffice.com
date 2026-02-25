@@ -22,7 +22,7 @@ boolean
 
 This example checks if the form border width is respected or not.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to find out whether the borders of the image are respected.
 
 // Find out whether the borders of the picture form in this document are respected when scaling the image.

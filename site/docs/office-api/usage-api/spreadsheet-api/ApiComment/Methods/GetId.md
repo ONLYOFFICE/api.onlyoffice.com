@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment ID.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a comment ID.
 
 // Find a comment by its ID and display its ID.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a paragraph that contains the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to display the parent paragraph of the inline text control.
 
 // Make bold the parent paragraph of inline content control.

@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get a paragraph element using the position specified.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an element of a paragraph using its index.
 
 // Find a paragraph element using its index and change its properties.

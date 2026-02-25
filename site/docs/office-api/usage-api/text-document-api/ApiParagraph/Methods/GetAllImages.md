@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a collection of image objects in the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to retrieve all images from the document.
 
 // Get all images and get the class type of the first one.

@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the identifier of the current document using the ApiCore.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetIdentifier("#ID42");

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the font scheme of the theme.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a font scheme from a theme.
 
 // Get a font scheme and display its class type.

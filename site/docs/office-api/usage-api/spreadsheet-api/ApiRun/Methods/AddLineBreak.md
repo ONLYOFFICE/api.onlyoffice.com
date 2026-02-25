@@ -22,7 +22,7 @@ boolean
 
 This example adds a line break to the run position and starts the next element from a new line.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to start a sentence on a new line.
 
 // Break two lines of a text run with a line. 

@@ -25,7 +25,7 @@ boolean
 
 This example specifies how the floating object will be vertically aligned.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the vertical alignment of the drawing.
 
 // Move the shape to the top of the page.

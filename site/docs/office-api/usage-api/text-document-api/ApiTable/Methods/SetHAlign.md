@@ -24,7 +24,7 @@ boolean
 
 This example sets the horizontal alignment to the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set alignment of the text to the center.
 
 // Create a table and set its horizontal alignment.

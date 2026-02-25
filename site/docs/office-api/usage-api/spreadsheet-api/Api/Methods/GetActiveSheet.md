@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an object that represents the active sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an active sheet object.
 
 // Get worksheet.

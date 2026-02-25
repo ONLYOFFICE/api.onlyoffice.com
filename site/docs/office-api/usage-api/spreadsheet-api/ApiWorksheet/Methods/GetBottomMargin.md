@@ -22,7 +22,7 @@ number
 
 This example shows how to get the bottom margin of the sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get margin of the bottom.
 
 // Get the size of the bottom margin of the sheet.

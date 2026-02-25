@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example inserts a string replacing the specified characters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to replace characters with a different string value.
 
 // Change the characters to another string value.

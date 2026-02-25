@@ -24,7 +24,7 @@ expression.GroupDrawings(aDrawings);
 
 This example show how to create a group of drawings in document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to group the shapes.
 
 // Create two shapes, update their properties and group them.

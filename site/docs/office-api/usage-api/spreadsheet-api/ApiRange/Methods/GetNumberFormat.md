@@ -22,7 +22,7 @@ string \| null
 
 This example shows how to get a value that represents the format code for the current range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out a number format of a range.
 
 // Get a range, get its cell number format and show it in the worksheet.

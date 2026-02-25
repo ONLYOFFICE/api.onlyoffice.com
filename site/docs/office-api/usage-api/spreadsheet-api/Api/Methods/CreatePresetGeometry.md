@@ -24,7 +24,7 @@ expression.CreatePresetGeometry(sPreset);
 
 This example demonstrates creating a preset geometry in spreadsheets.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 let worksheet = Api.GetActiveSheet();
 
 // Create shape with preset geometry

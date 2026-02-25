@@ -22,7 +22,7 @@ string
 
 This example shows how to get a caption of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field caption.
 
 // Create a pivot table, add data to it then get a caption of a specified pivot field.

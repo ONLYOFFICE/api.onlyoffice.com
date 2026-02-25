@@ -24,7 +24,7 @@ boolean
 
 This example sets a style to the chart by style ID.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to update visualization of a chart setting a new style by using its ID.
 
 // Apply new style by its ID.

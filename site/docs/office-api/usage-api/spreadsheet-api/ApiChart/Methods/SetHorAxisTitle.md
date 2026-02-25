@@ -26,7 +26,7 @@ boolean
 
 This example specifies the chart horizontal axis title.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set title for horizontal axis.
 
 // Add title for the axis.

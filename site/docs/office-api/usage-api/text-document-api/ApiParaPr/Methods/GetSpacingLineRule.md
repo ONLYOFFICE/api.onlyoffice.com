@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph line spacing rule.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the spacing line rule of the paragraph and display it.
 
 // Get the paragraph spacing line rule.

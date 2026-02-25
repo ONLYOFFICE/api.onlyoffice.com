@@ -24,7 +24,7 @@ number
 
 This example shows how to return a number matching an error value.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the error type code from the value.
 
 // Use function to get a error type.

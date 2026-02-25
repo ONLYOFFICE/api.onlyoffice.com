@@ -26,7 +26,7 @@ expression.GetRange(cell1, cell2);
 
 This example shows how to get a subrange from an existing range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a range within a range.
 
 // Get a range, access subranges and fill them with different colors.

@@ -32,7 +32,7 @@ boolean
 
 This example adds a caption paragraph after the current table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add caption to the table.
 
 // Add text as a table caption specifying its properties.

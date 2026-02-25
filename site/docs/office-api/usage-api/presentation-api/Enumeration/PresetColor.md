@@ -204,7 +204,7 @@ Enumeration
 
 This example creates a scheme color using the 'lightYellow' color preset.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a preset color.
 
 // Create light yellow preset color.

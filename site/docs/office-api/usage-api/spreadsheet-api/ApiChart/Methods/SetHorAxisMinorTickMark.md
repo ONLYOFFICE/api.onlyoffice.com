@@ -24,7 +24,7 @@ boolean
 
 This example specifies the minor tick mark for the horizontal axis.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to specify minor tick mark for the horizontal axis.
 
 // Minor mark the horizontal axis of the chart.

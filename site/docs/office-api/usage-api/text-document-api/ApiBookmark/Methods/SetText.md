@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set bookmark text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set a text to a bookmark.
 
 // Get a bookmark from the document by its name then set its text.

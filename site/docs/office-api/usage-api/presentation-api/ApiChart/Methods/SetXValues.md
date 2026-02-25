@@ -24,7 +24,7 @@ boolean
 
 This example sets the x-axis values to all chart series. It is used with the scatter charts only.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to add values to horizontal axis for all series of scatter charts.
 
 // Fill all x-axis values of scattered charts series.

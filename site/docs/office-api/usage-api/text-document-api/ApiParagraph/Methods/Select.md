@@ -22,7 +22,7 @@ boolean
 
 This example selects the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to select the paragraph.
 
 // Select a paragraph with a cursor.

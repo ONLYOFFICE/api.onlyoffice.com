@@ -22,7 +22,7 @@ number
 
 This example gets the count of conditional formatting rules in a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the number of conditional formatting rules applied to cells.
 
 // Get count of conditional formatting rules.

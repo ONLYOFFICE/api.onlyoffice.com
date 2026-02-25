@@ -24,7 +24,7 @@ boolean
 
 This example shows how to enable percentile values for icon set thresholds.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to configure icon set to use percentile values instead of actual values.
 
 // Enable percentile values for icon set threshold calculation.

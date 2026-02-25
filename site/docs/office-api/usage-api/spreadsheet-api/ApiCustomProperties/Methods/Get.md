@@ -24,7 +24,7 @@ string \| number \| Date \| boolean \| null
 
 This example demonstrates how to get the value of a custom property by its name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 

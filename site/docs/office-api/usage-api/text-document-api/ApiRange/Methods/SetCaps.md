@@ -24,7 +24,7 @@ expression.SetCaps(isCaps);
 
 This example specifies that any lowercase characters in the current text Range are formatted for display only as their capital letter character equivalents.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make range text uppercase.
 
 // Update text letters of the range by converting them to capital letters.

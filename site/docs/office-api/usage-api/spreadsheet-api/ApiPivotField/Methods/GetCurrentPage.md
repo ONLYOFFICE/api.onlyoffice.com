@@ -22,7 +22,7 @@ string \| number
 
 This example shows how to get a current page of a pivot field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a pivot field current page.
 
 // Create a pivot table, add data to it then get a current page of a specified pivot field.

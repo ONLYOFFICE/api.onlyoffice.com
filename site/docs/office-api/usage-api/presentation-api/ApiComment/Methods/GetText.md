@@ -22,7 +22,7 @@ string
 
 This example shows how to get text of a comment.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a raw text of a comment.
 
 // Get all comments from the presentation and the first one's text.

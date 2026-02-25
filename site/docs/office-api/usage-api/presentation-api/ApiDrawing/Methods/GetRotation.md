@@ -22,7 +22,7 @@ number
 
 This example shows how to get the rotation angle of the drawing.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

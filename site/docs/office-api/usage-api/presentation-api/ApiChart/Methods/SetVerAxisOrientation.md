@@ -24,7 +24,7 @@ boolean
 
 This example specifies the vertical axis orientation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set an orientation of vertical axis.
 
 // Create a chart, set its properties and its vertical axis orientation.

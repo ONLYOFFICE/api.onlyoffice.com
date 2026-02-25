@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get column range of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get column range from a pivot table.
 
 // Create a pivot table, add data to it then get its column range and select them.

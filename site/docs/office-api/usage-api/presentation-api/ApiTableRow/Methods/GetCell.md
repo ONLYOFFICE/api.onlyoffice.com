@@ -24,7 +24,7 @@ expression.GetCell(nPos);
 
 This example shows how to get a cell by its position in the row.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return a cell using its row index.
 
 // Create a table, get its row and get a cell from this row.

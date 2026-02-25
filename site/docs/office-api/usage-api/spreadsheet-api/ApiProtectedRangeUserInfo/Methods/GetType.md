@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets type of a protected range user.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a user info of a protected range and show its type.
 
 // Get a user type of a protected range and add it to the worksheet.

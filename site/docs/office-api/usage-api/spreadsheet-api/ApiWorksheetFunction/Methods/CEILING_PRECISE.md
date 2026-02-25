@@ -25,7 +25,7 @@ number
 
 This example shows how to return a number that is rounded up to the nearest integer or to the nearest multiple of significance. The number is always rounded up regardless of its sing.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to round a number up precisely.
 
 // Use function to round a negative or positive number up the nearest integer or to the nearest multiple of significance.

@@ -22,7 +22,7 @@ number
 
 This example gets the end position of a given range object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the last index of the range position.
 
 // Get a range of the paragraph and display its the end position.

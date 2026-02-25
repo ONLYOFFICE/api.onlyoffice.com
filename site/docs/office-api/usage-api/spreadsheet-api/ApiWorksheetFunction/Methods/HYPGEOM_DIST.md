@@ -28,7 +28,7 @@ number
 
 This example shows how to get the hypergeometric distribution.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from a hypergeometric distribution.
 
 // Use a function to get the result of hypergeometric distribution.

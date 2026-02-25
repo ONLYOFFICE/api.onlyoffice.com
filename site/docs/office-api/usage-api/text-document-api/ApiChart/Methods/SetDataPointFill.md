@@ -27,7 +27,7 @@ boolean
 
 This example shows how to set the fill to the data point.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color chart data point with a solid fill.
 
 // Create a chart and set a color for its data points.

@@ -22,7 +22,7 @@ boolean
 
 This example wraps the paragraph content in a mail merge field.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a paragraph wrapped in 'Mail Merge Field'.
 
 // Add a paragraph to the mail merge field.

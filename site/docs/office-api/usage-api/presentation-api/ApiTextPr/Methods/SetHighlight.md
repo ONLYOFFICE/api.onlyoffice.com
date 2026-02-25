@@ -24,7 +24,7 @@ expression.SetHighlight(sColor);
 
 This example specifies a highlighting color which is added to the text properties and applied as a background to the contents of the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to highlight a text with a color.
 
 // Get the text properties of the run and highlight it.

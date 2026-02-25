@@ -22,7 +22,7 @@ number[]
 
 This example shows how to get current visible pages indexes.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get all indexes of non-hidden pages.
 
 // How to display numbers of all visible pages.

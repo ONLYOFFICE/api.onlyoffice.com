@@ -23,7 +23,7 @@ Enumeration
 
 This example paste data with paste all options.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to indicate a paste type.
 
 // Specifies the part of the range to be pasted.

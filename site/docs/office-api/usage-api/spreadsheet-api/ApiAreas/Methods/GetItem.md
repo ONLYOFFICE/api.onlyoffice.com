@@ -24,7 +24,7 @@ expression.GetItem(ind);
 
 This example shows how to get a single object from a collection by its ID.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find an object by its ID from the collection.
 
 // Get element from an array by its ID.

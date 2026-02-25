@@ -31,7 +31,7 @@ string
 
 This example gets a text from document content element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the text of the document content as a string.
 
 // Display all content. 

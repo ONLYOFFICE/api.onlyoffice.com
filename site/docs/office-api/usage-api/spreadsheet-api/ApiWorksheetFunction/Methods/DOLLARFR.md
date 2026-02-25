@@ -25,7 +25,7 @@ number
 
 This example shows how to convert a dollar price, expressed as a decimal number, into a dollar price, expressed as a fraction.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to convert a dollar price from decimal to fraction.
 
 // Use function to get fraction from decimal price.

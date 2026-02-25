@@ -26,7 +26,7 @@ number
 
 This example shows how to return the relative position of an item in a range that matches the specified value in the specified order.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an index of an element that matches a condition.
 
 // Use a function to find an item in a range.

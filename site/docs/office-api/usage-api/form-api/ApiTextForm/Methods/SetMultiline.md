@@ -24,7 +24,7 @@ boolean
 
 This example specifies if the text field should be miltiline.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to set the first text form from this document multiline.
 
 // Set the boolean that represents the multiline property of the text form.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the number format for a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to apply number formatting to conditional formatting rules.
 
 // Set conditional formatting rule number format.

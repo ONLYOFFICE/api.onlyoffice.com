@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an index of pivot field of a data field.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to use a table element pivot field.
 
 // Create a pivot table, add data to it then display a custom data field's pivot index.

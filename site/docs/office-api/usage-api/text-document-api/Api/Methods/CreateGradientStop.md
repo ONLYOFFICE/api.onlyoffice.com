@@ -25,7 +25,7 @@ expression.CreateGradientStop(uniColor, pos);
 
 This example shows how to create a gradient stop used for different types of gradients.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates two gradient stops of the specified RGB colors, creates a linear gradient fill with them, and uses it to create a shape in the current document.
 
 // How to create the ApiGradientStop objects for the linear gradient fill.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get currently active chart from the workbook
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // const workbook = Api.GetActiveWorkbook();
 // const worksheet = workbook.GetActiveSheet();
 // worksheet.GetRange('A1').SetValue('John Smith');

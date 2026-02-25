@@ -20,11 +20,11 @@ Completes the basic address data with detailed address information and inserts i
 
 (function()
 {
-    let API_KEY = 'yourAPIkey';
+    let API_KEY = 'YOUR_API_KEY';
     let ENDPOINT = 'https://api.geoapify.com/v1/geocode/search';
-    let worksheet = Api.GetActiveSheet();
+    let oWorksheet = Api.GetActiveSheet();
     let row = 2;
-    makeRequest(worksheet.GetRange(`A${row}`).GetText());
+    makeRequest(oWorksheet.GetRange(`A${row}`).GetText());
     
     // REQUEST
     function makeRequest(ADDRESS) {
@@ -86,7 +86,7 @@ Completes the basic address data with detailed address information and inserts i
         }
         // Execute recursively until "Address" value is empty
         row++;
-        makeRequest(worksheet.GetRange(`A${row}:A${row}`).GetText());
+        makeRequest(oWorksheet.GetRange(`A${row}:A${row}`).GetText());
     }
     // Sheet has to be reloaded on changes
     function reload() {

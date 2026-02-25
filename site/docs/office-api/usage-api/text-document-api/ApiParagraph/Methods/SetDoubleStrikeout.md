@@ -24,7 +24,7 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 This example specifies that the contents of this paragraph are displayed with two horizontal lines through each character displayed on the line.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to strike out a text with two lines.
 
 // Create a new paragraph and set double strikeout to it.

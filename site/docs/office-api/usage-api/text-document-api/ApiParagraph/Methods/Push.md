@@ -24,7 +24,7 @@ boolean
 
 This example adds a oRun to the paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to insert text to the paragraph.
 
 // Get the last paragraph and make it bold.

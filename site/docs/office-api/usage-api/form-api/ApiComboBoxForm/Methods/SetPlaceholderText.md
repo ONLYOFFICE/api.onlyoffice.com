@@ -25,7 +25,7 @@ boolean
 
 This example sets the placeholder text to the form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // Add text as a placeholder of the form.
 
 // Create a text form and set its placeholder text.

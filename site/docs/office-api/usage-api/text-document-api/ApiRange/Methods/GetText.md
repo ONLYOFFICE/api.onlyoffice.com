@@ -31,7 +31,7 @@ String
 
 This example shows how to get a text from the specified range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a raw text from the characters.
 
 // Retrieve a text from the character collection.

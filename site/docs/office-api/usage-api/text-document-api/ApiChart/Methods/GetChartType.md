@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to get the chart type of a chart.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 

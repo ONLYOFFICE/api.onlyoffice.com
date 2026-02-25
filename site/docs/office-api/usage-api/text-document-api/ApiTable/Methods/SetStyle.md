@@ -24,7 +24,7 @@ boolean
 
 This example sets a style to the table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set style of the table.
 
 // Create a bordered table.

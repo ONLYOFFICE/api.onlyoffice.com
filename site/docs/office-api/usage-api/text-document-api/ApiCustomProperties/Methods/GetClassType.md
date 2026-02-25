@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to get the class type of ApiCustomProperties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 

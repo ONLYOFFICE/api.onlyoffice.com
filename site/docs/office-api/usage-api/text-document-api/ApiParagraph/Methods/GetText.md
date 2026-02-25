@@ -28,7 +28,7 @@ string
 
 This example shows how to get the paragraph text.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get text of the paragraph object.
 
 // Get the paragraph text and display it.

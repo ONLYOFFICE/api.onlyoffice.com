@@ -25,7 +25,7 @@ boolean
 
 This example inserts a break at the specified location in the main document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add some space from the drawing.
 
 // Insert a drawing and text into document and add a break to them.

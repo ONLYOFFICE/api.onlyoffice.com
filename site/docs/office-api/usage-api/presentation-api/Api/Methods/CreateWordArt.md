@@ -33,7 +33,7 @@ expression.CreateWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, 
 
 This example creates a Text Art object with the "textArchUp" text transform type.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create word art indicating its text properties.
 
 // Add arch up text word art.

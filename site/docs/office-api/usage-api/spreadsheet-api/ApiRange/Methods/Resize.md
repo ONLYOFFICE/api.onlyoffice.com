@@ -25,7 +25,7 @@ expression.Resize(rowSize, columnSize);
 
 This example shows how to resize a range to a different number of rows and columns.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to resize a range.
 
 // Get a range, resize it and fill the resized range with color.

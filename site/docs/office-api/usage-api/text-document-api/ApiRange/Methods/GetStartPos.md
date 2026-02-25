@@ -22,7 +22,7 @@ number
 
 This example gets the start position of a given range object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get the start index of the range and display it.
 
 // Retrieve a range of the paragraph and show its first position.

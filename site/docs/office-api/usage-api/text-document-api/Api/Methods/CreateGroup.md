@@ -24,7 +24,7 @@ expression.CreateGroup(drawings);
 
 This example shows how to create a group of drawings.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates two "rect" shapes in the current document and groups them.
 
 // How to create the ApiGroup object from an array of drawings.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the text operator from a text-based conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve text operators from text-based conditional formatting rules.
 
 // Get conditional formatting rule text operator.

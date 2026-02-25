@@ -24,7 +24,7 @@ boolean
 
 This example shows how to check whether any of the arguments are true. Returns false only if all arguments are false.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to use OR logical operator.
 
 // Use a function to apply OR operation.

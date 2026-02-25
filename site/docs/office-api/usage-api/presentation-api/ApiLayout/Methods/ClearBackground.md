@@ -22,7 +22,7 @@ boolean
 
 This example clears backgound for a slide.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove a background from a layout.
 
 // Clear background from a layout object.

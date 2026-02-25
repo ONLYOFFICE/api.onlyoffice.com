@@ -23,7 +23,7 @@ boolean
 
 This example converts the form to an inline form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make the form inline.
 
 // Create a text form and make its position inline.

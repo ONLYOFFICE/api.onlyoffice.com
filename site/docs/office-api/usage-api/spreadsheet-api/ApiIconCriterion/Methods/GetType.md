@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the type of an icon criterion.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to retrieve the type from an icon set criterion.
 
 // Get the criterion type used for threshold comparison.

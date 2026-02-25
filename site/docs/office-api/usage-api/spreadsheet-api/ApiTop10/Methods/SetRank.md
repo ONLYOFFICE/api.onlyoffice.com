@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to change the rank value for top 10 condition.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set the number of top or bottom values to highlight in the condition.
 
 // Change the rank value for the top 10 rule.

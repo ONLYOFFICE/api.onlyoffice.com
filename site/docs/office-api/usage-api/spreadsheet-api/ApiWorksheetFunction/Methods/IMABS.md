@@ -24,7 +24,7 @@ number
 
 This example shows how to return the absolute value (modulus) of a complex number.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the absolute value of the complex number.
 
 // Use a function to get a modulus of the complex number. 

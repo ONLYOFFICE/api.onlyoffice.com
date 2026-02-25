@@ -22,7 +22,7 @@ boolean
 
 This example deletes the current graphic object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to delete a shape from the document.
 
 // Remove the drawing object.

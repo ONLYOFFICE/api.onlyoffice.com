@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the previous paragraph.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the previous paragraph.
 
 // Get the paragraph, its previous one and make it bold.

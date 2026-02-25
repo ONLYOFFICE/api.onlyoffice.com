@@ -24,7 +24,7 @@ expression.GetRange(sRange);
 
 This example shows how to get the ApiRange object by the range reference.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a range object using an address.
 
 // Update a rabge knowing its cell address.

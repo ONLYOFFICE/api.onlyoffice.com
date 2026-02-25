@@ -24,7 +24,7 @@ boolean
 
 This example sets a name of the current style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Rename the table style.
 
 // How to change the name of the created table style.

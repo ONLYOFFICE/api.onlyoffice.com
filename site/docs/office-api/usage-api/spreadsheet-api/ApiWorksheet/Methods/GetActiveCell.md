@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an object that represents an active cell.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get selected active cell.
 
 // Get an active cell and insert data to it.

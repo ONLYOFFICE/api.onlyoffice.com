@@ -25,7 +25,7 @@ expression.Search(sText, isMatchCase);
 
 This example shows how to make search in table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to search throughout the table.
 
 // Get a table, search information using value, position, order, etc.

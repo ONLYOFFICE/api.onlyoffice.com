@@ -24,7 +24,7 @@ number
 
 This example shows how to return the number of rows in a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to count number of rows.
 
 // Use a function to count number of rows.

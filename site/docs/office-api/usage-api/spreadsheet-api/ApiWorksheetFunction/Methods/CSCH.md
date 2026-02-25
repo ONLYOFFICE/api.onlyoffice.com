@@ -24,7 +24,7 @@ number
 
 This example shows how to the hyperbolic cosecant of an angle.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return hyperbolic cosecant.
 
 // Use function to get the hyperbolic cosecant of an angle.

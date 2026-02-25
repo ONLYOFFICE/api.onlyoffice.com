@@ -24,7 +24,7 @@ number
 
 This example shows how to multiply all the numbers given as arguments.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to return the result after multiplication.
 
 // Use a function to multiply a list of numbers.

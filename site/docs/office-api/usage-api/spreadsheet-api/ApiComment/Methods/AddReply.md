@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 This example adds a reply to a comment.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to reply to a comment.
 
 // Add a commnet reply indicating an author and id.

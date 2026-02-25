@@ -24,7 +24,7 @@ expression.SetOutLine(oStroke);
 
 In this example, the WordArt text has a text outline.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set an outline to the text.
 
 // Create a text run object, change its property by outlining it with a color.

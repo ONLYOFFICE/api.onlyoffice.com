@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example merges the cells in the row.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Merge cells of the entire row.
 
 // Combine the entire row cells.

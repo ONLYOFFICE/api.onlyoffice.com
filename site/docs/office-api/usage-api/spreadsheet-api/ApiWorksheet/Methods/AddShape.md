@@ -35,7 +35,7 @@ expression.AddShape(sType, nWidth, nHeight, oFill, oStroke, nFromCol, nColOffset
 
 This example adds a shape to the sheet with the parameters specified.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add a shape to the worksheet.
 
 // Insert a flowchart shape to the worksheet.

@@ -29,7 +29,7 @@ boolean
 
 This example shows how to set a border for the entire table.
 
-```javascript editor-docx
+```javascript editor-docx playground
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and add 4 point black border for the entrire table:");

@@ -24,7 +24,7 @@ boolean
 
 This example specifies whether the current section in this document has the different header and footer for the section first page.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to make a page a title one.
 
 // Create a section and make its set its page as a title one.

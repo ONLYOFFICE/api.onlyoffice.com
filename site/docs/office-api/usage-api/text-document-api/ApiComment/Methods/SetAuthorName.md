@@ -24,7 +24,7 @@ expression.SetAuthorName(sAuthorName);
 
 This example sets the comment author's name.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to change a comment's author name.
 
 // Get all comments from the presentation and set an author for the first one.

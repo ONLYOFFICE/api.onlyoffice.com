@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates creating a preset geometry in presentations.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 

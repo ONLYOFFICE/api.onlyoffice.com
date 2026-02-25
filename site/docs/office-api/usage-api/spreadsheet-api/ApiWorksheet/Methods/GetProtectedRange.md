@@ -24,7 +24,7 @@ expression.GetProtectedRange(sTitle);
 
 This example shows how to get an object that represents the protected range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get protected range.
 
 // Get protected range and set its title.

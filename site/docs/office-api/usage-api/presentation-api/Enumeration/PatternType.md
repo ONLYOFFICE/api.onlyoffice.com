@@ -68,7 +68,7 @@ Enumeration
 
 This example sets the picture position measured in percent inside the current form.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create a pattern fill indicating its pattern type.
 
 // Create a dash diagonal pattern.

@@ -24,7 +24,7 @@ expression.SetTimeUTC(nTimeStamp);
 
 This example shows how to set a comment time in UTC.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a creation time of a comment in UTC format.
 
 // Get all comments from the presentation and change its first one's creation UTC time.

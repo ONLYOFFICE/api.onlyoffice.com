@@ -22,7 +22,7 @@ boolean
 
 This example removes all the elements from the run.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to remove all elements from the text run object.
 
 // Delete text from the slide.

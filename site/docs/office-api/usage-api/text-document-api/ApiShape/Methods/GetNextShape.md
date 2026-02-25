@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the next inline shape.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get next shape from the current one.
 
 // Color the next shape with a solid fill.

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example adds a content control and changes its appearance.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let contentControl = Api.CreateBlockLvlSdt();
 contentControl.SetAppearance("hidden");

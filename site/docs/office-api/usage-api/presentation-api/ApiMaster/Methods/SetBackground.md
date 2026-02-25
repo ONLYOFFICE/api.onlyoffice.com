@@ -24,7 +24,7 @@ boolean
 
 This example sets the background to the current slide master.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a background of a slide master.
 
 // Create a solid fill and apply it as a background for a slide master.

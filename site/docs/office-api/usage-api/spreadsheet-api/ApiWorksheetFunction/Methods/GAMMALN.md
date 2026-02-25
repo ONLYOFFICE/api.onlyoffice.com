@@ -24,7 +24,7 @@ number
 
 This example shows how to return the natural logarithm of the gamma function.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to calculate the natural logarithm of the gamma function.
 
 // Use a function to calculate the natural logarithm of the gamma function value.

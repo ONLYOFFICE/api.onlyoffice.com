@@ -26,7 +26,7 @@ boolean
 
 This example specifies that all the columns in the current section have the different widths.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to split the text into 3 columns with different sizes.
 
 // Get the final section and divide it to columns.

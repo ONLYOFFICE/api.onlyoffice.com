@@ -23,7 +23,7 @@ Enumeration
 
 This example returns a type of the current form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a form type.
 
 // Return a type from the ApiTextForm object.

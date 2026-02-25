@@ -22,7 +22,7 @@ boolean
 
 This example finds out whether a text has the strikeout property set.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know whether a text is crossed by one horizontal line.
 
 // Retrieve text properties of the form to find out whether it is stroke out.

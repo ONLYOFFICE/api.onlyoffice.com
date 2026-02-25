@@ -24,7 +24,7 @@ number
 
 This example shows how to convert points to lines.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const points = 100;
 const lines = Api.PointsToLines(points);
 

@@ -22,7 +22,7 @@ Number
 
 This example gets a quote text of a comment.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to retrieve a quote text from a comment.
 
 // Get all comments from the presentation and the first one's quote text.

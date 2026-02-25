@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the title of the workbook.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

@@ -25,7 +25,7 @@ boolean
 
 This example specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set a page break before the current paragraph.
 
 // Move the paragraph to the new page while rendering.

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example splits the selected merged cell range into the single cells.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to unmerge a range of cells.
 
 // Get a range and split its merged cells.

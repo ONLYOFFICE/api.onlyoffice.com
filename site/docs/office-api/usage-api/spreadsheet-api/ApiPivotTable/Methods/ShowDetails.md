@@ -25,7 +25,7 @@ boolean
 
 This example shows how to show details of a pivot table.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to display details of a field using its position.
 
 // Create a pivot table, add data to it then get and show its fiels details.

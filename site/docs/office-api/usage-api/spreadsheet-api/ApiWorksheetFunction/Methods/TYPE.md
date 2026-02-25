@@ -24,7 +24,7 @@ number
 
 This example shows how to return an integer representing the data type of a value: number = 1; text = 2; logical value = 4; error value = 16; array = 64; compound data = 128.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an integer representing the data type of a value.
 
 // Use a function to return the data type of a value.

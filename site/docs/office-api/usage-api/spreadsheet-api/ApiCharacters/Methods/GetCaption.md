@@ -22,7 +22,7 @@ string
 
 This example shows how to get a string value that represents the text of the specified range of characters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Get a value that represents the label text for the pivot field.
 
 // How to get and display caption of the text.

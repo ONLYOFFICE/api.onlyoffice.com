@@ -22,7 +22,7 @@ number
 
 This example shows how to get current page index.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know the order index of the current page.
 
 // Get current page number.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the date language from a date form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to know which language is used for a date form.
 
 // Create a date form and diplay its language info in the document.

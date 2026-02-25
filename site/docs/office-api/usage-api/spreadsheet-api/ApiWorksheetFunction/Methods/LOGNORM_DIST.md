@@ -27,7 +27,7 @@ number
 
 This example shows how to return the lognormal distribution of x, where ln(x) is normally distributed with the specified parameters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the lognormal distribution of x.
 
 // Use a function to return the lognormal distribution.

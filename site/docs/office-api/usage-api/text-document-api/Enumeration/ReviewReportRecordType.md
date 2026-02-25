@@ -21,7 +21,7 @@ Enumeration
 
 Report on all review changes that contains review records of four different types: "TextRem" - removing text, "TextAdd" - adding text, "ParaRem" - removing a paragraph, "TextPr" - changing text properties.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a review report record indicating its type.
 
 // Create review report records with types.

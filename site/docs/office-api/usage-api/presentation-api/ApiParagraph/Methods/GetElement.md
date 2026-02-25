@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get a paragraph element using the position specified.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return an element from the ApiPargaraph object.
 
 // Get an object from the paragraph.

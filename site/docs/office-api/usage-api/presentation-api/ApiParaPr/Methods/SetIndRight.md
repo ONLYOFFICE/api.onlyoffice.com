@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph right side indentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set a right side indentation using a paragraph properties.
 
 // Create a paragraph setting its right side indentation property.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the text of the specified range of characters.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a raw text from the characters.
 
 // Retrieve a text from the character collection.

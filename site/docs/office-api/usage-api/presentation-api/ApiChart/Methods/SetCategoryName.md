@@ -25,7 +25,7 @@ boolean
 
 This example sets a category name for chart.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to rename a chart category.
 
 // Create a chart then name its category.

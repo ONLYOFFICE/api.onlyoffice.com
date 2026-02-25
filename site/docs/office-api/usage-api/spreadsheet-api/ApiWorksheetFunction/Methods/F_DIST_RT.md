@@ -26,7 +26,7 @@ number
 
 This example shows how to return the (right-tailed) F probability distribution (degree of diversity) for two data sets.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the F probability distribution.
 
 // Use function to calculate a right-tailed F probability distribution.

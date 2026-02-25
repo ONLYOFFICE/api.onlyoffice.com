@@ -24,7 +24,7 @@ boolean
 
 This example clear current custom function.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to delete custom created function from the library.
 
 // Remove custom function library.

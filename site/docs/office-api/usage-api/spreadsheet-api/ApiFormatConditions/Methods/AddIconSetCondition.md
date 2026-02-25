@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds icon set conditional formatting to a range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add icon set conditional formatting rules to display icons based on values.
 
 // Add icon set conditional formatting to cells.

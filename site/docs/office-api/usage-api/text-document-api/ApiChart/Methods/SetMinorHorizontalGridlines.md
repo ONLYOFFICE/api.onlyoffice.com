@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties for the minor horizontal gridlines.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set minor horizontal gridlines of the chart.
 
 // Create a chart, set its properties and its minor gridlines as a stroke.

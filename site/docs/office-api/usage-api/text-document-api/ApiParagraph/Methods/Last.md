@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the last element of the paragraph which is not empty.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the last paragraph.
 
 // Get the last paragraph and make it bold.

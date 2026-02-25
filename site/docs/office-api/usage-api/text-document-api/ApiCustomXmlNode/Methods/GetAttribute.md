@@ -25,7 +25,7 @@ string \| null
 
 This example shows how to retrieve the value of an attribute from the current XML node.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

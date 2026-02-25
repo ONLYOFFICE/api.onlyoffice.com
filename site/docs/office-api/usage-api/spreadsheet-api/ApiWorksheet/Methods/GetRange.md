@@ -26,7 +26,7 @@ expression.GetRange(Range1, Range2);
 
 This example shows how to get an object that represents the selected range of the sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a range using address.
 
 // Get range and set its horizontal alignment.

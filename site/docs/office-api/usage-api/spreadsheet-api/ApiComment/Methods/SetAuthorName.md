@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the comment author's name.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add author's name to the comment.
 
 // Add a comment and author name to it, then show author name in the worksheet.

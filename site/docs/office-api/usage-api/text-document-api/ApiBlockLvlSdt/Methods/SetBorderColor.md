@@ -27,7 +27,7 @@ boolean
 
 This example shows how to set the border color for the block-level container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.SetBorderColor(0, 0, 255, 255);

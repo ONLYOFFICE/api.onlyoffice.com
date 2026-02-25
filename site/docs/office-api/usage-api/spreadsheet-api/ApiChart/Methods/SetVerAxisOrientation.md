@@ -24,7 +24,7 @@ boolean
 
 This example specifies the direction of the data displayed on the vertical axis.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to indicate the direction of values of the chart vertical axis.
 
 // Specify the vertical axis orientation.

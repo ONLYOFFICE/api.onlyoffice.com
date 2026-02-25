@@ -24,7 +24,7 @@ expression.SetHighlight(sColor);
 
 This example specifies a highlighting color which is applied as a background to the contents of the run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to color a text object background.
 
 // Create a text run object, add color to its background.

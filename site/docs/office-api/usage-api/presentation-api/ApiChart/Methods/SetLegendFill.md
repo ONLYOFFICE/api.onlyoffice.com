@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart legend.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to color a chart legend.
 
 // Create a chart, set its properties and background color of a legend.

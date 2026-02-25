@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm();
 let paragraph = doc.GetElement(0);

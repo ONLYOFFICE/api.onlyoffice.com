@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the creator of the current workbook using the ApiCore.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

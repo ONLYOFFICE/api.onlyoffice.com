@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to check if icon order is reversed.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine if icon set displays icons in reverse order.
 
 // Check if the icon set rule reverses the icon display order.

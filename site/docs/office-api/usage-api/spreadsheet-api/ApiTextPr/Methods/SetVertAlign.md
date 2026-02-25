@@ -27,7 +27,7 @@ expression.SetVertAlign(sType);
 
 This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change vertical alignment of a text.
 
 // Make text superscript.

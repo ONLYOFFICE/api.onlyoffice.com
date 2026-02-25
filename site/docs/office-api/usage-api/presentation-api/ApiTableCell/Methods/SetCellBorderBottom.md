@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the border which shall be displayed at the bottom of the table cell.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set cell bottom border with its fill color.
 
 // Create table and set its cell bottom border.

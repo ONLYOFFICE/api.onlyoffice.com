@@ -38,3 +38,10 @@ html[data-theme='dark'] .runButton:hover {
     width: 1.5rem;
     height: 1.5rem;
 }
+
+@media (max-width: 767px) {
+    .runButton {
+        left: 1rem;
+        right: unset;
+    }
+}

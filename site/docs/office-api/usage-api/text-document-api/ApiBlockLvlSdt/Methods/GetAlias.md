@@ -22,7 +22,7 @@ string
 
 This example shows how to get the alias attribute of the container.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, adds a text to it, returns its alias, and writes it to the second paragraph of the document.
 
 // How to return an alias of the ApiBlockLvlSdt object.

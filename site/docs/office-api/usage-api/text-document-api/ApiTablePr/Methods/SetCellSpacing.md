@@ -24,7 +24,7 @@ boolean
 
 This example specifies the default table cell spacing.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the size of the cell spacing.
 
 // Create a table and indicate its cell spacing.

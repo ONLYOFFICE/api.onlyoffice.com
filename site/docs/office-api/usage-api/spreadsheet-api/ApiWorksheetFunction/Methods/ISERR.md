@@ -24,7 +24,7 @@ boolean
 
 This example shows how to check whether a value is an error other than N/A, and returns true or false.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check if the cell contains an error and not N/A value.
 
 // Use a function to check whether the value is error or not and is not N/A.

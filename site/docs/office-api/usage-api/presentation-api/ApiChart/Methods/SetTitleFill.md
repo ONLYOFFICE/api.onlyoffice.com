@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart title.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to color a chart title.
 
 // Create a chart, set its properties and its title color.

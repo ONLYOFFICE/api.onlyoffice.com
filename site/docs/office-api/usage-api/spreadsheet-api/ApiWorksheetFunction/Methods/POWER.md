@@ -25,7 +25,7 @@ number
 
 This example shows how to return the result of a number raised to a power.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to raise a number to a power.
 
 // Use a function to calculate the result after raising a number to the power.

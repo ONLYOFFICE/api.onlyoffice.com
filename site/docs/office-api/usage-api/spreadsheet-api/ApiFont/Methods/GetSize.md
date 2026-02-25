@@ -22,7 +22,7 @@ number \| null
 
 This example shows how to get the font size property of the specified font.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to determine a font size of characters.
 
 // Get the size of a font and display it in the worksheet.

@@ -25,7 +25,7 @@ expression.CreateTable(nCols, nRows);
 
 This example creates a 2x4 table and inserts it into the presentation.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to create new table with two rows and four columns.
 
 // Add a table to the presentation.

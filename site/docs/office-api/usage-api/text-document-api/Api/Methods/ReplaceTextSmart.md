@@ -26,7 +26,7 @@ boolean
 
 This example replaces text while preserving formatting and other things.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Adds a text to the first paragraph of the document, sets the bold and italic properties to it, and replaces it with a new text preserving the text style.
 
 // Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.

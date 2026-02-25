@@ -22,7 +22,7 @@ number
 
 This example shows how to get a row number for the selected cell.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a cell column index.
 
 // Get a range and display its column number.

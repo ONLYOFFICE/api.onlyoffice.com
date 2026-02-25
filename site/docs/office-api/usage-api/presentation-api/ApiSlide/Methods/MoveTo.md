@@ -24,7 +24,7 @@ boolean
 
 This example moves the current slide to a specific location within the same collection.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to move a slide to the position index.
 
 // Create a slide and change its position.

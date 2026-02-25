@@ -24,7 +24,7 @@ number
 
 This example shows how to convert points to pixels.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const points = 1000;
 const pixels = Api.PointsToPixels(points);
 

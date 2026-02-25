@@ -24,7 +24,7 @@ boolean
 
 This example sets the scaling condition to the current picture form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to set the image scale flag of the form.
 
 // Make the picture scalable.

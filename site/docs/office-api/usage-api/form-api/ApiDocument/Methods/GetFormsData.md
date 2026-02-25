@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example showh how to get the data for all forms added to the document.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to get form information as a string.
 
 // Display the form data in the document.

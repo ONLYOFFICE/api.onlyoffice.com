@@ -22,7 +22,7 @@ string
 
 This example shows how to get the tip text of the form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Get a comboBox form tip text and show it in the document.
 
 // Show a tip text of the form.

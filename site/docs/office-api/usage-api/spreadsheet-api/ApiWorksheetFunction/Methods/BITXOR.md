@@ -25,7 +25,7 @@ number
 
 This example shows how to return a bitwise "XOR" of two numbers.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a result from XOR operation.
 
 // Use function to calculate bitwise "XOR" operation.

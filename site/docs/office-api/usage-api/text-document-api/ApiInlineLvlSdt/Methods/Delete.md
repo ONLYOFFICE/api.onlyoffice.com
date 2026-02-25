@@ -24,7 +24,7 @@ boolean
 
 This example removes a content control and its content.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to delete inline text element.
 
 // Add inline content control and then clear its content.

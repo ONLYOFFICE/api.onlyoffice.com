@@ -29,7 +29,7 @@ boolean
 
 This example sets the border which will be displayed at the top of the table cell.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to add border to the top of the cell.
 
 // Create a 3x3 table and add the top 4 point black border to cell #1.

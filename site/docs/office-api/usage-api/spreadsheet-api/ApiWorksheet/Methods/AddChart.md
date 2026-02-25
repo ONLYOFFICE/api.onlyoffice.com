@@ -35,7 +35,7 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 This example creates a chart of the specified type from the selected data range of the sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add chart to the worksheet.
 
 // Create a chart using data from a range from a worksheet.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the next paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get the next paragraph of the current one.
 
 // Return the next paragraph on the slide and make its text bold.

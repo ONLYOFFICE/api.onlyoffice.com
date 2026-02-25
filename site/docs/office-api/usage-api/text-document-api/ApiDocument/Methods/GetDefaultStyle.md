@@ -24,7 +24,7 @@ expression.GetDefaultStyle(sStyleType);
 
 This example shows how to get the default style parameters for the specified document element.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get default style of a document element indicating its name.
 
 // Update the default style of the paragraph element.

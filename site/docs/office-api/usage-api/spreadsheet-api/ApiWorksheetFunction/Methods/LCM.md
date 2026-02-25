@@ -24,7 +24,7 @@ number
 
 This example shows how to return the least common multiple.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find the least common multiple from the list of numbers.
 
 // Use a function to find out the least common multiple.

@@ -22,7 +22,7 @@ boolean
 
 This example selects the current run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to select a text with a cursor.
 
 // Select a run.

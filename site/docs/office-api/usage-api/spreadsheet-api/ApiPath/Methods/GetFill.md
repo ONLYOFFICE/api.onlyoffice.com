@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 Analyzes cloud shape path properties and displays them in cells.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Shows path count, dimensions, stroke and fill information.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));

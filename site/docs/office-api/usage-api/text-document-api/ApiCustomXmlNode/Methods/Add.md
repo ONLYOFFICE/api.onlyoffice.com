@@ -24,7 +24,7 @@ expression.Add(nodeName);
 
 This example shows how to create a new child node and insert it as a child of the current XML node.
 
-```javascript editor-docx
+```javascript editor-docx playground
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'><text>Hello World!</text></content>");

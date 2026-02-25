@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the axis position from a data bar conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to check the axis position setting of a data bar.
 
 // Get the axis position of a data bar conditional formatting rule.

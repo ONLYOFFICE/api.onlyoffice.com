@@ -25,7 +25,7 @@ boolean
 
 This example demonstrates how to add string custom properties to a document.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 

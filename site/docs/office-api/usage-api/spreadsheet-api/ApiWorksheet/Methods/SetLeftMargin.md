@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the left margin of the sheet.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set margin of the left side.
 
 // Resize the left margin of the sheet.

@@ -24,7 +24,7 @@ boolean
 
 This example applies text settings to the content of the content control.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a block content control, adds a text to it, and sets the font size and bold property to this text.
 
 // Specifies the ApiTextPr object and applies its settings to the ApiBlockLvlSdt object.

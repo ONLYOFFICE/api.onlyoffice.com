@@ -23,7 +23,7 @@ Enumeration
 
 This example shows how to create a numbering.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // The paragraph will be starting with the Arabic numeral which has parenthesis.
 
 // How to create a bullet indicating its type.

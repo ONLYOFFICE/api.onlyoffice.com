@@ -16,7 +16,7 @@ Enumeration
 
 This example adds a green shadow to the table.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to change a table shadow type.
 
 // Indicate a clear shadow type of the table.

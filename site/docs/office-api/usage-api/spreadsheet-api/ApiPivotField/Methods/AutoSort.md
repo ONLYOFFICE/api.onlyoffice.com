@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to establish automatic field-sorting rules for PivotTable reports.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to use the AutoSort method to sort pivot field data.
 
 // Create a pivot table, add data to it then apply automatic sorting to a specified field.

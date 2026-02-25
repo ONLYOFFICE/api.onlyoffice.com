@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiTableStylePr object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the table style properties.
 
 // Convert the table style properties to json and add it to the document.

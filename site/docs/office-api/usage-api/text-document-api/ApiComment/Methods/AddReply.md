@@ -27,7 +27,7 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 This example adds a comment and makes a reply for it.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to reply to the comment.
 
 // Create a comment from a paragraph and add a reply to its first one.

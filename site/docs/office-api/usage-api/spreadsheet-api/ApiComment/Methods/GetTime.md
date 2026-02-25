@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the timestamp of the comment creation in the current time zone format.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get a time when a comment was created.
 
 // Add a comment creation timestamp to a range of the worksheet.

@@ -27,7 +27,7 @@ number
 
 This example shows how to return statistics that describe an exponential curve matching known data points.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get the statistics of exponential curve matching the data points.
 
 // Use a function to return the statistics of exponential curve matching the data points.

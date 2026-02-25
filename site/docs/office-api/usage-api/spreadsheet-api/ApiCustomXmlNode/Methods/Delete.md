@@ -22,7 +22,7 @@ boolean
 
 This example shows how to delete a custom XML node.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to remove custom XML node elements from the document.
 
 // Delete first item node.

@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the date format on a date form.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // Specify the format of the date for the form.
 
 // How to change the date format of the form to "dddd, dd MMMM yyyy".

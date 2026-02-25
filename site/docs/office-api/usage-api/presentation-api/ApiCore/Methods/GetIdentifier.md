@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to set and get the identifier of the current presentation using the ApiCore.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetIdentifier("#ID42");

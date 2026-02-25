@@ -24,7 +24,7 @@ expression.ExpandTo(oRange);
 
 This example returns a new range that goes beyond the specified range in any direction and spans a different range.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to expand the first range to the second one.
 
 // Create a range and make it cover a different area.

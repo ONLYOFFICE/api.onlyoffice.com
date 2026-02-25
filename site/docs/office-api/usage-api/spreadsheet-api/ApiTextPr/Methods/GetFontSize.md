@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a text font size.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to find out a text font size.
 
 // Get a text font size and display it in the worksheet.

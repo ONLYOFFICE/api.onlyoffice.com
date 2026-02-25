@@ -25,7 +25,7 @@ JSON
 
 This example converts the ApiRange object into the JSON object.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get a JSON from the range.
 
 // Convert the range content to json and add it to the document.

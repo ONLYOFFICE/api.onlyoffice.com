@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a set of the table properties which will be applied to all the regions within a table which match the conditional formatting type.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get table properties and set its bottom border.
 
 // Update the table style by setting its border.

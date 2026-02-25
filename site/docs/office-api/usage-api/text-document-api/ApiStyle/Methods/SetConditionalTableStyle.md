@@ -24,7 +24,7 @@ expression.SetConditionalTableStyle(oTableStylePr);
 
 This example shows how to create and set the formatting properties which will be conditionally applied to the parts of a table that match the requirement specified in the sType parameter.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a style that will be applied to the table elements whish satisfy the condition.
 
 // Create a conditional table style.

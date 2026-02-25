@@ -27,7 +27,7 @@ boolean
 
 This example sets the spacing after the current paragraph.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to set the size of a spacing after a text from a paragraph properties.
 
 // Change the size property of a spacing after a paragraph.

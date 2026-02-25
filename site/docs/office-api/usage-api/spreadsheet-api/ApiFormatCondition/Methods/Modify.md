@@ -27,7 +27,7 @@ expression.Modify(Type, Operator, Formula1, Formula2);
 
 This example modifies a conditional formatting rule.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to change the conditions of existing conditional formatting rules.
 
 // Modify conditional formatting rule parameters.

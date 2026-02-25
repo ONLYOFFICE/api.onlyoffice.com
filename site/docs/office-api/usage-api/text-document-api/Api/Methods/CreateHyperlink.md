@@ -26,7 +26,7 @@ expression.CreateHyperlink(link, display, screenTipText);
 
 This example creates a hyperlink and pastes it into the document.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create the ApiHyperlink object and add it to the ApiParagraph class.
 
 // Creates a hyperlink with the specified URL address, display text and tip text and adds it to the first paragraph of the document.

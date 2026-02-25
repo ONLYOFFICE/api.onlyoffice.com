@@ -22,7 +22,7 @@ number
 
 This example gets a number of cells in the row.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to return a number of cells from the row.
 
 // Create a table, count its cells and display the number in the slide.

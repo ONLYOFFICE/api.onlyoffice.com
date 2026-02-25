@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of the run.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to create a duplicate of the text.
 
 // Create a copy of the run and insert it to the paragraph. 

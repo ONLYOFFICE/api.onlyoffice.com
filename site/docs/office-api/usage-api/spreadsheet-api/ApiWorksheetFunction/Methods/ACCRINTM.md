@@ -28,7 +28,7 @@ number
 
 This example shows how to return the accrued interest for a security that pays interest at maturity.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to get an accrued interest for a security that pays periodic interest at maturity.
 
 // Get a function that gets accrued interest for a security at maturity.

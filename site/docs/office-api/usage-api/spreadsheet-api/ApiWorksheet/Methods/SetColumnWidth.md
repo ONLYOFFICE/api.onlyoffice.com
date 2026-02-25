@@ -28,7 +28,7 @@ This method doesn't return any data.
 
 This example sets the width of the specified column.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set a column width.
 
 // Resize column width.

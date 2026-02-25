@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph first line indentation.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to get the indentation of the first sentence line of the paragraph.
 
 // Print the identation of the line of a paragraph.

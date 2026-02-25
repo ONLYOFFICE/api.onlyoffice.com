@@ -24,7 +24,7 @@ expression.CreateTextForm(formPr);
 
 This example creates a text form with the common and specific text form properties.
 
-```javascript editor-pdf
+```javascript editor-pdf playground
 // How to create a text form and add it to the paragraph.
 
 // Add a text form to the ApiDocument object, set its properties like characters limit, etc.

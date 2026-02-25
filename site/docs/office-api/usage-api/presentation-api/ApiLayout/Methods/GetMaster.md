@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the parent slide master of the current layout.
 
-```javascript editor-pptx
+```javascript editor-pptx playground
 // How to get a master of a layout.
 
 // Get layout slide master.

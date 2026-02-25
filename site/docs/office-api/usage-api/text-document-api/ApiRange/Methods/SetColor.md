@@ -27,7 +27,7 @@ expression.SetColor(r, g, b, isAuto);
 
 This example sets the text color to the text Range in the RGB format.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // How to color the text of the range.
 
 // Set the text color to middle washed rose.

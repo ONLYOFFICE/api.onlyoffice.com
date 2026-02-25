@@ -24,7 +24,7 @@ boolean
 
 This example sets a key to the form.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Change the key of the text form.
 
 // How to specify the text form key.

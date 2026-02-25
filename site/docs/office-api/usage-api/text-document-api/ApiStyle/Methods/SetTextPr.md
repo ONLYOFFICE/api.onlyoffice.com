@@ -24,7 +24,7 @@ expression.SetTextPr(textPr);
 
 This example applies text settings to the specified style.
 
-```javascript editor-docx
+```javascript editor-docx playground
 // Creates a paragraph, adds a text to it, and sets the font size and bold property to this text.
 
 // Specifies the ApiTextPr object and applies its settings to the ApiStyle object.

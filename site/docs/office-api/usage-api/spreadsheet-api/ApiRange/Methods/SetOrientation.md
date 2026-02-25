@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets an angle to the cell range.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to set an orientation of cells.
 
 // Get a range and specify its orientation.

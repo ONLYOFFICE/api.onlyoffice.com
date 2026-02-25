@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example creates a new history point.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // Add history point for a range.
 
 // How to make a history point.

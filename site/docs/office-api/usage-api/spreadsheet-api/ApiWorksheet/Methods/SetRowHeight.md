@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 This example sets the height of the specified row measured in points.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to resize the height of the row.
 
 // Set a row height.

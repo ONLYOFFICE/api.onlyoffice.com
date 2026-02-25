@@ -27,7 +27,7 @@ boolean
 
 This example sets the spacing after the current paragraph.
 
-```javascript editor-xlsx
+```javascript editor-xlsx playground
 // How to add the spacing after the paragraphs using points.
 
 // Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
