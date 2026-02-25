@@ -21,7 +21,7 @@ const PlaygroundEditor = lazy(() =>
     import('../editor/PlaygroundEditor').then(m => ({ default: m.PlaygroundEditor }))
 )
 
-
+}
 
 export const PlaygroundContent = () => {
     const isMobile = useIsMobile()
