@@ -19,4 +19,4 @@ Represents the ApiPage class.
 | [RecognizeContent](./Methods/RecognizeContent.md) | [Drawing](../Enumeration/Drawing.md)[] | Recognizes content on the page and returns an array of recognized objects. |
 | [Search](./Methods/Search.md) | Quads[] | Search words and returns their quads. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets page rotation angle |
-| [SetSelection](./Methods/SetSelection.md) | boolean | Gets page selection quads |
+| [SetSelection](./Methods/SetSelection.md) | boolean | Sets page selection. |

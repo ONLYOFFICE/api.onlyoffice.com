@@ -1,6 +1,6 @@
 # SetSelection
 
-Gets page selection quads
+Sets page selection.
 
 ## Syntax
 
