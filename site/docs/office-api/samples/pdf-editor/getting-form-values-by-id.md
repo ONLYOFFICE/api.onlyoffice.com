@@ -10,7 +10,7 @@ Extract values from specific form fields using their unique identifiers for vali
 - retrieve specific form values by their key/ID ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
 - validate form data and highlight required fields ([ApiTextForm/GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md), [ApiFormBase/SetBorderColor](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/SetBorderColor.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Create a registration form with various field types

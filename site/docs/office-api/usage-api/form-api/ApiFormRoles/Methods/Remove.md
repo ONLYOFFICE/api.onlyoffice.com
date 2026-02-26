@@ -25,7 +25,7 @@ boolean
 
 This example shows how to remove role.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 let doc = editor.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");

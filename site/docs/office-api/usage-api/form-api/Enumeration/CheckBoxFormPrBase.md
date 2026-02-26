@@ -17,7 +17,7 @@ Object
 
 This example creates a checkbox form with the specific checkbox form properties.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 // How to create a checkbox form with its base properties.
 
 // Create the base properties and apply them to the ApiCheckBoxForm object.

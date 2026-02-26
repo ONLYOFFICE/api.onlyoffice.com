@@ -15,7 +15,7 @@ This sample is also available for **Document Builder**.
 Download the sample and get more information on the [Document Builder samples](/docs/document-builder/samples/samples.md) page.
 :::
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Helper functions for form creation

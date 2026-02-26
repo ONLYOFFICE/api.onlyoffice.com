@@ -10,7 +10,7 @@ Create forms automatically from simple JSON objects where field types and struct
 - generate form fields with intelligent type detection ([ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [ApiParagraph/AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md));
 - create labels and initial values from JSON structure ([Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Sample JSON data from different sources

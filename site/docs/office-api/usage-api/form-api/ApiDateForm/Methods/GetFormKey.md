@@ -22,7 +22,7 @@ string
 
 This example shows how to get the form key.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 // How get a key of a comboBox form.
 
 // Retrieve key of a created comboBox form object and display it.

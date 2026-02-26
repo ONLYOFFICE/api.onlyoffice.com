@@ -25,7 +25,7 @@ boolean
 
 This example shows how to change the color of role.
 
-```javascript editor-pdf playground
+```javascript editor-forms playground
 let doc = editor.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
