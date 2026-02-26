@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Reording macros
+# Recording macros
 
 ONLYOFFICE Editors allow you to record macros. Recording a macro captures your actions, clicks, and movements in the editor and saves them as a macro to automate the process.
 
