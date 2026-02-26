@@ -8,7 +8,6 @@ Represents the ApiDocumentContent class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the document content. |
-| [ApiDocument#GetDrawingsByName](./Methods/ApiDocument#GetDrawingsByName.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md)[] | Returns a collection of drawing objects from the document filtered by their names. |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns a collection of chart objects from the document content. |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects from the document content. |
 | [GetAllImages](./Methods/GetAllImages.md) | [ApiImage](../ApiImage/ApiImage.md)[] | Returns a collection of image objects from the document content. |
