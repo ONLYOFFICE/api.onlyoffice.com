@@ -13,7 +13,7 @@ The DocSpace MCP server allows you to connect numerous mcp clients, offering fle
 - [Claude-desktop](#connect-to-claude-desktop)
 - [Claude-web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
-- [Le-chat](#connect-to-le-chat)
+- [Le Chat](#connect-to-le-chat)
 - [VSCode](#connect-to-vscode)
 - [Windsurf](#connect-to-windsurf)
 
@@ -204,9 +204,9 @@ Connect to the locally running MCP server using stdio transport.
 6. Save the file.
 
 </TabItem>
-<TabItem value="le-chat" label="Le-chat" default>
+<TabItem value="Le Chat" label="Le Chat" default>
 
-## Connect to Le chat
+## Connect to Le Chat
 
 1. Open Le Chat  in your web browser.
 2. Navigate to Intelligence.
@@ -214,7 +214,9 @@ Connect to the locally running MCP server using stdio transport.
 4. Click "Add Connector".
 5. Navigate to Custom MCP Connector.
 6. Enter a name for the connector (e.g., "ONLYOFFICE_DocSpace_MCP").
-7. Enter the server URL with your DocSpace instance as a query parameter:
+7. Enter the server URL based on your authenticating method:
+    - **OAuth**: `https://mcp.onlyoffice.com/mcp` 
+    - **API Token Authentication**: server URL with your DocSpace instance as a query parameter:
    `https://mcp.onlyoffice.com/mcp?base_url=https://your-instance.onlyoffice.com`
    (replace the base_url value with your actual DocSpace URL).
 8. Authenticate the connection with any of these auth methods 
@@ -225,7 +227,7 @@ Connect to the locally running MCP server using stdio transport.
         - Select "API Token Authentication" from "Authentication Methods" section and 
         - In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
 9. Click "Connect".
-10. Confirm connection by enabling the docspace mcp server in the **Enable tools** section of the chat bar. 
+10. Confirm connection by enabling the Docspace MCP server in the **Enable tools** section of the chat bar. 
 
 </TabItem>
 <TabItem value="vscode" label="VSCode" default>

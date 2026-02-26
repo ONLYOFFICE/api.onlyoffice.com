@@ -1,14 +1,14 @@
 # Build From Source
 
-This document describes how to build the DocSpace MCP server from source code in
-different formats.
-
-## Contents
+This guide shows the different ways to build the DocSpace MCP server from source code using the following formats: 
 
 - [Docker Image](#docker-image)
 - [Node.js Application](#nodejs-application)
 - [MCP Bundle](#mcp-bundle)
-- [References](#references)
+
+:::note
+Building the DocSpace MCP server with a Node.js app or MCP bundle requires [Node.js] version 24 or higher to be installed on your system.
+:::
 
 ## Docker Image
 
@@ -47,15 +47,7 @@ system.
 
 ## Node.js Application
 
-Building the Node.js application requires [Node.js] version 24 or higher and
-[pnpm] version 10 or higher to be installed on your system.
-
-Running the Node.js application requires [Node.js] version 18 or higher to be
-installed on your system.
-
-This project uses [mise], a polyglot tool version manager, to manage development
-tool versions. If you have experience with tools like [asdf], [nvm], [nodenv],
-or similar, you will find this familiar.
+This project uses [mise](https://mise.jdx.dev/getting-started.html), a polyglot tool version manager, to manage development tool versions. If you have experience with tools like [asdf], [nvm], [nodenv], or similar, you will find this familiar.
 
 1. Clone the repository from the company's Git server:
 
@@ -89,12 +81,6 @@ or similar, you will find this familiar.
 
 ## MCP Bundle
 
-Building the MCP bundle requires [Node.js] version 24 or higher and [pnpm]
-version 10 or higher to be installed on your system.
-
-Running the MCP bundle requires [Node.js] version 18 or higher to be installed
-on your system.
-
 This project uses [mise], a polyglot tool version manager, to manage development
 tool versions. If you have experience with tools like [asdf], [nvm], [nodenv],
 or similar, you will find this familiar.
@@ -125,12 +111,6 @@ or similar, you will find this familiar.
 
 4. Use the built `.mcpb` file from the root of the project directory in an
   application that supports MCP bundles.
-
-## References
-
-- [Docker Docs: What is an image?]
-- [GitHub Anthropic: MCP Bundles]
-- [GitHub ONLYOFFICE: DocSpace MCP Server]
 
 <!-- Footnotes  -->
 

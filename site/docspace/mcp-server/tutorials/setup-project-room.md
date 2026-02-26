@@ -5,17 +5,22 @@ sidebar_position: 1
 
 # Set up a project room
 
-Managing projects with different moving parts can be tasking, and the DocSpace room helps to segment these projects for better management. This guide will show you how to set up a project room using the mcp server.  
+Managing multiple projects, each with numerous moving parts, can be taxing and, without careful management, can lead to inefficient processes. ONLYOFFICE DocSpace provides you with rooms to work and collaborate with team members. 
+
+Connecting your DocSpace to MCP clients via the DocSpace MCP server enables you to use these AI clients as assistants, allowing you to issue commands that improve the efficiency of how you handle projects.
+
+This guide will show you how to set up a project room using the mcp server.  
 
 ## Scenario
 
 Imagine you're a project manager with a newly commissioned project to manage a website redesign for a company called Meridian Corp. You need to set up a collaboration space in DocSpace for your team before the kickoff meeting. 
-A task like this normally takes numerous clicks but with the DocSpace server, all it takes is a few natural language commands with your AI client.
 
-### What You'll Learn
+A task like this normally takes numerous clicks, but with the DocSpace server, all it takes is a few natural language commands with your AI client.
+
+## What you'll learn
 
 - [Create and configure a room suited to your specific project](#step-2-create-the-project-room)
-- [Build a logical folder structure inside the new room for efficiency](#step-3-build-a-folder-structure)
+- [Build a well-organized folder structure inside the new room](#step-3-build-a-folder-structure)
 - [Add teammates and configure their access levels to ensure security](#step-5-control-team-members-access-levels)
 
 This tutorial uses the `get_room_types`, `create_room`, `create_folder`, `get_all_people`, `get_room_access_levels`, `set_room_security` tools. 
@@ -24,19 +29,25 @@ This tutorial uses the `get_room_types`, `create_room`, `create_folder`, `get_al
 
 - Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
 
-### Step 1: Understand Your Room Options
+:::note
+Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
+:::
 
-Before creating a room, it's worth understanding what room types DocSpace supports to pick the right room that supports your specific needs. Different room types are designed for different workflows — some are suited for document editing, others for read-only review or public sharing. Hence, picking the wrong room type can limit collaboration features later. For active team projects, a Collaboration Room is typically the right choice.
+### Step 1: Understand Your room options
 
-**Try this prompt:**
+Before creating a room, it's important to note what room types DocSpace supports to select the right room that supports your specific needs. Different room types are designed for different workflows — some are suited for document editing, others for read-only review or public sharing. Hence, picking the wrong room type can limit collaboration features later. 
+
+For active team projects, a Collaboration Room is typically the right choice.
+
+**Enter this prompt into your MCP client:**
 
 ```
 What room types are available in DocSpace?
 ```
 
-The AI will call `get_room_types` and return a list of available types (e.g., Collaboration Room, Custom Room, Public Room). Read through the descriptions and decide which type fits your project.
+The AI will call the `get_room_types` tool and return a list of available types (e.g., Collaboration Room, Custom Room, Public Room). Read through them and decide which type fits your project.
 
-### Step 2: Create the Project Room
+### Step 2: Create the project room
 
 Now that you know which room type you want, create the room.
 
@@ -46,9 +57,9 @@ Now that you know which room type you want, create the room.
 Create a new collaboration room called "Meridian Corp — Website Redesign".
 ```
 
-The AI will call `create_room` and return the new room's details including its ID. **Take note of the room name** as you'll reference it in subsequent steps.
+The AI will call `create_room` and return the new room's details including its ID. **Take note of the room name** for reference purposes in subsequent steps.
 
-Confirm the room was created by asking:
+**Confirm the room was created by asking**:
 
 ```
 Get the details of the room named "Meridian Corp — Website Redesign".
@@ -56,16 +67,14 @@ Get the details of the room named "Meridian Corp — Website Redesign".
 
 This calls `get_room_info` and lets you verify the room's type, creation date, and ID.
 
----
+### Step 3: Build a folder structure
 
-### Step 3: Build a Folder Structure
-
-A well-organized folder hierarchy makes it easy for team members to find the right documents without asking around. For this project, you'll create four top-level folders.
+A well-organized folder hierarchy makes it easy for team members to quickly find the right documents without any issues or delays. For this project, you'll create four top-level folders.
 
 **Try this prompt:**
 
 ```
-Inside the "Meridian Corp — Website Redesign" room, create the following folders:
+Create the following folders inside the "Meridian Corp — Website Redesign" room:
 - "01 — Briefs & Requirements"
 - "02 — Design Assets"
 - "03 — Drafts & Work in Progress"
@@ -80,14 +89,14 @@ Show me the contents of the "Meridian Corp — Website Redesign" room.
 
 This calls `get_folder_content` and displays your folder tree.
 
-:::tips
+:::note
 **For end users:** Prefixing folder names with numbers (01, 02, etc.) keeps them sorted in the order you want, not alphabetically.
 
 **For developers:** The `create_folder` tool takes a `parent_id` parameter. When creating nested folders, you'll pass the ID returned from the parent folder creation as the `parent_id` for the child. Your AI agent handles this chaining automatically when you describe the nesting in natural language.
 :::
 
 
-### Step 4: Look Up Your Team Members
+### Step 4: Look up your team members
 
 Before you can invite anyone, you need to know who's available in your DocSpace portal and what their user identifiers are.
 
@@ -103,9 +112,7 @@ The AI calls `get_all_people` and returns a directory of all users with their na
 - **Priya Nair** — Copywriter
 - **Jordan Mills** — Client Stakeholder (review-only)
 
----
-
-### Step 5: Control team members Access Levels
+### Step 5: Control team members access levels
 
 Before inviting people, check what access levels are available so you can assign the right permissions.
 
@@ -122,11 +129,9 @@ Plan your assignments:
 - Priya Nair → **Editor** (writing and editing copy documents)
 - Jordan Mills → **Viewer** (client, read-only access)
 
----
+### Step 6: Invite your team
 
-### Step 6: Invite Your Team
-
-Now put it all together and send the invitations.
+Now send the invitations, with permissions attached.
 
 **Try this prompt:**
 
@@ -146,7 +151,5 @@ Who currently has access to the "Meridian Corp — Website Redesign" room and wh
 ```
 
 This calls `get_room_security_info` and displays the current member list with their access levels.
-
----
 
 You've successfully set up a fully structured, secure project room through natural language alone. Your team can now start collaborating in an organized space without any manual setup through the DocSpace UI.

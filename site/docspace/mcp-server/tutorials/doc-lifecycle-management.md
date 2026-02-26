@@ -5,27 +5,36 @@ sidebar_position: 3
 
 # Document Lifecycle Management
 
-When working on numerous projects, files can get mismatched and messy along the way. The DocSpace MCP server can you to streamline your document lifecycle process, improving efficiency throughout the process.
+Creating content requires numerous reviews and iterations from editors and other team members before a final draft, and without proper management to keep track of these files and versions, it can get confusing. The DocSpace MCP server facilitates this process, improving efficiency throughout the process.
 
 ## Scenario
 
-Imagine you're part of a content team creating product marketing content for a new feature. This content passes through different stages -rough draft, reviews by multiple stakeholders before being greenlit for publishing, and subsequent archival. This tutorial walks you through managing the entire document lifecycle, including cleaning up old drafts. 
+Imagine you're part of a content team creating marketing copies for a new campaign. This content passes through different stages -rough draft, reviews by multiple stakeholders before being greenlit for publishing, and subsequent archival. 
+This tutorial walks you through managing the entire document lifecycle, from first draft to clean up. 
 
-### What You'll Learn
+## What you'll learn
 
-- How to upload documents and verify their location
-- How to have the AI read and reason about a document's contents
-- How to update a file with a revised version
-- How to promote documents between folders when they're approved
-- How to clean up superseded drafts
+- [How to upload documents and verify their location](#step-1-upload-your-first-draft)
+- [How to have the AI read and reason about a document's contents](#step-3-have-the-ai-read-the-document)
+- [How to update a file with a revised version](#step-4-upload-a-revised-version)
+- [How to compare the two drafts](#step-5-compare-the-two-drafts)
+- [How to clean up superseded drafts](#step-7-clean-up-old-drafts)
 
 **Tools used:** `upload_file`, `get_file_info`, `download_file_as_text`, `update_file`, `move_batch_items`, `copy_batch_items`, `delete_file`, `get_folder_content`
 
-### Step 1: Upload Your First Draft
+## Before you proceed
+
+- Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
+
+:::note
+Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
+:::
+
+### Step 1: Upload your first draft
 
 You have the first draft of the product marketing copy. You'll upload it to the `03 — Drafts & Work in Progress` folder inside your project room.
 
-**For end users — try this prompt:**
+**Try this prompt:**
 
 ```
 Upload the file "launch-brief-v1.docx" to the "03 — Drafts & Work in Progress" folder in the "Meridian Corp — Website Redesign" room.
@@ -39,9 +48,7 @@ Once uploaded, verify it landed in the right place:
 Show me the contents of the "03 — Drafts & Work in Progress" folder.
 ```
 
----
-
-### Step 2: Retrieve File Metadata
+### Step 2: Retrieve file metadata
 
 Confirm the file's details — its ID, creation timestamp, file size, and type.
 
@@ -55,16 +62,14 @@ The AI calls `get_file_info` and returns the file's metadata. This is particular
 
 **Note the file's ID** — it will be used in subsequent operations.
 
----
-
-### Step 3: Have the AI Read the Document
+### Step 3: Review the document with your MCP client
 
 One of the most powerful capabilities of the DocSpace MCP server is allowing an AI agent to actually read the contents of a document for analysis, summarization, or review.
 
 **Try this prompt:**
 
 ```
-Download and read the contents of "launch-brief-v1.docx". Summarize the key sections and flag any areas that seem incomplete.
+Download and read the contents of "launch-brief-v1.docx". Summarize the key sections and note any ideas for improvement.
 ```
 
 The AI calls `download_file_as_text`, retrieves the document text, and reasons about it directly. It might respond with something like:
@@ -75,9 +80,7 @@ This workflow is powerful for asynchronous document review — instead of readin
 
 **For developers:** `download_file_as_text` returns plain text. It works best on text-based formats (DOCX, TXT, MD). For files with complex formatting, some structure may be lost in the text conversion — your agent should handle this gracefully.
 
----
-
-### Step 4: Upload a Revised Version
+### Step 4: Upload a revised version
 
 After incorporating feedback, you have a second draft ready. Upload it alongside the first.
 
@@ -99,11 +102,9 @@ This uses `update_file` to replace the file content while preserving the same fi
 - Use `upload_file` when you want to keep both versions side by side (version comparison)
 - Use `update_file` when you want a clean replacement and don't need to preserve the old version
 
----
+### Step 5: Compare the two drafts
 
-### Step 5: Compare the Two Drafts
-
-With both versions available, use the AI to compare them:
+With both versions available, compare them:
 
 ```
 Download and compare "launch-brief-v1.docx" and "launch-brief-v2.docx". What changed between the two versions?
@@ -111,9 +112,7 @@ Download and compare "launch-brief-v1.docx" and "launch-brief-v2.docx". What cha
 
 The AI will call `download_file_as_text` twice and then produce a diff summary. This is a lightweight alternative to tracked changes for teams who don't use collaborative editing features.
 
----
-
-### Step 6: Promote the Approved Document
+### Step 6: Promote the approved document
 
 The brief has been approved by the client. Move it from the Drafts folder to the Final Deliverables folder.
 
@@ -137,9 +136,7 @@ This uses `copy_batch_items` instead, which leaves the original in place.
 - `move_batch_items` — removes from source, places in destination
 - `copy_batch_items` — original stays in source, a copy is placed in destination
 
----
-
-### Step 7: Clean Up Old Drafts
+### Step 7: Clean up old drafts
 
 Now that the approved version is in Final Deliverables, delete the first draft to keep things tidy.
 

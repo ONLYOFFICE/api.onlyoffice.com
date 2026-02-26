@@ -8,7 +8,7 @@ sidebar_position: 10
 This document describes common configuration issues when working with the
 DocSpace MCP server.
 
-## Parsing Errors
+## Parsing errors
 
 If an error occurs during global configuration parsing, the DocSpace MCP server will automatically fall back to using the stdio transport and defer the
 configuration error until tool execution:
@@ -28,3 +28,12 @@ This error may arise due to the a wrong connection. To fix this:
 
 - Check your DocSpace MCP server-client connection. If you're using API authentication, check the validity of your API key, and retry connection.
 - Reach out to support if issue persists.
+
+## Issues uploading a file to DocSpace room with Claude Desktop
+
+Receiving error messages like 'Claude's response could not be fully generated' or any other issues uploading a file to your DocSpace with the Claude MCP client points towards issues from your Claude installation or MCP connection. 
+To fix this:
+
+- Delete and reinstall Claude Desktop
+- Check your DocSpace MCP server - MCP client connection. Delete and retry connection. 
+- Reach out to support if issue persists. 

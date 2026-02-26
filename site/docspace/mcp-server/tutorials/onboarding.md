@@ -5,11 +5,14 @@ sidebar_position: 2
 
 # Onboard a distributed team
 
-Managing distributed remote teams require careful and strict access to company files to ensure efficiency and security. 
+With businesses increasingly adopting remote work, managing these teams efficiently without sacrificing security and access becomes a priority. 
+The AI assistant created by the DocSpace MCP server-client connection allows you to successfully onboard new hires quickly while practicing best security practices.
 
 ## Scenario
 
-Your company has just hired five new remote employees across three time zones — two developers, two technical writers, and one customer success manager. Each person needs access to different rooms with different roles. You need to onboard all four efficiently without introducing security gaps or granting anyone more access then necessary. You'll do this entirely through your AI assistant:
+Your company has just hired four new remote employees across three time zones — one developer, two writers, and one customer success manager. Each person needs access to different rooms with different roles. 
+
+You need to onboard all four efficiently without introducing security gaps or granting anyone more access then necessary. You'll do this entirely through your AI assistant:
 
 ## What you'll learn
 
@@ -20,9 +23,17 @@ Your company has just hired five new remote employees across three time zones �
 
 **Tools used:** `get_rooms_folder`, `get_room_info`, `get_room_security_info`, `get_all_people`, `get_room_access_levels`, `set_room_security`
 
-### Step 1: Survey Your Existing Rooms
+## Before you proceed
 
-Before inviting anyone, you need a clear picture of what rooms currently exist in your DocSpace.
+- Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
+
+:::note
+Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
+:::
+
+### Step 1: Review your existing rooms
+
+Before inviting anyone, get a clear picture of what rooms currently exist in your DocSpace.
 
 ```
 Show me the Rooms folder — I want to see all existing rooms.
@@ -40,9 +51,9 @@ If the list is long, you can ask for details on specific rooms:
 Get the details of the "Engineering — Core Platform" room.
 ```
 
-### Step 2: Audit Current Access
+### Step 2: Audit current access
 
-Before adding new team members, it's good practice to audit who already has access to each room. This helps you spot stale permissions (old contractors, former employees), review these existing permissions and plan the new invitations.
+Before adding new team members, it's good practice to audit who already has access to each room. This audit helps you spot stale permissions (old contractors, former employees), review these existing permissions and plan the access levels for the new hires.
 
 **Try this prompt to know who has access for each room:**
 
@@ -58,7 +69,7 @@ If you spot a former contractor/employee still listed in any of these rooms, you
 Remove user "freelancer@example.com" from the "Engineering — Core Platform" room.
 ```
 
-### Step 3: Look Up the New Hires
+### Step 3: Look up the new hires
 
 Find the new employees in your DocSpace portal.
 
@@ -68,7 +79,7 @@ Find the new employees in your DocSpace portal.
 List all people in the DocSpace portal and tell me which ones were recently added.
 ```
 
-The AI calls `get_all_people` and returns the full directory. Identify your five new hires:
+The AI calls `get_all_people` and returns the full directory. Identify your four new hires:
 
 - **Sam Rivera** — Developer
 - **Yuki Tanaka** — Content Writer
@@ -77,7 +88,7 @@ The AI calls `get_all_people` and returns the full directory. Identify your five
 
 ### Step 4: Define who has access
 
-Before issuing invitations and assigning permissions, know what each team member can/can't access. 
+Before issuing invitations and assigning permissions, know and define what each team member can/can't access. 
 
 Here is the access plan for this scenario:
 
@@ -92,7 +103,7 @@ Here is the access plan for this scenario:
 Note that Marcus gets access to two rooms — Editor in his primary room and Viewer in the content room so he can reference materials without editing them.
 
 
-### Step 5: Execute the Invitations
+### Step 5: Execute the invitations
 
 Now send all the invitations. You can do this room by room:
 
@@ -117,7 +128,7 @@ Invite Marcus Webb to the "Client Success — Shared Resources" room as an Edito
 Each call uses `set_room_security` under the hood. The AI resolves the user names to IDs automatically using the data it retrieved from `get_all_people`.
 
 
-### Step 6: Verify All Invitations
+### Step 6: Verify all invitations
 
 Run a final audit on all three rooms to confirm everything is correct with this prompt:
 
