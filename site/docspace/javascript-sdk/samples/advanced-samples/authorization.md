@@ -18,7 +18,7 @@ Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docsp
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
   </head>
   <body>
     <label>Login</label><br />
@@ -68,7 +68,7 @@ Create an HTML file. Add two text fields and a button. The HTML file must includ
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
   </head>
   <body>
     <label for="login">Login</label><br>
@@ -82,7 +82,7 @@ Create an HTML file. Add two text fields and a button. The HTML file must includ
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ### 2. Initialize the System mode
