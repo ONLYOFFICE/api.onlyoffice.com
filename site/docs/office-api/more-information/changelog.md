@@ -94,7 +94,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/presentation-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to the Presentation API.
 - Added the [ApiDocumentContent/GetCurrentRun](../usage-api/presentation-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to the Presentation API.
 - Added the [ApiDocumentContent/GetText](../usage-api/presentation-api/ApiDocumentContent/Methods/GetText.md) method to the Presentation API.
-- Added the [ApiTable/GetInternalId](../usage-api/presentation-api/ApiTable/Methods/GetInternalId.md) method to the Presentation API.
 
 ### Spreadsheet methods
 
@@ -104,7 +103,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to the Spreadsheet API.
 - Added the [ApiDocumentContent/GetCurrentRun](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to the Spreadsheet API.
 - Added the [ApiDocumentContent/GetText](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetText.md) method to the Spreadsheet API.
-- Added the [ApiTable/GetInternalId](../usage-api/spreadsheet-api/ApiTable/Methods/GetInternalId.md) method to the Spreadsheet API.
 
 ### Document methods
 
