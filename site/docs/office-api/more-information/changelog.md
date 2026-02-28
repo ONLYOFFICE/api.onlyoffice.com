@@ -194,14 +194,14 @@ The list of changes for Office JavaScript API.
 
 ### Changed methods
 
-- Updated the [Api/CreateStroke](../usage-api/text-document-api/Api/Methods/CreateStroke.md) method in Text document API — added `sDash` parameter.
-- Updated the [Api/CreateStroke](../usage-api/spreadsheet-api/Api/Methods/CreateStroke.md) method in Spreadsheet API — added `sDash` parameter.
-- Updated the [Api/CreateStroke](../usage-api/presentation-api/Api/Methods/CreateStroke.md) method in Presentation API — added `sDash` parameter.
-- Updated the [ApiDrawing/Select](../usage-api/text-document-api/ApiDrawing/Methods/Select.md) method in Text document API — added `isReplace` parameter.
-- Updated the [ApiDrawing/Select](../usage-api/spreadsheet-api/ApiDrawing/Methods/Select.md) method in Spreadsheet API — added `isReplace` parameter.
-- Updated the [ApiDrawing/Select](../usage-api/presentation-api/ApiDrawing/Methods/Select.md) method in Presentation API — added `isReplace` parameter.
-- Updated the [ApiDrawing/SetHorPosition](../usage-api/text-document-api/ApiDrawing/Methods/SetHorPosition.md) method in Text document API — added `bPercent` parameter.
-- Updated the [ApiDrawing/SetVerPosition](../usage-api/text-document-api/ApiDrawing/Methods/SetVerPosition.md) method in Text document API — added `bPercent` parameter.
+- Updated the [Api/CreateStroke](../usage-api/text-document-api/Api/Methods/CreateStroke.md) method in Text document API - added `sDash` parameter.
+- Updated the [Api/CreateStroke](../usage-api/spreadsheet-api/Api/Methods/CreateStroke.md) method in Spreadsheet API - added `sDash` parameter.
+- Updated the [Api/CreateStroke](../usage-api/presentation-api/Api/Methods/CreateStroke.md) method in Presentation API - added `sDash` parameter.
+- Updated the [ApiDrawing/Select](../usage-api/text-document-api/ApiDrawing/Methods/Select.md) method in Text document API - added `isReplace` parameter.
+- Updated the [ApiDrawing/Select](../usage-api/spreadsheet-api/ApiDrawing/Methods/Select.md) method in Spreadsheet API - added `isReplace` parameter.
+- Updated the [ApiDrawing/Select](../usage-api/presentation-api/ApiDrawing/Methods/Select.md) method in Presentation API - added `isReplace` parameter.
+- Updated the [ApiDrawing/SetHorPosition](../usage-api/text-document-api/ApiDrawing/Methods/SetHorPosition.md) method in Text document API - added `bPercent` parameter.
+- Updated the [ApiDrawing/SetVerPosition](../usage-api/text-document-api/ApiDrawing/Methods/SetVerPosition.md) method in Text document API - added `bPercent` parameter.
 
 ### Drawing methods
 
@@ -231,7 +231,6 @@ The list of changes for Office JavaScript API.
 
 ### ApiTable methods
 
-- Added the [ApiTable/SetSize](../usage-api/text-document-api/ApiTable/Methods/SetSize.md) method to the Text document API.
 - Added the [ApiTable/SetSize](../usage-api/presentation-api/ApiTable/Methods/SetSize.md) method to the Presentation API.
 
 ### ApiChart methods
@@ -379,7 +378,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiBaseListField/GetOptions](../usage-api/pdf-api/ApiBaseListField/Methods/GetOptions.md) method to the PDF API.
 - Added the [ApiBaseListField/GetValueIndexes](../usage-api/pdf-api/ApiBaseListField/Methods/GetValueIndexes.md) method to the PDF API.
 - Added the [ApiBaseListField/IsCommitOnSelChange](../usage-api/pdf-api/ApiBaseListField/Methods/IsCommitOnSelChange.md) method to the PDF API.
-- Added the [ApiBaseListField/MoveOptionTo](../usage-api/pdf-api/ApiBaseListField/Methods/MoveOptionTo.md) method to the PDF API.
+- Added the [ApiBaseListField/MoveOption](../usage-api/pdf-api/ApiBaseListField/Methods/MoveOption.md) method to the PDF API.
 - Added the [ApiBaseListField/RemoveOption](../usage-api/pdf-api/ApiBaseListField/Methods/RemoveOption.md) method to the PDF API.
 - Added the [ApiBaseListField/SetCommitOnSelChange](../usage-api/pdf-api/ApiBaseListField/Methods/SetCommitOnSelChange.md) method to the PDF API.
 - Added the [ApiBaseListField/SetValueIndexes](../usage-api/pdf-api/ApiBaseListField/Methods/SetValueIndexes.md) method to the PDF API.
@@ -545,7 +544,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiComboboxField/GetValueIndexes](../usage-api/pdf-api/ApiComboboxField/Methods/GetValueIndexes.md) method to the PDF API.
 - Added the [ApiComboboxField/IsCommitOnSelChange](../usage-api/pdf-api/ApiComboboxField/Methods/IsCommitOnSelChange.md) method to the PDF API.
 - Added the [ApiComboboxField/IsEditable](../usage-api/pdf-api/ApiComboboxField/Methods/IsEditable.md) method to the PDF API.
-- Added the [ApiComboboxField/MoveOptionTo](../usage-api/pdf-api/ApiComboboxField/Methods/MoveOptionTo.md) method to the PDF API.
+- Added the [ApiComboboxField/MoveOption](../usage-api/pdf-api/ApiComboboxField/Methods/MoveOption.md) method to the PDF API.
 - Added the [ApiComboboxField/RemoveOption](../usage-api/pdf-api/ApiComboboxField/Methods/RemoveOption.md) method to the PDF API.
 - Added the [ApiComboboxField/SetCommitOnSelChange](../usage-api/pdf-api/ApiComboboxField/Methods/SetCommitOnSelChange.md) method to the PDF API.
 - Added the [ApiComboboxField/SetDateFormat](../usage-api/pdf-api/ApiComboboxField/Methods/SetDateFormat.md) method to the PDF API.
@@ -561,24 +560,13 @@ The list of changes for Office JavaScript API.
 
 #### ApiDocument methods
 
-- Added the [ApiDocument/AddElement](../usage-api/pdf-api/ApiDocument/Methods/AddElement.md) method to the PDF API.
 - Added the [ApiDocument/AddPage](../usage-api/pdf-api/ApiDocument/Methods/AddPage.md) method to the PDF API.
 - Added the [ApiDocument/ApplyRedact](../usage-api/pdf-api/ApiDocument/Methods/ApplyRedact.md) method to the PDF API.
 - Added the [ApiDocument/GetAllFields](../usage-api/pdf-api/ApiDocument/Methods/GetAllFields.md) method to the PDF API.
-- Added the [ApiDocument/GetAllParagraphs](../usage-api/pdf-api/ApiDocument/Methods/GetAllParagraphs.md) method to the PDF API.
 - Added the [ApiDocument/GetClassType](../usage-api/pdf-api/ApiDocument/Methods/GetClassType.md) method to the PDF API.
-- Added the [ApiDocument/GetCurrentParagraph](../usage-api/pdf-api/ApiDocument/Methods/GetCurrentParagraph.md) method to the PDF API.
-- Added the [ApiDocument/GetCurrentRun](../usage-api/pdf-api/ApiDocument/Methods/GetCurrentRun.md) method to the PDF API.
-- Added the [ApiDocument/GetElement](../usage-api/pdf-api/ApiDocument/Methods/GetElement.md) method to the PDF API.
-- Added the [ApiDocument/GetElementsCount](../usage-api/pdf-api/ApiDocument/Methods/GetElementsCount.md) method to the PDF API.
 - Added the [ApiDocument/GetFieldByName](../usage-api/pdf-api/ApiDocument/Methods/GetFieldByName.md) method to the PDF API.
-- Added the [ApiDocument/GetInternalId](../usage-api/pdf-api/ApiDocument/Methods/GetInternalId.md) method to the PDF API.
 - Added the [ApiDocument/GetPage](../usage-api/pdf-api/ApiDocument/Methods/GetPage.md) method to the PDF API.
 - Added the [ApiDocument/GetPagesCount](../usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md) method to the PDF API.
-- Added the [ApiDocument/GetText](../usage-api/pdf-api/ApiDocument/Methods/GetText.md) method to the PDF API.
-- Added the [ApiDocument/Push](../usage-api/pdf-api/ApiDocument/Methods/Push.md) method to the PDF API.
-- Added the [ApiDocument/RemoveAllElements](../usage-api/pdf-api/ApiDocument/Methods/RemoveAllElements.md) method to the PDF API.
-- Added the [ApiDocument/RemoveElement](../usage-api/pdf-api/ApiDocument/Methods/RemoveElement.md) method to the PDF API.
 - Added the [ApiDocument/RemovePage](../usage-api/pdf-api/ApiDocument/Methods/RemovePage.md) method to the PDF API.
 - Added the [ApiDocument/SearchAndRedact](../usage-api/pdf-api/ApiDocument/Methods/SearchAndRedact.md) method to the PDF API.
 
@@ -701,7 +689,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiListboxField/GetValueIndexes](../usage-api/pdf-api/ApiListboxField/Methods/GetValueIndexes.md) method to the PDF API.
 - Added the [ApiListboxField/IsCommitOnSelChange](../usage-api/pdf-api/ApiListboxField/Methods/IsCommitOnSelChange.md) method to the PDF API.
 - Added the [ApiListboxField/IsMultipleSelection](../usage-api/pdf-api/ApiListboxField/Methods/IsMultipleSelection.md) method to the PDF API.
-- Added the [ApiListboxField/MoveOptionTo](../usage-api/pdf-api/ApiListboxField/Methods/MoveOptionTo.md) method to the PDF API.
+- Added the [ApiListboxField/MoveOption](../usage-api/pdf-api/ApiListboxField/Methods/MoveOption.md) method to the PDF API.
 - Added the [ApiListboxField/RemoveOption](../usage-api/pdf-api/ApiListboxField/Methods/RemoveOption.md) method to the PDF API.
 - Added the [ApiListboxField/SetCommitOnSelChange](../usage-api/pdf-api/ApiListboxField/Methods/SetCommitOnSelChange.md) method to the PDF API.
 - Added the [ApiListboxField/SetMultipleSelection](../usage-api/pdf-api/ApiListboxField/Methods/SetMultipleSelection.md) method to the PDF API.
