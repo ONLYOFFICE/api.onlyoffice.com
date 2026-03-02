@@ -106,6 +106,10 @@
     "message": "关闭",
     "description": "The ARIA label for close button of announcement bar"
   },
+  "theme.AnnouncementBar.content": {
+    "message": "<a target=\"_blank\" href=\"https://onlyoffice.com\"><b>ONLYOFFICE Docs 9.3 released</b></a>: enhanced PDF Editor and more signature options, multipage view for documents, Solver in sheets, GIF playback in presentation slideshow mode, AI-powered updates, and more.",
+    "description": "The content of the announcement bar"
+  },
   "theme.admonition.caution": {
     "message": "警告",
     "description": "The default label used for the Caution admonition (:::caution)"
