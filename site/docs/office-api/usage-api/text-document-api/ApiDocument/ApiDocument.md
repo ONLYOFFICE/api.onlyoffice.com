@@ -53,7 +53,7 @@ Represents the ApiDocument class.
 | [GetContentControlsByTag](./Methods/GetContentControlsByTag.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a list of all content controls in the document with the specified tag name. |
 | [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Retrieves the core properties interface for the current document. This method is used to view or modify standard metadata such as title, author, and keywords. |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns the currently selected content control. |
-| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Moves a cursor to the start of the specified page in the document. |
+| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the footnote or endnote content if the cursor is currently inside one, otherwise returns null. |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | Returns the index of the current page. |
 | [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the current paragraph where the cursor is located. |
 | [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the current run where the cursor is located. |

@@ -1,6 +1,6 @@
 # GetCurrentFootEndnote
 
-Moves a cursor to the start of the specified page in the document.
+Returns the footnote or endnote content if the cursor is currently inside one, otherwise returns null.
 
 ## Syntax
 

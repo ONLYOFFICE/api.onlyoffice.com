@@ -20,19 +20,21 @@ boolean \| null
 
 ## Example
 
-This example inserts a break at the specified location in the main document.
+This example checks whether the drawing is flipped horizontally.
 
 ```javascript editor-docx
-// How to add some space from the drawing.
+// How to get the horizontal flip property of the shape.
 
-// Insert a drawing and text into document and add a break to them.
+// Create a drawing, add text to it, and read its horizontal flip value.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
-let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+let drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);
-drawing.InsertParagraph("Added a line break after this paragraph.", "before", false);
-drawing.AddBreak(1, "before");
+let flip = drawing.GetFlipH();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Drawing is flipped horizontally: " + flip);
+doc.AddElement(0, paragraph);
 ```

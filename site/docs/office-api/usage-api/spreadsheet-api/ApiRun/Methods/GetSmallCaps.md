@@ -1,6 +1,6 @@
 # GetSmallCaps
 
-Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
+Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
 
 ## Syntax
 

@@ -6,21 +6,21 @@ Represents the ApiValidation class.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| AlertStyle | [ValidationAlertStyle](../Enumeration/ValidationAlertStyle.md) | Returns or sets the validation alert style. |
+| AlertStyle | [ValidationAlertStyle](../Enumeration/ValidationAlertStyle.md) | Returns the validation alert style. |
 | ErrorMessage | string | Returns or sets the data validation error message. |
 | ErrorTitle | string | Returns or sets the title of the data-validation error dialog box. |
-| Formula1 | string | Returns or sets the value or expression associated with the conditional format or data validation. |
-| Formula2 | string | Returns or sets the value or expression associated with the second part of a conditional format or data validation. |
+| Formula1 | string | Returns the value or expression associated with the conditional format or data validation. |
+| Formula2 | string | Returns the value or expression associated with the second part of a conditional format or data validation. |
 | IgnoreBlank | boolean | Returns or sets a Boolean value that specifies whether blank values are permitted by the range data validation. |
 | InCellDropdown | boolean | Returns or sets a Boolean value indicating whether data validation displays a drop-down list that contains acceptable values. |
 | InputMessage | string | Returns or sets the data validation input message. |
 | InputTitle | string | Returns or sets the title of the data-validation input dialog box. |
-| Operator | [ValidationOperator](../Enumeration/ValidationOperator.md) | Returns or sets the data validation operator. |
+| Operator | [ValidationOperator](../Enumeration/ValidationOperator.md) | Returns the data validation operator. |
 | Parent | [ApiRange](../ApiRange/ApiRange.md) | Returns the parent range object. |
 | ShowError | boolean | Returns or sets a Boolean value indicating whether the data validation error message will be displayed whenever the user enters invalid data. |
 | ShowInput | boolean | Returns or sets a Boolean value indicating whether the data validation input message will be displayed whenever the user selects a cell in the data validation range. |
-| Type | [ValidationType](../Enumeration/ValidationType.md) | Returns or sets the validation type. |
-| Value | string | Returns or sets the validation value. |
+| Type | [ValidationType](../Enumeration/ValidationType.md) | Returns the validation type. |
+| Value | string | Returns the validation value. |
 
 ## Methods
 

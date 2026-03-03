@@ -14,7 +14,7 @@ Represents the ApiRun class.
 | [Copy](./Methods/Copy.md) | [ApiRun](../ApiRun/ApiRun.md) | Creates a copy of the current run. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current run. |
 | [GetBold](./Methods/GetBold.md) | boolean | Gets the bold property from the current text properties. |
-| [GetCaps](./Methods/GetCaps.md) | boolean | Specifies whether the text with the current text properties are capitalized. |
+| [GetCaps](./Methods/GetCaps.md) | boolean | Returns whether the text with the current text properties are capitalized. |
 | [GetClassType](./Methods/GetClassType.md) | "run" | Returns a type of the ApiRun class. |
 | [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean | Gets the double strikeout property from the current text properties. |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Gets the text color from the current text properties. |
@@ -24,7 +24,7 @@ Represents the ApiRun class.
 | [GetHighlight](./Methods/GetHighlight.md) | string | Gets the highlight property from the current text properties. |
 | [GetItalic](./Methods/GetItalic.md) | boolean | Gets the italic property from the current text properties. |
 | [GetOutLine](./Methods/GetOutLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | Gets the text outline from the current text properties. |
-| [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean | Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
+| [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean | Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
 | [GetSpacing](./Methods/GetSpacing.md) | [twips](../Enumeration/twips.md) | Gets the text spacing from the current text properties measured in twentieths of a point. |
 | [GetStrikeout](./Methods/GetStrikeout.md) | boolean | Gets the strikeout property from the current text properties. |
 | [GetTextFill](./Methods/GetTextFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Gets the text fill from the current text properties. |

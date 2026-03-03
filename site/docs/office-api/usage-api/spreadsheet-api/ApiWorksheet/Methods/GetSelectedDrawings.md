@@ -20,31 +20,29 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all drawings from the sheet.
+This example shows how to get selected drawings from the sheet.
 
 ```javascript editor-xlsx
-// How to get all drawings.
+// How to get seletectd drawings.
 
-// Get all drawings as an array.
+// Get selected drawings as an array.
 
 let worksheet = Api.GetActiveSheet();
-worksheet.GetRange("B1").SetValue(2014);
-worksheet.GetRange("C1").SetValue(2015);
-worksheet.GetRange("D1").SetValue(2016);
-worksheet.GetRange("A2").SetValue("Projected Revenue");
-worksheet.GetRange("A3").SetValue("Estimated Costs");
-worksheet.GetRange("B2").SetValue(200);
-worksheet.GetRange("B3").SetValue(250);
-worksheet.GetRange("C2").SetValue(240);
-worksheet.GetRange("C3").SetValue(260);
-worksheet.GetRange("D2").SetValue(280);
-worksheet.GetRange("D3").SetValue(280);
-let drawing = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
-drawing.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
-drawing.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-drawing.SetSeriesFill(fill, 1, false);
-let drawings = worksheet.GetAllDrawings();
-drawings[0].SetSize(150 * 36000, 100 * 36000);
+let gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
+let gradientStop2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+let fill = Api.CreateLinearGradientFill([gradientStop1, gradientStop2], 5400000);
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 0, 0), 0);
+gradientStop2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 0, 255), 100000);
+fill = Api.CreateLinearGradientFill([gradientStop1, gradientStop2], 5400000);
+stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let image = worksheet.AddImage("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", 60 * 36000, 35 * 36000, 10, 2 * 36000, 5, 3 * 36000);
+shape.Select();
+image.Select();
+let shapes = worksheet.GetSelectedDrawings();
+shapes.forEach(function(shape) {
+	shape.SetRotation(45);
+});
+
 ```

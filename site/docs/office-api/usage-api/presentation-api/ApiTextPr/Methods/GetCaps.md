@@ -1,6 +1,6 @@
 # GetCaps
 
-Specifies whether the text with the current text properties are capitalized.
+Returns whether the text with the current text properties are capitalized.
 
 ## Syntax
 

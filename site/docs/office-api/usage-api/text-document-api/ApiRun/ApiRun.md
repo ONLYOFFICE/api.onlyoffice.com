@@ -19,7 +19,7 @@ Represents the ApiRun class.
 | [Copy](./Methods/Copy.md) | [ApiRun](../ApiRun/ApiRun.md) | Creates a copy of the current run. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current run. |
 | [GetBold](./Methods/GetBold.md) | boolean | Gets the bold property from the current text properties. |
-| [GetCaps](./Methods/GetCaps.md) | boolean | Specifies whether the text with the current text properties are capitalized. |
+| [GetCaps](./Methods/GetCaps.md) | boolean | Returns whether the text with the current text properties are capitalized. |
 | [GetClassType](./Methods/GetClassType.md) | "run" | Returns a type of the ApiRun class. |
 | [GetColor](./Methods/GetColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets the RGB color from the current text properties. |
 | [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean | Gets the double strikeout property from the current text properties. |
@@ -37,7 +37,7 @@ Represents the ApiRun class.
 | [GetPosition](./Methods/GetPosition.md) | [hps](../Enumeration/hps.md) | Gets the text position from the current text properties measured in half-points (1/144 of an inch). |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified run. |
 | [GetShd](./Methods/GetShd.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets the text shading from the current text properties. |
-| [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean | Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
+| [GetSmallCaps](./Methods/GetSmallCaps.md) | boolean | Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size. |
 | [GetSpacing](./Methods/GetSpacing.md) | [twips](../Enumeration/twips.md) | Gets the text spacing from the current text properties measured in twentieths of a point. |
 | [GetStrikeout](./Methods/GetStrikeout.md) | boolean | Gets the strikeout property from the current text properties. |
 | [GetStyle](./Methods/GetStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Gets the style of the current text properties. |
