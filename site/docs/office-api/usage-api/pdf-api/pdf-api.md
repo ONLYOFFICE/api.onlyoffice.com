@@ -44,16 +44,16 @@ PDF forms include *fields* and *widgets*. A field defines the data model (name, 
 
 ## Creating a new PDF document
 
-The simplest example PDF document with a single page containing centered "Center" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
+To create a PDF document with **ONLYOFFICE Document Builder**, you first create a document in an editable format (DOCX) and then save it as PDF. The simplest example creates a single page with centered "Center" text:
 
 ```ts
-// create a PDF file with ONLYOFFICE Document Builder
-builder.CreateFile("pdf")
+// create a document file with ONLYOFFICE Document Builder
+builder.CreateFile("docx")
 
-// create a new 'oDocument' variable and get the created PDF document
+// create a new 'oDocument' variable and get the created document
 const oDocument = Api.GetDocument()
 
-// create a new paragraph for the PDF content
+// create a new paragraph for the document content
 const oParagraph = Api.CreateParagraph()
 
 // set the paragraph justification to center the text
@@ -65,7 +65,7 @@ oParagraph.AddText("Center")
 // push the paragraph to the document
 oDocument.Push(oParagraph)
 
-// save the resulting PDF document as a file in the .pdf format with the 'example.pdf' name and close it
+// save the resulting document as a PDF file with the 'example.pdf' name and close it
 builder.SaveFile("pdf", "example.pdf")
 builder.CloseFile()
 ```
