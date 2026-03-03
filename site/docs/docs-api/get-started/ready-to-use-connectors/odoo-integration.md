@@ -15,15 +15,15 @@ This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit 
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, XLSB, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
-- The following formats are available for viewing only: DOC, DOT, EPUB, FB2, FODT, HTM, HTML, HWP, HWPX, MD, MHT, MHTML, ODT, OTT, PAGES, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, NUMBERS, ODS, OTS, SXC, XLS, XLT, DPS, DPT, FODP, KEY, ODG, ODP, OTP, POT, PPS, PPT, SXI, DJVU, DOCXF, OFORM, OXPS, XPS, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOCXF, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OFORM, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
 - The app will create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Odoo.
 
 ## Installing ONLYOFFICE Docs
 
-You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Odoo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Odoo directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Odoo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Odoo directly.
 
-The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
 ## Installing ONLYOFFICE app for Odoo
 
@@ -51,7 +51,7 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
    addons_path = /mnt/extra-addons
    ```
 
-4. Install the *pyjwt* package:
+4. Install the `pyjwt` package:
 
    ``` sh
    pip install pyjwt
@@ -60,12 +60,12 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 5. Switch your Odoo to the developer mode and click **Apps -> Update Apps List** or just restart your Odoo instance.
 
 :::note
-**Please note (refers to the ONLYOFFICE Templates app)**: ONLYOFFICE demo templates will only be added to the Odoo modules that are already installed. That's why we strongly recommend installing ONLYOFFICE Templates after installing other Odoo modules such as CRM, Sales, Calendar, etc.
+ONLYOFFICE demo templates will only be added to the Odoo modules that are already installed (refers to the ONLYOFFICE Templates app). That's why we strongly recommend installing ONLYOFFICE Templates after installing other Odoo modules such as CRM, Sales, Calendar, etc.
 :::
 
 ## Configuring ONLYOFFICE app for Odoo
 
-To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sidebar and press it. Specify the URL of the installed ONLYOFFICE Docs:
+To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sidebar and click it. Specify the URL of the installed ONLYOFFICE Docs:
 
 ``` sh
 https://<documentserver>/
@@ -81,21 +81,22 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-Download the ONLYOFFICE app for Odoo [here](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop).
-
 ## Working with forms
 
 You can create, upload, and use fillable form templates within the **ONLYOFFICE Templates** module in Odoo. The module allows you to generate documents with fields that can be automatically filled with data from Odoo records.
 
-**Requirements**
+### Requirements
+
 - An instance of **ONLYOFFICE Docs** with support for fillable forms.
 - A valid **ONLYOFFICE license** with the **Automation API** option enabled.
 - The **ONLYOFFICE Templates** module in Odoo (automatically installs the main ONLYOFFICE module).
-  
+
 :::info
 For Odoo integration specifics, see the [ONLYOFFICE Odoo connector guide](https://helpcenter.onlyoffice.com/integration/odoo.aspx).
 :::
 
 :::note
-If you are planning to deploy fillable form workflows in Odoo, make sure that your edition of ONLYOFFICE Docs supports PDF forms. For exact minimal supported versions in your environment (Community, Enterprise, Cloud), please check the [ONLYOFFICE release notes](https://github.com/ONLYOFFICE/DocumentServer/releases) or contact the support team.
+If you are planning to deploy fillable form workflows in Odoo, make sure that your edition of ONLYOFFICE Docs supports PDF forms. For the minimum supported versions in your environment (Community, Enterprise, Cloud), please check the [ONLYOFFICE release notes](https://github.com/ONLYOFFICE/DocumentServer/releases) or contact the support team.
 :::
+
+Download the ONLYOFFICE app for Odoo [here](https://github.com/ONLYOFFICE/onlyoffice-odoo).
