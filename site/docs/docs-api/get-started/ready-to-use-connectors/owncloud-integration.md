@@ -40,9 +40,9 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications):
 
-    ``` sh
-    cd apps/
-    ```
+   ``` sh
+   cd apps/
+   ```
 
 2. Get the ONLYOFFICE app for ownCloud. There are several ways to do that:
 
@@ -57,13 +57,13 @@ If the server with the ownCloud installed does not have the Internet access, or 
    ```
 
    :::note
-   ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **a** or **b** to get the application.
+   ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **1** or **2** to get the application.
    :::
 
 3. Change the owner to update the application right from ownCloud web interface:
 
     ``` sh
-    chown -R www-data:www-data
+    chown -R www-data:www-data onlyoffice
     ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
@@ -84,7 +84,7 @@ Sometimes your network configuration might not allow the requests between instal
 
 ![Public](/assets/images/editor/owncloud-public.jpg)
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the ownCloud administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the ownCloud administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 Enable or disable the **Open file in the same tab** setting.
 
@@ -105,7 +105,7 @@ You will see a text either with information about the successful connection or t
 To enable work within **ownCloud Web**, register the app in the ownCloud Web *config.json*:
 
 - If you installed ownCloud Web from the [official marketplace](https://marketplace.owncloud.com/apps/onlyoffice), the path is *\<owncloud-root-catalog>/config/config.json*.
-- If you compiled it from source code yourself using [this instruction](#installing-owncloud-onlyoffice-integration-app), the path is *\<owncloud-web-root-catalog>/config/config.json*.
+- If you compiled it from source code yourself using [this instruction](#installing-onlyoffice-app-for-owncloud), the path is *\<owncloud-web-root-catalog>/config/config.json*.
 
 To register the app, use these lines:
 
@@ -166,7 +166,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
   ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
   :::
 
-- **Validating certificate**. If you are using a self-signed certificate for ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
+- **Validating certificate**. If you are using a self-signed certificate for your ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
 
   1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.
   2. Change the ownCloud config file manually. Locate the ownCloud config file (*/owncloud/config/config.php*) and open it. Insert the following section to it:
