@@ -22,7 +22,7 @@ This [package](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to 
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Nuxeo and any end-clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Nuxeo directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Nuxeo and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Nuxeo directly.
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
 
@@ -50,7 +50,7 @@ onlyoffice.docserv.url=http://documentserver/
 
 where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Nuxeo server. The Nuxeo server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key by adding the **onlyoffice.jwt.secret=yoursecret** line to the *nuxeo.conf* file. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key by adding the **onlyoffice.jwt.secret=yoursecret** line to the `nuxeo.conf` file. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Compiling ONLYOFFICE addon package for Nuxeo
 
@@ -78,7 +78,7 @@ To build Nuxeo package, the following steps must be performed for Ubuntu:
    mvn clean install
    ```
 
-5. Built package is located here *./onlyoffice-nuxeo-package/target/onlyoffice-nuxeo-package-x.x.zip*.
+5. Built package is located here `./onlyoffice-nuxeo-package/target/onlyoffice-nuxeo-package-x.x.zip`.
 
 ## How it works
 
@@ -93,11 +93,11 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 ### Open an existing file
 
-1. Locate your file in *Nuxeo*.
+1. Locate your file in Nuxeo.
 2. Click **Open with ONLYOFFICE** (or the editor icon).
 3. The file opens in the embedded editor for viewing or editing (per your permissions).
 
-### Auto-save & versioning
+### Auto-save and versioning
 
 Changes are sent back to Nuxeo; Nuxeo handles repository updates/versioning.
 
