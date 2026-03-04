@@ -148,4 +148,33 @@ export const DEFAULT_SCRIPTS = {
             "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
             "builder.CloseFile();\n",
     },
+    pdf: {
+        'office-js-api':
+            'var oDocument = Api.GetDocument();\n' +
+            'var oParagraph = Api.CreateParagraph();\n' +
+            'oParagraph.AddText("Hello world!");\n' +
+            'oDocument.InsertContent([oParagraph]);\n',
+
+        connector:
+            'connector.executeMethod("GetCurrentWord", [], function(word) {\n' +
+            '    console.log("GetCurrentWord: " + word);\n' +
+            '});\n',
+
+        plugin:
+            PLUGIN_HEADER +
+            '(async function(){\n' +
+            '    let version = await Editor.callMethod("GetVersion");\n' +
+            '    console.log(version);\n' +
+            '    await Editor.callMethod("PasteHtml", ["<span>Hello, </span><span><b>world</b></span><span>!</span>"]);\n' +
+            '})();\n',
+
+        builder:
+            "builder.CreateFile(\"pdf\");\n" +
+            "var oDocument = Api.GetDocument();\n" +
+            "var oParagraph = Api.CreateParagraph();\n" +
+            "oParagraph.AddText(\"Hello world!\");\n" +
+            "oDocument.InsertContent([oParagraph]);\n" +
+            "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
+            "builder.CloseFile();\n",
+    }
 }

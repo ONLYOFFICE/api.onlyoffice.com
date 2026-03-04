@@ -4,10 +4,9 @@ import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react'
-import {useCallback, useState} from "react";
-import {EditorType, PreviewType, ScriptType, usePlaygroundRootContext} from '../root/PlaygroundRootContext'
+import { useCallback, useState } from "react";
+import { EditorType, PreviewType, ScriptType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
-import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 
 export const PlaygroundToolbar = () => {
     const { editorType, setEditorType, previewType, setPreviewType, scriptType, setScriptType, isScriptModified, setIsScriptModified, theme, setTheme, setScriptValue } = usePlaygroundRootContext()
@@ -89,6 +88,9 @@ export const PlaygroundToolbar = () => {
                                 </Select.Item>
                                 <Select.Item value="form" className={styles.SelectOption}>
                                     <Select.ItemText>Form</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="pdf" className={styles.SelectOption}>
+                                    <Select.ItemText>PDF</Select.ItemText>
                                 </Select.Item>
                             </Select.Viewport>
                         </Select.Content>
