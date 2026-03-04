@@ -30,3 +30,7 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
+
+.TabsContent[data-state="inactive"] {
+    display: none;
+}

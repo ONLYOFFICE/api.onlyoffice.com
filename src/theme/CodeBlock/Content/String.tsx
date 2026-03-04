@@ -103,7 +103,7 @@ export default function CodeBlockString({
             )}
           </Tabs.List>
 
-          <Tabs.Content value="code">
+          <Tabs.Content value="code" forceMount className={styles.TabsContent}>
             <CodeBlockLayout />
           </Tabs.Content>
 
