@@ -140,7 +140,7 @@ export const DEFAULT_SCRIPTS = {
             '})();\n',
 
         builder:
-            "builder.CreateFile(\"pdf\");\n" +
+            "builder.CreateFile(\"docx\");\n" +
             "var oDocument = Api.GetDocument();\n" +
             "var oParagraph = Api.CreateParagraph();\n" +
             "oParagraph.AddText(\"Hello world!\");\n" +
@@ -183,9 +183,10 @@ export const DEFAULT_SCRIPTS = {
             '})();\n',
 
         builder:
-            "builder.CreateFile(\"pdf\");\n" +
+            "builder.CreateFile(\"docx\");\n" +
             "var oDocument = Api.GetDocument();\n" +
             "var oParagraph = Api.CreateParagraph();\n" +
+            "oParagraph.SetJc(\"center\");\n" +
             "oParagraph.AddText(\"Hello world!\");\n" +
             "oDocument.InsertContent([oParagraph]);\n" +
             "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
