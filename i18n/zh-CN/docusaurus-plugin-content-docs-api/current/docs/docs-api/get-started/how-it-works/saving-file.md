@@ -144,6 +144,10 @@ import TabItem from '@theme/TabItem';
   }
   ```
 
+  :::info
+  autoAssembly 功能有一个特殊行为：它会保存文件在该时刻的当前状态。如果用户处于严格模式并且没有点击保存,他们的更改将不会包含在组装的文件中。在 PDF 格式中,严格模式默认启用。
+  :::
+
   将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为**2**。
 
 > 请注意，您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。

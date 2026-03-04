@@ -144,6 +144,10 @@ If you want to change it, you can use the *local.json* file, where all the edite
   }
   ```
 
+  :::info
+  The autoAssembly feature has a specific behavior: it saves the current state of the file at that moment. If a user is in strict mode and doesn't click Save, their changes will not be included in the assembled file. In PDF format, strict mode is enabled by default.
+  :::
+
   The *forcesavetype* parameter will have the **2** value when sending the request to the **callback handler**.
 
 > Please note that you cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](./document-history.md#how-this-can-be-done-in-practice) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
