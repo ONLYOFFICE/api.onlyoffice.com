@@ -20,6 +20,22 @@ The DocSpace JavaScript SDK provides several initialization modes, each producin
 
 ## Mode descriptions
 
+### initFrame()
+
+Initializes the SDK frame in [`manager`](#initmanager) mode by default, but the mode can be changed later using the `mode` parameter.
+
+```javascript
+const docSpace = DocSpace.SDK.initFrame({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  showMenu: true,
+});
+```
+
+**Typical use cases:** When dynamic mode switching is needed.
+
+---
+
 ### initManager()
 
 Embeds the full DocSpace interface, including all rooms, folders, files, and settings navigation. This is the most complete embedding mode and gives users an entire DocSpace workspace inside your application.
@@ -34,23 +50,23 @@ const docSpace = DocSpace.SDK.initManager({
 });
 ```
 
-**Ideal use cases:** SaaS dashboards needing built-in document management, intranet portals, white-labelled products built on top of DocSpace, etc.
+**Typical use cases:** SaaS dashboards needing built-in document management, intranet portals, white-labelled products built on top of DocSpace, etc.
 
 ---
 
-### initFrame()
+### initViewer()
 
-Initializes the SDK frame in [`manager`](#initmanager) mode by default, but the mode can be changed later using the `mode` parameter.
+Opens a specific file in the ONLYOFFICE document editor in **read-only mode**. Editing is disabled. Requires a file ID to be passed in the configuration.
 
 ```javascript
-const docSpace = DocSpace.SDK.initFrame({
+const docSpace = DocSpace.SDK.initViewer({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
-  showMenu: true,
+  id: "your-file-id",
 });
 ```
 
-**Typical use cases:** When dynamic mode switching is needed.
+**Typical use cases:** Internal knowledge bases displaying policy documents, e-learning platforms showing course materials, legal portals for reviewing contracts, etc.
 
 ---
 
@@ -71,22 +87,6 @@ const docSpace = DocSpace.SDK.initEditor({
 
 ---
 
-### initViewer()
-
-Opens a specific file in the ONLYOFFICE document editor in **read-only mode**. Editing is disabled. Requires a file ID to be passed in the configuration.
-
-```javascript
-const docSpace = DocSpace.SDK.initViewer({
-  frameId: "ds-frame",
-  src: "https://your-docspace.com",
-  id: "your-file-id",
-});
-```
-
-**Typical use cases:** Internal knowledge bases displaying policy documents, e-learning platforms showing course materials, legal portals for reviewing contracts, etc.
-
----
-
 ### initRoomSelector()
 
 Displays an interface listing available DocSpace rooms. When the user selects a room and confirms, the SDK fires `onSelectCallback` with the room data. No full file manager is shown — only the selection UI.
@@ -103,7 +103,7 @@ const docSpace = DocSpace.SDK.initRoomSelector({
 
 ---
 
-### intiFileSelector()
+### initFileSelector()
 
 This mode integrates a file selector for browsing from a list of files.
 
@@ -115,7 +115,7 @@ const docSpace = DocSpace.SDK.initFileSelector({
   withSearch: true,
   events: {
     onSelectCallback: function (file) {},
-});
+}});
 ```
 
 **Typical use cases:** Helpdesk systems, email clients with DocSpace file attachment, etc.
