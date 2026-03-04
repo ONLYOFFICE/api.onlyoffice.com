@@ -63,7 +63,7 @@ class Provider {
 class Provider extends AI.Provider {
 
     constructor() {
-        super("Alibaba Cloud", "https://dashscope.aliyuncs.com/compatible-mode", "yourAPIKey", "v1");
+        super("Alibab Cloud", "https://dashscope.aliyuncs.com/compatible-mode", "yourAPIKey", "v1");
     }
 }
 ```
