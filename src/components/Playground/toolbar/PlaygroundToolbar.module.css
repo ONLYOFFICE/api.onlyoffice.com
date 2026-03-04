@@ -56,12 +56,12 @@
 
 .SelectContent {
     z-index: 1500;
-}
-
-.SelectPopup {
     background-color: var(--ifm-dropdown-background-color);
     border-radius: var(--ifm-global-radius);
     box-shadow: var(--ifm-global-shadow-md);
+}
+
+.SelectPopup {
     padding: 0.5rem;
     min-width: 130px;
 }
@@ -244,6 +244,10 @@
 
     .ToolbarGroup {
         gap: 6px;
+    }
+
+    .ToolbarGroupRight {
+        margin-left: unset;
     }
 
     .Label {

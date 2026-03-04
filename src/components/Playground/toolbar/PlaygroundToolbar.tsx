@@ -7,6 +7,7 @@ import * as React from 'react'
 import { useCallback, useState } from "react";
 import { EditorType, PreviewType, ScriptType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
+import { DEFAULT_SCRIPTS } from "@site/src/components/Playground/defaultScripts";
 
 export const PlaygroundToolbar = () => {
     const { editorType, setEditorType, previewType, setPreviewType, scriptType, setScriptType, isScriptModified, setIsScriptModified, theme, setTheme, setScriptValue } = usePlaygroundRootContext()
@@ -75,7 +76,7 @@ export const PlaygroundToolbar = () => {
                         </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
-                        <Select.Content className={styles.SelectContent}>
+                        <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="word" className={styles.SelectOption}>
                                     <Select.ItemText>Word</Select.ItemText>
@@ -108,7 +109,7 @@ export const PlaygroundToolbar = () => {
                         </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
-                        <Select.Content className={styles.SelectContent}>
+                        <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="office-js-api" className={styles.SelectOption}>
                                     <Select.ItemText>Office JS API</Select.ItemText>
@@ -138,7 +139,7 @@ export const PlaygroundToolbar = () => {
                         </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
-                        <Select.Content className={styles.SelectContent}>
+                        <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="desktop" className={styles.SelectOption}>
                                     <Select.ItemText>Desktop</Select.ItemText>
@@ -165,7 +166,7 @@ export const PlaygroundToolbar = () => {
                         </Select.Icon>
                     </Select.Trigger>
                     <Select.Portal>
-                        <Select.Content className={styles.SelectContent}>
+                        <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="light" className={styles.SelectOption}>
                                     <Select.ItemText>Light</Select.ItemText>
