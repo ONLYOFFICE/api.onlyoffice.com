@@ -5,7 +5,6 @@ title: Glossary
 
 Terms used across the DocSpace MCP Server documentation, grouped by category.
 
-
 ## MCP Concepts
 
 ### Model Context Protocol (MCP)
@@ -34,10 +33,16 @@ be a custom application that embeds an MCP client library.
 The communication mechanism used between an MCP client and server. The DocSpace
 MCP Server supports three transports: `stdio`, `sse` and `streamable-http`. 
 
+| Transport | Description |
+|---|---|
+| `stdio` | Standard input/output. Used for local servers launched as a subprocess by the client. |
+| `sse` | Server-Sent Events. A legacy HTTP-based transport, deprecated since MCP 2025-03-26 but still supported. |
+| `streamable-http` | The modern HTTP-based transport. Preferred for remote servers. |
+
 ### Tool
 A callable function used in MCP terminology and exposed by an MCP server. When a user prompts the LLM to perform an action, like create a room or fetch a file, it
 invokes a tool by name with a set of parameters. The DocSpace MCP Server exposes
-[tools organized into toolsets](tools.md#regular-tools) such as `files`, `rooms`, and `people`.
+[tools organized into toolsets](tools.md#regular-tools) such as `files`, `rooms`, `folders` and `people`.
 
 ### Toolset
 A named group of related tools. Toolsets let you enable or disable a whole
@@ -88,9 +93,7 @@ onboard to OAuth automatically.
 
 ### SSE (Server-Sent Events)
 A web standard for servers to push a stream of events to a client over a single
-HTTP connection. Used as an MCP transport (`sse`). It is one-directional
-(server → client), which is why it has been superseded by Streamable HTTP for
-MCP use.
+HTTP connection. Used as an MCP transport (`sse`) and is available at `https://mcp.onlyoffice.com/sse`. It is one-directional (server → client), and currently superseded by the bi-directional Streamable HTTP for MCP use.
 
 ### Streamable HTTP
 The modern MCP transport introduced in the MCP 2025-03-26 specification. Unlike
