@@ -151,13 +151,27 @@ export const DEFAULT_SCRIPTS = {
     pdf: {
         'office-js-api':
             'var oDocument = Api.GetDocument();\n' +
-            'var oParagraph = Api.CreateParagraph();\n' +
-            'oParagraph.AddText("Hello world!");\n' +
-            'oDocument.InsertContent([oParagraph]);\n',
+            'var oPage = oDocument.GetPage(0);\n' +
+            'var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\n' +
+            'var oStroke = Api.CreateStroke(0, Api.CreateNoFill());\n' +
+            'var oShape = Api.CreateShape("rect", 100 * 36000, 30 * 36000, oFill, oStroke);\n' +
+            'oShape.SetPosition(608400, 1267200);\n' +
+            'var oContent = oShape.GetContent();\n' +
+            'var oParagraph = oContent.GetElement(0);\n' +
+            'var oRun = Api.CreateRun();\n' +
+            'oRun.AddText("Hello world!");\n' +
+            'oParagraph.AddElement(oRun);\n' +
+            'oPage.AddObject(oShape);\n',
 
         connector:
-            'connector.executeMethod("GetCurrentWord", [], function(word) {\n' +
-            '    console.log("GetCurrentWord: " + word);\n' +
+            'connector.callCommand(function() {\n' +
+            '    var doc = Api.GetDocument();\n' +
+            '    var page = doc.GetPage(0);\n' +
+            '    var fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\n' +
+            '    var stroke = Api.CreateStroke(0, Api.CreateNoFill());\n' +
+            '    var shape = Api.CreateShape("rect", 100 * 36000, 30 * 36000, fill, stroke);\n' +
+            '    shape.SetPosition(608400, 1267200);\n' +
+            '    page.AddObject(shape);\n' +
             '});\n',
 
         plugin:
