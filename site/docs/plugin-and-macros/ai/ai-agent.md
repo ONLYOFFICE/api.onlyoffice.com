@@ -11,7 +11,7 @@ The AI inline agent is a contextual assistant integrated into ONLYOFFICE editors
 The AI agent:
 
 - Provides natural language interaction for executing common editing tasks without navigating menus.
-- Includes a collection of simple predefined [functions](custom-ai-functions.md) adapted to common tasks for each editor.
+- Includes a collection of simple predefined [functions](custom-ai-tools.md) adapted to common tasks for each editor.
 - Maintains conversation history to support iterative refinement and multi-step requests.
 
 ## What the AI agent can do {#functions}
