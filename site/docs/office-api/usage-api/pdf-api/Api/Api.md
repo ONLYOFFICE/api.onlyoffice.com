@@ -59,6 +59,7 @@ Represents the Api class.
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | Creates a text field with the specified text field properties. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
+| [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color from a HEX string. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
@@ -75,4 +76,5 @@ Represents the Api class.
 | [PointsToPicas](./Methods/PointsToPicas.md) | number | Converts points to picas (1 pica = 12 points). |
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | Converts points to pixels. |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | Converts points to twips. |
+| [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGB color from red, green and blue components. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
