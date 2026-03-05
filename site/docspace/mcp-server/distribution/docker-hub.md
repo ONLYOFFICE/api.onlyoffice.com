@@ -1,12 +1,6 @@
 # Docker Hub
 
-This document describes how to install and run the DocSpace MCP server using the
-Docker image from Docker Hub.
-
-## Contents
-
-- [Docker Image](#docker-image)
-- [References](#references)
+This document describes how to install and run the DocSpace MCP server using the Docker image from Docker Hub.
 
 ## Docker Image
 

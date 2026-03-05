@@ -1,12 +1,7 @@
 # npm Registry
 
-This document describes how to install and run the DocSpace MCP server directly
+Follow these steps to install and run the DocSpace MCP server directly
 from the npm registry.
-
-## Contents
-
-- [Node.js Application](#nodejs-application)
-- [References](#references)
 
 ## Node.js Application
 
@@ -42,7 +37,11 @@ The `ps aux` command lists all running processes, including those not attached t
   "mcpServers": {
     "onlyoffice": {
       "command": "npx",
-      "args": ["--yes", "@onlyoffice/docspace-mcp"]
+      "args": ["--yes", "@onlyoffice/docspace-mcp"],
+      "env": {
+                "DOCSPACE_BASE_URL": "https://your-instance.onlyoffice.com",
+                "DOCSPACE_API_KEY": "your-api-key"
+            }
     }
   }
 }

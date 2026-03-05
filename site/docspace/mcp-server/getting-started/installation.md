@@ -36,9 +36,10 @@ Before proceeding, ensure to set these environment variables:
 
 ## Install with Docker image
 
-1. Locate your client `.json` config file. The location of this file depends on the specific client.
+1. [Follow these steps](../distribution/docker-hub.md) to pull the latest DocSpace MCP server from Docker Hub
+2. Locate your MCP client `.json` config file. The location of this file depends on the specific client.
 
-2. Add the DocSpace MCP Server entry
+3. Add the DocSpace MCP Server entry
 
 Insert the following block into the `mcpServers` section of your `.json` configuration file:
 
@@ -67,6 +68,7 @@ Insert the following block into the `mcpServers` section of your `.json` configu
 | `env` | Flag to pass environment variables 
 | `onlyoffice/docspace-mcp` | Docker image name to run|
 
+
 ## Install with Docker MCP Server
 
 Using the [Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) requires [Docker Desktop](https://docs.docker.com/desktop/) to be installed on your
@@ -76,11 +78,9 @@ system and the Docker MCP Toolkit to be enabled.
 The Docker MCP toolkit is currently a beta feature and is only available to specific user segments, subscription tiers, or by invitation
 :::
 
-1. Install the server through the Docker Desktop interface using the
-   [Install an MCP Server] guide.
+1. Follow [this guide](../distribution/docker-mcp.md) to install the server through the Docker Desktop interface.
 
-2. Connect the server to an MCP client through the Docker Desktop interface using
-   the [Install an MCP Client] guide.
+2. [Connect the server to an MCP client](https://docs.docker.com/ai/mcp-catalog-and-toolkit/get-started/#add-mcp-servers) through the Docker Desktop interface.
 
 3. Configure the server through the Docker Desktop interface. In general:
 

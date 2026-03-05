@@ -9,7 +9,6 @@ import TabItem from '@theme/TabItem';
 
 The DocSpace MCP server allows you to connect numerous mcp clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
 
-- [ChatGPT](#connect-to-chatgpt)
 - [Claude-desktop](#connect-to-claude-desktop)
 - [Claude-web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
@@ -23,21 +22,6 @@ The DocSpace MCP server allows you to connect numerous mcp clients, offering fle
 Follow the steps to connect to your client of choice
 
 <Tabs groupId="mcp-clients" queryString="client">
-  <TabItem value="chatgpt" label="ChatGPT" default>
-
-## Connect to ChatGPT
-
-1. Open ChatGPT Web
-2. Navigate to **Settings** > **Apps** > **Advanced Settings**;
-3. Toggle on Developer Mode;
-4. Click "Create App";
-5. Enter a name (e.g., "ONLYOFFICE DocSpace MCP");
-6. Enter a URL (e.g., https://mcp.onlyoffice.com/mcp);
-7. Select "OAuth" in Authentication;
-8. Click "Create"; This redirects you to the ONLYOFFICE DocSpace login to authenticate your account
-9. Login to complete the OAuth authentication process.
-
-</TabItem>
 <TabItem value="claude-desktop" label="Claude Desktop" default>
 
 ## Connect to Claude Desktop
