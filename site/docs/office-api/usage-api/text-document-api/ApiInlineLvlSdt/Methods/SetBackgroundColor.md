@@ -31,7 +31,7 @@ let inlineLvlSdt = Api.CreateInlineLvlSdt();
 let run = Api.CreateRun();
 run.AddText("This is an inline text content control with a transparent blue background.");
 inlineLvlSdt.AddElement(run, 0);
-inlineLvlSdt.SetBackgroundColor(0, 0, 255, 40);
+inlineLvlSdt.SetBackgroundColor(Api.RGBA(0, 0, 255, 40));
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 
 ```
