@@ -1,11 +1,11 @@
-# ToJSON
+# IsThemeColor
 
-Converts the ApiColor object into the JSON object.
+Returns true if the color is a theme color.
 
 ## Syntax
 
 ```javascript
-expression.ToJSON();
+expression.IsThemeColor();
 ```
 
 `expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
@@ -16,18 +16,20 @@ This method doesn't have any parameters.
 
 ## Returns
 
-string
+boolean
 
 ## Example
 
-This example shows how to convert a shape fill color to JSON.
+This example shows how to check if the color is a theme color.
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const color = Api.RGB(64, 128, 192);
-const fill = Api.CreateSolidFill(color);
+const hexColor = Api.HexColor('#FF0000');
+const themeColor = Api.ThemeColor('accent1');
+
+const fill = Api.CreateSolidFill(hexColor);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -36,7 +38,8 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.SetFontSize(30);
-run.AddText('Color JSON:\n' + color.ToJSON());
+run.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
+run.AddText('\nIs themeColor a theme color? ' + themeColor.IsThemeColor());
 paragraph.AddElement(run);
 page.AddObject(shape);
 

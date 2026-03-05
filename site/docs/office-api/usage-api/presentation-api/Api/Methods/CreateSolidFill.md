@@ -14,7 +14,7 @@ expression.CreateSolidFill(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | ApiColor |  | The color used for the element fill. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color used for the element fill. |
 
 ## Returns
 

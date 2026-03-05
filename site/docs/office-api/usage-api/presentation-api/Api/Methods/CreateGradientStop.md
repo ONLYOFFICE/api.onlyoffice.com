@@ -14,7 +14,7 @@ expression.CreateGradientStop(color, pos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | ApiColor |  | The color used for the gradient stop. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color used for the gradient stop. |
 | pos | Required | [PositivePercentage](../../Enumeration/PositivePercentage.md) |  | The position of the gradient stop measured in 1000th of percent. |
 
 ## Returns

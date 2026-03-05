@@ -77,4 +77,6 @@ Represents the Api class.
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | Converts points to pixels. |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | Converts points to twips. |
 | [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGB color from red, green and blue components. |
+| [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGBA color from red, green, blue and alpha components. |
+| [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |

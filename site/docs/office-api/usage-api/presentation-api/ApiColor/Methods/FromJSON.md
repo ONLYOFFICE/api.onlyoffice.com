@@ -24,9 +24,10 @@ expression.FromJSON(jsonObject);
 
 This example shows how to restore a shape fill color from JSON.
 
-```javascript editor-pdf
-const doc = Api.GetDocument();
-const page = doc.GetPage(0);
+```javascript editor-pptx
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
 
 const original = Api.RGB(93, 192, 232);
 const json = JSON.parse(original.ToJSON());
@@ -34,7 +35,7 @@ const restored = original.FromJSON(json);
 
 const fill = Api.CreateSolidFill(restored);
 const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
-const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
@@ -43,6 +44,6 @@ const run = Api.CreateRun();
 run.SetFontSize(30);
 run.AddText('Original: ' + original.GetHex() + '\nRestored: ' + restored.GetHex());
 paragraph.AddElement(run);
-page.AddObject(shape);
+slide.AddObject(shape);
 
 ```

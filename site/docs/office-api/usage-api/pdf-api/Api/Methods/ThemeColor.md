@@ -1,11 +1,11 @@
-# HexColor
+# ThemeColor
 
-Creates a color from a HEX string.
+Creates a theme color.
 
 ## Syntax
 
 ```javascript
-expression.HexColor(hexString);
+expression.ThemeColor(name);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.HexColor(hexString);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| hexString | Required | string |  | No description provided. |
+| name | Optional | [SchemeColorId](../../Enumeration/SchemeColorId.md) | "tx1" | The theme color name. If the provided name is not supported, the 'tx1' color will be used. |
 
 ## Returns
 
@@ -22,13 +22,13 @@ expression.HexColor(hexString);
 
 ## Example
 
-This example shows how to create a hex color and use it as a shape fill.
+This example shows how to create a theme color and use it as a shape fill.
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
-const color = Api.HexColor('#DECADE');
+const color = Api.ThemeColor('accent6');
 const fill = Api.CreateSolidFill(color);
 const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);

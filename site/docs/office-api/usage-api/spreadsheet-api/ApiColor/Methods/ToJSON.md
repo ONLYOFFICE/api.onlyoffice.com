@@ -22,22 +22,14 @@ string
 
 This example shows how to convert a shape fill color to JSON.
 
-```javascript editor-pdf
-const doc = Api.GetDocument();
-const page = doc.GetPage(0);
-
+```javascript editor-xlsx
+const worksheet = Api.GetActiveSheet();
 const color = Api.RGB(64, 128, 192);
+
 const fill = Api.CreateSolidFill(color);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
+worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
-const docContent = shape.GetContent();
-const paragraph = docContent.GetElement(0);
-const run = Api.CreateRun();
-run.SetFontSize(30);
-run.AddText('Color JSON:\n' + color.ToJSON());
-paragraph.AddElement(run);
-page.AddObject(shape);
+worksheet.GetRange("A12").SetValue("Color JSON: " + color.ToJSON());
 
 ```

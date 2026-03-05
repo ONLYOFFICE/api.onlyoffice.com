@@ -49,6 +49,7 @@ Represents the Api class.
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
 | [GetPresentation](./Methods/GetPresentation.md) | [ApiPresentation](../ApiPresentation/ApiPresentation.md) | Returns the main presentation. |
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | Returns the selection from the current presentation. |
+| [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color from a HEX string. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
@@ -65,8 +66,11 @@ Represents the Api class.
 | [PointsToPicas](./Methods/PointsToPicas.md) | number | Converts points to picas (1 pica = 12 points). |
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | Converts points to pixels. |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | Converts points to twips. |
+| [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGB color from red, green and blue components. |
+| [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGBA color from red, green, blue and alpha components. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [Save](./Methods/Save.md) | None | Saves changes to the specified document. |
+| [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
 | [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
 | [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |

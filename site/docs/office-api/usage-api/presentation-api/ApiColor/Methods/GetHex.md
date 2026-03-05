@@ -1,11 +1,11 @@
-# ToJSON
+# GetHex
 
-Converts the ApiColor object into the JSON object.
+Gets the HEX string representation of the color.
 
 ## Syntax
 
 ```javascript
-expression.ToJSON();
+expression.GetHex();
 ```
 
 `expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
@@ -20,24 +20,25 @@ string
 
 ## Example
 
-This example shows how to convert a shape fill color to JSON.
+This example shows how to get the HEX string of a shape fill color.
 
-```javascript editor-pdf
-const doc = Api.GetDocument();
-const page = doc.GetPage(0);
+```javascript editor-pptx
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
 
-const color = Api.RGB(64, 128, 192);
+const color = Api.RGB(255, 111, 61);
 const fill = Api.CreateSolidFill(color);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.SetFontSize(30);
-run.AddText('Color JSON:\n' + color.ToJSON());
+run.AddText('Hex: ' + color.GetHex());
 paragraph.AddElement(run);
-page.AddObject(shape);
+slide.AddObject(shape);
 
 ```

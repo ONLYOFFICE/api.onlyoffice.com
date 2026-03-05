@@ -1,11 +1,11 @@
-# RGB
+# RGBA
 
-Creates an RGB color from red, green and blue components.
+Creates an RGBA color from red, green, blue and alpha components.
 
 ## Syntax
 
 ```javascript
-expression.RGB(r, g, b);
+expression.RGBA(r, g, b, a);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -17,6 +17,7 @@ expression.RGB(r, g, b);
 | r | Required | [byte](../../Enumeration/byte.md) |  | Red component (0-255). |
 | g | Required | [byte](../../Enumeration/byte.md) |  | Green component (0-255). |
 | b | Required | [byte](../../Enumeration/byte.md) |  | Blue component (0-255). |
+| a | Required | [byte](../../Enumeration/byte.md) |  | Alpha component (0-255). |
 
 ## Returns
 
@@ -24,17 +25,13 @@ expression.RGB(r, g, b);
 
 ## Example
 
-This example shows how to create a color in RGB format and use it as a shape fill.
+This example shows how to create an RGBA color and use it as a shape fill.
 
-```javascript editor-pdf
-const doc = Api.GetDocument();
-const page = doc.GetPage(0);
-
-const color = Api.RGB(186, 218, 85);
+```javascript editor-xlsx
+const worksheet = Api.GetActiveSheet();
+const color = Api.RGBA(110, 160, 180, 127);
 const fill = Api.CreateSolidFill(color);
-const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
-const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
-page.AddObject(shape);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
 ```
