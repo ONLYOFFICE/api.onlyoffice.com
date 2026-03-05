@@ -112,6 +112,9 @@ function createFormRow(labelText, formKey, placeholder, maxChars, required, mult
     autoFit: true,
   });
   textForm.SetBorderColor(128, 0, 255);
+  let textPr = Api.CreateTextPr();
+  textPr.SetColor(0, 0, 0);
+  textForm.SetTextPr(textPr);
   rowPara.AddElement(textForm);
 
   return rowPara;
@@ -170,6 +173,9 @@ let interestsForm = Api.CreateTextForm({
   autoFit: false,
 });
 interestsForm.SetBorderColor(128, 0, 255);
+let interestsTextPr = Api.CreateTextPr();
+interestsTextPr.SetColor(0, 0, 0);
+interestsForm.SetTextPr(interestsTextPr);
 interestsPara.AddElement(interestsForm);
 shapeContent.Push(interestsPara);
 

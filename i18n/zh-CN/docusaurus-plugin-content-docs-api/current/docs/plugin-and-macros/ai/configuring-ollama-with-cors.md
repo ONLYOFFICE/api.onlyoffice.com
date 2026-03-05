@@ -456,12 +456,14 @@ docker inspect <container_name> | grep -A 10 "Env"
 
 ## 解决方案架构
 
-```
-┌─────────────────┐     HTTPS      ┌─────────────────┐     HTTP      ┌─────────────────┐
-│   ONLYOFFICE    │ ──────────────── │      Nginx      │ ───────────── │     Ollama      │
-│   (浏览器/      │    :443        │  (反向代理      │   :11434      │    (LLM API)    │
-│    桌面版)      │                │   + TLS + CORS) │               │                 │
-└─────────────────┘                └─────────────────┘               └─────────────────┘
+```mermaid
+flowchart LR
+    A["`ONLYOFFICE
+(浏览器/桌面版)`"] -->|"HTTPS :443"| B["`Nginx
+(反向代理
++ TLS + CORS)`"]
+    B -->|"HTTP :11434"| C["`Ollama
+(LLM API)`"]
 ```
 
 组件交互遵循以下方案：

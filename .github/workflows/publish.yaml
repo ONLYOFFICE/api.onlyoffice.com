@@ -212,7 +212,7 @@ jobs:
           fi
 
           # Compress files more than 10mb manually
-          echo "Find files that more than 10MB"
+          echo "Find and compress files larger than 10MB"
           BUILD_DIR="."
           find "$BUILD_DIR" -type f \( -name "*.js" -o -name "*.json" -o -name "*.htm" \
             -o -name "*.html" -o -name "*.css" -o -name "*.bin" -o -name "*.wasm" -o -name "*.dic" -o -name "*.aff" -o -name "*.svg" \) \
@@ -221,9 +221,20 @@ jobs:
             echo "Compress: $file"
             gzip -9 -c "$file" > "$file.gz" && mv "$file.gz" "$file"
             MIME_TYPE=$(file --mime-type -b "$file")
-            echo "Upload compressed file to s3: $file"
+
+            if [[ "$file" == *.js ]] || [[ "$file" == *.css ]]; then
+              CACHE_CONTROL="public, max-age=31536000, immutable"
+            elif [[ "$file" == *.html ]]; then
+              CACHE_CONTROL="public, max-age=0, must-revalidate"
+            else
+              CACHE_CONTROL="public, max-age=86400"
+            fi
+
+            echo "Upload: $file (cache: $CACHE_CONTROL)"
             aws s3 cp "$file" "${{ env.AWS_BUCKET_URL }}/${file#./}" \
-            --content-encoding gzip --content-type "$MIME_TYPE"
+            --content-encoding gzip \
+            --content-type "$MIME_TYPE" \
+            --cache-control "$CACHE_CONTROL"
           done
 
     - uses: actions/cache/save@v3
