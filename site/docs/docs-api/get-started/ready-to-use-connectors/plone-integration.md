@@ -17,9 +17,9 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-plone) allows users to ed
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Plone and any end-clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Plone directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Plone and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Plone directly.
 
-The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
 ## Installing Plone ONLYOFFICE integration plugin
 
@@ -27,9 +27,9 @@ To start using ONLYOFFICE Docs with Plone, the following steps must be performed
 
 1. Installation instructions can be found under [Install Plone add-ons](https://6.docs.plone.org/admin-guide/add-ons.html).
 
-2. Go to **Site Setup -> Add-ons** and press the **Install** button to enable plugin.
+2. Go to **Site Setup -> Add-ons** and click the **Install** button to enable the plugin.
 
-You could also install plugin via Docker:
+You can also install the plugin via Docker:
 
 ``` sh
 docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 start
@@ -41,22 +41,23 @@ Please note that if you have the previous plugin version installed (earlier plug
 
 ## Configuring Plone ONLYOFFICE integration plugin
 
-To configure plugin, go to **Site Setup**. Scroll down to **Add-ons Configuration** section and press the **ONLYOFFICE Configuration** button.
+To configure the plugin, go to **Site Setup**. Scroll down to **Add-ons Configuration** section and click the **ONLYOFFICE Configuration** button.
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Developing Plone ONLYOFFICE plugin
 
-Run this command to install the addon from the local repository:
-   ```
-   docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
-   ```
+Run this command to install the add-on from the local repository:
+
+``` sh
+docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
+```
 
 :::note
 For more information, check [Developing packages variable](https://6.dev-docs.plone.org/install/containers/images/backend.html#developing-packages-variable).
 :::
 
-## Upgrade Plone ONLYOFFICE integration plugin
+## Upgrading Plone ONLYOFFICE integration plugin
 
 1. If you specified a concrete plugin version in your *buildout.cfg* file (so-called *pinning*, and a recommended practice), like *onlyoffice.plone = 1.0.0*, update this reference to point to the newer version. If the plugin version is not specified, then the latest version will be automatically loaded:
 
@@ -75,14 +76,14 @@ For more information, check [Developing packages variable](https://6.dev-docs.pl
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-1. User navigates to a document within Plone and selects the **ONLYOFFICE Edit** action.
+1. The user navigates to a document within Plone and selects the **ONLYOFFICE Edit** action.
 
-2. Plone prepares a JSON object for the ONLYOFFICE Docs with the following properties:
+2. Plone prepares a JSON object for ONLYOFFICE Docs with the following properties:
 
-   - **url**: the URL that ONLYOFFICE Docs uses to download the document;
-   - **callbackUrl**: the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **key**: the *UUID+Modified Timestamp* to instruct ONLYOFFICE Docs whether to download the document again or not;
-   - **title**: the document title (name).
+   - **url** - the URL that ONLYOFFICE Docs uses to download the document;
+   - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
+   - **key** - the *UUID+Modified Timestamp* to instruct ONLYOFFICE Docs whether to download the document again or not;
+   - **title** - the document title (name).
 
 3. Plone constructs a page from the *.pt* template, filling in all of those values so that the client browser can load up the editor.
 
