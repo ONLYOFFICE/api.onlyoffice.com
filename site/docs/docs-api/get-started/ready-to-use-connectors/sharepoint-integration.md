@@ -11,13 +11,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="5rN7CksWE-w"/>
 ```
 
-This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from SharePoint using ONLYOFFICE Docs.
+This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from [SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) using ONLYOFFICE Docs.
 
 ## Features
 
 - Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
-- The plugin will create a new **Edit in ONLYOFFICE** menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
+- The solution will create a new **Edit in ONLYOFFICE** menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
 
 ## Installing ONLYOFFICE Docs
 
@@ -35,23 +35,23 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 3. Run the *Install.ps1* script:
 
-   ``` sh
+   ``` ps1
    PS> .\Install.ps1
    ```
 
 4. Enter your SharePoint site address:
 
-   ``` sh
+   ``` ps1
    https://<yoursharepointsite>
    ```
 
    :::note
-   Alternatively to steps **3** and **4** you can type the following command:
+   As an alternative to steps **3** and **4**, you can type the following command:
 
    ``` ps1
-   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
+   Add-SPSolution -LiteralPath <SolutionPath>/onlyoffice.wsp
    ```
-   
+
    On the **SharePoint Central Administration** home page, click **System Settings -> Farm Management -> Manage farm solutions**. On the **Solution Management** page, click **onlyoffice.wsp -> Deploy Solution**.
    :::
 
@@ -81,7 +81,7 @@ where the **documentserver** is the name of the server with the **ONLYOFFICE Doc
 Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
 :::
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../additional-api/signature/signature.md).
 
@@ -115,7 +115,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
    - **url** - the URL that ONLYOFFICE Docs uses to download the document;
    - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **DocumentSeverHost** - the URL that the client needs to reply to ONLYOFFICE Docs (can be set at the settings page);
+   - **DocumentServerHost** - the URL that the client needs to reply to ONLYOFFICE Docs (can be set at the settings page);
    - **Key** - the file identifier from SharePoint;
    - **FileName** - the document title (name);
    - **CurrentUserId** - the user identifier;
