@@ -8,6 +8,7 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the specifed document element or array of Runs. |
+| [AutoColor](./Methods/AutoColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an auto-color. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
@@ -55,6 +56,7 @@ Represents the Api class.
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
 | [GetMailMergeReceptionsCount](./Methods/GetMailMergeReceptionsCount.md) | number | Returns the mail merge receptions count. |
 | [GetMailMergeTemplateDocContent](./Methods/GetMailMergeTemplateDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the mail merge template document. |
+| [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color from a HEX string. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
 | [LoadMailMergeData](./Methods/LoadMailMergeData.md) | boolean | Loads data for the mail merge. |
@@ -73,9 +75,12 @@ Represents the Api class.
 | [PointsToPicas](./Methods/PointsToPicas.md) | number | Converts points to picas (1 pica = 12 points). |
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | Converts points to pixels. |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | Converts points to twips. |
+| [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGB color from red, green and blue components. |
+| [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGBA color from red, green, blue and alpha components. |
 | [ReplaceDocumentContent](./Methods/ReplaceDocumentContent.md) | boolean | Replaces the main document content with another document content. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [Save](./Methods/Save.md) | boolean | Saves changes to the specified document. |
+| [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
 | [attachEvent](./Methods/attachEvent.md) | boolean | Subscribes to the specified event and calls the callback function when the event fires. |
 | [detachEvent](./Methods/detachEvent.md) | boolean | Unsubscribes from the specified event. |

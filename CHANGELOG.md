@@ -1,5 +1,17 @@
 # Change log
 
+## 7.6.6
+
+### New features
+
+#### Common
+
+* Added the announcement bar at the top containing information about new releases.
+
+#### Office API
+
+* Updated the [Office API documentation](/docs/office-api/get-started/overview) for version 9.3.0.
+
 ## 7.6.5
 
 ### New features

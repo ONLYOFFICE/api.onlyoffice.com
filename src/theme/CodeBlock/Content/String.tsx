@@ -50,8 +50,8 @@ export default function CodeBlockString({
   const editorWord = metastring && metastring.includes("editor-docx") && "docx";
   const editorCell = metastring && metastring.includes("editor-xlsx") && "xlsx";
   const editorSlide = metastring && metastring.includes("editor-pptx") && "pptx";
-  const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
-  const isForm = metastring && metastring.includes("editor-pdf"); // TODO: change to editor-pdf-form
+  const editorPdf = metastring && /editor-(?:pdf|forms)/.test(metastring) && "pdf";
+  const isForm = metastring && metastring.includes("editor-forms");
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
   let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;

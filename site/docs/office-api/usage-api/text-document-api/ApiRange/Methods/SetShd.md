@@ -5,7 +5,7 @@ Specifies the shading applied to the contents of the current text Range.
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b);
+expression.SetShd(type, color);
 ```
 
 `expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
@@ -14,10 +14,8 @@ expression.SetShd(sType, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text Range. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| type | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text Range. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 
@@ -36,5 +34,6 @@ let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(0, 24);
-range.SetShd("clear", 255, 111, 61);
+range.SetShd("clear", Api.HexColor('#FF6F3D'));
+
 ```

@@ -5,7 +5,7 @@ Sets the background color to the current form.
 ## Syntax
 
 ```javascript
-expression.SetBackgroundColor(r, g, b, bNone);
+expression.SetBackgroundColor(color);
 ```
 
 `expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
@@ -14,10 +14,7 @@ expression.SetBackgroundColor(r, g, b, bNone);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| bNone | Required | boolean |  | Defines that background color will not be set. |
+| color | Optional | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 
@@ -27,7 +24,7 @@ boolean
 
 This example sets the background color to the form.
 
-```javascript editor-pdf
+```javascript editor-forms
 // Applies an RGB background color to the text form element.
 
 // How to change background color of the text form.
@@ -36,5 +33,5 @@ let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
-textForm.SetBackgroundColor(255, 111, 61);
+textForm.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 ```

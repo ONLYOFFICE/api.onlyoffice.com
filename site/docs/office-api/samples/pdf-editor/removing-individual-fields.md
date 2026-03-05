@@ -10,7 +10,7 @@ Remove unnecessary fields from forms by their ID or index for interface simplifi
 - implement field removal functionality ([ApiDocument/GetFormsByKey](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsByKey.md), [ApiFormBase/GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md));
 - customize forms based on user permissions ([ApiFormBase/GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Simulate user authentication and role determination

@@ -10,7 +10,7 @@ Add contextual comments to a document automatically based on form field selectio
 - detect when a specific option is selected ([ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md));
 - automatically add a comment to flag the selection for review ([Api/AddComment](/docs/office-api/usage-api/text-document-api/Api/Methods/AddComment.md)).
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Create the survey title

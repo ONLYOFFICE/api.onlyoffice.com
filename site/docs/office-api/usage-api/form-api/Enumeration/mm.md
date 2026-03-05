@@ -12,7 +12,7 @@ number
 
 This example set the cell width measured in millimeters to the applied comb of characters.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to set a cell width in millimeters.
 
 // Resize a cell indicating its width in millimeters.

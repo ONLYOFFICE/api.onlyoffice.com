@@ -13,6 +13,7 @@ declare global {
 
 const FILE_CONFIGS = {
     word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
+    pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf' },
     cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
     slide: {
         ext: 'pptx',
