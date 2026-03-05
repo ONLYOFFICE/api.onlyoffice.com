@@ -23,7 +23,6 @@ description: 了解如何在 ONLYOFFICE 插件中创建和使用输入辅助。
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -44,7 +43,6 @@ window.Asc.plugin.init = (text) => {
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -111,7 +109,6 @@ window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true]);
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentText = "";
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }

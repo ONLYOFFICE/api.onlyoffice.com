@@ -23,7 +23,6 @@ To create an input helper, use the **createInputHelper** method.
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -44,7 +43,6 @@ To get the [InputHelper object](#inputhelper), use the **getInputHelper** method
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -111,7 +109,6 @@ Creates an input helper window.
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentText = "";
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
