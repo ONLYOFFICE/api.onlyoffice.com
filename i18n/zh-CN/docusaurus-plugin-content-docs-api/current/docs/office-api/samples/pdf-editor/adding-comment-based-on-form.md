@@ -84,7 +84,7 @@ function checkAndAddComments() {
       // 向包含单选按钮的段落添加批注
       Api.AddComment(
         radio.paragraph,
-        "注意：员工选择了"非常不满意"。请安排后续会议讨论相关问题并探讨改进措施。",
+        "注意：员工选择了'非常不满意'。请安排后续会议讨论相关问题并探讨改进措施。",
         "人力资源审核系统"
       );
       return true;
@@ -105,7 +105,7 @@ doc.Push(paragraph);
 
 if (commentAdded) {
   paragraph = Api.CreateParagraph();
-  paragraph.AddText("已自动为"非常不满意"选项添加审核批注。");
+  paragraph.AddText("已自动为'非常不满意'选项添加审核批注。");
   paragraph.SetFontSize(11 * 2);
   paragraph.SetColor(200, 100, 0);
   doc.Push(paragraph);
