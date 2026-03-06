@@ -73,6 +73,7 @@ Represents the Api class.
 | [GetSheets](./Methods/GetSheets.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md)[] | Returns a sheet collection that represents all the sheets in the active workbook. |
 | [GetThemesColors](./Methods/GetThemesColors.md) | string[] | Returns a list of all the available theme colors for the spreadsheet. |
 | [GetWorksheetFunction](./Methods/GetWorksheetFunction.md) | [ApiWorksheetFunction](../ApiWorksheetFunction/ApiWorksheetFunction.md) | Returns the ApiWorksheetFunction object. |
+| [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color from a HEX string. |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | Converts inches to points. |
 | [InsertPivotExistingWorksheet](./Methods/InsertPivotExistingWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Inserts the specified pivot table into an existing worksheet. |
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Inserts the specified pivot table into a new worksheet. |
@@ -92,6 +93,8 @@ Represents the Api class.
 | [PointsToPicas](./Methods/PointsToPicas.md) | number | Converts points to picas (1 pica = 12 points). |
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | Converts points to pixels. |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | Converts points to twips. |
+| [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGB color from red, green and blue components. |
+| [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an RGBA color from red, green, blue and alpha components. |
 | [RecalculateAllFormulas](./Methods/RecalculateAllFormulas.md) | boolean | Recalculates all formulas in the active workbook. |
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | None | Refreshes all pivot tables. |
 | [RemoveCustomFunction](./Methods/RemoveCustomFunction.md) | boolean | Removes a custom function. |
@@ -101,6 +104,7 @@ Represents the Api class.
 | [SetLocale](./Methods/SetLocale.md) | None | Sets a locale to the document. |
 | [SetReferenceStyle](./Methods/SetReferenceStyle.md) | None | Sets the cell reference style. |
 | [SetThemeColors](./Methods/SetThemeColors.md) | boolean | Sets the theme colors to the current spreadsheet. |
+| [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | Converts twips to points. |
 | [attachEvent](./Methods/attachEvent.md) | None | Subscribes to the specified event and calls the callback function when the event fires. |
 | [detachEvent](./Methods/detachEvent.md) | None | Unsubscribes from the specified event. |

@@ -5,7 +5,7 @@ Adds text to the current content control.
 ## Syntax
 
 ```javascript
-expression.AddText(sText);
+expression.AddText(text);
 ```
 
 `expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
@@ -14,7 +14,7 @@ expression.AddText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | String |  | The text which will be added to the content control. |
+| text | Required | String |  | The text which will be added to the content control. |
 
 ## Returns
 

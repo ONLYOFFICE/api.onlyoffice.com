@@ -46,6 +46,7 @@ Represents the ApiRange class.
 | Strikeout | boolean | Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through. |
 | Text | string | Returns the text from the first cell of the specified range or sets it to this cell. |
 | Underline | 'none' \| 'single' \| 'singleAccounting' \| 'double' \| 'doubleAccounting' | Sets the type of underline applied to the font. |
+| Validation | [ApiValidation](../ApiValidation/ApiValidation.md) | Returns the ApiValidation class instance associated with this range. If no validation instance exists yet, it will be created. |
 | Value | string | Returns a value from the first cell of the specified range or sets it to this cell. |
 | Value2 | string | Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell. |
 | Width | number | Returns a value that represents the range width measured in points. |
@@ -100,6 +101,7 @@ Represents the ApiRange class.
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the rows in the specified range. If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row. |
 | [GetRowsCount](./Methods/GetRowsCount.md) | number | Returns a number of rows in the current range. |
 | [GetText](./Methods/GetText.md) | string \| string[][] | Returns the text of the specified range. |
+| [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | Returns the data validation object associated with this range. If no validation object exists yet, it will be created. |
 | [GetValue](./Methods/GetValue.md) | string \| string[][] | Returns a value of the specified range. |
 | [GetValue2](./Methods/GetValue2.md) | string \| string[][] | Returns the Value2 property (value without format) of the specified range. |
 | [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode. |

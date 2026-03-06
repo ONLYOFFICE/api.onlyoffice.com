@@ -12,7 +12,7 @@ export function usePlaygroundRootContext() {
     return value
 }
 
-export type EditorType = 'word' | 'cell' | 'slide' | 'form'
+export type EditorType = 'word' | 'cell' | 'slide' | 'form' | 'pdf'
 export type ScriptType = 'office-js-api' | 'connector' | 'plugin' | 'builder'
 export type PreviewType = 'desktop' | 'mobile' | 'embedded'
 

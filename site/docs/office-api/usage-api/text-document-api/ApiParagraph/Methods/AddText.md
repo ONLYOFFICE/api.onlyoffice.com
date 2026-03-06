@@ -5,7 +5,7 @@ Adds some text to the current paragraph.
 ## Syntax
 
 ```javascript
-expression.AddText(sText);
+expression.AddText(text);
 ```
 
 `expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
@@ -14,7 +14,7 @@ expression.AddText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Optional | string | "" | The text that we want to insert into the current document element. |
+| text | Required | string |  | The text that we want to insert into the current document element. |
 
 ## Returns
 

@@ -9,6 +9,7 @@ Represents the ApiWorksheet class.
 | Active | number | Makes the current sheet active. |
 | ActiveCell | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents an active cell. |
 | AllProtectedRanges | [ApiProtectedRange](../ApiProtectedRange/ApiProtectedRange.md)[] | Returns all protected ranges from the current worksheet. |
+| AutoFilter | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) | Returns AutoFilter that represents all applied autofilters |
 | BottomMargin | number | Returns or sets the size of the sheet bottom margin measured in points. |
 | Cells | [ApiRange](../ApiRange/ApiRange.md) | Returns ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use). |
 | Cols | [ApiRange](../ApiRange/ApiRange.md) | Returns ApiRange that represents all the cells of the columns range. |
@@ -50,6 +51,7 @@ Represents the ApiWorksheet class.
 | [GetAllPivotTables](./Methods/GetAllPivotTables.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md)[] | Returns all pivot tables from the current worksheet. |
 | [GetAllProtectedRanges](./Methods/GetAllProtectedRanges.md) | [ApiProtectedRange](../ApiProtectedRange/ApiProtectedRange.md)[] \| null | Returns all protected ranges from the current worksheet. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns all shapes from the current sheet. |
+| [GetAutoFilter](./Methods/GetAutoFilter.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) | Returns the instante of ApiAutoFilter object that represents the worksheet AutoFilter. |
 | [GetBottomMargin](./Methods/GetBottomMargin.md) | number | Returns the bottom margin of the sheet. |
 | [GetCells](./Methods/GetCells.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use). |
 | [GetCols](./Methods/GetCols.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object that represents all the cells on the columns range. |
@@ -70,6 +72,8 @@ Represents the ApiWorksheet class.
 | [GetRangeByNumber](./Methods/GetRangeByNumber.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range of the current sheet using the **row/column** coordinates for the cell selection. |
 | [GetRightMargin](./Methods/GetRightMargin.md) | number | Returns the right margin of the sheet. |
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents all the cells on the rows range. |
+| [GetSelectedDrawings](./Methods/GetSelectedDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns selected drawings from the current sheet. |
+| [GetSelectedShapes](./Methods/GetSelectedShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns selected shapes from the current sheet. |
 | [GetSelection](./Methods/GetSelection.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range. |
 | [GetTopMargin](./Methods/GetTopMargin.md) | number | Returns the top margin of the sheet. |
 | [GetUsedRange](./Methods/GetUsedRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object that represents the used range on the specified worksheet. |

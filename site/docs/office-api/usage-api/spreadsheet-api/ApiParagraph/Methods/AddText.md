@@ -5,7 +5,7 @@ Adds some text to the current paragraph.
 ## Syntax
 
 ```javascript
-expression.AddText(sText);
+expression.AddText(text);
 ```
 
 `expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
@@ -14,7 +14,7 @@ expression.AddText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Optional | string | "" | The text that we want to insert into the current document element. |
+| text | Required | string |  | The text that we want to insert into the current document element. |
 
 ## Returns
 
@@ -30,7 +30,7 @@ This example adds some text to the paragraph.
 // Change content of the shape by adding a text.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

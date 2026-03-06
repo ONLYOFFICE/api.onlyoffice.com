@@ -5,7 +5,7 @@ Specifies the shading applied to the contents of the current text run.
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b);
+expression.SetShd(type, color);
 ```
 
 `expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
@@ -14,10 +14,8 @@ expression.SetShd(sType, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text run. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
+| type | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text run. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
 
 ## Returns
 
@@ -38,7 +36,8 @@ let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
 paragraph.AddElement(run);
 run = Api.CreateRun();
-run.SetShd("clear", 255, 111, 61);
+run.SetShd("clear", Api.HexColor('#FF6F3D'));
 run.AddText("This is a text run with the text shading set to orange.");
 paragraph.AddElement(run);
+
 ```

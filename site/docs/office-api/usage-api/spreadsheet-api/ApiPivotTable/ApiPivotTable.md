@@ -82,7 +82,7 @@ Represents the ApiPivotTable class.
 | [Select](./Methods/Select.md) | None | Selects the current pivot table. |
 | [SetColumnGrand](./Methods/SetColumnGrand.md) | None | Sets the **Grand Totals** setting to the pivot table columns. |
 | [SetDescription](./Methods/SetDescription.md) | None | Sets the pivot table description. |
-| [SetDisplayFieldCaptions](./Methods/SetDisplayFieldCaptions.md) | None | Returns the setting which specifies whether to display field headers for rows and columns. |
+| [SetDisplayFieldCaptions](./Methods/SetDisplayFieldCaptions.md) | None | Sets whether to display field headers for rows and columns. |
 | [SetDisplayFieldsInReportFilterArea](./Methods/SetDisplayFieldsInReportFilterArea.md) | None | Sets the pivot table display fields in the report filter area settings. |
 | [SetGrandTotalName](./Methods/SetGrandTotalName.md) | None | Sets the text string label that is displayed in the grand total column or row heading in the specified pivot table report. |
 | [SetLayoutBlankLine](./Methods/SetLayoutBlankLine.md) | None | Sets the setting which specifies whether to insert blank rows after each item. |

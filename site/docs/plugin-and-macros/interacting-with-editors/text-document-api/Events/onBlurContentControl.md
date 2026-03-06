@@ -38,3 +38,4 @@ window.Asc.plugin.attachEditorEvent("onBlurContentControl", (oPr) => {
     console.log("event: onBlurContentControl");
 });
 ```
+

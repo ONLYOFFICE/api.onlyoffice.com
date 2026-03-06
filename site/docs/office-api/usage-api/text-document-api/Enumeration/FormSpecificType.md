@@ -15,6 +15,8 @@ Enumeration
 - "dropDownList"
 - "dateTime"
 - "radio"
+- "complex"
+- "signature"
 
 
 ## Example

@@ -10,11 +10,14 @@ Represents the ApiTextForm class.
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
 | [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current form. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetCharactersLimit](./Methods/GetCharactersLimit.md) | number | Returns a limit of the text field characters. |
 | [GetClassType](./Methods/GetClassType.md) | "textForm" | Returns a type of the ApiTextForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current form. |
+| [GetLock](./Methods/GetLock.md) | boolean | Returns the lock state of the current form. |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |
@@ -35,6 +38,7 @@ Represents the ApiTextForm class.
 | [SetCharactersLimit](./Methods/SetCharactersLimit.md) | boolean | Sets a limit to the text field characters. |
 | [SetComb](./Methods/SetComb.md) | boolean | Specifies if the text field should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value. |
 | [SetFormKey](./Methods/SetFormKey.md) | boolean | Sets a key to the current form. |
+| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock state of the current form. |
 | [SetMultiline](./Methods/SetMultiline.md) | boolean | Specifies if the current text field should be miltiline. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form. *Can't be set to checkbox or radio button.* |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Specifies if the current form should be required. |
