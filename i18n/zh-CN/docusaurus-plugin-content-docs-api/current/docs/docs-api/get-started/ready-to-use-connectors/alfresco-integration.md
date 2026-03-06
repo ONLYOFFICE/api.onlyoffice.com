@@ -20,8 +20,8 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 功能特性
 
-- 目前，使用该插件可打开并编辑的文档格式有：DOCX、XLSX、PPTX、DOCXF、OFORM。
-
+- 目前，使用该插件可打开并编辑的文档格式有：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
+- 以下格式仅支持查看：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 该插件会在文档库中为办公文档添加**在ONLYOFFICE中编辑**选项。
 
   ![在OnlyOffice中编辑](/assets/images/editor/alfresco.png)
@@ -30,17 +30,19 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 - 若要将ODT、ODP、ODS、DOC、XLS、PPT文件转换为对应的OOXML格式文件，请选择**使用ONLYOFFICE转换**选项。转换后的文件将放置在同一文件夹中。您还可以为文件夹配置规则，使其在上传或更改时自动转换文件。具体细节可在此处找到：[这里](https://docs.alfresco.com/content-services/latest/using/content/rules/)。
 
-- 若要创建新文档，请打开您想要创建文档的文件夹，然后点击**创建...**按钮。[创建...](/assets/images/editor/alfresco-create.png)。
+- 若要创建新文档，请打开您想要创建文档的文件夹，然后点击**创建...**按钮。
+
+  ![创建...](/assets/images/editor/alfresco-create.png)
 
 ## 安装ONLYOFFICE文档
 
-您需要一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Alfresco和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Chamilo发送POST请求。
+您需要一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Alfresco和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Alfresco发送POST请求。
 
 使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)是启动ONLYOFFICE文档实例的最简单方法。
 
 ## 安装ONLYOFFICE Alfresco模块包
 
-要在Alfresco中使用ONLYOFFICE文档，对于Ubuntu14.04系统，请按照以下步骤操作：
+要在Alfresco中使用ONLYOFFICE文档，对于Ubuntu系统，请按照以下步骤操作：
 
 1. 根据您的Alfresco安装情况，将已编译的 **\*.amp**包上传到相应的目录：
 
@@ -66,17 +68,17 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
       </TabItem>
    </Tabs>
 
-   有关使用MMT的更多详细信息，请访问以下地址：`https://docs.alfresco.com/content-services/latest/install/zip/amp/`。
+   有关使用MMT的更多详细信息，请参阅[Alfresco文档](https://docs.alfresco.com/content-services/latest/install/zip/amp/)。
 
-1. 确保ONLYOFFICE文档能够向Alfresco发送POST请求。
+3. 确保ONLYOFFICE文档能够向Alfresco发送POST请求。
 
-   您可能需要在alfresco-global.properties中更改以下行，或者您可以使用**配置页面**进行设置：[配置页面](#configuring-onlyoffice-alfresco-module-package):
+   您可能需要在**alfresco-global.properties**中更改以下行，或者您可以使用[配置页面](#configuring-onlyoffice-alfresco-module-package)进行设置：
 
    ``` ini
    alfresco.host=<hostname>
    alfresco.port=443
    alfresco.protocol=https
-   
+
    share.host=<hostname>
    share.port=443
    share.protocol=https
@@ -86,7 +88,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    该文件可能位于 */usr/local/tomcat/shared/classes/alfresco-global.properties*。
    :::
 
-2. 重启Alfresco:
+4. 重启Alfresco:
 
    ``` sh
    sudo ./alfresco.sh stop
@@ -95,21 +97,21 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 您可以在Alfresco的管理员工具中，通过 */share/page/console/admin-console/module-package*检查该模块。
 
-## 配置ONLYOFFICE Alfresco模块包 {#configuring-onlyoffice-alfresco-module-package}
+## 配置ONLYOFFICE Alfresco模块包
 
-模块配置可以在**Alfresco管理控制台**中找到，或者直接导航到*http\://\<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config*。
+模块配置可以在**Alfresco管理控制台**中找到，或者直接导航到`http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`。
 
 :::note
 您也可以将*onlyoffice.url*添加到**alfresco-global.properties**中。通过设置页面进行的配置将覆盖**alfresco-global.properties**中的设置。
 :::
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Alfresco配置页面指定您自己的**密钥**，或者通过在**alfresco-global.properties**中添加*onlyoffice.jwtsecret*来设置。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Alfresco配置页面指定您自己的**密钥**，或者通过在**alfresco-global.properties**中添加*onlyoffice.security.key*来设置。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译ONLYOFFICE Alfresco模块包
 
 如果您计划自行编译ONLYOFFICE Alfresco模块包（例如，编辑源代码然后进行编译），请按照以下步骤操作：
 
-1. 成功编译需要最新的稳定版**Oracle Java**版本。如果未安装，可使用以下命令安装 Oracle Java 8：
+1. 成功编译需要最新的稳定版**Java**。如果未安装，可使用以下命令安装 OpenJDK 8：
 
    ``` sh
    sudo apt-get update

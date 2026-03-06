@@ -20,17 +20,19 @@ The plugin is available in the official [Alfresco Add-ons directory](https://con
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
-
+- Currently, the following document formats can be opened and edited with this plugin: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
 - The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents.
 
-  ![Edit in OnlyOffice](/assets/images/editor/alfresco.png)
+  ![Edit in ONLYOFFICE](/assets/images/editor/alfresco.png)
 
   This allows multiple users to collaborate in real time and to save back those changes to Alfresco.
 
-- To convert ODT, ODP, ODS, DOC, XLS, PPT files into their OOXML counterparts, select the **Convert using ONLYOFFICE** option. Resulting files will be placed in the same folder. You can also configure rules for a folder, that will automatically convert files on upload or on change. Details you can find [here](https://docs.alfresco.com/content-services/latest/using/content/rules/).
+- To convert ODT, ODP, ODS, DOC, XLS, PPT files into their OOXML counterparts, select the **Convert using ONLYOFFICE** option. Resulting files will be placed in the same folder. You can also configure rules for a folder, that will automatically convert files on upload or on change. For more details, see [this page](https://docs.alfresco.com/content-services/latest/using/content/rules/).
 
-- To create a new document, open the folder where you want to create a document and click the **Create...** button. ![Create new...](/assets/images/editor/alfresco-create.png)
+- To create a new document, open the folder where you want to create a document and click the **Create...** button.
+
+  ![Create new...](/assets/images/editor/alfresco-create.png)
 
 ## Installing ONLYOFFICE Docs
 
@@ -38,20 +40,20 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing ONLYOFFICE Alfresco module package
+## Installing ONLYOFFICE module package for Alfresco
 
-To start using ONLYOFFICE Docs with Alfresco, the following steps must be performed for Ubuntu 14.04:
+To start using ONLYOFFICE Docs with Alfresco, the following steps must be performed for Ubuntu:
 
 1. Upload the compiled **\*.amp** packages to directories accordingly for your Alfresco installation:
 
    - from *onlyoffice-alfresco/repo/target/* to */usr/local/tomcat/amps/* for Alfresco repository,
-   - from *onlyoffice-alfresco/share/target/* to */usr/local/tomcat/amps\_share/* for Share.
+   - from *onlyoffice-alfresco/share/target/* to */usr/local/tomcat/amps_share/* for Share.
 
    :::note
    You can download the already compiled package files [here](https://github.com/onlyoffice/onlyoffice-alfresco/releases) and place them to the respective directories.
    :::
 
-2. Use the **Module Management Tool (MMT)** to install modules, run this commands:
+2. Use the **Module Management Tool (MMT)** to install modules, run these commands:
 
    <Tabs>
       <TabItem value="alfresco" label="Alfresco">
@@ -66,9 +68,9 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
       </TabItem>
    </Tabs>
 
-   More details about using MMT can be found at the following address - `https://docs.alfresco.com/content-services/latest/install/zip/amp/`.
+   For more details about using MMT, see the [Alfresco documentation](https://docs.alfresco.com/content-services/latest/install/zip/amp/).
 
-1. Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
+3. Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
 
    You may need to change these lines in **alfresco-global.properties** or you can set it using [configuration page](#configuring-onlyoffice-alfresco-module-package):
 
@@ -86,7 +88,7 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
    Probably located here */usr/local/tomcat/shared/classes/alfresco-global.properties*
    :::
 
-2. Restart Alfresco:
+4. Restart Alfresco:
 
    ``` sh
    sudo ./alfresco.sh stop
@@ -95,21 +97,21 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
 
 The module can be checked in administrator tools at */share/page/console/admin-console/module-package* in Alfresco.
 
-## Configuring ONLYOFFICE Alfresco module package
+## Configuring ONLYOFFICE module package for Alfresco
 
-Module configuration can be found inside **Alfresco Administration Console** or by simply navigating to *http\://\<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config*.
+Module configuration can be found inside **Alfresco Administration Console** or by simply navigating to `http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`.
 
 :::note
 You can also add *onlyoffice.url* to **alfresco-global.properties**. Configuration made via settings page will override **alfresco-global.properties**.
 :::
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Alfresco configuration page or by adding *onlyoffice.jwtsecret* to **alfresco-global.properties**. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Alfresco configuration page or by adding *onlyoffice.security.key* to **alfresco-global.properties**. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Compiling ONLYOFFICE Alfresco module package
+## Compiling ONLYOFFICE module package for Alfresco
 
-If you plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards), follow these steps:
+If you plan to compile the ONLYOFFICE module package for Alfresco yourself (e.g. edit the source code and compile it afterwards), follow these steps:
 
-1. The latest stable **Oracle Java** version is necessary for the successful build. If you do not have it installed, use the following commands to install Oracle Java 8:
+1. The latest stable **Java** version is necessary for the successful build. If you do not have it installed, use the following commands to install OpenJDK 8:
 
    ``` sh
    sudo apt-get update
@@ -118,7 +120,7 @@ If you plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edi
 
 2. Install the latest **Maven**. Installation process is described [here](https://maven.apache.org/install.html).
 
-3. Download the ONLYOFFICE Alfresco module package source code:
+3. Download the ONLYOFFICE module package for Alfresco source code:
 
    ``` sh
    git clone https://github.com/ONLYOFFICE/onlyoffice-alfresco.git
@@ -137,7 +139,7 @@ If you plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edi
    mvn clean install
    ```
 
-Another way to build ONLYOFFICE Alfresco module package is using **docker-compose** file.
+Another way to build ONLYOFFICE module package for Alfresco is using **docker-compose** file.
 
 Use this command from project directory:
 
@@ -177,4 +179,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 11. Alfresco downloads a new version of the document, replacing the old one.
 
-Download the ONLYOFFICE Alfresco module package [here](https://github.com/ONLYOFFICE/onlyoffice-alfresco).
+Download the ONLYOFFICE module package for Alfresco [here](https://github.com/ONLYOFFICE/onlyoffice-alfresco).

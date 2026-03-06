@@ -17,10 +17,10 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 功能特性
 
-- 目前，使用该应用程序可打开并编辑以下文档格式：DOCX、XLSX、PPTX、CSV、TXT、DOCXF、OFORM。
-- 仅支持查看的文档格式为：PDF。
+- 目前，使用该应用程序可打开并编辑以下文档格式：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
+- 仅支持查看的文档格式为：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 以下格式可转换为OOXML格式：DOC、DOCM、DOT、DOTX、EPUB、HTM、HTML、ODP、ODT、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、RTF、XLS、XLSM、XLT、XLTM、XLTX。
-- 该应用程序会在**新建(+)**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**的选项。它还会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Nextcloud。连接到同一文档服务器的多个联合Nextcloud实例之间也支持协同编辑。
+- 该应用程序会在**新建(+)**菜单中创建用于创建**文档**、**电子表格**、**演示文稿**、**PDF**的选项。它还会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Nextcloud。连接到同一文档服务器的多个联合Nextcloud实例之间也支持协同编辑。
 
 ## 安装ONLYOFFICE文档
 
@@ -28,9 +28,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ONLYOFFICE文档和Nextcloud可以安装在不同的计算机上，也可以安装在同一台机器上。如果选择后者，您需要为文档服务器设置一个自定义端口，因为默认情况下ONLYOFFICE文档和Nextcloud都使用80端口。或者您可以在代理服务器后使用ONLYOFFICE文档，有关配置方法，请参考[这篇文章](https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx)。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer) 是启动ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE文档实例的最简单方法。
 
-您也可以使用我们的[Docker安装方式](https://github.com/ONLYOFFICE/Docker-DocumentServer)，通过几条命令就能完成。
+您也可以使用我们的[Docker安装方式](https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud)，通过几条命令就能完成ONLYOFFICE文档和Nextcloud的安装与配置。
 
 ## 安装Nextcloud ONLYOFFICE集成应用程序
 
@@ -38,27 +38,38 @@ Nextcloud管理员可以从内置应用市场安装集成应用程序。为此�
 
 如果安装Nextcloud的服务器没有互联网访问权限，或者由于其他原因需要手动安装，管理员可以按以下步骤手动安装该应用程序。要在Nextcloud中使用ONLYOFFICE文档，必须执行以下步骤：
 
-1. 进入Nextcloud服务器的*apps/*目录（或[用于](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories)连接应用程序的其他目录）:cd apps/
+1. 进入Nextcloud服务器的*apps/*目录（或[用于](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories)连接应用程序的其他目录）:
 
+   ``` sh
+   cd apps/
+   ```
 2. 获取Nextcloud ONLYOFFICE集成应用程序。有以下几种方法：
 
    1. 从[Nextcloud](https://apps.nextcloud.com/apps/onlyoffice)官方应用商店下载最新的已签名版本。
    2. 从GitHub上的应用程序[发布页面](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases)下载最新的已签名版本。
    3. 克隆应用程序源代码并自行编译：
-   
+
    ``` sh
    git clone https://github.com/ONLYOFFICE/onlyoffice-nextcloud.git onlyoffice
    cd onlyoffice
    git submodule update --init --recursive
    ```
+3. 构建webpack（仅当您在上一步选择了克隆方式时）：
+   ``` sh
+   npm install
+   npm run build
+   ```
+4. 安装Composer依赖（仅当您在第2步选择了克隆方式时）：
+   ``` sh
+   composer install
+   ```
+5. 修改所有者，以便可以从Nextcloud Web界面更新应用程序：
 
-3. 修改所有者，以便可以从Nextcloud Web界面更新应用程序：
+    ``` sh
+    chown -R www-data:www-data onlyoffice
+    ```
 
-  ``` sh
-  chown -R www-data:www-data onlyoffice
-  ```
-
-4. 在Nextcloud中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为**ONLYOFFICE**应用点击**启动**。
+6. 在Nextcloud中，管理员打开包含**未启用**应用的*\~/settings/apps/disabled*页面，并为**ONLYOFFICE**应用点击**启用**。
 
 ## 配置Nextcloud ONLYOFFICE集成应用程序 {#configuring-nextcloud-onlyoffice-integration-app}
 
@@ -146,7 +157,7 @@ https://<文档服务器地址>/
 | `disable_download`         | 如果为`true`，禁用文件下载功能。                                                                   |
 | `editors_check_interval`   | 检查ONLYOFFICE文档可用性的时间间隔（分钟）。默认为`1440`。                                           |
 
-`config/config.php`配置示例：
+以下参数必须手动添加到Nextcloud安装目录中的`config/config.php`文件：
 
 ```php
 <?php
@@ -167,24 +178,33 @@ occ onlyoffice:documentserver --check
 
 您将看到一段文本，内容要么是连接成功的信息，要么是错误原因。
 
+## 高级文档权限
+
+高级标签页允许您仅向共享标签页中指定的用户授予额外的访问权限，而不允许他们重新共享文件。根据所选的自定义权限选项和文件类型（docx、pptx、xlsx），您可以授予不同的额外权限。
+
+- 如果**DOCX**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅审阅（**仅审阅**）或仅评论（**仅评论**）。
+- 如果**XLSX**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）或为所有人应用筛选（**全局筛选**，默认启用）。
+- 如果**PPTX**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅评论（**仅评论**）。
+- 如果**PDF**文件在共享标签页中以自定义权限（启用编辑，禁用共享）方式共享，您可以在高级标签页中将权限设置为仅填写（**表单填写**）。
+
 ## 工作原理
 
 ONLYOFFICE集成遵循此处记录的API规范：[此处](../basic-concepts.md)。
 
-1. 创建新文件时，用户在Nextcloud中导航到文档文件夹，然后点击**新建(+)**菜单中的**文档**、**电子表格”**或**演示文稿**选项。
+1. 创建新文件时，用户在Nextcloud中导航到文档文件夹，然后点击**新建(+)**菜单中的**文档**、**电子表格**或**演示文稿**选项。
 
-2. 浏览器调用 */lib/Controller/EditorController.php*控制器中的*creat*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
+2. 浏览器调用*/lib/Controller/editorController.php*控制器中的*create*方法。此方法会将*assets*文件夹中的文件副本添加到用户当前所在的文件夹中。
 
-3.打开现有文件时，用户在Nextcloud中找到该文件，并选择**在ONLYOFFICE中打开**菜单项。
+3. 打开现有文件时，用户在Nextcloud中找到该文件，并选择**在ONLYOFFICE中打开**菜单项。
 
-4.会打开一个新的浏览器标签页，并调用 */lib/Controller/EditorController.php*控制器中的*index*方法。
+4. 会打开一个新的浏览器标签页，并调用*/lib/Controller/editorController.php*控制器中的*index*方法。
 
 5. 应用程序准备一个包含以下属性的JSON对象：
 
-   - **url**- ONLYOFFICE文档用于下载文档的URL；
-   - **callbackUrl**- ONLYOFFICE文档用于通知文档编辑状态的URL；
-   - **documentServerUrl**- 客户端需要响应给ONLYOFFICE文档的 URL（可在管理设置页面中设置）；
-   - **key**- 由*UUID+修改时间戳*组成，用于指示ONLYOFFICE文档是否需要重新下载文档。
+   - **url** - ONLYOFFICE文档用于下载文档的URL；
+   - **callbackUrl** - ONLYOFFICE文档用于通知文档编辑状态的URL；
+   - **documentServerUrl** - 客户端需要响应给ONLYOFFICE文档的URL（可在管理设置页面中设置）；
+   - **key** - 由*UUID+修改时间戳*组成，用于指示ONLYOFFICE文档是否需要重新下载文档。
 
 6. Nextcloud获取该对象，并从*templates/editor.php*模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 
@@ -251,4 +271,6 @@ ONLYOFFICE集成遵循此处记录的API规范：[此处](../basic-concepts.md)�
 
 - 当用户访问没有下载权限的文档时，文件打印和使用系统剪贴板的功能不可用。不过，可以通过编辑器工具栏和上下文菜单中的按钮在编辑器内进行复制和粘贴操作。
 
-在此处下载Nextcloud ONLYOFFICE集成应用程序：[此处](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).
+- 当文件在ONLYOFFICE中打开编辑的同时，也在其他工具中被编辑时，更改可能会被覆盖或丢失。为避免冲突并确保顺畅协作，我们建议使用临时文件锁定应用程序：https://apps.nextcloud.com/apps/files_lock。这有助于防止并行编辑并保护您的工作。
+
+在此处下载Nextcloud ONLYOFFICE集成应用程序：[此处](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)。

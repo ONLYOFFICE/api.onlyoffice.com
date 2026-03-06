@@ -11,15 +11,16 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="pGd06HLkWU4"/>
 ```
 
-This [plugin](https://github.com/ONLYOFFICE/onlyoffice-confluence) enables users to edit office documents from [Confluence](https://www.atlassian.com/software/confluence/) using ONLYOFFICE Docs.
+This [app](https://github.com/ONLYOFFICE/onlyoffice-confluence) enables users to edit office documents from [Confluence](https://www.atlassian.com/software/confluence/) using ONLYOFFICE Docs.
 
 The connector is available in the official [Atlassian Marketplace](https://marketplace.atlassian.com/1218214).
 
 ## Features
 
-- Currently, the following document formats can be edited or viewed: DOCX, XLSX, PPTX.
-- The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Confluence.
-- Currently, the following document formats can be converted into OOXML: ODT, DOC, ODP, PPT, ODS, XLS.
+- Currently, the following document formats can be edited: DOCM, DOCX, DOTM, DOTX, XLSB, XLSM, XLSX, XLTM, XLTX, POTM, POTX, PPSM, PPSX, PPTM, PPTX, PDF.
+- The following formats are available for viewing only: DOC, DOT, EPUB, FB2, FODT, HTM, HTML, HWP, HWPX, MD, MHT, MHTML, ODT, OTT, PAGES, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, NUMBERS, ODS, OTS, SXC, XLS, XLT, DPS, DPT, FODP, KEY, ODG, ODP, OTP, POT, PPS, PPT, SXI, DJVU, OXPS, XPS, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX.
+- The app will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Confluence.
+- The following document formats can be converted into OOXML: DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTM, HTML, HWP, HWPX, MD, MHT, MHTML, ODT, OTT, PAGES, RTF, STW, SXW, TXT, WPS, WPT, XML, CSV, ET, ETT, FODS, NUMBERS, ODS, OTS, SXC, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, DPS, DPT, FODP, KEY, ODG, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX, SXI, OXPS, PDF, XPS.
 
 ## Installing ONLYOFFICE Docs
 
@@ -27,13 +28,13 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing Confluence ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Confluence
 
 Upload the compiled *target/onlyoffice-confluence-plugin.jar* to Confluence on the **Manage add-ons** page.
 
-The latest compiled package files are available [here](https://github.com/onlyoffice/onlyoffice-confluence/releases) and on [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence?tab=overview\&hosting=datacenter).
+The latest compiled package files are available [here](https://github.com/onlyoffice/onlyoffice-confluence/releases) and on [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence?tab=overview&hosting=datacenter).
 
-You could also install the app from Confluence administration panel:
+You can also install the app from Confluence administration panel:
 
 1. Log in to your Confluence instance as an administrator.
 2. Navigate to the **Manage add-ons** page.
@@ -42,21 +43,21 @@ You could also install the app from Confluence administration panel:
 5. Click **Install** to download and install the app.
 6. Now you can click **Close** in the **Installed and ready to go** dialog.
 
-## Configuring Confluence ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for Confluence
 
-Find the uploaded **ONLYOFFICE Confluence connector** on the **Manage add-ons** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
+Find the uploaded **ONLYOFFICE Connector for Confluence** on the **Manage add-ons** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
 ``` sh
-https://documentserver/
+https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Confluence server. The Confluence server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Confluence server. The Confluence server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Confluence administration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Confluence administration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Compiling Confluence ONLYOFFICE integration app
+## Compiling ONLYOFFICE app for Confluence
 
-If you plan to compile the Confluence ONLYOFFICE integration app yourself (e.g. edit the source code and compile it afterwards), follow these steps:
+If you plan to compile the ONLYOFFICE app for Confluence yourself (e.g. edit the source code and compile it afterwards), follow these steps:
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
@@ -83,17 +84,17 @@ If you plan to compile the Confluence ONLYOFFICE integration app yourself (e.g. 
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-1. User navigates to the Confluence attachments and selects the **Edit in ONLYOFFICE** action.
+1. The user navigates to the Confluence attachments and selects the **Edit in ONLYOFFICE** action.
 
-2. Confluence makes a request to OnlyOfficeEditorServlet (URL of the form: */plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*).
+2. Confluence makes a request to *OnlyOfficeEditorServlet* (URL of the form: */plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*).
 
-3. Confluence sends a document to ONLYOFFICE Document storage service and receive a temporary link.
+3. Confluence sends a document to ONLYOFFICE Document storage service and receives a temporary link.
 
 4. Confluence prepares a JSON object with the following properties:
 
    - **url** - the temporary link that ONLYOFFICE Docs uses to download the document;
    - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **docserviceApiUrl** - the URL that the client needs to reply to ONLYOFFICE Docs (provided by the *files.docservice.url.api* property);
+   - **docserviceApiUrl** - the URL that the client needs to respond to ONLYOFFICE Docs (provided by the *files.docservice.url.api* property);
    - **key** - the UUID to instruct ONLYOFFICE Docs whether to download the document again or not;
    - **title** - the document title (name).
 
@@ -109,4 +110,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 10. Confluence downloads a new version of the document, replacing the old one.
 
-Download the Confluence ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-confluence).
+Download the ONLYOFFICE app for Confluence [here](https://github.com/ONLYOFFICE/onlyoffice-confluence).

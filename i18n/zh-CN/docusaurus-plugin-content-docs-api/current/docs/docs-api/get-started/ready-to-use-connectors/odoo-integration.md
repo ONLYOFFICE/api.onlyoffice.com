@@ -15,8 +15,8 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 功能特性
 
-- 目前，可编辑的文档格式有：DOCX、DOCXF、XLSX、PPTX。
-- 仅支持查看的文档格式如下：DJVU、DOC、DOCM、DOT、DOTM、DOTX、EPUB、FB2、FODT、HTML、MHT、ODT、OFORM、OTT、OXPS、PDF、RTF、TXT、XPS、XML、CSV、FODS、ODS、OTS、XLS、XLSB、XLSM、XLT、XLTM、XLTX、FODP、ODP、OTP、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM。
+- 目前，可使用此应用程序打开和编辑的文档格式有：DOCM、DOCX、DOTM、DOTX、PDF、POTM、POTX、PPSM、PPSX、PPTM、PPTX、XLSB、XLSM、XLSX、XLTM、XLTX。
+- 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOCXF、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OFORM、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 该应用程序会在文档库中为Office文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Odoo。
 
 ## 安装ONLYOFFICE文档
@@ -42,7 +42,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 2. 搜索ONLYOFFICE并下载。您也可以从官方[GitHub仓库](https://github.com/ONLYOFFICE/onlyoffice-odoo/releases)下载应用程序的最新版本。
 
-3. 将ONLYOFFICE连接器放入*/path/to/odoo/addons* 目录。确保ONLYOFFICE文件夹命名为*onlyoffice_odoo*。
+3. 将ONLYOFFICE应用程序放入*/path/to/odoo/addons* 目录。确保ONLYOFFICE文件夹命名为*onlyoffice_odoo*。
 
    或者，您可以在*/path/to/odoo/config/odoo.conf* 文件中添加以下内容，指定您存放*apps/addons*文件夹的路径：
 
@@ -51,13 +51,17 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    addons_path = /mnt/extra-addons
    ```
 
-4. 安装*pyjwt*包：
+4. 安装 `pyjwt` 包：
 
    ``` sh
    pip install pyjwt
    ```
 
 5. 将Odoo切换到开发者模式，点击**应用->更新应用列表**，或者直接重启您的Odoo实例。
+
+:::note
+ONLYOFFICE演示模板仅会添加到已安装的Odoo模块中（指ONLYOFFICE模板应用）。因此，我们强烈建议在安装CRM、销售、日历等其他Odoo模块之后再安装ONLYOFFICE模板。
+:::
 
 ## 配置Odoo ONLYOFFICE集成应用程序
 
@@ -75,15 +79,14 @@ https://<documentserver>/
 
 ## 工作原理
 
-ONLYOFFICE 集成遵循此处记录的API规范：[这里](../basic-concepts.md)。
-
-在此处下载Odoo ONLYOFFICE集成应用程序：[此处](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop)。
+ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
 ## 使用表单
 
 您可以在Odoo的**ONLYOFFICE模板**模块中创建、上传和使用可填写的表单模板。该模块允许您生成带有字段的文档，这些字段可以自动填充来自Odoo记录的数据。
 
-**要求**
+### 要求
+
 - 支持可填写表单的**ONLYOFFICE文档**实例。
 - 启用了**Automation API**选项的有效**ONLYOFFICE许可证**。
 - Odoo中的**ONLYOFFICE模板**模块（会自动安装主ONLYOFFICE模块）。
@@ -95,3 +98,5 @@ ONLYOFFICE 集成遵循此处记录的API规范：[这里](../basic-concepts.md)
 :::note
 如果您计划在Odoo中部署可填写表单工作流，请确保您的ONLYOFFICE文档版本支持PDF表单。有关您环境（社区版、企业版、云版）中支持的最低版本，请查看[ONLYOFFICE发布说明](https://github.com/ONLYOFFICE/DocumentServer/releases)或联系支持团队。
 :::
+
+在[此处](https://github.com/ONLYOFFICE/onlyoffice-odoo)下载Odoo的ONLYOFFICE应用程序。
