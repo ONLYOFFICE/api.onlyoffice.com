@@ -10,10 +10,10 @@ The DocSpace JavaScript SDK provides several initialization modes, each producin
 
 | Mode | SDK method | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
 | ------ | ----------- | ----------------- | ------ | -------- | ------ | ------ |
-| Manager | `initManager()` | Full file and room manager | Yes | Yes | No | Yes |
 | Frame | `initFrame()` | Full file and room manager | Yes | Yes | No | Yes |
-| Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
+| Manager | `initManager()` | Full file and room manager | Yes | Yes | No | Yes |
 | Viewer | `initViewer()` | Read-only document preview | No | No | Yes (file) | Yes |
+| Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
 | Room selector | `initRoomSelector()` | Room picker dialog | Rooms only | No | No | Yes |
 | File selector | `initFileSelector()` | File picker dialog | Yes | No | No | Yes |
 | System | `initSystem()` | None (blank/hidden frame) | NA | NA | NA | Yes |
@@ -115,7 +115,8 @@ const docSpace = DocSpace.SDK.initFileSelector({
   withSearch: true,
   events: {
     onSelectCallback: function (file) {},
-}});
+}
+});
 ```
 
 **Typical use cases:** Helpdesk systems, email clients with DocSpace file attachment, etc.
