@@ -30,8 +30,9 @@ Removes all drawing objects (shapes, charts, images) from every page of the PDF 
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument), GetPagesCount, GetPage, GetAllDrawings, Delete
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), GetPagesCount, GetPage, GetAllDrawings, Delete
 
 ## Result
 
-![Remove All Drawings](/assets/images/plugins/remove-all-drawings.png#gh-light-mode-only)![Remove All Drawings](/assets/images/plugins/remove-all-drawings.dark.png#gh-dark-mode-only)
+![Remove All Drawings](/assets/images/plugins/remove-all-drawings.png#gh-light-mode-only)
+![Remove All Drawings](/assets/images/plugins/remove-all-drawings.dark.png#gh-dark-mode-only)

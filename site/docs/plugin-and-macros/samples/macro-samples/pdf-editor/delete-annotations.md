@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# Remove all annotations
+# Delete annotations
 
 Iterates through all pages in the PDF document and removes annotations which contain a specified keyword.
 
@@ -36,8 +36,9 @@ Iterates through all pages in the PDF document and removes annotations which con
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument), GetPagesCount, GetPage, GetAllAnnots, Delete
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), GetPagesCount, GetPage, GetAllAnnots, Delete
 
 ## Result
 
-![Export All Annotations](/assets/images/plugins/delete-annotations.png#gh-light-mode-only)![Export All Annotations](/assets/images/plugins/delete-annotations.dark.png#gh-dark-mode-only)
+![Delete Annotations](/assets/images/plugins/delete-annotations.png#gh-light-mode-only)
+![Delete Annotations](/assets/images/plugins/delete-annotations.dark.png#gh-dark-mode-only)
