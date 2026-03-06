@@ -43,7 +43,7 @@ Please note that if you have the previous plugin version installed (earlier plug
 
 To configure the plugin, go to **Site Setup**. Scroll down to **Add-ons Configuration** section and click the **ONLYOFFICE Configuration** button.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Developing Plone ONLYOFFICE plugin
 

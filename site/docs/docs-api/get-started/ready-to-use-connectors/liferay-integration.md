@@ -33,7 +33,7 @@ Either install it from [Liferay Marketplace](https://web.liferay.com/marketplace
 
 To configure the app, navigate to **Control Panel -> Configuration -> System Settings**. In the **Platform** section, click the **Connectors** category and select **ONLYOFFICE**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Compiling ONLYOFFICE app for Liferay
 
