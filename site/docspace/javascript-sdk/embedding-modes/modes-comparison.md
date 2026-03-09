@@ -16,7 +16,7 @@ The DocSpace JavaScript SDK provides several initialization modes, each producin
 | Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
 | Room selector | `initRoomSelector()` | Room picker dialog | Rooms only | No | No | Yes |
 | File selector | `initFileSelector()` | File picker dialog | Yes | No | No | Yes |
-| System | `initSystem()` | None (blank/hidden frame) | NA | NA | NA | Yes |
+| System | `initSystem()` | None (blank/hidden frame) | N/A | N/A | N/A | Yes |
 
 ## Mode descriptions
 
@@ -114,12 +114,15 @@ const docSpace = DocSpace.SDK.initFileSelector({
   withBreadCrumbs: true,
   withSearch: true,
   events: {
-    onSelectCallback: function (file) {},
-}
+    onSelectCallback: function (file) {
+
+      //function body
+    },
+  },
 });
 ```
 
-**Typical use cases:** Helpdesk systems, email clients with DocSpace file attachment, etc.
+**Typical use cases:** Helpdesk systems, email clients with DocSpace file attachments, etc.
 
 ---
 
