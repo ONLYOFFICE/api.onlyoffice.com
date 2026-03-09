@@ -51,7 +51,7 @@ To install the package, run:
 npm install @onlyoffice/docspace-sdk-js
 ```
 
-Then import and initialize the SDK with using the desired parameters:
+Then import and initialize the SDK using the desired parameters:
 
 ```javascript
 import { SDK } from "@onlyoffice/docspace-sdk-js";
@@ -66,7 +66,7 @@ const docSpace = sdk.initManager({
 });
 ```
 
-> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Checkout the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
+> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
 
 ## Configuration parameters
 
@@ -80,7 +80,7 @@ const docSpace = sdk.initManager({
 ### Layout
 
 | Parameter | Type | Default | Description |
-| -----------| ------ | --------- | ------------- |
+| ----------- | ------ | --------- | ------------- |
 | `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
 | `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
 
@@ -112,7 +112,7 @@ const docSpace = sdk.initManager({
 ### Filtering
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| ----------- | ------ | ------------- |
 | `filter.count` | string | Number of items per page. |
 | `filter.sortBy` | `FilterSortBy` | Sort field. Accepted values: `FilterSortBy.Name`, `FilterSortBy.Size`, `FilterSortBy.DateAndTime`, `FilterSortBy.Author`, `FilterSortBy.Type`. |
 | `filter.sortOrder` | `FilterSortOrder` | Sort direction. Accepted values: `FilterSortOrder.Ascending`, `FilterSortOrder.Descending`. |
@@ -122,14 +122,14 @@ const docSpace = sdk.initManager({
 ### Authentication and access
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| ----------- | ------ | ------------- |
 | `requestToken` | string | Token for accessing public rooms or files without a full login session. |
 | `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
 
 ### Lifecycle
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| ----------- | ------ | ------------- |
 | `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
 | `downloadToEvent` | boolean | Switches download operations to fire the `onDownload` event instead of triggering a direct browser download. |
 
@@ -149,7 +149,7 @@ const docSpace = DocSpace.SDK.initManager({
 ```
 
 | Event | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `onAppReady` | Fires when the SDK frame has finished initializing and is ready for interaction. |
 | `onContentReady` | Fires when the content inside the frame has fully loaded. |
 | `onAuthSuccess` | Fires when a user successfully authenticates. |
@@ -171,7 +171,7 @@ const frame = DocSpace.SDK.frames["ds-frame"];
 The following methods are available on a manager instance:
 
 | Method | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `getConfig()` | Returns the current configuration object for this frame. |
 | `setConfig(config)` | Updates the configuration of this frame. |
 | `getList()` | Returns information about all files and folders currently visible in the frame. |
