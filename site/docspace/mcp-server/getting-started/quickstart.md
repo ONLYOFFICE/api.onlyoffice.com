@@ -16,7 +16,7 @@ This guide will help you achieve the following:
 
 ### Step 1: Connect to MCP client 
 
-[MCP clients](clients.md) like ChatGPT, Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and [connects to a local mcp server](installation.md#install-with-docker-image). You can also [access via a remote server](installation.md#public-instance). 
+[MCP clients](clients.md) like ChatGPT, Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace workspace and tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and [connects to a local mcp server](installation.md#install-with-docker-image). You can also [access via a remote server](installation.md#public-instance). 
 
 :::note
 Ensure Docker is installed on your system.
@@ -28,7 +28,7 @@ To connect Claude Desktop to your local mcp server:
 2. Navigate to **Settings**
 3. Navigate to **Developer**
 4. Click **Edit config**
-5. Open the configuration file in a text editor
+5. Open the configuration file (`config.json`) in a text editor
 6. Add a new record to the `mcpServers` section:
    ```json
    {
@@ -58,11 +58,15 @@ WHERE:
 - `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
 - `DOCSPACE_API_KEY` - your personal API key generated in DocSpace **Settings** -> **Developer Tools** -> **API keys**.
 
-7. Save the file and close Claude Desktop.
+7. Save the file and quit Claude Desktop. 
+
+:::note
+It's important to quit and not just close the Claude desktop window as quitting and restarting the app reloads the `config.json` configuration with the new `mcpServer` entry
+:::
 
 ### Step 2: Confirm the connection
 
-1. Reopen Claude Desktop
+1. Open Claude Desktop. 
 2. Click **+** > **Connectors** on the chat bar
 
     Our newly configured mcp server (**onlyoffice-docspace**) is now enabled. 
@@ -138,4 +142,4 @@ Now we have our connection, let us interact with DocSpace via Claude:
 ## Next steps
 
 - [Discover other ways to connect to DocSpace MCP server](installation.md)
-- [Learn how to connect other mcp clients to our DocSpace MCP server](clients.md)
+- Learn how to explore this connection for tasks like [onboarding team members](../tutorials/onboarding.md), [managing projects](../tutorials/setup-project-room.md), and effectively [archiving projects after completion.](../tutorials/project-archival.md)

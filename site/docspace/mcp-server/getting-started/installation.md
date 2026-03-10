@@ -9,19 +9,21 @@ import TabItem from '@theme/TabItem';
 
 Before interacting and building with the DocSpace MCP server, you need to access this server. DocSpace offers two ways to do this:
 
-- [Access server via a local machine](#installing-on-your-local-machine)
-- [Access via a remote server](#accessing-via-a-remote-server)
+- [Access via a local machine](#access-via-a-local-docspace-mcp-server)
+- [Access via a remote server](#access-via-the-remote-docspace-mcp-server)
 
 This page provides a step by step approach to installing the MCP server using these methods.
 
 ## Before you start
 
-- Ensure you have a DocSpace Instance. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to access your instance and get an API key
-- Choose your desired client. You can build a custom client or [choose from the different MCP clients](clients.md) available based on your integration, features, user interface, or security needs. 
+- Ensure you have a DocSpace Instance. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to access your instance and get an API key.
+- Choose your desired client. You can build a custom client or [choose from the different MCP clients](clients.md) available based on your integration, features, user interface, or security needs.
 
 <Tabs>
   <TabItem value="local machine" label="Install on local machine" default>
-    
+  
+## Access via a local DocSpace MCP server
+  
 You can configure your local machine to interact with the DocSpace MCP server using:
 
 - [Docker image](#install-with-docker-image)
@@ -34,7 +36,7 @@ Before proceeding, ensure to set these environment variables:
 - `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
 - `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> **Developer Tools** -> **API keys.**
 
-## Install with Docker image
+### Install with Docker image
 
 1. [Follow these steps](../distribution/docker-hub.md) to pull the latest DocSpace MCP server from Docker Hub
 2. Locate your MCP client `.json` config file. The location of this file depends on the specific client.
@@ -69,7 +71,7 @@ Insert the following block into the `mcpServers` section of your `.json` configu
 | `onlyoffice/docspace-mcp` | Docker image name to run|
 
 
-## Install with Docker MCP Server
+### Install with Docker MCP Server
 
 Using the [Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) requires [Docker Desktop](https://docs.docker.com/desktop/) to be installed on your
 system and the Docker MCP Toolkit to be enabled. 
@@ -90,15 +92,13 @@ The Docker MCP toolkit is currently a beta feature and is only available to spec
     - Enter your personal API key
     - Save the configuration
 
-## Install with MCP Bundle
+### Install with MCP Bundle
 
-Running the MCP bundle requires [Node.js] version 18 or higher to be installed
-on your system.
+Running the MCP bundle requires [Node.js](https://nodejs.org/en/download) version 18 or higher to be installed on your system.
 
-1. Download the latest MCP bundle from [GitHub Releases] (typically named `docspace-mcp-bundle-x.x.x.zip` or similar).
+1. Download the latest MCP bundle from [GitHub Releases](../distribution/github-releases.md) (typically named `docspace-mcp-bundle-x.x.x.zip` or similar).
 
-2. Install the MCP bundle in an application by following the application's MCP
-   bundles installation procedure.
+2. Install the MCP bundle in an application by following the application's MCP bundles installation procedure.
 
 3. Configure the server through the application's interface. In general:
 
@@ -107,11 +107,10 @@ on your system.
     - Enter your personal API key 
     - Save the configuration and restart the application if required
 
-## Install via Node.js Application
+### Install via Node.js Application
 
 :::note
-Running the Node.js application requires [Node.js] version 18 or higher to be
-installed on your system.
+Running the Node.js application requires Node.js version 18 or higher to be installed on your system.
 :::
 
 Configure your MCP client to use the Node.js application by adding the following
@@ -143,6 +142,8 @@ configuration to your client's configuration file:
 </TabItem>
 <TabItem value="remote server" label="Access via remote server">
 
+## Access via the remote DocSpace MCP server
+
 Another way to use the DocSpace MCP server is to access it via a public DocSpace MCP Server instance hosted by ONLYOFFICE. This eliminates the need to run your own server infrastructure while providing access to DocSpace functionality through your AI assistant. To do this, provide the DocSpace MCP server public instance URL when [connecting to any of the MCP clients](clients.md). 
 
 ## Public Instance
@@ -160,9 +161,9 @@ The public instance provides access to all available tools by default. Tool sele
 
 The public instance provides access to all available DocSpace tools by default. Tool selection can be customized using the following options:
 
-- **MCP Client Interface**:  (Preferred) Most MCP clients provide a built-in interface for enabling or disabling specific tools. Use this method when your client supports it.
+- **MCP Client Interface**:  (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/tools.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
 
-- **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can customize tool availability by passing parameters in the connection URL or via custom HTTP headers.
+- **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can [customize tool availability by passing parameters in the connection URL or via custom HTTP headers](../reference/configuration/request-configuration.md#enabled_tools).
 
 ## Authenticating the remote mcp server-client connection
 
