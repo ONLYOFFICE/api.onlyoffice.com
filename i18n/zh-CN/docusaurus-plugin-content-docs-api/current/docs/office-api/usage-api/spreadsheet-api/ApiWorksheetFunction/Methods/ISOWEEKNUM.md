@@ -1,0 +1,39 @@
+# ISOWEEKNUM
+
+返回给定日期在年份中的 ISO 周数。
+
+## 语法
+
+```javascript
+expression.ISOWEEKNUM(arg1);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 用于日期和时间计算的日期时间代码。 |
+
+## 返回值
+
+number
+
+## 示例
+
+此示例演示如何返回给定日期在一年中的 ISO 周数。
+
+```javascript editor-xlsx
+// How to get the ISO week number.
+
+// Use a function to get an ISO week number in the year.
+
+const worksheet = Api.GetActiveSheet();
+
+let func = Api.WorksheetFunction;
+let ans = func.ISOWEEKNUM("9/1/2017"); 
+
+worksheet.GetRange("C1").SetValue(ans);
+
+```

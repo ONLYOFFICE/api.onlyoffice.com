@@ -1,0 +1,38 @@
+# AddOption
+
+向列表选项添加新选项。
+
+## 语法
+
+```javascript
+expression.AddOption(option, nPos);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| option | 必需 | [ListOption](../../Enumeration/ListOption.md) |  | 要添加的列表选项 |
+| nPos | 可选 | number | this.GetOptions().lenght | 添加选项的位置 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+This example adds new options to field with list of options.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
+page.AddObject(comboboxField);
+
+comboboxField.AddOption('Option 1');
+comboboxField.AddOption('Option 2');
+comboboxField.AddOption('Option 3');
+comboboxField.SetValueIndexes([0]);
+```

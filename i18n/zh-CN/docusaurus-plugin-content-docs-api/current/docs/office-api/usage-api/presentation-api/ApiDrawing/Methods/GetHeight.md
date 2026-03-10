@@ -1,0 +1,45 @@
+# GetHeight
+
+返回当前绘图的高度。
+
+## 语法
+
+```javascript
+expression.GetHeight();
+```
+
+`expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[EMU](../../Enumeration/EMU.md)
+
+## 示例
+
+此示例获取形状的高度并将其插入演示文稿。
+
+```javascript editor-pptx
+// How to find a shape's height and display it on the slide.
+
+// Get a slide shape's height.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const height = shape.GetHeight();
+const docContent = shape.GetDocContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText("Drawing height: " + height);
+slide.AddObject(shape);
+
+```

@@ -1,0 +1,51 @@
+# GetQuoteText
+
+返回当前批注的引用文本。
+
+## 语法
+
+```javascript
+expression.GetQuoteText();
+```
+
+`expression` - 表示 [ApiComment](../ApiComment.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+Number
+
+## 示例
+
+此示例获取批注的引用文本。
+
+```javascript editor-pptx
+// How to retrieve a quote text from a comment.
+
+// Get all comments from the presentation and the first one's quote text.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const posX = 15 * 36000;
+const posY = 35 * 36000;
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(posX, posY);
+slide.AddObject(shape);
+
+slide.AddComment(posX, posY, "Comment 1", "John Smith");
+const arrComments = presentation.GetAllComments();
+const quoteText = arrComments[0].GetQuoteText();
+
+const docContent = shape.GetDocContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText("Comment's quote text: " + quoteText);
+
+```

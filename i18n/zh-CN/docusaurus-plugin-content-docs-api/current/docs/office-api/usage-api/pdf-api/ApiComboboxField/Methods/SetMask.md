@@ -1,0 +1,36 @@
+# SetMask
+
+设置字段的掩码。
+
+## 语法
+
+```javascript
+expression.SetMask(sMask);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sMask | 必需 | string |  | 字段掩码（例如 "(999)999-9999"） |
+
+## 返回值
+
+boolean
+
+## 示例
+
+This example gets text field and sets mask for entered text for it.
+
+```javascript editor-pdf
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
+page.AddObject(comboboxField);
+
+comboboxField.SetMask("(999)999-9999");
+comboboxField.SetValue("(123)456-7890");
+
+```

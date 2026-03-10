@@ -1,0 +1,39 @@
+# GetClassType
+
+返回 ApiPictureForm 类的类型。
+
+## 语法
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"pictureForm"
+
+## 示例
+
+此示例获取类类型并将其插入到文档中。
+
+```javascript editor-docx
+// How to get a class type of ApiPictureForm.
+
+// Retrieve class type of ApiPictureForm object and insert it to the document.
+
+let doc = Api.GetDocument();
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+let paragraph = doc.GetElement(0);
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let classType = pictureForm.GetClassType();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Class type: " + classType);
+doc.Push(paragraph);
+```
