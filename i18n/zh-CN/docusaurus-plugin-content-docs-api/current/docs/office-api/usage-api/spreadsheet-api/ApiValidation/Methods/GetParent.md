@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-This example gets the parent range of the validation.
+此示例获取验证的父范围。
 
 ```javascript editor-xlsx
 // How to retrieve the validation parent range.

@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example shows how to move the cursor to the end of the document.
+此示例展示如何将光标移动到文档末尾。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

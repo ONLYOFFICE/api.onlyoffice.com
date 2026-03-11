@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example sets field required.
+此示例设置字段为必填。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

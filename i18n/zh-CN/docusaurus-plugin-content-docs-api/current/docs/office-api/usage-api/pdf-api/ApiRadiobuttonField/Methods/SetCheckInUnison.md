@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets radiobutton field check in unison property.
+此示例设置单选按钮字段的统一选中属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

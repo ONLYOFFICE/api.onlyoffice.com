@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets whether the error message is displayed.
+此示例获取是否显示错误消息。
 
 ```javascript editor-xlsx
 // How to check if validation shows an error message.

@@ -24,7 +24,7 @@ expression.AddPage(nPos, nWidth, nHeight);
 
 ## 示例
 
-This example adds new page into document after 0 index page.
+此示例在索引为 0 的页面之后向文档添加新页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

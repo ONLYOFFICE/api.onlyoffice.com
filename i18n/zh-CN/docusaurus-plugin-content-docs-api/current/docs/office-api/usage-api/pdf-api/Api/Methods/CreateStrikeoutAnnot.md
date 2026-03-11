@@ -22,7 +22,7 @@ expression.CreateStrikeoutAnnot(rect);
 
 ## 示例
 
-How to strikeout a text on a page.
+如何在页面上为文本添加删除线。
 
 ```javascript editor-pdf
 // Ho to create strikeout annotation

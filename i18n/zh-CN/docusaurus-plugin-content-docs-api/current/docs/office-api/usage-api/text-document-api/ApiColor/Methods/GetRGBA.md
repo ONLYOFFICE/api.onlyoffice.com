@@ -20,7 +20,7 @@ Object
 
 ## 示例
 
-This example shows how to get the RGBA components of the color.
+此示例展示如何获取颜色的 RGBA 分量。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

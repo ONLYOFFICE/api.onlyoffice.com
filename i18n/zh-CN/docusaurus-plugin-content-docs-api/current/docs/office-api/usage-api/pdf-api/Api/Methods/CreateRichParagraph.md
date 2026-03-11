@@ -20,7 +20,7 @@ expression.CreateRichParagraph();
 
 ## 示例
 
-How to create a new rich paragraph and add it to rich content
+如何创建新的富文本段落并将其添加到富文本内容
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

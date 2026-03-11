@@ -20,7 +20,7 @@ expression.GetSlideShowTransition();
 
 ## 示例
 
-This example gets the slide show transition from a slide.
+此示例从幻灯片获取幻灯片放映过渡效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

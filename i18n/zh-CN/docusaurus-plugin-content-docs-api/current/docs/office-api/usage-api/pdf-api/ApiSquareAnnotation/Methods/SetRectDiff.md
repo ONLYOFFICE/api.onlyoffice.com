@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets rect diff to square annotation.
+此示例为方形注释设置矩形差异。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

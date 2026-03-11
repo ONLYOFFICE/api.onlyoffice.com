@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-How to get a class type of ApiTableCell.
+如何获取 ApiTableCell 的类类型。
 
 ```javascript editor-pdf
 // Retrieve class type of ApiTableCell object and insert it to the page.

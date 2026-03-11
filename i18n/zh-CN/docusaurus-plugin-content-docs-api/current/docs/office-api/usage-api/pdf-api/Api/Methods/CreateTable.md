@@ -23,7 +23,7 @@ expression.CreateTable(nCols, nRows);
 
 ## 示例
 
-How to create new table with two rows and four columns.
+如何创建包含两行四列的新表格。
 
 ```javascript editor-pdf
 // Add a table to the pdf document.

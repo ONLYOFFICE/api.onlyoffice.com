@@ -20,7 +20,7 @@ expression.GetBorderStyle();
 
 ## 示例
 
-This example gets field widgets border style and displays it.
+此示例获取字段控件的边框样式并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

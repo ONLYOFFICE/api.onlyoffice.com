@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example returns the name of the current drawing.
+此示例返回当前绘图的名称。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

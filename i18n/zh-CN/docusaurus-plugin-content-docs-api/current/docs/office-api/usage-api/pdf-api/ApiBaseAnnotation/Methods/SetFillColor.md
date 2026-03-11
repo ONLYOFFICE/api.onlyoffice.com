@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example creates a square annotation and sets red fill color to it.
+此示例创建方形注释并为其设置红色填充颜色。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

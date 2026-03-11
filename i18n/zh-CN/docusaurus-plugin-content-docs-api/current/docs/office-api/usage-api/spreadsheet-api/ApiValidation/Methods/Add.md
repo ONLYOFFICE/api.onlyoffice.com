@@ -26,7 +26,7 @@ expression.Add(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## 示例
 
-This example adds a data validation rule to a range of cells.
+此示例向单元格范围添加数据验证规则。
 
 ```javascript editor-xlsx
 // How to apply data validation to a range of cells.

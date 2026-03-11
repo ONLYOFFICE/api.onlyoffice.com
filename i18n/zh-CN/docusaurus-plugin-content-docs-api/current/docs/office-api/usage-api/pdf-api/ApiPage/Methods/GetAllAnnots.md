@@ -20,7 +20,7 @@ expression.GetAllAnnots();
 
 ## 示例
 
-This example gets all annots from page.
+此示例从页面获取所有注释。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

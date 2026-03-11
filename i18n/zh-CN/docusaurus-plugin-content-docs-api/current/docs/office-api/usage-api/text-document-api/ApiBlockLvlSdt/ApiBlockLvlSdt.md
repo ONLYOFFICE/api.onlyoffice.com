@@ -19,8 +19,8 @@
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | 返回当前内容控件中的段落对象集合。 |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回给定绝对页面上的表格集合。💡 此方法可能会有点慢，因为它会运行文档计算过程来排列指定页面上的表格。 |
 | [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | 获取内容控件的可视化效果。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | null \| Object | 返回当前内容控件的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | null \| Object | 返回当前内容控件的边框颜色。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前内容控件的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 返回当前内容控件的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | 返回 ApiBlockLvlSdt 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回当前容器的内容。 |
 | [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | 检索内容控件的数据绑定。 |
@@ -46,7 +46,6 @@
 | [Select](./Methods/Select.md) | boolean | 选择当前内容控件。 |
 | [SetAlias](./Methods/SetAlias.md) | boolean | 设置当前容器的别名属性。 |
 | [SetAppearance](./Methods/SetAppearance.md) | 无 | 设置内容控件的可视化效果。 |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置当前内容控件的背景颜色。 |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | 设置当前内容控件的边框颜色。 |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | 设置内容控件的数据绑定。 |
 | [SetId](./Methods/SetId.md) | 无 | 指定当前内容控件的唯一 ID。 |

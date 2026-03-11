@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets vertices to polyline annotation.
+此示例为折线注释设置顶点。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

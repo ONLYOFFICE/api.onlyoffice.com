@@ -20,7 +20,7 @@ expression.GetSelectionQuads();
 
 ## 示例
 
-This example gets the selection quads on the page and highlights it.
+此示例获取页面上的选择四边形并高亮显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

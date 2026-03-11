@@ -14,7 +14,7 @@ expression.CreateGradientStop(color, pos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | ApiColor |  | 用于渐变光圈的颜色。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 用于渐变光圈的颜色。 |
 | pos | 必需 | [PositivePercentage](../../Enumeration/PositivePercentage.md) |  | 以千分之一百分比度量的渐变光圈位置。 |
 
 ## 返回值

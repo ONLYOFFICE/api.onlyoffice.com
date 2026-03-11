@@ -23,7 +23,7 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-This example applies small caps formatting to paragraph text.
+此示例对段落文本应用小型大写字母格式。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

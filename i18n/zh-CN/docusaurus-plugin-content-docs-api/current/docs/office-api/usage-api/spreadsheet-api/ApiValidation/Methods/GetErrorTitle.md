@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets the error message title.
+此示例获取错误消息标题。
 
 ```javascript editor-xlsx
 // How to retrieve the validation error title.

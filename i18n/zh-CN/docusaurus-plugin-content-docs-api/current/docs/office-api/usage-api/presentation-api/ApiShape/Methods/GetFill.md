@@ -20,7 +20,7 @@ expression.GetFill();
 
 ## 示例
 
-Gets the fill properties from a shape and displays detailed information.
+从形状获取填充属性并显示详细信息。
 
 ```javascript editor-pptx
 // Creates a shape with gradient fill, retrieves it and shows fill details.

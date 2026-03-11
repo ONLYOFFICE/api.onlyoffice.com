@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to change a style of a chart.
+如何更改图表样式。
 
 ```javascript editor-pdf
 // Update chart style.

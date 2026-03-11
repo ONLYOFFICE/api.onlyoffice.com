@@ -20,7 +20,7 @@ expression.GetStartPoint();
 
 ## 示例
 
-This example gets start point of line annotation.
+此示例获取线条注释的起点。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

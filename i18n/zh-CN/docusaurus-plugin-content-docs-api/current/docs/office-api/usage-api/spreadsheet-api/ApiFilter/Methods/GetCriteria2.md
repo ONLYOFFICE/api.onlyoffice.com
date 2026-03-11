@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-This example reads the second criteria of a filter.
+此示例读取筛选的第二个条件。
 
 ```javascript editor-xlsx
 // How to inspect the additional condition of an AutoFilter column.

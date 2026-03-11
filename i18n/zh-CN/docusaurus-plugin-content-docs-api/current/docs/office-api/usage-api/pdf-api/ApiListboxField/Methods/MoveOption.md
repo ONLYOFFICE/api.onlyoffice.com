@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example moves option in field with list of options.
+此示例在带有选项列表的字段中移动选项。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

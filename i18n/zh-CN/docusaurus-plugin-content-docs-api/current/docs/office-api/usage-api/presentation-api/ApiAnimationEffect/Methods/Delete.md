@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example deletes an animation effect.
+此示例删除动画效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

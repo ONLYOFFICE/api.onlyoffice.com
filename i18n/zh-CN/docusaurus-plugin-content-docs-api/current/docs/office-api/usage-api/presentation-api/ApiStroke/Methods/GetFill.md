@@ -20,7 +20,7 @@ expression.GetFill();
 
 ## 示例
 
-Gets the fill color of a stroke.
+获取描边的填充颜色。
 
 ```javascript editor-pptx
 // Creates a shape with a colored border and retrieves its fill properties.

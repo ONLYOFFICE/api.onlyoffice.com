@@ -20,7 +20,7 @@ expression.GetBorderColor();
 
 ## 示例
 
-This example gets field widget and displays it's border color.
+此示例获取字段控件并显示其边框颜色。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

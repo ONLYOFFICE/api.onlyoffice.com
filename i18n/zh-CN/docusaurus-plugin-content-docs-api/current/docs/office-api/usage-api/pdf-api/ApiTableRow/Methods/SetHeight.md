@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set a height of the row.
+如何设置行高。
 
 ```javascript editor-pdf
 // Create a table and change its rows height.

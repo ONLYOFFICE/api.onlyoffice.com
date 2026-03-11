@@ -20,7 +20,7 @@ expression.GetFormatConditions();
 
 ## 示例
 
-This example shows how to get the format conditions collection for a range.
+此示例展示如何获取范围的格式条件集合。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

@@ -20,7 +20,7 @@ expression.GetIntent();
 
 ## 示例
 
-This example gets intent of freeText annotation.
+此示例获取自由文本注释的意图。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

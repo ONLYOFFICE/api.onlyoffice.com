@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-This example sets the transition speed to 'slow'.
+此示例将过渡速度设置为'慢速'。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

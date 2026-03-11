@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to delete a chart seria indicating its index.
+如何通过索引删除图表系列。
 
 ```javascript editor-pdf
 // Create a chart then delete a seria from it.

@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets field partial name and displays it.
+此示例获取字段部分名称并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

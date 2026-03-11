@@ -20,7 +20,7 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-This example shows how to get all paragraphs from the document content of a shape.
+此示例展示如何从形状的文档内容中获取所有段落。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

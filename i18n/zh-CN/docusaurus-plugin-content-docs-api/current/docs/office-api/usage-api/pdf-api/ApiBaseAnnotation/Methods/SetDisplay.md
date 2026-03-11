@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example creates a square annotation and sets display to it.
+此示例创建方形注释并为其设置显示属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

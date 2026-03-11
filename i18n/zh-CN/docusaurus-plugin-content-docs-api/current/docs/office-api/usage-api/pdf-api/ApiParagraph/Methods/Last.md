@@ -20,7 +20,7 @@ expression.Last();
 
 ## 示例
 
-This example shows how to get the last element of the paragraph.
+此示例展示如何获取段落的最后一个元素。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

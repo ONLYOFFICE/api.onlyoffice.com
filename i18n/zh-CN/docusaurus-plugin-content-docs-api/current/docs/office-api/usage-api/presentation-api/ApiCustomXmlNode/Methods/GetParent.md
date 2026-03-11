@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-This example shows how to get the parent of a custom XML node.
+此示例展示如何获取自定义 XML 节点的父节点。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

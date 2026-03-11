@@ -20,7 +20,7 @@ expression.RecognizeContent();
 
 ## 示例
 
-How to recognize content on a page.
+如何识别页面上的内容。
 
 ```javascript editor-pdf
 // Get recognized drawing on a page and select it.

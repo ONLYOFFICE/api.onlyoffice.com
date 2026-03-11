@@ -22,7 +22,7 @@ expression.SetColor(color);
 
 ## 示例
 
-This example sets the text color to the text Range.
+此示例为文本范围设置文本颜色。
 
 ```javascript editor-docx
 // How to color the text of the range.

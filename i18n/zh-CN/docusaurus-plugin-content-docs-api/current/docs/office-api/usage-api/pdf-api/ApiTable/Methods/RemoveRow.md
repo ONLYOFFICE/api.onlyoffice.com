@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to delete a row from the table.
+如何从表格删除行。
 
 ```javascript editor-pdf
 // Create a table, create cells and remove the whole row by its cell.

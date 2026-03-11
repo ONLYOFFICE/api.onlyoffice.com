@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the internal ID of a document content.
+此示例展示如何获取文档内容的内部 ID。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

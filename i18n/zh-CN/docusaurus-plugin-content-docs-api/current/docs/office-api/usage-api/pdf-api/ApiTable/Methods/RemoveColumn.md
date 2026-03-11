@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to delete a column from the table.
+如何从表格删除列。
 
 ```javascript editor-pdf
 // Create a table, create cells and remove the whole column by its cell.

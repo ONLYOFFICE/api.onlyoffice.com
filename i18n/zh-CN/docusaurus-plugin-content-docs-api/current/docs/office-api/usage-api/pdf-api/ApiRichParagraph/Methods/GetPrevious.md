@@ -20,7 +20,7 @@ expression.GetPrevious();
 
 ## 示例
 
-This example gets previous rich paragraph and adds some text to it.
+此示例获取上一个富文本段落并向其添加一些文本。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

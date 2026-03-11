@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example removes the widget from parent field.
+此示例从父字段中删除控件。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

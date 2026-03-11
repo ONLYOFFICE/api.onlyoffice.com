@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set a background color for the plot area.
+如何为绑定区域设置背景颜色。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its plot area color.

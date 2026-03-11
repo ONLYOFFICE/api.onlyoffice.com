@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets rotate for first page in document.
+此示例为文档中的第一页设置旋转。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

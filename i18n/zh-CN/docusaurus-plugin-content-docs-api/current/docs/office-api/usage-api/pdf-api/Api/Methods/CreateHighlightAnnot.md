@@ -22,7 +22,7 @@ expression.CreateHighlightAnnot(rect);
 
 ## 示例
 
-This example creates a highlight annotation and adds it to the page.
+此示例创建高亮注释并将其添加到页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

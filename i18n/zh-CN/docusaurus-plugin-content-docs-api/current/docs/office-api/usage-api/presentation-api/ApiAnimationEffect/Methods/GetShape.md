@@ -20,7 +20,7 @@ expression.GetShape();
 
 ## 示例
 
-This example gets the shape associated with an animation effect.
+此示例获取与动画效果关联的形状。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

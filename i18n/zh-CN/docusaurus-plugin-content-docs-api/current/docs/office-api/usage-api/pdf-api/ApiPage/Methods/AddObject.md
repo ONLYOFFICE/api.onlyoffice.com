@@ -22,7 +22,7 @@ expression.AddObject(object);
 
 ## 示例
 
-This example adds an object (image, shape or chart) to the current pdf page.
+此示例向当前 PDF 页面添加对象（图像、形状或图表）。
 
 ```javascript editor-pdf
 // How to add an element to the page.

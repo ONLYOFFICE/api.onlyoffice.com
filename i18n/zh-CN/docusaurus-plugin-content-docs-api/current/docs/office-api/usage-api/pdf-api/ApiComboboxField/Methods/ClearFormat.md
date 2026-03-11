@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets text field and sets number format for it and then clear format.
+此示例获取文本字段并为其设置数字格式，然后清除格式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

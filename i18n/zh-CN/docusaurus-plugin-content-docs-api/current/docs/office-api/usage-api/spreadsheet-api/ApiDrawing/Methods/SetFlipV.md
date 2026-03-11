@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to flip the drawing vertically.
+此示例展示如何垂直翻转绘图。
 
 ```javascript editor-xlsx
 // How to set the vertical flip property of the shape.

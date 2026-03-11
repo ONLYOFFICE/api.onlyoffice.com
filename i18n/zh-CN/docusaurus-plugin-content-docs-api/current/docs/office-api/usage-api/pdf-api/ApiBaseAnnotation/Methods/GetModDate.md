@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example creates a square annotation and gets its mod date.
+此示例创建方形注释并获取其修改日期。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

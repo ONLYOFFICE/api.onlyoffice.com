@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to set the cell left margin for the current table cell.
+如何为当前表格单元格设置左边距。
 
 ```javascript editor-pdf
 // Specify the left margin value for the ApiTableCell object.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets field widgets border width.
+此示例设置字段控件的边框宽度。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

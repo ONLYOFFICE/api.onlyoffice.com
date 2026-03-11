@@ -20,7 +20,7 @@ expression.CreateRichParaPr();
 
 ## 示例
 
-How to create a paragraph properties and set it for rich paragraph.
+如何创建段落属性并将其设置为富文本段落。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

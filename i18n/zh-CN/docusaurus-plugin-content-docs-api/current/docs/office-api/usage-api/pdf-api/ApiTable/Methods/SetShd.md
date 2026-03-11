@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to add a shading to the table background.
+如何为表格背景添加底纹。
 
 ```javascript editor-pdf
 // Create a table, set its shading color and add it to the page.

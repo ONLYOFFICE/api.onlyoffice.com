@@ -20,7 +20,7 @@ expression.GetSelectedDrawings();
 
 ## 示例
 
-This example shows how to get selected drawings from the sheet.
+此示例展示如何从工作表中获取选中的绘图对象。
 
 ```javascript editor-xlsx
 // How to get seletectd drawings.

@@ -20,7 +20,7 @@ expression.GetGeometry();
 
 ## 示例
 
-Displays preset type and custom status in a text shape.
+在文本形状中显示预设类型和自定义状态。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

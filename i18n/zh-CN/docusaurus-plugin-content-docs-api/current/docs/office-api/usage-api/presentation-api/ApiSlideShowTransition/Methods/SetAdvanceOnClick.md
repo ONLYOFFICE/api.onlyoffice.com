@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example enables advancing to the next slide on mouse click.
+此示例启用鼠标单击时前进到下一张幻灯片。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

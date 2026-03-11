@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example shows how to insert a blank page at the current cursor position.
+此示例展示如何在当前光标位置插入空白页。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

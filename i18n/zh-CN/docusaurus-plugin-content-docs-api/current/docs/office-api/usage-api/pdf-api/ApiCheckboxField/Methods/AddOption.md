@@ -24,7 +24,7 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 ## 示例
 
-This example adds an option for checkbox field group.
+此示例为复选框字段组添加选项。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

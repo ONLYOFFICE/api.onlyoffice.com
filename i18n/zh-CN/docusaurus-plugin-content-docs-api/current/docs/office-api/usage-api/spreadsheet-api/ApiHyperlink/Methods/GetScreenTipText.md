@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the screen tip text of a hyperlink inside a shape.
+此示例展示如何获取形状内超链接的屏幕提示文本。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example adds a new element to rich content.
+此示例向富文本内容添加新元素。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

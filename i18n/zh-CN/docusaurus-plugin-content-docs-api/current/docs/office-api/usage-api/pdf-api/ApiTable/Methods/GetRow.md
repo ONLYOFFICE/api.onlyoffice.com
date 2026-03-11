@@ -22,7 +22,7 @@ expression.GetRow(nIndex);
 
 ## 示例
 
-How to get a row object from the table.
+如何从表格获取行对象。
 
 ```javascript editor-pdf
 // Create a table, add rows and columns, then get its row by index.

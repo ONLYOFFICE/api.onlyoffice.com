@@ -22,7 +22,7 @@ expression.GetPath(nIndex);
 
 ## 示例
 
-Analyzes cloud shape path properties on a page.
+分析页面上云形状的路径属性。
 
 ```javascript editor-pdf
 // Displays comprehensive path information in a text shape.

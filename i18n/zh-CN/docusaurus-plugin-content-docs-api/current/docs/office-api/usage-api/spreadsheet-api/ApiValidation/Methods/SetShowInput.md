@@ -22,7 +22,7 @@ expression.SetShowInput(ShowInput);
 
 ## 示例
 
-This example sets whether the input message is displayed.
+此示例设置是否显示输入消息。
 
 ```javascript editor-xlsx
 // How to show or hide the validation input message.

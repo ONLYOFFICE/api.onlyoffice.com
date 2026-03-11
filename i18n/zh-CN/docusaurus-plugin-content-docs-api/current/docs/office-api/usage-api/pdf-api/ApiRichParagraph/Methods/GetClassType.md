@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets class type of rich paragraph.
+此示例获取富文本段落的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -20,7 +20,7 @@ expression.GetValidation();
 
 ## 示例
 
-This example shows how to get the validation object for a range.
+此示例展示如何获取范围的验证对象。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

@@ -20,7 +20,7 @@ expression.GetThemeName();
 
 ## 示例
 
-This example shows how to get the theme color name of an ApiColor object.
+此示例展示如何获取 ApiColor 对象的主题颜色名称。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

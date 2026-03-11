@@ -23,7 +23,7 @@ expression.AddWidget(nPage, aRect);
 
 ## 示例
 
-This example adds new widget - visual representation for field
+此示例添加新的控件 - 字段的可视化表示
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

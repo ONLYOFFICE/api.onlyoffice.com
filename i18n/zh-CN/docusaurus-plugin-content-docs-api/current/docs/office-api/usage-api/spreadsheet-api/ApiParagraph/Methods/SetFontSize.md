@@ -22,7 +22,7 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-This example shows how to set the font size for all text in a paragraph inside a shape.
+此示例展示如何为形状内段落中的所有文本设置字体大小。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

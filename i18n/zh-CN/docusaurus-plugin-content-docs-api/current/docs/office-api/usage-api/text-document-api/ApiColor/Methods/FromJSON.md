@@ -22,7 +22,7 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-This example shows how to restore ApiColor objects of different types from JSON.
+此示例展示如何从 JSON 恢复不同类型的 ApiColor 对象。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

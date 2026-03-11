@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets the first formula in data validation.
+此示例获取数据验证中的第一个公式。
 
 ```javascript editor-xlsx
 // How to retrieve the validation formula.

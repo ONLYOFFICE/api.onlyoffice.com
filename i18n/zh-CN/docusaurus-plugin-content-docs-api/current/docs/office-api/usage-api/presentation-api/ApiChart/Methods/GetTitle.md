@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-This example shows how to get the chart title text.
+此示例展示如何获取图表标题文本。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

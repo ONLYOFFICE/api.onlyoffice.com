@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the formula associated with an icon set condition.
+此示例展示如何获取与图标集条件关联的公式。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

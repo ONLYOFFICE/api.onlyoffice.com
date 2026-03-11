@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets rotate for stamp annotation.
+此示例为图章注释设置旋转角度。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

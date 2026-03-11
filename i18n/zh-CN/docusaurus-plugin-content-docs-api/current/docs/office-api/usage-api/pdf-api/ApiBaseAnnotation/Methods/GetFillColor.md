@@ -20,7 +20,7 @@ expression.GetFillColor();
 
 ## 示例
 
-This example creates a square annotation and gets its fill color.
+此示例创建方形注释并获取其填充颜色。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

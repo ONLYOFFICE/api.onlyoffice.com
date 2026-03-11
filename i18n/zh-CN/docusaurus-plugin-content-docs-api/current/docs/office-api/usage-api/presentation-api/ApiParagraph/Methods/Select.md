@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example selects the current paragraph.
+此示例选择当前段落。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

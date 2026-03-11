@@ -22,7 +22,7 @@ expression.SetColor(color);
 
 ## 示例
 
-This example sets the text color to the current paragraph.
+此示例为当前段落设置文本颜色。
 
 ```javascript editor-docx
 // Color the paragraph text with orange.

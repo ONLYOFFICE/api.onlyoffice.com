@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example creates a square annotation and gets its unique name.
+此示例创建方形注释并获取其唯一名称。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

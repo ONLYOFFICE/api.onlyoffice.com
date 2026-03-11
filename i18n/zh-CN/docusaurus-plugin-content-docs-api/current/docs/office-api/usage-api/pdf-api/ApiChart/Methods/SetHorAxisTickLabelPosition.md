@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to change a position of tick label.
+如何更改刻度标签的位置。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its horizontal axis tick label position.

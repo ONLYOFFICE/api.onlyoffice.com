@@ -22,7 +22,7 @@ expression.GetEffect(index);
 
 ## 示例
 
-This example gets an effect at a specified index from an animation sequence.
+此示例从动画序列中获取指定索引处的效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

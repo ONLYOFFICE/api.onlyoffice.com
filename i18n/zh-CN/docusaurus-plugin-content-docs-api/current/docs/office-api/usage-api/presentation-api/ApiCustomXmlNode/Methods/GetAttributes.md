@@ -20,7 +20,7 @@ expression.GetAttributes();
 
 ## 示例
 
-This example shows how to retrieve and display the attributes of the current XML node.
+此示例展示如何检索并显示当前 XML 节点的属性。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

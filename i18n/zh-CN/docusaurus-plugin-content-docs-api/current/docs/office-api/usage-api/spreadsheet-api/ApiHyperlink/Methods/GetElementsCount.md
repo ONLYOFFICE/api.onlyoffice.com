@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example shows how to get the number of elements in a hyperlink inside a shape.
+此示例展示如何获取形状内超链接中的元素数量。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

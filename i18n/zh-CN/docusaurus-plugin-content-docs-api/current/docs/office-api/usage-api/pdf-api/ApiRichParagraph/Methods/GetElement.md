@@ -22,7 +22,7 @@ expression.GetElement(pos);
 
 ## 示例
 
-This example gets element from rich paragraph.
+此示例从富文本段落获取元素。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

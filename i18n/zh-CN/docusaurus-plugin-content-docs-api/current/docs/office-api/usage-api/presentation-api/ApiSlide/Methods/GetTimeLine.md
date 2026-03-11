@@ -20,7 +20,7 @@ expression.GetTimeLine();
 
 ## 示例
 
-This example gets the animation timeline from a slide and adds an animation effect.
+此示例从幻灯片获取动画时间线并添加动画效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

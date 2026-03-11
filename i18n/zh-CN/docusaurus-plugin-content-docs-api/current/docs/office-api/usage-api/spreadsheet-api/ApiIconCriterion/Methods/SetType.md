@@ -22,7 +22,7 @@ expression.SetType(type);
 
 ## 示例
 
-This example shows how to set the condition value type for an icon criterion.
+此示例展示如何为图标条件设置条件值类型。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

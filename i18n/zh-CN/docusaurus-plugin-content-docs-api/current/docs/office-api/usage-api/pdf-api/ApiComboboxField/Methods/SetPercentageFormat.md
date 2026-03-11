@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example gets text field and sets percentage format for it.
+此示例获取文本字段并为其设置百分比格式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

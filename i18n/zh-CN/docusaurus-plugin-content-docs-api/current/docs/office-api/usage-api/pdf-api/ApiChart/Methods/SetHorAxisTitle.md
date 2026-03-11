@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-Title the chart's horizontal axis.
+为图表的水平轴添加标题。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and name its horizontal axis.

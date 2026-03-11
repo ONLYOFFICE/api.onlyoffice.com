@@ -20,7 +20,7 @@ expression.GetMainSequence();
 
 ## 示例
 
-This example gets the main animation sequence from a timeline.
+此示例从时间线获取主动画序列。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

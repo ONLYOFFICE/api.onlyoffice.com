@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example selects the text on the page and returns it.
+此示例选择页面上的文本并返回。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

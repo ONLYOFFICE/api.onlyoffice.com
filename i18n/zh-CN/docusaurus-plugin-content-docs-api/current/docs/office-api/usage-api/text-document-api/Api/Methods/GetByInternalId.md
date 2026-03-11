@@ -22,7 +22,7 @@ object
 
 ## 示例
 
-This example shows how to get an object by its internal ID.
+此示例展示如何通过内部 ID 获取对象。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example returns an internal ID of the current document content.
+此示例返回当前文档内容的内部 ID。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

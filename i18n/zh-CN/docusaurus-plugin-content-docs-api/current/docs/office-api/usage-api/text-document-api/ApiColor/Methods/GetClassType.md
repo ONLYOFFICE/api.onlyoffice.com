@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example shows how to get the class type of ApiColor object.
+此示例展示如何获取 ApiColor 对象的类类型。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

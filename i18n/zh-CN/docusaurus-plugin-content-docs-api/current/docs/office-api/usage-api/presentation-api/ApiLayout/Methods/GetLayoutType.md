@@ -20,7 +20,7 @@ expression.GetLayoutType();
 
 ## 示例
 
-This example returns a type of the layout.
+此示例返回布局的类型。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

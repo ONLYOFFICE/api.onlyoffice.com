@@ -24,7 +24,7 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## 示例
 
-How to create an image object using a url and specifying its width and height.
+如何使用 URL 创建图像对象并指定其宽度和高度。
 
 ```javascript editor-pdf
 // Create an image and insert it to the page.

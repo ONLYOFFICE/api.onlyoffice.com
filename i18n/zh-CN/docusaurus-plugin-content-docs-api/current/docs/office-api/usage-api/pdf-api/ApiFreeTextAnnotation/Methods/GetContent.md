@@ -20,7 +20,7 @@ expression.GetContent();
 
 ## 示例
 
-This example gets rich content of freeText annotation.
+此示例获取自由文本注释的富文本内容。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

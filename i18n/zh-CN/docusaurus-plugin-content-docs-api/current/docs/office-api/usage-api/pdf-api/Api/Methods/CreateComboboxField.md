@@ -22,7 +22,7 @@ expression.CreateComboboxField(aRect);
 
 ## 示例
 
-How to create and add a combobox field to document.
+如何创建组合框字段并添加到文档。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

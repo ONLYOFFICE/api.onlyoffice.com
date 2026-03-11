@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets value to text field.
+此示例为文本字段设置值。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

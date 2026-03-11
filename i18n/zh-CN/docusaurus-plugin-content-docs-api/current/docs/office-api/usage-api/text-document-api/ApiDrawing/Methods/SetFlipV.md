@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to set the vertical flip for a drawing.
+此示例展示如何为绘图设置垂直翻转。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

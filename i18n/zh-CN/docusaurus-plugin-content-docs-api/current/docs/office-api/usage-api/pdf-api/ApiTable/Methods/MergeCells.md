@@ -23,7 +23,7 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-How to get two cells by their position index and merge them into one.
+如何通过位置索引获取两个单元格并将它们合并为一个。
 
 ```javascript editor-pdf
 // Create a table, create cells and merge them into one.

@@ -20,7 +20,7 @@ expression.GetFilters();
 
 ## 示例
 
-This example reads filter information from the worksheet AutoFilter.
+此示例从工作表自动筛选中读取筛选信息。
 
 ```javascript editor-xlsx
 // How to inspect the criteria of existing filters.

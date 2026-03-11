@@ -20,7 +20,7 @@ number[]
 
 ## 示例
 
-This example gets selected value indexes from field with list of options.
+此示例从带有选项列表的字段获取选中值索引。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

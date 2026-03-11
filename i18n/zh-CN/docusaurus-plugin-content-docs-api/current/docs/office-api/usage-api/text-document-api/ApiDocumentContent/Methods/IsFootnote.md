@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example check is the ApiDocumentContent is a footnote.
+此示例检查 ApiDocumentContent 是否为脚注。
 
 ```javascript editor-docx
 // How to add footnote to the document.

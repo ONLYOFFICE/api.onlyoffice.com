@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-Sets the outline properties to a shape.
+为形状设置轮廓属性。
 
 ```javascript editor-xlsx
 // Creates a rectangle and changes its outline to a thick blue line.

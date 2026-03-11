@@ -23,7 +23,7 @@ expression.SetSize(width, height);
 
 ## 示例
 
-This example shows how to set the size of a table.
+此示例展示如何设置表格大小。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

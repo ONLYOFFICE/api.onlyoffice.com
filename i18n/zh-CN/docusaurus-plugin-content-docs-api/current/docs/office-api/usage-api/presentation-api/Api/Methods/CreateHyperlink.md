@@ -23,7 +23,7 @@ expression.CreateHyperlink(link, tooltip);
 
 ## 示例
 
-This example shows how to create a hyperlink and set it to an image.
+此示例展示如何创建超链接并将其设置到图像。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

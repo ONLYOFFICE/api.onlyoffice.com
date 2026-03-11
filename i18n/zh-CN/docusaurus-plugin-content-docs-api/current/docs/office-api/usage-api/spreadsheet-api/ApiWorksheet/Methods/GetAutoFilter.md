@@ -20,7 +20,7 @@ expression.GetAutoFilter();
 
 ## 示例
 
-This example gets the autofilter object for a worksheet.
+此示例获取工作表的自动筛选对象。
 
 ```javascript editor-xlsx
 // How to get the AutoFilter object of a worksheet.

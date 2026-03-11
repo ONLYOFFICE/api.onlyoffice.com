@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-How to outline a chart seria.
+如何为图表系列添加轮廓。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its series outline.

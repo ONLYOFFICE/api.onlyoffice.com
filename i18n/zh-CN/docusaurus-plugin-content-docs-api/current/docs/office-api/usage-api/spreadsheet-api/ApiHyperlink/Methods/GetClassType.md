@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example shows how to get the class type of an ApiHyperlink object inside a shape.
+此示例展示如何获取形状内 ApiHyperlink 对象的类类型。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

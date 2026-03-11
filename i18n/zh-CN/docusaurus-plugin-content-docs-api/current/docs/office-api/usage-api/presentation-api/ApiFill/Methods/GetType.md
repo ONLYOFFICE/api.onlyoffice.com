@@ -20,7 +20,7 @@ expression.GetType();
 
 ## 示例
 
-Gets the fill type and displays it.
+获取填充类型并显示。
 
 ```javascript editor-pptx
 // Creates shapes with different fill types and shows their types.

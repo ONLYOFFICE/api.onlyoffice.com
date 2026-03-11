@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example adds a redact annot to first page and applies redact.
+此示例向第一页添加密文注释并应用密文处理。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

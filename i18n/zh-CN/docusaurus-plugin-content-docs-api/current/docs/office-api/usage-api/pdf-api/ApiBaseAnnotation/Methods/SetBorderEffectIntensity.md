@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example creates a square annotation and sets border effect intensity.
+此示例创建方形注释并设置边框效果强度。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

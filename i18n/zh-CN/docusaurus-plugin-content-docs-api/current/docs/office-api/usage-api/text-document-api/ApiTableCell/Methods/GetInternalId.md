@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the internal ID of a table cell.
+此示例展示如何获取表格单元格的内部 ID。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

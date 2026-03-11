@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-This example shows how to insert a new XML element into a custom XML part.
+此示例展示如何向自定义 XML 部件中插入新的 XML 元素。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

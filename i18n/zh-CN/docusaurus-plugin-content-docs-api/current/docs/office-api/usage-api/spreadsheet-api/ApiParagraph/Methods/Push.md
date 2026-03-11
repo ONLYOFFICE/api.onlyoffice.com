@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to push a run element to a paragraph inside a shape.
+此示例展示如何向形状内的段落添加文本运行元素。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

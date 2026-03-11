@@ -15,8 +15,8 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | patternType | 必需 | [PatternType](../../Enumeration/PatternType.md) |  | 从可用图案类型中选择的用于填充的图案类型。 |
-| bgColor | 必需 | ApiColor |  | 用于创建图案的背景色。 |
-| fgColor | 必需 | ApiColor |  | 用于创建图案的前景色。 |
+| bgColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 用于创建图案的背景色。 |
+| fgColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 用于创建图案的前景色。 |
 
 ## 返回值
 

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example replaces the placeholder by a drawing on the slide.
+此示例用幻灯片上的绘图替换占位符。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

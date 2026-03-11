@@ -22,7 +22,7 @@ expression.CreateSquareAnnot(rect);
 
 ## 示例
 
-This example creates a square annotation and adds it to the page.
+此示例创建方形注释并将其添加到页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

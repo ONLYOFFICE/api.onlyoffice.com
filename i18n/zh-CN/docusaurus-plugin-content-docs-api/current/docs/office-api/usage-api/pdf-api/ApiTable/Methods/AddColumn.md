@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to insert a column to the table.
+如何向表格插入列。
 
 ```javascript editor-pdf
 // Create a 2x4 table, set its position and then insert a column to it.

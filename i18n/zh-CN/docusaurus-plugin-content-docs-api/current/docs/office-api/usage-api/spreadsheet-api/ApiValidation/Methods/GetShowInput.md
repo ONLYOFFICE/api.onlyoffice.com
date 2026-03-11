@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets whether the input message is displayed.
+此示例获取是否显示输入消息。
 
 ```javascript editor-xlsx
 // How to check if validation shows an input message.

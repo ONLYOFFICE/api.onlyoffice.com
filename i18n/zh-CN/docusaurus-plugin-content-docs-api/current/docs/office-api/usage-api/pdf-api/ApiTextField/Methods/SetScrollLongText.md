@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example adds text field and sets scroll long text property for it.
+此示例添加文本字段并为其设置滚动长文本属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

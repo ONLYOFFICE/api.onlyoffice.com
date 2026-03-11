@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-This example shows how to insert an attribute into a custom XML part element.
+此示例展示如何向自定义 XML 部件元素中插入属性。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

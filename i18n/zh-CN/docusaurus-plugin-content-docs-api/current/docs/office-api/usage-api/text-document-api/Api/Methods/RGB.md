@@ -24,7 +24,7 @@ expression.RGB(r, g, b);
 
 ## 示例
 
-This example shows how to create a color in RGB format and use it as a font color.
+此示例展示如何创建 RGB 格式的颜色并将其用作字体颜色。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

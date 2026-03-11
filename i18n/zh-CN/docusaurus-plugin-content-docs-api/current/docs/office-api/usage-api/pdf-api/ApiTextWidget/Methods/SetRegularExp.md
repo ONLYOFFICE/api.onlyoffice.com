@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets regular expression for text widget.
+此示例为文本控件设置正则表达式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

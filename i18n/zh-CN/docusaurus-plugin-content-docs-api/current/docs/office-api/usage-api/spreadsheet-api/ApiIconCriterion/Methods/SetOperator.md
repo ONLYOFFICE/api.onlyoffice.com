@@ -22,7 +22,7 @@ expression.SetOperator(operator);
 
 ## 示例
 
-This example shows how to set the comparison operator for an icon criterion.
+此示例展示如何为图标条件设置比较运算符。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

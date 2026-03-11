@@ -20,7 +20,7 @@ expression.GetFieldByName();
 
 ## 示例
 
-This example gets field by name in document.
+此示例按名称获取文档中的字段。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

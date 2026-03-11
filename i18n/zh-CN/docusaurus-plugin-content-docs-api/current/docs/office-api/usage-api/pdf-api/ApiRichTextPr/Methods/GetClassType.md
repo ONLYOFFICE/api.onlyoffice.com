@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets class type of rich text properties object.
+此示例获取富文本属性对象的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets text field and displays comb property.
+此示例获取文本字段并显示梳状格式属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

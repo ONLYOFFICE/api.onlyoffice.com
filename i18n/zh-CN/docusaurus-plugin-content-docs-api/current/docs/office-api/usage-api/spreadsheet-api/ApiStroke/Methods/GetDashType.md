@@ -20,7 +20,7 @@ expression.GetDashType();
 
 ## 示例
 
-Gets the dash type of a stroke.
+获取描边的虚线类型。
 
 ```javascript editor-xlsx
 // Creates a shape with a solid border and displays its dash type.

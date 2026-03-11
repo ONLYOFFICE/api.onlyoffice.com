@@ -20,7 +20,7 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-This example shows how to get the last run with text from a paragraph inside a shape.
+此示例展示如何从形状内的段落获取最后一个包含文本的运行。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

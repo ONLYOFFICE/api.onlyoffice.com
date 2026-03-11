@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets field required and display's it.
+此示例获取字段必填属性并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to outline a chart title.
+如何为图表标题添加轮廓。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its title outline.

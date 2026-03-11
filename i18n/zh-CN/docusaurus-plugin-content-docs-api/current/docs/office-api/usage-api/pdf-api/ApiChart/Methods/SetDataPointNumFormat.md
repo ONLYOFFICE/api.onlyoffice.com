@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to change a number format of a data point.
+如何更改数据点的数字格式。
 
 ```javascript editor-pdf
 // Create a chart then apply specified numeric format to its data points.

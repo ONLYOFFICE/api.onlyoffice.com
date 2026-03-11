@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to flip the drawing horizontally.
+此示例展示如何水平翻转绘图。
 
 ```javascript editor-pptx
 // How to set the horizontal flip property of the shape.

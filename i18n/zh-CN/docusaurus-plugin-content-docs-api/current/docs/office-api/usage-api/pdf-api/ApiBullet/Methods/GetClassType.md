@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets a type of ApiBullet class and inserts it into the pdf document.
+此示例获取 ApiBullet 类的类型并将其插入到 PDF 文档中。
 
 ```javascript editor-pdf
 // How get a class type of ApiBullet.

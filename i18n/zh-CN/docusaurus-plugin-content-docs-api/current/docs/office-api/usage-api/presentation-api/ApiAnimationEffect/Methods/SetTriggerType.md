@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the trigger type for an animation effect.
+此示例为动画效果设置触发类型。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

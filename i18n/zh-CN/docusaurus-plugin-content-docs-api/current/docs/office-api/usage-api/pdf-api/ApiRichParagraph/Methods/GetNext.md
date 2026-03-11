@@ -20,7 +20,7 @@ expression.GetNext();
 
 ## 示例
 
-This example gets next rich paragraph and adds some text to it.
+此示例获取下一个富文本段落并向其添加一些文本。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

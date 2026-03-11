@@ -22,7 +22,7 @@ expression.SetErrorMessage(ErrorMessage);
 
 ## 示例
 
-This example sets the error message text.
+此示例设置错误消息文本。
 
 ```javascript editor-xlsx
 // How to set the validation error message.

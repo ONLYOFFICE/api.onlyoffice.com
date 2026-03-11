@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-This example retrieves the parent AutoFilter of a filter column.
+此示例检索筛选列的父自动筛选。
 
 ```javascript editor-xlsx
 // How to navigate from ApiFilter back to ApiAutoFilter.

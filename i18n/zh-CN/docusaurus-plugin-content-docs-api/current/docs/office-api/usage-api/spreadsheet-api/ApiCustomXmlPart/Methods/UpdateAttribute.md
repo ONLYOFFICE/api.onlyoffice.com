@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-This example shows how to update the value of an attribute in a custom XML part element.
+此示例展示如何更新自定义 XML 部件元素中属性的值。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

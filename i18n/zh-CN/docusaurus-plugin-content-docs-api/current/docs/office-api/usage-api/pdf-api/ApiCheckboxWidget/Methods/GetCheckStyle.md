@@ -20,7 +20,7 @@ expression.GetCheckStyle();
 
 ## 示例
 
-This example gets checkbox widget check style.
+此示例获取复选框控件的选中样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

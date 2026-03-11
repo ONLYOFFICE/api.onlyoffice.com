@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example removes option from field with list of options.
+此示例从带有选项列表的字段中删除选项。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to replace the XML content of a custom XML node.
+此示例展示如何替换自定义 XML 节点的 XML 内容。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

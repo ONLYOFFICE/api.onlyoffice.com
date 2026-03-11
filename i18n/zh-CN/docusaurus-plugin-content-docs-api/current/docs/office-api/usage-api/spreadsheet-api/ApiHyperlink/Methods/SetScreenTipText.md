@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to set a tooltip for a hyperlink inside a shape.
+此示例展示如何为形状内的超链接设置工具提示。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

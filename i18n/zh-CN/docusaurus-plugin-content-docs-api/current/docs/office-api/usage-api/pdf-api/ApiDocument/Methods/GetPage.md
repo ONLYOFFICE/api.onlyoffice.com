@@ -22,7 +22,7 @@ expression.GetPage(nPos);
 
 ## 示例
 
-This example gets first page and sets rotate.
+此示例获取第一页并设置旋转。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

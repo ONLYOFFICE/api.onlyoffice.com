@@ -20,7 +20,7 @@ expression.GetBorderWidth();
 
 ## 示例
 
-This example gets field widgets border width and displays it.
+此示例获取字段控件的边框宽度并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

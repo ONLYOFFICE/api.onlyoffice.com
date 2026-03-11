@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets text field and display it's type.
+此示例获取文本字段并显示其类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

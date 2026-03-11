@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example shows how to get the loop-until-stopped setting of the presentation.
+此示例展示如何获取演示文稿的循环播放直到停止设置。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

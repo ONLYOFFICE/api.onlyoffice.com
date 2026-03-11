@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-This example retrieves the worksheet that owns the AutoFilter.
+此示例检索拥有自动筛选的工作表。
 
 ```javascript editor-xlsx
 // How to navigate back from ApiAutoFilter to ApiWorksheet.

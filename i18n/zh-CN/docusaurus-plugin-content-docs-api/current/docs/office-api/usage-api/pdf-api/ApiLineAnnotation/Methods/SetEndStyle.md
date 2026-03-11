@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets end line style to line annotation.
+此示例为线条注释设置终点线条样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

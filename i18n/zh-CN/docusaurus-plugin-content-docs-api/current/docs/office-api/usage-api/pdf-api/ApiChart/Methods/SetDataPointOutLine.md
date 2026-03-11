@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to outline data points.
+如何为数据点添加轮廓。
 
 ```javascript editor-pdf
 // Create a chart then apply outline to its data points.

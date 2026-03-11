@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets checkbox field object class type.
+此示例获取复选框字段对象的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

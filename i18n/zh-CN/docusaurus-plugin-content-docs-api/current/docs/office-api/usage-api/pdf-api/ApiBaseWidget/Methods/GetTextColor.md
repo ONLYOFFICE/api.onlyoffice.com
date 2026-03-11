@@ -20,7 +20,7 @@ expression.GetTextColor();
 
 ## 示例
 
-This example gets field widget and displays it's text color.
+此示例获取字段控件并显示其文本颜色。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -20,7 +20,7 @@ expression.GetType();
 
 ## 示例
 
-This example gets type of stamp annotation.
+此示例获取图章注释的类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

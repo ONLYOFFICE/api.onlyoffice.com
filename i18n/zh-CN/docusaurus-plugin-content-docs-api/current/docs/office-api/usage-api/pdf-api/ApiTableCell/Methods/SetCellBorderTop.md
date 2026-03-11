@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to set cell top border with its fill color.
+如何设置单元格顶部边框及其填充颜色。
 
 ```javascript editor-pdf
 // Create table and set its cell top border.

@@ -25,7 +25,7 @@ void
 
 ## 示例
 
-This example reapplies an existing AutoFilter after the data changes.
+此示例在数据更改后重新应用现有的自动筛选。
 
 ```javascript editor-xlsx
 // How to reuse filter criteria without redefining them.

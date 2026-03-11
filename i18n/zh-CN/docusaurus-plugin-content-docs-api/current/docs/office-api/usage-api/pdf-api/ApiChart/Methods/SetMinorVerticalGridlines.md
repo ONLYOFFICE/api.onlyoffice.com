@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set minor vertical gridlines of the chart.
+如何设置图表的次垂直网格线。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its minor gridlines.

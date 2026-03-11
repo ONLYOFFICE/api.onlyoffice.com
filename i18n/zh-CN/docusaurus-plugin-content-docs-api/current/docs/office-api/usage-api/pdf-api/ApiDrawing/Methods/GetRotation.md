@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-How to get rotate from a drawing object.
+如何从绘图对象获取旋转角度。
 
 ```javascript editor-pdf
 // Get drawing rotate

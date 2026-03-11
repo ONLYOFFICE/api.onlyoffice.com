@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example adds a paragraph to pdf document.
+此示例向 PDF 文档添加段落。
 
 ```javascript editor-pdf
 // How to create an element, add it to a shape and insert the shape to the page.

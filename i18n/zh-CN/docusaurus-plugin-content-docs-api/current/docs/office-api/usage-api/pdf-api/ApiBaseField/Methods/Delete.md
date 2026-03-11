@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example removes the field from document.
+此示例从文档中删除字段。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

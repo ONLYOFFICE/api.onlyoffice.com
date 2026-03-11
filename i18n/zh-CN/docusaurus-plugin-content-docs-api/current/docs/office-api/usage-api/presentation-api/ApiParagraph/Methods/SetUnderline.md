@@ -23,7 +23,7 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-This example applies underline formatting to paragraph text.
+此示例对段落文本应用下划线格式。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

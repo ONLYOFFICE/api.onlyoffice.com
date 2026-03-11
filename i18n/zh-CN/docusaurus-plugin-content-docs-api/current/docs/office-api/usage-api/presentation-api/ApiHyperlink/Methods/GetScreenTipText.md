@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example returns the screen tip text of the hyperlink.
+此示例返回超链接的屏幕提示文本。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

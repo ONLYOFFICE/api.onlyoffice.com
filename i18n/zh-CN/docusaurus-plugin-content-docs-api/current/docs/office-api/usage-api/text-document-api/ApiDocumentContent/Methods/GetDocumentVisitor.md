@@ -20,7 +20,7 @@ ApiDocumentVisitor
 
 ## 示例
 
-This example shows how to use a document visitor to traverse document elements.
+此示例展示如何使用文档访问器遍历文档元素。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example demonstrates relative height shape sizing to page dimensions.
+此示例演示相对于页面尺寸的形状高度调整。
 
 ```javascript editor-docx
 // How to set shape width and height as percentages of the page.

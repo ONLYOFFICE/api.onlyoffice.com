@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set major horizontal gridlines of the chart.
+如何设置图表的主水平网格线。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its major gridlines.

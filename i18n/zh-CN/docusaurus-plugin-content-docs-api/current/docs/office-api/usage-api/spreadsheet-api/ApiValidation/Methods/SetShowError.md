@@ -22,7 +22,7 @@ expression.SetShowError(ShowError);
 
 ## 示例
 
-This example sets whether the error message is displayed.
+此示例设置是否显示错误消息。
 
 ```javascript editor-xlsx
 // How to show or hide the validation error message.

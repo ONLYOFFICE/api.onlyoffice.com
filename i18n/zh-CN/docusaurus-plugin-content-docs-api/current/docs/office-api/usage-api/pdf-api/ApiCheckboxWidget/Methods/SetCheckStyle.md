@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets checkbox widget check style.
+此示例设置复选框控件的选中样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -20,7 +20,7 @@ boolean \| null
 
 ## 示例
 
-This example checks whether the drawing is flipped vertically.
+此示例检查绘图是否垂直翻转。
 
 ```javascript editor-xlsx
 // How to get the vertical flip property of the shape.

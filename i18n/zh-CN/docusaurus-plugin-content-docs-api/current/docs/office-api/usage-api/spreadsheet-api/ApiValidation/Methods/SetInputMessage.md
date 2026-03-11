@@ -22,7 +22,7 @@ expression.SetInputMessage(InputMessage);
 
 ## 示例
 
-This example sets the input message text.
+此示例设置输入消息文本。
 
 ```javascript editor-xlsx
 // How to set the validation input message.

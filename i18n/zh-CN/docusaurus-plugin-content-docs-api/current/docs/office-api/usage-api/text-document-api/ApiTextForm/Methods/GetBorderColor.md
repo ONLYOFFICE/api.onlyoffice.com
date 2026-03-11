@@ -20,7 +20,7 @@ expression.GetBorderColor();
 
 ## 示例
 
-This example shows how to get the border color of a form.
+此示例展示如何获取表单的边框颜色。
 
 ```javascript editor-docx
 // How to get the border color of a text form.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to change a X position of a drawing.
+如何更改绘图的 X 坐标位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and move by X axis.

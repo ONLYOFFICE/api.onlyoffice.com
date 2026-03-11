@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets page rotate of the first page in document and display it in the text field.
+此示例获取文档中第一页的旋转角度并在文本字段中显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

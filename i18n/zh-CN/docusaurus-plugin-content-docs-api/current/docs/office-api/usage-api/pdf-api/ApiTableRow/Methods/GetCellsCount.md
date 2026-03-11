@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-How to return a number of cells from the row.
+如何返回行中的单元格数量。
 
 ```javascript editor-pdf
 // Create a table, count its cells and display the number in the page.

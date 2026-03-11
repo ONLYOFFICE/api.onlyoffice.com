@@ -27,7 +27,7 @@ boolean
 
 ## 示例
 
-How to show specific chart data labels with options.
+如何使用选项显示特定的图表数据标签。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and the visibility of its data labels options.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-Sets a solid fill color to a shape.
+为形状设置纯色填充。
 
 ```javascript editor-pdf
 // Creates a rectangle and applies a red fill to it.

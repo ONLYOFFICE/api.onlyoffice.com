@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-Analyzes path commands of a star shape on a pdf document page.
+分析 PDF 文档页面上星形形状的路径命令。
 
 ```javascript editor-pdf
 // Shows command count and first command details in a text shape.

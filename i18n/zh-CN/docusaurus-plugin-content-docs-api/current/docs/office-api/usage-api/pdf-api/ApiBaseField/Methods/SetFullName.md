@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets field full name and displays it.
+此示例设置字段全名并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

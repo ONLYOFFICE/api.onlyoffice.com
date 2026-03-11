@@ -21,7 +21,7 @@ expression.GetTextSize();
 
 ## 示例
 
-This example gets field widget and displays it's text size.
+此示例获取字段控件并显示其文本大小。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

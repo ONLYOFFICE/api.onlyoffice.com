@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to color a data point.
+如何为数据点着色。
 
 ```javascript editor-pdf
 // Create a chart then color its data points.

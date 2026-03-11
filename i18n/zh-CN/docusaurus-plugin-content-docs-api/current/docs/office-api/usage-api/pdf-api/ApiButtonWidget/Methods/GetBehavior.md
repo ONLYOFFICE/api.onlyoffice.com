@@ -20,7 +20,7 @@ expression.GetBehavior();
 
 ## 示例
 
-This example gets button widget behavior type and displays it.
+此示例获取按钮控件的行为类型并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

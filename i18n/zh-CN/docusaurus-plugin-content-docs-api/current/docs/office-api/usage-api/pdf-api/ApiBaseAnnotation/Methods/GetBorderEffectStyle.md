@@ -20,7 +20,7 @@ expression.GetBorderEffectStyle();
 
 ## 示例
 
-This example creates a square annotation and gets its border effect style.
+此示例创建方形注释并获取其边框效果样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

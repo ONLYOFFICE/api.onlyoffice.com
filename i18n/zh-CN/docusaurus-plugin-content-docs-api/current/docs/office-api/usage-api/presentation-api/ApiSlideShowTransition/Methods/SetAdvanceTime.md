@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the automatic advance time to 4.3 seconds (4300 milliseconds).
+此示例将自动前进时间设置为 4.3 秒（4300 毫秒）。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

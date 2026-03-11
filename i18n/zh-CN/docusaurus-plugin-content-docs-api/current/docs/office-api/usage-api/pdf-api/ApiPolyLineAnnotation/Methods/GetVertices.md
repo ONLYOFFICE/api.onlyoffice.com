@@ -20,7 +20,7 @@ expression.GetVertices();
 
 ## 示例
 
-This example gets vertices from polyline annotation.
+此示例从折线注释获取顶点。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

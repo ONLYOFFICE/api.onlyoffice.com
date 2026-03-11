@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the delay of an animation effect.
+此示例设置动画效果的延迟时间。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -20,7 +20,7 @@ expression.GetEndStyle();
 
 ## 示例
 
-This example gets line end style of polyline annotation.
+此示例获取折线注释的线条终点样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

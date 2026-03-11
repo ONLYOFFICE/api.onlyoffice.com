@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example shows how to set the name for a drawing object.
+此示例展示如何为绘图对象设置名称。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

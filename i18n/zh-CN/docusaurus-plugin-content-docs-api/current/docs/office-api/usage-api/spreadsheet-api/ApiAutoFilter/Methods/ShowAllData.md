@@ -25,7 +25,7 @@ void
 
 ## 示例
 
-This example clears the active filter and shows all rows in the AutoFilter range.
+此示例清除活动筛选并显示自动筛选范围内的所有行。
 
 ```javascript editor-xlsx
 // How to temporarily show all data while keeping the filter drop-downs.

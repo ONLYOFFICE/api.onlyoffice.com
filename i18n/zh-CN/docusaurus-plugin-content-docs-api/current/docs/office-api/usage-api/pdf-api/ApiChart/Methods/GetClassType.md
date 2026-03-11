@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-How to get a class type of ApiChart.
+如何获取 ApiChart 的类类型。
 
 ```javascript editor-pdf
 // Retrieve class type of ApiChart object and insert it to the page.

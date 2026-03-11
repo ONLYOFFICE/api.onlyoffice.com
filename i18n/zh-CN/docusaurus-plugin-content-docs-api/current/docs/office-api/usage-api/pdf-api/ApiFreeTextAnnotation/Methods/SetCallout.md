@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets callout for freeText annotation.
+此示例为自由文本注释设置标注。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

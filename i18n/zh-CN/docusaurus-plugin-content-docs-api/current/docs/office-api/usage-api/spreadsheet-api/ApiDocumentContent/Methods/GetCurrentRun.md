@@ -20,7 +20,7 @@ expression.GetCurrentRun();
 
 ## 示例
 
-This example shows how to get the current run from the document content of a shape.
+此示例展示如何从形状的文档内容中获取当前文本运行。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

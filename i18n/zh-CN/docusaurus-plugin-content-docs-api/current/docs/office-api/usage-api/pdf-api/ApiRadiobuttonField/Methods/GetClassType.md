@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets radiobutton field object class type.
+此示例获取单选按钮字段对象的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

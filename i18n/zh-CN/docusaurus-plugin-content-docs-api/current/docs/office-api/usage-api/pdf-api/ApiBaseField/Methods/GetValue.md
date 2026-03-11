@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets value from first text field and sets to second text field.
+此示例从第一个文本字段获取值并设置到第二个文本字段。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

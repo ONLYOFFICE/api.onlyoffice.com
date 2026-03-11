@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example adds new options to field with list of options.
+此示例向带有选项列表的字段添加新选项。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -28,7 +28,7 @@ boolean
 
 ## 示例
 
-This example checks whether a filter is active on a column.
+此示例检查列上是否有活动筛选。
 
 ```javascript editor-xlsx
 // How to see if a given column currently has any filter definition.

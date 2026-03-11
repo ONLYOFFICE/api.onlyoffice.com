@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-Analyzes arc command parameters in a page shape.
+分析页面形状中的弧线命令参数。
 
 ```javascript editor-pdf
 // Retrieves and displays arc radii and angle information.

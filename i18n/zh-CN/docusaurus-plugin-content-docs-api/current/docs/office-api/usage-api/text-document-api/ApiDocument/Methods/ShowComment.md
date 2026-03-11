@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to display a comment by its ID.
+此示例展示如何通过 ID 显示批注。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

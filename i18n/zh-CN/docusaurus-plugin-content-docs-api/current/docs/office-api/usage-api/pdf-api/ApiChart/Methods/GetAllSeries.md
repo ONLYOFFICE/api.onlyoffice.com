@@ -20,7 +20,7 @@ expression.GetAllSeries();
 
 ## 示例
 
-How to get types of all series of a chart.
+如何获取图表所有系列的类型。
 
 ```javascript editor-pdf
 // Get all series from a chart.

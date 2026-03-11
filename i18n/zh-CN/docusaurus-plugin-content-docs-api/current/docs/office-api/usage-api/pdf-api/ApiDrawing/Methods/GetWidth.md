@@ -20,7 +20,7 @@ expression.GetWidth();
 
 ## 示例
 
-How to find a shape's width and display it on the page.
+如何查找形状的宽度并在页面上显示。
 
 ```javascript editor-pdf
 // Get a page shape's width.

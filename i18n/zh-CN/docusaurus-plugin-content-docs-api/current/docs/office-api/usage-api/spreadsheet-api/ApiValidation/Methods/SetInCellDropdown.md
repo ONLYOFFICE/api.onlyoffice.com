@@ -22,7 +22,7 @@ expression.SetInCellDropdown(InCellDropdown);
 
 ## 示例
 
-This example sets whether a dropdown list is displayed.
+此示例设置是否显示下拉列表。
 
 ```javascript editor-xlsx
 // How to show or hide the validation dropdown list.

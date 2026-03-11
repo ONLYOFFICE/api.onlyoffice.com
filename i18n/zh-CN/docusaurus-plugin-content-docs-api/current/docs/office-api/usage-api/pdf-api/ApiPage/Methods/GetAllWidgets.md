@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets all fields on the page.
+此示例获取页面上的所有字段。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

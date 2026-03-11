@@ -20,7 +20,7 @@ expression.CreateSlideShowTransition();
 
 ## 示例
 
-This example creates a slide show transition
+此示例创建幻灯片放映过渡效果
 
 ```javascript editor-pptx
 // with fade effect that starts after 3 seconds.

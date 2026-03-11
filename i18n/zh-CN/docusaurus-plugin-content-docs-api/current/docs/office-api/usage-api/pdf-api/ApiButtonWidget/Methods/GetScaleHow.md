@@ -20,7 +20,7 @@ expression.GetScaleHow();
 
 ## 示例
 
-This example gets button widget scale how type and displays it.
+此示例获取按钮控件的缩放方式类型并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

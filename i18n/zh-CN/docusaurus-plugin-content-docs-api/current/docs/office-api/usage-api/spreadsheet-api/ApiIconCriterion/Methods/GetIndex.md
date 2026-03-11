@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example shows how to get the index of an icon criterion in the collection.
+此示例展示如何获取图标条件在集合中的索引。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

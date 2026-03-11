@@ -22,7 +22,7 @@ expression.SearchAndRedact(props);
 
 ## 示例
 
-This example search some word in document and adds a redact annotation to it.
+此示例在文档中搜索某个词并为其添加密文注释。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

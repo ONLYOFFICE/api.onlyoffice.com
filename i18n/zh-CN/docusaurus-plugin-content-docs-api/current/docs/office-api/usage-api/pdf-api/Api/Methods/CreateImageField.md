@@ -22,7 +22,7 @@ expression.CreateImageField(aRect);
 
 ## 示例
 
-How to create and add a field with image to document.
+如何创建带图像的字段并添加到文档。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

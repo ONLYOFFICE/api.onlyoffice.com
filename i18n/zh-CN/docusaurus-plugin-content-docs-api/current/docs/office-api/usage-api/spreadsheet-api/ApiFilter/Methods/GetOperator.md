@@ -20,7 +20,7 @@ expression.GetOperator();
 
 ## 示例
 
-This example reads the operator used by a filter.
+此示例读取筛选使用的运算符。
 
 ```javascript editor-xlsx
 // How to detect the type of filter (values, custom AND/OR, dynamic, top10, etc.).

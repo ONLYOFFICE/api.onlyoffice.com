@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the hex representation of the color.
+此示例展示如何获取颜色的十六进制表示。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

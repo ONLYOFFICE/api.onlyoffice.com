@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example gets text field and sets mask for entered text for it.
+此示例获取文本字段并为其设置输入文本的掩码。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

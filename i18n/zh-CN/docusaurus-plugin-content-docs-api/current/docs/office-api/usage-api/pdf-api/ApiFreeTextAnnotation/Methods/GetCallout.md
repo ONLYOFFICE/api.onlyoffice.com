@@ -20,7 +20,7 @@ expression.GetCallout();
 
 ## 示例
 
-This example gets callout of freeText annotation.
+此示例获取自由文本注释的标注。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -49,6 +49,7 @@
 | [GetFullName](./Methods/GetFullName.md) | string | 返回当前打开文件的完整名称。 |
 | [GetPresentation](./Methods/GetPresentation.md) | [ApiPresentation](../ApiPresentation/ApiPresentation.md) | 返回主演示文稿。 |
 | [GetSelection](./Methods/GetSelection.md) | [ApiSelection](../ApiSelection/ApiSelection.md) | 返回当前演示文稿中的选择。 |
+| [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 从十六进制字符串创建颜色。 |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | 将英寸转换为磅。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
 | [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。结果为整数值。 |
@@ -65,8 +66,11 @@
 | [PointsToPicas](./Methods/PointsToPicas.md) | number | 将磅转换为派卡（1 派卡 = 12 磅）。 |
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | 将磅转换为像素。 |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | 将磅转换为缇。 |
+| [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝分量创建 RGB 颜色。 |
+| [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝和透明度分量创建 RGBA 颜色。 |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选区中的每个段落（或单元格中的文本）。 |
 | [Save](./Methods/Save.md) | 无 | 保存对指定文档的更改。 |
+| [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建主题颜色。 |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | 将缇转换为磅。 |
 | [attachEvent](./Methods/attachEvent.md) | 无 | 订阅指定事件，并在事件触发时调用回调函数。 |
 | [detachEvent](./Methods/detachEvent.md) | 无 | 取消订阅指定事件。 |

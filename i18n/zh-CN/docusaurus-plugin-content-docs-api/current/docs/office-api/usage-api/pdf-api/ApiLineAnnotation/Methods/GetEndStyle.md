@@ -20,7 +20,7 @@ expression.GetEndStyle();
 
 ## 示例
 
-This example gets end line style to line annotation.
+此示例获取线条注释的终点线条样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

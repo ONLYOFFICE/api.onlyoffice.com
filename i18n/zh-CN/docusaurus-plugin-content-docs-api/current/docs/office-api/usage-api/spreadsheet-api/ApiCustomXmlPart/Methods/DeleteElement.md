@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to delete an XML element from a custom XML part.
+此示例展示如何从自定义 XML 部件中删除 XML 元素。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

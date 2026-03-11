@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example shows how to check if the color is a theme color.
+此示例展示如何检查颜色是否为主题颜色。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

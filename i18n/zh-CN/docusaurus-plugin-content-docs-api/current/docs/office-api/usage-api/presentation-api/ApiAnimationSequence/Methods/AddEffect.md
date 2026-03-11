@@ -24,7 +24,7 @@ expression.AddEffect(drawing, effectType, trigger);
 
 ## 示例
 
-This example adds an animation effect to a sequence.
+此示例向序列添加动画效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

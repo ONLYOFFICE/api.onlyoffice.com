@@ -22,7 +22,7 @@ expression.GetContent(getCopies);
 
 ## 示例
 
-This example gets all elements from rich content.
+此示例从富文本内容获取所有元素。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

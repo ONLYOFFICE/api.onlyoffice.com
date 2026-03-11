@@ -20,7 +20,7 @@ expression.GetInteractiveSequences();
 
 ## 示例
 
-This example gets all interactive animation sequences from a timeline.
+此示例从时间线获取所有交互式动画序列。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

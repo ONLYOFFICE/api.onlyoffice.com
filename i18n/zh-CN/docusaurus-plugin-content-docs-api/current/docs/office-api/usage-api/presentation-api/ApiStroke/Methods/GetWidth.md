@@ -20,7 +20,7 @@ expression.GetWidth();
 
 ## 示例
 
-Gets the width of a stroke in EMU.
+获取描边宽度（以 EMU 为单位）。
 
 ```javascript editor-pptx
 // Creates shapes with different border widths and displays their widths.

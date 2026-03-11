@@ -20,7 +20,7 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-This example returns an array of all paragraphs from the document content.
+此示例返回文档内容中所有段落的数组。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

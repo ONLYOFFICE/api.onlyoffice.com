@@ -33,7 +33,7 @@ boolean
 
 ## 示例
 
-How to set a table look with options.
+如何使用选项设置表格外观。
 
 ```javascript editor-pdf
 // Create the ApiTable object and set its look.

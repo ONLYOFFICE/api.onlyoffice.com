@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets the class type of the ApiAnimationSequence object.
+此示例获取 ApiAnimationSequence 对象的类类型。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

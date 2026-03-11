@@ -22,7 +22,7 @@ expression.GetCell(nPos);
 
 ## 示例
 
-How to return a cell using its row index.
+如何使用行索引返回单元格。
 
 ```javascript editor-pdf
 // Create a table, get its row and get a cell from this row.

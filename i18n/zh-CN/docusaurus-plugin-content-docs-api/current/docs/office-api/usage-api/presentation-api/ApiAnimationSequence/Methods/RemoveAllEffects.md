@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example removes all effects from an animation sequence.
+此示例从动画序列中移除所有效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

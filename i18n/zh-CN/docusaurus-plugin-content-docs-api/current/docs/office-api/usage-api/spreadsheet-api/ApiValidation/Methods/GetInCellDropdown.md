@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets whether a dropdown list is displayed.
+此示例获取是否显示下拉列表。
 
 ```javascript editor-xlsx
 // How to check if validation displays a dropdown list.

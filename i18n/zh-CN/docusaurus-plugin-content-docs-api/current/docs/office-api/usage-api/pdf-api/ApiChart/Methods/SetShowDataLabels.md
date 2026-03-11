@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to show specific chart data labels.
+如何显示特定的图表数据标签。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its specific data labels visibility.

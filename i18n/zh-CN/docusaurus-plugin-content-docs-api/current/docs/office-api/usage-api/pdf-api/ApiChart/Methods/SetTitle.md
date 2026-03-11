@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-How to rename a chart.
+如何重命名图表。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its title.

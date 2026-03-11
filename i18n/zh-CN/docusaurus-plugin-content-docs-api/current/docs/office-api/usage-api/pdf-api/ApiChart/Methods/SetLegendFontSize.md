@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to resize a font of a chart legend.
+如何调整图表图例的字体大小。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its legend's font size.

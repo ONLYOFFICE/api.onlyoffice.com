@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the repeat count for an animation effect.
+此示例设置动画效果的重复次数。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

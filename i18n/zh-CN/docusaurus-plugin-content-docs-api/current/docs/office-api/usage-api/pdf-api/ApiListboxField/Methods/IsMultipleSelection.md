@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets multiple selection property from listbox field.
+此示例从列表框字段获取多选属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

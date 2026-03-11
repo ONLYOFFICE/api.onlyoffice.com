@@ -20,7 +20,7 @@ expression.GetCurrentContentControl();
 
 ## 示例
 
-This example shows how to get the currently selected content control.
+此示例展示如何获取当前选中的内容控件。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

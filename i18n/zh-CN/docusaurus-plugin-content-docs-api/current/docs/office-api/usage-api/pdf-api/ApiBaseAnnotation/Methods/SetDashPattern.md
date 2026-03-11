@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example creates a square annotation and sets dash pattern for border.
+此示例创建方形注释并为边框设置虚线图案。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

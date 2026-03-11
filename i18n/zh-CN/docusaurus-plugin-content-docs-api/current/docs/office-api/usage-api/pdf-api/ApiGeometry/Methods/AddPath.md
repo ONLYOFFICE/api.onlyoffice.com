@@ -20,7 +20,7 @@ expression.AddPath();
 
 ## 示例
 
-Creates a custom shape and adds it to a page.
+创建自定义形状并将其添加到页面。
 
 ```javascript editor-pdf
 // Applies custom geometry with specific fill and stroke properties.

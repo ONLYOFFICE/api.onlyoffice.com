@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example sets image for field with image.
+此示例为带图像的字段设置图像。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets checkbox widget checked in group of checkbox widgets.
+此示例在复选框控件组中设置复选框控件为选中状态。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

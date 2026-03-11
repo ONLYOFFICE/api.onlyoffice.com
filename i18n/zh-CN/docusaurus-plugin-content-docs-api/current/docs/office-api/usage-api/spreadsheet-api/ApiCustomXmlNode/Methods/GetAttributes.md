@@ -20,7 +20,7 @@ expression.GetAttributes();
 
 ## 示例
 
-This example shows how to get all attributes of a custom XML node.
+此示例展示如何获取自定义 XML 节点的所有属性。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

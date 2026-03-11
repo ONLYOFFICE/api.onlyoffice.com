@@ -20,7 +20,7 @@ expression.Select();
 
 ## 示例
 
-This example selects the current slide.
+此示例选择当前幻灯片。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

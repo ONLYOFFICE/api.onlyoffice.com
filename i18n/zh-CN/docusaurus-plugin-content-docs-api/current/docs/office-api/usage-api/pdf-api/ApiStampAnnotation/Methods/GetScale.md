@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets scale of stamp annotation.
+此示例获取图章注释的缩放比例。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

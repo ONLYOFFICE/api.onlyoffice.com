@@ -20,7 +20,7 @@ expression.GetCurrentRegion();
 
 ## 示例
 
-This example shows how to get the current region of a range.
+此示例展示如何获取范围的当前区域。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

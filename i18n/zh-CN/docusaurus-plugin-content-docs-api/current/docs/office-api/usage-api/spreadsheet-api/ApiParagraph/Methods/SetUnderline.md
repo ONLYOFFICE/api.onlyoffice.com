@@ -23,7 +23,7 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-This example shows how to apply underline formatting to all text in a paragraph inside a shape.
+此示例展示如何对形状内段落中的所有文本应用下划线格式。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

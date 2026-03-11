@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example sets field read only.
+此示例设置字段为只读。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

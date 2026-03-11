@@ -23,7 +23,7 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-This example shows how to set small caps formatting for all text in a paragraph inside a shape.
+此示例展示如何为形状内段落中的所有文本设置小型大写字母格式。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

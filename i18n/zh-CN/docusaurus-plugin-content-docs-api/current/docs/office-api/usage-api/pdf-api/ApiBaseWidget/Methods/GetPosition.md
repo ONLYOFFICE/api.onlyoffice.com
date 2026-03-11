@@ -20,7 +20,7 @@ expression.GetPosition();
 
 ## 示例
 
-This example create a new field and gets position of its widget.
+此示例创建新字段并获取其控件的位置。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

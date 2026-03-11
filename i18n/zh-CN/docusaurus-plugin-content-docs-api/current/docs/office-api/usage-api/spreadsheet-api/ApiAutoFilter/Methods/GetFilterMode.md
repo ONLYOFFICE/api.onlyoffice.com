@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example checks whether a worksheet currently has an AutoFilter.
+此示例检查工作表当前是否具有自动筛选。
 
 ```javascript editor-xlsx
 // How to detect if filtering is active on a sheet.

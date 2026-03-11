@@ -22,7 +22,7 @@ expression.CreateUnderlineAnnot(rect);
 
 ## 示例
 
-This example creates a underline annotation and adds it to the page.
+此示例创建下划线注释并将其添加到页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

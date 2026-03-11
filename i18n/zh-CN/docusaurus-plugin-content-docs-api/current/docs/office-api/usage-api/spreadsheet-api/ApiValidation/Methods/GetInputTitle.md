@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets the input message title.
+此示例获取输入消息标题。
 
 ```javascript editor-xlsx
 // How to retrieve the validation input title.

@@ -20,7 +20,7 @@ string[]
 
 ## 示例
 
-This example shows how to get all font names used in a paragraph inside a shape.
+此示例展示如何获取形状内段落中使用的所有字体名称。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

@@ -26,7 +26,7 @@ expression.Modify(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## 示例
 
-This example modifies a data validation rule for a range of cells.
+此示例修改单元格范围的数据验证规则。
 
 ```javascript editor-xlsx
 // How to change data validation for a range of cells.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to remove page from document.
+此示例展示如何从文档中删除页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

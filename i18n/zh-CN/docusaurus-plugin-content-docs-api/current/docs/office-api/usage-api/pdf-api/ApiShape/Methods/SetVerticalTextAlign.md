@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set vertical alignment of the shape content.
+如何设置形状内容的垂直对齐方式。
 
 ```javascript editor-pdf
 // Adjust vertical alignment of the text inside the shape.

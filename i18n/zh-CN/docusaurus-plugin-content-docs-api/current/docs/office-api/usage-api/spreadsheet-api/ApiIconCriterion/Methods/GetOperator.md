@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-This example shows how to get the comparison operator of an icon criterion.
+此示例展示如何获取图标条件的比较运算符。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

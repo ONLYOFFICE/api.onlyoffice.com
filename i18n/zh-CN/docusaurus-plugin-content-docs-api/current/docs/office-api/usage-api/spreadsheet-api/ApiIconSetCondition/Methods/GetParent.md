@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-This example shows how to get the parent range of a conditional formatting rule.
+此示例展示如何获取条件格式规则的父范围。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example pushes new element to rich paragraph.
+此示例向富文本段落推入新元素。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

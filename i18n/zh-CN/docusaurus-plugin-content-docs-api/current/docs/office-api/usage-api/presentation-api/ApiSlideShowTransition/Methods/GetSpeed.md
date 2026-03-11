@@ -24,7 +24,7 @@ expression.GetSpeed();
 
 ## 示例
 
-This example gets the transition speed and displays it.
+此示例获取过渡速度并显示。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

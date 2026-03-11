@@ -20,7 +20,7 @@ expression.GetRange();
 
 ## 示例
 
-This example obtains the range to which an AutoFilter is applied.
+此示例获取应用自动筛选的范围。
 
 ```javascript editor-xlsx
 // How to find the AutoFilter range and work with it as a normal ApiRange.

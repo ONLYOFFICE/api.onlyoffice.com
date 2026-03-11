@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example gets all field widgets and sets text autofit for them.
+此示例获取所有字段控件并为它们设置文本自动适应。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

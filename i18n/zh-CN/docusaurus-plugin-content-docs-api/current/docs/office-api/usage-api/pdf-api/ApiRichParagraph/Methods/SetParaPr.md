@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets rich paragraph properties to rich paragraph.
+此示例为富文本段落设置富文本段落属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

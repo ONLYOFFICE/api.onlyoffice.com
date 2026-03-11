@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set the cell text vertical alignment.
+如何设置单元格文本的垂直对齐方式。
 
 ```javascript editor-pdf
 // Create a table and set the text alignment of its cell from the row.

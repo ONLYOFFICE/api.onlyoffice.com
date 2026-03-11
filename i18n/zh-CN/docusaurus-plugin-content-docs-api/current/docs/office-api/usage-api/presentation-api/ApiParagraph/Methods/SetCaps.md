@@ -22,7 +22,7 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-This example sets all characters in the paragraph to display as capitals.
+此示例将段落中的所有字符设置为大写显示。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

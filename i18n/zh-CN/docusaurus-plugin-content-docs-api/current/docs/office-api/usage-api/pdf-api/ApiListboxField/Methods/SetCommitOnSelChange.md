@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets commit on selection change prop to field with list of options.
+此示例为带有选项列表的字段设置选择更改时提交属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

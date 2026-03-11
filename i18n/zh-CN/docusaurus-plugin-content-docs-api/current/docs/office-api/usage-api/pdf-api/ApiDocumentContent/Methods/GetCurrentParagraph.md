@@ -20,7 +20,7 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-This example returns the current paragraph from the document content.
+此示例返回文档内容中的当前段落。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-This example gets text field and sets validate range for it.
+此示例获取文本字段并为其设置验证范围。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

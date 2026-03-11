@@ -20,7 +20,7 @@ expression.GetPreset();
 
 ## 示例
 
-Gets geometry information from a star shape on a presentation page.
+从演示文稿页面上的星形形状获取几何信息。
 
 ```javascript editor-pdf
 // Displays preset type and custom status in a text shape.

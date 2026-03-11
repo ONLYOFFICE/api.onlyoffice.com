@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example creates a square annotation and sets rect to twice the initial size.
+此示例创建方形注释并将矩形设置为初始大小的两倍。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

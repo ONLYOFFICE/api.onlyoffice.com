@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets multiple selection for listbox field.
+此示例为列表框字段设置多选。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

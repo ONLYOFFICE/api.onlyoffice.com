@@ -22,7 +22,7 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-This example shows how to get nodes from a custom XML node based on an XPath.
+此示例展示如何根据 XPath 从自定义 XML 节点获取节点。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

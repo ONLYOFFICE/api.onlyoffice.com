@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to set a fill to the marker.
+如何为标记设置填充。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its marker color.

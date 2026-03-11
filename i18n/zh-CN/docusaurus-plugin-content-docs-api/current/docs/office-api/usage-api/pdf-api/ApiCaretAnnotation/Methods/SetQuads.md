@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets quads for markup annotation.
+此示例为标记注释设置四边形。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

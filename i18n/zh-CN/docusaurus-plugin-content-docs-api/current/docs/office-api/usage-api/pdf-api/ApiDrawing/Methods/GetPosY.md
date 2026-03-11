@@ -20,7 +20,7 @@ expression.GetPosY();
 
 ## 示例
 
-How to get and display a Y position of a drawing.
+如何获取并显示绘图的 Y 坐标位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and get its Y position.

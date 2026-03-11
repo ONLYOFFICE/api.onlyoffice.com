@@ -20,7 +20,7 @@ expression.GetParaPr();
 
 ## 示例
 
-This example gets rich paragraph properties from rich paragraph.
+此示例从富文本段落获取富文本段落属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

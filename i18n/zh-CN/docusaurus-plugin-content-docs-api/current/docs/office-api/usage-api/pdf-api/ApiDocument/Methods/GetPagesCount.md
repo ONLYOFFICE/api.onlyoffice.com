@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets document pages count and displays it in text field.
+此示例获取文档页数并在文本字段中显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

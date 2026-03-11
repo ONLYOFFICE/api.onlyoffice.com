@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets button widget object class type.
+此示例获取按钮控件对象的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

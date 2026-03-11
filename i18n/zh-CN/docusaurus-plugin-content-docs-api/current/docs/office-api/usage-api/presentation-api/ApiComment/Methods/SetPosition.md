@@ -23,7 +23,7 @@ expression.SetPosition(x, y);
 
 ## 示例
 
-This example sets the position of the comment in the presentation.
+此示例设置演示文稿中批注的位置。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

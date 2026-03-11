@@ -22,7 +22,7 @@ string
 
 ## 示例
 
-This example gets button widget labels and displays it.
+此示例获取按钮控件的标签并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

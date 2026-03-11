@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set text direction of the table cell.
+如何设置表格单元格的文本方向。
 
 ```javascript editor-pdf
 // Create a table and set the text direction for the ApiTableCell object.

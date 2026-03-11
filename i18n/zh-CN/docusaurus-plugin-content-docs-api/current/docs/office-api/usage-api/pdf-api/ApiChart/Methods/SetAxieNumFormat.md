@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to change a numeric format of left axis Labels.
+如何更改左轴标签的数字格式。
 
 ```javascript editor-pdf
 // Create a chart then set its axis number format.

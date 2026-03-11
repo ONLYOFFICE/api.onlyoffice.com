@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets scale for stamp annotation.
+此示例为图章注释设置缩放比例。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

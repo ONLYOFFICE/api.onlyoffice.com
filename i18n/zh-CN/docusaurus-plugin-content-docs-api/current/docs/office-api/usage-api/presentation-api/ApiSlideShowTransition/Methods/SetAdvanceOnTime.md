@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example enables automatic slide advance after time.
+此示例启用定时后自动前进幻灯片。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

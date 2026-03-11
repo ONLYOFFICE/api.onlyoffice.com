@@ -20,7 +20,7 @@ expression.GetAlertStyle();
 
 ## 示例
 
-This example gets the validation alert style.
+此示例获取验证警告样式。
 
 ```javascript editor-xlsx
 // How to retrieve the validation alert style.

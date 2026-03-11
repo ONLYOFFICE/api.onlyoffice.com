@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets editable property for combobox field and displays it.
+此示例获取组合框字段的可编辑属性并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

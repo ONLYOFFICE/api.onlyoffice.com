@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets rect diff to freeText annotation.
+此示例为自由文本注释设置矩形差异。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

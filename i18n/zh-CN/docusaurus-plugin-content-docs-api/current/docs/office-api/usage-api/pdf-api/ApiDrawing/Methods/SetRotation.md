@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to rotate a drawing object of the page.
+如何旋转页面的绘图对象。
 
 ```javascript editor-pdf
 // Rotate an object from a page.

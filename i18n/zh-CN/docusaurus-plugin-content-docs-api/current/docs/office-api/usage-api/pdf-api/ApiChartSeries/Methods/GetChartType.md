@@ -20,7 +20,7 @@ expression.GetChartType();
 
 ## 示例
 
-This example gets the first series of ApiChart class and inserts its type into the pdf document.
+此示例获取 ApiChart 类的第一个系列并将其类型插入到 PDF 文档中。
 
 ```javascript editor-pdf
 // How to get a chart type and show it on the page.

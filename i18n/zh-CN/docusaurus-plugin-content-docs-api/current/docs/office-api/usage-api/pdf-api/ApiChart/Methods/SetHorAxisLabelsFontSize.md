@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example specifies font size for the labels of the vertical axis.
+此示例为垂直轴标签指定字体大小。
 
 ```javascript editor-pdf
 // How to resize a font size of the vertical axis labels.

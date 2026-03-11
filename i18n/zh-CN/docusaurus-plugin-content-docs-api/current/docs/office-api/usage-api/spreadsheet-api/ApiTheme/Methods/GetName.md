@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the name of the current workbook theme.
+此示例展示如何获取当前工作簿主题的名称。
 
 ```javascript editor-xlsx
 const workbook = Api.GetActiveWorkbook();

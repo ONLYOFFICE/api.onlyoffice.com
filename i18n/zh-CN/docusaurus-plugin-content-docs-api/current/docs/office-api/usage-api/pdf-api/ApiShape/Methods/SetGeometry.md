@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-Applies custom geometry with specific fill and stroke properties.
+应用具有特定填充和描边属性的自定义几何图形。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

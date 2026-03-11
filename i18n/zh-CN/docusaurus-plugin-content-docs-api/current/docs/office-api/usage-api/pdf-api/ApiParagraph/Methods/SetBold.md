@@ -22,7 +22,7 @@ expression.SetBold(isBold);
 
 ## 示例
 
-This example sets the bold property to the text of the paragraph.
+此示例为段落文本设置粗体属性。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

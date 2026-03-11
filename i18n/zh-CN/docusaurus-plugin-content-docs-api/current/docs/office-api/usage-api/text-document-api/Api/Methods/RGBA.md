@@ -25,7 +25,7 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-This example shows how to create RGBA color and use it as content control background color
+此示例展示如何创建 RGBA 颜色并将其用作内容控件的背景颜色
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

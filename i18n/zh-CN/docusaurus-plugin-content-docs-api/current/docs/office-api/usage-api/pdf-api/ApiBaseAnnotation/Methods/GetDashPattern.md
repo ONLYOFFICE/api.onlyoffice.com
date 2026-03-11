@@ -20,7 +20,7 @@ number[]
 
 ## 示例
 
-This example creates a square annotation and gets its dash pattern.
+此示例创建方形注释并获取其虚线图案。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

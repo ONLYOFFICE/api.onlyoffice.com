@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set a minor tick mark using predefined symbols.
+如何使用预定义符号设置次刻度线。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and minor tick mark for horizontal axis.

@@ -20,7 +20,7 @@ expression.GetBorderWidth();
 
 ## 示例
 
-This example creates a square annotation and gets its border width.
+此示例创建方形注释并获取其边框宽度。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

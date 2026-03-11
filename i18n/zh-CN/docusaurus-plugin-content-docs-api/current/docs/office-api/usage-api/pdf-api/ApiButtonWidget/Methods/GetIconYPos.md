@@ -20,7 +20,7 @@ expression.GetIconYPos();
 
 ## 示例
 
-This example gets icon Y position from field with image.
+此示例从带图像的字段获取图标 Y 坐标位置。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

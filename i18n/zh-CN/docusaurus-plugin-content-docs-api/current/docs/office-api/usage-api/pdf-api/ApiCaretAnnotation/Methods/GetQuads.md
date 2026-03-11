@@ -20,7 +20,7 @@ expression.GetQuads();
 
 ## 示例
 
-This example gets quads of markup annotation.
+此示例获取标记注释的四边形。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

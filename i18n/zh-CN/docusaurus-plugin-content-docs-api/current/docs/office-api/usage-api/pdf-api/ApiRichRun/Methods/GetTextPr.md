@@ -20,7 +20,7 @@ expression.GetTextPr();
 
 ## 示例
 
-This example gets rich text properties from rich run object and set some properties to it.
+此示例从富文本运行对象获取富文本属性并为其设置一些属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

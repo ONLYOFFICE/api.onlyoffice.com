@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets class type of line annotation.
+此示例获取线条注释的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

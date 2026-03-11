@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the internal id of a form.
+此示例展示如何获取表单的内部 ID。
 
 ```javascript editor-docx
 // How to get an internal id of a text form.

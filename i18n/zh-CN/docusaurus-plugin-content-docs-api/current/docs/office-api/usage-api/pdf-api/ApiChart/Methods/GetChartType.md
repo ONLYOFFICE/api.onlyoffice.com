@@ -20,7 +20,7 @@ expression.GetChartType();
 
 ## 示例
 
-How to get a chart type of a chart.
+如何获取图表的图表类型。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

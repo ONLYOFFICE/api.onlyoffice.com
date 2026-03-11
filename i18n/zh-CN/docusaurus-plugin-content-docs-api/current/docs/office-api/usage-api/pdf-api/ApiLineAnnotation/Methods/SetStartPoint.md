@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets start point to line annotation.
+此示例为线条注释设置起点。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

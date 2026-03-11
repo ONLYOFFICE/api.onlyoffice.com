@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets a class type and pastes it into the pdf document.
+此示例获取类类型并将其粘贴到 PDF 文档中。
 
 ```javascript editor-pdf
 // How to get a class type of ApiUniColor.

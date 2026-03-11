@@ -22,7 +22,7 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-This example applies strikeout formatting to paragraph text.
+此示例对段落文本应用删除线格式。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

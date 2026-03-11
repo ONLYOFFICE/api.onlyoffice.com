@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set a stroke as major vertical gridlines.
+如何将描边设置为主垂直网格线。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its vertical gridlines properties.

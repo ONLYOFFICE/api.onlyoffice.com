@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-How to set shading fill to the cell.
+如何为单元格设置底纹填充。
 
 ```javascript editor-pdf
 // Create table and set its cell shading color.

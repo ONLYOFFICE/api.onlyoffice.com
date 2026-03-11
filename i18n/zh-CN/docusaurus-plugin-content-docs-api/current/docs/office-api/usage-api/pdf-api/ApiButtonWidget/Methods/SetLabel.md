@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example sets button widget labels.
+此示例设置按钮控件的标签。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

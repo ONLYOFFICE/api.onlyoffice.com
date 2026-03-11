@@ -22,7 +22,7 @@ expression.AddInteractiveSequence(drawing);
 
 ## 示例
 
-This example creates an interactive animation sequence.
+此示例创建交互式动画序列。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

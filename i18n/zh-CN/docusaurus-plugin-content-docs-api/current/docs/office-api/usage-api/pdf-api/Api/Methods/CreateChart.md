@@ -29,7 +29,7 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 ## 示例
 
-How to add charts to pdf document.
+如何向 PDF 文档添加图表。
 
 ```javascript editor-pdf
 // Create a 3D bar chart, set its size, position, color and other properties.

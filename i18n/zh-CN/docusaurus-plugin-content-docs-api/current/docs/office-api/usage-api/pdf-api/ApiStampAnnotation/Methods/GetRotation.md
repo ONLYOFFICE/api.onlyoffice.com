@@ -20,7 +20,7 @@ expression.GetRotation();
 
 ## 示例
 
-This example gets rotate of stamp annotation.
+此示例获取图章注释的旋转角度。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

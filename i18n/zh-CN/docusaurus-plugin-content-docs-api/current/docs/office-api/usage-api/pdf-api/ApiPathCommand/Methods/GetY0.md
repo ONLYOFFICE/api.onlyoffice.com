@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-Extracts control points from a cubic bezier curve in a pdf document.
+从 PDF 文档中的三次贝塞尔曲线提取控制点。
 
 ```javascript editor-pdf
 // Displays all control point coordinates in a text shape.

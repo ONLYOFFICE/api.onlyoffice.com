@@ -20,7 +20,7 @@ expression.GetCurrentRun();
 
 ## 示例
 
-This example returns the current run from the document content.
+此示例返回文档内容中的当前文本运行。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

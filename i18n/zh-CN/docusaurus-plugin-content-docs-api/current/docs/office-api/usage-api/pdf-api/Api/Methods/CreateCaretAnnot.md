@@ -22,7 +22,7 @@ expression.CreateCaretAnnot(rect);
 
 ## 示例
 
-This example creates a caret annotation and adds it to the page.
+此示例创建插入符注释并将其添加到页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

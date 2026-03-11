@@ -20,7 +20,7 @@ expression.GetBackgroundColor();
 
 ## 示例
 
-This example shows how to set and get the background color of the current table cell.
+此示例展示如何设置和获取当前表格单元格的背景颜色。
 
 ```javascript editor-docx
 let doc = Api.GetDocument();

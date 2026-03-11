@@ -22,7 +22,7 @@ Quads[]
 
 ## 示例
 
-This example searches a some word in page and adds a highlight to it.
+此示例在页面中搜索某个词并为其添加高亮。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -20,7 +20,7 @@ expression.GetRect();
 
 ## 示例
 
-This example create a new field and gets rect of its widget.
+此示例创建新字段并获取其控件的矩形。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

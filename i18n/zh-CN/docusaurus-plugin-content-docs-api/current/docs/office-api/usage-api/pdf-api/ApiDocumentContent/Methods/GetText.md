@@ -29,7 +29,7 @@ string
 
 ## 示例
 
-This example returns the text from the document content.
+此示例返回文档内容中的文本。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

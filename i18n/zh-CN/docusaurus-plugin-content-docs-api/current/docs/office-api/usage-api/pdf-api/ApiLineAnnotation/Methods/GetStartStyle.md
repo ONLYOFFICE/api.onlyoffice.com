@@ -20,7 +20,7 @@ expression.GetStartStyle();
 
 ## 示例
 
-This example gets start line style to line annotation.
+此示例获取线条注释的起点线条样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

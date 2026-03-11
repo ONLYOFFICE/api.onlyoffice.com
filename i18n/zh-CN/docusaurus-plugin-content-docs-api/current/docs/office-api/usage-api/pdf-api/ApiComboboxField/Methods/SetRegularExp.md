@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example gets text field and sets regular expression validate for it.
+此示例获取文本字段并为其设置正则表达式验证。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

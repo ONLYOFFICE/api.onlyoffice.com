@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to set values to the specified ApiChart object.
+如何为指定的 ApiChart 对象设置值。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its series values.

@@ -20,7 +20,7 @@ expression.GetCurrentFootEndnote();
 
 ## 示例
 
-This example gets the current footnote in the document.
+此示例获取文档中的当前脚注。
 
 ```javascript editor-docx
 // How to add footnote to the document.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets field with image icon position X to 0.
+此示例将带图像字段的图标 X 坐标位置设置为 0。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

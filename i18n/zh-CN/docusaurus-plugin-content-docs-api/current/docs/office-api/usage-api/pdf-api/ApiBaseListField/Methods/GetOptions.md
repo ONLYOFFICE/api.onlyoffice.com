@@ -20,7 +20,7 @@ expression.GetOptions();
 
 ## 示例
 
-This example gets options from field with list of options.
+此示例从带有选项列表的字段获取所有选项。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

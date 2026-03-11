@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets placeholder from text widget and displays it.
+此示例从文本控件获取占位符并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

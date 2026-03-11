@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example changes the type of the first series of ApiChart class and inserts the new type into the pdf document.
+此示例更改 ApiChart 类第一个系列的类型并将新类型插入到 PDF 文档中。
 
 ```javascript editor-pdf
 // How to change a chart type.

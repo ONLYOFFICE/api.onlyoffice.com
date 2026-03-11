@@ -20,7 +20,7 @@ expression.Last();
 
 ## 示例
 
-This example gets last element from rich paragraph.
+此示例从富文本段落获取最后一个元素。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

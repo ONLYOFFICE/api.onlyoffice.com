@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-Creates adjustable geometry with guides and connection points for a pdf document.
+为 PDF 文档创建带有参考线和连接点的可调整几何图形。
 
 ```javascript editor-pdf
 // Displays adjustment value and applies custom geometry to shape.

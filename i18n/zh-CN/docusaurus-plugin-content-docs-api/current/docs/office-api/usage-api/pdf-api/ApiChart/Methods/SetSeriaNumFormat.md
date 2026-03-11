@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to set the "0.00" numeric format to the chart seria.
+如何为图表系列设置 "0.00" 数字格式。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its series numeric format.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the entry effect for a slide show transition.
+此示例为幻灯片放映过渡设置进入效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

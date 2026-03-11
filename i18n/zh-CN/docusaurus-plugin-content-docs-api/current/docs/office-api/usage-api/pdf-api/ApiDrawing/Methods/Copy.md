@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-How to create the same page shape.
+如何创建相同的页面形状。
 
 ```javascript editor-pdf
 // Get a page shape, add it to the page and create its copy.

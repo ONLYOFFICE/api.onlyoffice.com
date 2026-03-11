@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example gets all field widgets and sets background color for them.
+此示例获取所有字段控件并为它们设置背景颜色。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

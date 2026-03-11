@@ -20,7 +20,7 @@ number \| undefined
 
 ## 示例
 
-This example gets the automatic advance time and displays it.
+此示例获取自动前进时间并显示。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

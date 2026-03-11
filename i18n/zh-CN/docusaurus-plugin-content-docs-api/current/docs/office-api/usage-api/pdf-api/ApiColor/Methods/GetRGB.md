@@ -20,7 +20,7 @@ Object
 
 ## 示例
 
-This example shows how to get the RGB components of the color.
+此示例展示如何获取颜色的 RGB 分量。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

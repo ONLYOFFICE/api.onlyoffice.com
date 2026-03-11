@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to place a chart legend.
+如何放置图表图例。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its legend's position.

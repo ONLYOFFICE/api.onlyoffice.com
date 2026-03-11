@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example sets a hyperlink for a shape and an image on a slide.
+此示例为幻灯片上的形状和图像设置超链接。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -20,7 +20,7 @@ expression.GetType();
 
 ## 示例
 
-This example gets the validation type.
+此示例获取验证类型。
 
 ```javascript editor-xlsx
 // How to retrieve the validation type.

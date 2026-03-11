@@ -20,7 +20,7 @@ expression.GetAllFields();
 
 ## 示例
 
-This example gets all fields in the document.
+此示例获取文档中的所有字段。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

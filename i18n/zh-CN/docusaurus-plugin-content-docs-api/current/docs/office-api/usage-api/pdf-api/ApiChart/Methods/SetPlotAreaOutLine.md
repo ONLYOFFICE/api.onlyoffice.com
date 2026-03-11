@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set an outline color for the plot area.
+如何为绑定区域设置轮廓颜色。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its plot area outline.

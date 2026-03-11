@@ -22,7 +22,7 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-How to get a seria from a chart using its index.
+如何使用索引从图表获取系列。
 
 ```javascript editor-pdf
 // Find a chart seria.

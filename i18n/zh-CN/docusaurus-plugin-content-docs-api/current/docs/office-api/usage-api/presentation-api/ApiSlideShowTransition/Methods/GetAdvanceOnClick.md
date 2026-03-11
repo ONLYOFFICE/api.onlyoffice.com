@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets the advance on click setting and displays it.
+此示例获取单击时前进设置并显示。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

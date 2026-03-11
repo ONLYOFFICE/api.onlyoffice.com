@@ -20,7 +20,7 @@ expression.GetHyperlink();
 
 ## 示例
 
-This example returns the hyperlink from the current drawing object.
+此示例返回当前绘图对象的超链接。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

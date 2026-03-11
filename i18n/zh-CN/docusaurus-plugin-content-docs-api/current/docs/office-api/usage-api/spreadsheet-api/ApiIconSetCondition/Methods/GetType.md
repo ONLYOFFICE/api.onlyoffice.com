@@ -20,7 +20,7 @@ expression.GetType();
 
 ## 示例
 
-This example shows how to get the type of an icon set conditional formatting rule.
+此示例展示如何获取图标集条件格式规则的类型。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

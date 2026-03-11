@@ -20,7 +20,7 @@ expression.Last();
 
 ## 示例
 
-This example shows how to get the last non-empty element of a paragraph inside a shape.
+此示例展示如何获取形状内段落的最后一个非空元素。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

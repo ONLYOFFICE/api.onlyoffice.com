@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to convert a shape fill color to JSON.
+此示例展示如何将形状填充颜色转换为 JSON。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

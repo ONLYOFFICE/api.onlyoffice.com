@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example unselects the current graphic object.
+此示例取消选择当前图形对象。
 
 ```javascript editor-pptx
 // How to unselect drawing objects of the slide.

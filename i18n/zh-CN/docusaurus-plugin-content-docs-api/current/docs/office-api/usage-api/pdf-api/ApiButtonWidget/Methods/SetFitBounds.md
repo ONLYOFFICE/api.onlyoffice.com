@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets button widget fit bounds property.
+此示例设置按钮控件的适应边界属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

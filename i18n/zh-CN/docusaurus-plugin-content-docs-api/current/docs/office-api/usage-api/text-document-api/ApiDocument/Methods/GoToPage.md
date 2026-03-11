@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example moves the cursor to the start of the specified page in the document.
+此示例将光标移动到文档中指定页面的开头。
 
 ```javascript editor-docx
 // How to navigate to a specific page in the document.

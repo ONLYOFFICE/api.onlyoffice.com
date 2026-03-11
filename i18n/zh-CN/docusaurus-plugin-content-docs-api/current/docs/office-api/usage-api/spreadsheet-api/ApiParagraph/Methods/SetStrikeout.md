@@ -22,7 +22,7 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-This example shows how to apply strikeout formatting to all text in a paragraph inside a shape.
+此示例展示如何对形状内段落中的所有文本应用删除线格式。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

@@ -73,6 +73,7 @@
 | [GetSheets](./Methods/GetSheets.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md)[] | 返回表示活动工作簿中所有工作表的工作表集合。 |
 | [GetThemesColors](./Methods/GetThemesColors.md) | string[] | 返回电子表格所有可用主题颜色的列表。 |
 | [GetWorksheetFunction](./Methods/GetWorksheetFunction.md) | [ApiWorksheetFunction](../ApiWorksheetFunction/ApiWorksheetFunction.md) | 返回 ApiWorksheetFunction 对象。 |
+| [HexColor](./Methods/HexColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 从十六进制字符串创建颜色。 |
 | [InchesToPoints](./Methods/InchesToPoints.md) | number | 将英寸转换为磅。 |
 | [InsertPivotExistingWorksheet](./Methods/InsertPivotExistingWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 将指定的数据透视表插入到现有工作表中。 |
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 将指定的数据透视表插入到新工作表中。 |
@@ -92,6 +93,8 @@
 | [PointsToPicas](./Methods/PointsToPicas.md) | number | 将磅转换为派卡（1 派卡 = 12 磅）。 |
 | [PointsToPixels](./Methods/PointsToPixels.md) | number | 将磅转换为像素。 |
 | [PointsToTwips](./Methods/PointsToTwips.md) | number | 将磅转换为缇。 |
+| [RGB](./Methods/RGB.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝分量创建 RGB 颜色。 |
+| [RGBA](./Methods/RGBA.md) | [ApiColor](../ApiColor/ApiColor.md) | 从红、绿、蓝和透明度分量创建 RGBA 颜色。 |
 | [RecalculateAllFormulas](./Methods/RecalculateAllFormulas.md) | boolean | 重新计算活动工作簿中的所有公式。 |
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | 无 | 刷新所有数据透视表。 |
 | [RemoveCustomFunction](./Methods/RemoveCustomFunction.md) | boolean | 删除自定义函数。 |
@@ -101,6 +104,7 @@
 | [SetLocale](./Methods/SetLocale.md) | 无 | 设置文档的区域设置。 |
 | [SetReferenceStyle](./Methods/SetReferenceStyle.md) | 无 | 设置单元格引用样式。 |
 | [SetThemeColors](./Methods/SetThemeColors.md) | boolean | 设置当前电子表格的主题颜色。 |
+| [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建主题颜色。 |
 | [TwipsToPoints](./Methods/TwipsToPoints.md) | number | 将缇转换为磅。 |
 | [attachEvent](./Methods/attachEvent.md) | 无 | 订阅指定事件，并在事件触发时调用回调函数。 |
 | [detachEvent](./Methods/detachEvent.md) | 无 | 取消订阅指定事件。 |

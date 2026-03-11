@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets vertices to polygon annotation.
+此示例为多边形注释设置顶点。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

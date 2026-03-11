@@ -20,7 +20,7 @@ expression.GetParentParagraph();
 
 ## 示例
 
-This example gets parent rich paragraph of rich run object and set justification property to it.
+此示例获取富文本运行对象的父富文本段落并为其设置对齐属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

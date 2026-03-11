@@ -20,7 +20,7 @@ expression.GetLine();
 
 ## 示例
 
-Gets the outline properties from a shape and displays detailed information.
+从形状获取轮廓属性并显示详细信息。
 
 ```javascript editor-docx
 // Creates a shape with a stroke, retrieves it and shows stroke details.

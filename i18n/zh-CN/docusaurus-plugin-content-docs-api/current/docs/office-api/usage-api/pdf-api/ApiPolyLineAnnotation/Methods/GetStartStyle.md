@@ -20,7 +20,7 @@ expression.GetStartStyle();
 
 ## 示例
 
-This example gets line start style of polyline annotation.
+此示例获取折线注释的线条起点样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

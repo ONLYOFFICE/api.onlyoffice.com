@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the x position of the drawing on the slide.
+此示例设置绘图在幻灯片上的 X 坐标位置。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example selects the text on the page.
+此示例选择页面上的文本。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

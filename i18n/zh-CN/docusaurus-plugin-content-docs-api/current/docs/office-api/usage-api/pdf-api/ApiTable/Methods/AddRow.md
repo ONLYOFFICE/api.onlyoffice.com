@@ -23,7 +23,7 @@ expression.AddRow(oCell, isBefore);
 
 ## 示例
 
-How to insert a row to the table.
+如何向表格插入行。
 
 ```javascript editor-pdf
 // Create a 2x4 table, set its position and then insert a row to it.

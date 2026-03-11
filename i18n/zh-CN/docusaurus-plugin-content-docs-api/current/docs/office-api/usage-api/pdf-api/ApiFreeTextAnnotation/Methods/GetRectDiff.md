@@ -20,7 +20,7 @@ expression.GetRectDiff();
 
 ## 示例
 
-This example gets rect diff of freeText annotation.
+此示例获取自由文本注释的矩形差异。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

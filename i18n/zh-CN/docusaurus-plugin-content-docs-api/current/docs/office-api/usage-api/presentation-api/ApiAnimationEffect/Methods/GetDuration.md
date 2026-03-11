@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets the duration of an animation effect.
+此示例获取动画效果的持续时间。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

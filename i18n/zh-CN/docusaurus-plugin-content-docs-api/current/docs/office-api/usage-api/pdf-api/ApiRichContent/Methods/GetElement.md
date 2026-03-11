@@ -22,7 +22,7 @@ expression.GetElement(pos);
 
 ## 示例
 
-This example gets first element of rich content.
+此示例获取富文本内容的第一个元素。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -22,7 +22,7 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-This example shows how to apply all-caps formatting to a paragraph inside a shape.
+此示例展示如何对形状内的段落应用全大写格式。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

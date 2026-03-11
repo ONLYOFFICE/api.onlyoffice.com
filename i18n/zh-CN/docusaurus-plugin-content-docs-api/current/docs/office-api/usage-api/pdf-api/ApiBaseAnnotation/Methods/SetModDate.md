@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example creates a square annotation and sets mod date to it.
+此示例创建方形注释并为其设置修改日期。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets whether blank values are permitted.
+此示例获取是否允许空白值。
 
 ```javascript editor-xlsx
 // How to check if blank values are allowed in validation.

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to resize a drawing.
+如何调整绘图大小。
 
 ```javascript editor-pdf
 // Get a shape object from a page and set its size.

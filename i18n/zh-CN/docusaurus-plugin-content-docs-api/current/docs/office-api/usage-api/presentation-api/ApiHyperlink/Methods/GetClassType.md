@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example shows how to get a class type of a hyperlink.
+此示例展示如何获取超链接的类类型。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

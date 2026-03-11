@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets checkbox widget export (checked) value.
+此示例设置复选框控件的导出（选中）值。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

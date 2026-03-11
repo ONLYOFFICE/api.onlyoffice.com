@@ -20,7 +20,7 @@ expression.GetLayout();
 
 ## 示例
 
-This example gets button widget layout type.
+此示例获取按钮控件的布局类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

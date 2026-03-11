@@ -22,7 +22,7 @@ expression.CreateRadiobuttonField(aRect);
 
 ## 示例
 
-How to create and add a radiobutton field to document.
+如何创建单选按钮字段并添加到文档。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

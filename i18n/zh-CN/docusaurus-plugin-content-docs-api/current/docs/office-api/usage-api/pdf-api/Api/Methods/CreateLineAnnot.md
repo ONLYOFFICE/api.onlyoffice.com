@@ -24,7 +24,7 @@ expression.CreateLineAnnot(rect, startPoint, endPoint);
 
 ## 示例
 
-This example creates a line annotation and adds it to the page.
+此示例创建线条注释并将其添加到页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

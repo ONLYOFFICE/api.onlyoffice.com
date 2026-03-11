@@ -22,7 +22,7 @@ expression.GetDrawingsByName(ids);
 
 ## 示例
 
-This example shows how to get all drawings with the specified names from the document.
+此示例展示如何从文档中获取具有指定名称的所有绘图对象。
 
 ```javascript editor-docx
 // Get drawings by their names.

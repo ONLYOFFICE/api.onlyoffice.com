@@ -22,7 +22,7 @@ expression.SetIgnoreBlank(IgnoreBlank);
 
 ## 示例
 
-This example sets whether blank values are permitted.
+此示例设置是否允许空白值。
 
 ```javascript editor-xlsx
 // How to allow or disallow blank values in validation.

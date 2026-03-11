@@ -20,7 +20,7 @@ expression.GetCurrentRun();
 
 ## 示例
 
-This example gets current paragraph from rich content.
+此示例从富文本内容获取当前段落。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

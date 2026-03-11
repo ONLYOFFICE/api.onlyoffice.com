@@ -22,7 +22,7 @@ expression.HexColor(hexString);
 
 ## 示例
 
-This example shows how to create a hex color and use it as a font color.
+此示例展示如何创建十六进制颜色并将其用作字体颜色。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets checkbox widget checked by default property.
+此示例设置复选框控件的默认选中属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to rename a chart seria.
+如何重命名图表系列。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its series names.

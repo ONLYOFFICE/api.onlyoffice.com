@@ -20,7 +20,7 @@ expression.GetAllDrawings();
 
 ## 示例
 
-How to get drawings on a page.
+如何获取页面上的绘图。
 
 ```javascript editor-pdf
 // Get drawing on a page and select it.

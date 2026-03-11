@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets new icon type for text annotation.
+此示例为文本注释设置新的图标类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

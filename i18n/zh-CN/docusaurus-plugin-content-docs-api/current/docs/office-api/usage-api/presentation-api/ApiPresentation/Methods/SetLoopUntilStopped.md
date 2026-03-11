@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the presentation to loop continuously until manually stopped.
+此示例将演示文稿设置为持续循环播放直到手动停止。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

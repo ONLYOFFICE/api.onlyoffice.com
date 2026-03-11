@@ -20,7 +20,7 @@ Object
 
 ## 示例
 
-This example shows how to get the position of the comment in the presentation.
+此示例展示如何获取演示文稿中批注的位置。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

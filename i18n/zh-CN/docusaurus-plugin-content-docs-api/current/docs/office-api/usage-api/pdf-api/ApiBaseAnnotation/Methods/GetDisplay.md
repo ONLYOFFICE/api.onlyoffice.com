@@ -20,7 +20,7 @@ expression.GetDisplay();
 
 ## 示例
 
-This example creates a square annotation and gets its display.
+此示例创建方形注释并获取其显示属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

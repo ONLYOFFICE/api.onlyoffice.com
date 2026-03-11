@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example shows how to get the class type of an ApiTheme object.
+此示例展示如何获取 ApiTheme 对象的类类型。
 
 ```javascript editor-xlsx
 const workbook = Api.GetActiveWorkbook();

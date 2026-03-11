@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets selected value index to field with list of options.
+此示例为带有选项列表的字段设置选中值索引。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

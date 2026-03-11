@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to rename a chart category.
+如何重命名图表类别。
 
 ```javascript editor-pdf
 // Create a chart then name its category.

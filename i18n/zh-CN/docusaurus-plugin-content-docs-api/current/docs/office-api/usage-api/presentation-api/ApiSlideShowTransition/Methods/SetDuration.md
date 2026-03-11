@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the transition duration to 2000 milliseconds.
+此示例将过渡持续时间设置为 2000 毫秒。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

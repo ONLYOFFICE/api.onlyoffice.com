@@ -20,7 +20,7 @@ Number
 
 ## 示例
 
-This example shows how to get the outline level of paragraphs with different levels.
+此示例展示如何获取不同级别段落的大纲级别。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

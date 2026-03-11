@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to add values to horizontal axis for all series of scatter charts.
+如何为散点图的所有系列向水平轴添加值。
 
 ```javascript editor-pdf
 // Fill all x-axis values of scattered charts series.

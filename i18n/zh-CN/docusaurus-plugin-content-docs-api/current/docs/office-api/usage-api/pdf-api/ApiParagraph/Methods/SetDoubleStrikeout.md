@@ -22,7 +22,7 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-This example applies double strikeout formatting to paragraph text.
+此示例对段落文本应用双删除线格式。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

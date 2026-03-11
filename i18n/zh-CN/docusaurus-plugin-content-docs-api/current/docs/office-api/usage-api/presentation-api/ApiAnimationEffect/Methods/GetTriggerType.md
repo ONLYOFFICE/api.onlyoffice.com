@@ -20,7 +20,7 @@ expression.GetTriggerType();
 
 ## 示例
 
-This example gets the trigger type of an animation effect.
+此示例获取动画效果的触发类型。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

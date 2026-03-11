@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example checks if the current form is locked.
+此示例检查当前表单是否已锁定。
 
 ```javascript editor-docx
 // How to know whether a form is locked or not.

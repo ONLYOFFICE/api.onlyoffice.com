@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to color a chart legend.
+如何为图表图例着色。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and background color of a legend.

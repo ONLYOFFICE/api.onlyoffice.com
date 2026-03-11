@@ -20,7 +20,7 @@ expression.GetAllWidgets();
 
 ## 示例
 
-This example gets all field widgets and sets border color for them.
+此示例获取所有字段控件并为它们设置边框颜色。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

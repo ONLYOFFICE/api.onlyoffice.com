@@ -20,7 +20,7 @@ expression.GetIconType();
 
 ## 示例
 
-This example gets icon type of text annotation.
+此示例获取文本注释的图标类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

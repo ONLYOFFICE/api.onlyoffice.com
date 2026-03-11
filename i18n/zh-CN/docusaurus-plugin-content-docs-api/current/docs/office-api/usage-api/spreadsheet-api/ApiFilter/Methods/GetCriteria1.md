@@ -20,7 +20,7 @@ string \| string[] \| number \| [XlDynamicFilterCriteria](../../Enumeration/XlDy
 
 ## 示例
 
-This example reads the first criteria of a filter.
+此示例读取筛选的第一个条件。
 
 ```javascript editor-xlsx
 // How to inspect the main condition of an AutoFilter column.

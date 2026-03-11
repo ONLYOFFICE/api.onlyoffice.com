@@ -20,7 +20,7 @@ expression.GetPosX();
 
 ## 示例
 
-This example gets the x position of the drawing on the slide.
+此示例获取绘图在幻灯片上的 X 坐标位置。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

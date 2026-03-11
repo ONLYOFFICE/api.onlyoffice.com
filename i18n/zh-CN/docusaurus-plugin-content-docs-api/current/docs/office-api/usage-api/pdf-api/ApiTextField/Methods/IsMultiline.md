@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets text field and displays multiline property.
+此示例获取文本字段并显示多行属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

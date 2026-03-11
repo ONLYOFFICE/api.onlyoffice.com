@@ -20,7 +20,7 @@ expression.GetContent();
 
 ## 示例
 
-How to get a content of the ApiTableCell object.
+如何获取 ApiTableCell 对象的内容。
 
 ```javascript editor-pdf
 // Return the ApiDocumentContent object from the table cell.

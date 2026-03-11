@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example show how to select footnote/endnote reference in the document.
+此示例展示如何在文档中选择脚注/尾注引用。
 
 ```javascript editor-docx
 // How to add footnote to the document.

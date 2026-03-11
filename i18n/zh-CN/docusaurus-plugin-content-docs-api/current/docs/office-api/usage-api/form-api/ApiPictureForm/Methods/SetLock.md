@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example specifies if the current form should be locked.
+此示例指定当前表单是否应被锁定。
 
 ```javascript editor-forms
 // How to lock a form.

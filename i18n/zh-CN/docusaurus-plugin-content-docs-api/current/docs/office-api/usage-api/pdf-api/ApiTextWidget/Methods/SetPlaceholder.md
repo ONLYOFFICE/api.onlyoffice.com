@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets placeholder for text widget.
+此示例为文本控件设置占位符。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

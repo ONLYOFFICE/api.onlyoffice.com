@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example shows how to set the name of a drawing.
+此示例展示如何设置绘图的名称。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

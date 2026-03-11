@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets the number of effects in an animation sequence.
+此示例获取动画序列中的效果数量。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-How to delete a page drawing.
+如何删除页面绘图。
 
 ```javascript editor-pdf
 // Get a page drawing and delete it.

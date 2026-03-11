@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the internal ID of a paragraph.
+此示例展示如何获取段落的内部 ID。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

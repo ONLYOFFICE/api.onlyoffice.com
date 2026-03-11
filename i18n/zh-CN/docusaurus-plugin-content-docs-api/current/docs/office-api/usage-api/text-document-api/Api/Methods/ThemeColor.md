@@ -22,7 +22,7 @@ expression.ThemeColor(name);
 
 ## 示例
 
-This example shows how to create a theme-color and use it as a font color.
+此示例展示如何创建主题颜色并将其用作字体颜色。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

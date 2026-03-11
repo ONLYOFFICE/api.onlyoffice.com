@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example returns the absolute XPath of the current XML node.
+此示例返回当前 XML 节点的绝对 XPath。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBorderColor(r, g, b, a);
+expression.SetBorderColor(color);
 ```
 
 `expression` - 表示 [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) 类的变量。
@@ -14,10 +14,7 @@ expression.SetBorderColor(r, g, b, a);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
-| a | 必需 | [byte](../../Enumeration/byte.md) |  | Alpha 颜色分量值。 |
+| color | 可选 | [ApiColor](../../ApiColor/ApiColor.md) |  | 未提供描述。 |
 
 ## 返回值
 

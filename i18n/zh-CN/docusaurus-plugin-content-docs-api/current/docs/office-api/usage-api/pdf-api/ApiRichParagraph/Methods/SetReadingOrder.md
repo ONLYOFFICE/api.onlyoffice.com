@@ -26,7 +26,7 @@ expression.SetReadingOrder(readingOrder);
 
 ## 示例
 
-This example sets rtl to rich paragraph.
+此示例为富文本段落设置从右到左方向。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

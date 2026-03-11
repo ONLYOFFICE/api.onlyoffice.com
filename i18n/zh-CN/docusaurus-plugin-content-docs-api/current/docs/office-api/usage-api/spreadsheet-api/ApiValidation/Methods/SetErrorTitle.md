@@ -22,7 +22,7 @@ expression.SetErrorTitle(ErrorTitle);
 
 ## 示例
 
-This example sets the error message title.
+此示例设置错误消息标题。
 
 ```javascript editor-xlsx
 // How to set the validation error title.

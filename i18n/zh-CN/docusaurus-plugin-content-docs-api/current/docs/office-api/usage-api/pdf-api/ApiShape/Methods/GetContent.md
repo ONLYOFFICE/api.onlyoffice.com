@@ -20,7 +20,7 @@ expression.GetContent();
 
 ## 示例
 
-How to get a content of a shape.
+如何获取形状的内容。
 
 ```javascript editor-pdf
 // Retrieve a shape content and insert a paragraph to it.

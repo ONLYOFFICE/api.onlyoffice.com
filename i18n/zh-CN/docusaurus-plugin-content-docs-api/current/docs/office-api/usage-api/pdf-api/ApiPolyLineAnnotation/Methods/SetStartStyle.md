@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets line start style to polyline annotation.
+此示例为折线注释设置线条起点样式。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

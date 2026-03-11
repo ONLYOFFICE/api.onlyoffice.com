@@ -22,7 +22,7 @@ expression.SetTextPr(textPr);
 
 ## 示例
 
-This example sets rich text properties to rich run object.
+此示例为富文本运行对象设置富文本属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

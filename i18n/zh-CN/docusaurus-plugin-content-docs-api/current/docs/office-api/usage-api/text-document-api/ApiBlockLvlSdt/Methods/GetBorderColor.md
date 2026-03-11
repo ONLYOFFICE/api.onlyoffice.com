@@ -16,7 +16,7 @@ expression.GetBorderColor();
 
 ## 返回值
 
-null \| Object
+[ApiColor](../../ApiColor/ApiColor.md)
 
 ## 示例
 

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets button widget scale how type.
+此示例设置按钮控件的缩放方式类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

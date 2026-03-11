@@ -20,7 +20,7 @@ expression.GetEntryEffect();
 
 ## 示例
 
-This example gets the entry effect from a slide show transition.
+此示例从幻灯片放映过渡中获取进入效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

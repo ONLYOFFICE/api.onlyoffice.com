@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example check is the ApiDocumentContent is a endnote.
+此示例检查 ApiDocumentContent 是否为尾注。
 
 ```javascript editor-docx
 // How to add endnote to the document.

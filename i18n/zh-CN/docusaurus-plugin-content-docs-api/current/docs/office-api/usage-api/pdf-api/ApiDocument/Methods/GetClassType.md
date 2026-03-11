@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-This example gets document object class type and displays it in text field.
+此示例获取文档对象类类型并在文本字段中显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

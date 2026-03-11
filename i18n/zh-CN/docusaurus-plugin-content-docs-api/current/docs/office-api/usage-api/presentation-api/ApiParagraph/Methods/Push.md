@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example adds an element to the paragraph.
+此示例向段落添加元素。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

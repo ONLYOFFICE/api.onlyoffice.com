@@ -22,7 +22,7 @@ expression.GetLayoutByType(sType);
 
 ## 示例
 
-This example returns the layout by its type from the slide master.
+此示例根据类型从幻灯片母版返回布局。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

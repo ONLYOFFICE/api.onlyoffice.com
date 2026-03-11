@@ -20,7 +20,7 @@ expression.GetOperator();
 
 ## 示例
 
-This example gets the data validation operator.
+此示例获取数据验证运算符。
 
 ```javascript editor-xlsx
 // How to retrieve the validation operator.

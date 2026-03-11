@@ -26,7 +26,7 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## 示例
 
-How to add a new flowchart shape.
+如何添加新的流程图形状。
 
 ```javascript editor-pdf
 // Add a new shape indicating its properties.

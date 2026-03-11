@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets the transition duration and displays it.
+此示例获取过渡持续时间并显示。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

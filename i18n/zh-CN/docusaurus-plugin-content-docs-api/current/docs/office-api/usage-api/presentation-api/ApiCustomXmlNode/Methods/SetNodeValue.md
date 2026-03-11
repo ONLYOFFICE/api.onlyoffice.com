@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example shows how to set the XML content for the current node.
+此示例展示如何为当前节点设置 XML 内容。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -22,7 +22,7 @@ expression.CreateListboxField(aRect);
 
 ## 示例
 
-How to create and add a listbox field to document.
+如何创建列表框字段并添加到文档。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

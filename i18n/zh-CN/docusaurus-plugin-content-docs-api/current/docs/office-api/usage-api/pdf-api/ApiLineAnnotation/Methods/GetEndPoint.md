@@ -20,7 +20,7 @@ expression.GetEndPoint();
 
 ## 示例
 
-This example gets end point of line annotation.
+此示例获取线条注释的终点。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

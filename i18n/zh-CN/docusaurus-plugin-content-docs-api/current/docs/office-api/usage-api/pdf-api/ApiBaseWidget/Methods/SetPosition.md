@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example create a new field and sets new position to its widget.
+此示例创建新字段并为其控件设置新位置。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

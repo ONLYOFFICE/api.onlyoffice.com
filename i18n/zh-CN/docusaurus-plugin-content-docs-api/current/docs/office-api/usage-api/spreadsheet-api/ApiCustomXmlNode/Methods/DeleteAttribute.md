@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example shows how to delete an attribute from a custom XML node.
+此示例展示如何从自定义 XML 节点中删除属性。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

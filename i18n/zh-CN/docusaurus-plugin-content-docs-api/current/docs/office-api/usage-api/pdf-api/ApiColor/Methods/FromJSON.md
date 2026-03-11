@@ -22,7 +22,7 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-This example shows how to restore a shape fill color from JSON.
+此示例展示如何从 JSON 恢复形状填充颜色。
 
 ```javascript editor-pdf
 const doc = Api.GetDocument();

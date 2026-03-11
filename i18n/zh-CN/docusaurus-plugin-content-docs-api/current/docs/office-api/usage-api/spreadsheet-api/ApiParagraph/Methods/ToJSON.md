@@ -23,7 +23,7 @@ JSON
 
 ## 示例
 
-This example shows how to serialize a paragraph to JSON format.
+此示例展示如何将段落序列化为 JSON 格式。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

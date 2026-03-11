@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-How to select a drawing object of the page.
+如何选择页面的绘图对象。
 
 ```javascript editor-pdf
 // Select an object from a page.

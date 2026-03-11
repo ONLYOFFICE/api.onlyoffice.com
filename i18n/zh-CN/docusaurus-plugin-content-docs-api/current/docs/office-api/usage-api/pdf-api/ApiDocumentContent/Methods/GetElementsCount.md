@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example gets elements count and inserts this value into the pdf document.
+此示例获取元素数量并将此值插入到 PDF 文档中。
 
 ```javascript editor-pdf
 // How to get a number of elements a page shape contains.

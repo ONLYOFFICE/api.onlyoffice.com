@@ -20,7 +20,7 @@ expression.GetAllEffects();
 
 ## 示例
 
-This example gets all animation effects from a timeline.
+此示例从时间线获取所有动画效果。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

@@ -22,7 +22,7 @@ expression.SetColor(color);
 
 ## 示例
 
-This example sets the text color for the current text run.
+此示例为当前文本运行设置文本颜色。
 
 ```javascript editor-docx
 // How to change text color.

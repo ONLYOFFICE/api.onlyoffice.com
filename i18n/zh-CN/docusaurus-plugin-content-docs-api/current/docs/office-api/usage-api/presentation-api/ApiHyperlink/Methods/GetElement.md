@@ -22,7 +22,7 @@ expression.GetElement(nPos);
 
 ## 示例
 
-This example returns the hyperlink element using the position specified.
+此示例使用指定位置返回超链接元素。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

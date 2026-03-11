@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the name of a drawing object.
+此示例展示如何获取绘图对象的名称。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

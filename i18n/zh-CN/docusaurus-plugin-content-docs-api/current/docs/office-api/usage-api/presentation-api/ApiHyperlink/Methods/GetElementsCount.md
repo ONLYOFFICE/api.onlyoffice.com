@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-This example returns a number of elements in the current hyperlink.
+此示例返回当前超链接中的元素数量。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

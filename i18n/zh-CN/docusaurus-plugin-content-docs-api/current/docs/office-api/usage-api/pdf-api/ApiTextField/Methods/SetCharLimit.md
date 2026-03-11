@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-This example adds text field and sets char limit for it.
+此示例添加文本字段并为其设置字符限制。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

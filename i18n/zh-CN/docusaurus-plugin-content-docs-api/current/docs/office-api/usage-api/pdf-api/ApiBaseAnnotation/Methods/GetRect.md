@@ -20,7 +20,7 @@ expression.GetRect();
 
 ## 示例
 
-This example creates a square annotation and gets its rect.
+此示例创建方形注释并获取其矩形。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

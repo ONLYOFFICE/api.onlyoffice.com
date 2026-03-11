@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets field full name and displays it.
+此示例获取字段全名并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

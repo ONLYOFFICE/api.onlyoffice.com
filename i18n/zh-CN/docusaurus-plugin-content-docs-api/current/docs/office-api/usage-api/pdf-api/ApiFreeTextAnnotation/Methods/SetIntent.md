@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets intent for freeText annotation.
+此示例为自由文本注释设置意图。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

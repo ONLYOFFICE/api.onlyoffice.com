@@ -22,7 +22,7 @@ expression.CreateDateField(aRect);
 
 ## 示例
 
-How to create and add a text field with date picker to document.
+如何创建带日期选择器的文本字段并添加到文档。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets the font size to the horizontal axis labels.
+此示例为水平轴标签设置字体大小。
 
 ```javascript editor-xlsx
 // How to update font size of the horizontal axis labels.

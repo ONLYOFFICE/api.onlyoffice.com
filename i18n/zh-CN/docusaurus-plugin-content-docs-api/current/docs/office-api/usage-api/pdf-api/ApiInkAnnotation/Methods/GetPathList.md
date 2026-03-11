@@ -20,7 +20,7 @@ expression.GetPathList();
 
 ## 示例
 
-This example sets path list to ink annotation.
+此示例为墨迹注释设置路径列表。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

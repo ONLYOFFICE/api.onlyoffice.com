@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example moves an animation effect to a different position.
+此示例将动画效果移动到不同位置。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

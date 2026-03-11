@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example gets a pdf document name and inserts it into the pdf document.
+此示例获取 PDF 文档名称并将其插入到 PDF 文档中。
 
 ```javascript editor-pdf
 // How to get a pdf document name.

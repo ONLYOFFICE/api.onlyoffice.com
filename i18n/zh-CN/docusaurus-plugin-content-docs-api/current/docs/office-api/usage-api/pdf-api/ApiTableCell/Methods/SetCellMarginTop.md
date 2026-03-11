@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-How to set the cell top margin for the current table cell.
+如何为当前表格单元格设置顶部边距。
 
 ```javascript editor-pdf
 // Specify the top margin value for the ApiTableCell object.

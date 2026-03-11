@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-This example copies rich paragraph.
+此示例复制富文本段落。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

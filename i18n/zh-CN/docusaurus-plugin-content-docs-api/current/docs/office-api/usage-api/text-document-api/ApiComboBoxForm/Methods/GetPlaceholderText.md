@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the placeholder text of a form.
+此示例展示如何获取表单的占位符文本。
 
 ```javascript editor-docx
 // How to get the placeholder text of a text form.

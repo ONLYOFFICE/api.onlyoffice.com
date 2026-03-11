@@ -22,7 +22,7 @@ expression.GetElement(nPos);
 
 ## 示例
 
-This example shows how to get an element from a hyperlink inside a shape.
+此示例展示如何从形状内的超链接获取元素。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

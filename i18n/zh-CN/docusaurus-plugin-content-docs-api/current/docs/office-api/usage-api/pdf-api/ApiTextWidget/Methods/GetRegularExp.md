@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets regular expression from text widget and displays it.
+此示例从文本控件获取正则表达式并显示。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

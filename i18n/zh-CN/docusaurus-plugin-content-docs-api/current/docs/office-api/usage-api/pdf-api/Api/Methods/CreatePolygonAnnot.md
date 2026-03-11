@@ -23,7 +23,7 @@ expression.CreatePolygonAnnot(rect, path);
 
 ## 示例
 
-This example creates a polygon annotation and adds it to the page.
+此示例创建多边形注释并将其添加到页面。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

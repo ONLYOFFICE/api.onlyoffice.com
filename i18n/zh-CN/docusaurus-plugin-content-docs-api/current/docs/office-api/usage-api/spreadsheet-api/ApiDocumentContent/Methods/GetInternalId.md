@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to get the internal identifier of a document content element inside a shape.
+此示例展示如何获取形状内文档内容元素的内部标识符。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

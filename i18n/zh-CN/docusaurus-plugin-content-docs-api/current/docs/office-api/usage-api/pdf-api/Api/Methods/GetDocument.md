@@ -20,7 +20,7 @@ expression.GetDocument();
 
 ## 示例
 
-This example gets the document object for further use.
+此示例获取文档对象以供进一步使用。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

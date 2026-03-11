@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-This example sets toggle to off property for checkbox field.
+此示例为复选框字段设置切换为关闭属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

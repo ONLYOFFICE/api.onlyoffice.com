@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-This example shows how to convert ApiColor objects of different types to JSON strings.
+此示例展示如何将不同类型的 ApiColor 对象转换为 JSON 字符串。
 
 ```javascript editor-docx
 const doc = Api.GetDocument();

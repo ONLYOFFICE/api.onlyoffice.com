@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-This example gets checkbox widget checked prop in group of checkbox widgets.
+此示例获取复选框控件组中复选框控件的选中属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

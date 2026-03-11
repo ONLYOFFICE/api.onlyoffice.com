@@ -22,7 +22,7 @@ expression.CreateTextField(aRect);
 
 ## 示例
 
-How to create and add a text field to document.
+如何创建文本字段并添加到文档。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

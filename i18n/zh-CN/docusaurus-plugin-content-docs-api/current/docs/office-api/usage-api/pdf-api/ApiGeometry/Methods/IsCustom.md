@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-Gets geometry information from a star shape on a pdf document page.
+从 PDF 文档页面上的星形形状获取几何信息。
 
 ```javascript editor-pdf
 // Displays preset type and custom status in a text shape.

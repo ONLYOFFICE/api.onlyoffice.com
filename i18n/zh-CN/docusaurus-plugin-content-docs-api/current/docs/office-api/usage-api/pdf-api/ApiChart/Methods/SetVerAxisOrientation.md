@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-How to set an orientation of vertical axis.
+如何设置垂直轴的方向。
 
 ```javascript editor-pdf
 // Create a chart, set its properties and its vertical axis orientation.
