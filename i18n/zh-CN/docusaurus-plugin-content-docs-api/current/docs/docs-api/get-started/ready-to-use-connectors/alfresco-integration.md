@@ -72,7 +72,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 3. 确保ONLYOFFICE文档能够向Alfresco发送POST请求。
 
-   您可能需要在**alfresco-global.properties**中更改以下行，或者您可以使用[配置页面](#configuring-onlyoffice-alfresco-module-package)进行设置：
+   您可能需要在**alfresco-global.properties**中更改以下行，或者您可以使用[配置页面](#configuring-onlyoffice-module-package-for-alfresco)进行设置：
 
    ``` ini
    alfresco.host=<hostname>

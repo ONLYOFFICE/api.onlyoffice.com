@@ -72,7 +72,7 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
 
 3. Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
 
-   You may need to change these lines in **alfresco-global.properties** or you can set it using [configuration page](#configuring-onlyoffice-alfresco-module-package):
+   You may need to change these lines in **alfresco-global.properties** or you can set it using [configuration page](#configuring-onlyoffice-module-package-for-alfresco):
 
    ``` ini
    alfresco.host=<hostname>
