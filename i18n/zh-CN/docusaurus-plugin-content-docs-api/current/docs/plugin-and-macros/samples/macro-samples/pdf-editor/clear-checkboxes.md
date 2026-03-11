@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 清除复选框
 
 清除文档中的所有复选框。

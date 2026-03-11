@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 修改验证规则
 
 修改文档中数字和邮箱字段的验证规则。
