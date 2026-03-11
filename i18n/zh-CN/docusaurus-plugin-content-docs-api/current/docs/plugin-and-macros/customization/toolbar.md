@@ -303,8 +303,6 @@ const oToolbarMenuItem = {
 
 **示例**：
 
-<!-- eslint-skip -->
-
 ``` ts
 window.Asc.plugin.event_onToolbarMenuClick = (id) => {
   console.log("Toolbar menu item clicked: " + id);

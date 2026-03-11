@@ -8,8 +8,6 @@ Sets the font color of the cell **B4** to red.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

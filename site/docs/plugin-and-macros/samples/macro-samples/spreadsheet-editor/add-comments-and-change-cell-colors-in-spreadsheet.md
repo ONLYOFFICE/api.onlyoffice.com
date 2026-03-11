@@ -8,8 +8,6 @@ Adds comments to the cells in the selection and can also change the background c
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let worksheet = Api.GetActiveSheet();

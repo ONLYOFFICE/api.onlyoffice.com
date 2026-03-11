@@ -8,8 +8,6 @@ Finds the next available blank row in a worksheet. This macro allows you to get 
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function () 
 {

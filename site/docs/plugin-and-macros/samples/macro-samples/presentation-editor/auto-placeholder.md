@@ -8,8 +8,6 @@ Automatically fills empty text boxes on slides with placeholder content and arra
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

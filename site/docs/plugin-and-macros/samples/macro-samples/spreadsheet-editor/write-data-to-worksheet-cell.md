@@ -8,8 +8,6 @@ Writes the data (the *Hello world* phrase) to the worksheet third column of the 
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

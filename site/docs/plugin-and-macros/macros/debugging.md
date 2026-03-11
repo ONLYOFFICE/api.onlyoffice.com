@@ -12,7 +12,6 @@ To debug ONLYOFFICE macros, follow the instructions below.
 
    <!-- This code is related to macros. -->
 
-   <!-- eslint-skip -->
 
    ``` ts
    debugger;
@@ -37,8 +36,6 @@ The **debugger** command works as a breakpoint and pauses the execution at the s
 If you just need to display the specific values in the browser developer console, you can use the **console.log()** method. Pass a value you want to check or just a message string as an argument of this method and open the developer console by pressing the **F12** button to see the result:
 
 <!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 console.log(123);

@@ -104,8 +104,6 @@ End Sub
 
 <!-- 下面的代码与宏相关。 -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

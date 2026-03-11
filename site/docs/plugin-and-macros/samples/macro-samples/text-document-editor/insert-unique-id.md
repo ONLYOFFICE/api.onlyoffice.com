@@ -8,8 +8,6 @@ Inserts a unique id into a form document.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

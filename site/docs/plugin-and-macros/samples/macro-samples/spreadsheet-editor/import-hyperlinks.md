@@ -8,8 +8,6 @@ Imports hyperlinks between different worksheets in the spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let worksheetA = Api.GetSheet("Sheet1");

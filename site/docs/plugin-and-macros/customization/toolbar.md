@@ -303,8 +303,6 @@ The event called when the toolbar menu button has been clicked. [Subscribe](../i
 
 **Example**:
 
-<!-- eslint-skip -->
-
 ``` ts
 window.Asc.plugin.event_onToolbarMenuClick = (id) => {
   console.log("Toolbar menu item clicked: " + id);

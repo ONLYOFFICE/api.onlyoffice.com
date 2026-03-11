@@ -8,8 +8,6 @@ Applies multiple conditional formatting rules to the selected range.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     // Get the selected range

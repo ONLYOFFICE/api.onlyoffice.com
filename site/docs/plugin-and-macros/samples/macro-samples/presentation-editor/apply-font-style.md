@@ -8,8 +8,6 @@ Applies a consistent font style across all the slides.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

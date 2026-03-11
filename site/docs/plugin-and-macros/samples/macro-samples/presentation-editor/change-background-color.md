@@ -8,8 +8,6 @@ Sets blue color as the background of even indexed slides, if it is odd sets an i
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

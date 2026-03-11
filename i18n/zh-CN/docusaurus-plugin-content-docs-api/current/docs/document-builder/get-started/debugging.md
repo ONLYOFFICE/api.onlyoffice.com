@@ -18,7 +18,6 @@ import TabItem from '@theme/TabItem';
 
    <!-- 此代码片段显示在截图中。 -->
 
-   <!-- eslint-skip -->
    
    ```ts
    debugger;

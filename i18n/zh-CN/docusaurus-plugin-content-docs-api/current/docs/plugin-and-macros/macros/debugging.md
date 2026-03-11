@@ -12,7 +12,6 @@ sidebar_position: -3
 
    <!-- This code is related to macros. -->
 
-   <!-- eslint-skip -->
 
    ``` ts
    debugger;
@@ -37,8 +36,6 @@ sidebar_position: -3
 如果您想在浏览器的开发者控制台中显示某些值，可以使用 **console.log()** 方法。将你想检查的值或一段消息字符串作为参数传入此方法，然后按 **F12** 按键打开开发者控制台，即可查看结果：
 
 <!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 console.log(123);

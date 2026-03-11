@@ -8,8 +8,6 @@ Adds the "State" label and the text form prefilled with "CA" if the zip code of 
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

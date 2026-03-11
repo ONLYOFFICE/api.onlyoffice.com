@@ -8,8 +8,6 @@ Automatically generates bookmarks for all heading paragraphs in the document, us
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

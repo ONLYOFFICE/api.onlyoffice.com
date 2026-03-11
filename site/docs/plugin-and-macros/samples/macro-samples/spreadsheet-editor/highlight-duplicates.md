@@ -8,8 +8,6 @@ Highlights duplicates in the selected area with different colors to recognize du
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function () 
 {

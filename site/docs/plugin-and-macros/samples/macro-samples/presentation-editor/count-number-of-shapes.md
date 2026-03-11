@@ -8,8 +8,6 @@ Counts the total number of shapes in a presentation by iterating through all sli
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

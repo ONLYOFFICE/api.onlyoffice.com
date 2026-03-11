@@ -8,8 +8,6 @@ Applies predefined headers and footers to all pages in the document.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

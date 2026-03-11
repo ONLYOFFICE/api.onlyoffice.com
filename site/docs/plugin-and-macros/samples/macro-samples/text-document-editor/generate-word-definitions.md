@@ -10,8 +10,6 @@ Generates word definitions in your document using the [Dictionary API](https://a
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let doc = Api.GetDocument();

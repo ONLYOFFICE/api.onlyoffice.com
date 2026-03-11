@@ -17,8 +17,6 @@ sidebar_position: -4
 
 <!-- 以下代码与宏相关。 -->
 
-<!-- eslint-skip -->
-
     ``` ts
     (function()
     {
@@ -109,8 +107,6 @@ sidebar_position: -4
 :::
 
 <!-- 此代码与宏相关。 -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

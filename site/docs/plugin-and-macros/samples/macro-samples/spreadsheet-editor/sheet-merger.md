@@ -8,8 +8,6 @@ Merges data from all sheets into the active sheet by copying the used range of e
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let sheets = Api.GetSheets();

@@ -20,8 +20,6 @@ For more information, visit the [World Bank documentation](https://data.worldban
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 //custom function:
 

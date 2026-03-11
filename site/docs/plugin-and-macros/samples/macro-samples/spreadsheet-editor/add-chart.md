@@ -8,8 +8,6 @@ Adds a new chart to the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

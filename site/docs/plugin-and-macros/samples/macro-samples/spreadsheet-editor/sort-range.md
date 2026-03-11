@@ -8,8 +8,6 @@ Automatically sorts a selected range or the entire used range in a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let worksheet = Api.GetActiveSheet();

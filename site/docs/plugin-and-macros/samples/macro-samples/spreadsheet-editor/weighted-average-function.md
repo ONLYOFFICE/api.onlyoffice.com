@@ -8,8 +8,6 @@ Creates a [custom function](/docs/plugin-and-macros/macros/adding-custom-functio
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     // Get the active worksheet.

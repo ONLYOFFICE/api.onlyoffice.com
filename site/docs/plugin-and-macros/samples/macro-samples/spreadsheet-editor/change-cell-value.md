@@ -10,8 +10,6 @@ Changes the selected cell value.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function(){
     // Get the active sheet

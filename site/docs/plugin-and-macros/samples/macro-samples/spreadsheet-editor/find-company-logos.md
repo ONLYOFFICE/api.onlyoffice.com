@@ -10,8 +10,6 @@ Searches for a company logo throughout the spreadsheet using the [Logo API](http
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function() {
     // Get the active worksheet

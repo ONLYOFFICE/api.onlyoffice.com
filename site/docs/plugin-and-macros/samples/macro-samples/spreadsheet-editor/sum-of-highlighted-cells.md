@@ -8,8 +8,6 @@ Sums the answer of all highlighted cells in a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function () {
     let worksheet = Api.GetActiveSheet();

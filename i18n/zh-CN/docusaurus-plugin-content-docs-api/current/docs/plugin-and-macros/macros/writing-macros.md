@@ -11,8 +11,6 @@ sidebar_position: -5
 
 <!-- 此代码与宏相关。 -->
 
-<!-- eslint-skip -->
-
    ``` ts
    (function () {
      // ... your code goes here ...
@@ -57,8 +55,6 @@ sidebar_position: -5
 现在我们将其整合成完整的脚本代码：
 
 <!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

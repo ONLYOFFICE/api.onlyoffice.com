@@ -4,8 +4,6 @@
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 // Macros structure:
 // Read Address (Cell A2) ->

@@ -8,8 +8,6 @@ Changes the font family and/or size on all the slides in your presentation.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let presentation = Api.GetPresentation();

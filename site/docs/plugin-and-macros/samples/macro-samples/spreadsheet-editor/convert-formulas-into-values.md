@@ -10,8 +10,6 @@ Converts all formulas in the active worksheet into values.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function(){
     // Get the active sheet

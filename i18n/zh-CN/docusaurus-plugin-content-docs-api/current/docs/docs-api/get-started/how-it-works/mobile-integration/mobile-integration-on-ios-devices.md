@@ -189,7 +189,6 @@ func webView(_ webView: WKWebView,
 
 7. 添加初始化 **Document Editor** 的脚本，用于 *div* 元素，并配置您要打开的文档：
 
-   <!-- eslint-skip -->
    ``` ts
    const config = {
      {external_config},

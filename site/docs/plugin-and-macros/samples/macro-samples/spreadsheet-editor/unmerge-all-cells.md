@@ -10,8 +10,6 @@ Unmerges all the merged cells in the active worksheet.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function(){
     // Get the active sheet

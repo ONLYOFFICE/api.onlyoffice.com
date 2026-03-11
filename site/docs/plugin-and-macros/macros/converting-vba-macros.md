@@ -104,8 +104,6 @@ The exact same thing can be achieved using ONLYOFFICE macros, the code will be a
 
 <!-- This code is related to macros. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

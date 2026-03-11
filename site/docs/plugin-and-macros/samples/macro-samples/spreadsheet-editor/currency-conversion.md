@@ -10,8 +10,6 @@ Converts a base currency into multiple desired target currencies. It can also fe
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     function buildHistoricalURL(apiKey, baseCurrency, date, currencies) {

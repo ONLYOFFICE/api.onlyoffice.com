@@ -8,8 +8,6 @@ Searches for a word throughout the document and replaces it with the given repla
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let doc = Api.GetDocument();

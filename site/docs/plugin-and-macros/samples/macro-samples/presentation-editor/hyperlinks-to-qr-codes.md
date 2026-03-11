@@ -8,8 +8,6 @@ Converts all the hyperlinks in the presentation into QR codes using an external 
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

@@ -8,8 +8,6 @@ Hides or unhides the specified rows and/or columns in the spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function()
 {

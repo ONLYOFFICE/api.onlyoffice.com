@@ -10,8 +10,6 @@ Imports data from remote CSV/TXT files into the spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ``` ts
 (function() 
 {

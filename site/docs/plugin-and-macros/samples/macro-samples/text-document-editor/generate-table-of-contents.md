@@ -8,8 +8,6 @@ Generates a table of contents by scanning the document for headings.
 
 <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

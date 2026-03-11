@@ -18,7 +18,6 @@ You can debug any Document Builder [component](../get-started/overview.md). To d
 
    <!-- This code snippet is shown in the screenshot. -->
 
-   <!-- eslint-skip -->
    
    ```ts
    debugger;
