@@ -2,8 +2,6 @@
 
 更改演示文稿中所有幻灯片的字体和/或字号。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let presentation = Api.GetPresentation();

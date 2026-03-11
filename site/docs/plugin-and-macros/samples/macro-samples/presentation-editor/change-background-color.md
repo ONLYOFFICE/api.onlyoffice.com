@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

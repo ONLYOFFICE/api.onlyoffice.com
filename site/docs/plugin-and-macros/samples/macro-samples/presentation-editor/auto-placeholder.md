@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Automatically fills empty text boxes on slides with placeholder content and arranges texts in a structured format.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

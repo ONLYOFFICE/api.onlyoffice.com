@@ -43,8 +43,6 @@ sidebar_position: -2
 
 1. 在脚本中添加 `debugger` 命令：
 
-<!-- This code snippet is shown in the screenshot. -->
-
    ``` ts
    (function debugger(window, undefined){
 

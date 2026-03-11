@@ -2,8 +2,6 @@
 
 以一秒间隔重复重新计算工作表单元格的数值。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function ()
 {

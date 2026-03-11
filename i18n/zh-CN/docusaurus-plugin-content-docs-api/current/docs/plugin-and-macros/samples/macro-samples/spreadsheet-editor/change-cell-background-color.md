@@ -2,8 +2,6 @@
 
 将单元格 **B3** 的背景颜色设置为蓝色。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

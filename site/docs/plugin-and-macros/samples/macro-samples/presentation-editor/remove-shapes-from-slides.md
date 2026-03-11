@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Removes shapes from slides in a presentation.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

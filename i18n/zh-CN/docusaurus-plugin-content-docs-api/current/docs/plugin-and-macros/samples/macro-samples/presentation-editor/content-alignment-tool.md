@@ -2,8 +2,6 @@
 
 在整个演示文稿中统一对齐文本框和图像。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

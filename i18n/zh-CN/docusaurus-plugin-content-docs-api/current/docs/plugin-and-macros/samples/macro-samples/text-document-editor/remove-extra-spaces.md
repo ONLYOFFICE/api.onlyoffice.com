@@ -2,8 +2,6 @@
 
 在文本文件中删除多余的空格。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

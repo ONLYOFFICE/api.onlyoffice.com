@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Unmerges the selected cell range.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

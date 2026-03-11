@@ -2,8 +2,6 @@
 
 通过遍历所有幻灯片，统计演示文稿中的形状总数，并在一张新建幻灯片上显示该数量。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

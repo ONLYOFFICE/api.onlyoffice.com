@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Generates a table of contents by scanning the document for headings.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

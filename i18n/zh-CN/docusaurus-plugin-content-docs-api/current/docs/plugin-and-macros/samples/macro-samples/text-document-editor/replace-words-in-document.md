@@ -2,8 +2,6 @@
 
 在整个文档中搜索指定单词，并将其替换为给定的替换词。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let doc = Api.GetDocument();

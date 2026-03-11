@@ -18,8 +18,6 @@ The following indicators can be calculated:
 
 For more information, visit the [World Bank documentation](https://data.worldbank.org/indicator).
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 //custom function:
 

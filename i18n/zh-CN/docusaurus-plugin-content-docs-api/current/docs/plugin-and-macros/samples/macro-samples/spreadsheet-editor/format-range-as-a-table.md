@@ -2,8 +2,6 @@
 
 将单元格范围 **A1:D10** 格式化为表格。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

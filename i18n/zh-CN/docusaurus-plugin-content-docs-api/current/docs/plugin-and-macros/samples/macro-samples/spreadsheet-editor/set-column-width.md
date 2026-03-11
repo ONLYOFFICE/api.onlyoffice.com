@@ -2,8 +2,6 @@
 
 设置 **B** 列的宽度。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

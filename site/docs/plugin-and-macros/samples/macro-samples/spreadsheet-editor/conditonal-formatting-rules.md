@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Applies multiple conditional formatting rules to the selected range.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     // Get the selected range

@@ -2,8 +2,6 @@
 
 将数据（*Hello world* 这个短语）写入工作表第 4 行第 3 列的单元格中。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

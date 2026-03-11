@@ -2,8 +2,6 @@
 
 将预定义的页眉和页脚应用到文档中的所有页面。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

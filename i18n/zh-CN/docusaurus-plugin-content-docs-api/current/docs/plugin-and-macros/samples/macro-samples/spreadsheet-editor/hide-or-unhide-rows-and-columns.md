@@ -2,8 +2,6 @@
 
 在电子表格中隐藏或取消隐藏指定的行和/或列。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

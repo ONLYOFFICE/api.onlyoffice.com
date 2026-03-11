@@ -2,8 +2,6 @@
 
 移除演示文稿中幻灯片上的形状。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

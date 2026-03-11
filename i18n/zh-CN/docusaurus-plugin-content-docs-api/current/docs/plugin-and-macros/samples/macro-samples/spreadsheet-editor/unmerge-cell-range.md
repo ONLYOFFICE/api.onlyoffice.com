@@ -2,8 +2,6 @@
 
 取消选定的单元格区域的合并操作。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

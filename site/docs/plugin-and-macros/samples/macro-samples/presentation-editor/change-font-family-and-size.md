@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Changes the font family and/or size on all the slides in your presentation.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let presentation = Api.GetPresentation();

@@ -2,8 +2,6 @@
 
 对所选区域应用多个条件格式规则。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     // 获取所选区域

@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Removes extra spaces in text document.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

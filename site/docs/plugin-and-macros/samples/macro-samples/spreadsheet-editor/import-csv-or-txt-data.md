@@ -8,8 +8,6 @@ Imports data from remote CSV/TXT files into the spreadsheet.
 
 > This macro is operational only with the desktop versions of the ONLYOFFICE editors.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function() 
 {

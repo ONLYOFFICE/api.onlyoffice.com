@@ -2,8 +2,6 @@
 
 导入表格中不同工作表之间的超链接。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let worksheetA = Api.GetSheet("Sheet1");

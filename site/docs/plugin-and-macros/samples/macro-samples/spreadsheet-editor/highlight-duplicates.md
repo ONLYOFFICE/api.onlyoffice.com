@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function () 
 {

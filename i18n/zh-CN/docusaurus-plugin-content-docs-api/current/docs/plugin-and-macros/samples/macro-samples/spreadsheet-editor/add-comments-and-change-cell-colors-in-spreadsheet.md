@@ -2,8 +2,6 @@
 
 为所选单元格添加批注，也可以更改单元格的背景颜色。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let worksheet = Api.GetActiveSheet();

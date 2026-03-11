@@ -2,8 +2,6 @@
 
 自动为文档中的所有标题段落生成书签，并使用标题文本作为书签名称。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

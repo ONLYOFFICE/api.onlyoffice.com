@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sets the font of the cell **A2** to bold.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

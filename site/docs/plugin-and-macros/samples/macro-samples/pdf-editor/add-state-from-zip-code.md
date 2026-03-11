@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Adds the "State" label and the text form prefilled with "CA" if the zip code of California is entered. It can be extended by using API to prefill "State" when entering the zip code.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

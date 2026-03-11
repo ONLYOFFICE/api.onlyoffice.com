@@ -2,8 +2,6 @@
 
 合并选定的单元格区域。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

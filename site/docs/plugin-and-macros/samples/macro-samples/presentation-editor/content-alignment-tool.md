@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Consistently aligns text boxes and images throughout the entire presentation.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

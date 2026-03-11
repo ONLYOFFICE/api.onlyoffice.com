@@ -8,8 +8,6 @@ Generates word definitions in your document using the [Dictionary API](https://a
 
 > To use this macro, you need to obtain your own API key from API Ninjas.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts 
 (function () {
   let doc = Api.GetDocument();

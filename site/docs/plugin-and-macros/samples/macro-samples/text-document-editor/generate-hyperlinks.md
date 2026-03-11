@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Generates and inserts hyperlinks instead of text URLs.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

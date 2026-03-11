@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 // Macros structure:
 // Read Address (Cell A2) ->

@@ -8,8 +8,6 @@ Converts a base currency into multiple desired target currencies. It can also fe
 
 > To use this macro, you need to obtain your own API key from currencyapi.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     function buildHistoricalURL(apiKey, baseCurrency, date, currencies) {

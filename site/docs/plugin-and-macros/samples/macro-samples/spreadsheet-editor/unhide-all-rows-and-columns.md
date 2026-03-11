@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Unhides all the rows and columns in the active spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

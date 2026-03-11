@@ -2,8 +2,6 @@
 
 为偶数索引的幻灯片设置蓝色背景，奇数索引的幻灯片设置图片背景。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

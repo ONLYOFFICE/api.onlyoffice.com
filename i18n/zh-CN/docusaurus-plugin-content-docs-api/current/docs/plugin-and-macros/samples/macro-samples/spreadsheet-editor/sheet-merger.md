@@ -2,8 +2,6 @@
 
 通过复制每个工作表的已用区域并追加，将所有工作表的数据合并到当前活动工作表。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let sheets = Api.GetSheets();

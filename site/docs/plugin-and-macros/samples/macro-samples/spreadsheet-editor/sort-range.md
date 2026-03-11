@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Automatically sorts a selected range or the entire used range in a spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let worksheet = Api.GetActiveSheet();

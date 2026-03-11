@@ -8,8 +8,6 @@ Searches for a company logo throughout the spreadsheet using the [Logo API](http
 
 > To use this macro, you need to obtain your own API key from API Ninjas.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function() {
     // Get the active worksheet

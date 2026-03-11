@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sets the width for the column **B**.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

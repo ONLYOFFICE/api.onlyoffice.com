@@ -2,8 +2,6 @@
 
 通过扫描文档中的标题来生成目录。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

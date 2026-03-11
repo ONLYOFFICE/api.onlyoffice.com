@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Merges data from all sheets into the active sheet by copying the used range of each sheet and appending it.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let sheets = Api.GetSheets();

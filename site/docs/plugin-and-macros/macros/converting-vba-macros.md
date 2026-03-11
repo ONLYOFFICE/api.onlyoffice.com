@@ -102,8 +102,6 @@ The macro counts the sum of the values from the three cell ranges of the **A** c
 
 The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
 
-<!-- This code is related to macros. -->
-
 ``` ts
 (function()
 {

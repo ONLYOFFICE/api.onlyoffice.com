@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sets all date form formats to USA one.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

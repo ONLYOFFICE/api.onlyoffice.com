@@ -2,8 +2,6 @@
 
 自动对选定范围或电子表格中的整个已用范围进行排序。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let worksheet = Api.GetActiveSheet();

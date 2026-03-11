@@ -4,8 +4,6 @@
 
 > 使用此宏需要从 currencyapi 获取您自己的 API 密钥。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     function buildHistoricalURL(apiKey, baseCurrency, date, currencies) {

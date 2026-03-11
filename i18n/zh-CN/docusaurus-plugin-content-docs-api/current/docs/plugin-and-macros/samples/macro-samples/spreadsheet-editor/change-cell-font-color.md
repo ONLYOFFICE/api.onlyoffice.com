@@ -2,8 +2,6 @@
 
 将单元格 **B4** 的字体颜色设置为红色。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

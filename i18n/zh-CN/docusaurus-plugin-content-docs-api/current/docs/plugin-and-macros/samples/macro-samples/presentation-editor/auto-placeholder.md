@@ -2,8 +2,6 @@
 
 自动将幻灯片中的空文本框填充为占位符内容，并以结构化格式排列文本。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

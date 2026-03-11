@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Adds comments to the cells in the selection and can also change the background color of the cells.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let worksheet = Api.GetActiveSheet();

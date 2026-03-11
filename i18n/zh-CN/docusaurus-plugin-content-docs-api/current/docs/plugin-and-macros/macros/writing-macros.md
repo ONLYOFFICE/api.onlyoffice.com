@@ -52,8 +52,6 @@ sidebar_position: -5
 
 现在我们将其整合成完整的脚本代码：
 
-<!-- This code is related to macros. -->
-
 ``` ts
 (function()
 {

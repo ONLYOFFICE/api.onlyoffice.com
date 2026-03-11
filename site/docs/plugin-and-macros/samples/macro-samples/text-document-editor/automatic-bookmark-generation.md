@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();

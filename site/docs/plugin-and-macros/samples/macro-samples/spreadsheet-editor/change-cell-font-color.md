@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sets the font color of the cell **B4** to red.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

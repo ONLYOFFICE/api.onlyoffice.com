@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Searches for a word throughout the document and replaces it with the given replacement word.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let doc = Api.GetDocument();

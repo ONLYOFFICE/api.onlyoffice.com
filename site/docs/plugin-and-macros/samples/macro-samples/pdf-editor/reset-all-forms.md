@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Clears all fields if necessary, for example after printing the document.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

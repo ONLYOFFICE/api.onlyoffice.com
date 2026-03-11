@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sums the answer of all highlighted cells in a spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function () {
     let worksheet = Api.GetActiveSheet();

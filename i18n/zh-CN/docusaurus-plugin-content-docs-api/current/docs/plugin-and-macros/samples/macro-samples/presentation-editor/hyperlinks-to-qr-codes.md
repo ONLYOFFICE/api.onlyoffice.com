@@ -2,8 +2,6 @@
 
 使用外部 API 将演示文稿中的所有超链接转换为二维码。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

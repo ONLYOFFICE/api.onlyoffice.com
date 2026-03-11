@@ -2,8 +2,6 @@
 
 完善基础地址数据，补充详细地址信息并插入到表格中。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 // Macros structure:
 // Read Address (Cell A2) ->

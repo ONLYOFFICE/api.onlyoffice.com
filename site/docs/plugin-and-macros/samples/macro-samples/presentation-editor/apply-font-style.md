@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Applies a consistent font style across all the slides.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

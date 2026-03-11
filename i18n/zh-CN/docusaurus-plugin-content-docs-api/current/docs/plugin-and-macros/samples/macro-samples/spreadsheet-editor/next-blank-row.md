@@ -2,8 +2,6 @@
 
 查找工作表中下一个可用的空白行。该宏可帮助你定位数据末尾的空白行（而非数据中间的空白行）。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function () 
 {

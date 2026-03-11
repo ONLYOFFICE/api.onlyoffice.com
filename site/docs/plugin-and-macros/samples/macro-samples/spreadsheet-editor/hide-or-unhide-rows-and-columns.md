@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Hides or unhides the specified rows and/or columns in the spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {

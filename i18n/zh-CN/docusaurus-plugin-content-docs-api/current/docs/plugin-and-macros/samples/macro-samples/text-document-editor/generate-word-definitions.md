@@ -4,8 +4,6 @@
 
 > 要使用此宏，您需要从 API Ninjas 获取您自己的 API 密钥。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
   let doc = Api.GetDocument();

@@ -2,8 +2,6 @@
 
 在所有幻灯片中统一应用同一字体样式。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

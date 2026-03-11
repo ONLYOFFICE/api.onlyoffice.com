@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Converts all the hyperlinks in the presentation into QR codes using an external API.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();

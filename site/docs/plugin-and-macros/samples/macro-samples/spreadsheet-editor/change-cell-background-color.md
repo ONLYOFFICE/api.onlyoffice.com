@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Sets the background color of the cell **B3** to blue.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

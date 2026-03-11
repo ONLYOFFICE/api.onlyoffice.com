@@ -6,8 +6,6 @@ hide_table_of_contents: true
 
 Inserts text into the document at the current cursor position.
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ``` ts
 (function()
 {

@@ -2,8 +2,6 @@
 
 创建一个用于计算加权平均值的自定义函数。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function () {
     // 获取活动工作表。

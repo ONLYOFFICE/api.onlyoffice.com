@@ -2,8 +2,6 @@
 
 生成并插入超链接，替代文本形式的 URL。
 
-<!-- This code snippet is shown in the screenshot. -->
-
 ```ts
 (function()
 {
