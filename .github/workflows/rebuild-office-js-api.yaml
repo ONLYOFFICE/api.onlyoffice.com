@@ -80,9 +80,11 @@ jobs:
           cd build_tools/scripts/sdkjs_common/jsdoc
           npm install
           python office-api/generate_docs_md.py
-          python office-api/generate_docs_md.py "$WORKSPACE_ROOT/api.onlyoffice.com/i18n/zh-CN/docusaurus-plugin-content-docs-api/current/docs/office-api/usage-api/" --translations "$WORKSPACE_ROOT/office-js-api/Translations/Office/zh-CN.json"
           python plugins/generate_docs_methods_md.py
           python plugins/generate_docs_events_md.py
+          python office-api/generate_docs_md.py "$WORKSPACE_ROOT/api.onlyoffice.com/i18n/zh-CN/docusaurus-plugin-content-docs-api/current/docs/office-api/usage-api/" --translations "$WORKSPACE_ROOT/office-js-api/Translations/Office/zh-CN.json"
+          python plugins/generate_docs_methods_md.py "$WORKSPACE_ROOT/api.onlyoffice.com/i18n/zh-CN/docusaurus-plugin-content-docs-api/current/docs/plugin-and-macros/interacting-with-editors/" --translations "$WORKSPACE_ROOT/office-js-api/Translations/Plugins/Methods/zh-CN.json"
+          python plugins/generate_docs_events_md.py "$WORKSPACE_ROOT/api.onlyoffice.com/i18n/zh-CN/docusaurus-plugin-content-docs-api/current/docs/plugin-and-macros/interacting-with-editors/" --translations "$WORKSPACE_ROOT/office-js-api/Translations/Plugins/Events/zh-CN.json"
           cd ../../../../api.onlyoffice.com
 
           if ! git diff --exit-code; then
