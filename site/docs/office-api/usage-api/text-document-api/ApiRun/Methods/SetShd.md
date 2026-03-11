@@ -15,7 +15,7 @@ expression.SetShd(type, color);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | type | Required | [ShdType](../../Enumeration/ShdType.md) |  | The shading type applied to the contents of the current text run. |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The shading color. |
 
 ## Returns
 

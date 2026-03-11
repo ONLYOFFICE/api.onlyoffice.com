@@ -46,6 +46,7 @@ Represents the ApiBlockLvlSdt class.
 | [Select](./Methods/Select.md) | boolean | Selects the current content control. |
 | [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
 | [SetAppearance](./Methods/SetAppearance.md) | None | Sets the visualization of the content control. |
+| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current content control. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current content control. |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
 | [SetId](./Methods/SetId.md) | None | Specifies a unique ID for the current content control. |
