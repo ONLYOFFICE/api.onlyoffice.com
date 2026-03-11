@@ -61,8 +61,6 @@ export default function CodeBlockString({
   const isForm = metastring && metastring.includes("editor-forms");
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
-  const playground = metastring && metastring.includes("playground") && "playground";
-
   let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;
   const zoom = res ? Number(res[1]) : undefined;
 
@@ -92,15 +90,13 @@ export default function CodeBlockString({
           <Tabs.List className={styles.TabsList}>
             <Tabs.Trigger className={styles.TabsItem} value="code">Code</Tabs.Trigger>
             <Tabs.Trigger className={styles.TabsItem} value="result">Result</Tabs.Trigger>
-            {playground && (
-                <button
-                    className={styles.TabsItem}
-                    onClick={handlePlaygroundClick}
-                    type="button"
-                >
-                  Playground
-                </button>
-            )}
+            <button
+                className={styles.TabsItem}
+                onClick={handlePlaygroundClick}
+                type="button"
+            >
+              Playground
+            </button>
           </Tabs.List>
 
           <Tabs.Content value="code" forceMount className={styles.TabsContent}>
