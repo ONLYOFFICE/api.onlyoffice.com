@@ -89,6 +89,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<!-- imgpath -->
-
 ![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)

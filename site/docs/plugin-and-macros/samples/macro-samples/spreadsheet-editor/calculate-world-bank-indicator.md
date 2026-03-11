@@ -89,6 +89,4 @@ Methods used: [AddCustomFunction](/docs/office-api/usage-api/spreadsheet-api/Api
 
 ## Result
 
-<!-- imgpath -->
-
 ![World Bank indicator](/assets/images/plugins/world-bank-indicator.png#gh-light-mode-only)![World Bank indicator](/assets/images/plugins/world-bank-indicator.dark.png#gh-dark-mode-only)

@@ -15,8 +15,6 @@ sidebar_position: -4
 1. 打开**视图**选项卡并选择**宏**，宏窗口将会弹出。
 2. 在**自定义函数**区域，点击![Plus icon](/assets/images/plugins/plus.svg)，您将看到一个自定义函数模板：
 
-<!-- 以下代码与宏相关。 -->
-
     ``` ts
     (function()
     {

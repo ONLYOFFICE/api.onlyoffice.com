@@ -26,6 +26,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-<!-- imgpath -->
-
 ![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.png#gh-light-mode-only)![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.dark.png#gh-dark-mode-only)

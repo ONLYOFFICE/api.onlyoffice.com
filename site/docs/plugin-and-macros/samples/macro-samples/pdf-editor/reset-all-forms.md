@@ -21,6 +21,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-<!-- imgpath -->
-
 ![Reset All Forms](/assets/images/plugins/reset-all-forms.png#gh-light-mode-only)![Reset All Forms](/assets/images/plugins/reset-all-forms.dark.png#gh-dark-mode-only)

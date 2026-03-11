@@ -36,6 +36,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.png#gh-light-mode-only)![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.dark.png#gh-dark-mode-only)

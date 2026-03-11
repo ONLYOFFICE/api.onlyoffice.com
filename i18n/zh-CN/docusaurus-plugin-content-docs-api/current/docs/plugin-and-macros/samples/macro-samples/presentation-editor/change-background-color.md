@@ -34,8 +34,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ``` vb
 Sub SetSlideBackground()
     Dim slide As Slide

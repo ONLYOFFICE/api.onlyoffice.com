@@ -35,6 +35,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-<!-- imgpath -->
-
 ![Generate word definitons](/assets/images/plugins/generate-word-definitions.png#gh-light-mode-only)![Generate word definitons](/assets/images/plugins/generate-word-definitions.dark.png#gh-dark-mode-only)

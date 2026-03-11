@@ -31,8 +31,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub ApplyConsistentFontStyle()
     Dim slide As Slide
@@ -66,8 +64,6 @@ End Sub
 ```
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Apply font style](/assets/images/plugins/apply-font-style.png#gh-light-mode-only)![Apply font style](/assets/images/plugins/apply-font-style.dark.png#gh-dark-mode-only)
 

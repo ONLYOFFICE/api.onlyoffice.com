@@ -27,8 +27,6 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub SimpleAddCommentsAndChangeColor()
     Range("A1").ClearComments
@@ -38,7 +36,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png#gh-light-mode-only)![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.dark.png#gh-dark-mode-only)

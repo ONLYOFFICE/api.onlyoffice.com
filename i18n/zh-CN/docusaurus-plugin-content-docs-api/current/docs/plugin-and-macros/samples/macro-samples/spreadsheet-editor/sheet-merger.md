@@ -37,6 +37,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)

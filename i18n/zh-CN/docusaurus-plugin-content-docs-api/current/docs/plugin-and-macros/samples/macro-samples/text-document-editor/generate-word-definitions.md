@@ -31,6 +31,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![Generate word definitons](/assets/images/plugins/generate-word-definitions.png#gh-light-mode-only)![Generate word definitons](/assets/images/plugins/generate-word-definitions.dark.png#gh-dark-mode-only)

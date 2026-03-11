@@ -4,8 +4,6 @@
 
 > 该宏由 VBA 代码通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
 
-<!-- 以下代码展示在截图中。 -->
-
 ``` ts
 (function(){
     // 获取当前工作表

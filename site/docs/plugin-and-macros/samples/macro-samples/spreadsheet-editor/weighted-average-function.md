@@ -63,6 +63,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<!-- imgpath -->
-
 ![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.png#gh-light-mode-only)![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.dark.png#gh-dark-mode-only)

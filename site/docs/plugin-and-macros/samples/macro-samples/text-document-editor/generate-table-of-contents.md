@@ -19,8 +19,6 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub GenerateTableOfContents()
     Dim doc As Document

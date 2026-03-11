@@ -2,8 +2,6 @@
 
 将所有日期表单字段的格式设置为美国格式。
 
-<!-- 此代码片段展示于截图中。 -->
-
 ```ts
 (function()
 {
@@ -23,7 +21,5 @@
 使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](../../../../office-api/usage-api/text-document-api/ApiDateForm/Methods/SetFormat.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png#gh-light-mode-only)![Set USA Date Format](/assets/images/plugins/set-usa-date-format.dark.png#gh-dark-mode-only)

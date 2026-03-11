@@ -62,6 +62,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.png#gh-light-mode-only)![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.dark.png#gh-dark-mode-only)

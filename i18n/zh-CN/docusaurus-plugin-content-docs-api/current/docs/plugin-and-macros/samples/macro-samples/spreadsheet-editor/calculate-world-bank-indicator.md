@@ -14,8 +14,6 @@
 
 更多信息请参阅[世界银行文档](https://data.worldbank.org/indicator)。
 
-<!-- 此代码片段以截图展示。 -->
-
 ```ts
 //自定义函数:
 
@@ -86,7 +84,5 @@
 使用方法：[添加自定义函数](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md)，[获取当前工作表](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md)，[获取单元格范围](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)，[设置值](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)，[获取值](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md)，[格式化为表格](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md)，[添加图表](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md)，[设置标题](/docs/office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![世界银行指标](/assets/images/plugins/world-bank-indicator.png#gh-light-mode-only)![世界银行指标](/assets/images/plugins/world-bank-indicator.dark.png#gh-dark-mode-only)

@@ -62,6 +62,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<!-- imgpath -->
-
 ![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.png#gh-light-mode-only)![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.dark.png#gh-dark-mode-only)

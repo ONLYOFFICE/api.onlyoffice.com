@@ -102,8 +102,6 @@ End Sub
 
 使用 ONLYOFFICE 宏也可以实现完全相同的功能。如果您了解 Visual Basic for Applications 和 JavaScript，会发现它们的代码几乎一致且易于理解：
 
-<!-- 下面的代码与宏相关。 -->
-
 ``` ts
 (function()
 {

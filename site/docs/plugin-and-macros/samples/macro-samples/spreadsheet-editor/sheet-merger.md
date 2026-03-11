@@ -41,6 +41,4 @@ Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods
 
 ## Result
 
-<!-- imgpath -->
-
 ![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)

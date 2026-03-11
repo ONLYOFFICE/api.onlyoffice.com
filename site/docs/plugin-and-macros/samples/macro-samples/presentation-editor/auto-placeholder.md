@@ -73,6 +73,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<!-- imgpath -->
-
 ![AutoPlaceholder](/assets/images/plugins/auto-placeholder.png#gh-light-mode-only)![AutoPlaceholder](/assets/images/plugins/auto-placeholder.dark.png#gh-dark-mode-only)

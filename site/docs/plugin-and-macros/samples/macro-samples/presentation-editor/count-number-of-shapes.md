@@ -43,8 +43,6 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub CountShapesInPresentation()
     Dim slide As slide

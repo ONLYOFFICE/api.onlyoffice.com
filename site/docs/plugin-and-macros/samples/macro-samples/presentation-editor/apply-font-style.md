@@ -35,8 +35,6 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub ApplyConsistentFontStyle()
     Dim slide As Slide
@@ -70,8 +68,6 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Apply font style](/assets/images/plugins/apply-font-style.png#gh-light-mode-only)![Apply font style](/assets/images/plugins/apply-font-style.dark.png#gh-dark-mode-only)
 

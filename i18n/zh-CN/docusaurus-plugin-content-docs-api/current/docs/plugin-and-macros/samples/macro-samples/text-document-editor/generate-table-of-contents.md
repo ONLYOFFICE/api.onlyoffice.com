@@ -15,8 +15,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub GenerateTableOfContents()
     Dim doc As Document

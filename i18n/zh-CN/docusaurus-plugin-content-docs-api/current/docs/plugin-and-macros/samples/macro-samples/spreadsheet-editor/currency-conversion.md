@@ -85,6 +85,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)

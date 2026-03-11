@@ -41,6 +41,4 @@ Methods used: [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Meth
 
 ## Result
 
-<!-- imgpath -->
-
 ![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.png#gh-light-mode-only)![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.dark.png#gh-dark-mode-only)

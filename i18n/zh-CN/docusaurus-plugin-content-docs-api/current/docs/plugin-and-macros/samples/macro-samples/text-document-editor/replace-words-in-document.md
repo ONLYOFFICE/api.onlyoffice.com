@@ -27,8 +27,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub SimpleFindReplace()
     Selection.Find.Execute FindText:="find", ReplaceWith:="replace", Replace:=wdReplaceAll
@@ -36,7 +34,5 @@ End Sub
 ```
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)

@@ -41,8 +41,6 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub RemoveExtraSpaces()
     Dim rng As Range
@@ -58,7 +56,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Remove extra space](/assets/images/plugins/remove-extra-spaces.png#gh-light-mode-only)![Remove extra space](/assets/images/plugins/remove-extra-spaces.dark.png#gh-dark-mode-only)

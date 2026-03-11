@@ -41,6 +41,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)

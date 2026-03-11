@@ -39,8 +39,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub CountShapesInPresentation()
     Dim slide As slide
