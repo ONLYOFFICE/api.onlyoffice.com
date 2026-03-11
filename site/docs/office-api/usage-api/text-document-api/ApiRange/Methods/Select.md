@@ -22,7 +22,7 @@ boolean
 
 This example sets the selection to the specified range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to select a range with a cursor.
 
 // Get range of the paragraph and select it.

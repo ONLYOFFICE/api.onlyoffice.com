@@ -24,7 +24,7 @@ number
 
 This example shows how to convert millimeters to pixels.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const millimeters = 100;
 const pixels = Api.MillimetersToPixels(millimeters);
 

@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 This example adds a new series to the chart.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add a new series to create a chart.
 
 // Add a new series to update a chart.

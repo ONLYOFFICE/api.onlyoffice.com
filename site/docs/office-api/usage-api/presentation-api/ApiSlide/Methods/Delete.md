@@ -22,7 +22,7 @@ boolean
 
 This example deletes the current slide from the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete a slide.
 
 // Remove a slide from the presentation.

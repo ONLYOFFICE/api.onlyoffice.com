@@ -27,7 +27,7 @@ boolean
 
 This example specifies that the current table row will be repeated at the top of each new page wherever this table is displayed.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Rename the header of the table.
 
 // How to set table row as a header.

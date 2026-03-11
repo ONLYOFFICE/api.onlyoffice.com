@@ -24,7 +24,7 @@ expression.SetFill(oApiFill);
 
 This example sets the text color to the text run.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a color of a text.
 
 // Get the text properties of the run and color its font.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the ID of a custom XML part.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get the ID of an XML part.
 
 // Get an XML part ID.

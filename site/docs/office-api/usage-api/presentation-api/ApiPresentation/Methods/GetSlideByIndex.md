@@ -24,7 +24,7 @@ expression.GetSlideByIndex(nIndex);
 
 This example shows how to get a slide by its position in the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to find a slide from the presentation using its index.
 
 // Get slide from the presentation by its index.

@@ -24,7 +24,7 @@ number
 
 This example shows how to count a number of cells in a range that are not empty.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find a number of non-empty cells.
 
 // Use function to get non-empty cells count.

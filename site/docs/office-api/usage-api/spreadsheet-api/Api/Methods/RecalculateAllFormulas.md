@@ -24,7 +24,7 @@ boolean
 
 This example recalculates all formulas in the active workbook.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to recalculate all formulas in a worksheet.
 
 // Reset all values calculated by formulas.

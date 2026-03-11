@@ -22,7 +22,7 @@ boolean
 
 This example shows how to delete a custom XML node.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete a custom XML node.
 
 // Delete an XML node.

@@ -24,7 +24,7 @@ boolean
 
 This example specifies the vertical alignment for the text contents within the table cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Set text vertical alignment to the cell.
 
 // Align the text to bottom of the cell.

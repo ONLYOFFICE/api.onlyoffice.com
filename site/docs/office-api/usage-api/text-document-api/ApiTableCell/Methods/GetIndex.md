@@ -22,7 +22,7 @@ Number
 
 This example shows how to get the cell index.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get position index of the cell.
 
 // Retrieve the index of the table cell and display it in the document.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the maximum point type from a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check the type of the maximum condition value.
 
 // Get the maximum point type of a data bar conditional formatting rule.

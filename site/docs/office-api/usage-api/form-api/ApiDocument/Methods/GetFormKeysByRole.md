@@ -24,7 +24,7 @@ string[]
 
 This example shows how to get a list of all form keys attached to the specified role.
 
-```javascript editor-forms playground
+```javascript editor-forms
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");

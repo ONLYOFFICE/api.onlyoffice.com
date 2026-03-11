@@ -16,13 +16,13 @@ This method doesn't have any parameters.
 
 ## Returns
 
-null \| Object
+[ApiColor](../../ApiColor/ApiColor.md)
 
 ## Example
 
 This example shows how to get the background color of the block-level container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.SetBackgroundColor(Api.RGBA(200, 200, 255, 255));

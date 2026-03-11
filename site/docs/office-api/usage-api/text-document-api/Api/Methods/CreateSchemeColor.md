@@ -24,7 +24,7 @@ expression.CreateSchemeColor(schemeColorId);
 
 This example shows how to create a scheme color with the 'dk1' identifier.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a complex color scheme using the 'dk1' scheme identifier.
 
 // How to create the ApiSchemeColor object and use it as a background for the ApiShape object.

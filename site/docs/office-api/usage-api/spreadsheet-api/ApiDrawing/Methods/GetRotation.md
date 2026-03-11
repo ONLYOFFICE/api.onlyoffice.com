@@ -22,7 +22,7 @@ number
 
 This example shows how to get the rotation angle of the drawing.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

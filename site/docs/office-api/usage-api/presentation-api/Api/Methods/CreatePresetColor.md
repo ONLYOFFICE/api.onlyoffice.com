@@ -24,7 +24,7 @@ expression.CreatePresetColor(presetColor);
 
 This example creates a color selecting for create gradient stop.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a preset color.
 
 // Add a preset color as a gradient stop.

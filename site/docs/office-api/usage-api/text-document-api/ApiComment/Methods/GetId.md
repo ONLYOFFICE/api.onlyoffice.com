@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment ID.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Display comment author name by finding a comment by its ID.
 
 // How to get a comment knowing its ID.

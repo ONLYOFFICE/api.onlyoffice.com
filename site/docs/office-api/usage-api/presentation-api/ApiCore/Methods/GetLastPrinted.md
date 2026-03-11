@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to set and get the date when the current presentation was printed last time.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastPrinted(new Date());

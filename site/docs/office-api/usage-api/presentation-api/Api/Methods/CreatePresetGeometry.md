@@ -24,7 +24,7 @@ expression.CreatePresetGeometry(sPreset);
 
 This example demonstrates creating a preset geometry in presentations.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 

@@ -22,7 +22,7 @@ boolean
 
 This example selects the content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a block content control and selects it.
 
 // How to select the ApiBlockLvlSdt object in the current document.

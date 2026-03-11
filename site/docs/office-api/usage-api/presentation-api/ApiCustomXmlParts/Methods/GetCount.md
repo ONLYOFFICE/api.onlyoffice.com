@@ -22,7 +22,7 @@ number
 
 This example shows how to get the count of custom XML parts in the XML manager.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get the count of custom XML parts.
 
 // Get the count of XML parts.

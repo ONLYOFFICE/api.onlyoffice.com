@@ -22,7 +22,7 @@ string
 
 This example shows how to get the user ID of the comment author.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a comment author's user ID.
 
 // Add a comment author's ID to a range of the worksheet.

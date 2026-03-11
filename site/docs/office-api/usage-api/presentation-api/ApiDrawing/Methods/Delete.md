@@ -22,7 +22,7 @@ boolean
 
 This example shows how to delete a drawing object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete a slide drawing.
 
 // Get a slide drawing and delete it.

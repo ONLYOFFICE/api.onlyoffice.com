@@ -24,7 +24,7 @@ number
 
 This example shows how to get the cosecant of an angle.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return cosecant.
 
 // Use function to get the cosecant of an angle.

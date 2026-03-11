@@ -26,7 +26,7 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 This example adds a hyperlink to a paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a hyperlink and add it to the paragraph.
 
 // Add a paragraph hyperlink.

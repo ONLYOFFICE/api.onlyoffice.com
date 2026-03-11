@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set and get the name of the last user who modified the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastModifiedBy("Mark Pottato");

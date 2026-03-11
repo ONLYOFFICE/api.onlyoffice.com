@@ -24,7 +24,7 @@ number
 
 This example shows how to return the inverse hyperbolic sine of a number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an inverse hyperbolic sine.
 
 // Use function to get an inverse hyperbolic sine of a number.

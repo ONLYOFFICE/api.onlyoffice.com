@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the category of the presentation using the ApiCore.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");

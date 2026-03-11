@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the minimum point value of a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the value of the minimum condition.
 
 // Set the minimum point value of a data bar conditional formatting rule.

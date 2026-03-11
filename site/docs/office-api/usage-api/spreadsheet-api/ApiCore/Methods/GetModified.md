@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to get the date when the current workbook was modified last time.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

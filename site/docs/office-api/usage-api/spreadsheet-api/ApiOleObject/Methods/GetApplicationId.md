@@ -22,7 +22,7 @@ string
 
 This example shows how to get the application ID from the OLE object.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve application id of OLE object.
 
 // Add Ole object and display its application id in the worksheet.

@@ -29,7 +29,7 @@ number
 
 This example shows how to get the cumulative interest paid between two periods.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the cumulative interest paid between two periods.
 
 // Use function to get cumulative interest paid between two periods.

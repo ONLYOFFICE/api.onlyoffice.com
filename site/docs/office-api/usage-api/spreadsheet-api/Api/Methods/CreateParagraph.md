@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a new paragraph.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add a text in a shape.
 
 // Create a text paragraph for a shape.

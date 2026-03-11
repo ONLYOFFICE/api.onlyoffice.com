@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a run and inserts it into the document.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add text.
 
 // Add an ApiRun object that represents a text.

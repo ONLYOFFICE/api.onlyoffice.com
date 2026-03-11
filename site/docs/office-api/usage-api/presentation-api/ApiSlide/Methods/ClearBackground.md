@@ -22,7 +22,7 @@ boolean
 
 This example clears the slide background.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove the background from the slide.
 
 // Create a duplicate slide and change its background.

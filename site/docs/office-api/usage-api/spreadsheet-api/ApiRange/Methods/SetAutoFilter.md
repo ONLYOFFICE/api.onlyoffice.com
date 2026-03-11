@@ -28,7 +28,7 @@ This method doesn't return any data.
 
 This example sets the autofilter by cell range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to automatically filter the specified range values.
 
 // Automatically filter out a range values.

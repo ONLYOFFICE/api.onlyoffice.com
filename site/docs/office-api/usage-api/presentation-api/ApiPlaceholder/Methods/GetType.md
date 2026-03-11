@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the placeholder type.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a placeholder type (chart, table, etc.).
 
 // Create a shape and get its placeholder type.

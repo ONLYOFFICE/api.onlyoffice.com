@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the fill styles to the current theme format scheme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change fill styles of a format scheme.
 
 // Get format scheme and update its fill styles, adding pattern, solid and radial fills.

@@ -26,7 +26,7 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 This example creates a pattern fill and applies it to the object using the selected pattern as the object background.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to apply pattern to the background of a drawing.
 
 // Change color of an element using a pattern fill.

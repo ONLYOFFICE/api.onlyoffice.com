@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example selects the current range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to select a range.
 
 // Select a range and get a selection from the worksheet.

@@ -22,7 +22,7 @@ string
 
 This example gets a document name and inserts it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Returns the first paragraph of the document and adds the document full name to it.
 
 // How to get the full name of the current document and add it to the paragraph.

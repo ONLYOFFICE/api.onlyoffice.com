@@ -28,7 +28,7 @@ number
 
 This example shows how to return the present value of an investment: the total amount that a series of future payments is worth now.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the present value of an investment.
 
 // Use a function to calculate the total amount that a series of future payments is worth now.

@@ -24,8 +24,8 @@ boolean
 
 This example selects the current graphic object.
 
-```javascript editor-docx playground
-// How to select the drawing with the cursor.
+```javascript editor-docx
+// How to select drawing objects with the cursor.
 
 // Create three shapes, select the first one,
 // then select the second shape with isReplace=true (replacing the selection),

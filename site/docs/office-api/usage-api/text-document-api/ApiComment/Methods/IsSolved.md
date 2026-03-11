@@ -22,7 +22,7 @@ boolean
 
 This example checks if a comment is solved or not.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to know whether a comment is resolved or not.
 
 // Get a boolean value that indicates that a comment is solved.

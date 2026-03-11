@@ -24,7 +24,7 @@ boolean
 
 This example sets the font scheme to the current presentation theme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a theme and set a new font scheme.
 
 // Create a new font scheme and apply it to the slide theme.

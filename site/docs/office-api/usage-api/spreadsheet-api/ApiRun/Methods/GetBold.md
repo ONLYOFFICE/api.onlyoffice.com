@@ -22,7 +22,7 @@ boolean
 
 This example gets a text bold using its property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find out whether a text is bold or not.
 
 // Get a text bold property.

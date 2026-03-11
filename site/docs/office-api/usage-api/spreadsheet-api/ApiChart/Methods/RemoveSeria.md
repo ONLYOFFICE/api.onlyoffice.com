@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove the specified series from the current chart.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to delete series using indices. 
 
 // Remove seria from the chart using idex number.

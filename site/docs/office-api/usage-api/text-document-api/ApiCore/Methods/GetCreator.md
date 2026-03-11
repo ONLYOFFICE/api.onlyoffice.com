@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the creator of the current document using the ApiCore.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCreator("John Smith");

@@ -22,7 +22,7 @@ boolean
 
 This example shows how to ungroup a group drawing element.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to remove grouping from the two shapes.
 
 // Ungroup two shapes.

@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to set and get the title of the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetTitle("My Presentation Title");

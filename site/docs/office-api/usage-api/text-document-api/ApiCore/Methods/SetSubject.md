@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the subject of the current document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetSubject("ApiCore Method Showcase");

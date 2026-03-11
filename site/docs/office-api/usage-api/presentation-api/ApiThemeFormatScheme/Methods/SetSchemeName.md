@@ -24,7 +24,7 @@ boolean
 
 This example sets a name to the current theme format scheme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a format scheme name.
 
 // Create new format scheme and set its name.

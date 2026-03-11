@@ -24,7 +24,7 @@ expression.CreatePresetColor(presetColor);
 
 This example creates a color for the gradient stop selecting it from one of the available color presets.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates the ApiPresetColor object and applies it to the ApiGradientStop class.
 
 // How to create a preset color and use it for the gradient stop.

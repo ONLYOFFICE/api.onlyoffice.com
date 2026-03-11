@@ -24,7 +24,7 @@ expression.AddText(text);
 
 This example adds some text to the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to insert the text to the paragraph.
 
 // Add paragraph text.

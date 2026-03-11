@@ -25,7 +25,7 @@ boolean
 
 This example adds a paragraph in document content.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add elements to the document content.
 
 // Clear the entire document and add a new paragraph to it.

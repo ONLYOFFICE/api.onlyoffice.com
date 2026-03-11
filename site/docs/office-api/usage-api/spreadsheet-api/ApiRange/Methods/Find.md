@@ -24,7 +24,7 @@ expression.Find(oSearchData);
 
 This example finds specific information in the range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to search throughout the range.
 
 // Get a range, search information using value, position, order, etc.

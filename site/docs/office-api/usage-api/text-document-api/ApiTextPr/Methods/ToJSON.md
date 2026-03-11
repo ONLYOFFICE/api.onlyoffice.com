@@ -24,7 +24,7 @@ JSON
 
 This example converts the ApiTextPr object into the JSON object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a JSON from the text properties.
 
 // Convert the text properties to json and add it to the document.

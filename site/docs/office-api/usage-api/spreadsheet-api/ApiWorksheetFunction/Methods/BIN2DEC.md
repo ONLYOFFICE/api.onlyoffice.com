@@ -24,7 +24,7 @@ number
 
 This example shows how to convert a binary number to decimal.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a decimal representation of a binary number.
 
 // Use function to convert a binary to decimal.

@@ -26,7 +26,7 @@ boolean
 
 Creates adjustable custom geometry with guides and connection points.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Displays adjustment value in a cell and applies geometry to shape.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

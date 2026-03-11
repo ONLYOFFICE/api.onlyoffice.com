@@ -31,7 +31,7 @@ number
 
 This example shows how to return the accrued interest for a security that pays periodic interest.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an accrued interest for a security that pays periodic interest.
 
 // Get a function that gets accrued interest for a security.

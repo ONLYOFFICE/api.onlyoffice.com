@@ -26,7 +26,7 @@ boolean
 
 This example specifies the chart title.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to rename a chart.
 
 // Create a chart, set its properties and its title.

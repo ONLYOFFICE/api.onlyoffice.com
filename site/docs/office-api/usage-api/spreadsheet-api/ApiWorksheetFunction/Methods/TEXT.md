@@ -25,7 +25,7 @@ string
 
 This example shows how to convert a value to text in a specific number format.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to convert a value to text.
 
 // Use a function to convert a value to text.

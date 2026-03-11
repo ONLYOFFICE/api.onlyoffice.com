@@ -22,7 +22,7 @@ boolean
 
 This example shows how to ugroup a group drawing element.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to ungroup a grouped drawings.
 
 // How to remove a grouping from objects.

@@ -24,7 +24,7 @@ boolean
 
 This example specifies the direction of the text flow for this table cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Set the direction of the cell text.
 
 // Get the cell from the table and set its direction.

@@ -24,7 +24,7 @@ expression.AddText(text);
 
 This example adds some text to the paragraph.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add a text to the ApiParagraph object.
 
 // How to add a text to the shape.

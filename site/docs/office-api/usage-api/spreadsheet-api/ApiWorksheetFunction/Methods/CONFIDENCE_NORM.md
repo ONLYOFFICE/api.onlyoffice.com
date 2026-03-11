@@ -26,7 +26,7 @@ number
 
 This example shows how to return the confidence interval for a population mean, using a normal distribution.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the confidence interval for a population mean, using a normal distribution.
 
 // Use function to confidence interval for a population mean.

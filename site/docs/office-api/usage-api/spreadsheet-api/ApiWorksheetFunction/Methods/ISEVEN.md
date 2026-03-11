@@ -24,7 +24,7 @@ boolean
 
 This example shows how to return true if a number is even.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check if the number is even.
 
 // Use a function to check whether a number is even or not.

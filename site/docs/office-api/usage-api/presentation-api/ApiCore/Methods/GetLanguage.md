@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to set and get the language of the current presentation using the ApiCore.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLanguage("en-US");

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the state of sheet visibility.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set visibility of the sheet.
 
 // Make a sheet visible or not.

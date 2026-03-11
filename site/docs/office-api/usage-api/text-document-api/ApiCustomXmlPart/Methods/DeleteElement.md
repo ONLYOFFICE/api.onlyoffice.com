@@ -24,7 +24,7 @@ boolean
 
 This example demonstrates how to delete an XML element from a custom XML part.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'><text>example_text</text><firstNode>text inside first node</firstNode></content>");

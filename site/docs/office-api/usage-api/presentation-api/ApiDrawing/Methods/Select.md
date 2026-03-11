@@ -24,8 +24,8 @@ boolean
 
 This example selects the current graphic object.
 
-```javascript editor-pptx playground
-// How to select a drawing object of the slide.
+```javascript editor-pptx
+// How to select drawing objects of the slide.
 
 // Create three shapes, select the first one,
 // then select the second shape with isReplace=true (replacing the selection),

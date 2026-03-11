@@ -24,7 +24,7 @@ expression.GroupDrawings(aDrawings);
 
 This example shows how to group drawings on slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to group two shapes.
 
 // Create two ApiShape objects and group them.

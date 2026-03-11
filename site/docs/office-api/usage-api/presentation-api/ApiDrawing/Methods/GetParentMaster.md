@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show how to get the drawing parent slide master.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a parent master of a slide shape.
 
 // Get a slide shape's parent master.

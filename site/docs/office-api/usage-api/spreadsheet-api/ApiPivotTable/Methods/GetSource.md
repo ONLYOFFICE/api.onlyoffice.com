@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get source of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get table source and its address.
 
 // Create a pivot table, add data to it then get its source.

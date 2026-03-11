@@ -22,7 +22,7 @@ boolean
 
 This example gets a text strikeout using its property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find out whether a text is stroke out or not.
 
 // Get cross out property of a text.

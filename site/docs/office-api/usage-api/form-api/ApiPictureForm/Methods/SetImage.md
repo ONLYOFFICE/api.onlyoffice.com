@@ -24,7 +24,7 @@ boolean
 
 This example sets an image to the current picture form.
 
-```javascript editor-forms playground
+```javascript editor-forms
 // How to set image of the picture form.
 
 // Set the url of the image to the picture form.

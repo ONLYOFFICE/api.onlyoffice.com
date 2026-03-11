@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example creates a new history point.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add a new history point to the presentation.
 
 // Create a presentation history point.

@@ -25,7 +25,7 @@ boolean
 
 This example adds math equations to the document in three different formats: LaTeX, Unicode, and MathML.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add math equations in different formats.
 
 // Insert math equations using LaTeX, Unicode, and MathML formats.

@@ -22,7 +22,7 @@ number
 
 This example shows how to get a position of a data field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a table element position.
 
 // Create a pivot table, add data to it then display a custom data field's position.

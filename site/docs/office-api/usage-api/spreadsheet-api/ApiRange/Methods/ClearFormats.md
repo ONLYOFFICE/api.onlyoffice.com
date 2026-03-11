@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example clears all the formatting in the range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to clear formatting for a range.
 
 // Get a range, clear formatting and show the result.

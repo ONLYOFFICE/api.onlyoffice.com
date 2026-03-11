@@ -26,7 +26,7 @@ expression.CreateImage(imageSrc, width, height);
 
 This example creates an image and pastes it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates the ApiImage object and adds it to the ApiParagraph class.
 
 // How to create the ApiImage object using the URL to the image, its width and height.

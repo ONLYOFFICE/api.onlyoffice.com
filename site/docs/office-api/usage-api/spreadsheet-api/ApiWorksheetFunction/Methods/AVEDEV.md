@@ -24,7 +24,7 @@ number
 
 This example shows how to return the average of the absolute deviations of data points from their mean.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an average of the absolute deviations.
 
 // Use function to get the average of the absolute deviations of data points from their mean.

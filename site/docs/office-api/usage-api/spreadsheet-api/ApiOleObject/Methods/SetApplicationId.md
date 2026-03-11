@@ -24,7 +24,7 @@ boolean
 
 This example sets the application ID to the current OLE object.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set application id of OLE object.
 
 // Add Ole object, set its application id and display it in the worksheet.

@@ -24,7 +24,7 @@ boolean
 
 This example sets font size for labels of the horizontal axis.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to resize a horizontal axis labels font.
 
 // Create a chart and set its horizontal axis labels font to 8.

@@ -24,7 +24,7 @@ number
 
 This example shows how to estimate standard deviation based on a sample (ignores logical values and text in the sample).
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to calculate the standard deviation based on a sample.
 
 // Use a function to get the standard deviation.

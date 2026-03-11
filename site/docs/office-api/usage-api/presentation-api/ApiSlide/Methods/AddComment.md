@@ -28,7 +28,7 @@ boolean
 
 This example demonstrates how to add a comment to a specific slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 

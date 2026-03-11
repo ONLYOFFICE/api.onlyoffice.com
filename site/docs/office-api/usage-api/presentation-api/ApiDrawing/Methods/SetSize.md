@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets size to the shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to resize a drawing.
 
 // Get a shape object from a slide and set its size.

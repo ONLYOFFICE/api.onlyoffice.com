@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get table style raw headers of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get table style raw headers.
 
 // Create a pivot table, add data to it then get its table style raw headers.

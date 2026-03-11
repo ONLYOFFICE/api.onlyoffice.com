@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of a shape and inserts it into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create the same slide shape.
 
 // Get a slide shape, add it to the slide and create its copy.

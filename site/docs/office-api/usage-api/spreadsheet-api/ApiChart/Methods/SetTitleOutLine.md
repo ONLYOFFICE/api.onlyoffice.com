@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline to the chart title.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to outline a chart title.
 
 // Add a stroke for the chart title outline.

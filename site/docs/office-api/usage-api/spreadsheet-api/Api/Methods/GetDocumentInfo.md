@@ -33,7 +33,7 @@ object
 
 This example shows how to get the document info represented as an object and paste the application name into "A1" cell.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get document info and iys application name.
 
 // Get application name using document info.

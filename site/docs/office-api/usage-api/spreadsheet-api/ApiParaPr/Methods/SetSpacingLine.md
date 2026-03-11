@@ -28,7 +28,7 @@ boolean
 
 This example sets the paragraph line spacing.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add a spacing line between paragraphs.
 
 // Get a paragraph from the shape's content then add a text specifying spacing between text lines.

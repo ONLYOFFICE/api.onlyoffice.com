@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the previous inline shape.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get previous shape from the current one.
 
 // Color the previous shape with a solid fill.

@@ -24,7 +24,7 @@ boolean
 
 This example applies the specified theme to the current slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a theme with different properties and apply it to the slide.
 
 // Create a theme, specify its color schemes, formats and patterns, then apply it to the slide.

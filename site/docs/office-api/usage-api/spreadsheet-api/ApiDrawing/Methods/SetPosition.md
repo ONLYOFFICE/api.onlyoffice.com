@@ -29,7 +29,7 @@ This method doesn't return any data.
 
 This example changes the position for the drawing object.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the position of the drawing on the worksheet.
 
 // Move a drawing by setting the position.

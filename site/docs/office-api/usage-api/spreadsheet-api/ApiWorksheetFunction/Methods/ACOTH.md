@@ -24,7 +24,7 @@ number
 
 This example shows how to return the inverse hyperbolic cotangent of a number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an inverse hyperbolic cotangent of a number and display it in the worksheet.
 
 // Get a function that gets inverse hyperbolic cotangent of a number.

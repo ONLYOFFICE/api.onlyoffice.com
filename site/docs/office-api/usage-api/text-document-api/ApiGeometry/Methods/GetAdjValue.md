@@ -24,7 +24,7 @@ number \| null
 
 Creates a shape with adjustable parameters and guides.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Sets up text rectangle and connection points for the custom geometry.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,7 +22,7 @@ boolean
 
 This example checks if the combo box text can be edited.
 
-```javascript editor-forms playground
+```javascript editor-forms
 // How to know whether a combobox form is editable.
 
 // Display a boolean representing editability of a combobox.

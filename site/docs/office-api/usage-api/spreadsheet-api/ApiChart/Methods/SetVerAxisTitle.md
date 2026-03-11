@@ -26,7 +26,7 @@ boolean
 
 This example specifies the chart vertical axis title.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add title for the chart vertical axis.
 
 // Specify the chart vertical axis title.

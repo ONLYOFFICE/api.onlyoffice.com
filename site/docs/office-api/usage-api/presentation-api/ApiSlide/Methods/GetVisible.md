@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get visibility property of the slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to find out whether a slide is visible or not.
 
 // Get a slide, set its visibility and show it in the slide.

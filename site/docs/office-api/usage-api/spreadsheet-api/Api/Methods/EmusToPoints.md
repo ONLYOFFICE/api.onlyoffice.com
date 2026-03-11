@@ -24,7 +24,7 @@ number
 
 This example shows how to convert EMUs (english metric units) to points.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const emus = 100;
 const points = Api.EmusToPoints(emus);
 const text = emus + ' emus are equal to ' + points + ' points.';

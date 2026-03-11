@@ -26,7 +26,7 @@ string
 
 This example returns a text from the text run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a raw text value.
 
 // Get a run, get its text value and show it in the document.

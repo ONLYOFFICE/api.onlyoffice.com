@@ -24,7 +24,7 @@ number \| null
 
 Creates adjustable geometry with guides and connection points for a presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // Displays adjustment value and applies custom geometry to shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

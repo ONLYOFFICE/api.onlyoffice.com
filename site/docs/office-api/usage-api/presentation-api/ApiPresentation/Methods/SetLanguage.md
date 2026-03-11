@@ -24,7 +24,7 @@ boolean
 
 This example sets a language which will be used to check spelling and grammar.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to specify a language of the current presentation.
 
 // Set the 'en-CA' language to the ApiPresentation object.

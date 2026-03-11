@@ -26,7 +26,7 @@ Object
 
 Specify the form data that can be used to create the form.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a form data indicating its key and value.
 
 // Create a data to add it to the form.

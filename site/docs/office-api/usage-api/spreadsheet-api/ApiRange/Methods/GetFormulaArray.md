@@ -22,7 +22,7 @@ string \| null
 
 This example shows how to get the array formula of a range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an array formula value.
 
 // Get a range, get its array formula value and show it in the worksheet.

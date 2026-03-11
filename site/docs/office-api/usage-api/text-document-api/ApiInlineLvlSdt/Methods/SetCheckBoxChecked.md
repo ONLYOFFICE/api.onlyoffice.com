@@ -25,7 +25,7 @@ boolean
 
 This example shows how to set the checkbox value of an inline content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let inlineControl = doc.AddCheckBoxContentControl();
 inlineControl.SetCheckBoxChecked(true);

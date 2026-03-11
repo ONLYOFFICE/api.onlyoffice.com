@@ -22,7 +22,7 @@ Number
 
 This example shows how to get a number of the comment replies.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a number of replies a comment has.
 
 // Get all comments from the presentation and the first one's number of replies.

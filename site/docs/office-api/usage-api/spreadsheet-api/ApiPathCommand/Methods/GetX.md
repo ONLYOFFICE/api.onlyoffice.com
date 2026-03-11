@@ -22,7 +22,7 @@ string \| null
 
 Analyzes path commands of a star shape and displays command details.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Shows total command count and first command information in cells.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

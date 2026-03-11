@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get the height of the image. 
 
 // Get the watermark image height.

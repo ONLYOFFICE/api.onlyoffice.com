@@ -24,7 +24,7 @@ boolean
 
 This example specifies the visual properties of the minor vertical gridline.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Set a stroke as a minor vertical gridline.
 
 // How to add gridlines for the chart.

@@ -24,7 +24,7 @@ expression.AddText(text);
 
 This example adds some text to the paragraph.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add raw text to the paragraph.
 
 // Change content of the shape by adding a text.

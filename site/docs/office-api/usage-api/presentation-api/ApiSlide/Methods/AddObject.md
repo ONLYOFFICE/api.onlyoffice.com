@@ -24,7 +24,7 @@ boolean
 
 This example adds an object (image, shape or chart) to the current presentation slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add an element to the slide.
 
 // Create a chart and add it to the ApiSlide object.

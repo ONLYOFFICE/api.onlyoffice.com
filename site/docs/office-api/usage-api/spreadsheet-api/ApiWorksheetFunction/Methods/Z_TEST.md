@@ -26,7 +26,7 @@ number
 
 This example shows how to return the one-tailed P-value of a z-test.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return one-tailed P-value.
 
 // Use a function to get one-tailed P-value.

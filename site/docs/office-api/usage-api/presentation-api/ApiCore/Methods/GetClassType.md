@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 const classType = core.GetClassType();

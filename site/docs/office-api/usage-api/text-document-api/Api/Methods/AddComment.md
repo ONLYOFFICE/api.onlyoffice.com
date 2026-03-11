@@ -27,7 +27,7 @@ expression.AddComment(element, text, author, userId);
 
 This example adds text and comment to the first paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a comment to the ApiParagraph class.
 
 // How to comment on text.

@@ -24,7 +24,7 @@ expression.SetHighlight(sColor);
 
 This example sets highlight color "lightGray" for the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set highlight to the text.
 
 // Create a new paragraph and highlight it.

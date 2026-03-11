@@ -24,7 +24,7 @@ expression.CreateRadialGradientFill(gradientStops);
 
 This example shows how to create a radial gradient fill.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a radial gradient fill.
 
 // Add a radial gradient fill.

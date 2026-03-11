@@ -24,7 +24,7 @@ boolean
 
 This example sets the border color to the form.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
 
 // Define the border color of the date form.

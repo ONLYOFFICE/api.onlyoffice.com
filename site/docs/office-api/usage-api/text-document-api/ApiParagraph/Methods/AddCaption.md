@@ -32,7 +32,7 @@ boolean
 
 This example adds a caption paragraph after the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add caption to the paragraph.
 
 // Add a caption to the text specifying its properties.

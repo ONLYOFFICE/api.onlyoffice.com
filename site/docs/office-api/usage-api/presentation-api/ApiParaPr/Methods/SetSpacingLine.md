@@ -28,7 +28,7 @@ boolean
 
 This example sets the paragraph line spacing.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set the size of a spacing line from a paragraph properties.
 
 // Change a spacing line size property of a paragraph properties.

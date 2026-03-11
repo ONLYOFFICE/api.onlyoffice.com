@@ -25,7 +25,7 @@ boolean
 
 This example sets the specified numeric format to the axis values.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to format numbers of the axis.
 
 // Apply number format for the chart axis using an expression.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to find out whether a text is outlined.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to know whether an outline is set to the text.
 
 // Get the text properties of the run and find whether it is outlined or not.

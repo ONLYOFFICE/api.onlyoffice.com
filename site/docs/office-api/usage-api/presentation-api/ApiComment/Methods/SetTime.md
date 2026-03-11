@@ -24,7 +24,7 @@ expression.SetTime(nTimeStamp);
 
 This example shows how to set a comment time.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a creation time of a comment.
 
 // Get all comments from the presentation and change its first one's creation time.

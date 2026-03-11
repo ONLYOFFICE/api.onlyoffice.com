@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set and get the revision of the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetRevision("Rev. B");

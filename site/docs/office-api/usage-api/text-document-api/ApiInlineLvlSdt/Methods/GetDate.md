@@ -24,7 +24,7 @@ undefined \| Date
 
 This example demonstrates how to retrieve the date from a datepicker content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 contentControl.SetDateFormat("yyyy-mm-dd");

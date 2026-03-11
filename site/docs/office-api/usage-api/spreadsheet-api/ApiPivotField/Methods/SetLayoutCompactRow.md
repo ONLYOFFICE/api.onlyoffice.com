@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a layout compact row line of a pivot field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change a pivot field layout compact row.
 
 // Create a pivot table, add data to it then set layout compact row of a specified pivot.

@@ -25,7 +25,7 @@ number
 
 This example shows how to convert a hexadecimal number to binary.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a binary from hexadecimal number.
 
 // Use a function to convert a hexadecimal number to binary.

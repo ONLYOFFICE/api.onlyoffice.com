@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the font name property to the specified font.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change name of a font.
 
 // Get a font object of characters and set a new name for it.

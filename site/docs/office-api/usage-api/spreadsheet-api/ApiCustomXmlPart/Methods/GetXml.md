@@ -22,7 +22,7 @@ string
 
 This example shows how to get the XML content of a custom XML part.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the XML content of an XML part.
 
 // Get XML content.

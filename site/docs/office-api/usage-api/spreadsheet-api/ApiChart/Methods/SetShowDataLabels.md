@@ -27,7 +27,7 @@ boolean
 
 This example specifies which chart data labels are shown for the chart.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to hide chart data labels.
 
 // Show only values as chart lables.

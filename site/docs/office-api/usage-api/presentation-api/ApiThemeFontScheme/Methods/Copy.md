@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of the theme font scheme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a copy of a font scheme.
 
 // Get font scheme and create its copy.

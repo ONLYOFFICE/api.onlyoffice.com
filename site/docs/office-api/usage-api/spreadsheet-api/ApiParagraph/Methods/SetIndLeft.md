@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph left side indentation.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the sentence's left side indentation of the paragraph.
 
 // Get a paragraph from the shape's content then add a text specifying the left side indentation.

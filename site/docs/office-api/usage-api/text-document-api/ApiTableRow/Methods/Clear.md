@@ -22,7 +22,7 @@ boolean
 
 This example clears the content from the row.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to delete the content of the first row.
 
 // Remove the text from the table row.

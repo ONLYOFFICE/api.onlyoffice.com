@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set layout subtotals of a table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set subtotals of a table.
 
 // Create a pivot table, add data to it then set subtotals using a boolean value.

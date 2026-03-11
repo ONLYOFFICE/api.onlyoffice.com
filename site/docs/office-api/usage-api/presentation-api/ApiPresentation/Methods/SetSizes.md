@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the size to the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to specify the sizes of the current presentation.
 
 // Set the width and height of the ApiPesentation object.

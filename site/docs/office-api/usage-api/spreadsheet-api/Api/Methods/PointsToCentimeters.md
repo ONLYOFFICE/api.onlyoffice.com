@@ -24,7 +24,7 @@ number
 
 This example shows how to convert points to centimeters.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const points = 1000;
 const centimeters = Api.PointsToCentimeters(points);
 const text = points + ' points are equal to ' + centimeters + ' centimeters.';

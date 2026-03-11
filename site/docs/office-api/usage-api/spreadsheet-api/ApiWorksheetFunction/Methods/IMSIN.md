@@ -24,7 +24,7 @@ number
 
 This example shows how to return the sine of a complex number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the sine.
 
 // Use a function to get the sine of a complex number.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example get the text properties from the Range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to make italic the text of the range.
 
 // Get a range and update its text style.

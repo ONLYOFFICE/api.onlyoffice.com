@@ -24,7 +24,7 @@ boolean
 
 This example specifies the major tick mark "cross" for the horizontal axis.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a major tick mark using predefined symbols.
 
 // Create a chart, set its properties and major tick mark for horizontal axis.

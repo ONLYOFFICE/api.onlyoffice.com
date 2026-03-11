@@ -25,7 +25,7 @@ boolean
 
 This example sets the size of the shape bounding box.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to resize the drawing.
 
 // Set the height and the width of the shape. 

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the current document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Returns the current document object and adds a paragraph to it.
 
 // How to add a paragraph to the current document.

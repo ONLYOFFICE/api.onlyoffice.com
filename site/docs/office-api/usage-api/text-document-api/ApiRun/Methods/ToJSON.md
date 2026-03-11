@@ -24,7 +24,7 @@ JSON
 
 This example converts the ApiRun object into the JSON object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to convert a slide object to a JSON object.
 
 // Get a slide by its index and convert it to JSON.

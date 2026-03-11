@@ -25,7 +25,7 @@ number
 
 This example shows how to convert a hexadecimal number to octal.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an octal from hexadecimal number.
 
 // Use a function to convert a hexadecimal number to octal.

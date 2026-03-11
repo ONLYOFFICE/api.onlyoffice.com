@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the bar color from a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve the bar color of a data bar.
 
 // Get the bar color of a data bar conditional formatting rule.

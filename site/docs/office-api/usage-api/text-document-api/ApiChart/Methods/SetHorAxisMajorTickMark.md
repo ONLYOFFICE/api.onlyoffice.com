@@ -24,7 +24,7 @@ boolean
 
 This example specifies the major tick mark "cross" for the horizontal axis.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change a tickmark of a major horizontal axis.
 
 // Create a chart and set its major horizontal axis tickmark as a cross symbol.

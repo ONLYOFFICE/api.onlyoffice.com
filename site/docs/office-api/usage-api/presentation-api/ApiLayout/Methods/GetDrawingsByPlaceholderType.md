@@ -24,7 +24,7 @@ expression.GetDrawingsByPlaceholderType(sType);
 
 This example gets drawings by placeholder type and removes it from layout.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get all drawings as an array by indicating placeholder type.
 
 // Get drawings by their placeholder type.

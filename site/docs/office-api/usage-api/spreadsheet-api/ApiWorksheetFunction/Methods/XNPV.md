@@ -26,7 +26,7 @@ number
 
 This example shows how to return the net present value for a schedule of cash flows.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the net present value for a schedule of cash flows.
 
 // Use a function to return the net present value.

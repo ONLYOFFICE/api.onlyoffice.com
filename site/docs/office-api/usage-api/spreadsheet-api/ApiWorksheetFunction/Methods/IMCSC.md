@@ -24,7 +24,7 @@ number
 
 This example shows how to return the cosecant of a complex number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the cosecant.
 
 // Use a function to get the cosecant of a complex number.

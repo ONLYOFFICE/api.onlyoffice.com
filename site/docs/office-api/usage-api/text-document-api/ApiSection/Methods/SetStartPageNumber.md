@@ -24,7 +24,7 @@ boolean
 
 This example sets a custom start page index for section.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the start page number for the current section.
 
 // Get a section from the paragraph and change its first page number to 2.

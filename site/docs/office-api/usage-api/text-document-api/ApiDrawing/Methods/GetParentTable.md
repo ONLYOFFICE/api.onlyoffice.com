@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a parent table that contains the graphic object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get an element's parent table.
 
 // How to show the shape's wrapper table.

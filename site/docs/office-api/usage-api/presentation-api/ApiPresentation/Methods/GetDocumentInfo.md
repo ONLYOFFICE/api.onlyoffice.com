@@ -33,7 +33,7 @@ object
 
 This example shows how to get the document info represented as an object and paste the application name into the document.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a document info from the presentation.
 
 // Get current document info.

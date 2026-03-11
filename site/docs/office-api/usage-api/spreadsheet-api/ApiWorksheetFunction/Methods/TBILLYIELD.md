@@ -26,7 +26,7 @@ number
 
 This example shows how to return the yield for a Treasury bill.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the yield for a Treasury bill.
 
 // Use a function to calculate a Treasury bill yield.

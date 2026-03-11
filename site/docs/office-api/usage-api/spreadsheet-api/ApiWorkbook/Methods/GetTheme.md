@@ -22,5 +22,5 @@ This method doesn't have any parameters.
 
 
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 ```

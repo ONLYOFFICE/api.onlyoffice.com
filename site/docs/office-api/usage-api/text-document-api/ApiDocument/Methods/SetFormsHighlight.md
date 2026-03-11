@@ -24,7 +24,7 @@ boolean
 
 This example sets the highlight to the forms in the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set color for forms background.
 
 // Highlight the forms color.

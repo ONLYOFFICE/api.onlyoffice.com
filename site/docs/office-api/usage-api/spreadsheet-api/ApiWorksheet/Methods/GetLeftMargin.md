@@ -22,7 +22,7 @@ number
 
 This example shows how to get the left margin of the sheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get margin of the sheet's left side.
 
 // Get the size of the left margin of the sheet.

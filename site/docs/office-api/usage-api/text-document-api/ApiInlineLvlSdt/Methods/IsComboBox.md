@@ -22,7 +22,7 @@ boolean
 
 This example shows how to check if the content control is a combobox list.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let comboboxControl = doc.AddComboBoxContentControl();
 let isComboBox = comboboxControl.IsComboBox();

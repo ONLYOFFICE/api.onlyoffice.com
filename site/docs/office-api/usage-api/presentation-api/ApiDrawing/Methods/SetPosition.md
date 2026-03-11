@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets position to the shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a position of a drawing.
 
 // Get a shape object from a slide and move it.

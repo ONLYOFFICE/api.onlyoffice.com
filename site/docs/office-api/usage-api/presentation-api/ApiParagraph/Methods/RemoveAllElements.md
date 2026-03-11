@@ -24,7 +24,7 @@ boolean
 
 This example removes all the elements from the paragraph.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete all elements from the paragraph.
 
 // Clear all elements from the paragraph.

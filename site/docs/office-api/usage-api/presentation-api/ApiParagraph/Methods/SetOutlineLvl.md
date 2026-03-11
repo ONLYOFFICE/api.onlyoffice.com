@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline level for the specified paragraph via paragraph properties.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

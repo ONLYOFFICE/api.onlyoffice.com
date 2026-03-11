@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a color class type.
 
 // Get an RGB color type.

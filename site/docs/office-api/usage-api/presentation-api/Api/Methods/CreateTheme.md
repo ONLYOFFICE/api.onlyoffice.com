@@ -28,7 +28,7 @@ expression.CreateTheme(sName, oMaster, oClrScheme, oFormatScheme, oFontScheme);
 
 This example creates theme and applies it for presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change theme of the presentation.
 
 // Create new theme indicating all its properties.

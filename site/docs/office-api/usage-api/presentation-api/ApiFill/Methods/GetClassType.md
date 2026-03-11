@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a class type of ApiFill.
 
 // Retrieve class type of ApiFill object and insert it to the slide.

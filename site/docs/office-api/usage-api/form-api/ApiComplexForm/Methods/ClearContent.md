@@ -22,7 +22,7 @@ boolean
 
 This example clear content of complex form.
 
-```javascript editor-forms playground
+```javascript editor-forms
 let doc = Api.GetDocument()
 let complexForm = Api.CreateComplexForm({"key": "Complex1"});
 let paragraph = doc.GetElement(0);

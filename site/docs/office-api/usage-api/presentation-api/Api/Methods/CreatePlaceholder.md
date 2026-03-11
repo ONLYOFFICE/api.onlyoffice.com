@@ -24,7 +24,7 @@ expression.CreatePlaceholder(sType);
 
 This example shows how to create placeholder for shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a placeholder type of an object.
 
 // Add a placeholder to the shape.

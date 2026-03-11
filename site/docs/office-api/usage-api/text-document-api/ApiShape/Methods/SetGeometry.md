@@ -24,7 +24,7 @@ boolean
 
 Creates a custom triangle geometry and applies it to a shape.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Uses basic path drawing commands: MoveTo, LineTo and Close.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

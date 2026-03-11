@@ -24,7 +24,7 @@ number
 
 This example shows how to convert picas to points.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const picas = 100;
 const points = Api.PicasToPoints(picas);
 

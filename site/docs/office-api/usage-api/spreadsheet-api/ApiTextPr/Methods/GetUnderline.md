@@ -22,7 +22,7 @@ boolean
 
 This example gets a text underline using its property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find out whether a text is underlined or not.
 
 // Get underlined property of a text run object.

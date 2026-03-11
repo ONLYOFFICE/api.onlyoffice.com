@@ -25,7 +25,7 @@ boolean
 
 This example sets a name for a seria of a chart.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to rename a chart seria.
 
 // Create a chart, set its properties and its series names.

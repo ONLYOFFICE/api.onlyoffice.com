@@ -24,7 +24,7 @@ boolean
 
 This example sets the background to the current slide layout.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a background of a layout.
 
 // Create a gradient fill and apply it as a background.

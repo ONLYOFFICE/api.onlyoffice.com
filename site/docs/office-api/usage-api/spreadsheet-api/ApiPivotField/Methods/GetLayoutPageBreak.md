@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get a layout page break of a pivot field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a layout page break of a pivot field.
 
 // Create a pivot table, add data to it then get a layout page break of a specified pivot field.

@@ -25,7 +25,7 @@ number
 
 This example shows how to round a number down to the nearest multiple of significance.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to round a number down to the nearest multiple of significance.
 
 // Use function to round down.

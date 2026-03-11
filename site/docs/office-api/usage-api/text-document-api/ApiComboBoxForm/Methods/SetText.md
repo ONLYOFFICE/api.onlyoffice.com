@@ -25,7 +25,7 @@ boolean
 
 This example sets the text to the current combo box.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Add text to the combobox.
 
 // How to create a combobox and change its content text.

@@ -22,7 +22,7 @@ boolean
 
 This example selects the current table.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to select a table with a cursor.
 
 // Add text to the table cell and select it.

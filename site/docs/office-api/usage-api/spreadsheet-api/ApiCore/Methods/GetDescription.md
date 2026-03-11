@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the description of the current workbook using the ApiCore.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 

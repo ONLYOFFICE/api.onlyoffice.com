@@ -24,7 +24,7 @@ expression.SetColor(color);
 
 This example sets the text color to the text Range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to color the text of the range.
 
 // Set the text color to middle washed rose.

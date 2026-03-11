@@ -27,7 +27,7 @@ boolean
 
 This example specifies which chart data labels are shown for the chart.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to show specific chart data labels.
 
 // Create a chart, set its properties and its specific data labels visibility.

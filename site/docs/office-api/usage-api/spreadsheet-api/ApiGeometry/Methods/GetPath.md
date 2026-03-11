@@ -24,7 +24,7 @@ expression.GetPath(nIndex);
 
 Analyzes cloud shape path properties and displays them in cells.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Shows path count, dimensions, stroke and fill information.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

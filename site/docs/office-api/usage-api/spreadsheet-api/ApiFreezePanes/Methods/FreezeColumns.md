@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example freezes the the first column.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to freeze columns using their indices.
 
 // Get freeze panes and freeze a column using its index.

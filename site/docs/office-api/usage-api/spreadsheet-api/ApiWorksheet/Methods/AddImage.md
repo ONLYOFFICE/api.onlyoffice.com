@@ -30,7 +30,7 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 This example adds an image to the sheet with the parameters specified.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add an image to the worksheet specifying its url and size.
 
 // Insert an image to the worksheet.

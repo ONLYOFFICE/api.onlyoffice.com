@@ -25,7 +25,7 @@ expression.SetShd(type, color);
 
 This example specifies the shading applied to the contents of the current text run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add shading to the text.
 
 // Create a new text run and apply shading to it.

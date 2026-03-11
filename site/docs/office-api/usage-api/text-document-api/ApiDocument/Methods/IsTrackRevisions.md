@@ -22,7 +22,7 @@ boolean
 
 This example checks if change tracking mode is enabled or not.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to track revisions of the document.
 
 // Get a boolean value that shows whether revision tracking is enabled or not.

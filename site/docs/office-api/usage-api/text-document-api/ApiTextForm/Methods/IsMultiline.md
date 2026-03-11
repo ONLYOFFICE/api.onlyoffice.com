@@ -22,7 +22,7 @@ boolean
 
 This example checks if the text field is multiline.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to know whether the first text form from this document is multiline.
 
 // Get the boolean that represents the multiline property of the text form.

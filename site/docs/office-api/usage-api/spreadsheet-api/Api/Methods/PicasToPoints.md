@@ -24,7 +24,7 @@ number
 
 This example shows how to convert picas to points.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const picas = 100;
 const points = Api.PicasToPoints(picas);
 const text = picas + ' picas are equal to ' + points + ' points.';

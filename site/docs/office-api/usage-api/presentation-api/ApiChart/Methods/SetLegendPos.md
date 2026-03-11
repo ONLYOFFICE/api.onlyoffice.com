@@ -24,7 +24,7 @@ boolean
 
 This example specifies the chart legend position.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to place a chart legend.
 
 // Create a chart, set its properties and its legend's position.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the data to the current OLE object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add link to the OLE object.
 
 // Update content of the OLE object.

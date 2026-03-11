@@ -24,7 +24,7 @@ expression.SetStyle(oStyle);
 
 This example sets the style to the current Range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to style a text of the range.
 
 // Get a range, apply "Heading 2" style to it.

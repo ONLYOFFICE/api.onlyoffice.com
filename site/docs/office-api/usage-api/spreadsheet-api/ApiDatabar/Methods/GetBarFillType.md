@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates getting the bar fill type from a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check the fill type setting of a data bar.
 
 // Get the bar fill type of a data bar conditional formatting rule.

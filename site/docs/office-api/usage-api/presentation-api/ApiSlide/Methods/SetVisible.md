@@ -24,7 +24,7 @@ boolean
 
 This example sets the visibility to the current presentation slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change visibility of the slide.
 
 // Create a slide and make it hidden.

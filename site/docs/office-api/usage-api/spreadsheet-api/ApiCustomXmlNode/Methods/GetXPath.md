@@ -22,7 +22,7 @@ string
 
 This example shows how to get the XPath of a custom XML node.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve XPath location from custom XML node elements.
 
 // Get XPath from employee node.

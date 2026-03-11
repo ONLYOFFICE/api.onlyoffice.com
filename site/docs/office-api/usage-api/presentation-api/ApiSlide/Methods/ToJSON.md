@@ -27,7 +27,7 @@ JSON
 
 This example converts the ApiSlide object into the JSON object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to convert a slide object to a JSON object.
 
 // Get a slide by its index and convert it to JSON.

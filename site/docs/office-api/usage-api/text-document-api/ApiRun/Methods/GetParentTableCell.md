@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table cell that contains the run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get a parent table cell of the text.
 
 // How to set shading of the table cell that contains a text run.

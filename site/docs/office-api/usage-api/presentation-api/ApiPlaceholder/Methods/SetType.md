@@ -24,7 +24,7 @@ boolean
 
 This example sets the placeholder type.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a placeholder type (chart, table, etc.).
 
 // Create a shape and set its placeholder type to "chart".

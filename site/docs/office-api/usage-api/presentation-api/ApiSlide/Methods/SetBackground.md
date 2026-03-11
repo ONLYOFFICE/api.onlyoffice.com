@@ -24,7 +24,7 @@ boolean
 
 This example sets background color of the slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a background color of the slide.
 
 // Get a slide by its index, set its background and add it to the presentation.

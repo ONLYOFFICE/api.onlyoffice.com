@@ -27,7 +27,7 @@ boolean
 
 This example show how to set the outline to the data point.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Sets the outline to the data point in the specified chart series.
 
 // How to set data point outline using a stroke.

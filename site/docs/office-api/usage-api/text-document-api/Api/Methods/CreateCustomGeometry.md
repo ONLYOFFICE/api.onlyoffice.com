@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates creating a custom geometry.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
  // Airplane shape in EMU units

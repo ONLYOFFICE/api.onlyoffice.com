@@ -24,7 +24,7 @@ number
 
 This example shows how to convert twips to points.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const twips = 100;
 const points = Api.TwipsToPoints(twips);
 const text = twips + ' twips are equal to ' + points + ' points.';

@@ -24,7 +24,7 @@ expression.GroupDrawings(aDrawings);
 
 This example shows how to group drawings on layout.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to group drawings.
 
 // Create two shapes and group them.

@@ -27,7 +27,7 @@ number
 
 This example shows how to return the probability of a trial result using a binomial distribution.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a probability of a trial result.
 
 // Use function to get a probability of a trial result using binomial distribution.

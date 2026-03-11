@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example copies a range to the specified range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to create identical range.
 
 // Get a range and create a copy of it.

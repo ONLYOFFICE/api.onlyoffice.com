@@ -24,7 +24,7 @@ string
 
 This example shows how to convert all letters in a text string to lowercase.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to make all characters uncapitalized.
 
 // Use a function to make a text string to lowercase.

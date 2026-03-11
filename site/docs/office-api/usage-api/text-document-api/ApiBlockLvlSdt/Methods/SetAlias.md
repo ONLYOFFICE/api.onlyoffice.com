@@ -24,7 +24,7 @@ boolean
 
 This example sets an alias attribute to the container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a block content control and sets an alias to it.
 
 // How to set an alias to the ApiBlockLvlSdt object.

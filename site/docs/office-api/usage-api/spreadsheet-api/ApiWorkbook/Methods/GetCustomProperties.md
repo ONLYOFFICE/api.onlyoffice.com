@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to get ApiCustomProperties object of the workbook
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const workbook = Api.GetActiveWorkbook();
 const customProps = workbook.GetCustomProperties();
 customProps.Add("MyStringProperty", "Hello, Spreadsheet!");

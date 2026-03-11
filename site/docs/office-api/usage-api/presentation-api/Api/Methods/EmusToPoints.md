@@ -24,7 +24,7 @@ number
 
 This example shows how to convert EMUs (english metric units) to points.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const emus = 100;
 const points = Api.EmusToPoints(emus);
 

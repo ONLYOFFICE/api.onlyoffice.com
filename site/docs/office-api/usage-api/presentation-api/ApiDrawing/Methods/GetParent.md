@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get parent.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a parent of a slide shape.
 
 // Get a slide shape's parent object.

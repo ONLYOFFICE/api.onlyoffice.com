@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the class type of a custom XML node and display it.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get the class type of an XML node.
 
 // Get the class type.

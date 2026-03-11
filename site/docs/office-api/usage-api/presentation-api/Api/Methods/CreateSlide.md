@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates slide and inserts it into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add a new slide.
 
 // Add new slides to the presentation.

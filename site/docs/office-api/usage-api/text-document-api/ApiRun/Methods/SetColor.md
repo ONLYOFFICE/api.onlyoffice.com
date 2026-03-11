@@ -24,7 +24,7 @@ expression.SetColor(color);
 
 This example sets the text color for the current text run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change text color.
 
 // Create a new text run and change its font color.

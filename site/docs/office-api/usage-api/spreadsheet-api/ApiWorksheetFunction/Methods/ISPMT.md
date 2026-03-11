@@ -27,7 +27,7 @@ number
 
 This example shows how to return the interest paid during a specific period of an investment.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the investment interest paid during a specific period.
 
 // Use a function to get an interest paid during a specific period.

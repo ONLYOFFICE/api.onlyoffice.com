@@ -35,7 +35,7 @@ boolean
 
 This example shows how to set table lock.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the table look.
 
 // Create a table and indicate its look properties.

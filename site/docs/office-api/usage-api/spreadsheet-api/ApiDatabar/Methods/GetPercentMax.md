@@ -22,7 +22,7 @@ number
 
 This example demonstrates getting the maximum percentage length from a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check the maximum length setting of a data bar.
 
 // Get the maximum percentage length of a data bar conditional formatting rule.

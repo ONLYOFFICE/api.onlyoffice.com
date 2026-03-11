@@ -26,7 +26,7 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 This example inserts a paragraph at the specified position.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to insert the paragraph into the drawing.
 
 // Create a rectangle and then add a paragraph to it.

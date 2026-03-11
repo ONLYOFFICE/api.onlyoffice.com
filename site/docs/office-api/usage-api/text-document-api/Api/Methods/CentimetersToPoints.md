@@ -24,7 +24,7 @@ number
 
 This example shows how to convert centimeters to points.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 

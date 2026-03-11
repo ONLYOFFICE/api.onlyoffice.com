@@ -24,7 +24,7 @@ number
 
 This example shows how to return the secant of an angle.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get angle's secant.
 
 // Use a function to calculate the secant of an angle.

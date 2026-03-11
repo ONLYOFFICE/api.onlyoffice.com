@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline to the chart legend.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the outline of the chart legend using a stoke.
 
 // Outline the chart legend creating a solid stroke.

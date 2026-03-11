@@ -29,7 +29,7 @@ boolean
 
 This example specifies the border which will be displayed at the right side of the page around the specified paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add border to the right side of the paragraph.
 
 // Add right single border.

@@ -22,7 +22,7 @@ number
 
 This example gets a number of layout objects and insert it itno the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a master layout count knowing its index.
 
 // Count each layout from the master.

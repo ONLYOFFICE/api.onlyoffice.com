@@ -24,7 +24,7 @@ number
 
 This example shows how to convert points to emus.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const points = 1000;
 const emus = Api.PointsToEmus(points);
 

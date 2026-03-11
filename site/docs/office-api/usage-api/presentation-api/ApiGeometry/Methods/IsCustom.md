@@ -22,7 +22,7 @@ boolean
 
 Gets geometry information from a star shape on a presentation slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // Displays preset type and custom status in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

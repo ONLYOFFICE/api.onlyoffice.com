@@ -26,7 +26,7 @@ boolean
 
 This example replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Replace string values of the selected range with a new values.
 
 // Replace cell string values with a new ones.

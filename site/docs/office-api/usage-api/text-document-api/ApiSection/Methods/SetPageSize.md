@@ -26,7 +26,7 @@ boolean
 
 This example specifies the properties (size and orientation) for all the pages in the section.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set page size.
 
 // Get the final section and resize its page.

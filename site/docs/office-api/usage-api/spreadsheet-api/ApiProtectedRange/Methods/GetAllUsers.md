@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets all users of a protected range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an array of users of a protected range.
 
 // Get an active sheet, add protected range to it and diplay its first user. 

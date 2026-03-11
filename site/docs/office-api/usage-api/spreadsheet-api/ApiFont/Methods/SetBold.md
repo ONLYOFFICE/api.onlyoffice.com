@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the bold property to the specified font.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to make a text bold.
 
 // Get a font object of characters and make it bold.

@@ -25,7 +25,7 @@ expression.Search(sText, isMatchCase);
 
 This example shows how to make search in paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to find a word in the paragraph.
 
 // Make the search result word bold.

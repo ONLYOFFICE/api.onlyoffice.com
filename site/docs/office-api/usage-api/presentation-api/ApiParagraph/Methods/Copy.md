@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a paragraph copy.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add a duplicate paragraph.
 
 // Copy a paragraph and add it to the shape.

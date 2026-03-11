@@ -22,7 +22,7 @@ boolean
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to remove the watermark.
 
 // Add the watermark with settings and then delete it.

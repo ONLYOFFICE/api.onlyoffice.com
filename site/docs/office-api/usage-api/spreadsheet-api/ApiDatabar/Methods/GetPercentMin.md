@@ -22,7 +22,7 @@ number
 
 This example demonstrates getting the minimum percentage length from a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check the minimum length setting of a data bar.
 
 // Get the minimum percentage length of a data bar conditional formatting rule.

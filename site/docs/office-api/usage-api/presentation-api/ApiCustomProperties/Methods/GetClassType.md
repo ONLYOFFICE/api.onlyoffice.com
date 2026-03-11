@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to get the class type of ApiCustomProperties.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 const classType = customProps.GetClassType();

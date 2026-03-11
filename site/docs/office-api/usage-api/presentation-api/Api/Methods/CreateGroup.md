@@ -24,7 +24,7 @@ expression.CreateGroup(drawings);
 
 This example show how to create a group.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a group of drawings.
 
 // Group the specified list of shapes.

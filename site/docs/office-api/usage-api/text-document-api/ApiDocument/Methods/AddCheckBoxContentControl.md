@@ -24,7 +24,7 @@ expression.AddCheckBoxContentControl(checkBoxPr);
 
 This example shows how to add a checkbox content control to a document:
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 doc.AddCheckBoxContentControl({checked : true});
 ```

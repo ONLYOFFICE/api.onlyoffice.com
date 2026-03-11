@@ -25,7 +25,7 @@ number
 
 This example shows how to return the two-tailed inverse of the Student's t-distribution.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to calculate the two-tailed inverse of Student's t-distribution.
 
 // Use a function to estimate the Student's t-distribution two-tailed inverse.

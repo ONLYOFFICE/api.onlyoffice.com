@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all the drawing objects from the current presentation
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const slideMaster = presentation.GetMaster(0);

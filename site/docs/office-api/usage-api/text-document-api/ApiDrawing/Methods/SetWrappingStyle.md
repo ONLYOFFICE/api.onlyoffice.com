@@ -32,7 +32,7 @@ boolean
 
 This example creates a shape with wrapping style "square".
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to wrap the shape with squared style.
 
 // Create a drawing, add its properties and set its wrapping style.

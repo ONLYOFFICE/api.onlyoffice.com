@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline to the chart plot area.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to color chart plot area outline.
 
 // Add a stroke for plot area outline.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the hyperbolic cosine of a complex number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the hyperbolic cosine.
 
 // Use a function to get the hyperbolic cosine of a complex number.

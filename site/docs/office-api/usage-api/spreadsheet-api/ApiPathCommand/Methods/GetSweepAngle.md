@@ -22,7 +22,7 @@ string \| null
 
 Retrieves arc parameters including radii and angles.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Displays arc width radius, height radius, start and sweep angles in cells.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example freezes first column then unfreeze all panes in the worksheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to unfreeze columns from freezed panes.
 
 // Add freezed panes then unfreeze the first column and show all freezed ones' location to prove it.

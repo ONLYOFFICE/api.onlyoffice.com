@@ -24,7 +24,7 @@ boolean
 
 This example sets the alias attribute to the container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set a "№1" alias to the inline content control.
 
 // Display the alias set for inline text element.

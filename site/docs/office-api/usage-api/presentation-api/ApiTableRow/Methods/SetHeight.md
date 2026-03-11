@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the height to the table row.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a height of the row.
 
 // Create a table and change its rows height.

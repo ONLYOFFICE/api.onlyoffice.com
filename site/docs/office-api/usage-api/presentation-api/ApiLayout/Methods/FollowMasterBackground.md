@@ -22,7 +22,7 @@ boolean
 
 This example sets the master background as the background of the layout.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to apply master background to the layout.
 
 // Change background of the presentation layout to the background of a master.

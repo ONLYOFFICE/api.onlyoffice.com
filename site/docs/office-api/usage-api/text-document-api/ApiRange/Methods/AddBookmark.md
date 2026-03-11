@@ -24,7 +24,7 @@ boolean
 
 This example adds a bookmark to the specified range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to bookmark a range of document.
 
 // Insert a bookmark into the 'ONLYOFFICE' range.

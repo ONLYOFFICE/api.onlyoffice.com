@@ -24,7 +24,7 @@ boolean
 
 This example specifies the minor tick mark for the horizontal axis.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change a tickmark of a minor horizontal axis.
 
 // Create a chart and set its minor horizontal axis tickmark as a out symbol.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the background color to the table cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to color the cell.
 
 // Get the first cell from the table and set its background color.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the XPath of a custom XML node.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

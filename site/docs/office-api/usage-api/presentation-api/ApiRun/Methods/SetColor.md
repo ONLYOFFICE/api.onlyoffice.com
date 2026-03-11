@@ -24,7 +24,7 @@ expression.SetColor(color);
 
 This example sets the text color for the current text run in the RGB format.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change text color.
 
 // Create a new text run and change its font color.

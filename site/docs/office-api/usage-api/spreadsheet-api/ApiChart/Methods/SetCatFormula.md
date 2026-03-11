@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets a range with the category values to the current chart.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to apply range category formula for the chart. 
 
 // Set category formula for the chart by sheet number and range. 

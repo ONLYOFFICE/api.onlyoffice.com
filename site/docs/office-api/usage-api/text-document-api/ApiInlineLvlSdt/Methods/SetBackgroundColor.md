@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the background color for the container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

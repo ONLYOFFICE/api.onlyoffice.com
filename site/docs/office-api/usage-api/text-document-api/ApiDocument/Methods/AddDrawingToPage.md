@@ -29,7 +29,7 @@ boolean
 
 This example shows how to get a collection of tables on a given absolute page.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add the drawing to the document.
 
 // Create an image from the URL and insert it to the page.

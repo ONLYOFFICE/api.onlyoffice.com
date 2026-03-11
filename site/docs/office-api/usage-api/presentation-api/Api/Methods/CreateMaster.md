@@ -24,7 +24,7 @@ expression.CreateMaster(oTheme);
 
 This example shows how to create a slide master.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add master to the slide.
 
 // Create new slide master and apply it to the slide.

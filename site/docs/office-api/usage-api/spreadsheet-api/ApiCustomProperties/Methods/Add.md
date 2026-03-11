@@ -25,7 +25,7 @@ boolean
 
 This example demonstrates how to add a boolean custom property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 

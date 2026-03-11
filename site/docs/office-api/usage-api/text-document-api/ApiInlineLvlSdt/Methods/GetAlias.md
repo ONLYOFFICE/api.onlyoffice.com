@@ -22,7 +22,7 @@ string
 
 This example showh how to get the alias attribute for the container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get an alias of the inline text element.
 
 // Retrieve the alias of the text element and display it in the document.

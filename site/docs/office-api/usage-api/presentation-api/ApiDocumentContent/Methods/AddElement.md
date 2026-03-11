@@ -25,7 +25,7 @@ boolean
 
 This example adds a paragraph to presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create an element, add it to a shape and insert the shape to the slide.
 
 // Create a shape, insert a paragraph to it and then add the shape to the slide.

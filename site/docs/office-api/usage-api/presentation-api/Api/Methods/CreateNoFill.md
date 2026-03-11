@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates no fill and removes the fill from the element.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove background fill from the object.
 
 // Create no fill and apply it to the element.

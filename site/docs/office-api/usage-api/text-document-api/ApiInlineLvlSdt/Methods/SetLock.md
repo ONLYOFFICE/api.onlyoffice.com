@@ -28,7 +28,7 @@ boolean
 
 This example sets the lock to the inline text content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set lock type for the inline content control.
 
 // Display the lock type set for inline text element.

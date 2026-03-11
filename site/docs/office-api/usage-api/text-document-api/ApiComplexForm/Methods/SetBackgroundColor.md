@@ -24,7 +24,7 @@ boolean
 
 This example sets the background color to the form.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Applies an RGB background color to the text form element.
 
 // How to change background color of the text form.

@@ -24,7 +24,7 @@ boolean
 
 This example specifies the horizontal axis orientation.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change an axis orientation.
 
 // Create a chart and set its horizontal axis orientation.

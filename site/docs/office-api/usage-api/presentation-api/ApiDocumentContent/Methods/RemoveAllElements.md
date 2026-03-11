@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove all elements from a shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove all elements from the slide shape.
 
 // Get a slide shape's content and remove all elements from it.

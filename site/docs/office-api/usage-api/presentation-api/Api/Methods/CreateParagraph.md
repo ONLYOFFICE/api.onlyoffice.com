@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a new paragraph and inserts it into the shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add a text.
 
 // Insert text to the paragraph and add it to the slide.

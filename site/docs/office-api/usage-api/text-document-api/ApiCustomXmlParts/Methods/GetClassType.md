@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the class type of the custom XML parts manager.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let classType = xmlManager.GetClassType();

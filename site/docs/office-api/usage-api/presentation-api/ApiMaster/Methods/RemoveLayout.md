@@ -25,7 +25,7 @@ boolean
 
 This example removes the layouts from the current slide master.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete layout from a master.
 
 // Delete a slide master layout.

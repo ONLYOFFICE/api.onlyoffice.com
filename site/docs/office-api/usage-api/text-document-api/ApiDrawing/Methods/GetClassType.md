@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How get a class type of ApiDrawing.
 
 // Retrieve class type of a created shape and display it.

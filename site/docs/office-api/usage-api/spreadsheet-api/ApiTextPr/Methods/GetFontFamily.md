@@ -23,7 +23,7 @@ string
 
 This example gets a text font family.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find out a text font family.
 
 // Get a text font family name and display it in the worksheet.

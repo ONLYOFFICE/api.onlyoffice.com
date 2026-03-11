@@ -28,7 +28,7 @@ This method doesn't return any data.
 
 This example calculates custom function result.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add custom function library.
 
 // How to use custom function.

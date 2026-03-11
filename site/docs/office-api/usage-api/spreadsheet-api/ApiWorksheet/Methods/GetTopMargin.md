@@ -22,7 +22,7 @@ number
 
 This example shows how to get the top margin of the sheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get margin of the sheet's top side.
 
 // Get the size of the top margin of the sheet.

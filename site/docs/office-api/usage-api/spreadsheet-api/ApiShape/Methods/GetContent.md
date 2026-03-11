@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the shape inner contents where a paragraph or text runs can be inserted.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get content of ApiShape.
 
 // Get content of ApiShape, remove all its elements and add a new paragraph to it.

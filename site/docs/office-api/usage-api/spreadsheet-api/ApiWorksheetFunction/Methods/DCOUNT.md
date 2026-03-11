@@ -26,7 +26,7 @@ number
 
 This example shows how to count the cells containing numbers in the field (column) of records in the database that match the conditions you specify.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to count the cells containing numbers in the field (column) of records in the database that match the conditions you specify.
 
 // Use function to count numbers from database records that met a condition specified.

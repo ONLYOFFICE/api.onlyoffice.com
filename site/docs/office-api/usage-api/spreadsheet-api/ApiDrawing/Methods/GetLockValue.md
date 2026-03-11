@@ -24,7 +24,7 @@ boolean
 
 This example shows how to get the lock value for the specified lock type of the drawing.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to know a lock type of a drawing.
 
 // Set a drawing's lock type and display it in the worksheet.

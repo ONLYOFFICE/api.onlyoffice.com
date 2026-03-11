@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a type of ApiCommentReply class and inserts it into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a class type of ApiCommentReply.
 
 // Retrieve class type of ApiCommentReply object and insert it to the slide.

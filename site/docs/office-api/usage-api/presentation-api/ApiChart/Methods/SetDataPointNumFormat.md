@@ -27,7 +27,7 @@ boolean
 
 This example sets "0.00" numeric format for chart.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a number format of a data point.
 
 // Create a chart then apply specified numeric format to its data points.

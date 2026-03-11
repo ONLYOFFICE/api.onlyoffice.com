@@ -22,7 +22,7 @@ Number
 
 This example shows how to get a time of a comment creation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to know when a comment was added.
 
 // Get all comments from the presentation and the first one's time of creation.

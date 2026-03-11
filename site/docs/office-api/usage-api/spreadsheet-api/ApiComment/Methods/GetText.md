@@ -22,7 +22,7 @@ string
 
 This example shows how to get the comment text.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a comment raw text.
 
 // Add a comment text to a range of the worksheet.

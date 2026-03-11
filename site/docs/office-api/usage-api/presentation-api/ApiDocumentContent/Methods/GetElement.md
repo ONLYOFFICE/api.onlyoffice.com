@@ -24,7 +24,7 @@ expression.GetElement(nPos);
 
 This example shows how to get element.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get an element from the content of a slide shape.
 
 // Find an element from the shape using its index.

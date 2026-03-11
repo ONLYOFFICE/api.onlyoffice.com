@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a tab stop to the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to separate two texts with tabs.
 
 // Insert tabs to the paragraph.

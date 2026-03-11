@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set and get the outline level of the specified paragraph via paragraph properties.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());

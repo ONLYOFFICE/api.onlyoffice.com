@@ -22,7 +22,7 @@ boolean
 
 This example clears all forms in the document.
 
-```javascript editor-forms playground
+```javascript editor-forms
 // How to remove all answers from all forms.
 
 // Reset answers from document.

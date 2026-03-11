@@ -25,7 +25,7 @@ string \| null
 
 This example shows how to get an attribute value from a custom XML node.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get an attribute from an XML node.
 
 // Get an XML node attribute.

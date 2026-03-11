@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to use ApiCustomProperties to configure custom properties in a spreadsheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 
 const customProps = Api.GetCustomProperties();

@@ -25,7 +25,7 @@ boolean
 
 This example inserts a watermark on each document page.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to insert watermark to the document.
 
 // Watermark the document.

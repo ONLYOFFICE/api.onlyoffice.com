@@ -24,7 +24,7 @@ boolean
 
 This example applies a theme to all the slides in the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to apply a theme to the presentation.
 
 // Create the ApiTheme object and apply it to the presentation.

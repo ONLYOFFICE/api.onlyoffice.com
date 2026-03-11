@@ -29,7 +29,7 @@ This method doesn't return any data.
 
 This example demonstrates comprehensive testing of ApiPivotFilters.Add method
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Creates one comprehensive dataset and 15 pivot tables with different filter types
 // Tests all major filter categories: label, value, top/bottom, and date filters
 

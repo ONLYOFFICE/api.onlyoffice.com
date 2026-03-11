@@ -24,7 +24,7 @@ boolean
 
 This example specifies the legend font size.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the font size of the chart legend.
 
 // Resize the font of the chart legend.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the change tracking mode.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to track revisions of the document.
 
 // Start document tracking mode.

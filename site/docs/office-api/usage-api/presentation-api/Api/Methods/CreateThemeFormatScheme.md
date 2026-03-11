@@ -27,7 +27,7 @@ expression.CreateThemeFormatScheme(arrFill, arrBgFill, arrLine, sName);
 
 This example shows how to create a new theme format scheme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change theme format of the theme.
 
 // Add theme format to the theme.

@@ -25,7 +25,7 @@ boolean
 
 This example shows how to remove objects from a slide layout.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove objects from a layout using their index position.
 
 // Delete an element from the slide.

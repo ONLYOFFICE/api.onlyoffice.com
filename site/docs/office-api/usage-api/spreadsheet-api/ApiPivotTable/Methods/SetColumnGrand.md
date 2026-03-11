@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to get a column grand.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to select a column grand of a table.
 
 // Create a pivot table, add data to it then get its column grand.

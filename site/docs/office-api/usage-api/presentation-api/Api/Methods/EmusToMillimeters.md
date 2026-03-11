@@ -24,7 +24,7 @@ expression.EmusToMillimeters(emu);
 
 This example shows how to convert emus to millimeters.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const emus = 780000;
 const millimeters = Api.EmusToMillimeters(emus);
 

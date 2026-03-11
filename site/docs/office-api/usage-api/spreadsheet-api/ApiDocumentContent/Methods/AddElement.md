@@ -25,7 +25,7 @@ boolean
 
 This example adds a paragraph in document content.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add text to the document using ApiParagraph.
 
 // Update the document content adding a paragraph to it.

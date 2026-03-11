@@ -12,7 +12,7 @@ number
 
 This example creates two RGB colors.
 
-```javascript editor-forms
+```javascript editor-pdf
 // How to use bytes to create a color.
 
 // Create RGB colors using bytes in decimal and hexadecimal.

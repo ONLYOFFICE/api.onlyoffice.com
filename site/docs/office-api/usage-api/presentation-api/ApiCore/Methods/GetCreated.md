@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to set and get the creation date of a presentation using the ApiCore.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreated(new Date('20 January 2000'));

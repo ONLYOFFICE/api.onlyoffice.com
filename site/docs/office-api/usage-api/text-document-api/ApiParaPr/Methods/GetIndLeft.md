@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the paragraph left side indentation.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get the left indentation of the paragraph and show it in the document.
 
 // How to know the number of inches of the left indentation.

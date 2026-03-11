@@ -29,7 +29,7 @@ JSON
 
 This example converts the ApiDocument object into the JSON object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a JSON object from the document content.
 
 // Convert the document to json file.

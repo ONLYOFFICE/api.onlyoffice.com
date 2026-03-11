@@ -25,7 +25,7 @@ boolean
 
 This example adds the slide master to the presentation slide masters collection.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to add a presentation master.
 
 // Create a shape and set its placeholder type to "chart".

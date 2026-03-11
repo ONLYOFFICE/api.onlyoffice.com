@@ -25,7 +25,7 @@ expression.Search(text, isMatchCase);
 
 This example shows how to make a search in the content control object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a block content control, adds two paragraphs to it, and searches for the specified word among the text in this container.
 
 // How to search for the specified string in the ApiBlockLvlSdt object.

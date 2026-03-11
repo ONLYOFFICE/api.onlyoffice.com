@@ -22,7 +22,7 @@ string
 
 This example shows how to get a user ID.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

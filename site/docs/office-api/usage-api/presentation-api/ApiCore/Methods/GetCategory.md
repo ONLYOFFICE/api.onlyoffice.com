@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the category of the presentation using the ApiCore.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");

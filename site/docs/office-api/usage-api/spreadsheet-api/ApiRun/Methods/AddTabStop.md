@@ -22,7 +22,7 @@ boolean
 
 This example adds a tab stop to the run.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add a tab to a sentence.
 
 // Break two lines of a text run with a tab. 

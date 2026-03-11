@@ -24,7 +24,7 @@ number
 
 This example shows how to get the sum of squares of deviations of data points from their sample mean.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get sum of squares of deviations.
 
 // Use function to get the sum of squares of deviations of data points from their sample mean.

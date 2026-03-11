@@ -24,7 +24,7 @@ boolean
 
 This example removes all the elements from the current paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to delete the paragraph.
 
 // Delete all ellements from the paragraph.

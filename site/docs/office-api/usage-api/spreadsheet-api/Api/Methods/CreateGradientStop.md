@@ -25,7 +25,7 @@ expression.CreateGradientStop(color, pos);
 
 This example creates a gradient stop used for different types of gradients.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to create a gradient background using gradient stop.
 
 // Create a shape with a gradient background using gradient stop.

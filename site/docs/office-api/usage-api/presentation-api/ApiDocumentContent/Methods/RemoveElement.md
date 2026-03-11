@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove an element.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove an elements from the slide shape.
 
 // Get a slide shape's content and remove an element from it using its index.

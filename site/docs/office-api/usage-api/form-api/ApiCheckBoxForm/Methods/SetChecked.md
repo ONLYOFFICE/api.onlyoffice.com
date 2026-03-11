@@ -24,7 +24,7 @@ boolean
 
 This example checks the checkbox.
 
-```javascript editor-forms playground
+```javascript editor-forms
 // How to check a form.
 
 // Check a checkbox.

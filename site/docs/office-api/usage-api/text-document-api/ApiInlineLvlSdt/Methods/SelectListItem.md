@@ -24,7 +24,7 @@ boolean
 
 This example shows how to select a list item from a ComboBox content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddComboBoxContentControl();

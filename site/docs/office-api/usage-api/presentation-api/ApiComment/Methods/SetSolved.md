@@ -24,7 +24,7 @@ expression.SetSolved(bSolved);
 
 This example shows how to resolve a comment.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to make a comment solved.
 
 // Get all comments from the presentation and set it solved.

@@ -22,7 +22,7 @@ string \| null
 
 This example demonstrates getting the value of color scale criterion.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve the value of a color scale criterion.
 
 // Get the value of a color scale criterion.

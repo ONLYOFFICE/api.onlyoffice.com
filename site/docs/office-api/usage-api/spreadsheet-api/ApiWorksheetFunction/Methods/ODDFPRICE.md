@@ -32,7 +32,7 @@ number
 
 This example shows how to return the price per $100 face value of a security with an odd first period.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the price per $100 face value of a security with an odd first period.
 
 // Use a function to return the price per $100 face value of a security.

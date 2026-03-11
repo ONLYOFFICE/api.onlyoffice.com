@@ -22,7 +22,7 @@ boolean
 
 This example shows how to check if the selection is empty.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

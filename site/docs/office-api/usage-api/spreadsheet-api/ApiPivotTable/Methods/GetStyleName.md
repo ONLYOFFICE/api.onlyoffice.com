@@ -22,7 +22,7 @@ string
 
 This example shows how to get style name of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get table style name.
 
 // Create a pivot table, add data to it then get its style name.

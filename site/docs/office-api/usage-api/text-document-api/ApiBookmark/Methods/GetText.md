@@ -31,7 +31,7 @@ string
 
 This example shows how to get bookmark text.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a bookmark and then display its content's text.
 
 // Show a bookmark text in the document.

@@ -24,7 +24,7 @@ number
 
 This example shows how to convert pixels to points.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);
 const text = pixels + ' pixels are equal to ' + points + ' points.';

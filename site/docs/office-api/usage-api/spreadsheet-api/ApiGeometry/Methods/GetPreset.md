@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 Retrieves geometry information from a star shape in a spreadsheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Displays preset type and custom status in cells.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

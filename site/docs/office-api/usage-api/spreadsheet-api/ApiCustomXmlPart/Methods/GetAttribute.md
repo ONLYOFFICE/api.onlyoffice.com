@@ -25,7 +25,7 @@ string \| null
 
 This example shows how to get an attribute from the root element of a custom XML part.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an attribute from an XML part element.
 
 // Get an XML attribute.

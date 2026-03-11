@@ -25,7 +25,7 @@ number
 
 This example shows how to return the serial number of the last day of the month before or after the specified number of months.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a date of the last day of the month before or after specified months.
 
 // Use function to get the serial number of the last day of the month before or after the specified number of months.

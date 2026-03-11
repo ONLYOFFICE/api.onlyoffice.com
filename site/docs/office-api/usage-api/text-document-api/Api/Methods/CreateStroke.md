@@ -26,7 +26,7 @@ expression.CreateStroke(width, fill, sDash);
 
 This example shows how to create a stroke.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Create a stroke using the specified width and fill and apply it to the shape from the first paragraph.
 
 // How to create the ApiStroke object and use it to create the ApiShape object.

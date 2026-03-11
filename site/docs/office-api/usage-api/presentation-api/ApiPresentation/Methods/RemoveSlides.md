@@ -26,7 +26,7 @@ boolean
 
 This example shows how to remove a range of slides from the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove the slides from the presentation.
 
 // Delete a range of the ApiSlide objects from the presentation.

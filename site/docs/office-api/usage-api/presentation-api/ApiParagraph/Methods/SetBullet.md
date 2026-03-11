@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the bullet or numbering to the current paragraph.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a bullet type to the paragraph properties.
 
 // Create a bulleted paragraph setting its bullet type.

@@ -22,7 +22,7 @@ string
 
 This example shows how to get the XML string representation of a custom XML node.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get XML content from an XML node.
 
 // Get XML node content.

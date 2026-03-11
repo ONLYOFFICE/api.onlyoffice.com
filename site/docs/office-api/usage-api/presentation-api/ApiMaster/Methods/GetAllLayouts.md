@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all layouts of the specified slide master.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);

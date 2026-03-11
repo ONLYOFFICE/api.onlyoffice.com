@@ -24,7 +24,7 @@ expression.GetBookmark(sBookmarkName);
 
 This example shows how to get bookmark in document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get a bookmark added by its name.
 
 // How to retrieve a bookmark and display its name.

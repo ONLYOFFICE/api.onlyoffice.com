@@ -22,7 +22,7 @@ number
 
 This example shows how to get a number of slides.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to count the slides of the presentation.
 
 // Get a number of the presentation slides.

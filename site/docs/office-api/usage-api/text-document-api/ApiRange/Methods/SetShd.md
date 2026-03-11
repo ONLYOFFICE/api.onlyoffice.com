@@ -25,7 +25,7 @@ expression.SetShd(type, color);
 
 This example specifies the shading applied to the contents of the current text Range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set a shading for a range text.
 
 // Get a range text, specify its shading options.

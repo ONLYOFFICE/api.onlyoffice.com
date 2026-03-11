@@ -26,7 +26,7 @@ expression.GetRange(Start, End);
 
 This example shows how to get a Range object that represents the part of the doc contained in the specified paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get the range where the paragraph is located.
 
 // Get the paragraph range and make it bold.

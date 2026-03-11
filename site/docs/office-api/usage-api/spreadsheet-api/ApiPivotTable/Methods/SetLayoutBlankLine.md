@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set layout blank line of a table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set layout blank line of a table.
 
 // Create a pivot table, add data to it then set layout blank line.

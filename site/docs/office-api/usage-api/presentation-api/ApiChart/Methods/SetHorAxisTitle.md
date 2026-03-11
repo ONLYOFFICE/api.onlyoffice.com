@@ -26,7 +26,7 @@ boolean
 
 This example specifies the chart horizontal axis title.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // Title the chart's horizontal axis.
 
 // Create a chart, set its properties and name its horizontal axis.

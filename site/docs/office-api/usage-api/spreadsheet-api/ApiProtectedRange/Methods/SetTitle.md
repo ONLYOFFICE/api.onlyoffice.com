@@ -24,7 +24,7 @@ boolean
 
 This example changes the the user protected range title.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set a title for a protected range.
 
 // Rename a title of a protected range.

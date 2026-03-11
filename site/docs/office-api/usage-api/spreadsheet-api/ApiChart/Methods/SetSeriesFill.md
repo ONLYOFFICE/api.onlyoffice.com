@@ -26,7 +26,7 @@ boolean
 
 This example sets the fill to the specified chart series.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to color chart series.
 
 // Add background solid fill color for a chart seria.

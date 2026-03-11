@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove the specified series from the current chart.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to remove seria from the chart indicating its index.
 
 // Create a chart, add series to it and then remove the second one. 

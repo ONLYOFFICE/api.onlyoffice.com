@@ -22,7 +22,7 @@ string
 
 This example shows how to get a name of a data field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a table element name.
 
 // Create a pivot table, add data to it then display a custom data field's name.

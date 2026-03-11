@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the outline of the existing text properties.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 
 const textPr = Api.CreateTextPr();

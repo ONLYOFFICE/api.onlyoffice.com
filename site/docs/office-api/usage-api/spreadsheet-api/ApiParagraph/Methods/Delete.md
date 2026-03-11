@@ -22,7 +22,7 @@ boolean
 
 This example deletes the paragraph.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to remove a paragraph.
 
 // Delete the paragraph from the shape content.

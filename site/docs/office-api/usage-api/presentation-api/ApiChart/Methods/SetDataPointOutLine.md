@@ -27,7 +27,7 @@ boolean
 
 This example show how to set the outline to the data point.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to outline data points.
 
 // Create a chart then apply outline to its data points.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the smallest value in a set of values. Does not ignore logical values and text.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a minimum from a list including text and logical values.
 
 // Use a function to find a minimum from a list of objects.

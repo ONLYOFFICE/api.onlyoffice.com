@@ -22,7 +22,7 @@ boolean
 
 This example shows how to delete the specified object from the parent slide master if it exists.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete a layout.
 
 // Remove a layout from a presentation master.

@@ -24,7 +24,7 @@ number
 
 This example shows how to get the hyperbolic cosine of a number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find a hyperbolic cosine.
 
 // Use function to get the hyperbolic cosine of an angle.

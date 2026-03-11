@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the rotation angle to the drawing.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

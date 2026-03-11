@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get a drag to page of a pivot field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a pivot field drag to page.
 
 // Create a pivot table, add data to it then get a drag to page of a specified pivot field.

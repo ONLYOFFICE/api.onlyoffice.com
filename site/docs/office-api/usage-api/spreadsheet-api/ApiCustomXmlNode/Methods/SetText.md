@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the text content of a custom XML node.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to update text content in custom XML node elements.
 
 // Set text for message node.

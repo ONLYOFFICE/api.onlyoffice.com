@@ -24,7 +24,7 @@ boolean
 
 This example shows how to check whether all conditions in a test are true.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to apply logical AND operation for a list of conditions.
 
 // Use logical AND to evaluate an expression.

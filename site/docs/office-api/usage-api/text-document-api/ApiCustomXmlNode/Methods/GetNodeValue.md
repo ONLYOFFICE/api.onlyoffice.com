@@ -22,7 +22,7 @@ string
 
 This example shows how to get the value of a custom XML node and display it.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

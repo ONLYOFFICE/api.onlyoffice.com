@@ -30,7 +30,7 @@ number
 
 This example shows how to return a depreciation of an asset for any specified period, including partial periods, using the double-declining balance method or some other method specified.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to estimate depreciation of an asset for any specified period.
 
 // Use a depreciation of an asset for any specified period including partial periods.

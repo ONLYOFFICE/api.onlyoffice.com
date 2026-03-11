@@ -24,7 +24,7 @@ expression.SetUserId(sUserId);
 
 This example sets the user ID to the comment reply author.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change a user ID of a comment reply.
 
 // Get all comments from the presentation and change its first one's reply user ID.

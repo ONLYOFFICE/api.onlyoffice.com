@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a text spacing using its property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find out space size of a text.
 
 // Get spacing size.

@@ -23,7 +23,7 @@ boolean
 
 This example shows how to check if the content control is a picture.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let inlineControl = doc.AddPictureContentControl();
 let isPicture = inlineControl.IsPicture();

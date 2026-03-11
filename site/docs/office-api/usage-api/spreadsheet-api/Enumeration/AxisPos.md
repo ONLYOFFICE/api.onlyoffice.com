@@ -18,7 +18,7 @@ Enumeration
 
 This example sets the axis values to the top position of the chart.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the axis labels format of the chart.
 
 // Set axis values to the top.

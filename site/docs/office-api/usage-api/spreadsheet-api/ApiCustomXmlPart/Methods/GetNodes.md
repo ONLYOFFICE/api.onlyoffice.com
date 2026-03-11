@@ -24,7 +24,7 @@ expression.GetNodes(xPath);
 
 This example shows how to get nodes from a custom XML part using XPath.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get nodes from an XML part using XPath.
 
 // Get XML nodes.

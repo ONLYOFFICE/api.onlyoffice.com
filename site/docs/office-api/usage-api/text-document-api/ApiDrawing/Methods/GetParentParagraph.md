@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a parent paragraph that contains the graphic object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get an element's parent paragraph.
 
 // How to show the shape's wrapper paragraph.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the outline to the chart legend.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to outline a chart legend.
 
 // Create a chart, set its properties and its legend's outline.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a theme of the current slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to return a theme of the slide.
 
 // Get a slide, get its theme and its properties.

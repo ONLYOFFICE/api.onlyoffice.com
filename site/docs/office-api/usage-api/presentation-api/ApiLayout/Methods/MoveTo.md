@@ -24,7 +24,7 @@ boolean
 
 This example shows how to move a layout.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to move layout using a position index.
 
 // Move a layout of a slide.

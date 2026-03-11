@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set and get the content status of the current presentation using the ApiCore.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetContentStatus("Final");

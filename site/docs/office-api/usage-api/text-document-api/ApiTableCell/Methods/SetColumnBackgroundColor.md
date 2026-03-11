@@ -24,7 +24,7 @@ boolean
 
 This example sets the background color to all cells in the column containing the cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to color the cell column background.
 
 // Set the rose color as a background color of the cell column.

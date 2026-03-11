@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a pivot table of the current range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a pivot table of a cell.
 
 // Get a range, get its pivot table and add some data fields to it.

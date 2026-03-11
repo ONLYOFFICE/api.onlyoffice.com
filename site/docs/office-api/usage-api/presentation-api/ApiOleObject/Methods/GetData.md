@@ -22,7 +22,7 @@ string
 
 This example shows how to get the string data from the current OLE object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get data from an OLE object.
 
 // Retrieve a content of an OLE object as a string.

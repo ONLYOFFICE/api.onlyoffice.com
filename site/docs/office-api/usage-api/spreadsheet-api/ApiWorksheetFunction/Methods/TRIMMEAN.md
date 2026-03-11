@@ -25,7 +25,7 @@ number
 
 This example shows how to return the mean of the interior portion of a set of data values.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to delete the mean of the data values interior portion.
 
 // Use a function to remove the mean from the interior portion of a set of data values.

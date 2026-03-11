@@ -28,7 +28,7 @@ boolean
 
 This example specifies the shading which shall be applied to the extents of the table.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add shading to the paragraph.
 
 // Apply the clear shading to the paragraph.

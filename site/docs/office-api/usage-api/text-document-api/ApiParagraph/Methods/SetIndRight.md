@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph right side indentation.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the indentation for the paragraph right side.
 
 // Create a new paragraph and set its right side indentation.

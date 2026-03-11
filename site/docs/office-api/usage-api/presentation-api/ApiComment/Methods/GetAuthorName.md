@@ -22,7 +22,7 @@ string
 
 This example shows how to get an author of a comment.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to find out a comment's author.
 
 // Get all comments from the presentation and display the first one's author name.
