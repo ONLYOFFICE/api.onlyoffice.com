@@ -15,9 +15,6 @@ import TabItem from '@theme/TabItem';
 1. 打开**视图**选项卡，然后点击**宏**。
 
 2. 在您的脚本中使用**debugger**命令：
-
-   <!-- 此代码片段显示在截图中。 -->
-
    
    ```ts
    debugger;

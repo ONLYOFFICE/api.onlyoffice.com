@@ -106,8 +106,6 @@ sidebar_position: -4
 
 :::
 
-<!-- 此代码与宏相关。 -->
-
 ``` ts
 (function()
 {

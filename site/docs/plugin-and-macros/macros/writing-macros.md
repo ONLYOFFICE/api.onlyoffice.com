@@ -11,8 +11,6 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
     <!-- This code is related to macros. -->
 
-    <!-- eslint-skip -->
-
     ``` ts
     (function () {
       // ... your code goes here ...
@@ -57,8 +55,6 @@ Now that you know how macros work, try to write your own macro. We have a table 
 Now let's sum it up with the complete script code:
 
 <!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

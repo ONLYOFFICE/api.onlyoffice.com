@@ -10,7 +10,7 @@ Generates word definitions in your document using the [Dictionary API](https://a
 
 <!-- This code snippet is shown in the screenshot. -->
 
-```ts
+```ts 
 (function () {
   let doc = Api.GetDocument();
   let range = doc.GetRangeBySelect();

@@ -17,8 +17,6 @@ Starting from version 8.1, you can add custom functions to the spreadsheets usin
 
     <!-- This code is related to macros. -->
 
-    <!-- eslint-skip -->
-
     ``` ts
     (function()
     {
@@ -109,8 +107,6 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 :::
 
 <!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()
