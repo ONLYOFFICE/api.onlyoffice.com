@@ -14,7 +14,7 @@ expression.SetControlsHighlight(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 未提供描述。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 内容控件的高亮颜色。 |
 
 ## 返回值
 

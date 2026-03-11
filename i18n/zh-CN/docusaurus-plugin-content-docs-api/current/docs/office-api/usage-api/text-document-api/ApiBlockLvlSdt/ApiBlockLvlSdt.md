@@ -46,6 +46,7 @@
 | [Select](./Methods/Select.md) | boolean | 选择当前内容控件。 |
 | [SetAlias](./Methods/SetAlias.md) | boolean | 设置当前容器的别名属性。 |
 | [SetAppearance](./Methods/SetAppearance.md) | 无 | 设置内容控件的可视化效果。 |
+| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | 设置当前内容控件的背景颜色。 |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | 设置当前内容控件的边框颜色。 |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | 设置内容控件的数据绑定。 |
 | [SetId](./Methods/SetId.md) | 无 | 指定当前内容控件的唯一 ID。 |

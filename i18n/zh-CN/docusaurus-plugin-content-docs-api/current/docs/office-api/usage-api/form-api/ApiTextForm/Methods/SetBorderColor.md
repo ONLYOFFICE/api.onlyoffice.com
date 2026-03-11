@@ -14,7 +14,7 @@ expression.SetBorderColor(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 可选 | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | 未提供描述。 |
+| color | 可选 | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | 边框颜色。 |
 
 ## 返回值
 

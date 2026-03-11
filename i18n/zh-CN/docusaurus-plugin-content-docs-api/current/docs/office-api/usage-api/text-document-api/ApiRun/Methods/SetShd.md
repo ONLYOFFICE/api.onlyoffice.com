@@ -15,7 +15,7 @@ expression.SetShd(type, color);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | type | 必需 | [ShdType](../../Enumeration/ShdType.md) |  | 应用于当前文本运行内容的底纹类型。 |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 未提供描述。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 底纹颜色。 |
 
 ## 返回值
 
