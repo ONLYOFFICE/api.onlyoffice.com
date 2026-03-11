@@ -1,23 +1,23 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Manager mode
+# Frame mode
 
-Manager mode embeds the full DocSpace interface inside your application, including rooms, folders, files, navigation, and settings. It is the most complete embedding mode and gives users an entire DocSpace window without having to leave the application. 
+The Frame mode is a general-purpose initialization method. Using `initFrame()` leaves the mode configurable, allowing you to load any other mode at runtime using the `mode` parameter. By default, `initFrame()` runs in the [Manager mode](./manager-mode.md).
 
-Manager mode is the default SDK mode.
+The use of `initFrame()` is ideal when the mode isn't fixed at build time: multi-tenant apps where different users get different interfaces, config-driven setups where the backend determines what gets embedded, or anywhere you need to switch modes without reinitializing the frame.
 
 ## Initialization
 
 ```javascript
-const docSpace = DocSpace.SDK.initManager({
+const docSpace = DocSpace.SDK.initFrame({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
 });
 ```
 
-Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
+Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults. If `mode` is not specified, the frame defaults to manager mode.
 
 ## Integration
 
@@ -30,17 +30,18 @@ The SDK can be embedded either in an HTML file or via the npm package, depending
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>DocSpace initManager() Example</title>
+    <title>DocSpace initFrame() Example</title>
     <script src="https://your-docspace.com/static/scripts/sdk/2.0.0/api.js"></script>
   </head>
   <body>
     <div id="ds-frame"></div>
     <script>
-      const docSpace = DocSpace.SDK.initManager({
+      const docSpace = DocSpace.SDK.initFrame({
         frameId: "ds-frame",
         src: "https://your-docspace.com",
         width: "100%",
         height: "700px",
+        mode: "room-selector",
       });
     </script>
   </body>
@@ -58,91 +59,45 @@ npm install @onlyoffice/docspace-sdk-js
 Then import and initialize the SDK using the desired parameters:
 
 ```javascript
-import { SDK } from "@onlyoffice/docspace-sdk-js";
+import { SDK, SDKMode } from "@onlyoffice/docspace-sdk-js";
 
 const sdk = new SDK();
 
-const docSpace = sdk.initManager({
+const docSpace = sdk.initFrame({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
   width: "100%",
   height: "700px",
+  mode: SDKMode.RoomSelector,
 });
 ```
 
 > **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
 
+<!--
 ## Configuration parameters
 
 ### Required
 
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
-| `src` | string | The URL of your DocSpace server. |
-
 ### Layout
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
-| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
 
 ### Display
 
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `theme` | `Theme` | `Theme.Base` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
-| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
-| `viewAs` | `ManagerViewMode` | `ManagerViewMode.Row` | How files and folders are arranged. Accepted values: `ManagerViewMode.Row`, `ManagerViewMode.Table`, `ManagerViewMode.Tile`. |
-| `viewTableColumns` | string | — | Comma-separated list of column names shown in table view. Example: `"Name,Size,Type,Modified Date,Author,Tags"`. |
-| `buttonColor` | string | — | Hex color code for action buttons. Example: `"#2196f3"`. |
-
 ### Navigation and UI elements
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `id` | string | — | ID of the room or folder to open on load. If not provided, the root rooms list is shown. |
-| `showHeader` | boolean | `false` | Displays the DocSpace header bar. |
-| `showMenu` | boolean | `false` | Displays the left navigation menu. |
-| `showFilter` | boolean | `false` | Displays the filter panel. |
-| `showSettings` | boolean | `false` | Displays the settings option in the interface. |
-| `showSignOut` | boolean | `true` | Displays the sign out button. |
-| `showTitle` | boolean | `true` | Displays the page title. |
-| `infoPanelVisible` | boolean | `false` | Opens the info panel on load. |
-| `withBreadCrumbs` | boolean | `false` | Displays breadcrumb navigation. |
-| `withSearch` | boolean | `false` | Displays the search bar. |
 
 ### Filtering
 
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `filter.count` | string | Number of items per page. |
-| `filter.sortBy` | `FilterSortBy` | Sort field. Accepted values: `FilterSortBy.Name`, `FilterSortBy.Size`, `FilterSortBy.DateAndTime`, `FilterSortBy.Author`, `FilterSortBy.Type`. |
-| `filter.sortOrder` | `FilterSortOrder` | Sort direction. Accepted values: `FilterSortOrder.Ascending`, `FilterSortOrder.Descending`. |
-| `filter.withSubfolders` | boolean | Includes items from subfolders in the listing. |
-| `filter.search` | string | Pre-fills the search bar with a search term on load. |
-
 ### Authentication and access
 
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
-| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
-
 ### Lifecycle
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
-| `downloadToEvent` | boolean | Switches download operations to fire the `onDownload` event instead of triggering a direct browser download. |
+-->
 
 ## Events
 
 Events are passed as an object to the `events` key in the config.
 
 ```javascript
-const docSpace = DocSpace.SDK.initManager({
+const docSpace = DocSpace.SDK.initFrame({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
   events: {
@@ -172,7 +127,7 @@ After initialization, the SDK instance can be accessed by its `frameId`:
 const frame = DocSpace.SDK.frames["ds-frame"];
 ```
 
-The following methods are available on a manager instance:
+The following methods are available on a frame instance:
 
 | Method | Description |
 | -------- | ------------- |
@@ -196,3 +151,7 @@ The following methods are available on a manager instance:
 | `login(email, passwordHash)` | Logs in to DocSpace using the specified credentials. |
 | `logout()` | Logs out the current user. |
 | `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |
+
+```markdown
+> **Note:** The methods and events may vary for `initFrame()`, depending on the `mode` passed at runtime.
+```
