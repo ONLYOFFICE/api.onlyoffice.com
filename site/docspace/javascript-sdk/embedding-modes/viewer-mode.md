@@ -1,0 +1,136 @@
+---
+sidebar_position: 5
+---
+
+# Viewer mode
+
+Viewer mode embeds a read-only document inside your application. It opens a file by ID and renders it in a non-editable state, allowing users to read and review documents without exposing editing controls. If you want users to have editing controls, use the [Editor mode](./editor-mode.md) instead.
+
+## Initialization
+
+```javascript
+const docSpace = DocSpace.SDK.initViewer({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  id: "your-file-id",
+});
+```
+
+Only the parameters `frameId`, `src`, and `id` are required. All other parameters are optional and have sensible defaults.
+
+## Integration
+
+The SDK can be embedded either in an HTML file or via the npm package, depending on your application setup.
+
+### HTML example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DocSpace initViewer() Example</title>
+    <script src="https://your-docspace.com/static/scripts/sdk/2.0.0/api.js"></script>
+  </head>
+  <body>
+    <div id="ds-frame"></div>
+    <script>
+      const docSpace = DocSpace.SDK.initViewer({
+        frameId: "ds-frame",
+        src: "https://your-docspace.com",
+        id: "your-file-id",
+        width: "100%",
+        height: "700px",
+      });
+    </script>
+  </body>
+</html>
+```
+
+### Integrating using an npm package
+
+To install the package, run:
+
+```bash
+npm install @onlyoffice/docspace-sdk-js
+```
+
+Then import and initialize the SDK using the desired parameters:
+
+```javascript
+import { SDK, EditorType, Theme } from "@onlyoffice/docspace-sdk-js";
+
+const sdk = new SDK();
+
+const docSpace = sdk.initViewer({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  id: "your-file-id",
+  width: "100%",
+  height: "700px",
+  theme: Theme.Base,
+  editorType: EditorType.Desktop,
+});
+```
+
+> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
+
+<!--
+## Configuration parameters
+
+### Required
+
+### Layout
+
+### Display
+
+### Authentication and access
+
+### Lifecycle
+-->
+
+## Events
+
+Events are passed as an object to the `events` key in the config.
+
+```javascript
+const docSpace = DocSpace.SDK.initViewer({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  id: "your-file-id",
+  events: {
+    onAppReady: function () {},
+    onAppError: function (error) {},
+  },
+});
+```
+
+| Event | Description |
+| ------- | ------------- |
+| `onAppReady` | Fires when the SDK frame has finished initializing and is ready for interaction. |
+| `onContentReady` | Fires when the document content inside the frame has fully loaded. |
+| `onAuthSuccess` | Fires when a user successfully authenticates. |
+| `onSignOut` | Fires when the user signs out of DocSpace. |
+| `onDownload` | Fires when a download is triggered and `downloadToEvent` is set to `true`. Returns a download link. |
+| `onAppError` | Fires when an error occurs in the SDK frame. |
+| `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
+| `onNotFound` | Fires when the requested file cannot be found. |
+
+## Methods
+
+After initialization, the SDK instance can be accessed by its `frameId`:
+
+```javascript
+const frame = DocSpace.SDK.frames["ds-frame"];
+```
+
+The following methods are available on a viewer instance:
+
+| Method | Description |
+| -------- | ------------- |
+| `getConfig()` | Returns the current configuration object for this frame. |
+| `setConfig(config)` | Updates the configuration of this frame. |
+| `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
+| `login(email, passwordHash)` | Logs in to DocSpace using the specified credentials. |
+| `logout()` | Logs out the current user. |
+| `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |
