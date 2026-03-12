@@ -1,8 +1,8 @@
 # Document Builder API
 
-For the interaction with the **web document builder service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/docbuilder` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
+For the interaction with the **web document builder service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/docbuilder` address where `documentserver` is the name of the server with the ONLYOFFICE Docs installed.
 
-Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL QueryString with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
 
 ## Request parameters and their description
 
@@ -15,24 +15,28 @@ import APITable from '@site/src/components/APITable/APITable';
 | Parameter | Type    | Presence                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | argument  | object  | optional                  | Defines the arguments to pass to the created document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| async     | boolean | optional                  | Defines the type of the request to the **document builder service**: asynchronous or not.<br/><br/>Supported values:<br/>- **true**;<br/>- **false**.<br/><br/>When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the document generation is finished. The default value is **false**.                                                                                                                                    |
-| key       | string  | required                  | Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the *async* parameter is set to **true**) the key is not present in the first request, but must be present in all the following requests which will be send before the generation is complete. When the synchronous request is used (the *async* parameter is set to **false**), this parameter is not required. |
+| async     | boolean | optional                  | Defines the type of the request to the **document builder service**: asynchronous or not. When `true`, the response is formed instantly, and you must send requests without changing parameters until document generation is finished. The default value is `false`.                                                                                                                                    |
+| key       | string  | required                  | Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the `async` parameter is set to `true`) the key is not present in the first request, but must be present in all the following requests which will be sent before the generation is complete. When the synchronous request is used (the `async` parameter is set to `false`), this parameter is not required. |
 | token     | string  | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).                                                                                                                                                                                                                                                                                                                                                                         |
-| url       | string  | required                  | Defines the absolute URL to the *.docbuilder* file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| url       | string  | required                  | Defines the absolute URL to the `.docbuilder` file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ```mdx-code-block
 </APITable>
 ```
 
-The *.docbuilder* file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
+The `.docbuilder` file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
 
-> Please note, that *.docbuilder* script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.
+:::note
+The `.docbuilder` script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.
+:::
 
-You can find more information about the *.docbuilder* file syntax [here](../../document-builder/builder-app/using-docbuilder-file.md). Please read [Office JavaScript API documentation](../../office-api/get-started/overview.md) for the detailed information on what classes and methods are used to generate the documents with the help of *.docbuilder* files.
+You can find more information about the `.docbuilder` file syntax [here](../../document-builder/builder-app/using-docbuilder-file.md). Please read [Office JavaScript API documentation](../../office-api/get-started/overview.md) for the detailed information on what classes and methods are used to generate the documents with the help of `.docbuilder` files.
 
 ## Examples
 
-### Sample of JSON object sent to **document builder service** for the first asynchronous request
+### First asynchronous request
+
+Sample of JSON object sent to the **document builder service** for the first asynchronous request:
 
 ``` json
 {
@@ -41,7 +45,7 @@ You can find more information about the *.docbuilder* file syntax [here](../../d
 }
 ```
 
-Where **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where `example.com` is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Response format:
 
@@ -52,7 +56,9 @@ Response format:
 }
 ```
 
-### Sample of JSON object sent to **document builder service** for the following asynchronous requests
+### Following asynchronous requests
+
+Sample of JSON object sent to the **document builder service** for the following asynchronous requests:
 
 ``` json
 {
@@ -74,7 +80,9 @@ Response format:
 }
 ```
 
-### Sample of JSON object sent to **document builder service** for the synchronous request
+### Synchronous request
+
+Sample of JSON object sent to the **document builder service** for the synchronous request:
 
 ``` json
 {
@@ -83,7 +91,7 @@ Response format:
 }
 ```
 
-Where **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where `example.com` is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Response example:
 
@@ -98,7 +106,9 @@ Response example:
 }
 ```
 
-### Sample of JSON object contains the JSON Web Token sent to **document builder service** for the first asynchronous request
+### Asynchronous request with token
+
+Sample of JSON object containing the JSON Web Token sent to the **document builder service** for the first asynchronous request:
 
 ``` json
 {
@@ -114,7 +124,13 @@ Response format:
 }
 ```
 
-### Sample of JSON object contains the arguments sent to **document builder service** for the first synchronous request
+:::info
+This example demonstrates the error response when the token is invalid. See the [error codes](#possible-error-codes-and-their-description) section for more details.
+:::
+
+### Synchronous request with arguments
+
+Sample of JSON object containing the arguments sent to the **document builder service** for the first synchronous request:
 
 ``` json
 {
@@ -125,7 +141,7 @@ Response format:
 }
 ```
 
-Where **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where `example.com` is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Response format:
 
