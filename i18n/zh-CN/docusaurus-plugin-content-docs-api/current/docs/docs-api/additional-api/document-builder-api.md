@@ -1,10 +1,10 @@
-﻿# 文档生成器 API
+# 文档生成器 API
 
 对于与 **Web 文档生成器服务** 的交互，使用 POST 请求。请求参数在请求正文中以 JSON 格式输入。请求被发送到 `https://documentserver/docbuilder` 地址，其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称。
 
 从 8.1 版开始，建议将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到 URL QueryString，其中包含 `key` 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
 
-## 参数及其说明：
+## 请求参数及其说明
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
@@ -14,10 +14,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 参数 | 类型    | 是否必填                  | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 论据  | object  | 非必填                  | 定义要传递给创建的文档的参数。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| argument  | object  | 非必填                  | 定义要传递给创建的文档的参数。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | async     | boolean | 非必填                  | 定义对**文档生成器服务**的请求类型：异步与否。当设置为 `true` 时，响应立即形成，必须在不更改参数的情况下发送请求，直到文档生成完成。默认值为 `false`。                                                                                                                                    |
 | key       | string  | 必填                  | 定义用于明确标识请求的请求标识符。key 在**文档生成器服务**端形成，并作为对第一个请求的响应返回。当使用异步请求时（`async` 参数设置为 `true`），key 不存在于第一个请求中，但必须存在于将在文档生成完成之前发送的所有后续请求中。使用同步请求时（`async` 参数设置为 `false`），不需要该参数。 |
-| 令牌     | string  | 配置要求 | 以[令牌](./signature/request/token-in-body.md#request-to-document-builder-service)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。                                                                                                                                                                                                                                                                                                                                                                         |
+| token     | string  | 配置要求 | 以[令牌](./signature/request/token-in-body.md#request-to-document-builder-service)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。                                                                                                                                                                                                                                                                                                                                                                         |
 | url       | string  | 必填                  | 定义 `.docbuilder` 文件的绝对 URL。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ```mdx-code-block
@@ -32,22 +32,41 @@ import APITable from '@site/src/components/APITable/APITable';
 
 您可以在[此处](../../document-builder/builder-app/using-docbuilder-file.md)找到有关 `.docbuilder` 文件语法的更多信息。请阅读 [Office JavaScript API 文档](../../office-api/get-started/overview.md)了解使用哪些类和方法借助 `.docbuilder` 文件生成文档的详细信息。
 
-## 示例
+## 示例 .docbuilder 文件
 
-### 首次异步请求
+下面是一个简单的 `.docbuilder` 脚本，用于创建包含 "Hello World!" 文本的文档：
 
-发送到**文档生成器服务**的 JSON 对象示例，用于首次异步请求：
-
-``` json
-{
-  "async": true,
-  "url": "https://example.com/url-to-example-script.docbuilder"
-}
+``` js
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("Hello World!");
+builder.SaveFile("docx", "output.docx");
+builder.CloseFile();
 ```
 
-此处的 `example.com` 表示安装**文档存储服务**的服务器名称。要深入了解ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)章节。
+将此文件托管在可公开访问的服务器上，以便与下面的 API 请求一起使用。
 
-响应格式:
+## 示例
+
+:::info
+在以下示例中，`example.com` 表示安装**文档存储服务**以及托管 `.docbuilder` 文件的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)章节。
+:::
+
+### 异步请求
+
+**步骤 1.** 发送包含 `.docbuilder` 文件 URL 的初始请求：
+
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": true,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+  }'
+```
+
+**响应：**
 
 ``` json
 {
@@ -56,25 +75,24 @@ import APITable from '@site/src/components/APITable/APITable';
 }
 ```
 
-### 后续异步请求
+**步骤 2.** 使用返回的 `key` 轮询，直到 `end` 为 `true`：
 
-发送到**文档生成器服务**的 JSON 对象示例，用于后续异步请求：
-
-``` json
-{
-  "async": true,
-  "key": "Khirz6zTPdfd7"
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": true,
+    "key": "af86C7e71Ca8"
+  }'
 ```
 
-响应格式:
+**响应：**
 
 ``` json
 {
-  "key": "Khirz6zTPdfd7",
+  "key": "af86C7e71Ca8",
   "urls": {
-    "SampleText.docx": "https://documentserver/SampleText.docx",
-    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+    "output.docx": "https://documentserver/output.docx"
   },
   "end": true
 }
@@ -82,25 +100,22 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 同步请求
 
-发送到**文档生成器服务**的 JSON 对象示例，用于同步请求：
-
-``` json
-{
-  "async": false,
-  "url": "https://example.com/url-to-example-script.docbuilder"
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+  }'
 ```
 
-此处的 `example.com` 表示安装**文档存储服务**的服务器名称。要深入了解ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)章节。
-
-响应格式:
+**响应：**
 
 ``` json
 {
   "key": "af86C7e71Ca8",
   "urls": {
-    "SampleText.docx": "https://documentserver/SampleText.docx",
-    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+    "output.docx": "https://documentserver/output.docx"
   },
   "end": true
 }
@@ -108,15 +123,15 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 带令牌的异步请求
 
-包含 JSON Web 令牌的 JSON 对象示例，发送到**文档生成器服务**用于首次异步请求：
-
-``` json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
+  }'
 ```
 
-响应格式:
+**响应：**
 
 ``` json
 {
@@ -130,27 +145,67 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 带参数的同步请求
 
-包含参数的 JSON 对象示例，发送到**文档生成器服务**用于首次同步请求：
-
-``` json
-{
-  "async": false,
-  "url": "https://example.com/url-to-example-script.docbuilder",
-  "argument": {"key": "string",
-    "key2": "string2"}
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/url-to-example-script.docbuilder",
+    "argument": {
+      "key": "string",
+      "key2": "string2"
+    }
+  }'
 ```
 
-此处的 `example.com` 表示安装**文档存储服务**的服务器名称。要深入了解ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)章节。
-
-响应格式:
+**响应：**
 
 ``` json
 {
   "key": "af86C7e71Ca8",
   "urls": {
-    "SampleText.docx": "https://documentserver/SampleText.docx",
-    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+    "output.docx": "https://documentserver/output.docx"
+  },
+  "end": true
+}
+```
+
+### 多个输出文件
+
+一个 `.docbuilder` 脚本可以生成多个文件。例如：
+
+``` js
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("Document 1");
+builder.SaveFile("docx", "document1.docx");
+builder.CloseFile();
+
+builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+oWorksheet.GetRange("A1").SetValue("Spreadsheet 1");
+builder.SaveFile("xlsx", "spreadsheet1.xlsx");
+builder.CloseFile();
+```
+
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+  }'
+```
+
+**响应：**
+
+``` json
+{
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "document1.docx": "https://documentserver/document1.docx",
+    "spreadsheet1.xlsx": "https://documentserver/spreadsheet1.xlsx"
   },
   "end": true
 }

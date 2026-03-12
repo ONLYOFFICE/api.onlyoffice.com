@@ -32,22 +32,41 @@ The `.docbuilder` script file can contain several output files as a result. The 
 
 You can find more information about the `.docbuilder` file syntax [here](../../document-builder/builder-app/using-docbuilder-file.md). Please read [Office JavaScript API documentation](../../office-api/get-started/overview.md) for the detailed information on what classes and methods are used to generate the documents with the help of `.docbuilder` files.
 
-## Examples
+## Sample .docbuilder file
 
-### First asynchronous request
+Below is a simple `.docbuilder` script that creates a document with "Hello World!" text:
 
-Sample of JSON object sent to the **document builder service** for the first asynchronous request:
-
-``` json
-{
-  "async": true,
-  "url": "https://example.com/url-to-example-script.docbuilder"
-}
+``` js
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("Hello World!");
+builder.SaveFile("docx", "output.docx");
+builder.CloseFile();
 ```
 
-Where `example.com` is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Host this file on a publicly accessible server to use it with the API requests below.
 
-Response format:
+## Examples
+
+:::info
+In the examples below, `example.com` represents the server where your **document storage service** is installed and where `.docbuilder` files are hosted. See the [How it works](../get-started/how-it-works/how-it-works.md) section to learn more about ONLYOFFICE Docs service client-server interactions.
+:::
+
+### Asynchronous request
+
+**Step 1.** Send the initial request with the `.docbuilder` file URL:
+
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": true,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+  }'
+```
+
+**Response:**
 
 ``` json
 {
@@ -56,25 +75,24 @@ Response format:
 }
 ```
 
-### Following asynchronous requests
+**Step 2.** Poll using the returned `key` until `end` is `true`:
 
-Sample of JSON object sent to the **document builder service** for the following asynchronous requests:
-
-``` json
-{
-  "async": true,
-  "key": "Khirz6zTPdfd7"
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": true,
+    "key": "af86C7e71Ca8"
+  }'
 ```
 
-Response format:
+**Response:**
 
 ``` json
 {
-  "key": "Khirz6zTPdfd7",
+  "key": "af86C7e71Ca8",
   "urls": {
-    "SampleText.docx": "https://documentserver/SampleText.docx",
-    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+    "output.docx": "https://documentserver/output.docx"
   },
   "end": true
 }
@@ -82,25 +100,22 @@ Response format:
 
 ### Synchronous request
 
-Sample of JSON object sent to the **document builder service** for the synchronous request:
-
-``` json
-{
-  "async": false,
-  "url": "https://example.com/url-to-example-script.docbuilder"
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+  }'
 ```
 
-Where `example.com` is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
-
-Response example:
+**Response:**
 
 ``` json
 {
   "key": "af86C7e71Ca8",
   "urls": {
-    "SampleText.docx": "https://documentserver/SampleText.docx",
-    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+    "output.docx": "https://documentserver/output.docx"
   },
   "end": true
 }
@@ -108,15 +123,15 @@ Response example:
 
 ### Asynchronous request with token
 
-Sample of JSON object containing the JSON Web Token sent to the **document builder service** for the first asynchronous request:
-
-``` json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
+  }'
 ```
 
-Response format:
+**Response:**
 
 ``` json
 {
@@ -130,27 +145,67 @@ This example demonstrates the error response when the token is invalid. See the 
 
 ### Synchronous request with arguments
 
-Sample of JSON object containing the arguments sent to the **document builder service** for the first synchronous request:
-
-``` json
-{
-  "async": false,
-  "url": "https://example.com/url-to-example-script.docbuilder",
-  "argument": {"key": "string",
-    "key2": "string2"}
-}
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/url-to-example-script.docbuilder",
+    "argument": {
+      "key": "string",
+      "key2": "string2"
+    }
+  }'
 ```
 
-Where `example.com` is the name of the server where **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
-
-Response format:
+**Response:**
 
 ``` json
 {
   "key": "af86C7e71Ca8",
   "urls": {
-    "SampleText.docx": "https://documentserver/SampleText.docx",
-    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+    "output.docx": "https://documentserver/output.docx"
+  },
+  "end": true
+}
+```
+
+### Multiple output files
+
+A `.docbuilder` script can generate multiple files. For example:
+
+``` js
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("Document 1");
+builder.SaveFile("docx", "document1.docx");
+builder.CloseFile();
+
+builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+oWorksheet.GetRange("A1").SetValue("Spreadsheet 1");
+builder.SaveFile("xlsx", "spreadsheet1.xlsx");
+builder.CloseFile();
+```
+
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+  }'
+```
+
+**Response:**
+
+``` json
+{
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "document1.docx": "https://documentserver/document1.docx",
+    "spreadsheet1.xlsx": "https://documentserver/spreadsheet1.xlsx"
   },
   "end": true
 }
