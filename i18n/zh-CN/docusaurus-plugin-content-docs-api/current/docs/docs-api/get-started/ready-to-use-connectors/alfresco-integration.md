@@ -97,7 +97,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 您可以在Alfresco的管理员工具中，通过 */share/page/console/admin-console/module-package*检查该模块。
 
-## 配置ONLYOFFICE Alfresco模块包
+## 配置ONLYOFFICE Alfresco模块包 {#configuring-onlyoffice-module-package-for-alfresco}
 
 模块配置可以在**Alfresco管理控制台**中找到，或者直接导航到`http://<alfrescohost>/alfresco/s/onlyoffice/onlyoffice-config`。
 
