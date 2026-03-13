@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: ONLYOFFICE desktop editors
+sidebar_label: ONLYOFFICE Desktop Editors
 title: Resolving errors with the ONLYOFFICE Desktop Editors
 ---
 
