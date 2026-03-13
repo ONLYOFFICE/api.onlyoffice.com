@@ -18,7 +18,7 @@ Any plugin has *window.Asc.plugin* object which in its turn has several methods 
 
 > Please note that starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the plugin command code because the *"use strict"* mode was applied to the plugin scripts. Don't forget to declare variables before using them so that the plugins work correctly.
 
-For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/builder-framework/C++/CDocBuilder/ExecuteCommand.md) features.
+For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/builder-framework/CDocBuilder/ExecuteCommand.md) features.
 
 If the plugin operates with an OLE object, [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to manage it.
 

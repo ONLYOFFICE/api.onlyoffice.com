@@ -24,7 +24,7 @@ docbuilder.exe mydocument.docbuilder
 
 如果将 **ONLYOFFICE Document Builder** 同时用作应用程序和脚本，你需要了解一些规则和限制：
 
-1. 要在 C++ 应用程序中运行 ONLYOFFICE Document Builder 可执行文件，请按以下方式使用 [CDocBuilder.Run](../builder-framework/C++/CDocBuilder/Run.md) 方法：
+1. 要在 C++ 应用程序中运行 ONLYOFFICE Document Builder 可执行文件，请按以下方式使用 [CDocBuilder.Run](../builder-framework/CDocBuilder/Run.md) 方法：
 
    ```cpp
    CDocBuilder::Initialize(sWorkDirectory.c_str());
@@ -39,7 +39,7 @@ docbuilder.exe mydocument.docbuilder
    docbuilder.exe "path-to-script.docbuilder"
    ```
 
-2. 要为构建器类设置一个可传递到 [CDocBuilder.ExecuteCommand](../builder-framework/C++/CDocBuilder/ExecuteCommand.md) 方法外部程序的参数，可以在运行 **ONLYOFFICE Document Builder** 可执行文件时将其作为附加属性添加，或者作为程序 JavaScript 代码的一部分，但不要包含在文档文件脚本中：
+2. 要为构建器类设置一个可传递到 [CDocBuilder.ExecuteCommand](../builder-framework/CDocBuilder/ExecuteCommand.md) 方法外部程序的参数，可以在运行 **ONLYOFFICE Document Builder** 可执行文件时将其作为附加属性添加，或者作为程序 JavaScript 代码的一部分，但不要包含在文档文件脚本中：
 
    ### 为 CDocBuilder.Run 设置 --argument 属性
 

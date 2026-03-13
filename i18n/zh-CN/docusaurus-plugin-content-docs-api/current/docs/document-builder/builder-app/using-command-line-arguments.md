@@ -7,7 +7,7 @@ sidebar_position: -2
 
 如果您需要通过命令行向创建的文档传递一些参数，可以借助**文档生成器（Document Builder）** 来实现。为此，您需要修改您的**.docbuilder**脚本文件的代码，并在运行**文档生成器**的命令中包含所需的参数。
 
-> 这与使用[SetProperty](../builder-framework/C++/CDocBuilder/SetProperty.md)方法的原理相同。
+> 这与使用[SetProperty](../builder-framework/CDocBuilder/SetProperty.md)方法的原理相同。
 
 在这种情况下，命令将如下所示：
 

@@ -6,7 +6,7 @@ sidebar_position: -2
 
 在处理文档时，经常需要在不同文档之间交换数据。例如，你可能需要打开某个文档，从中复制样式或某些数据值，关闭该文档后，创建一个新文档并将复制的数据粘贴进去，或者利用这些数据生成某种报告。
 
-但是，一旦你关闭文件（使用 [CDocBuilder.CloseFile](../../builder-framework/C++/CDocBuilder/CloseFile.md) 方法），所有你处理过的变量数据都会失效并被清除，无法在其他文件中使用。
+但是，一旦你关闭文件（使用 [CDocBuilder.CloseFile](../../builder-framework/CDocBuilder/CloseFile.md) 方法），所有你处理过的变量数据都会失效并被清除，无法在其他文件中使用。
 
 为了实现文件间的数据交换，引入了 *GlobalVariable*。
 

@@ -60,6 +60,6 @@ builder.SaveFile("pptx", "example.pptx")
 builder.CloseFile()
 ```
 
-如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要演示文稿的路径作为参数传递即可打开它。在上面的示例中，我们打开 **mypresentation.pptx** 演示文稿，获取其第一张幻灯片并删除其中的所有对象。同样的方式可以更改任何其他演示文稿元素。
+如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要演示文稿的路径作为参数传递即可打开它。在上面的示例中，我们打开 **mypresentation.pptx** 演示文稿，获取其第一张幻灯片并删除其中的所有对象。同样的方式可以更改任何其他演示文稿元素。
 
 使用相应的 API 文档部分来了解哪些方法允许您更改某些文档和演示文稿元素的格式属性。

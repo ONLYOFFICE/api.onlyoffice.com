@@ -12,11 +12,11 @@ sidebar_position: -3
 
 **ONLYOFFICE Document Builder** 提供了适用于多种编程语言的开发工具包，便于无缝集成到您的应用程序中。
 
-- [Python](../builder-framework/Python/Python.md)：在脚本或后端服务中生成和修改文档。
-- [C++](../builder-framework/C++/C++.md)：使用 C++ 库进行高性能文档处理。
-- [COM](../builder-framework/COM/COM.md)：通过组件对象模型（COM）接口与 Windows 应用程序集成。
-- [Java](../builder-framework/Java/Java.md)：借助 Java SDK 在企业应用程序中进行文档创建和编辑。
-- [.Net](../builder-framework/Net/Net.md)：使用 .NET SDK 开发适用于 Windows、Linux 和 macOS 的跨平台应用程序。
+- [Python](../builder-framework/overview.md)：在脚本或后端服务中生成和修改文档。
+- [C++](../builder-framework/overview.md)：使用 C++ 库进行高性能文档处理。
+- [COM](../builder-framework/overview.md)：通过组件对象模型（COM）接口与 Windows 应用程序集成。
+- [Java](../builder-framework/overview.md)：借助 Java SDK 在企业应用程序中进行文档创建和编辑。
+- [.Net](../builder-framework/overview.md)：使用 .NET SDK 开发适用于 Windows、Linux 和 macOS 的跨平台应用程序。
 
 将 SDK 集成到您自己的应用程序中。如需安装 ONLYOFFICE Document Builder，请访问 [此页面](./installing.md)。
 下载并解压文件后，该库即可用于 [集成](../builder-framework/overview.md)。

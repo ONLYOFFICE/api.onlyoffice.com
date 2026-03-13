@@ -8,9 +8,9 @@ sidebar_position: -2
 
 ## 创建新的表单文档
 
-要创建表单文档，必须使用带有 *"pdf"* 扩展名的 [CreateFile](../../../document-builder/builder-framework/C++/CDocBuilder/CreateFile.md) 方法。
+要创建表单文档，必须使用带有 *"pdf"* 扩展名的 [CreateFile](../../../document-builder/builder-framework/CDocBuilder/CreateFile.md) 方法。
 
-要将准备好的文档保存为表单，需要使用带有 *"pdf"* 扩展名的 [SaveFile](../../../document-builder/builder-framework/C++/CDocBuilder/SaveFile.md) 方法。
+要将准备好的文档保存为表单，需要使用带有 *"pdf"* 扩展名的 [SaveFile](../../../document-builder/builder-framework/CDocBuilder/SaveFile.md) 方法。
 
 使用 **ONLYOFFICE Document Builder** 可以通过以下代码构建一个包含"John Smith"文本的单个文本表单的最简单示例表单文档：
 
@@ -70,6 +70,6 @@ builder.SaveFile("pdf", "example.pdf")
 builder.CloseFile()
 ```
 
-如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要表单文档的路径作为参数传递即可打开它。在上面的示例中，我们打开 **myformdocument.pdf** 文档，获取其第一个段落并向其中添加带有"John Smith"文本的文本表单。同样的方式可以更改任何其他表单文档元素。
+如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要表单文档的路径作为参数传递即可打开它。在上面的示例中，我们打开 **myformdocument.pdf** 文档，获取其第一个段落并向其中添加带有"John Smith"文本的文本表单。同样的方式可以更改任何其他表单文档元素。
 
 使用相应的 API 文档部分来了解哪些方法允许您更改某些文档和电子表格元素的格式属性。

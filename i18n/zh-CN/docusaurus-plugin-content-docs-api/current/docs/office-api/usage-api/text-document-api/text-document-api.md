@@ -75,6 +75,6 @@ builder.SaveFile("docx", "example.docx")
 builder.CloseFile()
 ```
 
-如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要文本文档的路径作为参数传递即可打开它。在上面的示例中，我们打开 **mydocument.docx** 文档，获取其第一个段落并将其中的文本更改为居中的"Center"文本。同样的方式可以更改任何其他文本文档元素。
+如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要文本文档的路径作为参数传递即可打开它。在上面的示例中，我们打开 **mydocument.docx** 文档，获取其第一个段落并将其中的文本更改为居中的"Center"文本。同样的方式可以更改任何其他文本文档元素。
 
 使用相应的 API 文档部分来了解哪些方法允许您更改某些文档和电子表格元素的格式属性。
