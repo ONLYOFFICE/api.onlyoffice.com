@@ -20,12 +20,12 @@ With the Meridian Corp website redesign project officially complete and signed o
 ## What You'll Learn
 
 - [How to conduct a proper access audit before closing a room](#step-1-conduct-a-full-access-audit)
--[ How to revoke access for contractors and guests safely](#step-2-remove-external-access)
+- [How to revoke access for contractors and guests safely](#step-2-remove-external-access)
 - [How to clean up working/temp content while preserving final deliverables](#step-3-audit-the-room-contents)
 - [How to do a final pre-archive verification](#step-6-final-pre-archive-verification)
 - [How to archive a room correctly](#step-7-archive-the-room)
 
-**Tools used:** `get_room_security_info`, `set_room_security`, `get_folder_content`, `get_file_info`, `delete_file`, `delete_folder`, `archive_room`
+**Tools used:** `get_room_security_info`, `set_room_security`, `get_folder_content`, `get_file_info`, `delete_file`, `delete_folder`, `archive_room`. `download_file_as_text`
 
 ## Before you proceed
 
@@ -61,7 +61,7 @@ Revoke access for all external parties
 **Try this prompt:**
 
 ```
-Remove Sam Rivera, Yuki Tenaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they're all freelance contractors hired for this job. Marcus Webb is an internal team member and still retains access. 
+Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they're all freelance contractors hired for this job. Marcus Webb is an internal team member and still retains access. 
 ```
 
 The AI calls `set_room_security` with removal instructions for both users.
@@ -89,7 +89,7 @@ This calls `get_folder_content` on the room and its subfolders. Your results wil
 - `01 — Briefs & Requirements` — **keep** (project history)
 - `02 — Design Assets` — **keep** (final assets)
 - `03 — Drafts & Work in Progress` — **clean up** (old drafts no longer needed)
-- `04 — Final Deliverables` — *keep* (approved outputs)
+- `04 — Final Deliverables` — **keep** (approved outputs)
 
 ### Step 4: Identify Files for Deletion
 
