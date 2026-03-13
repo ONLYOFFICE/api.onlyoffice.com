@@ -9,12 +9,12 @@ import TabItem from '@theme/TabItem';
 
 The DocSpace MCP server allows you to connect numerous mcp clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
 
-- [ONLYOFFICE Desktop editors](#connect-to-local-docspace-mcp-server)
+- [ONLYOFFICE Desktop Editors](#connect-to-local-docspace-mcp-server)
 - [Claude-desktop](#connect-to-claude-desktop)
 - [Claude-web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
 - [Le Chat](#connect-to-le-chat)
-- [VSCode](#connect-to-vscode)
+- [VS Code](#connect-to-vs-code)
 - [Windsurf](#connect-to-windsurf)
 
 ## Before you start
@@ -32,7 +32,7 @@ The DocSpace MCP server allows you to connect numerous mcp clients, offering fle
 Follow the steps to connect to your client of choice
 
 <Tabs groupId="mcp-clients" queryString="client">
-<TabItem value="Desktop editors" label="ONLYOFFICE desktop editors" default>
+<TabItem value="Desktop editors" label="ONLYOFFICE Desktop Editors" default>
 
 ## Connect to local DocSpace MCP Server
 
@@ -259,11 +259,11 @@ Connect to the locally running MCP server using stdio transport.
 10. Confirm connection by enabling the Docspace MCP server in the **Enable tools** section of the chat bar. 
 
 </TabItem>
-<TabItem value="vscode" label="VSCode" default>
+<TabItem value="vscode" label="VS Code" default>
 
-## Connect to VSCode
+## Connect to VS Code
 
-VSCode client also connects to DocSpace MCP server using:
+VS Code client also connects to DocSpace MCP server using:
 
 - [HTTP](#http)
 - [Command](#command)
