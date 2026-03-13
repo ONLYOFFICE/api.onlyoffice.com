@@ -1,10 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: VSCode
-title: Resolving issues with VSCode client
+sidebar_label: VS Code
+title: Resolving issues with VS Code client
 ---
 
-This instruction describes some errors when creating a DocSpace MCP server - VSCode client connection and solutions to fix these errors.
+This instruction describes some errors when creating a DocSpace MCP server - VS Code client connection and solutions to fix these errors.
 
 ## The MCP server does not appear in the list
 
