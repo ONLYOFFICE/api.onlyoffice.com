@@ -22,7 +22,7 @@ configuration issues.
 
 ## Connection fails after entering the server URL
 
-The MCP server URL may be unreachable due to network restrictions, a VPN, or a typo in the URL. Try any of these solutions:m
+The MCP server URL may be unreachable due to network restrictions, a VPN, or a typo in the URL. Try any of these solutions:
 
 - Ensure the URL is entered correctly: `https://mcp.onlyoffice.com/mcp`.
 - Check that your network or firewall does not block access to `mcp.onlyoffice.com`.
@@ -34,7 +34,7 @@ The MCP server URL may be unreachable due to network restrictions, a VPN, or a t
 Sometimes OAuth authentication fails or browser fails to open to authenticate the DocSpace MCP server - MCP client connection. This may be due to any of these reasons:
 
 - **No default browser configured.** The client opens the OAuth page in the system default browser. Ensure a default browser is set in your OS settings.
-- - **The MCP server URL is incorrect.** Verify that the URL entered in is correct with no trailing slash issues or typos.
+- **The MCP server URL is incorrect.** Verify that the URL entered in is correct with no trailing slash issues or typos.
 - **Pop-ups are blocked.** If the authentication page does not appear, check that your browser is not blocking pop-ups from `mcp.onlyoffice.com`.
 - **Session expired or token revoked.** Delete the existing `onlyoffice-docspace` entry, re-add it, and repeat the authentication process.
 - **Corporate firewall or proxy.** If your organization uses a proxy, make sure that `mcp.onlyoffice.com` is reachable. Contact your network administrator if needed.
@@ -103,7 +103,7 @@ After installing the MCP bundle, the extension is not listed under **Extensions*
 
 ## Docker-based Local MCP server fails to start
 
-After editing the client `config.json file` and the client displays an error for the `onlyoffice-docspace` server, or server is not listed among the available connections. 
+After editing the client `config.json` file and the client displays an error for the `onlyoffice-docspace` server, or server is not listed among the available connections. 
 
 - **Docker is not running:** Make sure Docker Desktop (or the Docker daemon on Linux) is started before launching the client.
 - **The Docker image is not pulled:** Run `docker pull onlyoffice/docspace-mcp` manually in a terminal to verify the image can be downloaded.
