@@ -2,12 +2,9 @@
 sidebar_position: -7
 ---
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
 # Overview
 
-When you integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Java, or .Net application, you can embed the code for **ONLYOFFICE Document Builder** together with the script code for the document files to be created in your application. In this case, you will need to recompile your application each time anything is to be changed in the output document files. This option is good when you need a faster native application and you are sure that the resulting document files will always stay the same or will only be changed when you recompile your application anyway.
+You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Java, or .Net application to generate documents dynamically. Scripts and data are passed at runtime using methods like [Run](CDocBuilder/Run.md), [RunText](CDocBuilder/RunText.md), or [ExecuteCommand](CDocBuilder/ExecuteCommand.md), making it ideal for generating documents on demand — such as invoices, reports, or personalized content based on user input.
 
 ## Classes
 

@@ -2,12 +2,9 @@
 sidebar_position: -7
 ---
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
 # 概述
 
-当您将 **ONLYOFFICE Document Builder** 集成到您的 Python、C++、COM、Java 或 .Net 应用程序时，您可以在应用程序中嵌入 **ONLYOFFICE Document Builder** 代码和用于创建文档文件的脚本代码。在这种情况下，每当输出文档文件需要更改时，您都需要重新编译应用程序。当您需要更快的原生应用程序，并且确定生成的文档文件始终保持不变或仅在重新编译应用程序时才会更改时，此选项非常有用。
+您可以将 **ONLYOFFICE Document Builder** 集成到您的 Python、C++、COM、Java 或 .Net 应用程序中，以动态生成文档。脚本和数据在运行时通过 [Run](CDocBuilder/Run.md)、[RunText](CDocBuilder/RunText.md) 或 [ExecuteCommand](CDocBuilder/ExecuteCommand.md) 等方法传递，非常适合按需生成文档，例如发票、报告或基于用户输入的个性化内容。
 
 ## 类
 
