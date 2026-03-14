@@ -244,7 +244,7 @@
 
 #### Plugins and macros
 
-* Added samples for custom AI functions
+* Added samples for custom AI tools
 * Updated documentation in Chinese in the Interacting with editors section
 
 ## 6.6.0

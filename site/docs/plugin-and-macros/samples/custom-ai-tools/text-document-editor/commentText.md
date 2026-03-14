@@ -116,7 +116,7 @@ let func = new RegisteredFunction({
             return text;
         });
 
-        let argPromt = params.prompt + ":\n" + text;
+        let argPrompt = params.prompt + ":\n" + text;
 
         let requestEngine = AI.Request.create(AI.ActionType.Chat);
         if (!requestEngine) return;
@@ -141,7 +141,7 @@ let func = new RegisteredFunction({
         if (isFootnote) {
             let addFootnote = true;
             let result = await requestEngine.chatRequest(
-                argPromt,
+                argPrompt,
                 false,
                 async function (data) {
                     if (!data) return;
@@ -162,7 +162,7 @@ let func = new RegisteredFunction({
         } else {
             let commentId = null;
             let result = await requestEngine.chatRequest(
-                argPromt,
+                argPrompt,
                 false,
                 async function (data) {
                     if (!data) return;
@@ -193,7 +193,7 @@ let func = new RegisteredFunction({
                         let comment = doc.GetCommentById(commentId);
                         if (!comment) return commentId;
 
-                        comment.SetText(comment.GetText() + scope.data);
+                        comment.SetText(comment.GetText() + Asc.scope.data);
                         return commentId;
                     });
                 },

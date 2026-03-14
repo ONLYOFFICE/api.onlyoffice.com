@@ -160,7 +160,7 @@ let func = new RegisteredFunction({
             });
         }
 
-        let argPromt =
+        let argPrompt =
             params.prompt +
             ":\n" +
             text +
@@ -202,7 +202,7 @@ let func = new RegisteredFunction({
         }
 
         let result = await requestEngine.chatRequest(
-            argPromt,
+            argPrompt,
             false,
             async function (data) {
                 if (!data) return;
