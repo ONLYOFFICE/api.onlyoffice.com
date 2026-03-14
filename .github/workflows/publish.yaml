@@ -1,6 +1,6 @@
 name: Build & Publish Api
 
-run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}})"
+run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}}, dev: ${{github.event.inputs.dev}})"
 
 on:
   workflow_dispatch:
@@ -16,6 +16,11 @@ on:
         - production
       chinese:
         description: 'Build chinese?'
+        required: true
+        default: false
+        type: boolean
+      dev:
+        description: 'Add --dev flag to build?'
         required: true
         default: false
         type: boolean
@@ -67,7 +72,7 @@ jobs:
         fi
 
         # Build sub-arguments string
-        [[ "$mode" == "testing" ]] && SUB_ARGS="--dev"
+        [[ "${{ github.event.inputs.dev }}" == "true" ]] && SUB_ARGS="--dev"
 
         free -h
 
