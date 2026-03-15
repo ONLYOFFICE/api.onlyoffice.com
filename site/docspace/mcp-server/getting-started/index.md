@@ -4,7 +4,7 @@ title: About the DocSpace MCP server
 
 import DocCardList from '@theme/DocCardList';
 
-[Model Context Protocol] (MCP) is a standardized protocol for managing context between large language models (LLMs) and external systems. 
+[Model Context Protocol] (https://modelcontextprotocol.io/docs/getting-started/intro) is a standardized protocol for managing context between large language models (LLMs) and external systems. 
 The DocSpace MCP Server connects AI tools directly to ONLYOFFICE DocSpace. This gives AI agents, assistants, and chatbots the ability to manage rooms, collaborate on files, handle permissions, and automate document workflows - all through natural language interactions.
 
 <DocCardList items={[
