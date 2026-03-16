@@ -15,11 +15,17 @@ This guide shows the different ways to build the DocSpace MCP server from source
 
 ## Before you start
 
-- Building the DocSpace MCP server with a Node.js app or MCP bundle requires [Node.js] version 18 or higher to be installed on your system.
+Ensure you note the following prerequisites based on your desired build:
+
+| **Build**  | **Prerequisites**             |   |   |   |   |   |   |   |   |
+|------------|-------------------------------|---|---|---|---|---|---|---|---|
+| Docker     | Docker                        |   |   |   |   |   |   |   |   |
+| Node.js    | pnpm, Node.js (v18 or higher) |   |   |   |   |   |   |   |   |
+| MCP bundle | pnpm, Node.js (v18 or higher) |   |   |   |   |   |   |   |   |
 
 ## Building the MCP server
 
-1. Clone the repository from ONLYOFFICE Git server
+1. Clone the repository from ONLYOFFICE Git server:
 
   ```sh
   git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
@@ -40,7 +46,7 @@ This guide shows the different ways to build the DocSpace MCP server from source
 3. Build the MCP server by running the commands based on your desired format: 
 
 <Tabs>
-  <TabItem value="docker image" label="Build from Docker image" default>
+  <TabItem value="docker-image" label="Build from Docker image" default>
 
 4. Build the Docker image:
 
@@ -56,7 +62,7 @@ This guide shows the different ways to build the DocSpace MCP server from source
 
 </TabItem>
 
-<TabItem value="build from node app" label="Build with Nodejs app" default>
+<TabItem value="build from node app" label="Build with Node.js app">
 
 4. Build the Node.js application:
 
@@ -72,7 +78,7 @@ This guide shows the different ways to build the DocSpace MCP server from source
 
 </TabItem>
 
-<TabItem value="build from mcp bundle" label="Build from MCP bundle" default>
+<TabItem value="build from mcp bundle" label="Build from MCP bundle">
 
 4. Build the MCP Bundle:
 
