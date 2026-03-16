@@ -2,7 +2,9 @@
 
 创建 CDocBuilder 类的实例。
 
-> 请注意，此方法仅适用于 COM，不用于 `.docbuilder` 文件。
+:::note
+此方法仅适用于 COM。
+:::
 
 ## 语法
 

@@ -33,36 +33,46 @@ import TabItem from '@theme/TabItem';
         bool CreateFile(int nType);
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        CreateFile(type)
+        ```
+    </TabItem>
 </Tabs>
 
 ## 参数
 
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
-        | 名称 | 类型       | 描述                                                                                                                                                                                                                                   |
-        | ---- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| str | 要创建的文件类型，Python 代码中使用十六进制整数，或在 `.docbuilder` 脚本文件中使用 `docx`、`xlsx`、`pptx` 或 `pdf`（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
+        | 名称 | 类型       | 描述                                                                                                                                              |
+        | ---- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | type | int \| str | 文件类型，可以是十六进制整数（[OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）或字符串（`docx`、`xlsx`、`pptx`、`pdf`）。 |
     </TabItem>
     <TabItem value="cpp" label="C++">
-        | 名称       | 类型 | 描述                                                                                                                                                                                                                                                                                              |
-        | ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | nExtension | int  | 文件扩展名。可选值：`OFFICESTUDIO_FILE_DOCUMENT_DOCX`、`OFFICESTUDIO_FILE_SPREADSHEET_XLSX`、`OFFICESTUDIO_FILE_PRESENTATION_PPTX` 或 `OFFICESTUDIO_FILE_DOCUMENT_OFORM_PDF`（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
+        | 名称       | 类型 | 描述                                                                                                                    |
+        | ---------- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
+        | nExtension | int  | 要创建的文件类型，使用十六进制整数（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
     </TabItem>
     <TabItem value="com" label="COM">
-        | 名称   | 类型          | 描述                                                                                                                                                                    |
-        | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-        | type   | BSTR          | 文件扩展名。可选值：`docx`、`xlsx`、`pptx` 或 `pdf`（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
-        | result | VARIANT_BOOL* | 指定创建文件操作是否成功。                                                                                                            |
+        | 名称   | 类型          | 描述                                                                        |
+        | ------ | ------------- | --------------------------------------------------------------------------- |
+        | type   | BSTR          | 文件扩展名（参见[支持的格式](../../get-started/supported-formats.md)）。 |
+        | result | VARIANT_BOOL* | 指定创建文件操作是否成功。                                                  |
     </TabItem>
     <TabItem value="java" label="Java">
-        | 名称 | 类型          | 描述                                                                                                                                                                                                                                  |
-        | ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| String | 要创建的文件类型，Java 代码中使用十六进制整数，或在 `.docbuilder` 脚本文件中使用 `docx`、`xlsx`、`pptx` 或 `pdf`（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
+        | 名称 | 类型          | 描述                                                                                                                                              |
+        | ---- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | type | int \| String | 文件类型，可以是十六进制整数（[OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）或字符串（`docx`、`xlsx`、`pptx`、`pdf`）。 |
     </TabItem>
     <TabItem value="net" label=".Net">
-        | 名称  | 类型 | 描述                                                                                                                                                                                                                                    |
-        | ----- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | nType | int  | 要创建的文件类型，.Net 代码中使用十六进制整数，或在 `.docbuilder` 脚本文件中使用 `docx`、`xlsx`、`pptx` 或 `pdf`（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
+        | 名称  | 类型 | 描述                                                                                                                    |
+        | ----- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
+        | nType | int  | 要创建的文件类型，使用十六进制整数（参见 [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) 值）。 |
+    </TabItem>
+    <TabItem value="js" label="JS">
+        | 名称 | 类型   | 描述                                                                        |
+        | ---- | ------ | --------------------------------------------------------------------------- |
+        | type | String | 文件扩展名（参见[支持的格式](../../get-started/supported-formats.md)）。 |
     </TabItem>
 </Tabs>
 
@@ -119,9 +129,11 @@ import TabItem from '@theme/TabItem';
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
         builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

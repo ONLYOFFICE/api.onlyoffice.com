@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 当不再需要时，从应用程序内存中卸载 ONLYOFFICE Document Builder。通常情况下，在退出进程之前不需要释放 JS，它应该会自动释放。仅当进程需要 JS 占用的资源时才应使用此方法。
 
 :::note
-对于 `.docbuilder` 文件，不使用 `CDocBuilder.Dispose` 方法。对于 .Net，请使用 [Destroy](Destroy.md) 替代。
+对于 JS，不使用此方法。对于 .Net，请使用 [Destroy](Destroy.md) 替代。
 :::
 
 ## 语法

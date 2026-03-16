@@ -33,13 +33,47 @@ import TabItem from '@theme/TabItem';
         void SetTmpFolder(String^ sFolder);
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        SetTmpFolder(folder)
+        ```
+    </TabItem>
 </Tabs>
 
 ## 参数
 
-| 名称   | 类型   | 描述                                                     |
-| ------ | ------ | --------------------------------------------------------------- |
-| folder | string | 临时文件将保存到的文件夹路径。 |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | 名称   | 类型 | 描述                             |
+        | ------ | ---- | -------------------------------- |
+        | folder | str  | 临时文件将保存到的文件夹路径。   |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | 名称    | 类型           | 描述                             |
+        | ------- | -------------- | -------------------------------- |
+        | sFolder | const wchar_t* | 临时文件将保存到的文件夹路径。   |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | 名称   | 类型 | 描述                             |
+        | ------ | ---- | -------------------------------- |
+        | folder | BSTR | 临时文件将保存到的文件夹路径。   |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | 名称   | 类型   | 描述                             |
+        | ------ | ------ | -------------------------------- |
+        | folder | String | 临时文件将保存到的文件夹路径。   |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | 名称    | 类型    | 描述                             |
+        | ------- | ------- | -------------------------------- |
+        | sFolder | String^ | 临时文件将保存到的文件夹路径。   |
+    </TabItem>
+    <TabItem value="js" label="JS">
+        | 名称   | 类型   | 描述                             |
+        | ------ | ------ | -------------------------------- |
+        | folder | String | 临时文件将保存到的文件夹路径。   |
+    </TabItem>
+</Tabs>
 
 ## 示例
 
@@ -92,9 +126,12 @@ import TabItem from '@theme/TabItem';
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
         builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

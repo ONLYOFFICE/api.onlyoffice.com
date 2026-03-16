@@ -1,12 +1,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # SetProperty
 
 设置可以在 [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) 方法之外传递给程序的参数，即作为运行 ONLYOFFICE Document Builder 可执行文件时的附加属性，或作为程序代码的一部分，但不包含在文档文件脚本中。
 
 :::note
-对于 `.docbuilder` 文件，不直接使用 `CDocBuilder.SetProperty` 方法。参数本身用作可执行文件的附加属性。请参阅下面的示例。
+对于 JS，不直接调用 `SetProperty` 方法。请通过 [CLI 标志](../../using-cli/command-line-arguments.md)传递参数。
 :::
 
 ## 语法
@@ -41,24 +42,60 @@ import TabItem from '@theme/TabItem';
 
 ## 参数
 
-| 名称  | 类型   | 描述                                                          |
-| ----- | ------ | -------------------------------------------------------------------- |
-| name  | string | 参数名称，值始终为 `--argument`。                |
-| value | string | 将在文档中使用的参数值。              |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | 名称  | 类型 | 描述                                                            |
+        | ----- | ---- | --------------------------------------------------------------- |
+        | name  | str  | 参数名称（参见[支持的属性](#支持的属性)）。 |
+        | value | str  | 将在文档中使用的参数值。                                        |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | 名称   | 类型        | 描述                                                            |
+        | ------ | ----------- | --------------------------------------------------------------- |
+        | sParam | const char* | 参数名称（参见[支持的属性](#支持的属性)）。 |
+        | sValue | const char* | 将在文档中使用的参数值。                                        |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | 名称  | 类型 | 描述                                                            |
+        | ----- | ---- | --------------------------------------------------------------- |
+        | name  | BSTR | 参数名称（参见[支持的属性](#支持的属性)）。 |
+        | value | BSTR | 将在文档中使用的参数值。                                        |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | 名称  | 类型   | 描述                                                            |
+        | ----- | ------ | --------------------------------------------------------------- |
+        | name  | String | 参数名称（参见[支持的属性](#支持的属性)）。 |
+        | value | String | 将在文档中使用的参数值。                                        |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | 名称   | 类型    | 描述                                                            |
+        | ------ | ------- | --------------------------------------------------------------- |
+        | sParam | String^ | 参数名称（参见[支持的属性](#支持的属性)）。 |
+        | sValue | String^ | 将在文档中使用的参数值。                                        |
+    </TabItem>
+</Tabs>
 
 ## 支持的属性
 
-| 名称                      | 类型   | 默认值 | 描述                                                                                                            |
-| ------------------------- | ------ | ------- | ---------------------------------------------------------------------------------------------------------------------- |
-| --use-doctrenderer-scheme | bool   | false   | 指定在构建文档或保存文件时从编辑器获取内容时是否使用 doctrenderer 模式。 |
-| --check-fonts             | bool   | true    | 指定是否缓存系统字体以加快工作速度。                                                              |
-| --work-directory          | string | ""      | 临时目录的路径。                                                                                   |
-| --cache-scripts           | bool   | true    | 指定是否缓存 sdkjs 脚本。                                                                             |
-| --save-use-only-names     | bool   | false   | 指定是否使用目标路径（用于服务器工作）。例如：`/home/user/1.txt` => `/tmp/1.txt`。        |
-| --all-fonts-path          | string | ""      | `AllFonts.js` 脚本的路径。                                                                                  |
-| --argument                | string | ""      | 发送到所有打开的 JS 上下文的全局参数的 JSON 参数。                                 |
-| --fonts-system            | bool   | true    | 指定是否使用系统字体。                                                                |
-| --fonts-dir               | string | ""      | 附加字体目录的路径（可能有多条记录）。                                                      |
+```mdx-code-block
+<APITable>
+```
+
+| 名称                      | 类型   | 默认值 | 描述                                                                                   |
+| ------------------------- | ------ | ------ | -------------------------------------------------------------------------------------- |
+| --use-doctrenderer-scheme | bool   | false  | 指定在构建文档或保存文件时从编辑器获取内容时是否使用 doctrenderer 模式。               |
+| --check-fonts             | bool   | true   | 指定是否缓存系统字体以加快工作速度。                                                   |
+| --work-directory          | string | ""     | 临时目录的路径。                                                                       |
+| --cache-scripts           | bool   | true   | 指定是否缓存 sdkjs 脚本。                                                              |
+| --save-use-only-names     | bool   | false  | 指定是否使用目标路径（用于服务器工作）。例如：`/home/user/1.txt` => `/tmp/1.txt`。     |
+| --all-fonts-path          | string | ""     | `AllFonts.js` 脚本的路径。                                                             |
+| --argument                | string | ""     | 发送到所有打开的 JS 上下文的全局参数的 JSON 参数。                                     |
+| --fonts-system            | bool   | true   | 指定是否使用系统字体。                                                                 |
+| --fonts-dir               | string | ""     | 附加字体目录的路径（可能有多条记录）。                                                 |
+
+```mdx-code-block
+</APITable>
+```
 
 添加后，参数将作为 `Argument` 变量及其参数值可用：
 
@@ -109,11 +146,6 @@ Argument.name === "ONLYOFFICE" // true
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```bash
-        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
-        ```
-    </TabItem>
 </Tabs>
 
 ## 添加或移除字体
@@ -161,11 +193,6 @@ Argument.name === "ONLYOFFICE" // true
         CDocBuilder oBuilder = new CDocBuilder();
         oBuilder.SetProperty("--check-fonts", "true");
         CDocBuilder.Destroy();
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```bash
-        docbuilder.exe "--check-fonts=true" test.docbuilder
         ```
     </TabItem>
 </Tabs>

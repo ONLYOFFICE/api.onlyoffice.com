@@ -3,7 +3,11 @@ import TabItem from '@theme/TabItem';
 
 # Run
 
-运行 ONLYOFFICE Document Builder 可执行文件。如果您不想编写应用程序，可以简单地使用 `docbuilder.exe` 可执行文件，并将 `.docbuilder` 文件作为参数运行，其中将包含所有用于创建文档文件的代码。
+使用脚本文件作为参数运行 ONLYOFFICE Document Builder 可执行文件。
+
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 
@@ -37,9 +41,34 @@ import TabItem from '@theme/TabItem';
 
 ## 参数
 
-| 名称 | 类型   | 描述                                             |
-| ---- | ------ | ------------------------------------------------------- |
-| path | string | ONLYOFFICE Document Builder 脚本文件的路径。 |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | 名称 | 类型 | 描述                     |
+        | ---- | ---- | ------------------------ |
+        | path | str  | JS 脚本文件的路径。 |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | 名称  | 类型           | 描述                     |
+        | ----- | -------------- | ------------------------ |
+        | sPath | const wchar_t* | JS 脚本文件的路径。 |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | 名称   | 类型          | 描述                           |
+        | ------ | ------------- | ------------------------------ |
+        | path   | BSTR          | JS 脚本文件的路径。       |
+        | result | VARIANT_BOOL* | 指定操作是否成功。 |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | 名称 | 类型   | 描述                     |
+        | ---- | ------ | ------------------------ |
+        | path | String | JS 脚本文件的路径。 |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | 名称  | 类型    | 描述                     |
+        | ----- | ------- | ------------------------ |
+        | sPath | String^ | JS 脚本文件的路径。 |
+    </TabItem>
+</Tabs>
 
 ## 示例
 
@@ -49,7 +78,7 @@ import TabItem from '@theme/TabItem';
         import docbuilder
 
         builder = docbuilder.CDocBuilder()
-        builder.Run("path-to-script.docbuilder")
+        builder.Run("path-to-script.js")
         ```
     </TabItem>
     <TabItem value="cpp" label="C++">
@@ -57,7 +86,7 @@ import TabItem from '@theme/TabItem';
         std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
         CDocBuilder::Initialize(sWorkDirectory.c_str());
         CDocBuilder oBuilder;
-        oBuilder.Run(L"path-to-script.docbuilder");
+        oBuilder.Run(L"path-to-script.js");
         CDocBuilder::Dispose();
         ```
     </TabItem>
@@ -66,7 +95,7 @@ import TabItem from '@theme/TabItem';
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
         VARIANT_BOOL b;
-        oBuilder->Run("path-to-script.docbuilder", &b);
+        oBuilder->Run("path-to-script.js", &b);
         oBuilder->Dispose();
         ```
     </TabItem>
@@ -74,7 +103,7 @@ import TabItem from '@theme/TabItem';
         ```java
         CDocBuilder.initialize("");
         CDocBuilder builder = new CDocBuilder();
-        builder.run("path-to-script.docbuilder");
+        builder.run("path-to-script.js");
         CDocBuilder.dispose();
         ```
     </TabItem>
@@ -83,13 +112,8 @@ import TabItem from '@theme/TabItem';
         string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
         CDocBuilder.Initialize(workDirectory);
         CDocBuilder oBuilder = new CDocBuilder();
-        oBuilder.Run("path-to-script.docbuilder");
+        oBuilder.Run("path-to-script.js");
         CDocBuilder.Destroy();
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```bash
-        docbuilder.exe mydocument.docbuilder
         ```
     </TabItem>
 </Tabs>

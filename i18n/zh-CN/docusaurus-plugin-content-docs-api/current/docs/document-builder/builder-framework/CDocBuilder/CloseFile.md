@@ -33,6 +33,11 @@ import TabItem from '@theme/TabItem';
         void CloseFile();
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        CloseFile()
+        ```
+    </TabItem>
 </Tabs>
 
 ## 示例
@@ -86,8 +91,10 @@ import TabItem from '@theme/TabItem';
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
+        builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
         builder.CloseFile();
         ```
     </TabItem>
