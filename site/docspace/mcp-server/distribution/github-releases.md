@@ -1,17 +1,10 @@
 # GitHub Releases
 
 This document describes how to download and use the DocSpace MCP server from
-GitHub releases.
-
-## Contents
-
-- [MCP Bundle](#mcp-bundle)
-- [Node.js Application](#nodejs-application)
+GitHub releases. This method also requires [Node.js] version 18 or higher to be installed
+on your system.
 
 ## MCP Bundle
-
-Running the MCP bundle requires [Node.js] version 18 or higher to be installed
-on your system.
 
 1. Download the latest release from GitHub:
 
@@ -28,9 +21,6 @@ on your system.
 2. Use the downloaded `.mcpb` file in an application that supports MCP bundles.
 
 ## Node.js Application
-
-Running the Node.js application requires [Node.js] version 18 or higher to be
-installed on your system.
 
 1. Download the latest release from GitHub:
 
