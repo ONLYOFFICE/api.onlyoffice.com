@@ -3,7 +3,7 @@
 Runs all the commands for the document creation using a single command in the UTF8 format. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunTextA` makes it possible to enter all the commands for the document creation at once.
 
 :::note
-This method is C++ only. For the `.docbuilder` file the `CDocBuilder.RunTextA` method is not used.
+This method is C++ only.
 :::
 
 ## Syntax

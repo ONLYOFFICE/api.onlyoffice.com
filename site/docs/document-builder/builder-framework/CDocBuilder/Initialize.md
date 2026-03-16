@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Initializes the ONLYOFFICE Document Builder as a library for the application to be able to work with it. This method just sets the directory to the main Document Builder resources (icu files, etc). If this method is not called, the Document Builder will find resources from the current process directory.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.Initialize` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax
@@ -42,8 +42,6 @@ For the `.docbuilder` file the `CDocBuilder.Initialize` method is not used.
 
 ## Parameters
 
-*Not used in COM*
-
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
         | Name      | Type | Default | Description                                      |
@@ -54,6 +52,9 @@ For the `.docbuilder` file the `CDocBuilder.Initialize` method is not used.
         | Name       | Type           | Default | Description                                      |
         | ---------- | -------------- | ------- | ------------------------------------------------ |
         | sDirectory | const wchar_t* | 0       | The path to the main Document Builder resources. |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        Not used.
     </TabItem>
     <TabItem value="java" label="Java">
         | Name      | Type   | Default | Description                                      |

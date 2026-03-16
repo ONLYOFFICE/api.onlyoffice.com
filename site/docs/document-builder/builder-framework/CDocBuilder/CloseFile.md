@@ -33,6 +33,11 @@ Closes the file to stop working with it. You can use a single ONLYOFFICE Documen
         void CloseFile();
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        CloseFile()
+        ```
+    </TabItem>
 </Tabs>
 
 ## Example
@@ -86,8 +91,10 @@ Closes the file to stop working with it. You can use a single ONLYOFFICE Documen
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
+        builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
         builder.CloseFile();
         ```
     </TabItem>

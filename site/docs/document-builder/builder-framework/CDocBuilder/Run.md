@@ -3,7 +3,11 @@ import TabItem from '@theme/TabItem';
 
 # Run
 
-Runs the ONLYOFFICE Document Builder executable. If you do not want to write an application, you can simply use the `docbuilder.exe` executable file and run it with the `.docbuilder` file as an argument, where all the code for the document file creation will be written.
+Runs the ONLYOFFICE Document Builder executable with a script file as an argument.
+
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -37,9 +41,34 @@ Runs the ONLYOFFICE Document Builder executable. If you do not want to write an 
 
 ## Parameters
 
-| Name | Type   | Description                                             |
-| ---- | ------ | ------------------------------------------------------- |
-| path | string | The path to the ONLYOFFICE Document Builder script file. |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | Name | Type | Description                     |
+        | ---- | ---- | ------------------------------- |
+        | path | str  | The path to the JS script file. |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | Name  | Type           | Description                     |
+        | ----- | -------------- | ------------------------------- |
+        | sPath | const wchar_t* | The path to the JS script file. |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | Name   | Type          | Description                                      |
+        | ------ | ------------- | ------------------------------------------------ |
+        | path   | BSTR          | The path to the JS script file.                  |
+        | result | VARIANT_BOOL* | Specifies if the operation is successful or not. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | Name | Type   | Description                     |
+        | ---- | ------ | ------------------------------- |
+        | path | String | The path to the JS script file. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | Name  | Type    | Description                     |
+        | ----- | ------- | ------------------------------- |
+        | sPath | String^ | The path to the JS script file. |
+    </TabItem>
+</Tabs>
 
 ## Example
 
@@ -49,7 +78,7 @@ Runs the ONLYOFFICE Document Builder executable. If you do not want to write an 
         import docbuilder
 
         builder = docbuilder.CDocBuilder()
-        builder.Run("path-to-script.docbuilder")
+        builder.Run("path-to-script.js")
         ```
     </TabItem>
     <TabItem value="cpp" label="C++">
@@ -57,7 +86,7 @@ Runs the ONLYOFFICE Document Builder executable. If you do not want to write an 
         std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
         CDocBuilder::Initialize(sWorkDirectory.c_str());
         CDocBuilder oBuilder;
-        oBuilder.Run(L"path-to-script.docbuilder");
+        oBuilder.Run(L"path-to-script.js");
         CDocBuilder::Dispose();
         ```
     </TabItem>
@@ -66,7 +95,7 @@ Runs the ONLYOFFICE Document Builder executable. If you do not want to write an 
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
         VARIANT_BOOL b;
-        oBuilder->Run("path-to-script.docbuilder", &b);
+        oBuilder->Run("path-to-script.js", &b);
         oBuilder->Dispose();
         ```
     </TabItem>
@@ -74,7 +103,7 @@ Runs the ONLYOFFICE Document Builder executable. If you do not want to write an 
         ```java
         CDocBuilder.initialize("");
         CDocBuilder builder = new CDocBuilder();
-        builder.run("path-to-script.docbuilder");
+        builder.run("path-to-script.js");
         CDocBuilder.dispose();
         ```
     </TabItem>
@@ -83,13 +112,8 @@ Runs the ONLYOFFICE Document Builder executable. If you do not want to write an 
         string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
         CDocBuilder.Initialize(workDirectory);
         CDocBuilder oBuilder = new CDocBuilder();
-        oBuilder.Run("path-to-script.docbuilder");
+        oBuilder.Run("path-to-script.js");
         CDocBuilder.Destroy();
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```bash
-        docbuilder.exe mydocument.docbuilder
         ```
     </TabItem>
 </Tabs>

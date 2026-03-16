@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the current JS [context](../CDocBuilderContext/CDocBuilderContext.md).
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.GetContext` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

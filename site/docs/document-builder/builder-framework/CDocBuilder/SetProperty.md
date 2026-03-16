@@ -1,12 +1,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import APITable from '@site/src/components/APITable/APITable';
 
 # SetProperty
 
 Sets an argument which can be transferred to the program outside the [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) method, i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.SetProperty` method is not used explicitly. The argument itself is used instead as an additional property for the executable. See the example below.
+For JS, the `SetProperty` method is not called directly. Instead, pass arguments via the [CLI flags](../../using-cli/command-line-arguments.md).
 :::
 
 ## Syntax
@@ -41,12 +42,44 @@ For the `.docbuilder` file the `CDocBuilder.SetProperty` method is not used expl
 
 ## Parameters
 
-| Name  | Type   | Description                                                          |
-| ----- | ------ | -------------------------------------------------------------------- |
-| name  | string | The parameter name, the value is always `--argument`.                |
-| value | string | The parameter value which will be used in the document.              |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | Name  | Type | Description                                                                                                              |
+        | ----- | ---- | ------------------------------------------------------------------------------------------------------------------------ |
+        | name  | str  | The parameter name (see [Supported properties](#supported-properties)). |
+        | value | str  | The parameter value which will be used in the document.                                                                  |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | Name   | Type        | Description                                                                                                              |
+        | ------ | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+        | sParam | const char* | The parameter name (see [Supported properties](#supported-properties)). |
+        | sValue | const char* | The parameter value which will be used in the document.                                                                  |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | Name  | Type | Description                                                                                                              |
+        | ----- | ---- | ------------------------------------------------------------------------------------------------------------------------ |
+        | name  | BSTR | The parameter name (see [Supported properties](#supported-properties)). |
+        | value | BSTR | The parameter value which will be used in the document.                                                                  |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | Name  | Type   | Description                                                                                                              |
+        | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
+        | name  | String | The parameter name (see [Supported properties](#supported-properties)). |
+        | value | String | The parameter value which will be used in the document.                                                                  |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | Name   | Type    | Description                                                                                                              |
+        | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+        | sParam | String^ | The parameter name (see [Supported properties](#supported-properties)). |
+        | sValue | String^ | The parameter value which will be used in the document.                                                                  |
+    </TabItem>
+</Tabs>
 
 ## Supported properties
+
+```mdx-code-block
+<APITable>
+```
 
 | Name                      | Type   | Default | Description                                                                                                            |
 | ------------------------- | ------ | ------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -59,6 +92,10 @@ For the `.docbuilder` file the `CDocBuilder.SetProperty` method is not used expl
 | --argument                | string | ""      | The JSON argument which is sent to the global parameters of all the opened JS context.                                 |
 | --fonts-system            | bool   | true    | Specifies if the system fonts are used.                                                                                |
 | --fonts-dir               | string | ""      | The path to the additional fonts directory (may be many records).                                                      |
+
+```mdx-code-block
+</APITable>
+```
 
 Once added, the argument will be available as the `Argument` variable with its parameter values set:
 
@@ -109,11 +146,6 @@ Argument.name === "ONLYOFFICE" // true
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```bash
-        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
-        ```
-    </TabItem>
 </Tabs>
 
 ## Adding or removing fonts
@@ -161,11 +193,6 @@ It is also possible to update the font list when you either add new fonts or rem
         CDocBuilder oBuilder = new CDocBuilder();
         oBuilder.SetProperty("--check-fonts", "true");
         CDocBuilder.Destroy();
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```bash
-        docbuilder.exe "--check-fonts=true" test.docbuilder
         ```
     </TabItem>
 </Tabs>

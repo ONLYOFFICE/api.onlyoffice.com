@@ -3,7 +3,7 @@
 Creates an instance of the `CDocBuilder` class.
 
 :::note
-This method is COM only. For the `.docbuilder` file the `CDocBuilder.CreateInstance` method is not used.
+This method is COM only.
 :::
 
 ## Syntax

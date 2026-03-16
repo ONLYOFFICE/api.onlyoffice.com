@@ -33,13 +33,47 @@ Sets the path to the folder where the program will temporarily save files needed
         void SetTmpFolder(String^ sFolder);
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        SetTmpFolder(folder)
+        ```
+    </TabItem>
 </Tabs>
 
 ## Parameters
 
-| Name   | Type   | Description                                                     |
-| ------ | ------ | --------------------------------------------------------------- |
-| folder | string | The path to the folder where the temporary files will be saved. |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | Name   | Type | Description                                                     |
+        | ------ | ---- | --------------------------------------------------------------- |
+        | folder | str  | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | Name    | Type           | Description                                                     |
+        | ------- | -------------- | --------------------------------------------------------------- |
+        | sFolder | const wchar_t* | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | Name   | Type | Description                                                     |
+        | ------ | ---- | --------------------------------------------------------------- |
+        | folder | BSTR | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | Name   | Type   | Description                                                     |
+        | ------ | ------ | --------------------------------------------------------------- |
+        | folder | String | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | Name    | Type    | Description                                                     |
+        | ------- | ------- | --------------------------------------------------------------- |
+        | sFolder | String^ | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="js" label="JS">
+        | Name   | Type   | Description                                                     |
+        | ------ | ------ | --------------------------------------------------------------- |
+        | folder | String | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+</Tabs>
 
 ## Example
 
@@ -92,9 +126,12 @@ Sets the path to the folder where the program will temporarily save files needed
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
         builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

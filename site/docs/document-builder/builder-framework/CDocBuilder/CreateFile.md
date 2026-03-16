@@ -33,36 +33,46 @@ Creates a new file. The type of the file which will be created needs to be set.
         bool CreateFile(int nType);
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        CreateFile(type)
+        ```
+    </TabItem>
 </Tabs>
 
 ## Parameters
 
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
-        | Name | Type       | Description                                                                                                                                                                                                                                   |
-        | ---- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| str | The type of the file to be created set as a hexadecimal integer for the Python code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
+        | Name | Type       | Description                                                                                                                                              |
+        | ---- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | type | int \| str | The file type as a hexadecimal integer ([OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values) or a string (`docx`, `xlsx`, `pptx`, `pdf`). |
     </TabItem>
     <TabItem value="cpp" label="C++">
-        | Name       | Type | Description                                                                                                                                                                                                                                                                                              |
-        | ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | nExtension | int  | The file extension. The following values are possible: `OFFICESTUDIO_FILE_DOCUMENT_DOCX`, `OFFICESTUDIO_FILE_SPREADSHEET_XLSX`, `OFFICESTUDIO_FILE_PRESENTATION_PPTX`, or `OFFICESTUDIO_FILE_DOCUMENT_OFORM_PDF` (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
+        | Name       | Type | Description                                                                                                                                      |
+        | ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+        | nExtension | int  | The type of the file to be created set as a hexadecimal integer (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
     </TabItem>
     <TabItem value="com" label="COM">
-        | Name   | Type          | Description                                                                                                                                                                    |
-        | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-        | type   | BSTR          | The file extension. The following values are possible: `docx`, `xlsx`, `pptx`, or `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
-        | result | VARIANT_BOOL* | Specifies if the operation of creating a file is successful or not.                                                                                                            |
+        | Name   | Type          | Description                                                                            |
+        | ------ | ------------- | -------------------------------------------------------------------------------------- |
+        | type   | BSTR          | The file extension (see [Supported formats](../../get-started/supported-formats.md)). |
+        | result | VARIANT_BOOL* | Specifies if the operation of creating a file is successful or not.                    |
     </TabItem>
     <TabItem value="java" label="Java">
-        | Name | Type          | Description                                                                                                                                                                                                                                  |
-        | ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | type | int \| String | The type of the file to be created set as a hexadecimal integer for the Java code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
+        | Name | Type          | Description                                                                                                                                              |
+        | ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | type | int \| String | The file type as a hexadecimal integer ([OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values) or a string (`docx`, `xlsx`, `pptx`, `pdf`). |
     </TabItem>
     <TabItem value="net" label=".Net">
-        | Name  | Type | Description                                                                                                                                                                                                                                    |
-        | ----- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | nType | int  | The type of the file to be created set as a hexadecimal integer for the .Net code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
+        | Name  | Type | Description                                                                                                                                      |
+        | ----- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+        | nType | int  | The type of the file to be created set as a hexadecimal integer (see [OFFICESTUDIO\_FILE\_XXX](../../get-started/supported-formats.md) values). |
+    </TabItem>
+    <TabItem value="js" label="JS">
+        | Name | Type   | Description                                                                            |
+        | ---- | ------ | -------------------------------------------------------------------------------------- |
+        | type | String | The file extension (see [Supported formats](../../get-started/supported-formats.md)). |
     </TabItem>
 </Tabs>
 
@@ -119,9 +129,11 @@ Creates a new file. The type of the file which will be created needs to be set.
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
         builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

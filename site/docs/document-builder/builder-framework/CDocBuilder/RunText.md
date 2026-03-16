@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Runs all the commands for the document creation using a single command. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunText` makes it possible to enter all the commands for the document creation at once.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.RunText` method is not used. This method is not available in C++ (use [RunTextA](RunTextA.md) or [RunTextW](RunTextW.md) instead).
+For JS, this method is not used. This method is not available in C++ (use [RunTextA](RunTextA.md) or [RunTextW](RunTextW.md) instead).
 :::
 
 ## Syntax
@@ -36,9 +36,29 @@ For the `.docbuilder` file the `CDocBuilder.RunText` method is not used. This me
 
 ## Parameters
 
-| Name     | Type   | Description                                                                                                                                                                                                                                                                                                          |
-| -------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| commands | string | The commands which will be used to create the document file (the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | Name     | Type | Description                                                                                                                                                                                                                                                                               |
+        | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | commands | str  | The commands which will be used to create the document file (the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | Name     | Type          | Description                                                                                                                                                                                                                                                                               |
+        | -------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | commands | BSTR          | The commands which will be used to create the document file (the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
+        | result   | VARIANT_BOOL* | Specifies if the operation is successful or not.                                                                                                                                                                                                                                          |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | Name     | Type   | Description                                                                                                                                                                                                                                                                               |
+        | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | commands | String | The commands which will be used to create the document file (the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | Name      | Type    | Description                                                                                                                                                                                                                                                                               |
+        | --------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+        | sCommands | String^ | The commands which will be used to create the document file (the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
+    </TabItem>
+</Tabs>
 
 ## Example
 

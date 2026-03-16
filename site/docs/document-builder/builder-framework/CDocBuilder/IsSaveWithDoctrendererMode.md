@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Specifies if the doctrenderer mode is used when building a document or getting content from the editor when saving a file.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.IsSaveWithDoctrendererMode` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

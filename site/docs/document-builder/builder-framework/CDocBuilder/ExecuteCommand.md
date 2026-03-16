@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF). See the [Text document API](/docs/office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](/docs/office-api/usage-api/presentation-api/presentation-api.md), or [Form API](/docs/office-api/usage-api/form-api/form-api.md) sections for more information which commands are available for various document types.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.ExecuteCommand` method is not used explicitly. The command itself is used instead. See the example below.
+For JS, call the API methods directly instead.
 :::
 
 ## Syntax
@@ -128,11 +128,6 @@ For the `.docbuilder` file the `CDocBuilder.ExecuteCommand` method is not used e
         CDocBuilder oBuilder = new CDocBuilder();
         oBuilder.ExecuteCommand("oParagraph.AddText(\"Hello from .Net!\");");
         CDocBuilder.Destroy();
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
-        paragraph.AddText("Hello, world!");
         ```
     </TabItem>
 </Tabs>

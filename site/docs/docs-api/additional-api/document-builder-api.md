@@ -1,3 +1,5 @@
+import APITable from '@site/src/components/APITable/APITable';
+
 # Document Builder API
 
 For the interaction with the **web document builder service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/docbuilder` address where `documentserver` is the name of the server with the ONLYOFFICE Docs installed.
@@ -7,30 +9,30 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 ## Request parameters and their description
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
 | Parameter | Type    | Presence                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| argument  | object  | optional                  | Defines the arguments to pass to the created document. See [supported properties](../../document-builder/builder-framework/CDocBuilder/SetProperty.md#supported-properties) for details on how the argument is used.                                                                                                                                                                                                                                                                                                                              |
+| argument  | object  | optional                  | Defines the arguments to pass to the created document. See [supported properties](../../document-builder/builder-framework/CDocBuilder/SetProperty.md#--argument) for details on how the argument is used.                                                                                                                                                                                                                                                                                                                              |
 | async     | boolean | optional                  | Defines the type of the request to the **document builder service**: asynchronous or not. When `true`, the response is formed instantly with a `key` in the response. You must then poll by sending requests with this `key` until document generation is finished (when `end` becomes `true`). The default value is `false`.                                                                                                                                    |
 | key       | string  | conditional               | Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the `async` parameter is set to `true`) the key is not present in the first request, but must be present in all the following requests which will be sent before the generation is complete. When the synchronous request is used (the `async` parameter is set to `false`), this parameter is not required. |
 | token     | string  | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).                                                                                                                                                                                                                                                                                                                                                                         |
-| url       | string  | required                  | Defines the absolute URL to the `.docbuilder` file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| url       | string  | required                  | Defines the absolute URL to the `.js` script file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ```mdx-code-block
 </APITable>
 ```
 
-The `.docbuilder` file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
+The `.js` script file is a JavaScript file that uses the [Office JavaScript API](../../office-api/get-started/overview.md) to generate output document files (text documents, spreadsheets, or presentations). It uses `builder.CreateFile()` to create a document, the Office API classes to manipulate content, `builder.SaveFile()` to specify the output format and name, and `builder.CloseFile()` to finalize. You can find more information about the script file syntax [here](../../document-builder/using-cli/script-file.md). Once document generation is complete, the response with the absolute URL to the resulting file will be returned (see below).
 
 :::note
-The `.docbuilder` script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.
+The `.js` script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.
 :::
 
-You can find more information about the `.docbuilder` file syntax [here](../../document-builder/builder-app/using-docbuilder-file.md). Please read [Office JavaScript API documentation](../../office-api/get-started/overview.md) for the detailed information on what classes and methods are used to generate the documents with the help of `.docbuilder` files.
+:::caution
+When using `builder.OpenFile()` in your script, you must provide an absolute URL to the file (e.g., `https://example.com/document.docx`), not a local path. The Document Server needs to download the file from a publicly accessible location.
+:::
 
 ## Response parameters and their description
 
@@ -45,15 +47,15 @@ The request result is returned in JSON format.
 | end       | boolean | `true`                                               | Defines if the document generation is completed or not. When `false`, the task is still being processed and the `urls` parameter is not included in the response. When `true`, the task is complete and the `urls` parameter will be present.                                                                                                 |
 | error     | integer | `-8`                                                 | Defines an error that occurred during document generation. Possible error codes can be found [below](#possible-error-codes-and-their-description).                                                                                                                                                                                            |
 | key       | string  | `af86C7e71Ca8`                                       | Defines the unique identifier of the document generation task. If the `key` parameter was provided in the request, the same value is returned. If the `key` parameter was not provided in the first asynchronous request, a new key is generated by the **document builder service**. Use this value in all subsequent polling requests.      |
-| urls      | object  | `{"output.docx": "https://documentserver/..."}` | Defines an object containing the absolute URLs to the generated output files. The object keys are the output file names as specified in the `.docbuilder` script. This parameter is present only when the `end` value is `true`.                                                                                                              |
+| urls      | object  | `{"output.docx": "https://documentserver/..."}` | Defines an object containing the absolute URLs to the generated output files. The object keys are the output file names as specified in the `.js` script. This parameter is present only when the `end` value is `true`.                                                                                                              |
 
 ```mdx-code-block
 </APITable>
 ```
 
-## Sample .docbuilder file
+## Sample script
 
-Below is a simple `.docbuilder` script that creates a document with "Hello World!" text:
+Below is a simple `.js` script that creates a document with "Hello World!" text:
 
 ``` js
 builder.CreateFile("docx");
@@ -69,19 +71,19 @@ Host this file on a publicly accessible server to use it with the API requests b
 ## Examples
 
 :::info
-In the examples below, `example.com` represents the server where your **document storage service** is installed and where `.docbuilder` files are hosted. See the [How it works](../get-started/how-it-works/how-it-works.md) section to learn more about ONLYOFFICE Docs service client-server interactions.
+In the examples below, `example.com` represents the server where your **document storage service** is installed and `.js` files are served from. See the [How it works](../get-started/how-it-works/how-it-works.md) section to learn more about ONLYOFFICE Docs service client-server interactions.
 :::
 
 ### Asynchronous request
 
-**Step 1.** Send the initial request with the `.docbuilder` file URL:
+**Step 1.** Send the initial request with the `.js` script file URL:
 
 ``` bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
     "async": true,
-    "url": "https://example.com/url-to-example-script.docbuilder"
+    "url": "https://example.com/url-to-example-script.js"
   }'
 ```
 
@@ -124,7 +126,7 @@ curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
     "async": false,
-    "url": "https://example.com/url-to-example-script.docbuilder"
+    "url": "https://example.com/url-to-example-script.js"
   }'
 ```
 
@@ -169,7 +171,7 @@ curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
     "async": false,
-    "url": "https://example.com/url-to-example-script.docbuilder",
+    "url": "https://example.com/url-to-example-script.js",
     "argument": {
       "key": "string",
       "key2": "string2"
@@ -191,7 +193,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### Multiple output files
 
-A `.docbuilder` script can generate multiple files. For example:
+A `.js` script can generate multiple files. For example:
 
 ``` js
 builder.CreateFile("docx");
@@ -213,7 +215,7 @@ curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
     "async": false,
-    "url": "https://example.com/url-to-example-script.docbuilder"
+    "url": "https://example.com/url-to-example-script.js"
   }'
 ```
 
@@ -229,6 +231,42 @@ curl -X POST "https://documentserver/docbuilder" \
   "end": true
 }
 ```
+
+### Comparing documents
+
+You can compare two documents and generate a result file with tracked changes. The script uses [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) to open the second document for comparison:
+
+``` js
+builderJS.OpenFile("https://example.com/file1.docx");
+const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
+AscCommonWord.CompareDocuments(Api, file, null);
+file.Close();
+builderJS.SaveFile("docx", "Result.docx");
+builderJS.CloseFile();
+```
+
+``` bash
+curl -X POST "https://documentserver/docbuilder" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "async": false,
+    "url": "https://example.com/compare.js"
+  }'
+```
+
+**Response:**
+
+``` json
+{
+  "key": "Khirz6zTPdfd7",
+  "urls": {
+    "Result.docx": "https://documentserver/Result.docx"
+  },
+  "end": true
+}
+```
+
+See [Comparing documents](../../document-builder/using-cli/comparing-documents.md) for more details about document comparison.
 
 ## Possible error codes and their description
 

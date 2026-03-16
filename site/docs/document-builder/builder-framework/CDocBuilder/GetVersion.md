@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the ONLYOFFICE Document Builder engine version.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.GetVersion` method is not used. This method is not available in COM.
+For JS, this method is not used. This method is not available in COM.
 :::
 
 ## Syntax

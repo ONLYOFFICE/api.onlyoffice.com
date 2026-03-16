@@ -33,6 +33,11 @@ Opens the document file which will be edited and saved afterwards.
         bool OpenFile(String^ sPath, String^ sParams);
         ```
     </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        OpenFile(path, params)
+        ```
+    </TabItem>
 </Tabs>
 
 ## Parameters
@@ -68,6 +73,12 @@ Opens the document file which will be edited and saved afterwards.
         | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
         | sPath   | String^ | The path to the file to be opened together with its name and extension.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
         | sParams | String^ | The parameters needed for the correct file opening (most commonly, the encoding is used for the `txt` and `csv` file types or the delimiter for the `csv` files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where `m_nCsvTxtEncoding` is used for the text encoding and `m_nCsvDelimiter` is used for the delimiter. You can find all the supported values for the encoding [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). The supported values for the `csv` delimiters include: `0` - no delimiter; `1` - tab; `2` - semicolon; `3` - colon; `4` - comma; `5` - space. |
+    </TabItem>
+    <TabItem value="js" label="JS">
+        | Name   | Type   | Description                                                                                                           |
+        | ------ | ------ | --------------------------------------------------------------------------------------------------------------------- |
+        | path   | String | The path to the file to be opened together with its name and extension.                                               |
+        | params | String | Optional. The parameters for file opening (encoding for `txt`/`csv`, delimiter for `csv`). |
     </TabItem>
 </Tabs>
 
@@ -117,9 +128,11 @@ Opens the document file which will be edited and saved afterwards.
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
+    <TabItem value="js" label="JS">
+        ```js
         builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        builder.SaveFile("xlsx", "result.xlsx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

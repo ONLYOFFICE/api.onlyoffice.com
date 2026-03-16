@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Writes data to the log file. It is used for logs in JS code.
 
 :::note
-For the `.docbuilder` file the `CDocBuilder.WriteData` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax
@@ -41,11 +41,43 @@ For the `.docbuilder` file the `CDocBuilder.WriteData` method is not used.
 
 ## Parameters
 
-| Name   | Type   | Description                                                                                                |
-| ------ | ------ | ---------------------------------------------------------------------------------------------------------- |
-| path   | string | The path to the file where all the logs will be written.                                                   |
-| value  | string | The data which will be written to the log file.                                                            |
-| append | bool   | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | Name   | Type | Description                                                                                                |
+        | ------ | ---- | ---------------------------------------------------------------------------------------------------------- |
+        | path   | str  | The path to the file where all the logs will be written.                                                   |
+        | value  | str  | The data which will be written to the log file.                                                            |
+        | append | bool | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | Name    | Type           | Description                                                                                                |
+        | ------- | -------------- | ---------------------------------------------------------------------------------------------------------- |
+        | sPath   | const wchar_t* | The path to the file where all the logs will be written.                                                   |
+        | sValue  | const wchar_t* | The data which will be written to the log file.                                                            |
+        | bAppend | const bool&    | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | Name   | Type         | Description                                                                                                |
+        | ------ | ------------ | ---------------------------------------------------------------------------------------------------------- |
+        | path   | BSTR         | The path to the file where all the logs will be written.                                                   |
+        | value  | BSTR         | The data which will be written to the log file.                                                            |
+        | append | VARIANT_BOOL | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | Name   | Type    | Description                                                                                                |
+        | ------ | ------- | ---------------------------------------------------------------------------------------------------------- |
+        | path   | String  | The path to the file where all the logs will be written.                                                   |
+        | value  | String  | The data which will be written to the log file.                                                            |
+        | append | boolean | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | Name    | Type    | Description                                                                                                |
+        | ------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+        | sPath   | String^ | The path to the file where all the logs will be written.                                                   |
+        | sValue  | String^ | The data which will be written to the log file.                                                            |
+        | bAppend | bool    | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
+    </TabItem>
+</Tabs>
 
 ## Example
 
