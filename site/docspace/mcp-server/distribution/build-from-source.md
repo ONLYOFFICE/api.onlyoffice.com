@@ -17,11 +17,11 @@ This guide shows the different ways to build the DocSpace MCP server from source
 
 Ensure you note the following prerequisites based on your desired build:
 
-| **Build**  | **Prerequisites**             |   |   |   |   |   |   |   |   |
-|------------|-------------------------------|---|---|---|---|---|---|---|---|
-| Docker     | Docker                        |   |   |   |   |   |   |   |   |
-| Node.js    | pnpm, Node.js (v18 or higher) |   |   |   |   |   |   |   |   |
-| MCP bundle | pnpm, Node.js (v18 or higher) |   |   |   |   |   |   |   |   |
+| **Build**  | **Prerequisites**             |
+|------------|-------------------------------|
+| Docker     | Docker                        |
+| Node.js    | pnpm, Node.js (v18 or higher) |
+| MCP bundle | pnpm, Node.js (v18 or higher) |
 
 ## Building the MCP server
 
