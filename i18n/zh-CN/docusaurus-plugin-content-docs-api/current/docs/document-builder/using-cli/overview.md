@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
 有关在服务器上使用不同编程语言（C#、Node.js、PHP、Ruby）的 Document Builder CLI 示例，请参阅 [document-builder-integration](https://github.com/ONLYOFFICE/document-builder-integration) 仓库。
 :::
 
-## builder 与 builderJS 的区别
+## builder 与 builderJS 的区别 {#builder-vs-builderjs}
 
 有两个对象可用于处理文档。两者都可以访问 [CDocBuilder](../builder-framework/CDocBuilder/CDocBuilder.md) 方法，但它们处理 JavaScript 变量的方式不同。
 
