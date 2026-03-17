@@ -10,16 +10,31 @@ It enables document generation without running a full editor, automating content
 
 ## How to use
 
-**ONLYOFFICE Document Builder** provides SDKs for various programming languages, allowing seamless integration into your applications.
+**ONLYOFFICE Document Builder** can be used in the following ways:
 
-- [Python](../builder-framework/overview.md). Generate and modify documents in scripts or backend services.
-- [C++](../builder-framework/overview.md). Use the C++ library for high-performance document processing.
-- [COM](../builder-framework/overview.md). Integrate with Windows applications using the Component Object Model (COM) interface.
-- [Java](../builder-framework/overview.md). Work with the Java SDK for document creation and editing in enterprise applications.
-- [.Net](../builder-framework/overview.md). Develop cross-platform applications for Windows, Linux, and macOS using the .NET SDK.
+### Command line (CLI)
 
-Integrate SDK into your own application. To install ONLYOFFICE Document Builder, visit [this page](./installing.md).
-After you download and unpack the files, the library is ready for [integration](../builder-framework/overview.md).
+Run **.js** script files directly from the command line to generate documents. This is the simplest way to use Document Builder for automation and batch processing.
+
+See the [CLI documentation](../using-cli/overview.md) for details.
+
+### Builder Framework
+
+Integrate Document Builder into your applications using [SDKs for various programming languages](../builder-framework/overview.md):
+
+- **Python**. Generate and modify documents in scripts or backend services.
+- **C++**. Use the C++ library for high-performance document processing.
+- **COM**. Integrate with Windows applications using the Component Object Model interface.
+- **Java**. Work with the Java SDK for document creation and editing in enterprise applications.
+- **.NET**. Develop cross-platform applications for Windows, Linux, and macOS.
+
+To install ONLYOFFICE Document Builder, visit [this page](./installing.md).
+
+### Document Builder API
+
+Generate documents via HTTP requests to ONLYOFFICE Docs. This web service approach is ideal when you have ONLYOFFICE Docs installed and want to generate documents without installing Document Builder separately.
+
+See the [Document Builder API](../../docs-api/additional-api/document-builder-api.md) for details.
 
 ## Benefits of Using
 
@@ -49,26 +64,25 @@ You can convert whole documents, or particular pages, sheets, slides to PDF or X
 
 ## Platform Independence
 
-**ONLYOFFICE Document Builder** covers most of the popular development environments and deployment platforms. Its API can be used to develop applications for a wide range of operating systems, such as Windows, Linux, macOS and various platforms.
+**ONLYOFFICE Document Builder** covers most of the popular development environments and deployment platforms. Its API can be used to develop applications for a wide range of operating systems, such as Windows, Linux, and macOS.
 
 You can use **ONLYOFFICE Document Builder** to build any type of 32-bit or 64-bit application.
 
 ## Independence from Other Applications
 
-**ONLYOFFICE Document Builder** does not require third-party applications. All Aspose components are completely independent. This makes **ONLYOFFICE Document Builder** a great alternative to automation in terms of security, stability, scalability/speed, price, and features for working with documents and related tasks.
+**ONLYOFFICE Document Builder** does not require third-party applications, making it a great alternative to automation in terms of security, stability, scalability, speed, and price.
 
 ## Performance and Scalability
 
-**ONLYOFFICE Document Builder** is designed to perform greatly on both a server or client. **ONLYOFFICE Document Builder** is a single library. You do not need to worry about any other services, modules or libraries.
+**ONLYOFFICE Document Builder** is designed to perform well on both server and client. **ONLYOFFICE Document Builder** is a single library. You do not need to worry about any other services, modules or libraries.
 
-With **ONLYOFFICE Document Builder**, you can literally generate thousands of documents in minutes, which involves opening a document, modifying content and formatting or populating it with data, and saving it. Even most complex documents are opened and saved in fractions of a second.
+With **ONLYOFFICE Document Builder**, you can literally generate thousands of documents in minutes, which involves opening a document, modifying content and formatting or populating it with data, and saving it. Even the most complex documents are opened and saved in fractions of a second.
 
 **ONLYOFFICE Document Builder** is multithread safe as long as only one thread works on a document at a time. This is a typical scenario to have one thread working on one document. Different threads can safely work on different documents at the same time.
 
-
 ## Minimal Learning Curve
 
-Although there are over 150 public classes and enumerations in **ONLYOFFICE Document Builder**, the learning curve is minimal because the **ONLYOFFICE Document Builder** API has been carefully designed with the following goals in mind:
+The learning curve is minimal because the **ONLYOFFICE Document Builder** API has been carefully designed with the following goals in mind:
 
 - Borrow best practices from other well-known APIs
 - Provide a balance of ease of use and detailed manipulation of document elements

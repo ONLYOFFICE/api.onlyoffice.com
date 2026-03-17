@@ -10,16 +10,31 @@ sidebar_position: -3
 
 ## 如何使用
 
-**ONLYOFFICE Document Builder** 提供了适用于多种编程语言的开发工具包，便于无缝集成到您的应用程序中。
+**ONLYOFFICE Document Builder** 可通过以下方式使用：
 
-- [Python](../builder-framework/overview.md)：在脚本或后端服务中生成和修改文档。
-- [C++](../builder-framework/overview.md)：使用 C++ 库进行高性能文档处理。
-- [COM](../builder-framework/overview.md)：通过组件对象模型（COM）接口与 Windows 应用程序集成。
-- [Java](../builder-framework/overview.md)：借助 Java SDK 在企业应用程序中进行文档创建和编辑。
-- [.Net](../builder-framework/overview.md)：使用 .NET SDK 开发适用于 Windows、Linux 和 macOS 的跨平台应用程序。
+### 命令行（CLI）
 
-将 SDK 集成到您自己的应用程序中。如需安装 ONLYOFFICE Document Builder，请访问 [此页面](./installing.md)。
-下载并解压文件后，该库即可用于 [集成](../builder-framework/overview.md)。
+通过命令行直接运行 **.js** 脚本文件来生成文档。这是使用 Document Builder 进行自动化和批量处理的最简单方式。
+
+有关详细信息，请参阅 [CLI 文档](../using-cli/overview.md)。
+
+### Builder Framework
+
+使用[适用于多种编程语言的 SDK](../builder-framework/overview.md) 将 Document Builder 集成到您的应用程序中：
+
+- **Python**：在脚本或后端服务中生成和修改文档。
+- **C++**：使用 C++ 库进行高性能文档处理。
+- **COM**：通过组件对象模型接口与 Windows 应用程序集成。
+- **Java**：借助 Java SDK 在企业应用程序中进行文档创建和编辑。
+- **.NET**：开发适用于 Windows、Linux 和 macOS 的跨平台应用程序。
+
+如需安装 ONLYOFFICE Document Builder，请访问[此页面](./installing.md)。
+
+### Document Builder API
+
+通过向 ONLYOFFICE Docs 发送 HTTP 请求来生成文档。当您已安装 ONLYOFFICE Docs 并希望无需单独安装 Document Builder 即可生成文档时，此 Web 服务方式是理想选择。
+
+有关详细信息，请参阅 [Document Builder API](../../docs-api/additional-api/document-builder-api.md)。
 
 ## 使用优势
 
@@ -49,17 +64,17 @@ sidebar_position: -3
 
 ## 平台独立性
 
-**ONLYOFFICE Document Builder** 涵盖了大多数流行的开发环境和部署平台。其 API 可用于开发适用于多种操作系统的应用程序，如 Windows、Linux、macOS 及其他各种平台。
+**ONLYOFFICE Document Builder** 涵盖了大多数流行的开发环境和部署平台。其 API 可用于开发适用于多种操作系统的应用程序，如 Windows、Linux 和 macOS。
 
 您可以使用 **ONLYOFFICE Document Builder** 构建任何类型的 32 位或 64 位应用程序。
 
 ## 不依赖其他应用程序
 
-**ONLYOFFICE Document Builder** 不需要第三方应用程序。所有 Aspose 组件都是完全独立的。这使得 **ONLYOFFICE Document Builder** 在安全性、稳定性、可扩展性/速度、价格以及处理文档和相关任务的功能方面，成为自动化的绝佳替代方案。
+**ONLYOFFICE Document Builder** 不需要第三方应用程序，在安全性、稳定性、可扩展性、速度和价格方面，是自动化的绝佳替代方案。
 
 ## 高性能和可扩展性
 
-**ONLYOFFICE Document Builder** 设计用于在服务器或客户端都能出色运行。它是一个单一库，您无需担心任何其他服务、模块或库。
+**ONLYOFFICE Document Builder** 设计用于在服务器和客户端都能出色运行。它是一个单一库，您无需担心任何其他服务、模块或库。
 
 借助 **ONLYOFFICE Document Builder**，您实际上可以在几分钟内生成数千个文档，包括打开文档、修改内容和格式或填充数据，然后保存文档。即使是最复杂的文档，也能在几分之一秒内完成打开和保存操作。
 
@@ -67,7 +82,7 @@ sidebar_position: -3
 
 ## 较低的学习曲线
 
-尽管 **ONLYOFFICE Document Builder** 中有超过 150 个公共类和枚举，但学习曲线较低，因为其 API 的设计精心考虑了以下目标：
+学习曲线较低，因为 **ONLYOFFICE Document Builder** API 的设计精心考虑了以下目标：
 
 - 借鉴其他知名 API 的最佳实践
 - 在易用性和对文档元素的详细操作之间取得平衡
