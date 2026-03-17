@@ -3,7 +3,7 @@ sidebar_label: Onboard a distributed team
 sidebar_position: 2
 ---
 
-# Onboard a distributed team
+# How to successfully onboard a distributed team into your project
 
 With businesses increasingly adopting remote work, managing these teams efficiently without sacrificing security and access becomes a priority. 
 The AI assistant created by the DocSpace MCP server-client connection allows you to successfully onboard new hires quickly while practicing best security practices.
