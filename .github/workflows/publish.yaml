@@ -17,7 +17,7 @@ on:
       chinese:
         description: 'Build chinese?'
         required: true
-        default: false
+        default: true
         type: boolean
       dev:
         description: 'Add --dev flag to build?'
