@@ -31,6 +31,10 @@ Use the full path to the executable if running from a different folder. Replace 
 
 Visit the [Script file](./script-file.md) section for more information about file structure and syntax rules.
 
+:::info Server integration
+For examples of using Document Builder CLI on servers with different programming languages (C#, Node.js, PHP, Ruby), see the [document-builder-integration](https://github.com/ONLYOFFICE/document-builder-integration) repository.
+:::
+
 ## builder vs builderJS
 
 There are two objects available for working with documents. Both provide access to [CDocBuilder](../builder-framework/CDocBuilder/CDocBuilder.md) methods, but they differ in how they handle JavaScript variables.
