@@ -3,7 +3,7 @@ sidebar_label: Project archiving and offboarding
 sidebar_position: 4
 ---
 
-# Archiving projects and offboarding team members
+# How to archive projects and offboard team members after project completion
 
 After project completion, practicing archiving and offboarding ensures that the project data remains searchable and secure for any future use. It also:
 
