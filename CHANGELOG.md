@@ -1,5 +1,78 @@
 # Change log
 
+## 8.0.0
+
+### New features
+
+#### Document Builder
+
+* Restructured documentation to concatenate all programming languages on single pages instead of separate pages per language.
+* Rewrote the Builder Framework overview to emphasize runtime usage patterns.
+* Added comprehensive CLI documentation with improved examples.
+* Changed code examples from `.docbuilder` extension to `.js` for better IDE support.
+* Improved the Document Builder API async workflow documentation with detailed response parameters.
+* Added curl command examples throughout the API documentation.
+
+#### Plugins and Macros
+
+* Added AI custom tools text annotations feature documentation.
+* Added new PDF macros samples.
+* Added freeze panes macro example.
+* Added Chinese translations for the entire Plugins API section.
+
+#### Office API
+
+* Added PDF section support in the Playground.
+* Updated the Playground with new default scripts for SSE.
+* Added comprehensive Chinese translations for Office API usage documentation.
+
+#### DocSpace
+
+* Added MCP server use cases documentation.
+* Added new samples to API Backend documentation.
+
+### Improvements
+
+#### Common
+
+* Simplified Playground implementation by removing redundant variables.
+* Improved code quality by removing unused comments across the codebase.
+* Updated integration documentation for WordPress, SuiteCRM, Strapi, SharePoint, Redmine, Plone, ownCloud, Odoo, Nuxeo, Moodle, and Mattermost with Chinese translations.
+
+#### Document Builder
+
+* Added link to supported properties in argument parameter descriptions.
+* Improved API page formatting and readability.
+
+#### Docs API
+
+* Updated connectors documentation.
+* Fixed grammar in integration docs.
+
+#### Office API
+
+* Updated input-helper pages.
+* Added deprecation info for legacy methods.
+* Fixed `scrollWidth` null reference issue in code blocks.
+* Fixed select popup position in Playground.
+
+### Fixes
+
+* Fixed broken links across Document Builder documentation.
+* Fixed broken links throughout the documentation site.
+* Fixed wrong arguments in some Office API methods.
+* Fixed Recording macros page.
+* Fixed editor type for forms in Office API.
+* Corrected `review.reviewDisplay` documentation.
+* Fixed styles for announcement bar with multistring content.
+* Fixed problem with previous merge deleting files.
+
+### Breaking changes
+
+#### Document Builder
+
+* Documentation structure changed from separate language pages to unified multi-language pages. Update any direct links to language-specific builder documentation pages.
+
 ## 7.6.6
 
 ### New features
