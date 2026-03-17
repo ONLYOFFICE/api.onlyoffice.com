@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 货币转换
 
 将基础货币转换为多个目标货币。也可以获取指定日期的历史货币汇率。使用来自 [currencyapi](https://app.currencyapi.com/) 的货币转换 API。
@@ -14,12 +18,6 @@
     function buildLatestURL(apiKey, baseCurrency, currencies) {
       let currencyParam = currencies.join("%2C");
       return `https://api.currencyapi.com/v3/latest?apikey=${apiKey}&currencies=${currencyParam}&base_currency=${baseCurrency}`;
-    }
-
-    function reloadCellValues() {
-      setTimeout(function () {
-        Api.asc_calculate(Asc.c_oAscCalculateType.All);
-      }, 5000);
     }
 
     function fetchAndPopulateData(url, currencies, isHistorical) {
@@ -49,6 +47,8 @@
               console.warn(`Currency ${currency} not found in the response.`);
             }
           });
+
+          Api.RecalculateAllFormulas();
         } else {
           console.error(`Error fetching data: ${this.statusText}`);
         }
@@ -76,12 +76,10 @@
     // let date = "2025-01-01";
     // let historicalURL = buildHistoricalURL(apiKey, baseCurrency, date, currencies);
     // fetchAndPopulateData(historicalURL, currencies, true);
-
-    reloadCellValues();
   })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [RecalculateAllFormulas](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/RecalculateAllFormulas.md)
 
 ## 结果
 

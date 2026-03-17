@@ -20,12 +20,6 @@ Converts a base currency into multiple desired target currencies. It can also fe
       return `https://api.currencyapi.com/v3/latest?apikey=${apiKey}&currencies=${currencyParam}&base_currency=${baseCurrency}`;
     }
 
-    function reloadCellValues() {
-      setTimeout(function () {
-        Api.asc_calculate(Asc.c_oAscCalculateType.All);
-      }, 5000);
-    }
-
     function fetchAndPopulateData(url, currencies, isHistorical) {
       let xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);
@@ -53,6 +47,8 @@ Converts a base currency into multiple desired target currencies. It can also fe
               console.warn(`Currency ${currency} not found in the response.`);
             }
           });
+
+          Api.RecalculateAllFormulas();
         } else {
           console.error(`Error fetching data: ${this.statusText}`);
         }
@@ -80,12 +76,10 @@ Converts a base currency into multiple desired target currencies. It can also fe
     // let date = "2025-01-01";
     // let historicalURL = buildHistoricalURL(apiKey, baseCurrency, date, currencies);
     // fetchAndPopulateData(historicalURL, currencies, true);
-
-    reloadCellValues();
   })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [RecalculateAllFormulas](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/RecalculateAllFormulas.md)
 
 ## Result
 
