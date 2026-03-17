@@ -20,8 +20,8 @@ Ensure you note the following prerequisites based on your desired build:
 | **Build**  | **Prerequisites**                             |
 |------------|-----------------------------------------------|
 | Docker     | Docker                                        |
-| Node.js    | pnpm (v24 or higher), Node.js (v24 or higher) |
-| MCP bundle | pnpm (v24 or higher), Node.js (v24 or higher) |
+| Node.js    | pnpm (v10 or higher), Node.js (v24 or higher) |
+| MCP bundle | pnpm (v10 or higher), Node.js (v24 or higher) |
 
 ## Building the MCP server
 
