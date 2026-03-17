@@ -3,7 +3,7 @@ sidebar_label: Manage document lifecycle
 sidebar_position: 3
 ---
 
-# Document Lifecycle Management
+# How to effectively manage your project documentation throughout its lifecycle
 
 Creating content requires numerous reviews and iterations from editors and other team members before a final draft, and without proper management to keep track of these files and versions, it can get confusing. The DocSpace MCP server facilitates this process, improving efficiency throughout the process.
 
