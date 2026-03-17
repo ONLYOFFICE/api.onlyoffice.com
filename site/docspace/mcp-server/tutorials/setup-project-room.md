@@ -3,7 +3,7 @@ sidebar_label: Set up a project room
 sidebar_position: 1
 ---
 
-# Set up a project room
+# How to set up a project room
 
 Managing multiple projects, each with numerous moving parts, can be taxing and, without careful management, can lead to inefficient processes. ONLYOFFICE DocSpace provides you with rooms to work and collaborate with team members. 
 
