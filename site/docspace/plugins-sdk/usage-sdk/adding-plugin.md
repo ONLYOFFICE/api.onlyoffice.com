@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # Adding plugin
 
-You can upload your own plugins to your server. Starting from version 3.5, the plugins can be also uploaded to the DocSpace Saas solution. System plugins created by our developers are available by default in both the server and SaaS versions of ONLYOFFICE DocSpace.
+You can upload your own plugins to your server. Starting from version 3.5, the plugins can also be uploaded to the DocSpace SaaS solution. System plugins created by our developers are available by default in both the server and SaaS versions of ONLYOFFICE DocSpace.
 
 :::note
 The total number of plugins on the portal, including system plugins, must not exceed 10.
@@ -30,7 +30,7 @@ By default, system plugins are turned off. But you can enable them by following 
 
 After that, the plugin will function automatically unless additional settings need to be specified.
 
-A list of the system plugins can be also found in the **Developer Tools** section on the **Plugins SDK** tab. For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.
+A list of the system plugins can also be found in the **Developer Tools** section on the **Plugins SDK** tab. For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.
 
 ![Plugin samples](/assets/images/docspace/plugin-samples.png#gh-light-mode-only)![Plugin samples](/assets/images/docspace/plugin-samples.dark.png#gh-dark-mode-only)
 
@@ -40,7 +40,7 @@ To set up a plugin:
 
 1. Click ![Settings icon](/assets/images/docspace/settings-icon.png#gh-light-mode-only)![Settings icon](/assets/images/docspace/settings-icon.dark.png#gh-dark-mode-only).
 
-2. In the appeared dialog, fill out all the empty fields.
+2. In the dialog that appears, fill out all the empty fields.
 
    ![Plugin settings](/assets/images/docspace/plugin-settings.png#gh-light-mode-only)![Plugin settings](/assets/images/docspace/plugin-settings.dark.png#gh-dark-mode-only)
 
