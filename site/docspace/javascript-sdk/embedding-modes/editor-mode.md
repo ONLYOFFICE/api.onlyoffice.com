@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Editor mode
 
-Editor mode embeds a fully functional document editor inside your application. It opens a a file by ID and gives the users all document editor capabilities like real-time co-authoring, comments, and track changes, depending on the user's DocSpace permissions.
+Editor mode embeds a fully functional document editor inside your application. It opens a file by ID and gives the users all document editor capabilities like real-time co-authoring, comments, and track changes, depending on the user's DocSpace permissions.
 
 If you want to limit your users to viewing only, use the [Viewer mode](./viewer-mode.md) instead.
 

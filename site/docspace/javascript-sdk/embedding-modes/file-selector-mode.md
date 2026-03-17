@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # File selector mode
 
-File selector mode integrates a file picker interface inside your application. It allows users with a view, browse and select from a list of DocSpace files. The selected file's data is returned via a callback function.
+File selector mode integrates a file picker interface inside your application. It allows users to view, browse and select from a list of DocSpace files. The selected file's data is returned via a callback function.
 
 File selector is similar to [Room selector mode](./room-selector-mode.md) in terms of functionality.
 

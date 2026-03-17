@@ -123,14 +123,15 @@ const docSpace = DocSpace.SDK.initRoomSelector({
 
 | Event | Description |
 | ------- | ------------- |
-| `onSelectCallback` | Triggered when the user selects a room. Returns an object containing the selected room's `id`, `label`, `icon`, and `isSelected` fields. |
-| `onCloseCallback` | Triggered when the user closes the room selector without making a selection. |
-| `onAppReady` | Triggered when the SDK frame has finished initializing and is ready for interaction. |
-| `onContentReady` | Triggered when the content inside the frame has fully loaded. |
-| `onAuthSuccess` | Triggered when a user successfully authenticates. |
-| `onSignOut` | Triggered when the user signs out of DocSpace. |
-| `onAppError` | Triggered when an error occurs in the SDK frame. |
-| `onNoAccess` | Triggered when the user attempts to access a resource they do not have permission to view. |
+| `onSelectCallback` | Fires when the user selects a room. Returns an object containing the selected room's `id`, `label`, `icon`, and `isSelected` fields. |
+| `onCloseCallback` | Fires when the user closes the room selector without making a selection. |
+| `onAppReady` | Fires when the SDK frame has finished initializing and is ready for interaction. |
+| `onContentReady` | Fires when the content inside the frame has fully loaded. |
+| `onAuthSuccess` | Fires when a user successfully authenticates. |
+| `onSignOut` | Fires when the user signs out of DocSpace. |
+| `onAppError` | Fires when an error occurs in the SDK frame. |
+| `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
+| `onNotFound` | Fires when the requested file cannot be found. |
 
 ## Methods
 

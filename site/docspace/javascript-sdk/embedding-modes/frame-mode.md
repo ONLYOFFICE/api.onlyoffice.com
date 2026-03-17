@@ -152,6 +152,4 @@ The following methods are available on a frame instance:
 | `logout()` | Logs out the current user. |
 | `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |
 
-```markdown
 > **Note:** The methods and events may vary for `initFrame()`, depending on the `mode` passed at runtime.
-```
