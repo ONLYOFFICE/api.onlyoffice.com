@@ -66,6 +66,9 @@
 * Corrected `review.reviewDisplay` documentation.
 * Fixed styles for announcement bar with multistring content.
 * Fixed problem with previous merge deleting files.
+* Fixed Currency Conversion macro to use proper `RecalculateAllFormulas` API instead of internal method with timeout.
+* Fixed Hide or Unhide Rows and Columns macro example.
+* Fixed Java syntax highlighting in CDocBuilder and CDocBuilderValue method examples.
 
 ### Breaking changes
 
