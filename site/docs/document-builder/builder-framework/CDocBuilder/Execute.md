@@ -14,10 +14,10 @@ HRESULT Execute([in] BSTR command, [out, retval] I_DOCBUILDER_VALUE** result);
 
 ## Parameters
 
-| Name    | Type                                                                      | Description                                                                                                                             |
-| ------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| command | BSTR                                                                      | The command which will be used to create the document file (the escape character must be used when the command contains quotation symbols). |
-| result  | [I_DOCBUILDER_VALUE**](../CDocBuilderValue/CDocBuilderValue.md)           | The command return value.                                                                                                               |
+| Name    | Type                                                            | Description                                                                                                                                 |
+| ------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| command | BSTR                                                            | The command which will be used to create the document file (the escape character must be used when the command contains quotation symbols). |
+| result  | [I_DOCBUILDER_VALUE**](../CDocBuilderValue/CDocBuilderValue.md) | The command return value.                                                                                                                   |
 
 ## Example
 

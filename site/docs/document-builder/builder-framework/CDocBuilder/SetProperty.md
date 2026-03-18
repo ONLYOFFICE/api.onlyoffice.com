@@ -44,34 +44,34 @@ This method is not available for **JS**. Instead, pass arguments via the [CLI fl
 
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
-        | Name  | Type | Description                                                                                                              |
-        | ----- | ---- | ------------------------------------------------------------------------------------------------------------------------ |
+        | Name  | Type | Description                                                             |
+        | ----- | ---- | ----------------------------------------------------------------------- |
         | name  | str  | The parameter name (see [Supported properties](#supported-properties)). |
-        | value | str  | The parameter value which will be used in the document.                                                                  |
+        | value | str  | The parameter value which will be used in the document.                 |
     </TabItem>
     <TabItem value="cpp" label="C++">
-        | Name   | Type        | Description                                                                                                              |
-        | ------ | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+        | Name   | Type        | Description                                                             |
+        | ------ | ----------- | ----------------------------------------------------------------------- |
         | sParam | const char* | The parameter name (see [Supported properties](#supported-properties)). |
-        | sValue | const char* | The parameter value which will be used in the document.                                                                  |
+        | sValue | const char* | The parameter value which will be used in the document.                 |
     </TabItem>
     <TabItem value="com" label="COM">
-        | Name  | Type | Description                                                                                                              |
-        | ----- | ---- | ------------------------------------------------------------------------------------------------------------------------ |
+        | Name  | Type | Description                                                             |
+        | ----- | ---- | ----------------------------------------------------------------------- |
         | name  | BSTR | The parameter name (see [Supported properties](#supported-properties)). |
-        | value | BSTR | The parameter value which will be used in the document.                                                                  |
+        | value | BSTR | The parameter value which will be used in the document.                 |
     </TabItem>
     <TabItem value="java" label="Java">
-        | Name  | Type   | Description                                                                                                              |
-        | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
+        | Name  | Type   | Description                                                             |
+        | ----- | ------ | ----------------------------------------------------------------------- |
         | name  | String | The parameter name (see [Supported properties](#supported-properties)). |
-        | value | String | The parameter value which will be used in the document.                                                                  |
+        | value | String | The parameter value which will be used in the document.                 |
     </TabItem>
     <TabItem value="net" label=".Net">
-        | Name   | Type    | Description                                                                                                              |
-        | ------ | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+        | Name   | Type    | Description                                                             |
+        | ------ | ------- | ----------------------------------------------------------------------- |
         | sParam | String^ | The parameter name (see [Supported properties](#supported-properties)). |
-        | sValue | String^ | The parameter value which will be used in the document.                                                                  |
+        | sValue | String^ | The parameter value which will be used in the document.                 |
     </TabItem>
 </Tabs>
 
@@ -81,17 +81,17 @@ This method is not available for **JS**. Instead, pass arguments via the [CLI fl
 <APITable>
 ```
 
-| Name                      | Type   | Default | Description                                                                                                            |
-| ------------------------- | ------ | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Name                      | Type   | Default | Description                                                                                                                |
+| ------------------------- | ------ | ------- | -------------------------------------------------------------------------------------------------------------------------- |
 | --use-doctrenderer-scheme | bool   | false   | Specifies if the doctrenderer mode is used when building a document or getting content from the editor when saving a file. |
-| --check-fonts             | bool   | true    | Specifies if the system fonts are cached for faster work.                                                              |
-| --work-directory          | string | ""      | The path to the temporary directory.                                                                                   |
-| --cache-scripts           | bool   | true    | Specifies if the sdkjs scripts are cached.                                                                             |
-| --save-use-only-names     | bool   | false   | Specifies if the destination paths are used (for server work). For example: `/home/user/1.txt` => `/tmp/1.txt`.        |
-| --all-fonts-path          | string | ""      | The path to the `AllFonts.js` script.                                                                                  |
-| --argument                | string | ""      | The JSON argument which is sent to the global parameters of all the opened JS context.                                 |
-| --fonts-system            | bool   | true    | Specifies if the system fonts are used.                                                                                |
-| --fonts-dir               | string | ""      | The path to the additional fonts directory (may be many records).                                                      |
+| --check-fonts             | bool   | true    | Specifies if the system fonts are cached for faster work.                                                                  |
+| --work-directory          | string | ""      | The path to the temporary directory.                                                                                       |
+| --cache-scripts           | bool   | true    | Specifies if the sdkjs scripts are cached.                                                                                 |
+| --save-use-only-names     | bool   | false   | Specifies if the destination paths are used (for server work). For example: `/home/user/1.txt` => `/tmp/1.txt`.            |
+| --all-fonts-path          | string | ""      | The path to the `AllFonts.js` script.                                                                                      |
+| --argument                | string | ""      | The JSON argument which is sent to the global parameters of all the opened JS context.                                     |
+| --fonts-system            | bool   | true    | Specifies if the system fonts are used.                                                                                    |
+| --fonts-dir               | string | ""      | The path to the additional fonts directory (may be many records).                                                          |
 
 ```mdx-code-block
 </APITable>

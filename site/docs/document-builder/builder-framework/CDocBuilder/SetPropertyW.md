@@ -14,10 +14,10 @@ void SetPropertyW(const wchar_t* sParam, const wchar_t* sValue);
 
 ## Parameters
 
-| Name   | Type           | Description                                                                                            |
-| ------ | -------------- | ------------------------------------------------------------------------------------------------------ |
+| Name   | Type           | Description                                                                                                 |
+| ------ | -------------- | ----------------------------------------------------------------------------------------------------------- |
 | sParam | const wchar_t* | The parameter name in the Unicode format (see [Supported properties](SetProperty.md#supported-properties)). |
-| sValue | const wchar_t* | The parameter value in the Unicode format which will be used in the document.                          |
+| sValue | const wchar_t* | The parameter value in the Unicode format which will be used in the document.                               |
 
 ## Supported properties
 
