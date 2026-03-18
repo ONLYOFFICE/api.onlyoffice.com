@@ -43,6 +43,7 @@ If the server with the Nextcloud installed does not have the Internet access, or
    ``` sh
    cd apps/
    ```
+
 2. Get the ONLYOFFICE app for Nextcloud. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
@@ -54,15 +55,20 @@ If the server with the Nextcloud installed does not have the Internet access, or
    cd onlyoffice
    git submodule update --init --recursive
    ```
+
 3. Build webpack (only if you chose to clone on the previous step):
+
    ``` sh
    npm install
    npm run build
    ```
+
 4. Install Composer dependencies (only if you chose to clone on the step 2):
+
    ``` sh
    composer install
    ```
+
 5. Change the owner to update the application right from Nextcloud web interface:
 
     ``` sh
@@ -131,10 +137,13 @@ These settings are available through the Nextcloud admin interface or via `occ` 
 | `preview`                                   | Enables document preview generation.                                       |
 | `about`                                     | Shows About section.                                                       |
 
-> You can also use the `occ` command-line interface to get/set these parameters:
-> ```sh
-> php occ config:app:set onlyoffice customizationChat --value=false
-> ```
+:::tip
+You can also use the `occ` command-line interface to get/set these parameters:
+
+```sh
+php occ config:app:set onlyoffice customizationChat --value=false
+```
+:::
 
 #### Advanced Configuration (`config/config.php` only)
 

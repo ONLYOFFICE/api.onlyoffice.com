@@ -32,11 +32,13 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
     ``` sh
     sudo apt install make
     ```
+
 4. Clone the app branch:
 
     ``` sh
     git clone https://github.com/ONLYOFFICE/onlyoffice-mattermost.git
     ```
+
 5. Go to the project root and start the build:
 
     ``` sh

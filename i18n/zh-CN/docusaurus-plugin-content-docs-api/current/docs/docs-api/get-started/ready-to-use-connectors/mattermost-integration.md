@@ -32,11 +32,13 @@ ONLYOFFICE文档和Mattermost可以安装在不同的计算机上，也可以安
     ``` sh
     sudo apt install make
     ```
+
 4. 克隆应用分支：
 
     ``` sh
     git clone https://github.com/ONLYOFFICE/onlyoffice-mattermost.git
     ```
+
 5. 进入项目根目录并启动构建：
 
     ``` sh
