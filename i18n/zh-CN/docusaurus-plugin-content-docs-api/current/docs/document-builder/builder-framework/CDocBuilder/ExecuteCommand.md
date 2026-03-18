@@ -105,11 +105,12 @@ import TabItem from '@theme/TabItem';
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
-        IONLYOFFICEDocBuilderValue* oRun = NULL;
         VARIANT_BOOL b;
         oBuilder->Initialize();
-        oBuilder->Execute(L"oParagraph.AddText(\"Hello, world!\");", &oRun);
-        oBuilder->ExecuteCommand(L"oParagraph.SetSpacingAfter(1000, false);", &b);
+        oBuilder->CreateFile(_bstr_t("docx"), &b);
+        oBuilder->ExecuteCommand(_bstr_t("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText(\"Hello, world!\");"), &b);
+        oBuilder->SaveFile(_bstr_t("docx"), _bstr_t("result.docx"), &b);
+        oBuilder->CloseFile();
         oBuilder->Dispose();
         ```
     </TabItem>

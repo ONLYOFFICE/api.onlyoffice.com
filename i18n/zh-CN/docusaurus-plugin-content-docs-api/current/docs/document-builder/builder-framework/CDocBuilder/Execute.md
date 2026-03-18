@@ -25,7 +25,11 @@ HRESULT Execute([in] BSTR command, [out, retval] I_DOCBUILDER_VALUE** result);
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderValue* oRun = NULL;
+VARIANT_BOOL b;
 oBuilder->Initialize();
-oBuilder->Execute(L"oParagraph.AddText(\"Hello, world!\");", &oRun);
+oBuilder->CreateFile(_bstr_t("docx"), &b);
+oBuilder->Execute(_bstr_t("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText(\"Hello, world!\");"), &oRun);
+oBuilder->SaveFile(_bstr_t("docx"), _bstr_t("result.docx"), &b);
+oBuilder->CloseFile();
 oBuilder->Dispose();
 ```
