@@ -15,5 +15,5 @@ class CDocBuilderContextScope
 | [Close](Close.md) | Closes the current scope. |
 
 :::note
-Java uses camelCase method names: `close`.
+**Java** uses camelCase method names: `close`.
 :::

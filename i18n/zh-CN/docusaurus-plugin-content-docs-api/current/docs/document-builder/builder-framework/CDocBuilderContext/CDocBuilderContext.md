@@ -24,5 +24,5 @@ class CDocBuilderContext
 | [IsError](IsError.md)                             | 检查 JS 中的错误。                                                   |
 
 :::note
-Java 使用 camelCase 方法名：`createArray`、`createNull`、`createObject` 等。
+**Java** 使用 camelCase 方法名：`createArray`、`createNull`、`createObject` 等。
 :::

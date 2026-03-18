@@ -35,5 +35,5 @@ class CDocBuilder
 | [WriteData](WriteData.md)                                  | 将数据写入日志文件。                                                                                                    |
 
 :::note
-Java 使用驼峰命名法：`closeFile`、`createFile`、`executeCommand` 等。
+**Java** 使用驼峰命名法：`closeFile`、`createFile`、`executeCommand` 等。
 :::

@@ -98,5 +98,5 @@ Class used by ONLYOFFICE Document Builder for getting the results of called JS c
 | [ToString](ToString.md)               | Converts this object to a string.                          |
 
 :::note
-Java uses camelCase method names: `call`, `clear`, `get`, `getLength`, etc.
+**Java** uses camelCase method names: `call`, `clear`, `get`, `getLength`, etc.
 :::

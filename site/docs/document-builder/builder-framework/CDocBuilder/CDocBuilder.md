@@ -35,5 +35,5 @@ class CDocBuilder
 | [WriteData](WriteData.md)                                  | Writes data to the log file.                                                                                                    |
 
 :::note
-Java uses camelCase method names: `closeFile`, `createFile`, `executeCommand`, etc.
+**Java** uses camelCase method names: `closeFile`, `createFile`, `executeCommand`, etc.
 :::

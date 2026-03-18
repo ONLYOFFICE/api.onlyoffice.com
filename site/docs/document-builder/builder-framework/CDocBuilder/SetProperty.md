@@ -7,7 +7,7 @@ import APITable from '@site/src/components/APITable/APITable';
 Sets an argument which can be transferred to the program outside the [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) method, i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
 
 :::note
-For **JS**, the `SetProperty` method is not called directly. Instead, pass arguments via the [CLI flags](../../using-cli/command-line-arguments.md).
+This method is not available for **JS**. Instead, pass arguments via the [CLI flags](../../using-cli/command-line-arguments.md).
 :::
 
 ## Syntax

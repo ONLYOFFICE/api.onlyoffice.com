@@ -98,5 +98,5 @@ ONLYOFFICE Document Builder 用于获取调用 JS 命令结果的类。它表示
 | [ToString](ToString.md)               | 将此对象转换为字符串。                                     |
 
 :::note
-Java 使用驼峰命名法的方法名：`call`、`clear`、`get`、`getLength` 等。
+**Java** 使用驼峰命名法的方法名：`call`、`clear`、`get`、`getLength` 等。
 :::

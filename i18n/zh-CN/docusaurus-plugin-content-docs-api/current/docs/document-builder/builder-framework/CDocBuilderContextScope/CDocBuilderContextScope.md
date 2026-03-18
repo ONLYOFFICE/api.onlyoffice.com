@@ -15,5 +15,5 @@ class CDocBuilderContextScope
 | [Close](Close.md) | 关闭当前作用域。 |
 
 :::note
-Java 使用驼峰命名法的方法名：`close`。
+**Java** 使用驼峰命名法的方法名：`close`。
 :::
