@@ -104,7 +104,7 @@ import TabItem from '@theme/TabItem';
         CDocBuilder::Initialize(sWorkDirectory.c_str());
         CDocBuilder oBuilder;
         std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-        oBuilder.SaveFile("docx", sDstPath.c_str());
+        oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, sDstPath.c_str());
         CDocBuilder::Dispose();
         ```
     </TabItem>
