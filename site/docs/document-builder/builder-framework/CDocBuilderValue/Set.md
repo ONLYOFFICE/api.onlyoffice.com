@@ -27,7 +27,8 @@ Sets an array value by its index.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
-        void set(int | String index, Object value);
+        void set(int index, Object value);
+        void set(String index, Object value);
         ```
     </TabItem>
     <TabItem value="net" label=".Net">

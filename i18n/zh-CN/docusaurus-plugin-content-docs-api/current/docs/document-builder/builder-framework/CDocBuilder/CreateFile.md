@@ -25,7 +25,8 @@ import TabItem from '@theme/TabItem';
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
-        boolean createFile(int | String type);
+        boolean createFile(int type);
+        boolean createFile(String type);
         ```
     </TabItem>
     <TabItem value="net" label=".Net">

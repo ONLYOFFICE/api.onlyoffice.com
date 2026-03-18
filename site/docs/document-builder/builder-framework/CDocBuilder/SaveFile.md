@@ -25,7 +25,8 @@ Saves the file after all the changes are made. The type of the file which will b
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
-        int saveFile(int | String type, String path, String params);
+        int saveFile(int type, String path, String params);
+        int saveFile(String type, String path, String params);
         ```
     </TabItem>
     <TabItem value="net" label=".Net">

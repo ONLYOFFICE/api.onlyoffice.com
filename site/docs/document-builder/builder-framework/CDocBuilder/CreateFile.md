@@ -25,7 +25,8 @@ Creates a new file. The type of the file which will be created needs to be set.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
-        boolean createFile(int | String type);
+        boolean createFile(int type);
+        boolean createFile(String type);
         ```
     </TabItem>
     <TabItem value="net" label=".Net">

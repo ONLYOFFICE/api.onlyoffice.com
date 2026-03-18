@@ -27,7 +27,8 @@ Returns an array value by its index.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
-        CDocBuilderValue get(int | String index);
+        CDocBuilderValue get(int index);
+        CDocBuilderValue get(String index);
         ```
     </TabItem>
     <TabItem value="net" label=".Net">
