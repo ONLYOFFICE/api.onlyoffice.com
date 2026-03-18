@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 9
 ---
 
 # Comparison of embedding modes
@@ -139,7 +139,7 @@ const docSpace = DocSpace.SDK.initSystem({
       const frame = DocSpace.SDK.frames["ds-system"];
 
       // background operations
-      await frame.createRoom({ title: "New Project Room" });
+      await frame.createRoom("New Project Room", "collaboration");
       frame.destroyFrame();
     },
   },

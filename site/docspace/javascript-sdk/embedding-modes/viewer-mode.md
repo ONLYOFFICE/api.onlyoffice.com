@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Viewer mode
@@ -75,19 +75,50 @@ const docSpace = sdk.initViewer({
 
 > **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
 
-<!--
 ## Configuration parameters
 
 ### Required
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
+| `src` | string | The URL of your DocSpace server. |
+| `id` | string | The ID of the file to open in the viewer. |
+
 ### Layout
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
+| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
 
 ### Display
 
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
+| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
+
+### Viewer customization
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `editorType` | `EditorType` | `EditorType.Desktop` | Viewer display type. Accepted values: `EditorType.Desktop`, `EditorType.Embedded`, `EditorType.Mobile`. |
+| `editorGoBack` | boolean | `true` | Displays the "Open file location" button in the viewer. |
+
 ### Authentication and access
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
+| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
+
 ### Lifecycle
--->
+
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
+| `downloadToEvent` | boolean | Switches download operations to fire the `onDownload` event instead of triggering a direct browser download. |
 
 ## Events
 
@@ -114,7 +145,7 @@ const docSpace = DocSpace.SDK.initViewer({
 | `onDownload` | Fires when a download is triggered and `downloadToEvent` is set to `true`. Returns a download link. |
 | `onAppError` | Fires when an error occurs in the SDK frame. |
 | `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
-| `onNotFound` | Fires when the requested file cannot be found. |
+| `onNotFound` | Fires when the requested resource cannot be found. |
 
 ## Methods
 
@@ -131,6 +162,6 @@ The following methods are available on a viewer instance:
 | `getConfig()` | Returns the current configuration object for this frame. |
 | `setConfig(config)` | Updates the configuration of this frame. |
 | `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `login(email, passwordHash)` | Logs in to DocSpace using the specified credentials. |
+| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
 | `logout()` | Logs out the current user. |
 | `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |

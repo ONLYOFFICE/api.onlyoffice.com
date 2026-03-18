@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Manager mode
 
-Manager mode embeds the full DocSpace interface inside your application, including rooms, folders, files, navigation, and settings. It is the most complete embedding mode and gives users an entire DocSpace window without having to leave the application. 
+Manager mode embeds the full DocSpace interface inside your application, including rooms, folders, files, navigation, and settings. It is the most complete embedding mode and gives users an entire DocSpace window without having to leave the application.
 
 Manager mode is the default SDK mode.
 
@@ -92,11 +92,11 @@ const docSpace = sdk.initManager({
 
 | Parameter | Type | Default | Description |
 | ----------- | ------ | --------- | ------------- |
-| `theme` | `Theme` | `Theme.Base` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
+| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
 | `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
 | `viewAs` | `ManagerViewMode` | `ManagerViewMode.Row` | How files and folders are arranged. Accepted values: `ManagerViewMode.Row`, `ManagerViewMode.Table`, `ManagerViewMode.Tile`. |
-| `viewTableColumns` | string | — | Comma-separated list of column names shown in table view. Example: `"Name,Size,Type,Modified Date,Author,Tags"`. |
-| `buttonColor` | string | — | Hex color code for action buttons. Example: `"#2196f3"`. |
+| `viewTableColumns` | string | `"Index,Name,Size,Type,Tags"` | Comma-separated list of column names shown in table view. Example: `"Name,Size,Type,Modified Date,Author,Tags"`. |
+| `buttonColor` | string | `"#5299E0"` | Hex color code for action buttons. Example: `"#2196f3"`. |
 
 ### Navigation and UI elements
 
@@ -109,16 +109,16 @@ const docSpace = sdk.initManager({
 | `showSettings` | boolean | `false` | Displays the settings option in the interface. |
 | `showSignOut` | boolean | `true` | Displays the sign out button. |
 | `showTitle` | boolean | `true` | Displays the page title. |
-| `infoPanelVisible` | boolean | `false` | Opens the info panel on load. |
-| `withBreadCrumbs` | boolean | `false` | Displays breadcrumb navigation. |
-| `withSearch` | boolean | `false` | Displays the search bar. |
+| `infoPanelVisible` | boolean | `true` | Opens the info panel on load. |
+| `withBreadCrumbs` | boolean | `true` | Displays breadcrumb navigation. |
+| `withSearch` | boolean | `true` | Displays the search bar. |
 
 ### Filtering
 
 | Parameter | Type | Description |
 | ----------- | ------ | ------------- |
 | `filter.count` | string | Number of items per page. |
-| `filter.sortBy` | `FilterSortBy` | Sort field. Accepted values: `FilterSortBy.Name`, `FilterSortBy.Size`, `FilterSortBy.DateAndTime`, `FilterSortBy.Author`, `FilterSortBy.Type`. |
+| `filter.sortBy` | `FilterSortBy` | Sort field. Accepted values: `FilterSortBy.Name`, `FilterSortBy.Size`, `FilterSortBy.ModifiedDate`, `FilterSortBy.Author`, `FilterSortBy.Type`. |
 | `filter.sortOrder` | `FilterSortOrder` | Sort direction. Accepted values: `FilterSortOrder.Ascending`, `FilterSortOrder.Descending`. |
 | `filter.withSubfolders` | boolean | Includes items from subfolders in the listing. |
 | `filter.search` | string | Pre-fills the search bar with a search term on load. |
@@ -158,11 +158,12 @@ const docSpace = DocSpace.SDK.initManager({
 | `onContentReady` | Fires when the content inside the frame has fully loaded. |
 | `onAuthSuccess` | Fires when a user successfully authenticates. |
 | `onSignOut` | Fires when the user signs out of DocSpace. |
-| `onSelectCallback` | Fires when the user selects an item. Returns data about the selected item. |
 | `onDownload` | Fires when a download is triggered and `downloadToEvent` is set to `true`. Returns a download link. |
 | `onAppError` | Fires when an error occurs in the SDK frame. |
 | `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
 | `onNotFound` | Fires when the requested resource cannot be found. |
+| `onEditorOpen` | Fires when the document editor is opened from the context menu, modal windows, panels, or hotkeys. |
+| `onFileManagerClick` | Fires when a file is clicked in the file list. |
 
 ## Methods
 
@@ -185,14 +186,14 @@ The following methods are available on a manager instance:
 | `getRooms(filter)` | Returns a list of rooms matching the specified filter. |
 | `getSelection()` | Returns information about items currently selected in the frame. |
 | `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `createRoom(config)` | Creates a new room. |
+| `createRoom(title, roomType, quota?, tags?, color?, cover?, indexing?, denyDownload?)` | Creates a new room. |
 | `createFile(folderId, title, templateId, formId)` | Creates a new file in the specified folder. |
-| `createFolder(folderId, title)` | Creates a new folder. |
+| `createFolder(parentFolderId, title)` | Creates a new folder. |
 | `createTag(name)` | Creates a new tag. |
 | `addTagsToRoom(roomId, tags)` | Adds tags to the specified room. |
 | `removeTagsFromRoom(roomId, tags)` | Removes tags from the specified room. |
-| `openModal(type)` | Opens a DocSpace modal window of the specified type. |
+| `openModal(type, options)` | Opens a DocSpace modal window of the specified type. |
 | `setListView(type)` | Changes the file list display mode. |
-| `login(email, passwordHash)` | Logs in to DocSpace using the specified credentials. |
+| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
 | `logout()` | Logs out the current user. |
 | `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |

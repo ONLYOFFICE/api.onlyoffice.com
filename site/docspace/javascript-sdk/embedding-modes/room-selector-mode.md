@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Room selector mode
@@ -89,21 +89,55 @@ const docSpace = sdk.initRoomSelector({
 
 > **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
 
-<!--
 ## Configuration parameters
 
 ### Required
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
+| `src` | string | The URL of your DocSpace server. |
+
 ### Layout
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
+| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
 
 ### Display
 
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
+| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
+| `buttonColor` | string | `"#5299E0"` | Hex color code for the selector action button. Example: `"#2196f3"`. |
+
 ### Selector options
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `withSearch` | boolean | `true` | Displays the search bar. |
+| `withBreadCrumbs` | boolean | `true` | Displays breadcrumb navigation. |
+| `withSubtitle` | boolean | `true` | Displays a subtitle with additional descriptions for the current directory. |
+| `selectorType` | `SelectorFilterType` | `SelectorFilterType.All` | Filters the items shown in the selector. Accepted values: `SelectorFilterType.All`, `SelectorFilterType.RoomsOnly`, `SelectorFilterType.UserOnly`. |
+| `showSelectorCancel` | boolean | `false` | Displays the cancel button in the selector. |
+| `showSelectorHeader` | boolean | `false` | Displays the header in the selector. |
+| `acceptButtonLabel` | string | — | Custom label for the selector confirm button. |
+| `cancelButtonLabel` | string | — | Custom label for the selector cancel button. |
 
 ### Authentication and access
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
+| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
+
 ### Lifecycle
--->
+
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
 
 ## Events
 
@@ -131,7 +165,7 @@ const docSpace = DocSpace.SDK.initRoomSelector({
 | `onSignOut` | Fires when the user signs out of DocSpace. |
 | `onAppError` | Fires when an error occurs in the SDK frame. |
 | `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
-| `onNotFound` | Fires when the requested file cannot be found. |
+| `onNotFound` | Fires when the requested resource cannot be found. |
 
 ## Methods
 
@@ -149,6 +183,6 @@ The following methods are available on a room selector instance:
 | `setConfig(config)` | Updates the configuration of this frame. |
 | `getSelection()` | Returns information about the currently selected room. |
 | `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `login(email, passwordHash)` | Logs in to DocSpace using the specified credentials. |
+| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
 | `logout()` | Logs out the current user. |
 | `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |

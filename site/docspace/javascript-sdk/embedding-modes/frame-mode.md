@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Frame mode
@@ -74,23 +74,71 @@ const docSpace = sdk.initFrame({
 
 > **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
 
-<!--
 ## Configuration parameters
 
 ### Required
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
+| `src` | string | The URL of your DocSpace server. |
+| `mode` | string | The SDK initialization mode. Defaults to `"manager"` if not specified. Accepted values: `"manager"`, `"editor"`, `"viewer"`, `"room-selector"`, `"file-selector"`, `"system"`. |
+
 ### Layout
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
+| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
 
 ### Display
 
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
+| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
+| `viewAs` | `ManagerViewMode` | `ManagerViewMode.Row` | How files and folders are arranged. Accepted values: `ManagerViewMode.Row`, `ManagerViewMode.Table`, `ManagerViewMode.Tile`. |
+| `viewTableColumns` | string | `"Index,Name,Size,Type,Tags"` | Comma-separated list of column names shown in table view. Example: `"Name,Size,Type,Modified Date,Author,Tags"`. |
+| `buttonColor` | string | `"#5299E0"` | Hex color code for action buttons. Example: `"#2196f3"`. |
+
 ### Navigation and UI elements
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `id` | string | — | ID of the room, folder, or file to open on load. Required when `mode` is set to `"editor"` or `"viewer"`. |
+| `showHeader` | boolean | `false` | Displays the DocSpace header bar. |
+| `showMenu` | boolean | `false` | Displays the left navigation menu. |
+| `showFilter` | boolean | `false` | Displays the filter panel. |
+| `showSettings` | boolean | `false` | Displays the settings option in the interface. |
+| `showSignOut` | boolean | `true` | Displays the sign out button. |
+| `showTitle` | boolean | `true` | Displays the page title. |
+| `infoPanelVisible` | boolean | `true` | Opens the info panel on load. |
+| `withBreadCrumbs` | boolean | `true` | Displays breadcrumb navigation. |
+| `withSearch` | boolean | `true` | Displays the search bar. |
 
 ### Filtering
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `filter.count` | string | Number of items per page. |
+| `filter.sortBy` | `FilterSortBy` | Sort field. Accepted values: `FilterSortBy.Name`, `FilterSortBy.Size`, `FilterSortBy.ModifiedDate`, `FilterSortBy.Author`, `FilterSortBy.Type`. |
+| `filter.sortOrder` | `FilterSortOrder` | Sort direction. Accepted values: `FilterSortOrder.Ascending`, `FilterSortOrder.Descending`. |
+| `filter.withSubfolders` | boolean | Includes items from subfolders in the listing. |
+| `filter.search` | string | Pre-fills the search bar with a search term on load. |
+
 ### Authentication and access
 
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
+| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
+
 ### Lifecycle
--->
+
+| Parameter | Type | Description |
+| ----------- | ------ | ------------- |
+| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
+| `downloadToEvent` | boolean | Switches download operations to fire the `onDownload` event instead of triggering a direct browser download. |
 
 ## Events
 
@@ -114,10 +162,14 @@ const docSpace = DocSpace.SDK.initFrame({
 | `onAuthSuccess` | Fires when a user successfully authenticates. |
 | `onSignOut` | Fires when the user signs out of DocSpace. |
 | `onSelectCallback` | Fires when the user selects an item. Returns data about the selected item. |
+| `onCloseCallback` | Fires when the selector is closed or the selection is canceled. |
 | `onDownload` | Fires when a download is triggered and `downloadToEvent` is set to `true`. Returns a download link. |
+| `onEditorCloseCallback` | Fires when the document editor is closed. |
 | `onAppError` | Fires when an error occurs in the SDK frame. |
 | `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
 | `onNotFound` | Fires when the requested resource cannot be found. |
+| `onEditorOpen` | Fires when the document editor is opened from the context menu, modal windows, panels, or hotkeys. |
+| `onFileManagerClick` | Fires when a file is clicked in the file list. |
 
 ## Methods
 
@@ -140,15 +192,15 @@ The following methods are available on a frame instance:
 | `getRooms(filter)` | Returns a list of rooms matching the specified filter. |
 | `getSelection()` | Returns information about items currently selected in the frame. |
 | `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `createRoom(config)` | Creates a new room. |
+| `createRoom(title, roomType, quota?, tags?, color?, cover?, indexing?, denyDownload?)` | Creates a new room. |
 | `createFile(folderId, title, templateId, formId)` | Creates a new file in the specified folder. |
-| `createFolder(folderId, title)` | Creates a new folder. |
+| `createFolder(parentFolderId, title)` | Creates a new folder. |
 | `createTag(name)` | Creates a new tag. |
 | `addTagsToRoom(roomId, tags)` | Adds tags to the specified room. |
 | `removeTagsFromRoom(roomId, tags)` | Removes tags from the specified room. |
-| `openModal(type)` | Opens a DocSpace modal window of the specified type. |
+| `openModal(type, options)` | Opens a DocSpace modal window of the specified type. |
 | `setListView(type)` | Changes the file list display mode. |
-| `login(email, passwordHash)` | Logs in to DocSpace using the specified credentials. |
+| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
 | `logout()` | Logs out the current user. |
 | `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |
 
