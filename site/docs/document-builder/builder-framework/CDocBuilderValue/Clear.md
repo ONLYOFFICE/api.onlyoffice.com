@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Clears the `CDocBuilderValue` object.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

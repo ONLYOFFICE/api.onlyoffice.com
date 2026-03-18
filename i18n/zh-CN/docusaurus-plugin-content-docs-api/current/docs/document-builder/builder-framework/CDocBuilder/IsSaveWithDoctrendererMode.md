@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 指定在构建文档或保存文件时从编辑器获取内容时是否使用 doctrenderer 模式。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

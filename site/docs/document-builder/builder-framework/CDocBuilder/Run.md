@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Runs the ONLYOFFICE Document Builder executable with a script file as an argument.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

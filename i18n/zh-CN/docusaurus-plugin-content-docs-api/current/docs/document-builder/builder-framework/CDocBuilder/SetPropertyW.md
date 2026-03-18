@@ -3,7 +3,7 @@
 设置可以在 [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) 方法之外传递给程序的 Unicode 格式参数，即作为运行 ONLYOFFICE Document Builder 可执行文件时的附加属性，或作为程序代码的一部分，但不包含在文档文件脚本中。
 
 :::note
-此方法仅适用于 C++。
+此方法仅适用于 **C++**。
 :::
 
 ## 语法

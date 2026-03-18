@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Converts the `CDocBuilderValue` object to a double value.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 如果 `CDocBuilderValue` 对象是类型化数组，则返回 true。
 
 :::note
-此方法仅在 **C++**、**COM** 和 **.Net** 中可用。
+此方法仅适用于 **C++**、**COM** 和 **.Net**。
 :::
 
 ## 语法

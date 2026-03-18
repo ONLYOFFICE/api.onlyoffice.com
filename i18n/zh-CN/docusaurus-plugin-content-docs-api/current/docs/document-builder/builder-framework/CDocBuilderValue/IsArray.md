@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 如果 `CDocBuilderValue` 对象是数组，则返回 true。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

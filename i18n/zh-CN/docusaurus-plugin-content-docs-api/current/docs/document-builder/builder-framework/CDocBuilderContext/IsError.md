@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 检查 JS 中的错误。错误消息和调用堆栈将写入 `std::cerr`。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

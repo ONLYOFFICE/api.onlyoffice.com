@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 返回 `CDocBuilderValue` 对象的属性。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

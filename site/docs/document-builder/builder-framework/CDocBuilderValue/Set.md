@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Sets an array value by its index.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

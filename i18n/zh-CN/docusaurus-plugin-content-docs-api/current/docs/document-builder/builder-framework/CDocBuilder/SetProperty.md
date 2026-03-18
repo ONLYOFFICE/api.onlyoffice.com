@@ -7,7 +7,7 @@ import APITable from '@site/src/components/APITable/APITable';
 设置可以在 [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) 方法之外传递给程序的参数，即作为运行 ONLYOFFICE Document Builder 可执行文件时的附加属性，或作为程序代码的一部分，但不包含在文档文件脚本中。
 
 :::note
-对于 JS，不直接调用 `SetProperty` 方法。请通过 [CLI 标志](../../using-cli/command-line-arguments.md)传递参数。
+对于 **JS**，不直接调用 `SetProperty` 方法。请通过 [CLI 标志](../../using-cli/command-line-arguments.md)传递参数。
 :::
 
 ## 语法

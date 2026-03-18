@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 将 ONLYOFFICE Document Builder 初始化为库，以便应用程序能够使用它。此方法仅设置 Document Builder 主要资源（icu 文件等）的目录。如果不调用此方法，Document Builder 将从当前进程目录查找资源。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

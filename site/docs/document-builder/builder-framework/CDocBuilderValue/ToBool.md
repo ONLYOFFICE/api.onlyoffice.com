@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Converts the `CDocBuilderValue` object to a boolean value.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

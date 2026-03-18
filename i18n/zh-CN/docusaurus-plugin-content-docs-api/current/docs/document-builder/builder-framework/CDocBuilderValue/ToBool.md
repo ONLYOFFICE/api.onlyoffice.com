@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 将 `CDocBuilderValue` 对象转换为布尔值。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

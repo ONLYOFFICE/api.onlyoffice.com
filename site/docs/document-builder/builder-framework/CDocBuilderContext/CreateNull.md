@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates a null value, an analogue of `null` in JS.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

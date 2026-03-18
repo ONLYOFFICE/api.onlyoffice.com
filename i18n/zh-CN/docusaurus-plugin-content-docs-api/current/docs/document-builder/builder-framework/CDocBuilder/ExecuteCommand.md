@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 执行用于创建文档文件（文本文档、电子表格、演示文稿、表单文档、PDF）的命令。有关各种文档类型可用命令的更多信息，请参阅 [文本文档 API](/docs/office-api/usage-api/text-document-api/text-document-api.md)、[电子表格 API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md)、[演示文稿 API](/docs/office-api/usage-api/presentation-api/presentation-api.md) 或 [表单 API](/docs/office-api/usage-api/form-api/form-api.md) 部分。
 
 :::note
-对于 JS，请直接调用 API 方法。
+对于 **JS**，请直接调用 API 方法。
 :::
 
 ## 语法

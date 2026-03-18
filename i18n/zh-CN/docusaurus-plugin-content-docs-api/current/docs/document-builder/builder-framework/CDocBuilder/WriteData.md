@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 将数据写入日志文件。用于 JS 代码中的日志记录。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

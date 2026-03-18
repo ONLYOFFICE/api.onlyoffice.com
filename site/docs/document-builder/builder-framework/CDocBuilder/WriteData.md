@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Writes data to the log file. It is used for logs in JS code.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

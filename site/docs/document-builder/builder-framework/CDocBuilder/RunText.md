@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Runs all the commands for the document creation using a single command. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunText` makes it possible to enter all the commands for the document creation at once.
 
 :::note
-For JS, this method is not used. This method is not available in C++ (use [RunTextA](RunTextA.md) or [RunTextW](RunTextW.md) instead).
+This method is not available for **JS** and **C++**. For **C++**, use [RunTextA](RunTextA.md) or [RunTextW](RunTextW.md) instead.
 :::
 
 ## Syntax

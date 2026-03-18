@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Checks for errors in JS. The error message and call stack will be written to `std::cerr`.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

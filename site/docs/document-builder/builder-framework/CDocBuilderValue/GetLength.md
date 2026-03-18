@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the length if the `CDocBuilderValue` object is an array/typed array. Otherwise, returns 0.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

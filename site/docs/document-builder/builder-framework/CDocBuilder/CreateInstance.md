@@ -3,7 +3,7 @@
 Creates an instance of the `CDocBuilder` class.
 
 :::note
-This method is COM only.
+This method is only available for **COM**.
 :::
 
 ## Syntax

@@ -3,7 +3,7 @@
 Frees the memory for a typed array.
 
 :::note
-This method is C++ only.
+This method is only available for **C++**.
 :::
 
 ## Syntax

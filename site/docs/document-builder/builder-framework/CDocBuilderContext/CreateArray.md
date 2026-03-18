@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates an array value, an analogue of `new Array (length)` in JS.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

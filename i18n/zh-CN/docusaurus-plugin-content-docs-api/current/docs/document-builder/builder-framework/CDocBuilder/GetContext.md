@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 返回当前的 JS [上下文](../CDocBuilderContext/CDocBuilderContext.md)。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

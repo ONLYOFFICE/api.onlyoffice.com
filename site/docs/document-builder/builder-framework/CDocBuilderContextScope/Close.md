@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Closes the current scope. This method will be called automatically when the destructor is executed.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

@@ -3,7 +3,7 @@
 使用 UTF8 格式的单个命令运行所有文档创建命令。与 [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) 每次只允许执行一个命令不同，`CDocBuilder.RunTextA` 可以一次性输入所有文档创建命令。
 
 :::note
-此方法仅适用于 C++。
+此方法仅适用于 **C++**。
 :::
 
 ## 语法

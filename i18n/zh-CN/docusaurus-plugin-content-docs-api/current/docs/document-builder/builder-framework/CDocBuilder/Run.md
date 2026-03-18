@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 使用脚本文件作为参数运行 ONLYOFFICE Document Builder 可执行文件。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

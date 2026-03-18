@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns true if the `CDocBuilderValue` object is an array.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the ONLYOFFICE Document Builder engine version.
 
 :::note
-For JS, this method is not used. This method is not available in COM.
+This method is not available for **JS** and **COM**.
 :::
 
 ## Syntax

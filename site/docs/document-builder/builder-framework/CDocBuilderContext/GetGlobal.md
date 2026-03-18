@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the global object for the current context.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

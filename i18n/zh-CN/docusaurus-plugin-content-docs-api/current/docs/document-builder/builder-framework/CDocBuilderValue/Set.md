@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 通过索引设置数组值。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

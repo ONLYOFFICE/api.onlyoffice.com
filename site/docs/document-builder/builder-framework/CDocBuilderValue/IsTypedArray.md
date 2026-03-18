@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns true if the `CDocBuilderValue` object is a typed array.
 
 :::note
-This method is only available in **C++**, **COM**, and **.Net**.
+This method is only available for **C++**, **COM**, and **.Net**.
 :::
 
 ## Syntax

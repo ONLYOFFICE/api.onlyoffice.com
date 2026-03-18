@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the current JS [context](../CDocBuilderContext/CDocBuilderContext.md).
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

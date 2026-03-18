@@ -3,7 +3,7 @@
 Unloads the ONLYOFFICE Document Builder from the application memory when it is no longer needed. Generally, there is no need to dispose JS before exiting the process, it should happen automatically. It should only be used if the process needs the resources taken up by JS.
 
 :::note
-This method is .Net only. For other languages, use [Dispose](Dispose.md).
+This method is only available for **.Net**. For other languages, use [Dispose](Dispose.md).
 :::
 
 ## Syntax

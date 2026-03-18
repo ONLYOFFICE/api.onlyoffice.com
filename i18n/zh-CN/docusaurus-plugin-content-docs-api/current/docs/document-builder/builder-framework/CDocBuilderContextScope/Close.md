@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 关闭当前作用域。当析构函数执行时，此方法将自动调用。
 
 :::note
-对于 JS，不使用此方法。
+此方法不适用于 **JS**。
 :::
 
 ## 语法

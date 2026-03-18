@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Unloads the ONLYOFFICE Document Builder from the application memory when it is no longer needed. Generally, there is no need to dispose JS before exiting the process, it should happen automatically. It should only be used if the process needs the resources taken up by JS.
 
 :::note
-For JS, this method is not used. For .Net, use [Destroy](Destroy.md) instead.
+This method is not available for **JS**. For **.Net**, use [Destroy](Destroy.md) instead.
 :::
 
 ## Syntax

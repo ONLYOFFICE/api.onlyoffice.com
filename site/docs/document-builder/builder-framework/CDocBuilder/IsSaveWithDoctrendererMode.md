@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Specifies if the doctrenderer mode is used when building a document or getting content from the editor when saving a file.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax

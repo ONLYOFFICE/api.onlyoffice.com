@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates an undefined value, an analogue of `undefined` in JS.
 
 :::note
-For JS, this method is not used.
+This method is not available for **JS**.
 :::
 
 ## Syntax
