@@ -17,12 +17,9 @@ Iterates through all pages in the PDF document and removes annotations which con
     const page = doc.GetPage(i);
     const annots = page.GetAllAnnots();
 
-    if (!annots || annots.length === 0) continue;
-
-    // Iterate backwards to avoid issues when deleting items
-    for (let j = annots.length - 1; j >= 0; j--) {
+    for (let j = 0; j < annots.length; j++) {
       const annot = annots[j];
-      const contents = (annot.GetContents() || "").toLowerCase();
+      const contents = ((annot && annot.GetContents()) || "").toLowerCase();
 
       if (contents.includes(KEYWORD.toLowerCase())) {
         annot.Delete(); //delete annotation

@@ -17,12 +17,9 @@ hide_table_of_contents: true
     const page = doc.GetPage(i);
     const annots = page.GetAllAnnots();
 
-    if (!annots || annots.length === 0) continue;
-
-    // 反向迭代以避免删除时出现问题
-    for (let j = annots.length - 1; j >= 0; j--) {
+    for (let j = 0; j < annots.length; j++) {
       const annot = annots[j];
-      const contents = (annot.GetContents() || "").toLowerCase();
+      const contents = ((annot && annot.GetContents()) || "").toLowerCase();
 
       if (contents.includes(KEYWORD.toLowerCase())) {
         annot.Delete(); //删除注释
