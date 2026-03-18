@@ -1,51 +1,67 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # CDocBuilderValue
 
 ONLYOFFICE Document Builder 用于获取调用 JS 命令结果的类。它表示 JS 对象的包装器。
 
 ## 语法
 
-```cpp
-class CDocBuilderValue
-```
-
-`CDocBuilderValue` 类可以从基本数据类型创建：
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
         ```py
-        CDocBuilderValue(value)
+        class CDocBuilderValue:
+            def __init__(self, value: bool)
+            def __init__(self, value: int)
+            def __init__(self, value: float)
+            def __init__(self, value: str)
         ```
-        其中 `value` 可以是：`bool`、`int`、`float`、`str`
     </TabItem>
     <TabItem value="cpp" label="C++">
         ```cpp
-        CDocBuilderValue(const bool& value);
-        CDocBuilderValue(const int& value);
-        CDocBuilderValue(const unsigned int& value);
-        CDocBuilderValue(const double& value);
-        CDocBuilderValue(const char* value);
-        CDocBuilderValue(const wchar_t* value);
+        class CDocBuilderValue
+        {
+            CDocBuilderValue(const bool& value);
+            CDocBuilderValue(const int& value);
+            CDocBuilderValue(const unsigned int& value);
+            CDocBuilderValue(const double& value);
+            CDocBuilderValue(const char* value);
+            CDocBuilderValue(const wchar_t* value);
+        };
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        ```cpp
+        interface I_DOCBUILDER_VALUE : IDispatch
+        {
+            HRESULT CreateInstance([in] VARIANT_BOOL value);
+            HRESULT CreateInstance([in] long value);
+            HRESULT CreateInstance([in] double value);
+            HRESULT CreateInstance([in] BSTR value);
+        };
         ```
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
-        CDocBuilderValue(boolean value);
-        CDocBuilderValue(int value);
-        CDocBuilderValue(double value);
-        CDocBuilderValue(String value);
-        CDocBuilderValue(Object[] values);
+        public class CDocBuilderValue {
+            CDocBuilderValue(boolean value);
+            CDocBuilderValue(int value);
+            CDocBuilderValue(double value);
+            CDocBuilderValue(String value);
+            CDocBuilderValue(Object[] values);
+        }
         ```
     </TabItem>
     <TabItem value="net" label=".Net">
         ```cs
-        CDocBuilderValue(bool value);
-        CDocBuilderValue(int value);
-        CDocBuilderValue(unsigned int value);
-        CDocBuilderValue(double value);
-        CDocBuilderValue(String^ value);
+        public class CDocBuilderValue
+        {
+            CDocBuilderValue(bool value);
+            CDocBuilderValue(int value);
+            CDocBuilderValue(unsigned int value);
+            CDocBuilderValue(double value);
+            CDocBuilderValue(String^ value);
+        }
         ```
     </TabItem>
 </Tabs>
