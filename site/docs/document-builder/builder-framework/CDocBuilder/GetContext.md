@@ -41,9 +41,13 @@ For JS, this method is not used.
 
 ## Parameters
 
-*COM and Java only*
-
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type                   | Description              |
         | ------ | ---------------------- | ------------------------ |
@@ -53,6 +57,9 @@ For JS, this method is not used.
         | Name         | Type    | Default | Description                                    |
         | ------------ | ------- | ------- | ---------------------------------------------- |
         | enterContext | boolean | false   | Specifies whether the context will be entered. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 

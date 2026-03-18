@@ -41,13 +41,23 @@ For the `.docbuilder` file the `CDocBuilderContext.IsError` method is not used.
 
 ## Parameters
 
-*COM only*
-
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type          | Description                       |
         | ------ | ------------- | --------------------------------- |
         | result | VARIANT_BOOL* | Specifies whether an error occurs |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 

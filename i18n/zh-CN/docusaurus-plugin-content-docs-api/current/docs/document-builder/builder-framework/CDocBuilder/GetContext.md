@@ -41,9 +41,13 @@ import TabItem from '@theme/TabItem';
 
 ## 参数
 
-*仅限 COM 和 Java*
-
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        此方法没有参数。
+    </TabItem>
     <TabItem value="com" label="COM">
         | 名称   | 类型                   | 描述              |
         | ------ | ---------------------- | ------------------------ |
@@ -53,6 +57,9 @@ import TabItem from '@theme/TabItem';
         | 名称         | 类型    | 默认值 | 描述                                    |
         | ------------ | ------- | ------- | ---------------------------------------------- |
         | enterContext | boolean | false   | 指定是否进入上下文。 |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        此方法没有参数。
     </TabItem>
 </Tabs>
 

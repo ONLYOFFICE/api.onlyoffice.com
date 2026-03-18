@@ -41,13 +41,23 @@ import TabItem from '@theme/TabItem';
 
 ## 参数
 
-*仅限 COM*
-
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        此方法没有参数。
+    </TabItem>
     <TabItem value="com" label="COM">
         | 名称   | 类型                                                            | 描述                                 |
         | ------ | --------------------------------------------------------------- | ------------------------------------------- |
         | result | [I_DOCBUILDER_VALUE**](../CDocBuilderValue/CDocBuilderValue.md) | 用于存储创建的 null 值的指针 |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        此方法没有参数。
     </TabItem>
 </Tabs>
 

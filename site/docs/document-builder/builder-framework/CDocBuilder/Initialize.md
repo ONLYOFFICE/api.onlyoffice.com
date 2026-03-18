@@ -54,7 +54,7 @@ For JS, this method is not used.
         | sDirectory | const wchar_t* | 0       | The path to the main Document Builder resources. |
     </TabItem>
     <TabItem value="com" label="COM">
-        Not used.
+        This method has no parameters.
     </TabItem>
     <TabItem value="java" label="Java">
         | Name      | Type   | Default | Description                                      |

@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
         | sDirectory | const wchar_t* | 0       | Document Builder 主要资源的路径。 |
     </TabItem>
     <TabItem value="com" label="COM">
-        不使用。
+        此方法没有参数。
     </TabItem>
     <TabItem value="java" label="Java">
         | 名称      | 类型   | 默认值 | 描述                                      |

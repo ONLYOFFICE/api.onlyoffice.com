@@ -41,13 +41,23 @@ For the `.docbuilder` file the `CDocBuilderContext.CreateScope` method is not us
 
 ## Parameters
 
-*COM only*
-
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type                                                                                  | Description                 |
         | ------ | ------------------------------------------------------------------------------------- | --------------------------- |
         | result | [I_DOCBUILDER_CONTEXT_SCOPE**](../CDocBuilderContextScope/CDocBuilderContextScope.md) | The returned context scope. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 
