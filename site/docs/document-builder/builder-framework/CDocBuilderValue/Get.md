@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Returns an array value by its index.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.Get` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -145,13 +147,6 @@ Returns an array value by its index.
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
-        let doc = Api.GetDocument();
-        let charts = doc.GetAllCharts();
-        let chart = charts[1];
-        ```
-    </TabItem>
 </Tabs>
 
 ## Index operator
@@ -168,6 +163,9 @@ The `operator[]` postfix expression can also be used to get an array value by it
         ```cpp
         CDocBuilderValue operator[](const int& index);
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        This operator is not available. Use the `Get` method instead.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java

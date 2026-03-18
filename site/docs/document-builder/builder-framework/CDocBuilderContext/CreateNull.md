@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates a null value, an analogue of `null` in JS.
 
 :::note
-For the `.docbuilder` file the `CDocBuilderContext.CreateNull` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Returns the length if the `CDocBuilderValue` object is an array/typed array. Otherwise, returns 0.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.GetLength` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -40,10 +42,22 @@ Returns the length if the `CDocBuilderValue` object is an array/typed array. Oth
 ## Parameters
 
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type  | Description                 |
         | ------ | ----- | --------------------------- |
         | result | long* | The returned object length. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 

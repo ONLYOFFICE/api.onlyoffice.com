@@ -9,8 +9,6 @@ import TabItem from '@theme/TabItem';
 此方法仅在 **C++**、**COM** 和 **.Net** 中可用。
 :::
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.IsTypedArray` 方法。
-
 ## 语法
 
 <Tabs groupId="lang">
@@ -34,10 +32,16 @@ import TabItem from '@theme/TabItem';
 ## 参数
 
 <Tabs groupId="lang">
+    <TabItem value="cpp" label="C++">
+        此方法没有参数。
+    </TabItem>
     <TabItem value="com" label="COM">
         | 名称   | 类型          | 描述                                               |
         | ------ | ------------- | -------------------------------------------------- |
         | result | VARIANT_BOOL* | 指定 `CDocBuilderValue` 对象是否为类型化数组。     |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        此方法没有参数。
     </TabItem>
 </Tabs>
 

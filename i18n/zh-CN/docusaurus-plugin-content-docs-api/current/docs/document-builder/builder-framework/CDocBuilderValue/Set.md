@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 通过索引设置数组值。
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.Set` 方法。
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 
@@ -167,6 +169,14 @@ import TabItem from '@theme/TabItem';
         ```py
         array[index] = value
         ```
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        array[index] = value;
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        此运算符不可用。请改用 `Set` 方法。
     </TabItem>
     <TabItem value="java" label="Java">
         ```java

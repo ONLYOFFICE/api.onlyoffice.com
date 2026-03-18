@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 关闭当前作用域。当析构函数执行时，此方法将自动调用。
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderContextScope.Close` 方法。
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 

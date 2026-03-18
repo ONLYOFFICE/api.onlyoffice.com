@@ -6,10 +6,8 @@ import TabItem from '@theme/TabItem';
 创建未定义值。此方法返回当前[上下文](../CDocBuilderContext/CDocBuilderContext.md)并调用其 [CreateUndefined](../CDocBuilderContext/CreateUndefined.md) 方法。
 
 :::note
-此方法在 **COM** 中不可用。
+此方法不适用于 **COM** 和 **JS**。
 :::
-
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.CreateUndefined` 方法。
 
 ## 语法
 

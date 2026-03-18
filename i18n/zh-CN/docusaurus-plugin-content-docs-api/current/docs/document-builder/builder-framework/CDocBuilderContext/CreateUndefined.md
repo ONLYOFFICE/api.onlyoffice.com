@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 创建 undefined 值，相当于 JS 中的 `undefined`。
 
 :::note
-对于 `.docbuilder` 文件，不使用 `CDocBuilderContext.CreateUndefined` 方法。
+对于 JS，不使用此方法。
 :::
 
 ## 语法

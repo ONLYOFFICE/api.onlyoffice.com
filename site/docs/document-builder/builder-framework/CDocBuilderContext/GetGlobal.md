@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Returns the global object for the current context.
 
 :::note
-For the `.docbuilder` file the `CDocBuilderContext.GetGlobal` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

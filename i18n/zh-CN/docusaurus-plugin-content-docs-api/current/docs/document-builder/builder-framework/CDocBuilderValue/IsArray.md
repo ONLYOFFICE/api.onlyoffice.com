@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 如果 `CDocBuilderValue` 对象是数组，则返回 true。
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.IsArray` 方法。
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 
@@ -40,10 +42,22 @@ import TabItem from '@theme/TabItem';
 ## 参数
 
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        此方法没有参数。
+    </TabItem>
     <TabItem value="com" label="COM">
         | 名称   | 类型          | 描述                                           |
         | ------ | ------------- | ---------------------------------------------- |
         | result | VARIANT_BOOL* | 指定 `CDocBuilderValue` 对象是否为数组。       |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        此方法没有参数。
     </TabItem>
 </Tabs>
 

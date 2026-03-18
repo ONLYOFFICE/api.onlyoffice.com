@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Returns a property of the `CDocBuilderValue` object.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.GetProperty` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -154,6 +156,9 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
         CDocBuilderValue Get(const wchar_t* name);
         ```
     </TabItem>
+    <TabItem value="com" label="COM">
+        This method is not available. Use the `GetProperty` method instead.
+    </TabItem>
     <TabItem value="java" label="Java">
         ```java
         CDocBuilderValue get(String name);
@@ -191,6 +196,9 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
         CValue oDocPr = oDocument.Get("color");
         CDocBuilder::Dispose();
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        This method is not available. Use the `GetProperty` method instead.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
@@ -233,6 +241,9 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
         CDocBuilderValue operator[](const wchar_t* name);
         ```
     </TabItem>
+    <TabItem value="com" label="COM">
+        This operator is not available. Use the `GetProperty` method instead.
+    </TabItem>
     <TabItem value="java" label="Java">
         ```java
         value["property_name"]
@@ -270,6 +281,9 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
         CValue oDocPr = oDocument["color"];
         CDocBuilder::Dispose();
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        This operator is not available. Use the `GetProperty` method instead.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java

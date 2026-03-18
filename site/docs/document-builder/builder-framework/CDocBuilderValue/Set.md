@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Sets an array value by its index.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.Set` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -167,6 +169,14 @@ The `operator[]` postfix expression can also be used to set an array value by it
         ```py
         array[index] = value
         ```
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        array[index] = value;
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        This operator is not available. Use the `Set` method instead.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java

@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 调用指定的 Document Builder 方法。有关各种文档类型可用的方法，请参阅[文本文档 API](/docs/office-api/usage-api/text-document-api/text-document-api.md)、[电子表格 API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md)、[演示文稿 API](/docs/office-api/usage-api/presentation-api/presentation-api.md) 或[表单 API](/docs/office-api/usage-api/form-api/form-api.md) 部分。
 
-> 请注意，对于 `.docbuilder` 文件，不会显式使用 `CDocBuilderValue.Call` 方法。而是直接使用该方法本身。请参阅下面的示例。
+:::note
+对于 JS，不会显式使用此方法，直接调用方法即可。
+:::
 
 ## 语法
 
@@ -136,11 +138,6 @@ import TabItem from '@theme/TabItem';
         CValue oApi = oGlobal["Api"];
         CValue oDocument = oApi.Call("GetDocument");
         CDocBuilder.Destroy();
-        ```
-    </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
-        let doc = Api.GetDocument();
         ```
     </TabItem>
 </Tabs>

@@ -6,10 +6,8 @@ import TabItem from '@theme/TabItem';
 Creates an undefined value. This method returns the current [context](../CDocBuilderContext/CDocBuilderContext.md) and calls its [CreateUndefined](../CDocBuilderContext/CreateUndefined.md) method.
 
 :::note
-This method is not available in **COM**.
+This method is not available for **COM** and **JS**.
 :::
-
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.CreateUndefined` method is not used.
 
 ## Syntax
 

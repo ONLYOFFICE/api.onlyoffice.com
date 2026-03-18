@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 通过索引返回数组值。
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.Get` 方法。
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 
@@ -145,13 +147,6 @@ import TabItem from '@theme/TabItem';
         CDocBuilder.Destroy();
         ```
     </TabItem>
-    <TabItem value="builder" label=".docbuilder">
-        ```ts
-        let doc = Api.GetDocument();
-        let charts = doc.GetAllCharts();
-        let chart = charts[1];
-        ```
-    </TabItem>
 </Tabs>
 
 ## 索引运算符
@@ -168,6 +163,9 @@ import TabItem from '@theme/TabItem';
         ```cpp
         CDocBuilderValue operator[](const int& index);
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        此运算符不可用。请改用 `Get` 方法。
     </TabItem>
     <TabItem value="java" label="Java">
         ```java

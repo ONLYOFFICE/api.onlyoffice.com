@@ -9,8 +9,6 @@ Returns true if the `CDocBuilderValue` object is a typed array.
 This method is only available in **C++**, **COM**, and **.Net**.
 :::
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsTypedArray` method is not used.
-
 ## Syntax
 
 <Tabs groupId="lang">
@@ -34,10 +32,16 @@ This method is only available in **C++**, **COM**, and **.Net**.
 ## Parameters
 
 <Tabs groupId="lang">
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type          | Description                                                       |
         | ------ | ------------- | ----------------------------------------------------------------- |
         | result | VARIANT_BOOL* | Specifies whether the `CDocBuilderValue` object is a typed array. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 

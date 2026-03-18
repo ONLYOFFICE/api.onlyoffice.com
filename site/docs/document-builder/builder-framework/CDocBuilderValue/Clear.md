@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Clears the `CDocBuilderValue` object.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.Clear` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 

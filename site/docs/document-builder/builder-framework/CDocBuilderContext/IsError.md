@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Checks for errors in JS. The error message and call stack will be written to `std::cerr`.
 
 :::note
-For the `.docbuilder` file the `CDocBuilderContext.IsError` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

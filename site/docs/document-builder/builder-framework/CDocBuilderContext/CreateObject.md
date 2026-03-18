@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates an empty object, an analogue of `{}` in JS.
 
 :::note
-For the `.docbuilder` file the `CDocBuilderContext.CreateObject` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

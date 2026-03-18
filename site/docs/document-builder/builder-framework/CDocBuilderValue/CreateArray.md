@@ -6,10 +6,8 @@ import TabItem from '@theme/TabItem';
 Creates an array value. This method returns the current [context](../CDocBuilderContext/CDocBuilderContext.md) and calls its [CreateArray](../CDocBuilderContext/CreateArray.md) method.
 
 :::note
-This method is only available in **Python** and **Java**.
+This method is only available for **Python** and **Java**.
 :::
-
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.CreateArray` method is not used.
 
 ## Syntax
 

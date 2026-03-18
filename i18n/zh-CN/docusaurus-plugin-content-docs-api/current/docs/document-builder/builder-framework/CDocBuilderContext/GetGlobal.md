@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 返回当前上下文的全局对象。
 
 :::note
-对于 `.docbuilder` 文件，不使用 `CDocBuilderContext.GetGlobal` 方法。
+对于 JS，不使用此方法。
 :::
 
 ## 语法

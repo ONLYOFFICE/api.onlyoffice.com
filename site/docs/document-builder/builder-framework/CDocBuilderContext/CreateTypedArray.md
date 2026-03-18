@@ -6,8 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates a Uint8Array value, an analogue of `Uint8Array` in JS.
 
 :::note
-This method is not available for **Java** and **Python**.
-For the `.docbuilder` file the `CDocBuilderContext.CreateTypedArray` method is not used.
+This method is not available for **Java**, **Python**, and **JS**.
 :::
 
 ## Syntax

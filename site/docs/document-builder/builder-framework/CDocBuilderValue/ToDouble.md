@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Converts the `CDocBuilderValue` object to a double value.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.ToDouble` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -40,10 +42,22 @@ Converts the `CDocBuilderValue` object to a double value.
 ## Parameters
 
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type    | Description                |
         | ------ | ------- | -------------------------- |
         | result | double* | The returned double value. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 

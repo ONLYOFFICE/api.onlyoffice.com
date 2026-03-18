@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates an undefined value, an analogue of `undefined` in JS.
 
 :::note
-For the `.docbuilder` file the `CDocBuilderContext.CreateUndefined` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

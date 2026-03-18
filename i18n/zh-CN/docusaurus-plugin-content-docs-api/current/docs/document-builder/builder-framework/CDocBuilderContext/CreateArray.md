@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 创建数组值，相当于 JS 中的 `new Array (length)`。
 
 :::note
-对于 `.docbuilder` 文件，不使用 `CDocBuilderContext.CreateArray` 方法。
+对于 JS，不使用此方法。
 :::
 
 ## 语法

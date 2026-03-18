@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Returns true if the `CDocBuilderValue` object is undefined.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsUndefined` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -40,10 +42,22 @@ Returns true if the `CDocBuilderValue` object is undefined.
 ## Parameters
 
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        This method has no parameters.
+    </TabItem>
     <TabItem value="com" label="COM">
         | Name   | Type          | Description                                                     |
         | ------ | ------------- | --------------------------------------------------------------- |
         | result | VARIANT_BOOL* | Specifies whether the `CDocBuilderValue` object is undefined.   |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        This method has no parameters.
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        This method has no parameters.
     </TabItem>
 </Tabs>
 

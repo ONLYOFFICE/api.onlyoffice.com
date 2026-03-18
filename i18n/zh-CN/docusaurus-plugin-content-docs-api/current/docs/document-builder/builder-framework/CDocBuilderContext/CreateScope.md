@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 创建[上下文作用域](../CDocBuilderContextScope/CDocBuilderContextScope.md)，用于设置在本地作用域内执行的所有操作的执行上下文。
 
 :::note
-对于 `.docbuilder` 文件，不使用 `CDocBuilderContext.CreateScope` 方法。
+对于 JS，不使用此方法。
 :::
 
 ## 语法

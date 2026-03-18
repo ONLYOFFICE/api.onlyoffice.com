@@ -6,10 +6,8 @@ import TabItem from '@theme/TabItem';
 创建数组值。此方法返回当前[上下文](../CDocBuilderContext/CDocBuilderContext.md)并调用其 [CreateArray](../CDocBuilderContext/CreateArray.md) 方法。
 
 :::note
-此方法仅在 **Python** 和 **Java** 中可用。
+此方法仅适用于 **Python** 和 **Java**。
 :::
-
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.CreateArray` 方法。
 
 ## 语法
 

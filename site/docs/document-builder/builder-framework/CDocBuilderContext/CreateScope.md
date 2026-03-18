@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 Creates a [context scope](../CDocBuilderContextScope/CDocBuilderContextScope.md) which sets the execution context for all operations executed within a local scope.
 
 :::note
-For the `.docbuilder` file the `CDocBuilderContext.CreateScope` method is not used.
+For JS, this method is not used.
 :::
 
 ## Syntax

@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Closes the current scope. This method will be called automatically when the destructor is executed.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderContextScope.Close` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 

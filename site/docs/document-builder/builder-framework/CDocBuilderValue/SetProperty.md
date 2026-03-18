@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 Sets a property to the `CDocBuilderValue` object.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.SetProperty` method is not used.
+:::note
+For JS, this method is not used.
+:::
 
 ## Syntax
 
@@ -160,6 +162,9 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
         void Set(const wchar_t* name, CDocBuilderValue value);
         ```
     </TabItem>
+    <TabItem value="com" label="COM">
+        This method is not available. Use the `SetProperty` method instead.
+    </TabItem>
     <TabItem value="java" label="Java">
         ```java
         void set(String name, Object value);
@@ -184,6 +189,9 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
         ```cpp
         document["property_name"] = value;
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        This operator is not available. Use the `SetProperty` method instead.
     </TabItem>
     <TabItem value="java" label="Java">
         ```java

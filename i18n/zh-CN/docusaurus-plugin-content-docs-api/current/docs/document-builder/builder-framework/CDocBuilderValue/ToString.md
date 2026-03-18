@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 将 `CDocBuilderValue` 对象转换为字符串。
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.ToString` 方法。
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 
@@ -40,10 +42,22 @@ import TabItem from '@theme/TabItem';
 ## 参数
 
 <Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        此方法没有参数。
+    </TabItem>
     <TabItem value="com" label="COM">
         | 名称   | 类型  | 描述             |
         | ------ | ----- | ---------------- |
         | result | BSTR* | 返回的字符串值。 |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        此方法没有参数。
     </TabItem>
 </Tabs>
 

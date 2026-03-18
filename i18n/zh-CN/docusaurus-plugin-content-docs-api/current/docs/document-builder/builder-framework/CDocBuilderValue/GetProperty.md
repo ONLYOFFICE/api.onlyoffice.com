@@ -5,7 +5,9 @@ import TabItem from '@theme/TabItem';
 
 返回 `CDocBuilderValue` 对象的属性。
 
-> 请注意，对于 `.docbuilder` 文件，不使用 `CDocBuilderValue.GetProperty` 方法。
+:::note
+对于 JS，不使用此方法。
+:::
 
 ## 语法
 
@@ -154,6 +156,9 @@ import TabItem from '@theme/TabItem';
         CDocBuilderValue Get(const wchar_t* name);
         ```
     </TabItem>
+    <TabItem value="com" label="COM">
+        此方法不可用。请改用 `GetProperty` 方法。
+    </TabItem>
     <TabItem value="java" label="Java">
         ```java
         CDocBuilderValue get(String name);
@@ -191,6 +196,9 @@ import TabItem from '@theme/TabItem';
         CValue oDocPr = oDocument.Get("color");
         CDocBuilder::Dispose();
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        此方法不可用。请改用 `GetProperty` 方法。
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
@@ -233,6 +241,9 @@ import TabItem from '@theme/TabItem';
         CDocBuilderValue operator[](const wchar_t* name);
         ```
     </TabItem>
+    <TabItem value="com" label="COM">
+        此运算符不可用。请改用 `GetProperty` 方法。
+    </TabItem>
     <TabItem value="java" label="Java">
         ```java
         value["property_name"]
@@ -270,6 +281,9 @@ import TabItem from '@theme/TabItem';
         CValue oDocPr = oDocument["color"];
         CDocBuilder::Dispose();
         ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        此运算符不可用。请改用 `GetProperty` 方法。
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
