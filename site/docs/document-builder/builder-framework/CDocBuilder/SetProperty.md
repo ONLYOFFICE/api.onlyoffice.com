@@ -108,6 +108,8 @@ Argument.name === "ONLYOFFICE" // true
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
         ```py
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
         builder.SetProperty("--argument", "{\"name\":\"ONLYOFFICE\"}")
         ```
@@ -157,6 +159,8 @@ It is also possible to update the font list when you either add new fonts or rem
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
         ```py
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
         builder.SetProperty("--check-fonts", "true")
         ```

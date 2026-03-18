@@ -93,9 +93,15 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="lang">
     <TabItem value="python" label="Python">
         ```py
+        import os
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
+        builder.CreateFile("docx")
+
         dstPath = os.getcwd() + "/result.docx"
         builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="cpp" label="C++">
