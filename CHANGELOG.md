@@ -43,6 +43,7 @@
 
 * Added link to supported properties in argument parameter descriptions.
 * Improved API page formatting and readability.
+* Standardized Parameters section with tabs for all languages.
 
 #### Docs API
 
@@ -69,6 +70,8 @@
 * Fixed Currency Conversion macro to use proper `RecalculateAllFormulas` API instead of internal method with timeout.
 * Fixed Hide or Unhide Rows and Columns macro example.
 * Fixed Java syntax highlighting in CDocBuilder and CDocBuilderValue method examples.
+* Fixed C++, Java, .Net, Python, and COM code samples in Document Builder methods (SaveFile, SetProperty, Execute, ExecuteCommand, CreateInstance).
+* Hidden comparing-documents.md pages.
 
 ### Breaking changes
 
