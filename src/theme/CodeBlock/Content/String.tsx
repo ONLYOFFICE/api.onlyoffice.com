@@ -70,7 +70,7 @@ export default function CodeBlockString({
   const handlePlaygroundClick = () => {
     const params = new URLSearchParams({
       code: metadata.code,
-      editorType: isForm ? 'form' : (editorType.length ? EDITOR_TYPE_MAP[editorType] : null),
+      editor: isForm ? 'form' : (editorType.length ? EDITOR_TYPE_MAP[editorType] : null),
       testType: 'office-js-api',
     });
 
