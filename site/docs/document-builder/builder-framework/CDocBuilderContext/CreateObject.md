@@ -75,6 +75,7 @@ For the `.docbuilder` file the `CDocBuilderContext.CreateObject` method is not u
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         IONLYOFFICEDocBuilderContext* oContext = NULL;
         IONLYOFFICEDocBuilderValue* oContent = NULL;
         oBuilder->Initialize();

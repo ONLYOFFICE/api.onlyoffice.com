@@ -102,6 +102,7 @@ Sets a property to the `CDocBuilderValue` object.
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         IONLYOFFICEDocBuilderContext* oContext = NULL;
         IONLYOFFICEDocBuilderValue* oGlobal = NULL;
         IONLYOFFICEDocBuilderValue* oApi = NULL;
@@ -111,7 +112,7 @@ Sets a property to the `CDocBuilderValue` object.
         oContext->GetGlobal(&oGlobal);
         oGlobal->GetProperty(_bstr_t("Api"), &oApi);
         oApi->Call(_bstr_t("GetDocument"), ATL::CComVariant(), ATL::CComVariant(), ATL::CComVariant(), ATL::CComVariant(), ATL::CComVariant(), ATL::CComVariant(), &oDocument);
-        oDocument->SetProperty("color", colorValue);
+        oDocument->SetProperty(_bstr_t("color"), colorValue);
         oBuilder->Dispose();
         ```
     </TabItem>

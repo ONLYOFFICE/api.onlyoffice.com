@@ -63,6 +63,7 @@ Closes the current scope. This method will be called automatically when the dest
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         IONLYOFFICEDocBuilderContext* oContext = NULL;
         IONLYOFFICEDocBuilderContextScope* oScope = NULL;
         oBuilder->Initialize();

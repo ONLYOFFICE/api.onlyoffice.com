@@ -38,12 +38,14 @@ This method is only available in **COM**.
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         IONLYOFFICEDocBuilderContext* oContext = NULL;
         IONLYOFFICEDocBuilderValue* oGlobal = NULL;
         IONLYOFFICEDocBuilderValue* oApi = NULL;
         IONLYOFFICEDocBuilderValue* oDocument = NULL;
         IONLYOFFICEDocBuilderValue* oParagraph = NULL;
         I_DOCBUILDER_VALUE* p1 = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilderValue), NULL, CLSCTX_INPROC_SERVER, __uuidof(I_DOCBUILDER_VALUE), (void**)&p1);
         p1->CreateInstance(1000);
         oBuilder->Initialize();
         oBuilder->GetContext(&oContext);

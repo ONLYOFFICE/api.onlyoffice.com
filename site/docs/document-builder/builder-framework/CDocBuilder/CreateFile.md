@@ -106,6 +106,7 @@ Creates a new file. The type of the file which will be created needs to be set.
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         VARIANT_BOOL b;
         oBuilder->Initialize();
         oBuilder->CreateFile(_bstr_t("docx"), &b);

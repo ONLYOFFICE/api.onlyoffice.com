@@ -69,6 +69,7 @@ Closes the file to stop working with it. You can use a single ONLYOFFICE Documen
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         oBuilder->Initialize();
         oBuilder->CloseFile();
         oBuilder->Dispose();

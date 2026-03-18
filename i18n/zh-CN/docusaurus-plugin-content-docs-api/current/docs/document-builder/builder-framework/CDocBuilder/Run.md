@@ -94,8 +94,9 @@ import TabItem from '@theme/TabItem';
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         VARIANT_BOOL b;
-        oBuilder->Run("path-to-script.js", &b);
+        oBuilder->Run(_bstr_t("path-to-script.js"), &b);
         oBuilder->Dispose();
         ```
     </TabItem>

@@ -109,6 +109,7 @@ For JS, call the API methods directly instead.
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         VARIANT_BOOL b;
         oBuilder->Initialize();
         oBuilder->CreateFile(_bstr_t("docx"), &b);

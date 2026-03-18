@@ -79,6 +79,7 @@ import TabItem from '@theme/TabItem';
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         IONLYOFFICEDocBuilderContext* oContext = NULL;
         IONLYOFFICEDocBuilderValue* oGlobal = NULL;
         IONLYOFFICEDocBuilderValue* oApi = NULL;

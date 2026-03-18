@@ -75,6 +75,7 @@ For the `.docbuilder` file the `CDocBuilderContext.IsError` method is not used.
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         IONLYOFFICEDocBuilderContext* oContext = NULL;
         VARIANT_BOOL b;
         oBuilder->Initialize();

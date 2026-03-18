@@ -79,12 +79,13 @@ For JS, this method is not used. This method is not available in C++ (use [RunTe
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         VARIANT_BOOL b;
-        oBuilder->RunText("builder.SetTmpFolder(\"DocBuilderTemp\");\n\
+        oBuilder->RunText(_bstr_t("builder.SetTmpFolder(\"DocBuilderTemp\");\n\
         builder.CreateFile(\"docx\");\n\
         var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
         builder.SaveFile(\"pdf\", \"images.pdf\");\n\
-        builder.CloseFile();", &b);
+        builder.CloseFile();"), &b);
         oBuilder->Dispose();
         ```
     </TabItem>

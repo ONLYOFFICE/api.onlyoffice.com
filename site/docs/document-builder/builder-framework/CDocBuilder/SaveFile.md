@@ -118,9 +118,10 @@ Saves the file after all the changes are made. The type of the file which will b
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         VARIANT_BOOL b;
         oBuilder->Initialize();
-        oBuilder->SaveFile("docx", "result.docx", &b);
+        oBuilder->SaveFile(_bstr_t("docx"), _bstr_t("result.docx"), &b);
         oBuilder->Dispose();
         ```
     </TabItem>

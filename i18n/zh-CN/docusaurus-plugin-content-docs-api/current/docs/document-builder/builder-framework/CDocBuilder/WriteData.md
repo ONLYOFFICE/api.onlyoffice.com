@@ -103,7 +103,8 @@ import TabItem from '@theme/TabItem';
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
-        oBuilder->WriteData("result.log", "Alert!", VARIANT_FALSE);
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+        oBuilder->WriteData(_bstr_t("result.log"), _bstr_t("Alert!"), VARIANT_FALSE);
         oBuilder->Dispose();
         ```
     </TabItem>

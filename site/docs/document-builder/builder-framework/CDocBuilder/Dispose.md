@@ -59,6 +59,7 @@ For JS, this method is not used. For .Net, use [Destroy](Destroy.md) instead.
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         oBuilder->Initialize();
         oBuilder->Dispose();
         ```

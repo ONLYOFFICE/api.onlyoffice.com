@@ -24,6 +24,7 @@ HRESULT Execute([in] BSTR command, [out, retval] I_DOCBUILDER_VALUE** result);
 ```cpp
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
+CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
 IONLYOFFICEDocBuilderValue* oRun = NULL;
 VARIANT_BOOL b;
 oBuilder->Initialize();

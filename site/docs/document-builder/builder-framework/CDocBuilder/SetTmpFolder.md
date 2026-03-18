@@ -105,7 +105,8 @@ Sets the path to the folder where the program will temporarily save files needed
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
-        oBuilder->SetTmpFolder("DocBuilderTemp");
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+        oBuilder->SetTmpFolder(_bstr_t("DocBuilderTemp"));
         oBuilder->Dispose();
         ```
     </TabItem>

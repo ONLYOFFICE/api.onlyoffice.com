@@ -127,7 +127,8 @@ Argument.name === "ONLYOFFICE" // true
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
-        oBuilder->SetProperty("--argument", "{\"name\":\"ONLYOFFICE\"}");
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+        oBuilder->SetProperty(_bstr_t("--argument"), _bstr_t("{\"name\":\"ONLYOFFICE\"}"));
         oBuilder->Dispose();
         ```
     </TabItem>
@@ -178,7 +179,8 @@ It is also possible to update the font list when you either add new fonts or rem
         ```cpp
         CoInitialize(NULL);
         IONLYOFFICEDocBuilder* oBuilder = NULL;
-        oBuilder->SetProperty("--check-fonts", "true");
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+        oBuilder->SetProperty(_bstr_t("--check-fonts"), _bstr_t("true"));
         oBuilder->Dispose();
         ```
     </TabItem>
