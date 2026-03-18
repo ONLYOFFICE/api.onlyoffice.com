@@ -60,7 +60,7 @@ import TabItem from '@theme/TabItem';
 
 文档编辑完成后，**文档编辑服务**会将它通知给**文档存储服务**。完成之前的时间是根据编辑文件到 Office Open XML 格式的转换时间（取决于文件大小、复杂性和计算机能力，并且可以执行相当长的时间）和转换开始延迟来计算时间（默认为 5 秒）。在最常见的情况下，编辑完成后的时间约为 10 秒。
 
-转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。默认转换开始延迟时间由 [services.CoAuthoring.server.savetimeoutdelay](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay) 参数在 **ONLYOFFICE 文档**配置文件中定义, 配置文件可以在以下路径中找到:
+转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。默认转换开始延迟时间由 [services.CoAuthoring.server.savetimeoutdelay](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay) 参数在 **ONLYOFFICE 文档**配置文件中定义，配置文件可以在以下路径中找到：
 
 <Tabs>
   <TabItem value="windows" label="Windows">
@@ -145,7 +145,7 @@ import TabItem from '@theme/TabItem';
   ```
 
   :::info
-  autoAssembly 功能有一个特殊行为：它会保存文件在该时刻的当前状态。如果用户处于严格模式并且没有点击保存,他们的更改将不会包含在组装的文件中。在 PDF 格式中,严格模式默认启用。
+  autoAssembly 功能有一个特殊行为：它会保存文件在该时刻的当前状态。如果用户处于严格模式并且没有点击保存，他们的更改将不会包含在组装的文件中。在 PDF 格式中，严格模式默认启用。
   :::
 
   将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为**2**。
@@ -171,9 +171,9 @@ import TabItem from '@theme/TabItem';
 
 默认值为 **true**
 
-类型: boolean
+类型：boolean
 
-示例: true
+示例：true
 
 ### 示例 local.json 配置
 
