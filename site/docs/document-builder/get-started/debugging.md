@@ -15,9 +15,6 @@ You can debug any Document Builder [component](../get-started/overview.md). To d
 1. Open the **View** tab and click **Macros**.
 
 2. Use the **debugger** command in your script:
-
-   <!-- This code snippet is shown in the screenshot. -->
-
    
    ```ts
    debugger;

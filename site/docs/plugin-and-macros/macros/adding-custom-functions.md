@@ -104,8 +104,6 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 
 :::
 
-<!-- This code is related to macros. -->
-
 ``` ts
 (function()
 {

@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Hides or unhides the specified rows and/or columns in the spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function() {
     let sheet = Api.GetActiveSheet();
@@ -36,8 +32,6 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub HideUnhide()
     Rows("5:10").Hidden = Not Rows("5:10").Hidden
@@ -46,7 +40,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.png#gh-light-mode-only)![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.dark.png#gh-dark-mode-only)
