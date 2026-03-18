@@ -95,9 +95,13 @@ import TabItem from '@theme/TabItem';
     <TabItem value="cpp" label="C++">
         ```cpp
         std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        std::wstring sDstPath = sWorkDirectory + L"/result.docx";
         CDocBuilder::Initialize(sWorkDirectory.c_str());
         CDocBuilder oBuilder;
-        oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Hello, world!\");");
+        oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
+        oBuilder.ExecuteCommand(L"var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText(\"Hello, world!\");");
+        oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, sDstPath.c_str());
+        oBuilder.CloseFile();
         CDocBuilder::Dispose();
         ```
     </TabItem>
@@ -116,18 +120,27 @@ import TabItem from '@theme/TabItem';
     </TabItem>
     <TabItem value="java" label="Java">
         ```java
+        String resultPath = "result.docx";
         CDocBuilder.initialize("");
         CDocBuilder builder = new CDocBuilder();
-        builder.executeCommand("oParagraph.AddText(\"Hello from Java!\");");
+        builder.createFile(FileTypes.Document.DOCX);
+        builder.executeCommand("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText(\"Hello from Java!\");");
+        builder.saveFile(FileTypes.Document.DOCX, resultPath);
+        builder.closeFile();
         CDocBuilder.dispose();
         ```
     </TabItem>
     <TabItem value="net" label=".Net">
         ```cs
         string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        string resultPath = "result.docx";
+        var doctype = (int)OfficeFileTypes.Document.DOCX;
         CDocBuilder.Initialize(workDirectory);
         CDocBuilder oBuilder = new CDocBuilder();
-        oBuilder.ExecuteCommand("oParagraph.AddText(\"Hello from .Net!\");");
+        oBuilder.CreateFile(doctype);
+        oBuilder.ExecuteCommand("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText(\"Hello from .Net!\");");
+        oBuilder.SaveFile(doctype, resultPath);
+        oBuilder.CloseFile();
         CDocBuilder.Destroy();
         ```
     </TabItem>
