@@ -71,7 +71,11 @@ Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-pl
 
 ### Step 4. Building
 
-To build a plugin, you need the *yarn* package manager to be installed. Install all the necessary dependencies using the **yarn install** command in the plugin root folder (if this was not done previously in step 2). After that collect a plugin archive by running the **yarn build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. More information can be found [here](../usage-sdk/building-plugin.md).
+To build a plugin, you need the *yarn* package manager to be installed.
+
+1. Install all the necessary dependencies using the **yarn install** command in the plugin root folder (if this was not done previously in step 2).
+
+2. Build a plugin archive by running the **yarn build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. More information can be found [here](../usage-sdk/building-plugin.md).
 
 ### Step 5. Uploading to the portal
 
