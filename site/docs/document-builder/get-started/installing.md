@@ -22,7 +22,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 <Tabs>
     <TabItem value="python" label="Python">
         - [Python 3.10 - 3.12](https://www.python.org/downloads/)
-        - `pip3`. Make sure `python3` and `pip3` are installed in your system. You can check your Python version and pip3 version by using the command in the terminal:
+        - `pip3`. Make sure `python3` and `pip3` are installed on your system. You can check your Python version and pip3 version by using the command in the terminal:
 
         ```bash
         python3 --version
@@ -35,7 +35,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 
         :::
 
-        If you need to install them, you can use the following commands:
+        If you need to install them, you can use the following command:
 
         ```bash
         sudo apt install python3 python3-pip
@@ -57,7 +57,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
         - GCC ≥ 4.2.1 for macOS
     </TabItem>
     <TabItem value="java" label="Java">
-        - JDK >= 8. Make sure that the JDK has been added to your `PATH` environment variable.
+        - JDK ≥ 8. Make sure that the JDK has been added to your `PATH` environment variable.
     </TabItem>
     <TabItem value="net" label=".NET">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/)
@@ -146,7 +146,7 @@ cd document-builder-samples
             ```
 
             Provide the directory to Document Builder with `--dir` if necessary.
-            It is needed for generating auxiliary module containing the path to Document Builder.
+            It is needed for generating an auxiliary module containing the path to Document Builder.
 
         2. Go to the test directory:
 
@@ -183,7 +183,7 @@ cd document-builder-samples
         1. Use `configure/configure.py` to generate Qt project files. For example:
 
             ```shell
-            python configure/configure.py --qt --test cpp
+            python3 configure/configure.py --qt --test cpp
             ```
 
         2. Open the `.pro` file in Qt Creator.
@@ -195,13 +195,13 @@ cd document-builder-samples
         Only available on Linux and macOS.
         :::
 
-        1. Use `configure/configure.py` to generate Makefile. For example:
+        1. Use `configure/configure.py` to generate a Makefile. For example:
 
             ```shell
-            python configure/configure.py --make --test cpp/filling_spreadsheet
+            python3 configure/configure.py --make --test cpp/filling_spreadsheet
             ```
 
-        2. Go to the directory with generated Makefile:
+        2. Go to the directory with the generated Makefile:
 
             ```shell
             cd out/cpp/filling_spreadsheet
@@ -213,7 +213,7 @@ cd document-builder-samples
             make
             ```
 
-            `make` will build and run the executable. Documents will be created in the same directory as Makefile is.
+            `make` will build and run the executable. Documents will be created in the same directory as the Makefile.
     </TabItem>
     <TabItem value="java" label="Java">
         :::note
@@ -226,13 +226,19 @@ cd document-builder-samples
             cd java/creating_presentation
             ```
 
-        2. Compile the `Program.java` providing the path to ***docbuilder.jar*** located in the Document Builder directory:
+        2. Compile the `Program.java` providing the path to `docbuilder.jar` located in the Document Builder directory:
 
             ```shell
             javac -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar" Program.java
             ```
 
-        3. `.class` file should appear in the directory. Run the program:
+            On Linux or macOS, use the appropriate path:
+
+            ```shell
+            javac -cp "/opt/onlyoffice/documentbuilder/docbuilder.jar" Program.java
+            ```
+
+        3. A `.class` file should appear in the directory. Run the program:
 
             ```shell
             java -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar;." Program
@@ -257,7 +263,7 @@ cd document-builder-samples
             python configure/configure.py --vs --test cs
             ```
 
-        2. Open the `.sln` file in Visual Studio. Depending on your installed .NET SDK version, you may need to set different target framework by setting it in Visual Studio project properties or editing it directly in the `.csproj` file.
+        2. Open the `.sln` file in Visual Studio. Depending on your installed .NET SDK version, you may need to set a different target framework by setting it in Visual Studio project properties or editing it directly in the `.csproj` file.
 
         3. The solution is ready to be built and run. Documents will be created in the project files directory.
     </TabItem>
