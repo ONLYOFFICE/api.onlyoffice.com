@@ -53,8 +53,10 @@ export const DEFAULT_SCRIPTS = {
             'Api.AddComment("Comment 2");\n' +
             'let comments = Api.GetComments();\n' +
             'let worksheet = Api.GetActiveSheet();\n' +
-            'worksheet.GetRange("A1").SetValue("Comment Text: ", comments[0].GetText());\n' +
-            'worksheet.GetRange("B1").SetValue("Comment Author: ", comments[0].GetAuthorName());\n',
+            'if (comments.length > 0) {\n' +
+            '    worksheet.GetRange("A1").SetValue("Comment Text: ", comments[0].GetText());\n' +
+            '    worksheet.GetRange("B1").SetValue("Comment Author: ", comments[0].GetAuthorName());\n' +
+            '}\n',
 
         connector:
             'connector.callCommand(function(word) {\n' +
@@ -180,12 +182,23 @@ export const DEFAULT_SCRIPTS = {
 
         builder:
             "builder.CreateFile(\"docx\");\n" +
-            "var oDocument = Api.GetDocument();\n" +
-            "var oParagraph = Api.CreateParagraph();\n" +
-            "oParagraph.SetJc(\"center\");\n" +
-            "oParagraph.AddText(\"Hello world!\");\n" +
-            "oDocument.InsertContent([oParagraph]);\n" +
+            'const doc1 = Api.GetDocument();\n' +
+            'const page = doc1.GetPage(0);\n' +
+            'const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\n' +
+            'const stroke = Api.CreateStroke(0, Api.CreateNoFill());\n' +
+            'const shape = Api.CreateShape("wave", 150 * 36000, 65 * 36000, fill, stroke);\n' +
+            'shape.SetPosition(608400, 1267200);\n' +
+            'const docContent = shape.GetContent();\n' +
+            'const paragraph = docContent.GetElement(0);\n' +
+            'paragraph.SetJc("center");\n' +
+            'let run = Api.CreateRun();\n' +
+            'run.SetFontSize(60);\n' +
+            'run.SetFontFamily("Comic Sans MS");\n' +
+            'run.AddText("Hello World!");\n' +
+            'paragraph.AddElement(run);\n' +
+            'page.AddObject(shape);\n' +
             "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
             "builder.CloseFile();\n",
+
     }
 }
