@@ -71,6 +71,13 @@
 * Fixed Hide or Unhide Rows and Columns macro example.
 * Fixed Java syntax highlighting in CDocBuilder and CDocBuilderValue method examples.
 * Fixed C++, Java, .Net, Python, and COM code samples in Document Builder methods (SaveFile, SetProperty, Execute, ExecuteCommand, CreateInstance).
+* Fixed delete-annotations sample.
+* Fixed markdown table alignment in Document Builder API page.
+* Fixed markdown formatting in Mattermost and Nextcloud integration docs.
+* Fixed broken markdown link in Chinese writing-macros.md.
+* Fixed ASCII punctuation in Chinese saving-file.md translation.
+* Fixed editor type in Playground.
+* Standardized note format in builder-framework docs.
 * Hidden comparing-documents.md pages.
 
 ### Breaking changes
