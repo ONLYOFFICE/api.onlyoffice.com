@@ -88,8 +88,8 @@ let func = new RegisteredFunction({
 
 | Name      | Type   | Example              | Description                                                                                            |
 | --------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------ |
-| range     | string | "A1"                 | Specifies cell range containing error to explain (e.g., 'A1'). If omitted, uses active/selected cell". |
-| userInput | string | "Explain this error" | Raw user query that may contain natural language trigger".                                             |
+| range     | string | "A1"                 | Specifies cell range containing error to explain (e.g., 'A1'). If omitted, uses active/selected cell. |
+| userInput | string | "Explain this error" | Raw user query that may contain natural language trigger.                                             |
 
 ## Function execution {#function-execution}
 
@@ -257,10 +257,9 @@ return func;
 
 Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet/), [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection/), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange/), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells/), [GetValue2](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue2/), [GetAddress](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress/), [AddComment](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment/), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands/#ascscope-object)
 
-## Result ( Video needs to be updated)
+## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-
   <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explainError.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

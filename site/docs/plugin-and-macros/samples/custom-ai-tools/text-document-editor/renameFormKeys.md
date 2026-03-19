@@ -265,10 +265,9 @@ return func;
 
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/GetFormKey.md), [GetFormType](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/GetFormType.md), [GetPlaceholderText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/GetPlaceholderText.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [IsChecked](/docs/office-api/usage-api/text-document-api/ApiCheckBoxForm/Methods/IsChecked.md), [SetFormKey](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/SetFormKey.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands/#ascscope-object)
 
-## Result (Video needs to be updated)
+## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-
   <source src="/assets/images/plugins/functions-video/text-document-editor/renameFormKeys.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
