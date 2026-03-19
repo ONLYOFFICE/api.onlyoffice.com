@@ -76,8 +76,8 @@ jobs:
 
         free -h
 
-        cat /sys/fs/cgroup/memory.max
- 
+        cat /sys/fs/cgroup/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2>/dev/null || echo "Memory limit info not available"
+
         export NODE_OPTIONS="--max-old-space-size=8192"
         export UV_THREADPOOL_SIZE=4
         export RSPACK_PARALLEL=6
