@@ -13,9 +13,9 @@ declare global {
 }
 
 const FILE_CONFIGS = {
-    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
+    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx' },
     pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf' },
-    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
+    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/new.xlsx' },
     slide: {
         ext: 'pptx',
         docType: 'slide',
@@ -26,23 +26,6 @@ const FILE_CONFIGS = {
         docType: 'pdf',
         url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
     },
-}
-
-const getDocumentUrl = (
-    templateUrl: string | null | undefined,
-    fileConfig: { ext: string; url: string },
-    editorType: EditorType
-): string => {
-    if (templateUrl === null) {
-        const name = editorType === 'form' ? 'demo-invoice' : 'new'
-        return `https://static.onlyoffice.com/assets/docs/samples/${name}.${fileConfig.ext}`
-    }
-
-    if (templateUrl) {
-        return templateUrl
-    }
-
-    return fileConfig.url
 }
 
 export const PlaygroundPreview = () => {
@@ -122,7 +105,7 @@ export const PlaygroundPreview = () => {
                     fileType: fileConfig.ext,
                     key: "0" + Math.random(),
                     title: `Example Document Title.${fileConfig.ext}`,
-                    url: getDocumentUrl(templateUrl, fileConfig, editorType),
+                    url: templateUrl ?? fileConfig.url,
                 },
                 documentType: fileConfig.docType,
                 type: previewType,
