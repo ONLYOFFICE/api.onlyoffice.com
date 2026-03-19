@@ -18,7 +18,7 @@ const PlaygroundRoute = () => {
         documentServerUrl: string
         documentServerSecret: string
         templateUrl: string
-        emptyTemplateUrl?: string
+        emptyTemplateUrl?: string // note: because you can't use "boolean"
     }>(location.search, {
         editorType: 'editor',
         scriptType: 'testType',

@@ -82,7 +82,8 @@ const getDocumentType = (fileType: string): string => {
   }
 };
 
-const getDocumentName = (isDemo: boolean = false, isForm: boolean = false): string => {
+const getDocumentName = (fileType: string, isDemo: boolean = false, isForm: boolean = false): string => {
+  if (fileType === "pdf") return "demo";
   return isDemo ? (isForm ? "demo-invoice" : "demo") : "new";
 };
 
@@ -91,7 +92,7 @@ const createDocumentConfig = (fileType: string, templateUrl: string, title?: str
     fileType,
     key: `doc-${Date.now()}`,
     title: title || `Example Document.${fileType}`,
-    url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo, isForm)}.${fileType}`
+    url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(fileType, isDemo, isForm)}.${fileType}`
   };
 };
 

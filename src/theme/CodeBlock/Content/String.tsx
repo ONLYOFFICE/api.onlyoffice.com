@@ -32,6 +32,7 @@ const EDITOR_TYPE_MAP: Record<string, EditorType> = {
   'docx': 'word',
   'pptx': 'slide',
   'xlsx': 'cell',
+  'pdf': 'pdf'
 }
 
 // TODO Docusaurus v4: move this component at the root?
