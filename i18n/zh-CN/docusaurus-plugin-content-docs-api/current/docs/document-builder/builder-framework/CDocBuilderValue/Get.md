@@ -80,8 +80,8 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
-        charts = document.Call("GetAllCharts")
+        document = api.GetDocument()
+        charts = document.GetAllCharts()
         chart = charts.Get(1)
         ```
     </TabItem>
@@ -188,8 +188,8 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
-        charts = document.Call("GetAllCharts")
+        document = api.GetDocument()
+        charts = document.GetAllCharts()
         chart = charts[1]
         ```
     </TabItem>

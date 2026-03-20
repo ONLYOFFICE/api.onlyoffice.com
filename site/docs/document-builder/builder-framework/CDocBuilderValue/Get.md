@@ -80,8 +80,8 @@ This method is not available for **JS**.
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
-        charts = document.Call("GetAllCharts")
+        document = api.GetDocument()
+        charts = document.GetAllCharts()
         chart = charts.Get(1)
         ```
     </TabItem>
@@ -188,8 +188,8 @@ The `operator[]` postfix expression can also be used to get an array value by it
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
-        charts = document.Call("GetAllCharts")
+        document = api.GetDocument()
+        charts = document.GetAllCharts()
         chart = charts[1]
         ```
     </TabItem>

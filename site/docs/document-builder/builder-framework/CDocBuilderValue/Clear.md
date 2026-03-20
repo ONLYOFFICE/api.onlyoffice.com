@@ -48,7 +48,7 @@ This method is not available for **JS**.
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         document.Clear()
         ```
     </TabItem>

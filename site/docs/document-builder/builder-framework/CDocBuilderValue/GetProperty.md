@@ -79,7 +79,7 @@ This method is not available for **JS**.
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         docPr = document.GetProperty("color")
         ```
     </TabItem>
@@ -180,7 +180,7 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         docPr = document.Get("color")
         ```
     </TabItem>
@@ -265,7 +265,7 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         docPr = document["color"]
         ```
     </TabItem>

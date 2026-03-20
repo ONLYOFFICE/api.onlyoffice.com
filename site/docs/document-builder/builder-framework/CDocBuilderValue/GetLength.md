@@ -70,8 +70,8 @@ This method is not available for **JS**.
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
-        charts = document.Call("GetAllCharts")
+        document = api.GetDocument()
+        charts = document.GetAllCharts()
         length = charts.GetLength()
         ```
     </TabItem>

@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         document.Clear()
         ```
     </TabItem>

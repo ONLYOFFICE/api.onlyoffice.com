@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         docPr = document.GetProperty("color")
         ```
     </TabItem>
@@ -180,7 +180,7 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         docPr = document.Get("color")
         ```
     </TabItem>
@@ -265,7 +265,7 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         docPr = document["color"]
         ```
     </TabItem>

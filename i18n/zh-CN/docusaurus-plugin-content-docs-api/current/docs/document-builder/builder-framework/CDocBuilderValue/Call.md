@@ -6,7 +6,8 @@ import TabItem from '@theme/TabItem';
 调用指定的 Document Builder 方法。有关各种文档类型可用的方法，请参阅[文本文档 API](/docs/office-api/usage-api/text-document-api/text-document-api.md)、[电子表格 API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md)、[演示文稿 API](/docs/office-api/usage-api/presentation-api/presentation-api.md) 或[表单 API](/docs/office-api/usage-api/form-api/form-api.md) 部分。
 
 :::note
-此方法不适用于 **JS**。直接调用方法即可。
+- 此方法不适用于 **JS**。直接调用方法即可。
+- 对于 **Python**，您也可以直接调用方法，而无需使用 `Call`。例如，`api.GetDocument()` 等同于 `api.Call("GetDocument")`。
 :::
 
 ## 语法
@@ -85,7 +86,7 @@ import TabItem from '@theme/TabItem';
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         ```
     </TabItem>
     <TabItem value="cpp" label="C++">

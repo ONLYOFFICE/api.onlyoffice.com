@@ -6,7 +6,8 @@ import TabItem from '@theme/TabItem';
 Calls the specified Document Builder method. See the [Text document API](/docs/office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](/docs/office-api/usage-api/presentation-api/presentation-api.md), or [Form API](/docs/office-api/usage-api/form-api/form-api.md) sections for more information which methods are available for various document types.
 
 :::note
-This method is not available for **JS**. Call methods directly.
+- This method is not available for **JS**. Call methods directly.
+- For **Python**, you can also call methods directly without using `Call`. For example, `api.GetDocument()` is equivalent to `api.Call("GetDocument")`.
 :::
 
 ## Syntax
@@ -85,7 +86,7 @@ This method is not available for **JS**. Call methods directly.
         context = builder.GetContext()
         globalObj = context.GetGlobal()
         api = globalObj["Api"]
-        document = api.Call("GetDocument")
+        document = api.GetDocument()
         ```
     </TabItem>
     <TabItem value="cpp" label="C++">
