@@ -33,6 +33,20 @@ This tutorial uses the `get_room_types`, `create_room`, `create_folder`, `get_al
 Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
 :::
 
+## Recommendations to follow
+
+- Give detailed and contextual prompts that clearly define the scope and reduce the number of clarification steps the MCP client will otherwise have to take for clarity. For example, consider these two prompts:
+
+**First prompt**
+`Create a new room`
+This prompt offers no details on the type of room or the intended name of the room. In this case, the client will subsequently ask numerous questions, like the type of room and intended name, before creating the room, which increases the number of prompts and also reduces efficiency.
+
+**Second prompt**
+`Create a new collaboration room called X`
+Unlike the first prompt, this second prompt provides all the necessary information for the agent to create the new room, reducing the need for further clarification and thus improving efficiency.
+
+- Always verify creation after prompts. 
+
 ### Step 1: Understand Your room options
 
 Before creating a room, it's important to note what room types DocSpace supports to select the right room that supports your specific needs. Different room types are designed for different workflows — some are suited for document editing, others for read-only review or public sharing. Hence, picking the wrong room type can limit collaboration features later. 
