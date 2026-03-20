@@ -84,7 +84,7 @@ const getDocumentType = (fileType: string): string => {
 
 const getDocumentName = (fileType: string, isDemo: boolean = false, isForm: boolean = false): string => {
   if (isForm) return isDemo ? "demo-invoice" : "new";
-  if (fileType === "pdf") return "demo";
+  if (fileType === "pdf") return "blank";
   return isDemo ? "demo" : "new";
 };
 
