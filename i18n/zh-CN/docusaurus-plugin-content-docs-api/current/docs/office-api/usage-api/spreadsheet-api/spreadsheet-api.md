@@ -20,54 +20,54 @@ sidebar_position: -4
 
 ``` ts
 // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
-builder.CreateFile("xlsx")
+builder.CreateFile("xlsx");
 
 // create a new 'oWorksheet' variable and get the created spreadsheet contents
-const oWorksheet = Api.GetActiveSheet()
+const oWorksheet = Api.GetActiveSheet();
 
 // set the 'sheet 1' name for the current active sheet
-oWorksheet.SetName("sheet 1")
+oWorksheet.SetName("sheet 1");
 
 // set the width of the first column to 140 pixels
-oWorksheet.SetColumnWidth(0, 20)
+oWorksheet.SetColumnWidth(0, 20);
 
 // set the 'New cell' value to the A1 spreadsheet cell
-oWorksheet.GetRange("A1").SetValue("New cell")
+oWorksheet.GetRange("A1").SetValue("New cell");
 
 // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
-builder.SaveFile("xlsx", "example.xlsx")
+builder.SaveFile("xlsx", "example.xlsx");
 
 // close the spreadsheet file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
 ## 打开现有的电子表格
 
-如果您想编辑已存在的电子表格，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。在这种情况下，与电子表格编辑器的唯一区别是您不需要电子表格编辑器。电子表格按以下方式打开：
+如果您想编辑已存在的电子表格，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。电子表格按以下方式打开：
 
 ``` ts
-// use a path to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
-builder.OpenFile("https://example.com/myspreadsheet.xlsx")
+// use a path or URL to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
+builder.OpenFile("https://example.com/myspreadsheet.xlsx");
 
-// create a new 'oWorksheet' variable and get the created spreadsheet contents
-const oWorksheet = Api.GetActiveSheet()
+// create a new 'oWorksheet' variable and get the opened spreadsheet contents
+const oWorksheet = Api.GetActiveSheet();
 
 // set the 'sheet 1 renamed' name for the current active sheet
-oWorksheet.SetName("sheet 1 renamed")
+oWorksheet.SetName("sheet 1 renamed");
 
 // set the width of the first column to 140 pixels
-oWorksheet.SetColumnWidth(0, 20)
+oWorksheet.SetColumnWidth(0, 20);
 
 // set the 'New cell' value to the A1 spreadsheet cell
-oWorksheet.GetRange("A1").SetValue("New cell")
+oWorksheet.GetRange("A1").SetValue("New cell");
 
 // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
-builder.SaveFile("xlsx", "example.xlsx")
+builder.SaveFile("xlsx", "example.xlsx");
 
 // close the spreadsheet file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
-如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile();* 方法，并将必要电子表格的路径作为参数传递即可打开它。在上面的示例中，我们打开 **myspreadsheet.xlsx** 电子表格，获取其第一个工作表并更改工作表名称、第一列宽度，并在其 A1 单元格中输入新值。同样的方式可以更改任何其他电子表格元素。
+如您所见，您只需使用 [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) 类的 *builder.OpenFile* 方法，并将必要电子表格的路径或 URL 作为参数传递即可打开它。在上面的示例中，我们打开 **myspreadsheet.xlsx** 电子表格，获取其第一个工作表并更改工作表名称、第一列宽度，并在其 A1 单元格中输入新值。同样，任何其他电子表格元素都可以更改。
 
-使用相应的 API 文档部分来了解哪些方法允许您更改某些文档和电子表格元素的格式属性。
+使用相应的 API 文档部分来了解哪些方法允许您更改某些电子表格元素的格式属性。

@@ -48,26 +48,26 @@ PDF 表单包括*字段*和*部件*。字段定义数据模型（名称、值、
 
 ```ts
 // 使用 ONLYOFFICE Document Builder 创建文档文件
-builder.CreateFile("docx")
+builder.CreateFile("docx");
 
 // 创建一个新的 'oDocument' 变量并获取创建的文档
-const oDocument = Api.GetDocument()
+const oDocument = Api.GetDocument();
 
 // 为文档内容创建一个新段落
-const oParagraph = Api.CreateParagraph()
+const oParagraph = Api.CreateParagraph();
 
 // 设置段落对齐方式使文本居中
-oParagraph.SetJc("center")
+oParagraph.SetJc("center");
 
 // 向段落添加包含单个 'Center' 词的文本
-oParagraph.AddText("Center")
+oParagraph.AddText("Center");
 
 // 将段落推送到文档中
-oDocument.Push(oParagraph)
+oDocument.Push(oParagraph);
 
 // 将生成的文档保存为名为 'example.pdf' 的 PDF 文件并关闭它
-builder.SaveFile("pdf", "example.pdf")
-builder.CloseFile()
+builder.SaveFile("pdf", "example.pdf");
+builder.CloseFile();
 ```
 
 文档使用默认页面配置初始化。您可以使用适当的页面配置方法自定义页面大小、方向和边距。
@@ -77,26 +77,26 @@ builder.CloseFile()
 要编辑现有的 PDF 文档，请使用 `builder.OpenFile` 打开它，然后获取其页面并修改其内容：
 
 ```ts
-// 使用现有 'mydocument.pdf' 文件的路径通过 ONLYOFFICE Document Builder 打开它
-builder.OpenFile("https://example.com/mydocument.pdf")
+// 使用现有 'mydocument.pdf' 文件的路径或 URL 通过 ONLYOFFICE Document Builder 打开它
+builder.OpenFile("https://example.com/mydocument.pdf");
 
 // 创建一个新的 'oDocument' 变量并获取打开的 PDF 文档内容
-const oDocument = Api.GetDocument()
+const oDocument = Api.GetDocument();
 
 // 获取第一页
-const oPage = oDocument.GetElement(0)
+const oPage = oDocument.GetElement(0);
 
 // 创建并配置一个新段落
-const oParagraph = Api.CreateParagraph()
-oParagraph.SetJc("center")
-oParagraph.AddText("Center")
+const oParagraph = Api.CreateParagraph();
+oParagraph.SetJc("center");
+oParagraph.AddText("Center");
 
 // 将段落添加到页面
-oPage.Push(oParagraph)
+oPage.Push(oParagraph);
 
 // 将生成的 PDF 文档保存为新的 'example.pdf' 文件并关闭它
-builder.SaveFile("pdf", "example.pdf")
-builder.CloseFile()
+builder.SaveFile("pdf", "example.pdf");
+builder.CloseFile();
 ```
 
 使用相应的 API 文档部分了解哪些方法允许您更改某些 PDF 文档元素的格式属性并使用 PDF 特定功能。

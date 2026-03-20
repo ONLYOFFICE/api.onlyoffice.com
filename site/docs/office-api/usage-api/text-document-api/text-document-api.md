@@ -22,28 +22,28 @@ The simplest example text document with a single paragraph containing centered "
 
 ``` ts
 // create a text document file in the .docx format with ONLYOFFICE Document Builder
-builder.CreateFile("docx")
+builder.CreateFile("docx");
 
 // create a new 'oDocument' variable and get the created text document contents
-const oDocument = Api.GetDocument()
+const oDocument = Api.GetDocument();
 
 // create a new paragraph
-const oParagraph = Api.CreateParagraph()
+const oParagraph = Api.CreateParagraph();
 
 // set the paragraph justification to center the text
-oParagraph.SetJc("center")
+oParagraph.SetJc("center");
 
 // add a text containing a single 'Center' word to the paragraph
-oParagraph.AddText("Center")
+oParagraph.AddText("Center");
 
 // push the created paragraph contents with the 'Center' word to the document
-oDocument.Push(oParagraph)
+oDocument.Push(oParagraph);
 
 // save the resulting text document as a file in the .docx format with the 'example.docx' name
-builder.SaveFile("docx", "example.docx")
+builder.SaveFile("docx", "example.docx");
 
 // close the text document file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
 Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this: *oParagraph = oDocument.GetElement(0)* and line 7 (*oDocument.Push(oParagraph);*) is not needed.
@@ -53,26 +53,26 @@ Actually in the above example the created text document will have two paragraphs
 If you want to edit an already existing text document, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a document editor in this case will be that you will not need this text document editor. The document is opened the following way:
 
 ``` ts
-// use a path to an existing 'mydocument.docx' text document file to open it with ONLYOFFICE Document Builder
-builder.OpenFile("https://example.com/mydocument.docx")
+// use a path or URL to an existing 'mydocument.docx' text document file to open it with ONLYOFFICE Document Builder
+builder.OpenFile("https://example.com/mydocument.docx");
 
-// create a new 'oDocument' variable and get the created text document contents
-const oDocument = Api.GetDocument()
+// create a new 'oDocument' variable and get the opened text document contents
+const oDocument = Api.GetDocument();
 
 // get the contents of the document first paragraph
-const oParagraph = oDocument.GetElement(0)
+const oParagraph = oDocument.GetElement(0);
 
 // set the paragraph justification to center the text
-oParagraph.SetJc("center")
+oParagraph.SetJc("center");
 
 // add a text containing a single 'Center' word to the paragraph
-oParagraph.AddText("Center")
+oParagraph.AddText("Center");
 
 // save the resulting text document as a file in the .docx format with a new 'example.docx' name
-builder.SaveFile("docx", "example.docx")
+builder.SaveFile("docx", "example.docx");
 
 // close the text document file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
 As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) class with the path to the necessary text document as an argument to open it. In the above example we open **mydocument.docx** document, get its first paragraph and change the text in it to the centered "Center" text. The same way any other text document element can be changed.
