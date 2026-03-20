@@ -2,7 +2,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
 import {getFullUrl} from "@site/src/utils/url";
-import { EditorType } from "@site/src/components/Playground/root/PlaygroundRootContext";
+import {FILE_CONFIGS} from "../defaultScripts";
 
 declare global {
     interface Window {
@@ -10,22 +10,6 @@ declare global {
         connector: any
         docEditor: any
     }
-}
-
-const FILE_CONFIGS = {
-    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx' },
-    pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf' },
-    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/new.xlsx' },
-    slide: {
-        ext: 'pptx',
-        docType: 'slide',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
-    },
-    form: {
-        ext: 'pdf',
-        docType: 'pdf',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
-    },
 }
 
 export const PlaygroundPreview = () => {
