@@ -31,6 +31,7 @@
 
 * Added MCP server use cases documentation.
 * Added new samples to API Backend documentation.
+* Updated Plugins SDK documentation with improved structure and examples.
 
 ### Improvements
 
@@ -45,6 +46,9 @@
 * Added link to supported properties in argument parameter descriptions.
 * Improved API page formatting and readability.
 * Standardized Parameters section with tabs for all languages.
+* Updated Python examples in CDocBuilderValue docs to use direct method calls.
+* Improved signature documentation consistency and formatting.
+* Moved debugging docs to using-cli section.
 
 #### Docs API
 
@@ -80,6 +84,12 @@
 * Fixed editor type in Playground.
 * Standardized note format in builder-framework docs.
 * Hidden comparing-documents.md pages.
+* Fixed usage API documentation examples and improved consistency.
+* Fixed AI Tools samples video.
+* Fixed default scripts for PDF, builder, and mobile in Playground.
+* Fixed announcement bar on try-docs example page.
+* Updated PDF document name from 'demo' to 'blank' in Playground.
+* Shortened case titles.
 
 ### Breaking changes
 
