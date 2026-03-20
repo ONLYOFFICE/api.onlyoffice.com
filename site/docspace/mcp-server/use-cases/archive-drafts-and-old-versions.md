@@ -1,4 +1,4 @@
-# Clean up a room by archiving drafts and old versions
+# Archive drafts and old versions
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to keep a project room organized by moving drafts and old versions into an "Archive" folder. This makes it easier for the team to find final documents.
 

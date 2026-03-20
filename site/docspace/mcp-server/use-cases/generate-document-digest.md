@@ -1,4 +1,4 @@
-# Generate a digest from all documents in a folder
+# Generate document digest
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to generate a structured digest from all documents stored in a selected folder. The digest helps you review folder content without opening each file manually.
 

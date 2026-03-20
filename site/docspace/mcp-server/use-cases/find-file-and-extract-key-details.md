@@ -1,4 +1,4 @@
-# Find a file in a room and extract key details
+# Find file and extract key details
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to locate a file in a room and extract specific details from its content. This is useful when you know what information you need, but do not want to open and review multiple documents manually.
 

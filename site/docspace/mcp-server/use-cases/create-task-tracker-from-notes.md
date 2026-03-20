@@ -1,4 +1,4 @@
-# Create a task tracker spreadsheet from meeting notes
+# Create task tracker from notes
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to convert meeting notes into a structured task tracker spreadsheet saved to DocSpace. This is useful when you want action items in a clear format without rewriting notes manually.
 

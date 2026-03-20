@@ -1,4 +1,4 @@
-# Create a contract register spreadsheet from documents in a folder
+# Create contract register spreadsheet
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to create a contract register spreadsheet from multiple contract files stored in a DocSpace folder. This is useful when you have many contracts and want a single Excel table for tracking.
 

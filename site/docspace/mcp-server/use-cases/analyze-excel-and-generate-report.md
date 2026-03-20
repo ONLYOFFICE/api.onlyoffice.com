@@ -1,4 +1,4 @@
-# Analyze an Excel file and generate an executive summary report
+# Analyze Excel and generate report
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to analyze an Excel file stored in DocSpace and generate a short executive summary report. This is useful when you need key insights from a spreadsheet without reviewing the entire file manually.
 

@@ -1,4 +1,4 @@
-# Prepare a delivery package for a client
+# Prepare client delivery package
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to collect final project files into a single "Delivery" folder and provide a shareable link to that folder.
 

@@ -1,4 +1,4 @@
-# Generate a project presentation from documents in a folder
+# Generate project presentation
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to generate a project presentation based on documents stored in a DocSpace folder. This is useful when you want to quickly turn project materials into a shareable slide deck for a meeting or status update.
 

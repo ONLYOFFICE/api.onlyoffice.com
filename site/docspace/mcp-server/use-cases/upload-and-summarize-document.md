@@ -1,4 +1,4 @@
-# Upload a document to a room folder and generate a structured summary
+# Upload and summarize document
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to upload a document to a specific room folder and generate a structured summary based on the document content.
 

@@ -1,4 +1,4 @@
-# Review room access and archive the workspace
+# Review access and archive room
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to review who has access to a room, update access permissions, and archive the room when the project is completed.
 
