@@ -79,6 +79,20 @@ Starting from version 4.3, please use the absolute URLs in [pluginsData](#plugin
 
 ![Plugins](/assets/images/editor/plugins.png#gh-light-mode-only)![Plugins](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
+## Plugin command logging
+
+To enable logging of plugin commands in the browser console, set the `asc_plugin_commands_log` key in the browser's local storage to `"true"`:
+
+``` js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+To disable logging, remove the key or set it to any other value:
+
+``` js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
 ## Example
 
 ``` ts
