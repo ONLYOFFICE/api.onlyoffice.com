@@ -66,7 +66,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | thumbnail.height | integer | optional | 以像素为单位定义缩略图高度。默认值为 **100**。 |
 | thumbnail.width | integer | optional | 以像素为单位定义缩略图宽度。默认值为 **100**。 |
 | title | string | optional | 定义转换后的文件名。 |
-| token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#request-to-convert-the-document)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。 |
+| token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#convert-document)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。 |
 | url | string | required | 定义要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。 |
 | watermark | object | optional | 定义一个 JSON 对象，其中包含水印的[属性](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md)，在转换过程中将其插入到 pdf 和图像文件中。 |
 | watermark.align | integer | optional | 定义水印形状中的垂直文本对齐方式：**0** - 底部、**1** - 中心、**4** - 顶部。 |
