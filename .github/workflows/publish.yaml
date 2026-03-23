@@ -59,6 +59,9 @@ jobs:
         LOCALE="--locale en"
         SUB_ARGS=""
 
+        # Set NODE_ENV for testing builds
+        [[ "$mode" == "testing" ]] && export NODE_ENV=development
+
         # Build CN locale string
         if [[ "$CN" == "true" ]]; then
            LOCALE="$LOCALE --locale zh-CN"
