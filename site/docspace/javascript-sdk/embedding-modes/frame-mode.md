@@ -82,7 +82,12 @@ const docSpace = sdk.initFrame({
 | ----------- | ------ | ------------- |
 | `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
 | `src` | string | The URL of your DocSpace server. |
-| `mode` | string | The SDK initialization mode. Defaults to `"manager"` if not specified. Accepted values: `"manager"`, `"editor"`, `"viewer"`, `"room-selector"`, `"file-selector"`, `"system"`. |
+
+### Mode
+
+| Parameter | Type | Default | Description |
+| ----------- | ------ | --------- | ------------- |
+| `mode` | string | `"manager"` | The SDK initialization mode. Accepted values: `"manager"`, `"editor"`, `"viewer"`, `"room-selector"`, `"file-selector"`, `"system"`. |
 
 ### Layout
 

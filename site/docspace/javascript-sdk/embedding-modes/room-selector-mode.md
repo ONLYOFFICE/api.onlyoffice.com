@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Room selector mode
 
-Room selector mode embeds a room picker interface inside your application. It presents users with a list of DocSpace rooms and returns the selected room's data via a callback function. If you are looking to embed a fully functional DocSpace interface, check out the [Manager mode](./manager-mode.md) and [Frame mode](./frame-mode.md).
+Room selector mode integrates a room picker interface inside your application. It presents users with a list of DocSpace rooms and returns the selected room's data via a callback function. If you are looking to embed a fully functional DocSpace interface, check out the [Manager mode](./manager-mode.md) and [Frame mode](./frame-mode.md).
 
 ## Initialization
 
