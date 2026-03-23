@@ -24,7 +24,7 @@ boolean
 
 This example applies the text settings to the entire contents of the table.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a text properties and apply it to the table.
 
 // Create a table and make its text bold and bigger.

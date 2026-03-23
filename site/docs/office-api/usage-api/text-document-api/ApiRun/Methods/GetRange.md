@@ -25,7 +25,7 @@ expression.GetRange(Start, End);
 
 This example shows how to get a Range object that represents the part of the document contained in the specified run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get a range using position index and make it bold.
 
 // How to get the range where the run is located.

@@ -10,3 +10,7 @@
 .noHeaderFooter footer {
   display: none;
 }
+
+.noHeaderFooter [class*="announcementBar"] {
+  display: none;
+}

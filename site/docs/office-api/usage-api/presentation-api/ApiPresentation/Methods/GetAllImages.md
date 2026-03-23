@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all images from the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -35,7 +35,7 @@ for (let i = 0; i < copiesCount; i++) {
 	slide.AddObject(drawing);
 }
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 153, 204));
+const fill = Api.CreateSolidFill(Api.RGB(255, 153, 204));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('heart', 38 * 36000, 38 * 36000, fill, stroke);
 shape.SetPosition(184 * 36000, 0 * 36000);

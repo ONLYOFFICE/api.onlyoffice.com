@@ -53,6 +53,7 @@ Represents the ApiDocument class.
 | [GetContentControlsByTag](./Methods/GetContentControlsByTag.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a list of all content controls in the document with the specified tag name. |
 | [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Retrieves the core properties interface for the current document. This method is used to view or modify standard metadata such as title, author, and keywords. |
 | [GetCurrentContentControl](./Methods/GetCurrentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null | Returns the currently selected content control. |
+| [GetCurrentFootEndnote](./Methods/GetCurrentFootEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the footnote or endnote content if the cursor is currently inside one, otherwise returns null. |
 | [GetCurrentPage](./Methods/GetCurrentPage.md) | number | Returns the index of the current page. |
 | [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Returns the current paragraph where the cursor is located. |
 | [GetCurrentRun](./Methods/GetCurrentRun.md) | [ApiRun](../ApiRun/ApiRun.md) | Returns the current run where the cursor is located. |
@@ -66,6 +67,7 @@ Represents the ApiDocument class.
 | [GetDefaultTextPr](./Methods/GetDefaultTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns a set of default properties for the text run in the current document. |
 | [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: **Application** - the application the document was created with. **CreatedRaw** - the date and time when the file was created. **Created** - the parsed date and time when the file was created. **LastModifiedRaw** - the date and time when the file was last modified. **LastModified** - the parsed date and time when the file was last modified. **LastModifiedBy** - the name of the user who made the latest change to the document. **Authors** - the persons who created the file. **Title** - the document title (this property allows you to simplify your documents classification). **Tags** - the document tags (this property allows you to simplify your documents classification). **Subject** - the document subject (this property allows you to simplify your documents classification). **Comment** - the comment to the document (this property allows you to simplify your documents classification). |
 | [GetDocumentVisitor](./Methods/GetDocumentVisitor.md) | ApiDocumentVisitor | Returns a visitor object for traversing the elements of the current document. |
+| [GetDrawingsByName](./Methods/GetDrawingsByName.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md)[] | Returns a collection of drawing objects from the document filtered by their names. |
 | [GetElement](./Methods/GetElement.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns an element by its position in the document. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current document. |
 | [GetEndNotesFirstParagraphs](./Methods/GetEndNotesFirstParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns the first paragraphs from all endnotes in the current document. |
@@ -96,6 +98,8 @@ Represents the ApiDocument class.
 | [InsertContent](./Methods/InsertContent.md) | boolean | Inserts an array of elements into the current position of the document. |
 | [InsertParagraphBreak](./Methods/InsertParagraphBreak.md) | boolean | Add paragraph to the document on the cursor position. |
 | [InsertWatermark](./Methods/InsertWatermark.md) | boolean | Inserts a watermark on each document page. |
+| [IsEndnote](./Methods/IsEndnote.md) | boolean | Check if the current document content is an endnote. |
+| [IsFootnote](./Methods/IsFootnote.md) | boolean | Check if the current document content is a footnote. |
 | [IsTrackRevisions](./Methods/IsTrackRevisions.md) | boolean | Checks if change tracking mode is enabled or not. |
 | [Last](./Methods/Last.md) | [DocumentElement](../Enumeration/DocumentElement.md) | Returns the last document element. |
 | [MoveCursorDown](./Methods/MoveCursorDown.md) | boolean | Moves the cursor down. |
@@ -118,6 +122,7 @@ Represents the ApiDocument class.
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a document object. The search results are a collection of ApiRange objects. |
 | [SearchAndReplace](./Methods/SearchAndReplace.md) | boolean | Finds and replaces the text. |
 | [SelectCurrentWord](./Methods/SelectCurrentWord.md) | object | Selects the current word if it is possible. |
+| [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing. |
 | [SetAssistantTrackRevisions](./Methods/SetAssistantTrackRevisions.md) | boolean | Enables or disables AI-assisted change tracking in the document. |
 | [SetControlsHighlight](./Methods/SetControlsHighlight.md) | boolean | Sets the highlight to the content controls from the current document. |
 | [SetEvenAndOddHdrFtr](./Methods/SetEvenAndOddHdrFtr.md) | boolean | Specifies whether sections in this document will have different headers and footers for even and odd pages (one header/footer for odd pages and another header/footer for even pages). |

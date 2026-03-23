@@ -22,7 +22,7 @@ string
 
 This example shows how to get a name of a pivot item.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a pivot item name.
 
 // Create a pivot table, add data to it then get a name of a specified pivot item.

@@ -26,7 +26,7 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 This example shows how to remove replies from a comment.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to delete specified comment reply.
 
 // Get all comments from the presentation and remove a reply from the first one's.
@@ -38,7 +38,7 @@ slide.RemoveAllObjects();
 const posX = 15 * 36000;
 const posY = 35 * 36000;
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(posX, posY);

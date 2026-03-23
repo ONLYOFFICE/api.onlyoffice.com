@@ -25,7 +25,7 @@ expression.Search(sText, isMatchCase);
 
 This example shows how to make a search.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to search all paragraph objects.
 
 // Search paragraphs and make the second one bold.

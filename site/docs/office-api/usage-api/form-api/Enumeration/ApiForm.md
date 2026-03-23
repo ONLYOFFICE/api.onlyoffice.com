@@ -20,8 +20,8 @@ Enumeration
 
 This example copies a text form.
 
-```javascript editor-forms playground
-// Get a form and create its copy.
+```javascript editor-forms
+// Get a form and create its copy. 
 
 // How to duplicate a text form object.
 

@@ -4,10 +4,6 @@
 
 > 此宏仅适用于 ONLYOFFICE 桌面版编辑器。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function() 
 {

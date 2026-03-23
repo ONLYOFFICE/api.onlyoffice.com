@@ -24,7 +24,7 @@ boolean
 
 This example changes ranges for a protected range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set a protected range.
 
 // Update a range of a protected range.

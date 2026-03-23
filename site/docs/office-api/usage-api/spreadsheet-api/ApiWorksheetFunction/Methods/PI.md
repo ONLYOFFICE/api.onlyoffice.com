@@ -22,7 +22,7 @@ number
 
 This example shows how to return the mathematical constant pi, equal to 3.14159265358979, accurate to 15 digits.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the mathematical constant pi.
 
 // Use a function to return a constant pi.

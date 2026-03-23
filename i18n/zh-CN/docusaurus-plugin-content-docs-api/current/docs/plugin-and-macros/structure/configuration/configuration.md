@@ -335,6 +335,10 @@ sidebar_position: -5
 
 `类型: array of EventType`
 
+:::danger[已废弃]
+从版本 8.2 开始，请改用 [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) 方法，该方法不需要此参数。
+:::
+
 当前插件代码中使用的插件事件。了解如何订阅事件，请参见[这里](../../interacting-with-editors/overview/how-to-attach-events.md)。
 
 **示例**: `["onClick"]`

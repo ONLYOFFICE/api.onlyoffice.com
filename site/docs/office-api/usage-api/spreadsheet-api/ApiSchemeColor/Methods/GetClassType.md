@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a class type of ApiSchemeColor.
 
 // Get a class type of ApiSchemeColor and display it in the worksheet.

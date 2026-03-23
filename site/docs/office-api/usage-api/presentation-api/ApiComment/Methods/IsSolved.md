@@ -22,7 +22,7 @@ boolean
 
 This example shows how to find out if the comment is solved or not.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

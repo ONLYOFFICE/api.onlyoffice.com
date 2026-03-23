@@ -25,7 +25,7 @@ string[][]
 
 This example shows how to get the mail merge data.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Get mail merge data from the worksheet.
 
 // How to get mail merge information using index.

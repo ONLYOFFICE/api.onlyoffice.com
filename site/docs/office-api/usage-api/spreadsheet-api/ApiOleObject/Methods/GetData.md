@@ -22,7 +22,7 @@ string
 
 This example shows how to get the string data from the OLE object.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get ApiOleObject content as a string.
 
 // Get ApiOleObject data and display it in the worksheet.

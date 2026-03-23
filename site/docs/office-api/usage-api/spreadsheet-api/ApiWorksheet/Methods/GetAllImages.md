@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all images from the sheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get all images.
 
 // Get all images as an array.

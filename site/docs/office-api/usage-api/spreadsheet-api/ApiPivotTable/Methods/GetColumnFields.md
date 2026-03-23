@@ -24,7 +24,7 @@ expression.GetColumnFields(field);
 
 This example shows how to clear a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to remove all elements from a pivot table.
 
 // Create a pivot table, add data to it then delete all its content.

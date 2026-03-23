@@ -1,6 +1,6 @@
 # SetDisplayFieldCaptions
 
-Returns the setting which specifies whether to display field headers for rows and columns.
+Sets whether to display field headers for rows and columns.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set a display field captions of a table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set a display field captions of a table.
 
 // Create a pivot table, add data to it then set a display field captions.

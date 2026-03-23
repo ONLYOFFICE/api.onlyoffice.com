@@ -22,7 +22,7 @@ Number
 
 This example gets a quote text of a comment.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to retrieve a quote text from a comment.
 
 // Get all comments from the presentation and the first one's quote text.
@@ -34,7 +34,7 @@ slide.RemoveAllObjects();
 const posX = 15 * 36000;
 const posY = 35 * 36000;
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(posX, posY);

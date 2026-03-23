@@ -24,7 +24,7 @@ expression.CreateSchemeColor(schemeColorId);
 
 This example shows how to create a scheme color with the 'dk1' identifier.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a new scheme color.
 
 // Add a scheme color to create a solid fill.

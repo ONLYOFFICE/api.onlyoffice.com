@@ -24,7 +24,7 @@ boolean
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the direction of the watermark.
 
 // Indicate the direction "clockwise45" in the watermark settings.
@@ -40,7 +40,7 @@ textPr.SetDoubleStrikeout(true);
 textPr.SetItalic(true);
 textPr.SetBold(true);
 textPr.SetUnderline(true);
-textPr.SetColor(0, 255, 0);
+textPr.SetColor(Api.RGB(0, 255, 0));
 watermarkSettings.SetTextPr(textPr);
 watermarkSettings.SetOpacity(127);
 watermarkSettings.SetDirection("clockwise45");

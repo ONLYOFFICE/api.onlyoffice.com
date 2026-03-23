@@ -24,12 +24,12 @@ This method doesn't return any data.
 
 This example demonstrates how to set the category of the presentation using the ApiCore.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(200, 50, 200));
+const fill = Api.CreateSolidFill(Api.RGB(200, 50, 200));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 200 * 36000, 100 * 36000, fill, stroke);
 shape.SetPosition(0, 0);

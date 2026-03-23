@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to move a pivot field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the position a pivot field.
 
 // Create a pivot table, add data to it then move a specified pivot field by columns.

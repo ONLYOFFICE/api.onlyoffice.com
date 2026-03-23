@@ -22,7 +22,7 @@ string
 
 This example shows how to get a value of a data field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to use a table element value.
 
 // Create a pivot table, add data to it then display a custom data field's value.

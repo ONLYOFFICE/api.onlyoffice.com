@@ -23,7 +23,7 @@ number
 
 This example shows how to get position of a pivot field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a pivot field position.
 
 // Create a pivot table, add data to it then get the position of a specified pivot field.

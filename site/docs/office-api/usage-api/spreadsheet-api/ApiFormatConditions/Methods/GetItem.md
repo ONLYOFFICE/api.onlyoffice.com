@@ -24,7 +24,7 @@ expression.GetItem(index);
 
 This example gets a specific conditional formatting rule by index.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get individual conditional formatting rules from a collection.
 
 // Get specific conditional formatting rule by index.

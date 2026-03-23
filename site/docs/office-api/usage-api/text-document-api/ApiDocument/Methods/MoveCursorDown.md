@@ -25,7 +25,7 @@ boolean
 
 This example shows how to move the cursor down through the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to move the cursor down by a specified number of lines.
 
 // Create multiple paragraphs and move cursor.

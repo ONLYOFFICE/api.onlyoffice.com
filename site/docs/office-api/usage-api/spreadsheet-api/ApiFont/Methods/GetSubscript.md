@@ -22,7 +22,7 @@ boolean \| null
 
 This example shows how to get the subscript property of the specified font.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to determine a font subscript property.
 
 // Get a boolean value that represents whether a font has a subscript property or not and show the value in the worksheet.

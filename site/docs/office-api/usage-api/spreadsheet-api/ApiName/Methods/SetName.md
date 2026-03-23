@@ -24,7 +24,7 @@ boolean
 
 This example sets a string value representing the object name.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to rename an object.
 
 // Set a new name for an object and display it in the worksheet.

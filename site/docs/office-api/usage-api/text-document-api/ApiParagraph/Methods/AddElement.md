@@ -25,7 +25,7 @@ boolean
 
 This example adds a Run to the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add an element to the paragraph.
 
 // Create a text run and insert it to the paragraph.

@@ -29,7 +29,7 @@ boolean
 
 This example adds a caption cross-reference to the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a caption reference to the paragraph.
 
 // Add a cross-reference to the caption of the paragraph.

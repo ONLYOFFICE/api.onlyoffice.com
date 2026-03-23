@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example creates a copy of an inline content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a duplicate of the inline text element.
 
 // Add inline content control and its copy to the paragraph separated by a line break.

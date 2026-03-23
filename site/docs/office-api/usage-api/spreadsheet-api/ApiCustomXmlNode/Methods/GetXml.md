@@ -22,7 +22,7 @@ string
 
 This example shows how to get the XML string representation of a custom XML node.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve XML string representation from custom XML node elements.
 
 // Get XML string from book node.

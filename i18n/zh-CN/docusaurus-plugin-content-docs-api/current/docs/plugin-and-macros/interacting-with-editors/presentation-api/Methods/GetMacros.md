@@ -1,6 +1,6 @@
-# 获取宏
+# GetMacros
 
-返回文档中的宏。
+返回文档宏。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.GetMacros();
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[宏](../Enumeration/Macros.md)
+[Macros](../Enumeration/Macros.md)
 
 ## 示例
 

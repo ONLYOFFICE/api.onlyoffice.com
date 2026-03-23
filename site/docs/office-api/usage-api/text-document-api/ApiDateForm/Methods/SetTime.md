@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the date to a date form.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a time to the date form.
 
 // Set the current time to the date form.

@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set a role for a form element.
 
-```javascript editor-forms playground
+```javascript editor-forms
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

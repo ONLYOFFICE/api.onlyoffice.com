@@ -22,7 +22,7 @@ string
 
 This example shows how to get the tag attribute for the container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get tag of the inline text control.
 
 // Display the tag of the inline content control.

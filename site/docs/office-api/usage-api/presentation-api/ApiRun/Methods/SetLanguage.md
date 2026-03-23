@@ -25,7 +25,7 @@ expression.SetLanguage(sLangId);
 
 This example specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change language of the text for grammar check.
 
 // Create a new text run and change its language.
@@ -34,7 +34,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

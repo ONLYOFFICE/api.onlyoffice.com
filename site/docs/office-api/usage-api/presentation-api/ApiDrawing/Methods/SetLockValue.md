@@ -25,7 +25,7 @@ boolean
 
 This example sets the lock value to the specified lock type of the shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a lock value to a shape which means that the shape cannot be selected.
 
 // Select a shape object from a slide and set its lock value.
@@ -34,7 +34,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

@@ -1,4 +1,4 @@
-# 获取所有批注
+# GetAllComments
 
 返回文档中的所有批注。
 
@@ -8,15 +8,15 @@
 expression.GetAllComments();
 ```
 
-`expression` - 一个表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[批注](../Enumeration/comment.md)[]
+[comment](../Enumeration/comment.md)[]
 
 ## 示例
 

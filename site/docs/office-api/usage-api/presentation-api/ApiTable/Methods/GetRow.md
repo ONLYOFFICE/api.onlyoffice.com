@@ -24,7 +24,7 @@ expression.GetRow(nIndex);
 
 This example shows how to get a row by its index.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a row object from the table.
 
 // Create a table, add rows and columns, then get its row by index.

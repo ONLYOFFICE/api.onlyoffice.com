@@ -6,6 +6,55 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 9.3
+
+- Added the [SelectAddinField](../interacting-with-editors/text-document-api/Methods/SelectAddinField.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
+- Added the [RemoveAddinField](../interacting-with-editors/text-document-api/Methods/RemoveAddinField.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
+- Added the [GetCurrentAddinField](../interacting-with-editors/text-document-api/Methods/GetCurrentAddinField.md) method for Text document Api.
+- Added the [IsFormSigned](../interacting-with-editors/text-document-api/Methods/IsFormSigned.md) method for Text document Api.
+- Added the [AddOleObject](../interacting-with-editors/pdf-api/Methods/AddOleObject.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [CoAuthoringChatSendMessage](../interacting-with-editors/pdf-api/Methods/CoAuthoringChatSendMessage.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [ConvertDocument](../interacting-with-editors/pdf-api/Methods/ConvertDocument.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [EditOleObject](../interacting-with-editors/pdf-api/Methods/EditOleObject.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [EndAction](../interacting-with-editors/pdf-api/Methods/EndAction.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [FocusEditor](../interacting-with-editors/pdf-api/Methods/FocusEditor.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetAllComments](../interacting-with-editors/pdf-api/Methods/GetAllComments.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetCurrentPage](../interacting-with-editors/pdf-api/Methods/GetCurrentPage.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetDocumentLang](../interacting-with-editors/pdf-api/Methods/GetDocumentLang.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetFileToDownload](../interacting-with-editors/pdf-api/Methods/GetFileToDownload.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetFontList](../interacting-with-editors/pdf-api/Methods/GetFontList.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetImageDataFromSelection](../interacting-with-editors/pdf-api/Methods/GetImageDataFromSelection.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetInstalledPlugins](../interacting-with-editors/pdf-api/Methods/GetInstalledPlugins.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetMacros](../interacting-with-editors/pdf-api/Methods/GetMacros.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetPageImage](../interacting-with-editors/pdf-api/Methods/GetPageImage.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetSelectedContent](../interacting-with-editors/pdf-api/Methods/GetSelectedContent.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetSelectedOleObjects](../interacting-with-editors/pdf-api/Methods/GetSelectedOleObjects.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetSelectedText](../interacting-with-editors/pdf-api/Methods/GetSelectedText.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetSelectionType](../interacting-with-editors/pdf-api/Methods/GetSelectionType.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetVBAMacros](../interacting-with-editors/pdf-api/Methods/GetVBAMacros.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [GetVersion](../interacting-with-editors/pdf-api/Methods/GetVersion.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [InputText](../interacting-with-editors/pdf-api/Methods/InputText.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [InstallPlugin](../interacting-with-editors/pdf-api/Methods/InstallPlugin.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [MouseMoveWindow](../interacting-with-editors/pdf-api/Methods/MouseMoveWindow.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [MouseUpWindow](../interacting-with-editors/pdf-api/Methods/MouseUpWindow.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [OnDropEvent](../interacting-with-editors/pdf-api/Methods/OnDropEvent.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [OnEncryption](../interacting-with-editors/pdf-api/Methods/OnEncryption.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [PasteHtml](../interacting-with-editors/pdf-api/Methods/PasteHtml.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [PasteText](../interacting-with-editors/pdf-api/Methods/PasteText.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [PutImageDataToSelection](../interacting-with-editors/pdf-api/Methods/PutImageDataToSelection.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [RemovePlugin](../interacting-with-editors/pdf-api/Methods/RemovePlugin.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [ReplacePageContent](../interacting-with-editors/pdf-api/Methods/ReplacePageContent.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [ReplaceTextSmart](../interacting-with-editors/pdf-api/Methods/ReplaceTextSmart.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [SetMacros](../interacting-with-editors/pdf-api/Methods/SetMacros.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [SetPluginsOptions](../interacting-with-editors/pdf-api/Methods/SetPluginsOptions.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [SetProperties](../interacting-with-editors/pdf-api/Methods/SetProperties.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [ShowButton](../interacting-with-editors/pdf-api/Methods/ShowButton.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [ShowError](../interacting-with-editors/pdf-api/Methods/ShowError.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [ShowInputHelper](../interacting-with-editors/pdf-api/Methods/ShowInputHelper.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [StartAction](../interacting-with-editors/pdf-api/Methods/StartAction.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [UnShowInputHelper](../interacting-with-editors/pdf-api/Methods/UnShowInputHelper.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+- Added the [UpdatePlugin](../interacting-with-editors/pdf-api/Methods/UpdatePlugin.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
+
 ## Version 9.2
 
 - Added the [AnnotateParagraph](../interacting-with-editors/text-document-api/Methods/AnnotateParagraph.md) method for Text document Api.

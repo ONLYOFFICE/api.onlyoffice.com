@@ -2,10 +2,6 @@
 
 将单元格 A2 的字体设置为加粗。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

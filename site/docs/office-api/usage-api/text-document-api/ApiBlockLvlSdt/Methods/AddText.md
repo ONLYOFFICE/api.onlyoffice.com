@@ -24,7 +24,7 @@ boolean
 
 This example adds a text to the content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a block content control in the current document and adds a text to it.
 
 // How to add a text to the ApiBlockLvlSdt object.

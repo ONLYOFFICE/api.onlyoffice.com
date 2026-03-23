@@ -27,7 +27,7 @@ string
 
 This example shows how to replace existing text with new text in a text string.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to substitute a substring with another one.
 
 // Use a function to replace a text with another one.

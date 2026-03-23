@@ -15,10 +15,6 @@ Starting from version 8.1, you can add custom functions to the spreadsheets usin
 1. Open the **View** tab and select **Macros**. The macros window will pop up.
 2. In the **Custom functions** section, click ![Plus icon](/assets/images/plugins/plus.svg#gh-light-mode-only)![Plus icon](/assets/images/plugins/plus.dark.svg#gh-dark-mode-only). You will be presented with the custom function template:
 
-    <!-- This code is related to macros. -->
-
-    <!-- eslint-skip -->
-
     ``` ts
     (function()
     {
@@ -107,10 +103,6 @@ You can also copy your function. To do this, click ![Dots icon](/assets/images/p
 Starting from version 9.0, you can add asynchronous custom functions to manage any request within the function body.
 
 :::
-
-<!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

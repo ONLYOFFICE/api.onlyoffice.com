@@ -25,7 +25,7 @@ boolean
 
 This example adds a text to the specified position.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add raw text to the range.
 
 // Change content of the range by adding a text.

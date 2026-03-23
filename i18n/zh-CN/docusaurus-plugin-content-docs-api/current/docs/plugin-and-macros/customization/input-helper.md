@@ -23,7 +23,6 @@ description: 了解如何在 ONLYOFFICE 插件中创建和使用输入辅助。
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -44,7 +43,6 @@ window.Asc.plugin.init = (text) => {
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -111,7 +109,6 @@ window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true]);
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentText = "";
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -124,7 +121,7 @@ window.Asc.plugin.init = (text) => {
 
 **参数**：此方法不带任何参数。
 
-**返回值**：Array.\<[InputHelperItem](#inputhelperitem)\>
+**返回值**：[InputHelperItem](#inputhelperitem)[]
 
 **示例**：
 
@@ -178,7 +175,7 @@ const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().
 ```ts
 function getInputHelperSize() {
   const size = window.Asc.plugin.getInputHelper().getScrollSizes();
-  let width = 200;
+  let width = 150;
   let height = size.h;
   const inputHelper = window.Asc.plugin.getInputHelper();
   const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length));
@@ -201,7 +198,7 @@ function getInputHelperSize() {
 
 | 名称    | 类型                      | 描述                                                                             |
 |---------|---------------------------|----------------------------------------------------------------------------------|
-| *items* | `Array.<InputHelperItem>` | 定义一个包含所有输入辅助条目的 [InputHelperItem](#inputhelperitem) 对象数组。    |
+| *items* | [InputHelperItem](#inputhelperitem)[] | 定义一个包含所有输入辅助条目的 [InputHelperItem](#inputhelperitem) 对象数组。    |
 
 **返回值**：此方法不返回任何值。
 

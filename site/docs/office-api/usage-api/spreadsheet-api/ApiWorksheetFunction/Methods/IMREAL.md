@@ -24,7 +24,7 @@ number
 
 This example shows how to return the real coefficient of a complex number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the real coefficient.
 
 // Use a function to get the real coefficient of a complex number.

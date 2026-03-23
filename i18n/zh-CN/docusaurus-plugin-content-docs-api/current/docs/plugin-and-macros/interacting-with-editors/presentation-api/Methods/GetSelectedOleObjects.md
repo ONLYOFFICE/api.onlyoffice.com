@@ -1,6 +1,6 @@
-# 获取选中的 OLE 对象
+# GetSelectedOleObjects
 
-返回选中的 OLE 对象数组。
+返回所选 OLE 对象的数组。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.GetSelectedOleObjects();
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[OLE 属性](../Enumeration/OLEProperties.md) []
+[OLEProperties](../Enumeration/OLEProperties.md)[]
 
 ## 示例
 

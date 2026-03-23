@@ -1,6 +1,6 @@
-# 移除内容控件
+# RemoveContentControl
 
-移除当前选中的内容控件，同时保留其所有内容。鼠标光标当前所在的内容控件将被移除。
+删除当前选定的内容控件，同时保留其所有内容。将删除鼠标光标当前所在位置的内容控件。
 
 ## 语法
 
@@ -12,13 +12,13 @@ expression.RemoveContentControl(InternalId);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| InternalId | 必填 | string | — | 内容控件的唯一内部标识符。 |
+| InternalId | 必需 | string |  | 内容控件的唯一内部标识符。 |
 
 ## 返回值
 
-[内容控件父级属性](../Enumeration/ContentControlParentPr.md)
+[ContentControlParentPr](../Enumeration/ContentControlParentPr.md)
 
 ## 示例
 

@@ -24,7 +24,7 @@ boolean
 
 This example shows how to remove all elements from a shape.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to remove all elements from the slide shape.
 
 // Get a slide shape's content and remove all elements from it.
@@ -33,7 +33,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

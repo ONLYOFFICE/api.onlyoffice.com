@@ -26,7 +26,7 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 This example adds the new columns to the table.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to insert columns to the table.
 
 // Get a table cell and insert two new columns after it.

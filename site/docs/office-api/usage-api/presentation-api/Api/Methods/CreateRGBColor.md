@@ -26,7 +26,7 @@ expression.CreateRGBColor(r, g, b);
 
 This example shows how to create a RGB color for gradient stop.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a RGB color for a gradient stop.
 
 // Add an RGB color as a stop for a gradient.
@@ -35,7 +35,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const rgbColor = Api.CreateRGBColor(255, 111, 61);
+const rgbColor = Api.RGB(255, 111, 61);
 const gs1 = Api.CreateGradientStop(Api.CreatePresetColor("peachPuff"), 0);
 const gs2 = Api.CreateGradientStop(rgbColor, 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);

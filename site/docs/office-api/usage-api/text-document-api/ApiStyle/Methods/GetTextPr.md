@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the text properties of the current style.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to update text properties.
 
 // Get the default style text properties of the paragraph.
@@ -30,7 +30,7 @@ This example shows how to get the text properties of the current style.
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");
 let textPr = normalStyle.GetTextPr();
-textPr.SetColor(0x26, 0x26, 0x26, false);
+textPr.SetColor(Api.HexColor('#262626'));
 textPr.SetFontFamily("Calibri Light");
 textPr.SetFontSize(32);
 let paragraph = doc.GetElement(0);

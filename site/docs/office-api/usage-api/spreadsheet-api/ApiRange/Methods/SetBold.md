@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the bold property to the text characters in the current cell or cell range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the font style properties of a range making it bold.
 
 // Make characters of the ApiRange object bold.

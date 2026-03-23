@@ -19,7 +19,7 @@ Enumeration
 
 This example adds a table of contents of the standard style to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a table of contents properties indicating its style.
 
 // Add a table of contents with standard style.

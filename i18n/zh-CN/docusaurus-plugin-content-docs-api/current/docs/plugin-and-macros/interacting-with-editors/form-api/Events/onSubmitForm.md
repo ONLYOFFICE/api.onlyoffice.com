@@ -1,10 +1,10 @@
-# 提交表单回调
+# onSubmitForm
 
-当用户点击“完成并提交”按钮时调用的函数。
+用户点击"完成并提交"按钮时调用的函数。
 
 ## 参数
 
-此事件无参数。
+此事件没有参数。
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onSubmitForm", () => {

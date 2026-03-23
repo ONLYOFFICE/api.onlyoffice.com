@@ -1,4 +1,4 @@
-# 获取当前书签
+# GetCurrentBookmark
 
 返回当前书签。
 
@@ -12,7 +12,7 @@ expression.GetCurrentBookmark();
 
 ## 参数
 
-此方法没有参数。
+此方法没有任何参数。
 
 ## 返回值
 

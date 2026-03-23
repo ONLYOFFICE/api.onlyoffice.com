@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all chart objects from the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,7 +39,7 @@ const chart = Api.CreateChart(
 chart.SetPosition(36000, 36000);
 slide.AddObject(chart);
 
-const labelFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 230, 150));
+const labelFill = Api.CreateSolidFill(Api.RGB(255, 230, 150));
 const labelStroke = Api.CreateStroke(0, Api.CreateNoFill());
 const label = Api.CreateShape('rect', 60 * 36000, 20 * 36000, labelFill, labelStroke);
 const docContent = label.GetDocContent();

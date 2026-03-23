@@ -24,11 +24,11 @@ number
 
 This example shows how to convert points to emus.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const points = 1000;
 const emus = Api.PointsToEmus(points);
 
-const rgb = Api.CreateRGBColor(50, 150, 250);
+const rgb = Api.RGB(50, 150, 250);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 300 * 36000, 150 * 36000, fill, stroke);

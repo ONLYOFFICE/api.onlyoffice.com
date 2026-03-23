@@ -24,7 +24,7 @@ number
 
 This example shows how to return the number of columns in the cell range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find a number of columns from a range.
 
 // Use function to count range column.

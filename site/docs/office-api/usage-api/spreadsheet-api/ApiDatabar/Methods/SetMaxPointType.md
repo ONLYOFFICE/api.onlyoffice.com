@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the maximum point type of a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the type of the maximum condition value.
 
 // Set the maximum point type of a data bar conditional formatting rule.

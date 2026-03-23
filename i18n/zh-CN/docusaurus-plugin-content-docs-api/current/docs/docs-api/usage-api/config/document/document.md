@@ -6,7 +6,7 @@
 
 `类型: string`
 
-定义查看或编辑的源文档的文件类型。必须是小写。以下文件类型可用： *.csv、.djvu、.doc、.docm、.docx、.docxf、.dot、.dotm、.dotx、.epub、.fb2、.fodp、.fods、.fodt、.htm、.html、.key、.mht、.numbers、.odp、.ods、.odt、.oform、.otp、.ots、.ott、.oxps、.pages、.pdf、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx、.rtf、.txt、<!-- .vsdm、.vsdx、.vssm、.vssx、.vstm、.vstx、--> .xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml、.xps*.
+定义查看或编辑的源文档的文件类型。必须是小写。以下文件类型可用：*.csv、.djvu、.doc、.docm、.docx、.dot、.dotm、.dotx、.dps、.dpt、.epub、.et、.ett、.fb2、.fodp、.fods、.fodt、.hml、.htm、.html、.hwp、.hwpx、.key、.md、.mht、.mhtml、.numbers、.odg、.odp、.ods、.odt、.otp、.ots、.ott、.oxps、.pages、.pdf、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx、.rtf、.stw、.sxc、.sxi、.sxw、.txt、.vsdm、.vsdx、.vssm、.vssx、.vstm、.vstx、.wps、.wpt、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml、.xps*。
 
 **示例**: `"docx"`
 
@@ -26,10 +26,10 @@
 
 定义服务用来识别文档的唯一文档标识符。如果发送了已知key，则将从缓存中获取文档。每次编辑和保存文档时，都必须重新生成key。文档 url 可以用作 **key**，但不能使用特殊字符，长度限制为 128 个符号。
 
-:::请注意，
+:::note
 对于连接到同一文档服务器的所有独立服务，密钥必须是唯一的。否则，服务可能会从编辑器缓存中打开其他人的文件。如果多个第三方集成商连接到同一文档服务器，他们也必须提供唯一的密钥。
 
-可以使用的关键字符： **0-9**, **a-z**, **A-Z**, **-.\_=**。 最大密钥长度为 **128** 个字符。
+可以使用的关键字符：**0-9**、**a-z**、**A-Z**、**-.\_=**。最大密钥长度为 **128** 个字符。
 :::
 
 **示例**: `"Khirz6zTPdfd7"`
@@ -38,7 +38,7 @@
 
 `类型: object`
 
-定义一个由集成商生成的对象，用于唯一标识其系统中的文件：
+定义一个由集成商生成的对象，用于唯一标识其系统中的文件。
 
 **示例**:
 
@@ -63,9 +63,9 @@
 
 唯一的系统标识符。如果数据从一个系统上的文件复制并插入到另一个系统的文件中，则通过链接粘贴将不可用，并且上下文菜单中没有相应的按钮。
 
-**示例**: `https://example.com`
+**示例**: `"https://example.com"`
 
-## 标语
+## title
 
 `类型: string` | **此参数是必需的**
 
@@ -79,7 +79,7 @@
 
 定义存储查看或编辑的源文档的绝对 URL。使用本地链接时请务必添加[令牌](../../../get-started/how-it-works/security.md)。否则会出现错误。
 
-**示例**: `https://example.com/url-to-example-document.docx`
+**示例**: `"https://example.com/url-to-example-document.docx"`
 
 ## 示例
 

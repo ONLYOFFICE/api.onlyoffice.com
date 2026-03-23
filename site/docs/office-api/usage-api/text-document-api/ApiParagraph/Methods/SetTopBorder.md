@@ -30,7 +30,7 @@ boolean
 
 This example specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Set top border to the paragraph.
 
 // Border with single line the text.

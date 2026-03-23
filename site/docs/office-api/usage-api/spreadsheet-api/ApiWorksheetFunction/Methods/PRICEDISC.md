@@ -28,7 +28,7 @@ number
 
 This example shows how to return the price per $100 face value for a discounted security.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the price per $100 face value for a discounted security.
 
 // Use a function to return the price per $100 face value for a discounted security.

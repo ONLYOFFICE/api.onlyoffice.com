@@ -28,7 +28,7 @@ This method doesn't return any data.
 
 This example adds a hyperlink to the specified range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add hyperlinks to the range.
 
 // Add a hyperlink to the cell.

@@ -24,7 +24,7 @@ number
 
 This example shows how to convert lines to points.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const lines = 100;
 const points = Api.LinesToPoints(lines);
 const text = lines + ' lines are equal to ' + points + ' points.';

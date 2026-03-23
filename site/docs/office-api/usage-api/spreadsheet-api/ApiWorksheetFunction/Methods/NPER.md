@@ -28,7 +28,7 @@ number
 
 This example shows how to return the number of periods for an investment based on periodic, constant payments and a constant interest rate.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the number of periods for an investment.
 
 // Use a function to get the number of periods for an investment based on different parameters.

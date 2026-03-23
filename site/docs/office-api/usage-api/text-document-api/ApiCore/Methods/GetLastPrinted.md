@@ -22,7 +22,7 @@ Date
 
 This example demonstrates how to get the date when the current document was last printed.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetLastPrinted(new Date());

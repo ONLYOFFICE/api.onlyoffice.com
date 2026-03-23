@@ -15,8 +15,8 @@ Represents the ApiInlineLvlSdt class.
 | [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |
 | [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | Returns the visualization type of the content control. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | null \| Object | Returns the background color of the current content control. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | null \| Object | Returns the border color of the current content control. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current content control. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the border color of the current content control. |
 | [GetClassType](./Methods/GetClassType.md) | "inlineLvlSdt" | Returns a type of the ApiInlineLvlSdt class. |
 | [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | Retrieves the data binding of the content control. |
 | [GetDataForXmlMapping](./Methods/GetDataForXmlMapping.md) | string | Returns the content control data for the XML mapping. |

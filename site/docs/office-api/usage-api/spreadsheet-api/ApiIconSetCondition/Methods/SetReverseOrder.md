@@ -24,7 +24,7 @@ boolean
 
 This example shows how to reverse the icon order display.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the display order of icons in icon set formatting.
 
 // Reverse the order in which icons are displayed.

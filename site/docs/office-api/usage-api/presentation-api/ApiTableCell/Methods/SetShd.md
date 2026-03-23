@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 This example specifies the shading which shall be applied to the extents of the current table cell.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set shading fill to the cell.
 
 // Create table and set its cell shading color.
@@ -38,7 +38,7 @@ const slide = presentation.GetSlideByIndex(0);
 const table = Api.CreateTable(2, 4);
 const row = table.GetRow(0);
 const cell = row.GetCell(0);
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+const fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 cell.SetShd(fill);
 
 slide.RemoveAllObjects();

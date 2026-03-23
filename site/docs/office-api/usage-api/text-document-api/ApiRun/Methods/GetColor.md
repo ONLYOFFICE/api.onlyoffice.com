@@ -16,13 +16,13 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRGBColor](../../ApiRGBColor/ApiRGBColor.md)
+[ApiColor](../../ApiColor/ApiColor.md)
 
 ## Example
 
 This example gets a color property of the text.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a text color and apply it to the paragraph.
 
 // Retrieve color properties of the text.
@@ -41,7 +41,7 @@ run = Api.CreateRun();
 run.SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 textPr = run.GetTextPr();
-textPr.SetColor(255, 111, 61, false);
+textPr.SetColor(Api.HexColor('#FF6F3D'));
 paragraph.AddElement(run);
 paragraph = Api.CreateParagraph();
 let color = textPr.GetColor();

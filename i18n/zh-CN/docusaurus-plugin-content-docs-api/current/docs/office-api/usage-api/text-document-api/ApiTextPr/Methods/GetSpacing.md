@@ -1,0 +1,50 @@
+# GetSpacing
+
+从当前文本属性获取文本间距，以磅的二十分之一为单位。
+
+## 语法
+
+```javascript
+expression.GetSpacing();
+```
+
+`expression` - 表示 [ApiTextPr](../ApiTextPr.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
+
+## 示例
+
+此示例查明当前表单的间距值。
+
+```javascript editor-docx
+// How to find out th text spacing.
+
+// Get the property of the text that shows the size of spacing.
+
+let doc = Api.GetDocument();
+let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
+let textPr = myNewRunStyle.GetTextPr();
+textPr.SetCaps(true);
+textPr.SetFontFamily("Calibri Light");
+let paragraph = doc.GetElement(0);
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+run.AddText("The text properties are changed and the style is added to the paragraph. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetStyle(myNewRunStyle);
+run.AddText("This is a text run with its own style.");
+textPr = run.GetTextPr();
+textPr.SetSpacing(80);
+paragraph.AddElement(run);
+paragraph = Api.CreateParagraph();
+let spacing = textPr.GetSpacing();
+paragraph.AddText("Text spacing: " + spacing);
+doc.Push(paragraph);
+```

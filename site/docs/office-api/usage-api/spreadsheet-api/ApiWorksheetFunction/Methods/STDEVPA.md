@@ -25,7 +25,7 @@ number
 
 This example shows how to calculate standard deviation based on the entire population, including logical values and text. Text and the false logical value have the value 0; the true logical value has the value 1.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to calculate standard deviation based on the entire population considering logical and text data types.
 
 // Use a function to get the standard deviation.

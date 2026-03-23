@@ -22,7 +22,7 @@ String \| null
 
 This example shows how to get the quote text of the comment.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a comment quote.
 
 // Add a comment to the range and display its quote text in the worksheet.

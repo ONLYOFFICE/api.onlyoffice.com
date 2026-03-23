@@ -24,7 +24,7 @@ boolean
 
 This example adds a chart to the run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a drawing into the text.
 
 // Insert a drawing to the text run.
@@ -36,9 +36,9 @@ let drawing = Api.CreateChart("bar3D", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 drawing.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 drawing.SetSeriesFill(fill, 1, false);
 drawing.SetVerAxisTitle("USD In Hundred Thousands", 10);
 drawing.SetHorAxisTitle("Year", 11);

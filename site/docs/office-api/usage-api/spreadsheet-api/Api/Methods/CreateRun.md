@@ -22,13 +22,13 @@ This method doesn't have any parameters.
 
 This example creates a new smaller text block to be inserted to the paragraph or table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Create a text to construct a paragraph.
 
 // Add a text in a paragraph.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

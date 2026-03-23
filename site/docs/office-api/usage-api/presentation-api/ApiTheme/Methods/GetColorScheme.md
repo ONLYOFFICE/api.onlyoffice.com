@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the color scheme of the theme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a color scheme of presentation master's theme.
 
 // Get a theme color scheme and change its colors.

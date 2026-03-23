@@ -22,7 +22,7 @@ boolean
 
 This example demonstrates how to delete a custom XML part.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml1 = xmlManager.Add("<user xmlns='http://example'>John</user>");

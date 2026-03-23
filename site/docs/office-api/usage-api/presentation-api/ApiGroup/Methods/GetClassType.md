@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a class type and pastes it into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a class type of ApiGroup.
 
 // Retrieve class type of ApiGroup object and insert it to the slide.
@@ -32,8 +32,8 @@ presentation.SetSizes(254 * 36000, 190 * 36000);
 const slide = presentation.GetCurrentSlide();
 slide.RemoveAllObjects();
 
-const fill1 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const fill2 = Api.CreateSolidFill(Api.CreateRGBColor(111, 255, 61));
+const fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const fill2 = Api.CreateSolidFill(Api.RGB(111, 255, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 
 const shape1 = Api.CreateShape("flowChartOnlineStorage", 200 * 36000, 130 * 36000, fill1, stroke);

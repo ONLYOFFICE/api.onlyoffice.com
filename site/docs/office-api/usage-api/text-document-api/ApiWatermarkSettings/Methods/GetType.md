@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a watermark type and pastes it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get type of the watermark.
 
 // Display the name of the watermark style.

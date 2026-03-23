@@ -25,7 +25,7 @@ expression.CreateStyle(sStyleName, sType);
 
 This example creates a new style with the "Heading 1" type and "paragraph" name.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a paragraph and set its style as a heading.
 
 // Set style of the paragraph.
@@ -37,7 +37,7 @@ paraPr.SetKeepNext(true);
 paraPr.SetKeepLines(true);
 paraPr.SetSpacingAfter(240);
 let textPr = heading1Style.GetTextPr();
-textPr.SetColor(0xff, 0x68, 0x00, false);
+textPr.SetColor(Api.HexColor('#FF6800'));
 textPr.SetFontSize(40);
 textPr.SetFontFamily("Calibri Light");
 let paragraph = doc.GetElement(0);

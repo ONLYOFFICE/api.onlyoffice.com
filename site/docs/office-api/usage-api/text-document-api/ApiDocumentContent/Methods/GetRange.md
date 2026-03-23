@@ -25,14 +25,14 @@ expression.GetRange(Start, End);
 
 This example shows how to get a Range object that represents the part of the document contained in the specified document content.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get the range using row and column indexes.
 
 // Make a range text bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);

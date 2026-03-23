@@ -26,7 +26,7 @@ string
 
 This example shows how to round a number to the specified number of decimals and returns the result as text with or without commas.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to round a number with parameters.
 
 // Use function to round a number with specified decimal points.

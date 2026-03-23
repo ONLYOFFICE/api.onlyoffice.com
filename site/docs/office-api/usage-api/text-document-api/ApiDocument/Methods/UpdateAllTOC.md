@@ -24,7 +24,7 @@ boolean
 
 This example updates all tables of contents in the current document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to update all table of contents.
 
 // Edit document content and update the table of contents.

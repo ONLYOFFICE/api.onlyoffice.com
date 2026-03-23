@@ -2,10 +2,6 @@
 
 为所选单元格添加批注，也可以更改单元格的背景颜色。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let worksheet = Api.GetActiveSheet();
@@ -27,8 +23,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub SimpleAddCommentsAndChangeColor()
     Range("A1").ClearComments
@@ -38,7 +32,5 @@ End Sub
 ```
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png#gh-light-mode-only)![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.dark.png#gh-dark-mode-only)

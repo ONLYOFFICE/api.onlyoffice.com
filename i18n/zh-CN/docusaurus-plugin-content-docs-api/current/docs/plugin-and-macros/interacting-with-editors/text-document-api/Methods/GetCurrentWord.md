@@ -1,4 +1,4 @@
-# 获取当前单词
+# GetCurrentWord
 
 返回当前单词。
 
@@ -12,13 +12,13 @@ expression.GetCurrentWord(type);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 选填 | [文本部分类型](../Enumeration/TextPartType.md) | "entirely" | 指定返回整个单词还是单词的一部分。 |
+| type | 可选 | [TextPartType](../Enumeration/TextPartType.md) | "entirely" | 指定是返回整个单词还是仅返回其部分。 |
 
 ## 返回值
 
-string（字符串）
+string
 
 ## 示例
 

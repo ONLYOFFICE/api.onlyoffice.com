@@ -24,7 +24,7 @@ boolean
 
 This example sets a name to the current theme color scheme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set a scheme name.
 
 // Create new color scheme and set its name.
@@ -44,7 +44,7 @@ theme.SetColorScheme(colorScheme);
 
 colorScheme.SetSchemeName("New color scheme name");
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

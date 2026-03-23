@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds footnote fot the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add footnote to the document.
 
 // Get all footnotes first paragraphs and make the first one bold.

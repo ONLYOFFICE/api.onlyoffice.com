@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Generates and inserts hyperlinks instead of text URLs.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function()
 {
@@ -48,7 +44,5 @@ Generates and inserts hyperlinks instead of text URLs.
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateRun.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [AddHyperlink](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddHyperlink.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)

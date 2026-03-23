@@ -24,7 +24,7 @@ number
 
 This example shows how to return the factorial of a number, which is equal to 123 *...* number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to calculate a number factorial.
 
 // Use function to calculate the factorial of a number.

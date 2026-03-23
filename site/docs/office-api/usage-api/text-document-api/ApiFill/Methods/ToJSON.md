@@ -22,15 +22,15 @@ JSON
 
 This example converts the ApiFill object into the JSON object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a JSON object from the fill object.
 
 // Convert the radial gradient fill to json and add it to the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 let fill = Api.CreateRadialGradientFill([gs1, gs2]);
 let json = fill.ToJSON();
 let fillFromJSON = Api.FromJSON(json);

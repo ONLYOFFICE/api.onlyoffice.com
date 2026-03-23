@@ -22,7 +22,7 @@ string \| null
 
 This example gets a watermark text and pastes it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to retrieve the text from the watermark and display it in the document.
 
 // Get the text form the watermark settings.
@@ -38,7 +38,7 @@ textPr.SetDoubleStrikeout(true);
 textPr.SetItalic(true);
 textPr.SetBold(true);
 textPr.SetUnderline(true);
-textPr.SetColor(0, 255, 0);
+textPr.SetColor(Api.RGB(0, 255, 0));
 textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 watermarkSettings.SetOpacity(127);

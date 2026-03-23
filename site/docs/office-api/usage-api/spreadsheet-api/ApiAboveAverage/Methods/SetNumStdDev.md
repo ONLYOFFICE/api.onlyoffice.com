@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the number of standard deviations from the average.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to modify the standard deviation setting for above average conditions.
 
 // Change the number of standard deviations for conditional formatting.

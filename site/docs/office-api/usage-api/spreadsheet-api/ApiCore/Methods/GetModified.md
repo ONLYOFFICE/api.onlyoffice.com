@@ -22,14 +22,14 @@ Date
 
 This example demonstrates how to get the date when the current workbook was modified last time.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetModified(new Date("10 March 1990"));
 const lastModifiedDate = core.GetModified().toDateString();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",

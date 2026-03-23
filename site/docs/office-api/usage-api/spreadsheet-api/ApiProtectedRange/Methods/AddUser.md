@@ -26,7 +26,7 @@ expression.AddUser(sId, sName, protectedRangeUserType);
 
 This example adds the the user for protected range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to open an access for the protected range to user specifing user id, name and access type.
 
 // Get an active sheet, add protected range to it and add user with rights.  

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a watermark settings direction and pastes it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get the direction of the text in watermark. 
 
 // Get the angle and the direction (for example, "clockwise45") of the watermark text.
@@ -38,7 +38,7 @@ textPr.SetDoubleStrikeout(true);
 textPr.SetItalic(true);
 textPr.SetBold(true);
 textPr.SetUnderline(true);
-textPr.SetColor(0, 255, 0);
+textPr.SetColor(Api.RGB(0, 255, 0));
 watermarkSettings.SetTextPr(textPr);
 watermarkSettings.SetOpacity(127);
 watermarkSettings.SetDirection("clockwise45");

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example adds a line break to the current position and starts the next element from a new line.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to split the text of the paragraph.
 
 // Add a line break to the text.

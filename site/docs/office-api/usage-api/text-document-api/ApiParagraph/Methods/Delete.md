@@ -22,7 +22,7 @@ boolean
 
 This example deletes the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to remove the paragraph.
 
 // Create two paragraphs and delete the second one.

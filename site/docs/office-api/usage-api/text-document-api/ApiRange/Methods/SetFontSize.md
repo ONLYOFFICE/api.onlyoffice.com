@@ -24,7 +24,7 @@ expression.SetFontSize(FontSize);
 
 This example sets the font size to the characters of the text Range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change the range text font size.
 
 // Get a range, resize its font.

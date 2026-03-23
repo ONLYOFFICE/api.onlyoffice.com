@@ -31,7 +31,7 @@ number
 
 This example shows how to return the price per $100 face value of a security with an odd last period.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the price per $100 face value of a security.
 
 // Use a function to return the price per $100 face value of a security.

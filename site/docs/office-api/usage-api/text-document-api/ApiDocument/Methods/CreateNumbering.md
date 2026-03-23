@@ -24,7 +24,7 @@ expression.CreateNumbering(sType);
 
 This example creates an abstract multilevel numbering with a "bullet" type.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a paragraph with numbering.
 
 // Add a text to the paragraph, make it bulleted.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the paragraph contents justification.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set justification of the paragraph content.
 
 // Change the justification of the paragraph.

@@ -66,7 +66,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | thumbnail.height | integer | optional | Defines the thumbnail height in pixels. The default value is **100**. |
 | thumbnail.width | integer | optional | Defines the thumbnail width in pixels. The default value is **100**. |
 | title | string | optional | Defines the converted file name. |
-| token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#request-to-convert-the-document). |
+| token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). |
 | url | string | required | Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 | watermark | object | optional | Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
 | watermark.align | integer | optional | Defines the vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |

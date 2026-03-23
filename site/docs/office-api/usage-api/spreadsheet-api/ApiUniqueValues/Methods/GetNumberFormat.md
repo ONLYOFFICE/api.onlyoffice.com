@@ -22,7 +22,7 @@ string
 
 This example gets the number format of a conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve number formatting from conditional formatting rules.
 
 // Get conditional formatting rule number format.

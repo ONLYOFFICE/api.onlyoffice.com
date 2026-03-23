@@ -25,7 +25,7 @@ number
 
 This example shows how to return a random number between the numbers specified.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a number between indicated values.
 
 // Use a function to return a random value between specified limits.

@@ -1,6 +1,6 @@
-# 暂停幻灯片放映
+# PauseSlideShow
 
-暂停当前的幻灯片放映。
+暂停当前幻灯片放映。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.PauseSlideShow();
 ```
 
-`expression` - 一个表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

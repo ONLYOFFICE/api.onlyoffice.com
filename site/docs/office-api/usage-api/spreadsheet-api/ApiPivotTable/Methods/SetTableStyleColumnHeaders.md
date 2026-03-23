@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set table style column headers of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set table style column headers of a table.
 
 // Create a pivot table, add data to it then set its table style column headers.

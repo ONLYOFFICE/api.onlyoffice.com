@@ -25,14 +25,14 @@ boolean
 
 This example adds a paragraph in document content.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add elements to the document content.
 
 // Clear the entire document and add a new paragraph to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);

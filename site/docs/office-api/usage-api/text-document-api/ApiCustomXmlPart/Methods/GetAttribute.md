@@ -25,7 +25,7 @@ string \| null
 
 This example retrieves the value of the version attribute from the custom XML part.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

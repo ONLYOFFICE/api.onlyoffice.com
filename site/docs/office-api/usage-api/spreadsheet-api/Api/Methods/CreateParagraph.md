@@ -22,13 +22,13 @@ This method doesn't have any parameters.
 
 This example creates a new paragraph.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add a text in a shape.
 
 // Create a text paragraph for a shape.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

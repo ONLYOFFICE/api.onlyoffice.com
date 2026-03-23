@@ -24,7 +24,7 @@ number
 
 This example shows how to return the skewness of a distribution: a characterization of the degree of asymmetry of a distribution around its mean.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to calaculate the skewness of a distribution.
 
 // Use a function to get a characterization of the degree of asymmetry of a distribution around its mean.

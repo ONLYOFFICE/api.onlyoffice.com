@@ -24,7 +24,7 @@ expression.GetUser(sId);
 
 This example gets a user of a protected range.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a user information of the protected range.
 
 // Get an active sheet, add protected range to it, add user with rights and get user info. 

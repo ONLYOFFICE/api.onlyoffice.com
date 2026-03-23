@@ -24,7 +24,7 @@ expression.AddInlineLvlSdt(oSdt);
 
 This example adds an inline container to the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create an inline content control and add it to the paragraph.
 
 // Add an inline text element to the paragraph.

@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example sets the size to the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to specify the sizes of the current presentation.
 
 // Set the width and height of the ApiPesentation object.
@@ -36,7 +36,7 @@ presentation.SetSizes(254 * 36000, 190 * 36000);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 200 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

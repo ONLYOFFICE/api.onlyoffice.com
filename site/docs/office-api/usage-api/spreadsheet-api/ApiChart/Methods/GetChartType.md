@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get chart type of the chart.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange("B1").SetValue(2014);

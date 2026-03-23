@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to update the value of an attribute in a custom XML node.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

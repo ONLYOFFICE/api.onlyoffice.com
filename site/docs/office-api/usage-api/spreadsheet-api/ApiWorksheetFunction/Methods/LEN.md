@@ -24,7 +24,7 @@ number
 
 This example shows how to return the number of characters in a text string.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a length of a text.
 
 // Use a function to get length of a string.

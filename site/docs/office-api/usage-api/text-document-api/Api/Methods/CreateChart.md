@@ -31,7 +31,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 This example shows how to create a chart and paste it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a "bar3D" chart, adds it to the ApiParagraph class, and fills its series with the created solid fills.
 
 // How to create the ApiChart object and add it to the first paragraph of the document.
@@ -43,8 +43,8 @@ let chart = Api.CreateChart("bar3D", [
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
 paragraph.AddDrawing(chart);
-let solidFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let solidFill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(solidFill, 0, false);
-solidFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+solidFill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(solidFill, 1, false);
 ```

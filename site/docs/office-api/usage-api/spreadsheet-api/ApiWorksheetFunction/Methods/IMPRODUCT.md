@@ -24,7 +24,7 @@ number
 
 This example shows how to return the product of the specified complex numbers.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the result from multiplication of a complex number.
 
 // Use a function to get the result from the product.

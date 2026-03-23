@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates how to set the creation date of the current document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCreated(new Date('20 January 2000'));

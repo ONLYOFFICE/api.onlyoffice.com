@@ -24,7 +24,7 @@ expression.SetTableCellPr(tableCellPr);
 
 This example shows how set get the table cell properties to the style.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create table cell properties for style and add shading to it.
 
 // Update the table cell properties in the style.
@@ -32,7 +32,7 @@ This example shows how set get the table cell properties to the style.
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 let tableCellPr = Api.CreateTableCellPr();
-tableCellPr.SetShd("clear", 255, 111, 61);
+tableCellPr.SetShd("clear", Api.HexColor('#FF6F3D'));
 tableStyle.SetTableCellPr(tableCellPr);
 
 let table = Api.CreateTable(2, 3);

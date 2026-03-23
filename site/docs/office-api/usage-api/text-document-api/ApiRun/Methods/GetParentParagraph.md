@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a parent paragraph of run for further manipulation.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is paragraph with example run: ");

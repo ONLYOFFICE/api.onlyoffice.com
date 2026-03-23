@@ -1,0 +1,37 @@
+# CEILING_MATH
+
+将数字向上舍入到最接近的整数或最接近的基数倍数。
+
+## 语法
+
+```javascript
+expression.CEILING_MATH(arg1, arg2, arg3);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向上舍入的值。 |
+| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向上舍入到的基数的倍数。如果省略，则使用默认值 1。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定负数是向零方向还是远离零方向舍入。如果省略或设置为 0，负数向零方向舍入。如果指定任何其他数值，负数远离零方向舍入。 |
+
+## 返回值
+
+number
+
+## 示例
+
+此示例演示如何将数字向上舍入到最接近的整数或最接近的基数倍数。
+
+```javascript editor-xlsx
+// How to round a number up.
+
+// Use function to round a number up the nearest integer or to the nearest multiple of significance.
+
+let worksheet = Api.GetActiveSheet();
+let func = Api.WorksheetFunction;
+worksheet.GetRange("A1").SetValue(func.CEILING_MATH(-5.5, 2, 1));
+```

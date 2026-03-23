@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example demonstrates how to use ApiCore to manage spreadsheet metadata.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 
 const core = Api.GetCore();
@@ -59,7 +59,7 @@ let subject = core.GetSubject();
 let title = core.GetTitle();
 let version = core.GetVersion();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",

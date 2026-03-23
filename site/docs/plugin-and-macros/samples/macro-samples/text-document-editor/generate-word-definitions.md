@@ -8,11 +8,7 @@ Generates word definitions in your document using the [Dictionary API](https://a
 
 > To use this macro, you need to obtain your own API key from API Ninjas.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
-```ts
+```ts 
 (function () {
   let doc = Api.GetDocument();
   let range = doc.GetRangeBySelect();
@@ -38,7 +34,5 @@ Generates word definitions in your document using the [Dictionary API](https://a
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), GetRangeBySelect, GetText, [CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertContent](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![Generate word definitons](/assets/images/plugins/generate-word-definitions.png#gh-light-mode-only)![Generate word definitons](/assets/images/plugins/generate-word-definitions.dark.png#gh-dark-mode-only)

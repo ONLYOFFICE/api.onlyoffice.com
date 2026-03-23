@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to retrieve the data binding of an inline content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

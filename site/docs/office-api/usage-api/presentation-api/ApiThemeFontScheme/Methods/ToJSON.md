@@ -22,7 +22,7 @@ JSON
 
 This example converts the ApiThemeFontScheme object into the JSON object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to convert a ApiThemeFontScheme object to a JSON object.
 
 // Create a ApiThemeFontScheme, convert it to JSON and create a new object from it.
@@ -43,7 +43,7 @@ const theme = slide.GetTheme();
 theme.SetFontScheme(fontSchemeFromJSON);
 const sType = fontSchemeFromJSON.GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

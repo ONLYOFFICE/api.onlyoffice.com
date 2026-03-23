@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example showh how to get a parent table cell that contains the graphic object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get an element's parent table cell.
 
 // How to show the shape's wrapper table cell.
@@ -33,7 +33,7 @@ let table = Api.CreateTable(3, 3);
 let tableStyle = doc.GetStyle("Bordered");
 table.SetStyle(tableStyle);
 table.SetWidth("percent", 100);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
 let cell = table.GetCell(1, 1);

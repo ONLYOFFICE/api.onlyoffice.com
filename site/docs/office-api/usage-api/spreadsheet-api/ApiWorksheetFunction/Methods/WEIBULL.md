@@ -27,7 +27,7 @@ number
 
 This example shows how to return the Weibull distribution.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return the Weibull distribution.
 
 // Use a function to calculate the Weibull distribution.

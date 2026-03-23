@@ -22,7 +22,7 @@ JSON
 
 This example converts the shape into JSON.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to convert a drawing object to a JSON object.
 
 // Get a shape object from a slide and convert to JSON.
@@ -31,7 +31,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 

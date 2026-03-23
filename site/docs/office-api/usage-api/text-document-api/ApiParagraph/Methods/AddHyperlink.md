@@ -5,7 +5,7 @@ Adds a hyperlink to a paragraph.
 ## Syntax
 
 ```javascript
-expression.AddHyperlink(sLink, sScreenTipText);
+expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 ```
 
 `expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
@@ -16,16 +16,17 @@ expression.AddHyperlink(sLink, sScreenTipText);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sLink | Required | string |  | The link address. |
 | sScreenTipText | Required | string |  | The screen tip text. |
+| sBookmarkName | Required | string |  | name of a bookmark |
 
 ## Returns
 
-[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md) \| null
+[ApiHyperlink](../../ApiHyperlink/ApiHyperlink.md)
 
 ## Example
 
 This example adds a hyperlink to a paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a hyperlink and add it to the paragraph.
 
 // Add a paragraph hyperlink.

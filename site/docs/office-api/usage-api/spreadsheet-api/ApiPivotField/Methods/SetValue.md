@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example shows how to set value of a pivot field.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change a pivot field value.
 
 // Create a pivot table, add data to it then set value of a specified pivot.

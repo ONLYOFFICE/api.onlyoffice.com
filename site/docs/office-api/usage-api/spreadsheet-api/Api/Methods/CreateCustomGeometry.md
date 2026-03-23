@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example demonstrates creating a custom geometry.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 let worksheet = Api.GetActiveSheet();
 // Airplane shape in EMU units
 let customGeometry = Api.CreateCustomGeometry();
@@ -143,8 +143,8 @@ path.CubicBezTo(
 );
 
 path.Close();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 80 * 36000, 80 * 36000, fill, stroke, 3, 0, 3, 0);
 shape.SetGeometry(customGeometry);
 ```

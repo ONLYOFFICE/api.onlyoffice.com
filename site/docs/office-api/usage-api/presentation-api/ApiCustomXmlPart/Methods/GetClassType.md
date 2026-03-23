@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the class type of a custom XML part.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get the class type of an XML part.
 
 // Get the class type.
@@ -33,7 +33,7 @@ let xml = xmlManager.Add("<data><value>Sample</value></data>");
 let classType = xml.GetClassType();
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

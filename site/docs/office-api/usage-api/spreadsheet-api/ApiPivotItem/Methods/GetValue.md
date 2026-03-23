@@ -22,7 +22,7 @@ string
 
 This example shows how to get a value of a pivot item.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a pivot item value.
 
 // Create a pivot table, add data to it then get a value of a specified pivot item.

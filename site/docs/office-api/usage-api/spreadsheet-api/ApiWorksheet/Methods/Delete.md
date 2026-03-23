@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 This example deletes the worksheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to delete sheets.
 
 // Remove a worksheet.

@@ -1,6 +1,6 @@
 # GetSmallCaps
 
-Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
+Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ boolean
 
 This example finds out whether the current form is uncapitalized or not.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to find out whether a text is ucapitalized or not.
 
 // Get the property of the text that shows whether a text is in lowercase.

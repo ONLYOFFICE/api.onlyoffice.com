@@ -788,7 +788,7 @@ Defines the review display mode: show reviews in tooltips by hovering the change
 
 `Type: string`
 
-Defines the review editing mode which will be used when the document is opened for viewing. It will only be available for the document editor if [mode](../../editor/editor.md#mode) is set to **view**. Can take the following values:
+Defines the review display mode for the document editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when **markup** or **simple** is selected. If **original** or **final** is selected, the editor automatically switches to view-only mode. Can take the following values:
 
 - **markup** - the document is displayed with proposed changes highlighted;
 - **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;

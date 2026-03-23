@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all layouts of the specified slide master.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
@@ -36,7 +36,7 @@ for (let i = 0; i < layoutsCount; i++) {
 	master.AddLayout(0, layout);
 }
 
-const labelFill = Api.CreateSolidFill(Api.CreateRGBColor(210, 230, 250));
+const labelFill = Api.CreateSolidFill(Api.RGB(210, 230, 250));
 const labelStroke = Api.CreateStroke(0, Api.CreateNoFill());
 const label = Api.CreateShape('rect', 60 * 36000, 20 * 36000, labelFill, labelStroke);
 label.SetPosition(0, 3 * 36000);

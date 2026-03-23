@@ -24,7 +24,7 @@ number
 
 This example shows how to return the tangent of an angle.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to return a tangent of an angle.
 
 // Use a function to calculate angle's tangent.

@@ -24,7 +24,7 @@ boolean
 
 This example sets the end position of a given range object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get the end index of the range and display it.
 
 // Retrieve a range of the paragraph and show its last position.

@@ -25,7 +25,7 @@ expression.GetPageFields(field);
 
 This example shows how to get page fields of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get table page fields as an array of fields.
 
 // Create a pivot table, add data to it then get its page fields.

@@ -25,7 +25,7 @@ boolean
 
 This example adds a table of content to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add headings to the document and generate a table of contents.
 
 // Insert a table of contents specifying its properties.

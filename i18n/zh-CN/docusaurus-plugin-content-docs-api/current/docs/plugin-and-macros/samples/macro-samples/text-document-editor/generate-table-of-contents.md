@@ -2,10 +2,6 @@
 
 通过扫描文档中的标题来生成目录。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();
@@ -18,8 +14,6 @@
 [AddTableOfContents](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## 参考 Microsoft VBA 宏代码
-
-<!-- code generated with AI -->
 
 ```vb
 Sub GenerateTableOfContents()

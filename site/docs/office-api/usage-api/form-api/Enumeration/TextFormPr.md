@@ -16,7 +16,7 @@ Enumeration
 
 This example creates a a text form with the common and specific text form properties.
 
-```javascript editor-forms playground
+```javascript editor-forms
 // How to create a text form with adding properties like tip text, placeholder, etc. to it.
 
 // Create a text form with properties.

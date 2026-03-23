@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the bar color of a data bar conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the bar color of a data bar.
 
 // Set the bar color of a data bar conditional formatting rule.

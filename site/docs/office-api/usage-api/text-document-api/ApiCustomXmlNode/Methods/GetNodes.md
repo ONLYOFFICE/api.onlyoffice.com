@@ -24,7 +24,7 @@ expression.GetNodes(xPath);
 
 This example shows how to get nodes based on a specific XPath and display their values.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

@@ -22,13 +22,13 @@ This method doesn't have any parameters.
 
 This example shows how to get a type of the ApiBullet class and insert it into the table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a class type of a bullet and show it in the sheet.
 
 // Get a class type of an object.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the argument Theta, an angle expressed in radians.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an angle expressed in radians.
 
 // Use a function to get an angle expressed in radians.

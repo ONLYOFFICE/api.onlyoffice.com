@@ -22,7 +22,7 @@ number
 
 This example demonstrates getting the number of standard deviations from the average.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check the standard deviation setting for above average conditions.
 
 // Get the number of standard deviations used in the conditional formatting rule.

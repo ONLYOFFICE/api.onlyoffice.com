@@ -24,7 +24,7 @@ expression.SetTime(nTimeStamp);
 
 This example sets the timestamp of the comment creation in the current time zone format.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change a creation time of a comment.
 
 // Get all comments from the presentation and change its first one's creation time.

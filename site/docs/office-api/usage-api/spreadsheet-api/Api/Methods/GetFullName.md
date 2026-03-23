@@ -22,7 +22,7 @@ string
 
 This example shows how to get the full name of the currently opened file.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a full name of the file.
 
 // Insert a full name of the file into a cell.

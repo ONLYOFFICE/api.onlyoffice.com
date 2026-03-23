@@ -22,7 +22,7 @@ boolean
 
 This example clears all added custom functions.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to delete custom function library.
 
 // Remove unused custom function library.

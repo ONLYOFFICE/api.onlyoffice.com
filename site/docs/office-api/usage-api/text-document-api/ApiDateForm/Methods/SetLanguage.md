@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the date language in a date form.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Change the language of the date form.
 
 // How to set the date form language to "en-CA".

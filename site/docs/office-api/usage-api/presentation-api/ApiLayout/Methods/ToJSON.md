@@ -25,7 +25,7 @@ JSON
 
 This example converts the ApiLayout object into the JSON object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to convert a layout object to a JSON object.
 
 // Get a slide layout object from a slide and convert to JSON.
@@ -41,7 +41,7 @@ const json = layout.ToJSON(true, false);
 const layoutFromJSON = Api.FromJSON(json);
 master.AddLayout(0, layoutFromJSON);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

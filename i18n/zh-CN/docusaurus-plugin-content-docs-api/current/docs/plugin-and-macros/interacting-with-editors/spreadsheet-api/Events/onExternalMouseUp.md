@@ -1,10 +1,10 @@
-# 外部鼠标释放事件
+# onExternalMouseUp
 
-当鼠标按钮在插件 iframe 外部被释放时调用的函数。
+当鼠标按钮在插件 iframe 外部释放时调用的函数。
 
 ## 参数
 
-此事件无参数。
+此事件没有参数。
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onExternalMouseUp", () => {

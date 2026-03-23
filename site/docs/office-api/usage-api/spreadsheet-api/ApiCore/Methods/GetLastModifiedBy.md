@@ -22,14 +22,14 @@ string
 
 This example demonstrates how to get the name of the last user who modified the current workbook.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetLastModifiedBy("Mark Pottato");
 const lastModifiedBy = core.GetLastModifiedBy();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",

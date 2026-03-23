@@ -24,7 +24,7 @@ expression.GetById(xmlPartId);
 
 This example shows how to retrieve custom XML parts by their namespace.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = "<content xmlns='http://example.com'><text>Example XML</text></content>";

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get an array of ApiComment objects.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get all comments.
 
 // Get all comments from the worksheet.

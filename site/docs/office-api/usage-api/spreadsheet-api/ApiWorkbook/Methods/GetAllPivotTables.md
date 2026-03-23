@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get pivot tables from the workbook.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 

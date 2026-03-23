@@ -22,7 +22,7 @@ boolean
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to remove the watermark.
 
 // Add the watermark with settings and then delete it.
@@ -38,7 +38,7 @@ textPr.SetDoubleStrikeout(true);
 textPr.SetItalic(true);
 textPr.SetBold(true);
 textPr.SetUnderline(true);
-textPr.SetColor(0, 255, 0);
+textPr.SetColor(Api.RGB(0, 255, 0));
 textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);

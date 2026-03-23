@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Adds comments to the cells in the selection and can also change the background color of the cells.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let worksheet = Api.GetActiveSheet();
@@ -31,8 +27,6 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub SimpleAddCommentsAndChangeColor()
     Range("A1").ClearComments
@@ -42,7 +36,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png#gh-light-mode-only)![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.dark.png#gh-dark-mode-only)

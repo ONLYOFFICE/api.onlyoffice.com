@@ -24,8 +24,8 @@ boolean
 
 This example shows how to move down the specified role.
 
-```javascript editor-forms playground
-let doc = editor.GetDocument();
+```javascript editor-forms
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");

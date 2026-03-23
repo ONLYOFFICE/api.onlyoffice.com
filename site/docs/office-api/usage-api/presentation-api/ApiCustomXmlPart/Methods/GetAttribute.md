@@ -25,7 +25,7 @@ string \| null
 
 This example shows how to get an attribute from the root element of a custom XML part.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get an attribute from an XML part element.
 
 // Get an XML attribute.
@@ -36,7 +36,7 @@ let xml = xmlManager.Add("<config version='1.0' xmlns='http://example'><setting>
 let rootNodes = xml.GetNodes('/config');
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

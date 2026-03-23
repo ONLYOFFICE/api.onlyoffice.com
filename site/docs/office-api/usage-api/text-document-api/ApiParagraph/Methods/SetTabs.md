@@ -26,7 +26,7 @@ boolean
 
 This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Add tabs to the paragraph.
 
 // Create a text in a paragraph and add tab stops to it.

@@ -22,12 +22,12 @@ This method doesn't have any parameters.
 
 Analyzes path commands of a star shape on a presentation slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // Shows command count and first command details in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = Api.CreateShape("star5", 100 * 36000, 100 * 36000, fill, stroke);
 let geometry = shape.GetGeometry();
 let path = geometry.GetPath(0);

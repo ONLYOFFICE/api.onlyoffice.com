@@ -1,17 +1,17 @@
-# 内容控件复选框属性
+# ContentControlCheckBoxProperties
 
 内容控件复选框属性。
 
 ## 属性
 
-| 名称 | 类型 | 说明 |
-| ---- | ---- | ---- |
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
 | Checked | boolean | 定义内容控件复选框是否被选中。 |
-| CheckedSymbol | number | 当复选框被选中时使用的 HTML 代码格式符号。 |
-| UncheckedSymbol | number | 当复选框未被选中时使用的 HTML 代码格式符号。 |
+| CheckedSymbol | number | 复选框被选中时使用的 HTML 代码格式符号。 |
+| UncheckedSymbol | number | 复选框未被选中时使用的 HTML 代码格式符号。 |
 ## 类型
 
-object（对象）
+Object
 
 
 

@@ -1,6 +1,6 @@
-# 鼠标释放事件
+# MouseUpWindow
 
-当鼠标按钮在插件 iframe 内释放时，向插件发送事件。
+当鼠标按钮在插件 iframe 内释放时向插件发送事件。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.MouseUpWindow(frameId, x, y);
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-| 名称    | 必填/选填 | 数据类型 | 默认值 | 描述         |
-| ------- | --------- | -------- | ------ | ------------ |
-| frameId | 必填      | string   |        | iframe 的 ID |
-| x       | 必填      | number   |        | X 坐标       |
-| y       | 必填      | number   |        | Y 坐标       |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| frameId | 必需 | string |  | 框架 ID。 |
+| x | 必需 | number |  | X 坐标。 |
+| y | 必需 | number |  | Y 坐标。 |
 
 ## 返回值
 

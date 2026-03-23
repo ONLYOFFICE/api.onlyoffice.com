@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the fill styles to the current theme format scheme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change fill styles of a format scheme.
 
 // Get format scheme and update its fill styles, adding pattern, solid and radial fills.
@@ -35,11 +35,11 @@ slide.RemoveAllObjects();
 
 const master = presentation.GetMaster(0);
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill1 = Api.CreateRadialGradientFill([gs1, gs2]);
-const fill2 = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51));
-const fill3 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill2 = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
+const fill3 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let theme = slide.GetTheme();
 const formatScheme = theme.GetFormatScheme();
 formatScheme.ChangeFillStyles([fill1, fill2, fill3]);

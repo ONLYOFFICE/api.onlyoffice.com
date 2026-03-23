@@ -22,13 +22,13 @@ This method doesn't have any parameters.
 
 This example creates the empty text properties.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set custom properties for an empty text.
 
 // Change a new text properties like font size, font style, etc.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 80 * 36000, 50 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

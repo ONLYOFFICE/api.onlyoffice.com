@@ -24,7 +24,7 @@ boolean
 
 This example pushes a paragraph to actually add it to the container.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a block content control and pushes a paragraph to it.
 
 // How to add a document element (paragraph, table, or block content control) to the ApiBlockLvlSdt object.

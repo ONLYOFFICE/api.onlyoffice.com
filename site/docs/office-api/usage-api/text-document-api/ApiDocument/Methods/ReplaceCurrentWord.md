@@ -25,7 +25,7 @@ boolean
 
 This example shows how to replace the current word.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change the word to another one.
 
 // Add the new word instead of another using cursor position.

@@ -22,7 +22,7 @@ boolean
 
 This example shows how to create an inline content control and select it.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let checkbox = doc.AddCheckBoxContentControl();
 checkbox.Select();

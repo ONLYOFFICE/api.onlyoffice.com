@@ -24,7 +24,7 @@ boolean
 
 This example shows how to set the placeholder text for the content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Creates a block content control and sets the placeholder text to it.
 
 // How to add the placeholder text to the ApiBlockLvlSdt object.

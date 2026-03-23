@@ -1,6 +1,6 @@
 name: Build & Publish Api
 
-run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}})"
+run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}}, dev: ${{github.event.inputs.dev}})"
 
 on:
   workflow_dispatch:
@@ -16,6 +16,11 @@ on:
         - production
       chinese:
         description: 'Build chinese?'
+        required: true
+        default: true
+        type: boolean
+      dev:
+        description: 'Add --dev flag to build?'
         required: true
         default: false
         type: boolean
@@ -54,6 +59,9 @@ jobs:
         LOCALE="--locale en"
         SUB_ARGS=""
 
+        # Set NODE_ENV for testing builds
+        [[ "$mode" == "testing" ]] && export NODE_ENV=development
+
         # Build CN locale string
         if [[ "$CN" == "true" ]]; then
            LOCALE="$LOCALE --locale zh-CN"
@@ -67,12 +75,12 @@ jobs:
         fi
 
         # Build sub-arguments string
-        [[ "$mode" == "testing" ]] && SUB_ARGS="--dev"
+        [[ "${{ github.event.inputs.dev }}" == "true" ]] && SUB_ARGS="--dev"
 
         free -h
 
-        cat /sys/fs/cgroup/memory.max
- 
+        cat /sys/fs/cgroup/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2>/dev/null || echo "Memory limit info not available"
+
         export NODE_OPTIONS="--max-old-space-size=8192"
         export UV_THREADPOOL_SIZE=4
         export RSPACK_PARALLEL=6

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all slide masters from current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const firstSlide = presentation.GetSlideByIndex(0);
 firstSlide.RemoveAllObjects();

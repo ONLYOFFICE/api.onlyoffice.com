@@ -19,7 +19,7 @@ Enumeration
 
 This example paste data with paste options.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to paste indicating special parameters.
 
 // Specify the mathematical operation which will be applied to the copied data.

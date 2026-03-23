@@ -14,7 +14,7 @@ expression.RecalculateAllFormulas(fLogger);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fLogger | Required | function |  | A function which specifies the logger object for checking recalculation of formulas. |
+| fLogger | Optional | function |  | A function which specifies the logger object for checking recalculation of formulas. |
 
 ## Returns
 
@@ -24,7 +24,7 @@ boolean
 
 This example recalculates all formulas in the active workbook.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to recalculate all formulas in a worksheet.
 
 // Reset all values calculated by formulas.

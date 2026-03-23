@@ -22,7 +22,7 @@ string
 
 This example shows how to find out the text language.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get the language of the text properties.
 
 // How to know the text language property.

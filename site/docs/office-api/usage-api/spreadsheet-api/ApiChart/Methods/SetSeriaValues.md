@@ -25,7 +25,7 @@ boolean
 
 This example sets values from the specified range to the specified series.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to add values to series from the indicated range using addresses.
 
 // Fill series with values obtained from the worksheet cells.
@@ -51,8 +51,8 @@ chart.SetSeriaValues("'Sheet1'!$B$4:$D$4", 1);
 chart.SetShowPointDataLabel(1, 0, false, false, true, false);
 chart.SetShowPointDataLabel(1, 1, false, false, true, false);
 chart.SetShowPointDataLabel(1, 2, false, false, true, false);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```

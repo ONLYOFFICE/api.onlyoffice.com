@@ -18,7 +18,7 @@ Enumeration
 
 This example specifies that the range contents will be rotated upward.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // Use angles to set orientation of the range. 
 
 // How to rotate a range.

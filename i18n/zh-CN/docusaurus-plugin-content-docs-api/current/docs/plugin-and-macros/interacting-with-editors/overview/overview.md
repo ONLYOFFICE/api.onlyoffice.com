@@ -18,7 +18,7 @@ sidebar_position: -2
 
 > 请注意，从 7.1 版本开始，由于插件脚本启用了“使用严格模式”，因此在插件命令代码中访问窗口和文件对象以及使用警告函数将受到限制。请务必在使用变量前先声明，以确保插件正常运行。
 
-为了使插件正常运行，开发者必须为 window.Asc.plugin 对象指定两个必要事件：window.Asc.plugin.init 和 window.Asc.plugin.button。之后，通过 [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) 方法，借助内置的 **ONLYOFFICE 文档建构器** [API](../../../document-builder/builder-framework/C++/CDocBuilder/ExecuteCommand.md) 功能将数据发送给编辑器。
+为了使插件正常运行，开发者必须为 window.Asc.plugin 对象指定两个必要事件：window.Asc.plugin.init 和 window.Asc.plugin.button。之后，通过 [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) 方法，借助内置的 **ONLYOFFICE 文档建构器** [API](../../../document-builder/builder-framework/CDocBuilder/ExecuteCommand.md) 功能将数据发送给编辑器。
 
 如果插件涉及 OLE 对象的操作，也需要使用 [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) 方法进行处理。
 

@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example demonstrates setting the color of color scale criterion.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change the color of a color scale criterion.
 
 // Set the color of a color scale criterion.

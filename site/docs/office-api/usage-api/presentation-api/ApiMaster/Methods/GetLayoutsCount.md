@@ -22,7 +22,7 @@ number
 
 This example gets a number of layout objects and insert it itno the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a master layout count knowing its index.
 
 // Count each layout from the master.
@@ -34,7 +34,7 @@ slide.RemoveAllObjects();
 const master = presentation.GetMaster(0);
 const layoutsCount = master.GetLayoutsCount();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

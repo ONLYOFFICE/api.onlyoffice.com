@@ -28,7 +28,7 @@ const connector = docEditor.createConnector();
 
 | 名称  | 类型                                        | 描述                                           |
 | ----- | ------------------------------------------- | ----------------------------------------------------- |
-| items | Array.\<[ContextMenuItem](#contextmenuitem)\> | 包含上下文菜单项参数的数组。 |
+| items | [ContextMenuItem](#contextmenuitem)[] | 包含上下文菜单项参数的数组。 |
 
 ### ContextMenuItem
 
@@ -40,7 +40,7 @@ const connector = docEditor.createConnector();
 | *disabled* | boolean                  | 指定当前项是否已禁用。                                                                          |
 | *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons)文档）。 |
 | *onClick*  | function                 | 点击事件回调。                                                                                                  |
-| *items*    | Array.\<ContextMenuItem> | 包含当前项的上下文菜单项的数组。                                                           |
+| *items*    | ContextMenuItem[] | 包含当前项的上下文菜单项的数组。                                                           |
 
 ### 示例
 
@@ -71,7 +71,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | 名称 | 类型                                      | 描述                                                     |
 | ---- | ----------------------------------------- | --------------------------------------------------------------- |
 | guid | string                                    | 插件 guid。                                                |
-| tabs | Array.\<[ToolbarMenuTab](#toolbarmenutab)\> | 包含当前工具栏菜单选项卡的数组项。 |
+| tabs | [ToolbarMenuTab](#toolbarmenutab)[] | 包含当前工具栏菜单选项卡的数组项。 |
 
 ### ToolbarMenuTab
 
@@ -79,7 +79,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | ----- | ------------------------------------------- | --------------------------------------------------------------- |
 | id    | string                                      | 选项卡 ID。                                                     |
 | text  | string                                      | 选项卡文本。                                                   |
-| items | Array.\<[ToolbarMenuItem](#toolbarmenuitem)\> | 包含当前标签的工具栏菜单项的数组。 |
+| items | [ToolbarMenuItem](#toolbarmenuitem)[] | 包含当前标签的工具栏菜单项的数组。 |
 
 ### ToolbarMenuItem
 
@@ -96,7 +96,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | *separator*      | boolean                                     | 指定工具栏菜单项之间是否使用分隔符。                                                                    |
 | *split*          | boolean                                     | 指定工具栏菜单项是否分为两部分并包含下拉菜单。                                         |
 | onClick          | function                                    | 点击事件回调。                                                                                                                |
-| *items*          | Array.\<ToolbarMenuItem>                    | 包含当前项的上下文菜单项的数组。                                                                         |
+| *items*          | ToolbarMenuItem[]                    | 包含当前项的上下文菜单项的数组。                                                                         |
 
 ### ToolbarMenuItemType
 
@@ -278,7 +278,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 
 | 名称  | 类型                                         | 描述                                           |
 | ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | Array.\<[ContextMenuItem](#contextmenuitem)\> | 包含上下文菜单项参数的数组。 |
+| items | [ContextMenuItem](#contextmenuitem)[] | 包含上下文菜单项参数的数组。 |
 
 ### ContextMenuItem
 
@@ -289,7 +289,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 | data     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | disabled | boolean                  | 指定当前项目是否已禁用。                                                                          |
 | icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
-| items    | Array.\<ContextMenuItem\> | 包含当前项的上下文菜单项的数组。                                                         |
+| items    | ContextMenuItem[] | 包含当前项的上下文菜单项的数组。                                                         |
 
 ### 示例:
 

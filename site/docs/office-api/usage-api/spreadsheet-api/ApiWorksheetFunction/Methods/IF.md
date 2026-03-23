@@ -26,7 +26,7 @@ number \| string \| boolean
 
 This example shows how to check whether a condition is met, and returns one value if true, and another value if false.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to check a condition.
 
 // Use a function to use IF condition checker.

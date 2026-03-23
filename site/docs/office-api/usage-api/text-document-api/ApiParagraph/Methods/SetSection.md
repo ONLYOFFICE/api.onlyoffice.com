@@ -24,7 +24,7 @@ boolean
 
 This example sets the specified section to the current paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set section to the paragraph.
 
 // Add the section to the text.

@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get parent.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a parent of a slide shape.
 
 // Get a slide shape's parent object.
@@ -30,7 +30,7 @@ This example shows how to get parent.
 const presentation = Api.GetPresentation();
 
 const slide = presentation.GetSlideByIndex(0);
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

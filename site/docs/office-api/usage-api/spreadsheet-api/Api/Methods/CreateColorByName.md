@@ -24,7 +24,7 @@ expression.CreateColorByName(sPresetColor);
 
 This example creates a color selecting it from one of the available color presets.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to use a color from the preset.
 
 // Find a color by name and use it to change font color

@@ -24,7 +24,7 @@ number
 
 This example shows how to counts a number of empty cells in a specified range of cells.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find a number of empty cells.
 
 // Use function to get empty cells count.

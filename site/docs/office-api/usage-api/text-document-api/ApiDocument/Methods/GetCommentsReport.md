@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a report about all the comments added to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Retrieve each comment reports and display their contents one by one.
 
 // Create a table and insert the comment reports to its cells.
@@ -88,9 +88,9 @@ for (let userName in commentsReport) {
 		if (commentInfo["IsAnswer"] !== true) 
 		{
 			if (commentInfo["IsSolved"] === true) 
-				fillCell(rowIndex, 3, "yes").SetColor(0, 255, 0);
+				fillCell(rowIndex, 3, "yes").SetColor(Api.RGB(0, 255, 0));
 			else 
-				fillCell(rowIndex, 3, "no").SetColor(255, 0, 0);
+				fillCell(rowIndex, 3, "no").SetColor(Api.RGB(255, 0, 0));
 		}
 		fillCell(rowIndex, 4, commentInfo["CommentMessage"] ? commentInfo["CommentMessage"] : "");
 		fillCell(rowIndex, 5, commentInfo["QuoteText"] ? commentInfo["QuoteText"] : "");

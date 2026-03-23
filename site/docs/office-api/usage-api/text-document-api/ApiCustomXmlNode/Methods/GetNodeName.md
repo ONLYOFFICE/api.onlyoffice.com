@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to retrieve the name of the current XML node.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

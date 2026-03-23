@@ -22,7 +22,7 @@ string \| null
 
 Analyzes arc command parameters including radius and angles.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Retrieves width radius, height radius, start and sweep angles of an arc.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,8 +38,8 @@ path.Close();
 let cmd = path.GetCommand(3); // arc command
 paragraph.AddText("Arc: WR=" + cmd.GetWR() + ", HR=" + cmd.GetHR());
 paragraph.AddText(", Start=" + cmd.GetStartAngle() + ", Sweep=" + cmd.GetSweepAngle());
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(200, 100, 0)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
 let shape = Api.CreateShape("rect", 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);

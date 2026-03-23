@@ -22,15 +22,15 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a class type of ApiGroup.
 
 // Retrieve class type of ApiGroup object and insert it to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-let fill1 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-let fill2 = Api.CreateSolidFill(Api.CreateRGBColor(111, 255, 61));
+let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let fill2 = Api.CreateSolidFill(Api.RGB(111, 255, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape1 = Api.CreateShape("rect", 3212465, 963295, fill1, stroke);
 let shape2 = Api.CreateShape("rect", 1606232, 481647, fill2, stroke);

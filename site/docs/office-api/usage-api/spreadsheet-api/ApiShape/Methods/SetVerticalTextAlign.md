@@ -24,13 +24,13 @@ boolean
 
 This example sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to specify a vertical alignment of a shape content.
 
 // Set text vertical alignment of a shape to bottom.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 50 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

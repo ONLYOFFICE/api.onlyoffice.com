@@ -1,6 +1,6 @@
-# 获取选区类型
+# GetSelectionType
 
-返回当前选区的类型。
+返回当前选择的类型。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.GetSelectionType();
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[选区类型](../Enumeration/SelectionType.md)
+[SelectionType](../Enumeration/SelectionType.md)
 
 ## 示例
 

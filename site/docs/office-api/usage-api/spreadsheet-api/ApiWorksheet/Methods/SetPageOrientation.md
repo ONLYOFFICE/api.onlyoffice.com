@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the page orientation.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change a page orientation.
 
 // Set a page orientation and display it in the sheet.

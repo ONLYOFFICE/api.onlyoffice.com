@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets the first series of ApiChart class and inserts its type into the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a chart type and show it on the slide.
 
 // Change a chart type to the "area" type.
@@ -33,9 +33,9 @@ let chart = Api.CreateChart("comboBarLine", [
 	[200, 240, 280],
 	[250, 260, 280]
 ], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
 chart.SetHorAxisTitle("Year", 11);

@@ -24,7 +24,7 @@ number
 
 This example shows how to get an inverse of the Fisher transformation: if y = FISHER(x), then FISHERINV(y) = x.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get an inverse of the Fisher transformation.
 
 // Use function to find out an inverse of Fisher transformation.

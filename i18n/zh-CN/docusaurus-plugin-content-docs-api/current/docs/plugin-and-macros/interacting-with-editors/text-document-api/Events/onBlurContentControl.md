@@ -1,12 +1,12 @@
-# 内容控件失焦回调
+# onBlurContentControl
 
-当某个内容控件失去焦点时调用的函数。
+用于显示哪个内容控件已失去焦点的函数。
 
 ## 参数
 
-| **名称** | **数据类型** | **说明** |
+| **名称** | **数据类型** | **描述** |
 | --------- | ------------- | ----------- |
-| control | [事件_内容控件](../Enumeration/Event_ContentControl.md) | 指明已失去焦点的内容控件。 |
+| control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | 定义已失去焦点的内容控件。 |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onBlurContentControl", (oPr) => {
@@ -38,3 +38,4 @@ window.Asc.plugin.attachEditorEvent("onBlurContentControl", (oPr) => {
     console.log("event: onBlurContentControl");
 });
 ```
+

@@ -25,7 +25,7 @@ expression.Search(sText, isMatchCase);
 
 This example shows how to make search in table cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Search the word from the row.
 
 // How to find a word from the row and make it bold.

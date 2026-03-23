@@ -24,7 +24,7 @@ expression.SetText(sText);
 
 This example sets the comment text.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change a text of a comment.
 
 // Get all comments from the presentation and set its first one's text.

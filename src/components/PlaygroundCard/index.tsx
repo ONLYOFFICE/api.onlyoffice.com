@@ -42,6 +42,13 @@ const Playgrounds = [
     description: 'Interact with the form editor to create and manage forms.',
   },
   {
+    name: 'PDF API',
+    image: require('@site/static/assets/images/editor/pdf-playground.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/editor/pdf-playground.dark.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///playground/?editor=pdf',
+    description: 'Use the PDF editor to create, edit, and annotate PDF documents.',
+  },
+  {
     name: 'Builder API',
     image: require('@site/static/assets/images/editor/builder-playground.png').default + '#gh-light-mode-only',
     imageDark: require('@site/static/assets/images/editor/builder-playground.dark.png').default + '#gh-dark-mode-only',

@@ -24,7 +24,7 @@ boolean
 
 This example sets the text to the current text field.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add the text to the text form.
 
 // Update the content of the form.

@@ -1,0 +1,72 @@
+# GetPivotItems
+
+返回表示单个数据透视表项（ApiPivotItem 对象）
+或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。
+
+## 语法
+
+```javascript
+expression.GetPivotItems(index);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| index | 可选 | number |  | 项索引。 |
+
+## 返回值
+
+[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
+
+## 示例
+
+此示例展示如何获取透视字段的项。
+
+```javascript editor-xlsx
+// How to get a pivot field items.
+
+// Create a pivot table, add data to it then get items of a specified pivot field as an array.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
+
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
+
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
+
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
+
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+
+pivotTable.AddFields({
+    rows: 'Region',
+    columns: 'Style',
+});
+
+let pivotWorksheet = Api.GetActiveSheet();
+pivotTable.AddDataField('Price');
+
+let pivotField = pivotTable.GetPivotFields('Region');
+let pivotItems = pivotField.GetPivotItems();
+pivotWorksheet.GetRange('A10').SetValue('Region pivot items');
+
+for (let i = 0; i < pivotItems.length; i += 1) {
+    pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
+}
+```

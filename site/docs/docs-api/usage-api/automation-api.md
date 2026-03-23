@@ -28,7 +28,7 @@ The function called to add an item to the context menu. The process of working w
 
 | Name  | Type                                        | Description                                           |
 | ----- | ------------------------------------------- | ----------------------------------------------------- |
-| items | Array.\<[ContextMenuItem](#contextmenuitem)\> | An array containing the context menu item parameters. |
+| items | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu item parameters. |
 
 ### ContextMenuItem
 
@@ -40,7 +40,7 @@ The function called to add an item to the context menu. The process of working w
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
 | *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *onClick*  | function                 | The click event callback.                                                                                                  |
-| *items*    | Array.\<ContextMenuItem> | An array containing the context menu items for the current item.                                                           |
+| *items*    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
 
 ### Example
 
@@ -71,7 +71,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | Name | Type                                      | Description                                                     |
 | ---- | ----------------------------------------- | --------------------------------------------------------------- |
 | guid | string                                    | The plugin guid.                                                |
-| tabs | Array.\<[ToolbarMenuTab](#toolbarmenutab)\> | An array containing the toolbar menu tabs for the current item. |
+| tabs | [ToolbarMenuTab](#toolbarmenutab)[] | An array containing the toolbar menu tabs for the current item. |
 
 ### ToolbarMenuTab
 
@@ -79,7 +79,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | ----- | ------------------------------------------- | --------------------------------------------------------------- |
 | id    | string                                      | The tab ID.                                                     |
 | text  | string                                      | The tab text.                                                   |
-| items | Array.\<[ToolbarMenuItem](#toolbarmenuitem)\> | An array containing the toolbar menu items for the current tab. |
+| items | [ToolbarMenuItem](#toolbarmenuitem)[] | An array containing the toolbar menu items for the current tab. |
 
 ### ToolbarMenuItem
 
@@ -96,7 +96,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | *separator*      | boolean                                     | Specifies whether a separator is used between the toolbar menu items.                                                                    |
 | *split*          | boolean                                     | Specifies whether the toolbar menu item is split into two parts and includes the drop-down menu.                                         |
 | onClick          | function                                    | The click event callback.                                                                                                                |
-| *items*          | Array.\<ToolbarMenuItem>                    | An array containing the context menu items for the current item.                                                                         |
+| *items*          | ToolbarMenuItem[]                    | An array containing the context menu items for the current item.                                                                         |
 
 ### ToolbarMenuItemType
 
@@ -278,7 +278,7 @@ The function called to update an item in the context menu with the specified ite
 
 | Name  | Type                                         | Description                                           |
 | ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | Array.\<[ContextMenuItem](#contextmenuitem)\> | An array containing the context menu item parameters. |
+| items | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu item parameters. |
 
 ### ContextMenuItem
 
@@ -289,7 +289,7 @@ The function called to update an item in the context menu with the specified ite
 | data     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | disabled | boolean                  | Specifies if the current item is disabled or not.                                                                          |
 | icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
-| items    | Array.\<ContextMenuItem\> | An array containing the context menu items for the current item.                                                           |
+| items    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
 
 ### Example
 

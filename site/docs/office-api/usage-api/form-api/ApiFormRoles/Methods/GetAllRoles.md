@@ -22,8 +22,8 @@ string[]
 
 This example shows how to get a list of all roles in the filling order.
 
-```javascript editor-forms playground
-let doc = editor.GetDocument();
+```javascript editor-forms
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");

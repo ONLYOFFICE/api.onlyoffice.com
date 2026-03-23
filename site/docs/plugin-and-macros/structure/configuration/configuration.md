@@ -335,6 +335,10 @@ The editors which the plugin is available for:
 
 `Type: array of EventType`
 
+:::danger[Deprecated]
+Starting from version 8.2, please use the [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method instead, which does not require this parameter.
+:::
+
 Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../interacting-with-editors/overview/how-to-attach-events.md).
 
 **Example**: `["onClick"]`

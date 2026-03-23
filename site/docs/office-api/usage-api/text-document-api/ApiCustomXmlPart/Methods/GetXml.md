@@ -22,7 +22,7 @@ string
 
 This example shows how to get the XML string representation of a custom XML part.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

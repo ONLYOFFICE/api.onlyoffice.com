@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 This example replaces the image with a new one.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to replace an image to another one.
 
 // Replace an image from one to another using their urls.

@@ -22,7 +22,7 @@ boolean
 
 This example shows how to check if a content control is a datepicker.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 let paragraph1 = Api.CreateParagraph();

@@ -24,7 +24,7 @@ boolean
 
 This example sets the fill to the chart legend.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to color a chart legend.
 
 // Create a chart, set its properties and background color of a legend.
@@ -40,11 +40,11 @@ const chart = Api.CreateChart("bar3D", [
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
+fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetLegendFill(fill);
 slide.AddObject(chart);
 

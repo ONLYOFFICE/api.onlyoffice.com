@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to creates a copy of the specified slide master object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a copy of a master.
 
 // Copy the ApiMaster object.
@@ -36,7 +36,7 @@ const copyMaster = master.Copy();
 presentation.AddMaster(1, copyMaster);
 const countAfter = presentation.GetMastersCount();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

@@ -24,7 +24,7 @@ boolean
 
 This example sets the font scheme to the current presentation theme.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get a theme and set a new font scheme.
 
 // Create a new font scheme and apply it to the slide theme.
@@ -37,7 +37,7 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme = slide.GetTheme();
 theme.SetFontScheme(fontScheme);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

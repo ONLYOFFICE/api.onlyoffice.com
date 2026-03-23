@@ -19,7 +19,7 @@ Enumeration
 
 This example specifys that the single underlining is applied to the font.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to underline a text font.
 
 // Set an underline style to "xlUnderlineStyleSingle".

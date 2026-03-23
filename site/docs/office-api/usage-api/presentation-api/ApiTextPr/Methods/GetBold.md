@@ -22,7 +22,7 @@ boolean
 
 This example shows how to find out whether a text is bold.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to know whether a text is set to bold or not.
 
 // Get the text properties of the run and find whether it is bold or not.
@@ -31,7 +31,7 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

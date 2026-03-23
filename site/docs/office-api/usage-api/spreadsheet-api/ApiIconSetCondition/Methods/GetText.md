@@ -22,7 +22,7 @@ string
 
 This example gets the text value from a text-based conditional formatting rule.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to retrieve text values from text-based conditional formatting rules.
 
 // Get conditional formatting rule text value.

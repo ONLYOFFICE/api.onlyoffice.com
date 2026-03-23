@@ -25,7 +25,7 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 This example creates a blip fill to apply to the object using the selected image as the object background.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set image background to the shape object.
 
 // Create a blip fill from the image to set object background.

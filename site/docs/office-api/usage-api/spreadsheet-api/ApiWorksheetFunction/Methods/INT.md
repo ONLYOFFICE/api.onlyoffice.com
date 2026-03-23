@@ -24,7 +24,7 @@ number
 
 This example shows how to round a number down to the nearest integer.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to round a number down to the nearest integer.
 
 // Use a function to round down a number.

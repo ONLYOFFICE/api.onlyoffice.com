@@ -24,7 +24,7 @@ boolean
 
 This example specifies the horizontal axis orientation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to set an orientation of horizontal axis.
 
 // Create a chart, set its properties and its horizontal axis orientation.
@@ -44,9 +44,9 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetHorAxisOrientation(false);
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 

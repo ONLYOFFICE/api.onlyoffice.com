@@ -1,4 +1,4 @@
-# 替换当前单词
+# ReplaceCurrentWord
 
 用指定的字符串替换当前单词。
 
@@ -12,14 +12,14 @@ expression.ReplaceCurrentWord(replaceString, type);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| replaceString | 必填 | string | — | 替换字符串。 |
-| type | 选填 | [文本部分类型](../Enumeration/TextPartType.md) | "entirely" | 指定替换整个单词还是单词的一部分。 |
+| replaceString | 必需 | string |  | 替换字符串。 |
+| type | 可选 | [TextPartType](../Enumeration/TextPartType.md) | "entirely" | 指定是替换整个单词还是仅替换其部分。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

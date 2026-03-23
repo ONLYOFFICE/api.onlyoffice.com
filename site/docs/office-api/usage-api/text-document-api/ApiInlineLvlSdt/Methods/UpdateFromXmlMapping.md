@@ -22,7 +22,7 @@ boolean
 
 This example demonstrates how to load data from Custom XML into an inline content control using data binding.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

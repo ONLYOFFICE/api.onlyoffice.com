@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get column grand of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get column grand from a pivot table.
 
 // Create a pivot table, add data to it then get its column grand.

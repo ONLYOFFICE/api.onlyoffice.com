@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a table cell that contains the run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get a parent table cell of the text.
 
 // How to set shading of the table cell that contains a text run.
@@ -41,5 +41,5 @@ paragraph.AddElement(run);
 let cell = table.GetCell(0, 0);
 table.AddElement(cell, 0, paragraph);
 let parentTableCell = run.GetParentTableCell();
-parentTableCell.SetShd("clear", 255, 111, 61, false);
+parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```

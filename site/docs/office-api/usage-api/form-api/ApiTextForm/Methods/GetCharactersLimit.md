@@ -22,7 +22,7 @@ number
 
 This example shows how to get a limit of the text field characters.
 
-```javascript editor-forms playground
+```javascript editor-forms
 // How to display the characters limit of the text form.
 
 // Get the maximum number of characters that can be inserted to the text form.

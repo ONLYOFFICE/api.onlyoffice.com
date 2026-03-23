@@ -1,6 +1,6 @@
-# 安装插件
+# InstallPlugin
 
-安装插件，使用指定的插件配置。
+使用指定的插件配置安装插件。
 
 ## 语法
 
@@ -8,17 +8,17 @@
 expression.InstallPlugin(config);
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
-| ------------- | --------------------- | ------------- | ------------- | ------------- |
-| config | 选填 | object |  | 插件的[配置文件](https://api.onlyoffice.com/zh-CN/docs/plugin-and-macros/structure/configuration/)。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| config | 可选 | object |  | 插件[配置](https://api.onlyoffice.com/docs/plugin-and-macros/structure/configuration/)。 |
 
 ## 返回值
 
-object（对象）
+object
 
 ## 示例
 

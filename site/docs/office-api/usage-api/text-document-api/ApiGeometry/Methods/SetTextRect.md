@@ -27,7 +27,7 @@ boolean
 
 Creates a shape with adjustable parameters and guides.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Sets up text rectangle and connection points for the custom geometry.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,8 +47,8 @@ path.LineTo("r", "b");
 path.LineTo("l", "b");
 path.LineTo("x1", "hd2");
 path.Close();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(200, 100, 0)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
 let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);

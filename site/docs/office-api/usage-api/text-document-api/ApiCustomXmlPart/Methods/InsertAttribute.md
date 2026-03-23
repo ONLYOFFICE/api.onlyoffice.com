@@ -26,7 +26,7 @@ boolean
 
 This example shows how to insert an attribute into a custom XML node.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'></content>");

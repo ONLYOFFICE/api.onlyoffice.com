@@ -22,7 +22,7 @@ number
 
 This example shows how to get the RGB values of a ApiUniColor (ApiPresetColor is inherited from ApiUniColor).
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 

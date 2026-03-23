@@ -1,18 +1,18 @@
-# 插件数据
+# PluginData
 
 插件对象。
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
-| ---- | ---- | ---- |
-| canRemoved | boolean | 指定插件是否可以被移除（**true** 为可移除，**false** 为不可移除）。 |
-| guid | string | 插件标识符，必须为 *asc.&#123;UUID&#125;* 类型。 |
-| obj | object | 安装插件的[配置](https://api.onlyoffice.com/zh-CN/docs/plugin-and-macros/structure/configuration/)。版本信息将从配置中获取，并与当前版本比较以检查是否需要更新。 |
+| ---- | ---- | ----------- |
+| canRemoved | boolean | 指定是否可以删除插件（**true**）或不可以（**false**）。 |
+| guid | string | 插件标识符。必须是 *asc.&#123;UUID&#125;* 类型。 |
+| obj | object | 已安装插件的[配置](https://api.onlyoffice.com/docs/plugin-and-macros/structure/configuration/)。版本从配置中获取并与当前版本进行比较以检查更新。 |
 | url | string | 插件配置的 URL。 |
 ## 类型
 
-Object（对象）
+Object
 
 
 

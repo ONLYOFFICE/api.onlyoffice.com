@@ -25,7 +25,7 @@ number
 
 This example shows how to convert a binary number to octal.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a octal representation of a binary number.
 
 // Use function to convert a binary to octal.

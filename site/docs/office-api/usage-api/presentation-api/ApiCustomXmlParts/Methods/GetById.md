@@ -24,7 +24,7 @@ expression.GetById(xmlPartId);
 
 This example shows how to get a custom XML part by its ID.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to retrieve a custom XML part using its ID.
 
 // Get an XML part by its ID.
@@ -36,7 +36,7 @@ let id = xml.GetId();
 let retrievedXml = xmlManager.GetById(id);
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

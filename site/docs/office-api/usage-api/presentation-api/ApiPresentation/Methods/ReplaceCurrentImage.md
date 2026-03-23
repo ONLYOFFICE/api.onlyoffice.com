@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 This example shows how to replace the current image with an image specified.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to replace an image with another one.
 
 // Replace the current ApiImage with another image on the slide.

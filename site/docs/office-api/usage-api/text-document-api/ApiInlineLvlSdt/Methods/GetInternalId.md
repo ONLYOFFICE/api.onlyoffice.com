@@ -22,7 +22,7 @@ string
 
 This example shows how to get the internal ID of an inline-level content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 

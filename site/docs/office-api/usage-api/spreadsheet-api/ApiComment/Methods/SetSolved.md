@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example marks a comment as solved.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to resolve a comment.
 
 // Resolve a comment, then show its status in the worksheet.

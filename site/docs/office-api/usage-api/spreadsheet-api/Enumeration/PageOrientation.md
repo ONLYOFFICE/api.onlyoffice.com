@@ -16,7 +16,7 @@ Enumeration
 
 This example sets the page orientation to portrait.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change an orientation of a page.
 
 // Set a page orientation to portrait.

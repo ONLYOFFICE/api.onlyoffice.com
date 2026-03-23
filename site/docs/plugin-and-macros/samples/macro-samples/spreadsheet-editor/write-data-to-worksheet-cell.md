@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

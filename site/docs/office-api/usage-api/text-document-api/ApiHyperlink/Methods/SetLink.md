@@ -24,7 +24,7 @@ boolean
 
 This example sets the hyperlink address.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to change the link address of the hyperlink object.
 
 // Set link of the hyperlink.

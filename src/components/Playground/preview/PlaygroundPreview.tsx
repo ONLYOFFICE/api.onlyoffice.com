@@ -2,7 +2,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
 import {getFullUrl} from "@site/src/utils/url";
-import { EditorType } from "@site/src/components/Playground/root/PlaygroundRootContext";
+import {FILE_CONFIGS} from "../defaultScripts";
 
 declare global {
     interface Window {
@@ -10,38 +10,6 @@ declare global {
         connector: any
         docEditor: any
     }
-}
-
-const FILE_CONFIGS = {
-    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
-    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
-    slide: {
-        ext: 'pptx',
-        docType: 'slide',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
-    },
-    form: {
-        ext: 'pdf',
-        docType: 'pdf',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
-    },
-}
-
-const getDocumentUrl = (
-    templateUrl: string | null | undefined,
-    fileConfig: { ext: string; url: string },
-    editorType: EditorType
-): string => {
-    if (templateUrl === null) {
-        const name = editorType === 'form' ? 'demo-invoice' : 'new'
-        return `https://static.onlyoffice.com/assets/docs/samples/${name}.${fileConfig.ext}`
-    }
-
-    if (templateUrl) {
-        return templateUrl
-    }
-
-    return fileConfig.url
 }
 
 export const PlaygroundPreview = () => {
@@ -121,7 +89,7 @@ export const PlaygroundPreview = () => {
                     fileType: fileConfig.ext,
                     key: "0" + Math.random(),
                     title: `Example Document Title.${fileConfig.ext}`,
-                    url: getDocumentUrl(templateUrl, fileConfig, editorType),
+                    url: templateUrl ?? fileConfig.url,
                 },
                 documentType: fileConfig.docType,
                 type: previewType,
@@ -228,7 +196,8 @@ export const PlaygroundPreview = () => {
                         "word": "Api.GetDocument().RemoveAllElements();",
                         "cell": "Api.AddSheet(\"Sheet 1\");var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
                         "slide": "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());",
-                        "form": "Api.GetDocument().RemoveAllElements();"
+                        "form": "Api.GetDocument().RemoveAllElements();",
+                        "pdf": "let doc = Api.GetDocument();for(let i = doc.GetPagesCount()-1; i > 0; i--) {doc.RemovePage(i);} doc.AddPage(1);doc.RemovePage(0);",
                     };
                     var script = removeMethod[editorType] + code.replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
                     window.connector.callCommand(new Function(script));

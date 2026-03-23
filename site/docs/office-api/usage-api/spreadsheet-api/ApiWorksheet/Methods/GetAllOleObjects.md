@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all OLE objects from the sheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get all OLE objects images.
 
 // Get all OLE objects as an array.

@@ -26,7 +26,7 @@ boolean
 
 This example shows how to update the value of an existing attribute in a custom XML node.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `<?xml version="1.0" encoding="UTF-8"?>

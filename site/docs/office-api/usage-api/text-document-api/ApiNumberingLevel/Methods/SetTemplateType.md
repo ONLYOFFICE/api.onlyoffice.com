@@ -25,7 +25,7 @@ boolean
 
 This example sets one of the existing predefined numbering templates.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set template type of the numbering.
 
 // Set "A." template to the numbering.

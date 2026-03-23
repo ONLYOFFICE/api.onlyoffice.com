@@ -1,12 +1,12 @@
-# 权限变更回调
+# onChangeRestrictions
 
-当编辑器中的权限设置发生更改时调用的回调函数。
+当编辑器中的限制更改时调用的函数。
 
 ## 参数
 
-| **名称** | **数据类型** | **说明** |
+| **名称** | **数据类型** | **描述** |
 | --------- | ------------- | ----------- |
-| value | number | 权限值。 |
+| value | number | 限制值。 |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {

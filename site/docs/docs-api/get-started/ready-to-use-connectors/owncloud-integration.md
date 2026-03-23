@@ -13,12 +13,12 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-owncloud) enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs.
 
-The latest connector signed versions are available in the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
+The latest app signed versions are available in the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
-- The following formats are available for viewing only: PDF, DJVU, XPS.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX. ODT, ODS, and ODP are also available for instant conversion. After you enable the corresponding option in the admin settings, ODF-formatted documents are immediately converted in the editor and opened after you click on it.
 - The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to ownCloud. Co-editing is also available between several federated ownCloud instances connected to one Document Server.
 - Sharing files is possible with different permission types - viewing/editing, commenting, reviewing, filling forms. It's also possible to restrict downloading (in all editors) and modifying filters (in spreadsheets). Sharing via public link is also available.
@@ -32,7 +32,7 @@ ONLYOFFICE Docs and ownCloud can be installed either on different computers, or 
 
 You can also use our [Docker installation](https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud) to get installed and configured ONLYOFFICE Docs and ownCloud installation with a couple of commands.
 
-## Installing ownCloud ONLYOFFICE integration app
+## Installing ONLYOFFICE app for ownCloud
 
 The ownCloud administrator can install the integration app from the in-built application market. To do this, click the upper-left hamburger menu and select **Market**. After that, find **ONLYOFFICE** in the list of available applications and install it.
 
@@ -40,11 +40,11 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications):
 
-    ``` sh
-    cd apps/
-    ```
+   ``` sh
+   cd apps/
+   ```
 
-2. Get the ownCloud ONLYOFFICE integration app. There are several ways to do that:
+2. Get the ONLYOFFICE app for ownCloud. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
    2. Download the latest signed version from the application [release page](https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases) on GitHub.
@@ -57,18 +57,18 @@ If the server with the ownCloud installed does not have the Internet access, or 
    ```
 
    :::note
-   ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **a** or **b** to get the application.
+   ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **1** or **2** to get the application.
    :::
 
 3. Change the owner to update the application right from ownCloud web interface:
 
     ``` sh
-    chown -R www-data:www-data
+    chown -R www-data:www-data onlyoffice
     ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
-## Configuring ownCloud ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for ownCloud
 
 In ownCloud, open the *\~/settings/admin?sectionid=additional#onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
@@ -76,7 +76,7 @@ In ownCloud, open the *\~/settings/admin?sectionid=additional#onlyoffice* page w
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the ownCloud server. The ownCloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the ownCloud server. The ownCloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ![Local](/assets/images/editor/owncloud-local.jpg)
 
@@ -84,7 +84,7 @@ Sometimes your network configuration might not allow the requests between instal
 
 ![Public](/assets/images/editor/owncloud-public.jpg)
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the ownCloud administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the ownCloud administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 Enable or disable the **Open file in the same tab** setting.
 
@@ -102,12 +102,12 @@ You will see a text either with information about the successful connection or t
 
 ## Enabling editing for ownCloud Web
 
-To enable work within **ownCloud Web**, register the connector in the ownCloud Web *config.json*:
+To enable work within **ownCloud Web**, register the app in the ownCloud Web *config.json*:
 
 - If you installed ownCloud Web from the [official marketplace](https://marketplace.owncloud.com/apps/onlyoffice), the path is *\<owncloud-root-catalog>/config/config.json*.
-- If you compiled it from source code yourself using [this instruction](#installing-owncloud-onlyoffice-integration-app), the path is *\<owncloud-web-root-catalog>/config/config.json*.
+- If you compiled it from source code yourself using [this instruction](#installing-onlyoffice-app-for-owncloud), the path is *\<owncloud-web-root-catalog>/config/config.json*.
 
-To register the connector, use these lines:
+To register the app, use these lines:
 
 ``` json
 {
@@ -166,7 +166,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
   ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
   :::
 
-- **Validating certificate**. If you are using a self-signed certificate for ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
+- **Validating certificate**. If you are using a self-signed certificate for your ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
 
   1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.
   2. Change the ownCloud config file manually. Locate the ownCloud config file (*/owncloud/config/config.php*) and open it. Insert the following section to it:
@@ -189,7 +189,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   To solve this, we added an asynchronous background task which runs on the server to check availability of the editors. It allows testing the connection between your **ownCloud instance** and **ONLYOFFICE Docs**, namely availability of server addresses and the validity of the JWT secret are being checked.
 
-  If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled. As an ownCloud admin, you will get the corresponding notification.
+  If any issue is detected, the ONLYOFFICE app (consequently, the ability to create and open files) will be disabled. As an ownCloud admin, you will get the corresponding notification.
 
   This option allows you to avoid issues when the server settings become incorrect and require changes.
 
@@ -213,4 +213,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 - When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
 
-Download the ownCloud ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-owncloud).
+Download the ONLYOFFICE app for ownCloud [here](https://github.com/ONLYOFFICE/onlyoffice-owncloud).

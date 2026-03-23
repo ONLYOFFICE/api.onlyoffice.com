@@ -24,7 +24,7 @@ number
 
 This example shows how to return the unit matrix for the specified dimension.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a unit matrix.
 
 // Use a function to get a unit matrix specifying dimension.

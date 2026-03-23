@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to retrieve and display the list of attributes of the current XML node.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

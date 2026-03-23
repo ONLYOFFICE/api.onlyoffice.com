@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets the value hiding property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to hide cells from a range.
 
 // Get a range and make specified cells invisible.

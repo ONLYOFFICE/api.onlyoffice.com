@@ -28,7 +28,7 @@ boolean
 
 This example adds a heading cross-reference to the paragraph.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a heading reference to the paragraph.
 
 // Add a cross-reference to the heading of the paragraph.

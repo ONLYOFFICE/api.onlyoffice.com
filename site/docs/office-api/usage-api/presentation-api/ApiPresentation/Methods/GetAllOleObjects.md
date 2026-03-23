@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get all the OLE objects from the current presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,7 +40,7 @@ const oleObject2 = oleObject1.Copy();
 oleObject2.SetPosition(0, 48 * 36000);
 slideMaster.AddObject(oleObject2);
 
-const labelFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 230, 150));
+const labelFill = Api.CreateSolidFill(Api.RGB(255, 230, 150));
 const labelStroke = Api.CreateStroke(0, Api.CreateNoFill());
 const label = Api.CreateShape('rect', 60 * 36000, 20 * 36000, labelFill, labelStroke);
 label.SetPosition(0, 96 * 36000);

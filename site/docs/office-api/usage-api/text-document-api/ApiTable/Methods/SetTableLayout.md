@@ -24,7 +24,7 @@ boolean
 
 This example specifies the algorithm which will be used to lay out the contents of the table within the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the table layout.
 
 // Create a table and make its layout fixed.

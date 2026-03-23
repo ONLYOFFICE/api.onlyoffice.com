@@ -22,7 +22,7 @@ boolean
 
 This example sets the default hyperlink style.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the default style to the hyperlink.
 
 // Create a hyperlink and apply the default properties to it.
@@ -30,7 +30,7 @@ This example sets the default hyperlink style.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Api Document Builder");
-paragraph.SetColor(255, 111, 61);
+paragraph.SetColor(Api.HexColor('#FF6F3D'));
 let copyParagraph = paragraph.Copy();
 doc.Push(copyParagraph);
 let hyperlink = paragraph.AddHyperlink("http://api.teamlab.info/docbuilder/basic");

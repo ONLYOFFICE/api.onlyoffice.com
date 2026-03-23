@@ -26,7 +26,7 @@ number
 
 This example shows how to return the left-tailed Student's t-distribution.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to calculate the left-tailed Student's t-distribution.
 
 // Use a function to estimate the Student's t-distribution left-tailed.

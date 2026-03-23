@@ -22,7 +22,7 @@ string
 
 This example shows how to get the tag of a form element.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

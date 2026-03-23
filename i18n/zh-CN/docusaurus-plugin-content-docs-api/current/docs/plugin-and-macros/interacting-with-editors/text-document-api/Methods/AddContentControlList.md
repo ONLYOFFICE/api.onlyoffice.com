@@ -1,6 +1,6 @@
-# 添加内容控件列表
+# AddContentControlList
 
-向文档添加一个空的内容控件列表。
+向文档添加空的内容控件列表。
 
 ## 语法
 
@@ -12,15 +12,15 @@ expression.AddContentControlList(type, List, commonPr);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必填 | [内容控件类型](../Enumeration/ContentControlType.md) | — | 指定内容控件类型的数值，可取以下值之一：**1**（组合框）、**0**（下拉列表）。 |
-| List | 选填 | [内容控件列表元素](../Enumeration/ContentControlListElement.md)[] | — | 内容控件列表元素，每个元素包含两项：**Display** - 在内容控件列表中显示给用户的项目，**Value** - 内容控件列表中每个项目的值。 |
-| commonPr | 选填 | [内容控件属性](../Enumeration/ContentControlProperties.md) | &#123;&#125; | 公共内容控件属性。 |
+| type | 必需 | [ContentControlType](../Enumeration/ContentControlType.md) |  | 指定内容控件类型的数值。可以是以下值之一：**1**（组合框）、**0**（下拉列表）。 |
+| List | 可选 | [ContentControlListElement](../Enumeration/ContentControlListElement.md)[] |  | 内容控件元素列表，由两个项目组成：**Display** - 将在内容控件列表中向用户显示的项目，**Value** - 内容控件列表中每个项目的值。 |
+| commonPr | 可选 | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | 通用内容控件属性。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

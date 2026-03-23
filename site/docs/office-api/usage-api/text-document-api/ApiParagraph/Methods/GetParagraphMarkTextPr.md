@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the text properties of the paragraph mark which is used to mark the paragraph end.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get the mark text properties of the paragraph.
 
 // How to update the text properties of the paragraph mark.
@@ -34,6 +34,6 @@ paragraph.AddText("We set the font size, font color and spacing for the paragrap
 paragraph.AddText("You can see it if you download the document, open it and enable the invisible symbols display.");
 let paragraphMarkTextPr = paragraph.GetParagraphMarkTextPr();
 paragraphMarkTextPr.SetFontSize(52);
-paragraphMarkTextPr.SetColor(255, 255, 0, false);
+paragraphMarkTextPr.SetColor(Api.HexColor('#FFFF00'));
 paragraphMarkTextPr.SetSpacing(5);
 ```

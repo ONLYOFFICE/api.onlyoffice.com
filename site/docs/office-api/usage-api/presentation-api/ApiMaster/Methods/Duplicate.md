@@ -24,7 +24,7 @@ expression.Duplicate(nPos);
 
 This example creates a duplicate of the specified slide master object, adds the new slide master to the slide masters collection.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to create a duplicate of a slide master.
 
 // Add a duplicate master.
@@ -37,7 +37,7 @@ const countBefore = presentation.GetMastersCount();
 master.Duplicate(1);
 const countAfter = presentation.GetMastersCount();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

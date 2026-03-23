@@ -24,7 +24,7 @@ number
 
 This example shows how to get a Fisher transformation.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a Fisher transformation.
 
 // Use function to find out a Fisher transformation.

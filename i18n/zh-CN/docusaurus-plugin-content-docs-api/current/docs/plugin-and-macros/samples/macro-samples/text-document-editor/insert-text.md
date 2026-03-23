@@ -2,10 +2,6 @@
 
 在文档当前光标位置插入文本。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

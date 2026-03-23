@@ -35,7 +35,7 @@ boolean
 
 This example shows how to set table lock.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the table look.
 
 // Create a table and indicate its look properties.
@@ -49,6 +49,6 @@ let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 table.SetTableLook(true, true, true, true, true, true);
-tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 111, 61);
+tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", Api.HexColor('#FF6F3D'));
 doc.Push(table);
 ```

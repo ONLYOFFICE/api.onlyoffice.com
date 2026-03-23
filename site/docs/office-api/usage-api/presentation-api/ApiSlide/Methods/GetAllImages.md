@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example show how to get an array with all the image objects from the slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to get all images from the slide.
 
 // Get all images from the slide as an array.
@@ -39,7 +39,7 @@ slide.AddObject(image);
 const allImages = slide.GetAllImages();
 const type = allImages[0].GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('flowChartMagneticTape', 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

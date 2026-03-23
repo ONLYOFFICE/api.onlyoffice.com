@@ -25,7 +25,7 @@ boolean
 
 This example adds a table of figures to the current document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add drawings to the document and generate a table of figures.
 
 // Insert a table of figures specifying its properties.
@@ -41,9 +41,9 @@ drawing.SetHorAxisTitle("Year", 11);
 drawing.SetLegendPos("bottom");
 drawing.SetShowDataLabels(false, false, true, false);
 drawing.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 drawing.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 drawing.SetSeriesFill(fill, 1, false);
 paragraph.AddDrawing(drawing);
 paragraph.AddCaption(" - Financial Overview", "Figure", false, "Arabic", false, undefined, "hyphen");

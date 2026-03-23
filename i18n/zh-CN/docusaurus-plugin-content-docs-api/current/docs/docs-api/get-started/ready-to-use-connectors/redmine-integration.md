@@ -17,7 +17,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 功能特性
 
-- 可查看和编辑文本文档、电子表格、演示文稿以及表单。
+- 可查看和编辑文本文档、电子表格、演示文稿、PDF以及表单。
 - 支持通过两种协同编辑模式（快速模式和严格模式）进行文档实时协同编辑，具备修订跟踪、添加注释和内置聊天功能。
 - 设有设置页面，用于配置与服务器的连接、JWT身份验证，还能自定义编辑器外观。
 - 授权编辑器支持移动端查看。
@@ -26,11 +26,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 支持的格式
 
-|        | djvu  |  doc  | docm  | docx  | docxf |  dot  | dotm  | dotx  | epub* | fb2*  | fodt  |  htm  | html* |  mht  | mhtml | odt*  | oform | ott*  | oxps  |  pdf  | rtf*  |  stw  |  sxw  | txt*  |  wps  |  wpt  |  xml  |  xps  | csv*  |  et   |  ett  | fods  | ods*  | ots*  |  sxc  |  xls  | xlsb  | xlsm  | xlsx  |  xlt  | xltm  | xltx  |  dps  |  dpt  | fodp  | odp*  | otp*  |  pot  | potm  | potx  |  pps  | ppsm  | ppsx  |  ppt  | pptm  | pptx  |  sxi  |
-| :----- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 查看    |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |
-| 编辑    |   -   |   -   |   +   |   +   |   +   |   -   |   +   |   +   |   +   |   +   |   -   |   -   |   +   |   -   |   -   |   +   |   -   |   +   |   -   |   +   |   +   |   -   |   -   |   +   |   -   |   -   |   -   |   -   |   +   |   -   |   -   |   -   |   +   |   +   |   -   |   -   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |   -   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |
-| 创建    |   -   |   -   |   -   |   +   |   +   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   +   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   +   |   -   |
+|        | djvu | doc | docm | docx | dot | dotm | dotx | epub* | fb2* | fodt | htm | html* | mht | mhtml | odt* | ott* | oxps | pdf | rtf* | stw | sxw | txt* | wps | wpt | xml | xps | csv* | et | ett | fods | ods* | ots* | sxc | xls | xlsb | xlsm | xlsx | xlt | xltm | xltx | dps | dpt | fodp | odp* | otp* | pot | potm | potx | pps | ppsm | ppsx | ppt | pptm | pptx | sxi |
+|:-------|:----:|:---:|:----:|:----:|:---:|:----:|:----:|:-----:|:----:|:----:|:---:|:-----:|:---:|:-----:|:----:|:----:|:----:|:---:|:----:|:---:|:---:|:----:|:---:|:---:|:---:|:---:|:----:|:--:|:---:|:----:|:----:|:----:|:---:|:---:|:----:|:----:|:----:|:---:|:----:|:----:|:---:|:---:|:----:|:----:|:----:|:---:|:----:|:----:|:---:|:----:|:----:|:---:|:----:|:----:|:---:|
+| 查看   |  +   |  +  |  +   |  +   |  +  |  +   |  +   |   +   |  +   |  +   |  +  |   +   |  +  |   +   |  +   |  +   |  +   |  +  |  +   |  +  |  +  |  +   |  +  |  +  |  +  |  +  |  +   | +  |  +  |  +   |  +   |  +   |  +  |  +  |  +   |  +   |  +   |  +  |  +   |  +   |  +  |  +  |  +   |  +   |  +   |  +  |  +   |  +   |  +  |  +   |  +   |  +  |  +   |  +   |  +  |
+| 编辑   |  -   |  -  |  +   |  +   |  -  |  +   |  +   |   +   |  +   |  -   |  -  |   +   |  -  |   -   |  +   |  +   |  -   |  +  |  +   |  -  |  -  |  +   |  -  |  -  |  -  |  -  |  +   | -  |  -  |  -   |  +   |  +   |  -  |  -  |  -   |  +   |  +   |  -  |  +   |  +   |  -  |  -  |  -   |  +   |  +   |  -  |  +   |  +   |  -  |  +   |  +   |  -  |  +   |  +   |  -  |
+| 创建   |  -   |  -  |  -   |  +   |  -  |  -   |  -   |   -   |  -   |  -   |  -  |   -   |  -  |   -   |  -   |  -   |  -   |  -  |  -   |  -  |  -  |  -   |  -  |  -  |  -  |  -  |  -   | -  |  -  |  -   |  -   |  -   |  -  |  -  |  -   |  -   |  +   |  -  |  -   |  -   |  -  |  -  |  -   |  -   |  -   |  -  |  -   |  -   |  -  |  -   |  -   |  -  |  -   |  +   |  -  |
 
 \* *- 要能够打开这些格式进行编辑，请在[格式设置](#formats)中勾选。由于某些格式限制，可能会出现数据丢失的情况。*
 
@@ -44,7 +44,9 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 安装该插件需要Redmine4.2或更高版本，或者5.0或更高版本。同时要注意，该插件与Ruby2.7.2或更高版本，或者3.0.0或更高版本兼容。我们建议使用Redmine5搭配Ruby3。
 
-1. 如果您是Redmine新手，请按照[这些说明](https://www.redmine.org/projects/redmine/wiki/RedmineInstall)。
+此外，您可能需要[zstd](https://github.com/facebook/zstd)来解压该插件。
+
+1. 如果您是Redmine新手，请按照[这些说明](https://www.redmine.org/projects/redmine/wiki/RedmineInstall)安装Redmine。
 
 2. 下载[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine/releases):
 
@@ -72,11 +74,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 6. 重启Redmine。
 
-在Redmine的[维基页面](https://www.redmine.org/projects/redmine/wiki/Plugins#Installing-a-plugin)上可以了解更多关于插件安装的信息。
+在Redmine的[维基页面](https://www.redmine.org/projects/redmine/wiki/plugins#Installing-a-plugin)上可以了解更多关于插件安装的信息。
 
 ## 配置Redmine ONLYOFFICE集成插件
 
-通过Redmine界面配置插件。进入**管理->插件**，找到Redmine的 ONLYOFFICE集成插件并点击**配置**：
+通过Redmine界面配置插件。进入**管理->插件**，找到Redmine的ONLYOFFICE集成插件并点击**配置**：
 
 ![Redmine设置](/assets/images/editor/redmine-settings.png)
 
@@ -86,15 +88,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ### 高级服务器设置
 
-- 服务器内部请求的ONLYOFFICE文档地址。
-- ONLYOFFICE文档内部请求的服务器地址。
-- 连接到演示ONLYOFFICE文档服务器。
+- **服务器内部请求的ONLYOFFICE文档地址。**
+- **ONLYOFFICE文档内部请求的服务器地址。**
+- **连接到演示ONLYOFFICE文档服务器。**
 
 ### 安全设置
 
-- **密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)，中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
-- 授权标头。
-- 禁用证书验证（不安全）。
+- **密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
+- **授权标头。**
+- **禁用证书验证（不安全）。**
 
 ### 编辑器自定义设置
 
@@ -110,7 +112,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 工作原理
 
-该插件使用[ONLYOFFICE文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachment)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
+该插件使用[ONLYOFFICE文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
 
 ### 文档 {#documents}
 
@@ -118,15 +120,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在**文档**页面，用户可以打开附件进行查看、编辑、创建或转换操作。界面中显示的选项可能会因用户权限的不同而有所差异。
 
-|   选项            |             权限                |
-| ——————————————————|————————————————————————————————|
+| 选项              | 权限                           |
+|-------------------|--------------------------------|
 | 查看              | 查看文档                        |
 | 编辑              | 查看文档、编辑文档               |
 | 创建              | 查看文档、编辑文档               |
 | 转换：保存         | 查看文档、编辑文档               |
 | 转换：下载         | 查看文档                        |
 
-### 附件 {#attachment}
+### 附件 {#attachments}
 
 ![附件页面](/assets/images/editor/attachment-page.png)
 
@@ -139,24 +141,24 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 在**文件**页面，用户可以打开附件进行查看、编辑或转换操作。界面中显示的选项可能会因用户权限的不同而有所差异。
 
 | 选项              | 权限                      |
-| ----------------- | ------------------------ |
-| 查看              |  查看问题                 |
-| 编辑              |  查看问题、编辑自己的问题   |
-| 转换：保存        |  查看问题、编辑自己的问题   |
-|转换：下载         |  查看问题                  |
+|-------------------|--------------------------|
+| 查看              | 查看文件                  |
+| 编辑              | 查看文件、管理文件          |
+| 转换：保存        | 查看文件、管理文件          |
+| 转换：下载        | 查看文件                  |
 
 ### 问题 {#issues}
 
 ![问题页面](/assets/images/editor/issues-page.png)
 
-在**问题**页面，用户可以打开附件进行查看、编辑或转换操作。界面中显示的选项可能会因用户对附件所在模块的权限不同而有所差异。
+在**问题**页面，用户可以打开附件进行查看、编辑或转换操作。界面中显示的选项可能会因用户权限的不同而有所差异。
 
-|选项	              | 权限                          |
-| ----------------- | ---------------------------- |
+| 选项              | 权限                          |
+|-------------------|------------------------------|
 | 查看              | 查看问题                      |
 | 编辑              | 查看问题、编辑自己的问题        |
 | 转换：保存        | 查看问题、编辑自己的问题        |
-|转换：下载         | 查看问题                       |
+| 转换：下载        | 查看问题                      |
 
 ### 新闻 {#news}
 
@@ -177,12 +179,12 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在**维基**页面，用户可以打开附件进行查看、编辑或转换操作。界面中显示的选项可能会因用户权限的不同而有所差异。
 
-| 选项	           | 权限                       |
-| ----------------- | -------------------------- |
+| 选项              | 权限                       |
+|-------------------|--------------------------|
 | 查看              | 查看维基                    |
 | 编辑              | 查看维基、编辑维基页面       |
-| 转换：保存         |查看维基、编辑维基页面        |
-| 转换：下载         | 查看维基                  |
+| 转换：保存        | 查看维基、编辑维基页面       |
+| 转换：下载        | 查看维基                   |
 
 ### 论坛 {#forums}
 
@@ -214,3 +216,5 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 ![使用ONLYOFFICE转换](/assets/images/editor/convert-page.png)
 
 在**使用ONLYOFFICE转换**页面，用户可以转换附件。此页面的可见性取决于用户对附件所在模块的权限。
+
+在[这里](https://github.com/ONLYOFFICE/onlyoffice-redmine)下载Redmine ONLYOFFICE插件。

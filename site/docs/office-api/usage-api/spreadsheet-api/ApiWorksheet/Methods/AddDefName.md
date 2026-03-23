@@ -26,7 +26,7 @@ boolean
 
 This example adds a new name to the worksheet.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to change a name of the worksheet range.
 
 // Name a range from a worksheet.

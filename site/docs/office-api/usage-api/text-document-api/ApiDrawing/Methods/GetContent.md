@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get content of a drawing.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);
 

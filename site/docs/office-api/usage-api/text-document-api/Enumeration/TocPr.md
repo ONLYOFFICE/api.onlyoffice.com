@@ -22,7 +22,7 @@ Object
 
 This example adds a table of contents with the specified properties to the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to create a table of contents properties.
 
 // Add a table of contents from the properties.

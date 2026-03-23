@@ -5,7 +5,7 @@ Adds some text to the current run.
 ## Syntax
 
 ```javascript
-expression.AddText(sText);
+expression.AddText(text);
 ```
 
 `expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
@@ -14,7 +14,7 @@ expression.AddText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The text which will be added to the current run. |
+| text | Required | string |  | The text which will be added to the current run. |
 
 ## Returns
 
@@ -24,7 +24,7 @@ boolean
 
 This example adds some text to the run.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a sentence to the text run.
 
 // Add text to the document. 

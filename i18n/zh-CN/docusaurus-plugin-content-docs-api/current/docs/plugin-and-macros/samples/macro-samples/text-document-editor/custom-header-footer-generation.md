@@ -2,10 +2,6 @@
 
 将预定义的页眉和页脚应用到文档中的所有页面。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();
@@ -39,7 +35,5 @@
 使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetSections](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetSections.md), [RemoveHeader](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/RemoveHeader.md), [RemoveFooter](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/RemoveFooter.md), [GetHeader](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/GetHeader.md), [GetFooter](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/GetFooter.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetJc](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [AddPageNumber](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddPageNumber.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.png#gh-light-mode-only)![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.dark.png#gh-dark-mode-only)

@@ -1,6 +1,6 @@
-# 移除多个 OLE 对象
+# RemoveOleObjects
 
-根据内部 ID 移除文档中的多个 OLE 对象。
+通过内部 ID 从文档中删除多个 OLE 对象。
 
 ## 语法
 
@@ -12,13 +12,13 @@ expression.RemoveOleObjects(arrObjects);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrObjects | 必填 | [OLE 对象数据](../Enumeration/OLEObjectData.md)[] | — | 用于操作文档中添加的 OLE 对象的标识符数组。例如：[&#123;"InternalId": "5_556"&#125;]。 |
+| arrObjects | 必需 | [OLEObjectData](../Enumeration/OLEObjectData.md)[] |  | 用于处理添加到文档中的 OLE 对象的标识符数组。示例：[&#123;"InternalId": "5_556"&#125;]。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

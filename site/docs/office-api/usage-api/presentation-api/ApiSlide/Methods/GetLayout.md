@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get a layout of the current slide.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to return a slide layout.
 
 // Get a slide layout and set its background color.
@@ -30,7 +30,7 @@ This example shows how to get a layout of the current slide.
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const layout = slide.GetLayout();
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
 

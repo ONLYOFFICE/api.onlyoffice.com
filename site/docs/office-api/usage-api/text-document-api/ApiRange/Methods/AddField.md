@@ -25,7 +25,7 @@ boolean
 
 This example adds the field to the specified range by field instruction code. Note: This method removes text within range.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This text for time field");

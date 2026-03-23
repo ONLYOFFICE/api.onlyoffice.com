@@ -26,7 +26,7 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 This example inserts a paragraph at the specified position.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to insert the paragraph object into the another element.
 
 // Add paragraph to the content control.

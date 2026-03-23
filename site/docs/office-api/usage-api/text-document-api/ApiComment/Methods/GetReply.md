@@ -24,7 +24,7 @@ expression.GetReply(nIndex);
 
 This example shows how to get the specified comment reply.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Get a comment reply by knowing its index.
 
 // How to get the first comment reply text and display it in the document.

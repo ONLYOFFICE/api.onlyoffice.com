@@ -22,7 +22,7 @@ boolean
 
 This example removes a row containing the cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to delete the row with Cell 1.
 
 // Get the first cell and remove its rowd. 

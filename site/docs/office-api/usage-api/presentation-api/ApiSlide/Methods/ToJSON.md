@@ -27,7 +27,7 @@ JSON
 
 This example converts the ApiSlide object into the JSON object.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to convert a slide object to a JSON object.
 
 // Get a slide by its index and convert it to JSON.
@@ -41,7 +41,7 @@ const slideFromJSON = Api.FromJSON(json);
 presentation.AddSlide(slideFromJSON);
 const classType = slideFromJSON.GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);

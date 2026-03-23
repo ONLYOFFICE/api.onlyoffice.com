@@ -27,7 +27,7 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 This example shows how to add a reply to the comment.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to reply to the comment.
 
 // Get all comments from the presentation and reply to the first one.
@@ -41,7 +41,7 @@ const posY = 35 * 36000;
 const shapeWidth = 300 * 36000;
 const shapeHeight = 100 * 36000;
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", shapeWidth, shapeHeight, fill, stroke);
 shape.SetPosition(posX, posY);

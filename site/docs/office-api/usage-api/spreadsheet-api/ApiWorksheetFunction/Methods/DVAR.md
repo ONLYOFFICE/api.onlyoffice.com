@@ -26,7 +26,7 @@ number
 
 This example shows how to estimate variance based on a sample from the selected database entries.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to estimate variance.
 
 // Use function to calculate a variance from a range sample.

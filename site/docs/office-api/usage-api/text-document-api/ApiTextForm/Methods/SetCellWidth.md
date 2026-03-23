@@ -24,7 +24,7 @@ boolean
 
 This example sets the cell width to the applied comb of characters.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to set the width of the cell of the text form.
 
 // Resize the text form cell.

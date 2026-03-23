@@ -22,7 +22,7 @@ number
 
 This example shows how to get an index of the row.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get row index of the table cell.
 
 // Retrieve the cell from the table and add a text showing its row index.

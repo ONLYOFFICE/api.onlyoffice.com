@@ -24,7 +24,7 @@ expression.GetCommentById(sId);
 
 This example shows how to get a comment from the document by its ID.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Search the comment by its ID.
 
 // Get comment author knowing its ID.

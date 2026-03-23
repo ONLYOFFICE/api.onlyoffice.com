@@ -25,7 +25,7 @@ boolean
 
 This example sets the preferred width to the current table cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Resize the width of the cell.
 
 // Change the width of the cell.

@@ -24,7 +24,7 @@ number
 
 This example shows how to return the secant of a complex number.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the secant.
 
 // Use a function to get the secant of a complex number.

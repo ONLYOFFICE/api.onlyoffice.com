@@ -24,7 +24,7 @@ boolean
 
 This example removes a bookmark from the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to delete a bookmark knowing its name.
 
 // Remove the bookmark from the range.

@@ -32,6 +32,7 @@ const EDITOR_TYPE_MAP: Record<string, EditorType> = {
   'docx': 'word',
   'pptx': 'slide',
   'xlsx': 'cell',
+  'pdf': 'pdf'
 }
 
 // TODO Docusaurus v4: move this component at the root?
@@ -57,11 +58,9 @@ export default function CodeBlockString({
   const editorWord = metastring && metastring.includes("editor-docx") && "docx";
   const editorCell = metastring && metastring.includes("editor-xlsx") && "xlsx";
   const editorSlide = metastring && metastring.includes("editor-pptx") && "pptx";
-  const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
+  const editorPdf = metastring && /editor-(?:pdf|forms)/.test(metastring) && "pdf";
   const isForm = metastring && metastring.includes("editor-forms");
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
-
-  const playground = metastring && metastring.includes("playground") && "playground";
 
   let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;
   const zoom = res ? Number(res[1]) : undefined;
@@ -72,7 +71,7 @@ export default function CodeBlockString({
   const handlePlaygroundClick = () => {
     const params = new URLSearchParams({
       code: metadata.code,
-      editorType: isForm ? 'form' : (editorType.length ? EDITOR_TYPE_MAP[editorType] : null),
+      editor: isForm ? 'form' : (editorType.length ? EDITOR_TYPE_MAP[editorType] : null),
       testType: 'office-js-api',
     });
 
@@ -92,15 +91,13 @@ export default function CodeBlockString({
           <Tabs.List className={styles.TabsList}>
             <Tabs.Trigger className={styles.TabsItem} value="code">Code</Tabs.Trigger>
             <Tabs.Trigger className={styles.TabsItem} value="result">Result</Tabs.Trigger>
-            {playground && (
-                <button
-                    className={styles.TabsItem}
-                    onClick={handlePlaygroundClick}
-                    type="button"
-                >
-                  Playground
-                </button>
-            )}
+            <button
+                className={styles.TabsItem}
+                onClick={handlePlaygroundClick}
+                type="button"
+            >
+              Playground
+            </button>
           </Tabs.List>
 
           <Tabs.Content value="code" forceMount className={styles.TabsContent}>

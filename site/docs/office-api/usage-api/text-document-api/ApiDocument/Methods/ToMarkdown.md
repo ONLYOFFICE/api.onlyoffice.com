@@ -27,7 +27,7 @@ string
 
 This example converts a document to Markdown.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a markdown object from the document content.
 
 // Convert the document to markdown.

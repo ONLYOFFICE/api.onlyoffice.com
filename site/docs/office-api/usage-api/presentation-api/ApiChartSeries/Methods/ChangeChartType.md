@@ -24,7 +24,7 @@ boolean
 
 This example changes the type of the first series of ApiChart class and inserts the new type into the presentation.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to change a chart type.
 
 // Change a chart type to the "area" type.
@@ -53,9 +53,9 @@ title += "New Series Type = " + seriesType;
 chart.SetTitle(title, 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 

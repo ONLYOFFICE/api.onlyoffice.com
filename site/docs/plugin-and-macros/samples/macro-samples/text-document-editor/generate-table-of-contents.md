@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Generates a table of contents by scanning the document for headings.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let doc = Api.GetDocument();
@@ -22,8 +18,6 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 [AddTableOfContents](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## Reference Microsoft VBA macro code
-
-<!-- code generated with AI -->
 
 ```vb
 Sub GenerateTableOfContents()

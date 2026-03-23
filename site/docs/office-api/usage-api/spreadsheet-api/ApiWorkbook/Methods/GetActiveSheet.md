@@ -22,15 +22,15 @@ This method doesn't have any parameters.
 
 This example shows how to get the name of the current workbook (filename)
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 
 worksheet.SetName('not-an-easter-egg');
 const worksheetName = worksheet.GetName();
 
-const lightGreen = Api.CreateRGBColor(16, 121, 63);
-const darkGreen = Api.CreateRGBColor(24, 92, 55);
+const lightGreen = Api.RGB(16, 121, 63);
+const darkGreen = Api.RGB(24, 92, 55);
 const fill = Api.CreateSolidFill(lightGreen);
 const stroke = Api.CreateStroke(2, Api.CreateSolidFill(darkGreen));
 let shape = worksheet.AddShape(

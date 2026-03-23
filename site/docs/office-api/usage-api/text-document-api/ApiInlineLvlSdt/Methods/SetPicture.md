@@ -26,7 +26,7 @@ boolean
 
 This example shows how to set image to picture content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddPictureContentControl();

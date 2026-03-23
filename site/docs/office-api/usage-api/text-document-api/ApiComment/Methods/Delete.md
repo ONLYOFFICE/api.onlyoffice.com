@@ -22,7 +22,7 @@ boolean
 
 This example delets the comment from the document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to remove a comment.
 
 // Get all comments from the presentation and remove the first one.

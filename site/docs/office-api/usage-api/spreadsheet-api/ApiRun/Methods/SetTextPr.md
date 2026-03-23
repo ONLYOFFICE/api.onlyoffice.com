@@ -24,13 +24,13 @@ expression.SetTextPr(oTextPr);
 
 This example sets the text properties to the current run.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to create text property for a text object.
 
 // Create a text run object, add properties like font size, style, color, etc.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

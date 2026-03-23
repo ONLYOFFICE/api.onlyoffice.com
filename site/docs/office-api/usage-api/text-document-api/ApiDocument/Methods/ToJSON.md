@@ -29,7 +29,7 @@ JSON
 
 This example converts the ApiDocument object into the JSON object.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to get a JSON object from the document content.
 
 // Convert the document to json file.
@@ -38,8 +38,8 @@ let doc = Api.GetDocument();
 let json = doc.ToJSON(true, true, true, true, true, true);
 let docFromJSON = Api.FromJSON(json);
 let paragraph = docFromJSON[0];
-let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing1 = Api.CreateShape("rect", 3212465, 963295, fill, stroke);

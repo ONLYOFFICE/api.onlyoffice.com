@@ -26,7 +26,7 @@ number
 
 This example shows how to return the exponential distribution.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get the exponential distribution.
 
 // Use function to calculate an exponential distribution.

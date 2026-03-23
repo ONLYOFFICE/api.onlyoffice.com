@@ -22,7 +22,7 @@ boolean
 
 This example accepts all changes made in review mode.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to apply all changes and fixes after review.
 
 // Change the status of the document to the review mode and apply all changes.

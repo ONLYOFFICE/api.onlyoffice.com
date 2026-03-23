@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Repeatedly recalculates worksheet cell values within one-second intervals.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function ()
 {

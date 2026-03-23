@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the slide height in English measure units.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to find a slide's height and display it on the slide.
 
 // Get a height ofthe  ApiSlide object and show it in the slide.
@@ -33,7 +33,7 @@ presentation.SetSizes(254 * 36000, 190 * 36000);
 const slide = presentation.GetCurrentSlide();
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 200 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

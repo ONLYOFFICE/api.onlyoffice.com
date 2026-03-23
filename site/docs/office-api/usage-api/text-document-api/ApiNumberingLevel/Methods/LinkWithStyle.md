@@ -24,7 +24,7 @@ boolean
 
 This shows how to link numbering level with the specified heading style.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to link the numbering with the style of another element.
 
 // Apply the style of the element to the numbering.

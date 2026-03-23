@@ -22,8 +22,8 @@ This method doesn't have any parameters.
 
 This example shows how to get roles manager.
 
-```javascript editor-forms playground
-let doc = editor.GetDocument();
+```javascript editor-forms
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");

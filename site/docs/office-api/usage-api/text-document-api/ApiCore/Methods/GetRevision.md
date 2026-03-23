@@ -22,7 +22,7 @@ string
 
 This example demonstrates how to get the revision of the current document.
 
-```javascript editor-docx playground
+```javascript editor-docx
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetRevision("Rev. A");

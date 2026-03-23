@@ -22,7 +22,7 @@ boolean
 
 This example shows how to get the value hiding property.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to find out hidden property from a range.
 
 // Get a range, get its cell hiding property and show it in the worksheet.

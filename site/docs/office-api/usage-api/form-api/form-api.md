@@ -8,68 +8,68 @@ A form document has exactly the same structure as a [text document](../text-docu
 
 ## Creating a new form document
 
-To create a form document, the [CreateFile](../../../document-builder/builder-framework/C++/CDocBuilder/CreateFile.md) method with the *"pdf"* extension must be used.
+To create a form document, the [CreateFile](../../../document-builder/builder-framework/CDocBuilder/CreateFile.md) method with the *"docx"* extension must be used.
 
-To save the ready document as a form, you need to use the [SaveFile](../../../document-builder/builder-framework/C++/CDocBuilder/SaveFile.md) method with the *"pdf"* extension.
+To save the ready document as a form, you need to use the [SaveFile](../../../document-builder/builder-framework/CDocBuilder/SaveFile.md) method with the *"form"* format.
 
 The simplest example form document with a single text form containing the "John Smith" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
 ``` ts
-// create a form document file in the .pdf format with ONLYOFFICE Document Builder
-builder.CreateFile("pdf")
+// create a document file in the .docx format with ONLYOFFICE Document Builder
+builder.CreateFile("docx");
 
-// create a new 'oDocument' variable and get the created text document contents
-const oDocument = Api.GetDocument()
+// create a new 'oDocument' variable and get the document contents
+const oDocument = Api.GetDocument();
 
 // create an empty text form
-const oTextForm = Api.CreateTextForm()
+const oTextForm = Api.CreateTextForm();
 
-// get the first empty paragraph from the created document
-const oParagraph = oDocument.GetElement(0)
+// get the first paragraph from the document
+const oParagraph = oDocument.GetElement(0);
 
 // add the created text form to the first paragraph
-oParagraph.AddElement(oTextForm)
+oParagraph.AddElement(oTextForm);
 
 // add the "John Smith" text to the text form
-oTextForm.SetText("John Smith")
+oTextForm.SetText("John Smith");
 
-// save the resulting form document as a file in the .pdf format with the 'example.pdf' name
-builder.SaveFile("pdf", "example.pdf")
+// save the resulting document as a form file in the .pdf format with the 'example.pdf' name
+builder.SaveFile("form", "example.pdf");
 
-// close the form document file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+// close the file and finish work with ONLYOFFICE Document Builder
+builder.CloseFile();
 ```
 
 ## Opening an existing form document
 
-If you want to edit an already existing form document, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a document editor in this case will be that you will not need this document editor. The document is opened the following way:
+If you want to edit an already existing form document, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The document is opened the following way:
 
 ``` ts
-// use a path to an existing 'myformdocument.pdf' form document file to open it with ONLYOFFICE Document Builder
-builder.OpenFile("https://example.com/myformdocument.pdf")
+// use a path or URL to an existing 'myformdocument.pdf' form document file to open it with ONLYOFFICE Document Builder
+builder.OpenFile("https://example.com/myformdocument.pdf");
 
-// create a new 'oDocument' variable and get the created text document contents
-const oDocument = Api.GetDocument()
+// create a new 'oDocument' variable and get the opened form document contents
+const oDocument = Api.GetDocument();
 
 // create an empty text form
-const oTextForm = Api.CreateTextForm()
+const oTextForm = Api.CreateTextForm();
 
-// get the first empty paragraph from the created document
-const oParagraph = oDocument.GetElement(0)
+// get the first paragraph from the opened document
+const oParagraph = oDocument.GetElement(0);
 
 // add the created text form to the first paragraph
-oParagraph.AddElement(oTextForm)
+oParagraph.AddElement(oTextForm);
 
 // add the "John Smith" text to the text form
-oTextForm.SetText("John Smith")
+oTextForm.SetText("John Smith");
 
 // save the resulting form document as a file in the .pdf format with the 'example.pdf' name
-builder.SaveFile("pdf", "example.pdf")
+builder.SaveFile("form", "example.pdf");
 
 // close the form document file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
-As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary form document as an argument to open it. In the above example we open **myformdocument.pdf** document, get its first paragraph and add the text form with the "John Smith" text to it. The same way any other form document element can be changed.
+As you can see you just need to use the *builder.OpenFile* method of the [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) class with the path or URL to the necessary form document as an argument to open it. In the above example we open the **myformdocument.pdf** document, get its first paragraph and add the text form with the "John Smith" text to it. In the same way, any other form document element can be changed.
 
-Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.
+Use the appropriate API documentation sections to find out which methods allow you to change certain document element formatting properties.

@@ -25,7 +25,7 @@ expression.GetPivotData(dataField, fieldItemsArray);
 
 This example shows how to get a pivot data of a pivot table.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get table pivot data.
 
 // Create a pivot table, add data to it then get its pivot data.

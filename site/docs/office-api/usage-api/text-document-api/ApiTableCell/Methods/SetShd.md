@@ -28,7 +28,7 @@ boolean
 
 This example specifies the shading applied to the contents of the table cell.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // Create a 3x3 table and add an orange shading to cell #1.
 
 // Set shading to the table cell.
@@ -41,7 +41,7 @@ tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 let tableCellPr = tableStyle.GetTableCellPr();
-tableCellPr.SetShd("clear", 255, 111, 61, false);
+tableCellPr.SetShd("clear", Api.HexColor('#FF6F3D'));
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```

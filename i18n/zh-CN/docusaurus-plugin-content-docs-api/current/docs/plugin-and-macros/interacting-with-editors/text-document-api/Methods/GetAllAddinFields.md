@@ -1,4 +1,4 @@
-# 获取所有加载项字段
+# GetAllAddinFields
 
 返回当前文档中的所有加载项字段。
 
@@ -12,11 +12,11 @@ expression.GetAllAddinFields();
 
 ## 参数
 
-此方法没有参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[添加加载项字段](../Enumeration/AddinFieldData.md)[]
+[AddinFieldData](../Enumeration/AddinFieldData.md)[]
 
 ## 示例
 

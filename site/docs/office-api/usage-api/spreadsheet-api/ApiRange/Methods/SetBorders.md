@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 This example sets the border to the cell with the parameters specified.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to set the thick bottom border to a cell.
 
 // Get a range and set its border specifying its side, type and color.

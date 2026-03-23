@@ -22,7 +22,7 @@ boolean
 
 This example creates a new history point.
 
-```javascript editor-docx playground
+```javascript editor-docx
 // How to add a history point after adding the text.
 
 // Add a text to the paragraph, create a history point and change its text.

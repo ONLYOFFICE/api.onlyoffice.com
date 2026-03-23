@@ -24,7 +24,7 @@ boolean
 
 This example shows how to check state of a checkbox content control.
 
-```javascript editor-docx playground
+```javascript editor-docx
 let doc = Api.GetDocument();
 let checkBox = doc.AddCheckBoxContentControl();
 let paragraph = Api.CreateParagraph();

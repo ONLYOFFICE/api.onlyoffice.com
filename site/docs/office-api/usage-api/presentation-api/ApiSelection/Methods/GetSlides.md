@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the selected slides from current selection.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,7 +40,7 @@ text += 'Selected slides count after adding a new slide: ' + selection.GetSlides
 
 */
 
-const outShapeFill = Api.CreateSolidFill(Api.CreateRGBColor(50, 70, 180));
+const outShapeFill = Api.CreateSolidFill(Api.RGB(50, 70, 180));
 const outShapeStroke = Api.CreateStroke(0, Api.CreateNoFill());
 const outShape = Api.CreateShape('rect', 160 * 36000, 30 * 36000, outShapeFill, outShapeStroke);
 outShape.SetPosition(0, 30 * 36000);

@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example adds a new column to the table.
 
-```javascript editor-pptx playground
+```javascript editor-pptx
 // How to insert a column to the table.
 
 // Create a 2x4 table, set its position and then insert a column to it.

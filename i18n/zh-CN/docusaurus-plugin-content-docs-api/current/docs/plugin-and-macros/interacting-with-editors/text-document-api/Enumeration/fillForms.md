@@ -1,19 +1,19 @@
-# 填充表单
+# fillForms
 
 包含表单属性的对象。
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
-| ---- | ---- | ---- |
-| tags | object | 表单标签，指定具有该标签的每种表单类型的内容。 |
-| tags.checkBox | string | 复选框表单值（**true** 为选中，**false** 为未选中）。 |
-| tags.comboBox | string | 组合框表单值（组合框列表中的某一项）。 |
-| tags.picture | string | 图片表单值（图片链接）。 |
-| tags.text | string | 文本字段值（文本内容）。 |
+| ---- | ---- | ----------- |
+| tags | object | 指定具有此类标签的每种表单类型内容的表单标签。 |
+| tags.checkBox | string | 复选框表单值（**true** - 选中，**false** - 未选中）。 |
+| tags.comboBox | string | 组合框表单值（组合框列表值中的项目之一）。 |
+| tags.picture | string | 图像表单值（图像的链接）。 |
+| tags.text | string | 文本字段值（一些文本）。 |
 ## 类型
 
-Object（对象）
+Object
 
 
 

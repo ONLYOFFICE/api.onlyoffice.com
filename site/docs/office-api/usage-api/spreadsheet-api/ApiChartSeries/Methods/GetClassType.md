@@ -22,7 +22,7 @@ This method doesn't have any parameters.
 
 This example gets a type of ApiChartSeries class and inserts it into the document.
 
-```javascript editor-xlsx playground
+```javascript editor-xlsx
 // How to get a chart series class type.
 
 // Get a class type of a seria.
@@ -41,9 +41,9 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "comboBarLine", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 let series = chart.GetSeries(0);
 let classType = series.GetClassType();
