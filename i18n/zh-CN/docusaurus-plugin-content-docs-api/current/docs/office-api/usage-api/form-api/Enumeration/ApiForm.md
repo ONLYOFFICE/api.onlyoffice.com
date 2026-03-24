@@ -18,7 +18,7 @@
 
 ## 示例
 
-This example copies a text form.
+此示例复制文本表单。
 
 ```javascript editor-forms
 // Get a form and create its copy. 

@@ -15,7 +15,7 @@
 
 ## 示例
 
-Create properties and add a new role with the specified properties.
+创建属性并添加具有指定属性的新角色。
 
 ```javascript editor-forms
 let rolePr = {"color": "#ffefbf"};

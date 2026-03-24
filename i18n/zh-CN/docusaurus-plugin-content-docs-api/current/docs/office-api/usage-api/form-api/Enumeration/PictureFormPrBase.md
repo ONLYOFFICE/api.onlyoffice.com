@@ -19,7 +19,7 @@
 
 ## 示例
 
-Create a picture form with the specific picture form properties.
+创建具有特定图片表单属性的图片表单。
 
 ```javascript editor-forms
 // How to create a picture form with its base properties.

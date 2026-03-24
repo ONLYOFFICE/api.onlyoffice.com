@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example sets the axis values to the top position of the chart.
+此示例将坐标轴值设置到图表的顶部位置。
 
 ```javascript editor-pptx
 // How to change the axis labels format of the chart.

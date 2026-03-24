@@ -19,7 +19,7 @@
 
 ## 示例
 
-This example creates a text form with the specific text form properties.
+此示例创建具有特定文本表单属性的文本表单。
 
 ```javascript editor-forms
 // How to create a text form with adding base properties like max characters limit, cell width, etc. to it.

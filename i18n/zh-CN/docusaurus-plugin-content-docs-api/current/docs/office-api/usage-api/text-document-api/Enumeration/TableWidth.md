@@ -20,7 +20,7 @@
 
 ## 示例
 
-This example sets the width of the table cell equal to 100 points (2000 twips).
+此示例将表格单元格的宽度设置为 100 磅（2000 缇）。
 
 ```javascript editor-docx
 // How to change a table cell width using twips.

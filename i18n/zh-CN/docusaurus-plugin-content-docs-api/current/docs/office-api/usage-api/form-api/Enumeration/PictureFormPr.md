@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example creates a picture form with the common and specific picture form properties.
+此示例使用通用和特定的图片表单属性创建图片表单。
 
 ```javascript editor-forms
 // How to set the properties to the ApiPictureForm object.

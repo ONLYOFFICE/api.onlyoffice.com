@@ -17,7 +17,7 @@
 
 ## 示例
 
-This example adds a table of contents of the standard style to the document.
+此示例向文档添加标准样式的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its style.

@@ -17,7 +17,7 @@
 
 ## 示例
 
-This example creates a combo box form with the specific combo box form properties.
+此示例创建具有特定组合框表单属性的组合框表单。
 
 ```javascript editor-forms
 // How to create a combo box form with its base properties.

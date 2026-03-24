@@ -40,7 +40,7 @@
 
 ## 示例
 
-Set the "0.00" numeric format to the chart data point.
+将 "0.00" 数字格式设置到图表数据点。
 
 ```javascript editor-xlsx
 // How to use the specified numeric format for the ApiChart object.

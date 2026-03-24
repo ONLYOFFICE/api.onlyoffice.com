@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example specify that the sort should be by column.
+此示例指定应按列排序。
 
 ```javascript editor-xlsx
 // How to specify a sorting orientation (column wise or row wise) for each range.

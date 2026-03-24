@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example creates a a text form with the common and specific text form properties.
+此示例创建具有通用和特定文本表单属性的文本表单。
 
 ```javascript editor-forms
 // How to create a text form with adding properties like tip text, placeholder, etc. to it.

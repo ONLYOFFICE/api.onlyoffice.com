@@ -22,7 +22,7 @@
 
 ## 示例
 
-This example add a caption with the Arabic numbering format to the paragraph.
+此示例向段落添加具有阿拉伯数字编号格式的题注。
 
 ```javascript editor-docx
 // How to add a caption to the paragraph specifying numbering format.

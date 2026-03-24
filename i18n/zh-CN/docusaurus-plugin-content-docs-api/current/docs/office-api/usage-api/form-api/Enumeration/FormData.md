@@ -24,7 +24,7 @@
 
 ## 示例
 
-Specify the form data that can be used to create the form.
+指定可用于创建表单的表单数据。
 
 ```javascript editor-forms
 // How to create a form data indicating its key and value.

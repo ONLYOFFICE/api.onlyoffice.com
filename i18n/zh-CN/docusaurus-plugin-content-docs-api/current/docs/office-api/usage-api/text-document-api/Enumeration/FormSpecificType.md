@@ -21,7 +21,7 @@
 
 ## 示例
 
-Set the "text" form type to the first form of the current document.
+将 "text" 表单类型设置到当前文档的第一个表单。
 
 ```javascript editor-docx
 // How to specify the form type.

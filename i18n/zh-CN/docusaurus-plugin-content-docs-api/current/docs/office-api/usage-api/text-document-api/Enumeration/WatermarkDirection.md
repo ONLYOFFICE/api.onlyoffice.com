@@ -17,7 +17,7 @@
 
 ## 示例
 
-In this example sets the direction of the watermark within the document.
+此示例设置文档中水印的方向。
 
 ```javascript editor-docx
 // How to set a watermark direction.

@@ -18,7 +18,7 @@
 
 ## 示例
 
-This example adds a table of figures of the distinctive style to the document.
+此示例向文档添加独特样式的图表目录。
 
 ```javascript editor-docx
 // How to create a table of figures with distinctive style property.

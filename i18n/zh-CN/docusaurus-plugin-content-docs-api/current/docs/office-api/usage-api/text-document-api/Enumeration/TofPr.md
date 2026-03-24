@@ -21,7 +21,7 @@
 
 ## 示例
 
-This example adds a table of figures with the specified properties to the document.
+此示例向文档添加具有指定属性的图表目录。
 
 ```javascript editor-docx
 // How to create a table of figures properties.

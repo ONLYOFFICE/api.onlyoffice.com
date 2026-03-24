@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example adds a table of contents which is generated from 9 outline levels to the document.
+此示例向文档添加从 9 个大纲级别生成的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating the source from which it should be generated.

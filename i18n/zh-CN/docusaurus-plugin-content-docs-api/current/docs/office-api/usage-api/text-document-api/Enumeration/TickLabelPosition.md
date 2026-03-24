@@ -20,7 +20,7 @@
 
 ## 示例
 
-This example sets the position of the vertical tick labels next to the main vertical label.
+此示例将垂直刻度标签的位置设置在主垂直标签旁边。
 
 ```javascript editor-docx
 // How to set tick label positions for the chart.

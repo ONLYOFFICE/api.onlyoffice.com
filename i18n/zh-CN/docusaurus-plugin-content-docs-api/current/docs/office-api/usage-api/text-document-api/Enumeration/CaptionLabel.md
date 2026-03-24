@@ -15,7 +15,7 @@
 
 ## 示例
 
-This example add a cross-reference to the page containing a table caption.
+此示例添加指向包含表格标题的页面的交叉引用。
 
 ```javascript editor-docx
 // How to add reference to the page with caption.

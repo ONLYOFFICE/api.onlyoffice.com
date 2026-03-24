@@ -202,7 +202,7 @@
 
 ## 示例
 
-This example creates a scheme color using the 'lightYellow' color preset.
+此示例使用 'lightYellow' 颜色预设创建主题颜色。
 
 ```javascript editor-pdf
 // How to create a preset color.

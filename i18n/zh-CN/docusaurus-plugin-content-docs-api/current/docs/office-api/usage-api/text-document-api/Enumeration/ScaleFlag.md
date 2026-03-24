@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example sets the scaling condition when the current picture form is scaled if it is too big.
+此示例设置当前图片表单过大时的缩放条件。
 
 ```javascript editor-docx
 // How to set a scale flag for picture form.

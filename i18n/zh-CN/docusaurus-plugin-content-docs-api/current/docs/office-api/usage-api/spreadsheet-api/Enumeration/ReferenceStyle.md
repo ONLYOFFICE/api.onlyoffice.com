@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example gets reference style.
+此示例获取引用样式。
 
 ```javascript editor-xlsx
 // How to retrieve a reference style and display it in the worksheet.

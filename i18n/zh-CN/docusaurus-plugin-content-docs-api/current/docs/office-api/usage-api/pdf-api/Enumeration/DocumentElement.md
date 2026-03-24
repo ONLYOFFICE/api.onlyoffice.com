@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example adds a document element called "paragraph" to the document.
+此示例向文档添加名为 "paragraph" 的文档元素。
 
 ```javascript editor-pdf
 // How to add a paragraph element to the document.

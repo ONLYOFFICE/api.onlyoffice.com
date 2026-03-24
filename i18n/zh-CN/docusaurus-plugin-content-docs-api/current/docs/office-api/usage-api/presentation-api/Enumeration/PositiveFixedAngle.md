@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example sets the resulting gradient direction angle in 90 degrees.
+此示例将渐变方向角度设置为 90 度。
 
 ```javascript editor-pptx
 // How to create a gradient fill using positive fixed angle.

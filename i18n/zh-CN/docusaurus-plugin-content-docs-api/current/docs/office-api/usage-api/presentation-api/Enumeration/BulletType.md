@@ -21,7 +21,7 @@
 
 ## 示例
 
-This example shows how to create a numbering.
+此示例展示如何创建编号。
 
 ```javascript editor-pptx
 // The paragraph will be starting with the Arabic numeral which has parenthesis.

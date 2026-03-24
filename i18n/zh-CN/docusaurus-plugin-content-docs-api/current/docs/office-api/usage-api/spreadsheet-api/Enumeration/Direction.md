@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example shows how to get a Range object that represents the left end of the specified range.
+此示例展示如何获取表示指定区域左端的 Range 对象。
 
 ```javascript editor-xlsx
 // How to set a direction of the range.

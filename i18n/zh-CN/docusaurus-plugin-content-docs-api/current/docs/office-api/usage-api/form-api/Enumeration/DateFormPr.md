@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example creates a date form with the common and specific date form properties.
+此示例使用通用和特定的日期表单属性创建日期表单。
 
 ```javascript editor-forms
 // How to create a date form with its properties.

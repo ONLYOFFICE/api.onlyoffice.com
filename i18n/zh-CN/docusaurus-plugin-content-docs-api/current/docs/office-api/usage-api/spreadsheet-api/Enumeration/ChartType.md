@@ -51,7 +51,7 @@
 
 ## 示例
 
-This example shows how to create the "bar3D" chart.
+此示例展示如何创建 "bar3D" 图表。
 
 ```javascript editor-xlsx
 // Specify the "ChartType" property of the ApiChart object used in text documents.

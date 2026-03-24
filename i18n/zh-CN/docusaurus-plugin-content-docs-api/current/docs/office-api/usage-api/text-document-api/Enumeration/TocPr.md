@@ -20,7 +20,7 @@
 
 ## 示例
 
-This example adds a table of contents with the specified properties to the document.
+此示例向文档添加具有指定属性的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties.

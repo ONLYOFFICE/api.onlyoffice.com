@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example sets the text font size to 22 half-points.
+此示例将文本字号设置为 22 半磅。
 
 ```javascript editor-docx
 // How to resize a text using half-points.

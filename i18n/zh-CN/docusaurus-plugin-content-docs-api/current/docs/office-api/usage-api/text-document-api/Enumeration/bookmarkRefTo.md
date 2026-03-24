@@ -24,7 +24,7 @@
 
 ## 示例
 
-This example adds a cross-reference to the page containing a bookmark.
+此示例添加指向包含书签的页面的交叉引用。
 
 ```javascript editor-docx
 // How to add reference to the bookmarked page.

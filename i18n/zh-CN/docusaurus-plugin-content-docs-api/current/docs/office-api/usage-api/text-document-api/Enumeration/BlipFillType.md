@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example creates a blip fill with an image which is tiled all over the created shape.
+此示例创建一个图像填充，该图像平铺在整个创建的形状上。
 
 ```javascript editor-docx
 // How to create a blip fill from the image URL.
