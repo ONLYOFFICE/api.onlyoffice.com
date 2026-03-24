@@ -1,6 +1,6 @@
 # onAddComment
 
-The function called when a comment is added to the document with the [AddComment](../../text-document-api/Methods/AddComment.md) method.
+The function called when a comment is added to the document with the [AddComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddComment.md) method.
 
 ## Parameters
 

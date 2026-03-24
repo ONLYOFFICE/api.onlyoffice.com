@@ -27,7 +27,7 @@
 | stroke | number[] | RGB 格式的水印描边颜色。空数组 [] 表示水印描边没有填充。 |
 | stroke-width | number | 水印描边的宽度，以毫米为单位。 |
 | transparent | number | 水印的透明度。 |
-| type | string | 指定当前水印的预设形状几何图形的[形状](../../../../../docs/office-api/usage-api/text-document-api/Enumeration/ShapeType.md)。 |
+| type | [ShapeType](../Enumeration/ShapeType.md) | 指定当前水印预设形状几何的类型。 |
 | width | number | 水印的宽度，以毫米为单位。 |
 ## 类型
 

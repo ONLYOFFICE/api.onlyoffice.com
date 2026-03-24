@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiBaseAnnotation](../../ApiBaseAnnotation/ApiBaseAnnotation.md)
+[ApiBaseAnnotation](../../ApiBaseAnnotation/ApiBaseAnnotation.md)[]
 
 ## Example
 

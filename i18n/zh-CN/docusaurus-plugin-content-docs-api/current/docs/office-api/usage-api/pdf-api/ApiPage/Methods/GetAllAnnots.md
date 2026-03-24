@@ -16,7 +16,7 @@ expression.GetAllAnnots();
 
 ## 返回值
 
-[ApiBaseAnnotation](../../ApiBaseAnnotation/ApiBaseAnnotation.md)
+[ApiBaseAnnotation](../../ApiBaseAnnotation/ApiBaseAnnotation.md)[]
 
 ## 示例
 

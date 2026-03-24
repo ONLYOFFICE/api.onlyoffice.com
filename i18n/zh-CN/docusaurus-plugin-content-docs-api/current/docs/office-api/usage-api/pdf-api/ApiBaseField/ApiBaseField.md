@@ -9,7 +9,7 @@
 | ------ | ------- | ----------- |
 | [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | 添加新控件 - 字段的可视化表示 |
 | [Delete](./Methods/Delete.md) | boolean | 从文档中移除字段。 |
-| [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md) | 获取当前字段的控件数组。 |
+| [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 获取字段完整名称。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
 | [GetValue](./Methods/GetValue.md) | string | 获取字段值 |

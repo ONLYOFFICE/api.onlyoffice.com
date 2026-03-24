@@ -8,9 +8,9 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddObject](./Methods/AddObject.md) | [FloatObject](../Enumeration/FloatObject.md) | 向页面添加可用对象。 |
-| [GetAllAnnots](./Methods/GetAllAnnots.md) | [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md) | 获取页面上的所有批注 |
+| [GetAllAnnots](./Methods/GetAllAnnots.md) | [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md)[] | 获取页面上的所有批注 |
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | 获取页面上的所有绘图对象。 |
-| [GetAllWidgets](./Methods/GetAllWidgets.md) | number | 获取页面控件 |
+| [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取页面控件 |
 | [GetClassType](./Methods/GetClassType.md) | "page" | 返回 ApiPage 类的类型。 |
 | [GetIndex](./Methods/GetIndex.md) | number | 获取页面索引 |
 | [GetRotation](./Methods/GetRotation.md) | number | 获取页面旋转角度 |
