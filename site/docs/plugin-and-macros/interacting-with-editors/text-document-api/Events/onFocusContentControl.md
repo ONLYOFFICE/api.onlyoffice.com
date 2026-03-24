@@ -10,7 +10,13 @@ The function called to show which content control has been focused.
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onFocusContentControl", (control) => {
-    focusContentControl(control);
+    console.log("event: onFocusContentControl");
+    console.log("Tag: " + control.Tag);
+    console.log("Id: " + control.Id);
+    console.log("Lock: " + control.Lock);
+    console.log("InternalId: " + control.InternalId);
+    console.log("Alias: " + control.Alias);
+    console.log("Appearance: " + control.Appearance);
 });
 ```
 

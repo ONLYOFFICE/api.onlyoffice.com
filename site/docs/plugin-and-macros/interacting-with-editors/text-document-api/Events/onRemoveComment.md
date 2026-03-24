@@ -10,7 +10,8 @@ The function called when the specified comment is removed with the [RemoveCommen
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onRemoveComment", (comment) => {
-    removeComments([comment.Id]);
+    console.log("event: onRemoveComment");
+    console.log("Id: " + comment.Id);
 });
 ```
 
