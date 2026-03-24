@@ -18,6 +18,7 @@
 * Added AI custom tools text annotations feature documentation.
 * Added new PDF macros samples.
 * Added freeze panes macro example.
+* Added bookmark last view macro example.
 * Added OData plugin to plugin examples.
 * Added Chinese translations for the entire Plugins API section.
 
