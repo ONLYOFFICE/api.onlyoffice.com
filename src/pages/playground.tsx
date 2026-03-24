@@ -34,6 +34,9 @@ const PlaygroundRoute = () => {
         <ColorModeProvider>
             <Head>
                 <title>Playground | ONLYOFFICE</title>
+                <meta name="description" content="An interactive platform to explore and test ONLYOFFICE Docs APIs without registration - test Office JavaScript API, Automation API, Plugins, and Document Builder." />
+                <meta property="og:title" content="Playground | ONLYOFFICE" />
+                <meta property="og:description" content="An interactive platform to explore and test ONLYOFFICE Docs APIs without registration - test Office JavaScript API, Automation API, Plugins, and Document Builder." />
             </Head>
             <BrowserOnly>
                 {() => (
