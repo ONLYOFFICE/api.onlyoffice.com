@@ -1,10 +1,11 @@
 import {
+    DocumentType,
     EditorType,
     PlaygroundRootContext,
     PreviewType,
     ScriptType
 } from "./PlaygroundRootContext"
-import {ComponentProps, useMemo, useReducer} from "react";
+import {ComponentProps, useEffect, useMemo, useReducer} from "react";
 import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
 import {useColorMode} from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -18,6 +19,7 @@ export type PlaygroundRootProps = ComponentProps<'div'> & {
     documentServerUrl?: string
     documentServerSecret?: string
     templateUrl?: string | null
+    documentType?: DocumentType
 }
 
 export const PlaygroundRoot = ({
@@ -28,6 +30,7 @@ export const PlaygroundRoot = ({
     documentServerUrl: documentServerUrlProp,
     documentServerSecret: documentServerSecretProp,
     templateUrl,
+    documentType: documentTypeProp = 'blank',
     ...props
 }: PlaygroundRootProps) => {
     const { colorMode, setColorMode } = useColorMode()
@@ -42,7 +45,12 @@ export const PlaygroundRoot = ({
         scriptType,
         scriptValue: initialScriptProp ?? DEFAULT_SCRIPTS[editorType][scriptType],
         isScriptModified: false,
+        documentType: documentTypeProp,
     } satisfies PlaygroundState)
+
+    useEffect(() => {
+        dispatch({ type: 'SET_DOCUMENT_TYPE', payload: documentTypeProp })
+    }, [documentTypeProp])
 
     const contextValue = useMemo<PlaygroundRootContext>(() => ({
         ...state,

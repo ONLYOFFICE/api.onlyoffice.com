@@ -23,15 +23,23 @@ export const FILE_CONFIGS: Record<string, { ext: string, docType: EditorType, ur
     word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx' },
     pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/blank.pdf' },
     cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/new.xlsx' },
+    slide: { ext: 'pptx', docType: 'slide', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pptx' },
+    form: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pdf' },
+}
+
+export const SAMPLE_FILE_CONFIGS: Record<string, { ext: string, docType: EditorType, url: string }> = {
+    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
+    pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf' },
+    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
     slide: {
         ext: 'pptx',
         docType: 'slide',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/new.pptx',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
     },
     form: {
         ext: 'pdf',
         docType: 'pdf',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/new.pdf',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
     },
 }
 

@@ -2,7 +2,7 @@ import {Playground} from "../components/Playground";
 import styles from './playground.module.css';
 import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import {useLocation} from "react-router-dom";
-import {EditorType, PreviewType, ScriptType} from "@site/src/components/Playground/root/PlaygroundRootContext";
+import {EditorType, PreviewType, ScriptType, DocumentType} from "@site/src/components/Playground/root/PlaygroundRootContext";
 import Head from '@docusaurus/Head';
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import {getSearchParams} from "@site/src/utils/url";
@@ -19,6 +19,7 @@ const PlaygroundRoute = () => {
         documentServerSecret: string
         templateUrl: string
         emptyTemplateUrl?: string // note: because you can't use "boolean"
+        documentType: DocumentType
     }>(location.search, {
         editorType: 'editor',
         scriptType: 'testType',
@@ -27,7 +28,8 @@ const PlaygroundRoute = () => {
         documentServerUrl: 'documentServerUrl',
         documentServerSecret: 'documentServerSecret',
         templateUrl: 'templateUrl',
-        emptyTemplateUrl: 'emptyTemplateUrl'
+        emptyTemplateUrl: 'emptyTemplateUrl',
+        documentType: 'document'
     });
 
     return (

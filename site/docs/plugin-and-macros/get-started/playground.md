@@ -16,5 +16,5 @@ The Playground serves as an interactive platform for users to explore and test t
 ```mdx-code-block
 import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
 
-<PlaygroundCardsRow searchParams={[{testType: "plugin"}]}/>
+<PlaygroundCardsRow searchParams={[{testType: "plugin"}, {document: "sample"}]}/>
 ```

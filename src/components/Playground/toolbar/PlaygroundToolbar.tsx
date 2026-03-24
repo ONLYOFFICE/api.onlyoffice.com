@@ -5,12 +5,12 @@ import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react'
 import { useCallback, useState } from "react";
-import { EditorType, PreviewType, ScriptType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
+import { EditorType, PreviewType, ScriptType, DocumentType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
 import { DEFAULT_SCRIPTS } from "@site/src/components/Playground/defaultScripts";
 
 export const PlaygroundToolbar = () => {
-    const { editorType, previewType, scriptType, isScriptModified, theme, setTheme, dispatch } = usePlaygroundRootContext()
+    const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch } = usePlaygroundRootContext()
 
     const [dialogOpen, setDialogOpen] = useState(false)
     const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null)
@@ -53,6 +53,10 @@ export const PlaygroundToolbar = () => {
 
     const handlePreviewTypeChange = useCallback((value: string) => {
         dispatch({ type: 'SET_PREVIEW_TYPE', payload: value as PreviewType })
+    }, [dispatch])
+
+    const handleDocumentTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_DOCUMENT_TYPE', payload: value as DocumentType })
     }, [dispatch])
 
     const handleThemeChange = useCallback((value: string) => {
@@ -144,6 +148,30 @@ export const PlaygroundToolbar = () => {
                                 </Select.Item>
                                 <Select.Item value="embedded" className={styles.SelectOption}>
                                     <Select.ItemText>Embedded</Select.ItemText>
+                                </Select.Item>
+                            </Select.Viewport>
+                        </Select.Content>
+                    </Select.Portal>
+                </Select.Root>
+            </div>
+
+            <div className={styles.ToolbarGroup}>
+                <div className={styles.Label}>Document:</div>
+                <Select.Root value={documentType} onValueChange={handleDocumentTypeChange}>
+                    <Select.Trigger className={styles.SelectTrigger}>
+                        <Select.Value />
+                        <Select.Icon asChild>
+                            <div className={styles.SelectIcon}/>
+                        </Select.Icon>
+                    </Select.Trigger>
+                    <Select.Portal>
+                        <Select.Content className={styles.SelectContent} position='popper'>
+                            <Select.Viewport className={styles.SelectPopup}>
+                                <Select.Item value="blank" className={styles.SelectOption}>
+                                    <Select.ItemText>Blank</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="sample" className={styles.SelectOption}>
+                                    <Select.ItemText>Sample</Select.ItemText>
                                 </Select.Item>
                             </Select.Viewport>
                         </Select.Content>

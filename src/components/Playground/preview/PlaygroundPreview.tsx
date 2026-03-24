@@ -2,7 +2,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
 import {getFullUrl} from "@site/src/utils/url";
-import {FILE_CONFIGS} from "../defaultScripts";
+import {FILE_CONFIGS, SAMPLE_FILE_CONFIGS} from "../defaultScripts";
 
 declare global {
     interface Window {
@@ -13,7 +13,7 @@ declare global {
 }
 
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
     const initializingRef = useRef(false)
@@ -82,7 +82,8 @@ export const PlaygroundPreview = () => {
 
             containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>'
 
-            const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
+            const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS
+            const fileConfig = configs[editorType] || configs.word
 
             const config = {
                 document: {
@@ -165,7 +166,7 @@ export const PlaygroundPreview = () => {
             initializingRef.current = false
         }
 
-    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor, templateUrl])
+    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor, templateUrl, documentType])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {

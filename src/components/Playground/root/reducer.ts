@@ -1,4 +1,4 @@
-import {EditorType, PreviewType, ScriptType} from "./PlaygroundRootContext";
+import {EditorType, PreviewType, ScriptType, DocumentType} from "./PlaygroundRootContext";
 import {DEFAULT_SCRIPTS} from "../defaultScripts";
 
 export interface PlaygroundState {
@@ -7,6 +7,7 @@ export interface PlaygroundState {
     scriptType: ScriptType
     scriptValue: string
     isScriptModified: boolean
+    documentType: DocumentType
 }
 
 export type PlaygroundAction =
@@ -15,6 +16,7 @@ export type PlaygroundAction =
     | { type: 'SET_SCRIPT_TYPE'; payload: ScriptType }
     | { type: 'SET_SCRIPT_VALUE'; payload: string }
     | { type: 'RESET_SCRIPT' }
+    | { type: 'SET_DOCUMENT_TYPE'; payload: DocumentType }
 
 export function playgroundReducer(state: PlaygroundState, action: PlaygroundAction): PlaygroundState {
     switch (action.type) {
@@ -47,6 +49,8 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
                 scriptValue: DEFAULT_SCRIPTS[state.editorType]?.[state.scriptType] ?? '',
                 isScriptModified: false,
             }
+        case 'SET_DOCUMENT_TYPE':
+            return {...state, documentType: action.payload}
         default:
             return state
     }
