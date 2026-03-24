@@ -118,8 +118,9 @@ export const PlaygroundPreview = () => {
                             const pluginConfigUrl = getFullUrl("/plugin/config.json");
 
                             window.connector = window.docEditor.createConnector();
+                            // TODO:  Remove after release 9.4.0, as installDeveloperPlugin will be available directly on the connector object
                             window.connector.callCommand(
-                                new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+                                new Function(`gg.ud.yJj=gg.ud.installDeveloperPlugin;Api.installDeveloperPlugin("${pluginConfigUrl}");`)
                             );
 
                             if (!initialScriptExecutedRef.current) {
