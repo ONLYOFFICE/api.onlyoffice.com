@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -33,6 +34,7 @@ Send a request that clearly specifies the room and folder.
 **Example request:** Generate a digest for all documents in the "Legal" folder of the "Website Redesign" room.
 
 What you should expect:
+
 - The folder is located in DocSpace.
 - The client identifies the documents included in the digest.
 
@@ -45,6 +47,7 @@ Ask for a structure that matches your goal.
 **Example request:** Group the digest by topics and include a short summary for each document.
 
 What you should expect:
+
 - The output is structured and easy to scan.
 - Each section is based on the document content.
 
@@ -59,6 +62,7 @@ If you want the digest to reference original documents, request links.
 **Example request:** Include links to each document in the digest.
 
 What you should expect:
+
 - Each document section includes a link to the corresponding file in DocSpace (depending on client UI and link support).
 
 ### 5. Verify which documents were used
@@ -68,6 +72,7 @@ Request a confirmation of the processed documents to ensure nothing important wa
 **Example request:** List all documents that were included in the digest.
 
 What you should expect in the response:
+
 - A list of file names from the target folder
 - (Optional) file links, if supported by your MCP client
 

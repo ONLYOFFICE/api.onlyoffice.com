@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -36,6 +37,7 @@ Create a room (or a folder) that will contain all onboarding documents.
 **Example request:** Create an onboarding room called "Onboarding - John Miller".
 
 What you should expect:
+
 - The workspace is created in DocSpace.
 - The client confirms the created room and returns basic information (the exact output depends on the client UI).
 
@@ -50,6 +52,7 @@ Create the predefined folders inside the onboarding workspace.
 **Example request:** In "Onboarding - John Miller", create folders "Policies", "Forms", and "Training".
 
 What you should expect:
+
 - Each folder is created inside the workspace.
 - The client confirms the created folder structure.
 
@@ -60,6 +63,7 @@ Invite the required participants and assign roles.
 **Example request:** Invite HR as Editor, invite the manager as Viewer, and invite John Miller as Viewer.
 
 What you should expect:
+
 - Users are added to the workspace.
 - The specified roles are applied.
 
@@ -72,6 +76,7 @@ Request a short summary to confirm the onboarding workspace is ready.
 **Example request:** Show a summary of the created onboarding workspace: folders and invited users with roles.
 
 What you should expect in the response:
+
 - Workspace name
 - Folder list
 - Invited users and assigned roles

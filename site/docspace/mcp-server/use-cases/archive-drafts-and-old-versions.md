@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -36,6 +37,7 @@ Create a dedicated folder for archived files.
 **Example request:** In the "Website Redesign" room, create a folder named "Archive".
 
 What you should expect:
+
 - The "Archive" folder is created inside the room.
 - The client confirms the folder location.
 
@@ -50,6 +52,7 @@ Request the cleanup action with clear criteria.
 **Example request:** Move all files from the "Drafts" folder in the "Website Redesign" room to the "Archive" folder.
 
 What you should expect:
+
 - Files are moved to the archive location.
 - The response confirms which files were moved.
 
@@ -64,12 +67,14 @@ If your request uses naming conventions (for example, "draft", "v1", "final"), m
 ### 4. Verify the main folders and the Archive folder
 
 Request folder contents to confirm that:
+
 - the main folders contain only the current files;
 - archived items were moved to the correct location.
 
 **Example request:** Show the contents of the "Archive" folder in the "Website Redesign" room.
 
 What you should expect in the response:
+
 - A list of archived files (and optional links, depending on the client UI)
 
 You can also verify a main folder:
@@ -83,6 +88,7 @@ Request a short summary to confirm the cleanup was completed.
 **Example request:** Summarize what was archived and confirm the room is organized.
 
 What you should expect:
+
 - Number of files moved (or a list of moved files)
 - Archive folder location
 - A short confirmation that the cleanup is complete

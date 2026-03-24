@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -35,6 +36,7 @@ Send a request that clearly specifies the room and the file.
 **Example request:** In the "Finance" room, find the file named "Q4 Budget.xlsx".
 
 What you should expect:
+
 - The room is located.
 - The file is found in DocSpace.
 - If multiple files match the name, you may be asked to select the correct one.
@@ -50,6 +52,7 @@ Ask for a structured analysis that matches your goal.
 **Example request:** Analyze the spreadsheet and summarize the key totals, largest categories, and the main changes compared to previous months.
 
 What you should expect:
+
 - A short summary of the main numbers.
 - A list of the most important contributors (for example, top categories or highest costs).
 - Notable changes or trends.
@@ -65,6 +68,7 @@ Request a report in a document format that can be shared with others.
 **Example request:** Create a one-page executive summary report with sections "Overview", "Key insights", and "Risks", and save it as "Q4 Budget Summary.docx".
 
 What you should expect:
+
 - A clean, readable report based on the spreadsheet analysis.
 - A clear structure suitable for sharing.
 
@@ -79,6 +83,7 @@ Request that the report is saved to a specific folder and provide a link.
 **Example request:** Save the report to the "Reports" folder in the "Finance" room and provide a link to the file.
 
 What you should expect in the response:
+
 - Report file name
 - Save location (room and folder)
 - (Optional) a direct link to open the report in DocSpace

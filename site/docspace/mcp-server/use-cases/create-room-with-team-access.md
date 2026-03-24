@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -31,6 +32,7 @@ In your MCP client, send a request that includes at least the room name.
 **Example request:** Create a project room called "Website Redesign".
 
 What you should expect:
+
 - A new room is created in DocSpace.
 - The client confirms the room name and returns basic room information (the exact output depends on the client UI).
 
@@ -45,6 +47,7 @@ Add folders to organize project documents from the start.
 **Example request:** Inside "Website Redesign", create folders "Brief", "Design", "Legal", and "Deliverables".
 
 What you should expect:
+
 - Each folder is created inside the room.
 - The client confirms the created folder structure.
 
@@ -55,6 +58,7 @@ Invite team members and assign access roles.
 **Example request:** Invite Anna as Editor and Mark as Viewer.
 
 What you should expect:
+
 - Users are added to the room.
 - The specified roles are applied.
 
@@ -69,6 +73,7 @@ Request a short summary to confirm everything is set correctly.
 **Example request:** Show a summary of the created room, folders, and invited users with their roles.
 
 What you should expect in the response:
+
 - Room name (and room type, if specified)
 - Folder list
 - Invited users and assigned roles

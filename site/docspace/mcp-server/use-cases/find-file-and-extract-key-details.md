@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -37,6 +38,7 @@ Send a request that specifies the room and the file name (or keyword).
 **Example request:** In the "Website Redesign" room, find the latest file named "Contract".
 
 What you should expect:
+
 - The room is located.
 - Matching files are found.
 - If several files match, you may be asked to select the correct one.
@@ -52,6 +54,7 @@ After the file is identified, request the exact information you need.
 **Example request:** Extract payment terms and deadlines from the file and summarize them in bullet points.
 
 What you should expect:
+
 - The requested details are extracted from the document content.
 - The output is returned in the requested format.
 
@@ -70,6 +73,7 @@ Request confirmation of which file was used, so you can verify the result.
 **Example request:** Confirm which file was used and provide a link to it.
 
 What you should expect in the response:
+
 - File name
 - Location (room and folder)
 - (Optional) a direct link to open the file in DocSpace

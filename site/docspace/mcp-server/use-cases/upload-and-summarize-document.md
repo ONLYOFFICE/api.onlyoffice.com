@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -31,6 +32,7 @@ Send a request that includes the room name, folder name, and the file you want t
 **Example request:** Upload the attached contract to the "Legal" folder in the "Website Redesign" room.
 
 What you should expect:
+
 - The destination room and folder are located.
 - The document is uploaded to DocSpace.
 - The upload result is confirmed (file name and destination folder).
@@ -46,6 +48,7 @@ Request a summary in a clear format so it is easy to reuse (for example, to shar
 **Example request:** Summarize the document in bullet points grouped by "Obligations", "Deadlines", and "Risks".
 
 What you should expect:
+
 - A structured summary based on the document text.
 - Clear separation of key points, deadlines, and risk-related clauses.
 
@@ -64,6 +67,7 @@ Request a short confirmation that the file is stored correctly and the summary i
 **Example request:** Confirm the document is stored in the "Legal" folder of the "Website Redesign" room, and provide the file link.
 
 What you should expect in the response:
+
 - Room and folder name where the file is stored
 - File name
 - (Optional) a direct link to open the file in DocSpace

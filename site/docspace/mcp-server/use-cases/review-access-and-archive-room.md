@@ -8,6 +8,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -33,6 +34,7 @@ Request a list of all users who currently have access to the room and their role
 **Example request:** Show who has access to the "Website Redesign" room and list their roles.
 
 What you should expect:
+
 - A readable list of participants and access levels.
 - If multiple rooms match the same name, you are asked to select the correct one.
 
@@ -43,6 +45,7 @@ After reviewing the list, send a request to update access permissions.
 **Example request:** Remove Mark from the "Website Redesign" room and keep Anna as Editor.
 
 What you should expect:
+
 - The access configuration is updated.
 - The response confirms which users were removed or which roles were changed.
 
@@ -61,6 +64,7 @@ Request the access list again to confirm the changes were applied correctly.
 **Example request:** Show the updated access list for the "Website Redesign" room.
 
 What you should expect:
+
 - The updated list reflects the new set of participants and roles.
 
 ### 5. Archive the room
@@ -70,6 +74,7 @@ When the room is no longer needed for active collaboration, archive it.
 **Example request:** Archive the "Website Redesign" room.
 
 What you should expect:
+
 - The room becomes inactive.
 - The room remains available for reference, depending on your portal settings.
 
@@ -82,6 +87,7 @@ Request a short summary to confirm the final state.
 **Example request:** Provide a summary of the changes: removed users, updated roles, and the room status.
 
 What you should expect in the response:
+
 - A list of applied permission changes (removed users and role updates)
 - The room status (archived or active)
 - (Optional) a link to the room
