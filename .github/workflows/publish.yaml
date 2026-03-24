@@ -59,8 +59,8 @@ jobs:
         LOCALE="--locale en"
         SUB_ARGS=""
 
-        # Set NODE_ENV for testing builds
-        [[ "$mode" == "testing" ]] && export NODE_ENV=development
+        # Set SITE_MODE for docusaurus.config.ts (NODE_ENV is overridden by Docusaurus)
+        export SITE_MODE="$mode"
 
         # Build CN locale string
         if [[ "$CN" == "true" ]]; then

@@ -4,7 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
-const isDev = process.env.NODE_ENV === 'development';
+// SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
+const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
 
 let keyPath = '';
 function sidebarRecursive(item) {
