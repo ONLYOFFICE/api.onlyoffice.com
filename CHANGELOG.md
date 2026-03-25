@@ -27,6 +27,8 @@
 * Added PDF section support in the Playground.
 * Updated the Playground with new default scripts for SSE.
 * Added comprehensive Chinese translations for Office API usage documentation.
+* Added **Document** type selector to the Playground toolbar for choosing between documents with blank or sample content.
+* The Playground now opens with a sample document when accessed from the Playground overview pages.
 
 #### DocSpace
 
@@ -91,6 +93,7 @@
 * Fixed announcement bar on try-docs example page.
 * Updated PDF document name from 'demo' to 'blank' in Playground.
 * Shortened case titles.
+* Fixed Playground initialization issue with document type when opening via URL parameters.
 
 ### Breaking changes
 
