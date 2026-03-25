@@ -57,7 +57,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 如何更改 ONLYOFFICE 文档界面的默认语言？ {#how-to-change-the-default-language-of-the-onlyoffice-docs-interface}
 
-如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
+如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
 
 ``` ts
 const config = {
@@ -69,7 +69,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文档[此文](https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx)了解如何将其安装到 ONLYOFFICE 文档中。
+若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文档[此文](https://helpcenter.onlyoffice.com/docs/installation/docs-community-add-language-docker.aspx)了解如何将其安装到 ONLYOFFICE 文档中。
 
 有关语言设置的更多信息，请参见[此页](../../usage-api/config/editor/editor.md)。
 
