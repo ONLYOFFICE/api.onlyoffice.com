@@ -7,7 +7,6 @@ import * as React from 'react'
 import { useCallback, useState } from "react";
 import { EditorType, PreviewType, ScriptType, DocumentType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
-import { DEFAULT_SCRIPTS } from "@site/src/components/Playground/defaultScripts";
 
 export const PlaygroundToolbar = () => {
     const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch } = usePlaygroundRootContext()

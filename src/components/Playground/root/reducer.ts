@@ -1,5 +1,5 @@
 import {EditorType, PreviewType, ScriptType, DocumentType} from "./PlaygroundRootContext";
-import {DEFAULT_SCRIPTS} from "../defaultScripts";
+import {getDefaultScript} from "../defaultScripts";
 
 export interface PlaygroundState {
     editorType: EditorType
@@ -23,7 +23,7 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
         case 'SET_EDITOR_TYPE': {
             if (action.payload === state.editorType) return state
             const scriptValue = action.replace
-                ? DEFAULT_SCRIPTS[action.payload]?.[state.scriptType] ?? state.scriptValue
+                ? getDefaultScript(action.payload, state.previewType, state.scriptType)
                 : state.scriptValue
             return {
                 ...state,
@@ -36,17 +36,22 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
             if (action.payload === state.scriptType) return state
             const scriptValue = state.isScriptModified
                 ? state.scriptValue
-                : DEFAULT_SCRIPTS[state.editorType]?.[action.payload] ?? state.scriptValue
+                : getDefaultScript(state.editorType, state.previewType, action.payload)
             return {...state, scriptType: action.payload, scriptValue}
         }
-        case 'SET_PREVIEW_TYPE':
-            return {...state, previewType: action.payload}
+        case 'SET_PREVIEW_TYPE': {
+            if (action.payload === state.previewType) return state
+            const scriptValue = state.isScriptModified
+                ? state.scriptValue
+                : getDefaultScript(state.editorType, action.payload, state.scriptType)
+            return {...state, previewType: action.payload, scriptValue}
+        }
         case 'SET_SCRIPT_VALUE':
             return {...state, scriptValue: action.payload, isScriptModified: true}
         case 'RESET_SCRIPT':
             return {
                 ...state,
-                scriptValue: DEFAULT_SCRIPTS[state.editorType]?.[state.scriptType] ?? '',
+                scriptValue: getDefaultScript(state.editorType, state.previewType, state.scriptType),
                 isScriptModified: false,
             }
         case 'SET_DOCUMENT_TYPE':

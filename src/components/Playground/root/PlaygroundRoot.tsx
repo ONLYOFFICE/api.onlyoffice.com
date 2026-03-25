@@ -5,8 +5,8 @@ import {
     PreviewType,
     ScriptType
 } from "./PlaygroundRootContext"
-import {ComponentProps, useEffect, useMemo, useReducer} from "react";
-import {DEFAULT_SCRIPTS} from "@site/src/components/Playground/defaultScripts";
+import { ComponentProps, useMemo, useReducer } from "react";
+import { getDefaultScript } from "@site/src/components/Playground/defaultScripts";
 import {useColorMode} from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {playgroundReducer, PlaygroundState} from "@site/src/components/Playground/root/reducer";
@@ -43,7 +43,7 @@ export const PlaygroundRoot = ({
         editorType,
         previewType,
         scriptType,
-        scriptValue: initialScriptProp ?? DEFAULT_SCRIPTS[editorType][scriptType],
+        scriptValue: initialScriptProp ?? getDefaultScript(editorType, previewType, scriptType),
         isScriptModified: false,
         documentType: documentTypeProp,
     } satisfies PlaygroundState)
