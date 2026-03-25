@@ -11,4 +11,6 @@ Starting from version 7.1, the incoming requests use the token in body if it exi
 
 The outgoing requests use both the token in body and token in header. They can be different. For example, the information about version history can be removed from the header token because of the size limit of the token in header.
 
-> [Token in body](token-in-body.md) is used for POST requests only. For the GET requests, [token in header](token-in-header.md) is used.
+:::note
+[Token in body](token-in-body.md) is used for POST requests only. For the GET requests, [token in header](token-in-header.md) is used.
+:::

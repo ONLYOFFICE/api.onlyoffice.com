@@ -1,10 +1,10 @@
+---
+hide_table_of_contents: true
+---
+
 # 隐藏卡号信息
 
 对所有具有指定表单键的表单应用掩码，以隐藏卡号。
-
-<!-- 此代码片段展示于截图中 -->
-
-<!-- eslint-skip -->
 
 ```ts
 (function()

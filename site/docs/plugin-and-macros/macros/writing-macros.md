@@ -9,10 +9,6 @@ Now that you know how macros work, try to write your own macro. We have a table 
 1. Open ONLYOFFICE editors and create a new spreadsheet.
 2. Now open the **View** tab and select **Macros**. The macros window will pop up. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
 
-    <!-- This code is related to macros. -->
-
-    <!-- eslint-skip -->
-
     ``` ts
     (function () {
       // ... your code goes here ...
@@ -55,10 +51,6 @@ Now that you know how macros work, try to write your own macro. We have a table 
      ```
 
 Now let's sum it up with the complete script code:
-
-<!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

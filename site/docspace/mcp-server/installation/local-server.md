@@ -135,8 +135,6 @@ configuration to your client's configuration file:
 | `DOCSPACE_BASE_URL` | The full URL of your DocSpace instance (e.g., `https://your-instance.onlyoffice.com`) |
 | `DOCSPACE_API_KEY` | Your personal API key generated in DocSpace settings -> Developer Tools -> API keys|
 
-<!-- Definitions -->
-
 [Docker]: https://www.docker.com/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop/
 [Docker MCP Toolkit]: https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/

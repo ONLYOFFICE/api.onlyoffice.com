@@ -2,10 +2,6 @@
 
 向选定的单元格范围添加一个新图表。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

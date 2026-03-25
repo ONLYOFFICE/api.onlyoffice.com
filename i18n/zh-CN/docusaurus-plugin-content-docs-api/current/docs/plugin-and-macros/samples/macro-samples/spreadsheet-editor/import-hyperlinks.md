@@ -2,10 +2,6 @@
 
 导入表格中不同工作表之间的超链接。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let worksheetA = Api.GetSheet("Sheet1");
@@ -63,8 +59,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub AddHyperlinks()
     Dim wsA As Worksheet, wsB As Worksheet
@@ -100,7 +94,5 @@ End Sub
 ```
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png#gh-light-mode-only)![Import hyperlinks](/assets/images/plugins/import-hyperlinks.dark.png#gh-dark-mode-only)

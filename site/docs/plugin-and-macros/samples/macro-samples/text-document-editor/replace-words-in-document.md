@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Searches for a word throughout the document and replaces it with the given replacement word.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let doc = Api.GetDocument();
@@ -35,8 +31,6 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub SimpleFindReplace()
     Selection.Find.Execute FindText:="find", ReplaceWith:="replace", Replace:=wdReplaceAll
@@ -44,7 +38,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)

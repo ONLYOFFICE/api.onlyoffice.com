@@ -2,10 +2,6 @@
 
 更改演示文稿中所有幻灯片的字体和/或字号。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let presentation = Api.GetPresentation();
@@ -40,8 +36,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub ChangeFontOnAllSlides()
     Dim slide As slide
@@ -68,7 +62,5 @@ End Sub
 ```
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Change font family and size](/assets/images/plugins/change-font-family-and-size.png#gh-light-mode-only)![Change font family and size](/assets/images/plugins/change-font-family-and-size.dark.png#gh-dark-mode-only)

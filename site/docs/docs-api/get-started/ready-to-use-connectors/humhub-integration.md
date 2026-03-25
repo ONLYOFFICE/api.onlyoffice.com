@@ -5,32 +5,32 @@ sidebar_custom_props:
 
 # HumHub integration
 
-This [plugin](https://github.com/ONLYOFFICE/onlyoffice-humhub) enables users to edit office documents from [HumHub](https://www.humhub.com/) using ONLYOFFICE Docs.
+This [module](https://github.com/ONLYOFFICE/onlyoffice-humhub) enables users to edit office documents from [HumHub](https://www.humhub.com/) using ONLYOFFICE Docs.
 
-The plugin is available in the official [HumHub Marketplace](https://marketplace.humhub.com/module/onlyoffice).
+The module is available in the official [HumHub Marketplace](https://marketplace.humhub.com/module/onlyoffice).
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
+- Currently, the following document formats can be opened and edited with this module: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, TXT, PDF.
 - The following formats can be converted into OOXML: ODT, ODS, ODP, DOC, XLS, PPT, TXT, CSV.
-- The plugin will create a new **Edit/View** menu option for Office documents. This allows multiple users to collaborate in real time and to save back those changes to HumHub.
+- The module will create a new **Edit/View** menu option for Office documents. This allows multiple users to collaborate in real time and to save back those changes to HumHub.
 
 ## Installing ONLYOFFICE Docs
 
 You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from HumHub and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to HumHub directly.
 
-The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing HumHub ONLYOFFICE connector
+## Installing ONLYOFFICE module for HumHub
 
-Either install it from [HumHub Marketplace](https://marketplace.humhub.com/module/onlyoffice) or simply clone the [repository](https://github.com/ONLYOFFICE/onlyoffice-humhub) inside one of the folder specified by *moduleAutoloadPaths* parameter. Please see [HumHub Documentation](https://docs.humhub.org/docs/develop/environment#module-loader-path) for more information.
+Either install it from [HumHub Marketplace](https://marketplace.humhub.com/module/onlyoffice) or clone the [repository](https://github.com/ONLYOFFICE/onlyoffice-humhub) inside one of the folders specified by *moduleAutoloadPaths* parameter. For more information, see [HumHub Documentation](https://docs.humhub.org/docs/develop/environment#module-loader-path).
 
-## Configuring HumHub ONLYOFFICE connector
+## Configuring ONLYOFFICE module for HumHub
 
-In order to configure plugin, you must navigate to **Administation -> Modules**. Find ONLYOFFICE plugin and click **Configure**.
+To configure the module, navigate to **Administration -> Modules**. Find the ONLYOFFICE module and click **Configure**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **JWT Secret** on the HumHub configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **JWT Secret** on the HumHub configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## How it works
 
@@ -40,7 +40,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 2. The browser invokes the *index* method in the */controllers/CreateController.php* controller.
 
-3. Or, when opening an existing file, the user will be provided with **View document** or **Edit document** depending on an extension.
+3. When opening an existing file, the user will be provided with **View document** or **Edit document** depending on the file extension.
 
 4. A popup is opened and the *index* method of the */controllers/OpenController.php* controller is invoked.
 
@@ -67,4 +67,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 12. HumHub downloads a new version of the document, replacing the old one.
 
-Download the HumHub ONLYOFFICE connector [here](https://github.com/ONLYOFFICE/onlyoffice-humhub).
+Download the ONLYOFFICE module for HumHub [here](https://github.com/ONLYOFFICE/onlyoffice-humhub).

@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiField](../../Enumeration/ApiField.md)
+[ApiField](../../Enumeration/ApiField.md)[]
 
 ## Example
 

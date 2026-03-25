@@ -2,10 +2,6 @@
 
 计算电子表格中所有高亮单元格的数值总和。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function () {
     let worksheet = Api.GetActiveSheet();

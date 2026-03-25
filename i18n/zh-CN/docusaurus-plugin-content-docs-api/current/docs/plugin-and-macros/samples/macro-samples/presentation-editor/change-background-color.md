@@ -2,10 +2,6 @@
 
 为偶数索引的幻灯片设置蓝色背景，奇数索引的幻灯片设置图片背景。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {
@@ -37,8 +33,6 @@
 使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [CreateRGBColor](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor.md), [CreateSolidFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill.md), [CreateBlipFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateBlipFill.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [SetBackground](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md)
 
 ## 参考 Microsoft VBA 宏代码
-
-<!-- code generated with AI -->
 
 ``` vb
 Sub SetSlideBackground()

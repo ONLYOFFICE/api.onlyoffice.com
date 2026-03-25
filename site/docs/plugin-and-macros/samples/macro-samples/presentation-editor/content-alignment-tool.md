@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Consistently aligns text boxes and images throughout the entire presentation.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();
@@ -52,7 +48,5 @@ Consistently aligns text boxes and images throughout the entire presentation.
 Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetWidth](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/GetWidth.md), [GetHeight](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight.md), [GetAllDrawings](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetWidth](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetWidth.md), [GetHeight](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetHeight.md), [SetPosition](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.png#gh-light-mode-only)![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.dark.png#gh-dark-mode-only)

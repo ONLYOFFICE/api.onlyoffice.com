@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 自动调整文本框
 
 自动调整文档中的所有文本框大小。

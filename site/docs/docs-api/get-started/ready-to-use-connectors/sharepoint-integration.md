@@ -11,13 +11,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="5rN7CksWE-w"/>
 ```
 
-This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from SharePoint using ONLYOFFICE Docs.
+This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from [SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration) using ONLYOFFICE Docs.
 
 ## Features
 
 - Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
-- The plugin will create a new **Edit in ONLYOFFICE** menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
+- The solution will create a new **Edit in ONLYOFFICE** menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
 
 ## Installing ONLYOFFICE Docs
 
@@ -25,7 +25,7 @@ You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvabl
 
 The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing ONLYOFFICE SharePoint integration solution
+## Installing ONLYOFFICE solution for SharePoint
 
 To start using ONLYOFFICE Docs with SharePoint, the following steps must be performed:
 
@@ -35,23 +35,23 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 3. Run the *Install.ps1* script:
 
-   ``` sh
+   ``` ps1
    PS> .\Install.ps1
    ```
 
 4. Enter your SharePoint site address:
 
-   ``` sh
+   ``` ps1
    https://<yoursharepointsite>
    ```
 
    :::note
-   Alternatively to steps **3** and **4** you can type the following command:
+   As an alternative to steps **3** and **4**, you can type the following command:
 
    ``` ps1
-   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
+   Add-SPSolution -LiteralPath <SolutionPath>/onlyoffice.wsp
    ```
-   
+
    On the **SharePoint Central Administration** home page, click **System Settings -> Farm Management -> Manage farm solutions**. On the **Solution Management** page, click **onlyoffice.wsp -> Deploy Solution**.
    :::
 
@@ -67,7 +67,7 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 10. Under **Anonymous Access Restrictions**, select your **Zone**, set the **Permissions** to *None – No policy* and click **Save**.
 
-## Configuring SharePoint ONLYOFFICE integration solution
+## Configuring ONLYOFFICE solution for SharePoint
 
 In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with administrative settings. Enter the following address to connect ONLYOFFICE Docs:
 
@@ -75,19 +75,19 @@ In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with admin
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the SharePoint server. The SharePoint server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 :::note
 Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
 :::
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../additional-api/signature/signature.md).
 
-## Compiling ONLYOFFICE SharePoint integration solution
+## Compiling ONLYOFFICE solution for SharePoint
 
-There are two ways to compile ONLYOFFICE SharePoint integration solution:
+There are two ways to compile ONLYOFFICE solution for SharePoint:
 
 1. Using **MS Visual Studio**:
 
@@ -115,7 +115,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
    - **url** - the URL that ONLYOFFICE Docs uses to download the document;
    - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **DocumentSeverHost** - the URL that the client needs to reply to ONLYOFFICE Docs (can be set at the settings page);
+   - **DocumentServerHost** - the URL that the client needs to reply to ONLYOFFICE Docs (can be set at the settings page);
    - **Key** - the file identifier from SharePoint;
    - **FileName** - the document title (name);
    - **CurrentUserId** - the user identifier;
@@ -129,8 +129,8 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
-8. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
+8. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting ONLYOFFICE solution for SharePoint know that the clients have finished editing the document and closed it.
 
 9. SharePoint downloads a new version of the document, replacing the old one.
 
-Download the ONLYOFFICE SharePoint integration solution [here](https://github.com/ONLYOFFICE/onlyoffice-sharepoint).
+Download the ONLYOFFICE solution for SharePoint [here](https://github.com/ONLYOFFICE/onlyoffice-sharepoint).

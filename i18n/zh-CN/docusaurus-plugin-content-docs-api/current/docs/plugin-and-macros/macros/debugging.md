@@ -10,10 +10,6 @@ sidebar_position: -3
 
 2. 在脚本中使用 **debugger** 命令：
 
-   <!-- This code is related to macros. -->
-
-   <!-- eslint-skip -->
-
    ``` ts
    debugger;
    let doc = Api.GetDocument();
@@ -35,10 +31,6 @@ sidebar_position: -3
 **debugger** 命令会充当断点，脚本执行到该命令时会暂停。
 
 如果您想在浏览器的开发者控制台中显示某些值，可以使用 **console.log()** 方法。将你想检查的值或一段消息字符串作为参数传入此方法，然后按 **F12** 按键打开开发者控制台，即可查看结果：
-
-<!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 console.log(123);

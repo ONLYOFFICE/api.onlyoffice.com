@@ -5,15 +5,15 @@ import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react'
 import { useCallback, useState } from "react";
-import { EditorType, PreviewType, ScriptType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
+import { EditorType, PreviewType, ScriptType, DocumentType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
 import { DEFAULT_SCRIPTS } from "@site/src/components/Playground/defaultScripts";
 
 export const PlaygroundToolbar = () => {
-    const { editorType, setEditorType, previewType, setPreviewType, scriptType, setScriptType, isScriptModified, setIsScriptModified, theme, setTheme, setScriptValue } = usePlaygroundRootContext()
+    const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch } = usePlaygroundRootContext()
 
     const [dialogOpen, setDialogOpen] = useState(false)
-    const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null) // todo: better handle script+editor type
+    const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null)
 
     const handleEditorTypeChange = useCallback((value: string) => {
         const newEditorType = value as EditorType
@@ -22,47 +22,46 @@ export const PlaygroundToolbar = () => {
             setPendingEditorType(newEditorType)
             setDialogOpen(true)
         } else {
-            setEditorType(newEditorType)
-            setScriptValue(DEFAULT_SCRIPTS[newEditorType][scriptType])
+            dispatch({ type: 'SET_EDITOR_TYPE', payload: newEditorType, replace: true })
         }
-    }, [isScriptModified, scriptType, setEditorType, setScriptValue])
+    }, [isScriptModified, scriptType, dispatch])
 
     const handleConfirmChange = useCallback(() => {
         if (pendingEditorType) {
-            setEditorType(pendingEditorType)
-            setScriptValue(DEFAULT_SCRIPTS[pendingEditorType][scriptType])
-            setIsScriptModified(false)
+            dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType, replace: true })
             setPendingEditorType(null)
         }
         setDialogOpen(false)
-    }, [pendingEditorType, scriptType, setEditorType, setScriptValue, setIsScriptModified])
+    }, [pendingEditorType, scriptType, dispatch])
 
     const handleKeepScript = useCallback(() => {
         if (pendingEditorType) {
-            setEditorType(pendingEditorType)
+            dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType })
             setPendingEditorType(null)
         }
         setDialogOpen(false)
-    }, [pendingEditorType, setEditorType])
+    }, [pendingEditorType, dispatch])
 
-    const handleCancelChange = useCallback(() => {
+    const handleCancelChange = () => {
         setPendingEditorType(null)
         setDialogOpen(false)
-    }, [])
+    }
 
     const handleScriptTypeChange = useCallback((value: string) => {
-        const newScriptType = value as ScriptType
+        dispatch({ type: 'SET_SCRIPT_TYPE', payload: value as ScriptType })
+    }, [dispatch])
 
-        if (newScriptType === scriptType) {
-            return
-        }
+    const handlePreviewTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_PREVIEW_TYPE', payload: value as PreviewType })
+    }, [dispatch])
 
-        setScriptType(newScriptType)
+    const handleDocumentTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_DOCUMENT_TYPE', payload: value as DocumentType })
+    }, [dispatch])
 
-        if (!isScriptModified) {
-            setScriptValue(DEFAULT_SCRIPTS[editorType][newScriptType])
-        }
-    }, [scriptType, isScriptModified, editorType, setScriptType, setScriptValue])
+    const handleThemeChange = useCallback((value: string) => {
+        setTheme(value as 'light' | 'dark')
+    }, [setTheme])
 
     return (
         <div className={styles.Toolbar}>
@@ -131,7 +130,7 @@ export const PlaygroundToolbar = () => {
 
             <div className={styles.ToolbarGroup}>
                 <div className={styles.Label}>Preview:</div>
-                <Select.Root value={previewType} onValueChange={(value) => setPreviewType(value as PreviewType)}>
+                <Select.Root value={previewType} onValueChange={handlePreviewTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                         <Select.Icon asChild>
@@ -156,9 +155,33 @@ export const PlaygroundToolbar = () => {
                 </Select.Root>
             </div>
 
+            <div className={styles.ToolbarGroup}>
+                <div className={styles.Label}>Document:</div>
+                <Select.Root value={documentType} onValueChange={handleDocumentTypeChange}>
+                    <Select.Trigger className={styles.SelectTrigger}>
+                        <Select.Value />
+                        <Select.Icon asChild>
+                            <div className={styles.SelectIcon}/>
+                        </Select.Icon>
+                    </Select.Trigger>
+                    <Select.Portal>
+                        <Select.Content className={styles.SelectContent} position='popper'>
+                            <Select.Viewport className={styles.SelectPopup}>
+                                <Select.Item value="blank" className={styles.SelectOption}>
+                                    <Select.ItemText>Blank</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="sample" className={styles.SelectOption}>
+                                    <Select.ItemText>Sample</Select.ItemText>
+                                </Select.Item>
+                            </Select.Viewport>
+                        </Select.Content>
+                    </Select.Portal>
+                </Select.Root>
+            </div>
+
             <div className={`${styles.ToolbarGroup} ${styles.ToolbarGroupRight}`}>
                 <div className={styles.Label}>Theme:</div>
-                <Select.Root value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
+                <Select.Root value={theme} onValueChange={handleThemeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                         <Select.Icon asChild>

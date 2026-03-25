@@ -2,10 +2,6 @@
 
 在当前表格中显示所有隐藏的行和列。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

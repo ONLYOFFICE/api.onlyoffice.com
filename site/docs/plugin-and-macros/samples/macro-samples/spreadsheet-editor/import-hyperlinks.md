@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Imports hyperlinks between different worksheets in the spreadsheet.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
   let worksheetA = Api.GetSheet("Sheet1");
@@ -67,8 +63,6 @@ Methods used: [GetSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub AddHyperlinks()
     Dim wsA As Worksheet, wsB As Worksheet
@@ -104,7 +98,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png#gh-light-mode-only)![Import hyperlinks](/assets/images/plugins/import-hyperlinks.dark.png#gh-dark-mode-only)

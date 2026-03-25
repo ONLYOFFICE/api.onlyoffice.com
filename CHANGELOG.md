@@ -1,5 +1,106 @@
 # Change log
 
+## 8.0.0
+
+### New features
+
+#### Document Builder
+
+* Restructured documentation to concatenate all programming languages on single pages instead of separate pages per language.
+* Rewrote the Builder Framework overview to emphasize runtime usage patterns.
+* Added comprehensive CLI documentation with improved examples.
+* Changed code examples from `.docbuilder` extension to `.js` for better IDE support.
+* Improved the Document Builder API async workflow documentation with detailed response parameters.
+* Added curl command examples throughout the API documentation.
+
+#### Plugins and Macros
+
+* Added AI custom tools text annotations feature documentation.
+* Added new PDF macros samples.
+* Added freeze panes macro example.
+* Added bookmark last view macro example.
+* Added OData plugin to plugin examples.
+* Added Chinese translations for the entire Plugins API section.
+
+#### Office API
+
+* Added PDF section support in the Playground.
+* Updated the Playground with new default scripts for SSE.
+* Added comprehensive Chinese translations for Office API usage documentation.
+* Added **Document** type selector to the Playground toolbar for choosing between documents with blank or sample content.
+* The Playground now opens with a sample document when accessed from the Playground overview pages.
+
+#### DocSpace
+
+* Added MCP server use cases documentation.
+* Added new samples to API Backend documentation.
+* Updated Plugins SDK documentation with improved structure and examples.
+
+### Improvements
+
+#### Common
+
+* Simplified Playground implementation by removing redundant variables.
+* Improved code quality by removing unused comments across the codebase.
+* Updated integration documentation for WordPress, SuiteCRM, Strapi, SharePoint, Redmine, Plone, ownCloud, Odoo, Nuxeo, Moodle, and Mattermost with Chinese translations.
+
+#### Document Builder
+
+* Added link to supported properties in argument parameter descriptions.
+* Improved API page formatting and readability.
+* Standardized Parameters section with tabs for all languages.
+* Updated Python examples in CDocBuilderValue docs to use direct method calls.
+* Improved signature documentation consistency and formatting.
+* Moved debugging docs to using-cli section.
+
+#### Docs API
+
+* Updated connectors documentation.
+* Fixed grammar in integration docs.
+
+#### Office API
+
+* Updated input-helper pages.
+* Added deprecation info for legacy methods.
+* Fixed `scrollWidth` null reference issue in code blocks.
+* Fixed select popup position in Playground.
+
+### Fixes
+
+* Fixed broken links across Document Builder documentation.
+* Fixed broken links throughout the documentation site.
+* Fixed wrong arguments in some Office API methods.
+* Fixed Recording macros page.
+* Fixed editor type for forms in Office API.
+* Corrected `review.reviewDisplay` documentation.
+* Fixed styles for announcement bar with multistring content.
+* Fixed problem with previous merge deleting files.
+* Fixed Currency Conversion macro to use proper `RecalculateAllFormulas` API instead of internal method with timeout.
+* Fixed Hide or Unhide Rows and Columns macro example.
+* Fixed Java syntax highlighting in CDocBuilder and CDocBuilderValue method examples.
+* Fixed C++, Java, .Net, Python, and COM code samples in Document Builder methods (SaveFile, SetProperty, Execute, ExecuteCommand, CreateInstance).
+* Fixed delete-annotations sample.
+* Fixed markdown table alignment in Document Builder API page.
+* Fixed markdown formatting in Mattermost and Nextcloud integration docs.
+* Fixed broken markdown link in Chinese writing-macros.md.
+* Fixed ASCII punctuation in Chinese saving-file.md translation.
+* Fixed editor type in Playground.
+* Standardized note format in builder-framework docs.
+* Hidden comparing-documents.md pages.
+* Fixed usage API documentation examples and improved consistency.
+* Fixed AI Tools samples video.
+* Fixed default scripts for PDF, builder, and mobile in Playground.
+* Fixed announcement bar on try-docs example page.
+* Updated PDF document name from 'demo' to 'blank' in Playground.
+* Shortened case titles.
+* Fixed Playground initialization issue with document type when opening via URL parameters.
+
+### Breaking changes
+
+#### Document Builder
+
+* Documentation structure changed from separate language pages to unified multi-language pages. Update any direct links to language-specific builder documentation pages.
+
 ## 7.6.6
 
 ### New features
@@ -244,7 +345,7 @@
 
 #### Plugins and macros
 
-* Added samples for custom AI functions
+* Added samples for custom AI tools
 * Updated documentation in Chinese in the Interacting with editors section
 
 ## 6.6.0

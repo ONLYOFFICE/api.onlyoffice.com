@@ -23,6 +23,4 @@
 
 ## 结果
 
-<!-- imgpath -->
-
 ![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)

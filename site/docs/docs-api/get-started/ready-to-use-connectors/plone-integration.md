@@ -10,37 +10,30 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-plone) allows users to ed
 ## Features
 
 - Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.
+- The following formats are available for viewing only: DJVU, DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
+- The following formats are available for converting (download as): DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XPS, XML, FODS, ODS, OTS, XLS, XLSB, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, PPTX.
+- The following formats are available for converting to Office Open XML: DOC, DOCM, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, RTF, XPS, XML, FODS, ODS, OTS, XLS, XLSB, XLSM, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.
 - The plugin will create a new **ONLYOFFICE Edit** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Plone.
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Plone and any end-clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Plone directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Plone and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Plone directly.
 
-The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
 ## Installing Plone ONLYOFFICE integration plugin
 
 To start using ONLYOFFICE Docs with Plone, the following steps must be performed:
 
-1. Install plugin by adding it to your *buildout.cfg*:
+1. Installation instructions can be found under [Install Plone add-ons](https://6.docs.plone.org/admin-guide/add-ons.html).
 
-   ``` ini
-   [buildout]
-   eggs = onlyoffice.plone
-   ```
+2. Go to **Site Setup -> Add-ons** and click the **Install** button to enable the plugin.
 
-2. Run *bin/buildout*.
-
-3. Go to **Site Setup -> Add-ons** and press the **Install** button to enable plugin.
-
-You could also install plugin via Docker:
+You can also install the plugin via Docker:
 
 ``` sh
-docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
+docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 start
 ```
-
-Both options will automatically install plugin from [PyPi](https://pypi.org/project/onlyoffice.plone/).
 
 :::note
 Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
@@ -48,64 +41,23 @@ Please note that if you have the previous plugin version installed (earlier plug
 
 ## Configuring Plone ONLYOFFICE integration plugin
 
-To configure plugin, go to **Site Setup**. Scroll down to **Add-ons Configuration** section and press the **ONLYOFFICE Configuration** button.
+To configure the plugin, go to **Site Setup**. Scroll down to **Add-ons Configuration** section and click the **ONLYOFFICE Configuration** button.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Developing Plone ONLYOFFICE plugin
 
-1. Clone repository and change directory:
+Run this command to install the add-on from the local repository:
 
-   ``` sh
-   git clone --branch deploy git@github.com:ONLYOFFICE/onlyoffice-plone.git
-   cd onlyoffice-plone
-   ```
-
-2. Create a *virtualenv* in the package.
-
-3. Install requirements with pip.
-
-4. Run *buildout*:
-
-   ``` sh
-   virtualenv .
-   ./bin/pip install -r requirements.txt
-   ./bin/buildout
-   ```
-
-5. Start Plone in foreground:
-
-   ``` sh
-   ./bin/instance fg
-   ```
-
-If you have a working Plone instance, you can install plugin by adding the project files to the *scr* directory:
-
-1. In the *scr* directory create the *onlyoffice.plone* directory.
-
-2. Put your project files received by Git into the *onlyoffice.plone* directory.
-
-3. Edit the *buildout.cfg* file:
-
-   ``` ini
-   [buildout]
-   eggs = onlyoffice.plone
-   develop = src/onlyoffice.plone
-   ```
-
-4. Rerun buildout for the changes to take effect:
-
-   ``` sh
-   .bin/buildout
-   ```
-
-5. Then start or restart your Plone instance.
+``` sh
+docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
+```
 
 :::note
-Plone is based on **Zope server** and will not run as *root* user. If you intend to run it as *root* user, you must supply [effective-user directive](https://zope.readthedocs.io/en/2.12/SETUID.html). In order to do so, add *effective-user \<username>* line to *./parts/instance/etc/zope.conf*.
+For more information, check [Developing packages variable](https://6.dev-docs.plone.org/install/containers/images/backend.html#developing-packages-variable).
 :::
 
-## Upgrade Plone ONLYOFFICE integration plugin
+## Upgrading Plone ONLYOFFICE integration plugin
 
 1. If you specified a concrete plugin version in your *buildout.cfg* file (so-called *pinning*, and a recommended practice), like *onlyoffice.plone = 1.0.0*, update this reference to point to the newer version. If the plugin version is not specified, then the latest version will be automatically loaded:
 
@@ -124,14 +76,14 @@ Plone is based on **Zope server** and will not run as *root* user. If you intend
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-1. User navigates to a document within Plone and selects the **ONLYOFFICE Edit** action.
+1. The user navigates to a document within Plone and selects the **ONLYOFFICE Edit** action.
 
-2. Plone prepares a JSON object for the ONLYOFFICE Docs with the following properties:
+2. Plone prepares a JSON object for ONLYOFFICE Docs with the following properties:
 
-   - **url**: the URL that ONLYOFFICE Docs uses to download the document;
-   - **callbackUrl**: the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **key**: the *UUID+Modified Timestamp* to instruct ONLYOFFICE Docs whether to download the document again or not;
-   - **title**: the document title (name).
+   - **url** - the URL that ONLYOFFICE Docs uses to download the document;
+   - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
+   - **key** - the *UUID+Modified Timestamp* to instruct ONLYOFFICE Docs whether to download the document again or not;
+   - **title** - the document title (name).
 
 3. Plone constructs a page from the *.pt* template, filling in all of those values so that the client browser can load up the editor.
 

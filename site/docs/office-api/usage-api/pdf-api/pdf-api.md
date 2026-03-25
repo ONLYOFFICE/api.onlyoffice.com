@@ -48,26 +48,26 @@ To create a PDF document with **ONLYOFFICE Document Builder**, you first create 
 
 ```ts
 // create a document file with ONLYOFFICE Document Builder
-builder.CreateFile("docx")
+builder.CreateFile("docx");
 
 // create a new 'oDocument' variable and get the created document
-const oDocument = Api.GetDocument()
+const oDocument = Api.GetDocument();
 
 // create a new paragraph for the document content
-const oParagraph = Api.CreateParagraph()
+const oParagraph = Api.CreateParagraph();
 
 // set the paragraph justification to center the text
-oParagraph.SetJc("center")
+oParagraph.SetJc("center");
 
 // add a text containing a single 'Center' word to the paragraph
-oParagraph.AddText("Center")
+oParagraph.AddText("Center");
 
 // push the paragraph to the document
-oDocument.Push(oParagraph)
+oDocument.Push(oParagraph);
 
 // save the resulting document as a PDF file with the 'example.pdf' name and close it
-builder.SaveFile("pdf", "example.pdf")
-builder.CloseFile()
+builder.SaveFile("pdf", "example.pdf");
+builder.CloseFile();
 ```
 
 The document initializes with a default page configuration. You can customize page size, orientation, and margins using the appropriate page configuration methods.
@@ -77,26 +77,26 @@ The document initializes with a default page configuration. You can customize pa
 To edit an existing PDF document, open it with `builder.OpenFile`, then get its pages and modify their content:
 
 ```ts
-// use a path to an existing 'mydocument.pdf' file to open it with ONLYOFFICE Document Builder
-builder.OpenFile("https://example.com/mydocument.pdf")
+// use a path or URL to an existing 'mydocument.pdf' file to open it with ONLYOFFICE Document Builder
+builder.OpenFile("https://example.com/mydocument.pdf");
 
 // create a new 'oDocument' variable and get the opened PDF document contents
-const oDocument = Api.GetDocument()
+const oDocument = Api.GetDocument();
 
 // get the first page
-const oPage = oDocument.GetElement(0)
+const oPage = oDocument.GetElement(0);
 
 // create and configure a new paragraph
-const oParagraph = Api.CreateParagraph()
-oParagraph.SetJc("center")
-oParagraph.AddText("Center")
+const oParagraph = Api.CreateParagraph();
+oParagraph.SetJc("center");
+oParagraph.AddText("Center");
 
 // add the paragraph to the page
-oPage.Push(oParagraph)
+oPage.Push(oParagraph);
 
 // save the resulting PDF document as a file in the .pdf format with a new 'example.pdf' name and close it
-builder.SaveFile("pdf", "example.pdf")
-builder.CloseFile()
+builder.SaveFile("pdf", "example.pdf");
+builder.CloseFile();
 ```
 
 Use the appropriate API documentation sections to find out which methods allow you to change certain PDF document element formatting properties and work with PDF-specific features.

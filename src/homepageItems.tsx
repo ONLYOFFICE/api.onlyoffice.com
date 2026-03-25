@@ -35,13 +35,13 @@ export const Samples: Samples = {
       title: 'Inserting Pivot Table',
       description: (
         <>
-          This <Link to="/samples/docs/plugin-and-macros/custom-ai-functions-samples/spreadsheet-editor/insertPivotTable/">AI function</Link> inserts a pivot table into the specified range or the currently selected range. This function can be used to summarize, group, or aggregate data by rows and values.
+          This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range or the currently selected range. This tool can be used to summarize, group, or aggregate data by rows and values.
         </>
       ),
       seeSamples: [
         {
-          name: "AI functions",
-          link: "/samples/docs/plugin-and-macros/custom-ai-functions-samples/#spreadsheet-editor",
+          name: "AI tools",
+          link: "/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor",
         },
       ],
     },

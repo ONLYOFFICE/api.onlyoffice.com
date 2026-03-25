@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Applies the mask to all forms with the specified form key to hide card numbers.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

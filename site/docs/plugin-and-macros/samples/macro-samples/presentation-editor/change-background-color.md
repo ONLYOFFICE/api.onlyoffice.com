@@ -6,10 +6,6 @@ hide_table_of_contents: true
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {
@@ -41,8 +37,6 @@ Sets blue color as the background of even indexed slides, if it is odd sets an i
 Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [CreateRGBColor](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor.md), [CreateSolidFill](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill.md), [CreateBlipFill](/docs/office-api/usage-api/presentation-api/Api/Methods/CreateBlipFill.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [SetBackground](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md)
 
 ## Reference Microsoft VBA macro code
-
-<!-- code generated with AI -->
 
 ``` vb
 Sub SetSlideBackground()

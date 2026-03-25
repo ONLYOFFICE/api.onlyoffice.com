@@ -138,6 +138,6 @@ The AI agent will automatically utilize the DocSpace MCP tools to execute these 
 
 For more information about the DocSpace MCP server:
 
-- [ONLYOFFICE DocSpace API Documentation](https://api.onlyoffice.com/docspace)
+- [ONLYOFFICE DocSpace API Documentation](/docspace)
 - [Model Context Protocol Specification](https://modelcontextprotocol.io)
 - [ONLYOFFICE Blog: Connect DocSpace MCP Server to Desktop Editors](https://www.onlyoffice.com/blog/2025/12/connect-onlyoffice-docspace-mcp-server-to-desktop-editors)

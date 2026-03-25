@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-number
+[ApiWidget](../../Enumeration/ApiWidget.md)[]
 
 ## Example
 

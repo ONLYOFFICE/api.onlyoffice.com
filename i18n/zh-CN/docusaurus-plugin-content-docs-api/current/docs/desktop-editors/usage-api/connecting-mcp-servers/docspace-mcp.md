@@ -138,6 +138,6 @@ AI 代理将自动使用 DocSpace MCP 工具执行这些命令并显示结果。
 
 有关 DocSpace MCP 服务器的更多信息：
 
-- [ONLYOFFICE DocSpace API 文档](https://api.onlyoffice.com/docspace)
+- [ONLYOFFICE DocSpace API 文档](/docspace)
 - [模型上下文协议规范](https://modelcontextprotocol.io)
 - [ONLYOFFICE 博客：将 DocSpace MCP 服务器连接到桌面编辑器](https://www.onlyoffice.com/blog/2025/12/connect-onlyoffice-docspace-mcp-server-to-desktop-editors)

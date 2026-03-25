@@ -15,10 +15,6 @@ sidebar_position: -4
 1. 打开**视图**选项卡并选择**宏**，宏窗口将会弹出。
 2. 在**自定义函数**区域，点击![Plus icon](/assets/images/plugins/plus.svg)，您将看到一个自定义函数模板：
 
-<!-- 以下代码与宏相关。 -->
-
-<!-- eslint-skip -->
-
     ``` ts
     (function()
     {
@@ -107,10 +103,6 @@ sidebar_position: -4
 从 9.0 版本开始，您可以添加异步自定义函数，以便在函数体中管理任何请求。
 
 :::
-
-<!-- 此代码与宏相关。 -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

@@ -1,3 +1,5 @@
+import type { EditorType } from "./root/PlaygroundRootContext";
+
 const PLUGIN_HEADER =
     'var Editor = {\n\
     callCommand : async function(func) {\n\
@@ -16,6 +18,30 @@ const PLUGIN_HEADER =
         })());\n\
     }\n\
 };\n\n'
+
+export const FILE_CONFIGS: Record<string, { ext: string, docType: EditorType, url: string }> = {
+    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx' },
+    pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/blank.pdf' },
+    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/new.xlsx' },
+    slide: { ext: 'pptx', docType: 'slide', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pptx' },
+    form: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pdf' },
+}
+
+export const SAMPLE_FILE_CONFIGS: Record<string, { ext: string, docType: EditorType, url: string }> = {
+    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
+    pdf: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf' },
+    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
+    slide: {
+        ext: 'pptx',
+        docType: 'slide',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
+    },
+    form: {
+        ext: 'pdf',
+        docType: 'pdf',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
+    },
+}
 
 export const DEFAULT_SCRIPTS = {
     word: {
@@ -53,8 +79,10 @@ export const DEFAULT_SCRIPTS = {
             'Api.AddComment("Comment 2");\n' +
             'let comments = Api.GetComments();\n' +
             'let worksheet = Api.GetActiveSheet();\n' +
-            'worksheet.GetRange("A1").SetValue("Comment Text: ", comments[0].GetText());\n' +
-            'worksheet.GetRange("B1").SetValue("Comment Author: ", comments[0].GetAuthorName());\n',
+            'if (comments.length > 0) {\n' +
+            '    worksheet.GetRange("A1").SetValue("Comment Text: ", comments[0].GetText());\n' +
+            '    worksheet.GetRange("B1").SetValue("Comment Author: ", comments[0].GetAuthorName());\n' +
+            '}\n',
 
         connector:
             'connector.callCommand(function(word) {\n' +
@@ -70,16 +98,12 @@ export const DEFAULT_SCRIPTS = {
             '})();\n',
 
         builder:
-            "builder.CreateFile(\"xlsx\");\n" +
-            "Api.AddComment(\"Comment 1\", \"Bob\");\n" +
-            "Api.AddComment(\"Comment 2\");\n" +
-            "let comments = Api.GetComments();\n" +
-            "let worksheet = Api.GetActiveSheet();\n" +
-            "worksheet.GetRange(\"A1\").SetValue(\"Comment Text: \", comments[0].GetText());\n" +
-            "worksheet.GetRange(\"B1\").SetValue(\"Comment Author: \", comments[0].GetAuthorName());\n" +
-            "builder.SaveFile(\"xlsx\", \"Api.xlsx\");\n" +
-            "builder.CloseFile();\n"
-    },
+            'builder.CreateFile("xlsx");\n' +
+            'let worksheet = Api.GetActiveSheet();\n' +
+            'worksheet.GetRange("B2:G28").Select();\n' +
+            'builder.SaveFile("xlsx", "Api.xlsx");\n' +
+            'builder.CloseFile();\n'
+        },
     slide: {
         'office-js-api':
             'var oPresentation = Api.GetPresentation();\n' +
@@ -184,12 +208,23 @@ export const DEFAULT_SCRIPTS = {
 
         builder:
             "builder.CreateFile(\"docx\");\n" +
-            "var oDocument = Api.GetDocument();\n" +
-            "var oParagraph = Api.CreateParagraph();\n" +
-            "oParagraph.SetJc(\"center\");\n" +
-            "oParagraph.AddText(\"Hello world!\");\n" +
-            "oDocument.InsertContent([oParagraph]);\n" +
+            'const doc1 = Api.GetDocument();\n' +
+            'const page = doc1.GetPage(0);\n' +
+            'const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\n' +
+            'const stroke = Api.CreateStroke(0, Api.CreateNoFill());\n' +
+            'const shape = Api.CreateShape("wave", 150 * 36000, 65 * 36000, fill, stroke);\n' +
+            'shape.SetPosition(608400, 1267200);\n' +
+            'const docContent = shape.GetContent();\n' +
+            'const paragraph = docContent.GetElement(0);\n' +
+            'paragraph.SetJc("center");\n' +
+            'let run = Api.CreateRun();\n' +
+            'run.SetFontSize(60);\n' +
+            'run.SetFontFamily("Comic Sans MS");\n' +
+            'run.AddText("Hello World!");\n' +
+            'paragraph.AddElement(run);\n' +
+            'page.AddObject(shape);\n' +
             "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
             "builder.CloseFile();\n",
+
     }
 }
