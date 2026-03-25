@@ -48,10 +48,6 @@ export const PlaygroundRoot = ({
         documentType: documentTypeProp,
     } satisfies PlaygroundState)
 
-    useEffect(() => {
-        dispatch({ type: 'SET_DOCUMENT_TYPE', payload: documentTypeProp })
-    }, [documentTypeProp])
-
     const contextValue = useMemo<PlaygroundRootContext>(() => ({
         ...state,
         dispatch,
