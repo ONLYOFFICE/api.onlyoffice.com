@@ -118,10 +118,17 @@ export const PlaygroundPreview = () => {
                         try {
                             const pluginConfigUrl = getFullUrl("/plugin/config.json");
 
+                            // TODO: Remove after release 9.4.0, as installDeveloperPlugin will be available directly on the connector object
+                            const installPluginShim: Record<string, string> = {
+                                word: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
+                                pdf: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
+                                cell: "zi.je.Xok=zi.je.installDeveloperPlugin;",
+                                slide: "$g.le.Prj=$g.le.installDeveloperPlugin;",
+                            };
+
                             window.connector = window.docEditor.createConnector();
-                            // TODO:  Remove after release 9.4.0, as installDeveloperPlugin will be available directly on the connector object
                             window.connector.callCommand(
-                                new Function(`gg.ud.yJj=gg.ud.installDeveloperPlugin;Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+                                new Function(`${installPluginShim[fileConfig.docType] || ""}Api.installDeveloperPlugin("${pluginConfigUrl}");`)
                             );
 
                             if (!initialScriptExecutedRef.current) {
