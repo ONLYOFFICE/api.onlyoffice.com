@@ -7,7 +7,12 @@ sidebar_position: 4
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This page explains and demonstrates the various ways users can get the MCP server. This page explains each option and helps you choose the one that best fits your setup.
+This page explains and demonstrates the various ways users can get the MCP server:
+
+- [Building from source](#build-the-mcp-server-from-source)
+- [Pulling from Docker Hub](#pull-from-docker-hub)
+- [Building from Docker MCP toolkit](#build-with-docker-mcp-toolkit)
+- [Downloading the Github release](#download-with-github-release)
 
 ## Choosing a distribution method
 
@@ -25,10 +30,7 @@ Before choosing a distribution method, consult the following table:
 We recommend Docker Hub as it offers a minimal, easy setup to get started, in addition to an isolated environment.
 :::
 
-## Building the MCP server
-
-<Tabs>
-<TabItem value="build-source" label="Build from source">
+## Build the MCP server from source
 
 This method is ideal for developers who want to customize or contribute to the project. You can build from source using three methods, with each having its own prerequisites:
 
@@ -38,86 +40,101 @@ This method is ideal for developers who want to customize or contribute to the p
 | Node.js    | pnpm (v10 or higher), Node.js (v24 or higher) |
 | MCP bundle | pnpm (v10 or higher), Node.js (v24 or higher) |
 
-### Build the MCP server from source
+<Tabs>
+
+<TabItem value="docker-image" label="Docker image">
 
 1. Clone the repository from the ONLYOFFICE Git server:
-
-   ```sh
+```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
-   ```
+```
 
    Alternatively, clone from the GitHub mirror:
-
-   ```sh
+```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
-   ```
+```
 
 2. Navigate to the project directory:
-
-   ```sh
+```sh
    cd docspace-mcp
-   ```
+```
 
-3. Build in your preferred format:
-
-<details>
-<summary>Build with Docker image</summary>
-
-4. Build the Docker image:
-
-   ```sh
+3. Build the Docker image:
+```sh
    docker build --tag onlyoffice/docspace-mcp .
-   ```
+```
 
-5. Run the Docker container:
-
-   ```sh
+4. Run the Docker container:
+```sh
    docker run --interactive --rm onlyoffice/docspace-mcp
+```
 
-</details>
+</TabItem>
+<TabItem value="nodejs-app" label="Node.js app">
 
-<details>
+1. Clone the repository from the ONLYOFFICE Git server:
+```sh
+   git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
+```
 
-<summary>Build with Node.js app</summary>
+   Alternatively, clone from the GitHub mirror:
+```sh
+   git clone git@github.com:ONLYOFFICE/docspace-mcp.git
+```
 
-4. Build the Node.js application:
+2. Navigate to the project directory:
+```sh
+   cd docspace-mcp
+```
 
-   ```sh
+3. Build the Node.js application:
+```sh
    pnpm build-app
-   ```
+```
 
-5. Run the Node.js application:
-
-   ```sh
+4. Run the Node.js application:
+```sh
    ./bin/onlyoffice-docspace-mcp
+```
 
-</details>
+</TabItem>
+<TabItem value="mcp-bundle" label="MCP bundle">
 
-<details>
-<summary>Build with MCP bundle</summary>
+1. Clone the repository from the ONLYOFFICE Git server:
+```sh
+   git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
+```
 
-4. Build the MCP Bundle:
+   Alternatively, clone from the GitHub mirror:
+```sh
+   git clone git@github.com:ONLYOFFICE/docspace-mcp.git
+```
 
-   ```sh
+2. Navigate to the project directory:
+```sh
+   cd docspace-mcp
+```
+
+3. Build the MCP bundle:
+```sh
    pnpm build-mcpb
-   ```
+```
 
-5. Use the built `.mcpb` file from the root of the project directory in an application that supports MCP bundles.
+4. Use the built `.mcpb` file from the root of the project directory in an
+   application that supports MCP bundles.
 
-</details>
+</TabItem>
+</Tabs>
 
 ### References
 
 - [GitHub ONLYOFFICE: DocSpace MCP Server](https://github.com/ONLYOFFICE/docspace-mcp/)
 
-</TabItem>
-<TabItem value="docker-hub" label="Docker Hub">
+## Pull from Docker Hub
  
 This method is ideal for developers who want a consistent, isolated runtime environment with minimal setup. Before starting:
 
 - Ensure to have [Docker](https://www.docker.com/) installed on your system.
-
-### Build with Docker Hub
 
 1. Pull the latest DocSpace MCP server image from Docker Hub:
 
@@ -141,15 +158,12 @@ This method is ideal for developers who want a consistent, isolated runtime envi
 
 - [Docker Hub: ONLYOFFICE DocSpace MCP Server](https://hub.docker.com/r/onlyoffice/docspace-mcp)
 
-</TabItem>
-
-<TabItem value="docker-mcp" label="Docker MCP toolkit">
+## Build with Docker MCP toolkit
 
 This method works best for non-technical users or users who prefer a graphical interface over the command line. Before proceeding, ensure to have:
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) with the [Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) enabled
 
-### Build with Docker MCP toolkit
 
 1. Enable the Docker MCP Toolkit by following the [Enable Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/#enable-docker-mcp-toolkit) guide.
 
@@ -170,15 +184,11 @@ This method works best for non-technical users or users who prefer a graphical i
 - [Docker Docs: MCP Catalog and Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/)
 - [Docker MCP: ONLYOFFICE DocSpace](https://hub.docker.com/mcp/server/onlyoffice-docspace/)
 
-</TabItem>
-
-<TabItem value="npm-registry" label="npm registry">
+## Build with npm registry
 
 This method also requires minimal setup and is ideal for developers who want the fastest setup with no containerization overhead. Ensure you have:
 
 - [Node.js](https://nodejs.org/) version 18 or higher
-
-### Build with npm registry
 
 1. Run the latest version of the DocSpace MCP server:
 
@@ -194,23 +204,32 @@ This method also requires minimal setup and is ideal for developers who want the
 
 2. Open a different terminal session and confirm the MCP server is running:
 
+ **For Linux/MacOS**:
+
    ```sh
    ps aux | grep onlyoffice
    ```
 
    You should see a list of running `onlyoffice` processes.
 
+The `ps aux` command lists all running processes, including those not attached to a terminal - like the MCP server, and then uses the `grep` command to filter the list for the running processes containing `onlyoffice`.
 
-</TabItem>
+ **For Windows**:
 
-<TabItem value="github-releases" label="Github releases">
+    ```powershell
+    Get-Process | Where-Object { $_.Name -like "*onlyoffice*" }
+    ```
+
+`Get-Process` retrieves all running processes and then uses the `Where-Object` command then filters for processes with **onlyoffice**.
+
+## Download the Github release
 
 This method is ideal for teams who want to have access without pulling from a registry at runtime. This method also requires you to have [Node.js](https://nodejs.org/) version 18 or higher and is available in two formats:
 
 - As an MCP bundle
 - A Node.js application
 
-### Build with the MCP bundle Github release
+### Download the MCP bundle Github release
 
 Use this format if your MCP client supports `.mcpb` bundle files natively (e.g., Claude Desktop Extensions).
 
@@ -228,7 +247,7 @@ Use this format if your MCP client supports `.mcpb` bundle files natively (e.g.,
 
 2. Use the downloaded `.mcpb` file in an application that supports MCP bundles.
 
-### Build with the Node.js app Github release
+### Download the Node.js app Github release
 
 Use this format if you prefer to run the server as a standard Node.js process.
 
@@ -262,5 +281,6 @@ Use this format if you prefer to run the server as a standard Node.js process.
    ./bin/onlyoffice-docspace-mcp
    ```
 
-</TabItem>
-</Tabs>
+## After getting the server
+
+- [Connect to MCP clients](../getting-started/clients.md)
