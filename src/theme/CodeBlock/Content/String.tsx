@@ -81,7 +81,7 @@ export default function CodeBlockString({
       params.set('emptyTemplateUrl', '');
     }
 
-    window.open(`/playground?${params}`, '_blank');
+    window.open(`/playground/?${params}`, '_blank');
   };
 
   return (
