@@ -215,7 +215,7 @@ import TabItem from '@theme/TabItem';
 
   您可以编辑插件并重新加载以查看变更效果。
 
-  要在桌面编辑器中调试插件，请按照[此处](../tutorials/developing/for-desktop-editors.md#debugging)的说明操作。
+  要在桌面编辑器中调试插件，请按照[此处](../tutorials/debugging/for-desktop-editors.md)的说明操作。
 
 ### 网页版编辑器
 
