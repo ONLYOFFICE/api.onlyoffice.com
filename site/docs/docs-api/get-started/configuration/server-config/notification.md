@@ -8,7 +8,7 @@ These parameters define the notification settings.
 
 Notifications with the following event types and content are sent:
 
-- 70% of the [connection quota](./license#licensewarning_limit_percents) (quota of unique users) is exceeded.
+- 70% of the [connection quota](./license.md#licensewarning_limit_percents) (quota of unique users) is exceeded.
 
   License connection limit warning: *"Attention! You have reached 70% of the connections limit set by your license."*
 
@@ -16,7 +16,7 @@ Notifications with the following event types and content are sent:
 
   License connection limit warning: *"Attention! You have reached 100% of the connection limit set by your license."*
 
-- 30 days before the [license expires](./license#licensewarning_license_expiration).
+- 30 days before the [license expires](./license.md#licensewarning_license_expiration).
 
   License expiration warning: *"Attention! Your license is about to expire on September 8, 2024. Upon reaching this date, you will no longer be entitled to receive personal technical support and install new Docs versions released after this date."*
 

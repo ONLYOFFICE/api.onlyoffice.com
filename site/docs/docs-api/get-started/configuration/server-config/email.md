@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Email
 
-These parameters define the settings of an external mail server, which is used to send [notifications](./notification). To connect to the mail server, use the [nodemailer](https://nodemailer.com/about/) library. Many config settings are passed directly to this library.
+These parameters define the settings of an external mail server, which is used to send [notifications](./notification.md). To connect to the mail server, use the [nodemailer](https://nodemailer.com/about/) library. Many config settings are passed directly to this library.
 
 ## email.smtpServerConfiguration
 

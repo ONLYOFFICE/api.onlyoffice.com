@@ -4,7 +4,7 @@ sidebar_position: 11
 
 # Persistent storage
 
-These parameters define the settings of the persistent storage, which is used to separate the settings for the document cache file storage and the storage of the forgotten and error files. Settings that are not specified in this object are inherited from the [storage](./storage) object. The separation is convenient for server upgrades.
+These parameters define the settings of the persistent storage, which is used to separate the settings for the document cache file storage and the storage of the forgotten and error files. Settings that are not specified in this object are inherited from the [storage](./storage.md) object. The separation is convenient for server upgrades.
 
 ## persistentStorage
 

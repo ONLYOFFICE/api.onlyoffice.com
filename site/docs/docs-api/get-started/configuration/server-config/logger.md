@@ -24,6 +24,12 @@ Defines the log options.
 
 Defines if the log information is printed to the console or not.
 
+### log.options.categories.default.level
+
+`Type: string`
+
+Logging level for the application
+
 ## Example
 
 ```json
