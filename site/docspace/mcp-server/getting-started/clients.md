@@ -7,7 +7,7 @@ title: Connect DocSpace MCP server to MCP clients
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The DocSpace MCP server allows you to connect numerous mcp clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
+The DocSpace MCP server allows you to connect numerous MCP clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
 
 - [ONLYOFFICE Desktop Editors](#connect-to-local-docspace-mcp-server)
 - [Claude-desktop](#connect-to-claude-desktop)
