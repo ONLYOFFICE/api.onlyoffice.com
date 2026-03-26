@@ -1,6 +1,6 @@
 # GetParentTableCell
 
-返回包含当前运行的表格单元格。
+返回包含当前文本块的表格单元格。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetParentTableCell();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ expression.GetParentTableCell();
 
 ## 示例
 
-此示例展示如何获取包含运行的表格单元格。
+此示例展示如何获取包含文本块的表格单元格。
 
 ```javascript editor-docx
 // Get a parent table cell of the text.

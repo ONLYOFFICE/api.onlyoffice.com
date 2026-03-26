@@ -20,7 +20,7 @@ expression.CreateRichTextPr();
 
 ## 示例
 
-如何创建新的富文本属性并将其设置为富文本运行。
+如何创建新的富文本属性并将其设置为富文本块。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

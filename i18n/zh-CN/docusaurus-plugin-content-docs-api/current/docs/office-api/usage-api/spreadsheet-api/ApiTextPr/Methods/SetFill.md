@@ -1,6 +1,6 @@
 # SetFill
 
-设置当前文本运行的文本颜色。
+设置当前文本块的文本颜色。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-此示例设置当前文本运行的文本颜色。
+此示例设置当前文本块的文本颜色。
 
 ```javascript editor-xlsx
 // How to color a text with a solid fill.

@@ -14,14 +14,14 @@
 | paragraphs.align | number | 当前段落中的水平文本对齐方式：**0** - 右对齐，**1** - 左对齐，**2** - 居中，**3** - 两端对齐。 |
 | paragraphs.fill | number[] | RGB 格式的段落高亮。空数组 [] 表示段落没有高亮。 |
 | paragraphs.linespacing | number | 当前段落中的文本行间距。 |
-| paragraphs.runs | object[] | 包含当前段落中的文本运行及其属性的数组。 |
+| paragraphs.runs | object[] | 包含当前段落中的文本块及其属性的数组。 |
 | paragraphs.runs.bold | boolean | 定义当前文本是否显示为粗体。 |
 | paragraphs.runs.fill | number[] | RGB 格式的文本高亮。空数组 [] 表示文本没有高亮。 |
 | paragraphs.runs.font-family | string | 文本字体系列。 |
 | paragraphs.runs.font-size | string | 文本字体大小，以磅（pt）为单位。 |
 | paragraphs.runs.italic | boolean | 定义当前文本是否显示为斜体。 |
 | paragraphs.runs.strikeout | boolean | 定义当前文本是否显示为删除线。 |
-| paragraphs.runs.text | string | 运行文本。 |
+| paragraphs.runs.text | string | 文本块内容。 |
 | paragraphs.runs.underline | boolean | 定义当前文本是否显示为下划线。 |
 | rotate | number | 水印的旋转角度，以度为单位。 |
 | stroke | number[] | RGB 格式的水印描边颜色。空数组 [] 表示水印描边没有填充。 |

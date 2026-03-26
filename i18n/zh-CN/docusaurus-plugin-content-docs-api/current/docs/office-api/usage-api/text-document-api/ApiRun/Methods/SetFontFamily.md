@@ -8,13 +8,13 @@
 expression.SetFontFamily(sFontFamily);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | 必需 | string |  | 用于当前文本运行的字体系列。 |
+| sFontFamily | 必需 | string |  | 用于当前文本块的字体系列。 |
 
 ## 返回值
 

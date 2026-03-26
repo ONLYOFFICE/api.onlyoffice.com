@@ -20,7 +20,7 @@ expression.CreateRichRun();
 
 ## 示例
 
-如何创建富文本运行并将其添加到富文本段落。
+如何创建富文本块并将其添加到富文本段落。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

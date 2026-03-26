@@ -1,6 +1,6 @@
 # WrapInMailMergeField
 
-将运行包装在邮件合并域中。
+将文本块包装在邮件合并域中。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.WrapInMailMergeField();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例将运行包装在邮件合并域中。
+此示例将文本块包装在邮件合并域中。
 
 ```javascript editor-docx
 // How to create a run wrapped in 'Mail Merge Field'.

@@ -1,6 +1,6 @@
 # AddHyperlink
 
-向当前运行添加超链接。
+向当前文本块添加超链接。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -24,7 +24,7 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 ## 示例
 
-此示例向运行添加超链接。
+此示例向文本块添加超链接。
 
 ```javascript editor-docx
 // How to add a link to the text.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例展示如何向形状内的段落添加文本运行元素。
+此示例展示如何向形状内的段落添加文本块元素。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

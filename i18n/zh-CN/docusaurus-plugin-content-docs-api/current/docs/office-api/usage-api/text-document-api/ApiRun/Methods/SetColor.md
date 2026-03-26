@@ -1,6 +1,6 @@
 # SetColor
 
-设置当前文本运行的文本颜色。
+设置当前文本块的文本颜色。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetColor(color);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -22,7 +22,7 @@ expression.SetColor(color);
 
 ## 示例
 
-此示例为当前文本运行设置文本颜色。
+此示例为当前文本块设置文本颜色。
 
 ```javascript editor-docx
 // How to change text color.

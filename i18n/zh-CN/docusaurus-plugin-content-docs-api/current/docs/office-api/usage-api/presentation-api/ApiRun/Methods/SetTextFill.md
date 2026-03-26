@@ -1,6 +1,6 @@
 # SetTextFill
 
-设置当前文本运行的文本填充。
+设置当前文本块的文本填充。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetTextFill(oApiFill);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -22,7 +22,7 @@ expression.SetTextFill(oApiFill);
 
 ## 示例
 
-此示例设置当前文本运行的文本填充。
+此示例设置当前文本块的文本填充。
 
 ```javascript editor-pptx
 // How to change a font color.

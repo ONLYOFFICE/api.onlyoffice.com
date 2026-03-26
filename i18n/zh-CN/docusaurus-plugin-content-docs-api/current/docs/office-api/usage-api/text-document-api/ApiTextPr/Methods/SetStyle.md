@@ -24,7 +24,7 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-此示例为运行设置样式。
+此示例为文本块设置样式。
 
 ```javascript editor-docx
 // How to style a text.

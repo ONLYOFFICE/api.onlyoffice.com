@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例向容器添加文本运行。
+此示例向容器添加文本块。
 
 ```javascript editor-docx
 // How to add text run to the inline text element.

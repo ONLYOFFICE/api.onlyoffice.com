@@ -1,6 +1,6 @@
 # SetTextFill
 
-设置当前文本运行的文本填充。
+设置当前文本块的文本填充。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetTextFill(oApiFill);
 
 ## 示例
 
-此示例设置当前文本运行的文本填充。
+此示例设置当前文本块的文本填充。
 
 ```javascript editor-pdf
 // How to change a font color.

@@ -20,7 +20,7 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取富文本运行对象的类类型。
+此示例获取富文本块对象的类类型。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();
