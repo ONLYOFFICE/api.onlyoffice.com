@@ -9,10 +9,11 @@ import TabItem from '@theme/TabItem';
 
 This page explains and demonstrates the various ways users can get the MCP server:
 
-- [Building from source](#build-the-mcp-server-from-source)
-- [Pulling from Docker Hub](#pull-from-docker-hub)
-- [Building from Docker MCP toolkit](#build-with-docker-mcp-toolkit)
-- [Downloading the Github release](#download-with-github-release)
+- [Build from source](#build-the-mcp-server-from-source)
+- [Pull from Docker Hub](#pull-from-docker-hub)
+- [Build from Docker MCP toolkit](#build-with-docker-mcp-toolkit)
+- [Build with npm registry](#build-with-npm-registry)
+- [Download the GitHub release](#download-the-github-release)
 
 ## Choosing a distribution method
 
@@ -20,10 +21,10 @@ Before choosing a distribution method, consult the following table:
 
 | **I want to**                                | **Recommended method**         |
 |----------------------------------------------|--------------------------------|
-| Get started quickly with minimal setup       | npm registry, Docker Hub       |   |   |   |   |   |   |   |   |
+| Get started quickly with minimal setup       | Docker Hub, npm Registry       |   |   |   |   |   |   |   |   |
 | Run in an isolated, reproducible environment | Docker Hub, Docker MCP toolkit |   |   |   |   |   |   |   |   |
 | Use a GUI to manage everything               | Docker MCP toolkit             |   |   |   |   |   |   |   |   |
-| Install a specific version offline           | Github releases                |   |   |   |   |   |   |   |   |
+| Install a specific version offline           | GitHub releases                |   |   |   |   |   |   |   |   |
 | Customize or contribute to the server        | Build from source              |   |   |   |   |   |   |   |   |
 
 :::tip 
@@ -222,14 +223,14 @@ The `ps aux` command lists all running processes, including those not attached t
 
 `Get-Process` retrieves all running processes and then uses the `Where-Object` command then filters for processes with **onlyoffice**.
 
-## Download the Github release
+## Download the GitHub release
 
 This method is ideal for teams who want to have access without pulling from a registry at runtime. This method also requires you to have [Node.js](https://nodejs.org/) version 18 or higher and is available in two formats:
 
 - As an MCP bundle
 - A Node.js application
 
-### Download the MCP bundle Github release
+### Download the MCP bundle GitHub release
 
 Use this format if your MCP client supports `.mcpb` bundle files natively (e.g., Claude Desktop Extensions).
 
@@ -247,7 +248,7 @@ Use this format if your MCP client supports `.mcpb` bundle files natively (e.g.,
 
 2. Use the downloaded `.mcpb` file in an application that supports MCP bundles.
 
-### Download the Node.js app Github release
+### Download the Node.js app GitHub release
 
 Use this format if you prefer to run the server as a standard Node.js process.
 
