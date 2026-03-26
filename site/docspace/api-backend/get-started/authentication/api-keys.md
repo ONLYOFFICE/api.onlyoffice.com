@@ -58,13 +58,13 @@ You can also create and manage API keys on your portal from the **Developer Tool
 2. Navigate to the **Developer Tools** section.
 3. On the **API keys** tab, click the **Create new secret key** button to generate a new secret key.
     
-    ![API keys](/assets/images/docspace/api-keys.png)
+    ![API keys](/assets/images/docspace/api-keys.png#gh-light-mode-only)![API keys](/assets/images/docspace/api-keys.dark.png#gh-dark-mode-only)
 
 5. Specify the key name. The name usually contains information that allows the user to quickly understand where the key is used. For example, "LangFlow on a home computer."
 6. Configure the key access rights. You can create a read-only key or grant full access to the data.
 7. Specify the key lifetime in days (maximum 365), after which the key will be automatically deactivated.
 
-    ![Create API key](/assets/images/docspace/create-api-key.png)
+    ![Create API key](/assets/images/docspace/create-api-key.png#gh-light-mode-only)![Create API key](/assets/images/docspace/create-api-key.dark.png#gh-dark-mode-only)
 
 > Do not share the API key or include it in any client-side code (browsers, apps). API keys should be securely loaded from environment variables or a key management service on the server side.
 

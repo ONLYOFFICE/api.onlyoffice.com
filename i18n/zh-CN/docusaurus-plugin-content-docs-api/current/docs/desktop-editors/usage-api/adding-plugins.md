@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 2. 点击 **插件管理器**。
 3. 找到所需插件并点击 **安装**。
 
-![插件管理器](/assets/images/plugins/desktop-plugin-manager.png)
+![插件管理器](/assets/images/plugins/desktop-plugin-manager.png#gh-light-mode-only)![插件管理器](/assets/images/plugins/desktop-plugin-manager.dark.png#gh-dark-mode-only)
 
 ### 选项 2：上传插件归档文件（无需互联网连接）
 
@@ -39,7 +39,7 @@ import TabItem from '@theme/TabItem';
 
 4. 选择您创建的归档文件并点击 **打开**。
 
-![手动安装插件](/assets/images/plugins/install-manually.png)
+![手动安装插件](/assets/images/plugins/plugin-install-manually.png#gh-light-mode-only)![手动安装插件](/assets/images/plugins/plugin-install-manually.dark.png#gh-dark-mode-only)
 
 该插件将添加到已打开的编辑器以及之后打开的所有编辑器中，并显示在 **插件** 选项卡内。
 

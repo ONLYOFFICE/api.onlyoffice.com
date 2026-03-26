@@ -50,7 +50,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 2. 点击**插件管理器**。
 3. 找到你需要的插件并点击**安装**。
 
-![插件管理器](/assets/images/plugins/plugin-manager.png)
+![插件管理器](/assets/images/plugins/plugin-manager.png#gh-light-mode-only)![插件管理器](/assets/images/plugins/plugin-manager.dark.png#gh-dark-mode-only)
 
 插件将添加到当前已打开的编辑器中，并会显示在**插件**选项卡中，后续打开的所有编辑器也会显示该插件。
 

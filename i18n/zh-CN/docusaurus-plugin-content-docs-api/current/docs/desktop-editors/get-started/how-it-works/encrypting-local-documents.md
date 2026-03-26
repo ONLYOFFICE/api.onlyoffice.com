@@ -136,7 +136,7 @@ window.Asc.plugin.init = function init(obj) {
 
 有了它，我们将在主应用页面上获得一个名为**Encryption**的新选项卡：
 
-![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
+![Encryption exabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption exabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
 
 通过勾选复选框启用加密：
 

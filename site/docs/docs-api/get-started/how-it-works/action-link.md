@@ -18,7 +18,7 @@ The reference figure and the steps below explain the process of working with lin
 
 2. Specify the event handler for the *Get link* button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization. When the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event is called, the user request is sent to the software integrators which create the link in the document storage service.
 
-   ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
+   ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onMakeActionLink(event) {

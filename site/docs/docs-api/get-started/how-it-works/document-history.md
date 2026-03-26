@@ -136,7 +136,7 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+   ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
 5. Open your *html* file in the browser.
 
@@ -158,7 +158,7 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
 ## Opening the document history with changes highlighting
 

@@ -154,7 +154,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要设置书签链接，您必须调用 [setActionLink](../methods.md#setactionlink) 方法。书签数据在 `data` 参数中接收，然后必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。如果未声明该方法，则不会显示*获取链接*按钮。
 
-![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
+![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -277,7 +277,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
 
-:::请注意
+:::note
 此事件仅适用于ONLYOFFICE文档企业版和ONLYOFFICE文档开发者版。
 :::
 :::danger[Deprecated]
@@ -306,12 +306,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 `view` 或 `fillForms` 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
 
-:::请注意
+:::note
 当 [editorConfig](./editor/editor.md#mode) `mode` 参数设置为 `view` 并且 `permission` 为 `edit` 文档([文档权限](./document/permissions.md#edit))设置为 `true` 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
-![Edit PDF button](/assets/images/editor/edit-pdf.png)
+![Edit PDF button](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
+![Edit PDF button](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -336,7 +337,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要显示文档版本历史记录，您必须调用 [refreshHistory](../methods.md#refreshhistory) 方法。如果未声明该方法和 [onRequestHistoryData](#onrequesthistorydata) 方法，则不会显示*版本历史*按钮。
 
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png" width="282px" />
+<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
+<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
 
 **示例**:
 
@@ -386,7 +388,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击*关闭历史记录*按钮查看文档版本历史记录返回文档时调用的函数。调用该函数时，编辑器必须再次初始化，处于编辑模式。如果未声明该方法，则不会显示*关闭历史记录*按钮。
 
-![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -412,7 +414,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要显示与特定文档版本相对应的更改，您必须调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加token来验证参数。如果该方法和 [onRequestHistory](#onrequesthistory) 方法未声明，则不会显示版本历史记录按钮。
 
-![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png)
+![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -455,7 +457,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要将图像插入文件，您必须使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则不会显示*从存储中获取图像*按钮。
 
-![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png)
+![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -535,7 +537,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要通过事件参数指定的文件链接刷新数据，您必须调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。 如果未声明该事件，则不会显示*粘贴链接*和*更新值*按钮。
 
-:::请注意
+:::note
 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
 :::
 
@@ -583,7 +585,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 单击该按钮时，必须调用 [setReferenceSource](../methods.md#setreferencesource) 方法来更改外部数据的来源。调用该方法时，必须添加token来验证参数。如果未声明事件，则不会显示*更改源*按钮。
 
-:::请注意
+:::note
 要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
 :::
 
@@ -659,11 +661,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击 *重命名...* 按钮重命名文件时调用的函数。
 
-:::请注意
+:::note
 在 6.0 版之前，*重命名...* 按钮仅在 [document.permissions.rename](./document/permissions.md#rename) 设置为 `true` 时可用。
 :::
 
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
+<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
+<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
 
 **示例**:
 
@@ -689,11 +692,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
 
-:::请注意
+:::note
 *恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。在 5.5 版之前，仅当 [document.permissions.changeHistory](./document/permissions.md#changehistory) 设置为 `true` 时，*恢复* 按钮才可用。
 :::
 
-![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -749,7 +752,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 `data` 参数中发送。如果未声明该方法，将不会显示*另存为...*按钮。
 
-![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png)
+![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
 **示例**:
 
@@ -777,7 +780,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。
 
-![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
+![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
 ![插入文本](/assets/images/editor/insert-text.png#gh-light-mode-only)![插入文本](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
 
@@ -845,7 +848,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
 
-:::请注意
+:::note
 在 5.4 版本中，只有在设置了 [onRequestUsers](#onrequestusers) 事件时才能使用 **onRequestSendNotify** 事件。从 5.5 版开始，**onRequestSendNotify** 和 **onRequestUsers** 之间没有这种依赖关系两者都可以独立设置。
 :::
 
@@ -873,7 +876,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当访问权限发生变化时，您必须调用 [setSharingSettings](../methods.md#setsharingsettings) 方法来更新有关允许与其他用户共享文档的设置的 [信息](./document/info.md#sharingsettings)。如果未声明该方法，则不会显示*更改访问权限*按钮。
 
-![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png)
+![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
 **示例**:
 

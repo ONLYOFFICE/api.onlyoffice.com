@@ -389,7 +389,7 @@ The data which is sent from the editor to the plugin at the plugin start. This p
 
 **Example**: `"text"`
 
-![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
+![Init data](/assets/images/plugins/plugin-init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/plugin-init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
@@ -589,7 +589,7 @@ The background color used for the light theme plugin icon.
 
 **Example**: `"#F5F5F5"`
 
-![Light icon](/assets/images/plugins/icon-light.png)
+![Light icon](/assets/images/plugins/plugin-icon.png)
 
 ### variations.store.background.dark
 
@@ -599,7 +599,7 @@ The background color used for the dark theme plugin icon.
 
 **Example**: `"#444444"`
 
-![Dark icon](/assets/images/plugins/icon-dark.png)
+![Dark icon](/assets/images/plugins/plugin-icon.dark.png)
 
 ### variations.store.categories
 

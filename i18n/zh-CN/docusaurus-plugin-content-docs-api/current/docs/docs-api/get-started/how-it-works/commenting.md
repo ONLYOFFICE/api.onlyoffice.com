@@ -6,7 +6,7 @@ sidebar_position: -10
 
 **评论功能**允许您对文档中特定的单词、短语、句子以及其他部分添加评论，还能对这些评论进行编辑和删除操作。所有评论都会被保存下来，并展示给其他使用该文档的用户。
 
-![评论](/assets/images/editor/comment.png)
+![评论](/assets/images/editor/comment.png#gh-light-mode-only)![评论](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## 评论权限
 
@@ -16,7 +16,7 @@ sidebar_position: -10
 
 ![评论](/assets/images/editor/commenting.png)
 
-如果*edit* 参数设置为 false，而 *comment*参数设置为 true，那么该文档将仅可用于添加评论。
+如果*edit* 参数设置为 **false**，而 *comment*参数设置为 **true**，那么该文档将仅可用于添加评论。
 
 ``` ts
 const config = {
@@ -49,7 +49,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-2.如果您希望仅允许评论的作者删除评论，在编辑器初始化的权限部分中，将[deleteCommentAuthorOnly](../../usage-api/config/document/permissions.md#deletecommentauthoronly) 参数设置为**true**。
+2. 如果您希望仅允许评论的作者删除评论，在编辑器初始化的权限部分中，将[deleteCommentAuthorOnly](../../usage-api/config/document/permissions.md#deletecommentauthoronly) 参数设置为**true**。
 
    ``` ts
    const config = {
@@ -106,7 +106,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   - *"edit": \["Group2", ""]* 表示用户可以编辑来自** Group2**的用户以及不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加评论的文档）。
+   - *"edit": \["Group2", ""]* 表示用户可以编辑来自**Group2**的用户以及不属于任何群组的用户所添加的评论（例如，在第三方编辑器中添加评论的文档）。
    - *"remove": \[""]* 表示用户可以删除不属于这些群组的人所添加的评论（例如，在第三方编辑器中添加评论的文档）。
    - *"view": ""* 表示用户可以查看任何用户所添加的评论。
 

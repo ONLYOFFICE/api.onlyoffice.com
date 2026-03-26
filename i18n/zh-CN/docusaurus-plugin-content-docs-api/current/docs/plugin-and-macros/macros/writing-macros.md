@@ -66,7 +66,7 @@ sidebar_position: -5
 
 将上述代码粘贴到宏窗口中并点击![Play icon](/assets/images/plugins/play.svg)图标。 第 1 到第 200 行将会在不到一秒的时间内被交替着色。
 
-![Alternate raws](/assets/images/plugins/alternate-raws.png)
+![Alternate raws](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate raws](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
 
 ## 使用 AI 插件生成宏 {#generating-macros-using-ai-plugin}
 

@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
       </TabItem>
       <TabItem value="mac" label="macOS">
             ``` bash
-            Users/<username>/Library/Application Support/asc.onlyoffice.ONLYOFFICE/sdkjs-plugins/
+            ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
             ```
       </TabItem>
       <TabItem value="lin" label="Linux">
@@ -40,9 +40,3 @@ import TabItem from '@theme/TabItem';
    ![Sdkjs-plugins 文件夹](/assets/images/plugins/sdkjs-plugins-folder.png)
 
    你可以编辑插件并重新加载以查看更改。
-
-## 调试 {#debugging}
-
-要在桌面编辑器中调试 ONLYOFFICE 插件，请使用 --ascdesktop-support-debug-info 参数。具体操作请根据你所使用的操作系统，参考[此处说明](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md)。
-
-![调试](/assets/images/desktop/debugging.png)

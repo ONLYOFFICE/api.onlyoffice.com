@@ -6,7 +6,7 @@ sidebar_position: -1
 
 To debug ONLYOFFICE plugins in the desktop editors, use the `--ascdesktop-support-debug-info` flag. To do this, follow the instructions [here](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) depending on the operating system you use.
 
-![Debug](/assets/images/desktop/debugging.png)
+![Debug](/assets/images/desktop/debugging.png#gh-light-mode-only)![Debug](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
 
 ### Debugging tools
 

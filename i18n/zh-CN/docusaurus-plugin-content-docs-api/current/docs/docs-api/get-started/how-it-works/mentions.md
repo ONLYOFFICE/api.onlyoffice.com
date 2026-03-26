@@ -66,7 +66,7 @@ sidebar_position: -17
    })
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。有关ONLYOFFIC文档服务客户端-服务器交互的更多信息，请参阅工作原理部分。[工作原理](./how-it-works.md)部分。
+   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。有关ONLYOFFICE文档服务客户端-服务器交互的更多信息，请参阅[工作原理](./how-it-works.md)部分。
 
 ## 打开评论
 
@@ -102,7 +102,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 如果在文档初始化中使用了[document.info.sharingSettings](../../usage-api/config/document/info.md#sharingsettings)字段，但[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件中的用户列表与之不同，则必须调用[setSharingSettings](../../usage-api/methods.md#setsharingsettings)方法。
 
-![共享设置](/assets/images/editor/sharing_settings.png)
+![共享设置](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![共享设置](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
 ``` ts
 docEditor.setSharingSettings({
@@ -120,7 +120,7 @@ docEditor.setSharingSettings({
 });
 ```
 
-如果[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)件未提供对文件的访问权限，则必须将编辑器配置的自定义部分中的[mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare)参数设置为**false**。
+如果[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件未提供对文件的访问权限，则必须将编辑器配置的自定义部分中的[mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare)参数设置为**false**。
 
 > 请注意，只有在设置了[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件的情况下，此设置才对评论有效。
 
