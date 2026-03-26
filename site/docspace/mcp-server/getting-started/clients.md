@@ -165,7 +165,7 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
 
 ## Connect to Cursor
 
-Cursor allows you connect to the DocSpace mcp server either via:
+Cursor allows you to connect to the DocSpace MCP server either via:
 
 - (Recommended) [HTTP](#connect-via-http) 
 - [Command](#command)
