@@ -34,7 +34,7 @@ You can configure your local machine to interact with the DocSpace MCP server us
 Before proceeding, ensure to set these environment variables:
 
 - `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
-- `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> **Developer Tools** -> **API keys.**
+- `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> **Developer Tools** -> **API keys**.
 
 ### Install with Docker image
 
@@ -66,9 +66,9 @@ Insert the following block into the `mcpServers` section of your `.json` configu
 |--------|-------------|
 | `docker` | The executable to run |
 | `run` | Command to create and start a container |
-| `rmv` | Automatically remove the container when it exits|
-| `env` | Flag to pass environment variables 
-| `onlyoffice/docspace-mcp` | Docker image name to run|
+| `rm` | Automatically remove the container when it exits |
+| `env` | Flag to pass environment variables |
+| `onlyoffice/docspace-mcp` | Docker image name to run |
 
 
 ### Install with Docker MCP Server
@@ -153,7 +153,7 @@ The public instance is available at two endpoints:
 | **Endpoint**                   | **Transport**             | **Recommendation**                                                                                                         |
 |--------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | https://mcp.onlyoffice.com/mcp | HTTP                      | Preferred - Use this endpoint whenever your client supports it. Streamable HTTP offers better performance and reliability. |
-| https://mcp.onlyoffice.com/sse | Server Side Events. (SSE) | Legacy - Use this endpoint only if your client does not support the modern Streamable HTTP transport.                      |
+| https://mcp.onlyoffice.com/sse | Server-Sent Events. (SSE) | Legacy - Use this endpoint only if your client does not support the modern Streamable HTTP transport.                      |
 
 The public instance provides access to all available tools by default. Tool selection can be customized using query parameters or custom headers. However, we recommend using the MCP client interface for tool configuration when supported.
 
@@ -176,7 +176,7 @@ OAuth is the recommended method as it provides the strongest security model by a
 | **Authentication method**      | **Definition**                                                                  | **Requirements**                         | **Example**                      | **Recommendations**                                                                                                                   |
 |--------------------------------|---------------------------------------------------------------------------------|------------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | OAuth (public app)             | Authenticates the connection without requiring custom credentials               | Connection URL                           | [See VS Code remote connection](clients.md#connect-to-vs-code) | Simplest and most secure method, requiring no custom credentials or additional configuration                                          |
-| OAuth (custom app)             | Connects using a client ID and client secret after creating a [custom app]()    | Connection URL, Client ID, Client Secret | [See Claude Desktop connection](clients.md#connect-to-claude-desktop)    | Offers more flexibility and full control over the OAuth configuration, including custom redirect URIs, specific scopes, and branding. |
+| OAuth (custom app)             | Connects using a client ID and client secret after [creating a custom app](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/)    | Connection URL, Client ID, Client Secret | [See Claude Desktop connection](clients.md#connect-to-claude-desktop)    | Offers more flexibility and full control over the OAuth configuration, including custom redirect URIs, specific scopes, and branding. |
 | API Key (Header)               | Connect using an API key and base URL configured via custom headers             | Connection URL, API key                  | [See Le Chat connection](clients.md#connect-to-le-chat)        | Ideal when integrating with platforms that support custom HTTP headers but don't have built-in OAuth support                          |
 | API Key (Authorization header) | Connect using API key in `Authorization` header and base URL in query parameter | Connection URL, API key                  | [See Le Chat connection](clients.md#connect-to-le-chat)       | Ideal when working with clients that support Bearer token authentication but don't allow custom headers                                          |
 | Username & password in URL     | Connect using URL-encoded credentials and base URL in query parameter           | Connection URL, username, password       | [See Claude web connection](clients.md#connect-to-claude-web)    | Ideal for quick setup, testing, or when using clients with limited authentication options                                             |
