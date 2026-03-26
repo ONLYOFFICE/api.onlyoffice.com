@@ -103,8 +103,17 @@ const config: Config = {
 
           docItemComponent: '@theme/ApiItem',
 
-          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, isCategoryIndex, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator({
+              ...args,
+              isCategoryIndex(params) {
+                // Exclude index.md
+                if (params.fileName.toLowerCase() === 'index') {
+                  return false;
+                }
+                return isCategoryIndex(params);
+              },
+            });
             keyPath = args.item.dirName;
             sidebarItems.forEach(sidebarRecursive);
             return sidebarItems;
