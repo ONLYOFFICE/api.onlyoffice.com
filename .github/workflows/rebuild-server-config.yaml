@@ -1,0 +1,58 @@
+name: ReBuild server-config
+
+run-name: "ReBuild server-config"
+
+on:
+  workflow_dispatch:
+
+env:
+  TARGET: api.onlyoffice.com/site/docs/docs-api/get-started/configuration/server-config
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Checkout api.onlyoffice.com repository
+        uses: actions/checkout@v4
+        with:
+          path: api.onlyoffice.com
+
+      - name: Checkout server repository (branch)
+        id: checkout_server
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/server
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ github.ref_name }}
+          path: server
+
+      - name: Checkout server repository (default)
+        if: steps.checkout_server.outcome == 'failure'
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/server
+          token: ${{ secrets.READ_PAT }}
+          path: server
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Generate server config documentation
+        run: |
+          node server/scripts/generate-server-config.js --out ${TARGET}
+
+          cd api.onlyoffice.com
+          if [ -n "$(git status --porcelain)" ]; then
+              git add .
+              git commit -m "Update server config documentation from GitHub Actions"
+              git push origin ${{ github.ref_name }}
+            else
+              echo "Nothing to commit"
+            fi
