@@ -83,5 +83,5 @@ If something went wrong, make sure that you have followed the installation instr
 
 - [How to enable document forcesaving](/docs/docs-api/get-started/how-it-works/saving-file.md#force-saving)
 - [How to customize the editor](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md)
-- [How to manage the editor through Automation API](/docs/docs-api/usage-api/automation-api.md)
+- [How to manage the editor through Automation API](/docs/docs-api/usage-api/automation-api/automation-api.md)
 - [How to install / disable plugins](/docs/docs-api/usage-api/config/editor/plugins.md)

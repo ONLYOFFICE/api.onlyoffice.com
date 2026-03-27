@@ -1,58 +1,8 @@
 ---
-sidebar_position: -2
+sidebar_position: 1
 ---
 
-# Automation API
-
-Automation API enables interaction with office documents from external sources through custom interface elements. Build your own UI components while leveraging ONLYOFFICE document processing — manage comments, control review workflows, auto-fill forms, and more, all from outside the editor.
-
-:::info
-Automation API is available only for **ONLYOFFICE Docs Developer**.
-
-This is a premium feature not included by default and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote, or learn more at [onlyoffice.com/automation-api](https://www.onlyoffice.com/automation-api).
-:::
-
-## What you can build
-
-Explore interactive examples showing real-world use cases:
-
-| Use case | Description |
-| -------- | ----------- |
-| [Working with comments](../samples/external-access-to-the-document-editing/working-with-comments.md) | Collect and display all document comments in a custom interface. Add, remove, and navigate between comments from your own UI. |
-| [Managing review changes](../samples/external-access-to-the-document-editing/working-with-review-changes.md) | Control the review process externally — accept or reject tracked changes and navigate between revisions from a custom panel. |
-| [Filling out forms](../samples/external-access-to-the-document-editing/filling-out-the-form.md) | Auto-populate form fields with external data. Sync form values between your interface and the document in real-time. |
-
-## Getting started
-
-To start using Automation API, create a connector using the [createConnector](./methods.md#createconnector) method:
-
-``` ts
-const connector = docEditor.createConnector();
-```
-
-The connector provides methods to execute editor commands, listen to document events, and interact with the editor UI:
-
-``` ts
-// Listen to document events
-connector.attachEvent("onChangeContentControl", (obj) => {
-  console.log("Content changed:", obj);
-});
-
-// Execute editor methods
-connector.executeMethod("GetAllComments", null, (comments) => {
-  console.log("Comments:", comments);
-});
-
-// Insert content into the document
-connector.callCommand(() => {
-  const oDocument = Api.GetDocument();
-  const oParagraph = Api.CreateParagraph();
-  oParagraph.AddText("Hello from Automation API");
-  oDocument.InsertContent([oParagraph]);
-});
-```
-
-## Connector class
+# Connector class
 
 The **Connector** class allows editing text documents, spreadsheets, presentations, PDFs, and fillable forms from an external source. It has the same interface as plugins.
 
@@ -60,7 +10,7 @@ Below you can find methods available for this class.
 
 ## addContextMenuItem
 
-The function called to add an item to the context menu. The process of working with the context menu is the same as for [plugins](../../plugin-and-macros/customization/context-menu.md) except for the *onClick* method, which is used instead of subscribing by ID.
+The function called to add an item to the context menu. The process of working with the context menu is the same as for [plugins](../../../plugin-and-macros/customization/context-menu.md) except for the *onClick* method, which is used instead of subscribing by ID.
 
 ### Parameters
 
@@ -76,7 +26,7 @@ The function called to add an item to the context menu. The process of working w
 | *text*     | string                   | The item caption.                                                                                                          |
 | *data*     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
+| *icons*    | string                   | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *onClick*  | function                 | The click event callback.                                                                                                  |
 | *items*    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
 
@@ -96,7 +46,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 ## addToolbarMenuItem
 
-The function called to add an item to the toolbar menu. The process of working with the toolbar menu is the same as for [plugins](../../plugin-and-macros/customization/toolbar.md) except for the *onClick* method, which is used instead of subscribing by ID.
+The function called to add an item to the toolbar menu. The process of working with the toolbar menu is the same as for [plugins](../../../plugin-and-macros/customization/toolbar.md) except for the *onClick* method, which is used instead of subscribing by ID.
 
 ### Parameters
 
@@ -127,7 +77,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                           |
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                             |
 | *hint*           | string                                      | The item hint.                                                                                                                           |
-| *icons*          | string \| object                            | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
+| *icons*          | string \| object                            | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                            |
 | *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.               |
 | *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.). |
@@ -177,7 +127,13 @@ connector.addToolbarMenuItem({
 
 ## attachEvent
 
-The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins.
+The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins:
+
+- [Text document events](../../../plugin-and-macros/interacting-with-editors/text-document-api/Events/Events.md)
+- [Spreadsheet events](../../../plugin-and-macros/interacting-with-editors/spreadsheet-api/Events/Events.md)
+- [Presentation events](../../../plugin-and-macros/interacting-with-editors/presentation-api/Events/Events.md)
+- [PDF events](../../../plugin-and-macros/interacting-with-editors/pdf-api/Events/Events.md)
+- [Form events](../../../plugin-and-macros/interacting-with-editors/form-api/Events/Events.md)
 
 ### Parameters
 
@@ -203,15 +159,11 @@ To call commands and send the data back to the editor, define the callCommand me
 
 | Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| func | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../office-api/get-started/overview.md) syntax. |
+| func | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax. |
 | callback | function | The result that the method returns. Only the js standard types are available (any objects will be replaced with undefined).                                                                                                                                                                                                                                                                                                                 |
 | isNoCalc | boolean  | Defines whether the document will be recalculated or not. The *true* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The *false* value is used to recalculate the document after executing the function in the *func* parameter. The default value is *false*.                                    |
 
-This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
-
-### Returns
-
-This method doesn't return any data.
+This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
 
 ### Example
 
@@ -232,7 +184,7 @@ connector.callCommand(() => {
 The function called to connect the connector to the editor.
 
 :::note
-Please note that this method should only be called if you have disconnected the connector with the [disconnect](#disconnect) method and need to connect it to the editor again. When creating a connector, you do not need to use the *connect* method, as it is called automatically along with the [createConnector](./methods.md#createconnector) method.
+Please note that this method should only be called if you have disconnected the connector with the [disconnect](#disconnect) method and need to connect it to the editor again. When creating a connector, you do not need to use the *connect* method, as it is called automatically along with the [createConnector](../methods.md#createconnector) method.
 :::
 
 ### Example
@@ -244,7 +196,7 @@ connector.connect();
 
 ## createWindow
 
-The function called to create the [connector modal window](#connector-window) to display the additional information inside the editor.
+The function called to create the [connector modal window](./connector-window.md) to display the additional information inside the editor.
 
 ### Example
 
@@ -283,7 +235,7 @@ connector.disconnect();
 
 ## executeMethod
 
-The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/Methods.md).
+The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/Methods.md).
 
 ### Parameters
 
@@ -310,7 +262,7 @@ The function called to update an item in the context menu with the specified ite
 
 | Name  | Type                                         | Description                                           |
 | ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu item parameters. |
+| items | [ContextMenuItem](#contextmenuitem-1)[] | An array containing the context menu item parameters. |
 
 ### ContextMenuItem
 
@@ -320,7 +272,7 @@ The function called to update an item in the context menu with the specified ite
 | text     | string                   | The item text.                                                                                                             |
 | data     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | disabled | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
+| icons    | string                   | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | items    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
 
 ### Example
@@ -335,120 +287,4 @@ const items = [
 ];
 
 connector.updateContextMenuItem(items);
-```
-
-## Connector window
-
-Connector window is a class that represents the connector window. To create it, use the [createWindow](#createwindow) method of the connector object.
-
-Below you can find methods that are available for this class.
-
-### attachEvent
-
-The function called to add an event listener to the modal window frame. This function will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins.
-
-#### Parameters
-
-| Name   | Type     | Description         |
-| ------ | -------- | ------------------- |
-| id     | string   | The event name.     |
-| action | function | The event listener. |
-
-#### Example
-
-``` ts
-const connector = docEditor.createConnector();
-const testConnectorWindow = connector.createWindow();
-testConnectorWindow.attachEvent("onWindowMessage", (message) => {
-  console.log(`panel message: ${message}`);
-});
-```
-
-### dispatchEvent
-
-The function called to send an event to the modal window frame. The list of all the available events is the same as for the plugins.
-
-#### Parameters
-
-| Name | Type            | Description     |
-| ---- | --------------- | --------------- |
-| name | string          | The event name. |
-| data | string \| object | The event data. |
-
-#### Example
-
-``` ts
-const connector = docEditor.createConnector();
-const testConnectorWindow = connector.createWindow();
-testConnectorWindow.dispatchEvent("messageName", {
-  prop: "value",
-});
-```
-
-### show
-
-The function called to show a modal window inside the editor.
-
-#### Parameters
-
-| Name     | Type   | Description                                                                                                                                      |
-| -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| settings | object | The modal window parameters that are the same for plugin [variations](../../plugin-and-macros/structure/configuration/configuration.md#variations). |
-
-#### Example
-
-``` ts
-const connector = docEditor.createConnector();
-const testConnectorWindow = connector.createWindow();
-testConnectorWindow.show({
-  url: "./window/panel.html",
-  description: "Panel example!",
-  type: "panel",
-  EditorsSupport: ["word", "cell", "slide", "pdf"],
-  isVisual: true,
-  buttons: [],
-  icons: "./icon.svg",
-});
-```
-
-In the connector window code, you can also use the following methods:
-
-### attachEvent
-
-The function called to subscribe to the messages from the plugin.
-
-#### Parameters
-
-| Name     | Type     | Description         |
-| -------- | -------- | ------------------- |
-| *id*     | string   | The event name.     |
-| *action* | function | The event listener. |
-
-#### Returns
-
-This method doesn't return any data.
-
-#### Example
-
-``` ts
-window.Asc.plugin.attachEvent("messageName", (message) => {
-  console.log(message);
-});
-```
-
-### sendToPlugin
-
-The function called to send a message to the editor from the modal window.
-
-#### Parameters
-
-| Name | Type   | Description     |
-| ---- | ------ | --------------- |
-| name | string | The event name. |
-| data | object | The event data. |
-
-#### Example
-
-``` ts
-window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```
