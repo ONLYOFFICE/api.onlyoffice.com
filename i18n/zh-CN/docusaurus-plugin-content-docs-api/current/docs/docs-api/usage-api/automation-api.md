@@ -199,12 +199,6 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 调用的函数，用于将数据发送回编辑器。它允许连接器发送可以插入到结果文档文件中的结构化数据（格式化的段落、表格、文本部分和单独的单词等）。
 
-*callback* 是命令返回的结果，是一个可选参数。如果未提供该参数，则将使用 *window.Asc.plugin.onCommandCallback* 函数返回命令执行结果。
-
-:::信息
-**ONLYOFFICE 文档生成器** 命令只能用于创建内容并将其插入文档编辑器 (使用 *Api.GetDocument().InsertContent(...)*)。由于在线编辑器中的联合编辑功能，存在此限制。
-:::
-
 ### 参数:
 
 | 名称     | 类型     | 描述                                                                                                                                                                                                                                                                                                                                                                      |
