@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 The DocSpace MCP server allows you to connect numerous MCP clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
 
-- [ONLYOFFICE Desktop Editors](#connect-to-local-docspace-mcp-server)
+- [ONLYOFFICE Desktop Editors](#connect-to-onlyoffice-desktop-editor)
 - [Claude-desktop](#connect-to-claude-desktop)
 - [Claude-web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
@@ -25,16 +25,16 @@ The DocSpace MCP server allows you to connect numerous MCP clients, offering fle
     - `DOCSPACE_BASE_URL` — the URL of your DocSpace instance (e.g., `https://portal.onlyoffice.com`).
     - `DOCSPACE_API_KEY` — your personal API key generated in DocSpace settings → **Developer Tools** → **API Keys**.
 
-    **Ensure your API key is valid.** 
+**Ensure your API key is valid**. 
 
 ## Client configuration
 
 Follow the steps to connect to your client of choice
 
 <Tabs groupId="mcp-clients" queryString="client">
-<TabItem value="Desktop editors" label="ONLYOFFICE Desktop Editors" default>
+<TabItem value="Desktop editors" label="ONLYOFFICE Desktop Editors">
 
-## Connect to local DocSpace MCP Server
+## Connect to ONLYOFFICE Desktop Editor
 
 Connect to the locally running MCP server using stdio transport.
 
@@ -83,12 +83,15 @@ Connect to the MCP server running remotely using Claude's Connectors. This is th
 4. Click "Add custom connector".
 5. Enter a name for the connector (e.g., "ONLYOFFICE DocSpace MCP").
 6. Enter the connection URL (e.g., https://mcp.onlyoffice.com/mcp).
-7. Click "Advanced settings".
-8. In the "OAuth Client ID" field, enter the Client ID from your [DocSpace OAuth application](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/).
-9. In the "OAuth Client Secret" field, enter the Client Secret from your DocSpace OAuth application.
-10. Click "Add".
-11. Click "Connect" next to the newly added connector.
-12. Complete the OAuth authentication process:
+7. Follow based on your authentication preference:
+    - **OAuth with public app**: Click **Add**
+    - **OAuth with custom app**:
+        1. Click "Advanced settings".
+        2. In the "OAuth Client ID" field, enter the Client ID from your [DocSpace OAuth application](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/).
+        3. In the "OAuth Client Secret" field, enter the Client Secret from your DocSpace OAuth application.
+        4. Click "Add".
+8. Click "Connect" next to the newly added connector.
+9. Complete the OAuth authentication process:
     - Sign in to your DocSpace account by entering your email and password and clicking "Sign In".
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
@@ -144,7 +147,7 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
 7. Save the file.
 
 </TabItem>
-<TabItem value="claude-web" label="Claude web" default>
+<TabItem value="claude-web" label="Claude web">
 
 ## Connect to Claude web
 
@@ -153,24 +156,33 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
 3. Navigate to Connectors.
 4. Click "Add custom connector".
 5. Enter a name for the connector (e.g., "ONLYOFFICE DocSpace MCP").
-6. Enter the connection URL with your encoded credentials:
-   `https://{encoded_username}:{encoded_password}@mcp.onlyoffice.com/mcp?base_url=https://your-instance.onlyoffice.com/`
-   - Replace `{encoded_username}` with your URL-encoded DocSpace email
-   - Replace `{encoded_password}` with your URL-encoded DocSpace password
-   - Replace `your-instance.onlyoffice.com` with your actual DocSpace domain
+6. Enter connection URL based on your preferred authentication method:
+    - **OAuth with public app (Recommended)**
+        - Enter the connection URL (e.g., https://mcp.onlyoffice.com/mcp).
+    - **Authentication with URL-encoded credentials**:
+        - Enter the connection URL with your encoded credentials:
+       `https://{encoded_username}:{encoded_password}@mcp.onlyoffice.com/mcp?base_url=https://your-instance.onlyoffice.com/`
+        - Replace `{encoded_username}` with your URL-encoded DocSpace email
+        - Replace `{encoded_password}` with your URL-encoded DocSpace password
+        - Replace `your-instance.onlyoffice.com` with your actual DocSpace domain
 7. Click "Add".
+8. Click "Connect" next to the newly added connector.
+9. Complete the OAuth authentication process:
+    - Sign in to your DocSpace account by entering your email and password and clicking "Sign In".
+    - If you have more than one account associated with the entered email, choose one of them.
+    - Allow the MCP Remote Server to access the specified data in your DocSpace account.
 
 </TabItem>
-<TabItem value="cursor" label="Cursor" default>
+<TabItem value="cursor" label="Cursor">
 
 ## Connect to Cursor
 
 Cursor allows you to connect to the DocSpace MCP server either via:
 
-- (Recommended) [HTTP](#connect-via-http) 
-- [Command](#command)
+- (Recommended) [HTTP](#connect-cursor-to-remote-docspace-mcp-server-via-http) 
+- [Command](#connect-curosr-to-local-docspace-mcp-server-via-command)
 
-### Connect via HTTP to remote DocSpace MCP server
+### Connect Cursor to remote DocSpace MCP server via HTTP
 
 Connect to the MCP server running remotely using Streamable-HTTP transport
 
@@ -197,7 +209,7 @@ Connect to the MCP server running remotely using Streamable-HTTP transport
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
     
-### Connect via command to local DocSpace MCP server
+### Connect Cursor to local DocSpace MCP server via command
 
 Connect to the locally running MCP server using stdio transport.
 
@@ -233,7 +245,7 @@ Connect to the locally running MCP server using stdio transport.
 7. Save the file.
 
 </TabItem>
-<TabItem value="Le Chat" label="Le Chat" default>
+<TabItem value="Le Chat" label="Le Chat">
 
 ## Connect to Le Chat
 
@@ -259,16 +271,16 @@ Connect to the locally running MCP server using stdio transport.
 10. Confirm connection by enabling the Docspace MCP server in the **Enable tools** section of the chat bar. 
 
 </TabItem>
-<TabItem value="vscode" label="VS Code" default>
+<TabItem value="vscode" label="VS Code">
 
 ## Connect to VS Code
 
 VS Code client also connects to DocSpace MCP server using:
 
-- [HTTP](#http)
-- [Command](#command)
+- [HTTP](#connect-vs-code-to-remote-docspace-mcp-server-via-http)
+- [Command](#connect-vs-code-to-local-docspace-mcp-server-via-command)
 
-### Connect via HTTP to remote DocSpace MCP server
+### Connect VS Code to remote DocSpace MCP server via HTTP
 
 This is the preferred connection method and connects to the remote MCP server using Streamable-HTTP transport. 
 
@@ -296,7 +308,7 @@ This is the preferred connection method and connects to the remote MCP server us
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
 
-### Connect via command to local DocSpace MCP server
+### Connect VS Code to local DocSpace MCP server via command
 
 Connect to the locally running MCP server using stdio transport.
 
@@ -334,16 +346,16 @@ Connect to the locally running MCP server using stdio transport.
 9. Select **Start Server**.
 
 </TabItem>
-<TabItem value="Windsurf" label="Windsurf" default>
+<TabItem value="Windsurf" label="Windsurf">
 
 ## Connect to Windsurf
 
 Windsurf offers two ways to connect to the DocSpace MCP server:
 
-- [HTTP](#http)
-- [Command](#command)
+- [HTTP](#connect-windsurf-to-remote-docspace-mcp-server-via-http)
+- [Command](#connect-windsurf-to-local-docspace-mcp-server-via-command)
 
-### Connect via HTTP to remote DocSpace MCP server
+### Connect Windsurf to remote DocSpace MCP server via HTTP
 
 This is the recommended method and connects to the remote MCP server using Streamable-HTTP transport.
 
@@ -369,7 +381,7 @@ This is the recommended method and connects to the remote MCP server using Strea
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
 
-### Connect via command to local DocSpace MCP server
+### Connect Windsurf to local DocSpace MCP server via command
 
 This method uses stdio transport to connect to a local running MCP server.
 
