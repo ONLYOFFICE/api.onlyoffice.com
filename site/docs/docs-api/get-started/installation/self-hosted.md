@@ -66,7 +66,7 @@ To install it on your local server:
 Before working with ONLYOFFICE Docs API documentation, it is recommended to make the following settings if necessary:
 
 - open additional [ports](https://helpcenter.onlyoffice.com/installation/docs-developer-open-ports.aspx?from=api);
-- configure [ONLYOFFICE Docs server settings](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api) in ONLYOFFICE Docs configuration file;
+- configure [ONLYOFFICE Docs server settings](/docs/docs-api/get-started/configuration/server-config/intro.md) in ONLYOFFICE Docs configuration file;
 - switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using [SSL Certificates](https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx?from=api);
 - add additional [fonts](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx?from=api) to ONLYOFFICE Docs to enhance the work with the editors;
 - add your own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx?from=api) for the application interface.

@@ -66,7 +66,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 在使用 ONLYOFFICE 文档 API 前，建议根据需求完成以下配置：
 
 - 开放必要[端口](https://helpcenter.onlyoffice.com/installation/docs-developer-open-ports.aspx?from=api)；
-- 在 ONLYOFFICE 文档的配置文件中调整 [ONLYOFFICE 文档服务器设置](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api)；
+- 在 ONLYOFFICE 文档的配置文件中调整 [ONLYOFFICE 文档服务器设置](/docs/docs-api/get-started/configuration/server-config/intro.md)；
 - 使用 [SSL 证书](https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx?from=api)将 ONLYOFFICE 文档切换至 HTTPS 协议；
 - 添加额外[字体](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx?from=api)到 ONLYOFFICE 文档以增强编辑器兼容性；
 - 自定义编辑器界面[主题配色](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx?from=api)。
