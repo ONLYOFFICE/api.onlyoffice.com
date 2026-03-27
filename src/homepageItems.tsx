@@ -65,14 +65,14 @@ export const Samples: Samples = {
 export const BlogArticles: BlogArticles = {
   items: [
     {
-      title: 'ONLYOFFICE API updates: What’s new in December 2025',
-      link: "https://www.onlyoffice.com/blog/2025/12/api-updates-december-2025",
-      imgHref: "/img/homepage-blog/api-december-2025-768x388.png",
+      title: 'How to write an ONLYOFFICE plugin with AI: the OData Import plugin case',
+      link: "https://www.onlyoffice.com/blog/2026/03/how-to-write-an-onlyoffice-plugin-with-ai-odata-import",
+      imgHref: "/img/homepage-blog/odata-import-plugin-768x393.png",
     },
     {
-      title: 'A developer’s guide to ONLYOFFICE style and color APIs',
-      link: "https://www.onlyoffice.com/blog/2025/11/a-developer-s-guide-to-onlyoffice-style-and-color-apis",
-      imgHref: "/img/homepage-blog/styling-article-768x395.png",
+      title: 'Manipulate PDF content with new ONLYOFFICE PDF Editor API',
+      link: "https://www.onlyoffice.com/blog/2026/03/manipulate-pdf-content-with-new-onlyoffice-pdf-editor-api",
+      imgHref: "/img/homepage-blog/manipulate-pdf-768x390.png",
     },
     {
       title: 'How to handle async API calls inside ONLYOFFICE custom functions',

@@ -23,15 +23,16 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
       <div className={styles.samplesСontainer}>
         <div className={styles.samplesСontainerInner}>
           <main>
-            {blogGroups.map((group, index) => (
-              <section key={index} className={`${styles.sectionGroup} ${styles.blogGroup}`}>
+              <section className={`${styles.sectionGroup} ${styles.blogGroup}`}>
                 <Heading as="h2" className={styles.samplesHeading}>
                   Want to know more?
                 </Heading>
                 <div className={styles.samplesGridWrapper}>
-                  <BlogGrid
+                  {blogGroups.map((group, index) => (
+                  <BlogGrid key={index}
                     items={group.items}
                   />
+                  ))}
                 </div>
                 <div className={styles.buttonWrapper}>
                   <Link className={styles.samplesButton} to="https://www.onlyoffice.com/blog/category/for-developers" >
@@ -39,7 +40,6 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
                   </Link>
                 </div>
               </section>
-            ))}
           </main>
         </div>
       </div>
