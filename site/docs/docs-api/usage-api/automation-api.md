@@ -38,7 +38,7 @@ The function called to add an item to the context menu. The process of working w
 | *text*     | string                   | The item caption.                                                                                                          |
 | *data*     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
+| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *onClick*  | function                 | The click event callback.                                                                                                  |
 | *items*    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
 
@@ -89,7 +89,7 @@ The function called to add an item to the toolbar menu. The process of working w
 | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                           |
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                             |
 | *hint*           | string                                      | The item hint.                                                                                                                           |
-| *icons*          | string \| object                            | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
+| *icons*          | string \| object                            | The item icons (see the plugins [config](../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                            |
 | *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.               |
 | *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.). |
@@ -161,7 +161,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 To call commands and send the data back to the editor, define the callCommand method. It allows the connector to send structured data that can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
 
-*The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
+*The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
 
 :::info
 **Office JavaScript API** commands can be only used to create content and insert it into the document editor (using the [*Api.GetDocument().InsertContent(...)*](../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)). This limitation exists due to the co-editing feature in the online editors.
@@ -212,7 +212,7 @@ connector.connect();
 
 ## createWindow
 
-The function called to create the [connector modal window](#connector-window) to display the additional information inside the editor.
+The function called to create the [connector modal window](#connector-window) to display the additional information inside the editor.
 
 ### Example
 
@@ -307,7 +307,7 @@ connector.updateContextMenuItem(items);
 
 ## Connector window
 
-Connector window is a class that represents the connector window. To create it, use the [createWindow](#createwindow) method of the connector object.
+Connector window is a class that represents the connector window. To create it, use the [createWindow](#createwindow) method of the connector object.
 
 Below you can find methods that are available for this class.
 

@@ -72,7 +72,7 @@ You can also create and manage API keys on your portal from the **Developer Tool
 
 When calling the API, pass the API keys in the Authorization header in the same way as an OAuth access token.
 
-API keys should be provided via [HTTP Bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/):
+API keys should be provided via [HTTP Bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/):
 
 ```sh
 Authorization: Bearer ONLYOFFICE_API_KEY
@@ -85,7 +85,7 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
   -H "Authorization: Bearer ONLYOFFICE_API_KEY" 
 ```
 
-where `ONLYOFFICE_API_KEY` is the API key.
+where `ONLYOFFICE_API_KEY` is the API key.
 
 ## Security known issues
 
