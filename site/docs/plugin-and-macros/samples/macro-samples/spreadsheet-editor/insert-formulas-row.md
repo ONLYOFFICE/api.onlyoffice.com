@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # Insert formulas row
 
-Copies formulas from the row above into the currently active row. Select the desired row and run the macro.
+Copies formulas and number formats from the row above into the currently active row. Select the desired row and run the macro.
 
 ```ts
 (function () {
@@ -12,8 +12,25 @@ Copies formulas from the row above into the currently active row. Select the des
   let rowNum = sheet.GetActiveCell().GetRow();
   let sourceRow = sheet.GetRange(rowNum - 1 + ":" + (rowNum - 1));
   let destRow = sheet.GetRange(rowNum + ":" + rowNum);
-  sourceRow.Copy(destRow);
-  sourceRow.PasteSpecial(destRow, "xlPasteFormulas");
+
+  sourceRow.Copy();
+
+  setTimeout(function () {
+    // Paste values and number formats from the source row
+    destRow.PasteSpecial(
+      "xlPasteValuesAndNumberFormats",
+      "xlPasteSpecialOperationNone",
+      false,
+      false,
+    );
+    // Paste formulas from the source row
+    destRow.PasteSpecial(
+      "xlPasteFormulas",
+      "xlPasteSpecialOperationNone",
+      false,
+      false,
+    );
+  }, 100);
 })();
 ```
 

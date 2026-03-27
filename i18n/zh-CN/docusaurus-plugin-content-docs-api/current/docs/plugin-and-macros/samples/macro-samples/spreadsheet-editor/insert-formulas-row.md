@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # 插入公式行
 
-将上方行中的公式复制到当前活动行。选择目标行并运行宏。
+将上方行中的公式和数字格式复制到当前活动行。选择目标行并运行宏。
 
 ```ts
 (function () {
@@ -12,8 +12,25 @@ hide_table_of_contents: true
   let rowNum = sheet.GetActiveCell().GetRow();
   let sourceRow = sheet.GetRange(rowNum - 1 + ":" + (rowNum - 1));
   let destRow = sheet.GetRange(rowNum + ":" + rowNum);
-  sourceRow.Copy(destRow);
-  sourceRow.PasteSpecial(destRow, "xlPasteFormulas");
+
+  sourceRow.Copy();
+
+  setTimeout(function () {
+    // Paste values and number formats from the source row
+    destRow.PasteSpecial(
+      "xlPasteValuesAndNumberFormats",
+      "xlPasteSpecialOperationNone",
+      false,
+      false,
+    );
+    // Paste formulas from the source row
+    destRow.PasteSpecial(
+      "xlPasteFormulas",
+      "xlPasteSpecialOperationNone",
+      false,
+      false,
+    );
+  }, 100);
 })();
 ```
 
