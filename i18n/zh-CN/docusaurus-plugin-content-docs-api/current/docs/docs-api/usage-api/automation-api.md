@@ -4,21 +4,59 @@ sidebar_position: -2
 
 # 自动化应用程序编程接口（API）
 
-**连接器**是一个允许从外部源编辑文本文档、电子表格、演示文稿和可填写表单的类。使用"自动化API" 的示例可以在[此处](../samples/external-access-to-the-document-editing/external-access-to-the-document-editing.md)找到。
+自动化 API 允许通过自定义界面元素从外部源与办公文档进行交互。利用 ONLYOFFICE 文档处理功能构建您自己的 UI 组件 — 管理评论、控制审阅工作流程、自动填写表单等，所有操作都在编辑器外部完成。
 
-要创建连接器，请使用**文档编辑器**对象的 [createConnector](./methods.md#createconnector) 方法 ：
+:::info
+自动化 API 仅适用于 **ONLYOFFICE 文档开发者版**。
+
+这是一项高级功能，默认不包含，需额外付费。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价，或访问 [onlyoffice.com/automation-api](https://www.onlyoffice.com/automation-api) 了解更多信息。
+:::
+
+## 功能展示
+
+探索展示实际用例的交互式示例：
+
+| 用例 | 描述 |
+| -------- | ----------- |
+| [处理评论](../samples/external-access-to-the-document-editing/working-with-comments.md) | 在自定义界面中收集和显示所有文档评论。从您自己的 UI 添加、删除和导航评论。 |
+| [管理审阅修订](../samples/external-access-to-the-document-editing/working-with-review-changes.md) | 从外部控制审阅流程 — 从自定义面板接受或拒绝修订并在修订之间导航。 |
+| [填写表单](../samples/external-access-to-the-document-editing/filling-out-the-form.md) | 使用外部数据自动填充表单字段。在您的界面和文档之间实时同步表单值。 |
+
+## 快速入门
+
+要开始使用自动化 API，请使用 [createConnector](./methods.md#createconnector) 方法创建连接器：
 
 ``` ts
 const connector = docEditor.createConnector();
 ```
 
-:::note
-请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
+连接器提供执行编辑器命令、监听文档事件和与编辑器 UI 交互的方法：
 
-连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
-:::
+``` ts
+// 监听文档事件
+connector.attachEvent("onChangeContentControl", (obj) => {
+  console.log("Content changed:", obj);
+});
 
-连接器与插件具有相同的接口。下面可以找到可用于此类的方法。
+// 执行编辑器方法
+connector.executeMethod("GetAllComments", null, (comments) => {
+  console.log("Comments:", comments);
+});
+
+// 向文档插入内容
+connector.callCommand(() => {
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText("Hello from Automation API");
+  oDocument.InsertContent([oParagraph]);
+});
+```
+
+## 连接器类
+
+**连接器**是一个允许从外部源编辑文本文档、电子表格、演示文稿、PDF 和可填写表单的类。它与插件具有相同的接口。
+
+下面可以找到此类可用的方法。
 
 ## addContextMenuItem
 

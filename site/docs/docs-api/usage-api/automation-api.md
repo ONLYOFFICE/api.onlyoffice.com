@@ -4,21 +4,59 @@ sidebar_position: -2
 
 # Automation API
 
-**Connector** is a class that allows editing text documents, spreadsheets, presentations, PDFs, and fillable forms from an external source. The examples of using Automation API can be found [here](../samples/external-access-to-the-document-editing/external-access-to-the-document-editing.md).
+Automation API enables interaction with office documents from external sources through custom interface elements. Build your own UI components while leveraging ONLYOFFICE document processing — manage comments, control review workflows, auto-fill forms, and more, all from outside the editor.
 
-To create the connector, use the [createConnector](./methods.md#createconnector) method of the **document editor** object:
+:::info
+Automation API is available only for **ONLYOFFICE Docs Developer**.
+
+This is a premium feature not included by default and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote, or learn more at [onlyoffice.com/automation-api](https://www.onlyoffice.com/automation-api).
+:::
+
+## What you can build
+
+Explore interactive examples showing real-world use cases:
+
+| Use case | Description |
+| -------- | ----------- |
+| [Working with comments](../samples/external-access-to-the-document-editing/working-with-comments.md) | Collect and display all document comments in a custom interface. Add, remove, and navigate between comments from your own UI. |
+| [Managing review changes](../samples/external-access-to-the-document-editing/working-with-review-changes.md) | Control the review process externally — accept or reject tracked changes and navigate between revisions from a custom panel. |
+| [Filling out forms](../samples/external-access-to-the-document-editing/filling-out-the-form.md) | Auto-populate form fields with external data. Sync form values between your interface and the document in real-time. |
+
+## Getting started
+
+To start using Automation API, create a connector using the [createConnector](./methods.md#createconnector) method:
 
 ``` ts
 const connector = docEditor.createConnector();
 ```
 
-:::note
-Please note that the connector is available only for the **ONLYOFFICE Docs Developer**.
+The connector provides methods to execute editor commands, listen to document events, and interact with the editor UI:
 
-The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
-:::
+``` ts
+// Listen to document events
+connector.attachEvent("onChangeContentControl", (obj) => {
+  console.log("Content changed:", obj);
+});
 
-The connector has the same interface as plugins. Below you can find methods that are available for this class.
+// Execute editor methods
+connector.executeMethod("GetAllComments", null, (comments) => {
+  console.log("Comments:", comments);
+});
+
+// Insert content into the document
+connector.callCommand(() => {
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText("Hello from Automation API");
+  oDocument.InsertContent([oParagraph]);
+});
+```
+
+## Connector class
+
+The **Connector** class allows editing text documents, spreadsheets, presentations, PDFs, and fillable forms from an external source. It has the same interface as plugins.
+
+Below you can find methods available for this class.
 
 ## addContextMenuItem
 
@@ -361,7 +399,7 @@ The function called to show a modal window inside the editor.
 
 | Name     | Type   | Description                                                                                                                                      |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| settings | object | The modal window parameters that are the same as for plugin [variations](../../plugin-and-macros/structure/configuration/configuration.md#variations). |
+| settings | object | The modal window parameters that are the same for plugin [variations](../../plugin-and-macros/structure/configuration/configuration.md#variations). |
 
 #### Example
 
