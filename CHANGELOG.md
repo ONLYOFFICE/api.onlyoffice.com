@@ -1,5 +1,47 @@
 # Change log
 
+## 8.1.0
+
+### New features
+
+#### Plugins and macros
+
+* Reworked the Get Started section with improved quick-start tutorials (#649)
+* Added Hello World Plugin guide
+* Added Hello World Macro guide
+* Added Comment Text AI Tool tutorial
+
+#### Docs API
+
+* Added comprehensive Document Server configuration documentation (42 files)
+* New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
+
+#### Office API
+
+* Updated PDF API documentation (ApiRun, ApiRichRun, ApiTextPr, ApiShape classes)
+* Updated Presentation API documentation
+* Updated Spreadsheet API documentation
+
+### Improvements
+
+#### Common
+
+* Updated 165 images across the documentation with higher quality screenshots (#248)
+* Added new dark mode variants for plugin-related images (`plugin-manager.dark.png`, `submit-plugin.dark.png`)
+* Enhanced visual clarity for plugin screenshots and structure diagrams
+* Added `rebuild-server-config.yaml` workflow for automated DocServer config documentation rebuilds
+
+#### Playground
+
+* Removed unused legacy scripts (`cell/api.js`, `slide/api.js`, `word/api.js`)
+* Removed deprecated plugin folder
+* Restructured `DEFAULT_SCRIPTS` configuration for better flexibility
+
+### Fixes
+
+* Fixed link in documentation
+* Fixed Docusaurus configuration to exclude `index.md` from category index convention
+
 ## 8.0.0
 
 ### New features
