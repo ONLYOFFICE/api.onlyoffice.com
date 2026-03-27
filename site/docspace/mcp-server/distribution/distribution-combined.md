@@ -127,17 +127,13 @@ This method is ideal for developers who want to customize or contribute to the p
 </TabItem>
 </Tabs>
 
-### References
-
-- [GitHub ONLYOFFICE: DocSpace MCP Server](https://github.com/ONLYOFFICE/docspace-mcp/)
-
 ## Pull from Docker Hub
  
 This method is ideal for developers who want a consistent, isolated runtime environment with minimal setup. Before starting:
 
 - Ensure to have [Docker](https://www.docker.com/) installed on your system.
 
-1. Pull the latest DocSpace MCP server image from Docker Hub:
+1. Pull the latest [DocSpace MCP server image](https://hub.docker.com/r/onlyoffice/docspace-mcp) from Docker Hub:
 
    ```sh
    docker pull onlyoffice/docspace-mcp
@@ -154,10 +150,6 @@ This method is ideal for developers who want a consistent, isolated runtime envi
    ```sh
    docker run --interactive --rm onlyoffice/docspace-mcp
    ```
-
-### References
-
-- [Docker Hub: ONLYOFFICE DocSpace MCP Server](https://hub.docker.com/r/onlyoffice/docspace-mcp)
 
 ## Build with Docker MCP toolkit
 
@@ -179,11 +171,6 @@ This method works best for non-technical users or users who prefer a graphical i
    ```sh
    docker mcp client connect --global <client>
    ```
-
-### References
-
-- [Docker Docs: MCP Catalog and Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/)
-- [Docker MCP: ONLYOFFICE DocSpace](https://hub.docker.com/mcp/server/onlyoffice-docspace/)
 
 ## Build with npm registry
 
@@ -284,4 +271,5 @@ Use this format if you prefer to run the server as a standard Node.js process.
 
 ## After getting the server
 
-- [Connect to MCP clients](../getting-started/clients.md)
+- Learn how to [connect the MCP server to MCP clients](../getting-started/clients.md)
+
