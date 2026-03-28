@@ -27,8 +27,8 @@ The function called to add an item to the context menu. The process of working w
 | *data*     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
 | *icons*    | string                   | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
-| *onClick*  | function                 | The click event callback.                                                                                                  |
-| *items*    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
+| *onClick*  | function                 | The click event callback. Only available for the [addContextMenuItem](#addcontextmenuitem) method.                         |
+| *items*    | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu items for the current item.                                                           |
 
 ### Example
 
@@ -260,20 +260,9 @@ The function called to update an item in the context menu with the specified ite
 
 ### Parameters
 
-| Name  | Type                                         | Description                                           |
-| ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | [ContextMenuItem](#contextmenuitem-1)[] | An array containing the context menu item parameters. |
-
-### ContextMenuItem
-
-| Name     | Type                     | Description                                                                                                                |
-| -------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| id       | string                   | The item ID.                                                                                                               |
-| text     | string                   | The item text.                                                                                                             |
-| data     | string                   | The item data (this data will be sent to the click event callback).                                                        |
-| disabled | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| icons    | string                   | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
-| items    | ContextMenuItem[] | An array containing the context menu items for the current item.                                                           |
+| Name  | Type                                  | Description                                           |
+| ----- | ------------------------------------- | ----------------------------------------------------- |
+| items | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu item parameters. |
 
 ### Example
 

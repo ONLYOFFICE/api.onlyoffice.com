@@ -27,8 +27,8 @@ sidebar_position: 1
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 指定当前项是否已禁用。                                                                          |
 | *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons)文档）。 |
-| *onClick*  | function                 | 点击事件回调。                                                                                                  |
-| *items*    | ContextMenuItem[] | 包含当前项的上下文菜单项的数组。                                                           |
+| *onClick*  | function                 | 点击事件回调。仅适用于 [addContextMenuItem](#addcontextmenuitem) 方法。                                                                                                  |
+| *items*    | [ContextMenuItem](#contextmenuitem)[] | 包含当前项的上下文菜单项的数组。                                                           |
 
 ### 示例
 
@@ -260,20 +260,9 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 
 ### 参数
 
-| 名称  | 类型                                         | 描述                                           |
-| ----- | -------------------------------------------- | ----------------------------------------------------- |
-| items | [ContextMenuItem](#contextmenuitem-1)[] | 包含上下文菜单项参数的数组。 |
-
-### ContextMenuItem
-
-| 名称     | 类型                     | 描述                                                                                                                |
-| -------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| id       | string                   | 项目 ID。                                                                                                               |
-| text     | string                   | 项目文本。                                                                                                             |
-| data     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
-| disabled | boolean                  | 指定当前项目是否已禁用。                                                                          |
-| icons    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
-| items    | ContextMenuItem[] | 包含当前项的上下文菜单项的数组。                                                         |
+| 名称  | 类型                                  | 描述                                           |
+| ----- | ------------------------------------- | ----------------------------------------------------- |
+| items | [ContextMenuItem](#contextmenuitem)[] | 包含上下文菜单项参数的数组。 |
 
 ### 示例
 
