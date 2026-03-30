@@ -16,7 +16,7 @@ ONLYOFFICE 宏与 Microsoft 宏有所不同，Microsoft 宏使用的是 Visual B
 
 如果您希望加快转换过程，从 9.0 版本开始，您可以使用 ONLYOFFICE 内置的 AI 插件自动将 VBA 代码转换为与 ONLYOFFICE 宏兼容的 JavaScript：
 
-1. 配置 AI 插件。详细的配置步骤可以见于[此处]：(https://helpcenter.onlyoffice.com/docs/userguides/ai/configuration.aspx).
+1. 配置 AI 插件。详细的配置步骤可以见于[此处](https://helpcenter.onlyoffice.com/zh/docs/userguides/ai/configuration.aspx)。
 2. 打开**视图**选项卡，点击**宏**。
 3. 在**宏**窗口中点击 **AI** 图标，选择**从 VBA 转换**。
 

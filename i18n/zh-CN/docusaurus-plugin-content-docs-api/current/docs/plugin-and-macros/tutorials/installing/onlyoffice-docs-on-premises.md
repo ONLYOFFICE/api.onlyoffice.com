@@ -38,7 +38,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 `--directory` 参数指定插件文件夹的位置。示例中的路径为默认值，如有需要，请根据实际情况修改。
 :::
 
-完整的服务器命令列表可参考[此处](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands)。
+完整的服务器命令列表可参考[此处](https://helpcenter.onlyoffice.com/zh/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands)。
 
 ## 通过插件管理器为单个用户添加插件 {#adding-plugins-through-the-plugin-manager-for-a-single-user}
 
