@@ -40,8 +40,8 @@ source:
 [Docker Docs: MCP Catalog and Toolkit]: https://docs.docker.com/ai/mcp-catalog-and-toolkit/
 [GitHub Anthropic: MCP Bundles]: https://github.com/anthropics/mcpb/
 
-[Build From Source]: ./build-from-source.md
-[Docker Hub]: ./docker-hub.md
-[Docker MCP]: ./docker-mcp.md
-[GitHub Releases]: ./github-releases.md
-[npm Registry]: ./npm-registry.md
+[Build From Source]: ./distribution-combined.md#build-the-mcp-server-from-source
+[Docker Hub]: ./distribution-combined.md#pull-from-docker-hub
+[Docker MCP]: ./distribution-combined.md#build-with-docker-mcp-toolkit
+[GitHub Releases]: ./distribution-combined.md#download-the-github-release
+[npm Registry]: ./distribution-combined.md#build-with-npm-registry
