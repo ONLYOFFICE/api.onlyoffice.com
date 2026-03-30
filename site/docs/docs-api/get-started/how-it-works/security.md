@@ -16,6 +16,8 @@ The **token** is generated using the *JWT* ([JSON Web Tokens](https://jwt.io/)) 
 
 See the [Signature](../../additional-api/signature/signature.md) configuration section to find more.
 
-> Please note that using the **local links** by the integrator requires the *JWT* in the config. Otherwise, an error will occur.
-> 
-> Be sure to add a token when using local links in the following methods: [insertImage](../../usage-api/methods.md#insertimage), [setHistoryData](../../usage-api/methods.md#sethistorydata), [setMailMergeRecipients](../../usage-api/methods.md#setmailmergerecipients), [setReferenceData](../../usage-api/methods.md#setreferencedata), [setReferenceSource](../../usage-api/methods.md#setreferencesource), [setRequestedDocument](../../usage-api/methods.md#setrequesteddocument), [setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet), [setRevisedFile](../../usage-api/methods.md#setrevisedfile). Moreover, it is necessary when defining the local url for [opening](../../usage-api/config/document/document.md#url) or [conversion](../../additional-api/conversion-api/request.md#url).
+:::note
+Using the **local links** by the integrator requires the *JWT* in the config. Otherwise, an error will occur.
+
+Be sure to add a token when using local links in the following methods: [insertImage](../../usage-api/methods.md#insertimage), [setHistoryData](../../usage-api/methods.md#sethistorydata), [setMailMergeRecipients](../../usage-api/methods.md#setmailmergerecipients), [setReferenceData](../../usage-api/methods.md#setreferencedata), [setReferenceSource](../../usage-api/methods.md#setreferencesource), [setRequestedDocument](../../usage-api/methods.md#setrequesteddocument), [setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet), [setRevisedFile](../../usage-api/methods.md#setrevisedfile). Moreover, it is necessary when defining the local url for [opening](../../usage-api/config/document/document.md#url) or [conversion](../../additional-api/conversion-api/request.md#url).
+:::

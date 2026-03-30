@@ -16,14 +16,14 @@ hide_table_of_contents: true
   sourceRow.Copy();
 
   setTimeout(function () {
-    // Paste values and number formats from the source row
+    // 从源行粘贴值和数字格式
     destRow.PasteSpecial(
       "xlPasteValuesAndNumberFormats",
       "xlPasteSpecialOperationNone",
       false,
       false,
     );
-    // Paste formulas from the source row
+    // 从源行粘贴公式
     destRow.PasteSpecial(
       "xlPasteFormulas",
       "xlPasteSpecialOperationNone",

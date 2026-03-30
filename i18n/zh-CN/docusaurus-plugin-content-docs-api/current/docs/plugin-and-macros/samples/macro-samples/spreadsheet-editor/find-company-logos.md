@@ -2,7 +2,9 @@
 
 通过使用 [API Ninjas](https://api-ninjas.com) 提供的 [Logo API](https://api-ninjas.com/api/logo)，在整个表格中搜索公司徽标。
 
-> 要使用此宏，您需要从 API Ninjas 获取您自己的 API 密钥。
+:::note
+要使用此宏，您需要从 API Ninjas 获取您自己的 API 密钥。
+:::
 
 ```ts
 (function() {

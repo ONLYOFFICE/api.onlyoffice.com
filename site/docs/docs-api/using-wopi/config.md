@@ -22,7 +22,9 @@ For the WOPI protocol setup, it is necessary to edit the WOPI parameters in the 
   </TabItem>
 </Tabs>
 
-> The default values are available in the `default.json` configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade ONLYOFFICE Docs to a new version and all your changes will be lost.
+:::note
+The default values are available in the `default.json` configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade ONLYOFFICE Docs to a new version and all your changes will be lost.
+:::
 
 Restart the services for the config changes to take effect:
 

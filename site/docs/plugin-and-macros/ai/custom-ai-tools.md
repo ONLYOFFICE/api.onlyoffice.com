@@ -259,6 +259,8 @@ The full function flow is shown below, with inline comments explaining each step
 })();
 ```
 
-> To ensure the entire block of changes can be rolled back after the request is executed, we use [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) and [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) methods across the `commentText` function.
+:::note
+To ensure the entire block of changes can be rolled back after the request is executed, we use [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) and [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) methods across the `commentText` function.
+:::
 
 The AI agent functionality continues to evolve alongside the needs of today's digital world. Extend its capabilities by creating your own custom tools, tailored to your specific use cases.

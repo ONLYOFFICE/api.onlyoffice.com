@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 Unmerges all the merged cells in the active worksheet.
 
-> This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
+:::note
+This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
+:::
 
 ``` ts
 (function(){

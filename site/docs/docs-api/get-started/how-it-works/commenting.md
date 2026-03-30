@@ -31,7 +31,9 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> Please note that the document commenting will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::note
+The document commenting will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::
 
 ## Differentiation of commenting rights by authors
 

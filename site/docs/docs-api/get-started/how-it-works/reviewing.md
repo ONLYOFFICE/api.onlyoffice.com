@@ -31,7 +31,9 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> Please note that the document review will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::note
+The document review will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::
 
 ## Differentiation of reviewing rights by groups
 

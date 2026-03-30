@@ -228,7 +228,9 @@ To open the document with both the *viewing* mode enabled, the *document.permiss
 
 You will need to set the *document.permission.edit*, *document.permission.review* and *document.permission.fillForms* parameters to **false**, so that the user will not be able to either edit, or review the document, or change form fields in it. If you additionally want to disable the commenting functionality for the document, set the *comment* parameter also to **false** (the existing comments will be available for viewing though).
 
-> In case you disable all the editing permissions, we suggest that you also set the *document.permissions.chat* to **false**, so that the users with the access to the document could not spam to the document embedded chat.
+:::note
+In case you disable all the editing permissions, we suggest that you also set the *document.permissions.chat* to **false**, so that the users with the access to the document could not spam to the document embedded chat.
+:::
 
 The configuration in this case will look like this:
 
@@ -300,7 +302,9 @@ The *document.info.sharingSettings.user* is a string parameter, which can displa
 
 The *document.info.sharingSettings.permissions* is also a string parameter, which displays the name of the access rights corresponding to the set of rules defining the user access to the current document.
 
-> Please note, that initially there are not any predefined set of rules for the document access. In case you use **ONLYOFFICE Workspace**, there are several access right rules defined (**Full Access, Read Only, Deny Access**) which will be used and displayed. If you set up your own **document storage service**, you will have to define your own set of rules and their names (e.g. **Read-only access** with *document.permission.edit*, *document.permission.review*, *document.permission.fillForms* parameters set to **false**; or **Download only** with all the *document.permission* parameters set to **false** and only *document.permission.download* parameter set to **true**, etc.) and send them to the **document editing service** so that the user could access the document and these settings were displayed in the document **Access rights...** window.
+:::note
+Initially there are not any predefined set of rules for the document access. In case you use **ONLYOFFICE Workspace**, there are several access right rules defined (**Full Access, Read Only, Deny Access**) which will be used and displayed. If you set up your own **document storage service**, you will have to define your own set of rules and their names (e.g. **Read-only access** with *document.permission.edit*, *document.permission.review*, *document.permission.fillForms* parameters set to **false**; or **Download only** with all the *document.permission* parameters set to **false** and only *document.permission.download* parameter set to **true**, etc.) and send them to the **document editing service** so that the user could access the document and these settings were displayed in the document **Access rights...** window.
+:::
 
 The *sharingSettings* configuration might look the following way:
 
@@ -346,4 +350,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> Do not forget to set the *editorConfig.mode* to **edit**, otherwise any commenting functionality will be disabled.
+:::note
+Do not forget to set the *editorConfig.mode* to **edit**, otherwise any commenting functionality will be disabled.
+:::

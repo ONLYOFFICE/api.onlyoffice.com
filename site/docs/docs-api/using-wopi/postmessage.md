@@ -70,4 +70,6 @@ Here you can find the messages that are available for ONLYOFFICE Docs to send to
 </APITable>
 ```
 
-> Please note that the PostMessage messages have the higher priority than the [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) properties provided in *CheckFileInfo*.
+:::note
+The PostMessage messages have the higher priority than the [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) properties provided in *CheckFileInfo*.
+:::

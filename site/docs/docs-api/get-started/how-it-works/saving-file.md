@@ -77,7 +77,9 @@ The conversion start delay is necessary to allow to return to the file editing s
 
 If you want to change it, you can use the *local.json* file, where all the edited parameters should be stored. This file is located in the same directory as the *default.json* file and the **whole object structure** for the necessary parameter **must be retained** (see the examples below).
 
-> Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+:::note
+Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+:::
 
 ### Parameters
 
@@ -150,7 +152,9 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
   The *forcesavetype* parameter will have the **2** value when sending the request to the **callback handler**.
 
-> Please note that you cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](./document-history.md#how-this-can-be-done-in-practice) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
+:::note
+You cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](./document-history.md#how-this-can-be-done-in-practice) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
+:::
 
 ## Saving in original format
 
@@ -189,4 +193,6 @@ Example: true
 }
 ```
 
-> Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
+:::note
+Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
+:::

@@ -2,7 +2,9 @@
 
 使用 [API Ninjas](https://api-ninjas.com) 提供的 [API 词典](https://api-ninjas.com/api/dictionary)在文档中生成单词释义。
 
-> 要使用此宏，您需要从 API Ninjas 获取您自己的 API 密钥。
+:::note
+要使用此宏，您需要从 API Ninjas 获取您自己的 API 密钥。
+:::
 
 ```ts
 (function () {

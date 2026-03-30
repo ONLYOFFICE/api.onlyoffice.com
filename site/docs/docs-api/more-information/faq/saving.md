@@ -79,7 +79,9 @@ The **Autosave** option is enabled by default. To disable it, you need to set th
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-> Please note, that disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
+:::note
+Disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
+:::
 
 Further information about the autosaving can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave).
 

@@ -70,4 +70,6 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-> 请注意，PostMessage 消息的优先级高于 *CheckFileInfo*中提供的 [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) 属性。
+:::note
+请注意，PostMessage 消息的优先级高于 *CheckFileInfo*中提供的 [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) 属性。
+:::

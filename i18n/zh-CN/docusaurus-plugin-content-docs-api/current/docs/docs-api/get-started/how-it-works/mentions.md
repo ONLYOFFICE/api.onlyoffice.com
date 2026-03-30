@@ -78,7 +78,9 @@ sidebar_position: -17
 
 在文档编辑器初始化的配置脚本中，指定用于发送评论消息和电子邮件列表的事件处理程序。当用户添加评论时，将调用[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件。消息和电子邮件列表将在*data*参数中发送。评论数据将在*data.actionLink*参数中接收。与在书签中添加[操作链接](./action-link.md#how-this-can-be-done-in-practice)的情况一样，在配置中必须使用*actionLink*对象作为[editorConfig.actionLink](../../usage-api/config/editor/editor.md#actionlink)参数的值。
 
-> 在5.4版本中，只有在设置了[onRequestUsers](../../usage-api/config/events.md#onrequestusers)事件的情况下，才能使用**onRequestSendNotify**事件。从5.5版本开始，**onRequestSendNotify**和**onRequestUsers**之间不存在这种依赖关系，两者可以独立设置。
+:::note
+在5.4版本中，只有在设置了[onRequestUsers](../../usage-api/config/events.md#onrequestusers)事件的情况下，才能使用**onRequestSendNotify**事件。从5.5版本开始，**onRequestSendNotify**和**onRequestUsers**之间不存在这种依赖关系，两者可以独立设置。
+:::
 
 ``` ts
 function onRequestSendNotify(event) {
@@ -122,6 +124,8 @@ docEditor.setSharingSettings({
 
 如果[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件未提供对文件的访问权限，则必须将编辑器配置的自定义部分中的[mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare)参数设置为**false**。
 
-> 请注意，只有在设置了[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件的情况下，此设置才对评论有效。
+:::note
+请注意，只有在设置了[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件的情况下，此设置才对评论有效。
+:::
 
 <img alt="Mentions" src="/assets/images/editor/mentionShare.png" width="379px" />

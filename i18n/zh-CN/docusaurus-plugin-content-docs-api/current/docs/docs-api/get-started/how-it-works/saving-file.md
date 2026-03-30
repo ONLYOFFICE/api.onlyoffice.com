@@ -77,7 +77,9 @@ import TabItem from '@theme/TabItem';
 
 如果要更改它，可以使用 *local.json* 文件，该文件应存储所有已编辑的参数。此文件与 *default.json* 文件位于同一目录中，并且**必须保留**必要参数的**完整对象结构**（请参见下面的示例）。
 
-> 请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档**升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+:::note
+请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档**升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+:::
 
 ### 参数
 
@@ -150,7 +152,9 @@ import TabItem from '@theme/TabItem';
 
   将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为**2**。
 
-> 请注意，您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
+:::note
+请注意，您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
+:::
 
 ## 以原始格式保存 {#saving-in-original-format}
 
@@ -189,4 +193,6 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-> 请记住，此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 *.doc* 格式）。如有必要，禁用此设置。
+:::note
+请记住，此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 *.doc* 格式）。如有必要，禁用此设置。
+:::
