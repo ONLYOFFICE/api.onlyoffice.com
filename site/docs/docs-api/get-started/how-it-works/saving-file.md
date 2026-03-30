@@ -193,6 +193,6 @@ Example: true
 }
 ```
 
-:::note
+:::warning
 Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
 :::

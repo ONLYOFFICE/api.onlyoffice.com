@@ -100,7 +100,7 @@ import TabItem from '@theme/TabItem';
 
 如果需要卸载默认插件，请进入 *sdkjs-plugins* 文件夹并从此目录中删除相应的插件文件夹。
 
-:::note
+:::warning
 请注意，在 macOS 上从 ONLYOFFICE 桌面编辑器中删除默认插件会破坏软件包的完整性，并可能导致应用程序崩溃。请谨慎操作，除非绝对必要，否则不要这样做。
 :::
 

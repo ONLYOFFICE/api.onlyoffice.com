@@ -228,7 +228,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您需要将 *document.permission.edit*、 *document.permission.review* 和 *document.permission.fillForms* 参数设置为 **false**，这样用户将无法编辑、查看文档或更改其中的表单字段。如果您还想禁用文档的评论功能，请将 *comment* 参数也设置为 **false** （但现有评论将可供查看）。
 
-:::note
+:::tip
 如果您禁用所有的编辑权限，我们建议您也将 *document.permissions.chat* 设置为 **false**，这样有权访问该文档的用户就不会向文档嵌入聊天发送垃圾邮件。
 :::
 
@@ -350,6 +350,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-:::note
+:::tip
 不要忘记将 *editorConfig.mode* 设置为 **edit**，否则任何评论功能都将被禁用。
 :::

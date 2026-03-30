@@ -228,7 +228,7 @@ To open the document with both the *viewing* mode enabled, the *document.permiss
 
 You will need to set the *document.permission.edit*, *document.permission.review* and *document.permission.fillForms* parameters to **false**, so that the user will not be able to either edit, or review the document, or change form fields in it. If you additionally want to disable the commenting functionality for the document, set the *comment* parameter also to **false** (the existing comments will be available for viewing though).
 
-:::note
+:::tip
 In case you disable all the editing permissions, we suggest that you also set the *document.permissions.chat* to **false**, so that the users with the access to the document could not spam to the document embedded chat.
 :::
 
@@ -350,6 +350,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-:::note
+:::tip
 Do not forget to set the *editorConfig.mode* to **edit**, otherwise any commenting functionality will be disabled.
 :::

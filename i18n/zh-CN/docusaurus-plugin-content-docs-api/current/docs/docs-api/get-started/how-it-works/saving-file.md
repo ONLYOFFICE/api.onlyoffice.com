@@ -193,6 +193,6 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-:::note
+:::warning
 请记住，此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 *.doc* 格式）。如有必要，禁用此设置。
 :::
