@@ -27,13 +27,6 @@ The DocSpace MCP server allows you to connect numerous MCP clients, offering fle
 
 **Ensure your API key is valid**. 
 
-## Client configuration
-
-Follow the steps to connect to your client of choice
-
-<Tabs groupId="mcp-clients" queryString="client">
-<TabItem value="Desktop editors" label="ONLYOFFICE Desktop Editors">
-
 ## Connect to ONLYOFFICE Desktop Editor
 
 Connect to the locally running MCP server using stdio transport.
@@ -61,9 +54,6 @@ Connect to the locally running MCP server using stdio transport.
 ```
 
 7. Click **Save**.
-
-</TabItem>
-<TabItem value="claude-desktop" label="Claude Desktop" default>
 
 ## Connect to Claude Desktop
 
@@ -146,9 +136,6 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
    ```
 7. Save the file.
 
-</TabItem>
-<TabItem value="claude-web" label="Claude web">
-
 ## Connect to Claude web
 
 1.  Open Claude Web in your web browser.
@@ -171,9 +158,6 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
     - Sign in to your DocSpace account by entering your email and password and clicking "Sign In".
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
-
-</TabItem>
-<TabItem value="cursor" label="Cursor">
 
 ## Connect to Cursor
 
@@ -244,9 +228,6 @@ Connect to the locally running MCP server using stdio transport.
 6. Enter the values of the `DOCSPACE_BASE_URL` and `DOCSPACE_API_KEY` environment variables. 
 7. Save the file.
 
-</TabItem>
-<TabItem value="Le Chat" label="Le Chat">
-
 ## Connect to Le Chat
 
 1. Open Le Chat  in your web browser.
@@ -269,9 +250,6 @@ Connect to the locally running MCP server using stdio transport.
         - In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
 9. Click **Connect**.
 10. Confirm connection by enabling the Docspace MCP server in the **Enable tools** section of the chat bar. 
-
-</TabItem>
-<TabItem value="vscode" label="VS Code">
 
 ## Connect to VS Code
 
@@ -345,9 +323,6 @@ Connect to the locally running MCP server using stdio transport.
 8. Select **onlyoffice-docspace**;
 9. Select **Start Server**.
 
-</TabItem>
-<TabItem value="Windsurf" label="Windsurf">
-
 ## Connect to Windsurf
 
 Windsurf offers two ways to connect to the DocSpace MCP server:
@@ -419,5 +394,3 @@ This method uses stdio transport to connect to a local running MCP server.
 9. Open **Cascade**. 
 10. Click **Actions(...)**. You'll find **onlyoffice-docspace** under MCP section if connection was successful. Toggle to enable the connection. 
 
-</TabItem>
-</Tabs>
