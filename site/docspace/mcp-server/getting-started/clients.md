@@ -10,8 +10,8 @@ import TabItem from '@theme/TabItem';
 The DocSpace MCP server allows you to connect numerous MCP clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
 
 - [ONLYOFFICE Desktop Editors](#connect-to-onlyoffice-desktop-editor)
-- [Claude-desktop](#connect-to-claude-desktop)
-- [Claude-web](#connect-to-claude-web)
+- [Claude Desktop](#connect-to-claude-desktop)
+- [Claude Web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
 - [Le Chat](#connect-to-le-chat)
 - [VS Code](#connect-to-vs-code)
