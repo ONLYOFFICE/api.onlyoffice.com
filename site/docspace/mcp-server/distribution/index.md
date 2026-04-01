@@ -1,7 +1,6 @@
 ---
 sidebar_label: Distribution
 title: Overview
-sidebar_position: 3
 ---
 
 This document provides an overview of available formats and their corresponding distribution sources for the DocSpace MCP server.

@@ -38,7 +38,7 @@ Before proceeding, ensure to set these environment variables:
 
 ### Install with Docker image
 
-1. [Follow these steps](../distribution/docker-hub.md) to pull the latest DocSpace MCP server from Docker Hub
+1. [Follow these steps](../distribution/distribution-combined.md#pull-from-docker-hub) to pull the latest DocSpace MCP server from Docker Hub
 2. Locate your MCP client `.json` config file. The location of this file depends on the specific client.
 
 3. Add the DocSpace MCP Server entry
@@ -80,7 +80,7 @@ system and the Docker MCP Toolkit to be enabled.
 The Docker MCP toolkit is currently a beta feature and is only available to specific user segments, subscription tiers, or by invitation
 :::
 
-1. Follow [this guide](../distribution/docker-mcp.md) to install the server through the Docker Desktop interface.
+1. Follow [this guide](../distribution/distribution-combined.md#build-with-docker-mcp-toolkit) to install the server through the Docker Desktop interface.
 
 2. [Connect the server to an MCP client](https://docs.docker.com/ai/mcp-catalog-and-toolkit/get-started/#add-mcp-servers) through the Docker Desktop interface.
 
@@ -96,7 +96,7 @@ The Docker MCP toolkit is currently a beta feature and is only available to spec
 
 Running the MCP bundle requires [Node.js](https://nodejs.org/en/download) version 18 or higher to be installed on your system.
 
-1. Download the latest MCP bundle from [GitHub Releases](../distribution/github-releases.md) (typically named `docspace-mcp-bundle-x.x.x.zip` or similar).
+1. Download the latest MCP bundle from [GitHub Releases](../distribution/distribution-combined.md#download-the-mcp-bundle-github-release) (typically named `docspace-mcp-bundle-x.x.x.zip` or similar).
 
 2. Install the MCP bundle in an application by following the application's MCP bundles installation procedure.
 

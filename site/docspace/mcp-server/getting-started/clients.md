@@ -91,7 +91,7 @@ Connect to the MCP server running remotely using Claude's Connectors. This is th
 Connect to the locally running MCP server using Claude's Extensions. Before connecting, ensure to have:
 
 - Node.js (v18 or higher)
-- Download the Github MCP bundle. Follow [these steps](./distribution/github-releases.md) to install Node and the Github release.
+- Download the Github MCP bundle. Follow [these steps](../distribution/distribution-combined.md#download-the-github-release) to install Node and the Github release.
 
 1. Open Claude Desktop;
 2. Navigate to Settings;

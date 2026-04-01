@@ -1,5 +1,5 @@
 ---
-sidebar_label: Distribution
+sidebar_label: Distribution formats
 title: Get the MCP server
 sidebar_position: 4
 ---
