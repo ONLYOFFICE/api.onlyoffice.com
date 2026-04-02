@@ -20,8 +20,8 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
 }) => {
   return (
     <section className={styles.samples}>
-      <div className={styles.samplesСontainer}>
-        <div className={styles.samplesСontainerInner}>
+      <div className={styles.samplesContainer}>
+        <div className={styles.samplesContainerInner}>
           <main>
               <section className={`${styles.sectionGroup} ${styles.blogGroup}`}>
                 <Heading as="h2" className={styles.samplesHeading}>

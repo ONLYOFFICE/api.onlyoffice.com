@@ -20,8 +20,8 @@ const HomepageSamples: FC<HomepageSamplesProps.Props> = ({
 }) => {
   return (
     <section className={styles.samples}>
-      <div className={styles.samplesСontainer}>
-        <div className={styles.samplesСontainerInner}>
+      <div className={styles.samplesContainer}>
+        <div className={styles.samplesContainerInner}>
           <main>
             {samplesGroups.map((group, index) => (
               <section key={index} className={styles.sectionGroup}>
