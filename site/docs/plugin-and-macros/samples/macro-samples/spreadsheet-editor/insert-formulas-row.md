@@ -15,22 +15,20 @@ Copies formulas and number formats from the row above into the currently active 
 
   sourceRow.Copy();
 
-  setTimeout(function () {
-    // Paste values and number formats from the source row
-    destRow.PasteSpecial(
-      "xlPasteValuesAndNumberFormats",
-      "xlPasteSpecialOperationNone",
-      false,
-      false,
-    );
-    // Paste formulas from the source row
-    destRow.PasteSpecial(
-      "xlPasteFormulas",
-      "xlPasteSpecialOperationNone",
-      false,
-      false,
-    );
-  }, 100);
+  // Paste values and number formats from the source row
+  destRow.PasteSpecial(
+    "xlPasteValuesAndNumberFormats",
+    "xlPasteSpecialOperationNone",
+    false,
+    false,
+  );
+  // Paste formulas from the source row
+  destRow.PasteSpecial(
+    "xlPasteFormulas",
+    "xlPasteSpecialOperationNone",
+    false,
+    false,
+  );
 })();
 ```
 
