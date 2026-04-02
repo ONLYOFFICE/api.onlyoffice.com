@@ -20,27 +20,23 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
   return (
     <section className={styles.samples}>
       <div className={styles.samplesContainer}>
-        <div className={styles.samplesContainerInner}>
-          <main>
-              <section className={`${styles.sectionGroup} ${styles.blogGroup}`}>
-                <Heading as="h2" className={styles.samplesHeading}>
-                  Want to know more?
-                </Heading>
-                <div className={styles.samplesGridWrapper}>
-                  {blogGroups.map((group, index) => (
-                  <BlogGrid key={index}
-                    items={group.items}
-                  />
-                  ))}
-                </div>
-                <div className={styles.buttonWrapper}>
-                  <Link className={styles.samplesButton} to="https://www.onlyoffice.com/blog/category/for-developers" >
-                    More news here
-                  </Link>
-                </div>
-              </section>
-          </main>
-        </div>
+        <section className={`${styles.sectionGroup} ${styles.blogGroup}`}>
+          <Heading as="h2" className={styles.samplesHeading}>
+            Want to know more?
+          </Heading>
+          <div className={styles.samplesGridWrapper}>
+            {blogGroups.map((group, index) => (
+            <BlogGrid key={index}
+              items={group.items}
+            />
+            ))}
+          </div>
+          <div className={styles.buttonWrapper}>
+            <Link className={styles.samplesButton} to="https://www.onlyoffice.com/blog/category/for-developers" >
+              More news here
+            </Link>
+          </div>
+        </section>
       </div>
     </section>
   );

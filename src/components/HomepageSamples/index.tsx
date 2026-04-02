@@ -21,27 +21,23 @@ const HomepageSamples: FC<HomepageSamplesProps.Props> = ({
   return (
     <section className={styles.samples}>
       <div className={styles.samplesContainer}>
-        <div className={styles.samplesContainerInner}>
-          <main>
-            {samplesGroups.map((group, index) => (
-              <section key={index} className={styles.sectionGroup}>
-                <Heading as="h2" className={styles.samplesHeading}>
-                  Check out our popular samples
-                </Heading>
-                <div className={styles.samplesGridWrapper}>
-                  <SamplesGrid
-                    items={group.items}
-                  />
-                </div>
-                <div className={styles.buttonWrapper}>
-                  <Link className={styles.samplesButton} to="/samples/docs/docs-api/language-specific-examples/" >
-                    See all samples
-                  </Link>
-                </div>
-              </section>
-            ))}
-          </main>
-        </div>
+        {samplesGroups.map((group, index) => (
+          <section key={index} className={styles.sectionGroup}>
+            <Heading as="h2" className={styles.samplesHeading}>
+              Check out our popular samples
+            </Heading>
+            <div className={styles.samplesGridWrapper}>
+              <SamplesGrid
+                items={group.items}
+              />
+            </div>
+            <div className={styles.buttonWrapper}>
+              <Link className={styles.samplesButton} to="/samples/docs/docs-api/language-specific-examples/" >
+                See all samples
+              </Link>
+            </div>
+          </section>
+        ))}
       </div>
     </section>
   );
