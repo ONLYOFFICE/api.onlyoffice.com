@@ -10,8 +10,8 @@ Copies formulas and number formats from the row above into the currently active 
 (function () {
   let sheet = Api.GetActiveSheet();
   let rowNum = sheet.GetActiveCell().GetRow();
-  let sourceRow = sheet.GetRange(rowNum - 1 + ":" + (rowNum - 1));
-  let destRow = sheet.GetRange(rowNum + ":" + rowNum);
+  let sourceRow = sheet.GetRange(rowNum + ":" + rowNum);
+  let destRow = sheet.GetRange((rowNum + 1) + ":" + (rowNum + 1));
 
   sourceRow.Copy();
 
