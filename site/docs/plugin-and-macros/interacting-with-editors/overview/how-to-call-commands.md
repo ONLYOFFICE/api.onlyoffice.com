@@ -46,7 +46,9 @@ Asc.plugin.callCommand(() => {
 
 This method is executed in its own context isolated from other JavaScript data. If some parameters or any additional data (objects, parameters, variables, etc.)  need to be passed to this method, use **Asc.scope** object.
 
-> The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
+:::note
+The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
+:::
 
 ### Example
 

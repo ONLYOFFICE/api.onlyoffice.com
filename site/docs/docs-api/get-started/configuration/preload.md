@@ -33,4 +33,6 @@ Where **documentserver** is the name of the server with the ONLYOFFICE Docs inst
 
 This option is recommended if you need to set additional security parameters for the iframe or use a nonce to insert into the DOM.
 
-> Use an `<iframe>` for preloading, not a `<link rel="prefetch">`. The editor's static assets (scripts, styles, fonts) are loaded within the iframe's context, and `<link rel="prefetch">` will not correctly trigger their loading or caching.
+:::note
+Use an `<iframe>` for preloading, not a `<link rel="prefetch">`. The editor's static assets (scripts, styles, fonts) are loaded within the iframe's context, and `<link rel="prefetch">` will not correctly trigger their loading or caching.
+:::

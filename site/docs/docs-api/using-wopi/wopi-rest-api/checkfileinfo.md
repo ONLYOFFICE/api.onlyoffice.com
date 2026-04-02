@@ -24,7 +24,9 @@ The *CheckFileInfo* operation must be implemented for all WOPI actions. This ope
 
 ## Required response properties
 
-> Please note that the default value for any response string value is the empty string.
+:::note
+The default value for any response string value is the empty string.
+:::
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';

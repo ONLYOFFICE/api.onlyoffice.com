@@ -62,4 +62,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> The link is generated in the same way when [mentioning](./mentions.md#how-this-can-be-done-in-practice) users in the comments.
+:::note
+The link is generated in the same way when [mentioning](./mentions.md#how-this-can-be-done-in-practice) users in the comments.
+:::

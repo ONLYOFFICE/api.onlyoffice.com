@@ -62,4 +62,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> 在[评论中提及用户](./mentions.md#how-this-can-be-done-in-practice)时，链接的生成方式也是相同的。
+:::note
+在[评论中提及用户](./mentions.md#how-this-can-be-done-in-practice)时，链接的生成方式也是相同的。
+:::

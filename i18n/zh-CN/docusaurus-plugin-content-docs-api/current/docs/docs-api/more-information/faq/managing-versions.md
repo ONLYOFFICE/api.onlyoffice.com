@@ -80,7 +80,9 @@ const data = {
 
 4. 使用指定的所有上述参数打开文档。切换到**文件** > **版本历史** 菜单选项（或 **协作** > **版本历史**），将显示版本数据。
 
-> *history.changes* 对象在版本中显示为较小的更改（修订）。
+:::note
+*history.changes* 对象在版本中显示为较小的更改（修订）。
+:::
 
 ## 如何显示具有突出显示更改的文档？ {#how-to-display-a-document-with-highlighted-changes}
 

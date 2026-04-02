@@ -6,7 +6,9 @@ sidebar_position: -14
 
 以下步骤解释了在ONLYOFFICE文档中如何将多个编辑器连接到同一个HTML页面的过程。
 
-> 从5.5版本开始支持同时使用多个编辑器。
+:::note
+从5.5版本开始支持同时使用多个编辑器。
+:::
 
 <img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px" />
 

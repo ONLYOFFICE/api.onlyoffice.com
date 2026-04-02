@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 将基础货币转换为多个目标货币。也可以获取指定日期的历史货币汇率。使用来自 [currencyapi](https://app.currencyapi.com/) 的货币转换 API。
 
-> 使用此宏需要从 currencyapi 获取您自己的 API 密钥。
+:::note
+使用此宏需要从 currencyapi 获取您自己的 API 密钥。
+:::
 
 ```ts
 (function () {

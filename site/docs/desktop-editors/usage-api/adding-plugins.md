@@ -94,11 +94,15 @@ To uninstall the newly added plugins, proceed in the following way:
 2. Go to **Plugin Manager**.
 3. Click the **Remove** button under the corresponding plugin.
 
-> This option is not available for the default plugins and the plugins added via the plugin folder.
+:::note
+This option is not available for the default plugins and the plugins added via the plugin folder.
+:::
 
 If you need to uninstall the default plugins, go to the *sdkjs-plugins* folder and remove the corresponding plugin folder from this directory.
 
-> Please note that removing the default plugins from ONLYOFFICE Desktop Editors on macOS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
+:::warning
+Removing the default plugins from ONLYOFFICE Desktop Editors on macOS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
+:::
 
 The table below contains default plugins guids to make it easier for you to find them:
 
@@ -117,4 +121,6 @@ The table below contains default plugins guids to make it easier for you to find
 | Zotero         | \{BFC5D5C6-89DE-4168-9565-ABD8D1E48711\} |
 | Send           | \{B509123E-6335-40BD-B965-91EB799346E3\} |
 
-> Please note that after app updating the default plugins will appear again and you will need to uninstall them.
+:::note
+After app updating the default plugins will appear again and you will need to uninstall them.
+:::

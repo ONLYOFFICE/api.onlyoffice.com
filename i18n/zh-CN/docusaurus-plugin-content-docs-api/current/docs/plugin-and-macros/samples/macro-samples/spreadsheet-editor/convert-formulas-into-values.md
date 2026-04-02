@@ -2,7 +2,9 @@
 
 将当前工作表中的所有公式转换为数值。
 
-> 该宏是通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)从 VBA 代码转换而来。
+:::note
+该宏是通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)从 VBA 代码转换而来。
+:::
 
 ``` ts
 (function(){

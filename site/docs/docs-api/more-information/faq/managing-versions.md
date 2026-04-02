@@ -80,7 +80,9 @@ const data = {
 
 4. The document is opened with all the above parameters specified. Switch to the **File** > **Version History** menu option (or **Collaboration** > **Version History**) and there the version data will be displayed.
 
-> The *history.changes* objects are displayed as smaller changes (revisions) within the versions.
+:::note
+The *history.changes* objects are displayed as smaller changes (revisions) within the versions.
+:::
 
 ## How to display a document with highlighted changes?
 

@@ -81,7 +81,9 @@ The host page must contain the following elements:
 </html>
 ```
 
-> Please note that the *"\<%= actionUrl %\>"*, *"\<%= token %\>"*, *"\<%= tokenTtl %\>"*, *"\<%= apiConfig %\>"* strings will be rendered with the appropriate parameters.
+:::note
+The *"\<%= actionUrl %\>"*, *"\<%= token %\>"*, *"\<%= tokenTtl %\>"*, *"\<%= apiConfig %\>"* strings will be rendered with the appropriate parameters.
+:::
 
 ## Parameters
 
