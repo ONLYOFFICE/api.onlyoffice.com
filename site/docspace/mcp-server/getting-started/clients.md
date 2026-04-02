@@ -93,23 +93,23 @@ Connect to the locally running MCP server using Claude's Extensions. Before conn
 - Node.js (v18 or higher)
 - Download the Github MCP bundle. Follow [these steps](../distribution/distribution-combined.md#download-the-github-release) to install Node and the Github release.
 
-1. Open Claude Desktop;
-2. Navigate to Settings;
-3. Navigate to Extensions;
-4. Click "Advanced settings";
-5. Click "Install extension";
-6. Select the downloaded MCP bundle;
+1. Open Claude Desktop.
+2. Navigate to Settings.
+3. Navigate to Extensions.
+4. Click "Advanced settings".
+5. Click "Install extension".
+6. Select the downloaded MCP bundle.
 7. Click "Install".
 
 ### Connect via Local MCP
 
 Connect to the locally running MCP server using Claude's Local MCP servers.
 
-1. Open Claude Desktop;
-2. Navigate to Settings;
-3. Navigate to Developer;
-4. Click "Edit config";
-5. Open the configuration file in a text editor;
+1. Open Claude Desktop.
+2. Navigate to Settings.
+3. Navigate to Developer.
+4. Click "Edit config".
+5. Open the configuration file in a text editor.
 6. Add a new record to the `mcpServers` section:
    ```json
    {
@@ -170,10 +170,10 @@ Cursor allows you to connect to the DocSpace MCP server either via:
 
 Connect to the MCP server running remotely using Streamable-HTTP transport
 
-1. Open Cursor;
-2. Bring up Command Palette;
-3. Select **View: Open MCP Settings**;
-4. Click **Add Custom MCP**;
+1. Open Cursor.
+2. Bring up Command Palette.
+3. Select **View: Open MCP Settings**.
+4. Click **Add Custom MCP**.
 5. Add a new record to the `mcpServers` section:
    ```json
    {
@@ -185,10 +185,10 @@ Connect to the MCP server running remotely using Streamable-HTTP transport
     }
    }
    ```
-6. Save the file;
-7. Navigate back to **MCP Settings**;
-8. Click **Connect** next to the newly added MCP server;
-9. Complete the OAuth authentication process.
+6. Save the file.
+7. Navigate back to **MCP Settings**.
+8. Click **Connect** next to the newly added MCP server.
+9. Complete the OAuth authentication process:
     - Sign in to your DocSpace account by entering your email and password and clicking **Sign In**.
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
@@ -197,10 +197,10 @@ Connect to the MCP server running remotely using Streamable-HTTP transport
 
 Connect to the locally running MCP server using stdio transport.
 
-1. Open Cursor;
-2. Bring up Command Palette;
-3. Select **View: Open MCP Settings**;
-4. Click **Add Custom MCP**;
+1. Open Cursor.
+2. Bring up Command Palette.
+3. Select **View: Open MCP Settings**.
+4. Click **Add Custom MCP**.
 5. Add a new record to the `mcpServers` section:
    ```json
    {
@@ -236,12 +236,12 @@ Connect to the locally running MCP server using stdio transport.
 4. Click **Add Connector**.
 5. Navigate to Custom MCP Connector.
 6. Enter a name for the connector (e.g., "ONLYOFFICE_DocSpace_MCP").
-7. Enter the server URL based on your authenticating method:
+7. Enter the server URL based on your preferred authentication method:
     - **OAuth**: `https://mcp.onlyoffice.com/mcp` 
     - **API Token Authentication**: server URL with your DocSpace instance as a query parameter:
    `https://mcp.onlyoffice.com/mcp?base_url=https://your-instance.onlyoffice.com`
    (replace the base_url value with your actual DocSpace URL).
-8. Authenticate the connection with any of these auth methods 
+8. Authenticate the connection with any of these auth methods:
     - **OAuth**: 
         - Select **OAuth 2.1** from **Authentication method**. 
         - Enter your **Client ID** and **Client Secret** gotten from [creating your custom app on DocSpace](https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/)
@@ -262,9 +262,9 @@ VS Code client also connects to DocSpace MCP server using:
 
 This is the preferred connection method and connects to the remote MCP server using Streamable-HTTP transport. 
 
-1. Open Visual Studio Code;
-2. Bring up Command Palette;
-3. Select **MCP: Open User Configuration**;
+1. Open Visual Studio Code.
+2. Bring up Command Palette.
+3. Select **MCP: Open User Configuration**.
 4. Add a new record to the `servers` section:
    ```json
    {
@@ -276,12 +276,12 @@ This is the preferred connection method and connects to the remote MCP server us
     }
    }
    ```
-5. Save the file;
-6. Bring up Command Palette;
-7. Select **MCP: List Servers**;
-8. Select **onlyoffice-docspace**;
-9. Select **Start Server**;
-10. Complete the OAuth authentication process.
+5. Save the file.
+6. Bring up Command Palette.
+7. Select **MCP: List Servers**.
+8. Select **onlyoffice-docspace**.
+9. Select **Start Server**.
+10. Complete the OAuth authentication process:
     - Sign in to your DocSpace account by entering your email and password and clicking **Sign In**.
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
@@ -290,9 +290,9 @@ This is the preferred connection method and connects to the remote MCP server us
 
 Connect to the locally running MCP server using stdio transport.
 
-1. Open Visual Studio Code;
-2. Bring up Command Palette;
-3. Select **MCP: Open User Configuration**;
+1. Open Visual Studio Code.
+2. Bring up Command Palette.
+3. Select **MCP: Open User Configuration**.
 4. Add a new record to the `servers` section:
    ```json
    {
@@ -317,10 +317,10 @@ Connect to the locally running MCP server using stdio transport.
     }
    }
    ```
-5. Save the file;
-6. Bring up Command Palette;
-7. Select **MCP: List Servers**;
-8. Select **onlyoffice-docspace**;
+5. Save the file.
+6. Bring up Command Palette.
+7. Select **MCP: List Servers**.
+8. Select **onlyoffice-docspace**.
 9. Select **Start Server**.
 
 ## Connect to Windsurf
@@ -334,12 +334,12 @@ Windsurf offers two ways to connect to the DocSpace MCP server:
 
 This is the recommended method and connects to the remote MCP server using Streamable-HTTP transport.
 
-1. Open Windsurf;
-2. Bring up Command Palette;
-3. Select **Open Windsurf User Settings**;
-4. Navigate to **Cascade**;
-5. Click **Open MCP Marketplace**;
-6. Click **Settings**;
+1. Open Windsurf.
+2. Bring up Command Palette.
+3. Select **Open Windsurf User Settings**.
+4. Navigate to **Cascade**.
+5. Click **Open MCP Marketplace**.
+6. Click **Settings**.
 7. Add a new record to the `mcpServers` section:
    ```json
    {
@@ -350,8 +350,8 @@ This is the recommended method and connects to the remote MCP server using Strea
     }
    }
    ```
-8. Save the file;
-9. Complete the OAuth authentication process.
+8. Save the file.
+9. Complete the OAuth authentication process:
     - Sign in to your DocSpace account by entering your email and password and clicking **Sign In**.
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.
@@ -360,12 +360,12 @@ This is the recommended method and connects to the remote MCP server using Strea
 
 This method uses stdio transport to connect to a local running MCP server.
 
-1. Open Windsurf;
-2. Bring up Command Palette;
-3. Select **Open Windsurf User Settings**;
-4. Navigate to **Cascade**;
-5. Click **Open MCP Marketplace**;
-6. Click **Settings**;
+1. Open Windsurf.
+2. Bring up Command Palette.
+3. Select **Open Windsurf User Settings**.
+4. Navigate to **Cascade**.
+5. Click **Open MCP Marketplace**.
+6. Click **Settings**.
 7. Add a new record to the `mcpServers` section:
    ```json
    {
