@@ -7,7 +7,6 @@ import styles from "@site/src/css/sectionGroup.module.css";
 export namespace HomepageBlogProps {
   export type BlogGroup = {
     items: BlogGrid.Item[];
-    linkPrefix?: string;
   };
 
   export type Props = {
