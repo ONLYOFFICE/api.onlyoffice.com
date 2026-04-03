@@ -51,6 +51,7 @@ const CommentsExternalToolbar: React.FC<void> = () => {
         code={""}
         height="550px"
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/withcomments.docx"
+        config={{ editorConfig: { customization: { compactToolbar: true } } }}
         externalScript={{
           beforeDocumentReady: `
             var comments = [];

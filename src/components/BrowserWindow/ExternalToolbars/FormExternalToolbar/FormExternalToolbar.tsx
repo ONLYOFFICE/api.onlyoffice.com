@@ -49,6 +49,7 @@ const FormExternalToolbar: React.FC<void> = () => {
               fillForms: true,
             },
           },
+          editorConfig: { customization: { compactToolbar: true } },
         }}
         externalScript={{
           beforeDocumentReady: `            

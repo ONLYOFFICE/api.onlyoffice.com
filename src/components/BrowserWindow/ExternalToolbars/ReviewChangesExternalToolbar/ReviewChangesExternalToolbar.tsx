@@ -31,6 +31,7 @@ const ReviewChangesExternalToolbar: React.FC<void> = () => {
         code={""}
         height="550px"
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/review.docx"
+        config={{ editorConfig: { customization: { compactToolbar: true } } }}
         externalScript={{
           beforeDocumentReady: `            
             var contentControls = [];
