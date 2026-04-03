@@ -245,10 +245,10 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
 
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/setSort.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/set-sort.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/setSort.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/set-sort.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

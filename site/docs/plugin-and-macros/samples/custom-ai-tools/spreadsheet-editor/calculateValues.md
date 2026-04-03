@@ -364,10 +364,10 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
 
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/calculateValues.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/calculate-values.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/calculateValues.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/calculate-values.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

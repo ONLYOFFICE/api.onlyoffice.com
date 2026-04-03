@@ -145,10 +145,10 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
 
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/addChart.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/add-chart.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/addChart.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/add-chart.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
