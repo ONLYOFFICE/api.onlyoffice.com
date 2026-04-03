@@ -1,7 +1,7 @@
 import { OnlyofficeEditor } from "@site/src/components/BrowserWindow";
 import styles from "./styles.module.css";
 
-const CommentsExternalToolbar: React.FC<void> = () => {
+const CommentsExternalToolbar: React.FC = () => {
   return (
     <>
       <div id="commentsBlock" data-easy="true" className={styles.commentsExternalToolbar} spellCheck="false" style={{ display: "none" }}>
@@ -207,7 +207,7 @@ const CommentsExternalToolbar: React.FC<void> = () => {
                 document.getElementById("addReply").classList.remove("${styles.active}");
                 this.classList.remove("${styles.disabled}");
               }
-            })
+            });
 
             document.getElementById("deleteComment").addEventListener("click", function() {
               if (this.classList.contains("${styles.disabled}")) {

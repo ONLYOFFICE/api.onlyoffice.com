@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 
 const persons: string = JSON.stringify(personsData);
 
-const FormExternalToolbar: React.FC<void> = () => {
+const FormExternalToolbar: React.FC = () => {
   return (
     <>
       <select id={styles.persons} name="persons" defaultValue={"defaultValue"} required disabled>
@@ -85,7 +85,7 @@ const FormExternalToolbar: React.FC<void> = () => {
           `,
           otherFunctional: `
             document.getElementById('${styles.persons}').addEventListener('change', function(e) {
-              const person = ${persons}.find(e => e["PostalCode"] === this.value);
+              const person = ${persons}.find(p => p["PostalCode"] === this.value);
               for (const key in person) {
                 let value = person[key];
                 if (key === "Sex") {
@@ -189,7 +189,7 @@ const FormExternalToolbar: React.FC<void> = () => {
               });
 
               const groupsRadioControls = data
-                .filter(contentControl => contentControl["Tag"] !== "" && contentControl["Type"] == "radio")
+                .filter(contentControl => contentControl["Tag"] !== "" && contentControl["Type"] === "radio")
                 .reduce((r, a) => {
                   r[a["GroupKey"]] = r[a["GroupKey"]] || [];
                   r[a["GroupKey"]].push({ 
@@ -208,13 +208,15 @@ const FormExternalToolbar: React.FC<void> = () => {
                       index.push(i);
                     }
                   }
+                  let removed = 0;
                   for (let i = 0; i < index.length; i++) {
                     if (first) {
-                      data[index[i]]["Tag"] = key;
-                      data[index[i]]["Value"] = value;
+                      data[index[i] - removed]["Tag"] = key;
+                      data[index[i] - removed]["Value"] = value;
                       first = false;
                     } else {
-                      data.splice(index[i], 1);
+                      data.splice(index[i] - removed, 1);
+                      removed++;
                     }
                   }
                 }

@@ -1,7 +1,7 @@
 import { OnlyofficeEditor } from "@site/src/components/BrowserWindow";
 import styles from "./styles.module.css";
 
-const ReviewChangesExternalToolbar: React.FC<void> = () => {
+const ReviewChangesExternalToolbar: React.FC = () => {
   return (
     <>
       <ul className={styles["list-buttons"]}>
@@ -33,10 +33,7 @@ const ReviewChangesExternalToolbar: React.FC<void> = () => {
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/review.docx"
         config={{ editorConfig: { customization: { compactToolbar: true } } }}
         externalScript={{
-          beforeDocumentReady: `            
-            var contentControls = [];
-            var indexComment = 0;  
-          `,
+          beforeDocumentReady: "",
           onDocumentReady: `
             document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
                 btn.classList.remove("${styles.disabled}");
