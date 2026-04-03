@@ -4,28 +4,25 @@ import styles from "./styles.module.css";
 const ReviewChangesExternalToolbar: React.FC = () => {
   return (
     <>
-      <ul className={styles["list-buttons"]}>
-        <li>
-          <button id="accept" className={styles.disabled}>
-            ACCEPT
+      <div className={styles["demo-section"]}>
+        <div className={styles["demo-label"]}>LIVE DEMO</div>
+        <div className={styles["controls-row"]}>
+          <span className={styles["controls-label"]}>External controls</span>
+          <button id="accept" className={`${styles.btn} ${styles.disabled}`}>
+            &#x2713; Accept
           </button>
-        </li>
-        <li>
-          <button id="reject" className={styles.disabled}>
-            REJECT
+          <button id="reject" className={`${styles.btn} ${styles.disabled}`}>
+            &#x2718; Reject
           </button>
-        </li>
-        <li>
-          <button id="prev" className={styles.disabled}>
-            &lt;
+          <button id="prev" className={`${styles.btn} ${styles.disabled}`}>
+            &lsaquo; Prev
           </button>
-        </li>
-        <li>
-          <button id="next" className={styles.disabled}>
-            &gt;
+          <button id="next" className={`${styles.btn} ${styles.disabled}`}>
+            Next &rsaquo;
           </button>
-        </li>
-      </ul>
+          <span id="reviewCounter" className={styles["review-counter"]} />
+        </div>
+      </div>
       <OnlyofficeEditor
         fileType={"docx"}
         code={""}
@@ -33,27 +30,88 @@ const ReviewChangesExternalToolbar: React.FC = () => {
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/review.docx"
         config={{ editorConfig: { customization: { compactToolbar: true } } }}
         externalScript={{
-          beforeDocumentReady: "",
+          beforeDocumentReady: `
+            var reviewCount = 0;
+            var reviewIndex = 0;
+          `,
           onDocumentReady: `
-            document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
-                btn.classList.remove("${styles.disabled}");
+            connector.callCommand(function() {
+              var doc = Api.GetDocument();
+              var report = doc.GetReviewReport();
+              var total = 0;
+              for (var user in report) {
+                total += report[user].length;
+              }
+              return total;
+            }, function(total) {
+              reviewCount = total;
+              reviewIndex = total > 0 ? 1 : 0;
+              updateCounter();
+            });
+
+            document.querySelectorAll(".${styles.btn}").forEach(function(btn) {
+              btn.classList.remove("${styles.disabled}");
             });
           `,
           otherFunctional: `
+            function updateCounter() {
+              var el = document.getElementById("reviewCounter");
+              if (el) {
+                el.textContent = reviewCount > 0
+                  ? "Change " + reviewIndex + " of " + reviewCount
+                  : "";
+              }
+              var prevBtn = document.getElementById("prev");
+              var nextBtn = document.getElementById("next");
+              var acceptBtn = document.getElementById("accept");
+              var rejectBtn = document.getElementById("reject");
+              if (reviewCount === 0) {
+                acceptBtn.classList.add("${styles.disabled}");
+                rejectBtn.classList.add("${styles.disabled}");
+                prevBtn.classList.add("${styles.disabled}");
+                nextBtn.classList.add("${styles.disabled}");
+              } else {
+                acceptBtn.classList.remove("${styles.disabled}");
+                rejectBtn.classList.remove("${styles.disabled}");
+                if (reviewIndex <= 1) {
+                  prevBtn.classList.add("${styles.disabled}");
+                } else {
+                  prevBtn.classList.remove("${styles.disabled}");
+                }
+                if (reviewIndex >= reviewCount) {
+                  nextBtn.classList.add("${styles.disabled}");
+                } else {
+                  nextBtn.classList.remove("${styles.disabled}");
+                }
+              }
+            }
+
             document.getElementById('accept').addEventListener('click', function() {
-                connector.executeMethod("AcceptReviewChanges");
+              connector.executeMethod("AcceptReviewChanges", null, function() {
+                if (reviewCount > 0) reviewCount--;
+                if (reviewIndex > reviewCount) reviewIndex = reviewCount;
+                updateCounter();
+              });
             });
 
             document.getElementById('reject').addEventListener('click', function() {
-                connector.executeMethod("RejectReviewChanges");
+              connector.executeMethod("RejectReviewChanges", null, function() {
+                if (reviewCount > 0) reviewCount--;
+                if (reviewIndex > reviewCount) reviewIndex = reviewCount;
+                updateCounter();
+              });
             });
 
             document.getElementById('prev').addEventListener('click', function() {
-                connector.executeMethod("MoveToNextReviewChange", [false]);
+              connector.executeMethod("MoveToNextReviewChange", [false]);
+              if (reviewIndex > 1) reviewIndex--;
+              updateCounter();
             });
 
             document.getElementById('next').addEventListener('click', function() {
-                connector.executeMethod("MoveToNextReviewChange");
+              connector.executeMethod("MoveToNextReviewChange");
+              if (reviewIndex < reviewCount) reviewIndex++;
+              updateCounter();
             });
           `,
         }}

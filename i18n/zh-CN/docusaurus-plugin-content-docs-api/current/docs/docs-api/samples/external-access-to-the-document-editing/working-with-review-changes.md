@@ -7,30 +7,52 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 
 # 处理评审更改
 
-管理来自外部来源的审核流程。
+使用自动化 API 从外部 UI 接受或拒绝跟踪的更改，无需用户直接操作编辑器。
+
+:::info
+文档以 **修订模式** 打开。您的代码调用 `connector.executeMethod()` 来导航和处理更改。编辑器会实时更新。
+:::
 
 <ReviewChangesExternalToolbar/>
 
 ## 它是如何运作的
 
-1. 当用户单击自定义界面中的 **接受/拒绝** 按钮时，将执行 AcceptReviewChanges / RejectReviewChanges 方法来接受/拒绝编辑器中的选定更改：
+1. 文档就绪时，通过 `connector.callCommand` 使用 [GetReviewReport](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md) 获取评审更改的总数，并显示在计数器中：
 
    ``` ts
-   $("#accept").on("click", () => {
+   connector.callCommand(function () {
+     var doc = Api.GetDocument();
+     var report = doc.GetReviewReport();
+     var total = 0;
+     for (var user in report) {
+       total += report[user].length;
+     }
+     return total;
+   }, function (total) {
+     reviewCount = total;
+     reviewIndex = total > 0 ? 1 : 0;
+     updateCounter();
+   });
+   ```
+
+2. 当用户单击自定义界面中的 **接受/拒绝** 按钮时，将执行 [AcceptReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) 方法来接受/拒绝编辑器中的选定更改：
+
+   ``` ts
+   document.getElementById("accept").addEventListener("click", function () {
      connector.executeMethod("AcceptReviewChanges");
    });
-   $("#reject").on("click", () => {
+   document.getElementById("reject").addEventListener("click", function () {
      connector.executeMethod("RejectReviewChanges");
    });
    ```
 
-2. 当用户单击自定义界面中的箭头按钮时，将执行 MoveToNextReviewChange 方法，在下一次和上一次审阅更改之间移动：
+3. 当用户单击自定义界面中的 **上一个/下一个** 按钮时，将执行 [MoveToNextReviewChange](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) 方法，在评审更改之间导航：
 
    ``` ts
-   $("#prev").on("click", () => {
+   document.getElementById("prev").addEventListener("click", function () {
      connector.executeMethod("MoveToNextReviewChange", [false]);
    });
-   $("#next").on("click", () => {
+   document.getElementById("next").addEventListener("click", function () {
      connector.executeMethod("MoveToNextReviewChange");
    });
    ```
