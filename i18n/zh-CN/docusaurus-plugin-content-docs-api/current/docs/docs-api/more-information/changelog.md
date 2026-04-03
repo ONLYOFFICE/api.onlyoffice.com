@@ -57,7 +57,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onSubmit](../usage-api/config/events.md#onsubmit) 事件。
 - 将 *roles* 字段添加到 [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) 参数。
 - 发送时将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
-- 向 *Automation API* 添加了 [addContextMenuItem](../usage-api/automation-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/automation-api.md#addtoolbarmenuitem) 和 [updateContextMenuItem](../usage-api/automation-api/automation-api.md#updatecontextmenuitem) 方法。
+- 向 *Automation API* 添加了 [addContextMenuItem](../usage-api/automation-api/connector-class.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/connector-class.md#addtoolbarmenuitem) 和 [updateContextMenuItem](../usage-api/automation-api/connector-class.md#updatecontextmenuitem) 方法。
 - 向 Conversion API 添加了 [-10 错误代码](../additional-api/conversion-api/error-codes.md)。
 - [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数现在可用于移动编辑器。
 - 向 [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数添加了 *visible* 字段。
