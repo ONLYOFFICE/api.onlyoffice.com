@@ -97,21 +97,22 @@ const createDocumentConfig = (fileType: string, templateUrl: string, title?: str
   };
 };
 
-function deepMergePreferFirst(a: any, b: any): any {
-  if (typeof a !== "object" || a === null) return a;
-  if (typeof b !== "object" || b === null) return a;
+function deepMerge<T extends object>(target: T, ...sources: Partial<T>[]): T {
+  const result = { ...target } as T;
 
-  const result: any = Array.isArray(a) ? [...a] : { ...b, ...a };
+  for (const source of sources) {
+    for (const key in source) {
+      const targetVal = result[key];
+      const sourceVal = source[key];
 
-  for (const key in b) {
-    if (a.hasOwnProperty(key)) {
-      if (typeof a[key] === "object" && typeof b[key] === "object" && a[key] !== null && b[key] !== null) {
-        result[key] = deepMergePreferFirst(a[key], b[key]);
+      if (sourceVal && typeof sourceVal === "object" && !Array.isArray(sourceVal)) {
+        result[key] = deepMerge(
+          (targetVal && typeof targetVal === "object" ? targetVal : {}) as any,
+          sourceVal as any
+        );
       } else {
-        result[key] = a[key];
+        result[key] = sourceVal as any;
       }
-    } else {
-      result[key] = b[key];
     }
   }
 
@@ -136,7 +137,7 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
     externalConfig.editorConfig.customization.customer.logo = new URL("/assets/images/try-docs/example-logo-big.png", window.location.origin).href;
   }
 
-  const config = deepMergePreferFirst(
+  const config = deepMerge<code>(
     {
       document: documentConfig,
       documentType: getDocumentType(fileType),

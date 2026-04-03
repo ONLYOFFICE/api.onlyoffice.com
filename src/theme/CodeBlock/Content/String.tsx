@@ -111,6 +111,7 @@ export default function CodeBlockString({
                 templateUrl={templateUrl}
                 zoom={zoom}
                 isForm={isForm}
+                config={{ editorConfig: { customization: { compactToolbar: true } } }}
             />
           </Tabs.Content>
         </Tabs.Root>
