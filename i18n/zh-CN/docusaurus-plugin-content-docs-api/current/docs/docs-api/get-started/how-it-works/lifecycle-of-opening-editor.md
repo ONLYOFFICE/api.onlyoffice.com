@@ -167,7 +167,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   之后，可以向[Automation API](../../usage-api/automation-api.md)发送请求。
+   之后，可以向[Automation API](../../usage-api/automation-api/automation-api.md)发送请求。
    
    在以下情况下，`onDocumentReady`事件之后也可能会调用`onOutdatedVersion`或`onRequestRefreshFile`事件：
 
