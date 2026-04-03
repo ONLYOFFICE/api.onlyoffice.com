@@ -6,15 +6,17 @@
 
 #### Plugins and macros
 
-* Reworked the Get Started section with improved quick-start tutorials (#649)
+* Reworked the Get Started section with improved quick-start tutorials
 * Added Hello World Plugin guide
 * Added Hello World Macro guide
 * Added Comment Text AI Tool tutorial
+* Added Insert Formulas Row macro sample for spreadsheet editor
 
 #### Docs API
 
-* Added comprehensive Document Server configuration documentation (42 files)
+* Added comprehensive Document Server configuration documentation
 * New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
+* Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
 
 #### Office API
 
@@ -26,10 +28,37 @@
 
 #### Common
 
-* Updated 165 images across the documentation with higher quality screenshots (#248)
+* Updated 165 images across the documentation with higher quality screenshots
 * Added new dark mode variants for plugin-related images (`plugin-manager.dark.png`, `submit-plugin.dark.png`)
 * Enhanced visual clarity for plugin screenshots and structure diagrams
 * Added `rebuild-server-config.yaml` workflow for automated DocServer config documentation rebuilds
+* Removed legacy GIF assets and replaced with webm videos
+* Renamed webm files from camelCase to kebab-case for consistent naming
+* Replaced non-breaking spaces (U+00A0) with regular spaces across documentation
+* Enabled new S3 sync scheme for production deployment
+
+#### Docs API
+
+* Removed outdated Office JavaScript API limitation notes
+* Removed redundant callback descriptions from how-to-call-commands
+* Consolidated `ContextMenuItem` type definitions in connector class documentation
+* Updated server config link to internal documentation
+
+#### Plugins and macros
+
+* Converted blockquotes to admonitions in macro samples
+
+#### Homepage
+
+* Swapped DocSpace/Docs positioning on the first screen
+* Replaced blog articles on homepage
+* Fixed Cyrillic "С" (U+0421) replaced with Latin "C" in CSS class names
+* Reduced DOM nesting and removed unused assets
+
+#### Localization
+
+* Localized external links on zh-CN plugin and macro pages with Chinese equivalents
+* Added zh-CN translation for AI plugin page with localized links
 
 #### Playground
 
@@ -41,6 +70,9 @@
 
 * Fixed link in documentation
 * Fixed Docusaurus configuration to exclude `index.md` from category index convention
+* Fixed unnecessary `setTimeout` wrapper in insert-formulas-row macro sample
+* Fixed example in macro documentation
+* Changed warning admonition to info where appropriate
 
 ## 8.0.0
 
