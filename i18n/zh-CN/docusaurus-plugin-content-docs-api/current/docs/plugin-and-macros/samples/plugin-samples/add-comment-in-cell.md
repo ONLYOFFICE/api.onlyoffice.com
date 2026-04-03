@@ -100,7 +100,7 @@ GitHub 仓库地址：[example_add_comment_in_cell](https://github.com/ONLYOFFIC
 ## 方法与事件
 
 - [button](../../customization/buttons.md)
-- [init](../../interacting-with-editors/overview/#how-it-works)
+- [init](../../interacting-with-editors/overview/overview.md#how-it-works)
 - [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
