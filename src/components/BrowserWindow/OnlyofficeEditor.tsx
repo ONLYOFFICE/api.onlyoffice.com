@@ -120,7 +120,7 @@ function deepMergePreferFirst(a: any, b: any): any {
 
 const scriptId: string = "editorScript";
 
-const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
+const addScript = async (secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
                          externalConfig?: code, externalScript?: OnlyOfficeEditorProps["externalScript"], isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.id = scriptId;
@@ -220,13 +220,13 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
+          addScript(documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
         };
 
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
+        addScript(documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
       }
     }
 
