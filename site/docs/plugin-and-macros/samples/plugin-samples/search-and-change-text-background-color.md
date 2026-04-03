@@ -6,7 +6,9 @@ Searches for target text and changes its background color.
 
 **Supported editors:** documents.
 
-![SearchAndChangeTextBackgroundColor](/assets/images/plugins/gifs/search-and-change-background-text.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/search-and-change-background-text.webm" type="video/webm" />
+</video>
 
 ## Installation
 

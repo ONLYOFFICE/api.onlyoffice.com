@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文本文档。
 
-![SearchAndChangeTextBackgroundColor](/assets/images/plugins/gifs/search-and-change-background-text.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/search-and-change-background-text.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -99,10 +101,10 @@ GitHub 仓库：[example_search_and_change_text_background_color](https://github
 
 ## 方法和事件
 
-- button
-- init
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 

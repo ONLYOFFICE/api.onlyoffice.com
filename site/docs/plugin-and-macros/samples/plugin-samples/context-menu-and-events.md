@@ -6,7 +6,9 @@ Tracks the events of calling the context menu and clicking on its items. It also
 
 **Supported editors:** documents.
 
-![Context menu and events](/assets/images/plugins/gifs/context-menu-and-events.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/context-menu-and-events.webm" type="video/webm" />
+</video>
 
 ## Installation
 

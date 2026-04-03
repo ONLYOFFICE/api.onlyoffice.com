@@ -127,4 +127,6 @@ Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sd
 
 Run our HTML file and make sure everything works.
 
-<img alt="Authorization sample" src="/assets/images/docspace/gifs/open-editors.gif" width="720px" />
+<video autoPlay loop muted playsInline width="720px">
+  <source src="/assets/images/docspace/webm/open-editors.webm" type="video/webm" />
+</video>

@@ -6,7 +6,9 @@ Inserts the *Hello world!* phrase when the user presses the button.
 
 **Supported editors:** documents.
 
-![HelloWorld](/assets/images/plugins/gifs/hello-world.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/hello-world.webm" type="video/webm" />
+</video>
 
 ## Installation
 

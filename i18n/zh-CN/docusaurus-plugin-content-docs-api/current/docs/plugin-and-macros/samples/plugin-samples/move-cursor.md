@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档。
 
-![MoveCursor](/assets/images/plugins/gifs/move-cursor.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -97,10 +99,10 @@ GitHub 仓库：[示例：移动光标](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 方法和事件
 
-- button
-- init
-- executeMethod ("MoveCursorToStart")
-- executeMethod ("MoveCursorToEnd")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[MoveCursorToStart](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToStart.md)")
+- executeMethod ("[MoveCursorToEnd](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToEnd.md)")
 
 ## 支持
 

@@ -6,7 +6,9 @@ Adds comments to a cell of the spreadsheet.
 
 **Supported editors:** spreadsheets.
 
-![AddCommentInCell](/assets/images/plugins/gifs/add-comment-in-cell.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/add-comment-in-cell.webm" type="video/webm" />
+</video>
 
 ## Installation
 

@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档。
 
-![Context menu and events](/assets/images/plugins/gifs/context-menu-and-events.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/context-menu-and-events.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -208,9 +210,9 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## 方法与事件
 
-- button
-- init
-- onTargetPositionChanged
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
 - [attachContextMenuClickEvent](/docs/plugin-and-macros/customization/context-menu.md#clicking-a-context-menu-item)
 - [executeMethod ("AddContextMenuItem")](/docs/plugin-and-macros/customization/context-menu.md#creating-a-context-menu-item)
 - [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)

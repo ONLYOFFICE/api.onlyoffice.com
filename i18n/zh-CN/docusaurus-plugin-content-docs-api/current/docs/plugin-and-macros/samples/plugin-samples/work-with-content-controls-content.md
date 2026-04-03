@@ -6,9 +6,11 @@
 
 **支持的编辑器：** 文档。
 
-![WorkWithContentControlsContent](/assets/images/plugins/gifs/work-with-content-controls-content.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-content.webm" type="video/webm" />
+</video>
 
-## ## 安装
+## 安装
 
 从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_content) 下载此插件，并按照[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
 
@@ -96,11 +98,11 @@ GitHub 仓库：[example_work_with_content_controls_content](https://github.com/
 
 ## 方法和事件
 
-- button
-- init
-- executeMethod ("GetAllContentControls")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- executeMethod ("SelectContentControl")
+- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SelectContentControl.md)")
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持

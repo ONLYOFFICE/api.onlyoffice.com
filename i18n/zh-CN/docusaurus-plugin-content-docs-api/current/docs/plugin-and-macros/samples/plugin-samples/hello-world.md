@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档。
 
-![HelloWorld](/assets/images/plugins/gifs/hello-world.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/hello-world.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -78,11 +80,11 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 
 ## 方法和事件
 
-- button
-- init
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## 支持
 

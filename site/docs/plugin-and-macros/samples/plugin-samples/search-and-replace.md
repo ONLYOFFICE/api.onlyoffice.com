@@ -6,7 +6,9 @@ Searches for target text and replaces it with something else.
 
 **Supported editors:** documents.
 
-![SearchandReplace](/assets/images/plugins/gifs/search-and-replace.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/search-and-replace.webm" type="video/webm" />
+</video>
 
 ## Installation
 

@@ -6,7 +6,9 @@ Adds a clippy assistant to the document editor.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Clippy](/assets/images/plugins/gifs/clippy.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/clippy.webm" type="video/webm" />
+</video>
 
 ## Installation
 

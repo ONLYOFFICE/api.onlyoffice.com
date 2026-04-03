@@ -10,9 +10,11 @@
 
 **支持的编辑器：** 文档。
 
-![LoadCustomFields](/assets/images/plugins/gifs/load-custom-fields.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/load-custom-fields.webm" type="video/webm" />
+</video>
 
-安装
+## 安装
 
 从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) 下载该插件，并按照以下说明进行安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
 
@@ -102,11 +104,11 @@ GitHub 仓库：[example_customfields_load](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 方法和事件
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("GetAllContentControls")
-- executeMethod ("InsertAndReplaceContentControls")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## 支持
 

@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 电子表格。
 
-![AddCommentInCell](/assets/images/plugins/gifs/add-comment-in-cell.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/add-comment-in-cell.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -97,11 +99,11 @@ GitHub 仓库地址：[example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 ## 方法与事件
 
-- button
-- init
+- [button](../../customization/buttons.md)
+- [init](../../interacting-with-editors/overview/#how-it-works)
 - [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 
-如果你希望请求新功能或报告此插件的相关问题，请前往的事件（issues）区[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues)提交。
+如果你希望请求新功能或报告此插件的相关问题，请前往 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues) 的 issues 区提交。

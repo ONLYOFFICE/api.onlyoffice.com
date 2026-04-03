@@ -6,7 +6,9 @@ Inserts content controls (automatically or manually), navigates and selects them
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsNavigation](/assets/images/plugins/gifs/work-with-content-controls-navigation.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-navigation.webm" type="video/webm" />
+</video>
 
 ## Installation
 

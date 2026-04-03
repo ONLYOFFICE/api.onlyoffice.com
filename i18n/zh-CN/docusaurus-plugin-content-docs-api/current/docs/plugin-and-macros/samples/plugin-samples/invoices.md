@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文本文档。
 
-![Invoices](/assets/images/plugins/gifs/invoices.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/invoices.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -55,9 +57,9 @@ GitHub 仓库地址：[invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 ## 方法和事件
 
-- button
-- init
-- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## 支持
 
