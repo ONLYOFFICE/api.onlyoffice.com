@@ -39,7 +39,7 @@ To install the AI agent, follow the steps below:
 7. In the row of icons, select what the model is used for: *Text*, *Images*, *Embeddings*, *Audio Processing*, *Content Moderation*, *Realtime Tasks*, *Coding Help*, *Visual Analysis*.
 8. Click **OK** to save your settings and complete the connection process.
 
-    ![AI settings](/assets/images/plugins/ai-settings.png#gh-light-mode-only)![AI settings](/assets/images/plugins/ai-settings.dark.png#gh-dark-mode-only)
+   ![AI settings](/assets/images/plugins/ai-settings.png#gh-light-mode-only)![AI settings](/assets/images/plugins/ai-settings.dark.png#gh-dark-mode-only)
 
 9. Go back to the **Settings** and set the model for the **Chatbot**.
 
@@ -60,3 +60,38 @@ The editor supports request history, so you can continue the conversation, givin
 To reset the history, press `Ctrl + Alt + /`.
 
 To disable the agent, use `Esc`.
+
+## How to create an AI assistant {#create-ai-assistant}
+
+The Create AI assistant feature lets you turn any repetitive text task into a dedicated toolbar button. Define a prompt once, and reuse it across your documents.
+
+To create a new assistant:
+
+1. Open the **AI** tab and click **Create AI assistant**.
+
+2. Fill in the fields:
+   - **Name** — a short name for the assistant, displayed as the button label on the toolbar.
+   - **Prompt** — the instruction sent to the AI when the button is clicked.
+   - **Action** — the action type the assistant performs on the document (Hint, Replace, or Replace + Hint).
+
+3. Click **Create**.
+
+   ![Create AI assistant](/assets/images/plugins/create-ai-assistant.png#gh-light-mode-only)![Create AI assistant](/assets/images/plugins/create-ai-assistant.dark.png#gh-dark-mode-only)
+
+The assistant appears as a new button in the **AI** tab and can be used in the document.
+
+:::note
+If the assistant cannot perform the requested action — for example, when the prompt is unrelated to text editing — a warning is displayed and the operation is stopped.
+:::
+
+## AI assistant example {#create-ai-assistant-example}
+
+The following example shows a **Simplify** assistant created with this prompt:
+
+:::tip
+Rewrite the selected text in plain, simple language. Avoid technical jargon and keep sentences short.
+:::
+
+After selecting a text passage and clicking the **Simplify** button, click the highlighted text to open the **Proposal for replacement** panel. It shows the original text alongside the suggested simplified version. An **Explanation** section below describes why and how the text was changed. Click **Accept** to apply the changes or **Reject** to discard them.
+
+![Simplify assistant example](/assets/images/plugins/create-ai-assistant-example.png#gh-light-mode-only)![Simplify assistant example](/assets/images/plugins/create-ai-assistant-example.dark.png#gh-dark-mode-only)
