@@ -20,15 +20,15 @@ The document opens in **Track Changes** mode. Your code calls `connector.execute
 1. On document ready, the total number of review changes is retrieved using [GetReviewReport](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md) via `connector.callCommand` and displayed in the counter:
 
    ``` ts
-   connector.callCommand(function () {
-     var doc = Api.GetDocument();
-     var report = doc.GetReviewReport();
-     var total = 0;
-     for (var user in report) {
+   connector.callCommand(() => {
+     const doc = Api.GetDocument();
+     const report = doc.GetReviewReport();
+     let total = 0;
+     for (const user in report) {
        total += report[user].length;
      }
      return total;
-   }, function (total) {
+   }, (total) => {
      reviewCount = total;
      reviewIndex = total > 0 ? 1 : 0;
      updateCounter();
@@ -38,10 +38,10 @@ The document opens in **Track Changes** mode. Your code calls `connector.execute
 2. When the user clicks the **Accept / Reject** buttons in the custom interface, the [AcceptReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) methods are executed to accept / reject the selected change in the editor:
 
    ``` ts
-   document.getElementById("accept").addEventListener("click", function () {
+   document.getElementById("accept").addEventListener("click", () => {
      connector.executeMethod("AcceptReviewChanges");
    });
-   document.getElementById("reject").addEventListener("click", function () {
+   document.getElementById("reject").addEventListener("click", () => {
      connector.executeMethod("RejectReviewChanges");
    });
    ```
@@ -49,10 +49,10 @@ The document opens in **Track Changes** mode. Your code calls `connector.execute
 3. When the user clicks the **Prev / Next** buttons in the custom interface, the [MoveToNextReviewChange](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) method is executed to navigate between review changes:
 
    ``` ts
-   document.getElementById("prev").addEventListener("click", function () {
+   document.getElementById("prev").addEventListener("click", () => {
      connector.executeMethod("MoveToNextReviewChange", [false]);
    });
-   document.getElementById("next").addEventListener("click", function () {
+   document.getElementById("next").addEventListener("click", () => {
      connector.executeMethod("MoveToNextReviewChange");
    });
    ```

@@ -31,40 +31,40 @@ const ReviewChangesExternalToolbar: React.FC = () => {
         config={{ editorConfig: { customization: { compactToolbar: true } } }}
         externalScript={{
           beforeDocumentReady: `
-            var reviewCount = 0;
-            var reviewIndex = 0;
+            let reviewCount = 0;
+            let reviewIndex = 0;
           `,
           onDocumentReady: `
-            connector.callCommand(function() {
-              var doc = Api.GetDocument();
-              var report = doc.GetReviewReport();
-              var total = 0;
-              for (var user in report) {
+            connector.callCommand(() => {
+              const doc = Api.GetDocument();
+              const report = doc.GetReviewReport();
+              let total = 0;
+              for (const user in report) {
                 total += report[user].length;
               }
               return total;
-            }, function(total) {
+            }, (total) => {
               reviewCount = total;
               reviewIndex = total > 0 ? 1 : 0;
               updateCounter();
             });
 
-            document.querySelectorAll(".${styles.btn}").forEach(function(btn) {
+            document.querySelectorAll(".${styles.btn}").forEach((btn) => {
               btn.classList.remove("${styles.disabled}");
             });
           `,
           otherFunctional: `
-            function updateCounter() {
-              var el = document.getElementById("reviewCounter");
+            const updateCounter = () => {
+              const el = document.getElementById("reviewCounter");
               if (el) {
                 el.textContent = reviewCount > 0
-                  ? "Change " + reviewIndex + " of " + reviewCount
+                  ? \`Change \${reviewIndex} of \${reviewCount}\`
                   : "";
               }
-              var prevBtn = document.getElementById("prev");
-              var nextBtn = document.getElementById("next");
-              var acceptBtn = document.getElementById("accept");
-              var rejectBtn = document.getElementById("reject");
+              const prevBtn = document.getElementById("prev");
+              const nextBtn = document.getElementById("next");
+              const acceptBtn = document.getElementById("accept");
+              const rejectBtn = document.getElementById("reject");
               if (reviewCount === 0) {
                 acceptBtn.classList.add("${styles.disabled}");
                 rejectBtn.classList.add("${styles.disabled}");
@@ -84,31 +84,31 @@ const ReviewChangesExternalToolbar: React.FC = () => {
                   nextBtn.classList.remove("${styles.disabled}");
                 }
               }
-            }
+            };
 
-            document.getElementById('accept').addEventListener('click', function() {
-              connector.executeMethod("AcceptReviewChanges", null, function() {
+            document.getElementById("accept").addEventListener("click", () => {
+              connector.executeMethod("AcceptReviewChanges", null, () => {
                 if (reviewCount > 0) reviewCount--;
                 if (reviewIndex > reviewCount) reviewIndex = reviewCount;
                 updateCounter();
               });
             });
 
-            document.getElementById('reject').addEventListener('click', function() {
-              connector.executeMethod("RejectReviewChanges", null, function() {
+            document.getElementById("reject").addEventListener("click", () => {
+              connector.executeMethod("RejectReviewChanges", null, () => {
                 if (reviewCount > 0) reviewCount--;
                 if (reviewIndex > reviewCount) reviewIndex = reviewCount;
                 updateCounter();
               });
             });
 
-            document.getElementById('prev').addEventListener('click', function() {
+            document.getElementById("prev").addEventListener("click", () => {
               connector.executeMethod("MoveToNextReviewChange", [false]);
               if (reviewIndex > 1) reviewIndex--;
               updateCounter();
             });
 
-            document.getElementById('next').addEventListener('click', function() {
+            document.getElementById("next").addEventListener("click", () => {
               connector.executeMethod("MoveToNextReviewChange");
               if (reviewIndex < reviewCount) reviewIndex++;
               updateCounter();

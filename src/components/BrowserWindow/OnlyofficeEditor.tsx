@@ -162,24 +162,26 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
       window.docEditor = null;
     }
 
-    ${externalScript?.beforeDocumentReady}
-    window.onDocumentReady = function() {
-      window.connector = docEditor.createConnector();
-      connector.callCommand(() => {
-        ${code}
-      }, () => {
-      });
-      ${externalScript?.onDocumentReady}
-    };
+    (() => {
+      ${externalScript?.beforeDocumentReady}
+      window.onDocumentReady = function() {
+        window.connector = docEditor.createConnector();
+        connector.callCommand(() => {
+          ${code}
+        }, () => {
+        });
+        ${externalScript?.onDocumentReady}
+      };
 
-    var config = ${JSON.stringify(config)};
-    config.token = "${token}";
-    config.events = {
-      onDocumentReady: window.onDocumentReady,
-    };
+      const config = ${JSON.stringify(config)};
+      config.token = "${token}";
+      config.events = {
+        onDocumentReady: window.onDocumentReady,
+      };
 
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-    ${externalScript?.otherFunctional}
+      window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+      ${externalScript?.otherFunctional}
+    })();
   `;
 
   document.body.appendChild(scriptConfig);

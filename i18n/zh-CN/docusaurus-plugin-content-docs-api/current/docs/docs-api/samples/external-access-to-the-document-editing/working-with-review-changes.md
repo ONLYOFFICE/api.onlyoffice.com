@@ -20,15 +20,15 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 1. 文档就绪时，通过 `connector.callCommand` 使用 [GetReviewReport](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md) 获取评审更改的总数，并显示在计数器中：
 
    ``` ts
-   connector.callCommand(function () {
-     var doc = Api.GetDocument();
-     var report = doc.GetReviewReport();
-     var total = 0;
-     for (var user in report) {
+   connector.callCommand(() => {
+     const doc = Api.GetDocument();
+     const report = doc.GetReviewReport();
+     let total = 0;
+     for (const user in report) {
        total += report[user].length;
      }
      return total;
-   }, function (total) {
+   }, (total) => {
      reviewCount = total;
      reviewIndex = total > 0 ? 1 : 0;
      updateCounter();
@@ -38,10 +38,10 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 2. 当用户单击自定义界面中的 **接受/拒绝** 按钮时，将执行 [AcceptReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) 方法来接受/拒绝编辑器中的选定更改：
 
    ``` ts
-   document.getElementById("accept").addEventListener("click", function () {
+   document.getElementById("accept").addEventListener("click", () => {
      connector.executeMethod("AcceptReviewChanges");
    });
-   document.getElementById("reject").addEventListener("click", function () {
+   document.getElementById("reject").addEventListener("click", () => {
      connector.executeMethod("RejectReviewChanges");
    });
    ```
@@ -49,10 +49,10 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 3. 当用户单击自定义界面中的 **上一个/下一个** 按钮时，将执行 [MoveToNextReviewChange](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) 方法，在评审更改之间导航：
 
    ``` ts
-   document.getElementById("prev").addEventListener("click", function () {
+   document.getElementById("prev").addEventListener("click", () => {
      connector.executeMethod("MoveToNextReviewChange", [false]);
    });
-   document.getElementById("next").addEventListener("click", function () {
+   document.getElementById("next").addEventListener("click", () => {
      connector.executeMethod("MoveToNextReviewChange");
    });
    ```
