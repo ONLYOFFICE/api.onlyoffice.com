@@ -5,13 +5,7 @@
   background-color: var(--cc-demo-bg);
 }
 
-.demo-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--cc-demo-label-color);
-  margin-bottom: 12px;
-}
+
 
 .demo-layout {
   display: flex;
@@ -271,7 +265,6 @@
 
 :root {
   --cc-demo-bg: #f5f5f0;
-  --cc-demo-label-color: #888888;
   --cc-panel-bg: #ffffff;
   --cc-panel-border: #e5e5e5;
   --cc-panel-title-color: #666666;
@@ -293,7 +286,6 @@
 
 html[data-theme="dark"] {
   --cc-demo-bg: #2a2a2a;
-  --cc-demo-label-color: #999999;
   --cc-panel-bg: #1e1e1e;
   --cc-panel-border: #3a3a3a;
   --cc-panel-title-color: #aaaaaa;

@@ -8,7 +8,7 @@ const FormExternalToolbar: React.FC = () => {
   return (
     <>
       <div className={styles["demo-section"]}>
-        <div className={styles["demo-label"]}>LIVE DEMO</div>
+
         <div className={styles["demo-layout"]}>
           <div className={styles["form-panel"]}>
             <div className={styles["panel-header"]}>

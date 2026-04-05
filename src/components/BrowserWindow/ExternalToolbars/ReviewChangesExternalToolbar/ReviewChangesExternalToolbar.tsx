@@ -5,7 +5,7 @@ const ReviewChangesExternalToolbar: React.FC = () => {
   return (
     <>
       <div className={styles["demo-section"]}>
-        <div className={styles["demo-label"]}>LIVE DEMO</div>
+
         <div className={styles["controls-row"]}>
           <span className={styles["controls-label"]}>External controls</span>
           <button id="accept" className={`${styles.btn} ${styles.disabled}`}>

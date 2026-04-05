@@ -5,13 +5,7 @@
   background-color: var(--form-demo-bg);
 }
 
-.demo-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--form-demo-label-color);
-  margin-bottom: 12px;
-}
+
 
 .demo-layout {
   display: flex;
@@ -157,7 +151,6 @@
 
 :root {
   --form-demo-bg: #f5f5f0;
-  --form-demo-label-color: #888888;
   --form-panel-bg: #ffffff;
   --form-panel-border: #e5e5e5;
   --form-panel-title-color: #666666;
@@ -171,7 +164,6 @@
 
 html[data-theme="dark"] {
   --form-demo-bg: #2a2a2a;
-  --form-demo-label-color: #999999;
   --form-panel-bg: #1e1e1e;
   --form-panel-border: #3a3a3a;
   --form-panel-title-color: #aaaaaa;

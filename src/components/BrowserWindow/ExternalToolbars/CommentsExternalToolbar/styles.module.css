@@ -5,13 +5,7 @@
   background-color: var(--comments-demo-bg);
 }
 
-.demo-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--comments-demo-label-color);
-  margin-bottom: 12px;
-}
+
 
 .demo-layout {
   display: flex;
@@ -224,7 +218,6 @@
 
 :root {
   --comments-demo-bg: #f5f5f0;
-  --comments-demo-label-color: #888888;
   --comments-panel-bg: #ffffff;
   --comments-panel-border: #e5e5e5;
   --comments-panel-title-color: #666666;
@@ -250,7 +243,6 @@
 
 html[data-theme="dark"] {
   --comments-demo-bg: #2a2a2a;
-  --comments-demo-label-color: #999999;
   --comments-panel-bg: #1e1e1e;
   --comments-panel-border: #3a3a3a;
   --comments-panel-title-color: #aaaaaa;
