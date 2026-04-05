@@ -235,7 +235,13 @@ connector.disconnect();
 
 ## executeMethod
 
-调用该函数以使用连接器执行某些编辑器方法。这些方法的完整列表与插件相同。可在[此处](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/Methods.md)找到。
+调用该函数以使用连接器执行某些编辑器方法。这些方法的完整列表与插件相同：
+
+- [文本文档方法](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/Methods.md)
+- [电子表格方法](../../../plugin-and-macros/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
+- [演示文稿方法](../../../plugin-and-macros/interacting-with-editors/presentation-api/Methods/Methods.md)
+- [PDF 方法](../../../plugin-and-macros/interacting-with-editors/pdf-api/Methods/Methods.md)
+- [表单方法](../../../plugin-and-macros/interacting-with-editors/form-api/Methods/Methods.md)
 
 ### 参数
 
