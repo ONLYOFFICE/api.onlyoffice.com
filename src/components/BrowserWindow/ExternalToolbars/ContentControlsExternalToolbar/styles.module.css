@@ -166,6 +166,18 @@
   pointer-events: none;
 }
 
+.color-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .color-swatch {
   display: none;
   width: 28px;
@@ -173,6 +185,11 @@
   border-radius: 50%;
   border: 2px solid var(--cc-input-border);
   cursor: pointer;
+}
+
+.color-hint {
+  font-size: 11px;
+  color: var(--cc-label-color);
 }
 
 .btn-apply {

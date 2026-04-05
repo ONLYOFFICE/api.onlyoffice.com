@@ -48,10 +48,19 @@ const ContentControlsExternalToolbar: React.FC = () => {
                       </select>
                     </div>
                     <div className={styles["prop-row"]}>
-                      <span className={styles["prop-label"]}>Color</span>
-                      <input id="ccColorInput" type="color" className={styles["color-picker-hidden"]} defaultValue="#DCDCDC" />
-                      <span id="ccColor" className={styles["color-swatch"]} />
+                      <span className={styles["prop-label"]}>Colors</span>
+                      <span className={styles["color-group"]}>
+                        <span className={styles["color-item"]}>
+                          <span id="ccBgColor" className={styles["color-swatch"]} data-target="bg" />
+                          <span className={styles["color-hint"]}>BG</span>
+                        </span>
+                        <span className={styles["color-item"]}>
+                          <span id="ccBorderColor" className={styles["color-swatch"]} data-target="border" />
+                          <span className={styles["color-hint"]}>Border</span>
+                        </span>
+                      </span>
                     </div>
+                    <input id="ccColorInput" type="color" className={styles["color-picker-hidden"]} defaultValue="#DCDCDC" />
                   </div>
                   <button id="ccApply" className={`${styles.btn} ${styles["btn-apply"]}`}>Apply changes</button>
                   <pre id="ccJson" className={styles["json-preview"]} />
@@ -114,14 +123,19 @@ const ContentControlsExternalToolbar: React.FC = () => {
                       document.getElementById("ccLock").value = lockMap[props["Lock"]] || "unlocked";
                       document.getElementById("ccAppearance").value = props["Appearance"] === 2 ? "hidden" : "boundingBox";
 
-                      const c = props["Color"];
-                      const hex = c
+                      const toHex = (c) => c
                         ? "#" + [c["R"]||0, c["G"]||0, c["B"]||0].map((v) => v.toString(16).padStart(2, "0")).join("")
                         : "#DCDCDC";
-                      document.getElementById("ccColorInput").value = hex;
-                      const swatch = document.getElementById("ccColor");
-                      swatch.style.backgroundColor = hex;
-                      swatch.style.display = "inline-block";
+
+                      const bgSwatch = document.getElementById("ccBgColor");
+                      bgSwatch.style.backgroundColor = toHex(props["BackgroundColor"]);
+                      bgSwatch.dataset.hex = toHex(props["BackgroundColor"]);
+                      bgSwatch.style.display = "inline-block";
+
+                      const borderSwatch = document.getElementById("ccBorderColor");
+                      borderSwatch.style.backgroundColor = toHex(props["Color"]);
+                      borderSwatch.dataset.hex = toHex(props["Color"]);
+                      borderSwatch.style.display = "inline-block";
 
                       document.getElementById("ccJson").textContent = JSON.stringify({ commonPr: props }, null, 2);
                     });
@@ -170,20 +184,33 @@ const ContentControlsExternalToolbar: React.FC = () => {
                     });
                   });
 
-                  document.getElementById("ccColor").addEventListener("click", () => {
-                    document.getElementById("ccColorInput").click();
+                  let activeColorTarget = null;
+
+                  document.querySelectorAll(".${styles["color-swatch"]}").forEach((swatch) => {
+                    swatch.addEventListener("click", () => {
+                      activeColorTarget = swatch;
+                      const input = document.getElementById("ccColorInput");
+                      input.value = swatch.dataset.hex || "#DCDCDC";
+                      input.click();
+                    });
                   });
 
                   document.getElementById("ccColorInput").addEventListener("input", (e) => {
-                    document.getElementById("ccColor").style.backgroundColor = e.target.value;
+                    if (activeColorTarget) {
+                      activeColorTarget.style.backgroundColor = e.target.value;
+                      activeColorTarget.dataset.hex = e.target.value;
+                    }
                   });
 
                   document.getElementById("ccApply").addEventListener("click", () => {
                     if (!selectedId || !currentProps) return;
-                    const hex = document.getElementById("ccColorInput").value;
-                    const r = parseInt(hex.slice(1, 3), 16);
-                    const g = parseInt(hex.slice(3, 5), 16);
-                    const b = parseInt(hex.slice(5, 7), 16);
+                    const parseHex = (hex) => ({
+                      r: parseInt(hex.slice(1, 3), 16),
+                      g: parseInt(hex.slice(3, 5), 16),
+                      b: parseInt(hex.slice(5, 7), 16),
+                    });
+                    const bg = parseHex(document.getElementById("ccBgColor").dataset.hex || "#DCDCDC");
+                    const border = parseHex(document.getElementById("ccBorderColor").dataset.hex || "#DCDCDC");
 
                     const id = document.getElementById("ccId").value;
                     const tag = document.getElementById("ccTag").value;
@@ -191,7 +218,7 @@ const ContentControlsExternalToolbar: React.FC = () => {
                     const appearance = document.getElementById("ccAppearance").value;
                     const internalId = selectedId;
 
-                    Asc.scope.ccProps = { internalId, id, tag, lock, appearance, r, g, b };
+                    Asc.scope.ccProps = { internalId, id, tag, lock, appearance, bg, border };
                     connector.callCommand(() => {
                       const p = Asc.scope.ccProps;
                       const doc = Api.GetDocument();
@@ -203,9 +230,8 @@ const ContentControlsExternalToolbar: React.FC = () => {
                           cc.SetTag(p.tag);
                           cc.SetLock(p.lock);
                           cc.SetAppearance(p.appearance);
-                          const color = Api.RGBA(p.r, p.g, p.b, 255);
-                          cc.SetBackgroundColor(color);
-                          cc.SetBorderColor(color);
+                          cc.SetBackgroundColor(Api.RGBA(p.bg.r, p.bg.g, p.bg.b, 255));
+                          cc.SetBorderColor(Api.RGBA(p.border.r, p.border.g, p.border.b, 255));
                           break;
                         }
                       }
