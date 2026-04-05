@@ -123,21 +123,38 @@ const ContentControlsExternalToolbar: React.FC = () => {
                       document.getElementById("ccLock").value = lockMap[props["Lock"]] || "unlocked";
                       document.getElementById("ccAppearance").value = props["Appearance"] === 2 ? "hidden" : "boundingBox";
 
-                      const toHex = (c) => c
-                        ? "#" + [c["R"]||0, c["G"]||0, c["B"]||0].map((v) => v.toString(16).padStart(2, "0")).join("")
-                        : "#DCDCDC";
-
-                      const bgSwatch = document.getElementById("ccBgColor");
-                      bgSwatch.style.backgroundColor = toHex(props["BackgroundColor"]);
-                      bgSwatch.dataset.hex = toHex(props["BackgroundColor"]);
-                      bgSwatch.style.display = "inline-block";
-
-                      const borderSwatch = document.getElementById("ccBorderColor");
-                      borderSwatch.style.backgroundColor = toHex(props["Color"]);
-                      borderSwatch.dataset.hex = toHex(props["Color"]);
-                      borderSwatch.style.display = "inline-block";
-
                       document.getElementById("ccJson").textContent = JSON.stringify({ commonPr: props }, null, 2);
+
+                      Asc.scope.ccInternalId = selectedId;
+                      connector.callCommand(() => {
+                        const doc = Api.GetDocument();
+                        const controls = doc.GetAllContentControls();
+                        for (let i = 0; i < controls.length; i++) {
+                          if (controls[i].GetInternalId() === Asc.scope.ccInternalId) {
+                            const bg = controls[i].GetBackgroundColor();
+                            const border = controls[i].GetBorderColor();
+                            return {
+                              bg: bg ? bg.GetHex() : null,
+                              border: border ? border.GetHex() : null,
+                            };
+                          }
+                        }
+                        return null;
+                      }, (colors) => {
+                        const toHex = (hex) => hex ? "#" + hex : "#DCDCDC";
+
+                        const bgHex = toHex(colors && colors.bg);
+                        const bgSwatch = document.getElementById("ccBgColor");
+                        bgSwatch.style.backgroundColor = bgHex;
+                        bgSwatch.dataset.hex = bgHex;
+                        bgSwatch.style.display = "inline-block";
+
+                        const borderHex = toHex(colors && colors.border);
+                        const borderSwatch = document.getElementById("ccBorderColor");
+                        borderSwatch.style.backgroundColor = borderHex;
+                        borderSwatch.dataset.hex = borderHex;
+                        borderSwatch.style.display = "inline-block";
+                      });
                     });
                   };
 
