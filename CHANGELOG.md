@@ -11,12 +11,15 @@
 * Added Hello World Macro guide
 * Added Comment Text AI Tool tutorial
 * Added Insert Formulas Row macro sample for spreadsheet editor
+* Added Create AI assistant documentation with example
 
 #### Docs API
 
 * Added comprehensive Document Server configuration documentation
 * New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
 * Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
+* Added Working with content controls sample for Automation API
+* Added links to all editor methods (text document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
 
 #### Office API
 
@@ -43,6 +46,8 @@
 * Removed redundant callback descriptions from how-to-call-commands
 * Consolidated `ContextMenuItem` type definitions in connector class documentation
 * Updated server config link to internal documentation
+* Redesigned review changes sample with live demo UI and change counter
+* Updated filling out the form and working with comments samples
 
 #### Plugins and macros
 
@@ -54,6 +59,7 @@
 * Replaced blog articles on homepage
 * Fixed Cyrillic "С" (U+0421) replaced with Latin "C" in CSS class names
 * Reduced DOM nesting and removed unused assets
+* Changed navbar sorting
 
 #### Localization
 
@@ -73,6 +79,8 @@
 * Fixed unnecessary `setTimeout` wrapper in insert-formulas-row macro sample
 * Fixed example in macro documentation
 * Changed warning admonition to info where appropriate
+* Fixed broken links across documentation
+* Fixed external components
 
 ## 8.0.0
 
