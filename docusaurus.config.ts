@@ -264,10 +264,9 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'samples',
+          to: 'samples',
           label: 'Samples',
-          docsPluginId: 'api',
+          position: 'left',
         },
         {
           to: 'changelog',
