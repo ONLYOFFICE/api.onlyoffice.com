@@ -32,15 +32,15 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name       | Type    | Example          | Description                                                                                      |
-|------------|---------|------------------|--------------------------------------------------------------------------------------------------|
-| rows       | number  | 3                | Number of rows in the table.                                                                     |
-| columns    | number  | 4                | Number of columns in the table.                                                                  |
-| hasHeaders | boolean | true             | Whether the first row should be formatted as headers.                                            |
-| tableStyle | string  | "Table Grid"     | Optional table style name (e.g., 'Table Grid', 'Light Grid').                                    |
-| width      | number  | 100              | Table width percentage (default is 100).                                                         |
-| widthType  | string  | "percent"        | Width type - 'percent' or 'point' (default is 'percent').                                       |
-| position   | string  | "current"        | Where to insert the table - 'current', 'start', or 'end' (default is 'current').               |
+| Name       | Type    | Example      | Description                                                                      |
+| ---------- | ------- | ------------ | -------------------------------------------------------------------------------- |
+| rows       | number  | 3            | Number of rows in the table.                                                     |
+| columns    | number  | 4            | Number of columns in the table.                                                  |
+| hasHeaders | boolean | true         | Whether the first row should be formatted as headers.                            |
+| tableStyle | string  | "Table Grid" | Optional table style name (e.g., 'Table Grid', 'Light Grid').                    |
+| width      | number  | 100          | Table width percentage (default is 100).                                         |
+| widthType  | string  | "percent"    | Width type - 'percent' or 'point' (default is 'percent').                        |
+| position   | string  | "current"    | Where to insert the table - 'current', 'start', or 'end' (default is 'current'). |
 
 ## Function execution {#function-execution}
 

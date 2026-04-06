@@ -67,9 +67,9 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name     | Type   | Example                       | Description                                                                           |
-|----------|--------|-------------------------------|---------------------------------------------------------------------------------------|
-| scope    | string  | "selection"                  | Whether to summarize the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |
+| Name  | Type   | Example     | Description                                                                                                 |
+| ----- | ------ | ----------- | ----------------------------------------------------------------------------------------------------------- |
+| scope | string | "selection" | Whether to summarize the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |
 
 ## Function execution {#function-execution}
 

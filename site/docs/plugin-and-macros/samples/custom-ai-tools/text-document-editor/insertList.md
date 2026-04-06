@@ -27,11 +27,11 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name     | Type   | Example                                    | Description                                                                           |
-|----------|--------|--------------------------------------------|---------------------------------------------------------------------------------------|
-| items    | array  | ["First item", "Second item", "Third item"] | Array of strings representing list items.                                            |
-| listType | string | "numbered"                                 | 'numbered' for numbered list, 'bulleted' for bulleted list (default is 'bulleted'). |
-| position | string | "current"                                  | Where to insert the list - 'current', 'start', or 'end' (default is 'current').     |
+| Name     | Type   | Example                                     | Description                                                                         |
+| -------- | ------ | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| items    | array  | ["First item", "Second item", "Third item"] | Array of strings representing list items.                                           |
+| listType | string | "numbered"                                  | 'numbered' for numbered list, 'bulleted' for bulleted list (default is 'bulleted'). |
+| position | string | "current"                                   | Where to insert the list - 'current', 'start', or 'end' (default is 'current').     |
 
 ## Function execution {#function-execution}
 

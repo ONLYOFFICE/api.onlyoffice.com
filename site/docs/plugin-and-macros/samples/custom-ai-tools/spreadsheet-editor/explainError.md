@@ -86,8 +86,8 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name      | Type   | Example              | Description                                                                                            |
-| --------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------ |
+| Name      | Type   | Example              | Description                                                                                           |
+| --------- | ------ | -------------------- | ----------------------------------------------------------------------------------------------------- |
 | range     | string | "A1"                 | Specifies cell range containing error to explain (e.g., 'A1'). If omitted, uses active/selected cell. |
 | userInput | string | "Explain this error" | Raw user query that may contain natural language trigger.                                             |
 

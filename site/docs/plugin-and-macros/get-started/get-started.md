@@ -69,18 +69,18 @@ Answer these questions to find your ideal path:
 
 ## Detailed comparison {#detailed-comparison}
 
-| Feature | **Plugins** | **Macros** | **AI plugins** |
-|---------|-------------|------------|----------------|
-| **What is it?** | HTML/CSS/JS app embedded in editor | JavaScript code in documents | Plugin + AI provider integration |
-| **Installation** | Required (marketplace or manual) | None (embedded in docs) | Required (like plugins) |
-| **User interface** | ✅ Full custom UI | ❌ No UI | ✅ Full custom UI |
-| **External APIs** | ✅ Yes (REST, GraphQL, etc.) | ❌ No | ✅ Yes (AI services required) |
-| **Offline use** | ⚠️ Depends on features | ✅ Fully offline | ❌ Requires internet |
-| **Skill level** | Intermediate | Beginner | Advanced |
-| **Dev time** | 2-7 days | 30 mins - 2 hours | 3-10 days |
-| **Distribution** | Marketplace, GitHub, private | Copy-paste, templates | Marketplace, private |
-| **Best for** | Reusable tools, integrations | Personal automation | AI-powered features |
-| **Framework support** | ✅ React, Vue, Angular | ❌ Vanilla JS only | ✅ Any framework |
+| Feature               | **Plugins**                        | **Macros**                   | **AI plugins**                   |
+| --------------------- | ---------------------------------- | ---------------------------- | -------------------------------- |
+| **What is it?**       | HTML/CSS/JS app embedded in editor | JavaScript code in documents | Plugin + AI provider integration |
+| **Installation**      | Required (marketplace or manual)   | None (embedded in docs)      | Required (like plugins)          |
+| **User interface**    | ✅ Full custom UI                   | ❌ No UI                      | ✅ Full custom UI                 |
+| **External APIs**     | ✅ Yes (REST, GraphQL, etc.)        | ❌ No                         | ✅ Yes (AI services required)     |
+| **Offline use**       | ⚠️ Depends on features             | ✅ Fully offline              | ❌ Requires internet              |
+| **Skill level**       | Intermediate                       | Beginner                     | Advanced                         |
+| **Dev time**          | 2-7 days                           | 30 mins - 2 hours            | 3-10 days                        |
+| **Distribution**      | Marketplace, GitHub, private       | Copy-paste, templates        | Marketplace, private             |
+| **Best for**          | Reusable tools, integrations       | Personal automation          | AI-powered features              |
+| **Framework support** | ✅ React, Vue, Angular              | ❌ Vanilla JS only            | ✅ Any framework                  |
 
 ## Troubleshooting {#troubleshooting}
 

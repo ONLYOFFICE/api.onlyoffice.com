@@ -188,8 +188,8 @@ The table below contains default plugins guids to make it easier for you to find
 
 ## Default plugins GUIDs
 
-|                |                                        |
-| -------------- | -------------------------------------- |
+|                |                                          |
+| -------------- | ---------------------------------------- |
 | Highlight code | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |

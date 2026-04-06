@@ -35,9 +35,9 @@ The function called to send an event to the modal window frame. The list of all 
 
 ### Parameters
 
-| Name | Type            | Description     |
-| ---- | --------------- | --------------- |
-| name | string          | The event name. |
+| Name | Type             | Description     |
+| ---- | ---------------- | --------------- |
+| name | string           | The event name. |
 | data | string \| object | The event data. |
 
 ### Example
@@ -56,8 +56,8 @@ The function called to show a modal window inside the editor.
 
 ### Parameters
 
-| Name     | Type   | Description                                                                                                                                      |
-| -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name     | Type   | Description                                                                                                                                            |
+| -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | settings | object | The modal window parameters that are the same for plugin [variations](../../../plugin-and-macros/structure/configuration/configuration.md#variations). |
 
 ### Example
