@@ -10,7 +10,7 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
 使用自动化 API 从外部 UI 添加不同类型的内容控件并检查其属性。
 
 :::info
-从下拉列表中选择内容控件类型，然后点击 **Add** 将其插入文档。在编辑器中点击任何内容控件，即可在面板中查看其属性和 JSON 表示。
+点击内容控件类型标签将其插入文档。使用 **List** 按钮切换所有内容控件的列表。在编辑器中点击任何内容控件，即可在面板中查看其属性和 JSON 表示。
 :::
 
 <ContentControlsExternalToolbar/>
@@ -25,7 +25,7 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
     });
     ```
 
-2. 当用户从下拉列表中选择类型并点击 **Add** 时，将根据类型调用相应的方法：
+2. 当用户点击类型标签时，将根据类型调用相应的方法：
 
     - [AddContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddContentControl.md) — 用于纯文本（块或内联）
     - [AddContentControlDatePicker](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddContentControlDatePicker.md) — 用于日期选择器
@@ -57,6 +57,10 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
     connector.attachEvent("onBlurContentControl", () => {
       selectedId = null;
       // 隐藏详情面板
+    });
+
+    connector.attachEvent("onChangeContentControl", () => {
+      // 刷新列表和属性
     });
     ```
 

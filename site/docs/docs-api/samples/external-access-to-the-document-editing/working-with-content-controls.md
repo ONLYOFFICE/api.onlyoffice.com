@@ -10,7 +10,7 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
 Use the Automation API to add different types of content controls and inspect their properties from an external UI.
 
 :::info
-Choose a content control type from the dropdown and click **Add** to insert it into the document. Click any content control in the editor to view its properties and JSON representation in the panel.
+Click a content control type badge to insert it into the document. Use the **List** button to toggle the list of all content controls. Click any content control in the editor to view its properties and JSON representation in the panel.
 :::
 
 <ContentControlsExternalToolbar/>
@@ -25,7 +25,7 @@ Choose a content control type from the dropdown and click **Add** to insert it i
     });
     ```
 
-2. When the user selects a type from the dropdown and clicks **Add**, the corresponding method is called depending on the type:
+2. When the user clicks a type badge, the corresponding method is called depending on the type:
 
     - [AddContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddContentControl.md) — for plain text (block or inline)
     - [AddContentControlDatePicker](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddContentControlDatePicker.md) — for date pickers
@@ -57,6 +57,10 @@ Choose a content control type from the dropdown and click **Add** to insert it i
     connector.attachEvent("onBlurContentControl", () => {
       selectedId = null;
       // Hide details panel
+    });
+
+    connector.attachEvent("onChangeContentControl", () => {
+      // Refresh the list and properties
     });
     ```
 

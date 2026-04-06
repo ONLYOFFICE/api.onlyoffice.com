@@ -112,6 +112,11 @@ const ContentControlsExternalToolbar: React.FC = () => {
                     document.getElementById("ccRemove").classList.add("${styles.disabled}");
                     renderList();
                   });
+
+                  connector.attachEvent("onChangeContentControl", () => {
+                    refreshCount();
+                    if (selectedId) loadProperties();
+                  });
                 `,
                 otherFunctional: `
                   const loadProperties = () => {
@@ -305,6 +310,7 @@ const ContentControlsExternalToolbar: React.FC = () => {
                       }
                     }, () => {
                       loadProperties();
+                      refreshCount();
                     });
                   });
 
