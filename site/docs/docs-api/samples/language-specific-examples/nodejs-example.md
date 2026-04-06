@@ -1,5 +1,6 @@
 ---
 sidebar_position: -11
+description: Integrate ONLYOFFICE Docs into a Node.js web application.
 ---
 
 import Tabs from '@theme/Tabs';

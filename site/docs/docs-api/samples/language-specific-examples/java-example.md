@@ -1,5 +1,6 @@
 ---
 sidebar_position: -8
+description: Integrate ONLYOFFICE Docs into a Java web application.
 ---
 
 import Tabs from '@theme/Tabs';

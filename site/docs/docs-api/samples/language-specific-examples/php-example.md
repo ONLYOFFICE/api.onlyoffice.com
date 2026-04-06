@@ -1,5 +1,6 @@
 ---
 sidebar_position: -5
+description: Integrate ONLYOFFICE Docs into a PHP web application.
 ---
 
 # PHP example
