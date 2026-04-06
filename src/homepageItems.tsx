@@ -15,9 +15,11 @@ export type BlogArticles = {
 
 export const Samples: Samples = {
   items: [
+    // ── Favorite ──
     {
       icon: <ClockIcon />,
       title: 'Creating advanced form',
+      category: 'favorite',
       description: (
         <>
           Creates advanced form with table structure using Document Builder.
@@ -28,10 +30,7 @@ export const Samples: Samples = {
         'Input fields and checkboxes',
         'Cross-platform generation',
       ],
-      viewLink: {
-        label: 'View example',
-        href: 'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
-      },
+      viewLink:'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
       tags: [
         { label: 'Document Builder', variant: 'blue' },
         { label: 'Forms' },
@@ -42,6 +41,7 @@ export const Samples: Samples = {
     {
       icon: <CodeIcon />,
       title: 'Inserting Pivot Table',
+      category: 'favorite',
       description: (
         <>
           This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range.
@@ -52,10 +52,7 @@ export const Samples: Samples = {
         'Custom range selection',
         'AI-powered automation',
       ],
-      viewLink: {
-        label: 'View example',
-        href: '/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor',
-      },
+      viewLink:'/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor',
       tags: [
         { label: 'Plugins', variant: 'blue' },
         { label: 'Spreadsheet' },
@@ -66,6 +63,7 @@ export const Samples: Samples = {
     {
       icon: <ChatIcon />,
       title: 'Working with comments',
+      category: 'favorite',
       description: (
         <>
           Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in a custom interface.
@@ -76,10 +74,7 @@ export const Samples: Samples = {
         'Custom comment UI',
         'Real-time collaboration',
       ],
-      viewLink: {
-        label: 'View example',
-        href: '/samples/docs/docs-api/external-access-to-the-document-editing/',
-      },
+      viewLink:'/samples/docs/docs-api/external-access-to-the-document-editing/',
       tags: [
         { label: 'Docs API', variant: 'blue' },
         { label: 'Automation', variant: 'purple' },
@@ -87,6 +82,7 @@ export const Samples: Samples = {
         { label: 'Collaboration', variant: 'green' },
       ],
     },
+
   ]
 }
 

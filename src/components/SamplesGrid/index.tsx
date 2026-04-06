@@ -6,6 +6,7 @@ import styles from './styles.module.css';
 export namespace SamplesGrid {
   export type Props = {
     items: Item[];
+    compact?: boolean;
   }
 
   export type Tag = {
@@ -18,11 +19,9 @@ export namespace SamplesGrid {
     title: string;
     description: ReactNode;
     features?: string[];
-    viewLink?: {
-      label: string;
-      href: string;
-    };
+    viewLink?: string;
     tags?: Tag[];
+    category?: string;
   };
 }
 
@@ -41,22 +40,29 @@ const TagBadge: FC<SamplesGrid.Tag> = ({ label, variant = 'default' }) => {
   return <span className={className}>{label}</span>;
 };
 
-const Feature: FC<SamplesGrid.Item> = ({
+type FeatureProps = SamplesGrid.Item & { compact?: boolean };
+
+const Feature: FC<FeatureProps> = ({
   icon,
   title,
   description,
   features,
   viewLink,
   tags,
+  compact,
 }) => {
   const visibleTags = tags?.slice(0, MAX_VISIBLE_TAGS);
   const extraCount = tags ? tags.length - MAX_VISIBLE_TAGS : 0;
 
+  const heading = <Heading as="h3">{title}</Heading>;
+
   return (
     <div className={styles.samplesGridItem}>
       <div className={styles.samplesItemHeader}>
-        {icon && <div className={styles.iconWrapper}>{icon}</div>}
-        <Heading as="h3">{title}</Heading>
+        {!compact && icon && <div className={styles.iconWrapper}>{icon}</div>}
+        {compact && viewLink ? (
+          <Link className={styles.titleLink} to={viewLink}>{heading}</Link>
+        ) : heading}
       </div>
 
       <p className={styles.description}>{description}</p>
@@ -70,9 +76,9 @@ const Feature: FC<SamplesGrid.Item> = ({
       )}
 
       <div className={styles.cardFooter}>
-        {viewLink && (
-          <Link className={styles.viewLink} to={viewLink.href}>
-            {viewLink.label} →
+        {!compact && viewLink && (
+          <Link className={styles.viewLink} to={viewLink}>
+            View example →
           </Link>
         )}
 
@@ -91,11 +97,11 @@ const Feature: FC<SamplesGrid.Item> = ({
   );
 };
 
-export const SamplesGrid: FC<SamplesGrid.Props> = ({ items }) => {
+export const SamplesGrid: FC<SamplesGrid.Props> = ({ items, compact }) => {
   return (
     <div className={styles.samplesGridList}>
       {items.map((props, idx) => (
-        <Feature key={idx} {...props} />
+        <Feature key={idx} {...props} compact={compact} features={compact ? undefined : props.features} />
       ))}
     </div>
   );
