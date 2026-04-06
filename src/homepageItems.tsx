@@ -1,6 +1,9 @@
 import { SamplesGrid } from "@site/src/components/SamplesGrid";
 import { BlogGrid } from "@site/src/components/BlogGrid";
 import Link from '@docusaurus/Link';
+import ClockIcon from "@site/static/icons/clock-icon.svg";
+import CodeIcon from "@site/static/icons/code-icon.svg";
+import ChatIcon from "@site/static/icons/chat-icon.svg";
 
 export type Samples = {
   items: SamplesGrid.Item[]
@@ -10,53 +13,78 @@ export type BlogArticles = {
   items: BlogGrid.Item[]
 };
 
-
 export const Samples: Samples = {
   items: [
     {
+      icon: <ClockIcon />,
       title: 'Creating advanced form',
       description: (
         <>
-          Creates advanced form with table structure.
+          Creates advanced form with table structure using Document Builder.
         </>
       ),
-      seeSamples: [
-        {
-          name: "C++",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp",
-        },
-        {
-          name: ".Net",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_advanced_form/Program.cs",
-        },
+      features: [
+        'Table-based form layout',
+        'Input fields and checkboxes',
+        'Cross-platform generation',
+      ],
+      viewLink: {
+        label: 'View example',
+        href: 'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
+      },
+      tags: [
+        { label: 'Document Builder', variant: 'blue' },
+        { label: 'Forms' },
+        { label: 'C++', variant: 'purple' },
+        { label: '.Net' },
       ],
     },
     {
+      icon: <CodeIcon />,
       title: 'Inserting Pivot Table',
       description: (
         <>
-          This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range or the currently selected range. This tool can be used to summarize, group, or aggregate data by rows and values.
+          This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range.
         </>
       ),
-      seeSamples: [
-        {
-          name: "AI tools",
-          link: "/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor",
-        },
+      features: [
+        'Summarize and group data',
+        'Custom range selection',
+        'AI-powered automation',
+      ],
+      viewLink: {
+        label: 'View example',
+        href: '/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor',
+      },
+      tags: [
+        { label: 'Plugins', variant: 'blue' },
+        { label: 'Spreadsheet' },
+        { label: 'AI tools', variant: 'green' },
+        { label: 'Macros' },
       ],
     },
     {
+      icon: <ChatIcon />,
       title: 'Working with comments',
       description: (
         <>
-          Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in the custom interface.
+          Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in a custom interface.
         </>
       ),
-      seeSamples: [
-        {
-          name: "Automation API",
-          link: "/samples/docs/docs-api/external-access-to-the-document-editing/",
-        },
+      features: [
+        'External document access',
+        'Custom comment UI',
+        'Real-time collaboration',
+      ],
+      viewLink: {
+        label: 'View example',
+        href: '/samples/docs/docs-api/external-access-to-the-document-editing/',
+      },
+      tags: [
+        { label: 'Docs API', variant: 'blue' },
+        { label: 'Automation', variant: 'purple' },
+        { label: 'Comments' },
+        { label: 'Collaboration', variant: 'green' },
       ],
     },
   ]
