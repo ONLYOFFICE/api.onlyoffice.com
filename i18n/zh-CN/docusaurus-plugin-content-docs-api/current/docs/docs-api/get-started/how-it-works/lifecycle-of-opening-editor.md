@@ -54,6 +54,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```mdx-code-block
    <APITable>
    ```
+
       | 范围 | 类型   | 在场 | 描述               |
       | --------- | ------ | -------- | ------------------------- |
       | 信息   | 字符串 | 必需 | 定义消息文本。 |
@@ -61,6 +62,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
      ```mdx-code-block
      </APITable>
      ```
+
    :::note
    请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
    :::

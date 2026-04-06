@@ -11,12 +11,14 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 构建与 ONLYOFFICE 原生体验融为一体的复杂集成。
 
 **适用场景：**
+
 - 嵌入外部内容（[YouTube](../samples/plugin-samples/youtube.md)、媒体库）
 - 第三方集成（[Translator](../samples/plugin-samples/translator.md)、[Zotero](../samples/plugin-samples/zotero.md)、CRM 系统）
 - 高级处理（[OCR](../samples/plugin-samples/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
 **开发概况：**
+
 - **时间：** 2-7 天 | **技能：** 中级 | **技术栈：** HTML/CSS/JavaScript
 - **分发方式：** [ONLYOFFICE 应用市场](https://www.onlyoffice.com/app-directory/zh)或私有部署
 
@@ -27,12 +29,14 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 轻量级 JavaScript，直接在文档中运行，无需安装。
 
 **适用场景：**
+
 - 一键格式化（[重置文本属性](../samples/macro-samples/text-document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
 - 批量操作（[删除空表格](../samples/macro-samples/text-document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
 - 自定义计算（[加权平均值](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md) — 计算所选范围的加权平均值）
 - 文档清理（[删除空段落](../samples/macro-samples/presentation-editor/remove-empty-paragraphs.md) — 删除整个演示文稿中所有不必要的空段落）
 
 **开发概况：**
+
 - **时间：** 30 分钟 - 2 小时 | **技能：** 入门 | **技术栈：** JavaScript 基础
 - **分发方式：** 复制粘贴代码或嵌入文档模板
 
@@ -43,12 +47,14 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 结合 AI 能力的自定义工具，实现新一代文档工作流。
 
 **适用场景：**
+
 - 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/checkSpelling.md) — AI 驱动的拼写检查）
 - 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/changeTextStyle.md) — AI 驱动的文本样式调整）
 - 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/addShapeToSlide.md) — AI 驱动的演示文稿设计）
 - 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explainFormula.md) — AI 驱动的公式解释）
 
 **开发概况：**
+
 - **时间：** 3-10 天 | **技能：** 高级 | **技术栈：** 插件 API + AI 提供商集成
 - **要求：** OpenAI、Claude 或自定义 AI 服务的 API 密钥
 
@@ -81,16 +87,19 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 ### 插件问题
 
 **插件不显示：**
+
 - 检查 `config.json` 中是否有唯一的 GUID
 - 确认文件路径正确
 - 重启 ONLYOFFICE
 
 **JavaScript 错误：**
+
 - 打开浏览器开发者工具（F12）
 - 在 Console 标签页中查看错误信息
 - 确认 `plugin.js` 已加载
 
 **API 方法调用失败：**
+
 - 确认您的 ONLYOFFICE 版本支持该方法
 - 在 [API 参考](../interacting-with-editors/overview/overview.md)中检查方法语法
 - 确认编辑器类型兼容性
@@ -98,16 +107,19 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 ### 宏问题
 
 **宏无法运行：**
+
 - 检查**工具 → 设置**中是否已启用宏
 - 在宏编辑器中检查语法错误
 - 确认 API 方法名称正确
 
 **结果不符合预期：**
+
 - 添加 `console.log()` 语句进行调试
 - 逐步单独测试每个步骤
 - 运行前检查文档状态
 
 **需要更多帮助？**
+
 - [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告问题
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) — 问答归档
@@ -145,16 +157,19 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 ## 下一步 {#next-steps}
 
 **开始构建：**
+
 - [快速入门指南](quick-start/hello-world-macro.md)
 - [插件教程](../structure/getting-started.md)
 - [宏教程](../macros/getting-started.md)
 - [AI 集成](../ai/ai-plugin.md)
 
 **实验探索：**
+
 - [打开 Playground](playground.md)
 - [浏览示例](https://github.com/ONLYOFFICE/sdkjs-plugins)
 
 **深入学习：**
+
 - [API 参考](../interacting-with-editors/overview/overview.md)
 - [最佳实践](../tutorials/developing/for-web-editors.md)
 - [发布指南](../tutorials/publishing.md)

@@ -37,6 +37,7 @@ Paste this code into the editor:
 ```
 
 **What this does:**
+
 - Gets the current document
 - Creates a new paragraph with text
 - Applies bold formatting and blue color
@@ -137,15 +138,18 @@ Try these examples to learn more:
 ## Next steps
 
 **Learn more:**
+
 - [Complete macro guide](../../macros/writing-macros.md)
 - [Custom spreadsheet functions](../../macros/adding-custom-functions.md)
 - [Debugging macros](../../macros/debugging.md)
 
 **Explore examples:**
+
 - [Macro samples collection](../../samples/macro-samples/macro-samples.md)
 - [Converting VBA macros](../../macros/converting-vba-macros.md)
 
 **Need help?**
+
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
 - [FAQ](../../more-information/faq.md) — Frequently asked questions

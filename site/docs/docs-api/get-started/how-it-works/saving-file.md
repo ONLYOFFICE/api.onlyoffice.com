@@ -50,6 +50,7 @@ The reference figure and the steps below explain the process of saving a documen
 
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
+
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 
 4. Open your *html* file in the browser and edit your document.

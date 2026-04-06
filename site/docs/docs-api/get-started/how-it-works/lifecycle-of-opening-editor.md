@@ -54,6 +54,7 @@ Specify there the following events:
      ```mdx-code-block
      <APITable>
      ```
+
       | Parameter | Type   | Presence | Description               |
       | --------- | ------ | -------- | ------------------------- |
       | message   | string | required | Defines the message text. |
@@ -61,6 +62,7 @@ Specify there the following events:
      ```mdx-code-block
      </APITable>
      ```
+
    :::note
    Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../usage-api/config/config.md#type).
    :::

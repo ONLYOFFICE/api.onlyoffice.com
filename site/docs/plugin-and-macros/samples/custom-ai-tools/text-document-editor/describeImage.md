@@ -37,6 +37,7 @@ let func = new RegisteredFunction({
 ```
 
 ## Function execution {#function-execution}
+
 ```js
   func.call = async function (params) {
     let prompt = params.prompt;
@@ -137,6 +138,7 @@ let func = new RegisteredFunction({
 
   return func;
 ```
+
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetImageDataFromSelection.md)  
 
 ## Result

@@ -11,12 +11,14 @@ If you prefer to start coding right away, go directly to the [quick start guides
 Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
+
 - Embedding external content ([YouTube](../samples/plugin-samples/youtube.md), media galleries)
 - Third-party integrations ([Translator](../samples/plugin-samples/translator.md), [Zotero](../samples/plugin-samples/zotero.md), CRM systems)
 - Advanced processing ([OCR](../samples/plugin-samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
+
 - **Time:** 2-7 days | **Skill:** Intermediate | **Tech:** HTML/CSS/JavaScript
 - **Distribution:** [ONLYOFFICE Marketplace](https://www.onlyoffice.com/app-directory/en) or private deployment
 
@@ -27,12 +29,14 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 Lightweight JavaScript that runs directly in documents — no installation needed.
 
 **Perfect for:**
+
 - One-click formatting ([Reset text properties](../samples/macro-samples/text-document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
 - Batch operations ([Remove empty tables](../samples/macro-samples/text-document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
 - Custom calculations ([Find weighted average](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
 - Document cleanup ([Remove empty paragraphs](../samples/macro-samples/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
 
 **Development profile:**
+
 - **Time:** 30 mins - 2 hours | **Skill:** Beginner | **Tech:** JavaScript basics
 - **Distribution:** Copy-paste code or embed in document templates
 
@@ -43,12 +47,14 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 Custom tools enhanced with AI capabilities for next-generation document workflows.
 
 **Perfect for:**
+
 - Writing assistance ([Check spelling](../samples/custom-ai-tools/text-document-editor/checkSpelling.md) — AI-powered spell checking)
 - Smart styling ([Change text style](../samples/custom-ai-tools/text-document-editor/changeTextStyle.md) — AI-powered text styling)
 - Automatic shape generation ([Add shape](../samples/custom-ai-tools/presentation-editor/addShapeToSlide.md) — AI-powered presentation design)
 - Data insights ([Explain formula](../samples/custom-ai-tools/spreadsheet-editor/explainFormula.md) — AI-powered formula explanations)
 
 **Development profile:**
+
 - **Time:** 3-10 days | **Skill:** Advanced | **Tech:** Plugin API + AI provider integration
 - **Requirements:** API keys for OpenAI, Claude, or custom AI services
 
@@ -81,16 +87,19 @@ Answer these questions to find your ideal path:
 ### Plugin issues
 
 **Plugin doesn't appear:**
+
 - Check `config.json` has a unique GUID
 - Verify file paths are correct
 - Restart ONLYOFFICE
 
 **JavaScript errors:**
+
 - Open browser DevTools (F12)
 - Check the Console tab for error messages
 - Verify `plugin.js` is loaded
 
 **API methods fail:**
+
 - Ensure your ONLYOFFICE version supports the method
 - Check method syntax in the [API reference](../interacting-with-editors/overview/overview.md)
 - Verify editor type compatibility
@@ -98,16 +107,19 @@ Answer these questions to find your ideal path:
 ### Macro issues
 
 **Macro doesn't run:**
+
 - Check macros are enabled in **Tools → Settings**
 - Look for syntax errors in the macro editor
 - Verify API method names are correct
 
 **Unexpected results:**
+
 - Add `console.log()` statements for debugging
 - Test each step individually
 - Check document state before running
 
 **Need more help?**
+
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) — Q&A archive
@@ -145,16 +157,19 @@ Answer these questions to find your ideal path:
 ## Next steps {#next-steps}
 
 **Start building:**
+
 - [Quick start guides](quick-start/hello-world-macro.md)
 - [Plugin tutorial](../structure/getting-started.md)
 - [Macro tutorial](../macros/getting-started.md)
 - [AI integration](../ai/ai-plugin.md)
 
 **Experiment:**
+
 - [Open playground](playground.md)
 - [Browse examples](https://github.com/ONLYOFFICE/sdkjs-plugins)
 
 **Learn more:**
+
 - [API reference](../interacting-with-editors/overview/overview.md)
 - [Best practices](../tutorials/developing/for-web-editors.md)
 - [Publishing guide](../tutorials/publishing.md)

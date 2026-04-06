@@ -50,6 +50,7 @@ import TabItem from '@theme/TabItem';
 
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
+
    其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。
 
 4. 在浏览器中打开您的 *html* 文件并编辑您的文档。

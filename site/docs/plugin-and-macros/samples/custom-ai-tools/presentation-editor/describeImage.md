@@ -3,6 +3,7 @@
 This function analyzes the currently selected image and generates a title, caption, description, or alt text using an AI model. The generated text is then inserted into the slide.
 
 ## Prompts
+
 - Generate a caption for the selected image
 - Add a short title for the selected chart
 - Provide accessibility‑friendly alt text for this infographic
@@ -32,7 +33,9 @@ This function analyzes the currently selected image and generates a title, capti
     ]
 });
 ```
+
 ## Function execution
+
 ```ts
   func.call = async function (params) {
     async function insertMessage(message) {

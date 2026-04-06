@@ -36,6 +36,7 @@ func.description = "Use this function if you are asked to comment or explain any
 ```
 
 **关键字段说明：**
+
 - `name` — AI 模型调用的函数名称
 - `params` — 函数期望从 AI 接收的 JSON 参数
 - `examples` — 帮助 AI 学习正确调用语法的示例调用
@@ -143,14 +144,17 @@ func.call = async function (params) {
 ## 下一步
 
 **深入学习：**
+
 - [ONLYOFFICE AI 代理入门](../../ai/ai-agent.md)
 - [深入了解自定义 AI 工具](../../ai/custom-ai-tools.md)
 - [文本注释 API 指南](../../ai/text-annotations-guide.md)
 
 **浏览示例：**
+
 - [浏览所有 AI 工具示例](../../samples/custom-ai-tools/custom-ai-tools.md)
 
 **需要帮助？**
+
 - [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
 - [常见问题](../../more-information/faq.md) — 常见问题解答

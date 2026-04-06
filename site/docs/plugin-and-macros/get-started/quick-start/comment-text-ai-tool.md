@@ -36,6 +36,7 @@ func.description = "Use this function if you are asked to comment or explain any
 ```
 
 **Key fields explained:**
+
 - `name` — The function name the AI model will invoke
 - `params` — Parameters the function expects from the AI as a JSON object
 - `examples` — Sample invocations that teach the AI the correct calling syntax
@@ -143,14 +144,17 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 ## Next steps
 
 **Learn more:**
+
 - [Getting started with ONLYOFFICE AI agent](../../ai/ai-agent.md)
 - [Learn more about custom AI tools](../../ai/custom-ai-tools.md)
 - [Text annotations API guide](../../ai/text-annotations-guide.md)
 
 **Explore examples:**
+
 - [Browse all AI tool examples](../../samples/custom-ai-tools/custom-ai-tools.md)
 
 **Need help?**
+
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
 - [FAQ](../../more-information/faq.md) — Frequently asked questions
