@@ -34,6 +34,31 @@
   border-bottom: 1px solid var(--cc-panel-border);
 }
 
+.panel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel-list-btn {
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border: 1px solid var(--cc-btn-border);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--cc-btn-color);
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.panel-list-btn-active {
+  color: #ffffff;
+  background-color: #ff6f3d;
+  border-color: #ff6f3d;
+}
+
 .panel-title {
   font-size: 12px;
   font-weight: 700;
@@ -84,6 +109,38 @@
 .type-picture { border-left-color: #E8915B; }
 .type-combo { border-left-color: #7BB892; }
 .type-checkbox { border-left-color: #C47DB5; }
+
+/* CC list */
+
+.cc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.cc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--cc-panel-border);
+  background-color: var(--cc-input-bg);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.cc-item-active {
+  border-color: #ff6f3d;
+  background-color: var(--cc-item-active-bg);
+}
+
+.cc-item-label {
+  font-size: 11px;
+  font-family: monospace;
+  color: var(--cc-label-color);
+}
 
 /* Details */
 
@@ -275,6 +332,7 @@
   --cc-label-color: #666666;
   --cc-badge-bg: #f4f4f1;
   --cc-badge-color: #444444;
+  --cc-item-active-bg: #fff5f0;
   --cc-json-bg: #f8f8f5;
   --cc-json-color: #444444;
   --cc-empty-color: #999999;
@@ -296,6 +354,7 @@ html[data-theme="dark"] {
   --cc-label-color: #aaaaaa;
   --cc-badge-bg: #2c2c2c;
   --cc-badge-color: #d4d4d4;
+  --cc-item-active-bg: #3a2a20;
   --cc-json-bg: #111111;
   --cc-json-color: #d4d4d4;
   --cc-empty-color: #777777;
@@ -306,6 +365,21 @@ html[data-theme="dark"] {
 }
 
 @media (hover: hover) {
+  .panel-list-btn:hover {
+    color: #ff6f3d;
+    border-color: #ff6f3d;
+  }
+
+  .panel-list-btn-active:hover {
+    color: #ffffff;
+    background-color: #e5612e;
+    border-color: #e5612e;
+  }
+
+  .cc-item:hover {
+    border-color: #ff6f3d;
+  }
+
   .type-badge:hover {
     background-color: var(--cc-badge-hover-bg, #eee8dd);
   }

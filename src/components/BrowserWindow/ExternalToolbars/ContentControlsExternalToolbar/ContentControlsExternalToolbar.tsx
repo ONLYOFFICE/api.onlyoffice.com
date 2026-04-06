@@ -9,8 +9,11 @@ const ContentControlsExternalToolbar: React.FC = () => {
         <div className={styles["demo-layout"]}>
           <div className={styles["panel"]}>
             <div className={styles["panel-header"]}>
-              <span className={styles["panel-title"]}>CONTENT CONTROLS</span>
-              <span id="ccCount" className={styles["panel-count"]}>0</span>
+              <div className={styles["panel-header-left"]}>
+                <span className={styles["panel-title"]}>CONTENT CONTROLS</span>
+                <span id="ccCount" className={styles["panel-count"]}>0</span>
+              </div>
+              <button id="ccListToggle" className={styles["panel-list-btn"]}>{"\u2261"} List</button>
             </div>
             <div className={styles["panel-body"]}>
               <div className={styles["type-list"]}>
@@ -20,6 +23,7 @@ const ContentControlsExternalToolbar: React.FC = () => {
                 <button data-type="comboBox" className={`${styles["type-badge"]} ${styles["type-combo"]}`}>Combobox/Dropdown list</button>
                 <button data-type="checkBox" className={`${styles["type-badge"]} ${styles["type-checkbox"]}`}>Checkbox</button>
               </div>
+              <div id="ccList" className={styles["cc-list"]} style={{ display: "none" }} />
               <div id="ccDetails" className={styles["cc-details"]} style={{ display: "none" }}>
                 <div className={styles["details-grid"]}>
                   <div className={styles["props-section"]}>
@@ -89,13 +93,14 @@ const ContentControlsExternalToolbar: React.FC = () => {
                 onDocumentReady: `
                   connector.executeMethod("GetAllContentControls", null, (data) => {
                     allControls = data;
-                    document.getElementById("ccCount").textContent = data.length;
+                    renderList();
                   });
 
                   connector.attachEvent("onFocusContentControl", (control) => {
                     if (control && control["InternalId"]) {
                       selectedId = control["InternalId"];
                       loadProperties();
+                      renderList();
                     }
                   });
 
@@ -105,6 +110,7 @@ const ContentControlsExternalToolbar: React.FC = () => {
                     document.getElementById("ccDetails").style.display = "none";
                     document.getElementById("ccEmpty").style.display = "block";
                     document.getElementById("ccRemove").classList.add("${styles.disabled}");
+                    renderList();
                   });
                 `,
                 otherFunctional: `
@@ -158,10 +164,42 @@ const ContentControlsExternalToolbar: React.FC = () => {
                     });
                   };
 
+                  const renderList = () => {
+                    const list = document.getElementById("ccList");
+                    list.innerHTML = "";
+                    document.getElementById("ccCount").textContent = allControls.length;
+                    const btn = document.getElementById("ccListToggle");
+                    const isActive = btn.classList.contains("${styles["panel-list-btn-active"]}");
+                    if (allControls.length === 0) {
+                      list.style.display = "none";
+                      return;
+                    }
+                    if (isActive) {
+                      list.style.display = "flex";
+                    }
+                    allControls.forEach((cc) => {
+                      const item = document.createElement("div");
+                      item.className = "${styles["cc-item"]}" + (cc["InternalId"] === selectedId ? " ${styles["cc-item-active"]}" : "");
+                      item.dataset.id = cc["InternalId"];
+                      const tag = cc["Tag"] || "—";
+                      const lock = cc["Lock"] ?? "";
+                      item.innerHTML = '<span class="${styles["cc-item-label"]}">Tag: ' + tag + '</span>'
+                        + '<span class="${styles["cc-item-label"]}">ID: ' + cc["InternalId"] + '</span>';
+                      item.addEventListener("click", () => {
+                        selectedId = cc["InternalId"];
+                        connector.executeMethod("SelectContentControl", [selectedId], () => {
+                          loadProperties();
+                          renderList();
+                        });
+                      });
+                      list.appendChild(item);
+                    });
+                  };
+
                   const refreshCount = () => {
                     connector.executeMethod("GetAllContentControls", null, (data) => {
                       allControls = data;
-                      document.getElementById("ccCount").textContent = data.length;
+                      renderList();
                     });
                   };
 
@@ -199,6 +237,19 @@ const ContentControlsExternalToolbar: React.FC = () => {
                     badge.addEventListener("click", () => {
                       addByType(badge.dataset.type);
                     });
+                  });
+
+                  document.getElementById("ccListToggle").addEventListener("click", () => {
+                    const list = document.getElementById("ccList");
+                    const btn = document.getElementById("ccListToggle");
+                    const isActive = btn.classList.contains("${styles["panel-list-btn-active"]}");
+                    if (isActive) {
+                      list.style.display = "none";
+                      btn.classList.remove("${styles["panel-list-btn-active"]}");
+                    } else {
+                      btn.classList.add("${styles["panel-list-btn-active"]}");
+                      renderList();
+                    }
                   });
 
                   let activeColorTarget = null;
