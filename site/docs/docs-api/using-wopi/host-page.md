@@ -8,7 +8,7 @@ In order to create an online office session within your application, a host must
 
 The host page must contain the following elements:
 
-- A *form* element via which the host must *POST* the [access\_token](#access_token) and [access\_token\_ttl](#access_token_ttl) parameters to the online office iframe for security purposes. The [docs\_api\_config](#docs_api_config) parameter is optional.
+- A *form* element via which the host must *POST* the [access_token](#access_token) and [access_token_ttl](#access_token_ttl) parameters to the online office iframe for security purposes. The [docs_api_config](#docs_api_config) parameter is optional.
 - JavaScript code for interacting with the online office iframe using [PostMessage](./postmessage.md).
 - Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](./wopi-discovery.md).
 - A *viewport* meta tag to avoid visual and functional problems in mobile browsers.
