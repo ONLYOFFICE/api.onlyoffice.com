@@ -1,3 +1,7 @@
+---
+description: Search users with extended filter parameters via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -1,3 +1,7 @@
+---
+description: Create a new file in a folder and open it in the browser.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

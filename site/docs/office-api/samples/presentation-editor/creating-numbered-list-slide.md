@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Create a slide with a title and numbered list.
+---
+
 # Creating numbered list slide
 
 Create a slide with a numbered list for step-by-step instructions:

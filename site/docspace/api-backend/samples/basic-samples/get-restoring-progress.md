@@ -1,3 +1,7 @@
+---
+description: Check the progress of a portal restoration via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

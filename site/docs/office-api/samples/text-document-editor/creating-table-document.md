@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a table with styled headers and alternating row colors.
 ---
 
 # Creating table document

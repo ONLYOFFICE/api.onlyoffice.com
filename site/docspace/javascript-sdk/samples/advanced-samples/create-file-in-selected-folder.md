@@ -1,3 +1,7 @@
+---
+description: Create a file in a selected folder and open it in the editor.
+---
+
 # Create file in selected folder
 
 This example creates a file in the selected folder and opens it in the editors.

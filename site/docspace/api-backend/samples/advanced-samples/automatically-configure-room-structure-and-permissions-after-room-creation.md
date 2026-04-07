@@ -1,3 +1,7 @@
+---
+description: Set up folders and permissions automatically when a room is created.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

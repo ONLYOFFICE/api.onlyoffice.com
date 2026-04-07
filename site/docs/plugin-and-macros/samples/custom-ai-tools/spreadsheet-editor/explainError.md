@@ -1,3 +1,7 @@
+---
+description: Explain a cell error in natural language.
+---
+
 # explainError
 
 This function explains the error in the specified cell by adding a comment with the explanation.

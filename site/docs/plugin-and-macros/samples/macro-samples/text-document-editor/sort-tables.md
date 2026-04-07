@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Sort table rows by column values.
 ---
 
 # Sort tables

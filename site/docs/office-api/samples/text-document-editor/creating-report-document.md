@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate a comments review report with status tracking.
 ---
 
 # Creating report document

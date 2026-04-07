@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Validate exam form answers and highlight incorrect fields.
 ---
 
 # Validating exam form

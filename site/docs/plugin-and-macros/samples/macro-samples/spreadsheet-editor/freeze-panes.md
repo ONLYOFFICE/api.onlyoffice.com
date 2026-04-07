@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Freeze rows and columns in a spreadsheet.
 ---
 
 # Navigate to cell and reset frozen panes

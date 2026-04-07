@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a formal document with multi-column layout and charts.
 ---
 
 # Creating formal document

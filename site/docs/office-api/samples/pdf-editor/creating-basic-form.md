@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a basic PDF form with text and checkbox fields.
 ---
 
 # Creating basic form

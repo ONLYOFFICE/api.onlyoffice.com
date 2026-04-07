@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a custom header with formatted text.
 ---
 
 # Create custom header

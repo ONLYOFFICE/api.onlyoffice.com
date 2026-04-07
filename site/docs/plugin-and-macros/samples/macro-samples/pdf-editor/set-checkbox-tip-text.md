@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Set tip text for all checkboxes with a specified key.
 ---
 
 # Set checkbox tip text

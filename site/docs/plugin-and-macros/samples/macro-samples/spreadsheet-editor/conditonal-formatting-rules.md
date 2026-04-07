@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Apply conditional formatting rules to a cell range.
 ---
 
 # Conditional formatting rules

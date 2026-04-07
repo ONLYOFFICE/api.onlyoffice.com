@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Unmerge cells in a specified range.
 ---
 
 # Unmerge cell range

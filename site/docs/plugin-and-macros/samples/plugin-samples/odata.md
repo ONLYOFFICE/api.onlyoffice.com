@@ -1,3 +1,7 @@
+---
+description: Import external data via the OData protocol.
+---
+
 # OData Import
 
 Connects the OData (Open Data Protocol) service for importing external data into the spreadsheet editor. The plugin allows users to connect to OData feeds, browse available entity sets, and insert data directly into spreadsheet cells.

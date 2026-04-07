@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Align text content within slide text boxes.
 ---
 
 # Content alignment tool

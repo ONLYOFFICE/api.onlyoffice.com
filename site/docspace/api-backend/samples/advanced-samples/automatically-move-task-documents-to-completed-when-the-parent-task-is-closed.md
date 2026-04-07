@@ -1,3 +1,7 @@
+---
+description: Move task documents to a Completed folder when the task is closed.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

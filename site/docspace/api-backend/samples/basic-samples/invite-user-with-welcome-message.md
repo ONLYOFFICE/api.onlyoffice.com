@@ -1,3 +1,7 @@
+---
+description: Invite a user and send a welcome message after activation.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

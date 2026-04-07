@@ -1,3 +1,7 @@
+---
+description: Create a personal home folder for each new user in a shared room.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -1,3 +1,7 @@
+---
+description: Add support for a custom file extension with icons.
+---
+
 # File plugin
 
 This guide walks you through creating a plugin for DocSpace that adds support for a specific file extension, custom icons, and an action when such files are clicked.

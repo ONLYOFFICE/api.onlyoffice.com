@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Convert cell formulas into their computed values.
 ---
 
 # Convert formulas into values

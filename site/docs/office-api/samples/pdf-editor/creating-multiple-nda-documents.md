@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate multiple NDA documents from a template with data.
 ---
 
 # Creating multiple NDA documents

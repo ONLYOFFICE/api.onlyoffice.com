@@ -1,3 +1,7 @@
+---
+description: Search for text and replace it interactively.
+---
+
 # Search and replace
 
 Searches for target text and replaces it with something else.

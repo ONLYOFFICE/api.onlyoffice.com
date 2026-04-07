@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Auto-generate bookmarks from document headings.
 ---
 
 # Automatic bookmark generation

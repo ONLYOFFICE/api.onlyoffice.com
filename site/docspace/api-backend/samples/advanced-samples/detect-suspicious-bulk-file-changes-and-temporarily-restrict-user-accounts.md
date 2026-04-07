@@ -1,3 +1,7 @@
+---
+description: Detect bulk file changes and temporarily restrict suspicious user accounts.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

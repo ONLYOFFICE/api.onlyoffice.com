@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate hyperlinks from URLs found in text.
 ---
 
 # Generate hyperlinks

@@ -1,3 +1,7 @@
+---
+description: Embed a read-only document viewer using the JS SDK.
+---
+
 # Initialize viewer
 
 This example demonstrates how to embed a read-only document viewer using the JavaScript SDK method.

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Split data into separate sheets by criteria.
 ---
 
 # Split data sheets

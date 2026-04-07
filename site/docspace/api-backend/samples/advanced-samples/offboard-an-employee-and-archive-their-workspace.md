@@ -1,3 +1,7 @@
+---
+description: Disable an employee account and archive their workspace on offboarding.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

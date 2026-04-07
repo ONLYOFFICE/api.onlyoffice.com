@@ -1,3 +1,7 @@
+---
+description: Monitor login activity and detect logins from disallowed IP addresses.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Find and highlight duplicate values in a spreadsheet column.
+---
+
 # Checking duplicates
 
 Identifies repeating values in a selected column and visually highlights rows with duplicates. Used for data cleaning and analysis - for example, in customer lists, orders, or employee records:

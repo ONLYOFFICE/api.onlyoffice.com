@@ -1,3 +1,7 @@
+---
+description: Analyze VDR audit logs and alert on unusually high user activity.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

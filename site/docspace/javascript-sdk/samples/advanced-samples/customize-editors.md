@@ -1,3 +1,7 @@
+---
+description: Customize the editor interface with branded buttons, logos, and links.
+---
+
 # Customize editors
 
 This example customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Hide or unhide rows and columns in a spreadsheet.
 ---
 
 # Hide or unhide rows and columns

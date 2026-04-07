@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Format the title text on all slides.
 ---
 
 # Format slide titles

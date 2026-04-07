@@ -1,3 +1,7 @@
+---
+description: Search for users by text query with optional filters via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

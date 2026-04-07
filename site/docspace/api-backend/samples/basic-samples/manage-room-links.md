@@ -1,3 +1,7 @@
+---
+description: Set and retrieve room invitation and external links via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

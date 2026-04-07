@@ -1,3 +1,7 @@
+---
+description: Add comments to spreadsheet cells.
+---
+
 # Add comment in cell
 
 Adds comments to a cell of the spreadsheet.

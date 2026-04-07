@@ -1,3 +1,7 @@
+---
+description: Create a timestamped snapshot of room files before running mass edits.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

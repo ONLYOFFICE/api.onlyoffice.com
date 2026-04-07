@@ -1,3 +1,7 @@
+---
+description: Create a custom tag in DocSpace using the JS SDK.
+---
+
 # Create tag
 
 This example demonstrates how to create a new custom tag in DocSpace using the JavaScript SDK.

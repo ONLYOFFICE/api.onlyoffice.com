@@ -1,3 +1,7 @@
+---
+description: Generate a monthly compliance report from audit events and upload it.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

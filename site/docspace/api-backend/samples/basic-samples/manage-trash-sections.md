@@ -1,3 +1,7 @@
+---
+description: Retrieve, restore, and empty the Trash section via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

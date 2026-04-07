@@ -1,3 +1,7 @@
+---
+description: Rename uploaded files automatically to enforce safe naming rules.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

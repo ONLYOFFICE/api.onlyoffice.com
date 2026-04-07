@@ -1,3 +1,7 @@
+---
+description: Remove the embedded DocSpace iframe using the JS SDK.
+---
+
 # Destroy frame
 
 This example demonstrates how to destroy (remove) the embedded DocSpace iframe using the JavaScript SDK.

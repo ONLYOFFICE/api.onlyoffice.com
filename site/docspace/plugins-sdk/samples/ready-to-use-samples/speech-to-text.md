@@ -1,3 +1,7 @@
+---
+description: Recognize and convert spoken speech into text.
+---
+
 # Speech to text
 
 A speech recognition software that allows you to recognize and translate spoken speech into text.

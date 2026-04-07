@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Set all date form fields to the USA date format.
 ---
 
 # Set USA date format

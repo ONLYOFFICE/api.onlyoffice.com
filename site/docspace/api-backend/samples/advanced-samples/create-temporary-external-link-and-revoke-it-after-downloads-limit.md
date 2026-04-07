@@ -1,3 +1,7 @@
+---
+description: Share a file via a temporary link and revoke it after a download limit.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

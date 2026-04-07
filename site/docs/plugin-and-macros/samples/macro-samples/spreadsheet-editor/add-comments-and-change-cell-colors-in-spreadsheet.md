@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add comments to cells and change their background color.
 ---
 
 # Add comments and change cell colors in spreadsheet

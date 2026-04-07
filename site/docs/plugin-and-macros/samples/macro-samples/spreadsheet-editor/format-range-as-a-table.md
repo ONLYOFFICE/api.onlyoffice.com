@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Format a cell range as a styled table.
 ---
 
 # Format range as table

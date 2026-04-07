@@ -1,3 +1,7 @@
+---
+description: Prepare a structured workspace for a new employee in a shared folder.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

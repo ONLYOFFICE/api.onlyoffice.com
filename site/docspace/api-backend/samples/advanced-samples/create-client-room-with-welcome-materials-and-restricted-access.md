@@ -1,3 +1,7 @@
+---
+description: Onboard a client by creating a room with templates and restricted access.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

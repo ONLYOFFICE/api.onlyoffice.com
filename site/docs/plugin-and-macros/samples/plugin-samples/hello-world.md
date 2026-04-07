@@ -1,3 +1,7 @@
+---
+description: "Insert 'Hello world!' text on button click."
+---
+
 # Hello world
 
 Inserts the *Hello world!* phrase when the user presses the button.

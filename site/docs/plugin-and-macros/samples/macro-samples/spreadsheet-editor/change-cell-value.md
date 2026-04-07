@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Change the value of specified cells.
 ---
 
 # Change cell value

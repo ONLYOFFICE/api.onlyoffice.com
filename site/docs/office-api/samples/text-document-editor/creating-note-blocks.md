@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create styled note paragraphs with a colored left border.
 ---
 
 # Creating note blocks

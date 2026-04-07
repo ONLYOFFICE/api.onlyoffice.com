@@ -1,3 +1,7 @@
+---
+description: Configure developer tools access settings via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

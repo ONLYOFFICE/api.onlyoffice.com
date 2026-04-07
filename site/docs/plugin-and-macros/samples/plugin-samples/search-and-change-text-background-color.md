@@ -1,3 +1,7 @@
+---
+description: Search for text and change its background color.
+---
+
 # Search and change text background color
 
 Searches for target text and changes its background color.

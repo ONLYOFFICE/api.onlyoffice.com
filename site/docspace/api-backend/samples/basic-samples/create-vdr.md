@@ -1,3 +1,7 @@
+---
+description: Create a virtual data room with a watermark via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

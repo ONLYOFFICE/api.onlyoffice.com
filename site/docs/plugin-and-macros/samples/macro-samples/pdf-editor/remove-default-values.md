@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Clear specific default values from text form fields.
 ---
 
 # Remove default values

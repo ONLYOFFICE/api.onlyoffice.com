@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate a PDF form from a JSON data structure.
 ---
 
 # Creating form from JSON

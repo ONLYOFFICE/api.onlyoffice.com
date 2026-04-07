@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a spreadsheet with different cell data types.
 ---
 
 # Creating spreadsheet with different cell types

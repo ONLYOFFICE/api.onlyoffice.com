@@ -1,3 +1,7 @@
+---
+description: Log in to a DocSpace account using email and password hash.
+---
+
 # Authorization
 
 This examples logs in to the DocSpace account using the specified email and password hash.

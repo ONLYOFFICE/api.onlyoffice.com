@@ -1,3 +1,7 @@
+---
+description: Send reminders to room members with low activity based on audit events.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

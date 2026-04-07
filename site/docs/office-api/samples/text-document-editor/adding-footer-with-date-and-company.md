@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a footer with a company name and current date.
 ---
 
 # Adding footer with date and company name

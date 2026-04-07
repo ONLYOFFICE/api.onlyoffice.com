@@ -1,3 +1,7 @@
+---
+description: Copy newly uploaded files from a client room to an internal room.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -1,3 +1,7 @@
+---
+description: Generate an API key with specific permissions via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

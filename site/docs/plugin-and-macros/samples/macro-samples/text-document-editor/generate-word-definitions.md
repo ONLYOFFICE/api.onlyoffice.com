@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate definitions for words in a document.
 ---
 
 # Generate word definitions

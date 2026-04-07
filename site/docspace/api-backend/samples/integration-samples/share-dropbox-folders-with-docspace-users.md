@@ -1,3 +1,7 @@
+---
+description: Share Dropbox folders with DocSpace users.
+---
+
 # Share Dropbox folders with DocSpace users
 
 This integration automates the process of sharing Dropbox folders with DocSpace users.

@@ -1,3 +1,7 @@
+---
+description: Create DocSpace rooms and folders from Asana projects.
+---
+
 # Generate DocSpace structure from Asana projects
 
 This integration creates collaboration rooms in ONLYOFFICE DocSpace based on Asana projects and generates folders for each task inside the corresponding room. This setup is ideal for aligning your document structure with your project management workflow.

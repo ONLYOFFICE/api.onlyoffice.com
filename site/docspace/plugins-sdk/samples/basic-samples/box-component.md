@@ -1,3 +1,7 @@
+---
+description: Configure and use the Box layout component.
+---
+
 # Box component
 
 This guide demonstrates how to configure and use the [Box](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/box) component in the DocSpace Plugins SDK with common layout, alignment, and spacing properties.

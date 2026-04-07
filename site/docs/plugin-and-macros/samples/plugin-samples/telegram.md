@@ -1,3 +1,7 @@
+---
+description: Connect Telegram for instant messaging in the editor.
+---
+
 # Telegram
 
 Connects the Telegram application for instant messaging within the ONLYOFFICE editors.

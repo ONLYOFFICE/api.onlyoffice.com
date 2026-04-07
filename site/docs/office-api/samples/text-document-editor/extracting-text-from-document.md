@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+description: Extract all text from a document as a string or array.
+---
 # Extracting text from document
 
 Create a document with sample content and demonstrate how to extract all text content as a string or array of paragraphs:

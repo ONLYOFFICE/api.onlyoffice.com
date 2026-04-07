@@ -1,3 +1,7 @@
+---
+description: Retrieve permissions for the current API token via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

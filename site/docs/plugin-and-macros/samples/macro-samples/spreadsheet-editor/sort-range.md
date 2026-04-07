@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Sort a cell range by column values.
 ---
 
 # Sort range

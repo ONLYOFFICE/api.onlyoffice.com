@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a paragraph with a colored bottom border.
 ---
 
 # Creating paragraph with colored border

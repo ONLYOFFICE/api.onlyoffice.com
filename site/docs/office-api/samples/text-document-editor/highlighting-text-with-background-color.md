@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Apply background color highlighting to text fragments.
 ---
 
 # Highlighting text with background color

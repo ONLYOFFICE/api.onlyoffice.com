@@ -1,3 +1,7 @@
+---
+description: Protect documents with a watermark overlay.
+---
+
 # Settings
 
 Protects a document using a watermark.

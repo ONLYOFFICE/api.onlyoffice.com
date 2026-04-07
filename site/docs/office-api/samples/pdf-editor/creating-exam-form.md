@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create an exam form with questions and answer fields.
 ---
 
 # Creating exam form

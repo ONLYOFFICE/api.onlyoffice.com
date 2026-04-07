@@ -1,3 +1,7 @@
+---
+description: Classify uploaded documents by filename and move them to status folders.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

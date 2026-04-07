@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Count form fields grouped by type.
 ---
 
 # Count form fields

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Merge a range of cells in a spreadsheet.
 ---
 
 # Merge cell range

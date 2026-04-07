@@ -1,3 +1,7 @@
+---
+description: Track context menu events and cursor position changes.
+---
+
 # Context menu and events
 
 Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position changes.

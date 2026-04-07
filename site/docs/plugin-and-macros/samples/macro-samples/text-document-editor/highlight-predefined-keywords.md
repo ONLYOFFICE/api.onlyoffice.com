@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Highlight predefined keywords in a document.
 ---
 
 # Highlight predefined keywords

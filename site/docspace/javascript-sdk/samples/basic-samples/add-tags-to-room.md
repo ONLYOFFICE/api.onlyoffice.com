@@ -1,3 +1,7 @@
+---
+description: Add custom tags to a DocSpace room using the JS SDK.
+---
+
 # Add tags to room
 
 This example demonstrates how to add custom tags to a room using a button.

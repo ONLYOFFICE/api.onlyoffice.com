@@ -1,3 +1,7 @@
+---
+description: Revoke guest access automatically when a room is moved to the archive.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

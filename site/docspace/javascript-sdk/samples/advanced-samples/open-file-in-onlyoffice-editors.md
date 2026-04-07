@@ -1,3 +1,7 @@
+---
+description: Select a file and open it in ONLYOFFICE editors via the SDK.
+---
+
 # Open file in ONLYOFFICE editors
 
 This example opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) using the [file selector](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initfileselector).

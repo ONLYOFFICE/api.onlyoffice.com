@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Change the background color of specified cells.
 ---
 
 # Change cell background color

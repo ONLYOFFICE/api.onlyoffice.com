@@ -1,3 +1,7 @@
+---
+description: Add a chart to a presentation slide.
+---
+
 # addChartToSlide
 
 This function adds a chart to the specified or the current slide. By default, the chart is 152x89 mm and centered.

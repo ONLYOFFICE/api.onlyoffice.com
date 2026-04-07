@@ -1,3 +1,7 @@
+---
+description: Create a dedicated investigation room when a helpdesk ticket arrives.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

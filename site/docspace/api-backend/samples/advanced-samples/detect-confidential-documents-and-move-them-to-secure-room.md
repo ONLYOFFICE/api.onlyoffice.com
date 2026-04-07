@@ -1,3 +1,7 @@
+---
+description: Find documents marked as confidential and move them to a secure room.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

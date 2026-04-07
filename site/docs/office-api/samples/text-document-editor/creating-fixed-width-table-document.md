@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a table with fixed-width columns.
 ---
 
 # Creating a document with fixed-width column table

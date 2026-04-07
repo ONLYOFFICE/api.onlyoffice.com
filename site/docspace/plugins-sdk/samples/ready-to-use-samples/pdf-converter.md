@@ -1,3 +1,7 @@
+---
+description: Convert documents, spreadsheets, and presentations to PDF.
+---
+
 # PDF converter
 
 A tool for converting documents, spreadsheets, presentations, and forms to PDF.

@@ -1,3 +1,7 @@
+---
+description: Change the file list display mode using the JS SDK.
+---
+
 # Set list view
 
 This example demonstrates how to change the file list display mode in DocSpace using the JavaScript SDK.

@@ -1,3 +1,7 @@
+---
+description: Authenticate a user and verify the received token via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

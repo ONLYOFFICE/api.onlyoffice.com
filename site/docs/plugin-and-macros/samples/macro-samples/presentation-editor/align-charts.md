@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Align chart positions across presentation slides.
 ---
 
 # Align charts

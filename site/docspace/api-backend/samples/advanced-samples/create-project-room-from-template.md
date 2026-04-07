@@ -1,3 +1,7 @@
+---
+description: Create a new project room from an existing room template.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

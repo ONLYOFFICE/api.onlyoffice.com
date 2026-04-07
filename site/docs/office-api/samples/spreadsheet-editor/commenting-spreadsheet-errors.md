@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Detect formula errors in cells and add comments to them.
 ---
 
 import Tabs from '@theme/Tabs';

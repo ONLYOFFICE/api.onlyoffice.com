@@ -1,3 +1,7 @@
+---
+description: Create a user, retrieve their profile, and update their role.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

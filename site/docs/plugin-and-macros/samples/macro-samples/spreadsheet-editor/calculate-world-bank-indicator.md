@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Calculate indicators using World Bank data.
 ---
 
 # Calculate World Bank indicator

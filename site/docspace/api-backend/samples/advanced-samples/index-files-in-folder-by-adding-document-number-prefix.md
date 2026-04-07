@@ -1,3 +1,7 @@
+---
+description: Assign document number prefixes to files in a folder.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

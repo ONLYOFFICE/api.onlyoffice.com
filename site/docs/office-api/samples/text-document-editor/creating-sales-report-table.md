@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a sales report table with merged cells and totals.
 ---
 
 # Creating sales report with merged table cells

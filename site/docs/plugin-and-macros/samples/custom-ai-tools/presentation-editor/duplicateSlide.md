@@ -1,3 +1,7 @@
+---
+description: Duplicate a specified slide in a presentation.
+---
+
 # duplicateSlide
 
 This function duplicates the specified slide in the current presentation.

@@ -1,3 +1,7 @@
+---
+description: Trigger a manual portal backup and notify an administrator of the result.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

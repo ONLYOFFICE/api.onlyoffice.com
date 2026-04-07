@@ -1,3 +1,7 @@
+---
+description: Retrieve the list of existing backups via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

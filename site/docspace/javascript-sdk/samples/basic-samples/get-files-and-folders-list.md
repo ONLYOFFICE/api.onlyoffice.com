@@ -1,3 +1,7 @@
+---
+description: Retrieve files and folders from a room using the JS SDK.
+---
+
 # Get files and folders list
 
 This example demonstrates how to retrieve both files and folders from a DocSpace room using the JavaScript SDK.

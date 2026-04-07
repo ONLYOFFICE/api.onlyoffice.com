@@ -1,3 +1,7 @@
+---
+description: Search for users by their status via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

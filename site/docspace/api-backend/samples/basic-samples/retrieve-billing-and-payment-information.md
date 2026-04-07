@@ -1,3 +1,7 @@
+---
+description: Retrieve billing, quota, and payment details via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

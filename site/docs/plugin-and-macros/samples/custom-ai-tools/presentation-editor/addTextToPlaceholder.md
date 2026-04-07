@@ -1,3 +1,7 @@
+---
+description: Add text to a slide placeholder.
+---
+
 # addTextToPlaceholder
 
 This function adds any text content to the specified or the current slide. Use this function for all text insertion requests, including recipes, lists, instructions, notes, ideas, or other text content.

@@ -1,3 +1,7 @@
+---
+description: Disable external contractors who have not logged in recently.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

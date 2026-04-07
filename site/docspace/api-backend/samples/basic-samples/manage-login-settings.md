@@ -1,3 +1,7 @@
+---
+description: Configure login security settings via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

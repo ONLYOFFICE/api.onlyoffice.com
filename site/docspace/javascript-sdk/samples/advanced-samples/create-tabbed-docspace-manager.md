@@ -1,3 +1,7 @@
+---
+description: Embed DocSpace in a tabbed interface with multiple manager instances.
+---
+
 # Create a Tabbed DocSpace Manager UI
 
 This example demonstrates how to embed ONLYOFFICE DocSpace in a tabbed interface, where each tab runs its own DocSpace instance in manager mode.

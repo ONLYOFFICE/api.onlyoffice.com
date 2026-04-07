@@ -1,3 +1,7 @@
+---
+description: Attach files to tasks using a DocSpace file selector modal.
+---
+
 # File manager with task attachments
 
 This example demonstrates how to integrate the DocSpace file selector into a task management interface. Users can attach files to individual tasks by selecting a row and using a modal-based file selector.

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Auto-fill the state field based on the entered zip code.
 ---
 
 # Add state from zip code

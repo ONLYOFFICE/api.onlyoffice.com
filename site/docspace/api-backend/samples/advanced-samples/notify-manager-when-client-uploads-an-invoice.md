@@ -1,3 +1,7 @@
+---
+description: Send a notification to the manager when a client uploads an invoice.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

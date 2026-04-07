@@ -1,3 +1,7 @@
+---
+description: Generate a weekly contracts report for recently created rooms.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

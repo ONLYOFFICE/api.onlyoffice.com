@@ -1,3 +1,7 @@
+---
+description: Create a personal home room for every new user via webhooks.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

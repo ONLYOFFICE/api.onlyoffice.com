@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Clear all form field values to reset a PDF form.
 ---
 
 # Clearing all form values

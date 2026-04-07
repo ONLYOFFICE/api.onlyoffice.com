@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a formatted table with styled headers and borders.
 ---
 
 # Creating formatted table

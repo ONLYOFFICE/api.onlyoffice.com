@@ -1,3 +1,7 @@
+---
+description: Archive all client documents when a CRM deal is marked as closed.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

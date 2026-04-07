@@ -1,3 +1,7 @@
+---
+description: Notify the department owner when files in a critical folder change.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

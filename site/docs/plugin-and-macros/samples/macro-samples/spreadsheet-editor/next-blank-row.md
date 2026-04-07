@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Find the next blank row in a spreadsheet.
 ---
 
 # Next blank row

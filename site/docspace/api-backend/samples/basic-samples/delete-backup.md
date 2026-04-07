@@ -1,3 +1,7 @@
+---
+description: Delete a specific backup by its ID via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

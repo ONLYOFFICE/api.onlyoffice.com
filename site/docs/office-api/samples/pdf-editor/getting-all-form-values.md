@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Extract all form field values as structured data.
 ---
 
 # Getting all form values

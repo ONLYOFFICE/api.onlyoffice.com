@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create and populate a table from a JSON data array.
 ---
 
 # Creating table from JSON data

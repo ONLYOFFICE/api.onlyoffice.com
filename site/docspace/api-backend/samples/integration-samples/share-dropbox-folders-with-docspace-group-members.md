@@ -1,3 +1,7 @@
+---
+description: Create shared Dropbox folders for DocSpace group members.
+---
+
 # Share Dropbox folders with DocSpace group members
 This integration automates the process of creating shared Dropbox folders for DocSpace group members and inviting them to collaborate.
 

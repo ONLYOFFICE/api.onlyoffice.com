@@ -1,3 +1,7 @@
+---
+description: Create, retrieve, terminate, and delete user accounts via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

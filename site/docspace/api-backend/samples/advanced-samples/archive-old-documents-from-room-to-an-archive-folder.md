@@ -1,3 +1,7 @@
+---
+description: Move documents older than a threshold from a room to an archive folder.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

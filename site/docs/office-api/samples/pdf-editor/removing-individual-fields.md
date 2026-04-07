@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove form fields by key based on user role.
 ---
 
 # Removing individual fields

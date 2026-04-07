@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add a header with a company logo and organization name.
 ---
 
 # Adding header and footer with logo

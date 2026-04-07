@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Unhide all hidden rows and columns.
 ---
 
 # Unhide all rows and columns

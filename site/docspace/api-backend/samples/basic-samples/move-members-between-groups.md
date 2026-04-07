@@ -1,3 +1,7 @@
+---
+description: Move all members from one group to another via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

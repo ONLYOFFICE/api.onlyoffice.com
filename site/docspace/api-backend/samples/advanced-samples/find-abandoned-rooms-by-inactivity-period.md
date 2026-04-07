@@ -1,3 +1,7 @@
+---
+description: Identify rooms that have not been updated within a given time period.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

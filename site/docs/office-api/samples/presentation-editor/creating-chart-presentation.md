@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a slide with a gradient background and line chart.
 ---
 
 # Creating chart presentation

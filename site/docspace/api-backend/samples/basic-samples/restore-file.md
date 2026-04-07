@@ -1,3 +1,7 @@
+---
+description: Restore a file to a specific previous version via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

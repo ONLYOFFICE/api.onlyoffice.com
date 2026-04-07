@@ -1,3 +1,7 @@
+---
+description: Generate a description for images on a slide.
+---
+
 # describeImage
 
 This function analyzes the currently selected image and generates a title, caption, description, or alt text using an AI model. The generated text is then inserted into the slide.

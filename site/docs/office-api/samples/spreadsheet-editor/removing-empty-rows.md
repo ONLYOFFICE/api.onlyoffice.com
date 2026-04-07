@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Identify and remove empty rows from a data range.
+---
+
 # Removing empty rows
 
 Removes rows where all cells contain no data. Used for cleaning tables before export, visual report assembly, or preparing final document versions. Especially useful after importing data from external sources:

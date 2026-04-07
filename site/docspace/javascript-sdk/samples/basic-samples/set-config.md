@@ -1,3 +1,7 @@
+---
+description: Update the embedded frame configuration using the JS SDK.
+---
+
 # Set config
 
 This example demonstrates how to update the configuration of the embedded DocSpace frame using the JavaScript SDK.
