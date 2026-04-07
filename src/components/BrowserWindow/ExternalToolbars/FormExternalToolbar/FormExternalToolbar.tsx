@@ -107,6 +107,7 @@ const FormExternalToolbar: React.FC = () => {
                       settingFormIds.set(id, (settingFormIds.get(id) || 0) + 1);
                       connector.executeMethod("SetFormValue", [id, value], () => {
                         settingFormIds.set(id, settingFormIds.get(id) - 1);
+                        onChangeContentControl({ InternalId: id, FormValue: value });
                       });
                     });
                   };
