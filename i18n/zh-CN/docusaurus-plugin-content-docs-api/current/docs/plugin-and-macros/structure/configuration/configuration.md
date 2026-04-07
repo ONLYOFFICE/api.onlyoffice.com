@@ -89,7 +89,7 @@ sidebar_position: -5
 
 **示例**: `{ "fr": "french plugin name" }`
 
-#### localeTranslate
+## localeTranslate
 
 `类型: object`
 

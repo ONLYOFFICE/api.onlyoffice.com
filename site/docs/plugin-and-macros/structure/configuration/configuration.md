@@ -89,7 +89,7 @@ Translations for the name field. The object keys are the two letter language cod
 
 **Example**: `{ "fr": "french plugin name" }`
 
-#### localeTranslate
+## localeTranslate
 
 `Type: object`
 
