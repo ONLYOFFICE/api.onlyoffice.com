@@ -1,5 +1,6 @@
 ---
 sidebar_position: -7
+description: Integrate ONLYOFFICE Docs into a Go web application.
 ---
 
 # Go example

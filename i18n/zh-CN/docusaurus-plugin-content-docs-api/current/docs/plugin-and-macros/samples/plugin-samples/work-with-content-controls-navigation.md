@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档。
 
-![WorkWithContentControlsNavigation](/assets/images/plugins/gifs/work-with-content-controls-navigation.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-navigation.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -110,15 +112,15 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 
 ## 方法和事件
 
-- button
-- init
-- onMethodReturn
-- onTargetPositionChanged
-- executeMethod ("GetAllContentControls")
-- executeMethod ("GetCurrentContentControl")
-- executeMethod ("MoveCursorToContentControl")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
+- [onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- executeMethod ("[GetCurrentContentControl](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
+- executeMethod ("[MoveCursorToContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToContentControl.md)")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- executeMethod ("SelectContentControl")
+- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SelectContentControl.md)")
 
 ## 支持
 

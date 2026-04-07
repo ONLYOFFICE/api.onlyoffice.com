@@ -1,6 +1,6 @@
 # SetStyle
 
-为当前运行设置样式。
+为当前文本块设置样式。
 
 ## 语法
 
@@ -8,13 +8,13 @@
 expression.SetStyle(oStyle);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 必须应用于文本运行的样式。 |
+| **名称** | **必需/可选** | **数据类型**                           | **默认值** | **描述**                 |
+| -------- | ------------- | -------------------------------------- | ---------- | ------------------------ |
+| oStyle   | 必需          | [ApiStyle](../../ApiStyle/ApiStyle.md) |            | 必须应用于文本块的样式。 |
 
 ## 返回值
 
@@ -22,7 +22,7 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-此示例为运行设置样式。
+此示例为文本块设置样式。
 
 ```javascript editor-docx
 // How to update the style of the text run.

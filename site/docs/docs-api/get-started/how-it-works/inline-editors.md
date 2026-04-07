@@ -6,7 +6,9 @@ sidebar_position: -14
 
 The steps below explain the process of connecting several editors to the same html page in ONLYOFFICE Docs.
 
-> Simultaneous work with several editors is available starting from version 5.5.
+:::note
+Simultaneous work with several editors is available starting from version 5.5.
+:::
 
 <img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px" />
 

@@ -24,7 +24,9 @@
 
 ## 必需的响应属性 {#required-response-properties}
 
-> 请注意，任何响应字符串值的默认值都是空字符串。
+:::note
+请注意，任何响应字符串值的默认值都是空字符串。
+:::
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';

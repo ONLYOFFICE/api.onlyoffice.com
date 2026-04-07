@@ -50,7 +50,7 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 2. Click **Plugin Manager**.
 3. Find the plugin you need and click **Install**.
 
-![Plugins manager](/assets/images/plugins/plugin-manager.png)
+![Plugins manager](/assets/images/plugins/plugin-manager.png#gh-light-mode-only)![Plugins manager](/assets/images/plugins/plugin-manager.dark.png#gh-dark-mode-only)
 
 The plugin will be added to the opened editors and all the editors you will open afterwards and displayed within the **Plugins** tab.
 
@@ -188,8 +188,8 @@ The table below contains default plugins guids to make it easier for you to find
 
 ## Default plugins GUIDs
 
-|                |                                        |
-| -------------- | -------------------------------------- |
+|                |                                          |
+| -------------- | ---------------------------------------- |
 | Highlight code | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |

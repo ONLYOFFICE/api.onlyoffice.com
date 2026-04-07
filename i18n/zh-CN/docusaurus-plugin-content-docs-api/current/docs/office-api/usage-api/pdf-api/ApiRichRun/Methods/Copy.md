@@ -1,6 +1,6 @@
 # Copy
 
-创建当前运行的副本。
+创建当前文本块的副本。
 
 ## 语法
 
@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-此示例复制富文本运行对象并将其添加到父富文本段落。
+此示例复制富文本块对象并将其添加到父富文本段落。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

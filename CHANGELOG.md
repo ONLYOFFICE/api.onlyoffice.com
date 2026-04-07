@@ -1,5 +1,87 @@
 # Change log
 
+## 8.1.0
+
+### New features
+
+#### Plugins and macros
+
+* Reworked the Get Started section with improved quick-start tutorials
+* Added Hello World Plugin guide
+* Added Hello World Macro guide
+* Added Comment Text AI Tool tutorial
+* Added Insert Formulas Row macro sample for spreadsheet editor
+* Added Create AI assistant documentation with example
+
+#### Docs API
+
+* Added comprehensive Document Server configuration documentation
+* New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
+* Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
+* Added Working with content controls sample for Automation API
+* Added links to all editor methods (text document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
+
+#### Office API
+
+* Updated PDF API documentation (ApiRun, ApiRichRun, ApiTextPr, ApiShape classes)
+* Updated Presentation API documentation
+* Updated Spreadsheet API documentation
+
+### Improvements
+
+#### Common
+
+* Updated 165 images across the documentation with higher quality screenshots
+* Added new dark mode variants for plugin-related images (`plugin-manager.dark.png`, `submit-plugin.dark.png`)
+* Enhanced visual clarity for plugin screenshots and structure diagrams
+* Added `rebuild-server-config.yaml` workflow for automated DocServer config documentation rebuilds
+* Removed legacy GIF assets and replaced with webm videos
+* Renamed webm files from camelCase to kebab-case for consistent naming
+* Replaced non-breaking spaces (U+00A0) with regular spaces across documentation
+* Enabled new S3 sync scheme for production deployment
+
+#### Docs API
+
+* Removed outdated Office JavaScript API limitation notes
+* Removed redundant callback descriptions from how-to-call-commands
+* Consolidated `ContextMenuItem` type definitions in connector class documentation
+* Updated server config link to internal documentation
+* Redesigned review changes sample with live demo UI and change counter
+* Updated filling out the form and working with comments samples
+
+#### Plugins and macros
+
+* Converted blockquotes to admonitions in macro samples
+
+#### Homepage
+
+* Swapped DocSpace/Docs positioning on the first screen
+* Replaced blog articles on homepage
+* Fixed Cyrillic "С" (U+0421) replaced with Latin "C" in CSS class names
+* Reduced DOM nesting and removed unused assets
+* Changed navbar sorting
+
+#### Localization
+
+* Localized external links on zh-CN plugin and macro pages with Chinese equivalents
+* Added zh-CN translation for AI plugin page with localized links
+
+#### Playground
+
+* Removed unused legacy scripts (`cell/api.js`, `slide/api.js`, `word/api.js`)
+* Removed deprecated plugin folder
+* Restructured `DEFAULT_SCRIPTS` configuration for better flexibility
+
+### Fixes
+
+* Fixed link in documentation
+* Fixed Docusaurus configuration to exclude `index.md` from category index convention
+* Fixed unnecessary `setTimeout` wrapper in insert-formulas-row macro sample
+* Fixed example in macro documentation
+* Changed warning admonition to info where appropriate
+* Fixed broken links across documentation
+* Fixed external components
+
 ## 8.0.0
 
 ### New features

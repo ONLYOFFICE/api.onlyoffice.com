@@ -20,7 +20,7 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-此示例展示如何从形状内的段落获取最后一个包含文本的运行。
+此示例展示如何从形状内的段落获取最后一个包含文本的文本块。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

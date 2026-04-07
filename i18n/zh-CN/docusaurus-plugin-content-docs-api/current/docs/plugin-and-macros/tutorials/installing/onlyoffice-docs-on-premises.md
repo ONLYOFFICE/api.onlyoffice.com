@@ -38,7 +38,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 `--directory` 参数指定插件文件夹的位置。示例中的路径为默认值，如有需要，请根据实际情况修改。
 :::
 
-完整的服务器命令列表可参考[此处](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands)。
+完整的服务器命令列表可参考[此处](https://helpcenter.onlyoffice.com/zh/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands)。
 
 ## 通过插件管理器为单个用户添加插件 {#adding-plugins-through-the-plugin-manager-for-a-single-user}
 
@@ -50,7 +50,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 2. 点击**插件管理器**。
 3. 找到你需要的插件并点击**安装**。
 
-![插件管理器](/assets/images/plugins/plugin-manager.png)
+![插件管理器](/assets/images/plugins/plugin-manager.png#gh-light-mode-only)![插件管理器](/assets/images/plugins/plugin-manager.dark.png#gh-dark-mode-only)
 
 插件将添加到当前已打开的编辑器中，并会显示在**插件**选项卡中，后续打开的所有编辑器也会显示该插件。
 

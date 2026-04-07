@@ -1,6 +1,6 @@
 # AddTabStop
 
-向当前运行添加制表位。
+向当前文本块添加制表位。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddTabStop();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例向运行添加制表位。
+此示例向文本块添加制表位。
 
 ```javascript editor-pdf
 // How to add a tab after a string in a text run.

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例向段落添加文本运行。
+此示例向段落添加文本块。
 
 ```javascript editor-pdf
 // Insert a text run to the ApiParagraph object.

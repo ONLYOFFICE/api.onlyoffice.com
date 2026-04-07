@@ -27,7 +27,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 2. 点击**插件管理器**。
 3. 找到你需要的插件并点击**安装**。
 
-![插件管理器](/assets/images/plugins/desktop-plugin-manager.png)
+![插件管理器](/assets/images/plugins/desktop-plugin-manager.png#gh-light-mode-only)![插件管理器](/assets/images/plugins/desktop-plugin-manager.dark.png#gh-dark-mode-only)
 
 ### 选项 2：上传插件压缩包（无需联网）
 
@@ -45,7 +45,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 4. 选择你创建的压缩包并点击**打开**。
 
-![手动安装插件](/assets/images/plugins/install-manually.png)
+![手动安装插件](/assets/images/plugins/plugin-install-manually.png#gh-light-mode-only)![手动安装插件](/assets/images/plugins/plugin-install-manually.dark.png#gh-dark-mode-only)
 
 插件将被添加到当前已打开的编辑器以及之后打开的所有编辑器中，并显示在**插件**选项卡中。
 
@@ -114,18 +114,18 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 默认插件 GUID 列表
 
-|                |                                        |
-| -------------- | -------------------------------------- |
-| 代码高亮        | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
-| Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
-| OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |
-| 图像编辑器      | \{07FD8DFA-DFE0-4089-A124-0730933CC80A\} |
-| 语音朗读        | \{D71C2EF0-F15B-47C7-80E9-86D671F9C595\} |
-| 同义词词典      | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9840\} |
-| 翻译           | \{7327FC95-16DA-41D9-9AF2-0E7F449F6800\} |
-| YouTube        | \{38E022EA-AD92-45FC-B22B-49DF39746DB4\} |
-| Zotero         | \{BFC5D5C6-89DE-4168-9565-ABD8D1E48711\} |
-| 发送文档        | \{B509123E-6335-40BD-B965-91EB799346E3\} |
+|            |                                          |
+| ---------- | ---------------------------------------- |
+| 代码高亮   | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
+| Mendeley   | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
+| OCR        | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |
+| 图像编辑器 | \{07FD8DFA-DFE0-4089-A124-0730933CC80A\} |
+| 语音朗读   | \{D71C2EF0-F15B-47C7-80E9-86D671F9C595\} |
+| 同义词词典 | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9840\} |
+| 翻译       | \{7327FC95-16DA-41D9-9AF2-0E7F449F6800\} |
+| YouTube    | \{38E022EA-AD92-45FC-B22B-49DF39746DB4\} |
+| Zotero     | \{BFC5D5C6-89DE-4168-9565-ABD8D1E48711\} |
+| 发送文档   | \{B509123E-6335-40BD-B965-91EB799346E3\} |
 
 :::note
 请注意，更新应用后默认插件将再次出现，你需要重新卸载它们。

@@ -1,6 +1,6 @@
 # GetParentParagraph
 
-返回当前运行的父段落。
+返回当前文本块的父段落。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetParentParagraph();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ expression.GetParentParagraph();
 
 ## 示例
 
-此示例展示如何获取运行的父段落以进行进一步操作。
+此示例展示如何获取文本块的父段落以进行进一步操作。
 
 ```javascript editor-docx
 let doc = Api.GetDocument();

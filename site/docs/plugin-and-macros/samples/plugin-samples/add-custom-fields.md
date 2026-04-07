@@ -6,7 +6,9 @@ Inserts custom fields into the document.
 
 **Supported editors:** documents.
 
-![AddCustomFields](/assets/images/plugins/gifs/add-custom-fields.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/add-custom-fields.webm" type="video/webm" />
+</video>
 
 ## Installation
 

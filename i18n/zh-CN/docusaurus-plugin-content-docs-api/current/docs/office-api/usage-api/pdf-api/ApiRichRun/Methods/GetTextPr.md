@@ -1,6 +1,6 @@
 # GetTextPr
 
-返回当前运行的文本属性。
+返回当前文本块的文本属性。
 
 ## 语法
 
@@ -20,7 +20,7 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例从富文本运行对象获取富文本属性并为其设置一些属性。
+此示例从富文本块对象获取富文本属性并为其设置一些属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

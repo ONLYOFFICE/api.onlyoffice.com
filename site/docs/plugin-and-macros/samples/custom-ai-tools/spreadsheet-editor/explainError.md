@@ -86,8 +86,8 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name      | Type   | Example              | Description                                                                                            |
-| --------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------ |
+| Name      | Type   | Example              | Description                                                                                           |
+| --------- | ------ | -------------------- | ----------------------------------------------------------------------------------------------------- |
 | range     | string | "A1"                 | Specifies cell range containing error to explain (e.g., 'A1'). If omitted, uses active/selected cell. |
 | userInput | string | "Explain this error" | Raw user query that may contain natural language trigger.                                             |
 
@@ -260,10 +260,10 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explainError.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explain-error.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explainError.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explain-error.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

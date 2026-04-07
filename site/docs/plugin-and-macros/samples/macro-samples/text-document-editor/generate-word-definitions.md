@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 Generates word definitions in your document using the [Dictionary API](https://api-ninjas.com/api/dictionary) offered by [API Ninjas](https://api-ninjas.com).
 
-> To use this macro, you need to obtain your own API key from API Ninjas.
+:::note
+To use this macro, you need to obtain your own API key from API Ninjas.
+:::
 
 ```ts 
 (function () {

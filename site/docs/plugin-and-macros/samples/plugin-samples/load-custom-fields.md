@@ -2,13 +2,17 @@
 
 Loads custom fields from the document.
 
-> The fields should be already added to the document with the [Example add custom fields](./add-custom-fields.md) plugin.
+:::note
+The fields should be already added to the document with the [Example add custom fields](./add-custom-fields.md) plugin.
+:::
 
 **Plugin type:** visual, non-system.
 
 **Supported editors:** documents.
 
-![LoadCustomFields](/assets/images/plugins/gifs/load-custom-fields.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/load-custom-fields.webm" type="video/webm" />
+</video>
 
 ## Installation
 

@@ -1,5 +1,5 @@
 export type code = {
-  document: {
+  document?: {
     fileType?: string;
     key?: string;
     title?: string;
@@ -30,7 +30,9 @@ export type editorConfig = {
   callbackUrl?: string;
   mode?: string;
   customization?: {
+    anonymous?: { request: boolean };
     autosave?: boolean;
+    compactToolbar?: boolean;
     customer?: {
       address: string;
       info: string;
@@ -39,10 +41,13 @@ export type editorConfig = {
       name: string;
       www: string;
     };
+    features?: { featuresTips: boolean };
     logo?: {
       image?: string;
       url: string;
     };
+    uiTheme?: string;
+    zoom?: number;
   };
   user?: {
     id: string;

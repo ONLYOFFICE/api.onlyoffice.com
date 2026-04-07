@@ -6,7 +6,9 @@
 
 **支持编辑器：** 文档。
 
-![WorkWithContentControlsTags](/assets/images/plugins/gifs/work-with-content-controls-tags.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-tags.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -104,12 +106,12 @@ GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example
 
 ## 方法和事件
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("GetAllContentControls")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
 - [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- executeMethod ("SelectContentControl")
+- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SelectContentControl.md)")
 
 ## 支持
 

@@ -6,7 +6,9 @@ Inserts content controls (automatically or manually), navigates and selects them
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsNavigation](/assets/images/plugins/gifs/work-with-content-controls-navigation.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-navigation.webm" type="video/webm" />
+</video>
 
 ## Installation
 
@@ -21,7 +23,7 @@ Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 5. Press the **Test paste for document** button to paste text into the document (where the text cursor is located).
 6. In the second field, you can see the selected content.
 7. Press the **Get All Content Controls** button in the third field to see all the content controls with their IDs.
-8. To select text in a content control, select it and press the** Select Current Content Control** button.
+8. To select text in a content control, select it and press the **Select Current Content Control** button.
 
 ## Plugin structure
 

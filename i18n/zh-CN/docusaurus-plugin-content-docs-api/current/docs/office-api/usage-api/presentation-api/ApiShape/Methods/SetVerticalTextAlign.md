@@ -1,6 +1,6 @@
 # SetVerticalTextAlign
 
-设置可以插入段落或文本运行的形状内容的垂直对齐方式。
+设置可以插入段落或文本块的形状内容的垂直对齐方式。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetVerticalTextAlign(VerticalAlign);
 
 ## 示例
 
-此示例设置可以插入段落或文本运行的形状内容的垂直对齐方式。
+此示例设置可以插入段落或文本块的形状内容的垂直对齐方式。
 
 ```javascript editor-pptx
 // How to set vertical alignment of the shape content.

@@ -1,6 +1,6 @@
 # GetFontNames
 
-返回当前运行中所有元素的所有字体名称。
+返回当前文本块中所有元素的所有字体名称。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetFontNames();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ string[]
 
 ## 示例
 
-此示例展示如何获取运行中所有元素的所有字体名称。
+此示例展示如何获取文本块中所有元素的所有字体名称。
 
 ```javascript editor-docx
 // How to get all font names from the ApiRun object elements.

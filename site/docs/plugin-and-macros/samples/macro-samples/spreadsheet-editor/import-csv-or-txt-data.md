@@ -6,7 +6,9 @@ hide_table_of_contents: true
 
 Imports data from remote CSV/TXT files into the spreadsheet.
 
-> This macro is operational only with the desktop versions of the ONLYOFFICE editors.
+:::note
+This macro is operational only with the desktop versions of the ONLYOFFICE editors.
+:::
 
 ``` ts
 (function() 

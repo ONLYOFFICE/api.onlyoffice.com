@@ -7,7 +7,6 @@ import styles from "@site/src/css/sectionGroup.module.css";
 export namespace HomepageBlogProps {
   export type BlogGroup = {
     items: BlogGrid.Item[];
-    linkPrefix?: string;
   };
 
   export type Props = {
@@ -20,28 +19,24 @@ const HomepageBlog: FC<HomepageBlogProps.Props> = ({
 }) => {
   return (
     <section className={styles.samples}>
-      <div className={styles.samplesСontainer}>
-        <div className={styles.samplesСontainerInner}>
-          <main>
+      <div className={styles.samplesContainer}>
+        <section className={`${styles.sectionGroup} ${styles.blogGroup}`}>
+          <Heading as="h2" className={styles.samplesHeading}>
+            Want to know more?
+          </Heading>
+          <div className={styles.samplesGridWrapper}>
             {blogGroups.map((group, index) => (
-              <section key={index} className={`${styles.sectionGroup} ${styles.blogGroup}`}>
-                <Heading as="h2" className={styles.samplesHeading}>
-                  Want to know more?
-                </Heading>
-                <div className={styles.samplesGridWrapper}>
-                  <BlogGrid
-                    items={group.items}
-                  />
-                </div>
-                <div className={styles.buttonWrapper}>
-                  <Link className={styles.samplesButton} to="https://www.onlyoffice.com/blog/category/for-developers" >
-                    More news here
-                  </Link>
-                </div>
-              </section>
+            <BlogGrid key={index}
+              items={group.items}
+            />
             ))}
-          </main>
-        </div>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <Link className={styles.samplesButton} to="https://www.onlyoffice.com/blog/category/for-developers" >
+              More news here
+            </Link>
+          </div>
+        </section>
       </div>
     </section>
   );

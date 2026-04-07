@@ -1,61 +1,117 @@
 import { OnlyofficeEditor } from "@site/src/components/BrowserWindow";
 import styles from "./styles.module.css";
 
-const ReviewChangesExternalToolbar: React.FC<void> = () => {
+const ReviewChangesExternalToolbar: React.FC = () => {
   return (
     <>
-      <ul className={styles["list-buttons"]}>
-        <li>
-          <button id="accept" className={styles.disabled}>
-            ACCEPT
+      <div className={styles["demo-section"]}>
+
+        <div className={styles["controls-row"]}>
+          <span className={styles["controls-label"]}>External controls</span>
+          <button id="accept" className={`${styles.btn} ${styles.disabled}`}>
+            &#x2713; Accept
           </button>
-        </li>
-        <li>
-          <button id="reject" className={styles.disabled}>
-            REJECT
+          <button id="reject" className={`${styles.btn} ${styles.disabled}`}>
+            &#x2718; Reject
           </button>
-        </li>
-        <li>
-          <button id="prev" className={styles.disabled}>
-            &lt;
+          <button id="prev" className={`${styles.btn} ${styles.disabled}`}>
+            &lsaquo; Prev
           </button>
-        </li>
-        <li>
-          <button id="next" className={styles.disabled}>
-            &gt;
+          <button id="next" className={`${styles.btn} ${styles.disabled}`}>
+            Next &rsaquo;
           </button>
-        </li>
-      </ul>
+          <span id="reviewCounter" className={styles["review-counter"]} />
+        </div>
+      </div>
       <OnlyofficeEditor
         fileType={"docx"}
         code={""}
         height="550px"
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/review.docx"
+        config={{ editorConfig: { customization: { compactToolbar: true } } }}
         externalScript={{
-          beforeDocumentReady: `            
-            var contentControls = [];
-            var indexComment = 0;  
+          beforeDocumentReady: `
+            let reviewCount = 0;
+            let reviewIndex = 0;
           `,
           onDocumentReady: `
-            document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
-                btn.classList.remove("${styles.disabled}");
+            connector.callCommand(() => {
+              const doc = Api.GetDocument();
+              const report = doc.GetReviewReport();
+              let total = 0;
+              for (const user in report) {
+                total += report[user].length;
+              }
+              return total;
+            }, (total) => {
+              reviewCount = total;
+              reviewIndex = total > 0 ? 1 : 0;
+              updateCounter();
+            });
+
+            document.querySelectorAll(".${styles.btn}").forEach((btn) => {
+              btn.classList.remove("${styles.disabled}");
             });
           `,
           otherFunctional: `
-            document.getElementById('accept').addEventListener('click', function() {
-                connector.executeMethod("AcceptReviewChanges");
+            const updateCounter = () => {
+              const el = document.getElementById("reviewCounter");
+              if (el) {
+                el.textContent = reviewCount > 0
+                  ? \`Change \${reviewIndex} of \${reviewCount}\`
+                  : "";
+              }
+              const prevBtn = document.getElementById("prev");
+              const nextBtn = document.getElementById("next");
+              const acceptBtn = document.getElementById("accept");
+              const rejectBtn = document.getElementById("reject");
+              if (reviewCount === 0) {
+                acceptBtn.classList.add("${styles.disabled}");
+                rejectBtn.classList.add("${styles.disabled}");
+                prevBtn.classList.add("${styles.disabled}");
+                nextBtn.classList.add("${styles.disabled}");
+              } else {
+                acceptBtn.classList.remove("${styles.disabled}");
+                rejectBtn.classList.remove("${styles.disabled}");
+                if (reviewIndex <= 1) {
+                  prevBtn.classList.add("${styles.disabled}");
+                } else {
+                  prevBtn.classList.remove("${styles.disabled}");
+                }
+                if (reviewIndex >= reviewCount) {
+                  nextBtn.classList.add("${styles.disabled}");
+                } else {
+                  nextBtn.classList.remove("${styles.disabled}");
+                }
+              }
+            };
+
+            document.getElementById("accept").addEventListener("click", () => {
+              connector.executeMethod("AcceptReviewChanges", null, () => {
+                if (reviewCount > 0) reviewCount--;
+                if (reviewIndex > reviewCount) reviewIndex = reviewCount;
+                updateCounter();
+              });
             });
 
-            document.getElementById('reject').addEventListener('click', function() {
-                connector.executeMethod("RejectReviewChanges");
+            document.getElementById("reject").addEventListener("click", () => {
+              connector.executeMethod("RejectReviewChanges", null, () => {
+                if (reviewCount > 0) reviewCount--;
+                if (reviewIndex > reviewCount) reviewIndex = reviewCount;
+                updateCounter();
+              });
             });
 
-            document.getElementById('prev').addEventListener('click', function() {
-                connector.executeMethod("MoveToNextReviewChange", [false]);
+            document.getElementById("prev").addEventListener("click", () => {
+              connector.executeMethod("MoveToNextReviewChange", [false]);
+              if (reviewIndex > 1) reviewIndex--;
+              updateCounter();
             });
 
-            document.getElementById('next').addEventListener('click', function() {
-                connector.executeMethod("MoveToNextReviewChange");
+            document.getElementById("next").addEventListener("click", () => {
+              connector.executeMethod("MoveToNextReviewChange");
+              if (reviewIndex < reviewCount) reviewIndex++;
+              updateCounter();
             });
           `,
         }}

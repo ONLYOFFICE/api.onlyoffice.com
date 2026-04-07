@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文本文档。
 
-![SearchAndReplaceOnStart](/assets/images/plugins/gifs/search-and-replace-on-start.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/search-and-replace-on-start.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -55,10 +57,10 @@ GitHub 仓库：[示例：查找替换](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 方法和事件
 
-- button
-- init
-- onDocumentContentReady
-- executeMethod ("SearchAndReplace")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onDocumentContentReady](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)
+- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## 支持
 

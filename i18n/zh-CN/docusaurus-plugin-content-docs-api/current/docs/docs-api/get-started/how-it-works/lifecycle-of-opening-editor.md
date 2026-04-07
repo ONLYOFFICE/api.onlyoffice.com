@@ -54,6 +54,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```mdx-code-block
    <APITable>
    ```
+
       | 范围 | 类型   | 在场 | 描述               |
       | --------- | ------ | -------- | ------------------------- |
       | 信息   | 字符串 | 必需 | 定义消息文本。 |
@@ -61,6 +62,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
      ```mdx-code-block
      </APITable>
      ```
+
    :::note
    请注意，在嵌入式平台[type](../../usage-api/config/config.md#type)中不支持显示带有消息的工具提示。
    :::
@@ -167,7 +169,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   之后，可以向[Automation API](../../usage-api/automation-api.md)发送请求。
+   之后，可以向[Automation API](../../usage-api/automation-api/automation-api.md)发送请求。
    
    在以下情况下，`onDocumentReady`事件之后也可能会调用`onOutdatedVersion`或`onRequestRefreshFile`事件：
 

@@ -55,10 +55,10 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name     | Type   | Example                  | Description                                                                           |
-|----------|--------|--------------------------|---------------------------------------------------------------------------------------|
-| scope    | string | "selection"              | Whether to extract action items from the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection').|                                           
-| format   | string | "bullet"                 | How to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet').   |
+| Name   | Type   | Example     | Description                                                                                                                 |     |
+| ------ | ------ | ----------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
+| scope  | string | "selection" | Whether to extract action items from the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |     |
+| format | string | "bullet"    | How to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet').                                   |     |
 
 ## Function execution {#function-execution}
 
@@ -213,10 +213,10 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/extractActionItems.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/extract-action-items.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/extractActionItems.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/extract-action-items.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

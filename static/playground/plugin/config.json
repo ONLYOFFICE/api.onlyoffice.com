@@ -7,7 +7,7 @@
         {
             "description"    : "test",
             "url"            : "index.html",
-            "type"           : "system", 
+            "type"           : "system",
             "isViewer"       : true,
             "EditorsSupport" : ["word", "cell", "slide"],
             "initDataType"   : "none",

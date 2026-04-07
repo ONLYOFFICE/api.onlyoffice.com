@@ -28,7 +28,7 @@ sidebar_position: -10
 
 [获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-如需了解如何安装ONLYOFFICE文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example)。
+如需了解如何安装ONLYOFFICE文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example)。
 
 ## 步骤2.下载用于集成编辑器的.Net（C#）/.Net（C#MVC）代码
 
@@ -74,7 +74,7 @@ unzip DotNet.Csharp.MVC.Example.zip
 
 2. 在打开的窗口中，找到**Internet Information Services**，并勾选下图中所选的所有功能：
 
-   <img alt="Windows features" src="/assets/images/csharp/server-components.png" width="778px" />
+   ![Windows features](/assets/images/csharp/server-components.png)
 
 ## 步骤4. 配置 JWT
 
@@ -102,19 +102,19 @@ unzip DotNet.Csharp.MVC.Example.zip
 
    在**端口**框中指定仅用于此网站的唯一值。
 
-   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="583px" />
+   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="483px" />
 
 4. 检查IIS管理器中为您的网站指定的.NET平台版本。选择**v4.0**版本。
 
    **应用程序池**->右键单击平台名称->**设置应用程序池默认值**->**.NET CLR版本**
 
-   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="539px" />
+   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="439px" />
 
 5. 使用IIS管理器浏览您的网站：
 
    右键单击网站->**管理网站**->**浏览**
 
-   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="500px" />
+   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="400px" />
 
 ## 步骤 6.检查可访问性
 

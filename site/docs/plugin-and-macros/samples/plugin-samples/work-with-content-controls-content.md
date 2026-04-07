@@ -6,7 +6,9 @@ Inserts the content of one content control into another.
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsContent](/assets/images/plugins/gifs/work-with-content-controls-content.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-content.webm" type="video/webm" />
+</video>
 
 ## Installation
 

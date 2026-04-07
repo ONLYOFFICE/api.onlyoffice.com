@@ -40,4 +40,3 @@ To develop a plugin for ONLYOFFICE desktop editors, follow the instructions belo
    ![Sdkjs-plugins folder](/assets/images/plugins/sdkjs-plugins-folder.png)
 
    You can edit the plugin and reload it to see the changes.
-

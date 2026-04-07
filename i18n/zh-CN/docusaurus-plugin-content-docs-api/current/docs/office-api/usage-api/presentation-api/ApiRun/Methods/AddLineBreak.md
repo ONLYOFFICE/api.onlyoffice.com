@@ -1,6 +1,6 @@
 # AddLineBreak
 
-在当前运行位置添加换行符，并从新行开始下一个元素。
+在当前文本块位置添加换行符，并从新行开始下一个元素。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddLineBreak();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例在运行位置添加换行符，并从新行开始下一个元素。
+此示例在文本块位置添加换行符，并从新行开始下一个元素。
 
 ```javascript editor-pptx
 // How to add a line break after a sentence in a text run.

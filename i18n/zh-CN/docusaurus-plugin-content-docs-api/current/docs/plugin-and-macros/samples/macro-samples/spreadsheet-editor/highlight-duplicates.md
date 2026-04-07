@@ -65,7 +65,7 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-[这个 VBA 宏](https://www.extendoffice.com/documents/excel/3772-excel-highlight-duplicate-values-in-different-colors.html)被当做基准使用。
+[这个 VBA 宏](https://zh-cn.extendoffice.com/documents/excel/3772-excel-highlight-duplicate-values-in-different-colors.html)被当做基准使用。
 
 ``` vb
 Sub example()

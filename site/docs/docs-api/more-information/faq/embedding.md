@@ -54,6 +54,8 @@ Where the **example.com** is the name of the server where **document manager** a
 
 To remove any of these buttons simply do not include the corresponding parameter into the configuration file.
 
-> If you decide to hide the **Download** button (*editorConfig.embedded.saveUrl* parameter), please do not forget to also set the *document.permission.download* parameter in the document configuration to **false** to completely disable the possibility to download the file.
+:::note
+If you decide to hide the **Download** button (*editorConfig.embedded.saveUrl* parameter), please do not forget to also set the *document.permission.download* parameter in the document configuration to **false** to completely disable the possibility to download the file.
+:::
 
 Further information about the embedding parameters can be found [at this page](../../usage-api/config/editor/embedded.md).

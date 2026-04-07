@@ -85,7 +85,9 @@ window.Asc.plugin.init = function init(obj) {
 
 As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
 
-> Please note that the *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
+:::note
+The *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
+:::
 
 ## Step 2. Creating the UI plugin for the app
 
@@ -136,7 +138,7 @@ The *index.html* file will look as follows:
 
 With it, we will get a new tab called **Encryption** on the main app page:
 
-![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
+![Encryption enabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption enabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
 
 Enable encryption by ticking the checkbox:
 

@@ -20,7 +20,7 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例展示如何从形状的文档内容中获取当前文本运行。
+此示例展示如何从形状的文档内容中获取当前文本块。
 
 ```javascript editor-xlsx
 const worksheet = Api.GetActiveSheet();

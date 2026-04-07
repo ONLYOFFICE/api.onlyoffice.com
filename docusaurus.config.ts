@@ -103,8 +103,17 @@ const config: Config = {
 
           docItemComponent: '@theme/ApiItem',
 
-          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, isCategoryIndex, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator({
+              ...args,
+              isCategoryIndex(params) {
+                // Exclude index.md
+                if (params.fileName.toLowerCase() === 'index') {
+                  return false;
+                }
+                return isCategoryIndex(params);
+              },
+            });
             keyPath = args.item.dirName;
             sidebarItems.forEach(sidebarRecursive);
             return sidebarItems;
@@ -186,38 +195,6 @@ const config: Config = {
       items: [
         {
           type: 'dropdown',
-          label: 'Docspace',
-          position: 'left',
-          to: 'docspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceApiBackend',
-                label: 'API Reference',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceJSSdk',
-                label: 'Embed SDK',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspacePlugins',
-              label: 'Plugins SDK',
-              docsPluginId: 'api',
-             },
-             {
-               type: 'docSidebar',
-               sidebarId: 'docspaceMCPServer',
-               label: 'MCP Server',
-               docsPluginId: 'api',
-             },
-          ],
-        },
-        {
-          type: 'dropdown',
           label: 'Docs',
           position: 'left',
           to: 'docs',
@@ -252,6 +229,38 @@ const config: Config = {
               label: 'Desktop Editors',
               docsPluginId: 'api',
             },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Docspace',
+          position: 'left',
+          to: 'docspace',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceApiBackend',
+                label: 'API Reference',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceJSSdk',
+                label: 'Embed SDK',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspacePlugins',
+              label: 'Plugins SDK',
+              docsPluginId: 'api',
+             },
+             {
+               type: 'docSidebar',
+               sidebarId: 'docspaceMCPServer',
+               label: 'MCP Server',
+               docsPluginId: 'api',
+             },
           ],
         },
         {

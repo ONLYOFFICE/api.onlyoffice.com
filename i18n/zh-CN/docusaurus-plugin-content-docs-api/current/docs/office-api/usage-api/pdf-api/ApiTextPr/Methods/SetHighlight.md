@@ -1,6 +1,6 @@
 # SetHighlight
 
-指定添加到文本属性并作为背景应用于当前运行/范围/段落内容的高亮颜色。
+指定添加到文本属性并作为背景应用于当前文本块/范围/段落内容的高亮颜色。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定添加到文本属性并作为背景应用于运行内容的突出显示颜色。
+此示例指定添加到文本属性并作为背景应用于文本块内容的高亮颜色。
 
 ```javascript editor-pdf
 // How to highlight a text with a color.

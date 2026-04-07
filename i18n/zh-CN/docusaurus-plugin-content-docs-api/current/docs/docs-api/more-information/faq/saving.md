@@ -79,7 +79,9 @@ sidebar_position: -3
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-> 请注意，禁用**自动保存**也会禁用**快速**共同编辑模式，该模式仅适用于启用自动文档保存。
+:::note
+请注意，禁用**自动保存**也会禁用**快速**共同编辑模式，该模式仅适用于启用自动文档保存。
+:::
 
 有关自动保存的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave)。
 

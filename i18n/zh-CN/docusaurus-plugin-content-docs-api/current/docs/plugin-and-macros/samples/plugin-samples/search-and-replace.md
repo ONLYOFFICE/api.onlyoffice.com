@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档。
 
-![SearchandReplace](/assets/images/plugins/gifs/search-and-replace.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/search-and-replace.webm" type="video/webm" />
+</video>
 
 ## 安装方式
 
@@ -96,10 +98,10 @@ GitHub 仓库：[示例：查找并替换](https://github.com/ONLYOFFICE/sdkjs-p
 
 ## 方法和事件
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("SearchAndReplace")
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## 支持
 

@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE Document Builder can be installed on various platforms to generate, edit, and convert Office and PDF documents.
 
-:::warning
+:::info
 
 The free version of ONLYOFFICE Document Builder includes a watermark on all generated documents. To remove this limitation and access the full feature set, a commercial license is required.
 

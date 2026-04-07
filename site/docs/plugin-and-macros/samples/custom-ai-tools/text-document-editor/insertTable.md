@@ -32,15 +32,15 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name       | Type    | Example          | Description                                                                                      |
-|------------|---------|------------------|--------------------------------------------------------------------------------------------------|
-| rows       | number  | 3                | Number of rows in the table.                                                                     |
-| columns    | number  | 4                | Number of columns in the table.                                                                  |
-| hasHeaders | boolean | true             | Whether the first row should be formatted as headers.                                            |
-| tableStyle | string  | "Table Grid"     | Optional table style name (e.g., 'Table Grid', 'Light Grid').                                    |
-| width      | number  | 100              | Table width percentage (default is 100).                                                         |
-| widthType  | string  | "percent"        | Width type - 'percent' or 'point' (default is 'percent').                                       |
-| position   | string  | "current"        | Where to insert the table - 'current', 'start', or 'end' (default is 'current').               |
+| Name       | Type    | Example      | Description                                                                      |
+| ---------- | ------- | ------------ | -------------------------------------------------------------------------------- |
+| rows       | number  | 3            | Number of rows in the table.                                                     |
+| columns    | number  | 4            | Number of columns in the table.                                                  |
+| hasHeaders | boolean | true         | Whether the first row should be formatted as headers.                            |
+| tableStyle | string  | "Table Grid" | Optional table style name (e.g., 'Table Grid', 'Light Grid').                    |
+| width      | number  | 100          | Table width percentage (default is 100).                                         |
+| widthType  | string  | "percent"    | Width type - 'percent' or 'point' (default is 'percent').                        |
+| position   | string  | "current"    | Where to insert the table - 'current', 'start', or 'end' (default is 'current'). |
 
 ## Function execution {#function-execution}
 
@@ -98,10 +98,10 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/insertTable.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/insert-table.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/insertTable.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/text-document-editor/insert-table.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

@@ -6,9 +6,9 @@ sidebar_position: -1
 
 To debug ONLYOFFICE plugins in the desktop editors, use the `--ascdesktop-support-debug-info` flag. To do this, follow the instructions [here](../../../desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) depending on the operating system you use.
 
-![Debug](/assets/images/desktop/debugging.png)
+![Debug](/assets/images/desktop/debugging.png#gh-light-mode-only)![Debug](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
 
-### Debugging tools
+## Debugging tools
 
 **Developer console**
 
@@ -39,7 +39,7 @@ this.callCommand(function () {
 Alternatively, you can set debug breakpoint manually in DevTools: open Sources > locate your plugin file > click a line number to add a breakpoint (right-click for conditional breakpoints).
 :::
 
-### Best practices
+## Best practices
 
 Debugging plugin initialization
 
@@ -63,7 +63,7 @@ Debugging plugin initialization
 })(window, undefined);
 ```
 
-### Debugger use case and scope managing
+## Debugger use case and scope managing
 
 You can use external variables in your plugins by attaching them to `Asc.scope` object.
 

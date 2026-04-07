@@ -133,4 +133,6 @@ function onButtonClick() {
 
 Run our HTML file and make sure everything works.
 
-<img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-authorization-sample.gif" width="720px" />
+<video autoPlay loop muted playsInline width="720px">
+  <source src="/assets/images/docspace/webm/js-sdk-authorization-sample.webm" type="video/webm" />
+</video>

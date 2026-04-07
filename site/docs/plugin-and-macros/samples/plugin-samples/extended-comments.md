@@ -6,7 +6,9 @@ Pastes, edits, and removes comments and replies (with user data) in a document.
 
 **Supported editors:** documents.
 
-![ExtendedComments](/assets/images/plugins/gifs/extended-comments.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/extended-comments.webm" type="video/webm" />
+</video>
 
 ## Installation
 

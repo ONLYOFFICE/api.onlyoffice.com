@@ -1,6 +1,6 @@
 # SetVerticalTextAlign
 
-设置可以插入段落或文本运行的形状内容的垂直对齐方式。
+设置可以插入段落或文本块的形状内容的垂直对齐方式。
 
 ## 语法
 
@@ -12,9 +12,9 @@ expression.SetVerticalTextAlign(VerticalAlign);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| VerticalAlign | 必需 | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | 形状内部内容的垂直对齐类型。 |
+| **名称**      | **必需/可选** | **数据类型**                                                | **默认值** | **描述**                     |
+| ------------- | ------------- | ----------------------------------------------------------- | ---------- | ---------------------------- |
+| VerticalAlign | 必需          | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |            | 形状内部内容的垂直对齐类型。 |
 
 ## 返回值
 
@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置可以插入段落或文本运行的形状内容的垂直对齐方式。
+此示例设置可以插入段落或文本块的形状内容的垂直对齐方式。
 
 ```javascript editor-docx
 // How to align the text of the shape to top.
