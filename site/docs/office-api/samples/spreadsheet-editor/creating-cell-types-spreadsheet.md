@@ -3,7 +3,7 @@ hide_table_of_contents: true
 description: Create a spreadsheet with different cell data types.
 ---
 
-# Creating spreadsheet with different cell types
+# Creating cell types spreadsheet
 
 Creates a spreadsheet with heterogeneous data types for working with tables containing text, dates, amounts, percentages, and ratings. This approach is suitable for project reports, surveys, and budget tables.
 
