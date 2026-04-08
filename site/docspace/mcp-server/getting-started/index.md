@@ -1,5 +1,6 @@
 ---
 title: About the DocSpace MCP server
+sidebar_position: 0
 ---
 
 import DocCardList from '@theme/DocCardList';

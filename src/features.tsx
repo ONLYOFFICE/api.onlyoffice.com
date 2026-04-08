@@ -116,7 +116,7 @@ export const DocSpaceFeatures: Features = {
     },
 	{
       title: 'MCP Server',
-      link: 'mcp-server',
+      link: 'mcp-server/getting-started',
       description: (
         <>
           Connect AI tools directly to ONLYOFFICE DocSpace to execute actions{" "}
