@@ -1,3 +1,7 @@
+---
+description: Remove tags from a DocSpace room using the JS SDK.
+---
+
 # Remove tags from room
 
 This example demonstrates how to remove one or more tags from a room using the JavaScript SDK method.

@@ -1,3 +1,7 @@
+---
+description: Embed a chess board as an OLE object in the editor.
+---
+
 # Chess
 
 Inserts a Chess Board object into the document editor. The object makes it possible to edit and save the chess position in the *FEN* format.

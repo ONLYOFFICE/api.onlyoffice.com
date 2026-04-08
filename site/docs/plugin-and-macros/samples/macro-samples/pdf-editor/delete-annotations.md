@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove annotations containing a specified keyword.
 ---
 
 # Delete annotations

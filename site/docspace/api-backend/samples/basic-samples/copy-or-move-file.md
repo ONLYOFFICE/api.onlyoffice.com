@@ -1,3 +1,7 @@
+---
+description: Copy or move a file to another folder via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

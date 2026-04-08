@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Auto-fill text fields that share the same placeholder text.
 ---
 
 # Autofill fields

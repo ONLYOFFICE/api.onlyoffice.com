@@ -1,3 +1,7 @@
+---
+description: Change the style of a specified paragraph.
+---
+
 # changeParagraphStyle
 
 This function modifies the visual style of the specified paragraph.

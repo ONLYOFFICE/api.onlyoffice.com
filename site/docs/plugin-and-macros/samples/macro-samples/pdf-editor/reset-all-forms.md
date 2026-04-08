@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Reset all form fields to empty values.
 ---
 
 # Reset all forms

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Calculate the sum of highlighted cells.
 ---
 
 # Sum of highlighted cells

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Change font family and size across all slides.
 ---
 
 # Change font family and size

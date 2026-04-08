@@ -1,3 +1,7 @@
+---
+description: Change the background color of a slide.
+---
+
 # changeSlideBackground
 
 This function changes the background of a specified slide. Supports solid colors and gradient fills.

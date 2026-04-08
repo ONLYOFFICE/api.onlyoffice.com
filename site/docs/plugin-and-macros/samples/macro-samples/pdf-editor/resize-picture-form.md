@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Resize picture form fields by dimensions or aspect ratio.
 ---
 
 # Resize picture form

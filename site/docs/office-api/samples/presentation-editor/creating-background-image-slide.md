@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Create a slide with a background image and text overlay.
+---
+
 # Creating background image slide
 
 Create a slide with a background image and overlay text:

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Change the background color of presentation slides.
 ---
 
 # Change background color

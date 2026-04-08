@@ -1,3 +1,7 @@
+---
+description: Manage comments with categories and severity levels.
+---
+
 # Extended comments
 
 Pastes, edits, and removes comments and replies (with user data) in a document.

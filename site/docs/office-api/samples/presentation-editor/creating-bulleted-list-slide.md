@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Create a slide with a title and bulleted list.
+---
+
 # Creating bulleted list slide
 
 Create a slide with a bulleted list for structured information presentation:

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove all empty tables from a document.
 ---
 
 # Remove empty tables

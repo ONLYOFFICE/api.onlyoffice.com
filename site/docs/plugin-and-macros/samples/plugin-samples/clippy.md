@@ -1,3 +1,7 @@
+---
+description: Add an animated clippy assistant to the editor.
+---
+
 # Clippy
 
 Adds a clippy assistant to the document editor.

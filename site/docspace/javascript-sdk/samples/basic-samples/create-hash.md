@@ -1,3 +1,7 @@
+---
+description: Generate a password hash using the DocSpace JS SDK.
+---
+
 # Create password hash
 
 This example demonstrates how to generate a secure hash from a plain-text password using DocSpace SDK methods.

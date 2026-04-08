@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Merge data from multiple sheets into one.
 ---
 
 # Sheet merger

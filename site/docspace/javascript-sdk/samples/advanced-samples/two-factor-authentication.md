@@ -1,3 +1,7 @@
+---
+description: Verify users with a phone code before granting DocSpace access.
+---
+
 # Two-factor authentication
 
 This example demonstrates a two-step verification process using a phone number and 4-digit code before granting access to DocSpace via the SDK. Once verified, users are redirected to a file management interface embedded in an iframe.

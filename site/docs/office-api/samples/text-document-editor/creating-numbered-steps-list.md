@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a numbered list for step-by-step instructions.
 ---
 
 # Creating a numbered steps list

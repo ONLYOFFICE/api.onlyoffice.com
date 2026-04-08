@@ -1,3 +1,7 @@
+---
+description: Insert template fields for invoice information.
+---
+
 # Invoices
 
 Inserts template fields for invoice information.

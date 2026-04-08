@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a complex form with tables, text fields, and checkboxes.
 ---
 
 # Creating advanced form

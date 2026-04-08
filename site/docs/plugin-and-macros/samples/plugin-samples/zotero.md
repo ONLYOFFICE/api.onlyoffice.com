@@ -1,3 +1,7 @@
+---
+description: Add references and citations from a Zotero library.
+---
+
 # Zotero
 
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.

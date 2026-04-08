@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Validate and highlight empty required form fields.
 ---
 
 # Validate form fields

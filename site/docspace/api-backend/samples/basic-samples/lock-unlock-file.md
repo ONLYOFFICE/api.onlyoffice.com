@@ -1,3 +1,7 @@
+---
+description: Lock or unlock a file and view its access levels via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

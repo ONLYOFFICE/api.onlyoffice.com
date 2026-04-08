@@ -1,3 +1,7 @@
+---
+description: Create new users and send them invitations via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

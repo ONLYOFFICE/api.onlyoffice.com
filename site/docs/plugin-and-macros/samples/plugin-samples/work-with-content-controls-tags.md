@@ -1,3 +1,7 @@
+---
+description: Get a list of content control tags in a document.
+---
+
 # Work with content controls tags
 
 Gets the list of content controls tags.

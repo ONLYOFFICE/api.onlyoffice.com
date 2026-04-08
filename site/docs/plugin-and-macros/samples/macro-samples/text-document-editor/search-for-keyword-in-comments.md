@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Search for a keyword in document comments.
 ---
 
 # Search for keyword in comments

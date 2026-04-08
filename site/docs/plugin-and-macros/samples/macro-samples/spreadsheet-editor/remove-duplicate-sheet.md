@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove duplicate sheets from a workbook.
 ---
 
 # Remove duplicate sheet

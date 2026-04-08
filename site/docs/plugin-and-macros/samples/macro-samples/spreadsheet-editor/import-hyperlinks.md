@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Import hyperlinks into spreadsheet cells.
 ---
 
 # Import hyperlinks

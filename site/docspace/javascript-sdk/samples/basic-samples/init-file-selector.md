@@ -1,3 +1,7 @@
+---
+description: Initialize the DocSpace file selector using the JS SDK.
+---
+
 # Initialize file selector
 
 This example demonstrates how to initialize the DocSpace file selector using the JavaScript SDK.

@@ -1,3 +1,7 @@
+---
+description: Initialize the DocSpace manager using the JS SDK.
+---
+
 # Initialize manager
 
 This example demonstrates how to initialize the DocSpace manager using the JavaScript SDK.

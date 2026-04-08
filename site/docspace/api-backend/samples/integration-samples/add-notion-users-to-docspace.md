@@ -1,3 +1,7 @@
+---
+description: Retrieve Notion users and add them to DocSpace.
+---
+
 # Add Notion users to DocSpace
 
 This script automates the process of retrieving Notion users and adding them to the DocSpace. It ensures that all Notion team members are onboarded into DocSpace.

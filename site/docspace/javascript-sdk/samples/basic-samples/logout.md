@@ -1,3 +1,7 @@
+---
+description: Log out a user from the DocSpace session using the JS SDK.
+---
+
 # Logout
 
 This example demonstrates how to log out a user from the DocSpace session using the JavaScript SDK method.

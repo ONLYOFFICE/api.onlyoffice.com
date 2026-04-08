@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Highlight duplicate values in a cell range.
 ---
 
 # Highlight duplicates

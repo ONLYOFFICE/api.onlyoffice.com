@@ -1,3 +1,7 @@
+---
+description: Mark the DocSpace iframe as loaded using the JS SDK.
+---
+
 # Mark iframe as loaded
 
 This example demonstrates how to explicitly mark the iframe as loaded using the JavaScript SDK method.

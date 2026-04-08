@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a bullet list with custom Unicode symbols.
 ---
 
 # Creating a custom symbol list

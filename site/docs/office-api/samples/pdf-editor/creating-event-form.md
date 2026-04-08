@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create an event registration form with various field types.
 ---
 
 # Creating event form

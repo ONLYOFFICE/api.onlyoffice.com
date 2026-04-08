@@ -1,8 +1,9 @@
 ---
 hide_table_of_contents: true
+description: Freeze rows and columns in a spreadsheet.
 ---
 
-# Navigate to cell and reset frozen panes
+# Freeze panes
 
 Unfreezes panes, navigates the viewport to a target cell (A10), then refreezes panes at a different cell (D10).
 

@@ -1,3 +1,7 @@
+---
+description: Create a pivot table from a selected range.
+---
+
 # insertPivotTable
 
 This function inserts a pivot table into the specified range or the currently selected range.

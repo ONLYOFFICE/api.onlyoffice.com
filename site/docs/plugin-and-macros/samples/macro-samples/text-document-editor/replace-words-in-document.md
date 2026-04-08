@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Find and replace words throughout a document.
 ---
 
 # Replace words in document

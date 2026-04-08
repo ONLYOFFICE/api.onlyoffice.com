@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Write data to a specific worksheet cell.
 ---
 
 # Write data to worksheet cell

@@ -1,3 +1,7 @@
+---
+description: Search and replace text automatically on document open.
+---
+
 # Search and replace on start
 
 Searches for and replaces text in the document when it is reopened.

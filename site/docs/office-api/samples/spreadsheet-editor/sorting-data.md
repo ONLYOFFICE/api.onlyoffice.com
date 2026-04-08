@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Sort spreadsheet data by multiple columns.
+---
+
 # Sorting data
 
 Orders table rows by values in one of the columns. Used for convenient analysis, displaying best/worst values, alphabetical order, and other purposes. Works with numeric, text, and date values:

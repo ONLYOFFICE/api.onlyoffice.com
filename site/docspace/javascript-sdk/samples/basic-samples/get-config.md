@@ -1,3 +1,7 @@
+---
+description: Retrieve the embedded frame configuration using the JS SDK.
+---
+
 # Get config
 
 This example demonstrates how to retrieve the configuration object of the embedded frame.

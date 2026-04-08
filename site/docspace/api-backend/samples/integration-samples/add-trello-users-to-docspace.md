@@ -1,3 +1,7 @@
+---
+description: Retrieve Trello board members and add them to DocSpace.
+---
+
 # Add Trello users to DocSpace
 
 This script automates the process of retrieving Trello users and adding them to the DocSpace. It ensures that all Trello team members are onboarded into DocSpace.

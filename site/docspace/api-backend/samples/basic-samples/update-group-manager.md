@@ -1,3 +1,7 @@
+---
+description: Update the manager of a group via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

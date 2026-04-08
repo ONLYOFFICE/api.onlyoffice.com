@@ -1,3 +1,7 @@
+---
+description: Insert a formatted list into a document.
+---
+
 # insertList
 
 This function creates simple numbered or bulleted lists at the current cursor position or at the start/end of the document.

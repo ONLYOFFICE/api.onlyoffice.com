@@ -1,3 +1,7 @@
+---
+description: Insert custom text fields and dropdowns into a document.
+---
+
 # Add custom fields
 
 Inserts custom fields into the document.

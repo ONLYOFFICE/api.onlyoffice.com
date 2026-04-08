@@ -1,3 +1,7 @@
+---
+description: Add a table to a presentation slide.
+---
+
 # addTableToSlide
 
 This function adds a table to the specified or the current slide. By default, the table is 194x97 mm and centered.

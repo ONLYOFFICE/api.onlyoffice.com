@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a list of content controls in a document.
 ---
 
 # Create content control list

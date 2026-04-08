@@ -1,3 +1,7 @@
+---
+description: Retrieve groups managed by a specific user via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

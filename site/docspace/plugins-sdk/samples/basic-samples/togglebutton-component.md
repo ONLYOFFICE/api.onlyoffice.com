@@ -1,3 +1,7 @@
+---
+description: Configure and use the ToggleButton component.
+---
+
 # ToggleButton component
 
 This guide demonstrates how to configure and use the [ToggleButton](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/togglebutton) component in the DocSpace Plugins SDK with nearly all supported layout and style properties.

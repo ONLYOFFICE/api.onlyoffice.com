@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate a table of contents from document headings.
 ---
 
 # Generate table of contents

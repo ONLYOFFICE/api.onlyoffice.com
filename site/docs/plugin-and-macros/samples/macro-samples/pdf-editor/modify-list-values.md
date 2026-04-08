@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove specific values from combo box option lists.
 ---
 
 # Modify list values

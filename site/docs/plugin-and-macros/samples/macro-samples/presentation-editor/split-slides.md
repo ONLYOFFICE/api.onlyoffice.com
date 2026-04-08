@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Split slide content into multiple slides.
 ---
 
 # Split slides

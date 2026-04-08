@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Delete all comments from a spreadsheet.
 ---
 
 # Delete comments

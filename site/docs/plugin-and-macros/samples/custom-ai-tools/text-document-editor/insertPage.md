@@ -1,3 +1,7 @@
+---
+description: Insert a new page into a document.
+---
+
 # insertPage
 
 This function inserts a new page into the document at a specified location.

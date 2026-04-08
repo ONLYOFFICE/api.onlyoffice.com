@@ -1,3 +1,7 @@
+---
+description: Use AI models for text generation, editing, and summarization.
+---
+
 # AI
 
 Connects an AI provider (e.g., OpenAI, DeepSeek) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.

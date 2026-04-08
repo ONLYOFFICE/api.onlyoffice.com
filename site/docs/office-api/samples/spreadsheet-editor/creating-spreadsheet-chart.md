@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a chart from spreadsheet data.
 ---
 
 # Creating spreadsheet chart

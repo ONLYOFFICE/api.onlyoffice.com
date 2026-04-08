@@ -1,5 +1,6 @@
 ---
 sidebar_position: -1
+description: Set up and run Document Builder samples in Java.
 ---
 
 import Tabs from '@theme/Tabs';

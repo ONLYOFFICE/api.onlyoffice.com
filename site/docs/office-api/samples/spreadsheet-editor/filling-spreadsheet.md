@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Populate a spreadsheet with data from arrays.
 ---
 
 # Filling spreadsheet

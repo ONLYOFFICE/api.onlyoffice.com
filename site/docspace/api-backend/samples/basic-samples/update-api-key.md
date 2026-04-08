@@ -1,3 +1,7 @@
+---
+description: Update the name, permissions, or status of an API key.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

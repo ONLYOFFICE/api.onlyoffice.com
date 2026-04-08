@@ -1,3 +1,7 @@
+---
+description: Create a chart from a spreadsheet data range.
+---
+
 # addChart
 
 This function creates a chart of the specified type from the given range or the selected range.

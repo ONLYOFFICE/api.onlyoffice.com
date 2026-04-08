@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a purchase order form with vendor and item details.
 ---
 
 # Creating purchase order

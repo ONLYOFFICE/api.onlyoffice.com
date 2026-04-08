@@ -1,3 +1,7 @@
+---
+description: Build an admin settings interface with form controls.
+---
+
 # Settings plugin UI
 
 This plugin adds a settings interface for administrators in DocSpace. It includes:

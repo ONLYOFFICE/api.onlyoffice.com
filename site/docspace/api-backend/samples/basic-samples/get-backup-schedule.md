@@ -1,3 +1,7 @@
+---
+description: Retrieve the current portal backup schedule via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

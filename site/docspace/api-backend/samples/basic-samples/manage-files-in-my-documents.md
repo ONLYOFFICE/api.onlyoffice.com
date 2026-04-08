@@ -1,3 +1,7 @@
+---
+description: Upload, create, and delete files in My Documents via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

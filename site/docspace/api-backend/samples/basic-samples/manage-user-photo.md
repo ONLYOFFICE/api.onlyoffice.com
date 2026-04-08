@@ -1,3 +1,7 @@
+---
+description: Upload and delete user profile photos via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

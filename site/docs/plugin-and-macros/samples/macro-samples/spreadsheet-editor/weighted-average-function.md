@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Calculate a weighted average from cell values.
 ---
 
 # Weighted average function

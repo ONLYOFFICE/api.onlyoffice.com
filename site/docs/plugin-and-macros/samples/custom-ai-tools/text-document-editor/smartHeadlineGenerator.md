@@ -1,3 +1,7 @@
+---
+description: Generate a headline from document content.
+---
+
 # smartHeadlineGenerator
 
 This function generates a clear and relevant headline from the currently selected text (paragraph, slide, or section). This headline is meant to accurately represent the content, not be overly catchy.

@@ -1,3 +1,7 @@
+---
+description: Create a new shared room using the DocSpace JS SDK.
+---
+
 # Create room
 
 This example demonstrates how to create a new shared room.

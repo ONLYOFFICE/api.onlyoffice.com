@@ -1,3 +1,7 @@
+---
+description: Create a new room and invite a user to it via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

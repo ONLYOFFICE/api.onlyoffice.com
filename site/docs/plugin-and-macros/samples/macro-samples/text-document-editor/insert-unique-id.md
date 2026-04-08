@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Insert a unique ID into the document.
 ---
 
 # Insert unique id

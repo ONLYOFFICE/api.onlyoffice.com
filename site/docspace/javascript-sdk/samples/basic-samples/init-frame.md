@@ -1,3 +1,7 @@
+---
+description: Initialize the DocSpace view-only frame using the JS SDK.
+---
+
 # Initialize frame
 
 This example demonstrates how to initialize the DocSpace view-only frame using the JavaScript SDK method.

@@ -1,3 +1,7 @@
+---
+description: Copy content between content controls.
+---
+
 # Work with content controls content
 
 Inserts the content of one content control into another.

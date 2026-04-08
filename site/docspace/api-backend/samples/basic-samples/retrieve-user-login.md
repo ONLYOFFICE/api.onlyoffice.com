@@ -1,3 +1,7 @@
+---
+description: Retrieve and filter user login audit events via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

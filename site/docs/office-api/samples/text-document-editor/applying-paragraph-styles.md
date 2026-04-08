@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+description: Copy and apply formatting styles between paragraphs.
+---
 # Applying paragraph styles
 
 Create a document that demonstrates copying and applying formatting styles from one paragraph to other paragraphs:

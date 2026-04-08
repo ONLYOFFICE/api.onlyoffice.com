@@ -1,5 +1,6 @@
 ---
 sidebar_position: -4
+description: Set up and run Document Builder samples in C++.
 ---
 
 import Tabs from '@theme/Tabs';

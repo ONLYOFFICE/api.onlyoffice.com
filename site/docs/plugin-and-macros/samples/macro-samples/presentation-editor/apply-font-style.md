@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Apply a font style to all text on slides.
 ---
 
 # Apply font style

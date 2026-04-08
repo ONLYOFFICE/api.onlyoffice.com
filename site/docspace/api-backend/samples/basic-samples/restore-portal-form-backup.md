@@ -1,3 +1,7 @@
+---
+description: Restore a portal from a specific backup via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

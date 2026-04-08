@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Insert Unicode symbols with custom formatting.
 ---
 
 # Inserting special symbols

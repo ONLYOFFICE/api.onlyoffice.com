@@ -1,3 +1,7 @@
+---
+description: Add one or more members to an existing group via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

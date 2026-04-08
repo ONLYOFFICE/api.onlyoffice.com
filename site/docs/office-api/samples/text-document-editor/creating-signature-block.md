@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add a signature block with name, position, and signature line.
 ---
 
 # Creating signature block

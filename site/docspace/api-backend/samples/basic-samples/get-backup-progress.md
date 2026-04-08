@@ -1,3 +1,7 @@
+---
+description: Check the progress of an ongoing backup process via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

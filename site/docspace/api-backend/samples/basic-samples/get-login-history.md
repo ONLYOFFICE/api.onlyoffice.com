@@ -1,3 +1,7 @@
+---
+description: Retrieve recent login events and extract unique user IDs.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

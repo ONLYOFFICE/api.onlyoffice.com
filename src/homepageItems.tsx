@@ -44,7 +44,7 @@ export const Samples: Samples = {
       category: 'favorite',
       description: (
         <>
-          This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range.
+          This <Link to="/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range.
         </>
       ),
       features: [
@@ -52,7 +52,7 @@ export const Samples: Samples = {
         'Custom range selection',
         'AI-powered automation',
       ],
-      viewLink:'/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor',
+      viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/#spreadsheet-editor',
       tags: [
         { label: 'Plugins', variant: 'blue' },
         { label: 'Spreadsheet' },
@@ -66,7 +66,7 @@ export const Samples: Samples = {
       category: 'favorite',
       description: (
         <>
-          Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in a custom interface.
+          Collects all the <Link to="/docs/docs-api/samples/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in a custom interface.
         </>
       ),
       features: [
@@ -74,7 +74,7 @@ export const Samples: Samples = {
         'Custom comment UI',
         'Real-time collaboration',
       ],
-      viewLink:'/samples/docs/docs-api/external-access-to-the-document-editing/',
+      viewLink:'/docs/docs-api/samples/external-access-to-the-document-editing/',
       tags: [
         { label: 'Docs API', variant: 'blue' },
         { label: 'Automation', variant: 'purple' },

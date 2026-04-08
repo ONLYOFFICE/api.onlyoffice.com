@@ -1,3 +1,7 @@
+---
+description: Create tasks linked to DocSpace rooms and add files inside them.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

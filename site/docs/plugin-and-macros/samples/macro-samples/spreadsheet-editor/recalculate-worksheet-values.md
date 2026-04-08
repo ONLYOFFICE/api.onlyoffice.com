@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Recalculate all formulas in a worksheet.
 ---
 
 # Recalculate worksheet values

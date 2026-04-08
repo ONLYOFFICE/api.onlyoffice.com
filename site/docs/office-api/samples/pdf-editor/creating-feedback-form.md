@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a feedback form with rating and comment fields.
 ---
 
 # Creating feedback form

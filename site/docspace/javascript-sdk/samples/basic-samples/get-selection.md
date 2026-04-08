@@ -1,3 +1,7 @@
+---
+description: Retrieve the current selection in DocSpace using the JS SDK.
+---
+
 # Get selection
 
 This example demonstrates how to retrieve the current selection in the DocSpace interface using the JavaScript SDK.

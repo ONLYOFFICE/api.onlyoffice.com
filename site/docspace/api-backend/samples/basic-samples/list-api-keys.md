@@ -1,3 +1,7 @@
+---
+description: Retrieve all API keys for the current user via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -1,3 +1,7 @@
+---
+description: Insert a table into a document.
+---
+
 # insertTable
 
 This function inserts a table at the current cursor position or at the start/end of the document. You can specify the number of rows and columns, and optionally add headers.

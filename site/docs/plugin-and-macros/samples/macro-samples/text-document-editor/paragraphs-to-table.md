@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Convert paragraphs into a table structure.
 ---
 
 # Paragraphs to table

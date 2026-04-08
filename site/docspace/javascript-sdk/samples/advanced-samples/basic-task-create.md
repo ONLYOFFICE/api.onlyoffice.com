@@ -1,3 +1,7 @@
+---
+description: Create a task management table with auto-generated DocSpace rooms.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

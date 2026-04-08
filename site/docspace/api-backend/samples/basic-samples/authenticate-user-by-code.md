@@ -1,3 +1,7 @@
+---
+description: Authenticate a user with a one-time 2FA code via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

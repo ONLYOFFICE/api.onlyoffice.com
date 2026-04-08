@@ -1,3 +1,7 @@
+---
+description: Count paragraphs, words, and characters in a document.
+---
+
 # Count words and characters
 
 Counts paragraphs, words, and characters with or without spaces in the selected part of the document.

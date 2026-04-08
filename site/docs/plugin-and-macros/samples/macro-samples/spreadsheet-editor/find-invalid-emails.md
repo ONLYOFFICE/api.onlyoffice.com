@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Find and highlight invalid email addresses in cells.
 ---
 
 # Find invalid emails

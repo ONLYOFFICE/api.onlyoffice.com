@@ -1,3 +1,7 @@
+---
+description: Insert special symbols from a character table.
+---
+
 # Symbol table
 
 Inserts special symbols into the document.

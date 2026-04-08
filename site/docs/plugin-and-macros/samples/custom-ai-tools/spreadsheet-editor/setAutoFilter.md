@@ -1,3 +1,7 @@
+---
+description: Apply an auto filter to a selected range.
+---
+
 # setAutoFilter
 
 This function applies or modifies an AutoFilter on a given cell range or the active selection.

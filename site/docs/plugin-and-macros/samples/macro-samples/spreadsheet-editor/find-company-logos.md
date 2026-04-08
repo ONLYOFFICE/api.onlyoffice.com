@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Find and insert company logos into spreadsheet cells.
 ---
 
 # Find company logos

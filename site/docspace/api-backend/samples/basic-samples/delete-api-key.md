@@ -1,3 +1,7 @@
+---
+description: Delete an existing API key by its unique ID via the API.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

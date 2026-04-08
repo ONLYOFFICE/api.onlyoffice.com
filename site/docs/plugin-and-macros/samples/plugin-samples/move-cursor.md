@@ -1,3 +1,7 @@
+---
+description: Move the cursor to the document start or end.
+---
+
 # Move cursor
 
 Moves the text cursor to the document start/end.

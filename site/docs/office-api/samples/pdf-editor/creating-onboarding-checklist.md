@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create an employee onboarding checklist form.
 ---
 
 # Creating onboarding checklist
