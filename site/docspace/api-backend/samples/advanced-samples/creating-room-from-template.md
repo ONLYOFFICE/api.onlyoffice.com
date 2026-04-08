@@ -5,7 +5,7 @@ description: Create a new project room from an existing room template.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Creating project room from template
+# Creating room from template
 
 This example demonstrates how to create a DocSpace room for a new project from an existing room template.
 The external project system (PM/ERP/CRM) sends project data (for example, `projectId`, `projectType`, `projectName`). The integration then:
