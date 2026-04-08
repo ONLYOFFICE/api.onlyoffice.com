@@ -3,7 +3,7 @@ hide_table_of_contents: true
 description: Format a table with alternating row colors.
 ---
 
-# Creating spreadsheet with alternating row colors
+# Formatting alternating row colors
 
 Creates a spreadsheet with alternating row colors to improve readability of tables with multiple rows:
 
