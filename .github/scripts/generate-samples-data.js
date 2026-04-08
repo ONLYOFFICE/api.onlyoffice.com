@@ -8,8 +8,10 @@ const SOURCES = [
   { dir: 'site/docs/office-api/samples', routeBase: 'docs/office-api/samples', output: 'docs-office-api-samples.json' },
   { dir: 'site/docs/plugin-and-macros/samples', routeBase: 'docs/plugin-and-macros/samples', output: 'docs-plugins-samples.json' },
   { dir: 'site/docs/document-builder/samples', routeBase: 'docs/document-builder/samples', output: 'docs-builder-samples.json' },
-  // AI
+  // AI - Docs
   { dir: 'site/docs/plugin-and-macros/samples/custom-ai-tools', routeBase: 'docs/plugin-and-macros/samples/custom-ai-tools', output: 'docs-ai-samples.json' },
+  // AI - DocSpace
+  { dir: 'site/docspace/mcp-server/use-cases', routeBase: 'docspace/mcp-server/use-cases', output: 'docspace-ai-samples.json' },
   // DocSpace
   { dir: 'site/docspace/api-backend/samples', routeBase: 'docspace/api-backend/samples', output: 'docspace-samples.json' },
   { dir: 'site/docspace/javascript-sdk/samples', routeBase: 'docspace/javascript-sdk/samples', output: 'docspace-jssdk-samples.json' },
