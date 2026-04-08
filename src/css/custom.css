@@ -53,7 +53,6 @@
   --card-border-color: #ededed;
   --card-background-color: var(--ifm-card-background-color);
 
-
   /* START OPENAPI */
   --openapi-input-background: var(--ifm-color-emphasis-0) !important;
   --ifm-pre-background: var(--ifm-color-emphasis-100);
@@ -110,7 +109,7 @@
 
   --button-text-color: #245add;
   --button-border-color: #245add;
-  --button-bg-color: #00000000;
+  --button-bg-color: transparent;
   --button-text-color-hover: #2033f5;
   --button-border-color-hover: #2033f5;
   --button-bg-color-hover: #f5f5fac0;
