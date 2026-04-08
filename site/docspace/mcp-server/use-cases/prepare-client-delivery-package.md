@@ -1,6 +1,6 @@
 ---
 description: Collect project files into a delivery folder with a share link.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Prepare client delivery package

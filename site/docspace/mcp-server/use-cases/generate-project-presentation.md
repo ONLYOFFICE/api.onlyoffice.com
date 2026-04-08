@@ -1,6 +1,6 @@
 ---
 description: Generate a project presentation from folder documents.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Generate project presentation

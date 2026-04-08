@@ -1,6 +1,6 @@
 ---
 description: Create a contract register spreadsheet from multiple files.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Create contract register spreadsheet

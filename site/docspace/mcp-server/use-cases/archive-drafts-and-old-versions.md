@@ -1,6 +1,6 @@
 ---
 description: Move drafts and old file versions into an archive folder.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Archive drafts and old versions

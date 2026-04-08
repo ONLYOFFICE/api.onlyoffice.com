@@ -1,6 +1,6 @@
 ---
 description: Upload a document and generate a structured summary.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Upload and summarize document

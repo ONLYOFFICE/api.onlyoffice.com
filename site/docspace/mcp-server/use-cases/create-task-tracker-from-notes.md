@@ -1,6 +1,6 @@
 ---
 description: Convert meeting notes into a task tracker spreadsheet.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Create task tracker from notes

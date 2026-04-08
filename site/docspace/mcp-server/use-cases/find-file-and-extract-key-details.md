@@ -1,6 +1,6 @@
 ---
 description: Find a file in a room and extract key details.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Find file and extract key details

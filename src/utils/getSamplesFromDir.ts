@@ -31,6 +31,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'Integration': 'purple',
       'REST API': 'green',
       'MCP Server': 'green',
+      'AI': 'pink',
     };
     const docTags: SamplesGrid.Tag[] = (doc as any).tags?.map((t: string) => ({ label: t, variant: tagVariants[t] ?? 'default' })) ?? [];
     return {

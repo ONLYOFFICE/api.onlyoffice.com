@@ -1,6 +1,6 @@
 ---
 description: Create a review folder and grant reviewers access.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Create review folder with reviewers

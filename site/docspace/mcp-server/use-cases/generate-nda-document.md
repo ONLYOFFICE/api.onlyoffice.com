@@ -1,6 +1,6 @@
 ---
 description: Generate an NDA document and save it to a folder.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Generate NDA document

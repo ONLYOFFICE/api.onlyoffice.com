@@ -1,6 +1,6 @@
 ---
 description: Set up an onboarding workspace for a new employee.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Create onboarding workspace

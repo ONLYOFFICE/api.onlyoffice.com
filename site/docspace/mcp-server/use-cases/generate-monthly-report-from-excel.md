@@ -1,6 +1,6 @@
 ---
 description: Generate a monthly report from an Excel spreadsheet.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Generate monthly report from Excel

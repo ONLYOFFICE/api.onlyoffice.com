@@ -1,6 +1,6 @@
 ---
 description: Generate a digest from all documents in a folder.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Generate document digest

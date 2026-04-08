@@ -1,6 +1,6 @@
 ---
 description: Review room access, update permissions, and archive the room.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Review access and archive room

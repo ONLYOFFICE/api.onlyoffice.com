@@ -1,6 +1,6 @@
 ---
 description: Analyze an Excel file and generate an executive summary report.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Analyze Excel and generate report

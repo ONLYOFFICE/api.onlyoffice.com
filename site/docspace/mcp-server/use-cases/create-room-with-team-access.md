@@ -1,6 +1,6 @@
 ---
 description: Create a project room with folder structure and team access.
-tags: ["DocSpace", "MCP Server"]
+tags: ["DocSpace", "MCP Server", "AI"]
 ---
 
 # Create room with team access
