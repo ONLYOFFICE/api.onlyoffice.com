@@ -5,7 +5,7 @@ description: Generate a weekly contracts report for recently created rooms.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Build a weekly report of contracts in recently created rooms
+# Weekly contracts report
 
 This example demonstrates how to generate a weekly contracts report for rooms created recently in ONLYOFFICE DocSpace. The script loads rooms, filters them by creation date, scans files inside each room, detects a contract file by keywords, and marks it as SIGNED or NOT SIGNED based on the file name (placeholder logic).
 

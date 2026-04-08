@@ -5,7 +5,7 @@ description: Create a dedicated investigation room when a helpdesk ticket arrive
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Create an investigation room for each new support ticket
+# Investigation room from ticket
 
 This example shows how to create a dedicated investigation room in ONLYOFFICE DocSpace when your helpdesk system (Zendesk / Freshdesk / Jira Service Management) reports a new ticket.
 

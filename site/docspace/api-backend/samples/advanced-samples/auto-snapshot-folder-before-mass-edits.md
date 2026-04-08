@@ -5,7 +5,7 @@ description: Create a timestamped snapshot of room files before running mass edi
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Create a room snapshot before a mass edit
+# Auto snapshot before mass edits
 
 This example demonstrates how to automatically create a "snapshot" of a room before a mass edit operation. The script checks whether the room has a special tag (for example, `prepare-mass-edit`). If the tag is present, it creates a timestamped folder in a dedicated Snapshot room and copies all top-level files from the source room into that folder.
 This approach helps you keep a quick backup of important room files before you run bulk renaming, indexing, permissions updates, or other large changes.

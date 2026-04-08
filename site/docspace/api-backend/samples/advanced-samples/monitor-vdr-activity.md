@@ -5,7 +5,7 @@ description: Analyze VDR audit logs and alert on unusually high user activity.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Monitor VDR activity and alert on suspicious user behavior
+# Monitoring VDR activity
 
 This example shows how to monitor user activity in a Virtual Data Room (VDR) in ONLYOFFICE DocSpace using audit logs.
 

@@ -5,7 +5,7 @@ description: Create a personal home folder for each new user in a shared room.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatic home folder creation for new users in a shared Employees room
+# Auto home folder
 
 This example shows how to automatically create a personal home folder for every new user inside an existing shared room/folder (for example, Employees), instead of creating a separate room per user.
 

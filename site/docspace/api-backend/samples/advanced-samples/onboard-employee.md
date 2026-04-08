@@ -5,7 +5,7 @@ description: Prepare a structured workspace for a new employee in a shared folde
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Onboard an employee into a shared "Employees" folder
+# Onboarding employee
 
 This example demonstrates how to prepare a structured workspace for a new employee in ONLYOFFICE DocSpace using the API.
 

@@ -5,7 +5,7 @@ description: Classify uploaded documents by filename and move them to status fol
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatically detect document status by filename and route to folders
+# Routing docs by status
 
 This example shows how to automatically classify an uploaded document as **Draft**, **Final**, or **Signed** based on its filename, and move it to the corresponding folder in ONLYOFFICE DocSpace.
 

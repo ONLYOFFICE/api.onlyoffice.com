@@ -5,7 +5,7 @@ description: Rename uploaded files automatically to enforce safe naming rules.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatically sanitize file names on upload
+# Sanitizing filenames
 
 This example shows how to enforce consistent and safe file naming rules in ONLYOFFICE DocSpace by automatically renaming files right after upload.
 

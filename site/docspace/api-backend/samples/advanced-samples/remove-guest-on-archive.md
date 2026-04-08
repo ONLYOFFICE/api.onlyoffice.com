@@ -5,7 +5,7 @@ description: Revoke guest access automatically when a room is moved to the archi
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Remove guest access when a room is moved to Archive
+# Removing guest on archive
 
 This example shows how to automatically revoke guest (external) access when a room is moved under an Archive root in DocSpace.
 When a move event is received, the script verifies that the destination parent is the configured archive root, loads the room sharing entries, removes guest participants, and updates the room share settings. Optionally, it generates a cleanup report and notifies the room owner.

@@ -5,7 +5,7 @@ description: Generate a monthly compliance report from audit events and upload i
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Generate and upload a monthly compliance report
+# Monthly compliance report
 
 This example demonstrates how to generate a monthly compliance report in ONLYOFFICE DocSpace using the API. It retrieves audit events for a selected period, optionally filters events to focus on important documents, builds a human-readable TXT report, and uploads the report to a dedicated folder (for example, a “Compliance” room folder).
 

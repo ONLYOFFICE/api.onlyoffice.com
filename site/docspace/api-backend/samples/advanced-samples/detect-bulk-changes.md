@@ -5,7 +5,7 @@ description: Detect bulk file changes and temporarily restrict suspicious user a
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Detect suspicious bulk file changes and temporarily restrict user accounts
+# Detecting bulk changes
 
 This example shows how to detect potentially suspicious user behavior in ONLYOFFICE DocSpace by analyzing audit logs and automatically applying temporary restrictions.
 The workflow monitors recent file-related activity, identifies users who modify an unusually large number of files in a short time window, sends a security alert, and updates the account status of the affected users.

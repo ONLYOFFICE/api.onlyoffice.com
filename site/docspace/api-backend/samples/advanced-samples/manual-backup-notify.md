@@ -5,7 +5,7 @@ description: Trigger a manual portal backup and notify an administrator of the r
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Start a manual backup and notify an administrator
+# Manual backup and notify
 
 This example shows how to trigger a manual portal backup in ONLYOFFICE DocSpace and send a notification to an administrator with the backup status and details.
 

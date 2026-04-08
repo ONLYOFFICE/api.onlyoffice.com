@@ -5,7 +5,7 @@ description: Monitor login activity and detect logins from disallowed IP address
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Monitor logins and enforce IP allowlist
+# Monitoring logins and IP allowlist
 
 This example demonstrates how to monitor login activity in ONLYOFFICE DocSpace and detect logins that violate an IP allowlist policy.
 

@@ -5,7 +5,7 @@ description: Send a notification to the manager when a client uploads an invoice
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Notify manager when a client uploads an invoice
+# Notifying on invoice upload
 
 This example shows how to use ONLYOFFICE DocSpace webhooks to react when a client uploads an invoice to their room.
 

@@ -5,7 +5,7 @@ description: Assign document number prefixes to files in a folder.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Index files in a folder by adding a document number prefix
+# Indexing files by number
 
 This example demonstrates how to assign simple document numbers to files in a specific DocSpace folder. The script loads the folder contents, generates an index prefix in the format `TYPE-YEAR-COUNTER`, and renames each file by adding this prefix to the beginning of the file title.
 

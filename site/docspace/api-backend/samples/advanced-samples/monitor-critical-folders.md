@@ -5,7 +5,7 @@ description: Notify the department owner when files in a critical folder change.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Monitor changes in critical folders and notify the department owner
+# Monitoring critical folders
 
 This example shows how to monitor a critical folder (for example, **Compliance**) in ONLYOFFICE DocSpace and notify the department owner whenever a file in that folder is changed.
 

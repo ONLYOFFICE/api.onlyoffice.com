@@ -5,7 +5,7 @@ description: Set up folders and permissions automatically when a room is created
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatically configure room structure and permissions after room creation
+# Auto-configuring room
 
 This example demonstrates webhook-based room provisioning in ONLYOFFICE DocSpace.
 

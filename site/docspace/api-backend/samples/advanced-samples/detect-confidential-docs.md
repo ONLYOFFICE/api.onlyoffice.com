@@ -5,7 +5,7 @@ description: Find documents marked as confidential and move them to a secure roo
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Detect "confidential" documents and move them to a secure room
+# Detecting confidential docs
 
 This example shows how to automatically detect sensitive documents in ONLYOFFICE DocSpace by searching for the keyword `confidential` and moving such files into a secure folder (for example, inside a secure room).
 

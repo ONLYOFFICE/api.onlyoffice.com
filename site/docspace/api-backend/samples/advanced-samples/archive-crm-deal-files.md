@@ -5,7 +5,7 @@ description: Archive all client documents when a CRM deal is marked as closed.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Archive all client files when a CRM deal is closed
+# Archiving CRM deal files
 
 This example shows how to automatically archive all documents for a client when their CRM deal is marked as **Closed**.
 

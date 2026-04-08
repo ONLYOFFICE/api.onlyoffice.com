@@ -5,7 +5,7 @@ description: Share a file via a temporary link and revoke it after a download li
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Create a temporary external link and revoke it after downloads limit
+# Temporary external link
 
 This example demonstrates how to share a file via a temporary external link in ONLYOFFICE DocSpace using the API. It creates a read-only link with an expiration date and a maximum download limit, checks audit events to see how the link was used, and revokes the link if it is expired or overused.
 

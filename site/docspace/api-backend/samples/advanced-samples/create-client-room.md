@@ -5,7 +5,7 @@ description: Onboard a client by creating a room with templates and restricted a
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Create a client room with welcome materials and restricted access
+# Creating client room
 
 This example demonstrates how to onboard a client in ONLYOFFICE DocSpace. The script creates a collaboration room, creates a standard folder structure, copies welcome files from templates, configures room access for the account manager and the client, generates a room link, and logs the room information to an external CRM (placeholder).
 

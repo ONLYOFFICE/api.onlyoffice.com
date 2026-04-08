@@ -5,7 +5,7 @@ description: Identify rooms that have not been updated within a given time perio
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Find abandoned rooms by inactivity period
+# Finding abandoned rooms
 
 This example demonstrates how to find rooms that have not been updated for a certain number of days in ONLYOFFICE DocSpace. The script retrieves the room list, skips archived rooms, checks the last update date, and prints a simple report of rooms that look abandoned.
 

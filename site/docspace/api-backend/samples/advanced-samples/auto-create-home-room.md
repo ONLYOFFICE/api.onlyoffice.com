@@ -5,7 +5,7 @@ description: Create a personal home room for every new user via webhooks.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatically create a home room when a new user is added
+# Auto-creating home room
 
 This example shows how to automatically create a personal home room for every new user in ONLYOFFICE DocSpace using webhooks.
 

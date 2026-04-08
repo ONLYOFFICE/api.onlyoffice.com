@@ -5,7 +5,7 @@ description: Disable external contractors who have not logged in recently.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Disable inactive external contractors based on audit login events
+# Disabling inactive contractors
 
 Script loads external contractors (placeholder), checks their last login via audit login filter for the last N days, and disables users who have no login events or are inactive for INACTIVITY_DAYS.
 

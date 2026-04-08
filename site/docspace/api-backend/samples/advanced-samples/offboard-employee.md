@@ -5,7 +5,7 @@ description: Disable an employee account and archive their workspace on offboard
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Offboard an employee and archive their workspace
+# Offboarding employee
 
 This example shows a practical offboarding flow in ONLYOFFICE DocSpace:
 

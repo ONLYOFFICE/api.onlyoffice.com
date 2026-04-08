@@ -5,7 +5,7 @@ description: Copy newly uploaded files from a client room to an internal room.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatically copy uploaded files from a client room to an internal room
+# Copying uploads to internal room
 
 This example shows how to automatically copy every newly uploaded file from a client-facing room (for example, “Shared with Client”) to an internal room (for example, “Internal Processing”).
 

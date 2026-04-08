@@ -5,7 +5,7 @@ description: Track portal storage usage and send alerts when quota is nearly ful
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Monitor storage usage and warn when quota is near the limit
+# Monitoring disk quota
 
 This example shows how to track DocSpace storage consumption using the API. The script reads the portal quota (total capacity) and the current used space, calculates the usage percentage, and triggers a warning (placeholder) when the usage exceeds a configured threshold.
 Optionally, it requests files usage statistics (if available) and prints the largest folders/files returned by the API to help you locate the main storage consumers.

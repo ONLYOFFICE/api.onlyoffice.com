@@ -5,7 +5,7 @@ description: Send reminders to room members with low activity based on audit eve
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Remind inactive room members based on audit events
+# Reminding inactive members
 
 This example shows how to use DocSpace audit events to identify room members who are not participating.
 It loads audit events for the last N days, counts events per user for selected rooms, and sends a reminder to members whose activity is below a defined threshold. Optionally, it sends a short summary report to a room owner/manager.

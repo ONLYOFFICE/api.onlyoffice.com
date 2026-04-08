@@ -5,7 +5,7 @@ description: Move documents older than a threshold from a room to an archive fol
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Archive old documents from a room to an archive folder
+# Archiving old documents
 
 This example scans a DocSpace room (or folder), identifies files older than a defined threshold, and moves them to an archive folder in batches.
 

@@ -5,7 +5,7 @@ description: Set a "Need Review" comment on a file automatically when it is upda
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Set "Need Review" comment when a file is updated
+# Review comment on update
 
 This example demonstrates how to automatically set a file comment to Need Review whenever a file is updated in ONLYOFFICE DocSpace.
 

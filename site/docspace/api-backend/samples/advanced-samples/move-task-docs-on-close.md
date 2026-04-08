@@ -5,7 +5,7 @@ description: Move task documents to a Completed folder when the task is closed.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Automatically move task documents to "Completed" when the parent task is closed
+# Moving task docs on close
 
 This example shows how to automatically move all documents related to a task into a common Completed folder when the task is closed.
 In a typical setup:
