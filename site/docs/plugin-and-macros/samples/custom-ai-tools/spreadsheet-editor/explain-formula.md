@@ -2,7 +2,7 @@
 description: Explain a cell formula in natural language.
 ---
 
-# explainFormula
+# Explain formula
 
 This function explains a formula from the specified range or, if omitted, the active/selected range.
 

@@ -2,7 +2,7 @@
 description: Extract action items from selected text.
 ---
 
-# extractActionItems
+# Extract action items
 
 This function analyzes selected text, meeting notes, or a document section and extracts clear action items or to-dos, formatting them as a structured list. It can optionally remove the original text.
 

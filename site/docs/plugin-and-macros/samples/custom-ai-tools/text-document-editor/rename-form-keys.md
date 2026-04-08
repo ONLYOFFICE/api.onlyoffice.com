@@ -2,7 +2,7 @@
 description: Rename form field keys in a document.
 ---
 
-# renameFormKeys
+# Rename form keys
 
 This function collects all form fields (keys/placeholders), renames the fields to UPPER_SNAKE_CASE, and optionally updates placeholders.
 

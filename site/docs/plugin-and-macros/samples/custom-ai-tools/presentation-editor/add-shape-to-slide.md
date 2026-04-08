@@ -2,7 +2,7 @@
 description: Add a shape with text to a slide.
 ---
 
-# addShapeToSlide
+# Add shape to slide
 
 This function adds a shape to the slide with optional text. By default, the shape is 139x42 mm, centered, with a blue fill and a dark border.
 

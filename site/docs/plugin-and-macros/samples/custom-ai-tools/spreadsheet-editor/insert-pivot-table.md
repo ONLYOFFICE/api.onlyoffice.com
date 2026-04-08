@@ -2,7 +2,7 @@
 description: Create a pivot table from a selected range.
 ---
 
-# insertPivotTable
+# Insert pivot table
 
 This function inserts a pivot table into the specified range or the currently selected range.
 This function can be used to summarize, group, or aggregate data by rows and values.

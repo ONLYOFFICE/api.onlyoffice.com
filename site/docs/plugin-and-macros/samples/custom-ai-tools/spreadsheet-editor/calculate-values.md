@@ -2,7 +2,7 @@
 description: Perform math operations on a cell range.
 ---
 
-# calculateValues
+# Calculate values
 
 This function performs basic mathematical operations (addition, subtraction, multiplication, division, median, average) on selected cells or a specified range and writes the result to a specified cell or below the last used cell in the column.
 

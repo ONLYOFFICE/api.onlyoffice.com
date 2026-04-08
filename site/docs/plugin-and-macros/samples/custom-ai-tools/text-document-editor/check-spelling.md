@@ -2,7 +2,7 @@
 description: Check and fix spelling errors in the current paragraph.
 ---
 
-# checkSpelling
+# Check spelling
 
 This function checks spelling or fixes other text errors in the current paragraph.
 

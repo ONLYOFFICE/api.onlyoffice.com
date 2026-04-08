@@ -2,7 +2,7 @@
 description: Change the style of a specified paragraph.
 ---
 
-# changeParagraphStyle
+# Change paragraph style
 
 This function modifies the visual style of the specified paragraph.
 

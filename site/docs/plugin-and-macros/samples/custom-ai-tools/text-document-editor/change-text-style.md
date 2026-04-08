@@ -2,7 +2,7 @@
 description: Modify the style of selected or current text.
 ---
 
-# changeTextStyle
+# Change text style
 
 This function modifies the visual style of the selected text. If no text is selected, the current word is used by default.
 

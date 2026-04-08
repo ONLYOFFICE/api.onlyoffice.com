@@ -2,7 +2,7 @@
 description: Insert a new page into a document.
 ---
 
-# insertPage
+# Insert page
 
 This function inserts a new page into the document at a specified location.
 

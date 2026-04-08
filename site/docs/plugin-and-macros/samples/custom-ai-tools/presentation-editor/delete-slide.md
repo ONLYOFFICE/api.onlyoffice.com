@@ -2,7 +2,7 @@
 description: Delete a specified slide from a presentation.
 ---
 
-# deleteSlide
+# Delete slide
 
 This function deletes the specified slide from the current presentation.
 

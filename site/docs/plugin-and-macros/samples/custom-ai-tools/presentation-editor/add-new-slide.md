@@ -2,7 +2,7 @@
 description: Add a new slide to a presentation.
 ---
 
-# addNewSlide
+# Add new slide
 
 This function adds a new slide at the end of presentation using default layout from the current slide's master.
 

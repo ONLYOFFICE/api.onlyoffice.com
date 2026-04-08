@@ -2,7 +2,7 @@
 description: Generate hashtags from selected text.
 ---
 
-# generateHashtags
+# Generate hashtags
 
 This function generates relevant hashtags based on the selected text or the current word.
 

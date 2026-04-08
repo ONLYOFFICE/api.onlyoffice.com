@@ -2,7 +2,7 @@
 description: Sort a selected range by column.
 ---
 
-# setSort
+# Set sort
 
 This function sorts a given range (or the active/selected range) by up to three columns, using either cell references, column indices, named ranges, or column headers. Supports ascending/descending order and optional header detection.
 

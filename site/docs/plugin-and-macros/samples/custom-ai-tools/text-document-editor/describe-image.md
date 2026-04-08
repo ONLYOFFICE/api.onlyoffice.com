@@ -2,7 +2,7 @@
 description: Generate a description for images in a document.
 ---
 
-# describeImage
+# Describe image
 
 This function analyzes the selected image and generates a title, caption, description, or alt text using an AI model. The generated text is inserted into the document.
 

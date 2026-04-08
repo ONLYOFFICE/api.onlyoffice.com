@@ -2,7 +2,7 @@
 description: Rewrite selected text with AI assistance.
 ---
 
-# rewriteText
+# Rewrite text
 
 This function rewrites or replaces text. If no text or paragraph number is specified, the current paragraph is used by default.
 
