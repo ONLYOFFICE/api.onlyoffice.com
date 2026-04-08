@@ -64,7 +64,6 @@
   /* --ifm-color-primary: var(--openapi-card-background-color); */
   --ifm-card-background-color: var(--openapi-card-background-color);
 
-  /* --color-page-header-default-background: #424242; */
   /* --ifm-navbar-background-color: #fff; */
 
   --color-foreground-link: #ff6e3d;
@@ -155,8 +154,6 @@ html[data-theme='dark'] {
   /* END BACKGROUND COLOR */
 
   --sidebar-category-c: var(--c-gray-0);
-  --color-page-header-default-background: #333;
-
   --temp-color-shadow-default-small: 0 7px 15px 0 #141617;
 
   --button-text-color: #eaf1fe;
