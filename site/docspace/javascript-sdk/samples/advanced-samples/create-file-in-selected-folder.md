@@ -1,5 +1,6 @@
 ---
 description: Create a file in a selected folder and open it in the editor.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Create file in selected folder

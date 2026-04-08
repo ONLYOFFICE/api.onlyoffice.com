@@ -1,5 +1,6 @@
 ---
 description: Retrieve a list of folders from a room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Get folders

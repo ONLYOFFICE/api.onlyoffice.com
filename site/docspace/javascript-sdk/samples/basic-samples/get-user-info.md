@@ -1,5 +1,6 @@
 ---
 description: Retrieve user information using the DocSpace JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Get user info

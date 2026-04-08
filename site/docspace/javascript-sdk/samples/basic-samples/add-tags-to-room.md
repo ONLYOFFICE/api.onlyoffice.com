@@ -1,5 +1,6 @@
 ---
 description: Add custom tags to a DocSpace room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Add tags to room

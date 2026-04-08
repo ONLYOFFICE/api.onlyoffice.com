@@ -1,5 +1,6 @@
 ---
 description: Create a custom tag in DocSpace using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Create tag

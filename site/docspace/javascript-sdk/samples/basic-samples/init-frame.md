@@ -1,5 +1,6 @@
 ---
 description: Initialize the DocSpace view-only frame using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Initialize frame

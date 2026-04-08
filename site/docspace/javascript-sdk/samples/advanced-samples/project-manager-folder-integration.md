@@ -1,5 +1,6 @@
 ---
 description: Track projects as folders in a shared room with file locking.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Manage project folders

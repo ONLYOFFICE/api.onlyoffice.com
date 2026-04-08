@@ -1,5 +1,6 @@
 ---
 description: Embed DocSpace in draggable and resizable modal windows.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Draggable resizable modals

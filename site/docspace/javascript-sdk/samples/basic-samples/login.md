@@ -1,5 +1,6 @@
 ---
 description: Log in to DocSpace using the JS SDK with password hashing.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Login

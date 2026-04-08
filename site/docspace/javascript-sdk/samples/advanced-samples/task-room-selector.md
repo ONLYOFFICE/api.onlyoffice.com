@@ -1,5 +1,6 @@
 ---
 description: Link tasks to DocSpace rooms using the room selector component.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

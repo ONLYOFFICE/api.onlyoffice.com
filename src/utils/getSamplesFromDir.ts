@@ -46,7 +46,7 @@ export function getDocsSamples(category: string): SamplesGrid.Item[] {
 export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
   return [
     ...toItems(docspaceSamplesData, category, [{ label: 'REST API', variant: 'blue' }]),
-    ...toItems(docspaceJsSdkData, category, [{ label: 'JS SDK', variant: 'blue' }]),
+    ...toItems(docspaceJsSdkData, category),
     ...toItems(docspacePluginsData, category),
   ];
 }
