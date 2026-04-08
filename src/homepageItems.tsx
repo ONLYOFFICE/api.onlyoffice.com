@@ -76,7 +76,7 @@ export const Samples: Samples = {
       ],
       viewLink:'/docs/docs-api/samples/external-access-to-the-document-editing/',
       tags: [
-        { label: 'Docs API', variant: 'blue' },
+        { label: 'Docs', variant: 'blue' },
         { label: 'Automation', variant: 'purple' },
         { label: 'Comments' },
         { label: 'Collaboration', variant: 'green' },
