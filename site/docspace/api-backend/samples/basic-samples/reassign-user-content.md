@@ -5,7 +5,7 @@ description: Reassign all user content to another user via the API.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Reassign a user’s content to another user
+# Reassigning user content
 
 This example demonstrates how to reassign a user’s data to another user in ONLYOFFICE DocSpace via the API: check if reassignment is required, start the reassignment, monitor progress, and optionally terminate the task.
 
