@@ -2,8 +2,8 @@
 description: Reassign all user content to another user via the API.
 ---
 
-import Tabs from ‘@theme/Tabs’;
-import TabItem from ‘@theme/TabItem’;
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Reassign a user’s content to another user
 
