@@ -7,6 +7,7 @@ import docspaceSamplesData from '@site/src/data/docspace-samples.json';
 import docspaceJsSdkData from '@site/src/data/docspace-jssdk-samples.json';
 import docspacePluginsData from '@site/src/data/docspace-plugins-samples.json';
 import docsAiSamplesData from '@site/src/data/docs-ai-samples.json';
+import docspaceAiSamplesData from '@site/src/data/docspace-ai-samples.json';
 
 function toItems(data: typeof docsSamplesData, category: string, defaultTags?: SamplesGrid.Tag[]): SamplesGrid.Item[] {
   return data.map((doc) => {
@@ -25,6 +26,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'Embed SDK': 'green',
       'Integration': 'purple',
       'REST API': 'green',
+      'MCP Server': 'green',
     };
     const docTags: SamplesGrid.Tag[] = (doc as any).tags?.map((t: string) => ({ label: t, variant: tagVariants[t] ?? 'default' })) ?? [];
     return {
@@ -55,5 +57,8 @@ export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
 }
 
 export function getAiSamples(category: string): SamplesGrid.Item[] {
-  return toItems(docsAiSamplesData, category);
+  return [
+    ...toItems(docsAiSamplesData, category),
+    ...toItems(docspaceAiSamplesData, category),
+  ];
 }

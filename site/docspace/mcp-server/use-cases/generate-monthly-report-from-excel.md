@@ -1,3 +1,8 @@
+---
+description: Generate a monthly report from an Excel spreadsheet.
+tags: ["DocSpace", "MCP Server"]
+---
+
 # Generate monthly report from Excel
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to analyze a monthly metrics spreadsheet and generate a short report document saved to DocSpace.

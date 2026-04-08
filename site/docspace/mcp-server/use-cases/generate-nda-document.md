@@ -1,3 +1,8 @@
+---
+description: Generate an NDA document and save it to a folder.
+tags: ["DocSpace", "MCP Server"]
+---
+
 # Generate NDA document
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to generate an NDA document from provided details and save it to a DocSpace folder. This is useful when you want to quickly create a consistent document without writing it manually.
