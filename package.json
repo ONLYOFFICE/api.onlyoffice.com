@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "generate-samples": "node scripts/generate-samples-data.js",
+    "generate-samples": "node .github/scripts/generate-samples-data.js",
     "start": "npm run generate-samples && docusaurus start",
     "build": "npm run generate-samples && docusaurus build",
     "swizzle": "docusaurus swizzle",
