@@ -48,10 +48,10 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/checkSpelling.md) — AI 驱动的拼写检查）
-- 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/changeTextStyle.md) — AI 驱动的文本样式调整）
-- 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/addShapeToSlide.md) — AI 驱动的演示文稿设计）
-- 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explainFormula.md) — AI 驱动的公式解释）
+- 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/check-spelling.md) — AI 驱动的拼写检查）
+- 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/change-text-style.md) — AI 驱动的文本样式调整）
+- 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI 驱动的演示文稿设计）
+- 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI 驱动的公式解释）
 
 **开发概况：**
 

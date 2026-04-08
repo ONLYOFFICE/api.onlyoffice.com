@@ -48,10 +48,10 @@ Custom tools enhanced with AI capabilities for next-generation document workflow
 
 **Perfect for:**
 
-- Writing assistance ([Check spelling](../samples/custom-ai-tools/text-document-editor/checkSpelling.md) — AI-powered spell checking)
-- Smart styling ([Change text style](../samples/custom-ai-tools/text-document-editor/changeTextStyle.md) — AI-powered text styling)
-- Automatic shape generation ([Add shape](../samples/custom-ai-tools/presentation-editor/addShapeToSlide.md) — AI-powered presentation design)
-- Data insights ([Explain formula](../samples/custom-ai-tools/spreadsheet-editor/explainFormula.md) — AI-powered formula explanations)
+- Writing assistance ([Check spelling](../samples/custom-ai-tools/text-document-editor/check-spelling.md) — AI-powered spell checking)
+- Smart styling ([Change text style](../samples/custom-ai-tools/text-document-editor/change-text-style.md) — AI-powered text styling)
+- Automatic shape generation ([Add shape](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
+- Data insights ([Explain formula](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
 
 **Development profile:**
 

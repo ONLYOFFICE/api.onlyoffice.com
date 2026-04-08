@@ -44,7 +44,7 @@ export const Samples: Samples = {
       category: 'favorite',
       description: (
         <>
-          This <Link to="/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range.
+          This <Link to="/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/">AI tool</Link> inserts a pivot table into the specified range.
         </>
       ),
       features: [
