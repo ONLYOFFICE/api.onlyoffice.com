@@ -5,7 +5,7 @@ description: Retrieve billing, quota, and payment details via the API.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Retrieve billing and payment information
+# Retrieving billing info
 
 This example demonstrates how to read billing-related information in ONLYOFFICE DocSpace via the API: customer profile, balance by currency, current quota, available quotas, auto top-up settings, and supported currencies.
 
