@@ -3,7 +3,7 @@ hide_table_of_contents: true
 description: Create a footer with a company name and current date.
 ---
 
-# Adding footer with date and company name
+# Adding date and company footer
 
 Create a document with footer containing date and company name. Used for standard document formatting: memos, reports, letters, and templates. Placed in the footer where current date is shown on one side and organization name on the other. This helps with document identification and simplifies versioning:
 
