@@ -1,5 +1,52 @@
 # Change log
 
+## 8.2.0
+
+### New features
+
+#### DocSpace
+
+* Added SDK documentation with quick-start guides for C#, Java, PHP, Python, TypeScript, and Postman
+
+#### Common
+
+* Added a new Samples page with filterable sample cards across all documentation sections
+* Added description metadata to all sample pages across documentation
+
+### Improvements
+
+#### Common
+
+* Shortened sample filenames and headers for better readability and URL consistency
+* Translated the playground to Chinese (zh-CN)
+* Moved generate-samples-data script to .github/scripts
+
+#### Docs API
+
+* Removed unnecessary backslash escaping from fragment links in WOPI docs
+
+#### Plugins and macros
+
+* Fixed heading level for localeTranslate in plugin configuration docs
+
+#### Playground
+
+* Updated form inputs on template fill and restyled radio buttons
+* Fixed redundant onChangeContentControl updates
+* Restored playground plugin config.json
+
+### Fixes
+
+* Fixed curly quotes replaced with straight quotes in import statements
+* Fixed pipe character alignment with table headers across EN and zh-CN docs
+* Fixed missing table cell and closing pipe in zh-CN WOPI config
+* Fixed extra space inside bold marker in content controls navigation
+* Fixed extra indentation for list items in managing-versions FAQ
+* Fixed missing blank lines before code blocks, tables, and lists
+* Fixed heading levels: use H2 instead of H3 for top-level sections
+* Fixed typos across documentation (raws → rows, standart → standard, exabled → enabled, DocSpaace → DocSpace)
+* Fixed punctuation: use Chinese period in zh-CN working-with-content-controls
+
 ## 8.1.0
 
 ### New features
