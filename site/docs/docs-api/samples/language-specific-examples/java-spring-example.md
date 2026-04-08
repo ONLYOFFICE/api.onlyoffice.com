@@ -1,6 +1,7 @@
 ---
 sidebar_position: -6
 description: Integrate ONLYOFFICE Docs into a Java Spring Boot web application.
+tags: ["Docs"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,7 @@
 ---
 sidebar_position: -9
 description: Integrate ONLYOFFICE Docs into a Python web application.
+tags: ["Docs"]
 ---
 
 # Python example

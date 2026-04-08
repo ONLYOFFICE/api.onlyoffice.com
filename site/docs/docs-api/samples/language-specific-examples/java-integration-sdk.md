@@ -1,6 +1,7 @@
 ---
 sidebar_position: -2
 description: Use the Java SDK to integrate ONLYOFFICE Docs into your application.
+tags: ["Docs"]
 ---
 
 # Java integration SDK

@@ -1,6 +1,7 @@
 ---
 sidebar_position: -3
 description: Integrate ONLYOFFICE Docs into a PHP Laravel web application.
+tags: ["Docs"]
 ---
 
 # PHP (Laravel) example

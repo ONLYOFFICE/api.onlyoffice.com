@@ -2,6 +2,7 @@
 sidebar_position: 0
 hide_table_of_contents: true
 description: Add and inspect content controls from an external UI via the Automation API.
+tags: ["Docs"]
 ---
 
 import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWindow';
