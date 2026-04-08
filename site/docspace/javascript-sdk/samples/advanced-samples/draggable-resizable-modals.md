@@ -2,7 +2,7 @@
 description: Embed DocSpace in draggable and resizable modal windows.
 ---
 
-# Create Draggable and Resizable DocSpace Modals
+# Draggable resizable modals
 
 Embed DocSpace inside draggable and resizable modal windows built with Create React App, TypeScript, and Tailwind CSS.
 This example shows how to embed multiple DocSpace instances, automatically log in via the SDK, and manage them dynamically.
