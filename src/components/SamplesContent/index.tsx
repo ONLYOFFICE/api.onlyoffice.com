@@ -1,4 +1,5 @@
-import { type FC, type ReactNode, useRef, useState } from 'react';
+import { type FC, type ReactNode, useRef, useState, useEffect } from 'react';
+import { useLocation, useHistory } from '@docusaurus/router';
 import { SamplesGrid } from '@site/src/components/SamplesGrid';
 import { Samples } from '@site/src/homepageItems';
 import { getDocsSamples, getDocspaceSamples, getAiSamples } from '@site/src/utils/getSamplesFromDir';
@@ -24,10 +25,32 @@ type Props = {
   categories: Category[];
 };
 
+const VALID_CATEGORIES = new Set(Object.keys(itemsByCategory));
+const DEFAULT_CATEGORY = 'favorite';
+
+function getCategoryFromUrl(search: string): string {
+  const params = new URLSearchParams(search);
+  const doctype = params.get('doctype');
+  return doctype && VALID_CATEGORIES.has(doctype) ? doctype : DEFAULT_CATEGORY;
+}
+
 export const SamplesContent: FC<Props> = ({ categories }) => {
-  const [activeCategory, setActiveCategory] = useState('favorite');
+  const location = useLocation();
+  const history = useHistory();
+
+  const [activeCategory, setActiveCategory] = useState(() => getCategoryFromUrl(location.search));
   const [currentPage, setCurrentPage] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const categoryFromUrl = getCategoryFromUrl(location.search);
+    if (categoryFromUrl !== activeCategory) {
+      setActiveCategory(categoryFromUrl);
+      setCurrentPage(0);
+      setSearchQuery('');
+      prevSearchRef.current = { query: '', results: [] };
+    }
+  }, [location.search]);
 
   const allItems = itemsByCategory[activeCategory] || [];
   const prevSearchRef = useRef({ query: '', results: [] as SamplesGrid.Item[] });
@@ -68,6 +91,10 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
     setCurrentPage(0);
     setSearchQuery('');
     prevSearchRef.current = { query: '', results: [] };
+
+    const params = new URLSearchParams(location.search);
+    params.set('doctype', id);
+    history.replace({ ...location, search: `?${params.toString()}` });
   };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
