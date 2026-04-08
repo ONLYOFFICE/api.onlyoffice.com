@@ -100,7 +100,6 @@
   /* --ifm-navbar-link-hover-color: inherit; */
   --ifm-color-primary: var(--color-foreground-link);
   --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
-  /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
 
   --button-text-color: #245add;
   --button-border-color: #245add;
