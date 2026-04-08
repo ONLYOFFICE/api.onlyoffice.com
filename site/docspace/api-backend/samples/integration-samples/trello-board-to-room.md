@@ -2,7 +2,7 @@
 description: Create a DocSpace room using a Trello board name.
 ---
 
-# Create DocSpace room from Trello board
+# Trello board to room
 
 This integration retrieves the name of a Trello board and creates a new room in ONLYOFFICE DocSpace with the same title. It's helpful for mirroring Trello project structures into your document collaboration environment.
 

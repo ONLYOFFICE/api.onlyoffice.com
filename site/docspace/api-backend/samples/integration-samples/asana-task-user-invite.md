@@ -2,7 +2,7 @@
 description: Invite an Asana task assignee to DocSpace.
 ---
 
-# Invite DocSpace user from Asana task
+# Asana task user invite
 
 This integration automatically retrieves the email of the assignee from an Asana task and invites them to ONLYOFFICE DocSpace. It helps ensure that project contributors are granted access to collaborative workspaces without manual steps.
 

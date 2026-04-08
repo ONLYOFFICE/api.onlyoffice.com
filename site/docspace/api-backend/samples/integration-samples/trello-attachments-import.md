@@ -2,7 +2,7 @@
 description: Import Trello card attachments into a DocSpace room.
 ---
 
-# Import Trello card attachments to DocSpace
+# Trello attachments import
 
 This integration allows you to automatically import all file attachments from a specific Trello card into an ONLYOFFICE DocSpace room. It's useful for syncing project files, archiving task assets, or aggregating external documentation into a centralized workspace.
 
