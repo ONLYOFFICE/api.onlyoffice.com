@@ -1,36 +1,40 @@
-# 搜索并更改文本背景颜色
+---
+description: Search for text and change its background color.
+---
 
-搜索目标文本并更改其背景颜色。
+# Search and change background
 
-**插件类型：** 可视化，非系统插件。
+Searches for target text and changes its background color.
 
-**支持的编辑器：** 文本文档。
+**Plugin type:** visual, non-system.
+
+**Supported editors:** documents.
 
 <video autoPlay loop muted playsInline>
   <source src="/assets/images/plugins/webm/search-and-change-background-text.webm" type="video/webm" />
 </video>
 
-## 安装
+## Installation
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) 下载此插件，并按照以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md) 或[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
-## 使用方法
+## Usage
 
-1. 打开**插件**选项卡并点击**示例：搜索并更改背景文本颜色**。
-2. 在输入框中输入需要查找的文本。
-3. 在颜色块中选择所需颜色。
-4. 点击**更改颜色**按钮更改选中文本的背景颜色。
-5. 点击**更改全部颜色**按钮更改所有匹配文本的背景颜色。
-6. 点击**重置**按钮重置选中文本的背景颜色。
+1. Open the **Plugins** tab and press **Example search and change background text**.
+2. Enter the required text in the field.
+3. Choose the necessary color in the color block.
+4. Press the **Color** button to change the background color for the selected text.
+5. Press the **Color all** button to change the background color for all the found results.
+6. Press the **Reset** button to reset the background color for the selected text.
 
-## 插件结构
+## Plugin structure
 
-GitHub 仓库：[example_search_and_change_text_background_color](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color)。
+Repository on GitHub: [example_search_and_change_text_background_color](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color).
 
-1. *config.json*、*index.html* 和 *code.js*
-2. 图标
+1. *config.json*, *index.html*, and *code.js*
+2. Icons
 
-## 配置
+## Config
 
 ``` json
 {
@@ -99,13 +103,13 @@ GitHub 仓库：[example_search_and_change_text_background_color](https://github
 }
 ```
 
-## 方法和事件
+## Methods and events
 
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
-## 支持
+## Support
 
-如需请求功能或报告此插件的问题，请通过 [GitHub Issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 页面提交。
+If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).
