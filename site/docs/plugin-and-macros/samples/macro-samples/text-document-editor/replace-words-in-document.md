@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Find and replace words throughout a document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Replace words in document

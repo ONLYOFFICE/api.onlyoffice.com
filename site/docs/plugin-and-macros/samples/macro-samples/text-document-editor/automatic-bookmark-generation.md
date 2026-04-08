@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Auto-generate bookmarks from document headings.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Automatic bookmark generation

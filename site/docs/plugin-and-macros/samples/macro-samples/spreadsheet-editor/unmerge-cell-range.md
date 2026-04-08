@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Unmerge cells in a specified range.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Unmerge cell range

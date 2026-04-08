@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Format bullet point styles on presentation slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Format bullet points

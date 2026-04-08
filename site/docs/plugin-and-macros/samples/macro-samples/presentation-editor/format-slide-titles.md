@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Format the title text on all slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Format slide titles

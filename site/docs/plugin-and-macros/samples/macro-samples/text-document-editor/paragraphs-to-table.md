@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Convert paragraphs into a table structure.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Paragraphs to table

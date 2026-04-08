@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Calculate a weighted average from cell values.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Weighted average function

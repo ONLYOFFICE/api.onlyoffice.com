@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Convert currency values between different currencies.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Currency conversion

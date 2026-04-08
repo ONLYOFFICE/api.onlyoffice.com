@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Change the background color of all form fields.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Set form background color

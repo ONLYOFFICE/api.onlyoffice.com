@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Find and insert company logos into spreadsheet cells.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Find company logos

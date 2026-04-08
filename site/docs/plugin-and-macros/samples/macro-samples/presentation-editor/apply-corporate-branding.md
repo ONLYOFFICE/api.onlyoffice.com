@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Apply corporate fonts and colors to all slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Apply corporate branding

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Split slide content into multiple slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Split slides

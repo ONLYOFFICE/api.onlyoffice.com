@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add a chart to a spreadsheet from cell data.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Add chart

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Validate and highlight empty required form fields.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Validate form fields

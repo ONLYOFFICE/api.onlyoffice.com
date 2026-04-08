@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Apply conditional formatting rules to a cell range.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Conditional formatting rules

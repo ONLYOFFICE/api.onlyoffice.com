@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove duplicate sheets from a workbook.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Remove duplicate sheet

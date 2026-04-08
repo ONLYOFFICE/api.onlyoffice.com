@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create individual slides from list items.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Create slides from list items

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Import data from CSV or TXT files into a spreadsheet.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Import CSV/TXT data

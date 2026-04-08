@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Freeze rows and columns in a spreadsheet.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Freeze panes

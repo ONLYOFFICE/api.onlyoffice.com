@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Highlight duplicate values in a cell range.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Highlight duplicates

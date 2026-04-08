@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Change the value of specified cells.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Change cell value

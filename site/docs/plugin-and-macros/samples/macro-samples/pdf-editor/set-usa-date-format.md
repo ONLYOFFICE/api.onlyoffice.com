@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set all date form fields to the USA date format.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Set USA date format

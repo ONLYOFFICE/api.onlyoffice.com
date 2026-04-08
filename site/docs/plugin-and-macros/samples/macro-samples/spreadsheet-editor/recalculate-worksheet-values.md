@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Recalculate all formulas in a worksheet.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Recalculate worksheet values

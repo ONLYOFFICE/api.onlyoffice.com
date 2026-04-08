@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set the current date in all date form fields.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Update date field

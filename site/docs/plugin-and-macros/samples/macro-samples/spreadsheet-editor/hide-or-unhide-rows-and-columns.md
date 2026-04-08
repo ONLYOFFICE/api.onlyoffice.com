@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Hide or unhide rows and columns in a spreadsheet.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Hide or unhide rows and columns

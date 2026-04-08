@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Enable auto-fit for all text form fields.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Autofit text fields

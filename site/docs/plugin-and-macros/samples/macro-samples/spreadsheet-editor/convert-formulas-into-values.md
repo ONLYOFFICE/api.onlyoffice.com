@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Convert cell formulas into their computed values.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Convert formulas into values

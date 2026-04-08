@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove extra spaces from document text.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Remove extra spaces

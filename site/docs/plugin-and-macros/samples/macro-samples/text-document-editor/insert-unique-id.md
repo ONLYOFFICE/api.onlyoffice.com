@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Insert a unique ID into the document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Insert unique id

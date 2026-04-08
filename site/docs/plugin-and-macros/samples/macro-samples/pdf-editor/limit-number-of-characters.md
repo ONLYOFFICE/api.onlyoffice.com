@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set a character limit for text form fields.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Limit number of characters

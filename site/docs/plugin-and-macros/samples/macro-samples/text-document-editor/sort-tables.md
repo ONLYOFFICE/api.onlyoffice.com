@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Sort table rows by column values.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Sort tables

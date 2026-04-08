@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Insert formulas into a row of cells.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Insert formulas row

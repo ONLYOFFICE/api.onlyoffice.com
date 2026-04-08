@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Perform calculations on form field values.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Insert calculations

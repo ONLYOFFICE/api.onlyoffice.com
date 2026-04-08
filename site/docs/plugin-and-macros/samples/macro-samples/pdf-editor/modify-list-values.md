@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove specific values from combo box option lists.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Modify list values

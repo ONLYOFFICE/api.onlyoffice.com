@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove duplicate slides from a presentation.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Remove duplicate slides

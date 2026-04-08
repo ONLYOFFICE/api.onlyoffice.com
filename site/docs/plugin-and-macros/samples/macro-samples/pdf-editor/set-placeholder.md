@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set a placeholder for combo box fields with a specified key.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Set placeholder

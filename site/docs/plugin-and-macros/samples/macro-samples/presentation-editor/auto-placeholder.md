@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Auto-fill placeholders with predefined text.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Autoplaceholder

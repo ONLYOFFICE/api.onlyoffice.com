@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Auto-complete address fields from partial data.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Complete address information

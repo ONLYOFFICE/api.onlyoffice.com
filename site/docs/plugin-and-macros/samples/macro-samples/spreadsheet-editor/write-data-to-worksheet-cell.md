@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Write data to a specific worksheet cell.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Write data to worksheet cell

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set tip text for all checkboxes with a specified key.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Set checkbox tip text

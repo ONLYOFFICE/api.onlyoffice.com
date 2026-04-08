@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Unmerge all merged cells in a spreadsheet.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Unmerge all cells

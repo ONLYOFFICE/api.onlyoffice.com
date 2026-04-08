@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add a diagonal text watermark to all PDF pages.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Add watermark to all pages

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Find the next blank row in a spreadsheet.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Next blank row

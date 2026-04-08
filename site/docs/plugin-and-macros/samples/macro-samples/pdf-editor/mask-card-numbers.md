@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Mask credit card numbers showing only first and last digits.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Mask card numbers

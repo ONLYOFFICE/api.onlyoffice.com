@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Check for data mismatches between cells or ranges.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Check data mismatch

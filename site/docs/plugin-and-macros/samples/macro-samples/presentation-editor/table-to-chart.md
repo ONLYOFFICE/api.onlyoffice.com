@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Convert a table on a slide to a chart.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Table to chart

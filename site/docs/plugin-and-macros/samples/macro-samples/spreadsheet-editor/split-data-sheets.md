@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Split data into separate sheets by criteria.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Split data sheets

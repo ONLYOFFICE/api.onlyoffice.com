@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a list of content controls in a document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Create content control list

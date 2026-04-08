@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove all shapes from presentation slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Remove shapes from slides

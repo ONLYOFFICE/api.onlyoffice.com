@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add comments to cells and change their background color.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Commenting and coloring cells

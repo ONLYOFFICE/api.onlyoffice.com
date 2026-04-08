@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Reset all form fields to empty values.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Reset all forms

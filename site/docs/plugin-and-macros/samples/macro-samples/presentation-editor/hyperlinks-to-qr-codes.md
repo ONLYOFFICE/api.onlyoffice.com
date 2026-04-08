@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Convert hyperlinks on slides to QR codes.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Hyperlinks to QR codes

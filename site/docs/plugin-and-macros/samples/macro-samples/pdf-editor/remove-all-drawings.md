@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove all drawing objects from all PDF pages.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Remove all drawings

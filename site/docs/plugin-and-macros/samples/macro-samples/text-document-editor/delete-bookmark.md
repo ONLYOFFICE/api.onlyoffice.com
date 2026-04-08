@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Delete a specified bookmark from a document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Delete bookmark

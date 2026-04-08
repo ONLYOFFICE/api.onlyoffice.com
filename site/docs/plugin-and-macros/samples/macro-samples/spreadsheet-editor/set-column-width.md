@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set the width of specified columns.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Set column width

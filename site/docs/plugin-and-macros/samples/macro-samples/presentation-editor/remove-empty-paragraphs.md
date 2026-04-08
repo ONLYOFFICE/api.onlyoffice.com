@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove empty paragraphs from slide text boxes.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Remove empty paragraphs

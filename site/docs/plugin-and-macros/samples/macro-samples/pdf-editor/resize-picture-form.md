@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Resize picture form fields by dimensions or aspect ratio.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Resize picture form

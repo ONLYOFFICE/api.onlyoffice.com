@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Count the number of shapes on each slide.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Count number of shapes

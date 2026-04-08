@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Sort a cell range by column values.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Sort range

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Generate custom headers and footers for a document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Custom header and footer

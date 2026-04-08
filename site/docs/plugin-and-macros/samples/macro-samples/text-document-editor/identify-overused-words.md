@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Find and highlight overused words in a document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Identify overused words

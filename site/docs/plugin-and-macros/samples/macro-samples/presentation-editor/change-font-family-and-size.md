@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Change font family and size across all slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Change font family and size

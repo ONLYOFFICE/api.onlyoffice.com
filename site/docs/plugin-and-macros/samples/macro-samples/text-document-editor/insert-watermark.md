@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Insert a text watermark into a document.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Insert watermark

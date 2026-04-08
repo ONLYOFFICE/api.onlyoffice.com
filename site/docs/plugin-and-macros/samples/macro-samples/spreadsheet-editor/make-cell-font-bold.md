@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Make the font bold for specified cells.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Make cell font bold

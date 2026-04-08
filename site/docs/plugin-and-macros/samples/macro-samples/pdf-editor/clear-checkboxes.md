@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Clear all checkboxes in a PDF form.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Clear checkboxes

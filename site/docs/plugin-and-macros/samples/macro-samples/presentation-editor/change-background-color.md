@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Change the background color of presentation slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Change background color

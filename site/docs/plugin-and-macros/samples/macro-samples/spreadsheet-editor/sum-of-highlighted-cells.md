@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Calculate the sum of highlighted cells.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Sum of highlighted cells

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Calculate indicators using World Bank data.
+tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
 # Calculate World Bank indicator

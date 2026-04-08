@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Generate a table of contents from document headings.
+tags: ["Docs", "Macros", "Text documents"]
 ---
 
 # Generate table of contents

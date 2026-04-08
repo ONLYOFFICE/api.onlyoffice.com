@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Adjust paragraph indentation on all slides.
+tags: ["Docs", "Macros", "Presentations"]
 ---
 
 # Adjust indentation

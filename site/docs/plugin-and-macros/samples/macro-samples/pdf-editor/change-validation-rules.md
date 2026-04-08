@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Change validation rules for phone and email form fields.
+tags: ["Docs", "Macros", "PDF"]
 ---
 
 # Change validation rules
