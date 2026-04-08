@@ -54,37 +54,10 @@
   --card-background-color: var(--ifm-card-background-color);
 
 
-  /* START STATUS OPENAPI */
-  --ifm-color-get: #05b870;
-  --ifm-color-post: #19abff;
-  --ifm-color-delete: #f05151;
-  --ifm-color-put-patch: #f46d2a;
-  /* END STATUS OPENAPI */
-
   /* START OPENAPI */
   --openapi-input-background: var(--ifm-color-emphasis-0) !important;
   --ifm-pre-background: var(--ifm-color-emphasis-100);
   /* END OPENAPI */
-
-  /* START COLORS LIST */
-  --c-blue-0: #f0f6ff;
-  --c-blue-70: #4d8dff;
-  --c-blue-90: #1b6dff;
-
-  --c-gray-0: #f3f3f3;
-  --c-gray-100: #141414;
-  /* END COLORS LIST */
-
-  --ifm-link-color: var(--c-blue-90);
-  --ifm-link-hover-color: rgba(27, 109, 255, 0.8);
-
-  /* START SIDEBAR */
-  --dropdown-icon-width: 0.625rem;
-  --dropdown-icon-height: 0.375rem;
-  --dropdown-icon-gap: 0.688rem;
-
-  --sidebar-category-c: var(--c-gray-100);
-  /* END SIDEBAR */
 
   --ifm-heading-color: var(--ifm-font-color-base);
   /* --ifm-navbar-link-color: var(--ifm-color-content-inverse); */
@@ -95,7 +68,6 @@
   /* --color-page-header-default-background: #424242; */
   /* --ifm-navbar-background-color: #fff; */
 
-  --header-block-size: var(--base-size-72);
   --color-foreground-link: #ff6e3d;
   --color-foreground-accent: var(--color-foreground-link);
 
@@ -167,13 +139,6 @@
 
   /* docusaurus theme */
 
-  --ifm-color-primary: #3578e5;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -185,16 +150,9 @@
   /* END STATUS OPENAPI */
 
   /* START COLORS LIST */
-  --c-blue-0: #f0f6ff;
-  --c-blue-70: #4d8dff;
-  --c-blue-90: #1b6dff;
-
   --c-gray-0: #f3f3f3;
   --c-gray-100: #141414;
   /* END COLORS LIST */
-
-  /*--ifm-link-color: var(--c-blue-90);*/
-  /*--ifm-link-hover-color: rgba(27, 109, 255, 0.8);*/
 
   /* START SIDEBAR */
   --dropdown-icon-width: 0.625rem;
@@ -204,8 +162,6 @@
   --sidebar-category-c: var(--c-gray-100);
   /* END SIDEBAR */
 
-  --ifm-heading-color: var(--ifm-font-color-base);
-  /*--ifm-link-hover-color: var(--ifm-font-color-base);*/
   --ifm-link-color: var(--color-foreground-link);
   --ifm-link-hover-color: var(--ifm-link-color);
 
@@ -237,7 +193,6 @@
 }
 
 html[data-theme='light'] {
-  /* --ifm-menu-color-background-active: var(--c-blue-0); */
   --ifm-menu-color: #444;
 }
 
@@ -263,9 +218,6 @@ html[data-theme='dark'] {
   --ifm-pre-background: rgba(255, 255, 255, 0.1);
   --prism-background-color: var(--ifm-background-color) !important;
   /* END BACKGROUND COLOR */
-
-  /*--ifm-link-color: var(--c-blue-70);*/
-  /*--ifm-link-hover-color: rgba(77, 141, 255, 0.8);*/
 
   --sidebar-category-c: var(--c-gray-0);
   --color-page-header-default-background: #333;
