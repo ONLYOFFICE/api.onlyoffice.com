@@ -9,6 +9,10 @@ import docspacePluginsData from '@site/src/data/docspace-plugins-samples.json';
 import docsAiSamplesData from '@site/src/data/docs-ai-samples.json';
 import docspaceAiSamplesData from '@site/src/data/docspace-ai-samples.json';
 
+function sortByTitle(items: SamplesGrid.Item[]): SamplesGrid.Item[] {
+  return items.sort((a, b) => a.title.localeCompare(b.title));
+}
+
 function toItems(data: typeof docsSamplesData, category: string, defaultTags?: SamplesGrid.Tag[]): SamplesGrid.Item[] {
   return data.map((doc) => {
     const tagVariants: Record<string, SamplesGrid.Tag['variant']> = {
@@ -40,26 +44,26 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
 }
 
 export function getDocsSamples(category: string): SamplesGrid.Item[] {
-  return [
+  return sortByTitle([
     ...toItems(docsSamplesData, category),
     ...toItems(docsOfficeApiData, category, [{ label: 'Office API', variant: 'blue' }]),
     ...toItems(docsPluginsData, category),
     ...toItems(docsBuilderData, category, [{ label: 'Document Builder', variant: 'blue' }]),
-  ];
+  ]);
 }
 
 export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
-  return [
+  return sortByTitle([
     ...toItems(docspaceSamplesData, category),
     ...toItems(docspaceJsSdkData, category),
     ...toItems(docspacePluginsData, category),
     ...toItems(docspaceAiSamplesData, category),
-  ];
+  ]);
 }
 
 export function getAiSamples(category: string): SamplesGrid.Item[] {
-  return [
+  return sortByTitle([
     ...toItems(docsAiSamplesData, category),
     ...toItems(docspaceAiSamplesData, category),
-  ];
+  ]);
 }
