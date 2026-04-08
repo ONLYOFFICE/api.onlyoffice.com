@@ -53,6 +53,7 @@ export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
     ...toItems(docspaceSamplesData, category),
     ...toItems(docspaceJsSdkData, category),
     ...toItems(docspacePluginsData, category),
+    ...toItems(docspaceAiSamplesData, category),
   ];
 }
 
