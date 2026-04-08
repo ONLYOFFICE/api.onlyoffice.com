@@ -1,5 +1,6 @@
 ---
 description: Modify the style of selected or current text.
+tags: ["Docs", "Text documents"]
 ---
 
 # Change text style

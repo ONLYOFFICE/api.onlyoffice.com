@@ -1,5 +1,6 @@
 ---
 description: Explain a cell error in natural language.
+tags: ["Docs", "Spreadsheets"]
 ---
 
 # Explain error

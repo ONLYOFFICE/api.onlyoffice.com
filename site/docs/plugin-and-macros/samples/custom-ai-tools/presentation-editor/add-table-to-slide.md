@@ -1,5 +1,6 @@
 ---
 description: Add a table to a presentation slide.
+tags: ["Docs", "Presentations"]
 ---
 
 # Add table to slide

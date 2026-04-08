@@ -1,5 +1,6 @@
 ---
 description: Change the background color of a slide.
+tags: ["Docs", "Presentations"]
 ---
 
 # Change slide background

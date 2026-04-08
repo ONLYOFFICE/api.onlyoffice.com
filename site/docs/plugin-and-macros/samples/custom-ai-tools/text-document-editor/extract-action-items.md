@@ -1,5 +1,6 @@
 ---
 description: Extract action items from selected text.
+tags: ["Docs", "Text documents"]
 ---
 
 # Extract action items

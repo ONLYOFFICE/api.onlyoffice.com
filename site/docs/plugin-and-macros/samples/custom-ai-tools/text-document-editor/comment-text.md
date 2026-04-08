@@ -1,5 +1,6 @@
 ---
 description: Add a comment to the selected text.
+tags: ["Docs", "Text documents"]
 ---
 
 # Comment text

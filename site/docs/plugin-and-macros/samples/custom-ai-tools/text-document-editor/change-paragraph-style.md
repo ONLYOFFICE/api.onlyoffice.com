@@ -1,5 +1,6 @@
 ---
 description: Change the style of a specified paragraph.
+tags: ["Docs", "Text documents"]
 ---
 
 # Change paragraph style

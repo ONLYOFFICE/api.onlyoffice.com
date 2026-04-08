@@ -1,5 +1,6 @@
 ---
 description: Add a chart to a presentation slide.
+tags: ["Docs", "Presentations"]
 ---
 
 # Add chart to slide

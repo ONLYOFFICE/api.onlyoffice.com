@@ -1,5 +1,6 @@
 ---
 description: Add text to a slide placeholder.
+tags: ["Docs", "Presentations"]
 ---
 
 # Add text to placeholder

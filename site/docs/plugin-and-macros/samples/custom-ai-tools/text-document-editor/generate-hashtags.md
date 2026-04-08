@@ -1,5 +1,6 @@
 ---
 description: Generate hashtags from selected text.
+tags: ["Docs", "Text documents"]
 ---
 
 # Generate hashtags

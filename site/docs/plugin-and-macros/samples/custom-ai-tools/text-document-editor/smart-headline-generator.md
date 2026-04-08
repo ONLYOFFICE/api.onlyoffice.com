@@ -1,5 +1,6 @@
 ---
 description: Generate a headline from document content.
+tags: ["Docs", "Text documents"]
 ---
 
 # Smart headline generator

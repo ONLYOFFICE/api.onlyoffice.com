@@ -1,5 +1,6 @@
 ---
 description: Insert a formatted list into a document.
+tags: ["Docs", "Text documents"]
 ---
 
 # Insert list

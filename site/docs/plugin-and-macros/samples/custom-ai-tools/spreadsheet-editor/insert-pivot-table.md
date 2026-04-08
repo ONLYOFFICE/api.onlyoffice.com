@@ -1,5 +1,6 @@
 ---
 description: Create a pivot table from a selected range.
+tags: ["Docs", "Spreadsheets"]
 ---
 
 # Insert pivot table

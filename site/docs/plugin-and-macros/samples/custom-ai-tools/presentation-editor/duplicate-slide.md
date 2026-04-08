@@ -1,5 +1,6 @@
 ---
 description: Duplicate a specified slide in a presentation.
+tags: ["Docs", "Presentations"]
 ---
 
 # Duplicate slide

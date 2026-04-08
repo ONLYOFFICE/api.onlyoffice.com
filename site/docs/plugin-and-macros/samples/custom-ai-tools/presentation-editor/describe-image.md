@@ -1,5 +1,6 @@
 ---
 description: Generate a description for images on a slide.
+tags: ["Docs", "Presentations"]
 ---
 
 # Describe image

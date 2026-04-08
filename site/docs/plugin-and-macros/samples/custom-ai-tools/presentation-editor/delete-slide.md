@@ -1,5 +1,6 @@
 ---
 description: Delete a specified slide from a presentation.
+tags: ["Docs", "Presentations"]
 ---
 
 # Delete slide

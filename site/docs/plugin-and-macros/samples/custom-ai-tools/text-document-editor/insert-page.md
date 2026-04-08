@@ -1,5 +1,6 @@
 ---
 description: Insert a new page into a document.
+tags: ["Docs", "Text documents"]
 ---
 
 # Insert page

@@ -1,5 +1,6 @@
 ---
 description: Add a shape with text to a slide.
+tags: ["Docs", "Presentations"]
 ---
 
 # Add shape to slide

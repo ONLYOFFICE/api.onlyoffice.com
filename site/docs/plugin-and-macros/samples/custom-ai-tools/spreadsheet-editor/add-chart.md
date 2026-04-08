@@ -1,5 +1,6 @@
 ---
 description: Create a chart from a spreadsheet data range.
+tags: ["Docs", "Spreadsheets"]
 ---
 
 # Add chart

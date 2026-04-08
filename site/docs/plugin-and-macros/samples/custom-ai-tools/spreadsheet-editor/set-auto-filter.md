@@ -1,5 +1,6 @@
 ---
 description: Apply an auto filter to a selected range.
+tags: ["Docs", "Spreadsheets"]
 ---
 
 # Set auto filter

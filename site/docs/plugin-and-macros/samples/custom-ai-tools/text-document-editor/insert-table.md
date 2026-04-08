@@ -1,5 +1,6 @@
 ---
 description: Insert a table into a document.
+tags: ["Docs", "Text documents"]
 ---
 
 # Insert table

@@ -1,5 +1,6 @@
 ---
 description: Explain a cell formula in natural language.
+tags: ["Docs", "Spreadsheets"]
 ---
 
 # Explain formula

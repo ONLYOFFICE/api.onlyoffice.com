@@ -1,5 +1,6 @@
 ---
 description: Add a new slide to a presentation.
+tags: ["Docs", "Presentations"]
 ---
 
 # Add new slide

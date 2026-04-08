@@ -1,5 +1,6 @@
 ---
 description: Rename form field keys in a document.
+tags: ["Docs", "Text documents"]
 ---
 
 # Rename form keys
