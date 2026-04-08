@@ -9,7 +9,7 @@ const SOURCES = [
   { dir: 'site/docs/plugin-and-macros/samples', routeBase: 'docs/plugin-and-macros/samples', output: 'docs-plugins-samples.json' },
   { dir: 'site/docs/document-builder/samples', routeBase: 'docs/document-builder/samples', output: 'docs-builder-samples.json' },
   // AI
-  { dir: 'site/docs/plugin-and-macros/samples/custom-ai-tools', routeBase: 'docs/plugin-and-macros/samples/custom-ai-tools', output: 'ai-samples.json' },
+  { dir: 'site/docs/plugin-and-macros/samples/custom-ai-tools', routeBase: 'docs/plugin-and-macros/samples/custom-ai-tools', output: 'docs-ai-samples.json' },
   // DocSpace
   { dir: 'site/docspace/api-backend/samples', routeBase: 'docspace/api-backend/samples', output: 'docspace-samples.json' },
   { dir: 'site/docspace/javascript-sdk/samples', routeBase: 'docspace/javascript-sdk/samples', output: 'docspace-jssdk-samples.json' },
@@ -27,8 +27,12 @@ function parseFrontMatter(content) {
     const idx = line.indexOf(':');
     if (idx > 0) {
       const key = line.slice(0, idx).trim();
-      const val = line.slice(idx + 1).trim().replace(/^["']|["']$/g, '');
-      data[key] = val;
+      const raw = line.slice(idx + 1).trim();
+      if (raw.startsWith('[')) {
+        try { data[key] = JSON.parse(raw); } catch { data[key] = raw; }
+      } else {
+        data[key] = raw.replace(/^["']|["']$/g, '');
+      }
     }
   }
   return data;
@@ -65,11 +69,13 @@ for (const source of SOURCES) {
       const description = fm.description || '';
       const slug = f.replace(/\.md$/, '');
 
-      return {
+      const item = {
         title,
         description,
         path: `/${source.routeBase}/${slug}/`,
       };
+      if (Array.isArray(fm.tags)) item.tags = fm.tags;
+      return item;
     });
 
   const outputPath = path.join(OUTPUT_DIR, source.output);
