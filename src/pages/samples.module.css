@@ -66,6 +66,42 @@
   line-height: 1.3;
 }
 
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: var(--base-size-40);
+}
+
+.pageButton {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border-color, #ededed);
+  background-color: var(--card-background-color);
+  color: var(--ifm-color-content);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pageButton:hover:not(:disabled) {
+  border-color: var(--c-blue-70, #4d8dff);
+  color: var(--c-blue-90, #1b6dff);
+}
+
+.pageButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary, #666);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .categoryTabs {

@@ -27,9 +27,12 @@ const categories: Category[] = [
   { id: 'ai', label: 'AI', subtitle: 'Artificial Intelligence', icon: <AiIcon /> },
 ];
 
+const ITEMS_PER_PAGE = 30;
+
 export default function SamplesPage(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   const [activeCategory, setActiveCategory] = useState('favorite');
+  const [currentPage, setCurrentPage] = useState(0);
 
   const itemsByCategory: Record<string, SamplesGrid.Item[]> = {
     favorite: Samples.items,
@@ -38,7 +41,14 @@ export default function SamplesPage(): ReactNode {
     ai: getAiSamples('ai'),
   };
 
-  const items = itemsByCategory[activeCategory] || [];
+  const allItems = itemsByCategory[activeCategory] || [];
+  const totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE);
+  const items = allItems.slice(currentPage * ITEMS_PER_PAGE, (currentPage + 1) * ITEMS_PER_PAGE);
+
+  const handleCategoryChange = (id: string) => {
+    setActiveCategory(id);
+    setCurrentPage(0);
+  };
 
   return (
     <Layout
@@ -61,7 +71,7 @@ export default function SamplesPage(): ReactNode {
               <button
                 key={cat.id}
                 className={`${styles.categoryTab} ${activeCategory === cat.id ? styles.categoryTabActive : ''}`}
-                onClick={() => setActiveCategory(cat.id)}
+                onClick={() => handleCategoryChange(cat.id)}
               >
                 <span className={styles.categoryIcon}>{cat.icon}</span>
                 <span className={styles.categoryText}>
@@ -74,6 +84,28 @@ export default function SamplesPage(): ReactNode {
 
           <main>
             <SamplesGrid items={items} compact />
+
+            {totalPages > 1 && (
+              <nav className={styles.pagination}>
+                <button
+                  className={styles.pageButton}
+                  disabled={currentPage === 0}
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                >
+                  ← Previous
+                </button>
+                <span className={styles.pageInfo}>
+                  Page {currentPage + 1} of {totalPages}
+                </span>
+                <button
+                  className={styles.pageButton}
+                  disabled={currentPage === totalPages - 1}
+                  onClick={() => setCurrentPage(currentPage + 1)}
+                >
+                  Next →
+                </button>
+              </nav>
+            )}
           </main>
 
           <div className={layoutStyles.helpSection}>
