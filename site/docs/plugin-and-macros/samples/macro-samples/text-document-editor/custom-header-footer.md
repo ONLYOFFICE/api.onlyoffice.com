@@ -3,7 +3,7 @@ hide_table_of_contents: true
 description: Generate custom headers and footers for a document.
 ---
 
-# Custom header and footer generation
+# Custom header and footer
 
 Applies predefined headers and footers to all pages in the document.
 
