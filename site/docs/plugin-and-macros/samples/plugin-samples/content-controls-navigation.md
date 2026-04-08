@@ -1,5 +1,6 @@
 ---
 description: Navigate and select content controls in a document.
+tags: ["Docs", "Plugins"]
 ---
 
 # Content controls navigation

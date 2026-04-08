@@ -1,5 +1,6 @@
 ---
 description: Translate text using machine translation services.
+tags: ["Docs", "Plugins"]
 ---
 
 # Translator

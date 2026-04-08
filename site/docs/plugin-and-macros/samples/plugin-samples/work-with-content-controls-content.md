@@ -1,5 +1,6 @@
 ---
 description: Copy content between content controls.
+tags: ["Docs", "Plugins"]
 ---
 
 # Work with content controls content

@@ -1,5 +1,6 @@
 ---
 description: Load custom fields with questions and dropdowns.
+tags: ["Docs", "Plugins"]
 ---
 
 # Load custom fields

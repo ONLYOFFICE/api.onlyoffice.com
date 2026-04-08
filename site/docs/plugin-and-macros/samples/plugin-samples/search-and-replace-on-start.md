@@ -1,5 +1,6 @@
 ---
 description: Search and replace text automatically on document open.
+tags: ["Docs", "Plugins"]
 ---
 
 # Search and replace on start

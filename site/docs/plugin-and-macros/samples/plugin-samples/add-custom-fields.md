@@ -1,5 +1,6 @@
 ---
 description: Insert custom text fields and dropdowns into a document.
+tags: ["Docs", "Plugins"]
 ---
 
 # Add custom fields

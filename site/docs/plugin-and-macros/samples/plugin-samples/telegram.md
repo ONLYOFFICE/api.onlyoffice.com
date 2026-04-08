@@ -1,5 +1,6 @@
 ---
 description: Connect Telegram for instant messaging in the editor.
+tags: ["Docs", "Plugins"]
 ---
 
 # Telegram

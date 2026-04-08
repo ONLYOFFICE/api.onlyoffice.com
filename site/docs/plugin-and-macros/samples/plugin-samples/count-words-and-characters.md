@@ -1,5 +1,6 @@
 ---
 description: Count paragraphs, words, and characters in a document.
+tags: ["Docs", "Plugins"]
 ---
 
 # Count words and characters

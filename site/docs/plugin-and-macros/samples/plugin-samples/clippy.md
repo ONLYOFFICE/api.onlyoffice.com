@@ -1,5 +1,6 @@
 ---
 description: Add an animated clippy assistant to the editor.
+tags: ["Docs", "Plugins"]
 ---
 
 # Clippy

@@ -1,5 +1,6 @@
 ---
 description: Get a list of content control tags in a document.
+tags: ["Docs", "Plugins"]
 ---
 
 # Work with content controls tags

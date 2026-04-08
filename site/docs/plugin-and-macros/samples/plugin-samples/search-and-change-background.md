@@ -1,5 +1,6 @@
 ---
 description: Search for text and change its background color.
+tags: ["Docs", "Plugins"]
 ---
 
 # Search and change background

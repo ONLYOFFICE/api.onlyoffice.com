@@ -1,5 +1,6 @@
 ---
 description: Use AI models for text generation, editing, and summarization.
+tags: ["Docs", "Plugins"]
 ---
 
 # AI

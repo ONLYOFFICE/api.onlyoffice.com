@@ -1,5 +1,6 @@
 ---
 description: Check grammar, spelling, and style using LanguageTool.
+tags: ["Docs", "Plugins"]
 ---
 
 # Language tool

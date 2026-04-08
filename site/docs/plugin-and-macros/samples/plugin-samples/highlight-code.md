@@ -1,5 +1,6 @@
 ---
 description: Apply syntax highlighting to code snippets.
+tags: ["Docs", "Plugins"]
 ---
 
 # Highlight code
