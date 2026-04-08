@@ -16,7 +16,7 @@ const SOURCES = [
   { dir: 'site/docspace/plugins-sdk/samples', routeBase: 'docspace/plugins-sdk/samples', output: 'docspace-plugins-samples.json' },
 ];
 
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.resolve(__dirname, '../..');
 const OUTPUT_DIR = path.resolve(ROOT, 'src/data');
 
 function parseFrontMatter(content) {
@@ -55,7 +55,8 @@ for (const source of SOURCES) {
       if (f.includes('_category_')) return false;
       const name = path.basename(f, '.md');
       const parent = path.basename(path.dirname(f));
-      return name !== parent;
+      const dirName = path.basename(source.dir);
+      return name !== parent && name !== dirName;
     })
     .map(f => {
       const content = fs.readFileSync(path.join(samplesDir, f), 'utf-8');
