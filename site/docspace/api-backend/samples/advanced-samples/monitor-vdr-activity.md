@@ -1,5 +1,6 @@
 ---
 description: Analyze VDR audit logs and alert on unusually high user activity.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

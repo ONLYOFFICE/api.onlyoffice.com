@@ -1,5 +1,6 @@
 ---
 description: Create a virtual data room with a watermark via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

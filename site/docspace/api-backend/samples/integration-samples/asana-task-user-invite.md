@@ -1,5 +1,6 @@
 ---
 description: Invite an Asana task assignee to DocSpace.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Asana task user invite

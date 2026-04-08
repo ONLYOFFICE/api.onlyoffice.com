@@ -1,5 +1,6 @@
 ---
 description: Retrieve Trello board members and add them to DocSpace.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Add Trello users to DocSpace

@@ -1,5 +1,6 @@
 ---
 description: Assign document number prefixes to files in a folder.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

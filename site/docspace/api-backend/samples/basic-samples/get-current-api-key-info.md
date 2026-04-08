@@ -1,5 +1,6 @@
 ---
 description: Retrieve permissions for the current API token via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

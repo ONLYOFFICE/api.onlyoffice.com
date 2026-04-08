@@ -1,5 +1,6 @@
 ---
 description: Disable external contractors who have not logged in recently.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,5 +1,6 @@
 ---
 description: Identify rooms that have not been updated within a given time period.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

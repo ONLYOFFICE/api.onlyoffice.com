@@ -1,5 +1,6 @@
 ---
 description: Trigger a manual portal backup and notify an administrator of the result.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

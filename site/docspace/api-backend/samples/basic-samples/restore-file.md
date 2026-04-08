@@ -1,5 +1,6 @@
 ---
 description: Restore a file to a specific previous version via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

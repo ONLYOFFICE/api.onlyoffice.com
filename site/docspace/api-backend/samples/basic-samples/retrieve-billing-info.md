@@ -1,5 +1,6 @@
 ---
 description: Retrieve billing, quota, and payment details via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

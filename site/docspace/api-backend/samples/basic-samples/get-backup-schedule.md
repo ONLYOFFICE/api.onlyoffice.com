@@ -1,5 +1,6 @@
 ---
 description: Retrieve the current portal backup schedule via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

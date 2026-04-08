@@ -1,5 +1,6 @@
 ---
 description: Delete a specific backup by its ID via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

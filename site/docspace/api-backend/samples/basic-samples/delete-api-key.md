@@ -1,5 +1,6 @@
 ---
 description: Delete an existing API key by its unique ID via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

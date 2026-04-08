@@ -1,5 +1,6 @@
 ---
 description: Find documents marked as confidential and move them to a secure room.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

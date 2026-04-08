@@ -1,5 +1,6 @@
 ---
 description: Send a notification to the manager when a client uploads an invoice.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

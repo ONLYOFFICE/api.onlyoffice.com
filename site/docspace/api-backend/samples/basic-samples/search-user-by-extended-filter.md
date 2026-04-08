@@ -1,5 +1,6 @@
 ---
 description: Search users with extended filter parameters via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,5 +1,6 @@
 ---
 description: Create a user, retrieve their profile, and update their role.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

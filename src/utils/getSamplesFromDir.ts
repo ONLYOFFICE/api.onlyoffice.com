@@ -22,6 +22,9 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'Basic': 'green',
       'Advanced': 'purple',
       'Ready-to-use': 'pink',
+      'Embed SDK': 'green',
+      'Integration': 'purple',
+      'REST API': 'green',
     };
     const docTags: SamplesGrid.Tag[] = (doc as any).tags?.map((t: string) => ({ label: t, variant: tagVariants[t] ?? 'default' })) ?? [];
     return {
@@ -45,7 +48,7 @@ export function getDocsSamples(category: string): SamplesGrid.Item[] {
 
 export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
   return [
-    ...toItems(docspaceSamplesData, category, [{ label: 'REST API', variant: 'blue' }]),
+    ...toItems(docspaceSamplesData, category),
     ...toItems(docspaceJsSdkData, category),
     ...toItems(docspacePluginsData, category),
   ];

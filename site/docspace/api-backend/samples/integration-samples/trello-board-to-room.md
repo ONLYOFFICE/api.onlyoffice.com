@@ -1,5 +1,6 @@
 ---
 description: Create a DocSpace room using a Trello board name.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Trello board to room

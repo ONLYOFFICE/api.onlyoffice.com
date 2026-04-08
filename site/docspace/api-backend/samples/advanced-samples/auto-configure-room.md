@@ -1,5 +1,6 @@
 ---
 description: Set up folders and permissions automatically when a room is created.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

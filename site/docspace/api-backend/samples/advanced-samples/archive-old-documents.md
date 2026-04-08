@@ -1,5 +1,6 @@
 ---
 description: Move documents older than a threshold from a room to an archive folder.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

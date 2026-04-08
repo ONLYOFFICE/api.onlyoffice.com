@@ -1,5 +1,6 @@
 ---
 description: Add one or more members to an existing group via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

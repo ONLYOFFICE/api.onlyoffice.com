@@ -1,5 +1,6 @@
 ---
 description: Create a text file with custom content in a folder via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

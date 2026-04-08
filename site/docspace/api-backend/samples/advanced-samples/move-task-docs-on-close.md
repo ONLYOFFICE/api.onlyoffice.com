@@ -1,5 +1,6 @@
 ---
 description: Move task documents to a Completed folder when the task is closed.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

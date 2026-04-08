@@ -1,5 +1,6 @@
 ---
 description: Retrieve Notion users and add them to DocSpace.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Add Notion users to DocSpace

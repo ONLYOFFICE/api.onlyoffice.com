@@ -1,5 +1,6 @@
 ---
 description: Revoke guest access automatically when a room is moved to the archive.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

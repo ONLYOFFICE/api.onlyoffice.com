@@ -1,5 +1,6 @@
 ---
 description: Retrieve the list of available room templates via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

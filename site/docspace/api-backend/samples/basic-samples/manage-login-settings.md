@@ -1,5 +1,6 @@
 ---
 description: Configure login security settings via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

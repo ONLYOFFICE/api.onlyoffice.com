@@ -1,5 +1,6 @@
 ---
 description: Onboard a client by creating a room with templates and restricted access.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

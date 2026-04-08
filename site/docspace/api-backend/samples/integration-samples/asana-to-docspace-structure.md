@@ -1,5 +1,6 @@
 ---
 description: Create DocSpace rooms and folders from Asana projects.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Asana to DocSpace structure

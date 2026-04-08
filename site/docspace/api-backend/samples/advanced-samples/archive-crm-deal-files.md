@@ -1,5 +1,6 @@
 ---
 description: Archive all client documents when a CRM deal is marked as closed.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

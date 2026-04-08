@@ -1,5 +1,6 @@
 ---
 description: Copy newly uploaded files from a client room to an internal room.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

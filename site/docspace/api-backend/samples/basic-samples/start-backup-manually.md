@@ -1,5 +1,6 @@
 ---
 description: Start an on-demand backup of the portal via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

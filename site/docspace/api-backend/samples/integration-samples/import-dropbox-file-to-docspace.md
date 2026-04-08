@@ -1,5 +1,6 @@
 ---
 description: Import a file from Dropbox into a DocSpace room.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Import Dropbox file to DocSpace
