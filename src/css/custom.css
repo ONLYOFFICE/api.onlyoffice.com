@@ -216,12 +216,12 @@
   --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
   /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
 
-  --button-text-color: #245ADD;
-  --button-border-color: #245ADD;
+  --button-text-color: #245add;
+  --button-border-color: #245add;
   --button-bg-color: #00000000;
-  --button-text-color-hover: #2033F5;
-  --button-border-color-hover: #2033F5;
-  --button-bg-color-hover: #f5f5faC0;
+  --button-text-color-hover: #2033f5;
+  --button-border-color-hover: #2033f5;
+  --button-bg-color-hover: #f5f5fac0;
 
   --ifm-button-background-color: white;
   --ifm-button-background-color-hover: #e8e8ea;
@@ -272,12 +272,12 @@ html[data-theme='dark'] {
 
   --temp-color-shadow-default-small: 0 7px 15px 0 #141617;
 
-  --button-text-color: #EAF1FE;
-  --button-border-color: #2033F5;
-  --button-bg-color: #2033F518;
-  --button-text-color-hover: #EAF1FEC0;
-  --button-border-color-hover: #2033F5C0;
-  --button-bg-color-hover: #2033F518;
+  --button-text-color: #eaf1fe;
+  --button-border-color: #2033f5;
+  --button-bg-color: #2033f518;
+  --button-text-color-hover: #eaf1fec0;
+  --button-border-color-hover: #2033f5c0;
+  --button-bg-color-hover: #2033f518;
 
   --ifm-button-background-color: #1b1b1d;
   --ifm-button-background-color-hover: #3d3d43;
