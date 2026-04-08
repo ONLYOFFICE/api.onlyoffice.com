@@ -2,7 +2,7 @@
 description: Navigate and select content controls in a document.
 ---
 
-# Work with content controls navigation
+# Content controls navigation
 
 Inserts content controls (automatically or manually), navigates and selects them as well as pastes text into them.
 
