@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+description: Clear all content control field values in a document.
+---
 # Clearing all fields
 
 Create a document with filled content controls and demonstrate how to clear all field values to reset the template:

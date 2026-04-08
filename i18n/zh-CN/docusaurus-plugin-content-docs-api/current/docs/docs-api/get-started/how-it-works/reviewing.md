@@ -31,7 +31,9 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> 请注意，仅当 [mode](../../usage-api/config/editor/editor.md#mode) 参数设置为 **edit** 时，文档编辑器才能使用文档审阅。
+:::note
+请注意，仅当 [mode](../../usage-api/config/editor/editor.md#mode) 参数设置为 **edit** 时，文档编辑器才能使用文档审阅。
+:::
 
 ## 按组区分审阅权
 

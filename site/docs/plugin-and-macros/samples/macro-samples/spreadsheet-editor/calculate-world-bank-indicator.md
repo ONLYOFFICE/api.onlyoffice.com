@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Calculate indicators using World Bank data.
 ---
 
 # Calculate World Bank indicator
@@ -17,10 +18,6 @@ The following indicators can be calculated:
 | IT.NET.USER.ZS | Internet users % - IT.NET.USER.ZS |
 
 For more information, visit the [World Bank documentation](https://data.worldbank.org/indicator).
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ```ts
 //custom function:
@@ -92,7 +89,5 @@ For more information, visit the [World Bank documentation](https://data.worldban
 Methods used: [AddCustomFunction](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md), [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [FormatAsTable](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md), [AddChart](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md), [SetTitle](/docs/office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![World Bank indicator](/assets/images/plugins/world-bank-indicator.png#gh-light-mode-only)![World Bank indicator](/assets/images/plugins/world-bank-indicator.dark.png#gh-dark-mode-only)

@@ -5,7 +5,7 @@ Adds some text to the current run.
 ## Syntax
 
 ```javascript
-expression.AddText(sText);
+expression.AddText(text);
 ```
 
 `expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
@@ -14,7 +14,7 @@ expression.AddText(sText);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The text which will be added to the current run. |
+| text | Required | string |  | The text which will be added to the current run. |
 
 ## Returns
 
@@ -30,7 +30,7 @@ This example adds some text to the run.
 // Get a paragraph and add a text to it.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

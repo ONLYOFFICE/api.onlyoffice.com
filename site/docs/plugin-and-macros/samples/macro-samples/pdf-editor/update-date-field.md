@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Set the current date in all date form fields.
 ---
 
 # Update date field

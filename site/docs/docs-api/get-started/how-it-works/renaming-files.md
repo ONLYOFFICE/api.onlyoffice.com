@@ -21,7 +21,8 @@ The reference figure and the steps below explain the process of renaming a docum
 
 2. Specify the event handler for opening the *Rename...* menu in the configuration script for Document Editor initialization. When the [onRequestRename](../../usage-api/config/events.md#onrequestrename) event is called, the new name of the document without extension is sent to the software integrators which rename the document in the document storage service.
 
-   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
+   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
+   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
 
    ``` ts
    function onRequestRename(event) {

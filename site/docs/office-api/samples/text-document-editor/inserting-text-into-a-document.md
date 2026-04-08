@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add formatted text with bold, italic, and color styles.
 ---
 
 # Inserting text into a document

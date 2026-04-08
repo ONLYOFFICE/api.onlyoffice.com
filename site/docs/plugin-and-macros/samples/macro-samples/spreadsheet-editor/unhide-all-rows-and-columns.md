@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Unhide all hidden rows and columns.
 ---
 
 # Unhide all rows and columns
 
 Unhides all the rows and columns in the active spreadsheet.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

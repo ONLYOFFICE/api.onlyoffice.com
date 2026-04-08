@@ -1,14 +1,14 @@
-# 内容控件列表元素
+# ContentControlListElement
 
 内容控件列表元素。
 
 ## 属性
 
-| 名称    | 类型   | 说明           |
-| ------- | ------ | -------------- |
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
 | Display | string | 元素显示文本。 |
-| Value   | string | 元素值。       |
+| Value | string | 元素值。 |
 ## 类型
 
-Object（对象）
+Object
 

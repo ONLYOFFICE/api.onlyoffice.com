@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+description: Insert content controls at various document positions.
+---
 # Inserting new content controls
 
 Create a document template and demonstrate how to dynamically insert new content controls at different positions:

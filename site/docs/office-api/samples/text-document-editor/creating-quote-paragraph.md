@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a styled quote block with indent and background.
 ---
 
 # Creating quote paragraph

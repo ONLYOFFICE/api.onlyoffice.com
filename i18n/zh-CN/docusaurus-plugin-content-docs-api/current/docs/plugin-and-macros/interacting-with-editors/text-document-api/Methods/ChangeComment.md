@@ -1,6 +1,6 @@
-# 修改评论
+# ChangeComment
 
-修改指定的评论。
+更改指定的批注。
 
 ## 语法
 
@@ -8,18 +8,18 @@
 expression.ChangeComment(sId, oCommentData);
 ```
 
-`expression` - 一个表示 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **描述** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sId | 必填 | string |  | 评论ID。 |
-| oCommentData | 必填 | [批注数据](../Enumeration/CommentData.md) |  | 包含新评论数据的对象。 |
+| sId | 必需 | string |  | 批注 ID。 |
+| oCommentData | 必需 | [CommentData](../Enumeration/CommentData.md) |  | 包含新批注数据的对象。 |
 
 ## 返回值
 
-boolean（布尔值）
+此方法不返回任何数据。
 
 ## 示例
 

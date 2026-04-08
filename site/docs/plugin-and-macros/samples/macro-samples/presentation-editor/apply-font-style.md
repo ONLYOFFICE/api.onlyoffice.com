@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Apply a font style to all text on slides.
 ---
 
 # Apply font style
 
 Applies a consistent font style across all the slides.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ```ts
 (function () {
@@ -38,8 +35,6 @@ Applies a consistent font style across all the slides.
 Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFontFamily.md)  
 
 ## Reference Microsoft VBA macro code
-
-<!-- code generated with AI -->
 
 ```vb
 Sub ApplyConsistentFontStyle()
@@ -74,8 +69,6 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Apply font style](/assets/images/plugins/apply-font-style.png#gh-light-mode-only)![Apply font style](/assets/images/plugins/apply-font-style.dark.png#gh-dark-mode-only)
 

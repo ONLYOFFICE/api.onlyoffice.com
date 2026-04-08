@@ -1,6 +1,6 @@
-# 获取所有内容控件
+# GetAllContentControls
 
-返回页面上所有已添加的内容控件的信息。
+返回已添加到页面的所有内容控件的信息。
 
 ## 语法
 
@@ -12,11 +12,11 @@ expression.GetAllContentControls();
 
 ## 参数
 
-此方法没有参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[内容控件](../Enumeration/ContentControl.md)[]
+[ContentControl](../Enumeration/ContentControl.md)[]
 
 ## 示例
 

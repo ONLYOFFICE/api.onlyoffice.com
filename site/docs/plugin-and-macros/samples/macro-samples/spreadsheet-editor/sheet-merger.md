@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Merge data from multiple sheets into one.
 ---
 
 # Sheet merger
 
 Merges data from all sheets into the active sheet by copying the used range of each sheet and appending it.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ```ts
 (function () {
@@ -44,7 +41,5 @@ Merges data from all sheets into the active sheet by copying the used range of e
 Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetName](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetName.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)

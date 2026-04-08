@@ -1,3 +1,7 @@
+---
+description: Provide input suggestions from a dictionary while typing.
+---
+
 # Autocomplete
 
 Helps the user to input text quickly.

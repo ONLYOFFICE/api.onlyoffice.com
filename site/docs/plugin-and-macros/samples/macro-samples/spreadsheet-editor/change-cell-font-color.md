@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Change the font color of specified cells.
 ---
 
 # Change cell font color
 
 Sets the font color of the cell **B4** to red.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

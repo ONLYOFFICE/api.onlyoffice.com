@@ -1,3 +1,7 @@
+---
+description: Create client rooms with predefined folders and document templates.
+---
+
 # Structured room creation
 
 This example demonstrates how to use the DocSpace JavaScript SDK to create a structured workspace for each new client. When a user adds a client, the system:
@@ -7,6 +11,8 @@ This example demonstrates how to use the DocSpace JavaScript SDK to create a str
 - Inserts specific document templates (DOCX, XLSX, PDF) into the corresponding folders
 
 This allows for quick onboarding of clients into a standardized workspace environment.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/room-creation-with-folder-structure.html)
 
 ## Before you start
 
@@ -25,7 +31,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Manager</title>
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* Full CSS omitted for brevity */
     </style>

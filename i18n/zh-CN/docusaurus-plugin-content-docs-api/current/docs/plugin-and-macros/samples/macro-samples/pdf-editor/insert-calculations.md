@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 插入计算
 
 对表单中的指定字段执行自动计算并插入结果。

@@ -1,4 +1,4 @@
-# 获取 HTML 格式的文件内容
+# GetFileHTML
 
 以 HTML 格式返回文件内容。
 
@@ -12,11 +12,11 @@ expression.GetFileHTML();
 
 ## 参数
 
-此方法没有参数。
+此方法没有任何参数。
 
 ## 返回值
 
-string（字符串）
+string
 
 ## 示例
 

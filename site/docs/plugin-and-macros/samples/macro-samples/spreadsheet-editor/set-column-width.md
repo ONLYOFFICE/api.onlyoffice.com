@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Set the width of specified columns.
 ---
 
 # Set column width
 
 Sets the width for the column **B**.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

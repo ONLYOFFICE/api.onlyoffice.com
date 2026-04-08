@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Find and highlight overused words in a document.
 ---
 
 # Identify overused words

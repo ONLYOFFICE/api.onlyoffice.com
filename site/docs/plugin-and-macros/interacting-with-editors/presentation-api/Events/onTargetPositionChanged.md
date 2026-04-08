@@ -8,10 +8,7 @@ This event has no parameters.
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", () => {
-    if (!fClickLabel) {
-        window.Asc.plugin.executeMethod("GetCurrentContentControl");
-    }
-    fClickLabel = false;
+    console.log("event: onTargetPositionChanged");
 });
 ```
 

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Highlight predefined keywords in a document.
 ---
 
 # Highlight predefined keywords
@@ -26,7 +27,5 @@ Highlights predefined keywords in text document.
 Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [Search](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Search.md), [SetHighlight](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetHighlight.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)

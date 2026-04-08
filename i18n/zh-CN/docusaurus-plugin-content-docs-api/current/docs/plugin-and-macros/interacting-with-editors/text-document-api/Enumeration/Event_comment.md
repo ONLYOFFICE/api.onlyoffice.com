@@ -1,16 +1,16 @@
-# 事件_批注
+# Event_comment
 
 批注对象。
 
 ## 属性
 
-| 名称 | 类型 | 说明 |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| Data | [事件_批注数据](../Enumeration/Event_CommentData.md) | 包含批注数据的对象。 |
+| Data | [Event_CommentData](../Enumeration/Event_CommentData.md) | 包含批注数据的对象。 |
 | Id | string | 批注 ID。 |
 ## 类型
 
-Object（对象）
+Object
 
 
 

@@ -1,6 +1,12 @@
+---
+description: Verify users with a phone code before granting DocSpace access.
+---
+
 # Two-factor authentication
 
 This example demonstrates a two-step verification process using a phone number and 4-digit code before granting access to DocSpace via the SDK. Once verified, users are redirected to a file management interface embedded in an iframe.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/two-factor-authentication.html)
 
 ## Before you start
 
@@ -19,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Two-Factor Authentication</title>
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* CSS omitted for brevity */
     </style>

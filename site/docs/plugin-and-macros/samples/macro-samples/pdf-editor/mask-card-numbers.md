@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Mask credit card numbers showing only first and last digits.
 ---
 
 # Mask card numbers
 
 Applies the mask to all forms with the specified form key to hide card numbers.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

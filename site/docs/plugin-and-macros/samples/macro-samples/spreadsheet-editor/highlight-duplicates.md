@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Highlight duplicate values in a cell range.
 ---
 
 # Highlight duplicates
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function () 

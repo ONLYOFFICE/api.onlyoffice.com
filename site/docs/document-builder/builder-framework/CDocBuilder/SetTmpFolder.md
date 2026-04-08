@@ -1,0 +1,138 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# SetTmpFolder
+
+Sets the path to the folder where the program will temporarily save files needed for the program correct work. After the successful document file creation, all the files will be deleted from the folder. If no temporary folder is set, the system one will be used.
+
+## Syntax
+
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        ```py
+        def SetTmpFolder(self, folder: str)
+        ```
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        void SetTmpFolder(const wchar_t* sFolder);
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        ```cpp
+        HRESULT SetTmpFolder([in] BSTR folder);
+        ```
+    </TabItem>
+    <TabItem value="java" label="Java">
+        ```java
+        void setTmpFolder(String folder);
+        ```
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        ```cs
+        void SetTmpFolder(String^ sFolder);
+        ```
+    </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        SetTmpFolder(folder)
+        ```
+    </TabItem>
+</Tabs>
+
+## Parameters
+
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        | Name   | Type | Description                                                     |
+        | ------ | ---- | --------------------------------------------------------------- |
+        | folder | str  | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        | Name    | Type           | Description                                                     |
+        | ------- | -------------- | --------------------------------------------------------------- |
+        | sFolder | const wchar_t* | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | Name   | Type | Description                                                     |
+        | ------ | ---- | --------------------------------------------------------------- |
+        | folder | BSTR | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        | Name   | Type   | Description                                                     |
+        | ------ | ------ | --------------------------------------------------------------- |
+        | folder | String | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        | Name    | Type    | Description                                                     |
+        | ------- | ------- | --------------------------------------------------------------- |
+        | sFolder | String^ | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+    <TabItem value="js" label="JS">
+        | Name   | Type   | Description                                                     |
+        | ------ | ------ | --------------------------------------------------------------- |
+        | folder | String | The path to the folder where the temporary files will be saved. |
+    </TabItem>
+</Tabs>
+
+## Example
+
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        ```py
+        import os
+        import docbuilder
+
+        builder = docbuilder.CDocBuilder()
+        builder.SetTmpFolder("DocBuilderTemp")
+        builder.CreateFile("docx")
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
+        ```
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        oBuilder.SetTmpFolder(L"DocBuilderTemp");
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        ```cpp
+        CoInitialize(NULL);
+        IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+        oBuilder->SetTmpFolder(_bstr_t("DocBuilderTemp"));
+        oBuilder->Dispose();
+        ```
+    </TabItem>
+    <TabItem value="java" label="Java">
+        ```java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.setTmpFolder("DocBuilderTemp");
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        ```cs
+        string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        CDocBuilder.Initialize(workDirectory);
+        CDocBuilder oBuilder = new CDocBuilder();
+        oBuilder.SetTmpFolder("DocBuilderTemp");
+        CDocBuilder.Destroy();
+        ```
+    </TabItem>
+    <TabItem value="js" label="JS">
+        ```js
+        builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
+        ```
+    </TabItem>
+</Tabs>

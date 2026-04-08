@@ -1,4 +1,4 @@
-# 获取 VBA 宏
+# GetVBAMacros
 
 返回文档中的所有 VBA 宏。
 
@@ -8,15 +8,15 @@
 expression.GetVBAMacros();
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-string（字符串） \| null
+string \| null
 
 ## 示例
 

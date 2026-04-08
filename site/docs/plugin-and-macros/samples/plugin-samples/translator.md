@@ -1,3 +1,7 @@
+---
+description: Translate text using machine translation services.
+---
+
 # Translator
 
 Connects the [Google Translate API](https://cloud.google.com/translate?hl=ru) for translating the selected text into other languages.

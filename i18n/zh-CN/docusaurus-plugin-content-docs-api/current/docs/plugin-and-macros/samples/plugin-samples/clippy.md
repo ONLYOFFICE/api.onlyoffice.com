@@ -6,7 +6,9 @@
 
 **支持的编辑器：**文档、表格、演示文稿。
 
-![Clippy](/assets/images/plugins/gifs/clippy.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/clippy.webm" type="video/webm" />
+</video>
 
 ## 安装
 
@@ -88,8 +90,8 @@ GitHub 仓库：[clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 ## 方法与事件
 
-- button
-- init
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 
 ## 支持
 

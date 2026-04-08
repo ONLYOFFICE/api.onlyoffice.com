@@ -4,7 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
-const isDev = process.env.NODE_ENV === 'development';
+// SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
+const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
 
 let keyPath = '';
 function sidebarRecursive(item) {
@@ -37,15 +38,13 @@ const config: Config = {
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
-    }
+    },
+    mermaid: true,
   },
 
   customFields: {
     documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
     documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
-    markdown: {
-    mermaid: true,
-  },
   },
 
   future: {
@@ -80,15 +79,41 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
-          editUrl:
-            isDev
-              ? 'https://git.onlyoffice.com/ONLYOFFICE/api.onlyoffice.com/src/branch/master'
-              : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+          editUrl: ({docPath}) => {
+            const baseUrl = 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master/site';
+
+            // Transform sample paths: samples/{category}/{subcategory}/... → {category}/{subcategory}/samples/...
+            if (docPath.startsWith('samples/')) {
+              const parts = docPath.split('/');
+              if (parts.length >= 4) {
+                const [, category, subcategory, ...rest] = parts;
+                let filePath = rest.join('/');
+
+                // Reverse rename: {subcategory}.md → samples.md
+                if (filePath === `${subcategory}.md`) {
+                  filePath = 'samples.md';
+                }
+
+                return `${baseUrl}/${category}/${subcategory}/samples/${filePath}`;
+              }
+            }
+
+            return `${baseUrl}/${docPath}`;
+          },
 
           docItemComponent: '@theme/ApiItem',
 
-          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, isCategoryIndex, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator({
+              ...args,
+              isCategoryIndex(params) {
+                // Exclude index.md
+                if (params.fileName.toLowerCase() === 'index') {
+                  return false;
+                }
+                return isCategoryIndex(params);
+              },
+            });
             keyPath = args.item.dirName;
             sidebarItems.forEach(sidebarRecursive);
             return sidebarItems;
@@ -139,13 +164,6 @@ const config: Config = {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
-          docspaceHosted: {
-            specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
-            outputDir: "site/docspace/for-hosting-providers/usage-api",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
     ],
@@ -163,6 +181,11 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
+    announcementBar: {
+      content: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/02/onlyoffice-docs-9-3"><b>ONLYOFFICE Docs 9.3 released</b></a>: enhanced PDF Editor and more signature options, multipage view for documents, Solver in sheets, GIF playback in presentation slideshow mode, AI-powered updates, and more.`,
+      textColor: '#091E42',
+      isCloseable: true,
+    },
     navbar: {
       logo: {
         alt: 'ONLYOFFICE',
@@ -170,38 +193,6 @@ const config: Config = {
         srcDark: 'img/logo-dark.svg',
       },
       items: [
-        {
-          type: 'dropdown',
-          label: 'Docspace',
-          position: 'left',
-          to: 'docspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceApiBackend',
-                label: 'API Reference',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceJSSdk',
-                label: 'Embed SDK',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspacePlugins',
-              label: 'Plugins SDK',
-              docsPluginId: 'api',
-             },
-             {
-               type: 'docSidebar',
-               sidebarId: 'docspaceMCPServer',
-               label: 'MCP Server',
-               docsPluginId: 'api',
-             },
-          ],
-        },
         {
           type: 'dropdown',
           label: 'Docs',
@@ -241,10 +232,41 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'samples',
+          type: 'dropdown',
+          label: 'Docspace',
+          position: 'left',
+          to: 'docspace',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceApiBackend',
+                label: 'API Reference',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceJSSdk',
+                label: 'Embed SDK',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspacePlugins',
+              label: 'Plugins SDK',
+              docsPluginId: 'api',
+             },
+             {
+               type: 'docSidebar',
+               sidebarId: 'docspaceMCPServer',
+               label: 'MCP Server',
+               docsPluginId: 'api',
+             },
+          ],
+        },
+        {
+          to: 'samples',
           label: 'Samples',
-          docsPluginId: 'api',
+          position: 'left',
         },
         {
           to: 'changelog',
@@ -325,8 +347,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Ascensio System SIA. All right reserved`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
       additionalLanguages: ["bash", "php", "csharp", "java", "ruby"],
     },
     algolia: {
@@ -373,7 +395,7 @@ const config: Config = {
     ],
   } satisfies Preset.ThemeConfig,
 
-  themes: ["docusaurus-theme-openapi-docs", '@docusaurus/theme-mermaid'],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
 };
 
 export default config;

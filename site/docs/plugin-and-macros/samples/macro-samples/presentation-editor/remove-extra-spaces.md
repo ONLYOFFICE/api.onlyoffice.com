@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove extra spaces from text on slides.
 ---
 
 # Remove extra spaces

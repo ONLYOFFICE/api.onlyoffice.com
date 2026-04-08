@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a multi-level list with numbered and bulleted items.
 ---
 
 # Creating nested list

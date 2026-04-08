@@ -18,7 +18,7 @@
 
 `类型: boolean`
 
-定义是否在文档中启用聊天功能。如果聊天权限设置为 **true**，将显示**聊天**菜单按钮。
+定义是否在文档中启用聊天功能。如果聊天权限设置为 **true**，将显示**聊天**菜单按钮。默认值为 **true**。
 
 **示例**: `true`
 
@@ -34,13 +34,13 @@
 
 **示例**: `true`
 
-![评论](/assets/images/editor/comment.png)
+![评论](/assets/images/editor/comment.png#gh-light-mode-only)![评论](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## commentGroups
 
 `类型: object`
 
-定义用户可以编辑、删除和/或查看其评论[组](../editor/editor.md#user。
+定义用户可以编辑、删除和/或查看其评论[组](../editor/editor.md#user)。
 
 *\[""]* 值意味着用户可以编辑/删除/查看不属于这些组的人所做的评论（例如，如果文档在第三方编辑器中进行了审阅）。如果值为 *[]*，则用户无法编辑/删除/查看任何组的评论。如果 *edit*, *remove* 和 *view* 参数为 *""* 或未指定，则用户可以查看/编辑/删除任何用户的评论。
 
@@ -102,7 +102,7 @@ const config = {
 
 **示例**: `true`
 
-![下载文档](/assets/images/editor/download.png)
+![下载文档](/assets/images/editor/download.png#gh-light-mode-only)![下载文档](/assets/images/editor/download.dark.png#gh-dark-mode-only)
 
 ## 修改 {#edit}
 
@@ -134,7 +134,7 @@ const config = {
 
 **示例**: `true`
 
-![填写表格](/assets/images/editor/fill-forms.png)
+![填写表格](/assets/images/editor/fill-forms.png#gh-light-mode-only)![填写表格](/assets/images/editor/fill-forms.dark.png#gh-dark-mode-only)
 
 ## modifyContentControl
 
@@ -164,7 +164,7 @@ const config = {
 
 **示例**: `true`
 
-![打印文档](/assets/images/editor/print.png)
+![打印文档](/assets/images/editor/print.png#gh-light-mode-only)![打印文档](/assets/images/editor/print.dark.png#gh-dark-mode-only)
 
 ## 保护 {#protect}
 
@@ -174,7 +174,7 @@ const config = {
 
 **示例**: `true`
 
-![保护文档](/assets/images/editor/protect.png)
+![保护文档](/assets/images/editor/protect.png#gh-light-mode-only)![保护文档](/assets/images/editor/protect.dark.png#gh-dark-mode-only)
 
 ## 重命名 {#rename}
 

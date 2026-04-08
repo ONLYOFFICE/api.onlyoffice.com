@@ -2,10 +2,6 @@
 
 使用外部 API 将演示文稿中的所有超链接转换为二维码。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();
@@ -61,7 +57,5 @@
 使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [CreateOleObject](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateOleObject.md), [SetSize](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetSize.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.png#gh-light-mode-only)![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.dark.png#gh-dark-mode-only)

@@ -1,6 +1,12 @@
+---
+description: Log in to DocSpace using the JS SDK with password hashing.
+---
+
 # Login
 
 This example demonstrates how to log in to DocSpace using the JavaScript SDK by hashing the password.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/login.html)
 
 ## Before you start
 
@@ -19,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Login</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -90,7 +96,7 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
     <title>Login</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -120,7 +126,7 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic

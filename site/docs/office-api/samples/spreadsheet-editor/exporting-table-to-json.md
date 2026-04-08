@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Export spreadsheet table data to a JSON array.
+---
+
 # Exporting table to JSON
 
 Converts cell values into a structured JSON array where each table row becomes a separate object. Used for transferring tabular data to other systems, APIs, and saving to databases:

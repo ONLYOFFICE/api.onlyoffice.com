@@ -2,10 +2,6 @@
 
 完善基础地址数据，补充详细地址信息并插入到表格中。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 // Macros structure:
 // Read Address (Cell A2) ->
@@ -95,7 +91,9 @@
 
 使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md)
 
-> 要使宏正常运行，请将 *yourAPIkey* 替换为从 [Geoapify](https://www.geoapify.com/) 获取的 API 密钥。
+:::note
+要使宏正常运行，请将 *yourAPIkey* 替换为从 [Geoapify](https://www.geoapify.com/) 获取的 API 密钥。
+:::
 
 ## 结果
 

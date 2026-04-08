@@ -2,10 +2,6 @@
 
 在选定区域中使用不同颜色高亮显示重复项，帮助快速识别重复值。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function () 
 {
@@ -69,7 +65,7 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-[这个 VBA 宏](https://www.extendoffice.com/documents/excel/3772-excel-highlight-duplicate-values-in-different-colors.html)被当做基准使用。
+[这个 VBA 宏](https://zh-cn.extendoffice.com/documents/excel/3772-excel-highlight-duplicate-values-in-different-colors.html)被当做基准使用。
 
 ``` vb
 Sub example()

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a structured report with sections and page breaks.
 ---
 
 # Creating structured report

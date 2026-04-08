@@ -30,7 +30,9 @@ Represents the ApiSlide class.
 | [GetLayout](./Methods/GetLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | Returns a layout of the current slide. |
 | [GetNotesPage](./Methods/GetNotesPage.md) | [ApiNotesPage](../ApiNotesPage/ApiNotesPage.md) \| null | Returns the notes page from the current slide. |
 | [GetSlideIndex](./Methods/GetSlideIndex.md) | number | Returns a position of the current slide in the presentation. |
+| [GetSlideShowTransition](./Methods/GetSlideShowTransition.md) | [ApiSlideShowTransition](../ApiSlideShowTransition/ApiSlideShowTransition.md) \| null | Returns the slide show transition of the current slide. |
 | [GetTheme](./Methods/GetTheme.md) | [ApiTheme](../ApiTheme/ApiTheme.md) | Returns a theme of the current slide. |
+| [GetTimeLine](./Methods/GetTimeLine.md) | [ApiTimeLine](../ApiTimeLine/ApiTimeLine.md) | Returns the animation timeline for the slide. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the visibility of the current presentation slide. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the slide width in English measure units. |
 | [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current slide. |
@@ -39,5 +41,6 @@ Represents the ApiSlide class.
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide. |
 | [Select](./Methods/Select.md) | None | Selects the current slide. |
 | [SetBackground](./Methods/SetBackground.md) | boolean | Sets the background to the current presentation slide. |
+| [SetSlideShowTransition](./Methods/SetSlideShowTransition.md) | boolean | Sets the slide show transition to the current slide. |
 | [SetVisible](./Methods/SetVisible.md) | boolean | Sets the visibility to the current presentation slide. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiSlide object into the JSON object. |

@@ -40,9 +40,11 @@ Before you proceed to the plugin installation, make sure you have an instance of
 
 We recommend using [Docker](https://github.com/onlyoffice/Docker-DocumentServer) to install ONLYOFFICE Docs. Alternatively, you can follow [these instructions](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx) for Debian, Ubuntu, or derivatives.
 
-## Installing Redmine ONLYOFFICE integration plugin
+## Installing ONLYOFFICE plugin for Redmine
 
 To install the plugin, you will need Redmine version 4.2 or higher, or version 5.0 or higher. It is also important to note that the plugin is compatible with Ruby version 2.7.2 or higher, or 3.0.0 or higher. We recommend using Redmine 5 along with Ruby 3.
+
+Additionally, you may need [zstd](https://github.com/facebook/zstd) to unzip the plugin.
 
 1. If you are new to Redmine, install it by following [these instructions](https://www.redmine.org/projects/redmine/wiki/RedmineInstall).
 
@@ -74,27 +76,27 @@ To install the plugin, you will need Redmine version 4.2 or higher, or version 5
 
 Read more about the plugin installation on the Redmine [Wiki page](https://www.redmine.org/projects/redmine/wiki/plugins#Installing-a-plugin).
 
-## Configuring Redmine ONLYOFFICE integration plugin
+## Configuring ONLYOFFICE plugin for Redmine
 
 Configure the plugin via the Redmine interface. Go to **Administration -> Plugins**, find the ONLYOFFICE integration plugin for Redmine and click **Configure**:
 
 ![Redmine settings](/assets/images/editor/redmine-settings.png)
 
-### General Settings
+### General settings
 
 - **Document Editing Service address**. The URL of the installed ONLYOFFICE Docs (Document Server). Leave blank to disable the plugin.
 
-### Advanced Server Settings
+### Advanced server settings
 
-- ONLYOFFICE Docs address for internal requests from the server.
-- Server address for internal requests from ONLYOFFICE Docs.
-- Connect to the demo ONLYOFFICE Docs server.
+- **ONLYOFFICE Docs address for internal requests from the server.**
+- **Server address for internal requests from ONLYOFFICE Docs.**
+- **Connect to the demo ONLYOFFICE Docs server.**
 
 ### Security
 
-- **Secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your secret key in the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), then specify the same key in the settings page of the plugin. Leave blank to disable authentication.
-- Authorization header.
-- Disable certificate verification (insecure).
+- **Secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your secret key in the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), then specify the same key in the settings page of the plugin. Leave blank to disable authentication.
+- **Authorization header.**
+- **Disable certificate verification (insecure).**
 
 ### Editor customization settings
 
@@ -110,13 +112,13 @@ Configure the plugin via the Redmine interface. Go to **Administration -> Plugin
 
 ## How it works
 
-The plugin uses the [ONLYOFFICE Docs API](../basic-concepts.md) and is integrated into various Redmine pages, including [Documents](#documents), [Attachments](#attachment), [Files](#files), [Issue](#issues), [News](#news), [Wiki](#wiki), and [Forums](#forums). Additionally, the plugin adds general pages such as ["Create in ONLYOFFICE"](#create-in-onlyoffice) and ["Convert with ONLYOFFICE"](#convert-with-onlyoffice).
+The plugin uses the [ONLYOFFICE Docs API](../basic-concepts.md) and is integrated into various Redmine pages, including [Documents](#documents), [Attachments](#attachments), [Files](#files), [Issues](#issues), [News](#news), [Wiki](#wiki), and [Forums](#forums). Additionally, the plugin adds general pages such as ["Create in ONLYOFFICE"](#create-in-onlyoffice) and ["Convert with ONLYOFFICE"](#convert-with-onlyoffice).
 
 ### Documents
 
 ![Documents page](/assets/images/editor/documents-page.png)
 
-On the **Documents** page, users can open the attachment to view, edit, create, or convert it. The options displayed in the interface may vary depending on the user permissions.
+On the **Documents** page, users can open the attachment to view, edit, create, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
 | Option            | Permissions                    |
 |-------------------|--------------------------------|
@@ -126,7 +128,7 @@ On the **Documents** page, users can open the attachment to view, edit, create, 
 | Convert: Save     | View documents, Edit documents |
 | Convert: Download | View documents                 |
 
-### Attachment
+### Attachments
 
 ![Attachment page](/assets/images/editor/attachment-page.png)
 
@@ -197,11 +199,11 @@ On the **Forums** page, users can open the attachment to view, edit, or convert 
 | Convert: Save     | View messages, Edit messages |
 | Convert: Download | View messages                |
 
-### View Or Edit In ONLYOFFICE
+### View or Edit in ONLYOFFICE
 
-![View Or Edit In ONLYOFFICE](/assets/images/editor/view-or-edit.png)
+![View or Edit in ONLYOFFICE](/assets/images/editor/view-or-edit.png)
 
-On the **View Or Edit In ONLYOFFICE** page, users can view or edit the attachment. The visibility of this page depends on the user's permissions for the module where the attachment is located.
+On the **View or Edit in ONLYOFFICE** page, users can view or edit the attachment. The visibility of this page depends on the user's permissions for the module where the attachment is located.
 
 ### Create in ONLYOFFICE
 
@@ -214,3 +216,5 @@ On the **Create in ONLYOFFICE** page, users can create the attachment using temp
 ![Convert with ONLYOFFICE](/assets/images/editor/convert-page.png)
 
 On the **Convert with ONLYOFFICE** page, the user can convert the attachment. The visibility of this page depends on the user's permissions for the module where the attachment is located.
+
+Download the ONLYOFFICE plugin for Redmine [here](https://github.com/ONLYOFFICE/onlyoffice-redmine).

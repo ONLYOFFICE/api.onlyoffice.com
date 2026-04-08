@@ -1,6 +1,6 @@
 # 语音朗读
 
-将选中的文本转换为语音。该插件使用 [guessLanguage](https://richtr.github.io/guessLanguage.js/) 来识别语言，并通过 [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) 的 [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) 接口实现朗读。
+将选中的文本转换为语音。该插件使用 [guessLanguage](https://richtr.github.io/guessLanguage.js/) 来识别语言，并通过 [Web Speech API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Speech_API) 的 [SpeechSynthesis](https://developer.mozilla.org/zh-CN/docs/Web/API/SpeechSynthesis) 接口实现朗读。
 
 **插件类型：** 可视化，非系统插件。
 
@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 默认集成于 ONLYOFFICE 企业版与社区版（文档 + 工作区），以及 ONLYOFFICE 云端服务中。
 
-你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en/speech)下载该插件。
+你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/speech)下载该插件。
 
 ## 使用方法
 

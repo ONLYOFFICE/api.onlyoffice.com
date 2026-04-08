@@ -9,7 +9,7 @@ sidebar_position: -10
 
 本示例将帮助您把ONLYOFFICE文档集成到用.Net（C#）或.Net（C#MVC）编写的Web应用程序中。
 
-:::note
+:::caution
 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
 :::
 
@@ -28,22 +28,36 @@ sidebar_position: -10
 
 [获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-如需了解如何安装ONLYOFFICE文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example)。
+如需了解如何安装ONLYOFFICE文档，请查看详细指南，[适用于Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example)，[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example)，或者[适用于Docker](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-docker.aspx?from=api_csharp_example)。
 
 ## 步骤2.下载用于集成编辑器的.Net（C#）/.Net（C#MVC）代码
 
-从我们的网站下载[.Net(C#)或.Net(C#MVC)示例](./language-specific-examples.md)
+下载发布存档并解压，或从GitHub克隆源代码：[.Net (C#)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp) 或 [.Net (C# MVC)](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/csharp-mvc)。
 
-要将编辑器连接到您的网站，请在*settings.config*文件（对于MVC版本则是*web.appsettings.config*文件）中指定编辑器的安装路径和存储文件夹的路径：
+对于 .Net (C#)：
+
+``` sh
+curl --output DotNet.Csharp.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip
+unzip DotNet.Csharp.Example.zip
+```
+
+对于 .Net (C# MVC)：
+
+``` sh
+curl --output DotNet.Csharp.MVC.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip
+unzip DotNet.Csharp.MVC.Example.zip
+```
+
+要将编辑器连接到您的网站，请在`settings.config`文件（对于MVC版本则是`web.appsettings.config`文件）中指定编辑器的安装路径和存储文件夹的路径：
 
 ``` xml
 <add key="storage-path" value=""/>
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
-其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，**storage-path**是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，`documentserver`是安装了ONLYOFFICE文档的服务器名称，`storage-path`是将创建和存储文件的路径。您可以设置一个绝对路径。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-如果您想尝试配置编辑器，请修改*DocEditor.aspx*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
+如果您想尝试配置编辑器，请修改`DocEditor.aspx`文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
 ## 步骤3.安装先决条件
 
@@ -60,15 +74,15 @@ sidebar_position: -10
 
 2. 在打开的窗口中，找到**Internet Information Services**，并勾选下图中所选的所有功能：
 
-   <img alt="Windows features" src="/assets/images/csharp/server-components.png" width="778px" />
+   ![Windows features](/assets/images/csharp/server-components.png)
 
- ## 步骤4. 配置 JWT
+## 步骤4. 配置 JWT
 
- 打开 *settings.config* 文件（或 MVC 版本的 *web.appsettings.config* 文件），并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
- 
- ``` xml
- <add key="files.docservice.secret" value="secret" />
- ```
+打开 `settings.config` 文件（或 MVC 版本的 `web.appsettings.config` 文件），并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
+
+``` xml
+<add key="files.docservice.secret" value="secret" />
+```
 
 ## 步骤5.运行带有编辑器的网站
 
@@ -88,20 +102,20 @@ sidebar_position: -10
 
    在**端口**框中指定仅用于此网站的唯一值。
 
-   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="583px" />
+   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="483px" />
 
-4. 检查IIS管理器中为您的网站指定的.NET平台版本。选择**v4.0.**版本。
+4. 检查IIS管理器中为您的网站指定的.NET平台版本。选择**v4.0**版本。
 
    **应用程序池**->右键单击平台名称->**设置应用程序池默认值**->**.NET CLR版本**
 
-   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="539px" />
+   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="439px" />
 
 5. 使用IIS管理器浏览您的网站：
 
-   Right-click the site ->**Manage Website**->**Browse**
+   右键单击网站->**管理网站**->**浏览**
 
-   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="500px" />
+   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="400px" />
 
 ## 步骤 6.检查可访问性
 
-如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了**documentserver**的）地址的ONLYOFFICE文档。同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了**example.com**的）地址。
+如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE文档。同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。

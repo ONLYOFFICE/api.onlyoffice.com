@@ -1,16 +1,15 @@
 ---
 hide_table_of_contents: true
+description: Convert currency values between different currencies.
 ---
 
 # Currency conversion
 
 Converts a base currency into multiple desired target currencies. It can also fetch historical currency values for a specific date. Uses the Currency Conversion API from [currencyapi](https://app.currencyapi.com/).
 
-> To use this macro, you need to obtain your own API key from currencyapi.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
+:::note
+To use this macro, you need to obtain your own API key from currencyapi.
+:::
 
 ```ts
 (function () {
@@ -22,12 +21,6 @@ Converts a base currency into multiple desired target currencies. It can also fe
     function buildLatestURL(apiKey, baseCurrency, currencies) {
       let currencyParam = currencies.join("%2C");
       return `https://api.currencyapi.com/v3/latest?apikey=${apiKey}&currencies=${currencyParam}&base_currency=${baseCurrency}`;
-    }
-
-    function reloadCellValues() {
-      setTimeout(function () {
-        Api.asc_calculate(Asc.c_oAscCalculateType.All);
-      }, 5000);
     }
 
     function fetchAndPopulateData(url, currencies, isHistorical) {
@@ -57,6 +50,8 @@ Converts a base currency into multiple desired target currencies. It can also fe
               console.warn(`Currency ${currency} not found in the response.`);
             }
           });
+
+          Api.RecalculateAllFormulas();
         } else {
           console.error(`Error fetching data: ${this.statusText}`);
         }
@@ -84,15 +79,11 @@ Converts a base currency into multiple desired target currencies. It can also fe
     // let date = "2025-01-01";
     // let historicalURL = buildHistoricalURL(apiKey, baseCurrency, date, currencies);
     // fetchAndPopulateData(historicalURL, currencies, true);
-
-    reloadCellValues();
   })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [RecalculateAllFormulas](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/RecalculateAllFormulas.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)

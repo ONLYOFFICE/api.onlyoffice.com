@@ -10,7 +10,7 @@ Represents the ApiRange class.
 | [AddBookmark](./Methods/AddBookmark.md) | boolean | Adds a bookmark to the specified range. |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current range. |
 | [AddField](./Methods/AddField.md) | boolean | Adds a field to the specified range by the field instruction code. 💡  This method removes text within a range.  |
-| [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null | Adds a hyperlink to the specified range. |
+| [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) | Adds a hyperlink to the specified range. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the specified position. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes all the contents from the current range. |
 | [ExpandTo](./Methods/ExpandTo.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range that goes beyond the specified range in any direction and spans a different range. The current range has not changed. |
@@ -22,14 +22,14 @@ Represents the ApiRange class.
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the document part contained in the specified range. |
 | [GetStartPage](./Methods/GetStartPage.md) | Number | Returns the start page number of the current range. |
 | [GetStartPos](./Methods/GetStartPos.md) | number | Returns the start position of the current range. |
-| [GetText](./Methods/GetText.md) | String | Returns a text from the specified range. |
+| [GetText](./Methods/GetText.md) | string | Returns a text from the specified range. |
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the merged text properties of the entire range. |
 | [IntersectWith](./Methods/IntersectWith.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range as the intersection of the current range with another range. The current range has not changed. |
 | [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current range object. If there is any selection in the document, it will be removed. |
 | [Select](./Methods/Select.md) | boolean | Sets the selection to the specified range. |
 | [SetBold](./Methods/SetBold.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the bold property to the text character. |
 | [SetCaps](./Methods/SetCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that any lowercase characters in the current text Range are formatted for display only as their capital letter character equivalents. |
-| [SetColor](./Methods/SetColor.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text color to the current text Range in the RGB format. |
+| [SetColor](./Methods/SetColor.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text color to the current text Range. |
 | [SetDoubleStrikeout](./Methods/SetDoubleStrikeout.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed with two horizontal lines through each character displayed on the line. |
 | [SetEndPos](./Methods/SetEndPos.md) | boolean | Sets the end position of the current range object. |
 | [SetFontFamily](./Methods/SetFontFamily.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets all 4 font slots with the specified font family. |

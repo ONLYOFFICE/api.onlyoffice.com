@@ -2,10 +2,6 @@
 
 在整个演示文稿中统一对齐文本框和图像。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let presentation = Api.GetPresentation();
@@ -48,7 +44,5 @@
 使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetWidth](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetWidth.md), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetWidth](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetWidth.md), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetHeight.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.png#gh-light-mode-only)![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.dark.png#gh-dark-mode-only)

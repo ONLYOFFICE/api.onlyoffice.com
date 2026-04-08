@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-![Settings](/assets/images/plugins/gifs/settings.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/settings.webm" type="video/webm" />
+</video>
 
 ## 安装方式
 
@@ -51,8 +53,8 @@ GitHub 仓库：[设置](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 ## 方法和事件
 
-- button
-- init
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [executeMethod ("SetProperties")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetProperties.md)
 
 ## 支持

@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Write data to a specific worksheet cell.
 ---
 
 # Write data to worksheet cell
 
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

@@ -3,14 +3,14 @@ sidebar_label: Standard branding
 
 ---
 
-# 定制 - 白标定制
+# 定制 - 标准品牌
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
 在此页面上，您将找到 ONLYOFFICE 文档开发者版的[白标定制](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)可用的自定义参数。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
 
 :::请注意，
-只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)。
+只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
 :::
 
 ## 匿名 {#anonymous}
@@ -70,7 +70,7 @@ const anonymous = {
 
 **示例**: `true`
 
-![聊天](/assets/images/editor/chat.png)
+![聊天](/assets/images/editor/chat.png#gh-light-mode-only)![聊天](/assets/images/editor/chat.dark.png#gh-dark-mode-only)
 
 ## 关闭 {#close}
 
@@ -109,7 +109,7 @@ const close = {
 
 **示例**: `"关闭文件"`
 
-![标题中的十字按钮](/assets/images/editor/cross-button.jpg)
+![标题中的十字按钮](/assets/images/editor/cross-button.png#gh-light-mode-only)![标题中的十字按钮](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
 
 ## commentAuthorOnly
 
@@ -131,7 +131,7 @@ const close = {
 
 **示例**: `true`
 
-![批注](/assets/images/editor/comment.png)
+![批注](/assets/images/editor/comment.png#gh-light-mode-only)![批注](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## compactHeader
 
@@ -141,7 +141,7 @@ const close = {
 
 **示例**: `false`
 
-![紧凑标题](/assets/images/editor/compactHeader.png)
+![紧凑标题](/assets/images/editor/compactHeader.png#gh-light-mode-only)![紧凑标题](/assets/images/editor/compactHeader.dark.png#gh-dark-mode-only)
 
 ## compactToolbar
 
@@ -155,7 +155,7 @@ const close = {
 
 **示例**: `false`
 
-![紧凑工具栏](/assets/images/editor/compactToolbar.png)
+![紧凑工具栏](/assets/images/editor/compactToolbar.png#gh-light-mode-only)![紧凑工具栏](/assets/images/editor/compactToolbar.dark.png#gh-dark-mode-only)
 
 ## compatibleFeatures
 
@@ -254,7 +254,7 @@ const customer = {
 
 **示例**: `"example.com"`
 
-![客户](/assets/images/editor/customer.png)
+![客户](/assets/images/editor/customer.png#gh-light-mode-only)![客户](/assets/images/editor/customer.dark.png#gh-dark-mode-only)
 
 ## 功能 {#features}
 
@@ -446,7 +446,7 @@ const goback = {
 }
 ```
 
-![回去](/assets/images/editor/goback.png)
+![回去](/assets/images/editor/goback.png#gh-light-mode-only)![回去](/assets/images/editor/goback.dark.png#gh-dark-mode-only)
 
 ### goback.blank
 
@@ -496,7 +496,7 @@ const goback = {
 
 **示例**: `true`
 
-![帮助](/assets/images/editor/help.png)
+![帮助](/assets/images/editor/help.png#gh-light-mode-only)![帮助](/assets/images/editor/help.dark.png#gh-dark-mode-only)
 
 ## hideNotes
 
@@ -510,7 +510,7 @@ const goback = {
 
 **示例**: `false`
 
-![隐藏备注](/assets/images/editor/hideNotes.png)
+![隐藏备注](/assets/images/editor/hideNotes.png#gh-light-mode-only)![隐藏备注](/assets/images/editor/hideNotes.dark.png#gh-dark-mode-only)
 
 ## hideRightMenu
 
@@ -532,7 +532,7 @@ const goback = {
 
 **示例**: `false`
 
-![隐藏标尺](/assets/images/editor/hideRulers.png)
+![隐藏标尺](/assets/images/editor/hideRulers.png#gh-light-mode-only)![隐藏标尺](/assets/images/editor/hideRulers.dark.png#gh-dark-mode-only)
 
 ## integrationMode
 
@@ -689,7 +689,7 @@ const mobile = {
 
 `类型: boolean`
 
-定义在移动文档编辑器中启动时是否启用查看模式。
+定义在移动文档编辑器中启动时是否启用查看模式。默认值为 **true**。
 
 **示例**: `true`
 
@@ -697,7 +697,7 @@ const mobile = {
 
 `类型: boolean`
 
-定义在移动文档编辑器中是否显示或隐藏**文档信息**按钮。
+定义在移动文档编辑器中是否显示或隐藏**文档信息**按钮。默认值为 **false**。
 
 **示例**: `false`
 
@@ -705,7 +705,7 @@ const mobile = {
 
 `类型: boolean`
 
-定义编辑器是否在**标准视图**而不是**移动视图**中打开。
+定义编辑器是否在**标准视图**而不是**移动视图**中打开。默认值为 **false**。
 
 **示例**: `false`
 
@@ -740,7 +740,7 @@ const mobile = {
 
 **示例**: `"select"`
 
-![指针模式](/assets/images/editor/pointerMode.png)
+![指针模式](/assets/images/editor/pointerMode.png#gh-light-mode-only)![指针模式](/assets/images/editor/pointerMode.dark.png#gh-dark-mode-only)
 
 ## 审阅 {#review}
 
@@ -766,13 +766,13 @@ const review = {
 }
 ```
 
-![审阅显示](/assets/images/editor/reviewDisplay.png)
+![审阅显示](/assets/images/editor/reviewDisplay.png#gh-light-mode-only)![审阅显示](/assets/images/editor/reviewDisplay.dark.png#gh-dark-mode-only)
 
 ### review.hideReviewDisplay
 
 `类型: boolean`
 
-定义 **显示模式** 按钮是在 **协作** 选项卡上显示还是隐藏。
+定义 **显示模式** 按钮是在 **协作** 选项卡上显示还是隐藏。默认值为 **false**。
 
 **示例**: `false`
 
@@ -780,7 +780,7 @@ const review = {
 
 `类型: boolean`
 
-定义审阅显示模式：通过将鼠标悬停在更改上来在工具提示中显示审阅（**true**），或通过单击更改来在气球中显示审阅（**false**）。
+定义审阅显示模式：通过将鼠标悬停在更改上来在工具提示中显示审阅（**true**），或通过单击更改来在气球中显示审阅（**false**）。默认值为 **false**。
 
 **示例**: `false`
 
@@ -788,7 +788,7 @@ const review = {
 
 `类型: string`
 
-定义打开文档进行查看时将使用的审阅编辑模式。如果[模式](../../editor/editor.md#mode)设置为 **view**，它将仅对文档编辑器可用。
+定义文档编辑器的审阅显示模式。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 **markup** 或 **simple** 时才能进行编辑。如果选择 **original** 或 **final**，编辑器将自动切换到仅查看模式。可以采用以下值：
 
 - **markup** - 显示文档，并突出显示建议的更改；
 - **simple** - 显示文档并突出显示建议的更改，但气球已关闭；
@@ -934,7 +934,7 @@ const review = {
 定义文档标题在顶部工具栏上是可见的 (**false**) 还是隐藏的 (**true**)。默认值为 **false**。
 
 :::请注意，
-当 [compactHeader](#compactheader) 和 [toolbarNoTabs](#toolbarnotabs) 参数设置为 **true**时使用此设置。
+当 [compactHeader](#compactheader) 参数设置为 **true** 时使用此设置。
 :::
 
 :::请注意
@@ -943,7 +943,7 @@ const review = {
 
 **示例**: `false`
 
-![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png)
+![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png#gh-light-mode-only)![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.dark.png#gh-dark-mode-only)
 
 ## toolbarNoTabs
 
@@ -975,7 +975,7 @@ const review = {
 
  定义编辑器主题设置。可以通过两种方式设置：
 
-- **theme id** - 用户通过其 id 设置主题参数（**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**），
+- **theme id** - 用户通过其 id 设置主题参数（**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**, **theme-white**, **theme-night**）；
 - **default theme** - 将设置默认的深色或浅色主题值（**default-dark**，**default-light**）。默认的浅色主题是 **theme-classic-light**。
 
 第一个选项具有更高的优先级。
@@ -984,6 +984,10 @@ const review = {
 
 :::请注意，
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.uiTheme* 参数发送的任何值。
+:::
+
+:::请注意，
+从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：**theme-light**、**theme-dark**、**default-light**、**default-dark**。
 :::
 
 **示例**: `"theme-dark"`
@@ -1026,7 +1030,7 @@ const review = {
 
 **示例**: `100`
 
-![自定义](/assets/images/editor/customization.png)
+![自定义](/assets/images/editor/customization.png#gh-light-mode-only)![自定义](/assets/images/editor/customization.dark.png#gh-dark-mode-only)
 
 ## 示例
 

@@ -1,3 +1,7 @@
+---
+description: Get, modify, and paste back HTML content in the editor.
+---
+
 # Get and paste html
 
 Gets the document content as HTML code, modifies it, and pastes back to the document.

@@ -2,10 +2,6 @@
 
 在文本文件中删除多余的空格。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function()
 {
@@ -41,8 +37,6 @@
 
 ## 参考 Microsoft VBA 宏代码
 
-<!-- code generated with AI -->
-
 ```vb
 Sub RemoveExtraSpaces()
     Dim rng As Range
@@ -58,7 +52,5 @@ End Sub
 ```
 
 ## 结果
-
-<!-- imgpath -->
 
 ![Remove extra space](/assets/images/plugins/remove-extra-spaces.png#gh-light-mode-only)![Remove extra space](/assets/images/plugins/remove-extra-spaces.dark.png#gh-dark-mode-only)

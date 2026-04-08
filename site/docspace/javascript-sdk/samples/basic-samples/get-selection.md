@@ -1,6 +1,12 @@
+---
+description: Retrieve the current selection in DocSpace using the JS SDK.
+---
+
 # Get selection
 
 This example demonstrates how to retrieve the current selection in the DocSpace interface using the JavaScript SDK.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/get-selection.html)
 
 ## Before you start
 
@@ -19,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Get Selection</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -84,7 +90,7 @@ Create a basic HTML page that includes the DocSpace iframe and a button to trigg
     <title>Get Selection</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -115,7 +121,7 @@ Create a basic HTML page that includes the DocSpace iframe and a button to trigg
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic

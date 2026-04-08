@@ -1,6 +1,12 @@
+---
+description: Open a document in the DocSpace editor using the JS SDK.
+---
+
 # Initialize editor
 
 This example demonstrates how to open a document in the ONLYOFFICE DocSpace editor using the JavaScript SDK method.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/init-editor.html)
 
 ## Before you start
 
@@ -19,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Init Editor</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
   </head>
 
   <body>
@@ -66,7 +72,7 @@ Create a basic HTML page with an iframe where the ONLYOFFICE document editor wil
     <title>Init Editor</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
   </head>
 
   <body>
@@ -77,7 +83,7 @@ Create a basic HTML page with an iframe where the ONLYOFFICE document editor wil
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic

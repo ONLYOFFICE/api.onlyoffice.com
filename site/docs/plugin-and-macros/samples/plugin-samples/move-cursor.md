@@ -1,3 +1,7 @@
+---
+description: Move the cursor to the document start or end.
+---
+
 # Move cursor
 
 Moves the text cursor to the document start/end.
@@ -6,7 +10,9 @@ Moves the text cursor to the document start/end.
 
 **Supported editors:** documents.
 
-![MoveCursor](/assets/images/plugins/gifs/move-cursor.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
+</video>
 
 ## Installation
 

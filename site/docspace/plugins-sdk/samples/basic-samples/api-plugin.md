@@ -1,3 +1,7 @@
+---
+description: Create a plugin that makes authorized API requests.
+---
+
 # API plugin
 
 This guide walks you through creating a DocSpace plugin that uses platform API connection parameters (`origin`, `proxy`, and `prefix`) to make authorized requests, such as creating rooms via the REST API.

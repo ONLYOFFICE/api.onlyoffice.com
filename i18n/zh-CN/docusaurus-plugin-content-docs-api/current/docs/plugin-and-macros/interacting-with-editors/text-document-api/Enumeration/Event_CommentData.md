@@ -1,19 +1,19 @@
-# 事件_批注数据
+# Event_CommentData
 
 批注数据。
 
 ## 属性
 
-| 名称 | 类型 | 说明 |
+| 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
-| Replies | [事件_批注数据](../Enumeration/Event_CommentData.md)[] | 包含批注回复的数组，每个回复均表示为批注数据对象。 |
-| Solved | boolean | 指定该批注是否已解决：已解决（**true**）或未解决（**false**）。 |
+| Replies | [Event_CommentData](../Enumeration/Event_CommentData.md)[] | 包含以 *CommentData* 对象表示的批注回复的数组。 |
+| Solved | boolean | 指定批注是否已解决（**true**）或未解决（**false**）。 |
 | Text | string | 批注文本。 |
-| Time | string | 批注发布的时间（以毫秒为单位）。 |
+| Time | string | 批注发布时间（以毫秒为单位）。 |
 | UserName | string | 批注作者。 |
 ## 类型
 
-Object（对象）
+Object
 
 
 

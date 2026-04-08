@@ -1,4 +1,4 @@
-# 插入 OLE 对象
+# InsertOleObject
 
 在当前文档位置插入 OLE 对象。
 
@@ -12,14 +12,14 @@ expression.InsertOleObject(NewObject, bSelect);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NewObject | 必填 | [OLE 对象数据](../Enumeration/OLEObjectData.md) | — | OLEObjectData 对象。 |
-| bSelect | 必填 | boolean | — | 指定插入文档后是否选择 OLE 对象：选择（**true**）或不选择（**false**）。 |
+| NewObject | 必需 | [OLEObjectData](../Enumeration/OLEObjectData.md) |  | OLEObjectData 对象。 |
+| bSelect | 必需 | boolean |  | 定义 OLE 对象插入文档后是否被选中（**true**）或不选中（**false**）。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

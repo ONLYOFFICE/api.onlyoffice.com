@@ -1,3 +1,7 @@
+---
+description: Add references and citations from a Zotero library.
+---
+
 # Zotero
 
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.
@@ -64,12 +68,6 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 4. The *translations* folder contains translations into Russian, German, Spanish, Czech, Italian, Japanese, Dutch, Portuguese, Chinese, and French.
 
 5. *zotero.js* allows the user to get access to their Zotero account.
-
-6. Third-party services:
-
-   - [fetch-polyfill](https://github.com/github/fetch) - a project that implements a subset of the standard Fetch specification, enough to make fetch a viable replacement for most uses of XMLHttpRequest in traditional web applications. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/fetch-polyfill.license)
-   - [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) - lightweight ES6 Promise polyfill for the browser and node. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/promise-polyfill.license).
-   - [url-polyfill](https://github.com/lifaon74/url-polyfill) - Polyfill URL and URLSearchParams to match last WHATWG specifications. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/url-polyfill.license).
 
 ## Config
 

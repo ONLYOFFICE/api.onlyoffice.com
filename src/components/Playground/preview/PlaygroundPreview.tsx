@@ -2,6 +2,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
 import {getFullUrl} from "@site/src/utils/url";
+import {FILE_CONFIGS, SAMPLE_FILE_CONFIGS} from "../defaultScripts";
 
 declare global {
     interface Window {
@@ -11,29 +12,13 @@ declare global {
     }
 }
 
-const FILE_CONFIGS = {
-    word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
-    cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx' },
-    slide: {
-        ext: 'pptx',
-        docType: 'slide',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
-    },
-    form: {
-        ext: 'pdf',
-        docType: 'pdf',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
-    },
-}
-
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
     const initializingRef = useRef(false)
     const [isApiLoaded, setIsApiLoaded] = useState(false)
-
-    const pluginConfigUrl = getFullUrl("/plugin/config.json");
+    const initialScriptExecutedRef = useRef(!hasInitialScript)
 
     const createJWT = useCallback(
         async (payload: object): Promise<string> => {
@@ -97,14 +82,15 @@ export const PlaygroundPreview = () => {
 
             containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>'
 
-            const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
+            const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS
+            const fileConfig = configs[editorType] || configs.word
 
             const config = {
                 document: {
                     fileType: fileConfig.ext,
                     key: "0" + Math.random(),
                     title: `Example Document Title.${fileConfig.ext}`,
-                    url: fileConfig.url,
+                    url: templateUrl ?? fileConfig.url,
                 },
                 documentType: fileConfig.docType,
                 type: previewType,
@@ -116,6 +102,9 @@ export const PlaygroundPreview = () => {
                     },
                     customization: {
                         uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
+                        mobile: {
+                            disableForceDesktop:true,
+                        },
                         features: {
                             featuresTips: false,
                         },
@@ -127,10 +116,25 @@ export const PlaygroundPreview = () => {
                 events: {
                     onDocumentReady: () => {
                         try {
+                            const pluginConfigUrl = getFullUrl("/plugin/config.json");
+
+                            // TODO: Remove after release 9.4.0, as installDeveloperPlugin will be available directly on the connector object
+                            const installPluginShim: Record<string, string> = {
+                                word: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
+                                pdf: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
+                                cell: "zi.je.Xok=zi.je.installDeveloperPlugin;",
+                                slide: "$g.le.Prj=$g.le.installDeveloperPlugin;",
+                            };
+
                             window.connector = window.docEditor.createConnector();
                             window.connector.callCommand(
-                                new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+                                new Function(`${installPluginShim[fileConfig.docType] || ""}Api.installDeveloperPlugin("${pluginConfigUrl}");`)
                             );
+
+                            if (!initialScriptExecutedRef.current) {
+                                initialScriptExecutedRef.current = true
+                                executeCode(scriptValue, scriptType)
+                            }
                         } catch (error) {
                             console.error('Failed to initialize connector:', error)
                         }
@@ -142,6 +146,26 @@ export const PlaygroundPreview = () => {
                 (config as any).token = await createJWT(config)
             }
 
+            if (previewType === 'mobile') {
+                // NOTE:  Fixed positioning removes the element from normal document flow and positions it relative to the viewport, not the parent container.
+                const observer = new MutationObserver(() => {
+                    const iframe = containerRef.current?.querySelector('iframe')
+                    if (iframe) {
+                        iframe.style.position = 'absolute'
+                        iframe.style.top = '0'
+                        iframe.style.left = '0'
+                        observer.disconnect()
+                    }
+                })
+
+                if (containerRef.current) {
+                    observer.observe(containerRef.current, {
+                        childList: true,
+                        subtree: true
+                    })
+                }
+            }
+
             window.docEditor = new window.DocsAPI.DocEditor('placeholder', config)
         } catch (error) {
             console.error('Failed to create editor:', error)
@@ -149,7 +173,7 @@ export const PlaygroundPreview = () => {
             initializingRef.current = false
         }
 
-    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, pluginConfigUrl, isApiLoaded, destroyEditor])
+    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor, templateUrl, documentType])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
@@ -176,13 +200,25 @@ export const PlaygroundPreview = () => {
                     ])
                     break
                 }
+                case 'builder': {
+                    var removeMethod = {
+                        "word": "Api.GetDocument().RemoveAllElements();",
+                        "cell": "Api.AddSheet(\"Sheet 1\");var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
+                        "slide": "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());",
+                        "form": "Api.GetDocument().RemoveAllElements();",
+                        "pdf": "let doc = Api.GetDocument();for(let i = doc.GetPagesCount()-1; i > 0; i--) {doc.RemovePage(i);} doc.AddPage(1);doc.RemovePage(0);",
+                    };
+                    var script = removeMethod[editorType] + code.replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
+                    window.connector.callCommand(new Function(script));
+                    break;
+                }
                 default:
                     break
             }
         } catch (error) {
             console.error('Error executing code:', error)
         }
-    }, [])
+    }, [editorType])
 
 
     useEffect(() => {

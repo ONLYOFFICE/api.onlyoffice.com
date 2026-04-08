@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Calculate the sum of highlighted cells.
 ---
 
 # Sum of highlighted cells
 
 Sums the answer of all highlighted cells in a spreadsheet.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function () {

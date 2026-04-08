@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a table with auto-width columns based on content.
 ---
 
 # Creating auto-width table

@@ -1,3 +1,7 @@
+---
+description: Export a file from DocSpace to Dropbox via presigned URL.
+---
+
 # Export DocSpace file to Dropbox
 
 This integration allows you to automatically export files from DocSpace to Dropbox using a presigned download URL. It’s ideal for building document archiving workflows, offloading files to external storage, or syncing selected documents outside of the DocSpace environment.

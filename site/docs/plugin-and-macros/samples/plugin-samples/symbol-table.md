@@ -1,3 +1,7 @@
+---
+description: Insert special symbols from a character table.
+---
+
 # Symbol table
 
 Inserts special symbols into the document.
@@ -6,7 +10,9 @@ Inserts special symbols into the document.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![SymbolTable](/assets/images/plugins/gifs/symbol-table.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/symbol-table.webm" type="video/webm" />
+</video>
 
 ## Installation
 

@@ -24,8 +24,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 插件的 guid 是 `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`。
 
-<a id="configuring"></a>
-## 配置
+## 配置 {#configuring}
 
 要开始使用该插件，需要设置 AI 提供商：
 
@@ -55,4 +54,4 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 支持
 
-如果想请求该插件的新功能或报告相关漏洞，请使用 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 上的问题反馈区。
+如果想请求该插件的新功能或报告错误，请使用 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 上的问题反馈区。

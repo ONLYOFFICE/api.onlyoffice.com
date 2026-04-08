@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Create and apply a custom color scheme to a presentation.
+---
+
 # Applying color scheme
 
 Apply a unified color scheme to an entire presentation:

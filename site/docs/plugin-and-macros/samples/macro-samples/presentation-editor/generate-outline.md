@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Generate a presentation outline from slide titles.
 ---
 
 # Generate outline

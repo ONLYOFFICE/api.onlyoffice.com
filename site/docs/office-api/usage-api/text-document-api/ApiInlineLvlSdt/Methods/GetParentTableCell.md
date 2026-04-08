@@ -41,5 +41,5 @@ paragraph.AddElement(inlineLvlSdt, 0);
 let cell = table.GetRow(0).GetCell(0);
 cell.AddElement(0, paragraph);
 let parentTableCell = inlineLvlSdt.GetParentTableCell();
-parentTableCell.SetShd("clear", 255, 111, 61, false);
+parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```

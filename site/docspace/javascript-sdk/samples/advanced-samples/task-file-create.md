@@ -1,9 +1,15 @@
+---
+description: Create tasks linked to DocSpace rooms and add files inside them.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Create files in rooms
 
 This example demonstrates how to create tasks linked to rooms in DocSpace, and then create files inside those rooms using the JavaScript SDK.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/task-file-create.html)
 
 ## Before you start
 
@@ -19,7 +25,7 @@ Please make sure you are using a server environment to run the HTML file because
   <head>
     <meta charset="UTF-8" />
     <title>Create files in rooms</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* Check CSS tab for styles */
     </style>

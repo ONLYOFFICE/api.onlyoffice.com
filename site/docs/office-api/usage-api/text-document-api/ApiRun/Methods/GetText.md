@@ -5,7 +5,7 @@ Returns a text from the text run.
 ## Syntax
 
 ```javascript
-expression.GetText(oPr);
+expression.GetText(options);
 ```
 
 `expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
@@ -14,9 +14,9 @@ expression.GetText(oPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oPr | Required | object |  | The resulting string display properties. |
-| oPr.NewLineSeparator | Optional | string | '\r' | Defines how the line separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r". |
-| oPr.TabSymbol | Optional | string | ' ' | Defines how the tab will be specified in the resulting string. Any symbol can be used. The default symbol is " ". |
+| options | Optional | object |  | Options for formatting the returned text. |
+| options.NewLineSeparator | Optional | string | '\r' | Defines how the line separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r". |
+| options.TabSymbol | Optional | string | '\t' | Defines how the tab will be specified in the resulting string. Any symbol can be used. The default symbol is "\t". |
 
 ## Returns
 

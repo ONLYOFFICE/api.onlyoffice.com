@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Enable auto-fit for all text form fields.
 ---
 
 # Autofit text fields

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add auto-incrementing row numbers to a spreadsheet.
 ---
 
 # Adding sequential numbers

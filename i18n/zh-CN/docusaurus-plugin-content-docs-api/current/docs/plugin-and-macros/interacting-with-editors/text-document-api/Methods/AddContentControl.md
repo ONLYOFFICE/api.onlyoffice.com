@@ -1,6 +1,6 @@
-# 添加内容控件
+# AddContentControl
 
-向文档添加一个空的内容控件。
+向文档添加空内容控件。
 
 ## 语法
 
@@ -12,14 +12,14 @@ expression.AddContentControl(type, commonPr);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [内容控件类型](../Enumeration/ContentControlType.md) | — | 指定内容控件类型的数值，可取值：**1**（块级）、**2**（行内）、**3**（行级）、**4**（单元格级）。 |
-| commonPr | 可选 | [内容控件属性](../Enumeration/ContentControlProperties.md) | &#123;&#125; | 公共内容控件属性。 |
+| type | 必需 | [ContentControlType](../Enumeration/ContentControlType.md) |  | 指定内容控件类型的数值。可以是以下值之一：**1**（块）、**2**（内联）、**3**（行）或 **4**（单元格）。 |
+| commonPr | 可选 | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | &#123;&#125; | 通用内容控件属性。 |
 
 ## 返回值
 
-[内容控件](../Enumeration/ContentControl.md)
+[ContentControl](../Enumeration/ContentControl.md)
 
 ## 示例
 

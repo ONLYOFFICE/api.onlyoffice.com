@@ -1,4 +1,4 @@
-# 获取自定义函数
+# GetCustomFunctions
 
 返回本地自定义函数库。
 
@@ -12,11 +12,11 @@ expression.GetCustomFunctions();
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-string（字符串）
+string
 
 ## 示例
 

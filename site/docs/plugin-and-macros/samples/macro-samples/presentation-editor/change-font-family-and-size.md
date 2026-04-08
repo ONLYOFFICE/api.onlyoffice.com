@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Change font family and size across all slides.
 ---
 
 # Change font family and size
 
 Changes the font family and/or size on all the slides in your presentation.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ```ts
 (function () {
@@ -44,8 +41,6 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Reference Microsoft VBA macro code
 
-<!-- code generated with AI -->
-
 ```vb
 Sub ChangeFontOnAllSlides()
     Dim slide As slide
@@ -72,7 +67,5 @@ End Sub
 ```
 
 ## Result
-
-<!-- imgpath -->
 
 ![Change font family and size](/assets/images/plugins/change-font-family-and-size.png#gh-light-mode-only)![Change font family and size](/assets/images/plugins/change-font-family-and-size.dark.png#gh-dark-mode-only)

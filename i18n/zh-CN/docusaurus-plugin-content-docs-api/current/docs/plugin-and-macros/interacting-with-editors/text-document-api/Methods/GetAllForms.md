@@ -1,6 +1,6 @@
-# 获取所有表单
+# GetAllForms
 
-返回文档中添加的所有表单的信息。
+返回已添加到文档的所有表单的信息。
 
 ## 语法
 
@@ -12,11 +12,11 @@ expression.GetAllForms();
 
 ## 参数
 
-此方法没有参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[内容控件](../Enumeration/ContentControl.md)[]
+[ContentControl](../Enumeration/ContentControl.md)[]
 
 ## 示例
 

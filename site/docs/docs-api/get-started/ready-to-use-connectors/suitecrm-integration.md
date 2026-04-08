@@ -11,14 +11,14 @@ This [plugin](https://github.com/ONLYOFFICE/onlyoffice-suitecrm) enables users t
 
 - Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, TXT, CSV.
-- The plugin allows users to edit text documents, spreadsheets, presentations and create and fill out digital forms.
-- The plugin will create a new **Open in ONLYOFFICE** menu option within the document library for office documents. This allows multiple users to collaborate in real time and save back those changes to SuiteCRM.
+- The plugin allows users to edit text documents, spreadsheets, and presentations, and to create and fill out digital forms.
+- The plugin will create a new **Open in ONLYOFFICE** menu option within the document library for office documents. This allows multiple users to collaborate in real time and to save back those changes to SuiteCRM.
 
 ## Installing ONLYOFFICE Docs
 
-You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from SuiteCRM and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to SuiteCRM directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from SuiteCRM and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to SuiteCRM directly.
 
-The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
 ## Installing SuiteCRM ONLYOFFICE integration plugin
 
@@ -34,15 +34,15 @@ To start using ONLYOFFICE Docs with SuiteCRM, follow these steps:
 
 The plugin settings page is available after installation: **Admin -> ONLYOFFICE -> ONLYOFFICE Settings**.
 
-- **Document Server address**. Enter the name of the server with ONLYOFFICE Docs installed:
+Enter the following address to connect ONLYOFFICE Docs:
 
-  ``` sh
-  http://documentserver/
-  ```
+``` sh
+https://<documentserver>/
+```
 
-  where **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the SuiteCRM server. The SuiteCRM server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the SuiteCRM server. The SuiteCRM server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-- **Document Server Secret**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key on the SuiteCRM **ONLYOFFICE Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the SuiteCRM **ONLYOFFICE Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Using SuiteCRM ONLYOFFICE integration plugin
 

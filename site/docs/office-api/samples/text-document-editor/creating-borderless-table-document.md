@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a borderless table for structured data display.
 ---
 
 # Creating borderless table document

@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Change the background color of specified cells.
 ---
 
 # Change cell background color
 
 Sets the background color of the cell **B3** to blue.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

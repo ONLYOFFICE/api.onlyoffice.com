@@ -11,46 +11,46 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="U20aA97JglI"/>
 ```
 
-This [plugin](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to edit office documents from [Liferay](https://www.liferay.com/) using ONLYOFFICE Docs.
+This [app](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to edit office documents from [Liferay](https://www.liferay.com/) using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, PDF.
-- The plugin will create a new **ONLYOFFICE Edit/View** menu option within the **Documents and Media** section for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Liferay.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
+- The app will create a new **Edit in ONLYOFFICE** menu option within the **Documents and Media** section for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Liferay.
 
 ## Installing ONLYOFFICE Docs
 
 You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Liferay and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Liferay directly.
 
-The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing ONLYOFFICE Connector for Liferay
+## Installing ONLYOFFICE app for Liferay
 
-Either install it from [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/171169174) or if you are building the connector by yourself, simply put compiled **.jar** file from *build\libs* folder to */opt/liferay/deploy*. Liferay will install it automatically.
+Either install it from [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/171169174) or if you are building the app yourself, simply put a compiled `.jar` file from `build/libs` folder to `/opt/liferay/deploy`. Liferay will install it automatically.
 
-## Configuring ONLYOFFICE Connector for Liferay
+## Configuring ONLYOFFICE app for Liferay
 
-In order to configure connector, you must navigate to **System Settings** (**Control Panel -> Configuration -> System Settings**). In **Platform** section click the **Connectors** category and select **ONLYOFFICE**.
+To configure the app, navigate to **Control Panel -> Configuration -> System Settings**. In the **Platform** section, click the **Connectors** category and select **ONLYOFFICE**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-## Compiling ONLYOFFICE Connector for Liferay
+## Compiling ONLYOFFICE app for Liferay
 
-Simply run *gradle build*. Output **.jar** will be placed inside the *build/libs* directory.
+Run `gradle build`. The output `.jar` will be placed inside the `build/libs` directory.
 
 ## How it works
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-1. User navigates to the **Documents and Media** section within Liferay and selects the **Edit in ONLYOFFICE** action.
+1. The user navigates to the **Documents and Media** section within Liferay and selects the **Edit in ONLYOFFICE** action.
 
-2. Liferay prepares a JSON object for the ONLYOFFICE Docs with the following properties:
+2. Liferay prepares a JSON object for ONLYOFFICE Docs with the following properties:
 
-   - **url**: the URL that ONLYOFFICE Docs uses to download the document,
-   - **callbackUrl**: the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **key**: the *fileVersionId* to instruct ONLYOFFICE Docs whether to download the document again or not;
-   - **title**: the document title (name).
+   - **url** - the URL that ONLYOFFICE Docs uses to download the document;
+   - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
+   - **key** - the *fileVersionId* to instruct ONLYOFFICE Docs whether to download the document again or not;
+   - **title** - the document title (name).
 
 3. The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.
 
@@ -58,7 +58,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 5. ONLYOFFICE Docs sends a POST request to *callbackUrl* to inform Liferay that a user is editing the document.
 
-6. Liferay locks the document, but still allows other users with write access to collaborate in real time with ONLYOFFICE Docs by leaving the Action present.
+6. Liferay locks the document, but still allows other users with write access to collaborate in real time with ONLYOFFICE Docs by keeping the **Edit in ONLYOFFICE** action available.
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
@@ -66,4 +66,4 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 9. Liferay downloads a new version of the document, replacing the old one.
 
-Download the ONLYOFFICE Connector for Liferay [here](https://github.com/ONLYOFFICE/onlyoffice-liferay).
+Download the ONLYOFFICE app for Liferay [here](https://github.com/ONLYOFFICE/onlyoffice-liferay).

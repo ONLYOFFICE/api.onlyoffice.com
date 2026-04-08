@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add an image watermark with custom opacity and direction.
 ---
 
 # Adding image watermark

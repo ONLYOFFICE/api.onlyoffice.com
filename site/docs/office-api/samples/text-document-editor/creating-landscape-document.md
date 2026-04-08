@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a landscape-oriented section with a wide table.
 ---
 
 # Creating landscape document

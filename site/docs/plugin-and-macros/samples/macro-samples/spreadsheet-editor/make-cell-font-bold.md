@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Make the font bold for specified cells.
 ---
 
 # Make cell font bold
 
 Sets the font of the cell **A2** to bold.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

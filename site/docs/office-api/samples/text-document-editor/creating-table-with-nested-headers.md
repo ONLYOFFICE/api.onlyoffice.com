@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a table with merged header cells for grouped data.
 ---
 
 # Creating table with nested headers

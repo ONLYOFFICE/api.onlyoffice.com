@@ -2,10 +2,6 @@
 
 通过复制每个工作表的已用区域并追加，将所有工作表的数据合并到当前活动工作表。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     let sheets = Api.GetSheets();
@@ -40,7 +36,5 @@
 使用方法: [GetSheets](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetName.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)

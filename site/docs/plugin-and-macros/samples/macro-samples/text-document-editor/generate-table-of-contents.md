@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Generate a table of contents from document headings.
 ---
 
 # Generate table of contents
 
 Generates a table of contents by scanning the document for headings.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ```ts
 (function () {
@@ -22,8 +19,6 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 [AddTableOfContents](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## Reference Microsoft VBA macro code
-
-<!-- code generated with AI -->
 
 ```vb
 Sub GenerateTableOfContents()

@@ -1,16 +1,16 @@
-# 文档编辑限制
+# DocumentEditingRestrictions
 
-文档编辑限制：\
-- **none** - 无编辑限制，\
-- **comments** - 仅允许编辑批注，\
-- **forms** - 仅允许编辑表单字段，\
-- **readOnly** - 禁止任何编辑。
+文档编辑限制：
+-**none** - 无编辑限制，
+-**comments** - 允许编辑批注，
+-**forms** - 允许编辑表单字段，
+-**readOnly** - 不允许编辑。
 
 ## 类型
 
-Enumeration（枚举）
+枚举
 
-## 取值
+## 值
 
 - 'none'
 - 'comments'

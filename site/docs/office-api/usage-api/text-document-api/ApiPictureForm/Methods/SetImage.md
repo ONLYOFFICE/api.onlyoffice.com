@@ -5,7 +5,7 @@ Sets an image to the current picture form.
 ## Syntax
 
 ```javascript
-expression.SetImage(sImageSrc, nWidth, nHeight);
+expression.SetImage(imageSrc);
 ```
 
 `expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
@@ -14,9 +14,7 @@ expression.SetImage(sImageSrc, nWidth, nHeight);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, only internet URL or base64 encoded images are supported). |
-| nWidth | Required | [EMU](../../Enumeration/EMU.md) |  | The image width in English measure units. |
-| nHeight | Required | [EMU](../../Enumeration/EMU.md) |  | The image height in English measure units. |
+| imageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, only internet URL or base64 encoded images are supported). |
 
 ## Returns
 

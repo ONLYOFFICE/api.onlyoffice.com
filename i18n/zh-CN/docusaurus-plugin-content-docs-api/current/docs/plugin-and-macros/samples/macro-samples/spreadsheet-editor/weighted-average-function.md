@@ -2,10 +2,6 @@
 
 创建一个用于计算加权平均值的自定义函数。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ```ts
 (function () {
     // 获取活动工作表。
@@ -62,7 +58,5 @@
 使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 结果
-
-<!-- imgpath -->
 
 ![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.png#gh-light-mode-only)![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.dark.png#gh-dark-mode-only)

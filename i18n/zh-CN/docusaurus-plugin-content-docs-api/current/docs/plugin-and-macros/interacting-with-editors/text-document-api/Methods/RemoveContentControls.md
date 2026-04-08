@@ -1,6 +1,6 @@
-# 移除多个内容控件
+# RemoveContentControls
 
-移除多个内容控件。
+删除多个内容控件。
 
 ## 语法
 
@@ -12,13 +12,13 @@ expression.RemoveContentControls(arrDocuments);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrDocuments | 必填 | [内容控件](../Enumeration/ContentControl.md)[] | — | 内容控件内部 ID 数组。例如：[&#123;"InternalId": "5_556"&#125;]。 |
+| arrDocuments | 必需 | [ContentControl](../Enumeration/ContentControl.md)[] |  | 内容控件内部 ID 数组。示例：[&#123;"InternalId": "5_556"&#125;]。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

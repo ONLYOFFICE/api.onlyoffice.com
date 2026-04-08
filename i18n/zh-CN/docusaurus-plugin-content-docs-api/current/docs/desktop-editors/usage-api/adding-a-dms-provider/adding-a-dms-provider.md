@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 添加DMS提供商
 
-ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协作编辑。这种情况下，需要互联网连接。目前，用户可以将应用程序连接到ONLYOFFICE Workspace（SaaS或本地部署）、Nextcloud、ownCloud或Seafile，但您可以通过添加自己的文档管理系统（DMS）来扩展此列表。
+ONLYOFFICE桌面编辑器允许用户从云端访问文档并与团队成员协作编辑。这种情况下，需要互联网连接。目前，用户可以将应用程序连接到ONLYOFFICE DocSpace（SaaS或本地部署）、Nextcloud、ownCloud、Moodle、Liferay、kDrive或Seafile，但您可以通过添加自己的文档管理系统（DMS）来扩展此列表。
 
 按照以下步骤将您自己的文档管理系统（DMS）添加到连接列表中：
 
@@ -58,7 +58,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | startPage             | string                 | `"/"`                                                                                                      | 定义在创建新连接时添加到输入的IP或域名后的相对URL。                                                                                                                                  |
 | icons                 | object                 | `{ "themeLight": { "connectionsList": "./assets/listicon.svg", "buttonLogo": "./assets/buttonlogo.svg" } }` | 定义门户的图标。您可以通过指定带有相应图标的`themeLight`和`themeDark`对象，为每种UI主题类型（亮色和暗色）添加图标。                                                                     |
 | icons.connectionsList | string                 | `"./assets/listicon.svg"`                                                                                  | 连接列表图标的路径。                                                                                                                                                                 |
-| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 当门户列表为空时，连接页面上提供商按钮的图标路径。                                                                                                                                     |
+| icons.buttonLogo      | string                 | `"./assets/buttonlogo.svg"`                                                                                 | 当门户列表为空时，连接页面上提供商按钮的图标路径。此参数适用于9.0以下版本。                                                                                                            |
 
 ```mdx-code-block
 </APITable>
@@ -95,15 +95,15 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 步骤3
 
-创建两个应用程序页面的图标，并将其放入*config.json*文件中指定的文件夹：
+创建应用程序页面的图标，并将其放入*config.json*文件中指定的文件夹：
 
-1. 连接列表的图标。所需图标尺寸为36x36：
+1. 连接列表的亮色和暗色图标。所需图标尺寸为36x36：
 
-   ![连接列表](/assets/images/desktop/connection_list.png)
+   ![连接列表](/assets/images/desktop/connection-list.png#gh-light-mode-only)![连接列表](/assets/images/desktop/connection-list.dark.png#gh-dark-mode-only)
 
-2. 当**已连接的云端**列表为空时，连接页面上提供商按钮的图标。所需图标尺寸为148x38：
+2. 当**已连接的云端**列表为空时，连接页面上提供商按钮的亮色和暗色图标。所需图标尺寸为148x38。这些图标适用于9.0以下版本：
 
-   ![提供商按钮](/assets/images/desktop/provider_button.png)
+   ![提供商按钮](/assets/images/desktop/provider-button.png#gh-light-mode-only)![提供商按钮](/assets/images/desktop/provider-button.dark.png#gh-dark-mode-only)
 
 支持的图像格式为 *.png*、*.jpeg*、*.svg*。我们建议使用 *.svg*文件，以便在系统中200%缩放的HiDPI显示器上正确显示。
 
@@ -111,4 +111,6 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 步骤4
 
-启动ONLYOFFICE桌面编辑器，如果需要的话重启它，然后切换到**已连接的云端**部分，检查连接是否正常工作。
+1. 启动ONLYOFFICE桌面编辑器，如果需要请重启。
+2. 点击**云端**旁边的 ![加号图标](/assets/images/desktop/plus.svg#gh-light-mode-only)![加号图标](/assets/images/desktop/plus.dark.svg#gh-dark-mode-only)。
+3. 在**连接到云端办公**窗口中，打开可用云端列表，检查连接是否正常工作。

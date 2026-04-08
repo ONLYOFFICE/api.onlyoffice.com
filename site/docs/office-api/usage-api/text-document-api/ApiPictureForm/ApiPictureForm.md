@@ -10,11 +10,14 @@ Represents the ApiPictureForm class.
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
 | [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current form. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetClassType](./Methods/GetClassType.md) | "pictureForm" | Returns a type of the ApiPictureForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetImage](./Methods/GetImage.md) | [Base64Img](../Enumeration/Base64Img.md) | Returns an image in the base64 format from the current picture form. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current form. |
+| [GetLock](./Methods/GetLock.md) | boolean | Returns the lock state of the current form. |
 | [GetPicturePosition](./Methods/GetPicturePosition.md) | [percentage](../Enumeration/percentage.md)[] | Returns the picture position inside the current form. |
 | [GetPlaceholderText](./Methods/GetPlaceholderText.md) | string | Returns the placeholder text from the current form. |
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
@@ -33,6 +36,7 @@ Represents the ApiPictureForm class.
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current form. |
 | [SetFormKey](./Methods/SetFormKey.md) | boolean | Sets a key to the current form. |
 | [SetImage](./Methods/SetImage.md) | boolean | Sets an image to the current picture form. |
+| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock state of the current form. |
 | [SetLockAspectRatio](./Methods/SetLockAspectRatio.md) | boolean | Locks the aspect ratio of the current picture form. |
 | [SetPicturePosition](./Methods/SetPicturePosition.md) | boolean | Sets the picture position inside the current form: **0** - the picture is placed on the left/top; **50** - the picture is placed in the center; **100** - the picture is placed on the right/bottom. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form. *Can't be set to checkbox or radio button.* |

@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Create a slide with a formatted data table.
+---
+
 # Creating table slide
 
 Create a slide with a formatted table for data presentation:

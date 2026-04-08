@@ -14,7 +14,7 @@ expression.RecalculateAllFormulas(fLogger);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fLogger | Required | function |  | A function which specifies the logger object for checking recalculation of formulas. |
+| fLogger | Optional | function |  | A function which specifies the logger object for checking recalculation of formulas. |
 
 ## Returns
 

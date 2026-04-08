@@ -1,0 +1,55 @@
+# ReplaceDrawing
+
+用新绘图替换绘图。
+
+## 语法
+
+```javascript
+expression.ReplaceDrawing(oOldDrawing, oNewDrawing, bSaveOldDrawingPr);
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oOldDrawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 将被替换的图形。 |
+| oNewDrawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 用于替换旧图形的图形。 |
+| bSaveOldDrawingPr | 可选 | boolean | false | 指定是否保存旧图形的设置。 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+此示例用新图形替换图形。
+
+```javascript editor-docx
+// How to change the image to another one.
+
+// Add the new drawing instead of another one.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let oldDrawing = Api.CreateChart("bar3D", [
+	[200, 240, 280],
+	[250, 260, 280]
+], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+oldDrawing.SetSeriesFill(fill, 0, false);
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+oldDrawing.SetSeriesFill(fill, 1, false);
+paragraph.AddDrawing(oldDrawing);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let newDrawing = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
+let docContent = newDrawing.GetContent();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("The chart was replaced with the current shape in this document.");
+docContent.AddElement(0, paragraph);
+doc.ReplaceDrawing(oldDrawing, newDrawing, false);
+```

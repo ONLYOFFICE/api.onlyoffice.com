@@ -1,6 +1,6 @@
 # Last
 
-Returns the last element of the paragraph which is not empty.
+Returns the last element of the paragraph.
 
 ## Syntax
 

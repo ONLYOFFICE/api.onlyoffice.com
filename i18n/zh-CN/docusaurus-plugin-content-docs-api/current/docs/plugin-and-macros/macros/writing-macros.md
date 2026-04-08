@@ -9,10 +9,6 @@ sidebar_position: -5
 1. 打开 ONLYOFFICE 编辑器并创建一个新的电子表格。
 2. 打开**视图**选项卡并选择**宏**。宏窗口将弹出，并出现一个基础的函数包装器，可以在其中编写所需代码：
 
-<!-- 此代码与宏相关。 -->
-
-<!-- eslint-skip -->
-
    ``` ts
    (function () {
      // ... your code goes here ...
@@ -56,10 +52,6 @@ sidebar_position: -5
 
 现在我们将其整合成完整的脚本代码：
 
-<!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {
@@ -74,13 +66,13 @@ sidebar_position: -5
 
 将上述代码粘贴到宏窗口中并点击![Play icon](/assets/images/plugins/play.svg)图标。 第 1 到第 200 行将会在不到一秒的时间内被交替着色。
 
-![Alternate raws](/assets/images/plugins/alternate-raws.png)
+![Alternate rows](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate rows](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
 
 ## 使用 AI 插件生成宏 {#generating-macros-using-ai-plugin}
 
 如果您希望加快生成宏的过程，从 9.0 版本开始，可以使用 ONLYOFFICE 内置的 AI 插件，通过描述自动生成 ONLYOFFICE 宏：
 
-1. 配置 AI 插件。详细的配置步骤可见于[此处]：(https://helpcenter.onlyoffice.com/docs/userguides/ai/configuration.aspx)。
+1. 配置 AI 插件。详细的配置步骤可见于[此处](/docs/plugin-and-macros/ai/ai-plugin.md#configuring)。
 2. 打开**视图**选项卡，点击**宏**。
 3. 在**宏**窗口中点击 **AI** 图标，选择**根据描述创建**。
 

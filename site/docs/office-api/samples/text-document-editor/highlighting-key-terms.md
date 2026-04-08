@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Search and highlight key terms with bold and color formatting.
 ---
 
 # Highlighting key terms

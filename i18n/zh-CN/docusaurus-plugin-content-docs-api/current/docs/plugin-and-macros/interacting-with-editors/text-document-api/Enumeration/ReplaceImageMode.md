@@ -1,17 +1,17 @@
-# 替换图像模式
+# ReplaceImageMode
 
-指定在替换所选图像时，如何调整图像对象。
+指定在替换所选图像时如何调整图像对象。
 
 ## 类型
 
-Enumeration（枚举）
+枚举
 
 ## 值
 
-- "fill"（填充）
-- "fit"（适应）
-- "original"（原始大小）
-- "stretch"（拉伸）
+- "fill"
+- "fit"
+- "original"
+- "stretch"
 
 
 ## 示例

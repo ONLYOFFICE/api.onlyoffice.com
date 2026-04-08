@@ -1,16 +1,22 @@
-# 内容控件获得焦点回调
+# onFocusContentControl
 
-当某个内容控件获得焦点时调用的回调函数。
+用于显示哪个内容控件已获得焦点的函数。
 
 ## 参数
 
-| **名称** | **数据类型** | **说明** |
+| **名称** | **数据类型** | **描述** |
 | --------- | ------------- | ----------- |
-| control | [事件_内容控件](../Enumeration/Event_ContentControl.md) | 指明已获得焦点的内容控件。 |
+| control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | 定义已获得焦点的内容控件。 |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onFocusContentControl", (control) => {
-    focusContentControl(control);
+    console.log("event: onFocusContentControl");
+    console.log("Tag: " + control.Tag);
+    console.log("Id: " + control.Id);
+    console.log("Lock: " + control.Lock);
+    console.log("InternalId: " + control.InternalId);
+    console.log("Alias: " + control.Alias);
+    console.log("Appearance: " + control.Appearance);
 });
 ```
 

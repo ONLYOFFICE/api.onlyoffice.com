@@ -32,6 +32,12 @@ const AutomationAPISamples = [
     url: 'filling-out-the-form',
     description: 'This example shows how to fill in the empty cells in the form.',
   },
+  {
+    name: 'Working with content controls',
+    image: require('@site/static/assets/images/editor/working-with-content-controls.png').default,
+    url: 'working-with-content-controls',
+    description: 'This example shows how to add different types of content controls and inspect their properties from an external UI.',
+  },
 ];
 
 interface Props {

@@ -2,11 +2,9 @@
 
 从远程 CSV/TXT 文件导入数据到电子表格中。
 
-> 此宏仅适用于 ONLYOFFICE 桌面版编辑器。
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
+:::note
+此宏仅适用于 ONLYOFFICE 桌面版编辑器。
+:::
 
 ``` ts
 (function() 

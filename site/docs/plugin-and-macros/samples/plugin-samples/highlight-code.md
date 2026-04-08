@@ -1,3 +1,7 @@
+---
+description: Apply syntax highlighting to code snippets.
+---
+
 # Highlight code
 
 Connects the [highlight.js library](https://highlightjs.org/) for highlighting code syntax with the necessary language, style, and background color.

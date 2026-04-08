@@ -1,6 +1,6 @@
-# 修改 OLE 对象
+# ChangeOleObjects
 
-根据 OLE 对象数据中指定的内部标识号修改多个 OLE 对象。
+更改 OLE 对象数据中指定 *InternalIds* 的多个 OLE 对象。
 
 ## 语法
 
@@ -12,13 +12,13 @@ expression.ChangeOleObjects(arrObjectData);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrObjectData | 必填 | [OLE 对象数据](../Enumeration/OLEObjectData.md)[] | — | OLE 对象数据数组。 |
+| arrObjectData | 必需 | [OLEObjectData](../Enumeration/OLEObjectData.md)[] |  | OLE 对象数据数组。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Unmerge cells in a specified range.
 ---
 
 # Unmerge cell range
 
 Unmerges the selected cell range.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

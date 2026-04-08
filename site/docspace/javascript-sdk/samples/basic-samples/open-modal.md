@@ -1,6 +1,12 @@
+---
+description: Open a modal window in DocSpace using the JS SDK.
+---
+
 # Open modal
 
 This example demonstrates how to open a predefined modal window in DocSpace using the JavaScript SDK.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/open-modal.html)
 
 ## Before you start
 
@@ -19,7 +25,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Open Modal</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -85,7 +91,7 @@ Create an HTML page with a button and an embedded DocSpace iframe.
     <title>Open Modal</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -115,7 +121,7 @@ Create an HTML page with a button and an embedded DocSpace iframe.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic

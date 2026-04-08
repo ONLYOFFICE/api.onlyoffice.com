@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Apply corporate fonts and colors to all slides.
 ---
 
 # Apply corporate branding

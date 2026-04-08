@@ -1,3 +1,7 @@
+---
+description: Search and replace text automatically on document open.
+---
+
 # Search and replace on start
 
 Searches for and replaces text in the document when it is reopened.
@@ -6,7 +10,9 @@ Searches for and replaces text in the document when it is reopened.
 
 **Supported editors:** documents.
 
-![SearchAndReplaceOnStart](/assets/images/plugins/gifs/search-and-replace-on-start.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/search-and-replace-on-start.webm" type="video/webm" />
+</video>
 
 ## Installation
 

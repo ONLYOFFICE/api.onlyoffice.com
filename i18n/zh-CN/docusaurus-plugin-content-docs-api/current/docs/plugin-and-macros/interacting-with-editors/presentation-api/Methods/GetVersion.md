@@ -1,6 +1,6 @@
-# 获取版本
+# GetVersion
 
-返回编辑器的版本信息。
+返回编辑器版本。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.GetVersion();
 ```
 
-`expression` — 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-string（字符串）
+string
 
 ## 示例
 

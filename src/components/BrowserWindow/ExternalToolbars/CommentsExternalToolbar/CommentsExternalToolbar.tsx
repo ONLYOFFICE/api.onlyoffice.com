@@ -1,243 +1,259 @@
 import { OnlyofficeEditor } from "@site/src/components/BrowserWindow";
 import styles from "./styles.module.css";
 
-const CommentsExternalToolbar: React.FC<void> = () => {
+const CommentsExternalToolbar: React.FC = () => {
   return (
     <>
-      <div id="commentsBlock" data-easy="true" className={styles.commentsExternalToolbar} spellCheck="false" style={{ display: "none" }}>
-        <div id="comment" className={styles.comment}>
-          <div>
-            <div className={styles["comment-author"]} title="Author" />
-            <div className={styles["comment-date"]} title="Date" />
+      <div className={styles["demo-section"]}>
+
+        <div className={styles["demo-layout"]}>
+          <div className={styles["editor-column"]}>
+            <OnlyofficeEditor
+              fileType={"docx"}
+              code={""}
+              height="100%"
+              templateUrl="https://static.onlyoffice.com/assets/docs/samples/withcomments.docx"
+              config={{ editorConfig: { customization: { compactToolbar: true } } }}
+              externalScript={{
+                beforeDocumentReady: `
+                  let comments = [];
+                  let indexComment = 0;
+                `,
+                onDocumentReady: `
+                  const getCommentIndex = (targetComment) =>
+                    comments.findIndex((c) => c["Id"] === targetComment["Id"]);
+
+                  connector.executeMethod("GetAllComments", null, (data) => {
+                    comments.push(...data);
+                    renderComments();
+                  });
+
+                  connector.attachEvent("onAddComment", (targetComment) => {
+                    if (getCommentIndex(targetComment) === -1) {
+                      comments.unshift(targetComment);
+                    }
+                    indexComment = 0;
+                    renderComments();
+                  });
+
+                  connector.attachEvent("onRemoveComment", (targetComment) => {
+                    const index = getCommentIndex(targetComment);
+                    if (index !== -1) {
+                      comments.splice(index, 1);
+                    }
+                    if (indexComment >= comments.length && indexComment !== 0) {
+                      indexComment--;
+                    }
+                    renderComments();
+                  });
+
+                  connector.attachEvent("onChangeCommentData", (targetComment) => {
+                    const index = getCommentIndex(targetComment);
+                    if (index !== -1) {
+                      indexComment = index;
+                      comments[index]["Data"] = targetComment["Data"];
+                      renderComments();
+                    }
+                  });
+                `,
+                otherFunctional: `
+                  const avatarColors = ["#E8915B", "#7BB892", "#D4B44C", "#6B9BD2", "#C47DB5"];
+
+                  const getAvatarColor = (name) => {
+                    let hash = 0;
+                    for (let i = 0; i < name.length; i++) {
+                      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+                    }
+                    return avatarColors[Math.abs(hash) % avatarColors.length];
+                  };
+
+                  const getInitials = (name) =>
+                    name.split(" ").map((w) => w[0]).join("").substring(0, 2).toUpperCase();
+
+                  const formatDate = (time) => {
+                    const d = new Date(parseInt(time, 10));
+                    return d.toLocaleDateString(undefined, { month: "numeric", day: "numeric", year: "numeric" });
+                  };
+
+                  const createAvatar = (name) => {
+                    const el = document.createElement("div");
+                    el.className = "${styles.avatar}";
+                    el.style.backgroundColor = getAvatarColor(name);
+                    el.textContent = getInitials(name);
+                    return el;
+                  };
+
+                  const createCardHeader = (name, time) => {
+                    const header = document.createElement("div");
+                    header.className = "${styles["card-header"]}";
+                    header.appendChild(createAvatar(name));
+                    const nameEl = document.createElement("span");
+                    nameEl.className = "${styles["card-name"]}";
+                    nameEl.textContent = name;
+                    header.appendChild(nameEl);
+                    const dateEl = document.createElement("span");
+                    dateEl.className = "${styles["card-date"]}";
+                    dateEl.textContent = formatDate(time);
+                    header.appendChild(dateEl);
+                    return header;
+                  };
+
+                  const renderComments = () => {
+                    const list = document.getElementById("commentsList");
+                    const countEl = document.getElementById("commentCount");
+                    const emptyEl = document.getElementById("emptyComments");
+                    const prevBtn = document.getElementById("prevComment");
+                    const nextBtn = document.getElementById("nextComment");
+                    const deleteBtn = document.getElementById("deleteComment");
+                    const addReplyBtn = document.getElementById("addReply");
+
+                    list.innerHTML = "";
+                    countEl.textContent = comments.length;
+
+                    if (comments.length === 0) {
+                      emptyEl.style.display = "block";
+                      prevBtn.classList.add("${styles.disabled}");
+                      nextBtn.classList.add("${styles.disabled}");
+                      deleteBtn.classList.add("${styles.disabled}");
+                      addReplyBtn.classList.add("${styles.disabled}");
+                      return;
+                    }
+
+                    emptyEl.style.display = "none";
+                    deleteBtn.classList.remove("${styles.disabled}");
+                    addReplyBtn.classList.remove("${styles.disabled}");
+
+                    if (indexComment <= 0) {
+                      prevBtn.classList.add("${styles.disabled}");
+                    } else {
+                      prevBtn.classList.remove("${styles.disabled}");
+                    }
+                    if (indexComment >= comments.length - 1) {
+                      nextBtn.classList.add("${styles.disabled}");
+                    } else {
+                      nextBtn.classList.remove("${styles.disabled}");
+                    }
+
+                    comments.forEach((comment, idx) => {
+                      const card = document.createElement("div");
+                      card.className = "${styles.card}" + (idx === indexComment ? " ${styles["card-active"]}" : "");
+                      card.addEventListener("click", () => {
+                        indexComment = idx;
+                        renderComments();
+                        connector.executeMethod("MoveToComment", [comments[idx]["Id"]]);
+                      });
+
+                      card.appendChild(createCardHeader(comment["Data"]["UserName"], comment["Data"]["Time"]));
+
+                      const msg = document.createElement("div");
+                      msg.className = "${styles["card-message"]}";
+                      msg.textContent = comment["Data"]["Text"];
+                      card.appendChild(msg);
+
+                      if (comment["Data"]["Replies"]?.length > 0) {
+                        comment["Data"]["Replies"].forEach((reply) => {
+                          const replyCard = document.createElement("div");
+                          replyCard.className = "${styles["reply-card"]}";
+                          replyCard.appendChild(createCardHeader(reply["UserName"], reply["Time"]));
+                          const replyMsg = document.createElement("div");
+                          replyMsg.className = "${styles["card-message"]}";
+                          replyMsg.textContent = reply["Text"];
+                          replyCard.appendChild(replyMsg);
+                          card.appendChild(replyCard);
+                        });
+                      }
+
+                      list.appendChild(card);
+                    });
+
+                    connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
+                  };
+
+                  document.getElementById("prevComment").addEventListener("click", (e) => {
+                    if (e.currentTarget.classList.contains("${styles.disabled}")) return;
+                    if (indexComment > 0) indexComment--;
+                    renderComments();
+                  });
+
+                  document.getElementById("nextComment").addEventListener("click", (e) => {
+                    if (e.currentTarget.classList.contains("${styles.disabled}")) return;
+                    if (indexComment < comments.length - 1) indexComment++;
+                    renderComments();
+                  });
+
+                  document.getElementById("addReply").addEventListener("click", (e) => {
+                    const btn = e.currentTarget;
+                    if (btn.classList.contains("${styles.disabled}")) return;
+                    const area = document.getElementById("addReplyArea");
+                    if (btn.classList.contains("${styles.active}")) {
+                      const reply = area.value;
+                      if (reply) {
+                        const datetime = \`\${Date.now()}\`;
+                        comments[indexComment]["Data"]["Replies"].push({
+                          Text: reply,
+                          Time: datetime,
+                          UserName: "John Smith"
+                        });
+                        connector.executeMethod("ChangeComment", [comments[indexComment]["Id"], comments[indexComment]["Data"]]);
+                        area.value = "";
+                      }
+                      btn.classList.remove("${styles.active}");
+                      area.style.display = "none";
+                    } else {
+                      btn.classList.add("${styles.active}");
+                      area.style.display = "block";
+                    }
+                  });
+
+                  document.getElementById("addComment").addEventListener("click", (e) => {
+                    const btn = e.currentTarget;
+                    const area = document.getElementById("addCommentArea");
+                    if (btn.classList.contains("${styles.active}")) {
+                      const comment = area.value;
+                      if (comment) {
+                        const datetime = \`\${Date.now()}\`;
+                        connector.executeMethod("AddComment", [{ Text: comment, UserName: "John Smith", Time: datetime }]);
+                        area.value = "";
+                      }
+                      btn.classList.remove("${styles.active}");
+                      area.style.display = "none";
+                    } else {
+                      btn.classList.add("${styles.active}");
+                      area.style.display = "block";
+                    }
+                  });
+
+                  document.getElementById("deleteComment").addEventListener("click", (e) => {
+                    if (e.currentTarget.classList.contains("${styles.disabled}")) return;
+                    connector.executeMethod("RemoveComments", [[comments[indexComment]["Id"]]]);
+                    renderComments();
+                  });
+                `,
+              }}
+            />
           </div>
-          <div className={styles["comment-message"]} title="Message" />
-        </div>
-        <div id="replies" className={styles.replies} />
-        <textarea id="addReplyArea" name="addReplyArea" className={styles["add-reply-area"]} placeholder="Enter your reply here" hidden />
-        <div id="empty-comment" hidden style={{ display: "none" }}>
-          There are no comments in the document.
+          <div className={styles["comments-panel"]}>
+            <div className={styles["panel-header"]}>
+              <span className={styles["panel-title"]}>COMMENTS (<span id="commentCount">0</span>)</span>
+              <div className={styles["panel-nav"]}>
+                <button id="prevComment" className={`${styles["nav-btn"]} ${styles.disabled}`}>&lsaquo;</button>
+                <button id="nextComment" className={`${styles["nav-btn"]} ${styles.disabled}`}>&rsaquo;</button>
+              </div>
+            </div>
+            <div id="commentsList" className={styles["comments-list"]} />
+            <div id="emptyComments" className={styles["empty-state"]} style={{ display: "none" }}>
+              There are no comments in the document.
+            </div>
+            <textarea id="addReplyArea" className={styles.textarea} placeholder="Enter your reply here" style={{ display: "none" }} />
+            <textarea id="addCommentArea" className={styles.textarea} placeholder="Enter your comment here" style={{ display: "none" }} />
+            <div className={styles["panel-actions"]}>
+              <button id="addReply" className={`${styles.btn} ${styles.disabled}`}>Add Reply</button>
+              <button id="deleteComment" className={`${styles.btn} ${styles.disabled}`}>Delete</button>
+              <button id="addComment" className={styles.btn}>Add Comment</button>
+            </div>
+          </div>
         </div>
       </div>
-      <textarea id="addCommentArea" name="addCommentArea" className={styles["add-comment-area"]} placeholder="Enter your comment here" hidden />
-      <ul className={styles["list-buttons"]}>
-        <li>
-          <button id="addReply" className={styles.disabled}>
-            ADD REPLY
-          </button>
-        </li>
-        <li>
-          <button id="deleteComment" className={styles.disabled}>
-            DELETE
-          </button>
-        </li>
-        <li>
-          <button id="addComment" className={styles.disabled}>
-            ADD COMMENT
-          </button>
-        </li>
-        <li>
-          <button id="prevComment" className={styles.disabled}>
-            &lt;
-          </button>
-        </li>
-        <li>
-          <button id="nextComment" className={styles.disabled}>
-            &gt;
-          </button>
-        </li>
-      </ul>
-      <OnlyofficeEditor
-        fileType={"docx"}
-        code={""}
-        height="550px"
-        templateUrl="https://static.onlyoffice.com/assets/docs/samples/withcomments.docx"
-        externalScript={{
-          beforeDocumentReady: `
-            var comments = [];
-            var indexComment = 0;
-          `,
-          onDocumentReady: `
-            const getCommentIndex = (targetComment) => {
-              return comments.findIndex((comment) => comment["Id"] === targetComment["Id"]);
-            };
-
-            connector.executeMethod("GetAllComments", null, function(data) {
-              comments.push(...data);
-              renderComment();
-            });
-
-            connector.attachEvent("onAddComment", function(targetComment) {
-              if (getCommentIndex(targetComment) === -1) {
-                comments.unshift(targetComment);             
-              } 
-              indexComment = 0;
-              renderComment();
-            });
-
-            connector.attachEvent("onRemoveComment", function(targetComment) {
-              const index = getCommentIndex(targetComment);
-              if (index !== -1) {
-                comments.splice(index, 1);
-              }              
-              if (indexComment >= comments.length && indexComment !== 0) {
-                indexComment--;
-              }
-              renderComment();
-            });
-
-            connector.attachEvent("onChangeCommentData", function(targetComment) {
-              const index = getCommentIndex(targetComment);
-              if (index !== -1) {
-                indexComment = index;
-                comments[index]["Data"] = targetComment["Data"];
-                renderComment();
-              }
-            });
-          `,
-          otherFunctional: `
-            var renderComment = function() {
-              const comment = document.getElementById("comment");
-              const replies = document.getElementById("replies");
-              const emptyComment = document.getElementById("empty-comment");
-              const commentsBlock = document.getElementById("commentsBlock");
-
-              replies.innerHTML = "";
-
-              if (comments.length === 0) {
-                comment.querySelector(".${styles["comment-date"]}").innerHTML = "";
-                comment.querySelector(".${styles["comment-author"]}").innerHTML = "";
-                comment.querySelector(".${styles["comment-message"]}").innerHTML = "";
-                document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
-                  btn.classList.add("${styles.disabled}");
-                });
-                document.getElementById("addComment").classList.remove("${styles.disabled}");
-                comment.style.display = "none";
-                emptyComment.style.display = "block";
-              } else {
-                commentsBlock.style.display = "block";
-                comment.style.display = "block";
-                emptyComment.style.display = "none";
-
-                document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
-                    btn.classList.remove("${styles.disabled}");
-                });
-                
-                postComment(
-                  comment,
-                  comments[indexComment]["Data"]["UserName"],
-                  comments[indexComment]["Data"]["Time"],
-                  comments[indexComment]["Data"]["Text"]
-                );
-
-                connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
-
-                for (const element of comments[indexComment]["Data"]["Replies"]) {
-                  const reply = comment.cloneNode(true);
-                  reply.removeAttribute("id");
-                  reply.classList.add("${styles.reply}");
-                  postComment(
-                    reply,
-                    element["UserName"],
-                    element["Time"],
-                    element["Text"]
-                  );
-                  replies.appendChild(reply);
-                }
-              }
-            };
-
-            var postComment = function(parent, userName, time, text) {
-              const date = parent.querySelector(".${styles["comment-date"]}");
-              date.textContent = date.getAttribute("title") + ": " + new Date(parseInt(time, 10)).toLocaleString();
-
-              const author = parent.querySelector(".${styles["comment-author"]}");
-              author.textContent = author.getAttribute("title") + ": " + userName;
-
-              const message = parent.querySelector(".${styles["comment-message"]}");
-              message.textContent = message.getAttribute("title") + ": " + text;                  
-            };
-
-            document.getElementById("addReply").addEventListener("click", function() {
-              if (this.classList.contains("${styles.disabled}")) return;
-              if (this.classList.contains("${styles.active}")) {
-                const reply = document.getElementById("addReplyArea").value;
-                if (reply) {
-                  const currentdate = Date.now();
-                  const datetime = "" + currentdate;
-                  comments[indexComment]["Data"]["Replies"].push({ 
-                    Text: reply,
-                    Time: datetime,
-                    UserName: "John Smith"
-                  });
-                  connector.executeMethod("ChangeComment", [comments[indexComment]["Id"], comments[indexComment]["Data"]]);
-                  document.getElementById("addReplyArea").value = "";
-                }
-                this.classList.remove("${styles.active}");
-                document.getElementById("addReplyArea").style.display = "none";
-              } else {
-                this.classList.add("${styles.active}");
-                document.getElementById("addReplyArea").style.display = "block";
-              }
-            });
-
-            document.getElementById("addComment").addEventListener("click", function() {
-              if (this.classList.contains("${styles.active}")) {
-                const comment = document.getElementById("addCommentArea").value;
-                if (comment) {
-                  const currentdate = Date.now();
-                  const datetime = "" + currentdate;
-                  connector.executeMethod("AddComment", [{ Text: comment, UserName: "John Smith", Time: datetime }]);
-                  document.getElementById("addCommentArea").value = "";
-                }
-                this.classList.remove("${styles.active}");
-                document.getElementById("commentsBlock").style.display = "block";
-                document.getElementById("addCommentArea").style.display = "none";
-                document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
-                  btn.classList.remove("${styles.disabled}");
-                });
-              } else {
-                this.classList.add("${styles.active}");
-                document.getElementById("commentsBlock").style.display = "none";
-                document.getElementById("addReplyArea").style.display = "none";
-                document.getElementById("addCommentArea").style.display = "block";
-                document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
-                  btn.classList.add("${styles.disabled}");
-                });
-                document.getElementById("addReply").classList.remove("${styles.active}");
-                this.classList.remove("${styles.disabled}");
-              }
-            })
-
-            document.getElementById("deleteComment").addEventListener("click", function() {
-              if (this.classList.contains("${styles.disabled}")) {
-                return;
-              }
-              connector.executeMethod("RemoveComments", [[comments[indexComment]["Id"]]]);
-              renderComment();
-            });
-
-            document.getElementById("nextComment").addEventListener("click", function() {
-              if (this.classList.contains("${styles.disabled}")) {
-                return;
-              }
-              if (indexComment < comments.length - 1) {
-                indexComment++;
-              }
-              renderComment();
-            });
-
-            document.getElementById("prevComment").addEventListener("click", function() {
-              if (this.classList.contains("${styles.disabled}")) {
-                return;
-              }
-              if (indexComment > 0) {
-                indexComment--;
-              }
-              renderComment();
-            });
-          `,
-        }}
-      />
     </>
   );
 };

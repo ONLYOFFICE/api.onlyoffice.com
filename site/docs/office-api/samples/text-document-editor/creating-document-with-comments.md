@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add review comments to paragraphs and text fragments.
 ---
 
 # Creating document with comments

@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Apply conditional formatting rules to a cell range.
 ---
 
 # Conditional formatting rules
 
 Applies multiple conditional formatting rules to the selected range.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ```ts
 (function () {
@@ -44,7 +41,5 @@ Applies multiple conditional formatting rules to the selected range.
 Methods used: [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [CreateColorFromRGB](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [ForEach](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [AddComment](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md)
 
 ## Result
-
-<!-- imgpath -->
 
 ![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.png#gh-light-mode-only)![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.dark.png#gh-dark-mode-only)

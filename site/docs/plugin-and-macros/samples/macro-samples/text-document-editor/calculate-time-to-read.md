@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Calculate the estimated reading time of a document.
 ---
 
 # Calculate time to read

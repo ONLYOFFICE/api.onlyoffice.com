@@ -8,11 +8,11 @@ Each DocSpace plugin is a folder with files. It must contain the following files
 
 ## assets
 
-A folder for storing plugin images. Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The following formats are currently supported: *.jpg, .jpeg, .png, .svg*.
+A folder for storing plugin images. Nesting is not supported. The number of icons and their sizes will depend on the plugin types you implement. The number of plugin icons must not exceed 10. The following formats are currently supported: *.jpg*, *.jpeg*, *.png*, *.svg*.
 
 - The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
-  <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png" width="300px" />
+  <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png#gh-light-mode-only" width="300px" /><img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only" width="300px" />
 
 - The context menu plugin uses an [icon](coding-plugin/plugin-items/contextmenuitem.md#icon) for the context menu button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
@@ -42,27 +42,26 @@ A folder for the plugin source files.
 
 The entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the same parameter from the *package.json* file:
 
-  ``` ts
-  window.Plugins.PDFConverter = plugin || {}
-  ```
+``` ts
+window.Plugins.PDFConverter = plugin || {}
+```
 
 ## webpack.config.js
 
-The webpack configuration file. This file can be edited but this is important that in the *output* parameter, the *fileName* field is equal to *plugin.js* and the *path* field is equal to *dist*:
+The webpack configuration file. This file can be edited but it is important that in the *output* parameter, the *filename* field is equal to *plugin.js* and the *path* field is equal to *dist*:
 
-  ``` ts
-  const config = {
-    output: {
-      filename: "plugin.js",
-      path: path.resolve(dirname, "dist"),
-    },
-  }
-  
-  ```
+``` ts
+const config = {
+  output: {
+    filename: "plugin.js",
+    path: path.resolve(dirname, "dist"),
+  },
+}
+```
 
-## tsconfig
+## tsconfig.json
 
-The *typescript* configuration file. This file can be edited.
+The *TypeScript* configuration file. This file can be edited.
 
 ## package.json
 

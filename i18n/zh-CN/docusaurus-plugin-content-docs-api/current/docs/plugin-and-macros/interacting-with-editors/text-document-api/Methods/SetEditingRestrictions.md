@@ -1,4 +1,4 @@
-# 设置文档编辑限制
+# SetEditingRestrictions
 
 设置文档编辑限制。
 
@@ -12,13 +12,13 @@ expression.SetEditingRestrictions(restrictions);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| restrictions | 必填 | [文档编辑限制](../Enumeration/DocumentEditingRestrictions.md) | — | 文档编辑限制。 |
+| restrictions | 必需 | [DocumentEditingRestrictions](../Enumeration/DocumentEditingRestrictions.md) |  | 文档编辑限制。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

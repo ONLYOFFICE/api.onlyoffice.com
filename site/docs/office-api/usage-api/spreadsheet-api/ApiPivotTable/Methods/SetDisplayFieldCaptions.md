@@ -1,6 +1,6 @@
 # SetDisplayFieldCaptions
 
-Returns the setting which specifies whether to display field headers for rows and columns.
+Sets whether to display field headers for rows and columns.
 
 ## Syntax
 

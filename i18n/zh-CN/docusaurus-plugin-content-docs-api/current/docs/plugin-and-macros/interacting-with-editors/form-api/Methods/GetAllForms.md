@@ -1,6 +1,6 @@
-# 获取所有表单
+# GetAllForms
 
-返回文档中已添加的所有表单的信息。
+返回已添加到文档的所有表单的信息。
 
 ## 语法
 
@@ -8,15 +8,15 @@
 expression.GetAllForms();
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[内容控件](../Enumeration/ContentControl.md)[]
+[ContentControl](../Enumeration/ContentControl.md)[]
 
 ## 示例
 

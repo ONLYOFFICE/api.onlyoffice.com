@@ -16,6 +16,8 @@ sidebar_position: -12
 
 请参阅[签名](../../additional-api/signature/signature.md)配置部分以了解更多信息。
 
-> 请注意，集成商使用**本地链接**，需要配置中的 *JWT*。
-> 
-> 在以下方法中使用本地链接时一定要添加令牌：[insertImage](../../usage-api/methods.md#insertimage), [setHistoryData](../../usage-api/methods.md#sethistorydata), [setMailMergeRecipients](../../usage-api/methods.md#setmailmergerecipients), [setReferenceData](../../usage-api/methods.md#setreferencedata), [setReferenceSource](../../usage-api/methods.md#setreferencesource), [setRequestedDocument](../../usage-api/methods.md#setrequesteddocument), [setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet), [setRevisedFile](../../usage-api/methods.md#setrevisedfile)。此外，当为[打开](../../usage-api/config/document/document.md#url)或[转换](../../additional-api/conversion-api/request.md#url)定义本地 url时，它是有必要的。
+:::note
+请注意，集成商使用**本地链接**，需要配置中的 *JWT*。
+
+在以下方法中使用本地链接时一定要添加令牌：[insertImage](../../usage-api/methods.md#insertimage), [setHistoryData](../../usage-api/methods.md#sethistorydata), [setMailMergeRecipients](../../usage-api/methods.md#setmailmergerecipients), [setReferenceData](../../usage-api/methods.md#setreferencedata), [setReferenceSource](../../usage-api/methods.md#setreferencesource), [setRequestedDocument](../../usage-api/methods.md#setrequesteddocument), [setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet), [setRevisedFile](../../usage-api/methods.md#setrevisedfile)。此外，当为[打开](../../usage-api/config/document/document.md#url)或[转换](../../additional-api/conversion-api/request.md#url)定义本地 url时，它是有必要的。
+:::

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create individual slides from list items.
 ---
 
 # Create slides from list items

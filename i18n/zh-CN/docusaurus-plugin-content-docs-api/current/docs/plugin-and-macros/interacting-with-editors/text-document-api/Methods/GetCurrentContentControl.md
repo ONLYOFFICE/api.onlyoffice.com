@@ -1,6 +1,6 @@
-# 获取当前内容控件
+# GetCurrentContentControl
 
-返回当前选中的内容控件的标识符（即鼠标光标当前所在的内容控件）。
+返回所选内容控件的标识符（即鼠标光标当前所在的内容控件）。
 
 ## 语法
 
@@ -12,11 +12,11 @@ expression.GetCurrentContentControl();
 
 ## 参数
 
-此方法没有参数。
+此方法没有任何参数。
 
 ## 返回值
 
-string（字符串）
+string
 
 ## 示例
 

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Highlight form fields matching a keyword in their key.
 ---
 
 # Keyword match in form keys

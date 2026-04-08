@@ -31,16 +31,16 @@ function HomepageHeader() {
 const templateProps: HomepageFeaturesProps.Props = {
   featureGroups: [
     {
-      heading: 'DocSpace',
-      linkPrefix: DocSpaceFeatures.linkPrefix,
-      items: DocSpaceFeatures.items,
-      button: DocSpaceFeatures.button,
-    },
-    {
       heading: 'Docs',
       linkPrefix: DocsFeatures.linkPrefix,
       items: DocsFeatures.items,
       button: DocsFeatures.button,
+    },
+    {
+      heading: 'DocSpace',
+      linkPrefix: DocSpaceFeatures.linkPrefix,
+      items: DocSpaceFeatures.items,
+      button: DocSpaceFeatures.button,
     }
   ],
 };

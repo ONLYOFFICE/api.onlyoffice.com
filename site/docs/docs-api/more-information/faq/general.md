@@ -51,7 +51,9 @@ ONLYOFFICE Docs uses the [Node.js config module](https://www.npmjs.com/package/c
 
 Where all the main settings are stored in the *default.json* file, with some of them added or overriden by ones from *production.json* file and any user/developer settings overriden by the ones from *local.json* configuration file.
 
-> If you change the parameters in either *default.json* or *production.json* file, all the changes will be lost after ONLYOFFICE Docs update or Docker container restart (in case you have ONLYOFFICE Docs installed using Docker).
+:::note
+If you change the parameters in either *default.json* or *production.json* file, all the changes will be lost after ONLYOFFICE Docs update or Docker container restart (in case you have ONLYOFFICE Docs installed using Docker).
+:::
 
 So we strongly recommend that you **do not** alter the parameters in either *default.json* or *production.json* files and use *local.json* configuration file instead. This file must be created in the same folder with the *default.json* file and the **whole object structure** for the necessary parameter **must be retained**.
 

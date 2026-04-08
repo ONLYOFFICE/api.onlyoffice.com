@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Insert a unique ID into the document.
 ---
 
 # Insert unique id
 
 Inserts a unique id into a form document.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

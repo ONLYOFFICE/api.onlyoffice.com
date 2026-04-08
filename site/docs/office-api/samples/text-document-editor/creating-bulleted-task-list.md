@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a bulleted list for task enumeration.
 ---
 
 # Creating a bulleted task list

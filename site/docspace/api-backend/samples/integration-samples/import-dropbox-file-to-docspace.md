@@ -1,3 +1,7 @@
+---
+description: Import a file from Dropbox into a DocSpace room.
+---
+
 # Import Dropbox file to DocSpace
 
 This integration allows you to automatically import files from Dropbox into a specific room in ONLYOFFICE DocSpace. It’s ideal for collecting external resources, migrating document libraries, or building automated submission workflows.

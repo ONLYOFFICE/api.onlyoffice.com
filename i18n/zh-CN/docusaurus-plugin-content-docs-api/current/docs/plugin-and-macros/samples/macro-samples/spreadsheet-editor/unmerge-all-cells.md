@@ -2,11 +2,9 @@
 
 取消当前工作表中所有已合并的单元格。
 
-> 该宏由 VBA 代码通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
-
-<!-- 以下代码展示在截图中。 -->
-
-<!-- eslint-skip -->
+:::note
+该宏由 VBA 代码通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
+:::
 
 ``` ts
 (function(){

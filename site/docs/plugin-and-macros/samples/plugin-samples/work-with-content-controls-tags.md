@@ -1,3 +1,7 @@
+---
+description: Get a list of content control tags in a document.
+---
+
 # Work with content controls tags
 
 Gets the list of content controls tags.
@@ -6,7 +10,9 @@ Gets the list of content controls tags.
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsTags](/assets/images/plugins/gifs/work-with-content-controls-tags.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/work-with-content-controls-tags.webm" type="video/webm" />
+</video>
 
 ## Installation
 

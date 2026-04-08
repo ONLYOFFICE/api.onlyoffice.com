@@ -1,3 +1,7 @@
+---
+description: Add a custom button to the main toolbar.
+---
+
 # Main button plugin
 
 This guide walks you through creating a basic plugin for DocSpace that adds a button to the main toolbar and logs an action when clicked.

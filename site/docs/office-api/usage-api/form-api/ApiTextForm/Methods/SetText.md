@@ -24,7 +24,7 @@ boolean
 
 This example sets the text to the current text field.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to add the text to the text form.
 
 // Update the content of the form.

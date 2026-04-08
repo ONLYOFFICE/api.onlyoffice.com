@@ -1,16 +1,17 @@
-# 删除批注回调
+# onRemoveComment
 
-当使用[删除批注](../../text-document-api/Methods/RemoveComments.md)方法移除指定批注时调用的回调函数。
+使用 [RemoveComments](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RemoveComments.md) 方法删除指定评论时调用的函数。
 
 ## 参数
 
-| **名称** | **数据类型** | **说明** |
+| **名称** | **数据类型** | **描述** |
 | --------- | ------------- | ----------- |
-| comment | [事件_批注](../Enumeration/Event_comment.md) | 包含批注数据的批注对象。 |
+| comment | [Event_comment](../Enumeration/Event_comment.md) | 定义包含批注数据的批注对象。 |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onRemoveComment", (comment) => {
-    removeComments([comment.Id]);
+    console.log("event: onRemoveComment");
+    console.log("Id: " + comment.Id);
 });
 ```
 

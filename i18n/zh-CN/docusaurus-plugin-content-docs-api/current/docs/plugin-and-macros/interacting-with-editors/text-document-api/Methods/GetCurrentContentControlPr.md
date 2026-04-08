@@ -1,4 +1,4 @@
-# 获取当前内容控件属性
+# GetCurrentContentControlPr
 
 返回当前内容控件的属性。
 
@@ -12,13 +12,13 @@ expression.GetCurrentContentControlPr(contentFormat);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| contentFormat | 必填 | string | — | 内容格式（"none"、"text"、"html"、"ole" 或 "desktop"）。 |
+| contentFormat | 必需 | string |  | 内容格式（"none"、"text"、"html"、"ole" 或 "desktop"）。 |
 
 ## 返回值
 
-[内容控件属性](../Enumeration/ContentControlProperties.md)
+[ContentControlProperties](../Enumeration/ContentControlProperties.md)
 
 ## 示例
 

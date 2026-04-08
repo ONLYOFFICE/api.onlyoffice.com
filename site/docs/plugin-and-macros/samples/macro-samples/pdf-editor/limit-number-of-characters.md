@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Set a character limit for text form fields.
 ---
 
 # Limit number of characters

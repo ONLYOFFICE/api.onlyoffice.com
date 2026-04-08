@@ -1,3 +1,7 @@
+---
+description: Protect documents with a watermark overlay.
+---
+
 # Settings
 
 Protects a document using a watermark.
@@ -6,7 +10,9 @@ Protects a document using a watermark.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Settings](/assets/images/plugins/gifs/settings.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/settings.webm" type="video/webm" />
+</video>
 
 ## Installation
 

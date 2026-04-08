@@ -1,4 +1,4 @@
-# 获取已安装插件
+# GetInstalledPlugins
 
 返回所有已安装的插件。
 
@@ -8,15 +8,15 @@
 expression.GetInstalledPlugins();
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-此方法无参数。
+此方法没有任何参数。
 
 ## 返回值
 
-[插件数据](../Enumeration/PluginData.md)[]
+[PluginData](../Enumeration/PluginData.md)[]
 
 ## 示例
 

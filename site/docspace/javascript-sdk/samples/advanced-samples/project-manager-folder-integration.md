@@ -1,6 +1,12 @@
+---
+description: Track projects as folders in a shared room with file locking.
+---
+
 # Manage project folders
 
 This example shows how to create a simple project tracker that interacts with DocSpace. Each project is represented as a folder inside a shared room. You can add or remove projects, and when a project is deleted, all associated files are locked using the ONLYOFFICE API.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/project-manager-folder-integration.html)
 
 ## Before you start
 
@@ -18,7 +24,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <meta charset="UTF-8" />
     <title>Project Manager</title>
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* CSS omitted for brevity */
     </style>

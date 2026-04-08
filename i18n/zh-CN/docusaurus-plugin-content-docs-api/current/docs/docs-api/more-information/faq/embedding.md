@@ -54,6 +54,8 @@ sidebar_position: -9
 
 要删除这些按钮中的任何一个，只需在配置文件中不要包含相应的参数。
 
-> 如果您决定隐藏**下载**按钮（*editorConfig.embedded.saveUrl* 参数），请不要忘记将文档配置中的 *document.permission.download*> 参数设置为 **false** 以完全禁用下载文件的可能性。
+:::note
+如果您决定隐藏**下载**按钮（*editorConfig.embedded.saveUrl* 参数），请不要忘记将文档配置中的 *document.permission.download*> 参数设置为 **false** 以完全禁用下载文件的可能性。
+:::
 
 有关嵌入参数的更多信息，请参见[此页面](../../usage-api/config/editor/embedded.md)。

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a table with bold headers and gray background.
 ---
 
 # Creating formatted table

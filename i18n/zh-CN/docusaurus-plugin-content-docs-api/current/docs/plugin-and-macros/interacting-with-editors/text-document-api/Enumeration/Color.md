@@ -1,16 +1,16 @@
-# 颜色
+# Color
 
-无描述。
+未提供描述。
 
 ## 属性
 
-| 名称 | 类型 | 说明 |
-| ---- | ---- | ---- |
-| Color.A | number | Alpha（透明度）颜色分量值。 |
+| 名称 | 类型 | 描述 |
+| ---- | ---- | ----------- |
+| Color.A | number | Alpha 颜色分量值。 |
 | Color.B | number | 蓝色颜色分量值。 |
 | Color.G | number | 绿色颜色分量值。 |
 | Color.R | number | 红色颜色分量值。 |
 ## 类型
 
-Object（对象）
+Object
 

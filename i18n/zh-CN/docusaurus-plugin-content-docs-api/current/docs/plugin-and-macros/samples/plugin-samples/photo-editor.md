@@ -6,7 +6,9 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-![PhotoEditor](/assets/images/plugins/gifs/photo-editor.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/photo-editor.webm" type="video/webm" />
+</video>
 
 ## 安装方式
 
@@ -16,7 +18,7 @@
 
 插件 GUID：`{07FD8DFA-DFE0-4089-AL24-0730933CC80A}`。
 
-## ## 使用方法
+## 使用方法
 
 1. 在文档中选择一张图片。
 2. 在**插件**选项卡中找到**图片编辑器**插件。
@@ -181,9 +183,9 @@ GitHub 仓库：[photoeditor](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## 方法和事件
 
-- button
-- init
-- onTranslate
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetImageDataFromSelection.md)
 - [executeMethod ("GerVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)

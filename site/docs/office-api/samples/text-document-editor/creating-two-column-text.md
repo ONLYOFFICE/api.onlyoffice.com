@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a two-column text layout in a document.
 ---
 
 # Creating two-column text document

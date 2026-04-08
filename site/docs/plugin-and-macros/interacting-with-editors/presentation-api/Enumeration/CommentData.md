@@ -11,6 +11,7 @@ The comment data.
 | Solved | boolean | Specifies if the comment is resolved (**true**) or not (**false**). |
 | Text | string | The comment text. |
 | Time | string | The time when the comment was posted (in milliseconds). |
+| UserId | string | The user ID of the comment author. |
 | UserName | string | The comment author. |
 ## Type
 

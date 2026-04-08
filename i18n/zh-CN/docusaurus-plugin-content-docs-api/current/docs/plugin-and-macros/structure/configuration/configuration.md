@@ -89,7 +89,7 @@ sidebar_position: -5
 
 **示例**: `{ "fr": "french plugin name" }`
 
-#### localeTranslate
+## localeTranslate
 
 `类型: object`
 
@@ -217,11 +217,11 @@ sidebar_position: -5
 
 该可换肤插件按钮用于插件界面（仅用于具有独立窗口的可视插件，即 `isVisual == true` 且 `isInsideMode == false`）。
 
-| 名称       | 类型                                | 描述                                                                                         |
-| ---------- | ----------------------------------- | -------------------------------------------------------------------------------------------- |
-| text       | string                              | 按钮上显示的标签。                                                                           |
-| primary    | boolean                             | 定义按钮是否为主按钮。主按钮标记仅影响按钮的皮肤样式。                                       |
-| isViewer   | boolean                             | 定义按钮是否仅在查看模式下显示。                                                             |
+| 名称       | 类型                                | 描述                                                                                        |
+| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------- |
+| text       | string                              | 按钮上显示的标签。                                                                          |
+| primary    | boolean                             | 定义按钮是否为主按钮。主按钮标记仅影响按钮的皮肤样式。                                      |
+| isViewer   | boolean                             | 定义按钮是否仅在查看模式下显示。                                                            |
 | textLocale | [localeTranslate](#localetranslate) | text 字段的翻译。对象的键为两字母语言代码（如 ru、de、it 等），值为对应语言的按钮标签翻译。 |
 
 **示例**:
@@ -306,7 +306,7 @@ sidebar_position: -5
 
 `类型: array of editorType`
 
-插件可用的编辑器（**word**、**cell**、**slide** 或 **pdf**）。
+插件可用的编辑器（**word**、**cell**、**slide** 或 **pdf**）。默认值为 **[]**。
 
 **示例**: `["word"]`
 
@@ -334,6 +334,10 @@ sidebar_position: -5
 ### variations.events
 
 `类型: array of EventType`
+
+:::danger[已废弃]
+从版本 8.2 开始，请改用 [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) 方法，该方法不需要此参数。
+:::
 
 当前插件代码中使用的插件事件。了解如何订阅事件，请参见[这里](../../interacting-with-editors/overview/how-to-attach-events.md)。
 
@@ -385,7 +389,7 @@ sidebar_position: -5
 
 **示例**: `"text"`
 
-![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
+![Init data](/assets/images/plugins/plugin-init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/plugin-init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
@@ -585,7 +589,7 @@ sidebar_position: -5
 
 **示例**: `"#F5F5F5"`
 
-![Light icon](/assets/images/plugins/icon-light.png)
+![Light icon](/assets/images/plugins/plugin-icon.png)
 
 ### variations.store.background.dark
 
@@ -595,7 +599,7 @@ sidebar_position: -5
 
 **示例**: `"#444444"`
 
-![Dark icon](/assets/images/plugins/icon-dark.png)
+![Dark icon](/assets/images/plugins/plugin-icon.dark.png)
 
 ### variations.store.categories
 

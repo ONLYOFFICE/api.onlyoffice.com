@@ -6,6 +6,22 @@ sidebar_position: -1
 
 ONLYOFFICE 插件与宏 API 的变更列表。
 
+## 版本 9.2 {#version-92}
+
+- 为文本文档 API 添加了 [AnnotateParagraph](../interacting-with-editors/text-document-api/Methods/AnnotateParagraph.md) 方法。
+- 为文本文档 API 添加了 [RemoveAnnotationRange](../interacting-with-editors/text-document-api/Methods/RemoveAnnotationRange.md) 方法。
+- 为文本文档 API 添加了 [SelectAnnotationRange](../interacting-with-editors/text-document-api/Methods/SelectAnnotationRange.md) 方法。
+- 为文本文档 API 添加了 [onBlurAnnotation](../interacting-with-editors/text-document-api/Events/onBlurAnnotation.md) 事件。
+- 为文本文档 API 添加了 [onClickAnnotation](../interacting-with-editors/text-document-api/Events/onClickAnnotation.md) 事件。
+- 为文本文档 API 添加了 [onFocusAnnotation](../interacting-with-editors/text-document-api/Events/onFocusAnnotation.md) 事件。
+- 为文本文档 API 添加了 [onParagraphText](../interacting-with-editors/text-document-api/Events/onParagraphText.md) 事件。
+- 根据帮助中心信息更新了[为所有用户通过插件管理器添加插件](../tutorials/installing/onlyoffice-docs-on-premises.md)的说明。
+
+## 版本 9.1 {#version-91}
+
+- 为电子表格 API 的 *window.Asc.plugin.executeMethod* 添加了 [RemoveOleObject](../interacting-with-editors/spreadsheet-api/Methods/RemoveOleObject.md) 方法。
+- 为演示文稿 API 的 *window.Asc.plugin.executeMethod* 添加了 [RemoveOleObject](../interacting-with-editors/presentation-api/Methods/RemoveOleObject.md) 方法。
+
 ## 版本 9.0 {#version-90}
 
 - 添加了使用**宏**插件为电子表格添加[异步自定义函数](../macros/adding-custom-functions.md#asynchronous-functions)的功能。
@@ -39,7 +55,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 - 添加了关于插件触发上下文菜单事件时的位置的信息。
 - 添加了**工具栏菜单点击**事件。
 - 向 *window.Asc.plugin.executeMethod* 添加了[激活窗口](../customization/windows-and-panels.md#activating-a-window)方法。
-- 向 *window.Asc.plugin.executeMethod* 添加了[添加工具栏菜单项](../customization/toolbar.md#creating-a-toolbar-item)方法。
+- 向 *window.Asc.plugin.executeMethod* 添加了[添加工具栏菜单项](../customization/toolbar.md#addtoolbarmenuitem)方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了[获取选中的 OLE 对象](../interacting-with-editors/text-document-api/Methods/GetSelectedOleObjects.md)方法。
 - 向 *window.Asc.plugin.executeMethod* 添加了[设置插件选项](../interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md)方法。
 - 向电子表格 API 中的 *window.Asc.plugin.executeMethod* 添加了**获取所有评论**方法。

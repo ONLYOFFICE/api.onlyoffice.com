@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Make all bullet point text bold on slides.
 ---
 
 # Bold bullet points

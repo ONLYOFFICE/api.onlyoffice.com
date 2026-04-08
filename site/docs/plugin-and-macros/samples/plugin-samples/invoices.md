@@ -1,3 +1,7 @@
+---
+description: Insert template fields for invoice information.
+---
+
 # Invoices
 
 Inserts template fields for invoice information.
@@ -6,7 +10,9 @@ Inserts template fields for invoice information.
 
 **Supported editors:** documents.
 
-![Invoices](/assets/images/plugins/gifs/invoices.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/invoices.webm" type="video/webm" />
+</video>
 
 ## Installation
 

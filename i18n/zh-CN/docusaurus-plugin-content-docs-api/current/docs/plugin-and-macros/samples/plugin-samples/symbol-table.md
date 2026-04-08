@@ -6,9 +6,11 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-![SymbolTable](/assets/images/plugins/gifs/symbol-table.gif)
+<video autoPlay loop muted playsInline>
+  <source src="/assets/images/plugins/webm/symbol-table.webm" type="video/webm" />
+</video>
 
-## ## 安装方式
+## 安装方式
 
 从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) 下载此插件，并根据以下指南完成安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
 
@@ -99,11 +101,11 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 
 ## 方法和事件
 
-- button
-- init
-- onExternalMouseUp
-- onMethodReturn
-- onTranslate
+- [button](/docs/plugin-and-macros/customization/buttons.md)
+- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
+- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
 - [executeMethod ("GetFontList")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetFontList.md)
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)

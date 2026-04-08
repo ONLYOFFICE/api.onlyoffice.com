@@ -1,6 +1,6 @@
-# 修改 OLE 对象
+# ChangeOleObject
 
-根据 OLE 对象数据中指定的内部标识符修改 OLE 对象。
+更改 OLE 对象数据中指定 *InternalId* 的 OLE 对象。
 
 ## 语法
 
@@ -12,13 +12,13 @@ expression.ChangeOleObject(ObjectData);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| ObjectData | 必填 | [OLE 对象数据](../Enumeration/OLEObjectData.md) | — | OLEObjectData 对象。 |
+| ObjectData | 必需 | [OLEObjectData](../Enumeration/OLEObjectData.md) |  | OLEObjectData 对象。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

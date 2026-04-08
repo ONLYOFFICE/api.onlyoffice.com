@@ -2,10 +2,6 @@
 
 在表单文档中插入唯一 ID。
 
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
-
 ``` ts
 (function()
 {

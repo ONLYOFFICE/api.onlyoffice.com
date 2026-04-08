@@ -1,13 +1,16 @@
 ---
 hide_table_of_contents: true
+description: Sort table rows by column values.
 ---
 
 # Sort tables
 
 Automatically sorts table rows alphabetically or numerically based on the selected column.
 
-> Please select the entire column by which you want the table to be sorted (alphabetically or numerically).
-> The macro will only work correctly if the whole column is selected.
+:::tip
+Please select the entire column by which you want the table to be sorted (alphabetically or numerically).
+The macro will only work correctly if the whole column is selected.
+:::
 
 ```ts
 (function() {

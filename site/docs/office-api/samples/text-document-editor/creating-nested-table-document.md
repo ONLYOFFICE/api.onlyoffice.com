@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Create a table with nested tables for hierarchical data.
 ---
 
 # Creating nested table document

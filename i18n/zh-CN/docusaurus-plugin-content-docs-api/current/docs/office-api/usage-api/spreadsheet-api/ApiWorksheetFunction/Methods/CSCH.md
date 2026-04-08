@@ -1,0 +1,35 @@
+# CSCH
+
+返回角度的双曲余割值。
+
+## 语法
+
+```javascript
+expression.CSCH(arg1);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将计算其双曲余割的弧度角。其绝对值必须小于 *2^27*。 |
+
+## 返回值
+
+number
+
+## 示例
+
+此示例演示如何获取角的双曲余割。
+
+```javascript editor-xlsx
+// How to return hyperbolic cosecant.
+
+// Use function to get the hyperbolic cosecant of an angle.
+
+let worksheet = Api.GetActiveSheet();
+let func = Api.WorksheetFunction;
+worksheet.GetRange("A1").SetValue(func.CSCH(0.785398));
+```

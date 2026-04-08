@@ -17,17 +17,17 @@ The connector is available in the official [Atlassian Marketplace](https://marke
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
-- The following formats are available for viewing only: DOC, DOCM, DOC, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLTZ , XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.
-- The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Jira.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
+- The app will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Jira.
 
 ## Installing ONLYOFFICE Docs
 
-You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Jira and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Jira directly.
+You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Jira and any end clients. If that is not the case, use the official [ONLYOFFICE Docs documentation page](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx). ONLYOFFICE Docs must also be able to POST to Jira directly.
 
-The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/onlyoffice/Docker-DocumentServer).
+The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer).
 
-## Installing Jira ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Jira
 
 Upload the compiled *target/onlyoffice-jira-app.jar* to Jira on the **Manage apps** page.
 
@@ -40,23 +40,23 @@ You can also install the app from the Jira administration panel:
 3. Locate **ONLYOFFICE Connector for Jira** using search.
 4. Click **Install** to download and install the app.
 
-## Configuring Jira ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for Jira
 
 Find the uploaded app on the **Manage apps** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
 ``` sh
-http://documentserver/
+https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Jira server. The Jira server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
-
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Jira administration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Jira server. The Jira server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. The **Advanced server settings** section allows you to set the ONLYOFFICE Docs address for internal requests from Jira and the returning Jira address for internal requests from ONLYOFFICE Docs.
 
-## Compiling Jira ONLYOFFICE integration app
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Jira administration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-If you plan to compile the Jira ONLYOFFICE integration app yourself (e.g. edit the source code and compile it afterwards), follow these steps:
+## Compiling ONLYOFFICE app for Jira
+
+If you plan to compile the ONLYOFFICE app for Jira yourself (e.g. edit the source code and compile it afterwards), follow these steps:
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
@@ -73,19 +73,19 @@ If you plan to compile the Jira ONLYOFFICE integration app yourself (e.g. edit t
    atlas-package
    ```
 
-## Using Jira ONLYOFFICE integration app
+## Using ONLYOFFICE app for Jira
 
 With the ONLYOFFICE integration app, you can view, edit and co-author office files attached to tasks right within your Jira dashboard.
 
-To edit documents, click the ONLYOFFICE Docs icon next to the name of an attachment - the corresponding online editor will be opened in a new tab.
+To edit documents, select the **Edit in ONLYOFFICE** action next to the name of an attachment - the corresponding online editor will be opened in a new tab.
 
-After the editing session is over, a document with all the changes will be saved as a new attachment. You will recognize it by the same name with a postfix. If you're editing an attachment collaboratively, the changes are saved only after the last user quits the editor.
+After the editing session is over, a document with all the changes will be saved as a new attachment with a suffix added to the file name. If you are editing an attachment collaboratively, the changes are saved only after the last user quits the editor.
 
 ## How it works
 
 The ONLYOFFICE integration follows the API documented [here](../basic-concepts.md).
 
-1. User navigates to the Jira attachments and selects the **Edit in ONLYOFFICE** action.
+1. The user navigates to the Jira attachments and selects the **Edit in ONLYOFFICE** action.
 
 2. Jira makes a request to **OnlyOfficeEditorServlet** (URL of the form: */plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id*).
 
@@ -93,11 +93,11 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 4. Jira prepares a JSON object with the following properties:
 
-   - **url**: the temporary link that ONLYOFFICE Docs uses to download the document;
-   - **callbackUrl**: the URL that ONLYOFFICE Docs informs about status of the document editing;
-   - **docserviceApiUrl**: the URL that the client needs to reply to ONLYOFFICE Docs (provided by the *files.docservice.url.api* property);
-   - **key**: the UUID to instruct ONLYOFFICE Docs whether to download the document again or not;
-   - **title**: the document title (name).
+   - **url** - the temporary link that ONLYOFFICE Docs uses to download the document;
+   - **callbackUrl** - the URL that ONLYOFFICE Docs informs about status of the document editing;
+   - **docserviceApiUrl** - the URL that the client needs to respond to ONLYOFFICE Docs (provided by the *files.docservice.url.api* property);
+   - **key** - the UUID to instruct ONLYOFFICE Docs whether to download the document again or not;
+   - **title** - the document title (name).
 
 5. Jira takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.
 
@@ -109,6 +109,6 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 9. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Jira know that the clients have finished editing the document and closed it.
 
-10. The document with all the changes is saved as a new attachment with the postfix added to the file name.
+10. The document with all the changes is saved as a new attachment with the suffix added to the file name.
 
-Download the Jira ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-jira).
+Download the ONLYOFFICE app for Jira [here](https://github.com/ONLYOFFICE/onlyoffice-jira).

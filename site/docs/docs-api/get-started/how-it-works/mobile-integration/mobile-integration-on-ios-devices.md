@@ -189,7 +189,6 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 7. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open:
 
-   <!-- eslint-skip -->
    ``` ts
    const config = {
      {external_config},

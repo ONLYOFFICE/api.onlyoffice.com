@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Add automatic page numbering in the document footer.
 ---
 
 # Adding page numbering in footer

@@ -27,7 +27,7 @@ This example selects the paragraph.
 
 // Select a paragraph with a cursor.
 
-let doc = editor.GetDocument();
+let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 let result = paragraph.Select();

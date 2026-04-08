@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Auto-complete address fields from partial data.
 ---
 
 # Complete address information
 
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 // Macros structure:
@@ -20,11 +17,11 @@ Completes the basic address data with detailed address information and inserts i
 
 (function()
 {
-    let API_KEY = 'yourAPIkey';
+    let API_KEY = 'YOUR_API_KEY';
     let ENDPOINT = 'https://api.geoapify.com/v1/geocode/search';
-    let worksheet = Api.GetActiveSheet();
+    let oWorksheet = Api.GetActiveSheet();
     let row = 2;
-    makeRequest(worksheet.GetRange(`A${row}`).GetText());
+    makeRequest(oWorksheet.GetRange(`A${row}`).GetText());
     
     // REQUEST
     function makeRequest(ADDRESS) {
@@ -86,7 +83,7 @@ Completes the basic address data with detailed address information and inserts i
         }
         // Execute recursively until "Address" value is empty
         row++;
-        makeRequest(worksheet.GetRange(`A${row}:A${row}`).GetText());
+        makeRequest(oWorksheet.GetRange(`A${row}:A${row}`).GetText());
     }
     // Sheet has to be reloaded on changes
     function reload() {
@@ -99,7 +96,9 @@ Completes the basic address data with detailed address information and inserts i
 
 Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md)
 
-> For the macros to function, replace *yourAPIkey* with the API key obtained from [Geoapify](https://www.geoapify.com/).
+:::note
+For the macros to function, replace *yourAPIkey* with the API key obtained from [Geoapify](https://www.geoapify.com/).
+:::
 
 ## Result
 

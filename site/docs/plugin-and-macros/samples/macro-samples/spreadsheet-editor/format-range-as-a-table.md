@@ -1,14 +1,11 @@
 ---
 hide_table_of_contents: true
+description: Format a cell range as a styled table.
 ---
 
 # Format range as table
 
 Formats the range of cells **A1:D10** as a table.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
 
 ``` ts
 (function()

@@ -1,16 +1,15 @@
 ---
 hide_table_of_contents: true
+description: Import data from CSV or TXT files into a spreadsheet.
 ---
 
 # Import CSV/TXT data
 
 Imports data from remote CSV/TXT files into the spreadsheet.
 
-> This macro is operational only with the desktop versions of the ONLYOFFICE editors.
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
+:::note
+This macro is operational only with the desktop versions of the ONLYOFFICE editors.
+:::
 
 ``` ts
 (function() 

@@ -1,17 +1,22 @@
-# 添加批注回调
+# onAddComment
 
-当使用[添加批注](../../text-document-api/Methods/AddComment.md)方法向文档添加批注时调用的函数。
+使用 [AddComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddComment.md) 方法向文档添加评论时调用的函数。
 
 ## 参数
 
-| **名称** | **数据类型** | **说明** |
+| **名称** | **数据类型** | **描述** |
 | --------- | ------------- | ----------- |
-| comment | [事件_批注](../Enumeration/Event_comment.md) | 包含批注数据的批注对象。 |
+| comment | [Event_comment](../Enumeration/Event_comment.md) | 定义包含批注数据的批注对象。 |
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onAddComment", (comment) => {
-    Comments.push(comment);
-    $('#scrollable-container-id').append(makeComment(comment.Id, comment));
+    console.log("event: onAddComment");
+    console.log("Id: " + comment.Id);
+    console.log("UserName: " + comment.Data.UserName);
+    console.log("Text: " + comment.Data.Text);
+    console.log("Time: " + comment.Data.Time);
+    console.log("Solved: " + comment.Data.Solved);
+    console.log("QuoteText: " + comment.Data.QuoteText);
 });
 ```
 

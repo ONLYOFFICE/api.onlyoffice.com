@@ -24,8 +24,8 @@ boolean
 
 This example shows how to add new roles.
 
-```javascript editor-pdf
-let doc = editor.GetDocument();
+```javascript editor-forms
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");

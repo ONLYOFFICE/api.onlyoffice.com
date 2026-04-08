@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Remove duplicate slides from a presentation.
 ---
 
 # Remove duplicate slides

@@ -1,5 +1,6 @@
 ---
 hide_table_of_contents: true
+description: Reset text formatting to default properties.
 ---
 
 # Reset text properties

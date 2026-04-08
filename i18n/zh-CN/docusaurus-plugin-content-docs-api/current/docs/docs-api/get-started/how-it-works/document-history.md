@@ -136,9 +136,9 @@ sidebar_position: -19
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+   ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
-5. 在浏览器中打开您的*html*文件，
+5. 在浏览器中打开您的*html*文件。
 
 6. 在文档编辑器菜单中打开*版本历史记录*选项。
 
@@ -158,13 +158,15 @@ sidebar_position: -19
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
 ## 打开带有更改突出显示的文档历史记录
 
 如果文档版本是使用文档编辑器创建的，那么在查看文档历史记录时可以显示文档的更改。为了实现这一点，在[保存](./saving-file.md)编辑会话时，除了文档版本本身之外，还必须将额外的数据保存到**文档存储服务**中。在**文档编辑器**中编辑后，有关编辑会话期间的更改信息将与已更改的文档一起发送：
 
-> 当服务器版本更新时，**文档编辑器**不会使用*changes*s数据来突出显示历史记录中的更改。它只会在*changesurl*参数中返回已更改的文档。
+:::note
+当服务器版本更新时，**文档编辑器**不会使用*changes*数据来突出显示历史记录中的更改。它只会在*changesurl*参数中返回已更改的文档。
+:::
 
 - [历史记录](../../usage-api/callback-handler.md#history)：当您在侧面板中查看文档历史记录时，此信息允许显示每个文档版本的时间和作者。必须作为发送给[refreshHistory](../../usage-api/methods.md#refreshhistory)方法的对象的属性changes发送。
 

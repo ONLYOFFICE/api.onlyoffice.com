@@ -1,16 +1,15 @@
 ---
 hide_table_of_contents: true
+description: Change the value of specified cells.
 ---
 
 # Change cell value
 
 Changes the selected cell value.
 
-> This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
-
-<!-- This code snippet is shown in the screenshot. -->
-
-<!-- eslint-skip -->
+:::note
+This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
+:::
 
 ``` ts
 (function(){
