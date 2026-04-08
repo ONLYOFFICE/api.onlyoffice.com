@@ -14,7 +14,7 @@ const SOURCES = [
   { dir: 'site/docspace/mcp-server/use-cases', routeBase: 'docspace/mcp-server/use-cases', output: 'docspace-ai-samples.json' },
   // DocSpace
   { dir: 'site/docspace/api-backend/samples', routeBase: 'docspace/api-backend/samples', output: 'docspace-samples.json' },
-  { dir: 'site/docspace/javascript-sdk/samples', routeBase: 'docspace/javascript-sdk/samples', output: 'docspace-jssdk-samples.json' },
+  { dir: 'site/docspace/javascript-sdk', routeBase: 'docspace/javascript-sdk', output: 'docspace-jssdk-samples.json', include: ['samples/**/*.md', 'get-started/react-component.md'] },
   { dir: 'site/docspace/plugins-sdk/samples', routeBase: 'docspace/plugins-sdk/samples', output: 'docspace-plugins-samples.json' },
 ];
 
@@ -54,7 +54,8 @@ for (const source of SOURCES) {
     continue;
   }
 
-  const files = glob.sync('**/*.md', { cwd: samplesDir });
+  const patterns = source.include || ['**/*.md'];
+  const files = patterns.flatMap(p => glob.sync(p, { cwd: samplesDir }));
 
   const items = files
     .filter(f => {

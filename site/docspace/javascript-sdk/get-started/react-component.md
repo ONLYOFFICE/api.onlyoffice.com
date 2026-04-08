@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+description: Integrate ONLYOFFICE DocSpace into React projects.
+tags: ["DocSpace", "Embed SDK", "Integration", "React"]
 ---
 
 # React component
