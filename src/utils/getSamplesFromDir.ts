@@ -18,6 +18,10 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'PDF': 'pink',
       'Macros': 'blue',
       'Plugins': 'blue',
+      'DocSpace': 'blue',
+      'Basic': 'green',
+      'Advanced': 'purple',
+      'Ready-to-use': 'pink',
     };
     const docTags: SamplesGrid.Tag[] = (doc as any).tags?.map((t: string) => ({ label: t, variant: tagVariants[t] ?? 'default' })) ?? [];
     return {
@@ -43,7 +47,7 @@ export function getDocspaceSamples(category: string): SamplesGrid.Item[] {
   return [
     ...toItems(docspaceSamplesData, category, [{ label: 'REST API', variant: 'blue' }]),
     ...toItems(docspaceJsSdkData, category, [{ label: 'JS SDK', variant: 'blue' }]),
-    ...toItems(docspacePluginsData, category, [{ label: 'Plugins SDK', variant: 'blue' }]),
+    ...toItems(docspacePluginsData, category),
   ];
 }
 

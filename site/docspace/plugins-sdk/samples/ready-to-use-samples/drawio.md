@@ -1,5 +1,6 @@
 ---
 description: Create diagrams and flowcharts with the Draw.io plugin.
+tags: ["DocSpace", "Plugins", "Ready-to-use"]
 ---
 
 # Draw.io

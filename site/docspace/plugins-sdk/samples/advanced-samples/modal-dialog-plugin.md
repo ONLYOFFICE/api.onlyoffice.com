@@ -1,5 +1,6 @@
 ---
 description: Create files through a modal dialog with API calls.
+tags: ["DocSpace", "Plugins", "Advanced"]
 ---
 
 # Modal dialog plugin
