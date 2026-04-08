@@ -25,7 +25,7 @@ With the Meridian Corp website redesign project officially complete and signed o
 - [How to do a final pre-archive verification](#step-6-final-pre-archive-verification)
 - [How to archive a room correctly](#step-7-archive-the-room)
 
-**Tools used:** `get_room_security_info`, `set_room_security`, `get_folder_content`, `get_file_info`, `delete_file`, `delete_folder`, `archive_room`. `download_file_as_text`
+**Tools used:** `get_room_security_info`, `set_room_security`, `get_folder_content`, `get_file_info`, `delete_file`, `delete_folder`, `archive_room`, `download_file_as_text`
 
 ## Before you proceed
 
