@@ -3,7 +3,7 @@ hide_table_of_contents: true
 description: Create a table with fixed-width columns.
 ---
 
-# Creating fixed-width table document
+# Creating fixed-width table
 
 Create a document with a table that has fixed column widths for predictable document structure:
 
