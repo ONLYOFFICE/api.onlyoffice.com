@@ -10,7 +10,16 @@ import docsAiSamplesData from '@site/src/data/docs-ai-samples.json';
 
 function toItems(data: typeof docsSamplesData, category: string, defaultTags?: SamplesGrid.Tag[]): SamplesGrid.Item[] {
   return data.map((doc) => {
-    const docTags: SamplesGrid.Tag[] = (doc as any).tags?.map((t: string) => ({ label: t, variant: 'green' as const })) ?? [];
+    const tagVariants: Record<string, SamplesGrid.Tag['variant']> = {
+      'Docs': 'blue',
+      'Text documents': 'purple',
+      'Spreadsheets': 'green',
+      'Presentations': 'purple',
+      'PDF': 'pink',
+      'Macros': 'blue',
+      'Plugins': 'blue',
+    };
+    const docTags: SamplesGrid.Tag[] = (doc as any).tags?.map((t: string) => ({ label: t, variant: tagVariants[t] ?? 'default' })) ?? [];
     return {
       title: doc.title,
       description: doc.description,
@@ -23,7 +32,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
 
 export function getDocsSamples(category: string): SamplesGrid.Item[] {
   return [
-    ...toItems(docsSamplesData, category, [{ label: 'Docs API', variant: 'blue' }]),
+    ...toItems(docsSamplesData, category),
     ...toItems(docsOfficeApiData, category, [{ label: 'Office API', variant: 'blue' }]),
     ...toItems(docsPluginsData, category),
     ...toItems(docsBuilderData, category, [{ label: 'Document Builder', variant: 'blue' }]),
