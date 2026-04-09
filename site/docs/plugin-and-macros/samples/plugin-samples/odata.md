@@ -1,6 +1,6 @@
 ---
 description: Import external data via the OData protocol.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Spreadsheets"]
 ---
 
 # OData Import

@@ -1,6 +1,6 @@
 ---
 description: Check grammar, spelling, and style using LanguageTool.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
 ---
 
 # Language tool

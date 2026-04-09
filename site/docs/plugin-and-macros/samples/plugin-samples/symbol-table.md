@@ -1,6 +1,6 @@
 ---
 description: Insert special symbols from a character table.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
 ---
 
 # Symbol table

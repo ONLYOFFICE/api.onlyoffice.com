@@ -1,6 +1,6 @@
 ---
 description: Convert selected text to speech using Web Speech API.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
 ---
 
 # Speech

@@ -1,6 +1,6 @@
 ---
 description: Add comments to spreadsheet cells.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Spreadsheets"]
 ---
 
 # Add comment in cell

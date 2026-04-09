@@ -1,6 +1,6 @@
 ---
 description: Edit images using the Toast UI Image Editor.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
 ---
 
 # Photo editor

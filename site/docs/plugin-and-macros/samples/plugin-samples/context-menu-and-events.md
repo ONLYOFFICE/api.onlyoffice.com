@@ -1,6 +1,6 @@
 ---
 description: Track context menu events and cursor position changes.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
 ---
 
 # Context menu and events

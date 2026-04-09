@@ -1,6 +1,6 @@
 ---
 description: Search for text and replace it interactively.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
 ---
 
 # Search and replace

@@ -1,6 +1,6 @@
 ---
 description: Manage comments with categories and severity levels.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
 ---
 
 # Extended comments

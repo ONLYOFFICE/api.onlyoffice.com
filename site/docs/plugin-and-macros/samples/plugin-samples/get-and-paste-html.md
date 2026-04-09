@@ -1,6 +1,6 @@
 ---
 description: Get, modify, and paste back HTML content in the editor.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
 ---
 
 # Get and paste html

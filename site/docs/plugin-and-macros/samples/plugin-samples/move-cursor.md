@@ -1,6 +1,6 @@
 ---
 description: Move the cursor to the document start or end.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
 ---
 
 # Move cursor

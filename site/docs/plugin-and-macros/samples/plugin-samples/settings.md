@@ -1,6 +1,6 @@
 ---
 description: Protect documents with a watermark overlay.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
 ---
 
 # Settings

@@ -1,6 +1,6 @@
 ---
 description: Embed YouTube videos as OLE objects in the editor.
-tags: ["Docs", "Plugins"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
 ---
 
 # YouTube
