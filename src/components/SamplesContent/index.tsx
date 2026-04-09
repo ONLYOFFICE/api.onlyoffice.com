@@ -1,5 +1,5 @@
-import { type FC, type ReactNode, useRef, useState, useEffect } from 'react';
-import { useLocation, useHistory } from '@docusaurus/router';
+import { type FC, type ReactNode, useRef, useState, useEffect, useMemo, useCallback } from 'react';
+import { useLocation } from '@docusaurus/router';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { SamplesGrid } from '@site/src/components/SamplesGrid';
 import { Samples } from '@site/src/homepageItems';
@@ -38,7 +38,6 @@ function getCategoryFromUrl(search: string): string {
 export const SamplesContent: FC<Props> = ({ categories }) => {
   const isBrowser = useIsBrowser();
   const location = useLocation();
-  const history = useHistory();
 
   const [activeCategory, setActiveCategory] = useState(() => getCategoryFromUrl(location.search));
   const [currentPage, setCurrentPage] = useState(0);
@@ -57,7 +56,7 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
   const allItems = itemsByCategory[activeCategory] || [];
   const prevSearchRef = useRef({ query: '', results: [] as SamplesGrid.Item[] });
 
-  const filteredItems = (() => {
+  const filteredItems = useMemo(() => {
     if (!searchQuery) {
       prevSearchRef.current = { query: '', results: [] };
       return allItems;
@@ -83,26 +82,31 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
 
     prevSearchRef.current = { query: searchQuery, results };
     return results;
-  })();
+  }, [allItems, searchQuery]);
 
   const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
-  const items = filteredItems.slice(currentPage * ITEMS_PER_PAGE, (currentPage + 1) * ITEMS_PER_PAGE);
+  const items = useMemo(
+    () => filteredItems.slice(currentPage * ITEMS_PER_PAGE, (currentPage + 1) * ITEMS_PER_PAGE),
+    [filteredItems, currentPage],
+  );
 
-  const handleCategoryChange = (id: string) => {
+  const handleCategoryChange = useCallback((id: string) => {
     setActiveCategory(id);
     setCurrentPage(0);
     setSearchQuery('');
     prevSearchRef.current = { query: '', results: [] };
 
-    const params = new URLSearchParams(location.search);
+    // Use native replaceState to update URL without triggering
+    // React Router's full navigation cycle (PendingNavigation).
+    const params = new URLSearchParams(window.location.search);
     params.set('doctype', id);
-    history.replace({ ...location, search: `?${params.toString()}` });
-  };
+    window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+  }, []);
 
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
     setCurrentPage(0);
-  };
+  }, []);
 
   return (
     <>

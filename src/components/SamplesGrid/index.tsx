@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import { type FC, type ReactNode, memo } from 'react';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
@@ -42,7 +42,7 @@ const TagBadge: FC<SamplesGrid.Tag> = ({ label, variant = 'default' }) => {
 
 type FeatureProps = SamplesGrid.Item & { compact?: boolean };
 
-const Feature: FC<FeatureProps> = ({
+const Feature: FC<FeatureProps> = memo(({
   icon,
   title,
   description,
@@ -95,14 +95,14 @@ const Feature: FC<FeatureProps> = ({
       </div>
     </div>
   );
-};
+});
 
-export const SamplesGrid: FC<SamplesGrid.Props> = ({ items, compact }) => {
+export const SamplesGrid: FC<SamplesGrid.Props> = memo(({ items, compact }) => {
   return (
     <div className={styles.samplesGridList}>
       {items.map((props, idx) => (
-        <Feature key={idx} {...props} compact={compact} features={compact ? undefined : props.features} />
+        <Feature key={`${props.title}-${idx}`} {...props} compact={compact} features={compact ? undefined : props.features} />
       ))}
     </div>
   );
-};
+});
