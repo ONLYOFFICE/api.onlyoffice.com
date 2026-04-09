@@ -81,7 +81,6 @@
   line-height: 1.5;
   color: var(--ifm-color-content-secondary, #555);
   margin: 0;
-  min-height: calc(2 * 1.5 * var(--text-body-font-size-medium, 14px));
 }
 
 /* Feature bullet list */
@@ -126,7 +125,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  min-height: 54px;
   align-content: flex-end;
 }
 
