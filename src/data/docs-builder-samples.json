@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Filling spreadsheet",
+    "description": "Fills spreadsheet with array-based values.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/filling_spreadsheet",
+    "tags": ["Docs", "Builder", "Spreadsheets", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Commenting spreadsheet errors",
+    "description": "Comments spreadsheet cells with formula errors.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/cpp/commenting_errors",
+    "tags": ["Docs", "Builder", "Spreadsheets", "C++", ".Net"]
+  },
+  {
+    "title": "Creating presentation",
+    "description": "Creates presentation with multiple slides, images and text.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_presentation",
+    "tags": ["Docs", "Builder", "Presentations", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Creating chart presentation",
+    "description": "Creates single-slide chart presentation.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/cpp/creating_chart_presentation",
+    "tags": ["Docs", "Builder", "Presentations", "C++", ".Net"]
+  },
+  {
+    "title": "Creating basic form",
+    "description": "Creates basic form with text and image inputs.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_basic_form",
+    "tags": ["Docs", "Builder", "PDF", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Creating advanced form",
+    "description": "Creates advanced form with table structure.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/cpp/creating_advanced_form",
+    "tags": ["Docs", "Builder", "PDF", "C++", ".Net"]
+  },
+  {
+    "title": "Filling form",
+    "description": "Fills form with text values and image.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/cpp/filling_form",
+    "tags": ["Docs", "Builder", "PDF", "C++", ".Net"]
+  },
+  {
+    "title": "Generating user feedback report",
+    "description": "Creates an XLSX report with average scores, highlighted negative comments, individual ratings, and charts.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_user_feedback_report",
+    "tags": ["Docs", "Builder", "Spreadsheets", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Generating invoice from order data",
+    "description": "Creates a PDF invoice with customer details, itemized order, pricing, and tax-inclusive totals.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_invoice",
+    "tags": ["Docs", "Builder", "PDF", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Generating employment agreement",
+    "description": "Creates a personalized PDF employment agreement from HR form data and saves it to DocSpace for signing and storage.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_employment_agreement",
+    "tags": ["Docs", "Builder", "PDF", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Generating personalized investment plan",
+    "description": "Creates an XLSX investment plan with projections and charts tailored to the client's financial goals and input data.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_investment_plan",
+    "tags": ["Docs", "Builder", "Spreadsheets", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Generating inventory report",
+    "description": "Creates an XLSX report with current stock items, including quantities and status indicators.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_inventory_report",
+    "tags": ["Docs", "Builder", "Spreadsheets", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Creating startup market analysis presentation",
+    "description": "Generates a presentation with market trends, competition, and customer insights using integrated external data.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_startup_presentation",
+    "tags": ["Docs", "Builder", "Presentations", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Creating commercial offer",
+    "description": "Generates a personalized commercial offer in DOCX format with client-specific products, services, and timelines.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_commercial_offer",
+    "tags": ["Docs", "Builder", "Text documents", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Creating employee training plan",
+    "description": "Generates a structured DOCX training plan with learning goals, deadlines, and resources for each employee.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_development_plan",
+    "tags": ["Docs", "Builder", "Text documents", "C++", ".Net", "Python", "Java"]
+  },
+  {
+    "title": "Creating annual business report",
+    "description": "Generates a DOCX annual report with financial performance, key achievements, and strategic highlights based on external data.",
+    "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_annual_report",
+    "tags": ["Docs", "Builder", "Text documents", "C++", ".Net", "Python", "Java"]
+  }
+]

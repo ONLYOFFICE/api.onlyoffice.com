@@ -32,10 +32,10 @@ export const Samples: Samples = {
       ],
       viewLink:'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
       tags: [
-        { label: 'Document Builder', variant: 'blue' },
-        { label: 'PDF' },
+        { label: 'Docs', variant: 'blue' },
+        { label: 'Builder', variant: 'blue' },
+        { label: 'PDF', variant: 'pink' },
         { label: 'C++', variant: 'purple' },
-        { label: '.Net' },
       ],
     },
     {
@@ -54,10 +54,10 @@ export const Samples: Samples = {
       ],
       viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/#spreadsheet-editor',
       tags: [
+        { label: 'Docs', variant: 'blue' },
         { label: 'Plugins', variant: 'blue' },
-        { label: 'Spreadsheets' },
-        { label: 'AI Tools', variant: 'green' },
-        { label: 'Macros' },
+        { label: 'AI Tools', variant: 'pink' },
+        { label: 'Spreadsheets', variant: 'green' },
       ],
     },
     {
@@ -77,9 +77,9 @@ export const Samples: Samples = {
       viewLink:'/docs/docs-api/samples/external-access-to-the-document-editing/',
       tags: [
         { label: 'Docs', variant: 'blue' },
-        { label: 'Automation', variant: 'purple' },
-        { label: 'Comments' },
-        { label: 'Collaboration', variant: 'green' },
+        { label: 'Integration', variant: 'purple' },
+        { label: 'External access', variant: 'green' },
+        { label: 'Automation API', variant: 'blue' },
       ],
     },
 

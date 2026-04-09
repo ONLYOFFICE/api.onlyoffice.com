@@ -33,6 +33,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'External access': 'green',
       'Automation API': 'blue',
       'Office API': 'blue',
+      'Builder': 'blue',
       'REST API': 'green',
       'MCP Server': 'green',
       'AI': 'pink',
@@ -55,7 +56,7 @@ export function getDocsSamples(category: string): SamplesGrid.Item[] {
     ...toItems(docsSamplesData, category),
     ...toItems(docsOfficeApiData, category),
     ...toItems(docsPluginsData, category),
-    ...toItems(docsBuilderData, category, [{ label: 'Document Builder', variant: 'blue' }]),
+    ...toItems(docsBuilderData, category),
     ...toItems(docsConnectorsData, category),
   ]);
 }
