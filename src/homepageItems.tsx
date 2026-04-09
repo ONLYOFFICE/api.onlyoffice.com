@@ -33,7 +33,7 @@ export const Samples: Samples = {
       viewLink:'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
       tags: [
         { label: 'Document Builder', variant: 'blue' },
-        { label: 'Forms' },
+        { label: 'PDF' },
         { label: 'C++', variant: 'purple' },
         { label: '.Net' },
       ],
@@ -55,8 +55,8 @@ export const Samples: Samples = {
       viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/#spreadsheet-editor',
       tags: [
         { label: 'Plugins', variant: 'blue' },
-        { label: 'Spreadsheet' },
-        { label: 'AI tools', variant: 'green' },
+        { label: 'Spreadsheets' },
+        { label: 'AI', variant: 'green' },
         { label: 'Macros' },
       ],
     },
