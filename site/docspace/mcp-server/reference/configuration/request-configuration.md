@@ -212,31 +212,3 @@ This sample configuration uses an API key for authentication.
 X-Mcp-Base-Url: https://your-instance.onlyoffice.com/
 X-Mcp-Api-Key: sk-a499e...
 ```
-
-<!-- Definitions -->
-
-[DocSpace API: API Keys]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/api-keys/
-[DocSpace API: Basic Authentication]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/basic-authentication/
-[DocSpace API: Personal Access Tokens]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/personal-access-tokens/
-
-[DocSpace MCP: Toolsets]: ../tools.md#toolsets
-[DocSpace MCP: Tools]: ../tools.md#regular-tools
-[DocSpace MCP: Meta Tools]: ../tools.md#meta-tools
-[DocSpace MCP: Authentication Resolution]: ./authentication-resolution.md
-[DocSpace MCP: Tools Resolution]: ./tools-resolution.md
-
-[`dynamic`]: #dynamic
-[`toolsets`]: #toolsets
-[`enabled_tools`]: #enabled_tools
-[`disabled_tools`]: #disabled_tools
-[`base_url`]: #base_url
-[`X-Mcp-Dynamic`]: #x-mcp-dynamic
-[`X-Mcp-Toolsets`]: #x-mcp-toolsets
-[`X-Mcp-Enabled-Tools`]: #x-mcp-enabled-tools
-[`X-Mcp-Disabled-Tools`]: #x-mcp-disabled-tools
-[`X-Mcp-Base-Url`]: #x-mcp-base-url
-[`Authorization`]: #authorization
-[`X-Mcp-Api-Key`]: #x-mcp-api-key
-[`X-Mcp-Auth-Token`]: #x-mcp-auth-token
-[`X-Mcp-Username`]: #x-mcp-username
-[`X-Mcp-Password`]: #x-mcp-password

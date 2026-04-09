@@ -812,28 +812,6 @@ DOCSPACE_SERVER_CORS_MCP_MAX_AGE=1800000 # 30 minutes
 
 <!-- Definitions -->
 
-[RFC 7518: Cryptographic Algorithms for Digital Signatures and MACs]: https://www.rfc-editor.org/rfc/rfc7518#section-3
-[RFC 7518: HMAC with SHA-2 Functions]: https://www.rfc-editor.org/rfc/rfc7518.html#section-3.2
-[RFC 7591: Client Metadata]: https://www.rfc-editor.org/rfc/rfc7591#section-2
-[RFC 7591: "exp" (Expiration Time) Claim]: https://www.rfc-editor.org/rfc/rfc7519.html#section-4.1.4
-
-[MDN: Access-Control-Allow-Origin Header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
-[MDN: Access-Control-Max-Age Header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age
-[MDN: User-Agent Header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/User-Agent
-
-[Express: Express Behind Proxies]: https://expressjs.com/en/guide/behind-proxies.html
-[Express: Troubleshooting Proxy Issues]: https://express-rate-limit.mintlify.app/guides/troubleshooting-proxy-issues
-
-[MCP: Transports]: https://modelcontextprotocol.io/specification/2025-06-18/basic/transports/
-[MCP: Session Management]: https://modelcontextprotocol.io/specification/2025-06-18/basic/transports/#session-management
-
-[DocSpace API: API Keys]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/api-keys/
-[DocSpace API: OAuth]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/oauth2/
-[DocSpace API: Basic Authentication]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/basic-authentication/
-[DocSpace API: Personal Access Tokens]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/personal-access-tokens/
-
-
-
 [`DOCSPACE_TRANSPORT`]: #docspace_transport
 [`DOCSPACE_TOOLSETS`]: #docspace_toolsets
 [`DOCSPACE_ENABLED_TOOLS`]: #docspace_enabled_tools
