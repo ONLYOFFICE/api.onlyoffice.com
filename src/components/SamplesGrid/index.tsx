@@ -25,7 +25,6 @@ export namespace SamplesGrid {
   };
 }
 
-const MAX_VISIBLE_TAGS = 5;
 
 const variantStyles: Record<string, string | undefined> = {
   green: styles.tagGreen,
@@ -51,9 +50,6 @@ const Feature: FC<FeatureProps> = memo(({
   tags,
   compact,
 }) => {
-  const visibleTags = tags?.slice(0, MAX_VISIBLE_TAGS);
-  const extraCount = tags ? tags.length - MAX_VISIBLE_TAGS : 0;
-
   const heading = <Heading as="h3">{title}</Heading>;
 
   return (
@@ -82,14 +78,11 @@ const Feature: FC<FeatureProps> = memo(({
           </Link>
         )}
 
-        {visibleTags && visibleTags.length > 0 && (
+        {tags && tags.length > 0 && (
           <div className={styles.tagsRow}>
-            {visibleTags.map((tag, idx) => (
+            {tags.map((tag, idx) => (
               <TagBadge key={idx} {...tag} />
             ))}
-            {extraCount > 0 && (
-              <span className={styles.tag}>+{extraCount}</span>
-            )}
           </div>
         )}
       </div>
