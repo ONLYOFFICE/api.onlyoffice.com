@@ -12,6 +12,8 @@ const SOURCES = [
   { dir: 'site/docs/plugin-and-macros/samples/custom-ai-tools', routeBase: 'docs/plugin-and-macros/samples/custom-ai-tools', output: 'docs-ai-samples.json' },
   // AI - DocSpace
   { dir: 'site/docspace/mcp-server/use-cases', routeBase: 'docspace/mcp-server/use-cases', output: 'docspace-ai-samples.json' },
+  // Docs - Connectors
+  { dir: 'site/docs/docs-api/get-started/ready-to-use-connectors', routeBase: 'docs/docs-api/get-started/ready-to-use-connectors', output: 'docs-connectors-samples.json' },
   // DocSpace
   { dir: 'site/docspace/api-backend/samples', routeBase: 'docspace/api-backend/samples', output: 'docspace-samples.json' },
   { dir: 'site/docspace/javascript-sdk', routeBase: 'docspace/javascript-sdk', output: 'docspace-jssdk-samples.json', include: ['samples/**/*.md', 'get-started/react-component.md'] },

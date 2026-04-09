@@ -3,6 +3,7 @@ import docsSamplesData from '@site/src/data/docs-samples.json';
 import docsOfficeApiData from '@site/src/data/docs-office-api-samples.json';
 import docsPluginsData from '@site/src/data/docs-plugins-samples.json';
 import docsBuilderData from '@site/src/data/docs-builder-samples.json';
+import docsConnectorsData from '@site/src/data/docs-connectors-samples.json';
 import docspaceSamplesData from '@site/src/data/docspace-samples.json';
 import docspaceJsSdkData from '@site/src/data/docspace-jssdk-samples.json';
 import docspacePluginsData from '@site/src/data/docspace-plugins-samples.json';
@@ -51,6 +52,7 @@ export function getDocsSamples(category: string): SamplesGrid.Item[] {
     ...toItems(docsOfficeApiData, category, [{ label: 'Office API', variant: 'blue' }]),
     ...toItems(docsPluginsData, category),
     ...toItems(docsBuilderData, category, [{ label: 'Document Builder', variant: 'blue' }]),
+    ...toItems(docsConnectorsData, category),
   ]);
 }
 
