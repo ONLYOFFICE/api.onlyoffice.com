@@ -1,6 +1,6 @@
 ---
 description: Extract action items from selected text.
-tags: ["Docs", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
 ---
 
 # Extract action items

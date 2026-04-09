@@ -1,6 +1,6 @@
 ---
 description: Modify the style of selected or current text.
-tags: ["Docs", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
 ---
 
 # Change text style

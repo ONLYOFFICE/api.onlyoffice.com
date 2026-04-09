@@ -1,6 +1,6 @@
 ---
 description: Create a pivot table from a selected range.
-tags: ["Docs", "AI Tools", "Spreadsheets"]
+tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---
 
 # Insert pivot table

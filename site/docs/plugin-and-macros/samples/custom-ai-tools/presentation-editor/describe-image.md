@@ -1,6 +1,6 @@
 ---
 description: Generate a description for images on a slide.
-tags: ["Docs", "AI Tools", "Presentations"]
+tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---
 
 # Describe image

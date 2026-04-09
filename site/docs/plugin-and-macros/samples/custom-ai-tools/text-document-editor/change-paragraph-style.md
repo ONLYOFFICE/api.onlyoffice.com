@@ -1,6 +1,6 @@
 ---
 description: Change the style of a specified paragraph.
-tags: ["Docs", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
 ---
 
 # Change paragraph style

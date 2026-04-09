@@ -1,6 +1,6 @@
 ---
 description: Create a chart from a spreadsheet data range.
-tags: ["Docs", "AI Tools", "Spreadsheets"]
+tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---
 
 # Add chart
