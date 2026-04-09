@@ -108,6 +108,11 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
     setCurrentPage(0);
   }, []);
 
+  const handleTagClick = useCallback((label: string) => {
+    setSearchQuery(label);
+    setCurrentPage(0);
+  }, []);
+
   return (
     <>
       <div className={styles.categoryTabs}>
@@ -141,7 +146,7 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
           {items.length === 0 ? (
             <p className={styles.noResults}>No results found.</p>
           ) : (
-            <SamplesGrid items={items} compact />
+            <SamplesGrid items={items} compact onTagClick={handleTagClick} />
           )}
 
           {totalPages > 1 && (

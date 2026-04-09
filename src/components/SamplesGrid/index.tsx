@@ -7,6 +7,7 @@ export namespace SamplesGrid {
   export type Props = {
     items: Item[];
     compact?: boolean;
+    onTagClick?: (label: string) => void;
   }
 
   export type Tag = {
@@ -33,13 +34,19 @@ const variantStyles: Record<string, string | undefined> = {
   pink: styles.tagPink,
 };
 
-const TagBadge: FC<SamplesGrid.Tag> = ({ label, variant = 'default' }) => {
-  const className = [styles.tag, variantStyles[variant]].filter(Boolean).join(' ');
+type TagBadgeProps = SamplesGrid.Tag & { onClick?: (label: string) => void };
 
-  return <span className={className}>{label}</span>;
+const TagBadge: FC<TagBadgeProps> = ({ label, variant = 'default', onClick }) => {
+  const className = [styles.tag, onClick && styles.tagClickable, variantStyles[variant]].filter(Boolean).join(' ');
+
+  return (
+    <span className={className} onClick={onClick ? () => onClick(label) : undefined}>
+      {label}
+    </span>
+  );
 };
 
-type FeatureProps = SamplesGrid.Item & { compact?: boolean };
+type FeatureProps = SamplesGrid.Item & { compact?: boolean; onTagClick?: (label: string) => void };
 
 const Feature: FC<FeatureProps> = memo(({
   icon,
@@ -49,6 +56,7 @@ const Feature: FC<FeatureProps> = memo(({
   viewLink,
   tags,
   compact,
+  onTagClick,
 }) => {
   const heading = <Heading as="h3">{title}</Heading>;
 
@@ -81,7 +89,7 @@ const Feature: FC<FeatureProps> = memo(({
         {tags && tags.length > 0 && (
           <div className={styles.tagsRow}>
             {tags.map((tag, idx) => (
-              <TagBadge key={idx} {...tag} />
+              <TagBadge key={idx} {...tag} onClick={onTagClick} />
             ))}
           </div>
         )}
@@ -90,11 +98,11 @@ const Feature: FC<FeatureProps> = memo(({
   );
 });
 
-export const SamplesGrid: FC<SamplesGrid.Props> = memo(({ items, compact }) => {
+export const SamplesGrid: FC<SamplesGrid.Props> = memo(({ items, compact, onTagClick }) => {
   return (
     <div className={styles.samplesGridList}>
       {items.map((props, idx) => (
-        <Feature key={`${props.title}-${idx}`} {...props} compact={compact} features={compact ? undefined : props.features} />
+        <Feature key={`${props.title}-${idx}`} {...props} compact={compact} onTagClick={onTagClick} features={compact ? undefined : props.features} />
       ))}
     </div>
   );

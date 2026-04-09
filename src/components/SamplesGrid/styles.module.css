@@ -143,6 +143,15 @@
   white-space: nowrap;
 }
 
+.tagClickable {
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+
+.tagClickable:hover {
+  opacity: 0.75;
+}
+
 .tagGreen {
   border-color: #c8e6c9;
   color: #2e7d32;
