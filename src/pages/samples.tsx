@@ -19,7 +19,7 @@ type Category = {
 
 const categories: Category[] = [
   { id: 'favorite', label: 'Favorite', subtitle: 'Recommended', icon: <FavoriteIcon /> },
-  { id: 'docs', label: 'Docs', subtitle: 'Documents Editors', icon: <DocsApiIcon /> },
+  { id: 'docs', label: 'Docs', subtitle: 'Document Editors', icon: <DocsApiIcon /> },
   { id: 'docspace', label: 'DocSpace', subtitle: 'Collaborative cloud', icon: <DocSpaceIcon /> },
   { id: 'ai', label: 'AI', subtitle: 'Artificial Intelligence', icon: <AiIcon /> },
 ];
