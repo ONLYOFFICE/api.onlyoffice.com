@@ -1,4 +1,4 @@
-# Tools Resolution
+# Tools resolution
 
 This document describes how the DocSpace MCP server resolves which tools are
 available based on toolset configuration and enabled/disabled tool options.

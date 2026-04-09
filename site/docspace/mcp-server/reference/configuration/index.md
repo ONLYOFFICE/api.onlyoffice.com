@@ -1,5 +1,5 @@
 ---
-sidebar_label: Configuration
+sidebar_label: Overview
 sidebar_position: 1
 title: Configuration
 ---
