@@ -4,11 +4,11 @@ sidebar_label: ONLYOFFICE Desktop Editors
 title: Resolving errors with the ONLYOFFICE Desktop Editors
 ---
 
-This doc contains issues you might encounter when connecting the ONLYOFFICE Desktop Editors to the DocSpace MCP server, their causes, and offers solutions. 
+This doc contains issues you might encounter when connecting the ONLYOFFICE Desktop Editors to the DocSpace MCP server, their causes, and their solutions.
 
 ## Docker is not found or not running
 
-The MCP server fails to start with an error like `command not found: docker` or `Cannot connect to the Docker daemon`. To fix: 
+The MCP server fails to start with an error like `command not found: docker` or `Cannot connect to the Docker daemon`. To fix:
 
 - Make sure Docker Desktop is installed. Download it from [docker.com](https://www.docker.com/).
 - Make sure Docker Desktop is running before starting ONLYOFFICE Desktop Editors.
@@ -31,7 +31,7 @@ The server starts but immediately exits, or no tools appear in the AI agent. Try
 
 ## DocSpace instance is not reachable
 
-Connection timeout or `ERR_NAME_NOT_RESOLVED` when the server tries to reach `DOCSPACE_BASE_URL`. Confirm this error and fix it by: 
+Connection timeout or `ERR_NAME_NOT_RESOLVED` when the server tries to reach `DOCSPACE_BASE_URL`. Confirm this error and fix it by:
 
 - Confirm the URL is accessible from your machine by opening it in a browser.
 - If you are using a VPN, make sure it is active and the DocSpace domain resolves correctly.
@@ -45,7 +45,7 @@ Connection timeout or `ERR_NAME_NOT_RESOLVED` when the server tries to reach `DO
 
 ## Invalid JSON in the configuration file
 
-The configuration is not saved, or ONLYOFFICE Desktop Editors shows a parse error after clicking **Save**. Fix this by: 
+The configuration is not saved, or ONLYOFFICE Desktop Editors shows a parse error after clicking **Save**. Fix this by:
 
 - Validate your JSON before saving. Common mistakes include trailing commas after the last property and unescaped special characters in values.
 - Use an online JSON validator (e.g., [jsonlint.com](https://jsonlint.com)) to check the syntax.

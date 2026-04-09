@@ -5,17 +5,17 @@ sidebar_position: 1
 
 # How to set up a project room
 
-Managing multiple projects, each with numerous moving parts, can be taxing and, without careful management, can lead to inefficient processes. ONLYOFFICE DocSpace provides you with rooms to work and collaborate with team members. 
+Managing multiple projects, each with numerous moving parts, can be taxing and, without careful management, can lead to inefficient processes. ONLYOFFICE DocSpace provides you with rooms to work and collaborate with team members.
 
 Connecting your DocSpace to MCP clients via the DocSpace MCP server enables you to use these AI clients as assistants, allowing you to issue commands that improve the efficiency of how you handle projects.
 
-This guide will show you how to set up a project room using the mcp server.  
+This guide will show you how to set up a project room using the MCP server.
 
 ## Scenario
 
-Imagine you're a project manager with a newly commissioned project to manage a website redesign for a company called Meridian Corp. You need to set up a collaboration space in DocSpace for your team before the kickoff meeting. 
+Imagine you're a project manager with a newly commissioned project to manage a website redesign for a company called Meridian Corp. You need to set up a collaboration space in DocSpace for your team before the kickoff meeting.
 
-A task like this normally takes numerous clicks, but with the DocSpace server, all it takes is a few natural language commands with your AI client.
+A task like this normally takes numerous clicks, but with the DocSpace MCP server, all it takes is a few natural language commands with your AI client.
 
 ## What you'll learn
 
@@ -23,14 +23,14 @@ A task like this normally takes numerous clicks, but with the DocSpace server, a
 - [Build a well-organized folder structure inside the new room](#step-3-build-a-folder-structure)
 - [Add teammates and configure their access levels to ensure security](#step-5-control-team-members-access-levels)
 
-This tutorial uses the `get_room_types`, `create_room`, `create_folder`, `get_all_people`, `get_room_access_levels`, `set_room_security` tools. 
+This tutorial uses the `get_room_types`, `create_room`, `create_folder`, `get_all_people`, `get_room_access_levels`, `set_room_security` tools.
 
 ## Before you proceed
 
-- Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
+- Ensure to [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
 
 :::note
-Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
+Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client — Le Chat uses `Always allow`, `Decline` or `Continue`.
 :::
 
 ## Recommendations to follow
@@ -47,9 +47,9 @@ Unlike the first prompt, this second prompt provides all the necessary informati
 
 - Always verify creation after prompts. 
 
-### Step 1: Understand Your room options
+### Step 1: Understand your room options
 
-Before creating a room, it's important to note what room types DocSpace supports to select the right room that supports your specific needs. Different room types are designed for different workflows — some are suited for document editing, others for read-only review or public sharing. Hence, picking the wrong room type can limit collaboration features later. 
+Before creating a room, it's important to note what room types DocSpace supports to select the right room that supports your specific needs. Different room types are designed for different workflows — some are suited for document editing, others for read-only review or public sharing. Hence, picking the wrong room type can limit collaboration features later.
 
 For active team projects, a Collaboration Room is typically the right choice.
 
@@ -126,7 +126,7 @@ The AI calls `get_all_people` and returns a directory of all users with their na
 - **Priya Nair** — Copywriter
 - **Jordan Mills** — Client Stakeholder (review-only)
 
-### Step 5: Control team members access levels
+### Step 5: Control team members' access levels
 
 Before inviting people, check what access levels are available so you can assign the right permissions.
 

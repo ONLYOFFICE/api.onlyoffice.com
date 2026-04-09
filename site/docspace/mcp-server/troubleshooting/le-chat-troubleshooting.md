@@ -1,7 +1,7 @@
 ---
 sidebar_label: Le Chat
 sidebar_position: 5
-title: Troubleshooting issues with Le Chat MCP client 
+title: Troubleshooting issues with Le Chat MCP client
 ---
 
 This page explains some errors when connecting the DocSpace MCP server to the Le Chat client.

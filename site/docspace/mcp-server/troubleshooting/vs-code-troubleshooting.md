@@ -4,7 +4,7 @@ sidebar_label: VS Code
 title: Resolving issues with VS Code client
 ---
 
-This instruction describes some errors when creating a DocSpace MCP server - VS Code client connection and solutions to fix these errors.
+This page describes some errors when creating a DocSpace MCP server — VS Code client connection and solutions to fix these errors.
 
 ## The MCP server does not appear in the list
 
@@ -20,7 +20,7 @@ The configuration file may contain a syntax error, or the `servers` section is m
 
 **Local:** Docker is not running, or the `onlyoffice/docspace-mcp` image has not been pulled yet.
 
-To fix this: 
+To fix this:
 
 - **Remote:** Check your internet connection. Verify that `https://mcp.onlyoffice.com/mcp` is reachable from your browser. If the issue persists, try restarting VS Code.
 - **Local:** Make sure Docker Desktop is running. Pull the image manually by running:
@@ -39,7 +39,7 @@ The OAuth token was not saved correctly, or the session expired before the hands
 
 ## The local server cannot connect to the DocSpace instance
 
-This happens when the `DOCSPACE_BASE_URL` value is incorrect or the API key is invalid/expired. To fix: 
+This happens when the `DOCSPACE_BASE_URL` value is incorrect or the API key is invalid/expired. To fix:
 
 - Verify that the URL is correct and accessible: open it in a browser and confirm the DocSpace login page loads.
 - Regenerate the API key in DocSpace **Settings → Developer Tools → API Keys** and update the value in the configuration file.
@@ -49,7 +49,7 @@ This happens when the `DOCSPACE_BASE_URL` value is incorrect or the API key is i
 
 A required environment variable (`DOCSPACE_BASE_URL` or `DOCSPACE_API_KEY`) is missing or empty.
 
-To fix: 
+To fix:
 
 - Check that both variables are set in the `env` block of your configuration and that the values are not empty strings or placeholder text. You can verify the container startup logs by running the image manually:
 

@@ -1,9 +1,9 @@
 # Request configuration
 
-This document lists and describes the variables used to configure the DocSpace MCP server behavior at the request level using query parameters and custom header. 
+This document lists and describes the variables used to configure the DocSpace MCP server behavior at the request level using query parameters and custom header.
 
 :::note
-The request configuration parameters are only available for HTTP-like transports
+The request configuration parameters are only available for HTTP-like transports.
 :::
 
 ## Query Options
@@ -104,7 +104,6 @@ Comma-separated list of toolsets to enable. Available toolsets depend on the glo
 | **Type** | comma-separated list |
 | **Example** | `files,people` |
 | **Attributes** | trimmable, case-insensitive |
-
 
 #### X-Mcp-Enabled-Tools
 
@@ -220,9 +219,9 @@ X-Mcp-Api-Key: sk-a499e...
 [DocSpace API: Basic Authentication]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/basic-authentication/
 [DocSpace API: Personal Access Tokens]: https://api.onlyoffice.com/docspace/api-backend/get-started/authentication/personal-access-tokens/
 
-[DocSpace MCP: Toolsets]: ../features/tools.md#toolsets
-[DocSpace MCP: Tools]: ../features/tools.md#regular-tools
-[DocSpace MCP: Meta Tools]: ../features/tools.md#meta-tools
+[DocSpace MCP: Toolsets]: ../tools.md#toolsets
+[DocSpace MCP: Tools]: ../tools.md#regular-tools
+[DocSpace MCP: Meta Tools]: ../tools.md#meta-tools
 [DocSpace MCP: Authentication Resolution]: ./authentication-resolution.md
 [DocSpace MCP: Tools Resolution]: ./tools-resolution.md
 

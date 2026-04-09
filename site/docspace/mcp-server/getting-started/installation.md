@@ -12,7 +12,7 @@ Before interacting and building with the DocSpace MCP server, you need to access
 - [Access via a local machine](#access-via-a-local-docspace-mcp-server)
 - [Access via a remote server](#access-via-the-remote-docspace-mcp-server)
 
-This page provides a step by step approach to installing the MCP server using these methods.
+This page provides a step-by-step approach to installing the MCP server using these methods.
 
 ## Before you start
 
@@ -27,7 +27,7 @@ This page provides a step by step approach to installing the MCP server using th
 You can configure your local machine to interact with the DocSpace MCP server using:
 
 - [Docker image](#install-with-docker-image)
-- [Docker MCP toolkit](#install-with-docker-mcp-server)
+- [Docker MCP toolkit](#install-with-docker-mcp-toolkit)
 - [MCP bundle](#install-with-mcp-bundle)
 - [Node.js application](#install-via-nodejs-application)
 
@@ -71,13 +71,13 @@ Insert the following block into the `mcpServers` section of your `.json` configu
 | `onlyoffice/docspace-mcp` | Docker image name to run |
 
 
-### Install with Docker MCP Server
+### Install with Docker MCP toolkit
 
 Using the [Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) requires [Docker Desktop](https://docs.docker.com/desktop/) to be installed on your
 system and the Docker MCP Toolkit to be enabled. 
 
 :::note
-The Docker MCP toolkit is currently a beta feature and is only available to specific user segments, subscription tiers, or by invitation
+The Docker MCP toolkit is currently a beta feature and is only available to specific user segments, subscription tiers, or by invitation.
 :::
 
 1. Follow [this guide](../distribution/distribution-combined.md#build-with-docker-mcp-toolkit) to install the server through the Docker Desktop interface.
@@ -92,7 +92,7 @@ The Docker MCP toolkit is currently a beta feature and is only available to spec
     - Enter your personal API key
     - Save the configuration
 
-### Install with MCP Bundle
+### Install with MCP bundle
 
 Running the MCP bundle requires [Node.js](https://nodejs.org/en/download) version 18 or higher to be installed on your system.
 
@@ -107,7 +107,7 @@ Running the MCP bundle requires [Node.js](https://nodejs.org/en/download) versio
     - Enter your personal API key 
     - Save the configuration and restart the application if required
 
-### Install via Node.js Application
+### Install via Node.js application
 
 :::note
 Running the Node.js application requires Node.js version 18 or higher to be installed on your system.
@@ -153,7 +153,7 @@ The public instance is available at two endpoints:
 | **Endpoint**                   | **Transport**             | **Recommendation**                                                                                                         |
 |--------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | https://mcp.onlyoffice.com/mcp | HTTP                      | Preferred - Use this endpoint whenever your client supports it. Streamable HTTP offers better performance and reliability. |
-| https://mcp.onlyoffice.com/sse | Server-Sent Events. (SSE) | Legacy - Use this endpoint only if your client does not support the modern Streamable HTTP transport.                      |
+| https://mcp.onlyoffice.com/sse | Server-Sent Events (SSE) | Legacy - Use this endpoint only if your client does not support the modern Streamable HTTP transport.                      |
 
 The public instance provides access to all available tools by default. Tool selection can be customized using query parameters or custom headers. However, we recommend using the MCP client interface for tool configuration when supported.
 
@@ -161,11 +161,11 @@ The public instance provides access to all available tools by default. Tool sele
 
 The public instance provides access to all available DocSpace tools by default. Tool selection can be customized using the following options:
 
-- **MCP Client Interface**:  (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/tools.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
+- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/tools.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
 
 - **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can [customize tool availability by passing parameters in the connection URL or via custom HTTP headers](../reference/configuration/request-configuration.md#enabled_tools).
 
-## Authenticating the remote mcp server-client connection
+## Authenticating the remote MCP server-client connection
 
 The public instance supports multiple authentication methods to meet different security requirements and client capabilities: OAuth, API key, Personal Access Token (PAT), username/password pair, or raw `Authorization` header.
 

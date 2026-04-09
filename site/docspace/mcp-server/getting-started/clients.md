@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 The DocSpace MCP server allows you to connect numerous MCP clients, offering flexibility to choose between interfaces when interacting with your DocSpace. This guide demonstrates how to connect the DocSpace MCP server to the following clients:
 
-- [ONLYOFFICE Desktop Editors](#connect-to-onlyoffice-desktop-editor)
+- [ONLYOFFICE Desktop Editors](#connect-to-onlyoffice-desktop-editors)
 - [Claude Desktop](#connect-to-claude-desktop)
 - [Claude Web](#connect-to-claude-web)
 - [Cursor](#connect-to-cursor)
@@ -27,7 +27,7 @@ The DocSpace MCP server allows you to connect numerous MCP clients, offering fle
 
 **Ensure your API key is valid**. 
 
-## Connect to ONLYOFFICE Desktop Editor
+## Connect to ONLYOFFICE Desktop Editors
 
 Connect to the locally running MCP server using stdio transport.
 
@@ -57,7 +57,7 @@ Connect to the locally running MCP server using stdio transport.
 
 ## Connect to Claude Desktop
 
-Claude desktop offers three different ways to connect to the DocSpace MCP server:
+Claude Desktop offers three different ways to connect to the DocSpace MCP server:
 
 - [Connectors](#connect-via-connectors)
 - [Extensions](#connect-via-extensions)
@@ -88,10 +88,10 @@ Connect to the MCP server running remotely using Claude's Connectors. This is th
 
 ### Connect via extensions
 
-Connect to the locally running MCP server using Claude's Extensions. Before connecting, ensure to have:
+Connect to the locally running MCP server using Claude's Extensions. Before connecting, ensure you have:
 
 - Node.js (v18 or higher)
-- Download the Github MCP bundle. Follow [these steps](../distribution/distribution-combined.md#download-the-github-release) to install Node and the Github release.
+- Download the GitHub MCP bundle. Follow [these steps](../distribution/distribution-combined.md#download-the-github-release) to install Node and the GitHub release.
 
 1. Open Claude Desktop.
 2. Navigate to Settings.
@@ -138,7 +138,7 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
 
 ## Connect to Claude web
 
-1.  Open Claude Web in your web browser.
+1. Open Claude Web in your web browser.
 2. Navigate to Settings.
 3. Navigate to Connectors.
 4. Click "Add custom connector".
@@ -164,11 +164,11 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
 Cursor allows you to connect to the DocSpace MCP server either via:
 
 - (Recommended) [HTTP](#connect-cursor-to-remote-docspace-mcp-server-via-http) 
-- [Command](#connect-curosr-to-local-docspace-mcp-server-via-command)
+- [Command](#connect-cursor-to-local-docspace-mcp-server-via-command)
 
 ### Connect Cursor to remote DocSpace MCP server via HTTP
 
-Connect to the MCP server running remotely using Streamable-HTTP transport
+Connect to the MCP server running remotely using Streamable-HTTP transport.
 
 1. Open Cursor.
 2. Bring up Command Palette.
@@ -230,7 +230,7 @@ Connect to the locally running MCP server using stdio transport.
 
 ## Connect to Le Chat
 
-1. Open Le Chat  in your web browser.
+1. Open Le Chat in your web browser.
 2. Navigate to Intelligence.
 3. Navigate to Connectors.
 4. Click **Add Connector**.
@@ -249,7 +249,7 @@ Connect to the locally running MCP server using stdio transport.
         - Select "API Token Authentication" from "Authentication Methods" section and 
         - In the "Header value" field, enter your personal API key generated in DocSpace settings -> Developer Tools -> API keys.
 9. Click **Connect**.
-10. Confirm connection by enabling the Docspace MCP server in the **Enable tools** section of the chat bar. 
+10. Confirm connection by enabling the DocSpace MCP server in the **Enable tools** section of the chat bar.
 
 ## Connect to VS Code
 
@@ -358,7 +358,7 @@ This is the recommended method and connects to the remote MCP server using Strea
 
 ### Connect Windsurf to local DocSpace MCP server via command
 
-This method uses stdio transport to connect to a local running MCP server.
+This method uses stdio transport to connect to a locally running MCP server.
 
 1. Open Windsurf.
 2. Bring up Command Palette.
@@ -392,5 +392,5 @@ This method uses stdio transport to connect to a local running MCP server.
    ```
 8. Save the file.
 9. Open **Cascade**. 
-10. Click **Actions(...)**. You'll find **onlyoffice-docspace** under MCP section if connection was successful. Toggle to enable the connection. 
+10. Click **Actions(...)**. You'll find **onlyoffice-docspace** under the MCP section if connection was successful. Toggle to enable the connection.
 

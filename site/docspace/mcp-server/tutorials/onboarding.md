@@ -5,14 +5,14 @@ sidebar_position: 2
 
 # How to successfully onboard a distributed team into your project
 
-With businesses increasingly adopting remote work, managing these teams efficiently without sacrificing security and access becomes a priority. 
+With businesses increasingly adopting remote work, managing these teams efficiently without sacrificing security and access becomes a priority.
 The AI assistant created by the DocSpace MCP server-client connection allows you to successfully onboard new hires quickly while practicing best security practices.
 
 ## Scenario
 
-Your company has just hired four new remote employees across three time zones — one developer, two writers, and one customer success manager. Each person needs access to different rooms with different roles. 
+Your company has just hired four new remote employees across three time zones — one developer, two writers, and one customer success manager. Each person needs access to different rooms with different roles.
 
-You need to onboard all four efficiently without introducing security gaps or granting anyone more access then necessary. You'll do this entirely through your AI assistant:
+You need to onboard all four efficiently without introducing security gaps or granting anyone more access than necessary. You'll do this entirely through your AI assistant:
 
 ## What you'll learn
 
@@ -25,10 +25,10 @@ You need to onboard all four efficiently without introducing security gaps or gr
 
 ## Before you proceed
 
-- Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
+- Ensure to [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
 
 :::note
-Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
+Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client — Le Chat uses `Always allow`, `Decline` or `Continue`.
 :::
 
 ### Step 1: Review your existing rooms
@@ -88,19 +88,19 @@ The AI calls `get_all_people` and returns the full directory. Identify your four
 
 ### Step 4: Define who has access
 
-Before issuing invitations and assigning permissions, know and define what each team member can/can't access. 
+Before issuing invitations and assigning permissions, know and define what each team member can/can't access.
 
 Here is the access plan for this scenario:
 
 | **Person** | **Role** | **Room** | **Access Level** |
 |---|---|---|---|
-| June Taylor | Developer | Engineering — Core Platform | Editor |
+| Sam Rivera | Developer | Engineering — Core Platform | Editor |
 | Yuki Tanaka | Content Writer | Content & Marketing Hub | Editor |
 | Aisha Okafor | Content Writer | Content & Marketing Hub | Editor |
 | Marcus Webb | Client Success Manager | Client Success — Shared Resources | Editor |
 | Marcus Webb | Client Success Manager | Content & Marketing Hub | Viewer |
 
-Note that Marcus gets access to two rooms — Editor in his primary room and Viewer in the content room so he can reference materials without editing them.
+Note that Marcus gets access to two rooms — Editor in his primary room and Viewer in the content room, so he can reference materials without editing them.
 
 
 ### Step 5: Execute the invitations
@@ -110,7 +110,7 @@ Now send all the invitations. You can do this room by room:
 **Prompt for Engineering room:**
 
 ```
-Invite June Taylor to "Engineering — Core Platform" room as Editors.
+Invite Sam Rivera to "Engineering — Core Platform" room as an Editor.
 ```
 
 **Prompt for Content room:**
@@ -125,7 +125,7 @@ Invite Yuki Tanaka and Aisha Okafor to the "Content & Marketing Hub" room as Edi
 Invite Marcus Webb to the "Client Success — Shared Resources" room as an Editor.
 ```
 
-Each call uses `set_room_security` under the hood. The AI resolves the user names to IDs automatically using the data it retrieved from `get_all_people`.
+Each call uses `set_room_security` under the hood. The AI resolves the usernames to IDs automatically using the data it retrieved from `get_all_people`.
 
 
 ### Step 6: Verify all invitations
@@ -144,7 +144,7 @@ The AI will call `get_room_security_info` for each room and return a consolidate
 - Assigning a team member to the wrong access level
 - A user missing from a room they should be in
 
-If you find any issues, correct them immediately. For example, this prompt changes the access level for Marcus Webb: 
+If you find any issues, correct them immediately. For example, this prompt changes the access level for Marcus Webb:
 
 ```
 Change Marcus Webb's role in "Content & Marketing Hub" from Editor to Viewer.

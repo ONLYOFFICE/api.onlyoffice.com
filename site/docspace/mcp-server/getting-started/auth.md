@@ -4,7 +4,7 @@ sidebar_position: 3
 title: Authentication with the DocSpace MCP Server
 ---
 
-Before the DocSpace MCP server, the DocSpace authorization server had limitations that prevented MCP clients from using the OAuth flow due to how it handles dynamic client registration and scope handling.
+Before the DocSpace MCP server was introduced, the DocSpace authorization server had limitations that prevented MCP clients from using the OAuth flow due to how it handles dynamic client registration and scope handling.
 
 ## Dynamic Client Registration
 
@@ -19,7 +19,7 @@ The MCP server addresses this limitation by operating in one of two modes:
    users to provide their own OAuth client credentials through the MCP client
    interface.
 
-The first mode is optional. The second mode is always available when the OAuth
+The first mode is optional. The second mode is always available when OAuth
 is enabled.
 
 ## Scope Handling
@@ -42,11 +42,11 @@ issues between MCP clients and the DocSpace authorization server:
 Users effectively operate with all permissions granted to the OAuth application,
 regardless of which scopes the MCP client originally requested.
 
-## How the MCP server addresses the Doc authorization limitations 
+## How the MCP server addresses the DocSpace authorization limitations
 
-The MCP server acts as an OAuth proxy to address these limitations by using the DocSpace API to create an oAuth application and then using the client details to authenticate the mcp server-client connection. 
+The MCP server acts as an OAuth proxy to address these limitations by using the DocSpace API to create an OAuth application and then using the client details to authenticate the MCP server-client connection.
 
-To create a DocSpace oAuth application, follow the steps in the [DocSpace
+To create a DocSpace OAuth application, follow the steps in the [DocSpace
 OAuth application creation guide][DocSpace API: Creating OAuth Application].
 When configuring the application, ensure the following settings are properly
 configured:
@@ -65,7 +65,7 @@ through the MCP client interface.](clients.md)
 
 ## Other authentication methods
 
-Asides from authenticating with OAuth, the DocSpace MCP server also allows you to authenticate with:
+Aside from authenticating with OAuth, the DocSpace MCP server also allows you to authenticate with:
 
 - API Key (Header)
 - Personal Access Token (PAT)

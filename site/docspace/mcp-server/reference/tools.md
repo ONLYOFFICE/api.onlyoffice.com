@@ -103,7 +103,7 @@ tools, providing the same level of control over available functionality.
 <!--generate meta-tools-end-->
 
 
-## Resolving tools
+## Resolving Tools
 
 The tools resolution process follows a sequence that starts with toolsets, adds explicitly enabled tools, and removes explicitly disabled tools. The flowcharts
 below illustrate this process for both global and request-level configuration.
@@ -154,7 +154,6 @@ flowchart TD
 For HTTP-like transports, request-specific headers can override the global tool
 configuration using the same resolution process. However, the available toolsets
 and tools are constrained by what was configured globally.
-
 
 ## Examples
 

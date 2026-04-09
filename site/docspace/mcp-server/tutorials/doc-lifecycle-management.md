@@ -9,13 +9,13 @@ Creating content requires numerous reviews and iterations from editors and other
 
 ## Scenario
 
-Imagine you're part of a content team creating marketing copies for a new campaign. This content passes through different stages -rough draft, reviews by multiple stakeholders before being greenlit for publishing, and subsequent archival. 
-This tutorial walks you through managing the entire document lifecycle, from first draft to clean up. 
+Imagine you're part of a content team creating marketing copies for a new campaign. This content passes through different stages — rough draft, reviews by multiple stakeholders before being greenlit for publishing, and subsequent archival.
+This tutorial walks you through managing the entire document lifecycle, from first draft to cleanup.
 
 ## What you'll learn
 
 - [How to upload documents and verify their location](#step-1-upload-your-first-draft)
-- [How to have the AI read and reason about a document's contents](#step-3-have-the-ai-read-the-document)
+- [How to have the AI read and reason about a document's contents](#step-3-review-the-document-with-your-mcp-client)
 - [How to update a file with a revised version](#step-4-upload-a-revised-version)
 - [How to compare the two drafts](#step-5-compare-the-two-drafts)
 - [How to clean up superseded drafts](#step-7-clean-up-old-drafts)
@@ -24,10 +24,10 @@ This tutorial walks you through managing the entire document lifecycle, from fir
 
 ## Before you proceed
 
-- Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
+- Ensure to [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
 
 :::note
-Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client - fLe Chat uses `Always allow`, `Decline` or `Continue`.
+Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client — Le Chat uses `Always allow`, `Decline` or `Continue`.
 :::
 
 ### Step 1: Upload your first draft

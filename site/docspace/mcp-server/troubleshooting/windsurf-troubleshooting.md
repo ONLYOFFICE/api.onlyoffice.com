@@ -1,7 +1,7 @@
 ---
 sidebar_label: Windsurf
 sidebar_position: 5
-title: Troubleshooting issues with Windsurf MCP client 
+title: Troubleshooting issues with Windsurf MCP client
 ---
 
 This page explains some errors when connecting the DocSpace MCP server to the Windsurf client.

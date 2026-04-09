@@ -1,10 +1,10 @@
 ---
 sidebar_label: Common issues
 sidebar_position: 1
-title: Common issues 
+title: Common issues
 ---
 
-This doc contains common issues you might encounter when connecting to or using the DocSpace MCP server, their causes, and offers solutions. 
+This doc contains common issues you might encounter when connecting to or using the DocSpace MCP server, their causes, and their solutions.
 
 ## Parsing errors
 
@@ -31,7 +31,7 @@ The MCP server URL may be unreachable due to network restrictions, a VPN, or a t
 
 ## OAuth authentication fails or the browser does not open
 
-Sometimes OAuth authentication fails or browser fails to open to authenticate the DocSpace MCP server - MCP client connection. This may be due to any of these reasons:
+Sometimes OAuth authentication fails or the browser fails to open to authenticate the DocSpace MCP server - MCP client connection. This may be due to any of these reasons:
 
 - **No default browser configured.** The client opens the OAuth page in the system default browser. Ensure a default browser is set in your OS settings.
 - **The MCP server URL is incorrect.** Verify that the URL entered in is correct with no trailing slash issues or typos.
@@ -52,7 +52,7 @@ This signals invalid authentication credentials to access the server and may res
 Incorrect credentials or the DocSpace account may not be activated. To fix:
 
 - Double-check your email and password.
-- Ensure your DocSpace account is active and you have access to the portal at `https://mcp.onlyoffice.com`.
+- Ensure your DocSpace account is active and you have access to your DocSpace portal.
 - If you have forgotten your password, use the **Forgot Password** option on the DocSpace sign-in page.
 
 ## "Access denied" error during OAuth
@@ -103,7 +103,7 @@ After installing the MCP bundle, the extension is not listed under **Extensions*
 
 ## Docker-based Local MCP server fails to start
 
-After editing the client `config.json` file and the client displays an error for the `onlyoffice-docspace` server, or server is not listed among the available connections. 
+After editing the client `config.json` file, the client displays an error for the `onlyoffice-docspace` server, or the server is not listed among the available connections.
 
 - **Docker is not running:** Make sure Docker Desktop (or the Docker daemon on Linux) is started before launching the client.
 - **The Docker image is not pulled:** Run `docker pull onlyoffice/docspace-mcp` manually in a terminal to verify the image can be downloaded.
@@ -124,7 +124,7 @@ The configuration is saved successfully, but the MCP client does not show any Do
 
 ## Issues uploading a file to DocSpace room with Claude Desktop
 
-Receiving error messages like **Claude's response could not be fully generated** or any other issues uploading a file to your DocSpace with the Claude desktop client.
+Receiving error messages like **Claude's response could not be fully generated** or any other issues uploading a file to your DocSpace with the Claude Desktop client.
 
 - **Issues with Claude Desktop:** Delete and reinstall Claude Desktop
-- **Incorrect environment variable values:** Double check that your `DOCSPACE_BASE_URL` is correct and that `DOCSPACE_API_KEY` is still valid and copied correctly.
+- **Incorrect environment variable values:** Double-check that your `DOCSPACE_BASE_URL` is correct and that `DOCSPACE_API_KEY` is still valid and copied correctly.

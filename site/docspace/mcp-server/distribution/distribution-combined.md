@@ -11,7 +11,7 @@ This page explains and demonstrates the various ways users can get the MCP serve
 
 - [Build from source](#build-the-mcp-server-from-source)
 - [Pull from Docker Hub](#pull-from-docker-hub)
-- [Build from Docker MCP toolkit](#build-with-docker-mcp-toolkit)
+- [Build with Docker MCP toolkit](#build-with-docker-mcp-toolkit)
 - [Build with npm registry](#build-with-npm-registry)
 - [Download the GitHub release](#download-the-github-release)
 
@@ -21,13 +21,13 @@ Before choosing a distribution method, consult the following table:
 
 | **I want to**                                | **Recommended method**         |
 |----------------------------------------------|--------------------------------|
-| Get started quickly with minimal setup       | Docker Hub, npm Registry       |   |   |   |   |   |   |   |   |
-| Run in an isolated, reproducible environment | Docker Hub, Docker MCP toolkit |   |   |   |   |   |   |   |   |
-| Use a GUI to manage everything               | Docker MCP toolkit             |   |   |   |   |   |   |   |   |
-| Install a specific version offline           | GitHub releases                |   |   |   |   |   |   |   |   |
-| Customize or contribute to the server        | Build from source              |   |   |   |   |   |   |   |   |
+| Get started quickly with minimal setup       | Docker Hub, npm Registry       |
+| Run in an isolated, reproducible environment | Docker Hub, Docker MCP toolkit |
+| Use a GUI to manage everything               | Docker MCP toolkit             |
+| Install a specific version offline           | GitHub releases                |
+| Customize or contribute to the server        | Build from source              |
 
-:::tip 
+:::tip
 We recommend Docker Hub as it offers a minimal, easy setup to get started, in addition to an isolated environment.
 :::
 
@@ -128,10 +128,10 @@ This method is ideal for developers who want to customize or contribute to the p
 </Tabs>
 
 ## Pull from Docker Hub
- 
+
 This method is ideal for developers who want a consistent, isolated runtime environment with minimal setup. Before starting:
 
-- Ensure to have [Docker](https://www.docker.com/) installed on your system.
+- Ensure you have [Docker](https://www.docker.com/) installed on your system.
 
 1. Pull the latest [DocSpace MCP server image](https://hub.docker.com/r/onlyoffice/docspace-mcp) from Docker Hub:
 
@@ -153,7 +153,7 @@ This method is ideal for developers who want a consistent, isolated runtime envi
 
 ## Build with Docker MCP toolkit
 
-This method works best for non-technical users or users who prefer a graphical interface over the command line. Before proceeding, ensure to have:
+This method works best for non-technical users or users who prefer a graphical interface over the command line. Before proceeding, ensure you have:
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) with the [Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) enabled
 
@@ -192,7 +192,7 @@ This method also requires minimal setup and is ideal for developers who want the
 
 2. Open a different terminal session and confirm the MCP server is running:
 
- **For Linux/MacOS**:
+**For Linux/macOS**:
 
    ```sh
    ps aux | grep onlyoffice
@@ -202,13 +202,13 @@ This method also requires minimal setup and is ideal for developers who want the
 
 The `ps aux` command lists all running processes, including those not attached to a terminal - like the MCP server, and then uses the `grep` command to filter the list for the running processes containing `onlyoffice`.
 
- **For Windows**:
+**For Windows**:
 
     ```powershell
     Get-Process | Where-Object { $_.Name -like "*onlyoffice*" }
     ```
 
-`Get-Process` retrieves all running processes and then uses the `Where-Object` command then filters for processes with **onlyoffice**.
+`Get-Process` retrieves all running processes and then uses the `Where-Object` command to filter for processes with `onlyoffice`.
 
 ## Download the GitHub release
 

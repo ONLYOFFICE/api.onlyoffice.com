@@ -11,13 +11,13 @@ After project completion, practicing archiving and offboarding ensures that the 
 - preserves company knowledge and frees up space and tools for other projects.
 - ensures compliance and aids auditing, as proper transition management ensures files are readily available
 
-This guide will teach you how the connection created by the ONLYOFFICE DocSpace MCP server with AI clients enables you to properly archive your completed projects with simple human prompts. 
+This guide will teach you how the connection created by the ONLYOFFICE DocSpace MCP server with AI clients enables you to properly archive your completed projects with simple human prompts.
 
 ## Scenario
 
 With the Meridian Corp website redesign project officially complete and signed off by the client, with all deliverables properly handled, it's now time to properly close out the project room. This process will remove contractor access, clean up temporary working files, do a final audit, and archive the room so it's preserved for reference but no longer clutters the active workspace.
 
-## What You'll Learn
+## What you'll learn
 
 - [How to conduct a proper access audit before closing a room](#step-1-conduct-a-full-access-audit)
 - [How to revoke access for contractors and guests safely](#step-2-remove-external-access)
@@ -29,7 +29,7 @@ With the Meridian Corp website redesign project officially complete and signed o
 
 ## Before you proceed
 
-- Ensure to [connect your DocSpace mcp server to your mcp client of choice](../getting-started/clients.md).
+- Ensure to [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
 
 ### Step 1: Conduct a Full Access Audit
 
@@ -50,21 +50,21 @@ The AI calls `get_room_security_info` and returns the full member list. Review i
 
 For this scenario, you find:
 - **Sam Rivera** (Developer)  — **remove**
-- **Yuki Tanaka** (Content Writer) , "freelance.content@studio.com" (Editor) — **remove**
+- **Yuki Tanaka** (Content Writer), "freelance.content@studio.com" (Editor) — **remove**
 - **Aisha Okafor** (Content Writer), "freelance.content@studio.com" (Editor) — **remove**
 - **Marcus Webb** (Client Success Manager) — **keep for now**
 
 ### Step 2: Remove External Access
 
-Revoke access for all external parties
+Revoke access for all external parties.
 
 **Try this prompt:**
 
 ```
-Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they're all freelance contractors hired for this job. Marcus Webb is an internal team member and still retains access. 
+Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they're all freelance contractors hired for this job. Marcus Webb is an internal team member and still retains access.
 ```
 
-The AI calls `set_room_security` with removal instructions for both users.
+The AI calls `set_room_security` with removal instructions for the specified users.
 
 **Verify access was revoked:**
 
@@ -133,7 +133,7 @@ After deleting the files, you can also remove the now-empty folder:
 Delete the "03 — Drafts & Work in Progress" folder.
 ```
 
-The AI calls `delete_folder`. 
+The AI calls `delete_folder`.
 **Note:** DocSpace will prevent deletion of a folder that still contains files, so you must empty it first.
 
 ### Step 6: Final Pre-Archive Verification

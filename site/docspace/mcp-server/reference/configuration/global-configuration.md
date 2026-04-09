@@ -248,7 +248,7 @@ set to `sse`, `streamable-http`, or `http`.
 
 The following options are used to configure the behavior of the OAuth server.
 
-#### DOCSPACE_OAUTH_AUTH_TOKEN_ALGORITHM
+### DOCSPACE_OAUTH_AUTH_TOKEN_ALGORITHM
 
 Algorithm for signing OAuth access tokens. Used together with `DOCSPACE_OAUTH_AUTH_TOKEN_SECRET_KEY`. Set to an empty string to disable token signing.
 
@@ -392,8 +392,8 @@ header for CORS requests to MCP endpoints (e.g., `/sse`, `/messages`, `/mcp`).
 | **Type** | list |
 | **Attributes** | trimmable |
 | **Default** | `*` |
-| **Minimum** | `https://example.com,https://another-example.com` |
-| **Transports** | `sse` ,`streamable-http`, `http` |
+| **Example** | `https://example.com,https://another-example.com` |
+| **Transports** | `sse`, `streamable-http`, `http` |
 
 ### DOCSPACE_SERVER_CORS_MCP_MAX_AGE
 
@@ -421,8 +421,8 @@ header for CORS requests to OAuth endpoints (e.g.,
 |---|---|
 | **Type** | list |
 | **Attributes** | trimmable |
-| **Minimum** | `*` |
-| **Default** | `https://example.com,https://another-example.com` |
+| **Default** | `*` |
+| **Example** | `https://example.com,https://another-example.com` |
 | **Transports** | `sse`, `streamable-http`, `http` |
 
 ### DOCSPACE_SERVER_CORS_OAUTH_MAX_AGE
@@ -450,7 +450,7 @@ Maximum number of requests allowed per window for MCP endpoints (e.g.,
 | **Default** | `1000` |
 | **Minimum** | `0` |
 | **Attributes** | trimmable |
-| **Transports** | `sse`. `streamable-http`, `http` |
+| **Transports** | `sse`, `streamable-http`, `http` |
 
 ### DOCSPACE_SERVER_RATE_LIMITS_MCP_WINDOW
 
@@ -469,7 +469,7 @@ Time window in milliseconds for the rate limit on MCP endpoints. Set to `0` to d
 The maximum number of requests allowed per window for the OAuth server metadata
 endpoint (`/.well-known/oauth-authorization-server`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -499,7 +499,7 @@ The `0` is a special value that disables the rate limit.
 The maximum number of requests allowed per window for the OAuth resource
 metadata endpoint (`/.well-known/oauth-protected-resource`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -529,7 +529,7 @@ The `0` is a special value that disables the rate limit.
 The maximum number of requests allowed per window for the OAuth authorization
 endpoint (`/oauth/authorize`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -559,7 +559,7 @@ The `0` is a special value that disables the rate limit.
 The maximum number of requests allowed per window for the OAuth callback
 endpoint (`/oauth/callback`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -589,7 +589,7 @@ The `0` is a special value that disables the rate limit.
 The maximum number of requests allowed per window for the OAuth introspection
 endpoint (`/oauth/introspect`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -619,7 +619,7 @@ The `0` is a special value that disables the rate limit.
 The maximum number of requests allowed per window for the OAuth client
 registration endpoint (`/oauth/register`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -649,7 +649,7 @@ The `0` is a special value that disables the rate limit.
 The maximum number of requests allowed per window for the OAuth token revocation
 endpoint (`/oauth/revoke`).
 
-The `0` is special value that disables the rate limit.
+The `0` is a special value that disables the rate limit.
 
 | | |
 |---|---|
@@ -695,9 +695,6 @@ Time window in milliseconds for the rate limit on the OAuth token endpoint (`/oa
 | **Attributes** | trimmable |
 | **Transports** | `sse`, `streamable-http`, `http` |
 
-The time window in milliseconds for the rate limit for the OAuth token endpoint
-(`/oauth/token`).
-
 ## Request Options
 
 The following options are used to configure the behavior of incoming requests.
@@ -713,7 +710,7 @@ Controls whether the server accepts configuration via query parameters in incomi
 | **True** | `yes` `y` `true` `1` |
 | **False** | `no` `n` `false` `0` |
 | **Attributes** | trimmable, case-insensitive |
-| **Transports** | `sse`, `streamable-http`. `http` |
+| **Transports** | `sse`, `streamable-http`, `http` |
 
 ### DOCSPACE_REQUEST_AUTHORIZATION_HEADER
 

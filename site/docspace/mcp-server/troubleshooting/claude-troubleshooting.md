@@ -4,7 +4,7 @@ sidebar_label: Claude
 title: Resolving issues with Claude
 ---
 
-This page explains some errors and fixes for troubleshooting issues with Claude web and Claude desktop clients.
+This page explains some errors and fixes for troubleshooting issues with Claude Web and Claude Desktop clients.
 
 ## Claude web
 
