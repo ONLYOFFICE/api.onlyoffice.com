@@ -2,7 +2,7 @@
 sidebar_position: -3
 hide_table_of_contents: true
 description: Manage document comments from an external UI via the Automation API.
-tags: ["Docs"]
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';

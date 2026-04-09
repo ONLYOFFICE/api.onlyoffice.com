@@ -2,7 +2,7 @@
 sidebar_position: -1
 hide_table_of_contents: true
 description: Fill form fields from an external UI with bidirectional sync.
-tags: ["Docs"]
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { FormExternalToolbar } from '@site/src/components/BrowserWindow';

@@ -2,7 +2,7 @@
 sidebar_position: -2
 hide_table_of_contents: true
 description: Accept or reject tracked changes from an external UI via the Automation API.
-tags: ["Docs"]
+tags: ["Docs", "Integration", "External access", "Automation API"]
 ---
 
 import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow';

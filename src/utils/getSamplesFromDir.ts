@@ -30,6 +30,8 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'Ready-to-use': 'pink',
       'Embed SDK': 'green',
       'Integration': 'purple',
+      'External access': 'green',
+      'Automation API': 'blue',
       'REST API': 'green',
       'MCP Server': 'green',
       'AI': 'pink',
