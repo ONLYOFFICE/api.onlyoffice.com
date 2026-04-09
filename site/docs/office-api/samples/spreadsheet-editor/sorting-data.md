@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Sort spreadsheet data by multiple columns.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Sorting data

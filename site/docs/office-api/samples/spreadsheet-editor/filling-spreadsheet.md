@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Populate a spreadsheet with data from arrays.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Filling spreadsheet

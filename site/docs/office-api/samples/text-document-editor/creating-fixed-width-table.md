@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a table with fixed-width columns.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating fixed-width table

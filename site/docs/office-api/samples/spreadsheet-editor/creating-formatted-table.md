@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a formatted table with styled headers and borders.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Creating formatted table

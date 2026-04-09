@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a sales report table with merged cells and totals.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating sales report table

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add comments to a document based on form field selections.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Adding comment based on form

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a footer with a company name and current date.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Adding date and company footer

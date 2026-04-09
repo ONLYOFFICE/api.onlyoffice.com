@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a chart from spreadsheet data.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Creating spreadsheet chart

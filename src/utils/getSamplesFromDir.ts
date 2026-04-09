@@ -32,6 +32,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
       'Integration': 'purple',
       'External access': 'green',
       'Automation API': 'blue',
+      'Office API': 'blue',
       'REST API': 'green',
       'MCP Server': 'green',
       'AI': 'pink',
@@ -51,7 +52,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
 export function getDocsSamples(category: string): SamplesGrid.Item[] {
   return sortByTitle([
     ...toItems(docsSamplesData, category),
-    ...toItems(docsOfficeApiData, category, [{ label: 'Office API', variant: 'blue' }]),
+    ...toItems(docsOfficeApiData, category),
     ...toItems(docsPluginsData, category),
     ...toItems(docsBuilderData, category, [{ label: 'Document Builder', variant: 'blue' }]),
     ...toItems(docsConnectorsData, category),

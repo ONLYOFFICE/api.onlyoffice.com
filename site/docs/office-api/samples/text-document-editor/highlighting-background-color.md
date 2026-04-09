@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Apply background color highlighting to text fragments.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Highlighting background color

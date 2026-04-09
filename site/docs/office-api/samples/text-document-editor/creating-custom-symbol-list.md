@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a bullet list with custom Unicode symbols.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating a custom symbol list

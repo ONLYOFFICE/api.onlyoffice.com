@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create styled note paragraphs with a colored left border.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating note blocks

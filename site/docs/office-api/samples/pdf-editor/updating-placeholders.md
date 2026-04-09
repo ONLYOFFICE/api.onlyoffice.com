@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Update form field placeholders based on user language.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Updating placeholders

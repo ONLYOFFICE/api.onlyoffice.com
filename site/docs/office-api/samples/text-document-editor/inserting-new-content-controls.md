@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Insert content controls at various document positions.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 # Inserting new content controls
 

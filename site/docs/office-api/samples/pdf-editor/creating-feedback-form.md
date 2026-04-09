@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a feedback form with rating and comment fields.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating feedback form

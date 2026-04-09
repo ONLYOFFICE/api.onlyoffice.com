@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Extract all form field values as structured data.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Getting all form values

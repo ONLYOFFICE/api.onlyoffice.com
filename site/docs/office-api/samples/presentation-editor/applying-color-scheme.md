@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create and apply a custom color scheme to a presentation.
+tags: ["Docs", "Office API", "Presentations"]
 ---
 
 # Applying color scheme
