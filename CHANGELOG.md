@@ -7,19 +7,30 @@
 #### DocSpace
 
 * Added SDK documentation with quick-start guides for C#, Java, PHP, Python, TypeScript, and Postman
+* Added MCP server use-case samples to the Samples page
 
 #### Common
 
 * Added a new Samples page with filterable sample cards across all documentation sections
-* Added description metadata to all sample pages across documentation
+* Added search input with optimized filtering to the Samples page
+* Added ?doctype= URL parameter support to the Samples page
+* Added pagination and tag-based filtering to the Samples page
 
 ### Improvements
 
 #### Common
 
+* Upgraded React to 19.2.0
+* Upgraded Docusaurus to 3.10.0 and openapi-docs to 5.0.0
+* Added description metadata to all sample pages across documentation
 * Shortened sample filenames and headers for better readability and URL consistency
 * Translated the playground to Chinese (zh-CN)
 * Moved generate-samples-data script to .github/scripts
+* Cleaned up unused CSS styles, variables, comments, and normalized hex values
+
+#### Homepage
+
+* Updated tag labels in favorites samples
 
 #### Docs API
 
@@ -28,6 +39,8 @@
 #### Plugins and macros
 
 * Fixed heading level for localeTranslate in plugin configuration docs
+* Updated AI plugin and converting VBA macros documentation
+* Renamed custom AI tools files to kebab-case and headers to sentence case
 
 #### Playground
 
@@ -46,6 +59,11 @@
 * Fixed heading levels: use H2 instead of H3 for top-level sections
 * Fixed typos across documentation (raws → rows, standart → standard, exabled → enabled, DocSpaace → DocSpace)
 * Fixed punctuation: use Chinese period in zh-CN working-with-content-controls
+* Fixed links to renamed custom AI tools pages
+* Fixed active navbar link highlight to use accent color
+* Fixed duplicate .menu__link CSS rule
+* Fixed missing space before brace in CSS selector
+* Fixed broken links to language-specific-examples in changelog
 
 ## 8.1.0
 
