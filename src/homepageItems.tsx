@@ -1,6 +1,5 @@
 import { SamplesGrid } from "@site/src/components/SamplesGrid";
 import { BlogGrid } from "@site/src/components/BlogGrid";
-import Link from '@docusaurus/Link';
 import ClockIcon from "@site/static/icons/clock-icon.svg";
 import CodeIcon from "@site/static/icons/code-icon.svg";
 import ChatIcon from "@site/static/icons/chat-icon.svg";
@@ -44,7 +43,7 @@ export const Samples: Samples = {
       category: 'favorite',
       description: (
         <>
-          This <Link to="/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/">AI tool</Link> inserts a pivot table into the specified range.
+          This AI tool inserts a pivot table into the specified range.
         </>
       ),
       features: [
@@ -52,7 +51,7 @@ export const Samples: Samples = {
         'Custom range selection',
         'AI-powered automation',
       ],
-      viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/#spreadsheet-editor',
+      viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/',
       tags: [
         { label: 'Docs', variant: 'blue' },
         { label: 'Plugins', variant: 'blue' },
@@ -66,7 +65,7 @@ export const Samples: Samples = {
       category: 'favorite',
       description: (
         <>
-          Collects all the <Link to="/docs/docs-api/samples/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in a custom interface.
+          Collects all the comments from the document and displays them in a custom interface.
         </>
       ),
       features: [
@@ -74,7 +73,7 @@ export const Samples: Samples = {
         'Custom comment UI',
         'Real-time collaboration',
       ],
-      viewLink:'/docs/docs-api/samples/external-access-to-the-document-editing/',
+      viewLink:'/docs/docs-api/samples/external-access-to-the-document-editing/working-with-comments/',
       tags: [
         { label: 'Docs', variant: 'blue' },
         { label: 'Integration', variant: 'purple' },
