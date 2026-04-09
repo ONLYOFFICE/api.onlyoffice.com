@@ -1,5 +1,6 @@
 import { type FC, type ReactNode, useRef, useState, useEffect } from 'react';
 import { useLocation, useHistory } from '@docusaurus/router';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import { SamplesGrid } from '@site/src/components/SamplesGrid';
 import { Samples } from '@site/src/homepageItems';
 import { getDocsSamples, getDocspaceSamples, getAiSamples } from '@site/src/utils/getSamplesFromDir';
@@ -35,6 +36,7 @@ function getCategoryFromUrl(search: string): string {
 }
 
 export const SamplesContent: FC<Props> = ({ categories }) => {
+  const isBrowser = useIsBrowser();
   const location = useLocation();
   const history = useHistory();
 
@@ -108,7 +110,7 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
         {categories.map((cat) => (
           <button
             key={cat.id}
-            className={`${styles.categoryTab} ${activeCategory === cat.id ? styles.categoryTabActive : ''}`}
+            className={`${styles.categoryTab} ${isBrowser && activeCategory === cat.id ? styles.categoryTabActive : ''}`}
             onClick={() => handleCategoryChange(cat.id)}
           >
             <span className={styles.categoryIcon}>{cat.icon}</span>
@@ -130,35 +132,37 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
         />
       </div>
 
-      <main>
-        {items.length === 0 ? (
-          <p className={styles.noResults}>No results found.</p>
-        ) : (
-          <SamplesGrid items={items} compact />
-        )}
+      {isBrowser && (
+        <main>
+          {items.length === 0 ? (
+            <p className={styles.noResults}>No results found.</p>
+          ) : (
+            <SamplesGrid items={items} compact />
+          )}
 
-        {totalPages > 1 && (
-          <nav className={styles.pagination}>
-            <button
-              className={styles.pageButton}
-              disabled={currentPage === 0}
-              onClick={() => setCurrentPage(currentPage - 1)}
-            >
-              ← Previous
-            </button>
-            <span className={styles.pageInfo}>
-              Page {currentPage + 1} of {totalPages}
-            </span>
-            <button
-              className={styles.pageButton}
-              disabled={currentPage === totalPages - 1}
-              onClick={() => setCurrentPage(currentPage + 1)}
-            >
-              Next →
-            </button>
-          </nav>
-        )}
-      </main>
+          {totalPages > 1 && (
+            <nav className={styles.pagination}>
+              <button
+                className={styles.pageButton}
+                disabled={currentPage === 0}
+                onClick={() => setCurrentPage(currentPage - 1)}
+              >
+                ← Previous
+              </button>
+              <span className={styles.pageInfo}>
+                Page {currentPage + 1} of {totalPages}
+              </span>
+              <button
+                className={styles.pageButton}
+                disabled={currentPage === totalPages - 1}
+                onClick={() => setCurrentPage(currentPage + 1)}
+              >
+                Next →
+              </button>
+            </nav>
+          )}
+        </main>
+      )}
     </>
   );
 };
