@@ -1,6 +1,6 @@
 ---
 description: Add a chart to a presentation slide.
-tags: ["Docs", "Presentations"]
+tags: ["Docs", "AI Tools", "Presentations"]
 ---
 
 # Add chart to slide
@@ -141,7 +141,7 @@ func.call = async function (params) {
     async function checkEndAction() {
       if (!isSendedEndLongAction) {
         let actionName =
-          "AI" +
+          "AI Tools" +
           (requestEngine.modelUI && requestEngine.modelUI.name
             ? " (" + requestEngine.modelUI.name + ")"
             : " (Chart Generation)");
@@ -151,7 +151,7 @@ func.call = async function (params) {
     }
 
     let actionName =
-      "AI" +
+      "AI Tools" +
       (requestEngine.modelUI && requestEngine.modelUI.name
         ? " (" + requestEngine.modelUI.name + ")"
         : " (Chart Generation)");

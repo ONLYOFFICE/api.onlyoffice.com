@@ -1,6 +1,6 @@
 ---
 description: Perform math operations on a cell range.
-tags: ["Docs", "Spreadsheets"]
+tags: ["Docs", "AI Tools", "Spreadsheets"]
 ---
 
 # Calculate values

@@ -1,6 +1,6 @@
 ---
 description: Sort a selected range by column.
-tags: ["Docs", "Spreadsheets"]
+tags: ["Docs", "AI Tools", "Spreadsheets"]
 ---
 
 # Set sort

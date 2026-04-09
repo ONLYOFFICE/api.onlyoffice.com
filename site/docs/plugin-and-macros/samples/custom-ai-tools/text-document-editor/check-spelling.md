@@ -1,6 +1,6 @@
 ---
 description: Check and fix spelling errors in the current paragraph.
-tags: ["Docs", "Text documents"]
+tags: ["Docs", "AI Tools", "Text documents"]
 ---
 
 # Check spelling

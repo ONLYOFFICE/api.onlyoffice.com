@@ -1,6 +1,6 @@
 ---
 description: Add a table to a presentation slide.
-tags: ["Docs", "Presentations"]
+tags: ["Docs", "AI Tools", "Presentations"]
 ---
 
 # Add table to slide
