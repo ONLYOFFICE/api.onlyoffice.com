@@ -56,7 +56,7 @@ export const Samples: Samples = {
       tags: [
         { label: 'Plugins', variant: 'blue' },
         { label: 'Spreadsheets' },
-        { label: 'AI', variant: 'green' },
+        { label: 'AI Tools', variant: 'green' },
         { label: 'Macros' },
       ],
     },
