@@ -5,7 +5,7 @@ sidebar_position: -8
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Java 示例
+# Java 集成
 
 ## 概述
 
