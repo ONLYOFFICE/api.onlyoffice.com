@@ -189,7 +189,7 @@ function insertFormattedText() {
 
 - [YouTube 插件](../../samples/plugin-samples/youtube.md) — 嵌入视频
 - [Translator 插件](../../samples/plugin-samples/translator.md) — 多语言支持
-- [更多示例](../../samples/plugin-samples/plugin-samples.md)
+- [更多示例](/samples/?doctype=docs&text=plugin)
 
 **需要帮助？**
 

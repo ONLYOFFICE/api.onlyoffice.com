@@ -189,7 +189,7 @@ function insertFormattedText() {
 
 - [YouTube plugin](../../samples/plugin-samples/youtube.md) — Embed videos
 - [Translator plugin](../../samples/plugin-samples/translator.md) — Multi-language support
-- [More examples](../../samples/plugin-samples/plugin-samples.md)
+- [More examples](/samples/?doctype=docs&text=plugin)
 
 **Need help?**
 

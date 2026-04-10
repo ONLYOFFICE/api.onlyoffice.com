@@ -135,7 +135,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 ### 示例代码
 
-- **[插件示例](../samples/plugin-samples/plugin-samples.md)** — 可运行示例
+- **[插件示例](/samples/?doctype=docs&text=plugin)** — 可运行示例
 - **[宏示例](../samples/macro-samples/macro-samples.md)** — 常用自动化脚本
 - **[AI 函数示例](../samples/custom-ai-tools/custom-ai-tools.md)** — AI 集成模式
 

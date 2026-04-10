@@ -135,7 +135,7 @@ Answer these questions to find your ideal path:
 
 ### Sample code
 
-- **[Plugin examples](../samples/plugin-samples/plugin-samples.md)** — Working examples
+- **[Plugin examples](/samples/?doctype=docs&text=plugin)** — Working examples
 - **[Macro examples](../samples/macro-samples/macro-samples.md)** — Common automation scripts
 - **[AI function examples](../samples/custom-ai-tools/custom-ai-tools.md)** — AI integration patterns
 
