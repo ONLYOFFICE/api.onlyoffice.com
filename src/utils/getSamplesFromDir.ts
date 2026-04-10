@@ -11,7 +11,8 @@ import docsAiSamplesData from '@site/src/data/docs-ai-samples.json';
 import docspaceAiSamplesData from '@site/src/data/docspace-ai-samples.json';
 
 function sortByTitle(items: SamplesGrid.Item[]): SamplesGrid.Item[] {
-  return items.sort((a, b) => a.title.localeCompare(b.title));
+  const keys = new Map(items.map((item) => [item, item.title.replace(/^[^a-zA-Z]+/, '')]));
+  return items.sort((a, b) => keys.get(a)!.localeCompare(keys.get(b)!));
 }
 
 function toItems(data: typeof docsSamplesData, category: string, defaultTags?: SamplesGrid.Tag[]): SamplesGrid.Item[] {
