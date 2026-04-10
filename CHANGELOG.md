@@ -15,6 +15,8 @@
 * Added search input with optimized filtering to the Samples page
 * Added ?doctype= URL parameter support to the Samples page
 * Added pagination and tag-based filtering to the Samples page
+* Added Document Builder samples to the Samples page
+* Added Document Connectors samples to the Samples page
 
 ### Improvements
 
@@ -23,7 +25,13 @@
 * Upgraded React to 19.2.0
 * Upgraded Docusaurus to 3.10.0 and openapi-docs to 5.0.0
 * Added description metadata to all sample pages across documentation
+* Added tags and descriptions to sample pages across all documentation sections
 * Shortened sample filenames and headers for better readability and URL consistency
+* Added clickable tag filtering on the Samples page
+* Renamed "Favorite/Recommended" to "Favorites/Frequently used" on the Samples page
+* Renamed "AI" to "AI Tools" tag
+* Renamed "Documents Editors" to "Document Editors"
+* Removed tag display limit on the Samples page
 * Translated the playground to Chinese (zh-CN)
 * Moved generate-samples-data script to .github/scripts
 * Cleaned up unused CSS styles, variables, comments, and normalized hex values
@@ -50,6 +58,10 @@
 
 ### Fixes
 
+* Fixed homepage sample card links and cleaned up descriptions
+* Fixed flash of favorites on first load with doctype parameter on the Samples page
+* Fixed Samples page loading speed
+* Removed unnecessary min-height from description and tags row on the Samples page
 * Fixed curly quotes replaced with straight quotes in import statements
 * Fixed pipe character alignment with table headers across EN and zh-CN docs
 * Fixed missing table cell and closing pipe in zh-CN WOPI config
