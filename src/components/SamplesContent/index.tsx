@@ -35,21 +35,44 @@ function getCategoryFromUrl(search: string): string {
   return doctype && VALID_CATEGORIES.has(doctype) ? doctype : DEFAULT_CATEGORY;
 }
 
+function getTextFromUrl(search: string): string {
+  const params = new URLSearchParams(search);
+  return params.get('text') ?? '';
+}
+
+// Use native replaceState to update URL without triggering
+// React Router's full navigation cycle (PendingNavigation).
+function updateUrlParams(updates: Record<string, string | null>): void {
+  const params = new URLSearchParams(window.location.search);
+  for (const [key, value] of Object.entries(updates)) {
+    if (value) {
+      params.set(key, value);
+    } else {
+      params.delete(key);
+    }
+  }
+  window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+}
+
 export const SamplesContent: FC<Props> = ({ categories }) => {
   const isBrowser = useIsBrowser();
   const location = useLocation();
 
   const [activeCategory, setActiveCategory] = useState(() => getCategoryFromUrl(location.search));
   const [currentPage, setCurrentPage] = useState(0);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(() => getTextFromUrl(location.search));
 
   useEffect(() => {
     const categoryFromUrl = getCategoryFromUrl(location.search);
+    const textFromUrl = getTextFromUrl(location.search);
     if (categoryFromUrl !== activeCategory) {
       setActiveCategory(categoryFromUrl);
       setCurrentPage(0);
-      setSearchQuery('');
+      setSearchQuery(textFromUrl);
       prevSearchRef.current = { query: '', results: [] };
+    } else if (textFromUrl !== searchQuery) {
+      setSearchQuery(textFromUrl);
+      setCurrentPage(0);
     }
   }, [location.search]);
 
@@ -96,21 +119,22 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
     setSearchQuery('');
     prevSearchRef.current = { query: '', results: [] };
 
-    // Use native replaceState to update URL without triggering
-    // React Router's full navigation cycle (PendingNavigation).
-    const params = new URLSearchParams(window.location.search);
-    params.set('doctype', id);
-    window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+    updateUrlParams({ doctype: id, text: null });
   }, []);
 
   const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    const value = e.target.value;
+    setSearchQuery(value);
     setCurrentPage(0);
+
+    updateUrlParams({ text: value || null });
   }, []);
 
   const handleTagClick = useCallback((label: string) => {
     setSearchQuery(label);
     setCurrentPage(0);
+
+    updateUrlParams({ text: label });
   }, []);
 
   return (
