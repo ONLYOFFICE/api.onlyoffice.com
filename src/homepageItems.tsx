@@ -73,7 +73,7 @@ export const Samples: Samples = {
         'Custom comment UI',
         'Real-time collaboration',
       ],
-      viewLink:'/docs/docs-api/samples/external-access-to-the-document-editing/working-with-comments/',
+      viewLink:'/docs/docs-api/samples/automation-api/working-with-comments/',
       tags: [
         { label: 'Docs', variant: 'blue' },
         { label: 'Integration', variant: 'purple' },

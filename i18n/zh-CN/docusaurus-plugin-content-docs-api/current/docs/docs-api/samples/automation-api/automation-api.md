@@ -1,5 +1,6 @@
 ---
 sidebar_position: -1
+sidebar_label: 自动化 API
 hide_table_of_contents: true
 ---
 
