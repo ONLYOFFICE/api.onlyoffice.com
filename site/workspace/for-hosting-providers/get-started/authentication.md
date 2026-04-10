@@ -17,7 +17,9 @@ An HTTP header is required to pass the authentication when performing the API re
 
 The hash value is calculated using the HMAC-SHA1 function with the key from the *core.machinekey* value of the Hosted Solution site *appSettings* configuration.
 
-> Please note, that the token is valid for **5** minutes only, starting with the **datetime**.
+:::note
+Please note, that the token is valid for **5** minutes only, starting with the **datetime**.
+:::
 
 Authentication Token example will look like this: "*ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w*"
 

@@ -202,7 +202,9 @@ When the server version is updated, the **document editor** does not use the *ch
 
   Where the **serverVersion** is the *serverVersion* from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
 
-  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
+  :::note
+  ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
+  :::
 
 - [changesurl](../../usage-api/callback-handler.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../usage-api/methods.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
 
@@ -224,6 +226,8 @@ When the server version is updated, the **document editor** does not use the *ch
   })
   ```
 
-  > The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  :::warning
+  The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  :::
 
   ![changesurl](/assets/images/editor/changesurl.png)

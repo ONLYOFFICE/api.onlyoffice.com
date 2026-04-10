@@ -24,7 +24,9 @@ To debug ONLYOFFICE macros, follow the instructions below.
 
 4. Click ![Play icon](/assets/images/plugins/play.svg) to run your script.
 
-   > Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it.
+   :::note
+   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it.
+   :::
 
    ![Debugger](/assets/images/plugins/debugger.png#gh-light-mode-only)![Debugger](/assets/images/plugins/debugger.dark.png#gh-dark-mode-only)
 

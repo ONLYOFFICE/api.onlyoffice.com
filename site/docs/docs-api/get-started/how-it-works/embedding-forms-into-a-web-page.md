@@ -165,7 +165,9 @@ To make an online form in the PDF format available for filling in, follow the st
    const key = `${filename}.pdf`
    ```
 
-   > Please note that the *key* field is not passed to the configuration of the editors. This field will be automatically generated as a random number. This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled. That's why anyone can open the form and fill it out without disturbing others.
+   :::note
+   Please note that the *key* field is not passed to the configuration of the editors. This field will be automatically generated as a random number. This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled. That's why anyone can open the form and fill it out without disturbing others.
+   :::
 
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 

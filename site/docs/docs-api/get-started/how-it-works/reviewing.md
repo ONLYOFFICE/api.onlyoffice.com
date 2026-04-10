@@ -60,7 +60,9 @@ The document review will only be available for the document editor if the [mode]
 
 2. Specify the access rights using the [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter in the permissions section of the editor initialization.
 
-   > If the **reviewGroups** parameter is specified in the editor config, the access rights to reviewing all changes are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
+   :::note
+   If the **reviewGroups** parameter is specified in the editor config, the access rights to reviewing all changes are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
+   :::
 
    ``` ts
    const config = {

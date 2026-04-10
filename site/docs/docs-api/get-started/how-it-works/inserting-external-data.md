@@ -73,11 +73,15 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    The data update request to the file will be sent to the file URL.
 
-   > Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well. But in this case, the *onRequestReferenceData* event will be executed only with the *path* parameter.
+   :::note
+   Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well. But in this case, the *onRequestReferenceData* event will be executed only with the *path* parameter.
+   :::
 
 8. When the user is trying to refresh data from the source file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab, the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event is called. An object with the unique file data received from the source file, the file path or name, and the file URL are sent in the *data* parameter.
 
-   > To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
+   :::note
+   To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
+   :::
 
    ``` ts
    function onRequestReferenceData(event) {
@@ -91,7 +95,9 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 9. In order to refresh the data from the source file, the [setReferenceData](../../usage-api/methods.md#setreferencedata) method must be called. When calling this method, the token must be added to validate the parameters.
 
-   > Please note that this method is executed only when the user has permissions to the source file.
+   :::note
+   Please note that this method is executed only when the user has permissions to the source file.
+   :::
 
    ``` ts
    docEditor.setReferenceData({
@@ -149,7 +155,9 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    When the button is clicked, you must call the [setReferenceSource](../../usage-api/methods.md#setreferencesource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
 
-   > To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used.
+   :::note
+   To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used.
+   :::
    
    <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
 

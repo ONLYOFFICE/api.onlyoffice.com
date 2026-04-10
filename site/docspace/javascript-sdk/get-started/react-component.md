@@ -8,7 +8,9 @@ tags: ["DocSpace", "Embed SDK", "Integration", "React"]
 
 The ONLYOFFICE DocSpace React [component](https://github.com/ONLYOFFICE/docspace-react) integrates ONLYOFFICE DocSpace into [React](https://react.dev/) projects.
 
-> To work with this component, you need to have ONLYOFFICE DocSpace. If you are new to DocSpace, [create an account](https://www.onlyoffice.com/docspace-registration.aspx?from=api).
+:::info
+To work with this component, you need to have ONLYOFFICE DocSpace. If you are new to DocSpace, [create an account](https://www.onlyoffice.com/docspace-registration.aspx?from=api).
+:::
 
 ## Prerequisites
 

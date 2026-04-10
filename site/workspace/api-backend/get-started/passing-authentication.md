@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -21,7 +25,9 @@ The user needs to perform several easy steps to pass authentication:
         }
         ```
 
-        > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+        :::note
+        Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+        :::
       </TabItem>
       <TabItem value="response" label="Response">
         ``` http
@@ -54,7 +60,9 @@ The user needs to perform several easy steps to pass authentication:
    Authorization: sdjhfskjdhkqy739459234
    ```
 
-   > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   :::note
+   Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   :::
 
 ## Authentication request examples
 
@@ -78,13 +86,17 @@ The user needs to perform several easy steps to pass authentication:
     var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
     ```
 
-    > Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+    :::note
+    Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+    :::
   </TabItem>
   <TabItem value="curl" label="cURL">
     ``` sh
     curl --request POST --header "Content-Type: application/json" --data "{\"username\":\"yourusername\",\"password\":\"yourpassword\"}" "https://yourportal.onlyoffice.com/api/2.0/authentication.json"
     ```
 
-    > Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+    :::note
+    Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+    :::
   </TabItem>
 </Tabs>

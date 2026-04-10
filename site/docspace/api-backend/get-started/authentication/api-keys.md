@@ -34,7 +34,9 @@ The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user A
     }
     ```
 
-    > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+    :::note
+    Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+    :::
   </TabItem>
   <TabItem value="response" label="Response">
     ``` http
@@ -66,7 +68,9 @@ You can also create and manage API keys on your portal from the **Developer Tool
 
     ![Create API key](/assets/images/docspace/create-api-key.png#gh-light-mode-only)![Create API key](/assets/images/docspace/create-api-key.dark.png#gh-dark-mode-only)
 
-> Do not share the API key or include it in any client-side code (browsers, apps). API keys should be securely loaded from environment variables or a key management service on the server side.
+:::warning
+Do not share the API key or include it in any client-side code (browsers, apps). API keys should be securely loaded from environment variables or a key management service on the server side.
+:::
 
 ## How to use API keys
 

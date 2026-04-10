@@ -60,7 +60,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 2. 使用编辑器初始化的权限部分中的 [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) 参数指定访问权限。
 
-   > 如果在编辑器配置中指定了 **reviewGroups** 参数，则禁用查看所有更改的访问权限。否则，如果当前用户不属于任何组，他或她可以查看所有组的文档。
+   :::note
+   如果在编辑器配置中指定了 **reviewGroups** 参数，则禁用查看所有更改的访问权限。否则，如果当前用户不属于任何组，他或她可以查看所有组的文档。
+   :::
 
    ``` ts
    const config = {

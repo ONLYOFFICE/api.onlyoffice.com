@@ -31,7 +31,9 @@ import TabItem from '@theme/TabItem';
 
 1. 将插件文件夹中的所有 [插件文件](../../plugin-and-macros/structure/configuration/configuration.md) 打包成 **zip** 归档文件，并将其扩展名改为 *.plugin*（所有插件文件和子文件夹必须位于归档文件的根目录）。
 
-   > 如果您从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins) 下载插件，请先解压插件文件夹，然后仅归档其中的元素。
+   :::note
+   如果您从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins) 下载插件，请先解压插件文件夹，然后仅归档其中的元素。
+   :::
 
 2. 在 **插件** 选项卡上打开 **插件管理器**。
 

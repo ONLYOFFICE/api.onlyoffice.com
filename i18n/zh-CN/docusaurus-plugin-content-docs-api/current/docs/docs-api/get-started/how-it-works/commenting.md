@@ -90,7 +90,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 2. 在编辑器初始化的权限部分中，使用[commentGroups](../../usage-api/config/document/permissions.md#commentgroups)参数指定访问权限。
 
-   > 如果在编辑器配置中指定了**commentGroups**参数，那么查看、编辑和 / 或删除所有评论的访问权限将被禁用。否则，如果当前用户不属于任何一个群组，那么他或她可以编辑、删除和 / 或查看所有群组的评论。
+   :::note
+   如果在编辑器配置中指定了**commentGroups**参数，那么查看、编辑和 / 或删除所有评论的访问权限将被禁用。否则，如果当前用户不属于任何一个群组，那么他或她可以编辑、删除和 / 或查看所有群组的评论。
+   :::
 
    ``` ts
    const config = {

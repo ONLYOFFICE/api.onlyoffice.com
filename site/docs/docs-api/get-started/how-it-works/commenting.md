@@ -90,7 +90,9 @@ The document commenting will only be available for the document editor if the [m
 
 2. Specify the access rights using the [commentGroups](../../usage-api/config/document/permissions.md#commentgroups) parameter in the permissions section of the editor initialization.
 
-   > If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+   :::note
+   If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+   :::
 
    ``` ts
    const config = {
