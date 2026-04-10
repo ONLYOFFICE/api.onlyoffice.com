@@ -18,7 +18,7 @@ export const Samples: Samples = {
     {
       icon: <ClockIcon />,
       title: 'Creating advanced form',
-      category: 'favorite',
+      category: 'favorites',
       description: (
         <>
           Creates advanced form with table structure using Document Builder.
@@ -40,7 +40,7 @@ export const Samples: Samples = {
     {
       icon: <CodeIcon />,
       title: 'Inserting Pivot Table',
-      category: 'favorite',
+      category: 'favorites',
       description: (
         <>
           This AI tool inserts a pivot table into the specified range.
@@ -62,7 +62,7 @@ export const Samples: Samples = {
     {
       icon: <ChatIcon />,
       title: 'Working with comments',
-      category: 'favorite',
+      category: 'favorites',
       description: (
         <>
           Collects all the comments from the document and displays them in a custom interface.

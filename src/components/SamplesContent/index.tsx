@@ -16,7 +16,7 @@ type Category = {
 const ITEMS_PER_PAGE = 30;
 
 const itemsByCategory: Record<string, SamplesGrid.Item[]> = {
-  favorite: Samples.items,
+  favorites: Samples.items,
   docs: getDocsSamples('docs'),
   docspace: getDocspaceSamples('docspace'),
   ai: getAiSamples('ai'),
@@ -27,7 +27,7 @@ type Props = {
 };
 
 const VALID_CATEGORIES = new Set(Object.keys(itemsByCategory));
-const DEFAULT_CATEGORY = 'favorite';
+const DEFAULT_CATEGORY = 'favorites';
 
 function getCategoryFromUrl(search: string): string {
   const params = new URLSearchParams(search);
