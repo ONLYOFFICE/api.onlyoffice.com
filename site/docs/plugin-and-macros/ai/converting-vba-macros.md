@@ -34,7 +34,7 @@ Starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to au
 
 For example, the following VBA macro unmerges all merged cells in the active sheet:
 
-``` vb
+```vb
 Sub UnmergeAllCells()
     ActiveSheet.Cells.UnMerge
 End Sub
@@ -42,7 +42,7 @@ End Sub
 
 You can paste this VBA code into the AI plugin converter. The plugin will return the following JavaScript macro:
 
-``` ts
+```ts
 (function(){
     // This code will unmerge all the merged cells in the active worksheet
     
@@ -89,7 +89,7 @@ If the AI-generated version doesn't work properly, or you want to fully understa
 
 For example:
 
-``` vb
+```vb
 Sub Example()
     Dim myRange
     Dim result
@@ -113,7 +113,7 @@ The macro calculates the sum of the values from the three cell ranges of the **A
 
 The same result can be achieved using ONLYOFFICE macros. The code is almost identical if you know both VBA and JavaScript:
 
-``` ts
+```ts
 (function()
 {
   for (let run = 1; run <= 3; run += 1) {

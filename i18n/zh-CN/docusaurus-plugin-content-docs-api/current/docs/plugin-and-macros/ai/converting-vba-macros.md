@@ -34,7 +34,7 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
 
 例如，以下 VBA 宏可取消合并活动工作表中所有已合并的单元格：
 
-``` vb
+```vb
 Sub UnmergeAllCells()
     ActiveSheet.Cells.UnMerge
 End Sub
@@ -42,7 +42,7 @@ End Sub
 
 您可以将此 VBA 代码粘贴到 AI 插件转换器中。插件将返回以下 JavaScript 宏：
 
-``` ts
+```ts
 (function(){
     // This code will unmerge all the merged cells in the active worksheet
     
@@ -89,7 +89,7 @@ End Sub
 
 例如：
 
-``` vb
+```vb
 Sub Example()
     Dim myRange
     Dim result
@@ -113,7 +113,7 @@ End Sub
 
 使用 ONLYOFFICE 宏可以实现相同的结果。如果您同时了解 VBA 和 JavaScript，代码几乎完全相同：
 
-``` ts
+```ts
 (function()
 {
   for (let run = 1; run <= 3; run += 1) {
