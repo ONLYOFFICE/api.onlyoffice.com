@@ -12,9 +12,9 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
 
-- Embedding external content ([YouTube](../samples/plugin-samples/youtube.md), media galleries)
-- Third-party integrations ([Translator](../samples/plugin-samples/translator.md), [Zotero](../samples/plugin-samples/zotero.md), CRM systems)
-- Advanced processing ([OCR](../samples/plugin-samples/ocr.md), image manipulation, data visualization)
+- Embedding external content ([YouTube](../samples/plugins/youtube.md), media galleries)
+- Third-party integrations ([Translator](../samples/plugins/translator.md), [Zotero](../samples/plugins/zotero.md), CRM systems)
+- Advanced processing ([OCR](../samples/plugins/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
@@ -30,10 +30,10 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 
 **Perfect for:**
 
-- One-click formatting ([Reset text properties](../samples/macro-samples/text-document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
-- Batch operations ([Remove empty tables](../samples/macro-samples/text-document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
-- Custom calculations ([Find weighted average](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
-- Document cleanup ([Remove empty paragraphs](../samples/macro-samples/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
+- One-click formatting ([Reset text properties](../samples/macros/text-document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
+- Batch operations ([Remove empty tables](../samples/macros/text-document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
+- Custom calculations ([Find weighted average](../samples/macros/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
+- Document cleanup ([Remove empty paragraphs](../samples/macros/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
 
 **Development profile:**
 

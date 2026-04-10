@@ -12,9 +12,9 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 嵌入外部内容（[YouTube](../samples/plugin-samples/youtube.md)、媒体库）
-- 第三方集成（[Translator](../samples/plugin-samples/translator.md)、[Zotero](../samples/plugin-samples/zotero.md)、CRM 系统）
-- 高级处理（[OCR](../samples/plugin-samples/ocr.md)、图像处理、数据可视化）
+- 嵌入外部内容（[YouTube](../samples/plugins/youtube.md)、媒体库）
+- 第三方集成（[Translator](../samples/plugins/translator.md)、[Zotero](../samples/plugins/zotero.md)、CRM 系统）
+- 高级处理（[OCR](../samples/plugins/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
 **开发概况：**
@@ -30,10 +30,10 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 一键格式化（[重置文本属性](../samples/macro-samples/text-document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
-- 批量操作（[删除空表格](../samples/macro-samples/text-document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
-- 自定义计算（[加权平均值](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md) — 计算所选范围的加权平均值）
-- 文档清理（[删除空段落](../samples/macro-samples/presentation-editor/remove-empty-paragraphs.md) — 删除整个演示文稿中所有不必要的空段落）
+- 一键格式化（[重置文本属性](../samples/macros/text-document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
+- 批量操作（[删除空表格](../samples/macros/text-document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
+- 自定义计算（[加权平均值](../samples/macros/spreadsheet-editor/weighted-average-function.md) — 计算所选范围的加权平均值）
+- 文档清理（[删除空段落](../samples/macros/presentation-editor/remove-empty-paragraphs.md) — 删除整个演示文稿中所有不必要的空段落）
 
 **开发概况：**
 
