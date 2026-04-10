@@ -40,7 +40,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 - **时间：** 30 分钟 - 2 小时 | **技能：** 入门 | **技术栈：** JavaScript 基础
 - **分发方式：** 复制粘贴代码或嵌入文档模板
 
-[浏览所有宏示例](../samples/macro-samples/macro-samples.md)
+[浏览所有宏示例](/samples/?doctype=docs&text=macros)
 
 ### 自定义 AI 工具 — 智能助手
 
@@ -136,7 +136,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 ### 示例代码
 
 - **[插件示例](/samples/?doctype=docs&text=plugin)** — 可运行示例
-- **[宏示例](../samples/macro-samples/macro-samples.md)** — 常用自动化脚本
+- **[宏示例](/samples/?doctype=docs&text=macros)** — 常用自动化脚本
 - **[AI 函数示例](../samples/custom-ai-tools/custom-ai-tools.md)** — AI 集成模式
 
 ### 文档

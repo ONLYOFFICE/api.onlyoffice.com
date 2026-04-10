@@ -145,7 +145,7 @@ Try these examples to learn more:
 
 **Explore examples:**
 
-- [Macro samples collection](../../samples/macro-samples/macro-samples.md)
+- [Macro samples collection](/samples/?doctype=docs&text=macros)
 - [Converting VBA macros](../../macros/converting-vba-macros.md)
 
 **Need help?**

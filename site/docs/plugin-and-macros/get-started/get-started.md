@@ -40,7 +40,7 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 - **Time:** 30 mins - 2 hours | **Skill:** Beginner | **Tech:** JavaScript basics
 - **Distribution:** Copy-paste code or embed in document templates
 
-[Browse all macro examples](../samples/macro-samples/macro-samples.md)
+[Browse all macro examples](/samples/?doctype=docs&text=macros)
 
 ### Custom AI tools — intelligent assistants
 
@@ -136,7 +136,7 @@ Answer these questions to find your ideal path:
 ### Sample code
 
 - **[Plugin examples](/samples/?doctype=docs&text=plugin)** — Working examples
-- **[Macro examples](../samples/macro-samples/macro-samples.md)** — Common automation scripts
+- **[Macro examples](/samples/?doctype=docs&text=macros)** — Common automation scripts
 - **[AI function examples](../samples/custom-ai-tools/custom-ai-tools.md)** — AI integration patterns
 
 ### Documentation
