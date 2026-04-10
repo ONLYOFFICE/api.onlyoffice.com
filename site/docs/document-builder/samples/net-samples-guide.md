@@ -99,7 +99,7 @@ Run the sample:
     csc /target:exe /out:MyApplication.exe MyApplication.cs ...
     ```
 
-    Then to run it :
+    Then to run it:
 
     ```bash
     mono MyApplication.exe
