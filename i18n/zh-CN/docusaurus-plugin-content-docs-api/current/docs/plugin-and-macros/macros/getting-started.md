@@ -38,6 +38,6 @@ ONLYOFFICE 选择 JavaScript 作为宏的脚本语言的原因有以下几点：
 
 若要添加更多宏，请点击![Plus icon](/assets/images/plugins/plus.svg)。
 
-如需删除不再需要的宏，请点击宏名称旁边的![Dots icon](/assets/images/plugins/dots.svg)并选择**删除**。.
+如需删除不再需要的宏，请点击宏名称旁边的![Dots icon](/assets/images/plugins/dots.svg)并选择**删除**。
 
 如要复制宏，请点击宏名称旁边的![Dots icon](/assets/images/plugins/dots.svg)图标然后选择**复制**。

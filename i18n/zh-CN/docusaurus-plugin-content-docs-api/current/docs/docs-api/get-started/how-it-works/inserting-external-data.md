@@ -119,7 +119,7 @@ sidebar_position: -6
 
    <img alt="open-source" src="/assets/images/editor/open-source.png" width="498px" />
 
-   示例:
+   示例：
 
    ``` ts
    function onRequestOpen(event) {

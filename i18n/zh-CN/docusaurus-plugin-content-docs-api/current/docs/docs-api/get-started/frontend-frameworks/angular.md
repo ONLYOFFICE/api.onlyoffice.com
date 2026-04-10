@@ -223,13 +223,13 @@ ng version
    const documentEditor = window.DocEditor.instances["docxEditor"]
    ```
 
-2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md):
+2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md)：
 
    ```ts
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
    ```
 
-示例:
+示例：
 
 ```ts
 onDocumentReady = () => {
