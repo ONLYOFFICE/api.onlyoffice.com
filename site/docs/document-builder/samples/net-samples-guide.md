@@ -31,7 +31,8 @@ namespace Sample
     {
         public static void Main(string[] args)
         {
-            string workDirectory = Constants.BUILDER_DIR;
+            // Specify the path to the Document Builder work directory
+            string workDirectory = "C:\\document-builder";
             string resultPath = "../../../result.docx";
 
             // add Docbuilder dlls in path
