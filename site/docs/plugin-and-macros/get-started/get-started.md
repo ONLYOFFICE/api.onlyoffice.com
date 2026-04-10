@@ -58,7 +58,7 @@ Custom tools enhanced with AI capabilities for next-generation document workflow
 - **Time:** 3-10 days | **Skill:** Advanced | **Tech:** Plugin API + AI provider integration
 - **Requirements:** API keys for OpenAI, Claude, or custom AI services
 
-[Browse all AI function examples](../samples/custom-ai-tools/custom-ai-tools.md)
+[Browse all AI function examples](/samples/?doctype=ai&text=ai+tools)
 
 ## Which approach would you choose? {#which-approach-would-you-choose}
 
@@ -137,7 +137,7 @@ Answer these questions to find your ideal path:
 
 - **[Plugin examples](/samples/?doctype=docs&text=plugin)** — Working examples
 - **[Macro examples](/samples/?doctype=docs&text=macros)** — Common automation scripts
-- **[AI function examples](../samples/custom-ai-tools/custom-ai-tools.md)** — AI integration patterns
+- **[AI function examples](/samples/?doctype=ai&text=ai+tools)** — AI integration patterns
 
 ### Documentation
 

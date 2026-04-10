@@ -151,7 +151,7 @@ func.call = async function (params) {
 
 **浏览示例：**
 
-- [浏览所有 AI 工具示例](../../samples/custom-ai-tools/custom-ai-tools.md)
+- [浏览所有 AI 工具示例](/samples/?doctype=ai&text=ai+tools)
 
 **需要帮助？**
 

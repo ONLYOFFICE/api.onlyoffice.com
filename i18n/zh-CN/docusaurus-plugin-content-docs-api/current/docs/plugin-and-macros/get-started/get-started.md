@@ -58,7 +58,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 - **时间：** 3-10 天 | **技能：** 高级 | **技术栈：** 插件 API + AI 提供商集成
 - **要求：** OpenAI、Claude 或自定义 AI 服务的 API 密钥
 
-[浏览所有 AI 函数示例](../samples/custom-ai-tools/custom-ai-tools.md)
+[浏览所有 AI 函数示例](/samples/?doctype=ai&text=ai+tools)
 
 ## 如何选择方案？ {#which-approach-would-you-choose}
 
@@ -137,7 +137,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 - **[插件示例](/samples/?doctype=docs&text=plugin)** — 可运行示例
 - **[宏示例](/samples/?doctype=docs&text=macros)** — 常用自动化脚本
-- **[AI 函数示例](../samples/custom-ai-tools/custom-ai-tools.md)** — AI 集成模式
+- **[AI 函数示例](/samples/?doctype=ai&text=ai+tools)** — AI 集成模式
 
 ### 文档
 
