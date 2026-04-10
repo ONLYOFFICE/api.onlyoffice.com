@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create a borderless table in the footer with company info.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating table in header or footer

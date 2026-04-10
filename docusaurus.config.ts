@@ -51,7 +51,7 @@ const config: Config = {
     v4: {
       removeLegacyPostBuildHeadAttribute: true
     },
-    experimental_faster: {
+    faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
       ssgWorkerThreads: true,
@@ -264,10 +264,9 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'samples',
+          to: 'samples',
           label: 'Samples',
-          docsPluginId: 'api',
+          position: 'left',
         },
         {
           to: 'changelog',

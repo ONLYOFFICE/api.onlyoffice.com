@@ -1,3 +1,8 @@
+---
+description: Retrieve available rooms using the DocSpace JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Get rooms
 
 This example demonstrates how to retrieve a list of available rooms using the JavaScript SDK embedded in a DocSpace frame.

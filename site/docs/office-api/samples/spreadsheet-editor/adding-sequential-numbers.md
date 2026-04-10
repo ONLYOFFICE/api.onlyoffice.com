@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Add auto-incrementing row numbers to a spreadsheet.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Adding sequential numbers

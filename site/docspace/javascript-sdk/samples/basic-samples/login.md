@@ -1,3 +1,8 @@
+---
+description: Log in to DocSpace using the JS SDK with password hashing.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Login
 
 This example demonstrates how to log in to DocSpace using the JavaScript SDK by hashing the password.

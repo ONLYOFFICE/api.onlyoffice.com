@@ -1,3 +1,8 @@
+---
+description: Create a review folder and grant reviewers access.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Create review folder with reviewers
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to organize a lightweight review process: create a dedicated "Review" folder, collect selected files into it, and grant reviewers the appropriate access role.

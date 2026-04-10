@@ -1,3 +1,8 @@
+---
+description: Build a freelance project workspace with rooms and file management.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Collaborative project workflow
 
 This example shows how to build a freelance project workspace using DocSpace SDK. When a project is created, a room is generated, a freelancer is assigned via API, task files are managed, and the room is archived on completion.

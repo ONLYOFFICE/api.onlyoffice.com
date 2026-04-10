@@ -1,3 +1,8 @@
+---
+description: Retrieve a list of files from a room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Get files
 
 This example demonstrates how to retrieve a list of files from a room using the JavaScript SDK method.

@@ -125,7 +125,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  min-height: 54px;
   align-content: flex-end;
 }
 
@@ -140,6 +139,15 @@
   color: #555;
   background-color: #f5f5f5;
   white-space: nowrap;
+}
+
+.tagClickable {
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+
+.tagClickable:hover {
+  opacity: 0.75;
 }
 
 .tagGreen {

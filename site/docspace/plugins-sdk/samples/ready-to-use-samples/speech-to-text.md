@@ -1,3 +1,8 @@
+---
+description: Recognize and convert spoken speech into text.
+tags: ["DocSpace", "Plugins", "Ready-to-use"]
+---
+
 # Speech to text
 
 A speech recognition software that allows you to recognize and translate spoken speech into text.

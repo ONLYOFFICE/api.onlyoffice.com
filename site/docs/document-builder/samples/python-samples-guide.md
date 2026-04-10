@@ -1,5 +1,6 @@
 ---
 sidebar_position: -2
+description: Set up and run Document Builder samples in Python.
 ---
 
 # Python samples guide

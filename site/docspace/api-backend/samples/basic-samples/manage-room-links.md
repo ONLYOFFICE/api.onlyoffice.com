@@ -1,3 +1,8 @@
+---
+description: Set and retrieve room invitation and external links via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -1,3 +1,8 @@
+---
+description: Create a folder in a DocSpace room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Create folder
 
 This example demonstrates how to create a folder in a room.

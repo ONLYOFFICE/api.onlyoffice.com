@@ -1,3 +1,8 @@
+---
+description: Create a new file in a folder and open it in the browser.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

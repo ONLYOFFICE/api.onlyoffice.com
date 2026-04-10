@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Search and highlight key terms with bold and color formatting.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Highlighting key terms

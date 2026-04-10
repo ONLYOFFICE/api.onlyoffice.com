@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create an exam form with questions and answer fields.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating exam form

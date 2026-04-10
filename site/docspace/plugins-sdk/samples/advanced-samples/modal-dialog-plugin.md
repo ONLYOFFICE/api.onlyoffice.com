@@ -1,3 +1,8 @@
+---
+description: Create files through a modal dialog with API calls.
+tags: ["DocSpace", "Plugins", "Advanced"]
+---
+
 # Modal dialog plugin
 
 This guide walks you through building a plugin for DocSpace that adds a custom toolbar button. When clicked, it opens a dialog allowing users to input a filename and create an empty `.docx` file in the current room using a backend API call.

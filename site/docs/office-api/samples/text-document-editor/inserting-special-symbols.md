@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Insert Unicode symbols with custom formatting.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Inserting special symbols

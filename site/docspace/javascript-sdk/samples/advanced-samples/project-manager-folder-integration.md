@@ -1,3 +1,8 @@
+---
+description: Track projects as folders in a shared room with file locking.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Manage project folders
 
 This example shows how to create a simple project tracker that interacts with DocSpace. Each project is represented as a folder inside a shared room. You can add or remove projects, and when a project is deleted, all associated files are locked using the ONLYOFFICE API.

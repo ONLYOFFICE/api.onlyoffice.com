@@ -1,3 +1,8 @@
+---
+description: View, edit, and create Markdown files in DocSpace.
+tags: ["DocSpace", "Plugins", "Ready-to-use"]
+---
+
 # Markdown
 
 A tool for viewing, editing and creating `.md` files.

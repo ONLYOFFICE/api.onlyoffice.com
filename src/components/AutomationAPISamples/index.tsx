@@ -34,7 +34,7 @@ const AutomationAPISamples = [
   },
   {
     name: 'Working with content controls',
-    image: require('@site/static/assets/images/editor/filling-out-the-form.png').default,
+    image: require('@site/static/assets/images/editor/working-with-content-controls.png').default,
     url: 'working-with-content-controls',
     description: 'This example shows how to add different types of content controls and inspect their properties from an external UI.',
   },

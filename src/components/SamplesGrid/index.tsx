@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import { type FC, type ReactNode, memo } from 'react';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
@@ -7,6 +7,7 @@ export namespace SamplesGrid {
   export type Props = {
     items: Item[];
     compact?: boolean;
+    onTagClick?: (label: string) => void;
   }
 
   export type Tag = {
@@ -25,7 +26,6 @@ export namespace SamplesGrid {
   };
 }
 
-const MAX_VISIBLE_TAGS = 5;
 
 const variantStyles: Record<string, string | undefined> = {
   green: styles.tagGreen,
@@ -34,15 +34,21 @@ const variantStyles: Record<string, string | undefined> = {
   pink: styles.tagPink,
 };
 
-const TagBadge: FC<SamplesGrid.Tag> = ({ label, variant = 'default' }) => {
-  const className = [styles.tag, variantStyles[variant]].filter(Boolean).join(' ');
+type TagBadgeProps = SamplesGrid.Tag & { onClick?: (label: string) => void };
 
-  return <span className={className}>{label}</span>;
+const TagBadge: FC<TagBadgeProps> = ({ label, variant = 'default', onClick }) => {
+  const className = [styles.tag, onClick && styles.tagClickable, variantStyles[variant]].filter(Boolean).join(' ');
+
+  return (
+    <span className={className} onClick={onClick ? () => onClick(label) : undefined}>
+      {label}
+    </span>
+  );
 };
 
-type FeatureProps = SamplesGrid.Item & { compact?: boolean };
+type FeatureProps = SamplesGrid.Item & { compact?: boolean; onTagClick?: (label: string) => void };
 
-const Feature: FC<FeatureProps> = ({
+const Feature: FC<FeatureProps> = memo(({
   icon,
   title,
   description,
@@ -50,10 +56,8 @@ const Feature: FC<FeatureProps> = ({
   viewLink,
   tags,
   compact,
+  onTagClick,
 }) => {
-  const visibleTags = tags?.slice(0, MAX_VISIBLE_TAGS);
-  const extraCount = tags ? tags.length - MAX_VISIBLE_TAGS : 0;
-
   const heading = <Heading as="h3">{title}</Heading>;
 
   return (
@@ -82,27 +86,24 @@ const Feature: FC<FeatureProps> = ({
           </Link>
         )}
 
-        {visibleTags && visibleTags.length > 0 && (
+        {tags && tags.length > 0 && (
           <div className={styles.tagsRow}>
-            {visibleTags.map((tag, idx) => (
-              <TagBadge key={idx} {...tag} />
+            {tags.map((tag, idx) => (
+              <TagBadge key={idx} {...tag} onClick={onTagClick} />
             ))}
-            {extraCount > 0 && (
-              <span className={styles.tag}>+{extraCount}</span>
-            )}
           </div>
         )}
       </div>
     </div>
   );
-};
+});
 
-export const SamplesGrid: FC<SamplesGrid.Props> = ({ items, compact }) => {
+export const SamplesGrid: FC<SamplesGrid.Props> = memo(({ items, compact, onTagClick }) => {
   return (
     <div className={styles.samplesGridList}>
       {items.map((props, idx) => (
-        <Feature key={idx} {...props} compact={compact} features={compact ? undefined : props.features} />
+        <Feature key={`${props.title}-${idx}`} {...props} compact={compact} onTagClick={onTagClick} features={compact ? undefined : props.features} />
       ))}
     </div>
   );
-};
+});

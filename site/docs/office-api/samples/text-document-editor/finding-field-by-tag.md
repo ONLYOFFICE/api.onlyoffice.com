@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Find content controls by tag and retrieve their values.
+tags: ["Docs", "Office API", "Text documents"]
+---
 # Finding field by tag
 
 Create a document with various content controls and demonstrate how to find specific fields by their tags and retrieve their values:

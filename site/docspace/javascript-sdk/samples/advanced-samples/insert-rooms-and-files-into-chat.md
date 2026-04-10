@@ -1,3 +1,8 @@
+---
+description: Insert room and file links into a chat using slash commands.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # DocSpace chat commands
 
 This example shows how to integrate DocSpace SDK selectors into a chat interface. Users can enter special slash commands to open file or room selectors. Once an item is selected, the link is automatically added to the chat.

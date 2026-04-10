@@ -12,9 +12,9 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 嵌入外部内容（[YouTube](../samples/plugin-samples/youtube.md)、媒体库）
-- 第三方集成（[Translator](../samples/plugin-samples/translator.md)、[Zotero](../samples/plugin-samples/zotero.md)、CRM 系统）
-- 高级处理（[OCR](../samples/plugin-samples/ocr.md)、图像处理、数据可视化）
+- 嵌入外部内容（[YouTube](../samples/plugins/youtube.md)、媒体库）
+- 第三方集成（[Translator](../samples/plugins/translator.md)、[Zotero](../samples/plugins/zotero.md)、CRM 系统）
+- 高级处理（[OCR](../samples/plugins/ocr.md)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
 **开发概况：**
@@ -30,17 +30,17 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 一键格式化（[重置文本属性](../samples/macro-samples/text-document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
-- 批量操作（[删除空表格](../samples/macro-samples/text-document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
-- 自定义计算（[加权平均值](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md) — 计算所选范围的加权平均值）
-- 文档清理（[删除空段落](../samples/macro-samples/presentation-editor/remove-empty-paragraphs.md) — 删除整个演示文稿中所有不必要的空段落）
+- 一键格式化（[重置文本属性](../samples/macros/text-document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
+- 批量操作（[删除空表格](../samples/macros/text-document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
+- 自定义计算（[加权平均值](../samples/macros/spreadsheet-editor/weighted-average-function.md) — 计算所选范围的加权平均值）
+- 文档清理（[删除空段落](../samples/macros/presentation-editor/remove-empty-paragraphs.md) — 删除整个演示文稿中所有不必要的空段落）
 
 **开发概况：**
 
 - **时间：** 30 分钟 - 2 小时 | **技能：** 入门 | **技术栈：** JavaScript 基础
 - **分发方式：** 复制粘贴代码或嵌入文档模板
 
-[浏览所有宏示例](../samples/macro-samples/macro-samples.md)
+[浏览所有宏示例](/samples/?doctype=docs&text=macros)
 
 ### 自定义 AI 工具 — 智能助手
 
@@ -48,17 +48,17 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/checkSpelling.md) — AI 驱动的拼写检查）
-- 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/changeTextStyle.md) — AI 驱动的文本样式调整）
-- 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/addShapeToSlide.md) — AI 驱动的演示文稿设计）
-- 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explainFormula.md) — AI 驱动的公式解释）
+- 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/check-spelling.md) — AI 驱动的拼写检查）
+- 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/change-text-style.md) — AI 驱动的文本样式调整）
+- 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI 驱动的演示文稿设计）
+- 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI 驱动的公式解释）
 
 **开发概况：**
 
 - **时间：** 3-10 天 | **技能：** 高级 | **技术栈：** 插件 API + AI 提供商集成
 - **要求：** OpenAI、Claude 或自定义 AI 服务的 API 密钥
 
-[浏览所有 AI 函数示例](../samples/custom-ai-tools/custom-ai-tools.md)
+[浏览所有 AI 函数示例](/samples/?doctype=ai&text=ai+tools)
 
 ## 如何选择方案？ {#which-approach-would-you-choose}
 
@@ -135,9 +135,9 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 ### 示例代码
 
-- **[插件示例](../samples/plugin-samples/plugin-samples.md)** — 可运行示例
-- **[宏示例](../samples/macro-samples/macro-samples.md)** — 常用自动化脚本
-- **[AI 函数示例](../samples/custom-ai-tools/custom-ai-tools.md)** — AI 集成模式
+- **[插件示例](/samples/?doctype=docs&text=plugin)** — 可运行示例
+- **[宏示例](/samples/?doctype=docs&text=macros)** — 常用自动化脚本
+- **[AI 函数示例](/samples/?doctype=ai&text=ai+tools)** — AI 集成模式
 
 ### 文档
 

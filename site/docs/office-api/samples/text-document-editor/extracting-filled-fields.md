@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Extract all filled content control values as key-value pairs.
+tags: ["Docs", "Office API", "Text documents"]
+---
 # Extracting filled fields
 
 Create a document with various content controls (form fields) and demonstrate how to extract all filled values with their tags:

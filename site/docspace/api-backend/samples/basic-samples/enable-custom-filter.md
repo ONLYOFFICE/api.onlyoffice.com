@@ -1,3 +1,8 @@
+---
+description: Enable the custom filter mode for a spreadsheet via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

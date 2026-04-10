@@ -1,3 +1,9 @@
+---
+hide_table_of_contents: true
+description: Create a pivot table grouped by category with sum totals.
+tags: ["Docs", "Office API", "Spreadsheets"]
+---
+
 # Creating pivot table by categories
 
 Creates a pivot table based on source data, grouping rows by one column and calculating sum or count of values. Suitable for sales reports, inventory tracking, and task management:

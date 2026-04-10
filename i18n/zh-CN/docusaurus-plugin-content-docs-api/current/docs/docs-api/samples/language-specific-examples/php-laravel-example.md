@@ -2,7 +2,7 @@
 sidebar_position: -3
 ---
 
-# PHP (Laravel) 示例
+# PHP Laravel 集成
 
 ## 概述
 

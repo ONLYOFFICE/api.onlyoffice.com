@@ -1,3 +1,8 @@
+---
+description: Embed the room selection interface using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Initialize room selector
 
 This example demonstrates how to embed the room selection interface using the JavaScript SDK method.
