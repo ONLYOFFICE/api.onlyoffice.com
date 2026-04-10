@@ -131,10 +131,11 @@ export const SamplesContent: FC<Props> = ({ categories }) => {
   }, []);
 
   const handleTagClick = useCallback((label: string) => {
-    setSearchQuery(label);
+    const lowerLabel = label.toLowerCase();
+    setSearchQuery(lowerLabel);
     setCurrentPage(0);
 
-    updateUrlParams({ text: label });
+    updateUrlParams({ text: lowerLabel });
   }, []);
 
   return (
