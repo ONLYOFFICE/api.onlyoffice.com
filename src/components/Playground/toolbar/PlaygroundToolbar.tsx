@@ -77,7 +77,7 @@ export const PlaygroundToolbar = () => {
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="word" className={styles.SelectOption}>
-                                    <Select.ItemText>Word</Select.ItemText>
+                                    <Select.ItemText>Text Document</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="cell" className={styles.SelectOption}>
                                     <Select.ItemText>Spreadsheet</Select.ItemText>
