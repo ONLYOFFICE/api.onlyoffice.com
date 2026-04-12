@@ -10,7 +10,9 @@ The reference figure and the steps below explain the process of opening a docume
 
 1. The user uses the **document manager** (found in his/her browser) to open the document for viewing or editing.
 
-   > The browser **document manager** receives the list of all documents available to the user from the **document storage service**.
+   :::note
+   The browser **document manager** receives the list of all documents available to the user from the **document storage service**.
+   :::
 
 2. The document identifier and the link to it at the **document storage service** are sent using the [JavaScript API](../basic-concepts.md) to the **document editor**.
 

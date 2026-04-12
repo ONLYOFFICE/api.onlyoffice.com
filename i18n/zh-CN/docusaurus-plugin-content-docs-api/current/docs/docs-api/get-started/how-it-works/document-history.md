@@ -202,7 +202,9 @@ sidebar_position: -19
 
   其中**serverVersion**是保存文档后从[历史记录对象](../../usage-api/callback-handler.md#history)返回的*serverVersion*。
 
-  > ONLYOFFICE文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
+  :::note
+  ONLYOFFICE文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
+  :::
 
 - [changesurl](../../usage-api/callback-handler.md#changesurl)：包含文档编辑数据的文件的绝对URL，用于显示与特定文档版本相对应的更改。必须保存该文件，并且必须使用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法将其地址作为*changesUrl*参数发送。必须将前一个文档版本的链接(*previous.url*)添加到对象中。
 
@@ -224,6 +226,8 @@ sidebar_position: -19
   })
   ```
 
-  > *changesurl*请求是在浏览器中从添加的具有**documentserver**域的iframe中发出的，其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。为了使其正常工作，必须允许跨源HTTP请求（CORS）。这可以通过使用*Access-Control-Allow-Origin*标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+  :::warning
+  *changesurl*请求是在浏览器中从添加的具有**documentserver**域的iframe中发出的，其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。为了使其正常工作，必须允许跨源HTTP请求（CORS）。这可以通过使用*Access-Control-Allow-Origin*标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+  :::
 
   ![变更目录](/assets/images/editor/changesurl.png)

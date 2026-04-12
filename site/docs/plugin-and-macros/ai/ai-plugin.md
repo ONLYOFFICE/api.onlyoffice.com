@@ -50,7 +50,7 @@ To start using the AI plugin:
    - **Translation**: translate selected text using the configured AI service;
    - **Grammar & Spelling**: check the grammar and spelling of the selected text;
    - **Create AI assistant**: create a new AI assistant to perform repetitive text tasks.
-3. You can use the plugin on selected text. To do this, select the text, right-click it, and in the AI menu choose one of the options: **Summarization**, **Text analysis**, **Translate**, **Image**, or **Chatbot**.
+3. You can use the plugin on selected text. To do this, select the text, right-click it, and in the AI menu choose one of the options: **Summarization**, **Text analysis**, **Translate**, **Image**, **Grammar & Spelling**, or **Chatbot**.
 4. The plugin will respond based on the configured AI model.
 5. Insert the response into the document or use it for your needs.
 

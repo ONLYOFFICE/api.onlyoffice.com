@@ -21,7 +21,9 @@ import TabItem from '@theme/TabItem';
 
 5. **文档编辑服务**使用来自 [JavaScript API](../basic-concepts.md) 的 *callbackUrl* 通知**文档存储服务**文档编辑结束，并返回修改后文档的链接。
 
-   > 请注意，从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status*) 选择 [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 是从最后一个加入共同编辑的用户开始使用的。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
+   :::note
+   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status*) 选择 [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 是从最后一个加入共同编辑的用户开始使用的。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
+   :::
 
 6. **文档存储服务**从**文档编辑服务**下载所有已保存更改的文档文件并将其存储。
 
@@ -154,7 +156,7 @@ import TabItem from '@theme/TabItem';
   将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为**2**。
 
 :::note
-请注意，您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
+您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
 :::
 
 ## 以原始格式保存 {#saving-in-original-format}
@@ -195,5 +197,5 @@ import TabItem from '@theme/TabItem';
 ```
 
 :::warning
-请记住，此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 *.doc* 格式）。如有必要，禁用此设置。
+此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 *.doc* 格式）。如有必要，禁用此设置。
 :::

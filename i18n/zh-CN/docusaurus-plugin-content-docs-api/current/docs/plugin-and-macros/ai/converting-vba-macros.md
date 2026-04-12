@@ -28,7 +28,9 @@ ONLYOFFICE 宏与 Microsoft 宏不同，因为后者使用 Visual Basic for Appl
 
 5. 检查代码，并根据需要进行调整。
 
-    > 虽然 AI 插件可以生成完整且可运行的宏，但并不总是完美无误。请务必仔细检查输出结果并进行充分测试，尤其是对于复杂的宏。
+    :::warning
+    虽然 AI 插件可以生成完整且可运行的宏，但并不总是完美无误。请务必仔细检查输出结果并进行充分测试，尤其是对于复杂的宏。
+    :::
 
 6. 点击 ![Play icon](/assets/images/plugins/play.svg) 测试脚本。
 
@@ -45,22 +47,22 @@ End Sub
 ```ts
 (function(){
     // This code will unmerge all the merged cells in the active worksheet
-    
+
     // Get the active sheet
-    var oWorksheet = Api.GetActiveSheet();
-    
+    const oWorksheet = Api.GetActiveSheet();
+
     // Get all cells in the worksheet by getting the used range
-    var oUsedRange = oWorksheet.GetUsedRange();
-    
+    const oUsedRange = oWorksheet.GetUsedRange();
+
     // Check if there is any used range
     if (oUsedRange) {
         // Unmerge all cells in the used range
         oUsedRange.UnMerge();
     }
-    
+
     // Alternative approach: Get the entire sheet range and unmerge
     // This ensures all possible merged cells are unmerged
-    var oRange = oWorksheet.GetRange("A1:XFD1048576");
+    const oRange = oWorksheet.GetRange("A1:XFD1048576");
     oRange.UnMerge();
 })();
 ```
