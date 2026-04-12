@@ -188,4 +188,4 @@ OAuth is the recommended method as it provides the strongest security model by a
 ## After Installation
 
 - [Test MCP server-client installation](quickstart.md#step-2-confirm-the-connection)
-- [Start exploring with the MCP server by creating a new room](quickstart.md#step-3-interact-with-your-docspace-using-newly-connected-client)
+- [Start exploring with the MCP server by creating a new room](quickstart.md#step-3-interact-with-your-docspace-using-the-newly-connected-client)

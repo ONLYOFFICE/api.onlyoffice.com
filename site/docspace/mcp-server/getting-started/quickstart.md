@@ -10,9 +10,9 @@ This guide will demonstrate how the [DocSpace MCP server](index.md) works with M
 
 This guide will help you achieve the following:
 
-- [Connect Claude Desktop to the DocSpace MCP server](#step-1-connect-to-an-mcp-client)
+- [Connect Claude Desktop to the DocSpace MCP server](#step-1-connect-to-mcp-client)
 - [Confirm the MCP server-client connection](#step-2-confirm-the-connection)
-- [Interact with DocSpace using the MCP client](#step-3-interact-with-your-docspace-using-newly-connected-client)
+- [Interact with DocSpace using the MCP client](#step-3-interact-with-your-docspace-using-the-newly-connected-client)
 
 ### Step 1: Connect to MCP client
 
