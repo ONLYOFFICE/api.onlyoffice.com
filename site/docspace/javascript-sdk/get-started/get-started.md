@@ -9,6 +9,18 @@ The [ONLYOFFICE DocSpace SDK](https://www.npmjs.com/package/@onlyoffice/docspace
 
 You don't need to be an experienced JavaScript developer to use the DocSpace JavaScript SDK because we provide you with all the basics. You only need a few lines of JavaScript to set up a fully functional integration.
 
+## Comparison table
+
+| Mode | SDK method | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
+| ------ | ----------- | ----------------- | ------ | -------- | ------ | ------ |
+| Frame | `initFrame()` | Full file and room manager | Yes | Yes | No | Yes |
+| Manager | `initManager()` | Full file and room manager | Yes | Yes | No | Yes |
+| Viewer | `initViewer()` | Read-only document preview | No | No | Yes (file) | Yes |
+| Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
+| Room selector | `initRoomSelector()` | Room picker dialog | Rooms only | No | No | Yes |
+| File selector | `initFileSelector()` | File picker dialog | Yes | No | No | Yes |
+| System | `initSystem()` | None (blank/hidden frame) | N/A | N/A | N/A | Yes |
+
 Follow the steps below to connect DocSpace as a frame to your website.
 
 ## Step 1. Specifying the DocSpace URL
