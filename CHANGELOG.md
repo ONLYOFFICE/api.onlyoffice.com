@@ -1,5 +1,27 @@
 # Change log
 
+## 8.3.0
+
+### New features
+
+#### DocSpace
+
+* Added live Public room embed example to the SDK get-started page
+* Added embedding modes comparison table to the DocSpace SDK get-started page
+* Added DocSpace SDK playground page with interactive editor and live preview
+
+### Improvements
+
+#### DocSpace
+
+* Updated main page button to link to playground instead of cloud registration
+
+### Fixes
+
+* Fixed button being required in Features type for Workspace and Samples pages
+* Replaced console.log with visible actions in Playground connector examples
+* Renamed "Word" to "Text Document" in Playground editor selector
+
 ## 8.2.0
 
 ### New features
