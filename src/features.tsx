@@ -89,8 +89,8 @@ export const DocsFeatures: Features = {
 export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
   button: {
-    text: "Try DocSpace Cloud",
-    href: "https://www.onlyoffice.com/docspace-registration",
+    text: "Try DocSpace Playground",
+    href: "/docspace/javascript-sdk/get-started/playground/",
   },
   items: [
     {
