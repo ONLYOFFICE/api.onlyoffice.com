@@ -12,7 +12,7 @@ import MCPServerIcon from "@site/static/icons/mcp-server-icon.svg";
 export type Features = {
   linkPrefix: string
   items: FeaturesGrid.Item[]
-  button: FeaturesGrid.Button
+  button?: FeaturesGrid.Button
 };
 
 export const DocsFeatures: Features = {
