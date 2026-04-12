@@ -10,7 +10,7 @@ The reference figure and the steps below explain the process of setting a name t
 
 1. The anonymous user uses the **document manager** to open a document for viewing or editing.
 
-   :::info
+   :::note
    Anonymous user is a user with an empty [user id](../../usage-api/config/editor/editor.md#user).
    :::
 
