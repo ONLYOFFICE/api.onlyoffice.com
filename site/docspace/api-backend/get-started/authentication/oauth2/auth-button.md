@@ -74,7 +74,7 @@ This parameter is used only when the authentication method is not specified (non
 Example: kNDpYrWzia4n6BoUewMVbnb5kQRIFgVdiaKwNGZ-_Wc
 
 :::note
-Please note that the code verifier will be generated anew each time the preview dialog is reopened.
+The code verifier will be generated anew each time the preview dialog is reopened.
 :::
 
 You can click the example button to go through the entire [authorization flow](authorization-flow.md).

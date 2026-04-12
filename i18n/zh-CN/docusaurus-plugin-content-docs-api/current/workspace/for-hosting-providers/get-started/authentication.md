@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 哈希值使用 HMAC-SHA1 函数计算，密钥来自托管解决方案站点 *appSettings* 配置中的 *core.machinekey* 值。
 
 :::note
-请注意，令牌自 **datetime** 起仅有效 **5** 分钟。
+令牌自 **datetime** 起仅有效 **5** 分钟。
 :::
 
 身份验证令牌示例如下："*ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w*"

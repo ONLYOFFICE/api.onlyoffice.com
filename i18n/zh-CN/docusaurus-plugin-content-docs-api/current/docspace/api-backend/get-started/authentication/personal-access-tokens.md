@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
         ```
 
         :::note
-        请注意，您需要在 *Host: yourportal.onlyoffice.com* 行中输入您自己的门户地址，而非 *yourportal.onlyoffice.com* 地址。
+        您需要在 *Host: yourportal.onlyoffice.com* 行中输入您自己的门户地址，而非 *yourportal.onlyoffice.com* 地址。
         :::
       </TabItem>
       <TabItem value="response" label="响应">
@@ -60,7 +60,7 @@ import TabItem from '@theme/TabItem';
    ```
 
    :::note
-   请注意，您需要在 *Host: yourportal.onlyoffice.com* 行中输入您自己的门户地址，而非 *yourportal.onlyoffice.com* 地址。
+   您需要在 *Host: yourportal.onlyoffice.com* 行中输入您自己的门户地址，而非 *yourportal.onlyoffice.com* 地址。
    :::
 
 ## 身份验证请求示例
@@ -138,5 +138,5 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 :::note
-请注意，您需要输入您自己的门户地址、用户名和密码，分别替换 *yourportal.onlyoffice.com*、*yourusername* 和 *yourpassword*。
+您需要输入您自己的门户地址、用户名和密码，分别替换 *yourportal.onlyoffice.com*、*yourusername* 和 *yourpassword*。
 :::

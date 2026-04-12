@@ -82,7 +82,7 @@ If the users are not authenticated, they will see a page asking them to sign in 
 ## Step 5. Initializing
 
 :::warning
-Please note that when working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
+When working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
 :::
 
 Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDKInstance.md#initframe) method with the SDK config passed to it:

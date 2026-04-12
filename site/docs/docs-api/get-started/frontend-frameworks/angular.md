@@ -145,7 +145,7 @@ ng version
 1. Open the *./src/app/app.component.ts* file in the *onlyoffice-angular-demo* project and define options in your consuming component:
 
    :::note
-   Please note that starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
+   Starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
    :::
 
    ``` ts

@@ -89,5 +89,5 @@ Authorization: Basic "username:password".toBase64Str()
 </Tabs>
 
 :::note
-请注意，您需要输入您自己的门户地址、用户名和密码，分别替换 *yourportal.onlyoffice.com*、*yourusername* 和 *yourpassword*。
+您需要输入您自己的门户地址、用户名和密码，分别替换 *yourportal.onlyoffice.com*、*yourusername* 和 *yourpassword*。
 :::

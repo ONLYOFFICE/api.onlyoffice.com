@@ -64,7 +64,7 @@ API JavaScript 文件通常位于以下 DocSpace 文件夹中：
 ## 第 5 步. 初始化
 
 :::warning
-请注意，通过 HTTPS 工作时，必须在 *appsettings.json* 中将 **"SameSite": "none"** 参数设置为避免在跨域请求期间阻止 Cookie 的使用。
+通过 HTTPS 工作时，必须在 *appsettings.json* 中将 **"SameSite": "none"** 参数设置为避免在跨域请求期间阻止 Cookie 的使用。
 :::
 
 使用传入其中的 SDK 配置通过 [initFrame](../usage-sdk/classes/SDKInstance.md#initframe) 方法初始化 DocSpace 框架：

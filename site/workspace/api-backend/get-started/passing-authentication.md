@@ -26,7 +26,7 @@ The user needs to perform several easy steps to pass authentication:
         ```
 
         :::note
-        Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+        You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
         :::
       </TabItem>
       <TabItem value="response" label="Response">
@@ -61,7 +61,7 @@ The user needs to perform several easy steps to pass authentication:
    ```
 
    :::note
-   Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
    :::
 
 ## Authentication request examples
@@ -87,7 +87,7 @@ The user needs to perform several easy steps to pass authentication:
     ```
 
     :::note
-    Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+    You have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
     :::
   </TabItem>
   <TabItem value="curl" label="cURL">
@@ -96,7 +96,7 @@ The user needs to perform several easy steps to pass authentication:
     ```
 
     :::note
-    Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+    You have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
     :::
   </TabItem>
 </Tabs>

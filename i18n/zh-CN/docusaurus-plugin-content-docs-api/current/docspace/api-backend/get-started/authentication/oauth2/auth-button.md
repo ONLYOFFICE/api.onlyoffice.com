@@ -74,7 +74,7 @@ const codeVerifierHash = sha256(randomVerifier).toString(crypto.enc.Base64)
 示例：kNDpYrWzia4n6BoUewMVbnb5kQRIFgVdiaKwNGZ-_Wc
 
 :::note
-请注意，每次重新打开预览对话框时，代码验证器都会重新生成。
+每次重新打开预览对话框时，代码验证器都会重新生成。
 :::
 
 您可以点击示例按钮，完整体验[授权流程](authorization-flow.md)。

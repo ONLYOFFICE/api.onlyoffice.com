@@ -51,7 +51,7 @@ Split the file into chunks. Each chunk must be equal to or less than 10 MB (1010
 ### Known issues
 
 :::note
-Please pay attention to the following details:
+Pay attention to the following details:
 
 - Each chunk must be submitted in the order they appear in the file.
 - Each chunk must be multiple of **512** and equal to or less than **10 Mb**.

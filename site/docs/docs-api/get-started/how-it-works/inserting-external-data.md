@@ -74,7 +74,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
    The data update request to the file will be sent to the file URL.
 
    :::note
-   Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well. But in this case, the *onRequestReferenceData* event will be executed only with the *path* parameter.
+   You can enter a formula of the specified format in the cell, and the data from the external file will be inserted as well. But in this case, the *onRequestReferenceData* event will be executed only with the *path* parameter.
    :::
 
 8. When the user is trying to refresh data from the source file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab, the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event is called. An object with the unique file data received from the source file, the file path or name, and the file URL are sent in the *data* parameter.
@@ -96,7 +96,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 9. In order to refresh the data from the source file, the [setReferenceData](../../usage-api/methods.md#setreferencedata) method must be called. When calling this method, the token must be added to validate the parameters.
 
    :::note
-   Please note that this method is executed only when the user has permissions to the source file.
+   This method is executed only when the user has permissions to the source file.
    :::
 
    ``` ts

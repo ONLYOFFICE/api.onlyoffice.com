@@ -89,5 +89,5 @@ The main advantage of basic authentication is its simplicity, so it is suitable 
 </Tabs>
 
 :::note
-Please note, that you have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+You have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
 :::

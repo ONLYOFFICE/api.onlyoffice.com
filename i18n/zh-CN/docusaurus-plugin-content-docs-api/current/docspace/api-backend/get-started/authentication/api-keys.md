@@ -35,7 +35,7 @@ ONLYOFFICE DocSpace API 使用 API 密钥进行身份验证。要创建用户 AP
     ```
 
     :::note
-    请注意，您需要在 *Host: yourportal.onlyoffice.com* 行中输入您自己的门户地址，而非 *yourportal.onlyoffice.com* 地址。
+    您需要在 *Host: yourportal.onlyoffice.com* 行中输入您自己的门户地址，而非 *yourportal.onlyoffice.com* 地址。
     :::
   </TabItem>
   <TabItem value="response" label="响应">

@@ -35,7 +35,7 @@ The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user A
     ```
 
     :::note
-    Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+    You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
     :::
   </TabItem>
   <TabItem value="response" label="Response">

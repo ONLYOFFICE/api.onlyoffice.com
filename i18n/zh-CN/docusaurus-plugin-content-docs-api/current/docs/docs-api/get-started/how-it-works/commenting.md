@@ -32,7 +32,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-请注意，如果[mode](../../usage-api/config/editor/editor.md#mode)参数设置为**edit**，文档编辑器才会具备文档评论功能。
+如果[mode](../../usage-api/config/editor/editor.md#mode)参数设置为**edit**，文档编辑器才会具备文档评论功能。
 :::
 
 ## 按作者区分评论权限
