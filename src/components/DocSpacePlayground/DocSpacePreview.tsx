@@ -4,7 +4,8 @@ import React, {useRef, useEffect, useId, useCallback, useImperativeHandle, forwa
 import type {DocSpaceMode} from './codeSnippets'
 
 const DOCSPACE_URL = 'https://testaccount2025.onlyoffice.com'
-const API_KEY = 'sk-fd9d706e2ab674ea363eeb948629e536466d89a7c04b3cf379cb86c290d659a0'
+const LOGIN_EMAIL = 'johnsmith.testing2026@gmail.com'
+const LOGIN_HASH = '778d4b9a99bcdadc7950e63784519c322c439e13bfad12cabaae8d2737580f48'
 
 const METHOD_MAP: Record<string, string> = {
     'manager': 'initManager',
@@ -196,31 +197,50 @@ function ensureReady(): Promise<void> {
     if (readyPromise) return readyPromise
 
     readyPromise = new Promise<void>((resolve, reject) => {
-        function doAuth() {
-            if (!API_KEY) {
+        function doLogin() {
+            if (!LOGIN_EMAIL || !LOGIN_HASH) {
                 resolve()
                 return
             }
 
-            // Authenticate via API key — sets session cookie for the SDK iframe
-            fetch(`${DOCSPACE_URL}/api/2.0/authentication`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${API_KEY}`,
+            // Login via SDK system frame (same approach as the static example).
+            // Auth happens inside the DocSpace iframe — no cross-origin fetch needed.
+            const systemFrameId = 'ds-system-login'
+            const div = document.createElement('div')
+            div.id = systemFrameId
+            div.style.display = 'none'
+            document.body.appendChild(div)
+
+            DocSpace.SDK.initSystem({
+                frameId: systemFrameId,
+                src: DOCSPACE_URL,
+                events: {
+                    async onAppReady() {
+                        const frame = DocSpace.SDK.frames[systemFrameId]
+                        try {
+                            await frame.login(LOGIN_EMAIL, LOGIN_HASH)
+                        } catch {
+                            // Already logged in or login failed — proceed anyway
+                        } finally {
+                            frame.destroyFrame()
+                            div.remove()
+                            resolve()
+                        }
+                    },
+                    onAppError() {
+                        div.remove()
+                        resolve()
+                    },
                 },
-                credentials: 'include',
             })
-                .then(() => resolve())
-                .catch(() => resolve()) // Proceed even if auth fails
         }
 
         if (typeof DocSpace !== 'undefined' && DocSpace.SDK) {
-            doAuth()
+            doLogin()
         } else {
             const script = document.createElement('script')
             script.src = `${DOCSPACE_URL}/static/scripts/sdk/2.0.0/api.js?src=${encodeURIComponent(DOCSPACE_URL)}`
-            script.onload = () => doAuth()
+            script.onload = () => doLogin()
             script.onerror = () => reject('Failed to load DocSpace SDK.')
             document.head.appendChild(script)
         }
