@@ -90,6 +90,61 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
   );
 }
 
+const DocSpacePlaygrounds = [
+  {
+    name: 'Manager',
+    image: require('@site/static/assets/images/docspace/manager-mode.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/manager-mode.dark.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///docspace-playground/?mode=manager',
+    description: 'Explore the document manager to work with rooms, folders, and documents within DocSpace.',
+  },
+  {
+    name: 'Editor',
+    image: require('@site/static/assets/images/docspace/editor-mode.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/editor-mode.dark.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///docspace-playground/?mode=editor',
+    description: 'Open and edit documents directly in the embedded DocSpace editor.',
+  },
+  {
+    name: 'Viewer',
+    image: require('@site/static/assets/images/docspace/viewer-mode.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/viewer-mode.dark.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///docspace-playground/?mode=viewer',
+    description: 'View documents in a read-only embedded viewer.',
+  },
+  {
+    name: 'Room selector',
+    image: require('@site/static/assets/images/docspace/room-selector-mode.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/room-selector-mode.dark.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///docspace-playground/?mode=room-selector',
+    description: 'Embed a room selector to let users pick a DocSpace room.',
+  },
+  {
+    name: 'File selector',
+    image: require('@site/static/assets/images/docspace/file-selector-mode.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/file-selector-mode.dark.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///docspace-playground/?mode=file-selector',
+    description: 'Embed a file selector to let users pick files from DocSpace.',
+  },
+  {
+    name: 'System',
+    image: require('@site/static/assets/images/docspace/system-mode.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/system-mode.png').default + '#gh-dark-mode-only',
+    url: 'pathname:///docspace-playground/?mode=system',
+    description: 'Use the system mode to call SDK methods without a visible frame.',
+  },
+];
+
+export function DocSpacePlaygroundCardsRow(): ReactNode {
+  return (
+    <div className="row">
+      {DocSpacePlaygrounds.map((playground) => (
+        <PlaygroundCard key={playground.name} {...playground} />
+      ))}
+    </div>
+  );
+}
+
 interface PlaygroundCardsRowProps {
   searchParams?: {
     [parameter: string]: string

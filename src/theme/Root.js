@@ -14,7 +14,8 @@ export default function Root({ children }) {
   const docSearchRef = useRef(null);
   const location = useLocation();
 
-  const showAskAI = !location.pathname.startsWith('/playground');
+  const hideAskAIPaths = ['/playground/', '/docspace-playground/'];
+  const showAskAI = !hideAskAIPaths.includes(location.pathname);
 
   const openDocSearchSidepanel = (event) => {
     if (docSearchRef.current && event.detail) {
