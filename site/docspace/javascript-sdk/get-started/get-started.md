@@ -3,11 +3,17 @@ sidebar_position: 1
 sidebar_class_name: hidden
 ---
 
+import DocspaceEmbed from '@site/src/components/DocspaceEmbed';
+
 # Get started
 
 The [ONLYOFFICE DocSpace SDK](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) based on JavaScript allows developers to use all the DocSpace possibilities with *api.js*. You can integrate ONLYOFFICE DocSpace into your own web application, allowing users to create and submit documents directly from your website. For example, you can use the ONLYOFFICE DocSpace [React component](./react-component.md) to integrate ONLYOFFICE DocSpace into React projects.
 
 You don't need to be an experienced JavaScript developer to use the DocSpace JavaScript SDK because we provide you with all the basics. You only need a few lines of JavaScript to set up a fully functional integration.
+
+The example below shows what the DocSpace portal Public room looks like embedded in your website as a frame.
+
+<DocspaceEmbed params="?mode=public-room&id=2095446&token=Q1UzakRPQThMZzh0bWlzbFpTYS9iQ0Q0dk5SbDJBVE1TV2R3bkh6NUNLbz0_Ijg3MmE5MWQyLWViOWQtNDMxOC1iNzVjLTVhMWI1NmU0ZDVkYSI" />
 
 ## Comparison table
 
