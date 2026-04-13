@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 格式化项目符号
 
 为项目符号设定一致的格式设置。

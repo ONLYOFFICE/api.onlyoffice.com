@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 应用字体样式
 
 在所有幻灯片中统一应用同一字体样式。

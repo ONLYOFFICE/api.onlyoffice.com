@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 调整缩进
 
 调整演示文稿中所有段落的首行缩进量。

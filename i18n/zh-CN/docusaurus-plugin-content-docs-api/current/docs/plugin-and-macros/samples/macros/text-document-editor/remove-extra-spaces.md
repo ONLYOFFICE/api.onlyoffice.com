@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除多余空格
 
 在文本文件中删除多余的空格。

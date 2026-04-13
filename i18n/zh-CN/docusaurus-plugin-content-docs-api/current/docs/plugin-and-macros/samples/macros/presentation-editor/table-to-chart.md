@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 表格转换图表
 
 由选定的表格数据生成图表。

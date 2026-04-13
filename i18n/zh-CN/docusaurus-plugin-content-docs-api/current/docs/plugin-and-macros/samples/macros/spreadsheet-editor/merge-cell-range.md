@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 合并单元格区域
 
 合并选定的单元格区域。

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 生成演示文稿大纲
 
 根据标题自动生成演示文稿大纲。

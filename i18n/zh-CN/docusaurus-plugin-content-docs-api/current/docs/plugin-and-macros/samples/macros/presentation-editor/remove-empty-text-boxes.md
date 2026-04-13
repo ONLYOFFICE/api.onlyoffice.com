@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除空文本框
 
 删除演示文稿中所有空的文本框形状。

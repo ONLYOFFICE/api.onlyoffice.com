@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 设置单元格字体加粗
 
 将单元格 A2 的字体设置为加粗。

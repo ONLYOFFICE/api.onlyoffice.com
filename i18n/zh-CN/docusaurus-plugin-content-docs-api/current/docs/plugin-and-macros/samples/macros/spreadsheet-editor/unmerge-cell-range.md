@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 取消合并单元格区域
 
 取消选定的单元格区域的合并操作。

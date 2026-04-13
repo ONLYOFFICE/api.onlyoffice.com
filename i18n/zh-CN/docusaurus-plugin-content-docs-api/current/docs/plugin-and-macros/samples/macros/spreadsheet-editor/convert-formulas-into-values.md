@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 公式转换数值
 
 将当前工作表中的所有公式转换为数值。

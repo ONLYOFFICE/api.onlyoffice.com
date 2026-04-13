@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 插入水印
 
 在文档的每一页插入或移除自定义水印。

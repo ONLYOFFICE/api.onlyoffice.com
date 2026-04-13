@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 添加图表
 
 向选定的单元格范围添加一个新图表。

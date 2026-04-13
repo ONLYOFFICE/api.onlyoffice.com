@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 生成目录
 
 通过扫描文档中的标题来生成目录。

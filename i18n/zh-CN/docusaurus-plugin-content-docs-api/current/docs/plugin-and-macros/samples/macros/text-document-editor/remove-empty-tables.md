@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除空表格
 
 删除文档中的所有空表格。

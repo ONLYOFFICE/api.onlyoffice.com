@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 插入唯一 ID
 
 在表单文档中插入唯一 ID。
