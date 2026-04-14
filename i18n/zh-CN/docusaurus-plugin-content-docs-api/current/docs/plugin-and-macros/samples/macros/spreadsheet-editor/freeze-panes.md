@@ -13,16 +13,13 @@ hide_table_of_contents: true
     // 步骤 1：取消冻结窗格，使视图可以自由滚动
     worksheet.GetFreezePanes().Unfreeze();
 
-    // 步骤 2：选择目标单元格，同时重置视口
+    // 步骤 2：选择目标单元格
     worksheet.GetRange("A10").Select();
 
-    // 步骤 3：视图稳定后，在 D10 处重新冻结
-    // 需要使用超时函数，因为 Select() 会异步更新视口
-    setTimeout(function () {
-        worksheet
-            .GetFreezePanes()
-            .FreezeAt(worksheet.GetRange("D10")); // 要冻结窗格的单元格
-    }, 100);
+    // 步骤 3：在 D10 处重新冻结
+    worksheet
+        .GetFreezePanes()
+        .FreezeAt(worksheet.GetRange("D10")); // 要冻结窗格的单元格
 })();
 ```
 
@@ -34,6 +31,7 @@ hide_table_of_contents: true
 Sub NavigateAndRefreeze()
     ActiveWindow.FreezePanes = False
     Application.Goto Reference:=Range("A10"), Scroll:=True
+    Range("D10").Select
     ActiveWindow.FreezePanes = True
 End Sub
 ```
