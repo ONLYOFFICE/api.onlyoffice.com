@@ -3,6 +3,8 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
+import {DocSpacePlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
+
 # Playground
 
 The Playground serves as an interactive platform for users to explore and test the capabilities of the ONLYOFFICE DocSpace JavaScript SDK without registration and installing anything. It provides users with various embedding modes, allowing them to experiment with different DocSpace configurations seamlessly.
@@ -14,8 +16,4 @@ The Playground serves as an interactive platform for users to explore and test t
 - **Multiple modes**. Test all available embedding modes: manager, editor, viewer, room selector, file selector, frame, system, and public room.
 - **Customization**. Switch themes for convenience.
 
-```mdx-code-block
-import {DocSpacePlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
-
 <DocSpacePlaygroundCardsRow />
-```

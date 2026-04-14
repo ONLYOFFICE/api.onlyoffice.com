@@ -3,6 +3,8 @@ sidebar_position: -6
 hide_table_of_contents: true
 ---
 
+import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
+
 # Playground
 
 Playground 是一个交互式平台，用户无需注册和安装即可探索和测试 ONLYOFFICE 文档 API 的功能。Playground 为用户提供各种 API 功能，用户能够无缝体验不同的文档类型。
@@ -14,8 +16,4 @@ Playground 是一个交互式平台，用户无需注册和安装即可探索和
 - **多平台**：可在桌面、移动或嵌入式平台上进行测试。
 - **自定义**：方便切换主题和界面语言。
 
-```mdx-code-block
-import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
-
 <PlaygroundCardsRow />
-```
