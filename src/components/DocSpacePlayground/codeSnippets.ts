@@ -51,7 +51,7 @@ DocSpace.SDK.initManager(config);`,
     height: "100%",
     frameId: "ds-frame",
     init: false,
-    id: 3592391 // Replace with your file ID
+    id: 3730262 // Replace with your file ID
 };
 
 DocSpace.SDK.initEditor(config);`,
@@ -64,7 +64,7 @@ DocSpace.SDK.initEditor(config);`,
     height: "100%",
     frameId: "ds-frame",
     init: false,
-    id: 3592389 // Replace with your file ID
+    id: 3730260 // Replace with your file ID
 };
 
 DocSpace.SDK.initViewer(config);`,
@@ -166,8 +166,8 @@ DocSpace.SDK.initSystem(config);`,
         search: "",
         withSubfolders: false
     },
-    id: 2095446, // Replace with your room ID
-    requestToken: "Q1UzakRPQThMZzh0bWlzbFpTYS9iQ0Q0dk5SbDJBVE1TV2R3bkh6NUNLbz0_Ijg3MmE5MWQyLWViOWQtNDMxOC1iNzVjLTVhMWI1NmU0ZDVkYSI", // Replace with your request token
+    id: 2613800, // Replace with your room ID
+    requestToken: "ZjIrNGhZM2tDbmFnbzRHMmxKODE4Umx5SHdXOUx4OXVpc3BpaTlyN1ZIOD0_IjEzZmQ4MmRkLTVkNTAtNDM0ZC1iZTE0LWM2M2ZkNDJkMDFhNCI", // Replace with your request token
     rootPath: "/rooms/share"
 };
 

@@ -3,9 +3,9 @@
 import React, {useRef, useEffect, useId, useCallback, useImperativeHandle, forwardRef} from 'react'
 import type {DocSpaceMode} from './codeSnippets'
 
-const DOCSPACE_URL = 'https://testaccount2025.onlyoffice.com'
+const DOCSPACE_URL = 'https://docspace-duv4mw.onlyoffice.com'
 const LOGIN_EMAIL = 'johnsmith.testing2026@gmail.com'
-const LOGIN_HASH = '778d4b9a99bcdadc7950e63784519c322c439e13bfad12cabaae8d2737580f48'
+const LOGIN_HASH = '0455101f3594b2d0b353ce477735cbe13782b021484f1c8764f5c42e5ef9b1b4'
 
 const METHOD_MAP: Record<string, string> = {
     'manager': 'initManager',

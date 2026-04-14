@@ -13,7 +13,7 @@ You don't need to be an experienced JavaScript developer to use the DocSpace Jav
 
 The example below shows what the DocSpace portal Public room looks like embedded in your website as a frame.
 
-<DocspaceEmbed params="?mode=public-room&id=2095446&token=Q1UzakRPQThMZzh0bWlzbFpTYS9iQ0Q0dk5SbDJBVE1TV2R3bkh6NUNLbz0_Ijg3MmE5MWQyLWViOWQtNDMxOC1iNzVjLTVhMWI1NmU0ZDVkYSI" />
+<DocspaceEmbed params="?mode=public-room&id=2613800&token=ZjIrNGhZM2tDbmFnbzRHMmxKODE4Umx5SHdXOUx4OXVpc3BpaTlyN1ZIOD0_IjEzZmQ4MmRkLTVkNTAtNDM0ZC1iZTE0LWM2M2ZkNDJkMDFhNCI" />
 
 ## Comparison table
 
