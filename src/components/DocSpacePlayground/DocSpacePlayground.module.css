@@ -129,6 +129,17 @@
     transform: rotate(180deg);
 }
 
+/* ── Notice ────────────────────────────────────────────────── */
+
+.notice {
+    padding: 6px 20px;
+    font-size: 12px;
+    color: var(--ifm-color-emphasis-700);
+    background: var(--ifm-color-warning-contrast-background);
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    flex-shrink: 0;
+}
+
 /* ── Desktop split layout ──────────────────────────────────── */
 
 .desktopContent {

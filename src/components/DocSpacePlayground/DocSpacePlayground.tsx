@@ -60,6 +60,9 @@ export const DocSpacePlayground = ({initialMode = 'manager'}: DocSpacePlayground
                 theme={colorMode}
                 onThemeChange={setColorMode}
             />
+            <div className={styles.notice}>
+                This playground may not work in Safari or incognito/private browsing mode due to third-party cookie restrictions.
+            </div>
             <Content
                 script={script}
                 onScriptChange={setScript}
