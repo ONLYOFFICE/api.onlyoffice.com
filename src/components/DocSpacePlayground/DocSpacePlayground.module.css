@@ -292,6 +292,11 @@ html[data-theme='dark'] .runButton:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.preview iframe {
+    z-index: 0 !important;
 }
 
 /* ── Responsive ────────────────────────────────────────────── */
