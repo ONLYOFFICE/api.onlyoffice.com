@@ -140,14 +140,23 @@
 }
 
 .SettingsButton:hover {
-    border-color: var(--ifm-color-primary);
-    color: var(--ifm-color-primary);
+    border-color: #e55e31;
+    color: #e55e31;
+}
+
+html[data-theme='dark'] .SettingsButton:hover {
+    border-color: #ff8254;
+    color: #ff8254;
 }
 
 .SettingsButtonActive {
-    border-color: var(--ifm-color-primary);
-    color: var(--ifm-color-primary);
-    background: var(--ifm-color-primary-lightest);
+    color: #ED6A0C;
+    background: rgba(237, 106, 12, 0.08);
+    border-color: rgba(237, 106, 12, 0.3);
+}
+
+.SettingsButton.SettingsButtonActive:hover {
+    background: rgba(237, 106, 12, 0.15);
 }
 
 /* Settings Form */
@@ -273,7 +282,11 @@
 }
 
 .ConfirmButton:hover {
-    background: var(--ifm-color-primary-dark);
+    background: #e55e31;
+}
+
+html[data-theme='dark'] .ConfirmButton:hover {
+    background: #ff8254;
 }
 
 .ConfirmButton:active {
@@ -297,6 +310,11 @@
 
 .CancelButton:hover {
     background: var(--ifm-hover-overlay);
+}
+
+.CancelButton:active {
+    transform: scale(0.97);
+    background: var(--ifm-color-emphasis-200);
 }
 
 @media (max-width: 767px) {
