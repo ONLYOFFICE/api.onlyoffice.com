@@ -30,8 +30,8 @@ export const DEFAULT_SCRIPTS: Record<DocSpaceMode, string> = {
     showTitle: true,
     showMenu: false,
     showFilter: true,
-    disableActionButton: false,
-    infoPanelVisible: true,
+    disableActionButton: false, // Requires user with appropriate permissions
+    infoPanelVisible: true, // Requires user with appropriate permissions
     init: true,
     filter: {
         count: 100,
