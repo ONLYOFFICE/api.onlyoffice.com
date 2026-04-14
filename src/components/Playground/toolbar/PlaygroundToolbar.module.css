@@ -124,6 +124,69 @@
     transform: rotate(180deg);
 }
 
+/* Settings Button */
+.SettingsButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-600);
+    transition: all var(--ifm-transition-fast) ease;
+}
+
+.SettingsButton:hover {
+    border-color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
+}
+
+.SettingsButtonActive {
+    border-color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
+    background: var(--ifm-color-primary-lightest);
+}
+
+/* Settings Form */
+.SettingsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.SettingsLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.SettingsInput {
+    padding: 8px 12px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+    font-size: 13px;
+    font-family: var(--ifm-font-family-monospace);
+    transition: border-color var(--ifm-transition-fast) ease;
+}
+
+.SettingsInput:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+}
+
+.SettingsInput::placeholder {
+    color: var(--ifm-color-emphasis-400);
+}
+
 /* Radix UI AlertDialog Styles */
 .DialogOverlay {
     position: fixed;

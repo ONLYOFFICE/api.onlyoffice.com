@@ -11,6 +11,16 @@ import {useColorMode} from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {playgroundReducer, PlaygroundState} from "@site/src/components/Playground/root/reducer";
 
+const STORAGE_KEY = 'playground_server_config'
+
+function loadServerConfig(): { url?: string; secret?: string } | null {
+    try {
+        const stored = localStorage.getItem(STORAGE_KEY)
+        if (stored) return JSON.parse(stored)
+    } catch {}
+    return null
+}
+
 export type PlaygroundRootProps = ComponentProps<'div'> & {
     editorType?: EditorType
     previewType?: PreviewType
@@ -36,8 +46,10 @@ export const PlaygroundRoot = ({
     const { colorMode, setColorMode } = useColorMode()
     const { siteConfig: { customFields } } = useDocusaurusContext()
 
-    const documentServerUrl = documentServerUrlProp ?? (customFields.documentServer as string)
-    const documentServerSecret = documentServerSecretProp ?? (customFields.documentServerSecret as string)
+    const defaultDocumentServerUrl = documentServerUrlProp ?? (customFields.documentServer as string)
+    const defaultDocumentServerSecret = documentServerSecretProp ?? (customFields.documentServerSecret as string)
+
+    const savedConfig = useMemo(() => loadServerConfig(), [])
 
     const [state, dispatch] = useReducer(playgroundReducer, {
         editorType,
@@ -46,6 +58,8 @@ export const PlaygroundRoot = ({
         scriptValue: initialScriptProp ?? getDefaultScript(editorType, previewType, scriptType),
         isScriptModified: false,
         documentType: documentTypeProp,
+        documentServerUrl: savedConfig?.url || defaultDocumentServerUrl,
+        documentServerSecret: savedConfig?.secret || defaultDocumentServerSecret,
     } satisfies PlaygroundState)
 
     const contextValue = useMemo<PlaygroundRootContext>(() => ({
@@ -53,11 +67,11 @@ export const PlaygroundRoot = ({
         dispatch,
         theme: colorMode,
         setTheme: setColorMode,
-        documentServerUrl,
-        documentServerSecret,
+        defaultDocumentServerUrl,
+        defaultDocumentServerSecret,
         templateUrl,
         hasInitialScript: !!initialScriptProp,
-    }), [state, colorMode, documentServerUrl, documentServerSecret, templateUrl, initialScriptProp])
+    }), [state, colorMode, defaultDocumentServerUrl, defaultDocumentServerSecret, templateUrl, initialScriptProp])
 
     return <PlaygroundRootContext.Provider value={contextValue} {...props}/>
 }

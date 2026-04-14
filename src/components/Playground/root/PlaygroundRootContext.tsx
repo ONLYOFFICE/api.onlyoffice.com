@@ -21,8 +21,8 @@ export interface PlaygroundRootContext extends PlaygroundState {
     dispatch: Dispatch<PlaygroundAction>
     theme: 'light' | 'dark'
     setTheme: (theme: 'light' | 'dark') => void
-    documentServerUrl: string
-    documentServerSecret: string
+    defaultDocumentServerUrl: string
+    defaultDocumentServerSecret: string
     templateUrl: string | null | undefined
     hasInitialScript: boolean
 }

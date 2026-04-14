@@ -4,15 +4,49 @@ import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react'
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { EditorType, PreviewType, ScriptType, DocumentType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
 import styles from './PlaygroundToolbar.module.css'
 
+const STORAGE_KEY = 'playground_server_config'
+
 export const PlaygroundToolbar = () => {
-    const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch } = usePlaygroundRootContext()
+    const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch, documentServerUrl, documentServerSecret, defaultDocumentServerUrl, defaultDocumentServerSecret } = usePlaygroundRootContext()
 
     const [dialogOpen, setDialogOpen] = useState(false)
     const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null)
+
+    const [settingsOpen, setSettingsOpen] = useState(false)
+    const [serverUrl, setServerUrl] = useState(documentServerUrl)
+    const [serverSecret, setServerSecret] = useState(documentServerSecret)
+    const secretInputRef = useRef<HTMLInputElement>(null)
+
+    const isCustomServer = documentServerUrl !== defaultDocumentServerUrl || documentServerSecret !== defaultDocumentServerSecret
+
+    const handleOpenSettings = useCallback(() => {
+        setServerUrl(documentServerUrl)
+        setServerSecret(documentServerSecret)
+        setSettingsOpen(true)
+    }, [documentServerUrl, documentServerSecret])
+
+    const handleSaveSettings = useCallback(() => {
+        const url = serverUrl.trim() || defaultDocumentServerUrl
+        const secret = serverSecret.trim() || defaultDocumentServerSecret
+        dispatch({ type: 'SET_SERVER_CONFIG', payload: { documentServerUrl: url, documentServerSecret: secret } })
+        try {
+            if (url !== defaultDocumentServerUrl || secret !== defaultDocumentServerSecret) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({ url, secret }))
+            } else {
+                localStorage.removeItem(STORAGE_KEY)
+            }
+        } catch {}
+        setSettingsOpen(false)
+    }, [serverUrl, serverSecret, defaultDocumentServerUrl, defaultDocumentServerSecret, dispatch])
+
+    const handleResetSettings = useCallback(() => {
+        setServerUrl(defaultDocumentServerUrl)
+        setServerSecret(defaultDocumentServerSecret)
+    }, [defaultDocumentServerUrl, defaultDocumentServerSecret])
 
     const handleEditorTypeChange = useCallback((value: string) => {
         const newEditorType = value as EditorType
@@ -178,6 +212,18 @@ export const PlaygroundToolbar = () => {
                 </Select.Root>
             </div>
 
+            <div className={styles.ToolbarGroup}>
+                <button
+                    className={`${styles.SettingsButton} ${isCustomServer ? styles.SettingsButtonActive : ''}`}
+                    onClick={handleOpenSettings}
+                    title="Document Server settings"
+                >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 1L6.2 2.6C5.8 2.8 5.4 3 5.1 3.3L3.5 2.7L2 5.3L3.3 6.4C3.3 6.6 3.2 6.8 3.2 7C3.2 7.2 3.2 7.4 3.3 7.6L2 8.7L3.5 11.3L5.1 10.7C5.4 11 5.8 11.2 6.2 11.4L6.5 13H9.5L9.8 11.4C10.2 11.2 10.6 11 10.9 10.7L12.5 11.3L14 8.7L12.7 7.6C12.8 7.4 12.8 7.2 12.8 7C12.8 6.8 12.8 6.6 12.7 6.4L14 5.3L12.5 2.7L10.9 3.3C10.6 3 10.2 2.8 9.8 2.6L9.5 1H6.5ZM8 5C9.1 5 10 5.9 10 7C10 8.1 9.1 9 8 9C6.9 9 6 8.1 6 7C6 5.9 6.9 5 8 5Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+
             <div className={`${styles.ToolbarGroup} ${styles.ToolbarGroupRight}`}>
                 <div className={styles.Label}>Theme:</div>
                 <Select.Root value={theme} onValueChange={handleThemeChange}>
@@ -233,6 +279,59 @@ export const PlaygroundToolbar = () => {
                     </AlertDialog.Content>
                 </AlertDialog.Portal>
             </AlertDialog.Root>
+
+            {settingsOpen && (
+                <>
+                    <div className={styles.DialogOverlay} onClick={() => setSettingsOpen(false)} />
+                    <div className={styles.DialogContent} style={{ maxWidth: 480 }} onKeyDown={(e) => { if (e.key === 'Escape') setSettingsOpen(false) }}>
+                        <div className={styles.DialogTitle}>Document Server Settings</div>
+                        <p className={styles.DialogDescription}>
+                            Connect to your own ONLYOFFICE Document Server to test the API with your instance.
+                        </p>
+                        <div className={styles.SettingsForm}>
+                            <label className={styles.SettingsLabel}>
+                                Server URL
+                                <input
+                                    className={styles.SettingsInput}
+                                    type="url"
+                                    value={serverUrl}
+                                    onChange={(e) => setServerUrl(e.target.value)}
+                                    placeholder={defaultDocumentServerUrl}
+                                    autoFocus
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') secretInputRef.current?.focus()
+                                    }}
+                                />
+                            </label>
+                            <label className={styles.SettingsLabel}>
+                                JWT Secret
+                                <input
+                                    ref={secretInputRef}
+                                    className={styles.SettingsInput}
+                                    type="text"
+                                    value={serverSecret}
+                                    onChange={(e) => setServerSecret(e.target.value)}
+                                    placeholder={defaultDocumentServerSecret}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') handleSaveSettings()
+                                    }}
+                                />
+                            </label>
+                        </div>
+                        <div className={styles.DialogActions}>
+                            <button onClick={handleResetSettings} className={styles.CancelButton}>
+                                Reset to Default
+                            </button>
+                            <button onClick={() => setSettingsOpen(false)} className={styles.CancelButton}>
+                                Cancel
+                            </button>
+                            <button onClick={handleSaveSettings} className={styles.ConfirmButton}>
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                </>
+            )}
         </div>
     )
 }
