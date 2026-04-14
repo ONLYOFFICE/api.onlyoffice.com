@@ -87,12 +87,11 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 
 where `ONLYOFFICE_API_KEY` is the API key.
 
-## Security known issues
+## Security best practices
 
-For security, regularly audit the list of API keys you have created and revoke any keys that are no longer in use.
+Here are some recommendations to follow when using API keys:
 
-Always keep your API keys secret and treat them like passwords. Since API keys perform actions on your behalf when interacting with the API, avoid hardcoding them directly into your programs.
-
-As your application scales, consider using a dedicated secrets management service, such as [HashiCorp Vault](https://www.vaultproject.io/), [AWS Secrets Manager](https://aws.amazon.com/ru/secrets-manager/), or [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault). These tools offer secure storage, encryption, access control, and auditing capabilities. In containerized environments, solutions like [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) (with encryption enabled) can further enhance security. Additionally, ensure that secrets are loaded into memory at runtime and are never exposed in logs or code repositories.
+- **Regular audits:** Perform regular audits of your API keys. This enables you to delete or revoke any keys no longer in use. 
+- **Keep API keys secret:** Always treat your API keys as passwords. Since API keys perform actions on your behalf when interacting with the API, avoid hardcoding them directly into your programs. As your application scales, consider using a dedicated secrets management service, such as [HashiCorp Vault](https://www.vaultproject.io/), [AWS Secrets Manager](https://aws.amazon.com/ru/secrets-manager/), or [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault). These tools offer secure storage, encryption, access control, and auditing capabilities. In containerized environments, solutions like [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) (with encryption enabled) can further enhance security. Additionally, ensure that secrets are loaded into memory at runtime and are never exposed in logs or code repositories.
 
 By implementing these practices, you ensure your API keys remain safe and your application stays secure as it scales.
