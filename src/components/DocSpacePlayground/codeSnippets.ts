@@ -82,7 +82,7 @@ DocSpace.SDK.initViewer(config);`,
     acceptButtonLabel: "Select",
     cancelButtonLabel: "Cancel",
     isButtonMode: false,
-    buttonWithLogo: true,
+
     events: {
         onSelectCallback: null,
         onCloseCallback: null,
@@ -108,7 +108,7 @@ DocSpace.SDK.initRoomSelector(config);`,
     withSubtitle: true,
     filterParam: "ALL",
     isButtonMode: false,
-    buttonWithLogo: true,
+
     events: {
         onSelectCallback: null,
         onCloseCallback: null,
