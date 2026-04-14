@@ -32,6 +32,15 @@ export const DocSpacePlayground = ({initialMode = 'manager'}: DocSpacePlayground
         }
     }, [])
 
+    // Re-run script when theme changes
+    const prevTheme = useRef(colorMode)
+    useEffect(() => {
+        if (prevTheme.current !== colorMode) {
+            prevTheme.current = colorMode
+            previewRef.current?.runScript(script)
+        }
+    }, [colorMode])
+
     const handleModeChange = useCallback((newMode: DocSpaceMode) => {
         setMode(newMode)
         const newScript = DEFAULT_SCRIPTS[newMode]
