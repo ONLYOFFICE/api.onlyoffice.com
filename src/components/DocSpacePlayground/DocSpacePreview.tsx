@@ -4,6 +4,7 @@ import React, {useRef, useEffect, useId, useCallback, useImperativeHandle, forwa
 import type {DocSpaceMode} from './codeSnippets'
 
 const DOCSPACE_URL = 'https://docspace-duv4mw.onlyoffice.com'
+const PLACEHOLDER_URL = 'https://your-docspace.com'
 const LOGIN_EMAIL = 'johnsmith.testing2026@gmail.com'
 const LOGIN_HASH = '0455101f3594b2d0b353ce477735cbe13782b021484f1c8764f5c42e5ef9b1b4'
 
@@ -85,10 +86,13 @@ export const DocSpacePreview = forwardRef<DocSpacePreviewHandle, DocSpacePreview
                     const val = target[prop]
                     if (typeof val === 'function' && (prop === 'init' || String(prop).startsWith('init'))) {
                         return (userConfig: any) => {
+                            const src = userConfig.src && userConfig.src !== PLACEHOLDER_URL
+                                ? userConfig.src
+                                : DOCSPACE_URL
                             const mergedConfig = {
                                 ...userConfig,
+                                src,
                                 frameId,
-                                src: DOCSPACE_URL,
                                 width: '100%',
                                 height: '100%',
                                 checkCSP: false,
