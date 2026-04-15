@@ -12,17 +12,16 @@ interface SectionProps {
 export function Section({ title, depth, description, defaultOpen = true, children }: SectionProps) {
     const level = Math.min(Math.max(depth, 1), 6)
     const headingTag = `h${level}`
+    const headingClass = styles[`heading${level}`] ?? styles.heading
 
     return (
         <details className={styles.section} open={defaultOpen}>
             <summary className={styles.summary}>
                 <span className={styles.chevron}>▶</span>
-                {createElement(headingTag, { className: styles.heading }, title)}
+                {createElement(headingTag, { className: headingClass }, title)}
             </summary>
-            <div className={styles.body}>
-                {description && <p className={styles.description}>{description}</p>}
-                {children}
-            </div>
+            {description && <p className={styles.description}>{description}</p>}
+            {children}
         </details>
     )
 }

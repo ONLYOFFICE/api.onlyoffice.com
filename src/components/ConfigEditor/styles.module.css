@@ -16,21 +16,60 @@
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.runButton:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
 }
 
 .tabs {
-    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 
+    .list {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        border-bottom: 1px solid var(--ifm-color-emphasis-200);
+        padding: 0 0.5rem;
+        background: var(--ifm-background-surface-color);
+
+        button {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0.9rem;
+            font-size: 0.9rem;
+            color: var(--ifm-color-emphasis-700);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: color var(--ifm-transition-fast) ease,
+            border-color var(--ifm-transition-fast) ease;
+        }
+
+        button:hover {
+            color: var(--ifm-color-emphasis-900);
+        }
+
+        button[data-state='active'] {
+            color: var(--ifm-color-primary);
+            border-bottom-color: var(--ifm-color-primary);
+        }
+    }
+
     .content {
         position: relative;
         flex: 1;
+        min-height: 0;
+        overflow: auto;
 
         &[data-state='inactive'] {
             display: none;
@@ -38,40 +77,121 @@
     }
 }
 
+.formEditorContent {
+    padding: 0.75rem 1rem 3.5rem;
+}
+
 .field {
-    margin: 0.25rem 0;
-
-    .label {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
-
-        .required {}
-    }
+    margin: 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
 }
 
-.tabsList {
-    display: flex;
+.field .label {
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5ch;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-900);
 }
 
-.toolbar {
-    margin-left: auto;
+.field .required {
+    color: var(--ifm-color-danger);
+    font-weight: 600;
+}
+
+.field input[type='text'],
+.field input[type='number'],
+.field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--ifm-color-content);
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    transition: border-color var(--ifm-transition-fast) ease,
+                box-shadow var(--ifm-transition-fast) ease;
+}
+
+.field input[type='text']:focus,
+.field input[type='number']:focus,
+.field select:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--ifm-color-primary-rgb, 37, 194, 160), 0.15);
+}
+
+.field input[type='text']:disabled,
+.field input[type='number']:disabled,
+.field select:disabled {
+    background: var(--ifm-color-emphasis-100);
+    color: var(--ifm-color-emphasis-600);
+    cursor: not-allowed;
+}
+
+.field input[type='checkbox'] {
+    margin: 0;
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--ifm-color-primary);
+    cursor: pointer;
+}
+
+.field input[type='checkbox'] + span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.field [role='radiogroup'] {
     display: flex;
-    gap: 0.25rem;
-    padding-right: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.field [role='radiogroup'] label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4ch;
+    cursor: pointer;
+}
+
+.field [role='radiogroup'] input[type='radio'] {
+    accent-color: var(--ifm-color-primary);
 }
 
 .arrayItem {
-    border: 1px dashed var(--ifm-color-emphasis-300);
-    padding: 0.25rem 0.5rem;
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
 }
 
 .arrayItemHeader {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
     margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.arrayItem button,
+.content > button {
+    background: transparent;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-800);
+    cursor: pointer;
+    transition: all var(--ifm-transition-fast) ease;
+}
+
+.arrayItem button:hover,
+.content > button:hover {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-400);
 }
