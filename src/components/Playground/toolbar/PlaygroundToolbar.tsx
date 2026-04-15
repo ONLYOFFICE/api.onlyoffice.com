@@ -10,6 +10,9 @@ import styles from './PlaygroundToolbar.module.css'
 
 const STORAGE_KEY = 'playground_server_config'
 
+const normalizeServerUrl = (url: string): string =>
+    url.endsWith('/') ? url : `${url}/`
+
 export const PlaygroundToolbar = () => {
     const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch, documentServerUrl, documentServerSecret, defaultDocumentServerUrl, defaultDocumentServerSecret } = usePlaygroundRootContext()
 
@@ -30,7 +33,8 @@ export const PlaygroundToolbar = () => {
     }, [documentServerUrl, documentServerSecret])
 
     const handleSaveSettings = useCallback(() => {
-        const url = serverUrl.trim() || defaultDocumentServerUrl
+        const trimmedUrl = serverUrl.trim()
+        const url = trimmedUrl ? normalizeServerUrl(trimmedUrl) : defaultDocumentServerUrl
         const secret = serverSecret.trim() || defaultDocumentServerSecret
         dispatch({ type: 'SET_SERVER_CONFIG', payload: { documentServerUrl: url, documentServerSecret: secret } })
         try {
