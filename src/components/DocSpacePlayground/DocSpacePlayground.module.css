@@ -175,7 +175,11 @@
     width: 2px;
 }
 
-.resizeHandle:active::before,
+.resizeHandle:active::before {
+    background-color: var(--ifm-color-primary-darker);
+    width: 2px;
+}
+
 .resizeHandle[data-resize-handle-state="drag"]::before {
     background-color: var(--ifm-color-primary);
     width: 2px;
@@ -281,11 +285,11 @@
 }
 
 .runButton:hover {
-    background: #e55e31;
+    background: var(--ifm-color-primary-dark);
 }
 
 html[data-theme='dark'] .runButton:hover {
-    background: #ff8254;
+    background: var(--ifm-color-primary-light);
 }
 
 .runButton:active {
