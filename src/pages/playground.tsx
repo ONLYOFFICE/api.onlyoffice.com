@@ -6,6 +6,12 @@ import {EditorType, PreviewType, ScriptType, DocumentType} from "@site/src/compo
 import Head from '@docusaurus/Head';
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import {getSearchParams} from "@site/src/utils/url";
+import { lazy, Suspense } from "react";
+import { SplitPane } from "@site/src/components/SplitPane";
+
+const PlaygroundLazyEditor = lazy(() =>
+    import('../components/Playground').then(m => ({ default: m.Playground.Editor })),
+)
 
 const PlaygroundRoute = () => {
     const location = useLocation();
@@ -45,7 +51,10 @@ const PlaygroundRoute = () => {
                     <div className={styles.playgroundContainer}>
                         <Playground.Root templateUrl={emptyTemplateUrl !== undefined ? null : templateUrl} {...props}>
                             <Playground.Toolbar/>
-                            <Playground.Content/>
+                            <SplitPane
+                                first={<Suspense><PlaygroundLazyEditor /></Suspense>}
+                                second={<Playground.Preview/>}
+                            />
                         </Playground.Root>
                     </div>
                 )}
