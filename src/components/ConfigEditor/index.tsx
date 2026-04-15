@@ -1,0 +1,103 @@
+import styles from './styles.module.css'
+import { Provider as TooltipProvider } from "@radix-ui/react-tooltip";
+import PlayIcon from '@site/static/icons/icon-play.svg';
+import * as Tabs from "@radix-ui/react-tabs";
+import { renderers } from "./renderers";
+import rawSchema from '@site/static/schemas/config.json'
+import { JsonSchema, UISchemaElement } from "@jsonforms/core";
+import { JsonForms } from '@jsonforms/react'
+import { useColorMode } from "@docusaurus/theme-common";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import MonacoEditor from "@monaco-editor/react";
+import { filterSchema } from "./schemaFilter";
+import { CopyButton } from "./renderers/utils/CopyButton";
+
+interface ConfigEditorProps {
+    defaultConfig: Record<string, unknown>
+    onApply: (config: Record<string, unknown>) => void
+    excludePaths?: string[]
+}
+
+const ROOT_UISCHEMA: UISchemaElement = { type: 'Control', scope: '#' } as any
+
+export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEditorProps) {
+    const { colorMode } = useColorMode()
+
+    const initialFormData = defaultConfig
+
+    const schema = useMemo(
+        () => filterSchema(rawSchema as JsonSchema, excludePaths ?? []),
+        [excludePaths],
+    )
+
+    const [formData, setFormData] = useState<Record<string, unknown>>(initialFormData)
+    const [jsonText, setJsonText] = useState(() => JSON.stringify(initialFormData, null, 2))
+
+    useEffect(() => {
+        setFormData(initialFormData)
+        setJsonText(JSON.stringify(initialFormData, null, 2))
+        onApply(initialFormData)
+    }, [initialFormData])
+
+    const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
+        const updated = data ?? {}
+        setFormData(updated)
+        setJsonText(JSON.stringify(updated, null, 2))
+    }, [])
+
+    const handleJsonChange = useCallback((value: string) => {
+        setJsonText(value)
+        try {
+            const parsed = JSON.parse(value)
+            setFormData(parsed)
+        } catch {
+            // invalid JSON — keep current formData
+        }
+    }, [])
+
+    const handleRun = () => { onApply(formData) }
+
+    return (
+        <TooltipProvider delayDuration={200}>
+            <div className={styles.container}>
+                <button onClick={handleRun} className={styles.runButton}>
+                    <PlayIcon fill='currentColor'/>
+                </button>
+                <Tabs.Root defaultValue='form' className={styles.tabs}>
+                    <Tabs.List className={styles.tabsList}>
+                        <Tabs.Trigger value="form">Form</Tabs.Trigger>
+                        <Tabs.Trigger value="json">JSON</Tabs.Trigger>
+                    </Tabs.List>
+                    <Tabs.Content value="form" className={styles.content}>
+                        <JsonForms
+                            schema={schema}
+                            uischema={ROOT_UISCHEMA}
+                            data={formData}
+                            renderers={renderers}
+                            onChange={handleFormChange}
+                            validationMode="NoValidation"
+                        />
+                    </Tabs.Content>
+                    <Tabs.Content value='json' className={styles.content}>
+                        <MonacoEditor
+                            language="json"
+                            value={jsonText}
+                            onChange={(v) => handleJsonChange(v ?? '')}
+                            theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
+                            options={{
+                                minimap: {enabled: false},
+                                scrollBeyondLastLine: false,
+                                fontSize: 14,
+                                lineNumbers: 'on',
+                                renderLineHighlight: 'all',
+                                automaticLayout: true,
+                                fixedOverflowWidgets: true,
+                            }}
+                        />
+                        <CopyButton getText={() => jsonText} />
+                    </Tabs.Content>
+                </Tabs.Root>
+            </div>
+        </TooltipProvider>
+    )
+}

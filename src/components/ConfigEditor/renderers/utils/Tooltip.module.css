@@ -1,0 +1,36 @@
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1.5px solid var(--ifm-color-secondary-darkest);
+    font-size: 9px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--ifm-color-secondary-darkest);
+    cursor: help;
+    user-select: none;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.content {
+    width: 240px;
+    background: var(--ifm-tooltip-background-color, #333);
+    color: var(--ifm-tooltip-color, #fff);
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 6px;
+    padding: 7px 10px;
+    line-height: 1.45;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+    animation-duration: 150ms;
+    will-change: transform, opacity;
+}
+
+.arrow {
+    fill: var(--ifm-tooltip-background-color, #333);
+}

@@ -1,0 +1,77 @@
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.runButton {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--ifm-global-radius);
+    cursor: pointer;
+    transition: all var(--ifm-transition-fast) ease;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .content {
+        position: relative;
+        flex: 1;
+
+        &[data-state='inactive'] {
+            display: none;
+        }
+    }
+}
+
+.field {
+    margin: 0.25rem 0;
+
+    .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        .required {}
+    }
+}
+
+.tabsList {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toolbar {
+    margin-left: auto;
+    display: flex;
+    gap: 0.25rem;
+    padding-right: 0.5rem;
+}
+
+.arrayItem {
+    border: 1px dashed var(--ifm-color-emphasis-300);
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.arrayItemHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}

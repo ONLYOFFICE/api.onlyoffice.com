@@ -10,6 +10,7 @@ import { useColorMode } from "@docusaurus/theme-common";
 import { useLocation } from "react-router-dom";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { getSearchParams } from "@site/src/utils/url";
+import { ConfigEditor } from "@site/src/components/ConfigEditor";
 
 type DocumentConfig = { fileType: string; docType: string; url: string; title: string }
 
@@ -103,11 +104,10 @@ const ConfigEditorInner = (props: { docConfig: DocumentConfig }) => {
         <div className={styles.container}>
             <SplitPane
                 first={
-                    // <ConfigEditor
-                    //     defaultConfig={defaultConfig}
-                    //     onApply={handleApply}
-                    // />
-                    <div></div>
+                    <ConfigEditor
+                        defaultConfig={defaultConfig}
+                        onApply={handleApply}
+                    />
                 }
                 second={
                     <EditorPreview

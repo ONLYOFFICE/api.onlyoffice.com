@@ -1,0 +1,40 @@
+.section {
+    border: none;
+    margin: 0.5rem 0;
+}
+
+.summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+.summary::-webkit-details-marker { display: none; }
+
+.chevron {
+    display: inline-block;
+    transition: transform 0.15s ease;
+    font-size: 0.8em;
+}
+
+.section[open] > .summary > .chevron {
+    transform: rotate(90deg);
+}
+
+.heading {
+    margin: 0;
+    display: inline;
+}
+
+.body {
+    padding: 0.25rem 0 0.25rem 0;
+}
+
+.description {
+    margin: 0.25rem 0;
+    color: var(--ifm-color-emphasis-700);
+    font-size: 0.85em;
+}

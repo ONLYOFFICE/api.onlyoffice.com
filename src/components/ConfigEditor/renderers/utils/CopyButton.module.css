@@ -1,0 +1,20 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    cursor: pointer;
+    color: inherit;
+}
+
+.button svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.feedback {
+    font-size: 0.85em;
+}
