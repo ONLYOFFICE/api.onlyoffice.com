@@ -129,7 +129,7 @@ const DocSpacePlaygrounds = [
   {
     name: 'System',
     image: require('@site/static/assets/images/docspace/system-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/system-mode.png').default + '#gh-dark-mode-only',
+    imageDark: require('@site/static/assets/images/docspace/system-mode.dark.png').default + '#gh-dark-mode-only',
     url: 'pathname:///docspace-playground/?mode=system',
     description: 'Use the system mode to call SDK methods without a visible frame.',
   },
