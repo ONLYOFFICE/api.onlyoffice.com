@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# # 删除批注
+# 删除批注
 
 从活动工作表中指定的单元格范围删除批注。
 
