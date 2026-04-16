@@ -12,7 +12,7 @@ title: Introducing ONLYOFFICE DocSpace
 
 ## Basic concepts
 
-Before getting started the ONLYOFFICE DocSpace, here are some terms to get familiar with: 
+Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
 - **Portal:** Your personal DocSpace cloud containing your rooms with all your documents and files.
 - **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers different types of rooms (Collaboration, Editing, Public, Custom, Form filling, and Virtual data rooms) based on your specific needs.
@@ -72,13 +72,13 @@ You can send requests to customize and change room details to fit your specific 
 
 ### Decoding responses
 
-| **Response codes** | **Meaning**                                                                |
-|--------------------|----------------------------------------------------------------------------|
-| 200                | Successful query, delete, update, or read request.                         |
-| 201                | Successfully created a new record.                                         |
-| 404                | Requested resource not found.                                              |
-| 407                | Incomplete request due to invalid/incorrect authentication credentials.    |
-| 429                | Exceeded rate limit.                                                       |
+| **Response codes** | **Meaning**                                                                      |
+|--------------------|----------------------------------------------------------------------------------|
+| 200                | Successful query, delete, update, or read request.                               |
+| 201                | Successfully created a new record.                                               |
+| 404                | Requested resource not found.                                                    |
+| 407                | Proxy authentication error from invalid/incorrect authentication credentials.    |
+| 429                | Exceeded rate limit.                                                             |
 
 - Any non-200 response status code indicates an unsuccessful response with error information in response content. 
 
