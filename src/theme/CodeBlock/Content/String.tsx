@@ -81,7 +81,7 @@ export default function CodeBlockString({
       params.set('emptyTemplateUrl', '');
     }
 
-    window.open(`/playground?${params}`, '_blank');
+    window.open(`/playground/?${params}`, '_blank');
   };
 
   return (
@@ -111,6 +111,7 @@ export default function CodeBlockString({
                 templateUrl={templateUrl}
                 zoom={zoom}
                 isForm={isForm}
+                config={{ editorConfig: { customization: { compactToolbar: true } } }}
             />
           </Tabs.Content>
         </Tabs.Root>

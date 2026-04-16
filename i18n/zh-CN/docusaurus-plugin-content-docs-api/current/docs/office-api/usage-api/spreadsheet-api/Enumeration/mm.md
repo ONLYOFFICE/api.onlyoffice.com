@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example set the cell width measured in millimeters to the applied comb of characters.
+此示例将以毫米为单位的单元格宽度设置到应用的字符梳。
 
 ```javascript editor-xlsx
 // How to set a cell width in millimeters.

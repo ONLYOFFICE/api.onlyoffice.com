@@ -66,7 +66,7 @@ sidebar_position: -5
 
 将上述代码粘贴到宏窗口中并点击![Play icon](/assets/images/plugins/play.svg)图标。 第 1 到第 200 行将会在不到一秒的时间内被交替着色。
 
-![Alternate raws](/assets/images/plugins/alternate-raws.png)
+![Alternate rows](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate rows](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
 
 ## 使用 AI 插件生成宏 {#generating-macros-using-ai-plugin}
 
@@ -84,7 +84,9 @@ sidebar_position: -5
 
 5. 检查代码，如有必要可进行调整。
 
-    > 尽管 AI 插件可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
+    :::warning
+    尽管 AI 插件可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
+    :::
 
 6. 点击![播放图标](/assets/images/plugins/play.svg)测试脚本。
 

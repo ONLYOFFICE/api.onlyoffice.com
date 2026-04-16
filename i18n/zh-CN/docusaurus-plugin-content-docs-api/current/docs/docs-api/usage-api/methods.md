@@ -12,7 +12,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## createConnector
 
-[connector](./automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
+[connector](./automation-api/automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
 
 :::note
 此参数仅适用于ONLYOFFICE文档开发者版的编辑。

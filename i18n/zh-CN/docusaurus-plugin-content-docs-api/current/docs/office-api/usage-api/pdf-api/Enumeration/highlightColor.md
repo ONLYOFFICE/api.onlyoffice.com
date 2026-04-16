@@ -29,7 +29,7 @@
 
 ## 示例
 
-This example sets a paragraph highlight to green.
+此示例将段落突出显示设置为绿色。
 
 ```javascript editor-pdf
 // How to change a highlight color to green.

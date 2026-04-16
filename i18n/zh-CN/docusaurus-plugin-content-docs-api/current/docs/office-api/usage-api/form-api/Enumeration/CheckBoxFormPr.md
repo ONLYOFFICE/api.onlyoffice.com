@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example creates a checkbox form with the common and specific checkbox form properties.
+此示例创建具有通用和特定复选框表单属性的复选框表单。
 
 ```javascript editor-forms
 // How to create a checkbox form with its properties.

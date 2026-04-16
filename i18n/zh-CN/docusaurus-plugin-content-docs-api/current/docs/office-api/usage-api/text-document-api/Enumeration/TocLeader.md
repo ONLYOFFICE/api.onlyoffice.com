@@ -19,7 +19,7 @@
 
 ## 示例
 
-This example adds a table of contents with the dot leader to the document.
+此示例向文档添加具有点状前导符的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its leader type.

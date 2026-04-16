@@ -8,7 +8,7 @@
 | ---- | ---- | ----------- |
 | canRemoved | boolean | 指定是否可以删除插件（**true**）或不可以（**false**）。 |
 | guid | string | 插件标识符。必须是 *asc.&#123;UUID&#125;* 类型。 |
-| obj | object | 已安装插件的[配置](https://api.onlyoffice.com/docs/plugin-and-macros/structure/configuration/)。版本从配置中获取并与当前版本进行比较以检查更新。 |
+| obj | object | 已安装插件的 [config](../../../../../docs/plugin-and-macros/structure/configuration/configuration.md)。从配置中获取版本并与当前版本进行比较以检查更新。 |
 | url | string | 插件配置的 URL。 |
 ## 类型
 

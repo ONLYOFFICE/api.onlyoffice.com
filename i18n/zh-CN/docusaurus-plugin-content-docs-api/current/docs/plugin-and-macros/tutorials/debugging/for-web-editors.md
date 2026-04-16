@@ -113,7 +113,7 @@ console.error("Error:", errorObj);
 **CORS**
 
 - 使用 `--cors` 标志启动本地服务器（`http-server --cors`）。
-- 确保已安装并可访问 [document server](https://www.onlyoffice.com/download-docs#docs-community)。
+- 确保已安装并可访问 [document server](https://www.onlyoffice.com/zh/download-docs#docs-community)。
 - 在编辑器要求时，通过 HTTPS 提供插件资源。
 
 **JWT**

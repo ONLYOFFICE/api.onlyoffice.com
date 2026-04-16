@@ -66,7 +66,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
 - Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
-- Added the [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) methods to the *Automation API*.
+- Added the [addContextMenuItem](../usage-api/automation-api/connector-class.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/connector-class.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api/connector-class.md#updatecontextmenuitem) methods to the *Automation API*.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.
 - Added the *visible* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
@@ -125,7 +125,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 7.2
 
 - Added the [editorConfig.customization.integrationMode](../usage-api/config/editor/customization/customization-standard-branding.md#integrationmode) parameter.
-- Added the [Connector](../usage-api/automation-api.md) class to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
+- Added the [Connector](../usage-api/automation-api/connector-class.md) class to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 - Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.

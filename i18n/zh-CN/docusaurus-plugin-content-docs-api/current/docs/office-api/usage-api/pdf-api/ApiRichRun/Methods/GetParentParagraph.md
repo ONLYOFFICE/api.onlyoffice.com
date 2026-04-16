@@ -1,6 +1,6 @@
 # GetParentParagraph
 
-返回当前运行的父段落。
+返回当前文本块的父段落。
 
 ## 语法
 
@@ -20,7 +20,7 @@ expression.GetParentParagraph();
 
 ## 示例
 
-此示例获取富文本运行对象的父富文本段落并为其设置对齐属性。
+此示例获取富文本块对象的父富文本段落并为其设置对齐属性。
 
 ```javascript editor-pdf
 let doc = Api.GetDocument();

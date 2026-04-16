@@ -2,10 +2,10 @@
 
 | 事件 | 描述 |
 | ----- | ----------- |
-| [onAddComment](./onAddComment.md) | 使用 [AddComment](../../text-document-api/Methods/AddComment.md) 方法向文档添加批注时调用的函数。 |
+| [onAddComment](./onAddComment.md) | 使用 [AddComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddComment.md) 方法向文档添加评论时调用的函数。 |
 | [onBlurAnnotation](./onBlurAnnotation.md) | 当批注失去焦点时调用的函数。 |
 | [onBlurContentControl](./onBlurContentControl.md) | 用于显示哪个内容控件已失去焦点的函数。 |
-| [onChangeCommentData](./onChangeCommentData.md) | 使用 [ChangeComment](../../text-document-api/Methods/ChangeComment.md) 方法更改指定批注时调用的函数。 |
+| [onChangeCommentData](./onChangeCommentData.md) | 使用 [ChangeComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md) 方法更改指定评论时调用的函数。 |
 | [onChangeContentControl](./onChangeContentControl.md) | 用于显示哪个内容控件已更改的函数。 |
 | [onChangeCurrentPage](./onChangeCurrentPage.md) | 当前页面发生更改时调用的函数。 |
 | [onChangeRestrictions](./onChangeRestrictions.md) | 当编辑器中的限制更改时调用的函数。 |
@@ -19,7 +19,7 @@
 | [onHideContentControlTrack](./onHideContentControlTrack.md) | 当内容控件在文档中失去焦点时调用的函数。 |
 | [onInsertOleObjects](./onInsertOleObjects.md) | 当一个或多个 OLE 对象插入文档时调用的函数。 |
 | [onParagraphText](./onParagraphText.md) | 当文档中的段落文本更新时调用的函数。 |
-| [onRemoveComment](./onRemoveComment.md) | 使用 [RemoveComments](../../text-document-api/Methods/RemoveComments.md) 方法删除指定批注时调用的函数。 |
+| [onRemoveComment](./onRemoveComment.md) | 使用 [RemoveComments](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RemoveComments.md) 方法删除指定评论时调用的函数。 |
 | [onShowContentControlTrack](./onShowContentControlTrack.md) | 当内容控件获得焦点并显示其轨道时调用的函数。 |
 | [onSubmitForm](./onSubmitForm.md) | 用户点击"完成并提交"按钮时调用的函数。 |
 | [onTargetPositionChanged](./onTargetPositionChanged.md) | 当编辑器中的目标位置发生更改时调用的函数。 |

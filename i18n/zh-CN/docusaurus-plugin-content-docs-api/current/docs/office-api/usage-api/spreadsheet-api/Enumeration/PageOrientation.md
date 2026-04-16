@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example sets the page orientation to portrait.
+此示例将页面方向设置为纵向。
 
 ```javascript editor-xlsx
 // How to change an orientation of a page.

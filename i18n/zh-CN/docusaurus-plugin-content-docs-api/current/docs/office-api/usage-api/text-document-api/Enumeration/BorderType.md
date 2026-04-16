@@ -16,7 +16,7 @@
 
 ## 示例
 
-The paragraph has a single green bottom border of 3 point wide with a zero offset from the bottom paragraph edge.
+该段落具有 3 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为零。
 
 ```javascript editor-docx
 // How to set a bottom border specifying its type and color.

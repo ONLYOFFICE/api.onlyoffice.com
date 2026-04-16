@@ -1,3 +1,8 @@
+---
+description: Embed a read-only document viewer using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Initialize viewer
 
 This example demonstrates how to embed a read-only document viewer using the JavaScript SDK method.

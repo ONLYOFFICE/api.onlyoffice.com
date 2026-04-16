@@ -20,7 +20,7 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例返回文档内容中的当前文本运行。
+此示例返回文档内容中的当前文本块。
 
 ```javascript editor-pptx
 const presentation = Api.GetPresentation();

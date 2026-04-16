@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example gets type of a current selection.
+此示例获取当前选择的类型。
 
 ```javascript editor-pptx
 const selectionType = Api.GetSelection().GetType();

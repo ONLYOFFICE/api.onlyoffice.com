@@ -22,7 +22,7 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例展示如何创建和设置将应用于表格中符合条件格式类型的所有文本运行的文本运行属性。
+此示例展示如何创建和设置将应用于表格中符合条件格式类型的所有文本块的文本属性。
 
 ```javascript editor-docx
 // How to set text properties to the table style and make it bold.

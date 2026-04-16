@@ -2,7 +2,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundPreview.module.css';
 import {getFullUrl} from "@site/src/utils/url";
-import {FILE_CONFIGS} from "../defaultScripts";
+import {FILE_CONFIGS, SAMPLE_FILE_CONFIGS} from "../defaultScripts";
 
 declare global {
     interface Window {
@@ -13,7 +13,7 @@ declare global {
 }
 
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext()
 
     const containerRef = useRef(null)
     const initializingRef = useRef(false)
@@ -82,7 +82,8 @@ export const PlaygroundPreview = () => {
 
             containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>'
 
-            const fileConfig = FILE_CONFIGS[editorType] || FILE_CONFIGS.word
+            const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS
+            const fileConfig = configs[editorType] || configs.word
 
             const config = {
                 document: {
@@ -117,9 +118,17 @@ export const PlaygroundPreview = () => {
                         try {
                             const pluginConfigUrl = getFullUrl("/plugin/config.json");
 
+                            // TODO: Remove after release 9.4.0, as installDeveloperPlugin will be available directly on the connector object
+                            const installPluginShim: Record<string, string> = {
+                                word: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
+                                pdf: "gg.ud.yJj=gg.ud.installDeveloperPlugin;",
+                                cell: "zi.je.Xok=zi.je.installDeveloperPlugin;",
+                                slide: "$g.le.Prj=$g.le.installDeveloperPlugin;",
+                            };
+
                             window.connector = window.docEditor.createConnector();
                             window.connector.callCommand(
-                                new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+                                new Function(`${installPluginShim[fileConfig.docType] || ""}Api.installDeveloperPlugin("${pluginConfigUrl}");`)
                             );
 
                             if (!initialScriptExecutedRef.current) {
@@ -164,7 +173,7 @@ export const PlaygroundPreview = () => {
             initializingRef.current = false
         }
 
-    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor, templateUrl])
+    }, [editorType, theme, previewType, documentServerUrl, documentServerSecret, createJWT, isApiLoaded, destroyEditor, templateUrl, documentType])
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
@@ -199,7 +208,7 @@ export const PlaygroundPreview = () => {
                         "form": "Api.GetDocument().RemoveAllElements();",
                         "pdf": "let doc = Api.GetDocument();for(let i = doc.GetPagesCount()-1; i > 0; i--) {doc.RemovePage(i);} doc.AddPage(1);doc.RemovePage(0);",
                     };
-                    var script = removeMethod[editorType] + code.replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
+                    var script = removeMethod[editorType] + code.replace(/\/\/.*$/gm, "").replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
                     window.connector.callCommand(new Function(script));
                     break;
                 }

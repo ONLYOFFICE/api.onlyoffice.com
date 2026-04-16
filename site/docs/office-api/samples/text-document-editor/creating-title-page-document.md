@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create a formatted title page with centered text.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating title page document

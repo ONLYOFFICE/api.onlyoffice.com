@@ -12,9 +12,11 @@ There are several reasons why ONLYOFFICE uses JavaScript for macros:
 - easy to use,
 - security, as macros do not have any access to the system. They are just JS code that runs in the same window with the editors.
 
-> Please note that starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the macros because the *"use strict"* mode was applied to the macro scripts. Don't forget to declare variables before using them so that the macros work correctly.
+:::note
+Starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the macros because the *"use strict"* mode was applied to the macro scripts. Don't forget to declare variables before using them so that the macros work correctly.
+:::
 
-You can find ready-to-use macros [here](../samples/macro-samples/macro-samples.md) or create your own ones.
+You can find ready-to-use macros [here](/samples/?doctype=docs&text=macros) or create your own ones.
 
 ## How to start writing your macro
 
@@ -25,7 +27,7 @@ You can find ready-to-use macros [here](../samples/macro-samples/macro-samples.m
 ![Macro button](/assets/images/plugins/macro-button.png#gh-light-mode-only)![Macro button](/assets/images/plugins/macro-button.dark.png#gh-dark-mode-only)
 
 4. Consult the [API documentation](../../office-api/get-started/overview.md) to write the script.
-5. [Write](./writing-macros.md) code for your macro or copy an example macro code from the [macro samples](../samples/macro-samples/macro-samples.md) and paste it into the macro editor's workspace.
+5. [Write](./writing-macros.md) code for your macro or copy an example macro code from the [macro samples](/samples/?doctype=docs&text=macros) and paste it into the macro editor's workspace.
 ![Macros window](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Macros window](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
 
 7. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.

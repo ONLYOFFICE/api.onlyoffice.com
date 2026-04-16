@@ -18,7 +18,7 @@
 
 ## 示例
 
-This example set vertical aligment for a drawing object.
+此示例为绘图对象设置垂直对齐方式。
 
 ```javascript editor-docx
 // How to align a drawing to the center.

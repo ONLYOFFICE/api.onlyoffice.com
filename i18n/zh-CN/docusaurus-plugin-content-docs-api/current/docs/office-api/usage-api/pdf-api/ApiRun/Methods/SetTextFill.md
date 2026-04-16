@@ -1,6 +1,6 @@
 # SetTextFill
 
-设置当前文本运行的文本填充。
+设置当前文本块的文本填充。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetTextFill(oApiFill);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -22,7 +22,7 @@ expression.SetTextFill(oApiFill);
 
 ## 示例
 
-此示例设置当前文本运行的文本填充。
+此示例设置当前文本块的文本填充。
 
 ```javascript editor-pdf
 // How to change a font color.
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();

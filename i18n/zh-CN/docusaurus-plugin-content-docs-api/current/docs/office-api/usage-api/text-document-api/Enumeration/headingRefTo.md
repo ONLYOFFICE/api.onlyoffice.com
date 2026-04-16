@@ -24,7 +24,7 @@
 
 ## 示例
 
-This example adds a cross-reference to the page containing a heading.
+此示例添加指向包含标题的页面的交叉引用。
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with a heading.

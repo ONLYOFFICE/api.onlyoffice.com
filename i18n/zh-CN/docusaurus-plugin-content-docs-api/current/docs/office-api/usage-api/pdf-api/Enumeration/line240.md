@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example sets the paragraph line spacing to 1 line.
+此示例将段落行距设置为 1 行。
 
 ```javascript editor-pdf
 // How to change a spacing of a line.

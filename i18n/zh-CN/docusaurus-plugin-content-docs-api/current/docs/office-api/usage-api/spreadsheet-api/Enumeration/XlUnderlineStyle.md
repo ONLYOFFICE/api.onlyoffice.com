@@ -17,7 +17,7 @@
 
 ## 示例
 
-This example specifys that the single underlining is applied to the font.
+此示例指定对字体应用单下划线。
 
 ```javascript editor-xlsx
 // How to underline a text font.

@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example sets a gradient stop position in 100%.
+此示例将渐变停止位置设置为 100%。
 
 ```javascript editor-pptx
 // How to create a gradient stop using positive percentage.

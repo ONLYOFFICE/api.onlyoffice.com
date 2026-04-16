@@ -1,6 +1,6 @@
 # Delete
 
-删除当前运行。
+删除当前文本块。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.Delete();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例删除运行。
+此示例删除文本块。
 
 ```javascript editor-pdf
 // How to delete a text run object.
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");

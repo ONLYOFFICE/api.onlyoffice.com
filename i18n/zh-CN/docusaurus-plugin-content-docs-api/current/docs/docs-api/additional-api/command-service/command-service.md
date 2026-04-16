@@ -2,11 +2,15 @@
 
 与**文档命令服务**的交互使用 POST 请求。请求参数以 JSON 格式填写在请求正文中。请求被发送至`https://documentserver/command`地址，其中**文档服务器**指安装了 ONLYOFFICE 文档的服务器名称。
 
-> 请注意，在 8.2 版本之前，`https://documentserver/coauthoring/CommandService.ashx` 地址被用于发送请求。
+:::note
+请注意，在 8.2 版本之前，`https://documentserver/coauthoring/CommandService.ashx` 地址被用于发送请求。
+:::
 
 从 8.1 版开始，建议将[shardkey](../../get-started/configuration/shard-key.md)参数添加到 URL *QueryString*，其中包含 *key* 值。 例如，*?shardkey=Khirz6zTPdfd7*。这允许您对请求进行负载平衡。
 
-> 在版本4.2之前的 **ONLYOFFICE 文档服务器**中，使用了带有 *QueryString* 中参数的GET请求。
+:::note
+在版本4.2之前的 **ONLYOFFICE 文档服务器**中，使用了带有 *QueryString* 中参数的GET请求。
+:::
 
 请参阅下面可用的命令类型以了解更多信息。
 

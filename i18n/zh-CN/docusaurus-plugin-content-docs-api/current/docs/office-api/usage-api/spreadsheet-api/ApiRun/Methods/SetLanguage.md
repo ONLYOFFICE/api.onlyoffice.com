@@ -1,6 +1,6 @@
 # SetLanguage
 
-指定在处理此文本运行内容时将用于检查拼写和语法（如果请求）的语言。
+指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetLanguage(sLangId);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -22,7 +22,7 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本运行内容时将用于检查拼写和语法（如果请求）的语言。
+此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
 
 ```javascript editor-xlsx
 // How to set a language to the text for grammar checking.

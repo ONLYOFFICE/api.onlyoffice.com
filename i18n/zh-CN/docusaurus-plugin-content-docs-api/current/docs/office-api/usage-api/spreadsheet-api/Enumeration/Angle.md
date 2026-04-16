@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example specifies that the range contents will be rotated upward.
+此示例指定区域内容将向上旋转。
 
 ```javascript editor-xlsx
 // Use angles to set orientation of the range. 

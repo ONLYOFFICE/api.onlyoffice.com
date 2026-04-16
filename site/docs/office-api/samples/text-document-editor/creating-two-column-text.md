@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create a two-column text layout in a document.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating two-column text document

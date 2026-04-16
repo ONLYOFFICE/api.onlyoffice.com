@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create an employee onboarding checklist form.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating onboarding checklist

@@ -88,7 +88,7 @@
 
 ## 示例
 
-This example adds an entrance fade animation to a shape.
+此示例为形状添加进入淡入动画。
 
 ```javascript editor-pptx
 let oPresentation = Api.GetPresentation();

@@ -199,7 +199,7 @@
 
 ## 示例
 
-This example creates a shape using the 'diamond' preset.
+此示例使用 'diamond' 预设创建形状。
 
 ```javascript editor-xlsx
 // How to change a shape type of a drawing.

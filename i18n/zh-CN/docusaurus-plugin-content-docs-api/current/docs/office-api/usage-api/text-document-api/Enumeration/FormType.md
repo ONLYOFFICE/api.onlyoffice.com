@@ -21,7 +21,7 @@
 
 ## 示例
 
-This example returns a type of the current form.
+此示例返回当前表单的类型。
 
 ```javascript editor-docx
 // How to get a form type.

@@ -8,6 +8,8 @@
 # Generated files
 .docusaurus
 .cache-loader
+/src/data/*
+!/src/data/docs-builder-samples.json
 
 # Misc
 .DS_Store

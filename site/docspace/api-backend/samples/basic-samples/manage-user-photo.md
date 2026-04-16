@@ -1,3 +1,8 @@
+---
+description: Upload and delete user profile photos via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

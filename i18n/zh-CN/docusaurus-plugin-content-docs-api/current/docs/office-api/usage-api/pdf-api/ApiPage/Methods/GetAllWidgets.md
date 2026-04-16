@@ -16,7 +16,7 @@ expression.GetAllWidgets();
 
 ## 返回值
 
-number
+[ApiWidget](../../Enumeration/ApiWidget.md)[]
 
 ## 示例
 

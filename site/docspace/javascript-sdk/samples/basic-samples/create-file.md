@@ -1,3 +1,8 @@
+---
+description: Create a new file inside a DocSpace room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Create file
 
 This example demonstrates how to create a new file inside a DocSpace room using a button.

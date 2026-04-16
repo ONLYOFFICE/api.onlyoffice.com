@@ -1,3 +1,8 @@
+---
+description: Create diagrams and flowcharts with the Draw.io plugin.
+tags: ["DocSpace", "Plugins", "Ready-to-use"]
+---
+
 # Draw.io
 
 A tool for creating diagrams, flowcharts, intelligence maps, business layouts, entity relationships, program blocks, and more.

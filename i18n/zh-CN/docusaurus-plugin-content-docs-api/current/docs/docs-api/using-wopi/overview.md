@@ -39,7 +39,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-> 默认值在 *default.json* 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档** 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+:::note
+默认值在 *default.json* 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档** 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
+:::
 
 ## 启用 WOPI {#enabling-wopi}
 
@@ -65,7 +67,9 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list) 中。同时，必须拒绝所有其他集成商的访问。
 
-> 默认情况下，所有 IP 地址都被认为是可信的。
+:::note
+默认情况下，所有 IP 地址都被认为是可信的。
+:::
 
 按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
 

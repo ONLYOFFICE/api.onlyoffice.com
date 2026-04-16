@@ -1,6 +1,6 @@
 # SetOutLine
 
-设置当前文本运行的文本轮廓。
+设置当前文本块的文本轮廓。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetOutLine(oStroke);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -22,7 +22,7 @@ expression.SetOutLine(oStroke);
 
 ## 示例
 
-此示例设置当前文本运行的文本轮廓
+此示例设置当前文本块的文本轮廓
 
 ```javascript editor-xlsx
 // How to outline a text with a stroke.

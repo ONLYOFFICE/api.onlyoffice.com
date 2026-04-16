@@ -1,3 +1,8 @@
+---
+description: Generate a project presentation from folder documents.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Generate project presentation
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to generate a project presentation based on documents stored in a DocSpace folder. This is useful when you want to quickly turn project materials into a shareable slide deck for a meeting or status update.
@@ -8,6 +13,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -35,6 +41,7 @@ Send a request that specifies the room and the folder.
 **Example request:** In the "Website Redesign" room, use the documents from the "Brief" folder as the source for a project presentation.
 
 What you should expect:
+
 - The target folder is located.
 - Documents inside the folder are identified as the input for the presentation.
 
@@ -47,6 +54,7 @@ Request a clear structure so the presentation is consistent and easy to present.
 **Example request:** Create a 10-slide project presentation with the following structure: Title, Agenda, Project overview, Goals, Scope, Timeline, Deliverables, Risks, Next steps, Summary.
 
 What you should expect:
+
 - A slide outline with titles and key bullet points.
 - Content based on the folder documents.
 
@@ -61,6 +69,7 @@ Request the presentation to be generated as a `.pptx` file.
 **Example request:** Generate the presentation as "Project presentation.pptx".
 
 What you should expect:
+
 - A `.pptx` file is created based on the slide outline and extracted content.
 
 :::note
@@ -74,6 +83,7 @@ Request that the file is saved to a specific folder and provide a link.
 **Example request:** Save "Project presentation.pptx" to the "Deliverables" folder in the "Website Redesign" room and provide a link to the file.
 
 What you should expect in the response:
+
 - Presentation file name
 - Save location (room and folder)
 - (Optional) a direct link to open the file in DocSpace

@@ -136,7 +136,7 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+   ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
 5. Open your *html* file in the browser.
 
@@ -158,13 +158,15 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
 ## Opening the document history with changes highlighting
 
 If the document version was created with the **document editor**, then the document changes can be displayed when viewing the document history. The additional data must be saved to the **document storage service** when [saving](./saving-file.md) the editing session beside the document versions themselves to achieve that. After editing in **document editor** the information about the changes during the editing session is sent together with the changed document:
 
-> When the server version is updated, the **document editor** does not use the *changes* data to highlight changes in the history. It only returns the changed document in the *changesurl* parameter.
+:::note
+When the server version is updated, the **document editor** does not use the *changes* data to highlight changes in the history. It only returns the changed document in the *changesurl* parameter.
+:::
 
 - [history](../../usage-api/callback-handler.md#history) - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the [refreshHistory](../../usage-api/methods.md#refreshhistory) method.
 
@@ -200,7 +202,9 @@ If the document version was created with the **document editor**, then the docum
 
   Where the **serverVersion** is the *serverVersion* from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
 
-  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
+  :::note
+  ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
+  :::
 
 - [changesurl](../../usage-api/callback-handler.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../usage-api/methods.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
 
@@ -222,6 +226,8 @@ If the document version was created with the **document editor**, then the docum
   })
   ```
 
-  > The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  :::warning
+  The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  :::
 
   ![changesurl](/assets/images/editor/changesurl.png)

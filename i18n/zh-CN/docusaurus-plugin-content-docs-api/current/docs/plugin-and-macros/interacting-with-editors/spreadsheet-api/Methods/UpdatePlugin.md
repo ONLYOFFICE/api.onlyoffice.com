@@ -14,7 +14,7 @@ expression.UpdatePlugin(config);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| config | 可选 | object |  | 插件[配置](https://api.onlyoffice.com/docs/plugin-and-macros/structure/configuration/)。 |
+| config | 可选 | object |  | 插件 [config](../../../../../docs/plugin-and-macros/structure/configuration/configuration.md)。 |
 
 ## 返回值
 

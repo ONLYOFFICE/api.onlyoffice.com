@@ -4,7 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
-const isDev = process.env.NODE_ENV === 'development';
+// SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
+const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
 
 let keyPath = '';
 function sidebarRecursive(item) {
@@ -50,7 +51,7 @@ const config: Config = {
     v4: {
       removeLegacyPostBuildHeadAttribute: true
     },
-    experimental_faster: {
+    faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
       ssgWorkerThreads: true,
@@ -102,8 +103,17 @@ const config: Config = {
 
           docItemComponent: '@theme/ApiItem',
 
-          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, isCategoryIndex, ...args}) {
+            const sidebarItems = await defaultSidebarItemsGenerator({
+              ...args,
+              isCategoryIndex(params) {
+                // Exclude index.md
+                if (params.fileName.toLowerCase() === 'index') {
+                  return false;
+                }
+                return isCategoryIndex(params);
+              },
+            });
             keyPath = args.item.dirName;
             sidebarItems.forEach(sidebarRecursive);
             return sidebarItems;
@@ -185,38 +195,6 @@ const config: Config = {
       items: [
         {
           type: 'dropdown',
-          label: 'Docspace',
-          position: 'left',
-          to: 'docspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceApiBackend',
-                label: 'API Reference',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceJSSdk',
-                label: 'Embed SDK',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspacePlugins',
-              label: 'Plugins SDK',
-              docsPluginId: 'api',
-             },
-             {
-               type: 'docSidebar',
-               sidebarId: 'docspaceMCPServer',
-               label: 'MCP Server',
-               docsPluginId: 'api',
-             },
-          ],
-        },
-        {
-          type: 'dropdown',
           label: 'Docs',
           position: 'left',
           to: 'docs',
@@ -254,10 +232,41 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'samples',
+          type: 'dropdown',
+          label: 'Docspace',
+          position: 'left',
+          to: 'docspace',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceApiBackend',
+                label: 'API Reference',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceJSSdk',
+                label: 'Embed SDK',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspacePlugins',
+              label: 'Plugins SDK',
+              docsPluginId: 'api',
+             },
+             {
+               type: 'docSidebar',
+               sidebarId: 'docspaceMCPServer',
+               label: 'MCP Server',
+               docsPluginId: 'api',
+             },
+          ],
+        },
+        {
+          to: 'samples',
           label: 'Samples',
-          docsPluginId: 'api',
+          position: 'left',
         },
         {
           to: 'changelog',

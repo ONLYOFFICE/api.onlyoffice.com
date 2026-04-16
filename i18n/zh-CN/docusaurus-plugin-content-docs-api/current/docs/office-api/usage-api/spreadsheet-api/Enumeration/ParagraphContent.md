@@ -15,7 +15,7 @@
 
 ## 示例
 
-This example adds an element called 'text run' to the paragraph.
+此示例向段落添加名为 'text run' 的元素。
 
 ```javascript editor-xlsx
 // How to add an element to paragraph.

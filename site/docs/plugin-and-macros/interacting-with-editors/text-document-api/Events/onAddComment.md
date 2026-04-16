@@ -1,6 +1,6 @@
 # onAddComment
 
-The function called when a comment is added to the document with the [AddComment](../../text-document-api/Methods/AddComment.md) method.
+The function called when a comment is added to the document with the [AddComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddComment.md) method.
 
 ## Parameters
 
@@ -10,8 +10,13 @@ The function called when a comment is added to the document with the [AddComment
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onAddComment", (comment) => {
-    Comments.push(comment);
-    $('#scrollable-container-id').append(makeComment(comment.Id, comment));
+    console.log("event: onAddComment");
+    console.log("Id: " + comment.Id);
+    console.log("UserName: " + comment.Data.UserName);
+    console.log("Text: " + comment.Data.Text);
+    console.log("Time: " + comment.Data.Time);
+    console.log("Solved: " + comment.Data.Solved);
+    console.log("QuoteText: " + comment.Data.QuoteText);
 });
 ```
 

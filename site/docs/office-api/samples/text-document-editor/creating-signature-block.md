@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Add a signature block with name, position, and signature line.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating signature block

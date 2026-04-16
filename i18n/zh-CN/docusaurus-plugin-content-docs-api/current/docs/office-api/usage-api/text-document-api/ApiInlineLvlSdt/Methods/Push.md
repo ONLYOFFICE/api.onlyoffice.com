@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例推送文本运行以将其实际添加到容器。
+此示例推送文本块以将其实际添加到容器。
 
 ```javascript editor-docx
 // How to insert the text into the inline content control.

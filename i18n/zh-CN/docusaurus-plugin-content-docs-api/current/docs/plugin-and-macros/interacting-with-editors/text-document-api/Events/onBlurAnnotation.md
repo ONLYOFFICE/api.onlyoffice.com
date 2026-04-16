@@ -10,7 +10,9 @@
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onBlurAnnotation", (data) => {
-    console.log("Annotation blur:", data.rangeId);
+    console.log("event: onBlurAnnotation");
+    console.log("paragraphId: " + data.paragraphId);
+    console.log("rangeId: " + data.rangeId);
 });
 ```
 

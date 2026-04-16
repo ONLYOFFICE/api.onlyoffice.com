@@ -19,7 +19,7 @@
 
 ## 示例
 
-Report on all review changes that contains review records of four different types: "TextRem" - removing text, "TextAdd" - adding text, "ParaRem" - removing a paragraph, "TextPr" - changing text properties.
+报告包含四种不同类型审阅记录的所有审阅更改："TextRem" - 删除文本，"TextAdd" - 添加文本，"ParaRem" - 删除段落，"TextPr" - 更改文本属性。
 
 ```javascript editor-docx
 // How to create a review report record indicating its type.

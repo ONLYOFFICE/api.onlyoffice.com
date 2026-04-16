@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example specify that the whole text match will be searched in the range.
+此示例指定在区域中搜索完整文本匹配。
 
 ```javascript editor-xlsx
 // How to search a text indicating search order.

@@ -1,8 +1,10 @@
 ---
 sidebar_position: -4
+description: Integrate ONLYOFFICE Docs into a Ruby web application.
+tags: ["Docs", "Integration", "Ruby"]
 ---
 
-# Ruby example
+# Ruby integration
 
 ## Overview
 

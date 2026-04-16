@@ -1,6 +1,6 @@
 # SetFill
 
-设置当前文本运行的文本颜色。
+设置当前文本块的文本颜色。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-此示例设置文本运行的文本颜色。
+此示例设置文本块的文本颜色。
 
 ```javascript editor-pdf
 // How to change a color of a text.
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();

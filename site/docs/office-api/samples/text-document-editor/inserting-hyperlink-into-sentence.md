@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Insert a clickable hyperlink within paragraph text.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Inserting hyperlink into sentence

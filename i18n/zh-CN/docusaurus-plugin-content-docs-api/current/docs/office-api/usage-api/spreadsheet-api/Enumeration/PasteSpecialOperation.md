@@ -17,7 +17,7 @@
 
 ## 示例
 
-This example paste data with paste options.
+此示例使用粘贴选项粘贴数据。
 
 ```javascript editor-xlsx
 // How to paste indicating special parameters.

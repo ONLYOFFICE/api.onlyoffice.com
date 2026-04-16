@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example specify that the first row contains header information.
+此示例指定第一行包含标题信息。
 
 ```javascript editor-xlsx
 // How to specify a sorting header for a range.

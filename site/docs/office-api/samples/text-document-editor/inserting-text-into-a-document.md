@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Add formatted text with bold, italic, and color styles.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Inserting text into a document

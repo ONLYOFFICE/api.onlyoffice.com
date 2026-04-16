@@ -1,5 +1,231 @@
 # Change log
 
+## 8.3.0
+
+### New features
+
+#### DocSpace
+
+* Added live Public room embed example to the SDK get-started page
+* Added embedding modes comparison table to the DocSpace SDK get-started page
+* Added DocSpace SDK playground page with interactive editor and live preview
+
+#### Playground
+
+* Added Document Server settings dialog to playground toolbar
+
+### Improvements
+
+#### DocSpace
+
+* Updated main page button to link to playground instead of cloud registration
+* Replaced upload-and-summarize-document use case with a refocused chat-summary text flow
+* Updated DocSpace playground to new portal
+
+#### Office API
+
+* Updated office-js-api documentation
+
+#### Plugins and macros
+
+* Updated Freeze panes macro sample code snippet
+* Updated complete-address-information macro sample code snippet
+
+#### Localization
+
+* Added missing Chinese localization and frontmatter to macro samples
+* Removed zh-CN DocSpace and workspace translations
+
+### Fixes
+
+#### Playground
+
+* Fixed playground settings button: updated icon, colors, and click feedback
+* Fixed DocSpace playground: added notice about Safari and incognito mode limitations
+* Fixed DocSpace playground: removed undocumented buttonWithLogo from selector snippets
+* Fixed DocSpace playground: added permission comments to Manager config params
+* Fixed DocSpace playground: prevented iframe from overlapping resize handle
+* Fixed DocSpace playground: re-run script on theme change to update preview
+* Fixed DocSpace playground: allowed user-specified src to override default portal URL
+* Fixed playground pages: moved JSX imports to top level instead of mdx-code-block fence
+* Fixed playground builder mode: stripped single-line comments before collapsing newlines
+
+#### DocSpace
+
+* Fixed DocSpace auth: use SDK iframe login with hash instead of cross-origin fetch
+
+#### Docs API
+
+* Fixed text document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
+
+#### Common
+
+* Fixed button being required in Features type for Workspace and Samples pages
+* Replaced console.log with visible actions in Playground connector examples
+* Renamed "Word" to "Text Document" in Playground editor selector
+* Fixed inconsistent admonition types for definitional and prerequisite notes
+* Removed redundant "Please note" prefixes from admonitions, fixed "extrenal" typo
+* Fixed blockquotes formatting across documentation
+
+## 8.2.0
+
+### New features
+
+#### DocSpace
+
+* Added SDK documentation with quick-start guides for C#, Java, PHP, Python, TypeScript, and Postman
+* Added MCP server use-case samples to the Samples page
+
+#### Common
+
+* Added a new Samples page with filterable sample cards across all documentation sections
+* Added search input with optimized filtering to the Samples page
+* Added ?doctype= URL parameter support to the Samples page
+* Added pagination and tag-based filtering to the Samples page
+* Added Document Builder samples to the Samples page
+* Added Document Connectors samples to the Samples page
+
+### Improvements
+
+#### Common
+
+* Upgraded React to 19.2.0
+* Upgraded Docusaurus to 3.10.0 and openapi-docs to 5.0.0
+* Added description metadata to all sample pages across documentation
+* Added tags and descriptions to sample pages across all documentation sections
+* Shortened sample filenames and headers for better readability and URL consistency
+* Added clickable tag filtering on the Samples page
+* Renamed "Favorite/Recommended" to "Favorites/Frequently used" on the Samples page
+* Renamed "AI" to "AI Tools" tag
+* Renamed "Documents Editors" to "Document Editors"
+* Removed tag display limit on the Samples page
+* Translated the playground to Chinese (zh-CN)
+* Moved generate-samples-data script to .github/scripts
+* Cleaned up unused CSS styles, variables, comments, and normalized hex values
+
+#### Homepage
+
+* Updated tag labels in favorites samples
+
+#### Docs API
+
+* Removed unnecessary backslash escaping from fragment links in WOPI docs
+
+#### Plugins and macros
+
+* Fixed heading level for localeTranslate in plugin configuration docs
+* Updated AI plugin and converting VBA macros documentation
+* Renamed custom AI tools files to kebab-case and headers to sentence case
+
+#### Playground
+
+* Updated form inputs on template fill and restyled radio buttons
+* Fixed redundant onChangeContentControl updates
+* Restored playground plugin config.json
+
+### Fixes
+
+* Fixed homepage sample card links and cleaned up descriptions
+* Fixed flash of favorites on first load with doctype parameter on the Samples page
+* Fixed Samples page loading speed
+* Removed unnecessary min-height from description and tags row on the Samples page
+* Fixed curly quotes replaced with straight quotes in import statements
+* Fixed pipe character alignment with table headers across EN and zh-CN docs
+* Fixed missing table cell and closing pipe in zh-CN WOPI config
+* Fixed extra space inside bold marker in content controls navigation
+* Fixed extra indentation for list items in managing-versions FAQ
+* Fixed missing blank lines before code blocks, tables, and lists
+* Fixed heading levels: use H2 instead of H3 for top-level sections
+* Fixed typos across documentation (raws → rows, standart → standard, exabled → enabled, DocSpaace → DocSpace)
+* Fixed punctuation: use Chinese period in zh-CN working-with-content-controls
+* Fixed links to renamed custom AI tools pages
+* Fixed active navbar link highlight to use accent color
+* Fixed duplicate .menu__link CSS rule
+* Fixed missing space before brace in CSS selector
+* Fixed broken links to language-specific-examples in changelog
+
+## 8.1.0
+
+### New features
+
+#### Plugins and macros
+
+* Reworked the Get Started section with improved quick-start tutorials
+* Added Hello World Plugin guide
+* Added Hello World Macro guide
+* Added Comment Text AI Tool tutorial
+* Added Insert Formulas Row macro sample for spreadsheet editor
+* Added Create AI assistant documentation with example
+
+#### Docs API
+
+* Added comprehensive Document Server configuration documentation
+* New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
+* Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
+* Added Working with content controls sample for Automation API
+* Added links to all editor methods (text document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
+
+#### Office API
+
+* Updated PDF API documentation (ApiRun, ApiRichRun, ApiTextPr, ApiShape classes)
+* Updated Presentation API documentation
+* Updated Spreadsheet API documentation
+
+### Improvements
+
+#### Common
+
+* Updated 165 images across the documentation with higher quality screenshots
+* Added new dark mode variants for plugin-related images (`plugin-manager.dark.png`, `submit-plugin.dark.png`)
+* Enhanced visual clarity for plugin screenshots and structure diagrams
+* Added `rebuild-server-config.yaml` workflow for automated DocServer config documentation rebuilds
+* Removed legacy GIF assets and replaced with webm videos
+* Renamed webm files from camelCase to kebab-case for consistent naming
+* Replaced non-breaking spaces (U+00A0) with regular spaces across documentation
+* Enabled new S3 sync scheme for production deployment
+
+#### Docs API
+
+* Removed outdated Office JavaScript API limitation notes
+* Removed redundant callback descriptions from how-to-call-commands
+* Consolidated `ContextMenuItem` type definitions in connector class documentation
+* Updated server config link to internal documentation
+* Redesigned review changes sample with live demo UI and change counter
+* Updated filling out the form and working with comments samples
+
+#### Plugins and macros
+
+* Converted blockquotes to admonitions in macro samples
+
+#### Homepage
+
+* Swapped DocSpace/Docs positioning on the first screen
+* Replaced blog articles on homepage
+* Fixed Cyrillic "С" (U+0421) replaced with Latin "C" in CSS class names
+* Reduced DOM nesting and removed unused assets
+* Changed navbar sorting
+
+#### Localization
+
+* Localized external links on zh-CN plugin and macro pages with Chinese equivalents
+* Added zh-CN translation for AI plugin page with localized links
+
+#### Playground
+
+* Removed unused legacy scripts (`cell/api.js`, `slide/api.js`, `word/api.js`)
+* Removed deprecated plugin folder
+* Restructured `DEFAULT_SCRIPTS` configuration for better flexibility
+
+### Fixes
+
+* Fixed link in documentation
+* Fixed Docusaurus configuration to exclude `index.md` from category index convention
+* Fixed unnecessary `setTimeout` wrapper in insert-formulas-row macro sample
+* Fixed example in macro documentation
+* Changed warning admonition to info where appropriate
+* Fixed broken links across documentation
+* Fixed external components
+
 ## 8.0.0
 
 ### New features
@@ -18,6 +244,7 @@
 * Added AI custom tools text annotations feature documentation.
 * Added new PDF macros samples.
 * Added freeze panes macro example.
+* Added bookmark last view macro example.
 * Added OData plugin to plugin examples.
 * Added Chinese translations for the entire Plugins API section.
 
@@ -26,6 +253,8 @@
 * Added PDF section support in the Playground.
 * Updated the Playground with new default scripts for SSE.
 * Added comprehensive Chinese translations for Office API usage documentation.
+* Added **Document** type selector to the Playground toolbar for choosing between documents with blank or sample content.
+* The Playground now opens with a sample document when accessed from the Playground overview pages.
 
 #### DocSpace
 
@@ -90,6 +319,7 @@
 * Fixed announcement bar on try-docs example page.
 * Updated PDF document name from 'demo' to 'blank' in Playground.
 * Shortened case titles.
+* Fixed Playground initialization issue with document type when opening via URL parameters.
 
 ### Breaking changes
 

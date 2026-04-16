@@ -1,3 +1,8 @@
+---
+description: Configure and use the ComboBox dropdown component.
+tags: ["DocSpace", "Plugins", "Basic"]
+---
+
 # ComboBox component
 
 This guide demonstrates how to configure and use the [ComboBox](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/combobox) component in the DocSpace Plugins SDK with nearly all supported layout and style properties.

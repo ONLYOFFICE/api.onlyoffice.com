@@ -10,7 +10,7 @@ When the user goes to the authorization link, four scenarios are possible.
 
 If the user is not yet authorized on the portal, an authorization form opens. The user must enter their email and password and click the **Sign in** button. If the authorization is successful, they will be redirected to the pages described in scenarios 2 and 3.
 
-<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />
+<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />
 
 ## Scenario 2. Portal selection
 
@@ -36,7 +36,9 @@ If the authorization link contains non-existent [client_id](auth-button.md#clien
 
 1. When the user clicks the **Allow** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) where the code field will be added to the search.
 
-   > If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
+   :::note
+   If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
+   :::
 
    To send a consent request, you can also send POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/submit-consent.api.mdx) address.
 

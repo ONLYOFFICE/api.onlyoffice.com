@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Angular
 
 ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor-angular-workspace) 将 ONLYOFFICE 文档集成到 [Angular](https://angularjs.org/) 项目。
@@ -140,7 +144,9 @@ ng version
 
 1. 打开 *onlyoffice-angular-demo* 项目中的 *./src/app/app.component.ts* 文件，并在您的使用组件中定义选项：
 
-   > 请注意，从 Angular v17.0.0 开始，默认情况下，*app.module.ts* 文件不会添加到新项目中。您必须在 *Component* 装饰器的 *imports* 属性中指定 *DocumentEditorModule*，并将 *standalone* 设置为 *true*。
+   :::note
+   从 Angular v17.0.0 开始，默认情况下，*app.module.ts* 文件不会添加到新项目中。您必须在 *Component* 装饰器的 *imports* 属性中指定 *DocumentEditorModule*，并将 *standalone* 设置为 *true*。
+   :::
 
    ``` ts
    import {Component} from "@angular/core";
@@ -223,13 +229,13 @@ ng version
    const documentEditor = window.DocEditor.instances["docxEditor"]
    ```
 
-2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md):
+2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md)：
 
    ```ts
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
    ```
 
-示例:
+示例：
 
 ```ts
 onDocumentReady = () => {

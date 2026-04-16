@@ -15,13 +15,14 @@ export function usePlaygroundRootContext() {
 export type EditorType = 'word' | 'cell' | 'slide' | 'form' | 'pdf'
 export type ScriptType = 'office-js-api' | 'connector' | 'plugin' | 'builder'
 export type PreviewType = 'desktop' | 'mobile' | 'embedded'
+export type DocumentType = 'blank' | 'sample'
 
 export interface PlaygroundRootContext extends PlaygroundState {
     dispatch: Dispatch<PlaygroundAction>
     theme: 'light' | 'dark'
     setTheme: (theme: 'light' | 'dark') => void
-    documentServerUrl: string
-    documentServerSecret: string
+    defaultDocumentServerUrl: string
+    defaultDocumentServerSecret: string
     templateUrl: string | null | undefined
     hasInitialScript: boolean
 }

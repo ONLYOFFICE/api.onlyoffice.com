@@ -1,6 +1,6 @@
 # onChangeCommentData
 
-The function called when the specified comment is changed with the [ChangeComment](../../text-document-api/Methods/ChangeComment.md) method.
+The function called when the specified comment is changed with the [ChangeComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md) method.
 
 ## Parameters
 
@@ -10,7 +10,13 @@ The function called when the specified comment is changed with the [ChangeCommen
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeCommentData", (comment) => {
-    changeComment(comment);
+    console.log("event: onChangeCommentData");
+    console.log("Id: " + comment.Id);
+    console.log("UserName: " + comment.Data.UserName);
+    console.log("Text: " + comment.Data.Text);
+    console.log("Time: " + comment.Data.Time);
+    console.log("Solved: " + comment.Data.Solved);
+    console.log("QuoteText: " + comment.Data.QuoteText);
 });
 ```
 

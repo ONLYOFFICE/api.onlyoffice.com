@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Clear all form field values to reset a PDF form.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Clearing all form values

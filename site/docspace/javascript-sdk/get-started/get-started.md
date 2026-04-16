@@ -3,11 +3,29 @@ sidebar_position: 1
 sidebar_class_name: hidden
 ---
 
+import DocspaceEmbed from '@site/src/components/DocspaceEmbed';
+
 # Get started
 
 The [ONLYOFFICE DocSpace SDK](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) based on JavaScript allows developers to use all the DocSpace possibilities with *api.js*. You can integrate ONLYOFFICE DocSpace into your own web application, allowing users to create and submit documents directly from your website. For example, you can use the ONLYOFFICE DocSpace [React component](./react-component.md) to integrate ONLYOFFICE DocSpace into React projects.
 
 You don't need to be an experienced JavaScript developer to use the DocSpace JavaScript SDK because we provide you with all the basics. You only need a few lines of JavaScript to set up a fully functional integration.
+
+The example below shows what the DocSpace portal Public room looks like embedded in your website as a frame.
+
+<DocspaceEmbed params="?mode=public-room&id=2613800&token=ZjIrNGhZM2tDbmFnbzRHMmxKODE4Umx5SHdXOUx4OXVpc3BpaTlyN1ZIOD0_IjEzZmQ4MmRkLTVkNTAtNDM0ZC1iZTE0LWM2M2ZkNDJkMDFhNCI" />
+
+## Comparison table
+
+| Mode | SDK method | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
+| ------ | ----------- | ----------------- | ------ | -------- | ------ | ------ |
+| Frame | `initFrame()` | Full file and room manager | Yes | Yes | No | Yes |
+| Manager | `initManager()` | Full file and room manager | Yes | Yes | No | Yes |
+| Viewer | `initViewer()` | Read-only document preview | No | No | Yes (file) | Yes |
+| Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
+| Room selector | `initRoomSelector()` | Room picker dialog | Rooms only | No | No | Yes |
+| File selector | `initFileSelector()` | File picker dialog | Yes | No | No | Yes |
+| System | `initSystem()` | None (blank/hidden frame) | N/A | N/A | N/A | Yes |
 
 Follow the steps below to connect DocSpace as a frame to your website.
 
@@ -21,7 +39,7 @@ You need to add the URL of your server's root directory to the **Developer Tools
 2. Navigate to the **Developer Tools** section.
 3. On the **JavaScript SDK** tab, in the **Enter the address of DocSpace to embed** field, add the URL of your server's root directory.
 
-![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.png)
+![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.png#gh-light-mode-only)![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.dark.png#gh-dark-mode-only)
 
 ## Step 2. Creating the HTML file
 
@@ -63,7 +81,9 @@ If the users are not authenticated, they will see a page asking them to sign in 
 
 ## Step 5. Initializing
 
-> Please note that when working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
+:::warning
+When working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
+:::
 
 Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDKInstance.md#initframe) method with the SDK config passed to it:
 

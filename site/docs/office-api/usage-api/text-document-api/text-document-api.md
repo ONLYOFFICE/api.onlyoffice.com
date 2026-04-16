@@ -46,7 +46,11 @@ builder.SaveFile("docx", "example.docx");
 builder.CloseFile();
 ```
 
-Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this: *oParagraph = oDocument.GetElement(0)* and line 7 (*oDocument.Push(oParagraph);*) is not needed.
+Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph.
+
+:::tip
+You can address the first paragraph to change it using the *oDocument.GetElement(0)* method, so that `const oParagraph = Api.CreateParagraph()` is replaced with `const oParagraph = oDocument.GetElement(0)` and `oDocument.Push(oParagraph)` is not needed.
+:::
 
 ## Opening an existing text document
 
@@ -77,4 +81,4 @@ builder.CloseFile();
 
 As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) class with the path to the necessary text document as an argument to open it. In the above example we open **mydocument.docx** document, get its first paragraph and change the text in it to the centered "Center" text. The same way any other text document element can be changed.
 
-Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.
+Use the appropriate API documentation sections to find out which methods allow you to change certain document element formatting properties.

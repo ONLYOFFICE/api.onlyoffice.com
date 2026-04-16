@@ -1,6 +1,8 @@
 import { SamplesGrid } from "@site/src/components/SamplesGrid";
 import { BlogGrid } from "@site/src/components/BlogGrid";
-import Link from '@docusaurus/Link';
+import ClockIcon from "@site/static/icons/clock-icon.svg";
+import CodeIcon from "@site/static/icons/code-icon.svg";
+import ChatIcon from "@site/static/icons/chat-icon.svg";
 
 export type Samples = {
   items: SamplesGrid.Item[]
@@ -10,69 +12,90 @@ export type BlogArticles = {
   items: BlogGrid.Item[]
 };
 
-
 export const Samples: Samples = {
   items: [
+    // ── Favorite ──
     {
+      icon: <ClockIcon />,
       title: 'Creating advanced form',
+      category: 'favorites',
       description: (
         <>
-          Creates advanced form with table structure.
+          Creates advanced form with table structure using Document Builder.
         </>
       ),
-      seeSamples: [
-        {
-          name: "C++",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp",
-        },
-        {
-          name: ".Net",
-          link: "https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_advanced_form/Program.cs",
-        },
+      features: [
+        'Table-based form layout',
+        'Input fields and checkboxes',
+        'Cross-platform generation',
+      ],
+      viewLink:'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
+      tags: [
+        { label: 'Docs', variant: 'blue' },
+        { label: 'Builder', variant: 'blue' },
+        { label: 'PDF', variant: 'pink' },
+        { label: 'C++', variant: 'purple' },
       ],
     },
     {
+      icon: <CodeIcon />,
       title: 'Inserting Pivot Table',
+      category: 'favorites',
       description: (
         <>
-          This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range or the currently selected range. This tool can be used to summarize, group, or aggregate data by rows and values.
+          This AI tool inserts a pivot table into the specified range.
         </>
       ),
-      seeSamples: [
-        {
-          name: "AI tools",
-          link: "/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor",
-        },
+      features: [
+        'Summarize and group data',
+        'Custom range selection',
+        'AI-powered automation',
+      ],
+      viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/',
+      tags: [
+        { label: 'Docs', variant: 'blue' },
+        { label: 'Plugins', variant: 'blue' },
+        { label: 'AI Tools', variant: 'pink' },
+        { label: 'Spreadsheets', variant: 'green' },
       ],
     },
     {
+      icon: <ChatIcon />,
       title: 'Working with comments',
+      category: 'favorites',
       description: (
         <>
-          Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in the custom interface.
+          Collects all the comments from the document and displays them in a custom interface.
         </>
       ),
-      seeSamples: [
-        {
-          name: "Automation API",
-          link: "/samples/docs/docs-api/external-access-to-the-document-editing/",
-        },
+      features: [
+        'External document access',
+        'Custom comment UI',
+        'Real-time collaboration',
+      ],
+      viewLink:'/docs/docs-api/samples/automation-api/working-with-comments/',
+      tags: [
+        { label: 'Docs', variant: 'blue' },
+        { label: 'Integration', variant: 'purple' },
+        { label: 'External access', variant: 'green' },
+        { label: 'Automation API', variant: 'blue' },
       ],
     },
+
   ]
 }
 
 export const BlogArticles: BlogArticles = {
   items: [
     {
-      title: 'ONLYOFFICE API updates: What’s new in December 2025',
-      link: "https://www.onlyoffice.com/blog/2025/12/api-updates-december-2025",
-      imgHref: "/img/homepage-blog/api-december-2025-768x388.png",
+      title: 'How to write an ONLYOFFICE plugin with AI: the OData Import plugin case',
+      link: "https://www.onlyoffice.com/blog/2026/03/how-to-write-an-onlyoffice-plugin-with-ai-odata-import",
+      imgHref: "/img/homepage-blog/odata-import-plugin-768x393.png",
     },
     {
-      title: 'A developer’s guide to ONLYOFFICE style and color APIs',
-      link: "https://www.onlyoffice.com/blog/2025/11/a-developer-s-guide-to-onlyoffice-style-and-color-apis",
-      imgHref: "/img/homepage-blog/styling-article-768x395.png",
+      title: 'Manipulate PDF content with new ONLYOFFICE PDF Editor API',
+      link: "https://www.onlyoffice.com/blog/2026/03/manipulate-pdf-content-with-new-onlyoffice-pdf-editor-api",
+      imgHref: "/img/homepage-blog/manipulate-pdf-768x390.png",
     },
     {
       title: 'How to handle async API calls inside ONLYOFFICE custom functions',

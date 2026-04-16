@@ -1,3 +1,8 @@
+---
+description: Retrieve a list of folders from a room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Get folders
 
 This example demonstrates how to retrieve a list of folders from a shared DocSpace room using the JavaScript SDK.

@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Generate multiple NDA documents from a template with data.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating multiple NDA documents

@@ -16,7 +16,7 @@ expression.SetCustomType(sType, sTextFormatString, sAlign);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | 必需 | "none" \| "bullet" \| "decimal" \| "lowerRoman" \| "upperRoman" \| "lowerLetter" \| "upperLetter" \| "decimalZero" |  | 用于当前编号定义的自定义编号类型。 |
 | sTextFormatString | 必需 | string |  | 此参数中的任何文本都将作为字面文本在此编号级别的每个实例中重复，但百分号 (%) 后跟数字的用法除外，它将用于指示在此级别使用的基于 1 的数字索引。高于此级别的任何级别数字都将被忽略。 |
-| sAlign | 必需 | "left" \| "right" \| "center" |  | 应用于当前编号级别中文本运行的对齐类型。 |
+| sAlign | 必需 | "left" \| "right" \| "center" |  | 应用于当前编号级别中文本块的对齐类型。 |
 
 ## 返回值
 

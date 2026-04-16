@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This exampe sets the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height.
+此示例将要创建的绘图尺寸设置为宽 100 毫米（10 厘米）、高 100 毫米（10 厘米）。
 
 ```javascript editor-docx
 // How to set a size of the drawing.

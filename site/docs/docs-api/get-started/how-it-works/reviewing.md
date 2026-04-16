@@ -31,7 +31,9 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> Please note that the document review will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::note
+The document review will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::
 
 ## Differentiation of reviewing rights by groups
 
@@ -58,7 +60,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 2. Specify the access rights using the [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter in the permissions section of the editor initialization.
 
-   > If the **reviewGroups** parameter is specified in the editor config, the access rights to reviewing all changes are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
+   :::note
+   If the **reviewGroups** parameter is specified in the editor config, the access rights to reviewing all changes are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
+   :::
 
    ``` ts
    const config = {

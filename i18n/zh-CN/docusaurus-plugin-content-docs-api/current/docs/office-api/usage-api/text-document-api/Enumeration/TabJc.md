@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly.
+此示例在 50、75 和 150 磅位置设置制表位，文本分别在各制表位处居中、左对齐和右对齐。
 
 ```javascript editor-docx
 // How to set tabs and indicate justifications of text at each tab stop.

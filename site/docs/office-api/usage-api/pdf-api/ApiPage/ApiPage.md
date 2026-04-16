@@ -8,9 +8,9 @@ Represents the ApiPage class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddObject](./Methods/AddObject.md) | [FloatObject](../Enumeration/FloatObject.md) | Adds an available object to a page. |
-| [GetAllAnnots](./Methods/GetAllAnnots.md) | [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md) | Gets all annots on page |
+| [GetAllAnnots](./Methods/GetAllAnnots.md) | [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md)[] | Gets all annots on page |
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Gets all drawing objects from the page. |
-| [GetAllWidgets](./Methods/GetAllWidgets.md) | number | Gets page widgets |
+| [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets page widgets |
 | [GetClassType](./Methods/GetClassType.md) | "page" | Returns a type of the ApiPage class. |
 | [GetIndex](./Methods/GetIndex.md) | number | Gets page index |
 | [GetRotation](./Methods/GetRotation.md) | number | Gets page rotation angle |

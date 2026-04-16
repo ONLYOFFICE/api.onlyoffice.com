@@ -1,8 +1,10 @@
 ---
 sidebar_position: -2
+description: Use the Java SDK to integrate ONLYOFFICE Docs into your application.
+tags: ["Docs", "Integration", "Java"]
 ---
 
-# Java integration SDK
+# Java SDK integration
 
 [ONLYOFFICE Docs Integration SDK](https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk) provides common interfaces and default implementations for integrating ONLYOFFICE Docs into your own website or application on Java.
 

@@ -16,7 +16,7 @@
 
 ## 示例
 
-Set the "column" freeze pane type to the current worksheet.
+将 "column" 冻结窗格类型设置到当前工作表。
 
 ```javascript editor-xlsx
 // Specify the freeze pane type.

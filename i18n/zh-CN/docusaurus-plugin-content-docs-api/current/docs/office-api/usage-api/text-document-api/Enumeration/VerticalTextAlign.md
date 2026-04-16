@@ -15,7 +15,7 @@
 
 ## 示例
 
-In this example the inner text for the created shape will be added aligned vertically closer to the shape upper part.
+在此示例中，创建的形状的内部文本将垂直对齐到更靠近形状上部的位置。
 
 ```javascript editor-docx
 // How to set a vertical position of a text in a shape.

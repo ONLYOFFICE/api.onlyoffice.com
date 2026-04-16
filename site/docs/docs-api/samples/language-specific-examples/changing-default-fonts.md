@@ -1,5 +1,7 @@
 ---
 sidebar_position: -1
+description: Change the default font for new documents in ONLYOFFICE Docs examples.
+tags: ["Docs", "Integration"]
 ---
 
 # Changing the default font

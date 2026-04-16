@@ -25,7 +25,7 @@ To start working in debug mode, right-click any editable field on the top toolba
 
 Here is the result:
 
-![Debug](/assets/images/desktop/debugging.png)
+![Debug](/assets/images/desktop/debugging.png#gh-light-mode-only)![Debug](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
 
 ## Running the application
 

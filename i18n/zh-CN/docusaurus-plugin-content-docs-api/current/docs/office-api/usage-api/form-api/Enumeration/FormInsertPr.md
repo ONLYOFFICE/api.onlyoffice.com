@@ -16,7 +16,7 @@
 
 ## 示例
 
-This example inserts a text box with the specified text box properties over the selected text.
+此示例在选定文本上方插入具有指定文本框属性的文本框。
 
 ```javascript editor-forms
 // How to create a text form with its properties and insert it into the ApiDocument object.

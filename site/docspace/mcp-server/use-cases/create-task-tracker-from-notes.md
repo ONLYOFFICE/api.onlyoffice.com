@@ -1,3 +1,8 @@
+---
+description: Convert meeting notes into a task tracker spreadsheet.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Create task tracker from notes
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to convert meeting notes into a structured task tracker spreadsheet saved to DocSpace. This is useful when you want action items in a clear format without rewriting notes manually.
@@ -8,6 +13,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -39,6 +45,7 @@ If the notes are already stored in DocSpace, reference the file.
 **Example request:** In the "Website Redesign" room, use the file "Meeting notes - 2026-02-17.docx" from the "Brief" folder.
 
 What you should expect:
+
 - The file is located in DocSpace.
 - The content is used as the input for task extraction.
 
@@ -53,6 +60,7 @@ Request a structured list of action items based on the notes.
 **Example request:** Extract action items from the meeting notes and identify the owner and due date for each item.
 
 What you should expect:
+
 - A structured list of tasks is produced from the notes.
 - If owners or due dates are not explicit, they may be left blank.
 
@@ -67,6 +75,7 @@ Request a spreadsheet with one row per action item and the selected columns.
 **Example request:** Create an Excel file named "Task tracker - 2026-02-17.xlsx" with columns "Task", "Owner", "Due date", and "Status". Use one row per action item.
 
 What you should expect:
+
 - A new spreadsheet is generated from the extracted tasks.
 - The table is ready to be edited and updated by the team.
 
@@ -81,6 +90,7 @@ Request that the tracker is saved to a specific folder and provide a link.
 **Example request:** Save the spreadsheet to the "Deliverables" folder in the "Website Redesign" room and provide a link to the file.
 
 What you should expect in the response:
+
 - Spreadsheet file name
 - Save location (room and folder)
 - (Optional) a direct link to open the spreadsheet in DocSpace

@@ -21,7 +21,7 @@
 
 ## 示例
 
-This example paste data with paste all options.
+此示例使用全部粘贴选项粘贴数据。
 
 ```javascript editor-xlsx
 // How to indicate a paste type.

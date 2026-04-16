@@ -9,7 +9,7 @@ Represents the ApiBaseField class.
 | ------ | ------- | ----------- |
 | [AddWidget](./Methods/AddWidget.md) | [ApiWidget](../Enumeration/ApiWidget.md) | Adds new widget - visual representation for field |
 | [Delete](./Methods/Delete.md) | boolean | Removes field from document. |
-| [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md) | Gets array with widgets of the current field. |
+| [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
 | [GetFullName](./Methods/GetFullName.md) | string | Gets field full name. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
 | [GetValue](./Methods/GetValue.md) | string | Gets field value |

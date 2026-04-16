@@ -15,7 +15,7 @@ sidebar_position: -4
 :::
 
 :::note
-**ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求,请求参数在 *QueryString* 中。
+**ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求，请求参数在 *QueryString* 中。
 :::
 
 ## 请求参数

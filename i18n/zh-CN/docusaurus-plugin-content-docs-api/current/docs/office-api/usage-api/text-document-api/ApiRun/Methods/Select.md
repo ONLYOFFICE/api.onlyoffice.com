@@ -1,6 +1,6 @@
 # Select
 
-选择当前运行。
+选择当前文本块。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.Select();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例选择当前运行。
+此示例选择当前文本块。
 
 ```javascript editor-docx
 // How to select a text with a cursor.

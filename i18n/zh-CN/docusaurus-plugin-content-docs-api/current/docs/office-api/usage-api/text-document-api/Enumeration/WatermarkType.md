@@ -15,7 +15,7 @@
 
 ## 示例
 
-In this example sets the type of the watermark within the document.
+此示例设置文档中水印的类型。
 
 ```javascript editor-docx
 // How to set a watermark type.

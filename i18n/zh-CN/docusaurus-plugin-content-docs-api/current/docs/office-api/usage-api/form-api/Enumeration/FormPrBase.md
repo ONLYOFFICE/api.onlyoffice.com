@@ -20,7 +20,7 @@
 
 ## 示例
 
-This example creates a text form with the common form properties.
+此示例创建具有通用表单属性的文本表单。
 
 ```javascript editor-forms
 // How to create a text form using its base properties.

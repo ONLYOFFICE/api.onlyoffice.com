@@ -8,13 +8,17 @@ Starting from version 7.0, ONLYOFFICE Docs offers the possibility to create, edi
 
 ONLYOFFICE forms are available in the PDF format which is intended for creating form templates from blank or any existing DOCX file and used for filling out the ready forms.
 
-> Please note that starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.
->
-> Starting from version 8.1, the DOCXF format is deprecated. To create and edit forms, only the PDF format is used.
+:::note
+Starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.
+
+Starting from version 8.1, the DOCXF format is deprecated. To create and edit forms, only the PDF format is used.
+:::
 
 These instructions help you add an online form to your website, making it available for saving as PDF and filling in.
 
-> Please note that these instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it. More information about token can be found [here](../../additional-api/signature/signature.md).
+:::note
+These instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it. More information about token can be found [here](../../additional-api/signature/signature.md).
+:::
 
 ## Editing forms
 
@@ -161,7 +165,9 @@ To make an online form in the PDF format available for filling in, follow the st
    const key = `${filename}.pdf`
    ```
 
-   > Please note that the *key* field is not passed to the configuration of the editors. This field will be automatically generated as a random number. This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled. That's why anyone can open the form and fill it out without disturbing others.
+   :::note
+   The *key* field is not passed to the configuration of the editors. This field will be automatically generated as a random number. This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled. That's why anyone can open the form and fill it out without disturbing others.
+   :::
 
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 

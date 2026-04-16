@@ -78,7 +78,9 @@ The reference figure and the steps below explain the process of mentioning users
 
 Specify the event handler for the comment message and the list of emails to be sent in the configuration script for Document Editor initialization. When the user adds the comment, the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is called. The message and the list of emails are sent in the *data* parameter. The comment data is received in the *data.actionLink* parameter. As in the case of adding an [action link](./action-link.md#how-this-can-be-done-in-practice) to a bookmark, an *actionLink* object must be used in the configuration as the value for the [editorConfig.actionLink](../../usage-api/config/editor/editor.md#actionlink) parameter.
 
-> In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
+:::note
+In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
+:::
 
 ``` ts
 function onRequestSendNotify(event) {
@@ -102,7 +104,7 @@ When the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnot
 
 In the case when the [document.info.sharingSettings](../../usage-api/config/document/info.md#sharingsettings) field is used in the document initialization but the list of the users from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is different, the [setSharingSettings](../../usage-api/methods.md#setsharingsettings) method must be called.
 
-![Sharing settings](/assets/images/editor/sharing_settings.png)
+![Sharing settings](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![Sharing settings](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
 ``` ts
 docEditor.setSharingSettings({
@@ -122,6 +124,8 @@ docEditor.setSharingSettings({
 
 In the case when the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event does not provide access to the file, the [mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) parameter in the customization section of the editor configuration must be set to **false**.
 
-> Please note that it will only be available for the comments if the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is set.
+:::note
+It will only be available for the comments if the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is set.
+:::
 
 <img alt="Mentions" src="/assets/images/editor/mentionShare.png" width="379px" />

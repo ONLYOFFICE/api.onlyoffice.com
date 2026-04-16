@@ -21,7 +21,9 @@ The reference figure and the steps below explain the process of saving a documen
 
 5. The **document editing service** informs the **document storage service** about the end of the document editing using the *callbackUrl* from [JavaScript API](../basic-concepts.md) and returns the link to the modified document.
 
-   > Please note that since version 5.5, [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl) is selected based on [status](../../usage-api/callback-handler.md#status*) of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+   :::note
+   Since version 5.5, [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl) is selected based on [status](../../usage-api/callback-handler.md#status*) of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+   :::
 
 6. The **document storage service** downloads the document file with all the saved changes from the **document editing service** and stores it.
 
@@ -50,6 +52,7 @@ The reference figure and the steps below explain the process of saving a documen
 
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
+
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 
 4. Open your *html* file in the browser and edit your document.
@@ -77,7 +80,9 @@ The conversion start delay is necessary to allow to return to the file editing s
 
 If you want to change it, you can use the *local.json* file, where all the edited parameters should be stored. This file is located in the same directory as the *default.json* file and the **whole object structure** for the necessary parameter **must be retained** (see the examples below).
 
-> Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+:::note
+Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+:::
 
 ### Parameters
 
@@ -150,7 +155,9 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
   The *forcesavetype* parameter will have the **2** value when sending the request to the **callback handler**.
 
-> Please note that you cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](./document-history.md#how-this-can-be-done-in-practice) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
+:::note
+You cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](./document-history.md#how-this-can-be-done-in-practice) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
+:::
 
 ## Saving in original format
 
@@ -189,4 +196,6 @@ Example: true
 }
 ```
 
-> Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
+:::warning
+Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
+:::

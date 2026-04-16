@@ -1,3 +1,8 @@
+---
+description: Initialize the DocSpace system interface using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Initialize system
 
 This example demonstrates how to initialize the DocSpace system interface using the JavaScript SDK.

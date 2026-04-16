@@ -11,7 +11,7 @@ Custom AI tools are functions that define the functionality of the AI agent. The
 
 Adding custom AI tools expands the AI agent's capabilities and allows adapting it to specific use cases. Whether working with documents, spreadsheets, or presentations, custom AI tools let you integrate AI-driven operations directly into your workflow and align the agent's behavior with your requirements.
 
-You can find ready-to-use custom AI tools [here](../samples/custom-ai-tools/custom-ai-tools.md) or create your own ones.
+You can find ready-to-use custom AI tools [here](/samples/?doctype=ai&text=ai+tools) or create your own ones.
 
 :::caution Current limitation
 Adding a custom AI tool requires modifying the [AI plugin source code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai) directly — you can then install the modified plugin via a custom [store link](#setup).
@@ -259,6 +259,8 @@ The full function flow is shown below, with inline comments explaining each step
 })();
 ```
 
-> To ensure the entire block of changes can be rolled back after the request is executed, we use [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) and [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) methods across the `commentText` function.
+:::note
+To ensure the entire block of changes can be rolled back after the request is executed, we use [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) and [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) methods across the `commentText` function.
+:::
 
 The AI agent functionality continues to evolve alongside the needs of today's digital world. Extend its capabilities by creating your own custom tools, tailored to your specific use cases.

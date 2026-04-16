@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create a custom-sized event invitation with borders.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating event invitation

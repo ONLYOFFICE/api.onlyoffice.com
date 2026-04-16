@@ -1,3 +1,8 @@
+---
+description: Update the name, permissions, or status of an API key.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

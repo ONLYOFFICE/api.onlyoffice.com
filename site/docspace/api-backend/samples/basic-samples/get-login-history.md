@@ -1,3 +1,8 @@
+---
+description: Retrieve recent login events and extract unique user IDs.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

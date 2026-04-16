@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example set the distance between columns equal to 36 points.
+此示例将列间距设置为 36 磅。
 
 ```javascript editor-forms
 // How to set a column distance in twips.

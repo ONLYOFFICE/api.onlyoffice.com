@@ -70,7 +70,7 @@ Starting from version 7.1, please use the [document.permissions.chat](../../docu
 
 **Example**: `true`
 
-![Chat](/assets/images/editor/chat.png)
+![Chat](/assets/images/editor/chat.png#gh-light-mode-only)![Chat](/assets/images/editor/chat.dark.png#gh-dark-mode-only)
 
 ## close
 
@@ -109,7 +109,7 @@ This parameter is also available for the mobile editors.
 
 **Example**: `"Close file"`
 
-![Cross button in the header](/assets/images/editor/cross-button.jpg)
+![Cross button in the header](/assets/images/editor/cross-button.png#gh-light-mode-only)![Cross button in the header](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
 
 ## commentAuthorOnly
 
@@ -131,7 +131,7 @@ Defines if the **Comments** menu button is displayed or hidden. Please note that
 
 **Example**: `true`
 
-![Comments](/assets/images/editor/comment.png)
+![Comment](/assets/images/editor/comment.png#gh-light-mode-only)![Comment](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## compactHeader
 
@@ -141,7 +141,7 @@ Defines if the additional action buttons are displayed in the upper part of the 
 
 **Example**: `false`
 
-![Compact header](/assets/images/editor/compactHeader.png)
+![Compact header](/assets/images/editor/compactHeader.png#gh-light-mode-only)![Compact header](/assets/images/editor/compactHeader.dark.png#gh-dark-mode-only)
 
 ## compactToolbar
 
@@ -155,7 +155,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `false`
 
-![Compact toolbar](/assets/images/editor/compactToolbar.png)
+![Compact toolbar](/assets/images/editor/compactToolbar.png#gh-light-mode-only)![Compact toolbar](/assets/images/editor/compactToolbar.dark.png#gh-dark-mode-only)
 
 ## compatibleFeatures
 
@@ -254,7 +254,7 @@ Home website address of the above company or person.
 
 **Example**: `"example.com"`
 
-![Customer](/assets/images/editor/customer.png)
+![Customer](/assets/images/editor/customer.png#gh-light-mode-only)![Customer](/assets/images/editor/customer.dark.png#gh-dark-mode-only)
 
 ## features
 
@@ -446,7 +446,7 @@ const goback = {
 }
 ```
 
-![Go back](/assets/images/editor/goback.png)
+![Go back](/assets/images/editor/goback.png#gh-light-mode-only)![Go back](/assets/images/editor/goback.dark.png#gh-dark-mode-only)
 
 ### goback.blank
 
@@ -496,7 +496,7 @@ This parameter is also available for the mobile editors.
 
 **Example**: `true`
 
-![Help](/assets/images/editor/help.png)
+![Help](/assets/images/editor/help.png#gh-light-mode-only)![Help](/assets/images/editor/help.dark.png#gh-dark-mode-only)
 
 ## hideNotes
 
@@ -510,7 +510,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `false`
 
-![Hide notes](/assets/images/editor/hideNotes.png)
+![Hide notes](/assets/images/editor/hideNotes.png#gh-light-mode-only)![Hide notes](/assets/images/editor/hideNotes.dark.png#gh-dark-mode-only)
 
 ## hideRightMenu
 
@@ -532,7 +532,7 @@ Defines if the editor rulers are displayed or hidden. This parameter is availabl
 
 **Example**: `false`
 
-![Hide rulers](/assets/images/editor/hideRulers.png)
+![Hide rulers](/assets/images/editor/hideRulers.png#gh-light-mode-only)![Hide rulers](/assets/images/editor/hideRulers.dark.png#gh-dark-mode-only)
 
 ## integrationMode
 
@@ -740,7 +740,7 @@ Defines the pointer mode (**select** or **hand**) when the presentation editor i
 
 **Example**: `"select"`
 
-![Pointer mode](/assets/images/editor/pointerMode.png)
+![Pointer mode](/assets/images/editor/pointerMode.png#gh-light-mode-only)![Pointer mode](/assets/images/editor/pointerMode.dark.png#gh-dark-mode-only)
 
 ## review
 
@@ -766,7 +766,7 @@ const review = {
 }
 ```
 
-![Review display](/assets/images/editor/reviewDisplay.png)
+![Review display](/assets/images/editor/reviewDisplay.png#gh-light-mode-only)![Review display](/assets/images/editor/reviewDisplay.dark.png#gh-dark-mode-only)
 
 ### review.hideReviewDisplay
 
@@ -943,7 +943,7 @@ Starting from version 9.0.3, this parameter is also available for the mobile edi
 
 **Example**: `false`
 
-![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.png)
+![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.png#gh-light-mode-only)![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.dark.png#gh-dark-mode-only)
 
 ## toolbarNoTabs
 
@@ -1030,7 +1030,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `100`
 
-![Customization](/assets/images/editor/customization.png)
+![Customization](/assets/images/editor/customization.png#gh-light-mode-only)![Customization](/assets/images/editor/customization.dark.png#gh-dark-mode-only)
 
 ## Example
 

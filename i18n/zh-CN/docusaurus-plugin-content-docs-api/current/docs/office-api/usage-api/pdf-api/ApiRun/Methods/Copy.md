@@ -1,6 +1,6 @@
 # Copy
 
-创建当前运行的副本。
+创建当前文本块的副本。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.Copy();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-此示例创建运行的副本。
+此示例创建文本块的副本。
 
 ```javascript editor-pdf
 // How to copy a text run object and insert it to the paragraph.
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text that was copied. ");

@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example sets the picture position measured in percent inside the current form.
+此示例设置当前表单内以百分比计量的图片位置。
 
 ```javascript editor-forms
 // How to set a position of a picture form.

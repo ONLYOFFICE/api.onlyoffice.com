@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Generate a comments review report with status tracking.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating report document

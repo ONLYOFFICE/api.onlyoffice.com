@@ -1,3 +1,8 @@
+---
+description: Convert documents, spreadsheets, and presentations to PDF.
+tags: ["DocSpace", "Plugins", "Ready-to-use"]
+---
+
 # PDF converter
 
 A tool for converting documents, spreadsheets, presentations, and forms to PDF.
@@ -25,7 +30,9 @@ There you can also view the plugin metadata, such as the author, version, status
 
 ## Usage
 
-> Audio and video files cannot be converted to PDF.
+:::warning
+Audio and video files cannot be converted to PDF.
+:::
 
 To convert a file to PDF:
 

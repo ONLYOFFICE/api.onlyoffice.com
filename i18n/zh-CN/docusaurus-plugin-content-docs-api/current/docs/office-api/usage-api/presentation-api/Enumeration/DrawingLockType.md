@@ -27,7 +27,7 @@
 
 ## 示例
 
-This example shows how to get the lock value for the specified lock type of a drawing.
+此示例展示如何获取绘图对象指定锁定类型的锁定值。
 
 ```javascript editor-pptx
 // How to get a lock value of the drawing.

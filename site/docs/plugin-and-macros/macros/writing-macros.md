@@ -66,7 +66,7 @@ Now let's sum it up with the complete script code:
 
 Paste the code above to the macros window and click ![Play icon](/assets/images/plugins/play.svg). The table rows from 1 to 200 will be colored alternately in less than a second.
 
-![Alternate raws](/assets/images/plugins/alternate-raws.png)
+![Alternate rows](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate rows](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
 
 ## Generating macros using AI plugin
 
@@ -84,7 +84,9 @@ If you want to speed up the process, starting from version 9.0, you can use the 
 
 5. Review the code and make adjustments if necessary.
 
-    > While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::warning
+    While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::
 
 6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
 

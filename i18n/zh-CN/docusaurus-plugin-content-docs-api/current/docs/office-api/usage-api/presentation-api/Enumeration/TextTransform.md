@@ -53,7 +53,7 @@
 
 ## 示例
 
-This example creates a Text Art object with the "textArchUp" text transform type.
+此示例使用 "textArchUp" 文本变换类型创建艺术字对象。
 
 ```javascript editor-pptx
 // How to create a word art with adding properties like fill color, size, and transform type to it.

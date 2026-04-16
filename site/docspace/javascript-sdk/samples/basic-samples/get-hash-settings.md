@@ -1,3 +1,8 @@
+---
+description: Retrieve hash settings from the DocSpace frame using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Get hash settings
 
 This example demonstrates how to retrieve hash-based settings from the embedded DocSpace frame using the JavaScript SDK.

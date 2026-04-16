@@ -1,3 +1,8 @@
+---
+description: Filter and display files by extension in a modal dialog.
+tags: ["DocSpace", "Plugins", "Advanced"]
+---
+
 # File extension filter plugin
 
 This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.

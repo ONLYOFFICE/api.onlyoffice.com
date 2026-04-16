@@ -20,7 +20,7 @@
 
 ## 示例
 
-This example adds a cross-reference to the page containing an endnote.
+此示例添加指向包含尾注的页面的交叉引用。
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with an endnote.

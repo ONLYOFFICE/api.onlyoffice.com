@@ -30,4 +30,6 @@ The integrator must check that the request is received from ONLYOFFICE Docs. It 
 }
 ```
 
-> By default, proof keys are already set. They are not generated, i.e. the same keys are used for all installations.
+:::note
+By default, proof keys are already set. They are not generated, i.e. the same keys are used for all installations.
+:::

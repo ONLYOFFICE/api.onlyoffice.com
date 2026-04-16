@@ -1,3 +1,8 @@
+---
+description: Open a document in the DocSpace editor using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Initialize editor
 
 This example demonstrates how to open a document in the ONLYOFFICE DocSpace editor using the JavaScript SDK method.

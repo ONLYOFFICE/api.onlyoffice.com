@@ -1,6 +1,6 @@
 # SetLanguage
 
-指定在处理文本运行内容时将用于检查拼写和语法（如果请求）的语言。
+指定在处理文本块内容时将用于检查拼写和语法（如果请求）的语言。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理文本运行内容时将用于检查拼写和语法（如果请求）的语言。
+此示例指定在处理文本块内容时将用于检查拼写和语法（如果请求）的语言。
 
 ```javascript editor-docx
 // How to set a language to the text for grammar checking.

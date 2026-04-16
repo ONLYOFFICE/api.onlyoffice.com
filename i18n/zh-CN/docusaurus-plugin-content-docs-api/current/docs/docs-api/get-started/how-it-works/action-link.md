@@ -14,11 +14,11 @@ sidebar_position: -18
 
 ## 实际操作方法 {#how-this-can-be-done-in-practice}
 
-1. 创建一个*html*l文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
+1. 创建一个*html*文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 
 2. 在文档编辑器初始化的配置脚本中，为要显示在书签编辑菜单中的 *获取链接* 按钮指定事件处理程序。当调用[onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink)事件时，用户请求会发送给软件集成商，他们会在文档存储服务中创建链接。
 
-   ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
+   ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onMakeActionLink(event) {
@@ -62,4 +62,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> 在[评论中提及用户](./mentions.md#how-this-can-be-done-in-practice)时，链接的生成方式也是相同的。
+:::note
+在[评论中提及用户](./mentions.md#how-this-can-be-done-in-practice)时，链接的生成方式也是相同的。
+:::

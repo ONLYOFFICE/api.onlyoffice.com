@@ -14,7 +14,7 @@
 
 ## 示例
 
-This example adds a green shadow to the table.
+此示例为表格添加绿色阴影。
 
 ```javascript editor-pptx
 // How to change a table shadow type.

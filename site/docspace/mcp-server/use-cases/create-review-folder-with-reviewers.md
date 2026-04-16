@@ -1,3 +1,8 @@
+---
+description: Create a review folder and grant reviewers access.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Create review folder with reviewers
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to organize a lightweight review process: create a dedicated "Review" folder, collect selected files into it, and grant reviewers the appropriate access role.
@@ -8,6 +13,7 @@ Please make sure your MCP client is configured to use the DocSpace MCP Server so
 You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
 If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+
 - use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
 - run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
 
@@ -32,6 +38,7 @@ Create a dedicated folder for the review process.
 **Example request:** In the "Website Redesign" room, create a folder named "Review".
 
 What you should expect:
+
 - The "Review" folder is created inside the room.
 - The client confirms the folder location.
 
@@ -46,6 +53,7 @@ Move (or copy) the selected files into the review folder.
 **Example request:** In the "Website Redesign" room, move the files from the "Deliverables" folder into the "Review" folder.
 
 What you should expect:
+
 - The requested files are collected into the "Review" folder.
 - The response confirms which files were moved (or copied).
 
@@ -60,6 +68,7 @@ Invite reviewers and assign a role appropriate for review (usually Viewer).
 **Example request:** Invite the Legal team as Viewers to the "Website Redesign" room.
 
 What you should expect:
+
 - Reviewers get access to open files in DocSpace.
 - Reviewers cannot modify content if they are assigned the Viewer role.
 
@@ -74,6 +83,7 @@ Request the folder contents and a link so reviewers can open it directly.
 **Example request:** Show the contents of the "Review" folder and provide a link to it.
 
 What you should expect in the response:
+
 - A list of files collected for review
 - (Optional) a link to open the folder in DocSpace
 

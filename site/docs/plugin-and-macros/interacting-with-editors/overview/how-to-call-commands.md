@@ -6,12 +6,6 @@ sidebar_position: -2
 
 To call commands and send the data back to the editor, define the **callCommand** method. It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
 
-*The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
-
-:::note
-**Office JavaScript API** commands can be only used to create content and insert it to the document editor (using the *Api.GetDocument().InsertContent(...)*). This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.
-:::
-
 ## callCommand
 
 ### Parameters
@@ -24,10 +18,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                                      |
 |----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| func     | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax.             |
-| isClose  | boolean  | Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. The *true* value is used to close the plugin window after executing the function in the *func* parameter. The *false* value is used to execute the command and leave the window open waiting for the next command. The default value is *false*. |
-| isCalc   | boolean  | Defines whether the document will be recalculated or not. The *true* value is used to recalculate the document after executing the function in the *func* parameter. The *false* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is *true*.                                              |
-| callback | function | The result that the method returns. Only the js standart types are available (any objects will be replaced *with undefined*).                                                                                                                                                                                                                                                    |
+| func     | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax.             |
+| isClose  | boolean  | Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. The *true* value is used to close the plugin window after executing the function in the *func* parameter. The *false* value is used to execute the command and leave the window open waiting for the next command. The default value is *false*. |
+| isCalc   | boolean  | Defines whether the document will be recalculated or not. The *true* value is used to recalculate the document after executing the function in the *func* parameter. The *false* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is *true*.                                              |
+| callback | function | The result that the method returns. Only the js standard types are available (any objects will be replaced *with undefined*).                                                                                                                                                                                                                                                    |
 
 ```mdx-code-block
 </APITable>
@@ -50,9 +44,11 @@ Asc.plugin.callCommand(() => {
 
 ## Asc.scope object
 
-This method is executed in its own context isolated from other JavaScript data. If some parameters or any additional data (objects, parameters, variables, etc.)  need to be passed to this method, use **Asc.scope** object.
+This method is executed in its own context isolated from other JavaScript data. If some parameters or any additional data (objects, parameters, variables, etc.)  need to be passed to this method, use **Asc.scope** object.
 
-> The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
+:::note
+The functions cannot be passed to the *callCommand* method using the *Asc.scope* object
+:::
 
 ### Example
 
@@ -68,11 +64,11 @@ Asc.plugin.callCommand(() => {
 
 ## info object
 
-This object is used to change the object data and to send additional parameters when executing the **callCommand** method. The **info** object is the auxiliary object which is available when the plugin works. It stores all the information about the editor that uses the plugin (the used [editorType](#editorType) - text documents, spreadsheets, presentations, PDFs) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for the OLE objects vector drawing and some other OLE object parameters).
+This object is used to change the object data and to send additional parameters when executing the **callCommand** method. The **info** object is the auxiliary object which is available when the plugin works. It stores all the information about the editor that uses the plugin (the used [editorType](#editorType) - text documents, spreadsheets, presentations, PDFs) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for the OLE objects vector drawing and some other OLE object parameters).
 
-For example, if the document content is changed and recalculation is needed, the parameter [recalculate](#recalculate) must be set to *true*. This action is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).
+For example, if the document content is changed and recalculation is needed, the parameter [recalculate](#recalculate) must be set to *true*. This action is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).
 
-See the available *window.Asc.plugin.info* object parameters below to find out more about them.
+See the available *window.Asc.plugin.info* object parameters below to find out more about them.
 
 ### Parameters
 
@@ -82,7 +78,7 @@ See the available *window.Asc.plugin.info* object parameters below to find out
 
 | Name        | Type    | Example                 | Description                                                                                              |
 |-------------|---------|-------------------------|----------------------------------------------------------------------------------------------------------|
-| data        | string  | `{data}`                | The OLE object data which need to be sent to the *window.Asc.plugin.info* object and used by the plugin. |
+| data        | string  | `{data}`                | The OLE object data which need to be sent to the *window.Asc.plugin.info* object and used by the plugin. |
 | editorType  | string  | "word"                  | The editor type where the plugin is currently running.                                                   |
 | guid        | string  | `asc.{UUID}`            | The OLE object GUID in the current document.                                                             |
 | height      | number  | 70                      | The OLE object height measured in millimeters.                                                           |
@@ -97,7 +93,7 @@ See the available *window.Asc.plugin.info* object parameters below to find out
 </APITable>
 ```
 
-### Example for the data, height, imgSrc, mmToPx, objectId and width parameters
+### Example for the data, height, imgSrc, mmToPx, objectId and width parameters
 
 ``` ts
 window.Asc.plugin.button = (id) => {
@@ -136,7 +132,7 @@ window.Asc.plugin.button = (id) => {
 }
 ```
 
-### Example for the editorType parameter
+### Example for the editorType parameter
 
 ``` ts
 function createScriptFromArray(aSelected) {
@@ -155,7 +151,7 @@ function createScriptFromArray(aSelected) {
 }
 ```
 
-### Example for the guid parameter
+### Example for the guid parameter
 
 ``` ts
 window.Asc.plugin.init = () => {
@@ -163,7 +159,7 @@ window.Asc.plugin.init = () => {
 };
 ```
 
-### Example for the recalculate parameter
+### Example for the recalculate parameter
 
 ``` ts
 window.Asc.plugin.init = () => {
@@ -177,7 +173,7 @@ window.Asc.plugin.init = () => {
 };
 ```
 
-### Example for the resize parameter
+### Example for the resize parameter
 
 ``` ts
 if (window.Asc.plugin.info.resize === true) {

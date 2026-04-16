@@ -1,5 +1,7 @@
 ---
 sidebar_position: -4
+sidebar_label: Docs API integration
+description: Language-specific examples for integrating ONLYOFFICE Docs into your website.
 ---
 
 # Docs API integration samples

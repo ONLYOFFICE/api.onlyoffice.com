@@ -1,3 +1,8 @@
+---
+description: Create client rooms with predefined folders and document templates.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Structured room creation
 
 This example demonstrates how to use the DocSpace JavaScript SDK to create a structured workspace for each new client. When a user adds a client, the system:

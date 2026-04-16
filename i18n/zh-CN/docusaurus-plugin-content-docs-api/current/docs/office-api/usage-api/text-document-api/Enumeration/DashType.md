@@ -23,7 +23,7 @@
 
 ## 示例
 
-This example creates a dashed stroke with color and width settings.
+此示例创建具有颜色和宽度设置的虚线描边。
 
 ```javascript editor-docx
 // How to create a custom stroke line with dash pattern.

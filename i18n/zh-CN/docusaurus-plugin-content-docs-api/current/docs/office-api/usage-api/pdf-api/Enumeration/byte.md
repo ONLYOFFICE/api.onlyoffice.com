@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-This example creates two RGB colors.
+此示例创建两个 RGB 颜色。
 
 ```javascript editor-pdf
 // How to use bytes to create a color.

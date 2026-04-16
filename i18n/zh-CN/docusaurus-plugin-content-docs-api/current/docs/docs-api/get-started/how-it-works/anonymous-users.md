@@ -10,7 +10,9 @@ sidebar_position: -11
 
 1. 匿名用户使用**文档管理器**打开文档进行查看或编辑
 
-   > 匿名用户是指具有空的[用户id](../../usage-api/config/editor/editor.md#user)的用户。
+   :::note
+   匿名用户是指具有空的[用户id](../../usage-api/config/editor/editor.md#user)的用户。
+   :::
 
 2. **文档存储服务**使用[JavaScript API](../basic-concepts.md)将初始化配置发送给**文档编辑器**，但其中未指定用户名。
 

@@ -1,3 +1,8 @@
+---
+hide_table_of_contents: true
+description: Auto-populate content control fields from JSON data.
+tags: ["Docs", "Office API", "Text documents"]
+---
 # Auto-filling fields from JSON
 
 Create a document template with content controls and demonstrate how to automatically populate them with data from a JSON object:

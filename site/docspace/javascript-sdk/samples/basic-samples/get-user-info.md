@@ -1,3 +1,8 @@
+---
+description: Retrieve user information using the DocSpace JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Get user info
 
 This example demonstrates how to retrieve user information using the JavaScript SDK embedded in a DocSpace frame.

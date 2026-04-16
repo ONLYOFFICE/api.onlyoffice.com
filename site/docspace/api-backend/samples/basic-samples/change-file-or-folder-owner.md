@@ -1,3 +1,8 @@
+---
+description: Transfer file or folder ownership to another user via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -16,7 +16,7 @@ expression.GetAllFields();
 
 ## 返回值
 
-[ApiField](../../Enumeration/ApiField.md)
+[ApiField](../../Enumeration/ApiField.md)[]
 
 ## 示例
 

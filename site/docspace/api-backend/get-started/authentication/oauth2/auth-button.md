@@ -73,10 +73,12 @@ This parameter is used only when the authentication method is not specified (non
 
 Example: kNDpYrWzia4n6BoUewMVbnb5kQRIFgVdiaKwNGZ-_Wc
 
-> Please note that the code verifier will be generated anew each time the preview dialog is reopened.
+:::note
+The code verifier will be generated anew each time the preview dialog is reopened.
+:::
 
 You can click the example button to go through the entire [authorization flow](authorization-flow.md).
 
 To initiate the OAuth 2.0 authorization flow, you can also send GET request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/authorize-o-auth.api.mdx) address.
 
-<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />
+<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />

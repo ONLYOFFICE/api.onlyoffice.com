@@ -20,7 +20,7 @@
 
 ## 示例
 
-This example sets a bottom black dotted border for a cell.
+此示例为单元格设置黑色点线底部边框。
 
 ```javascript editor-xlsx
 // How to add a border to the cell.

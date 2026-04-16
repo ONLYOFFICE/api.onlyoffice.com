@@ -1,3 +1,8 @@
+---
+description: Select a file and open it in ONLYOFFICE editors via the SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Open file in ONLYOFFICE editors
 
 This example opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) using the [file selector](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initfileselector).
@@ -127,4 +132,6 @@ Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sd
 
 Run our HTML file and make sure everything works.
 
-<img alt="Authorization sample" src="/assets/images/docspace/gifs/open-editors.gif" width="720px" />
+<video autoPlay loop muted playsInline width="720px">
+  <source src="/assets/images/docspace/webm/open-editors.webm" type="video/webm" />
+</video>

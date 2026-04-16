@@ -1,6 +1,6 @@
 # GetText
 
-从文本运行返回文本。
+从文本块返回文本。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetText(options);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -24,7 +24,7 @@ string
 
 ## 示例
 
-此示例从文本运行返回文本。
+此示例从文本块返回文本。
 
 ```javascript editor-docx
 // How to get a raw text value.

@@ -1,9 +1,10 @@
 ---
-sidebar_label: .Net example
 sidebar_position: -10
+description: Integrate ONLYOFFICE Docs into a .Net (C#) web application.
+tags: ["Docs", "Integration", "C#"]
 ---
 
-# .Net example
+# .Net (C#) integration
 
 ## Overview
 
@@ -74,7 +75,7 @@ Configure the IIS components for the server to work correctly:
 
 2. In the opened window, find **Internet Information Services** and check all the features that are chosen in the following image:
 
-   <img alt="Windows features" src="/assets/images/csharp/server-components.png" width="778px" />
+   ![Windows features](/assets/images/csharp/server-components.png)
 
 ## Step 4. Configure JWT
 
@@ -102,19 +103,19 @@ Open the `settings.config` file (or `web.appsettings.config` file for MVC versio
 
    Specify the unique value used only for this website in the **Port** box.
 
-   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="583px" />
+   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="483px" />
 
 4. Check for the .NET platform version specified in IIS Manager for you website. Choose **v4.0** version.
 
    **Application Pools** -> right-click the platform name -> **Set application Pool defaults** -> **.NET CLR version**
 
-   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="539px" />
+   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="439px" />
 
 5. Browse your website with the IIS Manager:
 
    Right-click the site -> **Manage Website** -> **Browse**
 
-   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="500px" />
+   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="400px" />
 
 ## Step 6. Check accessibility
 

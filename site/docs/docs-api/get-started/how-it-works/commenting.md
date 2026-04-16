@@ -6,7 +6,7 @@ sidebar_position: -10
 
 The **Comment option** allows you to leave comments on the specific words, phrases, sentences and other document parts, edit and remove these comments. All the comments will be saved and shown to other document users.
 
-![Comment](/assets/images/editor/comment.png)
+![Comment](/assets/images/editor/comment.png#gh-light-mode-only)![Comment](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## Comment access rights
 
@@ -31,7 +31,9 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> Please note that the document commenting will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::note
+The document commenting will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+:::
 
 ## Differentiation of commenting rights by authors
 
@@ -88,7 +90,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 2. Specify the access rights using the [commentGroups](../../usage-api/config/document/permissions.md#commentgroups) parameter in the permissions section of the editor initialization.
 
-   > If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+   :::note
+   If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+   :::
 
    ``` ts
    const config = {

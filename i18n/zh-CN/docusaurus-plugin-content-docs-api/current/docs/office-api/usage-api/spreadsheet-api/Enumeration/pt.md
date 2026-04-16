@@ -10,7 +10,7 @@ number
 
 ## 示例
 
-In this example the paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge.
+在此示例中，该段落将具有 3 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为 1 磅。
 
 ```javascript editor-xlsx
 // How to set a bottom border indicating weight points and color.

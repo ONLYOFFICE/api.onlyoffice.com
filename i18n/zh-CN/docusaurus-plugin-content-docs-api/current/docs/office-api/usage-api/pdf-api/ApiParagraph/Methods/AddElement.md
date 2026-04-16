@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例向段落添加文本运行。
+此示例向段落添加文本块。
 
 ```javascript editor-pdf
 // Insert a text run to the ApiParagraph object.
@@ -39,7 +39,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 
 const run = Api.CreateRun();

@@ -89,7 +89,7 @@ Translations for the name field. The object keys are the two letter language cod
 
 **Example**: `{ "fr": "french plugin name" }`
 
-#### localeTranslate
+## localeTranslate
 
 `Type: object`
 
@@ -217,11 +217,11 @@ The list of skinnable plugin buttons used in the plugin interface. This paramete
 
 The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. `isVisual == true` and `isInsideMode == false`).
 
-| Name       | Type                                | Description                                                                                                                                                               |
-| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| text       | string                              | The label which is displayed on the button.                                                                                                                               |
-| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                   |
-| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                            |
+| Name       | Type                                | Description                                                                                                                                                              |
+| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| text       | string                              | The label which is displayed on the button.                                                                                                                              |
+| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                  |
+| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                           |
 | textLocale | [localeTranslate](#localetranslate) | Translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language. |
 
 **Example**:
@@ -389,7 +389,7 @@ The data which is sent from the editor to the plugin at the plugin start. This p
 
 **Example**: `"text"`
 
-![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
+![Init data](/assets/images/plugins/plugin-init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/plugin-init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
@@ -589,7 +589,7 @@ The background color used for the light theme plugin icon.
 
 **Example**: `"#F5F5F5"`
 
-![Light icon](/assets/images/plugins/icon-light.png)
+![Light icon](/assets/images/plugins/plugin-icon.png)
 
 ### variations.store.background.dark
 
@@ -599,7 +599,7 @@ The background color used for the dark theme plugin icon.
 
 **Example**: `"#444444"`
 
-![Dark icon](/assets/images/plugins/icon-dark.png)
+![Dark icon](/assets/images/plugins/plugin-icon.dark.png)
 
 ### variations.store.categories
 

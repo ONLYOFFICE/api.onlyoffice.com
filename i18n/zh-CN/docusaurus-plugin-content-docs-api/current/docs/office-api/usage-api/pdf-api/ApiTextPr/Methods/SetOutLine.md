@@ -1,6 +1,6 @@
 # SetOutLine
 
-设置当前文本运行的文本轮廓。
+设置当前文本块的文本轮廓。
 
 ## 语法
 
@@ -22,7 +22,7 @@ expression.SetOutLine(oStroke);
 
 ## 示例
 
-此示例设置当前文本运行的文本轮廓。
+此示例设置当前文本块的文本轮廓。
 
 ```javascript editor-pdf
 // How to make a text outlined.
@@ -37,7 +37,7 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();

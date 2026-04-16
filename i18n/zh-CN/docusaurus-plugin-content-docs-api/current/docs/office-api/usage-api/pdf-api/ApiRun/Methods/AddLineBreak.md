@@ -1,6 +1,6 @@
 # AddLineBreak
 
-在当前运行位置添加换行符，并从新行开始下一个元素。
+在当前文本块位置添加换行符，并从新行开始下一个元素。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddLineBreak();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
 
 ## 参数
 
@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例在运行位置添加换行符，并从新行开始下一个元素。
+此示例在文本块位置添加换行符，并从新行开始下一个元素。
 
 ```javascript editor-pdf
 // How to add a line break after a sentence in a text run.
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is the text for the first line. Nothing special.");
