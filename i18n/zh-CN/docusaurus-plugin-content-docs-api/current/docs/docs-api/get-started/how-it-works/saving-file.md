@@ -2,14 +2,11 @@
 sidebar_position: -21
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # 保存文件
 
-参考图和以下步骤说明了在 ONLYOFFICE 文档中保存文档的过程。
+下图和以下步骤说明了如何在 ONLYOFFICE 文档中保存文档。
 
-<img alt="保存文件" src="/assets/images/editor/saving.jpg" width="720px" />
+![保存文件](/assets/images/editor/saving.jpg)
 
 1. 用户在**文档编辑器**中编辑文档。
 
@@ -17,23 +14,23 @@ import TabItem from '@theme/TabItem';
 
 3. 用户关闭**文档编辑器**。
 
-4. **文档编辑服务**监视文档工作的结束，并将**文档编辑器**发送的更改收集到一个文档中。
+4. **文档编辑服务**检测到所有用户已完成编辑，并将从**文档编辑器**接收到的更改编译为最终文档。
 
-5. **文档编辑服务**使用来自 [JavaScript API](../basic-concepts.md) 的 *callbackUrl* 通知**文档存储服务**文档编辑结束，并返回修改后文档的链接。
+5. **文档编辑服务**使用 [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) 通知**文档存储服务**编辑已完成，并以 [`url`](../../usage-api/callback-handler.md#url) 参数返回修改后文档的链接。
 
    :::note
-   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status*) 选择 [callbackUrl](../../usage-api/config/editor/editor.md#callbackurl)。从 4.4 到 5.5 版本，*callbackUrl* 是从最后一个加入共同编辑的用户开始使用的。在 4.4 之前的版本中，在共同编辑时，*callbackUrl* 来自第一次打开文件进行编辑的用户。
+   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status) 选择 `callbackUrl`。从 4.4 到 5.5 版本，使用最后一个加入共同编辑会话的用户的 `callbackUrl`。在 4.4 版本之前，使用第一个打开文件进行编辑的用户的 `callbackUrl`。
    :::
 
-6. **文档存储服务**从**文档编辑服务**下载所有已保存更改的文档文件并将其存储。
+6. **文档存储服务**从**文档编辑服务**下载包含所有已保存更改的文档文件并将其存储。
 
 ## 如何在实践中做到这一点
 
 1. 创建一个[回调处理程序](../../usage-api/callback-handler.md)以保存来自**文档编辑服务**的文档。
 
-2. 创建一个 *html* 文件来[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
+2. 创建一个 `.html` 文件来[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 
-3. 在文档编辑器初始化的配置脚本中，使用[参数行](../../usage-api/config/editor/editor.md#callbackurl)中的*回调处理程序*指定文件的 URL。使用本地链接时，请务必添加[令牌](./security.md)。否则会出现错误。
+3. 在编辑器初始化配置中，将回调处理程序的 URL 添加为 [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) 参数。请务必添加 [`token`](./security.md)——否则请求将被拒绝。
 
    ``` ts
    const config = {
@@ -53,149 +50,50 @@ import TabItem from '@theme/TabItem';
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。
+   将 `example.com` 替换为提供文档文件的主机，即您的**文档存储服务**。
 
-4. 在浏览器中打开您的 *html* 文件并编辑您的文档。
+4. 在浏览器中打开您的 `.html` 文件并编辑文档。
 
-5. 关闭**文档编辑器**。在大约 10 秒内查看您的文档。所有更改应该都被保存了，这意味着配置正确。
+5. 关闭**文档编辑器**。大约 10 秒后，验证文档是否包含您的更改——如果包含，则配置正确。
 
 ## 保存延迟 {#save-delay}
 
-文档编辑完成后，**文档编辑服务**会将它通知给**文档存储服务**。完成之前的时间是根据编辑文件到 Office Open XML 格式的转换时间（取决于文件大小、复杂性和计算机能力，并且可以执行相当长的时间）和转换开始延迟来计算时间（默认为 5 秒）。在最常见的情况下，编辑完成后的时间约为 10 秒。
+编辑完成后，**文档编辑服务**会通知**文档存储服务**。此过程所需的总时间取决于两个因素：
 
-转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。默认转换开始延迟时间由 [services.CoAuthoring.server.savetimeoutdelay](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay) 参数在 **ONLYOFFICE 文档**配置文件中定义，配置文件可以在以下路径中找到：
+- **转换时间** — 将编辑文件转换为编辑器原生格式（`.docx`、`.xlsx`、`.pptx` 或 `.pdf`）。因文件大小、复杂性和服务器性能而异。
+- **转换开始延迟** — 默认为 5 秒。此延迟允许用户在不触发保存的情况下返回编辑会话——例如，在文件仍处于打开状态时重新加载浏览器页面。
 
-<Tabs>
-  <TabItem value="windows" label="Windows">
-      ``` bash
-      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\default.json
-      ```
-  </TabItem>
-  <TabItem value="linux" label="Linux">
-      ``` bash
-      /etc/onlyoffice/documentserver/default.json
-      ```
-  </TabItem>
-</Tabs>
-
-如果要更改它，可以使用 *local.json* 文件，该文件应存储所有已编辑的参数。此文件与 *default.json* 文件位于同一目录中，并且**必须保留**必要参数的**完整对象结构**（请参见下面的示例）。
-
-:::note
-请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档**升级到新版本时都会恢复默认值，并且所有更改都将丢失。
-:::
-
-### 参数
-
-| 参数                                    | 类型    | 示例 | 描述                                                                                         |
-| -------------------------------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------- |
-| services.CoAuthoring.server.savetimeoutdelay | integer | 5000    | 定义关闭编辑的文件后的转换开始延迟时间（以毫秒为单位）。|
-
-### 示例 local.json 配置
-
-``` json
-{
-  "services": {
-    "CoAuthoring": {
-      "server": {
-        "savetimeoutdelay": 5000
-      }
-    }
-  }
-}
-```
+在大多数情况下，保存在编辑结束后约 10 秒完成。默认延迟由 [ONLYOFFICE 文档服务器配置](../configuration/server-config/intro.md)中的 [`savetimeoutdelay`](../configuration/server-config/server.md#servicescoauthoringserversavetimeoutdelay) 参数定义。
 
 ## 强制保存 {#force-saving}
 
-**文档编辑服务**允许在编辑完成之前获取当前文档状态。该过程在 ONLYOFFICE 文档中称为 *forcesave*。**文档编辑服务**向[回调处理程序](../../usage-api/callback-handler.md)执行请求 *url* 参数的值为文档链接，*status* 参数的值为 **6**。可以通过以下方式启动强制保存过程：
+**文档编辑服务**允许您在编辑完成之前获取当前文档状态。此过程在 ONLYOFFICE 文档中称为 *forcesave*。当启动 forcesave 时，**文档编辑服务**向[回调处理程序](../../usage-api/callback-handler.md)发送请求，其中文档链接作为 `url` 参数，`status` 参数设置为 **6**。可以通过以下方式启动强制保存过程：
 
-- 通过将 *c* 参数的值设置为 [forcesave](../../additional-api/command-service/forcesave.md)，向[文档命令服务](../../additional-api/command-service/command-service.md)发送请求。将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为 **0** 。
+- 向[文档命令服务](../../additional-api/command-service/command-service.md)发送请求，将 `c` 参数设置为 [forcesave](../../additional-api/command-service/forcesave.md)。回调处理程序请求中的 `forcesavetype` 参数值为 **0**。
 
-- 启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 模式，在编辑器初始化配置中将其设置为 **true** 。在这种情况下，每次用户点击**保存** 按钮时，forcesave 都会完成，并且当将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为 **1**。
+- 启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 模式（在编辑器初始化配置中将其设置为 `true`）。每次用户点击**保存**时，都会触发 forcesave，回调处理程序请求中的 `forcesavetype` 参数值为 **1**。
 
-- 您可以在 **ONLYOFFICE 文档**附加配置文件中启用[开始重复强制保存](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly)，该文件可以在以下路径中找到或被放置（如果您已经创建了它）：
-
-  <Tabs>
-    <TabItem value="windows" label="Windows">
-        ``` bash
-        %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
-        ```
-    </TabItem>
-    <TabItem value="linux" label="Linux">
-        ``` bash
-        /etc/onlyoffice/documentserver/local.json
-        ```
-    </TabItem>
-  </Tabs>
-
-  ### 参数
-
-  | 参数                                  | 类型    | 示例 | 描述                                                                             |
-  | ------------------------------------------ | ------- | ------- | --------------------------------------------------------------------------------------- |
-  | services.CoAuthoring.autoAssembly.enable   | boolean | false   | 定义是否启用自动强制保存。默认值为 **false**。 |
-  | services.CoAuthoring.autoAssembly.interval | string  | 5m      | 定义启动自动强制保存的间隔时间（分钟）。          |
-
-  ### 示例 local.json 配置
-
-  ``` json
-  {
-    "services": {
-      "CoAuthoring": {
-        "autoAssembly": {
-          "enable": true,
-          "interval": "5m"
-        }
-      }
-    }
-  }
-  ```
+- 通过[自动组装](../configuration/server-config/auto-assembly.md)服务器配置启用自动重复强制保存。回调处理程序请求中的 `forcesavetype` 参数值为 **2**。
 
   :::info
-  autoAssembly 功能有一个特殊行为：它会保存文件在该时刻的当前状态。如果用户处于严格模式并且没有点击保存，他们的更改将不会包含在组装的文件中。在 PDF 格式中，严格模式默认启用。
+  自动组装功能会保存文件在该时刻的当前状态。如果用户处于严格模式且未点击**保存**，则其更改不会包含在组装的文件中。在 PDF 格式中，严格模式默认启用。
   :::
 
-  将请求发送到**回调处理程序**时，*forcesavetype* 参数的值为**2**。
-
 :::note
-您无法在文档历史记录中看到使用强制保存选项创建的文档版本。原因是 ONLYOFFICE 文档 [突出显示](./document-history.md#how-this-can-be-done-in-practice)了从当前文档会话开始而不是从文档版本开始时所做的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
+通过强制保存创建的文档版本不会出现在文档历史记录中。ONLYOFFICE 文档[突出显示](./document-history.md#how-this-can-be-done-in-practice)从当前编辑会话开始所做的更改，而不是从每个文档版本开始的更改。即使在一个会话中创建了多个文档版本，该会话中的所有更改也会被突出显示。
 :::
 
 ## 以原始格式保存 {#saving-in-original-format}
 
-从版本 7.0 开始，[assemblyFormatAsOrigin](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin) 服务器设置默认启用，以便将组装好的文件保存为其原始格式。它用于将文件格式从 OOXML 更改为 ODF 或使用宏保存文件。
-
-### 参数
-
-#### services.CoAuthoring.server.assemblyFormatAsOrigin
-
-指定组装好的文件是否以原始格式保存。
+从 7.0 版本开始，[`assemblyFormatAsOrigin`](../configuration/server-config/server.md#servicescoauthoringserverassemblyformatasorigin) 服务器设置默认启用，以便将组装好的文件保存为其原始格式。这用于将 OOXML 转换为 ODF 或保留包含宏的文件。
 
 此参数的工作原理如下：
 
-1. 编辑器始终返回 OOXML 格式的文件。
-2. 如果 *assemblyFormatAsOrigin* 参数设置为 **true**，编辑器会尝试将文件转换为原始格式。
-3. 如果原始格式是旧的（例如 `doc`）并且转换回旧格式失败，则会引发*回滚以保存对 *ooxml* 的更改警告，并且文件将转换回 OOXML 格式。
-4. 如果 *assemblyFormatAsOrigin* 参数设置为 **false**，编辑器不会将文件转换为原始格式并以 OOXML 格式返回。
-
-默认值为 **true**
-
-类型：boolean
-
-示例：true
-
-### 示例 local.json 配置
-
-``` json
-{
-  "services": {
-    "CoAuthoring": {
-      "server": {
-        "assemblyFormatAsOrigin": true
-      }
-    }
-  }
-}
-```
+1. **文档编辑服务**以原生格式之一返回文件：`.docx`、`.xlsx`、`.pptx` 或 `.pdf`。
+2. 如果 `assemblyFormatAsOrigin` 为 `true`，**文档编辑服务**会尝试将文件转换回原始格式。
+3. 如果原始格式是旧版格式（例如 `.doc`）且转换失败，**文档编辑服务**会显示*回滚以保存对 ooxml 的更改*警告，并保持文件为原生格式。
+4. 如果 `assemblyFormatAsOrigin` 为 `false`，**文档编辑服务**不会转换文件并以原生格式返回。
 
 :::warning
-此设置可能会使某些未经事先转换就打开文档的集成商崩溃（例如，无法在 ONLYOFFICE 文档中保存为 *.doc* 格式）。如有必要，禁用此设置。
+此设置可能会破坏未经事先转换就打开文档的集成（例如 `.doc` 格式，该格式无法在 ONLYOFFICE 文档中保存）。如有必要，请禁用此设置。
 :::
