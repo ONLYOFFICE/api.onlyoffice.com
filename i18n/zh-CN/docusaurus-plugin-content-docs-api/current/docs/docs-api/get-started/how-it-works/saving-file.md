@@ -67,13 +67,13 @@ sidebar_position: -21
 
 ## 强制保存 {#force-saving}
 
-**文档编辑服务**允许您在编辑完成之前获取当前文档状态。此过程在 ONLYOFFICE 文档中称为 *forcesave*。当启动 forcesave 时，**文档编辑服务**向[回调处理程序](../../usage-api/callback-handler.md)发送请求，其中文档链接作为 `url` 参数，`status` 参数设置为 **6**。可以通过以下方式启动强制保存过程：
+**文档编辑服务**允许您在编辑完成之前获取当前文档状态。此过程在 ONLYOFFICE 文档中称为 *forcesave*。当启动 forcesave 时，**文档编辑服务**向[回调处理程序](../../usage-api/callback-handler.md)发送请求，其中文档链接作为 `url` 参数，`status` 参数设置为 `6`。可以通过以下方式启动强制保存过程：
 
-- 向[文档命令服务](../../additional-api/command-service/command-service.md)发送请求，将 `c` 参数设置为 [forcesave](../../additional-api/command-service/forcesave.md)。回调处理程序请求中的 `forcesavetype` 参数值为 **0**。
+- 向[文档命令服务](../../additional-api/command-service/command-service.md)发送请求，将 `c` 参数设置为 [forcesave](../../additional-api/command-service/forcesave.md)。回调处理程序请求中的 `forcesavetype` 参数值为 `0`。
 
-- 启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 模式（在编辑器初始化配置中将其设置为 `true`）。每次用户点击**保存**时，都会触发 forcesave，回调处理程序请求中的 `forcesavetype` 参数值为 **1**。
+- 启用 [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 模式（在编辑器初始化配置中将其设置为 `true`）。每次用户点击**保存**时，都会触发 forcesave，回调处理程序请求中的 `forcesavetype` 参数值为 `1`。
 
-- 通过[自动组装](../configuration/server-config/auto-assembly.md)服务器配置启用自动重复强制保存。回调处理程序请求中的 `forcesavetype` 参数值为 **2**。
+- 通过[自动组装](../configuration/server-config/auto-assembly.md)服务器配置启用自动重复强制保存。回调处理程序请求中的 `forcesavetype` 参数值为 `2`。
 
   :::info
   自动组装功能会保存文件在该时刻的当前状态。如果用户处于严格模式且未点击**保存**，则其更改不会包含在组装的文件中。在 PDF 格式中，严格模式默认启用。

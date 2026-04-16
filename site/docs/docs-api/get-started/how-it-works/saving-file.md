@@ -67,13 +67,13 @@ In most cases, the save completes about 10 seconds after editing ends. The defau
 
 ## Force saving
 
-The **document editing service** allows you to get the current document state before editing is finished. This process is called *forcesave* in ONLYOFFICE Docs. When forcesave is initiated, the **document editing service** sends a request to the [callback handler](../../usage-api/callback-handler.md) with the link to the document as the `url` parameter and the `status` parameter set to **6**. The forcesave process can be initiated in the following ways:
+The **document editing service** allows you to get the current document state before editing is finished. This process is called *forcesave* in ONLYOFFICE Docs. When forcesave is initiated, the **document editing service** sends a request to the [callback handler](../../usage-api/callback-handler.md) with the link to the document as the `url` parameter and the `status` parameter set to `6`. The forcesave process can be initiated in the following ways:
 
-- By sending a request to the [document command service](../../additional-api/command-service/command-service.md) with the [forcesave](../../additional-api/command-service/forcesave.md) value in the `c` parameter. The `forcesavetype` parameter will be **0** in the callback handler request.
+- By sending a request to the [document command service](../../additional-api/command-service/command-service.md) with the [forcesave](../../additional-api/command-service/forcesave.md) value in the `c` parameter. The `forcesavetype` parameter will be `0` in the callback handler request.
 
-- By enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) mode (set it to `true` in the editor initialization config). Each time the user clicks **Save**, a forcesave is triggered, and the `forcesavetype` parameter will be **1** in the callback handler request.
+- By enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) mode (set it to `true` in the editor initialization config). Each time the user clicks **Save**, a forcesave is triggered, and the `forcesavetype` parameter will be `1` in the callback handler request.
 
-- By enabling automatic repeating forcesave via the [auto assembly](../configuration/server-config/auto-assembly.md) server configuration. The `forcesavetype` parameter will be **2** in the callback handler request.
+- By enabling automatic repeating forcesave via the [auto assembly](../configuration/server-config/auto-assembly.md) server configuration. The `forcesavetype` parameter will be `2` in the callback handler request.
 
   :::info
   The auto assembly feature saves the current state of the file at that moment. If a user is in strict mode and has not clicked **Save**, their changes will not be included in the assembled file. In PDF format, strict mode is enabled by default.
