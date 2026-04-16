@@ -1,20 +1,61 @@
 .button {
+    position: absolute;
+    top: var(--ce-space-3);
+    right: var(--ce-space-3);
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
-    padding: 0.25rem 0.5rem;
-    background: transparent;
-    border: 1px solid var(--ifm-color-emphasis-300);
-    border-radius: var(--ifm-global-radius);
+    gap: var(--ce-space-2);
+    padding: var(--ce-space-3);
+    background: var(--ifm-background-surface-color);
+    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ce-radius-md);
     cursor: pointer;
-    color: inherit;
+    color: var(--ifm-color-emphasis-800);
+    font-size: var(--ce-text-sm);
+    font-weight: 500;
+    transition: all var(--ce-transition-base);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.button:hover {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-400);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
+.button:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button[data-copied='true'] {
+    background: var(--ifm-color-success-lightest);
+    border-color: var(--ifm-color-success);
+    color: var(--ifm-color-success-dark);
 }
 
 .button svg {
     width: 1rem;
     height: 1rem;
+    flex-shrink: 0;
 }
 
 .feedback {
-    font-size: 0.85em;
+    font-size: var(--ce-text-xs);
+    font-weight: 600;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -107,6 +107,7 @@ const ConfigEditorInner = (props: { docConfig: DocumentConfig }) => {
                     <ConfigEditor
                         defaultConfig={defaultConfig}
                         onApply={handleApply}
+                        excludePaths={['events', 'document.options']}
                     />
                 }
                 second={

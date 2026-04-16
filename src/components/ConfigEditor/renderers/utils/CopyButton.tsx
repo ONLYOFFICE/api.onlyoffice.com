@@ -20,8 +20,15 @@ export function CopyButton({ getText }: CopyButtonProps) {
     }
 
     return (
-        <button type="button" onClick={handleClick} className={styles.button} title={copied ? 'Copied!' : 'Copy'} aria-label="Copy">
-            <CopyIcon />
+        <button
+            type="button"
+            onClick={handleClick}
+            className={styles.button}
+            title={copied ? 'Copied!' : 'Copy to clipboard'}
+            aria-label={copied ? 'Copied to clipboard' : 'Copy to clipboard'}
+            data-copied={copied}
+        >
+            <CopyIcon aria-hidden="true" />
             {copied && <span className={styles.feedback}>Copied!</span>}
         </button>
     )

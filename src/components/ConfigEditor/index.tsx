@@ -36,7 +36,7 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
         setFormData(defaultConfig)
         setJsonText(JSON.stringify(defaultConfig, null, 2))
         onApply(defaultConfig)
-    }, [defaultConfig])
+    }, [defaultConfig, onApply])
 
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         const updated = data ?? {}
@@ -59,15 +59,21 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     return (
         <TooltipProvider delayDuration={200}>
             <div className={styles.container}>
-                <button onClick={handleRun} className={styles.runButton}>
-                    <PlayIcon fill='currentColor'/>
+                <button
+                    onClick={handleRun}
+                    className={styles.runButton}
+                    aria-label="Apply configuration changes"
+                    title="Apply configuration changes"
+                    type="button"
+                >
+                    <PlayIcon fill='currentColor' aria-hidden="true"/>
                 </button>
                 <Tabs.Root value={tab} onValueChange={(v) => setTab(v as 'form' | 'json')} className={styles.tabs}>
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
                         <Tabs.Trigger value="json">JSON</Tabs.Trigger>
                     </Tabs.List>
-                    <Tabs.Content value="form" className={styles.content}>
+                    <Tabs.Content value="form" className={styles.content} forceMount>
                         <div className={styles.formEditorContent}>
                             <JsonForms
                                 schema={schema}
@@ -80,26 +86,24 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
                         </div>
                     </Tabs.Content>
                     <Tabs.Content value='json' className={styles.content} forceMount>
-                        {tab === 'json' && (
-                            <>
-                                <MonacoEditor
-                                    language="json"
-                                    value={jsonText}
-                                    onChange={(v) => handleJsonChange(v ?? '')}
-                                    theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
-                                    options={{
-                                        minimap: {enabled: false},
-                                        scrollBeyondLastLine: false,
-                                        fontSize: 14,
-                                        lineNumbers: 'on',
-                                        renderLineHighlight: 'all',
-                                        automaticLayout: true,
-                                        fixedOverflowWidgets: true,
-                                    }}
-                                />
-                                <CopyButton getText={() => jsonText} />
-                            </>
-                        )}
+                        <div className={styles.monacoContainer}>
+                            <MonacoEditor
+                                language="json"
+                                value={jsonText}
+                                onChange={(v) => handleJsonChange(v ?? '')}
+                                theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
+                                options={{
+                                    minimap: {enabled: false},
+                                    scrollBeyondLastLine: false,
+                                    fontSize: 14,
+                                    lineNumbers: 'on',
+                                    renderLineHighlight: 'all',
+                                    automaticLayout: true,
+                                    fixedOverflowWidgets: true,
+                                }}
+                            />
+                            <CopyButton getText={() => jsonText} />
+                        </div>
                     </Tabs.Content>
                 </Tabs.Root>
             </div>

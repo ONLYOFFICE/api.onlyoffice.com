@@ -1,3 +1,32 @@
+/* Design System Tokens */
+:root {
+  /* Spacing Scale (8px base) */
+  --ce-space-1: 0.25rem;   /* 4px */
+  --ce-space-2: 0.5rem;    /* 8px */
+  --ce-space-3: 0.75rem;   /* 12px */
+  --ce-space-4: 1rem;      /* 16px */
+  --ce-space-5: 1.25rem;   /* 20px */
+  --ce-space-6: 1.5rem;    /* 24px */
+  --ce-space-8: 2rem;      /* 32px */
+  --ce-space-10: 2.5rem;   /* 40px */
+  --ce-space-12: 3rem;     /* 48px */
+  --ce-space-14: 3.5rem;   /* 56px */
+  
+  /* Typography Scale */
+  --ce-text-xs: 0.75rem;    /* 12px */
+  --ce-text-sm: 0.875rem;   /* 14px */
+  --ce-text-base: 1rem;     /* 16px */
+  --ce-text-lg: 1.125rem;   /* 18px */
+  
+  /* Border Radius */
+  --ce-radius-sm: 4px;
+  --ce-radius-md: 6px;
+  
+  /* Transitions */
+  --ce-transition-fast: 150ms ease;
+  --ce-transition-base: 200ms ease;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -24,8 +53,18 @@
 }
 
 .runButton:hover {
-    filter: brightness(1.05);
-    transform: translateY(-1px);
+    filter: brightness(1.2);
+}
+
+.runButton:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2),
+                0 0 0 5px var(--ifm-color-primary);
+}
+
+.runButton:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .tabs {
@@ -45,23 +84,33 @@
         button {
             background: transparent;
             border: none;
-            padding: 0.5rem 0.9rem;
-            font-size: 0.9rem;
+            padding: var(--ce-space-2) var(--ce-space-4);
+            font-size: var(--ce-text-sm);
             color: var(--ifm-color-emphasis-700);
             cursor: pointer;
-            border-bottom: 2px solid transparent;
+            border-bottom: 3px solid transparent;
             margin-bottom: -1px;
-            transition: color var(--ifm-transition-fast) ease,
-            border-color var(--ifm-transition-fast) ease;
+            transition: color var(--ce-transition-base),
+            border-color var(--ce-transition-base),
+            background-color var(--ce-transition-base);
+            border-radius: var(--ce-radius-sm) var(--ce-radius-sm) 0 0;
         }
 
         button:hover {
             color: var(--ifm-color-emphasis-900);
+            background: var(--ifm-color-emphasis-50);
+        }
+
+        button:focus-visible {
+            outline: 2px solid var(--ifm-color-primary);
+            outline-offset: -2px;
+            z-index: 1;
         }
 
         button[data-state='active'] {
             color: var(--ifm-color-primary);
             border-bottom-color: var(--ifm-color-primary);
+            font-weight: 600;
         }
     }
 
@@ -78,21 +127,27 @@
 }
 
 .formEditorContent {
-    padding: 0.75rem 1rem 3.5rem;
+    padding: var(--ce-space-3) var(--ce-space-4) var(--ce-space-14);
+}
+
+.monacoContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .field {
-    margin: 0.75rem 0;
+    margin: var(--ce-space-4) 0;
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: var(--ce-space-2);
 }
 
 .field .label {
     display: inline-flex;
     align-items: center;
-    gap: 0.5ch;
-    font-size: 0.875rem;
+    gap: var(--ce-space-2);
+    font-size: var(--ce-text-sm);
     font-weight: 500;
     color: var(--ifm-color-emphasis-900);
 }
@@ -107,15 +162,23 @@
 .field select {
     width: 100%;
     box-sizing: border-box;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    padding: var(--ce-space-2) var(--ce-space-3);
+    font-size: var(--ce-text-sm);
+    line-height: 1.5;
     color: var(--ifm-color-content);
     background: var(--ifm-background-color);
-    border: 1px solid var(--ifm-color-emphasis-300);
-    border-radius: var(--ifm-global-radius);
-    transition: border-color var(--ifm-transition-fast) ease,
-                box-shadow var(--ifm-transition-fast) ease;
+    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ce-radius-md);
+    transition: border-color var(--ce-transition-base),
+                box-shadow var(--ce-transition-base),
+                background-color var(--ce-transition-base);
+}
+
+.field input[type='text']:hover:not(:disabled),
+.field input[type='number']:hover:not(:disabled),
+.field select:hover:not(:disabled) {
+    border-color: var(--ifm-color-emphasis-400);
+    background: var(--ifm-background-surface-color);
 }
 
 .field input[type='text']:focus,
@@ -123,7 +186,15 @@
 .field select:focus {
     outline: none;
     border-color: var(--ifm-color-primary);
-    box-shadow: 0 0 0 3px rgba(var(--ifm-color-primary-rgb, 37, 194, 160), 0.15);
+    box-shadow: 0 0 0 3px rgba(var(--ifm-color-primary-rgb, 255, 110, 61), 0.12);
+    background: var(--ifm-background-surface-color);
+}
+
+.field input[type='text']:focus-visible,
+.field input[type='number']:focus-visible,
+.field select:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
 }
 
 .field input[type='text']:disabled,
@@ -140,24 +211,37 @@
     height: 1rem;
     accent-color: var(--ifm-color-primary);
     cursor: pointer;
+    flex-shrink: 0;
+}
+
+.field input[type='checkbox']:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
+.field input[type='checkbox']:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .field input[type='checkbox'] + span {
-    font-size: 0.9rem;
+    font-size: var(--ce-text-sm);
     font-weight: 500;
+    color: var(--ifm-color-emphasis-800);
+    line-height: 1.5;
 }
 
 .field [role='radiogroup'] {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    font-size: 0.9rem;
+    gap: var(--ce-space-3);
+    font-size: var(--ce-text-sm);
 }
 
 .field [role='radiogroup'] label {
     display: inline-flex;
     align-items: center;
-    gap: 0.4ch;
+    gap: var(--ce-space-2);
     cursor: pointer;
 }
 
@@ -165,33 +249,102 @@
     accent-color: var(--ifm-color-primary);
 }
 
+.field [role='radiogroup'] input[type='radio']:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
 .arrayItem {
-    margin: 0.5rem 0;
+    margin: var(--ce-space-4) 0;
+    padding: var(--ce-space-3);
+    padding-left: var(--ce-space-4);
+    background: var(--ifm-color-emphasis-50);
+    border-left: 3px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ce-radius-sm);
+    transition: border-color var(--ce-transition-base),
+                background-color var(--ce-transition-base);
+}
+
+.arrayItem:hover {
+    background: var(--ifm-color-emphasis-100);
+    border-left-color: var(--ifm-color-primary-lightest);
 }
 
 .arrayItemHeader {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
-    font-size: 0.85rem;
-    color: var(--ifm-color-emphasis-700);
+    justify-content: space-between;
+    gap: var(--ce-space-3);
+    margin-bottom: var(--ce-space-3);
+    padding-bottom: var(--ce-space-2);
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
+.arrayItemHeader strong {
+    font-size: var(--ce-text-sm);
+    font-weight: 600;
+    color: var(--ifm-color-emphasis-800);
+}
+
+/* Base button styles for array controls and sections */
 .arrayItem button,
-.content > button {
+.content > button,
+.section button {
     background: transparent;
-    border: 1px solid var(--ifm-color-emphasis-300);
-    border-radius: var(--ifm-global-radius);
-    padding: 0.25rem 0.6rem;
-    font-size: 0.8rem;
+    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ce-radius-md);
+    padding: var(--ce-space-2) var(--ce-space-3);
+    font-size: var(--ce-text-sm);
+    font-weight: 500;
     color: var(--ifm-color-emphasis-800);
     cursor: pointer;
-    transition: all var(--ifm-transition-fast) ease;
+    transition: all var(--ce-transition-base);
 }
 
 .arrayItem button:hover,
-.content > button:hover {
+.content > button:hover,
+.section button:hover {
     background: var(--ifm-color-emphasis-100);
     border-color: var(--ifm-color-emphasis-400);
+    color: var(--ifm-color-emphasis-900);
+}
+
+.arrayItem button:focus-visible,
+.content > button:focus-visible,
+.section button:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
+/* Button variants */
+.arrayItem button[data-variant='primary'],
+.content > button[data-variant='primary'],
+.section button[data-variant='primary'] {
+    background: var(--ifm-color-primary);
+    color: white;
+    border-color: var(--ifm-color-primary);
+}
+
+.arrayItem button[data-variant='primary']:hover,
+.content > button[data-variant='primary']:hover,
+.section button[data-variant='primary']:hover {
+    background: var(--ifm-color-primary-dark);
+    border-color: var(--ifm-color-primary-dark);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.arrayItem button[data-variant='danger'],
+.content > button[data-variant='danger'],
+.section button[data-variant='danger'] {
+    color: var(--ifm-color-danger);
+    border-color: var(--ifm-color-danger-light);
+}
+
+.arrayItem button[data-variant='danger']:hover,
+.content > button[data-variant='danger']:hover,
+.section button[data-variant='danger']:hover {
+    background: var(--ifm-color-danger-lightest);
+    border-color: var(--ifm-color-danger);
+    color: var(--ifm-color-danger-dark);
 }

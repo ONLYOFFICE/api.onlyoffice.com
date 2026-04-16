@@ -1,5 +1,5 @@
-import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths } from '@jsonforms/core'
-import { withJsonFormsArrayControlProps, JsonFormsDispatch } from '@jsonforms/react'
+import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core'
+import { withJsonFormsArrayControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react'
 import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from '../layouts/depth'
 import styles from '../../styles.module.css'
@@ -17,12 +17,36 @@ function defaultForSchema(s: JsonSchema | undefined): unknown {
 }
 
 function ArrayControlRenderer(props: ArrayControlProps) {
-    const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells, uischema } = props
-    const itemSchema = (schema as JsonSchema).items as JsonSchema
+    const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props
+    const ctx = useJsonForms()
+    const rootSchema = ctx.core?.schema as JsonSchema | undefined
+
+    const rawItemSchema = (schema as JsonSchema).items as JsonSchema | undefined
+    let itemSchema: JsonSchema = rawItemSchema ?? {}
+
+    if (rawItemSchema?.$ref && rootSchema) {
+        itemSchema = resolveSchema(rootSchema, rawItemSchema.$ref, rootSchema) as JsonSchema
+    }
+
     const items: unknown[] = Array.isArray(data) ? data : []
     const depth = depthOfPath(path)
 
-    const itemUischema: ControlElement = { type: 'Control', scope: '#' }
+    // Determine effective item schema
+    const firstItem = items[0]
+    let effectiveItemSchema: JsonSchema = itemSchema
+    
+    // If we have data, infer type from first item
+    if (firstItem !== undefined) {
+        const itemType = typeof firstItem
+        if (itemType === 'string' || itemType === 'number' || itemType === 'boolean') {
+            effectiveItemSchema = { type: itemType as JsonSchema['type'] }
+        }
+    } else if (!itemSchema.type && !itemSchema.properties && !itemSchema.items) {
+        // If no data and no clear schema, default to string
+        effectiveItemSchema = { type: 'string' }
+    }
+
+    const itemUischema: ControlElement = { type: 'Control', scope: '#', label: false }
 
     return (
         <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={(schema as JsonSchema).description}>
@@ -33,11 +57,18 @@ function ArrayControlRenderer(props: ArrayControlProps) {
                         <div className={styles.arrayItemHeader}>
                             <strong>#{index + 1}</strong>
                             {enabled && (
-                                <button type="button" onClick={() => removeItems!(path, [index])()}>Remove</button>
+                                <button
+                                    type="button"
+                                    onClick={() => removeItems!(path, [index])()}
+                                    data-variant="danger"
+                                    aria-label={`Remove item ${index + 1}`}
+                                >
+                                    Remove
+                                </button>
                             )}
                         </div>
                         <JsonFormsDispatch
-                            schema={itemSchema}
+                            schema={effectiveItemSchema}
                             uischema={itemUischema}
                             path={itemPath}
                             renderers={renderers}
@@ -47,7 +78,14 @@ function ArrayControlRenderer(props: ArrayControlProps) {
                 )
             })}
             {enabled && (
-                <button type="button" onClick={addItem(path, defaultForSchema(itemSchema))}>+ Add item</button>
+                <button
+                    type="button"
+                    onClick={addItem(path, defaultForSchema(effectiveItemSchema))}
+                    data-variant="primary"
+                    aria-label="Add new item"
+                >
+                    + Add item
+                </button>
             )}
         </Section>
     )
