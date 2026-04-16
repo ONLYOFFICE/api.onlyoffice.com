@@ -6,16 +6,16 @@ title: Introducing ONLYOFFICE DocSpace
 
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
-- creating and customizing rooms for collaboration;
+- [creating and customizing rooms for collaboration](#step-3-create-a-room);
 - creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
 - inviting users to collaborate on files in real time.
 
 ## Basic concepts
 
-Before getting started the ONLYOFFICE DocSpace, here are some basic concepts to get familiar with: 
+Before getting started the ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
 - **Portal:** Your personal DocSpace cloud containing your rooms with all your documents and files.
-- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers different types of rooms based on your specific needs. 
+- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers different types of rooms (Collaboration, Editing, Public, Custom, Form filling, and Virtual data rooms) based on your specific needs.
 - **Users:** People with access to your DocSpace portal. Users are split between owners, and other members who can access some documents and files in DocSpace.
 
 ## Quickstart
@@ -45,26 +45,30 @@ This sample request creates an **Editing Room** titled **Graduation Planning**.
 Set your Content-Type and Accept headers to application/json, as every endpoint in the DocSpace API supports JSON.
 :::
 
-```bash
-curl --location '{baseUrl}/api/2.0/files/rooms' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer API-KEY' \
---data '{
-    "title": "Graduation Planning",
-    "roomType": "EditingRoom",
+```http
+
+POST /api/2.0/files/rooms HTTP/1.1
+Host: yourportal.onlyoffice.com
+Content-Type: application/json
+Authorization: Bearer API_KEY
+Content-Length: 115
+
+{
+    "title": "Chi's bridal shower",
+    "roomType": "PublicRoom",
+    "color": "Red",
     "private": false
     
-}'
+}
+
 ```
 
 **Where**:
 
-- **baseUrl**: Your DocSpace portal.
 - **API_KEY**: ONLYOFFICE API key.
+- **yourportal**: Your DocSpace portal
 
-### Step 4: Update room details
-
-You can update this new room with 
+You can send requests to customize and change room details to fit your specific needs.
 
 ### Decoding responses
 
