@@ -23,10 +23,10 @@ The figure and steps below explain how a shareable link to a bookmark position i
 
    ``` ts
    function onMakeActionLink(event) {
-     const ACTION_DATA = event.data
-     const link = GENERATE_LINK(ACTION_DATA)
-     docEditor.setActionLink(link)
-   };
+     const ACTION_DATA = event.data;
+     const link = GENERATE_LINK(ACTION_DATA);
+     docEditor.setActionLink(link);
+   }
    
    const config = {
      events: {

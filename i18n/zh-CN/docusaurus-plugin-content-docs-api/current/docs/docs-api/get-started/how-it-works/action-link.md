@@ -23,10 +23,10 @@ sidebar_position: -18
 
    ``` ts
    function onMakeActionLink(event) {
-     const ACTION_DATA = event.data
-     const link = GENERATE_LINK(ACTION_DATA)
-     docEditor.setActionLink(link)
-   };
+     const ACTION_DATA = event.data;
+     const link = GENERATE_LINK(ACTION_DATA);
+     docEditor.setActionLink(link);
+   }
    
    const config = {
      events: {
