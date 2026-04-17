@@ -10,10 +10,6 @@ sidebar_position: -22
 
 1. 用户通过浏览器中的**文档管理器**打开文档进行查看或编辑。
 
-   :::note
-   **文档管理器**从**文档存储服务**接收用户可用的所有文档的列表。
-   :::
-
 2. **文档管理器**使用一个 [`config`](../../usage-api/config/config.md) 对象初始化**文档编辑器**，该对象包含文档的 [`key`](../../usage-api/config/document/document.md#key)、[`url`](../../usage-api/config/document/document.md#url) 及其他必需参数。
 
 3. **文档编辑器**使用从**文档管理器**接收到的 `config`，向**文档编辑服务**发送打开文档的请求。

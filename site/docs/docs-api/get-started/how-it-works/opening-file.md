@@ -10,10 +10,6 @@ The figure and steps below explain how a document is opened in ONLYOFFICE Docs.
 
 1. Using the **document manager** in the browser, the user opens a document to view or edit it.
 
-   :::note
-   The **document manager** receives the list of all documents available to the user from the **document storage service**.
-   :::
-
 2. The **document manager** initializes the **document editor** with a [`config`](../../usage-api/config/config.md) object that includes the document [`key`](../../usage-api/config/document/document.md#key), [`url`](../../usage-api/config/document/document.md#url), and other required parameters.
 
 3. The **document editor** sends a request to the **document editing service** to open the document, using the `config` received from the **document manager**.
