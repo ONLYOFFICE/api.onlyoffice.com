@@ -28,7 +28,9 @@ Starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to au
 
 5. Review the code and make adjustments if necessary.
 
-    > While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::warning
+    While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::
 
 6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
 
@@ -45,22 +47,22 @@ You can paste this VBA code into the AI plugin converter. The plugin will return
 ```ts
 (function(){
     // This code will unmerge all the merged cells in the active worksheet
-    
+
     // Get the active sheet
-    var oWorksheet = Api.GetActiveSheet();
-    
+    const oWorksheet = Api.GetActiveSheet();
+
     // Get all cells in the worksheet by getting the used range
-    var oUsedRange = oWorksheet.GetUsedRange();
-    
+    const oUsedRange = oWorksheet.GetUsedRange();
+
     // Check if there is any used range
     if (oUsedRange) {
         // Unmerge all cells in the used range
         oUsedRange.UnMerge();
     }
-    
+
     // Alternative approach: Get the entire sheet range and unmerge
     // This ensures all possible merged cells are unmerged
-    var oRange = oWorksheet.GetRange("A1:XFD1048576");
+    const oRange = oWorksheet.GetRange("A1:XFD1048576");
     oRange.UnMerge();
 })();
 ```

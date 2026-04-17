@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 内容对齐工具
 
 在整个演示文稿中统一对齐文本框和图像。

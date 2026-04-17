@@ -30,7 +30,9 @@ There you can also view the plugin metadata, such as the author, version, status
 
 ## Usage
 
-> Audio and video files cannot be converted to PDF.
+:::warning
+Audio and video files cannot be converted to PDF.
+:::
 
 To convert a file to PDF:
 

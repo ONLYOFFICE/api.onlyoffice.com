@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除重复工作表
 
 识别并删除电子表格中的重复工作表。

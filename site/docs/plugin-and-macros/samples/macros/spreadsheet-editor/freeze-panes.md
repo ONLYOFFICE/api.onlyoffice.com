@@ -15,16 +15,13 @@ Unfreezes panes, navigates the viewport to a target cell (A10), then refreezes p
     // Step 1: Unfreeze panes so the view can scroll freely
     worksheet.GetFreezePanes().Unfreeze();
 
-    // Step 2: Select the target cell. Also resets the viewport
+    // Step 2: Select the target cell
     worksheet.GetRange("A10").Select();
 
-    // Step 3: Refreeze at D10 after the view has settled
-    // A timeout function is required because Select() updates the viewport asynchronously
-    setTimeout(function () {
-        worksheet
-            .GetFreezePanes()
-            .FreezeAt(worksheet.GetRange("D10")); // The cell you want to freeze panes at
-    }, 100);
+    // Step 3: Refreeze at D10
+    worksheet
+        .GetFreezePanes()
+        .FreezeAt(worksheet.GetRange("D10")); // The cell you want to freeze panes at
 })();
 ```
 
@@ -36,6 +33,7 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 Sub NavigateAndRefreeze()
     ActiveWindow.FreezePanes = False
     Application.Goto Reference:=Range("A10"), Scroll:=True
+    Range("D10").Select
     ActiveWindow.FreezePanes = True
 End Sub
 ```

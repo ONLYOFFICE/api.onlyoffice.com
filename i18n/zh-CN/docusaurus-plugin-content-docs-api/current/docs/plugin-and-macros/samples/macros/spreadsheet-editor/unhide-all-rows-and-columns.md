@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 显示所有行和列
 
 在当前表格中显示所有隐藏的行和列。

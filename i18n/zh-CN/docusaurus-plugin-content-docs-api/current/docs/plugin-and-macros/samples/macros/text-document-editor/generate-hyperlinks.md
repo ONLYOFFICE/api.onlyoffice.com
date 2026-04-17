@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 生成超链接
 
 生成并插入超链接，替代文本形式的 URL。

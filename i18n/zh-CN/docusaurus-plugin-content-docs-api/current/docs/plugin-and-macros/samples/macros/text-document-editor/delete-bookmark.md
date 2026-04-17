@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除书签
 
 查找并删除文档中包含特定文本的书签。

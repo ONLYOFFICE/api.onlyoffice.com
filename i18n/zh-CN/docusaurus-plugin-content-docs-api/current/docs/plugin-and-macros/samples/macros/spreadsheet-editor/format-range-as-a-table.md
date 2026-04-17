@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 将范围格式化为表格
 
 将单元格范围 **A1:D10** 格式化为表格。

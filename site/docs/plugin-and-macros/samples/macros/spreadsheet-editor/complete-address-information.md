@@ -41,7 +41,6 @@ Completes the basic address data with detailed address information and inserts i
     function successFunction(response) {
         let data = createAddressDetailsObject(response);
         pasteAddressDetails(data);
-        reload();
     }
     // Create Address Details object if address is found
     function createAddressDetailsObject(response) {
@@ -73,32 +72,21 @@ Completes the basic address data with detailed address information and inserts i
             range.SetValue([[data.error]]);
         } else {
             range.SetValue([
-                [
-                    data.country,
-                    data.county,
-                    data.city,
-                    data.post_code,
-                    data.full_address_line
-                ]
+                [data.country, data.county, data.city, data.post_code, data.full_address_line]
             ]);
         }
+        range.AutoFit(false, true);
         // Execute recursively until "Address" value is empty
         row++;
         makeRequest(oWorksheet.GetRange(`A${row}:A${row}`).GetText());
     }
-    // Sheet has to be reloaded on changes
-    function reload() {
-        let reload = setInterval(function(){
-            Api.asc_calculate(Asc.c_oAscCalculateType.All);
-        })
-    }
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [AutoFit](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 :::note
-For the macros to function, replace *yourAPIkey* with the API key obtained from [Geoapify](https://www.geoapify.com/).
+For the macros to function, replace *YOUR_API_KEY* with the API key obtained from [Geoapify](https://www.geoapify.com/).
 :::
 
 ## Result

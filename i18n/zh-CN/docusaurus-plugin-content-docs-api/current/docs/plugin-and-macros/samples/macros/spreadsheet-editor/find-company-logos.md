@@ -1,4 +1,8 @@
-# # 查找公司徽标
+---
+hide_table_of_contents: true
+---
+
+# 查找公司徽标
 
 通过使用 [API Ninjas](https://api-ninjas.com) 提供的 [Logo API](https://api-ninjas.com/api/logo)，在整个表格中搜索公司徽标。
 

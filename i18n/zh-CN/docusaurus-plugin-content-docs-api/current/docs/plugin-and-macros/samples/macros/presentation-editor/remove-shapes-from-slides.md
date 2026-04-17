@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 从幻灯片中移除形状
 
 移除演示文稿中幻灯片上的形状。

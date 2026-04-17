@@ -1,5 +1,72 @@
 # Change log
 
+## 8.3.0
+
+### New features
+
+#### DocSpace
+
+* Added live Public room embed example to the SDK get-started page
+* Added embedding modes comparison table to the DocSpace SDK get-started page
+* Added DocSpace SDK playground page with interactive editor and live preview
+
+#### Playground
+
+* Added Document Server settings dialog to playground toolbar
+
+### Improvements
+
+#### DocSpace
+
+* Updated main page button to link to playground instead of cloud registration
+* Replaced upload-and-summarize-document use case with a refocused chat-summary text flow
+* Updated DocSpace playground to new portal
+
+#### Office API
+
+* Updated office-js-api documentation
+
+#### Plugins and macros
+
+* Updated Freeze panes macro sample code snippet
+* Updated complete-address-information macro sample code snippet
+
+#### Localization
+
+* Added missing Chinese localization and frontmatter to macro samples
+* Removed zh-CN DocSpace and workspace translations
+
+### Fixes
+
+#### Playground
+
+* Fixed playground settings button: updated icon, colors, and click feedback
+* Fixed DocSpace playground: added notice about Safari and incognito mode limitations
+* Fixed DocSpace playground: removed undocumented buttonWithLogo from selector snippets
+* Fixed DocSpace playground: added permission comments to Manager config params
+* Fixed DocSpace playground: prevented iframe from overlapping resize handle
+* Fixed DocSpace playground: re-run script on theme change to update preview
+* Fixed DocSpace playground: allowed user-specified src to override default portal URL
+* Fixed playground pages: moved JSX imports to top level instead of mdx-code-block fence
+* Fixed playground builder mode: stripped single-line comments before collapsing newlines
+
+#### DocSpace
+
+* Fixed DocSpace auth: use SDK iframe login with hash instead of cross-origin fetch
+
+#### Docs API
+
+* Fixed text document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
+
+#### Common
+
+* Fixed button being required in Features type for Workspace and Samples pages
+* Replaced console.log with visible actions in Playground connector examples
+* Renamed "Word" to "Text Document" in Playground editor selector
+* Fixed inconsistent admonition types for definitional and prerequisite notes
+* Removed redundant "Please note" prefixes from admonitions, fixed "extrenal" typo
+* Fixed blockquotes formatting across documentation
+
 ## 8.2.0
 
 ### New features

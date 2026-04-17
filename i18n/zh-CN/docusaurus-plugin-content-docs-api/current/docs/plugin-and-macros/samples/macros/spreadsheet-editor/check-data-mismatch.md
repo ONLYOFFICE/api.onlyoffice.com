@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 检查数据类型不匹配
 
 基于列内多数表决机制（column majority vote），从默认起始位置 B2 开始检测数据类型不匹配的单元格，支持通过参数配置表头偏移量。

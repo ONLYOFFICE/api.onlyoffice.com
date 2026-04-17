@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 设置列宽
 
 设置 **B** 列的宽度。

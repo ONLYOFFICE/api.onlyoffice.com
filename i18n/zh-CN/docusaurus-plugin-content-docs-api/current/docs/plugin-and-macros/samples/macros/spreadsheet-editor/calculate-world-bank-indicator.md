@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 计算世界银行指标
 
 创建一个[异步自定义函数](/docs/plugin-and-macros/macros/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。

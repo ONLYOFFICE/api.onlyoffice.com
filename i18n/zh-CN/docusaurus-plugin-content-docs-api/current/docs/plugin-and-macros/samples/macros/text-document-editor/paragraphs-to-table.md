@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 段落转表格
 
 将编号的段落列表转换为表格格式。

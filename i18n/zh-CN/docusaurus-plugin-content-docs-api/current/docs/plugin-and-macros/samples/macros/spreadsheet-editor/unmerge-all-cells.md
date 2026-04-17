@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 取消合并单元格
 
 取消当前工作表中所有已合并的单元格。

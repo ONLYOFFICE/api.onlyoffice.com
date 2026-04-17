@@ -13,7 +13,9 @@ The basic authentication is defined in [RFC 7617](https://www.rfc-editor.org/rfc
 Authorization: Basic "username:password".toBase64Str()
 ```
 
-> Basic authentication transmits credentials as plaintext. It is strongly recommended to use HTTPS/TLS to protect sensitive or valuable information.
+:::warning
+Basic authentication transmits credentials as plaintext. It is strongly recommended to use HTTPS/TLS to protect sensitive or valuable information.
+:::
 
 The main advantage of basic authentication is its simplicity, so it is suitable for testing, quick integrations, or internal applications. However, it is not recommended for production applications due to security limitations and the need to handle user credentials directly.
 
@@ -86,4 +88,6 @@ The main advantage of basic authentication is its simplicity, so it is suitable 
   </TabItem>
 </Tabs>
 
-> Please note, that you have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+:::note
+You have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+:::

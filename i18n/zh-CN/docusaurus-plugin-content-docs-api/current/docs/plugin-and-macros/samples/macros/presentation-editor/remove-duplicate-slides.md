@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除重复幻灯片
 
 删除演示文稿中所有重复的幻灯片。

@@ -73,11 +73,15 @@ sidebar_position: -6
 
    对文件的数据更新请求将发送到文件的URL。
 
-   > 请注意，您可以在单元格中输入指定格式的公式，来自外部文件的数据也将被插入。但在这种情况下，*onRequestReferenceData*事件将仅使用*path*参数执行。
+   :::note
+   您可以在单元格中输入指定格式的公式，来自外部文件的数据也将被插入。但在这种情况下，*onRequestReferenceData*事件将仅使用*path*参数执行。
+   :::
 
 8. 当用户试图通过点击*数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新源文件中的数据时，将调用[onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata)事件。包含从源文件接收到的唯一文件数据、文件路径或名称以及文件URL的对象将在*data*参数中发送。
 
-   > 为了将数据发送到*setReferenceData*，建议首先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用*path*或*link*参数。
+   :::note
+   为了将数据发送到*setReferenceData*，建议首先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用*path*或*link*参数。
+   :::
 
    ``` ts
    function onRequestReferenceData(event) {
@@ -91,7 +95,9 @@ sidebar_position: -6
 
 9. 为了刷新源文件中的数据，必须调用[setReferenceData](../../usage-api/methods.md#setreferencedata)方法。调用此方法时，必须添加令牌以验证参数。
 
-   > 请注意，只有当用户对源文件具有权限时，才会执行此方法
+   :::note
+   只有当用户对源文件具有权限时，才会执行此方法。
+   :::
 
    ``` ts
    docEditor.setReferenceData({
@@ -149,7 +155,9 @@ sidebar_position: -6
 
    当点击该按钮时，您必须调用[setReferenceSource](../../usage-api/methods.md#setreferencesource)方法来更改外部数据的源。调用此方法时，必须添加令牌以验证参数。如果未声明该事件，则*更改源*按钮将不会显示。
 
-   > 为了将数据发送到*setReferenceSource*方法，建议首先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用*path*参数。
+   :::note
+   为了将数据发送到*setReferenceSource*方法，建议首先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用*path*参数。
+   :::
    
    <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
 

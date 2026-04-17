@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 插入文本
 
 在文档当前光标位置插入文本。

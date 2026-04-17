@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 对齐图表
 
 将每张幻灯片上的图表和文本框进行垂直对齐。

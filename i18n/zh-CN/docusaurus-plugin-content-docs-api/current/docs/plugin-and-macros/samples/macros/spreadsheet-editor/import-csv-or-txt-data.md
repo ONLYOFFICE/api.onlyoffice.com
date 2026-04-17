@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 导入 CSV/TXT 数据
 
 从远程 CSV/TXT 文件导入数据到电子表格中。

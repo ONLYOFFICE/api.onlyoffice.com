@@ -1,4 +1,8 @@
-# # 补全地址信息
+---
+hide_table_of_contents: true
+---
+
+# 补全地址信息
 
 完善基础地址数据，补充详细地址信息并插入到表格中。
 
@@ -12,11 +16,11 @@
 
 (function()
 {
-    let API_KEY = 'yourAPIkey';
+    let API_KEY = 'YOUR_API_KEY';
     let ENDPOINT = 'https://api.geoapify.com/v1/geocode/search';
-    let worksheet = Api.GetActiveSheet();
+    let oWorksheet = Api.GetActiveSheet();
     let row = 2;
-    makeRequest(worksheet.GetRange(`A${row}`).GetText());
+    makeRequest(oWorksheet.GetRange(`A${row}`).GetText());
     
     // REQUEST
     function makeRequest(ADDRESS) {
@@ -35,7 +39,6 @@
     function successFunction(response) {
         let data = createAddressDetailsObject(response);
         pasteAddressDetails(data);
-        reload();
     }
     // 如果找到地址，则创建地址详情对象
     function createAddressDetailsObject(response) {
@@ -67,32 +70,21 @@
             range.SetValue([[data.error]]);
         } else {
             range.SetValue([
-                [
-                    data.country,
-                    data.county,
-                    data.city,
-                    data.post_code,
-                    data.full_address_line
-                ]
+                [data.country, data.county, data.city, data.post_code, data.full_address_line]
             ]);
         }
-        // 递归执行直到“地址”值为空
+        range.AutoFit(false, true);
+        // 递归执行直到”地址”值为空
         row++;
-        makeRequest(worksheet.GetRange(`A${row}:A${row}`).GetText());
-    }
-    // 修改后需要重新加载表格
-    function reload() {
-        let reload = setInterval(function(){
-            Api.asc_calculate(Asc.c_oAscCalculateType.All);
-        })
+        makeRequest(oWorksheet.GetRange(`A${row}:A${row}`).GetText());
     }
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 :::note
-要使宏正常运行，请将 *yourAPIkey* 替换为从 [Geoapify](https://www.geoapify.com/) 获取的 API 密钥。
+要使宏正常运行，请将 *YOUR_API_KEY* 替换为从 [Geoapify](https://www.geoapify.com/) 获取的 API 密钥。
 :::
 
 ## 结果

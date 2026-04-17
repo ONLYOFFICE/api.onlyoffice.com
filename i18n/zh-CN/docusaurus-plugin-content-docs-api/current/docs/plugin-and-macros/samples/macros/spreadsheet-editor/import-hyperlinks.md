@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 导入超链接
 
 导入表格中不同工作表之间的超链接。

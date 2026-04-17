@@ -62,9 +62,14 @@ const WORD_SCRIPTS: Template = {
         'oDocument.InsertContent([oParagraph]);\n',
 
     connector:
-        'connector.executeMethod("GetCurrentWord", [], function(word) {\n' +
-        '    console.log("GetCurrentWord: " + word);\n' +
-        '});\n',
+        'connector.callCommand(function() {\n' +
+        '    var oDocument = Api.GetDocument();\n' +
+        '    var oParagraph = Api.CreateParagraph();\n' +
+        '    oParagraph.AddText("Hello world!");\n' +
+        '    oDocument.InsertContent([oParagraph]);\n' +
+        '});\n' +
+        '\n' +
+        'connector.executeMethod("AddContentControl", [1, {"Tag": "sample_tag", "Lock": 0}]);\n',
 
     plugin:
         PLUGIN_HEADER +
@@ -164,9 +169,15 @@ const FORM_SCRIPTS: Template = {
         'oDocument.InsertContent([oParagraph]);\n',
 
     connector:
-        'connector.executeMethod("GetCurrentWord", [], function(word) {\n' +
-        '    console.log("GetCurrentWord: " + word);\n' +
-        '});\n',
+        'connector.callCommand(function() {\n' +
+        '    var oDocument = Api.GetDocument();\n' +
+        '    var oParagraph = Api.CreateParagraph();\n' +
+        '    var oTextForm = Api.CreateTextForm({"key": "Name", "tip": "Enter your name", "required": true, "placeholder": "First name"});\n' +
+        '    oParagraph.AddElement(oTextForm);\n' +
+        '    oDocument.InsertContent([oParagraph]);\n' +
+        '});\n' +
+        '\n' +
+        'connector.executeMethod("InputText", ["ONLYOFFICE Playground", ""]);\n',
 
     plugin:
         PLUGIN_HEADER +

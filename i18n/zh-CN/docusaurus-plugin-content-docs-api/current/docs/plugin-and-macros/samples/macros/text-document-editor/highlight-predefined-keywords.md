@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 高亮预设关键词
 
 在文本文档中高亮预设关键词。

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # 删除空段落
 
 删除演示文稿中所有不必要的空白段落。
