@@ -15,20 +15,17 @@ You don't need to be an experienced JavaScript developer to use the DocSpace Jav
 
 The SDK supports multiple initialization modes:
 
-| Mode | SDK method | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
-| ------ | ----------- | ----------------- | ------ | -------- | ------ | ------ |
-| Manager | `initManager()` | Full file and room manager | Yes | Yes | No | Yes |
-| Public room | `initFrame()` | Public room view | Yes (within room) | Yes (within room) | Yes (room) | No |
-| Viewer | `initViewer()` | Document viewer | No | No | Yes (file) | Yes |
-| Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
-| Room selector | `initRoomSelector()` | Room picker dialog | Rooms only | No | No | Yes |
-| File selector | `initFileSelector()` | File picker dialog | Yes | No | No | Yes |
-| System | `initSystem()` | None (hidden frame) | N/A | N/A | N/A | Yes |
+| Mode | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
+| ------ | ----------------- | ------ | -------- | ------ | ------ |
+| Manager | Full file and room manager | Yes | Yes | No | Yes |
+| Public room | Public room view | Yes (within room) | Yes (within room) | Yes (room) | No |
+| Viewer | Document viewer | No | No | Yes (file) | Yes |
+| Editor | Document editor | No | Yes | Yes (file) | Yes |
+| Room selector | Room picker dialog | Rooms only | No | No | Yes |
+| File selector | File picker dialog | Yes | No | No | Yes |
+| System | None (hidden frame) | N/A | N/A | N/A | Yes |
 
 :::note
-- `initFrame()` is a generic initialization method that accepts any SDK mode via the `mode` parameter. Its behavior, UI, and requirements depend entirely on the mode you pass. All other `init*()` methods are convenience wrappers around `initFrame()` that lock the mode automatically.
-- `initManager()` is equivalent to calling `initFrame()` with `mode: "manager"`. Prefer `initManager()` when you specifically need a file management interface.
-- The Public room mode has no dedicated method; use `initFrame()` with `mode: "public-room"` instead.
 - For Public room, editing is scoped to documents within the room.
 - Selector and system modes do not expose editing capabilities.
 :::
@@ -91,7 +88,7 @@ If the users are not authenticated, they will see a page asking them to sign in 
 When working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
 :::
 
-Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDKInstance.md#initframe) method with the SDK config passed to it:
+Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDK.md#initframe) method with the SDK config passed to it:
 
 ``` ts
 const docSpace = DocSpace.SDK.initFrame({
