@@ -47,5 +47,5 @@ let ptCondition = condition1.GetPTCondition();
 
 worksheet.GetRange("C1").SetValue("PT Condition:");
 worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
-
 ```
+

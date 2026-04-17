@@ -2,21 +2,7 @@
 
 检查当前表单是否为固定大小。
 
-## 语法
-
-```javascript
-expression.IsFixed();
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md).
 
 ## 示例
 
@@ -37,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is fixed: " + fixed);
 doc.Push(paragraph);
 ```
+

@@ -38,3 +38,4 @@ worksheet.GetRange("B2").SetValue("ranges");
 let range = worksheet.GetRange("A1:B2");
 worksheet.GetRange("A4:B5").SetValue(func.TRANSPOSE(range));
 ```
+

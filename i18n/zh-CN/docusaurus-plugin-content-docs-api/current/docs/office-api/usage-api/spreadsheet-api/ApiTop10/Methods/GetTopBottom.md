@@ -41,5 +41,5 @@ let top10Condition = formatConditions.AddTop10();
 
 let topBottom = top10Condition.GetTopBottom();
 worksheet.GetRange("B1").SetValue("Direction: " + topBottom);
-
 ```
+

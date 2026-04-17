@@ -43,3 +43,4 @@ worksheet.GetRange("B4").SetValue(0.1);
 let range = worksheet.GetRange("B2:B4");
 worksheet.GetRange("B5").SetValue(func.FVSCHEDULE(100, range));
 ```
+

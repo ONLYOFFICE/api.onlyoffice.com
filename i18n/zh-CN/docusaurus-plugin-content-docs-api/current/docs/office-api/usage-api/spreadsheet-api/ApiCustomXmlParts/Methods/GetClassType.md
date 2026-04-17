@@ -32,3 +32,4 @@ let xmlManager = worksheet.GetCustomXmlParts();
 let classType = xmlManager.GetClassType();
 worksheet.GetRange("A1").SetValue("XML manager class type: " + classType);
 ```
+

@@ -32,5 +32,5 @@ const text = millimeters + ' millimeters are equal to ' + emus + ' emus (value i
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```
+

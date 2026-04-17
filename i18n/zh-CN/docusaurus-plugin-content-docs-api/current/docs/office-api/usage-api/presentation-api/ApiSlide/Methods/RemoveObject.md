@@ -47,5 +47,5 @@ copyDrawing.SetSize(150 * 36000, 130 * 36000);
 slide.AddObject(drawing);
 slide.AddObject(copyDrawing);
 slide.RemoveObject(1, 1);
-
 ```
+

@@ -45,5 +45,5 @@ let fillType = dataBar.GetBarFillType();
 
 worksheet.GetRange("C1").SetValue("Fill Type:");
 worksheet.GetRange("C2").SetValue(fillType);
-
 ```
+

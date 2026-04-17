@@ -2,23 +2,7 @@
 
 设置当前条件格式规则应用的单元格区域。
 
-## 语法
-
-```javascript
-expression.ModifyAppliesToRange(Range);
-```
-
-`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Range | 必需 | [ApiRange](../../ApiRange/ApiRange.md) |  | 当前条件格式规则将应用的区域。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
 
 ## 示例
 
@@ -55,5 +39,5 @@ condition1.ModifyAppliesToRange(newRange);
 
 worksheet.GetRange("D1").SetValue("Modified range:");
 worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
-
 ```
+

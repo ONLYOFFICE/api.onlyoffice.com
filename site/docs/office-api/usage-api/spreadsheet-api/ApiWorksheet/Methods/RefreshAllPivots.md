@@ -46,5 +46,5 @@ worksheet.GetAllPivotTables().forEach(function (pivot) {
 });
 
 worksheet.RefreshAllPivots();
-
 ```
+

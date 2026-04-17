@@ -57,5 +57,5 @@ for (let nLvl = 0; nLvl < 3; ++nLvl) {
     para.AddText("This paragraph with style: " + headings[nLvl].GetName());
     doc.Push(para);
 }
-
 ```
+

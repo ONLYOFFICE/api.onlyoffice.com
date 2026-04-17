@@ -44,5 +44,5 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Name: ' + drawing.GetName());
 
 worksheet.GetRange('A1').SetValue('Drawing name was set to: ' + drawing.GetName());
-
 ```
+

@@ -2,21 +2,7 @@
 
 返回表格标题（题注）。
 
-## 语法
-
-```javascript
-expression.GetTableTitle();
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle.md).
 
 ## 示例
 
@@ -39,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
+

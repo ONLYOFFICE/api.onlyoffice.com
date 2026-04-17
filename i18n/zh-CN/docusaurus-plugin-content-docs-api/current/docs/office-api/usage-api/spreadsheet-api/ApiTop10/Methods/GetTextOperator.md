@@ -2,21 +2,7 @@
 
 返回基于文本的条件格式规则的文本运算符。
 
-## 语法
-
-```javascript
-expression.GetTextOperator();
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlContainsOperator](../../Enumeration/XlContainsOperator.md) \| null
+Inherited from [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Methods/GetTextOperator.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let textOperator = condition1.GetTextOperator();
 
 worksheet.GetRange("C1").SetValue("Text operator:");
 worksheet.GetRange("C2").SetValue(textOperator ? textOperator : "None");
-
 ```
+

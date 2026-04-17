@@ -42,3 +42,4 @@ let allParas = richContent.GetContent();
 
 console.log(`Rich content has ${allParas.length} paragraphs`);
 ```
+

@@ -50,5 +50,5 @@ paragraph.AddDrawing(image);
 blockLvlSdt.AddElement(paragraph, 0);
 doc.AddElement(0, blockLvlSdt);
 blockLvlSdt.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
-
 ```
+

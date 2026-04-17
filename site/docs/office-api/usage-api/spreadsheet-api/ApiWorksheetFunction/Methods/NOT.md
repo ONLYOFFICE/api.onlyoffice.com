@@ -36,5 +36,5 @@ let func = Api.WorksheetFunction;
 let ans = func.NOT(condition);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

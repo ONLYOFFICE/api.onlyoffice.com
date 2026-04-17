@@ -34,5 +34,5 @@ const cell = table.GetCell(0, 0);
 const cellContent = cell.GetContent();
 const paragraph = cellContent.GetElement(0);
 paragraph.AddText('This table internal ID: ' + internalId);
-
 ```
+

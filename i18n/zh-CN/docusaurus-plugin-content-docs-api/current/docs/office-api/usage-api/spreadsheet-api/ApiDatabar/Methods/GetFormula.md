@@ -45,5 +45,5 @@ let formula = dataBar.GetFormula();
 
 worksheet.GetRange("C1").SetValue("Formula:");
 worksheet.GetRange("C2").SetValue(formula || "None");
-
 ```
+

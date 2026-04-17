@@ -6,6 +6,8 @@ The function called when the mouse button is released outside the plugin iframe.
 
 This event has no parameters.
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onExternalMouseUp", () => {
     let evt = document.createEvent("MouseEvents");

@@ -40,5 +40,5 @@ const classType = hyperlink.GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Class Type of ApiHyperlink instance is \"' + classType + '\".');
 docContent.Push(paragraph);
-
 ```
+

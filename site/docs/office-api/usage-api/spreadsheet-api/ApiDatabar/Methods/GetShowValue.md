@@ -45,5 +45,5 @@ let showValue = dataBar.GetShowValue();
 
 worksheet.GetRange("C1").SetValue("Show Value:");
 worksheet.GetRange("C2").SetValue(showValue ? "Yes" : "No");
-
 ```
+

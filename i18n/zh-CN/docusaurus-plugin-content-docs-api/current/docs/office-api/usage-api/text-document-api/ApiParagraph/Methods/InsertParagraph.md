@@ -38,3 +38,4 @@ let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText("This paragraph was inserted here.");
 paragraph1.InsertParagraph(paragraph2, "after", true);
 ```
+

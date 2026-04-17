@@ -2,24 +2,7 @@
 
 Establishes automatic field-sorting rules for the pivot table reports.
 
-## Syntax
-
-```javascript
-expression.AutoSort(order, field);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| order | Required | [SortOrder](../../Enumeration/SortOrder.md) |  | The sort order. |
-| field | Required | string |  | The name of the field to sort by (pivotField.SourceName, pivotField.Name, dataField.Name). |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.AutoSort](../../ApiPivotField/Methods/AutoSort.md).
 
 ## Example
 
@@ -90,5 +73,5 @@ pivotWorksheet.GetRange('A15').SetValue(`Product field will be sorted by Units i
 let priorityPivotField = pivotTable.GetPivotFields('Priority');
 priorityPivotField.AutoSort("xlManual", priorityField.Name);
 pivotWorksheet.GetRange('A16').SetValue(`Priority field set to manual sorting mode (${priorityPivotField.AutoSortOrder} - ${priorityPivotField.AutoSortField})`);
-
 ```
+

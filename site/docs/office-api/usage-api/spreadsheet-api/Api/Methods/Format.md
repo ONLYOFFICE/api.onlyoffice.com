@@ -34,3 +34,4 @@ let worksheet = Api.GetActiveSheet();
 let format = Api.Format("123456", "$#,##0");
 worksheet.GetRange("A1").SetValue(format);
 ```
+

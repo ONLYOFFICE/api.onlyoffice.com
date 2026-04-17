@@ -44,5 +44,5 @@ shape.SetPlaceholder(placeholder);
 
 placeholder.SetType("picture");
 slide.AddObject(shape);
-
 ```
+

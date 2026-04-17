@@ -2,21 +2,7 @@
 
 Returns a collection of image objects from the document content.
 
-## Syntax
-
-```javascript
-expression.GetAllImages();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiImage](../../ApiImage/ApiImage.md)[]
+Inherited from [ApiDocumentContent.GetAllImages](../../ApiDocumentContent/Methods/GetAllImages.md).
 
 ## Example
 
@@ -44,5 +30,5 @@ let classType = images[0].GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Class type: ' + classType);
 doc.Push(paragraph);
-
 ```
+

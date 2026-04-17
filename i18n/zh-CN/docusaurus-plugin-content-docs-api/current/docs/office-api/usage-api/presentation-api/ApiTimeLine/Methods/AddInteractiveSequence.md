@@ -67,5 +67,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Click the green button to spin the star!');
 slide.AddObject(infoShape);
-
 ```
+

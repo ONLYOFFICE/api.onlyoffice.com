@@ -2,21 +2,7 @@
 
 返回数据透视表字段的源名称。
 
-## 语法
-
-```javascript
-expression.GetSourceName();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiPivotField.GetSourceName](../../ApiPivotField/Methods/GetSourceName.md).
 
 ## 示例
 
@@ -71,3 +57,4 @@ pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
 pivotWorksheet.GetRange('A15').SetValue('Source Style field name');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetSourceName());
 ```
+

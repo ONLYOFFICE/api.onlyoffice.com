@@ -42,3 +42,4 @@ paragraph.AddText("Class Type = " + classType);
 docContent.AddElement(0, paragraph);
 drawing.SetVerticalTextAlign("top");
 ```
+

@@ -36,3 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.CONFIDENCE(0.5, 57, 8);
 worksheet.GetRange("B2").SetValue(ans);
 ```
+

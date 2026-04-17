@@ -48,5 +48,5 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```
+

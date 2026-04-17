@@ -48,5 +48,5 @@ subRange2.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
 let subRange3 = parentRange.GetRange("B1", "D2");
 subRange3.SetValue("Sub 3");
 subRange3.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
-
 ```
+

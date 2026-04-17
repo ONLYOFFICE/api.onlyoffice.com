@@ -36,6 +36,5 @@ widgets.forEach(function(widget) {
 });
 let borderColor = widgets[0].GetBorderColor();
 textField.SetValue('Widgets border color is: ' + borderColor.R + ',' + borderColor.G + ',' + borderColor.B);
-
-
 ```
+

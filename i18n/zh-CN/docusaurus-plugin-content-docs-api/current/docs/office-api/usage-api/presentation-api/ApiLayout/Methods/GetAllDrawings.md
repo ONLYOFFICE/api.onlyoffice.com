@@ -43,5 +43,5 @@ layout.AddObject(drawing);
 const drawings = layout.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("picture");
 drawings[0].SetPlaceholder(placeholder);
-
 ```
+

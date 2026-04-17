@@ -33,3 +33,4 @@ paragraph.AddText("This is a new paragraph.");
 let section = paragraph.GetSection();
 section.SetPageSize(7200, 4320);
 ```
+

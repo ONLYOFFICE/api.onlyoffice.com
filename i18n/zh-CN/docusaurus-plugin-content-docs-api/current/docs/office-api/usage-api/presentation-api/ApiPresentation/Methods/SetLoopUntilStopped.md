@@ -41,5 +41,5 @@ paragraph.AddText("Loop until stopped initial value: " + isLooping);
 presentation.SetLoopUntilStopped(true);
 paragraph.AddText("\nLoop until stopped new value: " + presentation.GetLoopUntilStopped());
 slide.AddObject(shape);
-
 ```
+

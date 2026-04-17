@@ -61,3 +61,4 @@ let xml = `<math>
 </math>`;
 doc.AddMathEquation(xml, "mathml");
 ```
+

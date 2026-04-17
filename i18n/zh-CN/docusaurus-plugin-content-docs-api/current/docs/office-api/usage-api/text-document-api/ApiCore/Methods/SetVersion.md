@@ -32,5 +32,5 @@ core.SetVersion("v9.0");
 const version = core.GetVersion();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Version: " + version);
-
 ```
+

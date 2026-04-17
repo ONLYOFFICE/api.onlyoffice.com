@@ -34,5 +34,5 @@ let drawing = worksheet.AddShape("cube", 60 * 36000, 35 * 36000, fill, stroke, 0
 let flip = drawing.GetFlipH();
 worksheet.SetColumnWidth(0, 25);
 worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
-
 ```
+

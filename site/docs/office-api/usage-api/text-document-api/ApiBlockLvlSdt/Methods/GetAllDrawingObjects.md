@@ -39,3 +39,4 @@ doc.AddElement(0, blockLvlSdt);
 let drawingObjects = blockLvlSdt.GetAllDrawingObjects();
 drawingObjects[0].Delete();
 ```
+

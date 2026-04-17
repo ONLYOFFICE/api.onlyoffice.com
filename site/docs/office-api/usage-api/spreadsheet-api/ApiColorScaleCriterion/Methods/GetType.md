@@ -48,5 +48,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Criterion Type:");
     worksheet.GetRange("C2").SetValue(criterionType);
 }
-
 ```
+

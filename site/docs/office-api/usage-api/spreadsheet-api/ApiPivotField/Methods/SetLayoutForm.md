@@ -67,3 +67,4 @@ pivotField.SetLayoutForm("Tabular");
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
+

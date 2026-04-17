@@ -2,21 +2,7 @@
 
 Returns the scope type of the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.GetScopeType();
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+Inherited from [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let scopeType = condition1.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
-
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the shading applied to the contents of the paragraph.
 
-## Syntax
-
-```javascript
-expression.GetShd();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiColor](../../ApiColor/ApiColor.md)
+Inherited from [ApiParaPr.GetShd](../../ApiParaPr/Methods/GetShd.md).
 
 ## Example
 
@@ -43,5 +29,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Shade: ');
 paragraph.AddDrawing(drawing);
 doc.Push(paragraph);
-
 ```
+

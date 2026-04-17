@@ -43,5 +43,5 @@ shape2.SetPosition(608400, 1400000);
 layout.AddObject(shape1);
 layout.AddObject(shape2);
 layout.GroupDrawings([shape1, shape2]);
-
 ```
+

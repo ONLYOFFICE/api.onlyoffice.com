@@ -38,5 +38,5 @@ let paragraph = doc.GetElement(0);
     }
     paragraph.AddLineBreak();
 });
-
 ```
+

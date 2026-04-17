@@ -2,21 +2,7 @@
 
 返回段落行距规则。
 
-## 语法
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-"auto" \| "atLeast" \| "exact" \| undefined
+Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md).
 
 ## 示例
 
@@ -51,5 +37,5 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
-
 ```
+

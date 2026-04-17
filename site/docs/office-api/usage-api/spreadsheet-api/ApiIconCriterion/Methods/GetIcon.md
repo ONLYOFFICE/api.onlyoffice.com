@@ -42,5 +42,5 @@ let criteria = iconCondition.GetIconCriteria();
 let firstIcon = criteria[0].GetIcon();
 
 worksheet.GetRange("B1").SetValue("First criterion icon: " + firstIcon);
-
 ```
+

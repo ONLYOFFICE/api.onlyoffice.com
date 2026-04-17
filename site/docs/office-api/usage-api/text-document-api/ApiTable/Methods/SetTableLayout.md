@@ -2,23 +2,7 @@
 
 Specifies the algorithm which will be used to lay out the contents of the current table within the document.
 
-## Syntax
-
-```javascript
-expression.SetTableLayout(sType);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "autofit" \| "fixed" |  | The type of the table layout in the document. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md).
 
 ## Example
 
@@ -43,3 +27,4 @@ let cell = table.GetRow(0).GetCell(0);
 cell.GetContent().GetElement(0).AddText("Fixed layout");
 doc.Push(table);
 ```
+

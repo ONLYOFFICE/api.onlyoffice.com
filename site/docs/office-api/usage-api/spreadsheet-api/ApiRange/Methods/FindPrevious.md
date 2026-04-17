@@ -52,5 +52,5 @@ let nextSearchRange = range.FindNext(searchRange);
 nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 let prevSearchRange = range.FindPrevious(nextSearchRange);
 prevSearchRange.SetValue(0);
-
 ```
+

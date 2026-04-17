@@ -2,21 +2,7 @@
 
 从当前文本属性获取删除线属性。
 
-## 语法
-
-```javascript
-expression.GetStrikeout();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
 
 ## 示例
 
@@ -50,5 +36,5 @@ paragraph = Api.CreateParagraph();
 const strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
-
 ```
+

@@ -3,21 +3,7 @@
 Returns the text properties from the current form.
 *Used if possible for this type of form*
 
-## Syntax
-
-```javascript
-expression.GetTextPr();
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
+Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
 
 ## Example
 
@@ -40,3 +26,4 @@ let formTextPr = textForm.GetTextPr();
 formTextPr.SetItalic(true);
 textForm.SetTextPr(formTextPr);
 ```
+

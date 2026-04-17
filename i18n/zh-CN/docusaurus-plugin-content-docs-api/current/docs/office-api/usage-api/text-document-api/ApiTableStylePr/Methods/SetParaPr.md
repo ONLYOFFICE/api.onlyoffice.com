@@ -50,3 +50,4 @@ paragraph.AddText("This is a paragraph with the text in it aligned by the center
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

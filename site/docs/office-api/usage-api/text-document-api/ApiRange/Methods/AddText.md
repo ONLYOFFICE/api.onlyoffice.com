@@ -37,3 +37,4 @@ let range = doc.GetRange(0, 7);
 range.AddText("ONLYOFFICE ", "before");
 range.AddText(" Builder", "after");
 ```
+

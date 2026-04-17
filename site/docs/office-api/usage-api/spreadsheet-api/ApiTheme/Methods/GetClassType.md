@@ -29,5 +29,5 @@ const classType = theme.GetClassType();
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Theme class type: ' + classType);
-
 ```
+

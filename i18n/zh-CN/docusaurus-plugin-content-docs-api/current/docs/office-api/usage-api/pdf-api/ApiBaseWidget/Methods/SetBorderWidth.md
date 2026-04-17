@@ -38,3 +38,4 @@ widgets.forEach(function(widget) {
     widget.SetBorderWidth('thick');
 });
 ```
+

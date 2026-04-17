@@ -37,3 +37,4 @@ blockLvlSdt.RemoveAllElements();
 let paragraph = doc.GetElement(1);
 paragraph.AddText("All elements were removed from the content control.");
 ```
+

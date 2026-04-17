@@ -47,5 +47,5 @@ const classType = arrComments[0].GetClassType();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's class type: " + classType);
-
 ```
+

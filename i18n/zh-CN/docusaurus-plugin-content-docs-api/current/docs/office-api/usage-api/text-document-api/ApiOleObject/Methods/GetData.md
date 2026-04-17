@@ -40,5 +40,5 @@ let data = oleObject.GetData();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The OLE object data: ' + data);
 doc.Push(paragraph);
-
 ```
+

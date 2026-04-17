@@ -52,5 +52,5 @@ let ans = func.LOGNORMDIST(xValue, mean, standardDeviation);
 
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

@@ -34,3 +34,4 @@ let color = Api.CreateColorByName("peachPuff");
 worksheet.GetRange("A2").SetValue("Text with color");
 worksheet.GetRange("A2").SetFontColor(color);
 ```
+

@@ -31,3 +31,4 @@
 
 paragraph.AddCaption("", "Figure", false, "Arabic", false, undefined, "hyphen");
 ```
+

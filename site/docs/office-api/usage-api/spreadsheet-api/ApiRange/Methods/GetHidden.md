@@ -36,3 +36,4 @@ worksheet.GetRange("C1").SetValue("3");
 let hidden = range.GetHidden();
 worksheet.GetRange("A4").SetValue("The values from A1:C1 are hidden: " + hidden);
 ```
+

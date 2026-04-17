@@ -31,3 +31,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Is this content control a picture? " + isPicture);
 doc.Push(paragraph);
 ```
+

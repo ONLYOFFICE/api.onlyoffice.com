@@ -52,5 +52,5 @@ condition1.SetPriority(5);
 
 worksheet.GetRange("C4").SetValue("New priority:");
 worksheet.GetRange("C5").SetValue(condition1.GetPriority());
-
 ```
+

@@ -37,3 +37,4 @@ drawing.Select();
 let drawings = doc.GetSelectedDrawings();
 drawings[0].SetSize(2 * 914400, 2 * 914400);
 ```
+

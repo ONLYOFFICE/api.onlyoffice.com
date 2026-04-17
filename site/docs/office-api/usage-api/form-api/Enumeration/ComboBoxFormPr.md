@@ -31,5 +31,5 @@ let comboBoxFormPr = {
 	"items": ["Latvia", "USA", "UK"]
 };
 let comboBoxForm = Api.CreateComboBoxForm(comboBoxFormPr);
-
 ```
+

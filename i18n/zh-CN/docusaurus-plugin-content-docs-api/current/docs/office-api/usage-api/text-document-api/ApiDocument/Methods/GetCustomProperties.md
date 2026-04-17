@@ -41,5 +41,5 @@ paragraph.AddText("Custom String Property: " + stringValue);
 paragraph.AddText("\nCustom Number Property: " + numberValue);
 paragraph.AddText("\nCustom Date Property: " + dateValue.toDateString());
 paragraph.AddText("\nCustom Boolean Property: " + boolValue);
-
 ```
+

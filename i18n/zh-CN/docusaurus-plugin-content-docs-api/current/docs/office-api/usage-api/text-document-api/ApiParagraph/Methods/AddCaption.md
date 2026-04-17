@@ -47,5 +47,5 @@ paragraph.AddDrawing(drawing);
 paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
-
 ```
+

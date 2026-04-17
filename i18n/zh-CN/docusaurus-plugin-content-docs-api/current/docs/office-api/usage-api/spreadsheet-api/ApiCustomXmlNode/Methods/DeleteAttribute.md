@@ -42,5 +42,5 @@ bookNode.DeleteAttribute('category');
 const attributes = bookNode.GetAttributes();
 worksheet.GetRange('A1').SetValue('Remaining attributes count: ' + attributes.length);
 worksheet.GetRange('A2').SetValue('XML after deletion: ' + xml.GetXml());
-
 ```
+

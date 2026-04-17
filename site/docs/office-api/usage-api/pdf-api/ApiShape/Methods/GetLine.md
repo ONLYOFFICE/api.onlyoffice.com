@@ -48,5 +48,5 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```
+

@@ -69,3 +69,4 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 ```
+

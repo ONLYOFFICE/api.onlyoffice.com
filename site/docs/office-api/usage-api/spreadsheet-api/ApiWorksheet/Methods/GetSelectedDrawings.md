@@ -44,5 +44,5 @@ let shapes = worksheet.GetSelectedDrawings();
 shapes.forEach(function(shape) {
 	shape.SetRotation(45);
 });
-
 ```
+

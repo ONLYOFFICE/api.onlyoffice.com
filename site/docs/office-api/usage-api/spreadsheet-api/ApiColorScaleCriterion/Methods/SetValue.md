@@ -53,5 +53,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C3").SetValue("After:");
     worksheet.GetRange("C4").SetValue(criteria[1].GetValue() || "No value");
 }
-
 ```
+

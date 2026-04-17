@@ -47,5 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetPlotAreaFill(fill);
 slide.AddObject(chart);
-
 ```
+

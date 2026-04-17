@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例将渐变方向角度设置为 90 度。
@@ -19,3 +17,4 @@ number
 
 let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 ```
+

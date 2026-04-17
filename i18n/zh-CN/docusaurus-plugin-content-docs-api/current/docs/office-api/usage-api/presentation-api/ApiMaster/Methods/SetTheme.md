@@ -77,5 +77,5 @@ chart.SetSeriesFill(fill, 1, false);
 
 slide.RemoveAllObjects();
 slide.AddObject(chart);
-
 ```
+

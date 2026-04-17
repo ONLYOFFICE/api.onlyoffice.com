@@ -33,3 +33,4 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.GCD(28, 16, 878, 800, 1650, 2000));
 ```
+

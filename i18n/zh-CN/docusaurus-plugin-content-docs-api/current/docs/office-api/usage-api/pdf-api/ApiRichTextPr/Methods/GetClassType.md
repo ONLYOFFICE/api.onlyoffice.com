@@ -16,7 +16,7 @@ expression.GetClassType();
 
 ## 返回值
 
-"textPr"
+"richTextPr"
 
 ## 示例
 
@@ -40,3 +40,4 @@ let textPr = run.GetTextPr();
 
 console.log(`Object class type is: ${textPr.GetClassType()}`);
 ```
+

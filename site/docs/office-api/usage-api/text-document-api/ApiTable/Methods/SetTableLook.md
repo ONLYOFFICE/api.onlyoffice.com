@@ -52,3 +52,4 @@ table.SetTableLook(true, true, true, true, true, true);
 tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", Api.HexColor('#FF6F3D'));
 doc.Push(table);
 ```
+

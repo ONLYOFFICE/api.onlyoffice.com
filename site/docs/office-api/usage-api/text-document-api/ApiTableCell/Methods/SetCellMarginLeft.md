@@ -3,23 +3,7 @@
 Specifies an amount of space which will be left between the left extent of the cell contents and 
 the border of a specific table cell within a table.
 
-## Syntax
-
-```javascript
-expression.SetCellMarginLeft(nValue);
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space to the left extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell left margin will be used, otherwise the table cell left margin will be overridden with the specified value for the current cell. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableCellPr.SetCellMarginLeft](../../ApiTableCellPr/Methods/SetCellMarginLeft.md).
 
 ## Example
 
@@ -43,3 +27,4 @@ tableCellPr.SetCellMarginLeft(720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

@@ -48,3 +48,4 @@ drawing.SetSeriesFill(fill, 1, false);
 let drawings = worksheet.GetAllDrawings();
 drawings[0].SetSize(150 * 36000, 100 * 36000);
 ```
+

@@ -67,5 +67,5 @@ const copyFormatScheme = formatScheme.Copy();
 copyFormatScheme.ChangeBgFillStyles([newBgFill1, newBgFill2, newBgFill3]);
 const theme2 = Api.CreateTheme("Theme 2", master, colorScheme, copyFormatScheme, fontScheme);
 slide.ApplyTheme(theme2);
-
 ```
+

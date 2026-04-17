@@ -42,3 +42,4 @@ paragraph.AddText(", First: " + cmd.GetType() + " at (" + cmd.GetX() + ", " + cm
 shape.SetPosition(1000000, 1000000);
 page.AddObject(shape);
 ```
+

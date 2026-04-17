@@ -45,5 +45,5 @@ let minPointType = dataBar.GetMinPointType();
 
 worksheet.GetRange("C1").SetValue("Min Point Type:");
 worksheet.GetRange("C2").SetValue(minPointType);
-
 ```
+

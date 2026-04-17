@@ -59,5 +59,5 @@ for (let i = 0; i < comments.length; i++) {
 slide.RemoveAllObjects();
 shape.SetPosition(posX, posY);
 slide.AddObject(shape);
-
 ```
+

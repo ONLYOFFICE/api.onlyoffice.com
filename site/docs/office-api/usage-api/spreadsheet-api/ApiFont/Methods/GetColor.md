@@ -39,3 +39,4 @@ characters = range.GetCharacters(16, 6);
 font = characters.GetFont();
 font.SetColor(color);
 ```
+

@@ -8,6 +8,8 @@ The function called when the user clicks an annotation.
 | --------- | ------------- | ----------- |
 | annotation | TextAnnotation | The annotation that was clicked. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onClickAnnotation", (data) => {
     console.log("event: onClickAnnotation");

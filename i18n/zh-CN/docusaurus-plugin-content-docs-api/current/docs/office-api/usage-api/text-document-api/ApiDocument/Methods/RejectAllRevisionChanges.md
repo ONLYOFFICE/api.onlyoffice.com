@@ -43,3 +43,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("All revision changes in this document were rejected.");
 doc.Push(paragraph);
 ```
+

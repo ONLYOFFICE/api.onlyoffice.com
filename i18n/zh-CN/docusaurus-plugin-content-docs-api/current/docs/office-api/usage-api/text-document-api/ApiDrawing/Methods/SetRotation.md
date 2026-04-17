@@ -40,3 +40,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
 docContent.AddElement(0, paragraph);
 ```
+

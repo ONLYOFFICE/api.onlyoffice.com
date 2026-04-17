@@ -31,5 +31,5 @@ page.AddObject(textField);
 
 textField.SetCharLimit(20);
 textField.SetValue('Char limit is: ' + textField.GetCharLimit());
-
 ```
+

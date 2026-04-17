@@ -46,3 +46,4 @@ chart.SetShowPointDataLabel(1, 0, false, false, true, false);
 chart.SetShowPointDataLabel(1, 1, false, false, true, false);
 chart.SetShowPointDataLabel(1, 2, false, false, true, false);
 ```
+

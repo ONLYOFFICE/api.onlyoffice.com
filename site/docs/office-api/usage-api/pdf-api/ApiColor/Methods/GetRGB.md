@@ -40,5 +40,5 @@ run.SetFontSize(30);
 run.AddText('RGB of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```
+

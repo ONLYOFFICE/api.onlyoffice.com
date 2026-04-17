@@ -35,3 +35,4 @@ let page = doc.GetPage(0);
 page.AddObject(polygonAnnot);
 console.log(`We set vertices to polygon annotation`);
 ```
+

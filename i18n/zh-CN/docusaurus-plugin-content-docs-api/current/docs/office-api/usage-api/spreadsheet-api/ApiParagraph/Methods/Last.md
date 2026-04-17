@@ -45,5 +45,5 @@ paragraph.AddElement(run2);
 
 const last = paragraph.Last();
 worksheet.GetRange('A1').SetValue('Last element text: ' + last.GetText());
-
 ```
+

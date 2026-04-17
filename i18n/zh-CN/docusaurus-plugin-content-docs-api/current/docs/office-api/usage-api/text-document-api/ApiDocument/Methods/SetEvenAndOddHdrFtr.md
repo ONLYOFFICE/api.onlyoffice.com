@@ -68,5 +68,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is section #4 of the document. ");
 paragraph.AddText("It has a header and a footer for even pages.");
 doc.Push(paragraph);
-
 ```
+

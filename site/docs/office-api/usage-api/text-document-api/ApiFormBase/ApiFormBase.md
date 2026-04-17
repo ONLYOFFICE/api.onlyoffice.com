@@ -2,7 +2,6 @@
 
 Represents the ApiFormBase class.
 
-
 ## Methods
 
 | Method | Returns | Description |

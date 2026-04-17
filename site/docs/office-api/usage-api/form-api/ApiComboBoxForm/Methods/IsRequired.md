@@ -2,21 +2,7 @@
 
 Checks if the current form is required.
 
-## Syntax
-
-```javascript
-expression.IsRequired();
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md).
 
 ## Example
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
+

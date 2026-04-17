@@ -46,5 +46,5 @@ doc.InsertTextForm({
 	"placeholderFromSelection": true,
 	"keepSelectedTextInForm": false
 });
-
 ```
+

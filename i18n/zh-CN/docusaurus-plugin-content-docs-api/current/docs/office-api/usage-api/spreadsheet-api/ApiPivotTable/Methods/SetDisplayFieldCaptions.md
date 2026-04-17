@@ -66,3 +66,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Disaply field captions');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetDisplayFieldCaptions());
 ```
+

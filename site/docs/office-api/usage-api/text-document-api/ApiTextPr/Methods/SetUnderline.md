@@ -36,3 +36,4 @@ textPr.SetUnderline(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text underlined with a single line.");
 ```
+

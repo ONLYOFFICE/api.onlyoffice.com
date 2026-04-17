@@ -16,7 +16,7 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"textWidget"
 
 ## 示例
 
@@ -31,3 +31,4 @@ page.AddObject(comboboxField);
 let widgets = comboboxField.GetAllWidgets();
 comboboxField.SetValue(widgets[0].GetClassType());
 ```
+

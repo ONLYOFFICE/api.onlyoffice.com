@@ -36,5 +36,5 @@ page.AddObject(textField);
 
 textField.SetNumberFormat(0, "us", "black-minus", "$", true);
 textField.SetValue('-1000.50');
-
 ```
+

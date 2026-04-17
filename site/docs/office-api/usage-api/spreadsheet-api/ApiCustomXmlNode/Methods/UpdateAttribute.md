@@ -42,5 +42,5 @@ bookNode.UpdateAttribute('category', 'ancient');
 
 const attributes = bookNode.GetAttributes();
 worksheet.GetRange('A1').SetValue('Updated attribute: ' + attributes[0].name + '=' + attributes[0].value);
-
 ```
+

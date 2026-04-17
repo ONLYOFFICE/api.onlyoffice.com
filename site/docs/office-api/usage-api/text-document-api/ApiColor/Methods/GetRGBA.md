@@ -41,5 +41,5 @@ paragraph.AddLineBreak();
 paragraph.AddText('RGBA of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b + ', ' + hexColorRGB.a);
 paragraph.AddLineBreak();
 paragraph.AddText('RGBA for theme colors and auto color are always opaque black; actual color depends on the document theme.');
-
 ```
+

@@ -39,3 +39,4 @@ paragraph.AddText(", Fill: " + path.GetFill() + ", Array: " + paths.length);
 shape.SetPosition(1000000, 1000000);
 slide.AddObject(shape);
 ```
+

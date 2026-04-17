@@ -2,23 +2,7 @@
 
 为当前表单设置键。
 
-## 语法
-
-```javascript
-expression.SetFormKey(sKey);
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sKey | 必需 | string |  | 表单键。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
 ## 示例
 
@@ -39,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
+

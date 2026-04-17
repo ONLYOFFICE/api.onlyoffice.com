@@ -6,8 +6,6 @@ Value from 0 to 100.
 
 number
 
-
-
 ## Example
 
 This example sets the picture position measured in percent inside the current form.
@@ -19,3 +17,4 @@ This example sets the picture position measured in percent inside the current fo
 
 pictureForm.SetPicturePosition(70, 70);
 ```
+

@@ -35,3 +35,4 @@ let func = Api.WorksheetFunction;
 let ans = func.CHISQ_INV_RT(0.4, 10);
 worksheet.GetRange("B2").SetValue(ans);
 ```
+

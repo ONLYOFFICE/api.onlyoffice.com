@@ -39,5 +39,5 @@ let oleObject = Api.CreateOleObject(
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(oleObject);
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
-
 ```
+

@@ -30,5 +30,5 @@ page.AddObject(freeTextAnnot);
 
 let annots = page.GetAllAnnots();
 annots[0].SetPosition({x: 30, y: 30});
-
 ```
+

@@ -2,21 +2,7 @@
 
 Checks if the current form is fixed size.
 
-## Syntax
-
-```javascript
-expression.IsFixed();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md).
 
 ## Example
 
@@ -37,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is fixed: " + fixed);
 doc.Push(paragraph);
 ```
+

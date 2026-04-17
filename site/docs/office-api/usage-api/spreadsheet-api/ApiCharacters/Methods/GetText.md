@@ -34,3 +34,4 @@ let characters = range.GetCharacters(23, 4);
 let text = characters.GetText();
 worksheet.GetRange("B3").SetValue("Text: " + text);
 ```
+

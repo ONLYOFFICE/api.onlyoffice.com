@@ -59,5 +59,5 @@ paragraph.AddText('Effects before delete: ' + countBefore);
 paragraph.AddLineBreak();
 paragraph.AddText('Effects after delete: ' + countAfter);
 slide.AddObject(infoShape);
-
 ```
+

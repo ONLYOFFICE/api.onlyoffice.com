@@ -40,5 +40,5 @@ paragraph.AddDrawing(flippedDrawing);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('The right arrow shape above is flipped vertically.');
 doc.Push(paragraph2);
-
 ```
+

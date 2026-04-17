@@ -2,23 +2,7 @@
 
 Sets the text fill to the current text run.
 
-## Syntax
-
-```javascript
-expression.SetTextFill(oApiFill);
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oApiFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the text color. |
-
-## Returns
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md).
 
 ## Example
 
@@ -48,5 +32,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the black text fill set using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```
+

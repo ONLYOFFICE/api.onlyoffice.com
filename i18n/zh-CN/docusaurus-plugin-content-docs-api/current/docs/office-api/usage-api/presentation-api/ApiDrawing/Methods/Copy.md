@@ -42,5 +42,5 @@ const copyShape = shape.Copy();
 const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
 newSlide.AddObject(copyShape);
-
 ```
+

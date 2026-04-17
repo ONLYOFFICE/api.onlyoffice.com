@@ -40,5 +40,5 @@ let logical3 = 50 < 10;
 let func = Api.WorksheetFunction;
 let ans = func.OR(logical1, logical2, logical3);
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

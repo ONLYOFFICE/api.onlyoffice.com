@@ -77,5 +77,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('First effect moved to position 2');
 slide.AddObject(infoShape);
-
 ```
+

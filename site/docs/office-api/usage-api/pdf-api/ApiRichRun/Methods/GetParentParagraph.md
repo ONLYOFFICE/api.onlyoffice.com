@@ -41,3 +41,4 @@ parentPara.SetJc("center");
 
 console.log(`We got parent paragraph of rich run and set justification to it`);
 ```
+

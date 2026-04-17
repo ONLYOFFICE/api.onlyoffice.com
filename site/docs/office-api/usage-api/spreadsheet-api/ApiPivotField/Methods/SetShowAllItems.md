@@ -67,3 +67,4 @@ pivotField.SetShowAllItems(true);
 pivotWorksheet.GetRange('A12').SetValue('Style get show all items');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetShowAllItems());
 ```
+

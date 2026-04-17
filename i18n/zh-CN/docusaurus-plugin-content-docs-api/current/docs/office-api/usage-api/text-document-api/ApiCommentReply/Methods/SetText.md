@@ -38,3 +38,4 @@ comments[0].AddReply("reply1", "Mark Potato", "uid-2", 0);
 let commentReply = comments[0].GetReply(0);
 commentReply.SetText("new reply");
 ```
+

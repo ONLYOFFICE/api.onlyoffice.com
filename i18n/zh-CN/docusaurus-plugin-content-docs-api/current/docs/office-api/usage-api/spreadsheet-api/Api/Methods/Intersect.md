@@ -36,3 +36,4 @@ let range2 = worksheet.GetRange("B2:B4");
 let range = Api.Intersect(range1, range2);
 range.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
+

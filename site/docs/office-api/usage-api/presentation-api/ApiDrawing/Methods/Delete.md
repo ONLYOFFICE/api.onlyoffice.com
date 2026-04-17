@@ -58,5 +58,5 @@ const docContent = drawing1.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The chart was deleted from this slide.");
-
 ```
+

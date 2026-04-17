@@ -40,3 +40,4 @@ fill = Api.CreateRadialGradientFill([gs1, gs2]);
 copyDrawing.Fill(fill);
 paragraph.AddDrawing(copyDrawing);
 ```
+

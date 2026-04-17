@@ -32,3 +32,4 @@ let width = worksheet.GetRange("A1").GetColumnWidth();
 worksheet.GetRange("A1").SetValue("Width: ");
 worksheet.GetRange("B1").SetValue(width);
 ```
+

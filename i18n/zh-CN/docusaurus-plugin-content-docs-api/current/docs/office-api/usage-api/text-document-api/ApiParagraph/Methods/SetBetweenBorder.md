@@ -2,28 +2,7 @@
 
 指定在具有相同段落边框设置的一组段落中每个段落之间显示的边框。
 
-## 语法
-
-```javascript
-expression.SetBetweenBorder(sType, nSize, nSpace, r, g, b);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 边框样式。 |
-| nSize | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前边框的宽度，以磅的八分之一为单位。 |
-| nSpace | 必需 | [pt](../../Enumeration/pt.md) |  | 用于放置此边框的段落之间的间距偏移量，以磅为单位。 |
-| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
-| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
-| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiParaPr.SetBetweenBorder](../../ApiParaPr/Methods/SetBetweenBorder.md).
 
 ## 示例
 
@@ -55,3 +34,4 @@ paragraph.AddText("No need to add anything additionally to it. ");
 paragraph.AddText("The borders between the paragraphs have already been set.");
 doc.Push(paragraph);
 ```
+

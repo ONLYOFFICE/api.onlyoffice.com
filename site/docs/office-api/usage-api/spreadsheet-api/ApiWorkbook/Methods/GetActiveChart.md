@@ -41,5 +41,5 @@ chart.Select();
 const activeChart = workbook.GetActiveChart();
 
 */
-
 ```
+

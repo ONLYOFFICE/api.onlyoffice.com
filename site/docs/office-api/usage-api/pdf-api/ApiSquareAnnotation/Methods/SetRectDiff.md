@@ -34,3 +34,4 @@ squareAnnot.SetBorderEffectIntensity(1);
 squareAnnot.SetRectDiff([10, 10, 10, 10]);
 console.log(`Annot rect diff is: ${squareAnnot.GetRectDiff()}`);
 ```
+

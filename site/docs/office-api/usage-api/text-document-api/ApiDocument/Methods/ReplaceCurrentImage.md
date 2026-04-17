@@ -40,5 +40,5 @@ let drawing = Api.CreateImage(
 paragraph.AddDrawing(drawing);
 drawing.Select();
 doc.ReplaceCurrentImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png');
-
 ```
+

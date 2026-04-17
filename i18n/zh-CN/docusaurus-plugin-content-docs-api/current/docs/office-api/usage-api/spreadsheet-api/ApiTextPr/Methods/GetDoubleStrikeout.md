@@ -45,3 +45,4 @@ let isDoubleStrikeout = textProps.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + isDoubleStrikeout);
 content.Push(paragraph);
 ```
+

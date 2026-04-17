@@ -274,5 +274,5 @@ let dateField19 = pivotTable19.GetPivotFields('Date');
 dateField19.PivotFilters.Add("xlDateBetween", null, new Date("1 March 2024"), new Date("31 May 2024"), true); // March 1 - May 31, 2024
 
 worksheet.GetRange('U31').SetValue('Test 19: Date Between Mar-May 2024');
-
 ```
+

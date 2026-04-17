@@ -46,5 +46,5 @@ let noFill = Api.CreateNoFill();
 let shape3 = worksheet.AddShape("rect", 50 * 36000, 30 * 36000, noFill, stroke, 3, 0, 2, 2);
 let fill3 = shape3.GetFill();
 worksheet.GetRange("A3").SetValue("No fill type: " + fill3.GetType());
-
 ```
+

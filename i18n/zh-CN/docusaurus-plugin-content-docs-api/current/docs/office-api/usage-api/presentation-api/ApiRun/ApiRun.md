@@ -1,7 +1,6 @@
 # ApiRun
 
-表示 ApiRun 类。
-
+ApiRun is a subclass of [ApiTextPr](../ApiTextPr/ApiTextPr.md).
 
 ## 方法
 

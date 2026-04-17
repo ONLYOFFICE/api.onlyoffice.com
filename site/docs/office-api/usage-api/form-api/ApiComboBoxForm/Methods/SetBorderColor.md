@@ -2,23 +2,7 @@
 
 Sets the border color to the current form.
 
-## Syntax
-
-```javascript
-expression.SetBorderColor(color);
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Optional | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | The border color. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
 ## Example
 
@@ -35,3 +19,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```
+

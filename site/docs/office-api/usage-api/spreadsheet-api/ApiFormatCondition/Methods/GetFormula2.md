@@ -50,5 +50,5 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
-
 ```
+

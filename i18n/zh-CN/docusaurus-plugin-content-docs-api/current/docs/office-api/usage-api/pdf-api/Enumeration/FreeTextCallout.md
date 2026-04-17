@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+array
 
 ## 属性
 
@@ -13,3 +13,4 @@
 | 0 | [Point](../Enumeration/Point.md) | 标注的起点。 |
 | 1 | [Point](../Enumeration/Point.md) | 标注的拐点/弯曲点。 |
 | 2 | [Point](../Enumeration/Point.md) | 附加到文本框的终点。 |
+

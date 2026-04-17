@@ -37,5 +37,5 @@ table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 table.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
-
 ```
+

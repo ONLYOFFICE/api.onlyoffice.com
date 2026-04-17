@@ -52,5 +52,5 @@ condition1.SetScopeType("xlDataFieldScope");
 
 worksheet.GetRange("C4").SetValue("New scope:");
 worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
-
 ```
+

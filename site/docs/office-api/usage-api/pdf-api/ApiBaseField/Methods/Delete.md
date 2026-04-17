@@ -31,5 +31,5 @@ page.AddObject(textField);
 textField.SetValue('Example text');
 textField.AddWidget(0, [10, 40, 160, 60]);
 textField.Delete();
-
 ```
+

@@ -2,21 +2,7 @@
 
 返回光标所在的当前文本域。
 
-## 语法
-
-```javascript
-expression.GetCurrentRun();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiRun](../../ApiRun/ApiRun.md)
+Inherited from [ApiDocumentContent.GetCurrentRun](../../ApiDocumentContent/Methods/GetCurrentRun.md).
 
 ## 示例
 
@@ -41,5 +27,5 @@ currentParagraph.AddElement(newRun);
 
 const currentRun = docContent.GetCurrentRun();
 currentRun.AddText("<CURRENT_RUN />");
-
 ```
+

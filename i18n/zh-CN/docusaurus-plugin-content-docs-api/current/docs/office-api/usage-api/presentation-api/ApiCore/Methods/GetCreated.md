@@ -38,5 +38,5 @@ paragraph.AddText("Created: " + createdDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

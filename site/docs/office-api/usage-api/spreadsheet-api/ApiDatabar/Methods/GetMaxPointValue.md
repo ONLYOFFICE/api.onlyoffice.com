@@ -45,5 +45,5 @@ let maxPointValue = dataBar.GetMaxPointValue();
 
 worksheet.GetRange("C1").SetValue("Max Point Value:");
 worksheet.GetRange("C2").SetValue(maxPointValue || "Auto");
-
 ```
+

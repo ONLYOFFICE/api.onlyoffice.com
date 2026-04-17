@@ -50,5 +50,5 @@ condition1.Delete();
 
 worksheet.GetRange("D1").SetValue("Rules after deletion:");
 worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
-
 ```
+

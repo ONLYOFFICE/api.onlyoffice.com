@@ -54,3 +54,4 @@ let charts = docContent.GetAllCharts();
 stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
 ```
+

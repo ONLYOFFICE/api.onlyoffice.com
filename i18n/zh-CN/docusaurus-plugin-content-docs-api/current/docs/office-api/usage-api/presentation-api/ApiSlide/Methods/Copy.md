@@ -37,5 +37,5 @@ slide.SetBackground(fill);
 
 const copySlide = slide.Copy();
 presentation.AddSlide(copySlide);
-
 ```
+

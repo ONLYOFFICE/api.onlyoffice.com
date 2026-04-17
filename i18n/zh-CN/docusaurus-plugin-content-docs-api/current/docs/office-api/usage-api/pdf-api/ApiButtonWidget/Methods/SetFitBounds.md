@@ -35,3 +35,4 @@ widgets[0].SetLayout('iconTextV');
 widgets[0].SetFitBounds(true);
 widgets[0].SetLabel('Fit bounds is: ' + widgets[0].IsFitBounds());
 ```
+

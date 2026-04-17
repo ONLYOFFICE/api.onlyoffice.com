@@ -46,3 +46,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed paragraph #3, check that out above.");
 content.Push(paragraph);
 ```
+

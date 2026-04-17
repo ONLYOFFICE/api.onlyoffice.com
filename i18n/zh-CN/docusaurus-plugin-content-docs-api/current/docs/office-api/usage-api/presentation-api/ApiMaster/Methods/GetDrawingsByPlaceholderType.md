@@ -36,5 +36,5 @@ const aDrawingsWithPh = master.GetDrawingsByPlaceholderType("title");
 for (let i = 0; i < aDrawingsWithPh.length; i++) {
 	aDrawingsWithPh[i].Delete();
 }
-
 ```
+

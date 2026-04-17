@@ -49,5 +49,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("All objects were removed from this slide before adding this shape.");
 slide.AddObject(shape);
-
 ```
+

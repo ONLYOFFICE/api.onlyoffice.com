@@ -48,5 +48,5 @@ textPr.SetFill(textFill);
 run.AddText("This is a text run with the font color set to black using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```
+

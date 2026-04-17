@@ -53,5 +53,5 @@ condition1.SetFillColor(fillColor);
 
 worksheet.GetRange("C4").SetValue("New color:");
 worksheet.GetRange("C5").SetValue("Yellow background");
-
 ```
+

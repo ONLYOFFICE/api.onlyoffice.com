@@ -51,5 +51,5 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Criteria2 (second condition):");
     worksheet.GetRange("D1").SetValue(filter.GetCriteria2());
 }
-
 ```
+

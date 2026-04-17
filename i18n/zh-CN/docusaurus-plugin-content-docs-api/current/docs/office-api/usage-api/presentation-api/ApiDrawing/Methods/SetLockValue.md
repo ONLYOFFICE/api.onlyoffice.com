@@ -46,5 +46,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 slide.AddObject(shape);
-
 ```
+

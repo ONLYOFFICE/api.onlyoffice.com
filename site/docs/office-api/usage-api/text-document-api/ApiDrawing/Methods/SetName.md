@@ -43,5 +43,5 @@ const nameRun = Api.CreateRun();
 nameRun.AddText(drawing.GetName());
 nameRun.SetBold(true);
 shapeParagraph.AddElement(nameRun);
-
 ```
+

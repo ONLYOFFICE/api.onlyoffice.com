@@ -48,3 +48,4 @@ let ans = func.QUARTILE(array, quart);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
+

@@ -31,5 +31,5 @@ let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 squareAnnot.SetFillColor(Api.RGB(255, 0, 0));
 squareAnnot.SetOpacity(50);
-
 ```
+

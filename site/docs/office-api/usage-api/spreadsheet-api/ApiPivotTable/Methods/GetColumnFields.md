@@ -68,5 +68,5 @@ for (let i = 0; i < pivotFields.length; i += 1) {
     let cell = pivotWorksheet.GetRangeByNumber(8 + i, 1);
     cell.SetValue(pivotFields[i].GetName());
 }
-
 ```
+

@@ -47,5 +47,5 @@ const outDoc = outShape.GetDocContent();
 const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(text);
 slide.AddObject(outShape);
-
 ```
+

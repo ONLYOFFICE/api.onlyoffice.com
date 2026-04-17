@@ -52,3 +52,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddElement(element);
 docContent.Push(paragraph);
 ```
+

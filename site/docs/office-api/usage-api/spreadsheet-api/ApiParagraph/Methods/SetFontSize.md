@@ -43,5 +43,5 @@ paragraph.SetFontSize(24);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has the default font size.');
 content.Push(paragraph2);
-
 ```
+

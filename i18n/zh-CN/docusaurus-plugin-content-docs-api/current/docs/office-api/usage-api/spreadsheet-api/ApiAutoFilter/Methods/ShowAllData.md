@@ -56,5 +56,5 @@ autoFilter.ShowAllData();
 worksheet.GetRange("C4").SetValue("ShowAllData() called.");
 worksheet.GetRange("C5").SetValue("Filter drop-down remains on header.");
 worksheet.GetRange("C6").SetValue("All rows in the AutoFilter range are visible.");
-
 ```
+

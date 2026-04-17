@@ -43,5 +43,5 @@ paragraph.SetBold(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not bold.');
 content.Push(paragraph2);
-
 ```
+

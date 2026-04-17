@@ -2,7 +2,6 @@
 
 Represents the ApiCustomXmlNode class.
 
-
 ## Methods
 
 | Method | Returns | Description |

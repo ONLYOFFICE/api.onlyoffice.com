@@ -35,3 +35,4 @@ blockLvlSdt.GetContent().GetElement(0).AddText("The cursor will be placed after 
 doc.AddElement(0, blockLvlSdt);
 blockLvlSdt.MoveCursorOutside(true);
 ```
+

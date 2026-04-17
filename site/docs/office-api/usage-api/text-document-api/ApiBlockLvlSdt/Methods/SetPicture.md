@@ -21,3 +21,4 @@ expression.SetPicture(imageUrl);
 ## Returns
 
 boolean
+

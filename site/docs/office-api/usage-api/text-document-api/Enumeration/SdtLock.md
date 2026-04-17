@@ -25,3 +25,4 @@ This example set the "sdtContentLocked" lock to the current inline text content 
 
 inlineLvlSdt.SetLock("sdtContentLocked");
 ```
+

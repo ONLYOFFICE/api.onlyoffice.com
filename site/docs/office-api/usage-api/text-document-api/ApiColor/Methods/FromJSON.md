@@ -56,5 +56,5 @@ for (let i = 0; i < colors.length; i++) {
 	run.AddText('Restored: ' + restored.GetHex());
 	paragraph.Push(run);
 }
-
 ```
+

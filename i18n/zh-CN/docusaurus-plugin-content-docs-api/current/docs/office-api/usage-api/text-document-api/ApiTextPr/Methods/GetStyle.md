@@ -47,3 +47,4 @@ let style = textPr.GetStyle();
 paragraph.AddText("Style: " + style.GetName());
 doc.Push(paragraph);
 ```
+

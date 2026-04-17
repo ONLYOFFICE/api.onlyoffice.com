@@ -46,5 +46,5 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 docContent.AddElement(paragraph);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```
+

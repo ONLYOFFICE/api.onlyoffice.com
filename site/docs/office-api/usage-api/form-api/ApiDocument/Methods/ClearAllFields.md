@@ -42,3 +42,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("All fields from this document were just cleared.");
 doc.Push(paragraph);
 ```
+

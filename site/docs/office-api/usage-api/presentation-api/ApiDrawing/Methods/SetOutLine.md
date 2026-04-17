@@ -38,5 +38,5 @@ drawing2.SetPosition(608400, 3267200);
 let stroke2 = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
 drawing2.SetOutLine(stroke2);
 slide.AddObject(drawing2);
-
 ```
+

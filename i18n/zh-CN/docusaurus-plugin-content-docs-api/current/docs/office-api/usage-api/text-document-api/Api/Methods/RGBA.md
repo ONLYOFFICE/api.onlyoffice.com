@@ -45,5 +45,5 @@ drawing.SetWrappingStyle('behind');
 const paragraph = doc.GetElement(0);
 paragraph.AddDrawing(drawing);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```
+

@@ -40,5 +40,5 @@ paragraph.AddText("Last modified: " + lastModifiedDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

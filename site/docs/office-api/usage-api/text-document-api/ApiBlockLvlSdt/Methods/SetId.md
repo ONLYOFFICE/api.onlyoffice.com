@@ -35,5 +35,5 @@ let contentControlId = blockLvlSdt.GetId();
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("Id: " + contentControlId);
 doc.Push(paragraph);
-
 ```
+

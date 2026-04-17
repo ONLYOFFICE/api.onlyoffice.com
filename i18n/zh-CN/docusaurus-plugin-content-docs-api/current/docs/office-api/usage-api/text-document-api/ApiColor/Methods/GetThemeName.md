@@ -32,5 +32,5 @@ const themeColor = Api.ThemeColor('accent1');
 paragraph.AddText('Theme name of hexColor: ' + hexColor.GetThemeName());
 paragraph.AddLineBreak();
 paragraph.AddText('Theme name of themeColor: ' + themeColor.GetThemeName());
-
 ```
+

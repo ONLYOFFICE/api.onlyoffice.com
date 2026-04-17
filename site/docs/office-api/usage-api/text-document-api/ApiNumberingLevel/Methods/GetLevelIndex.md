@@ -52,3 +52,4 @@ levelIndex = numLvl1.GetLevelIndex();
 paragraph.AddText("Level index for the element of a child numbered list  = " + levelIndex);
 doc.Push(paragraph);
 ```
+

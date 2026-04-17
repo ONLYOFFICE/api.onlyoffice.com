@@ -60,3 +60,4 @@ let growth = func.GROWTH(data_arrayRange, months_arrayRange);
 // Print the growth result
 worksheet.GetRange("D1").SetValue(growth);
 ```
+

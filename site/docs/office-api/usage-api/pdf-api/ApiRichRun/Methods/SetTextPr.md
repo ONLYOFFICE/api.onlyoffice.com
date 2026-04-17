@@ -46,3 +46,4 @@ run.SetTextPr(textPr);
 
 console.log(`We set rich text properties to rich run object`);
 ```
+

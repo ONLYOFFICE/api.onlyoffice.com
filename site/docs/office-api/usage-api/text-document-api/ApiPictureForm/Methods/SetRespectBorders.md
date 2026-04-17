@@ -40,3 +40,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The borders of the picture form in this document are respected when scaling the image: " + respectBorders);
 doc.Push(paragraph);
 ```
+

@@ -47,5 +47,5 @@ worksheet.GetRange("E2").SetValue(">200");
 let range1 = worksheet.GetRange("A1:C3");
 let range2 = worksheet.GetRange("E1:E2");
 worksheet.GetRange("E4").SetValue(func.DCOUNT(range1, "Sales", range2));
-
 ```
+

@@ -2,21 +2,7 @@
 
 返回段落内容对齐方式。
 
-## 语法
-
-```javascript
-expression.GetJc();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-"left" \| "right" \| "both" \| "center" \| undefined
+Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## 示例
 
@@ -40,3 +26,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + paraJc);
 doc.Push(paragraph);
 ```
+

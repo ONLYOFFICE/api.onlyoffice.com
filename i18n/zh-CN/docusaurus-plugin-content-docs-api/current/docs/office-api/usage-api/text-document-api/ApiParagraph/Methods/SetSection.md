@@ -48,3 +48,4 @@ paragraph.AddText("This is a paragraph in a new section. The properties from the
 doc.Push(paragraph);
 paragraph.SetSection(section);
 ```
+

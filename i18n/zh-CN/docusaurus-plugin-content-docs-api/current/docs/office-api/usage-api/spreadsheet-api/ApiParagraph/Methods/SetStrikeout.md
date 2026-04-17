@@ -43,5 +43,5 @@ paragraph.SetStrikeout(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has no strikeout.');
 content.Push(paragraph2);
-
 ```
+

@@ -38,3 +38,4 @@ range1.SetBold(true);
 let range2 = range1.GetRange(0, 9);
 range2.SetItalic(true);
 ```
+

@@ -3,21 +3,7 @@
 Converts the current form to an inline form.
 *Picture form can't be converted to an inline form, it's always a fixed size object.*
 
-## Syntax
-
-```javascript
-expression.ToInline();
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
 ## Example
 
@@ -46,3 +32,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
 doc.Push(paragraph);
 ```
+

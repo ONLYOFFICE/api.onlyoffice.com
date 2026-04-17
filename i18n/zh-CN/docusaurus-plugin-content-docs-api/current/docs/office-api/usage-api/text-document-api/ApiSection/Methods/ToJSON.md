@@ -42,3 +42,4 @@ let type = sectionFromJSON.GetClassType();
 paragraph.AddLineBreak();
 paragraph.AddText("Class type = " + type);
 ```
+

@@ -47,5 +47,5 @@ content.GetElement(0).AddText("This is a block text content control.");
 const para = Api.CreateParagraph();
 para.AddText("This text from DocContent element: " + content.GetText());
 doc.Push(para);
-
 ```
+

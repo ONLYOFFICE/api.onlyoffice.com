@@ -42,5 +42,5 @@ secondRun.AddText('The text uses a bluish color created with HexColor method.');
 const hexColor = Api.HexColor('#219ebc');
 secondRun.SetColor(hexColor);
 paragraph.AddElement(secondRun);
-
 ```
+

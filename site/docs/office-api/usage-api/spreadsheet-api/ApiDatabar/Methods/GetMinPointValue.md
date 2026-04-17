@@ -45,5 +45,5 @@ let minPointValue = dataBar.GetMinPointValue();
 
 worksheet.GetRange("C1").SetValue("Min Point Value:");
 worksheet.GetRange("C2").SetValue(minPointValue || "Auto");
-
 ```
+

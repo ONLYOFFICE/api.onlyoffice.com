@@ -32,5 +32,5 @@ string
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LOWER("Day"));
-
 ```
+

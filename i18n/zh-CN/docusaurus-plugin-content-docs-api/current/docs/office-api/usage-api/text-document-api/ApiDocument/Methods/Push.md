@@ -2,23 +2,7 @@
 
 推送段落或表格以将其实际添加到文档中。
 
-## 语法
-
-```javascript
-expression.Push(oElement);
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | 必需 | [DocumentElement](../../Enumeration/DocumentElement.md) |  | 将推送到文档的元素类型。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiDocumentContent.Push](../../ApiDocumentContent/Methods/Push.md).
 
 ## 示例
 
@@ -42,3 +26,4 @@ paragraph.SetJc("left");
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.Push(paragraph);
 ```
+

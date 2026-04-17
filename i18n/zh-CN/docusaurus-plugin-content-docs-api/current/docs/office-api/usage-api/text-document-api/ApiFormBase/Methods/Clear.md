@@ -37,3 +37,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);
 ```
+

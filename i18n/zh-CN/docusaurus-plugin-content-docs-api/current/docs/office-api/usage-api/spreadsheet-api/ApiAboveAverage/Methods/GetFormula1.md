@@ -2,21 +2,7 @@
 
 返回当前条件格式规则使用的第一个公式。
 
-## 语法
-
-```javascript
-expression.GetFormula1();
-```
-
-`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormatCondition.GetFormula1](../../ApiFormatCondition/Methods/GetFormula1.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let formula1 = condition1.GetFormula1();
 
 worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
-
 ```
+

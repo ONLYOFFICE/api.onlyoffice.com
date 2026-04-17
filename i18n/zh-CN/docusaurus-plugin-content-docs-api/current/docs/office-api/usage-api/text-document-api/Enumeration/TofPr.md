@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -17,7 +17,6 @@
 | RightAlgn | boolean | 指定是否在图表目录中右对齐页码。 |
 | ShowPageNums | boolean | 指定是否在图表目录中显示页码。 |
 | TofStyle | [TofStyle](../Enumeration/TofStyle.md) | 图表目录样式类型。 |
-
 
 ## 示例
 
@@ -38,5 +37,5 @@ let tofPr = {
 	"TofStyle": "distinctive"
 };
 doc.AddTableOfFigures(tofPr);
-
 ```
+

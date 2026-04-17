@@ -2,21 +2,7 @@
 
 Gets the text spacing from the current text properties measured in twentieths of a point.
 
-## Syntax
-
-```javascript
-expression.GetSpacing();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
 ## Example
 
@@ -51,5 +37,5 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```
+

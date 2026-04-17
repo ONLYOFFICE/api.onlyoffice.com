@@ -50,5 +50,5 @@ paragraph = Api.CreateParagraph();
 const highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 docContent.Push(paragraph);
-
 ```
+

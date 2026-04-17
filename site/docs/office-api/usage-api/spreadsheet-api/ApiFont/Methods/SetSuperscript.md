@@ -36,5 +36,5 @@ range.SetValue("This is just a sample text.");
 const characters = range.GetCharacters(9, 4);
 const font = characters.GetFont();
 font.SetSuperscript(true);
-
 ```
+

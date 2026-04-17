@@ -54,5 +54,5 @@ const spacingBefore = paraPr.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
-
 ```
+

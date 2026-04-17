@@ -35,3 +35,4 @@ let pageOrientation = worksheet.GetPageOrientation();
 worksheet.GetRange("A1").SetValue("Page orientation: ");
 worksheet.GetRange("C1").SetValue(pageOrientation);
 ```
+

@@ -46,5 +46,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```
+

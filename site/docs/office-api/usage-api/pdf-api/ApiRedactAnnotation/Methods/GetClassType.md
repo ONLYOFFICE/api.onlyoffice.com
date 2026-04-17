@@ -29,3 +29,4 @@ let page = doc.GetPage(0);
 page.AddObject(redactAnnot);
 console.log(`Annot class type is: ${redactAnnot.GetClassType()}`);
 ```
+

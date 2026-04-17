@@ -2,23 +2,7 @@
 
 Sets the text value used in text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.SetText(Text);
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Text | Required | string |  | The text value to compare against. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md).
 
 ## Example
 
@@ -52,5 +36,5 @@ condition1.SetText("Grape");
 
 worksheet.GetRange("C4").SetValue("New text:");
 worksheet.GetRange("C5").SetValue(condition1.GetText());
-
 ```
+

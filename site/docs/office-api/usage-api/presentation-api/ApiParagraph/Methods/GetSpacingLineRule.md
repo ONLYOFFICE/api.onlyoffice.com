@@ -2,21 +2,7 @@
 
 Returns the paragraph line spacing rule.
 
-## Syntax
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"auto" \| "atLeast" \| "exact" \| undefined
+Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md).
 
 ## Example
 
@@ -52,5 +38,5 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
-
 ```
+

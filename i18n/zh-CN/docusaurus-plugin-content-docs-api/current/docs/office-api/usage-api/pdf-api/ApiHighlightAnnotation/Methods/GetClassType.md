@@ -29,3 +29,4 @@ let page = doc.GetPage(0);
 page.AddObject(highlightAnnot);
 console.log(`Annot class type is: ${highlightAnnot.GetClassType()}`);
 ```
+

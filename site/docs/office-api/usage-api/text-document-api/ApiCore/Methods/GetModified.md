@@ -30,5 +30,5 @@ core.SetModified(new Date('1990-03-10'));
 const lastModifiedDate = core.GetModified().toDateString();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Last modified: " + lastModifiedDate);
-
 ```
+

@@ -36,5 +36,5 @@ paragraph.AddLineBreak();
 let retrievedStroke = shape.GetLine();
 let dashType = retrievedStroke.GetDashType();
 paragraph.AddText("Dash type: " + (dashType ? dashType : "not set"));
-
 ```
+

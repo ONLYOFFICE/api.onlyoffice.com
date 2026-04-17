@@ -32,5 +32,5 @@ core.SetCreator("John Smith");
 const creator = core.GetCreator();
 const paragraph = doc.GetElement(0);
 paragraph.AddText("Creator: " + creator);
-	
 ```
+

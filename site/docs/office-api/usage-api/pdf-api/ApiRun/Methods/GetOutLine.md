@@ -2,21 +2,7 @@
 
 Gets the text outline from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetOutLine();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiStroke](../../ApiStroke/ApiStroke.md)
+Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
 ## Example
 
@@ -52,5 +38,5 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
-
 ```
+

@@ -36,3 +36,4 @@ let xmlId = xmlPart.GetId();
 let retrievedXml = xmlManager.GetById(xmlId);
 worksheet.GetRange("A1").SetValue("Retrieved XML: " + retrievedXml.GetXml());
 ```
+

@@ -46,5 +46,5 @@ let classType = images[0].GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Class type: ' + classType);
 doc.Push(paragraph);
-
 ```
+

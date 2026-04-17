@@ -41,5 +41,5 @@ paragraph.AddText('Current paragraph text.');
 const currentParagraph = content.GetCurrentParagraph();
 const result = currentParagraph ? currentParagraph.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current paragraph: ' + result);
-
 ```
+

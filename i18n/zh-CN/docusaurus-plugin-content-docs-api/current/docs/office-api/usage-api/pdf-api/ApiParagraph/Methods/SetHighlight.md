@@ -45,5 +45,5 @@ paragraph.AddText("This is just a sample text. ");
 paragraph.SetHighlight("lightGray");
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```
+

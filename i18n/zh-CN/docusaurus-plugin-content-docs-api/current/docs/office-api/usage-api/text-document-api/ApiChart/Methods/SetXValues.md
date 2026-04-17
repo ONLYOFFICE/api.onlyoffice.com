@@ -46,3 +46,4 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 chart.SetXValues([2020, 2021, 2022]);
 ```
+

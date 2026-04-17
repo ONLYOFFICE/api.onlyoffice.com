@@ -2,23 +2,7 @@
 
 指定在使用页面视图呈现文档时，尽可能将当前段落的所有行保持在同一页上。
 
-## 语法
-
-```javascript
-expression.SetKeepLines(isKeepLines);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isKeepLines | 必需 | boolean |  | true 值启用将段落各行保持在同一页上的选项。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiParaPr.SetKeepLines](../../ApiParaPr/Methods/SetKeepLines.md).
 
 ## 示例
 
@@ -51,3 +35,4 @@ for (let i = 0; i < 10; ++i) {
 paragraph.SetStyle(myStyle);
 doc.Push(paragraph);
 ```
+

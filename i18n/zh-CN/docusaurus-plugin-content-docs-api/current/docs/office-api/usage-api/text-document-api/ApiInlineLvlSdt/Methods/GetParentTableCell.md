@@ -43,3 +43,4 @@ cell.AddElement(0, paragraph);
 let parentTableCell = inlineLvlSdt.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
+

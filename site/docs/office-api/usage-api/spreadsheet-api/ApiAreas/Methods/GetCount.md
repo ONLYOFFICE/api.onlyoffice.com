@@ -38,3 +38,4 @@ range.SetValue("The number of ranges in the areas: ");
 range.AutoFit(false, true);
 worksheet.GetRange('B5').SetValue(count);
 ```
+

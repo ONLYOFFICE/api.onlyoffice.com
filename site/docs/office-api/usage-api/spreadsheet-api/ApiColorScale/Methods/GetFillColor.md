@@ -2,21 +2,7 @@
 
 Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null.
 
-## Syntax
-
-```javascript
-expression.GetFillColor();
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
 
 ## Example
 
@@ -48,5 +34,5 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```
+

@@ -35,3 +35,4 @@ paragraph.AddText("The top margin is 2 inches high (" + section.GetPageMarginTop
 paragraph.AddText("The right margin is 1 inch wide (" + section.GetPageMarginRight() + " twentieths of a point). ");
 paragraph.AddText("The bottom margin is 4 inches high (" + section.GetPageMarginBottom() + " twentieths of a point). ");
 ```
+

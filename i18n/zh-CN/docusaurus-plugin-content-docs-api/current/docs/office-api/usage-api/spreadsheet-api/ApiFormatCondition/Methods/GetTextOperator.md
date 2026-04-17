@@ -47,5 +47,5 @@ let textOperator = condition1.GetTextOperator();
 
 worksheet.GetRange("C1").SetValue("Text operator:");
 worksheet.GetRange("C2").SetValue(textOperator ? textOperator : "None");
-
 ```
+

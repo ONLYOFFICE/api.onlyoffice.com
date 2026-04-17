@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether to insert blank rows after each item.
 
-## Syntax
-
-```javascript
-expression.GetLayoutBlankLine();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/GetLayoutBlankLine.md).
 
 ## Example
 
@@ -64,3 +50,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A14').SetValue('Region blank line');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutBlankLine());
 ```
+

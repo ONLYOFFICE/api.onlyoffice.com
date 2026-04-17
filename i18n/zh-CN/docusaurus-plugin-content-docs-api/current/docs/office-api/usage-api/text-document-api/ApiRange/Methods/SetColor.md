@@ -39,5 +39,5 @@ companyRange.SetColor(Api.HexColor('#FF6F3D'));
 const productRange = doc.GetRange(12, 30);
 const themeColor = Api.ThemeColor('accent1');
 productRange.SetColor(themeColor);
-
 ```
+

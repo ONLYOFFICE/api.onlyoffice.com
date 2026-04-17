@@ -34,3 +34,4 @@ worksheet.GetRange("A2").SetValue("Italicized text");
 worksheet.GetRange("A2").SetItalic(true);
 worksheet.GetRange("A3").SetValue("Normal text");
 ```
+

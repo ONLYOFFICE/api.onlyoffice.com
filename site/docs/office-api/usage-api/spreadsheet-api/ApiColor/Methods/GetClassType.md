@@ -34,3 +34,4 @@ worksheet.GetRange("A2").SetFontColor(color);
 let colorClassType = color.GetClassType();
 worksheet.GetRange("A4").SetValue("Class type = " + colorClassType);
 ```
+

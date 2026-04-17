@@ -39,3 +39,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The bookmark was removed from this document.");
 doc.Push(paragraph);
 ```
+

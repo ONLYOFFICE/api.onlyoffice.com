@@ -31,3 +31,4 @@ const page = doc.GetPage(0);
 let drawings = page.RecognizeContent();
 drawings[0].Select();
 ```
+

@@ -38,5 +38,5 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Sample text.');
 
 worksheet.GetRange('A1').SetValue('Paragraph ID: ' + paragraph.GetInternalId());
-
 ```
+

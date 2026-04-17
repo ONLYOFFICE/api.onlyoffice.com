@@ -36,3 +36,4 @@ let para = Api.CreateRichParagraph();
 para.AddText("Example text");
 richContent.Push(para);
 ```
+

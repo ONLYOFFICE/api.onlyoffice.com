@@ -34,5 +34,5 @@ roles.GetAllRoles().forEach(role => {
 });
 let numRoles = roles.GetCount();
 paragraph.AddText("Number of roles: " + numRoles);
-
 ```
+

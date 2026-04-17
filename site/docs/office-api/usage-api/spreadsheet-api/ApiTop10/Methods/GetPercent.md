@@ -41,5 +41,5 @@ let top10Condition = formatConditions.AddTop10();
 
 let isPercent = top10Condition.GetPercent();
 worksheet.GetRange("B1").SetValue("Percentage mode: " + isPercent);
-
 ```
+

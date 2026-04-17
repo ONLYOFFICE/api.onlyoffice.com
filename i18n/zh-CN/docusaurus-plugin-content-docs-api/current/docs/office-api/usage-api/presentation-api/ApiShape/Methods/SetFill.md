@@ -39,5 +39,5 @@ let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddLineBreak();
 paragraph.AddText("Fill changed to red");
-
 ```
+

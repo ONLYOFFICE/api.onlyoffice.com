@@ -50,5 +50,5 @@ dataBar.SetMaxPointValue(500);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMaxPointValue() || "Auto");
-
 ```
+

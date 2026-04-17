@@ -43,3 +43,4 @@ let ans = func.STDEVP(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
+

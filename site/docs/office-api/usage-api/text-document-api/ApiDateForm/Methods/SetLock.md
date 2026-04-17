@@ -2,23 +2,7 @@
 
 Sets the lock state of the current form.
 
-## Syntax
-
-```javascript
-expression.SetLock(isLock);
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isLock | Required | boolean |  | Specifies whether to lock the form (true) or unlock it (false). |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md).
 
 ## Example
 
@@ -38,5 +22,5 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```
+

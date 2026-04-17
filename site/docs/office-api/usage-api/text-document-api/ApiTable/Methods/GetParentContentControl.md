@@ -39,3 +39,4 @@ doc.AddElement(0, blockLvlSdt);
 let parentContentControl = table.GetParentContentControl();
 parentContentControl.SetAlias("№1");
 ```
+

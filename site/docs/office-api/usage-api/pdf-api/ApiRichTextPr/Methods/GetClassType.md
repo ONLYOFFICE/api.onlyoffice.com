@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"textPr"
+"richTextPr"
 
 ## Example
 
@@ -40,3 +40,4 @@ let textPr = run.GetTextPr();
 
 console.log(`Object class type is: ${textPr.GetClassType()}`);
 ```
+

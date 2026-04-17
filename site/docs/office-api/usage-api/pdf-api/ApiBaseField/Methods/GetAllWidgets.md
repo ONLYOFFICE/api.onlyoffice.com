@@ -35,5 +35,5 @@ let rgbColor = Api.RGB(255, 100, 0);
 widgets.forEach(function(widget) {
     widget.SetBorderColor(rgbColor);
 });
-
 ```
+

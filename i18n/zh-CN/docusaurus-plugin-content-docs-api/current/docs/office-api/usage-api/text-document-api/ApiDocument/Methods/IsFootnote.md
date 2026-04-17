@@ -2,21 +2,7 @@
 
 检查当前文档内容是否为脚注。
 
-## 语法
-
-```javascript
-expression.IsFootnote();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiDocumentContent.IsFootnote](../../ApiDocumentContent/Methods/IsFootnote.md).
 
 ## 示例
 
@@ -37,5 +23,5 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
-
 ```
+

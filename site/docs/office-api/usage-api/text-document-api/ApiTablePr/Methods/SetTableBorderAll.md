@@ -42,5 +42,5 @@ tablePr.SetTableBorderAll("single", 32, 0, 51, 51, 51);
 table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
-
 ```
+

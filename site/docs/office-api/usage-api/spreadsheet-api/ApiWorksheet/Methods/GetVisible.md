@@ -33,3 +33,4 @@ let isVisible = worksheet.GetVisible();
 worksheet.GetRange("A1").SetValue("Visible: ");
 worksheet.GetRange("B1").SetValue(isVisible);
 ```
+

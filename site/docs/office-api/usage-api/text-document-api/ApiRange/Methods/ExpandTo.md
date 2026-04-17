@@ -39,3 +39,4 @@ let rangeSecond = doc.GetRange(49, 123);
 let range = rangeFirst.ExpandTo(rangeSecond);
 range.SetItalic(true);
 ```
+

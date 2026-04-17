@@ -35,5 +35,5 @@ const layout = master.GetLayout(0);
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 layout.SetBackground(fill);
 slide.FollowMasterBackground();
-
 ```
+

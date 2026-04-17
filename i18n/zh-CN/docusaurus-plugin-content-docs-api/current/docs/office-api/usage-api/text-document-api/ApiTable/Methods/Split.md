@@ -41,3 +41,4 @@ doc.Push(table);
 let cell = table.GetCell(0, 0);
 table.Split(cell, 2, 2);
 ```
+

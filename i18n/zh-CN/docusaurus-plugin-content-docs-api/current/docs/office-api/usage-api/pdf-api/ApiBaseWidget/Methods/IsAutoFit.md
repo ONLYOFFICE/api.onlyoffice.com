@@ -35,6 +35,5 @@ widgets.forEach(function(widget) {
 });
 let bgColor = widgets[0].GetTextColor();
 textField.SetValue('Widgets text autofit is: ' + widgets[0].IsAutoFit());
-
-
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the text from the current form.
 
-## Syntax
-
-```javascript
-expression.GetText();
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md).
 
 ## Example
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form text: " + text);
 doc.Push(paragraph);
 ```
+

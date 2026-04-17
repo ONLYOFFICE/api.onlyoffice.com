@@ -2,21 +2,7 @@
 
 从文档内容返回绘图对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllDrawingObjects();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[Drawing](../../Enumeration/Drawing.md)[]
+Inherited from [ApiDocumentContent.GetAllDrawingObjects](../../ApiDocumentContent/Methods/GetAllDrawingObjects.md).
 
 ## 示例
 
@@ -54,3 +40,4 @@ let drawings = docContent.GetAllDrawingObjects();
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 drawings[0].Fill(fill);
 ```
+

@@ -45,5 +45,5 @@ run.AddText("This is a text run with the text language set to English (Canada)."
 paragraph.AddElement(run);
 run.SetLanguage("en-CA");
 page.AddObject(shape);
-
 ```
+

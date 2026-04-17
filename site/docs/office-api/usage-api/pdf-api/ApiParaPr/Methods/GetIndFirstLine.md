@@ -52,5 +52,5 @@ const indFirstLine = paraPr.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
-
 ```
+

@@ -37,5 +37,5 @@ let oleObject = worksheet.AddOleObject(
 );
 let data = oleObject.GetData();
 worksheet.GetRange('A1').SetValue('The OLE object data: ' + data);
-
 ```
+

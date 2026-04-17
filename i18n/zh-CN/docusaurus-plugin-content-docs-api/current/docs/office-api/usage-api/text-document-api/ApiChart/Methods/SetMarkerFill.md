@@ -48,3 +48,4 @@ chart.SetMarkerFill(fill, 1, 0, true);
 let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(128, 128, 128)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```
+

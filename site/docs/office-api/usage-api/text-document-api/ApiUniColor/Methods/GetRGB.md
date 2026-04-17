@@ -47,5 +47,5 @@ text += '\nG: ' + rgb.G;
 text += '\nB: ' + rgb.B;
 paragraph.AddText(text);
 doc.Push(paragraph);
-
 ```
+

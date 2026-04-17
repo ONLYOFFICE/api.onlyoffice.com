@@ -48,3 +48,4 @@ let bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 doc.Push(paragraph);
 ```
+

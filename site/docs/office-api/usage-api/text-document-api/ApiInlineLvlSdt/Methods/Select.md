@@ -27,3 +27,4 @@ let doc = Api.GetDocument();
 let checkbox = doc.AddCheckBoxContentControl();
 checkbox.Select();
 ```
+

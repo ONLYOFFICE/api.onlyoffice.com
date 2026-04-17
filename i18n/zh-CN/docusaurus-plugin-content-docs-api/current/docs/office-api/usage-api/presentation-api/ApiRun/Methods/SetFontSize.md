@@ -49,5 +49,5 @@ run.SetFontSize(50);
 run.AddText("This is a text run with the font size set to 25 points (50 half-points).");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

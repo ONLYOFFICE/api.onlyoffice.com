@@ -67,3 +67,4 @@ pivotField.SetLayoutPageBreak(true);
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
+

@@ -51,5 +51,5 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Filter operator:");
     worksheet.GetRange("D1").SetValue(filter.GetOperator());   // or filter.Operator
 }
-
 ```
+

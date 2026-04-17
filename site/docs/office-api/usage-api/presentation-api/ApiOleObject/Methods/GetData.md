@@ -52,5 +52,5 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The OLE object data: ' + data);
 slide.AddObject(drawing);
-
 ```
+

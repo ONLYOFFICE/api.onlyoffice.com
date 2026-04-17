@@ -34,3 +34,4 @@ let worksheet = Api.GetActiveSheet();
 let cells = worksheet.GetCells();
 cells.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
+

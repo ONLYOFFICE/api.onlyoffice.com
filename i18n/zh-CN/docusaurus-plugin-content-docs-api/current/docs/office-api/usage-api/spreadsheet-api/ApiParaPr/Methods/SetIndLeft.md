@@ -41,3 +41,4 @@ paragraph.AddText("This is the first paragraph with the indent of 2 inches set t
 paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 ```
+

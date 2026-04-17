@@ -38,5 +38,5 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 cell.SetCellBorderTop(2, fill);
 
 page.AddObject(table);
-
 ```
+

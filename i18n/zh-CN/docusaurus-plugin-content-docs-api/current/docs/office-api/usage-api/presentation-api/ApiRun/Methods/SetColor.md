@@ -49,5 +49,5 @@ run.AddText('This is a text run with the font color set to light blue.');
 paragraph.AddElement(run);
 run.SetColor(Api.HexColor('#aad3ff'));
 slide.AddObject(shape);
-
 ```
+

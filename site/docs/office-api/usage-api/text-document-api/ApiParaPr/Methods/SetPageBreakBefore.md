@@ -43,3 +43,4 @@ paragraph.AddText("This is the second paragraph and it has page break before it 
 paragraph.SetStyle(myStyle);
 doc.Push(paragraph);
 ```
+

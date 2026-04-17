@@ -2,23 +2,7 @@
 
 Removes a form and its content. If keepContent is true, the content is not deleted.
 
-## Syntax
-
-```javascript
-expression.Delete(keepContent);
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| keepContent | Required | boolean |  | Specifies if the content will be deleted or not. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.Delete](../../ApiFormBase/Methods/Delete.md).
 
 ## Example
 
@@ -41,3 +25,4 @@ paragraph.AddElement(copyCheckBoxForm);
 paragraph.AddText(' Single');
 checkBoxForm.Delete();
 ```
+

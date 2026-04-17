@@ -28,5 +28,5 @@ const color = Api.AutoColor();
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This text is in auto color.');
 paragraph.SetColor(color);
-
 ```
+

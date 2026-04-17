@@ -36,3 +36,4 @@ font.SetItalic(true);
 let isItalic = font.GetItalic();
 worksheet.GetRange("B3").SetValue("Italic property: " + isItalic);
 ```
+

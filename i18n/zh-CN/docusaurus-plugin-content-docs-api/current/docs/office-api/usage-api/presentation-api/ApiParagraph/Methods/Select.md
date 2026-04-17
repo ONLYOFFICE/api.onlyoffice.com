@@ -37,5 +37,5 @@ paragraph.AddText('This paragraph will be selected.');
 slide.AddObject(shape);
 
 paragraph.Select();
-
 ```
+

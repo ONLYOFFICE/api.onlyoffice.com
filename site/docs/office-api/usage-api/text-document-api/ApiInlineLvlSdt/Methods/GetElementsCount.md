@@ -49,3 +49,4 @@ inlineLvlSdtCount = inlineLvlSdt.GetElementsCount();
 paragraph.AddLineBreak();
 paragraph.AddText("Number of elements in inlineLvlSdt (after adding one more element) = " + inlineLvlSdtCount);
 ```
+

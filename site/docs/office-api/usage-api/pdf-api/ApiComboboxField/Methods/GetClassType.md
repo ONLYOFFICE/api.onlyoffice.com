@@ -30,3 +30,4 @@ page.AddObject(comboboxField);
 
 comboboxField.SetValue('Field type is: ' + comboboxField.GetClassType());
 ```
+

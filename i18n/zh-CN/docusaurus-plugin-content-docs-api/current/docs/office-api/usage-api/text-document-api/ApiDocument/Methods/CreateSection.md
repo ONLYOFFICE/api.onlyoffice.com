@@ -46,3 +46,4 @@ paragraph.SetSpacingAfter(360);
 paragraph.AddText("This is a paragraph in a new section");
 doc.Push(paragraph);
 ```
+

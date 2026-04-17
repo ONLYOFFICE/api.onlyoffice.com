@@ -39,5 +39,5 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText('This text is in same orange color, but created using HexColor method.');
 secondParagraph.SetColor(color);
 doc.Push(secondParagraph);
-
 ```
+

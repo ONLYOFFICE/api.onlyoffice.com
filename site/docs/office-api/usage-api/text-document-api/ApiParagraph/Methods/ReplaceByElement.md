@@ -36,3 +36,4 @@ let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("The paragraph was replaced with the current content control.");
 paragraph.ReplaceByElement(blockLvlSdt);
 ```
+

@@ -38,3 +38,4 @@ let range = worksheet.GetRange("A1:A2");
 range.Select();
 Api.ReplaceTextSmart(["Cell 1", "Cell 2"]);
 ```
+

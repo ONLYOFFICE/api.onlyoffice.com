@@ -2,21 +2,7 @@
 
 返回当前格式条件应用的字体。
 
-## 语法
-
-```javascript
-expression.GetFont();
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
 
 ## 示例
 
@@ -52,5 +38,5 @@ if (font) {
 worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
-
 ```
+

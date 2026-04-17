@@ -34,6 +34,5 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.TINV(0.5, 10);
 worksheet.GetRange("B2").SetValue(result);
-
-
 ```
+

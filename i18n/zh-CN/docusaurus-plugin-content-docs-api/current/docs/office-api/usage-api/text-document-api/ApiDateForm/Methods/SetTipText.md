@@ -2,23 +2,7 @@
 
 设置当前表单的提示文本。
 
-## 语法
-
-```javascript
-expression.SetTipText(sText);
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | 必需 | string |  | 提示文本。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md).
 
 ## 示例
 
@@ -39,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Tip text: " + tipText);
 doc.Push(paragraph);
 ```
+

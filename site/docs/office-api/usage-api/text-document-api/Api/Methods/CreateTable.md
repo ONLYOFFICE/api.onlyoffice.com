@@ -35,3 +35,4 @@ let table = Api.CreateTable(3, 3);
 doc.Push(table);
 table.SetWidth("percent", 100);
 ```
+

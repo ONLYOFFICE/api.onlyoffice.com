@@ -48,3 +48,4 @@ paragraph.SetJc('left');
 paragraph.AddText('Class Type = ' + classType);
 page.AddObject(shape);
 ```
+

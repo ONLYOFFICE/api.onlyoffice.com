@@ -46,5 +46,5 @@ const oleObject = Api.CreateOleObject(
 oleObject.SetSize(200 * 36000, 130 * 36000);
 oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
-
 ```
+

@@ -38,3 +38,4 @@ doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample text.");
 table.SetHAlign("center");
 ```
+

@@ -34,3 +34,4 @@ let userInfo = protectedRange.GetUser("userId");
 let userType = userInfo.GetType();
 worksheet.GetRange("A3").SetValue("Type: " + userType);
 ```
+

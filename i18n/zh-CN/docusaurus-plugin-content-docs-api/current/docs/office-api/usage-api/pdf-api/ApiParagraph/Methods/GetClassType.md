@@ -41,5 +41,5 @@ const paragraph = docContent.GetElement(0);
 const classType = paragraph.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```
+

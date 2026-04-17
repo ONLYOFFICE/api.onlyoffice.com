@@ -48,6 +48,5 @@ const chartTitle = chart.GetTitle();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Chart Title: ' + chartTitle);
 doc.Push(paragraph);
-
-
 ```
+

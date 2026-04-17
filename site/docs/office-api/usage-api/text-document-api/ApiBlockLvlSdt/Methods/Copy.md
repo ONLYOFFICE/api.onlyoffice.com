@@ -36,3 +36,4 @@ paragraph.AddText("This is an block level content control.");
 doc.Push(blockLvlSdt);
 doc.Push(blockLvlSdt.Copy());
 ```
+

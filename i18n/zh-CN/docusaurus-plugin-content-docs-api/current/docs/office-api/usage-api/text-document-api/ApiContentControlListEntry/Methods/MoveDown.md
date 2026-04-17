@@ -30,5 +30,5 @@ let listItem = contentControlList.GetItem(0);
 listItem.MoveDown();
 let paragraph = doc.GetElement(0);
 paragraph.Push(cc);
-
 ```
+

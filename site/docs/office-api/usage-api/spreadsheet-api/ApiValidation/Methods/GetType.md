@@ -33,5 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let validationType = validation.GetType();
 worksheet.GetRange("B1").SetValue("Validation type: " + validationType);
-
 ```
+

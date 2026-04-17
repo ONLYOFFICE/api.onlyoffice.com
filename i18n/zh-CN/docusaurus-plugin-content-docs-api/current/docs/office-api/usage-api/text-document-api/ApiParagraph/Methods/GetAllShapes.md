@@ -41,3 +41,4 @@ let drawings = paragraph.GetAllShapes();
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 drawings[1].Fill(fill);
 ```
+

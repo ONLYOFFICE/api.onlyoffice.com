@@ -38,6 +38,5 @@ para1.AddText(" jumps over the lazy dog");
 run.MoveCursorToPos(1);
 
 doc.ReplaceCurrentWord("fox");
-
-
 ```
+

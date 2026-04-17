@@ -39,3 +39,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing height: " + height);
 page.AddObject(shape);
 ```
+

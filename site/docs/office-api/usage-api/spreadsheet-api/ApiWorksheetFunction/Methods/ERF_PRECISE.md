@@ -33,3 +33,4 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ERF_PRECISE(0.745));
 ```
+

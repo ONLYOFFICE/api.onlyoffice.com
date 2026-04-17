@@ -37,3 +37,4 @@ let range = doc.GetRange(0, 28);
 let paragraphs = range.GetAllParagraphs();
 paragraphs[0].SetBold("true");
 ```
+

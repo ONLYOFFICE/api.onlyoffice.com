@@ -39,5 +39,5 @@ color = inlineLvlSdt.GetBorderColor();
 run.AddText("BorderColor: " + (color ? color.GetHex() : "none"));
 inlineLvlSdt.AddElement(run, 0);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```
+

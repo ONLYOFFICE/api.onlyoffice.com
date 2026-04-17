@@ -62,3 +62,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotField.GetParent().AddDataField('Region');
 ```
+

@@ -2,21 +2,7 @@
 
 返回表格说明。
 
-## 语法
-
-```javascript
-expression.GetTableDescription();
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTableDescription.md).
 
 ## 示例
 
@@ -39,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
+

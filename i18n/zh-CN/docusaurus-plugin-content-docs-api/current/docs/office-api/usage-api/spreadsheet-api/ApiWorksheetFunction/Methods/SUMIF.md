@@ -46,3 +46,4 @@ let func = Api.WorksheetFunction;
 let range = worksheet.GetRange("B2:B4");
 worksheet.GetRange("C4").SetValue(func.SUMIF(range, ">800"));
 ```
+

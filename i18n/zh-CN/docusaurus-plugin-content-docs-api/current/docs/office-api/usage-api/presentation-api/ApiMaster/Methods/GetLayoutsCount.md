@@ -44,5 +44,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Number of layouts = " + layoutsCount);
 slide.AddObject(shape);
-
 ```
+

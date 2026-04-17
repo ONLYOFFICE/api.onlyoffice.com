@@ -34,3 +34,4 @@ let characters = range.GetCharacters(23, 4);
 let parent = characters.GetParent();
 parent.SetBorders("Bottom", "Thick", Api.CreateColorFromRGB(255, 111, 61));
 ```
+

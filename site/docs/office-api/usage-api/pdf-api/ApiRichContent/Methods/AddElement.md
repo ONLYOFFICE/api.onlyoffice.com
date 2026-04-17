@@ -41,3 +41,4 @@ richContent.AddElement(0, para);
 
 console.log(`We added new paragraph to content`);
 ```
+

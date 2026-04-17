@@ -55,5 +55,5 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 slide.AddObject(chart);
-
 ```
+

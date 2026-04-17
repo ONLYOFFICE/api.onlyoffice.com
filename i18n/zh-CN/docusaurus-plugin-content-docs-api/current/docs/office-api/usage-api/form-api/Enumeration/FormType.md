@@ -30,3 +30,4 @@
 
 let formType = textForm.GetFormType();
 ```
+

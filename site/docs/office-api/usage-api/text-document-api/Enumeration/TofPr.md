@@ -18,7 +18,6 @@ Object
 | ShowPageNums | boolean | Specifies whether to show page numbers in the table of figures. |
 | TofStyle | [TofStyle](../Enumeration/TofStyle.md) | The table of figures style type. |
 
-
 ## Example
 
 This example adds a table of figures with the specified properties to the document.
@@ -38,5 +37,5 @@ let tofPr = {
 	"TofStyle": "distinctive"
 };
 doc.AddTableOfFigures(tofPr);
-
 ```
+

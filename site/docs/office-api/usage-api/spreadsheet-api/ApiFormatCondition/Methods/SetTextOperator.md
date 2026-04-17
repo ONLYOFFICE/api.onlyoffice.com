@@ -52,5 +52,5 @@ condition1.SetTextOperator("xlBeginsWith");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetTextOperator() || "None");
-
 ```
+

@@ -15,3 +15,4 @@ Object
 | DateUTC | number | The  comment UTC timestamp. |
 | IsAnswer | boolean | Specifies whether the comment is a response. |
 | QuoteText | string | The quoted text (if available). |
+

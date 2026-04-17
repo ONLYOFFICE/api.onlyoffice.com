@@ -48,5 +48,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Speed is ' + transitionSpeed);
 slide.AddObject(shape);
-
 ```
+

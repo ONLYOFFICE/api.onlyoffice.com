@@ -25,5 +25,5 @@
 
 const imageUrl = 'https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png';
 let blipFill = Api.CreateBlipFill(imageUrl, 'tile');
-
 ```
+

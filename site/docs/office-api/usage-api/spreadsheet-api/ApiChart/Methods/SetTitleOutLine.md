@@ -50,3 +50,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 ```
+

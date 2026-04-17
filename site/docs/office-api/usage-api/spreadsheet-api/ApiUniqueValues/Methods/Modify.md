@@ -2,26 +2,7 @@
 
 Modifies the current format condition with the specified parameters.
 
-## Syntax
-
-```javascript
-expression.Modify(Type, Operator, Formula1, Formula2);
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Type | Optional | [XlFormatConditionType](../../Enumeration/XlFormatConditionType.md) |  | The format condition type. |
-| Operator | Optional | [XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md) |  | The format condition operator. |
-| Formula1 | Optional | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | The first formula. |
-| Formula2 | Optional | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | The second formula. |
-
-## Returns
-
-[ApiFormatCondition](../../ApiFormatCondition/ApiFormatCondition.md) \| null
+Inherited from [ApiFormatCondition.Modify](../../ApiFormatCondition/Methods/Modify.md).
 
 ## Example
 
@@ -55,5 +36,5 @@ condition1.Modify("xlCellValue", "xlGreater", "200");
 
 worksheet.GetRange("C4").SetValue("Modified formula:");
 worksheet.GetRange("C5").SetValue(condition1.Formula1);
-
 ```
+

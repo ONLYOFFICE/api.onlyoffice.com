@@ -37,5 +37,5 @@ let retrievedFill = shape.GetFill();
 if (retrievedFill) {
     paragraph.AddText("Fill type: " + retrievedFill.GetType());
 }
-
 ```
+

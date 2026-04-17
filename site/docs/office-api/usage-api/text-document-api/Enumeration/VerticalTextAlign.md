@@ -24,3 +24,4 @@ In this example the inner text for the created shape will be added aligned verti
 
 drawing.SetVerticalTextAlign("top");
 ```
+

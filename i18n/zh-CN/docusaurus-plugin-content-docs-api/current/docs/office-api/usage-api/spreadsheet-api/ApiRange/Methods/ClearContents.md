@@ -32,5 +32,5 @@ worksheet.GetRange("A1:B1").SetValue("Example text");
 let range = worksheet.GetRange("A1");
 range.ClearContents();
 worksheet.GetRange("A2").SetValue("Result is contents cleared for A1 cell.");
-
 ```
+

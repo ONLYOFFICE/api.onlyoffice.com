@@ -62,3 +62,4 @@ drawing.SetHorPosition("page", 5, true);
 paragraph.AddDrawing(drawing);
 doc.Push(paragraph);
 ```
+

@@ -43,5 +43,5 @@ run.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
 run.AddText('\nIs themeColor a theme color? ' + themeColor.IsThemeColor());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

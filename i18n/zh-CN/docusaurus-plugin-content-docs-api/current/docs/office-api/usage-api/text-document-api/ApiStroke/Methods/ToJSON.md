@@ -37,3 +37,4 @@ let strokeFromJSON = Api.FromJSON(json);
 let drawing = Api.CreateShape("roundRect", 5930900, 395605, fill, strokeFromJSON);
 paragraph.AddDrawing(drawing);
 ```
+

@@ -32,3 +32,4 @@ let textField = Api.CreateTextField([10, 10, 160, 32]);
 page.AddObject(textField);
 textField.SetValue('This is the text field');
 ```
+

@@ -3,23 +3,7 @@
 Returns an object that represents either a single pivot table item (the ApiPivotItem object)
 or a collection of all the visible and hidden items (an array of the ApiPivotItem objects) in the specified field.
 
-## Syntax
-
-```javascript
-expression.GetPivotItems(index);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| index | Optional | number |  | The item index. |
-
-## Returns
-
-[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
+Inherited from [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md).
 
 ## Example
 
@@ -70,3 +54,4 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
 }
 ```
+

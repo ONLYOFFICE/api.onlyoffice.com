@@ -32,5 +32,5 @@ page.AddObject(comboboxField);
 
 comboboxField.SetMask("(999)999-9999");
 comboboxField.SetValue("(123)456-7890");
-
 ```
+

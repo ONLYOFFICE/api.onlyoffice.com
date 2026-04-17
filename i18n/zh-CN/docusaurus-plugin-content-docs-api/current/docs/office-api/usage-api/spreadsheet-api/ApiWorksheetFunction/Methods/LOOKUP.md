@@ -54,3 +54,4 @@ let range1 = worksheet.GetRange("B2:B5");
 let range2 = worksheet.GetRange("C2:C5");
 worksheet.GetRange("F2").SetValue(func.LOOKUP("Ella Tompson", range1, range2));
 ```
+

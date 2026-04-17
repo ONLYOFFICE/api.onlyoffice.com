@@ -2,23 +2,7 @@
 
 设置条件格式规则的优先级值。
 
-## 语法
-
-```javascript
-expression.SetPriority(Priority);
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Priority | 必需 | number |  | 优先级值（从 1 开始）。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md).
 
 ## 示例
 
@@ -52,5 +36,5 @@ condition1.SetPriority(5);
 
 worksheet.GetRange("C4").SetValue("New priority:");
 worksheet.GetRange("C5").SetValue(condition1.GetPriority());
-
 ```
+

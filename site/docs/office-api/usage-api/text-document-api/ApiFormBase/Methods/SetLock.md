@@ -38,5 +38,5 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```
+

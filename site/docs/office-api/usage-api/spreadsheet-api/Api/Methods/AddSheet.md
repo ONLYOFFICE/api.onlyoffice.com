@@ -31,3 +31,4 @@ This example creates a new worksheet.
 
 Api.AddSheet("New sheet");
 ```
+

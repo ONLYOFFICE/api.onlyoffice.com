@@ -52,3 +52,4 @@ let func = Api.WorksheetFunction;
 let letpaResult = func.VARPA(worksheet.GetRange("A1:D4"));
 worksheet.GetRange("D5").SetValue(letpaResult);
 ```
+

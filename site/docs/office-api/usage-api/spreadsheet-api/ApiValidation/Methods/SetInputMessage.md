@@ -36,5 +36,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetInputMessage("Please enter a value greater than 10");
 validation.SetShowInput(true);
 worksheet.GetRange("B1").SetValue("Input message has been set");
-
 ```
+

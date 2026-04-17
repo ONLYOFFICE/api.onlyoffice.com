@@ -51,5 +51,5 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
-
 ```
+

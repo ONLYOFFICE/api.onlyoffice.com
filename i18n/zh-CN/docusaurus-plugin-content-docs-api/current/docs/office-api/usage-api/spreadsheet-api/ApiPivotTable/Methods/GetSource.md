@@ -62,3 +62,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A12').SetValue('Source Range');
 pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetSource().GetAddress(true, true));
 ```
+

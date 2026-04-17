@@ -35,3 +35,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```
+

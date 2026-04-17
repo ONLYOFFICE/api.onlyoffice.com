@@ -34,3 +34,4 @@ worksheet.GetRange("A2").SetFontColor(color);
 let rgbColor = color.GetRGB();
 worksheet.GetRange("A4").SetValue("Cell color in RGB format: " + rgbColor);
 ```
+

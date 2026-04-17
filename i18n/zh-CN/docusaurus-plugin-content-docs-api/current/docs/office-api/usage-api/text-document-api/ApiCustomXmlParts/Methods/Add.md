@@ -32,3 +32,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("New XML part added: " + newXml.GetXml());
 doc.Push(infoParagraph);
 ```
+

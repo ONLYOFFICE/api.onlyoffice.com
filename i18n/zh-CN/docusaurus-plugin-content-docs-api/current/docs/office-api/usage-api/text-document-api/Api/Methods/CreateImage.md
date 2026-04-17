@@ -39,3 +39,4 @@ let image = Api.CreateImage(
 );
 paragraph.AddDrawing(image);
 ```
+

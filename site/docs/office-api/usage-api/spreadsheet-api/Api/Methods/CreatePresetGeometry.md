@@ -39,3 +39,4 @@ worksheet.GetRange("A1").SetValue("Preset Shape Info:");
 worksheet.GetRange("A2").SetValue("Type: " + presetGeometry.GetPreset());
 worksheet.GetRange("A3").SetValue("Is custom: " + presetGeometry.IsCustom());
 ```
+

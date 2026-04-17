@@ -41,5 +41,5 @@ worksheet.ReplaceCurrentImage(
 	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
 	60 * 36000, 60 * 36000
 );
-
 ```
+

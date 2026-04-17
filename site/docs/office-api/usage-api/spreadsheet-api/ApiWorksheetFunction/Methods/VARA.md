@@ -52,3 +52,4 @@ let func = Api.WorksheetFunction;
 let letaResult = func.VARA(worksheet.GetRange("A1:D4"));
 worksheet.GetRange("E6").SetValue(letaResult);
 ```
+

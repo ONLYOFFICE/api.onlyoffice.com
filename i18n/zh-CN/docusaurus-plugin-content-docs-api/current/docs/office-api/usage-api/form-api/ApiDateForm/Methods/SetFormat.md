@@ -39,3 +39,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has format: " + format);
 doc.Push(paragraph);
 ```
+

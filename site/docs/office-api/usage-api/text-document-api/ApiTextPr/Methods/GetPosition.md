@@ -48,3 +48,4 @@ let position = textPr.GetPosition();
 paragraph.AddText("Text position: " + position);
 doc.Push(paragraph);
 ```
+

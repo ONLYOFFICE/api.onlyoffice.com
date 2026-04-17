@@ -8,6 +8,8 @@ The function called to show which content control has been focused.
 | --------- | ------------- | ----------- |
 | control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | Defines the content control that has been focused. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onFocusContentControl", (control) => {
     console.log("event: onFocusContentControl");

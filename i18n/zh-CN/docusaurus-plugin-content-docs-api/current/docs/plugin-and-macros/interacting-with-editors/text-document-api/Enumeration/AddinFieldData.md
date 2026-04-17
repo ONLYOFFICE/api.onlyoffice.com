@@ -2,6 +2,10 @@
 
 加载项字段数据。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -9,11 +13,6 @@
 | Content | string | 字段文本内容。 |
 | FieldId | string | 字段标识符。 |
 | Value | string | 字段值。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 
@@ -21,3 +20,4 @@ Object
 let addinFieldData = {"FieldId": "1", "Value": "Addin №1", "Content": "This is the first addin field"};
 window.Asc.plugin.executeMethod("AddAddinField", [addinFieldData]);
 ```
+

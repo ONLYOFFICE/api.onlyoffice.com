@@ -48,5 +48,5 @@ paragraph.AddText(message);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

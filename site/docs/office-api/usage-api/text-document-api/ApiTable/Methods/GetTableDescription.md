@@ -2,21 +2,7 @@
 
 Returns the table description.
 
-## Syntax
-
-```javascript
-expression.GetTableDescription();
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTableDescription.md).
 
 ## Example
 
@@ -39,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
+

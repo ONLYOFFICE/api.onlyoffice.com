@@ -43,5 +43,5 @@ slide.AddObject(shape);
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```
+

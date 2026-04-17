@@ -46,5 +46,5 @@ const comments = presentation.GetAllComments();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment text: " + comments[0].GetText());
-
 ```
+

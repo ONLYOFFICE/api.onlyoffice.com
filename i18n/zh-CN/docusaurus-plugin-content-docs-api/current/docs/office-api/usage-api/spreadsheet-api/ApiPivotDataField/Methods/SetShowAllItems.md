@@ -2,23 +2,7 @@
 
 设置指定是否显示无数据项的设置。
 
-## 语法
-
-```javascript
-expression.SetShowAllItems(show);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| show | 必需 | boolean |  | 指定是否显示无数据的项。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md).
 
 ## 示例
 
@@ -67,3 +51,4 @@ pivotField.SetShowAllItems(true);
 pivotWorksheet.GetRange('A12').SetValue('Style get show all items');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetShowAllItems());
 ```
+

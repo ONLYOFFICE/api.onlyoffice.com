@@ -41,3 +41,4 @@ doc.Push(table);
 let cell = table.GetCell(0, 0).GetContent().GetElement(0).AddText("Two new rows were added after this cell.");
 table.AddRows(cell, 2, false);
 ```
+

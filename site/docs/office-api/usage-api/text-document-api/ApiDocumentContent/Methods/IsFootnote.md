@@ -37,5 +37,5 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
-
 ```
+

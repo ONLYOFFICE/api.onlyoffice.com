@@ -40,5 +40,5 @@ run.SetFontSize(30);
 run.AddText('Hex: ' + color.GetHex());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

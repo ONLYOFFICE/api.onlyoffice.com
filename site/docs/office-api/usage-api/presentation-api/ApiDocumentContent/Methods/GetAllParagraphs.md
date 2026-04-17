@@ -47,5 +47,5 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```
+

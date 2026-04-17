@@ -1,7 +1,6 @@
 # ApiComplexForm
 
-Represents the ApiComplexForm class.
-
+ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
 

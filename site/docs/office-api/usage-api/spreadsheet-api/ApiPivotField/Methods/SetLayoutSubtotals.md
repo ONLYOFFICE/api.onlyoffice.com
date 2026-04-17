@@ -67,3 +67,4 @@ pivotField.SetLayoutSubtotals(false);
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotals');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotals());
 ```
+

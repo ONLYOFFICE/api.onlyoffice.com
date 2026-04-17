@@ -43,3 +43,4 @@ range.SetValue("The type of the areas parent: ");
 range.AutoFit(false, true);
 worksheet.GetRange('B5').SetValue(type);
 ```
+

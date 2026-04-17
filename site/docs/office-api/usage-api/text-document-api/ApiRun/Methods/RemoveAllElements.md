@@ -39,3 +39,4 @@ run1.RemoveAllElements();
 paragraph.AddLineBreak();
 paragraph.AddText("The sample text №1 was removed from the document.");
 ```
+

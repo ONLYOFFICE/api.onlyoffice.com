@@ -32,3 +32,4 @@ This example shows how to get the ApiRange object that represents all the cells 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRows("1:4").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
+

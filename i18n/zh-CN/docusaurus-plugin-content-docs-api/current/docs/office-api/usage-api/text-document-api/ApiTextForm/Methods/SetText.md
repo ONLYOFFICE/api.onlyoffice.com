@@ -35,3 +35,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetText("John Smith");
 ```
+

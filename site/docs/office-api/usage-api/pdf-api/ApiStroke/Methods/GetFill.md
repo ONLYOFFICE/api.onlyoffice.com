@@ -41,5 +41,5 @@ if (strokeObj) {
         paragraph.AddText("Stroke fill type: " + strokeFill.GetType());
     }
 }
-
 ```
+

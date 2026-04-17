@@ -44,3 +44,4 @@ chart.RemoveSeria(1);
 paragraph.AddLineBreak();
 paragraph.AddText("The Estimated Costs series was removed from the current chart.");
 ```
+

@@ -39,3 +39,4 @@ row = table.GetRow(1);
 row.GetCell(0).GetContent().GetElement(0).AddText("The first row content was cleared.");
 doc.Push(table);
 ```
+

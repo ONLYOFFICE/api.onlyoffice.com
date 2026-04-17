@@ -2,26 +2,7 @@
 
 使用指定的参数修改当前格式条件。
 
-## 语法
-
-```javascript
-expression.Modify(Type, Operator, Formula1, Formula2);
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Type | 可选 | [XlFormatConditionType](../../Enumeration/XlFormatConditionType.md) |  | 格式条件类型。 |
-| Operator | 可选 | [XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md) |  | 格式条件运算符。 |
-| Formula1 | 可选 | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第一个公式。 |
-| Formula2 | 可选 | string \| number \| [ApiRange](../../ApiRange/ApiRange.md) |  | 第二个公式。 |
-
-## 返回值
-
-[ApiFormatCondition](../../ApiFormatCondition/ApiFormatCondition.md) \| null
+Inherited from [ApiFormatCondition.Modify](../../ApiFormatCondition/Methods/Modify.md).
 
 ## 示例
 
@@ -55,5 +36,5 @@ condition1.Modify("xlCellValue", "xlGreater", "200");
 
 worksheet.GetRange("C4").SetValue("Modified formula:");
 worksheet.GetRange("C5").SetValue(condition1.Formula1);
-
 ```
+

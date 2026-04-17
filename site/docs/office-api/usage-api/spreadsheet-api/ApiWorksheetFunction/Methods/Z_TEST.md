@@ -48,3 +48,4 @@ let func = Api.WorksheetFunction;
 let result = func.Z_TEST(data, 4);
 worksheet.GetRange("B1").SetValue(result);
 ```
+

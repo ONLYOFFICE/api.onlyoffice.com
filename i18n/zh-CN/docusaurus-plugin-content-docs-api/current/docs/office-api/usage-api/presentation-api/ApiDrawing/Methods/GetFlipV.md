@@ -41,5 +41,5 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped vertically: " + flip);
-
 ```
+

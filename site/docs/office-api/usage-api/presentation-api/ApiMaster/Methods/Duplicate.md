@@ -50,5 +50,5 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after duplicating: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

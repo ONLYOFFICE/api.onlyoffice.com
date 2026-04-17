@@ -41,5 +41,5 @@ const paragraph = docContent.GetElement(0);
 const currentSlideIndex = presentation.GetCurSlideIndex();
 paragraph.AddText("Current Slide Index = " + currentSlideIndex);
 slide.AddObject(shape);
-
 ```
+

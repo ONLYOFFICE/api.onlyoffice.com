@@ -35,3 +35,4 @@ let footnotesFirstParagraphs = doc.GetFootnotesFirstParagraphs();
 footnotesFirstParagraphs[0].AddText("Footnote 1");
 footnotesFirstParagraphs[0].SetBold(true);
 ```
+

@@ -40,5 +40,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 
 let criteria = iconCondition.GetIconCriteria();
 worksheet.GetRange("B1").SetValue("Number of criteria: " + criteria.length);
-
 ```
+

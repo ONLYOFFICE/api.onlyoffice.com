@@ -35,3 +35,4 @@ doc.AddElement(0, blockLvlSdt);
 let paragraphs = blockLvlSdt.GetAllParagraphs();
 paragraphs[0].SetBold(true);
 ```
+

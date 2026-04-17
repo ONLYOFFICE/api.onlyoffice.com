@@ -30,5 +30,5 @@ let searchRange = range.Find({
 	SearchDirection: "xlNext",
 	MatchCase: true
 });
-
 ```
+

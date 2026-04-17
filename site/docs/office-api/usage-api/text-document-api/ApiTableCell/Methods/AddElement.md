@@ -42,3 +42,4 @@ paragraph.AddText("This is just a sample text in the first cell.");
 let cell = table.GetCell(0, 0);
 cell.AddElement(0, paragraph);
 ```
+

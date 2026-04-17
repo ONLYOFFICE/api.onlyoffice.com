@@ -64,3 +64,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 let dataField = pivotTable.GetDataFields('Sum of Price');
 dataField.SetFunction('Count');
 ```
+

@@ -46,3 +46,4 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 paragraph.AddDrawing(chart);
 ```
+

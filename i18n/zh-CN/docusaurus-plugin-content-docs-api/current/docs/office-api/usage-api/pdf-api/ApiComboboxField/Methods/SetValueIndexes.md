@@ -2,23 +2,7 @@
 
 设置选定值的索引。
 
-## 语法
-
-```javascript
-expression.SetValueIndexes(aIndexes);
-```
-
-`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | 必需 | number[] |  | 选定的索引 |
-
-## 返回值
-
-boolean
+Inherited from [ApiBaseListField.SetValueIndexes](../../ApiBaseListField/Methods/SetValueIndexes.md).
 
 ## 示例
 
@@ -35,3 +19,4 @@ comboboxField.AddOption('Option 2');
 comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 ```
+

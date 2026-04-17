@@ -45,5 +45,5 @@ content.Push(p2);
 
 const paragraphs = content.GetAllParagraphs();
 worksheet.GetRange('A1').SetValue('Paragraph count: ' + paragraphs.length);
-
 ```
+

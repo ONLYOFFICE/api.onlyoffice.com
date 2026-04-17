@@ -37,5 +37,5 @@ let internalId = inlineLvlSdt.GetInternalId();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal Id: " + internalId);
 doc.Push(paragraph);
-
 ```
+

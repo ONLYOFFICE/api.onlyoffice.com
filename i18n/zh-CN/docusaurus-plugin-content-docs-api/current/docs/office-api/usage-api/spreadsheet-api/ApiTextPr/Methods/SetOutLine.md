@@ -44,3 +44,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the gray text outline set using the text properties.");
 paragraph.AddElement(run);
 ```
+

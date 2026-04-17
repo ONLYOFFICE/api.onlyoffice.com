@@ -31,3 +31,4 @@ This example shows how to enter text at the current cursor position.
 let doc = Api.GetDocument();
 doc.EnterText("This is the text in your document.");
 ```
+

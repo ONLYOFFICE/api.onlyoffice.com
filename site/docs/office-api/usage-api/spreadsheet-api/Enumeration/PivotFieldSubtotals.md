@@ -21,3 +21,4 @@ Object
 | Sum | boolean | Specififes whether the SUM function will be used. |
 | Var | boolean | Specififes whether the VAR function will be used. |
 | VarP | boolean | Specififes whether the VAR.P function will be used. |
+

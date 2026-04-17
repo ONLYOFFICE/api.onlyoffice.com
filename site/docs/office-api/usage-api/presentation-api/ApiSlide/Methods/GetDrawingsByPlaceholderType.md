@@ -46,5 +46,5 @@ const drawingsWithPh = slide.GetDrawingsByPlaceholderType("chart");
 for (let i = 0; i < drawingsWithPh.length; i++) {
 	drawingsWithPh[i].Delete();
 }
-
 ```
+

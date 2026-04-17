@@ -32,3 +32,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("There are " + count + " custom XML parts in the document.");
 doc.Push(infoParagraph);
 ```
+

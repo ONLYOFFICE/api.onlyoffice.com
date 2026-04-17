@@ -49,3 +49,4 @@ paragraph.AddText("The tables were added to the paragraph. Table 1 is inline and
 table1.SetWrappingStyle(true);
 table2.SetWrappingStyle(false);
 ```
+

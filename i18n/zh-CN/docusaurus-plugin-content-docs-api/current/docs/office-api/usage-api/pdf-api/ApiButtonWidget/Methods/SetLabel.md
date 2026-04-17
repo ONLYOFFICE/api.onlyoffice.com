@@ -39,3 +39,4 @@ widgets[0].SetLabel('Normal label', 'normal');
 widgets[0].SetLabel('Down label', 'down');
 widgets[0].SetLabel('Hover label', 'hover');
 ```
+

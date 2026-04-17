@@ -2,21 +2,7 @@
 
 Returns the table title (caption).
 
-## Syntax
-
-```javascript
-expression.GetTableTitle();
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle.md).
 
 ## Example
 
@@ -39,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
+

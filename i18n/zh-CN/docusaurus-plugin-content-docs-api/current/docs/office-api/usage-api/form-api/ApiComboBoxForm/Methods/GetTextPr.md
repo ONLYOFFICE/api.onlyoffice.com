@@ -3,21 +3,7 @@
 返回当前表单的文本属性。
 *如果该表单类型支持则使用*
 
-## 语法
-
-```javascript
-expression.GetTextPr();
-```
-
-`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
+Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
 
 ## 示例
 
@@ -40,3 +26,4 @@ let formTextPr = textForm.GetTextPr();
 formTextPr.SetItalic(true);
 textForm.SetTextPr(formTextPr);
 ```
+

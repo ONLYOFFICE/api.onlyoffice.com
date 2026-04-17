@@ -8,6 +8,8 @@ The function called to show which content control has been blurred.
 | --------- | ------------- | ----------- |
 | control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | Defines the content control that has been blurred. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onBlurContentControl", (oPr) => {
     if (oPr && "BankBIC" === oPr["Tag"]) {

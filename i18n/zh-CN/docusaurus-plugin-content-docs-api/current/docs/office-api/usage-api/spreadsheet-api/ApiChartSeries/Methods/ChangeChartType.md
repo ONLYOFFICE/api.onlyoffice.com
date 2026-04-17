@@ -54,3 +54,4 @@ series.ChangeChartType("area");
 seriesType = series.GetChartType();
 worksheet.GetRange("F2").SetValue("New Series Type = " + seriesType);
 ```
+

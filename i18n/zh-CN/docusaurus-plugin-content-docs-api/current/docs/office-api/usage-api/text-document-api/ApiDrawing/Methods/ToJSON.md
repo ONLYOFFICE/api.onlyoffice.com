@@ -41,3 +41,4 @@ let json = drawing.ToJSON(false, true);
 let drawingFromJSON = Api.FromJSON(json);
 paragraph.AddDrawing(drawingFromJSON);
 ```
+

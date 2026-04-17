@@ -2,21 +2,7 @@
 
 返回当前字段的父对象。
 
-## 语法
-
-```javascript
-expression.GetParent();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+Inherited from [ApiPivotField.GetParent](../../ApiPivotField/Methods/GetParent.md).
 
 ## 示例
 
@@ -62,3 +48,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotField.GetParent().AddDataField('Region');
 ```
+

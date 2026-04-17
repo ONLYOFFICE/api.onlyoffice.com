@@ -27,3 +27,4 @@ This example removes the header of the 'title' type from the final document sect
 
 let docContent = finalSection.RemoveHeader("title");
 ```
+

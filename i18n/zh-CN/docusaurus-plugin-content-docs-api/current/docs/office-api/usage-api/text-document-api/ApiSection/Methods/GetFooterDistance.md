@@ -38,3 +38,4 @@ paragraph = footer.GetElement(0);
 paragraph.AddText("This is a page footer. ");
 paragraph.AddText("The distance from the page bottom to the footer is 1 inch (" + section.GetFooterDistance() + " twentieths of a point).");
 ```
+

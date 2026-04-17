@@ -42,3 +42,4 @@ paragraph.AddText("We do not change the style of the paragraph itself. ");
 paragraph.AddText("Only document-wide paragraph styles are applied.");
 doc.Push(paragraph);
 ```
+

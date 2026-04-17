@@ -36,3 +36,4 @@ font.SetSize(18);
 let size = font.GetSize();
 worksheet.GetRange("B3").SetValue("Size property: " + size);
 ```
+

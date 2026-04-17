@@ -2,7 +2,6 @@
 
 Represents the ApiChartSeries class.
 
-
 ## Methods
 
 | Method | Returns | Description |

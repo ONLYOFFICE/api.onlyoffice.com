@@ -39,3 +39,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark URL = " + doc.GetWatermarkSettings().GetImageURL());
 doc.Push(paragraph);
 ```
+

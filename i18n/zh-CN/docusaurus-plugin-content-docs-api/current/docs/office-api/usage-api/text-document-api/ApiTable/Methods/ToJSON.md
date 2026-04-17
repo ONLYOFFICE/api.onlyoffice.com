@@ -43,3 +43,4 @@ tableFromJSON.SetTableBorderInsideH("single", 32, 0, 255, 111, 6);
 tableFromJSON.SetWidth("percent", 100);
 doc.Push(tableFromJSON);
 ```
+

@@ -52,3 +52,4 @@ let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText("Watermark Type = " + watermarkSettings3.GetType());
 doc.Push(paragraph2);
 ```
+

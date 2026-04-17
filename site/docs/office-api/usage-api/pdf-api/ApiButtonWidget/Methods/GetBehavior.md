@@ -33,3 +33,4 @@ widgets[0].SetLayout('iconTextV');
 widgets[0].SetBehavior('outline');
 widgets[0].SetLabel('Behavior is: ' + widgets[0].GetBehavior());
 ```
+

@@ -42,3 +42,4 @@ docContent.Push(paragraph);
 let paragraphs = docContent.GetAllParagraphs();
 paragraphs[0].SetBold(true);
 ```
+

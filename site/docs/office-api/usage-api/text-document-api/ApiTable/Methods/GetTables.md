@@ -41,3 +41,4 @@ let arrTables = table1.GetTables();
 arrTables[0].SetWidth("percent", 50);
 arrTables[1].SetWidth("percent", 30);
 ```
+

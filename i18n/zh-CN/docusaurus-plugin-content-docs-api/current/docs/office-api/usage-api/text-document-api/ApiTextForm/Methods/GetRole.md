@@ -2,21 +2,7 @@
 
 返回当前表单的角色。
 
-## 语法
-
-```javascript
-expression.GetRole();
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
 ## 示例
 
@@ -48,5 +34,5 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```
+

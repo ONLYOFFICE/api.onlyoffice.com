@@ -16,7 +16,7 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"checkboxWidget"
 
 ## 示例
 
@@ -31,3 +31,4 @@ page.AddObject(radiobuttonField);
 let widgets = radiobuttonField.GetAllWidgets();
 console.log('Widget type is: ' + widgets[0].GetClassType());
 ```
+

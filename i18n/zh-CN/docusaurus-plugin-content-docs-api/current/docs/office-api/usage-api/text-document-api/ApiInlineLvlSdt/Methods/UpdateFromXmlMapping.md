@@ -51,3 +51,4 @@ let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText(paragraph.GetText());
 doc.Push(paragraph2);
 ```
+

@@ -36,3 +36,4 @@ let color = Api.CreateColorFromRGB(255, 111, 61);
 worksheet.GetRange("A2").SetValue("Text with color");
 worksheet.GetRange("A2").SetFontColor(color);
 ```
+

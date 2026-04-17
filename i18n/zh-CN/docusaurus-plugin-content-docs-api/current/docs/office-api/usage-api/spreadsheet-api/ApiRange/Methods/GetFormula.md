@@ -35,3 +35,4 @@ range.SetValue("=SUM(B1:C1)");
 let formula = range.GetFormula();
 worksheet.GetRange("A3").SetValue("Formula from cell A1: " + formula);
 ```
+

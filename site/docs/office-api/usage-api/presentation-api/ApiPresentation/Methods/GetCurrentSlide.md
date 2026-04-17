@@ -36,5 +36,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```
+

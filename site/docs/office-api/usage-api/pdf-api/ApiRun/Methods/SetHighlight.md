@@ -44,5 +44,5 @@ run.AddText("This is a text run with the text highlighted with light gray color.
 paragraph.AddElement(run);
 run.SetHighlight("lightGray");
 page.AddObject(shape);
-
 ```
+

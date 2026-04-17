@@ -37,5 +37,5 @@ const posX = shape.GetPosX();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing X position: ' + posX + ' EMU');
-
 ```
+

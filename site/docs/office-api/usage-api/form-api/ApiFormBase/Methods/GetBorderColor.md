@@ -36,5 +36,5 @@ let borderColor = textForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);
-
 ```
+

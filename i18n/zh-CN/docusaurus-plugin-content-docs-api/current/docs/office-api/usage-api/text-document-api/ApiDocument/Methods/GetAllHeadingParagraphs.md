@@ -35,3 +35,4 @@ paragraph.AddText("Heading 1");
 let headingParagraphs = doc.GetAllHeadingParagraphs();
 headingParagraphs[0].SetCaps(true);
 ```
+

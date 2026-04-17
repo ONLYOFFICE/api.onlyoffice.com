@@ -2,23 +2,7 @@
 
 设置指定是否显示分类汇总的设置。
 
-## 语法
-
-```javascript
-expression.SetLayoutSubtotals(show);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| show | 必需 | boolean |  | 指定是否显示分类汇总。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetLayoutSubtotals](../../ApiPivotField/Methods/SetLayoutSubtotals.md).
 
 ## 示例
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutSubtotals(false);
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotals');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotals());
 ```
+

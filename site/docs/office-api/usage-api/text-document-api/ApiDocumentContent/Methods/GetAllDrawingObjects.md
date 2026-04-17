@@ -54,3 +54,4 @@ let drawings = docContent.GetAllDrawingObjects();
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 drawings[0].Fill(fill);
 ```
+

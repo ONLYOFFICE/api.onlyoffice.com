@@ -36,6 +36,5 @@ widgets.forEach(function(widget) {
 });
 let bgColor = widgets[0].GetBackgroundColor();
 textField.SetValue('Widgets background color is: ' + bgColor.R + ',' + bgColor.G + ',' + bgColor.B);
-
-
 ```
+

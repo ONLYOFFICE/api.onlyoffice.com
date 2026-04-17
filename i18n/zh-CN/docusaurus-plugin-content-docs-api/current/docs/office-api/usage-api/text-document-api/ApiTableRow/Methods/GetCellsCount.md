@@ -39,3 +39,4 @@ doc.Push(table);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Number of cells in the first row = " + cellsCount);
 ```
+

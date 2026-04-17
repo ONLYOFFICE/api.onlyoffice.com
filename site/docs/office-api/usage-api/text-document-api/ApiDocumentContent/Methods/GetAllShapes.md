@@ -48,3 +48,4 @@ paragraph.AddText("Class Type = " + classType);
 paragraph.SetColor(Api.HexColor('#333333'));
 shapes[0].SetVerticalTextAlign("bottom");
 ```
+

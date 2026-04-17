@@ -33,5 +33,5 @@ doc.Push(paragraph2);
 
 doc.MoveCursorToStart();
 doc.EnterText('Cursor was moved to the beginning. ');
-
 ```
+

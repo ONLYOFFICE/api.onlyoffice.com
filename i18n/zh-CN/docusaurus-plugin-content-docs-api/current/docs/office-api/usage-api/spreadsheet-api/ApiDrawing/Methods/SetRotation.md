@@ -35,3 +35,4 @@ drawing.SetRotation(90);
 let rotAngle = drawing.GetRotation();
 worksheet.GetRange("A1").SetValue("Drawing rotation angle is set to: " + rotAngle + " degrees");
 ```
+

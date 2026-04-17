@@ -50,5 +50,5 @@ const text = arrComments[0].GetText();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's text: " + text);
-
 ```
+

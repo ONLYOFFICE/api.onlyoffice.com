@@ -51,3 +51,4 @@ window.Asc.plugin.executeMethod("GetDocumentLang", [], function(lang) {
 	}
 });
 ```
+

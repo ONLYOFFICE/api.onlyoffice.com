@@ -51,3 +51,4 @@ shape.GetDocContent().GetElement(0).AddText("Adj value: " + customGeometry.GetAd
 shape.SetPosition(1500000, 1500000);
 slide.AddObject(shape);
 ```
+

@@ -36,3 +36,4 @@ paragraph.AddColumnBreak();
 paragraph.AddText("This is the text which starts from the beginning of the second column. ");
 paragraph.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 ```
+

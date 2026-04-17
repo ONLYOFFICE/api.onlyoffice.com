@@ -40,3 +40,4 @@ stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 copyDrawing.SetOutLine(stroke);
 paragraph.AddDrawing(copyDrawing);
 ```
+

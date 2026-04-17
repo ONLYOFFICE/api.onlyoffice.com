@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(textAnnot);
 console.log(`Text annot icon type is: ${textAnnot.GetIconType()}`);
 ```
+

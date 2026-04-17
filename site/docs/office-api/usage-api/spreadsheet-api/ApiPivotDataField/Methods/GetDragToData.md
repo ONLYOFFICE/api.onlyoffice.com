@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether the specified field can be dragged to the data position.
 
-## Syntax
-
-```javascript
-expression.GetDragToData();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetDragToData](../../ApiPivotField/Methods/GetDragToData.md).
 
 ## Example
 
@@ -64,3 +50,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A13').SetValue('Drag to data');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToData());
 ```
+

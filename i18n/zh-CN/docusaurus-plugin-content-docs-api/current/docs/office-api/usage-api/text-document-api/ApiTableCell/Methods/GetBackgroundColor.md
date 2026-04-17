@@ -38,5 +38,5 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText('This paragraph has the same color as the table cell background: ' + backgroundColor.GetHex());
 paragraph.SetColor(backgroundColor);
 doc.Push(table);
-
 ```
+

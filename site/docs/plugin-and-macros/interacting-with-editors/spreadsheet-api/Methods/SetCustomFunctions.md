@@ -27,3 +27,4 @@ window.Asc.plugin.executeMethod ("SetCustomFunctions", [JSON.stringify (Content)
     window.Asc.plugin.executeCommand ("close", "");
 });
 ```
+

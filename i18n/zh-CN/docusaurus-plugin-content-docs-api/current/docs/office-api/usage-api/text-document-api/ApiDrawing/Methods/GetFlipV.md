@@ -38,5 +38,5 @@ let flip = drawing.GetFlipV();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing is flipped vertically: " + flip);
 doc.AddElement(0, paragraph);
-
 ```
+

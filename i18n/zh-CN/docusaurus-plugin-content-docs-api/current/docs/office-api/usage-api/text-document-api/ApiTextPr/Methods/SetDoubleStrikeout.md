@@ -35,3 +35,4 @@ textPr.SetDoubleStrikeout(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text struck out with two lines using the text properties.");
 ```
+

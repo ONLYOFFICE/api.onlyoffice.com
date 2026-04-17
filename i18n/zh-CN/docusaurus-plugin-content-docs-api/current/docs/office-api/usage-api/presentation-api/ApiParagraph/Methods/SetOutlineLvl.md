@@ -2,23 +2,7 @@
 
 设置指定属性的大纲级别。
 
-## 语法
-
-```javascript
-expression.SetOutlineLvl(nLvl);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLvl | 可选 | Number |  | 大纲级别。可能的值：1-9。如果需要设置无大纲级别，请不带参数使用此方法。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiParaPr.SetOutlineLvl](../../ApiParaPr/Methods/SetOutlineLvl.md).
 
 ## 示例
 
@@ -43,5 +27,5 @@ const paragraph = content.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetOutlineLvl(outlineLvlIndex);
 paragraph.AddText("This is a paragraph with outline level parameter set to " + (outlineLvlIndex + 1));
-
 ```
+

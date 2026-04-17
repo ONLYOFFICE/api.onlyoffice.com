@@ -49,5 +49,5 @@ if (isAdded) {
 }
 
 slide.AddObject(shape);
-
 ```
+

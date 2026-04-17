@@ -39,5 +39,5 @@ const shape = Api.CreateImage(
 	60 * 36000, 60 * 36000
 );
 slide.AddObject(shape);
-
 ```
+

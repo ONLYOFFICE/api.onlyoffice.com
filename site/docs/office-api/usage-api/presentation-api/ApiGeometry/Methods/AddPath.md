@@ -45,3 +45,4 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 slide.AddObject(shape);
 ```
+

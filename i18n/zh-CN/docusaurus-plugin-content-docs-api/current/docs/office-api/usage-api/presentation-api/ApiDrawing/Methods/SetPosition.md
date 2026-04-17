@@ -47,5 +47,5 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```
+

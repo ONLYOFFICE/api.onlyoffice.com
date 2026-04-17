@@ -34,5 +34,5 @@ paragraph.AddText("The cursor was moved to the end of the document");
 doc.Push(paragraph);
 let range = doc.GetRange();
 doc.MoveCursorToPos(range.GetEndPos());
-
 ```
+

@@ -44,5 +44,5 @@ if (isNotesAdded) {
 }
 
 slide.AddObject(shape);
-
 ```
+

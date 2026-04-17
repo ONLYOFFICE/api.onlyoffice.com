@@ -2,21 +2,7 @@
 
 返回当前表单的提示文本。
 
-## 语法
-
-```javascript
-expression.GetTipText();
-```
-
-`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md).
 
 ## 示例
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tip text: " + tipText);
 doc.Push(paragraph);
 ```
+

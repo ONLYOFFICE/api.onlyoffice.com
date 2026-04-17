@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例将渐变停止位置设置为 100%。
@@ -19,3 +17,4 @@ number
 
 let gs = Api.CreateGradientStop(Api.RGB(255, 164, 101), 100000);
 ```
+

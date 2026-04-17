@@ -38,3 +38,4 @@ let paths = geometry.GetPaths();
 paragraph.AddText(", Total paths: " + paths.length);
 paragraph.AddDrawing(shape);
 ```
+

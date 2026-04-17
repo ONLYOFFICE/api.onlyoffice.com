@@ -39,3 +39,4 @@ drawing.SetLockValue("noSelect", true);
 let lockValue = drawing.GetLockValue("noSelect");
 worksheet.GetRange("A1").SetValue("This drawing cannot be selected: " + lockValue);
 ```
+

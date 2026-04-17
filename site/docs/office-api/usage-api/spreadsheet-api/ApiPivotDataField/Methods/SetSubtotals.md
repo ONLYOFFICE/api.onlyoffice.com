@@ -2,23 +2,7 @@
 
 Sets an object that represents all subtotals.
 
-## Syntax
-
-```javascript
-expression.SetSubtotals(subtotals);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| subtotals | Required | [PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md) |  | An object that represents all subtotals or some of them. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetSubtotals](../../ApiPivotField/Methods/SetSubtotals.md).
 
 ## Example
 
@@ -75,3 +59,4 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 ```
+

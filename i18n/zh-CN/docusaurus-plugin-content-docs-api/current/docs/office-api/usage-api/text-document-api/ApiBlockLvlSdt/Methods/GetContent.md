@@ -31,3 +31,4 @@ blockLvlSdt.AddElement(paragraph, 0);
 doc.AddElement(0, blockLvlSdt);
 blockLvlSdt.GetContent().GetElement(1).AddText("This is a content of the container.");
 ```
+

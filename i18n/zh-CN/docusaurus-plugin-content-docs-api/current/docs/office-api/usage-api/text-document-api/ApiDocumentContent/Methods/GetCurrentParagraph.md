@@ -40,5 +40,5 @@ docContent.Push(newParagraph);
 
 const currentParagraph = docContent.GetCurrentParagraph();
 currentParagraph.AddText("(Current paragraph detected!)");
-
 ```
+

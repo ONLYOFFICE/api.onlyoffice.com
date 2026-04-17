@@ -39,5 +39,5 @@ paragraph.AddText(millimeters + ' millimeters are equal to ' + emus + ' emus (va
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```
+

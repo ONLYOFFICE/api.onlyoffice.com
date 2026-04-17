@@ -2,21 +2,7 @@
 
 Returns the paragraph style method.
 
-## Syntax
-
-```javascript
-expression.GetStyle();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+Inherited from [ApiParaPr.GetStyle](../../ApiParaPr/Methods/GetStyle.md).
 
 ## Example
 
@@ -38,3 +24,4 @@ let style = paraPr.GetStyle();
 paragraph.AddLineBreak();
 paragraph.AddText("Style: " + style.GetName());
 ```
+

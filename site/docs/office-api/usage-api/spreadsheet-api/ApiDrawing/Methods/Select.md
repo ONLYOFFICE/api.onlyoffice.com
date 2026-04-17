@@ -44,5 +44,5 @@ let drawing3 = worksheet.AddShape("rect", 60 * 36000, 35 * 36000, fill3, stroke3
 drawing1.Select(true);
 drawing2.Select(true);
 drawing3.Select();
-
 ```
+

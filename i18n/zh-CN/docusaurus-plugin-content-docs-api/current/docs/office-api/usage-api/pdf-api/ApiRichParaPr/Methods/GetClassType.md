@@ -38,3 +38,4 @@ let paraPr = para.GetParaPr();
 
 console.log(`Object class type is: ${paraPr.GetClassType()}`);
 ```
+

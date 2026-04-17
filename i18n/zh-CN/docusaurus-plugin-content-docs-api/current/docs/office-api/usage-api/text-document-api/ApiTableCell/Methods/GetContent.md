@@ -37,3 +37,4 @@ cell.GetContent().GetElement(0).AddText("Cell #1");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

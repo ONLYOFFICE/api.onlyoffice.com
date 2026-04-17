@@ -36,3 +36,4 @@ blockLvlSdt.AddElement(paragraph, 0);
 let parentBlockLvlSdt = paragraph.GetParentContentControl();
 parentBlockLvlSdt.GetRange(0, 3).SetBold(true);
 ```
+

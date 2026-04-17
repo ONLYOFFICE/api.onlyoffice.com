@@ -34,3 +34,4 @@ Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");
 });
 ```
+

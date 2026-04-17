@@ -32,5 +32,5 @@ worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 
 
 const rgba = color.GetRGBA();
 worksheet.GetRange("A12").SetValue("RGBA: " + rgba.r + ", " + rgba.g + ", " + rgba.b + ", " + rgba.a);
-
 ```
+

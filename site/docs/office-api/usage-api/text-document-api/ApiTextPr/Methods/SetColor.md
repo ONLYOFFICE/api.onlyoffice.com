@@ -40,5 +40,5 @@ secondParagraph.AddText('This text is in the same orange color set to the paragr
 const color = Api.RGB(255, 111, 61);
 secondParagraph.GetTextPr().SetColor(color);
 doc.Push(secondParagraph);
-
 ```
+

@@ -51,3 +51,4 @@ window.Asc.plugin.executeMethod ("GetMacros", [JSON.stringify(Content)], functio
     }
 });
 ```
+

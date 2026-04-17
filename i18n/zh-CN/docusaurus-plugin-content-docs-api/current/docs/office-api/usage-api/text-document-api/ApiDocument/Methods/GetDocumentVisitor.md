@@ -2,21 +2,7 @@
 
 返回用于遍历当前文档元素的访问器对象。
 
-## 语法
-
-```javascript
-expression.GetDocumentVisitor();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-ApiDocumentVisitor
+Inherited from [ApiDocumentContent.GetDocumentVisitor](../../ApiDocumentContent/Methods/GetDocumentVisitor.md).
 
 ## 示例
 
@@ -56,5 +42,5 @@ resultParagraph.AddText('Paragraphs found: ' + paragraphCount + ' (including par
 resultParagraph.AddLineBreak();
 resultParagraph.AddText('Tables found: ' + tableCount);
 doc.Push(resultParagraph);
-
 ```
+

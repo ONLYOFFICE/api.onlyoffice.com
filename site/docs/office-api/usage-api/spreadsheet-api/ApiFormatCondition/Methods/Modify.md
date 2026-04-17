@@ -55,5 +55,5 @@ condition1.Modify("xlCellValue", "xlGreater", "200");
 
 worksheet.GetRange("C4").SetValue("Modified formula:");
 worksheet.GetRange("C5").SetValue(condition1.Formula1);
-
 ```
+

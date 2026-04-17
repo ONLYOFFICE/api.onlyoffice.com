@@ -36,5 +36,5 @@ const iconCondition = formatConditions.AddIconSetCondition();
 
 const conditionType = iconCondition.GetType();
 worksheet.GetRange('B1').SetValue('Icon set condition type: ' + conditionType);
-
 ```
+

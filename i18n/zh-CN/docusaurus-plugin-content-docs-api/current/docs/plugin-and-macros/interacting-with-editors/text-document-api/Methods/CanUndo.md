@@ -33,3 +33,4 @@ Asc.plugin.callCommand(addTextToDocument);
 
 Asc.plugin.executeMethod('CanUndo', [], result => console.log('Can undo: ' + result));
 ```
+

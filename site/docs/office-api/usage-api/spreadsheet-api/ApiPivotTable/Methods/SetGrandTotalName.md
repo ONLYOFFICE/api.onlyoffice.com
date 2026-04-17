@@ -68,3 +68,4 @@ pivotWorksheet.GetRange('A11').SetValue('New Grand total name');
 pivotTable.SetGrandTotalName('My GT name');
 pivotWorksheet.GetRange('B11').SetValue(pivotTable.GetGrandTotalName());
 ```
+

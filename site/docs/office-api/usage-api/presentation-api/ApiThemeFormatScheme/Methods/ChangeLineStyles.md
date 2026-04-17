@@ -69,5 +69,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Create a shape by yourself to see the stroke style set to this presentation.");
 slide.AddObject(shape);
-
 ```
+

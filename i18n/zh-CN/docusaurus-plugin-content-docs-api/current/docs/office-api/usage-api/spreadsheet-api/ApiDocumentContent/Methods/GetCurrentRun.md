@@ -42,5 +42,5 @@ run.AddText('Run text.');
 const currentRun = content.GetCurrentRun();
 const result = currentRun ? currentRun.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current run: ' + result);
-
 ```
+

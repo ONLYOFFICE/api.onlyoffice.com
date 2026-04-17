@@ -47,5 +47,5 @@ let ruleType = condition1.GetType();
 
 worksheet.GetRange("C1").SetValue("Rule type:");
 worksheet.GetRange("C2").SetValue(ruleType);
-
 ```
+

@@ -2,21 +2,7 @@
 
 从当前文本属性获取高亮属性。
 
-## 语法
-
-```javascript
-expression.GetHighlight();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md).
 
 ## 示例
 
@@ -50,5 +36,5 @@ paragraph = Api.CreateParagraph();
 const highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 docContent.Push(paragraph);
-
 ```
+

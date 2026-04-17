@@ -32,5 +32,5 @@ const emus = 100;
 const points = Api.EmusToPoints(emus);
 paragraph.AddText(emus + ' emus are equal to ' + points + ' points.');
 doc.Push(paragraph);
-
 ```
+

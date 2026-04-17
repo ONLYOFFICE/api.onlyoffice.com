@@ -35,3 +35,4 @@ let inlineLvlSdt = Api.CreateInlineLvlSdt();
 inlineLvlSdt.AddText("This is an inline text content control.");
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 ```
+

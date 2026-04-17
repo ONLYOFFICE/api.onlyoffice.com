@@ -36,3 +36,4 @@ font.SetSuperscript(true);
 let isSuperscript = font.GetSuperscript();
 worksheet.GetRange("B3").SetValue("Superscript property: " + isSuperscript);
 ```
+

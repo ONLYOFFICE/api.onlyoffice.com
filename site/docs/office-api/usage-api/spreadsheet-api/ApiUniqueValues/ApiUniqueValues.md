@@ -1,6 +1,6 @@
 # ApiUniqueValues
 
-Represents the ApiUniqueValues class.
+ApiUniqueValues is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
 

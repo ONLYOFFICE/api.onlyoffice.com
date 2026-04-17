@@ -64,5 +64,5 @@ Api.GetActiveSheet().GetRange('F4').SetValue('Region field will be cleared soon'
 setTimeout(function () {
 	pivotTable.RemoveField('Region');
 }, 5000);
-
 ```
+

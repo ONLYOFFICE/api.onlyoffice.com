@@ -30,3 +30,4 @@ page.AddObject(freeTextAnnot);
 freeTextAnnot.SetRectDiff([1, 1, 1, 1]);
 console.log(`Annot intent is: ${freeTextAnnot.GetIntent()}`);
 ```
+

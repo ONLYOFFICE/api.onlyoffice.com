@@ -2,21 +2,7 @@
 
 Returns the text operator for text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.GetTextOperator();
-```
-
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[XlContainsOperator](../../Enumeration/XlContainsOperator.md) \| null
+Inherited from [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Methods/GetTextOperator.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let textOperator = condition1.GetTextOperator();
 
 worksheet.GetRange("C1").SetValue("Text operator:");
 worksheet.GetRange("C2").SetValue(textOperator ? textOperator : "None");
-
 ```
+

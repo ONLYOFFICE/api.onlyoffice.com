@@ -41,3 +41,4 @@ table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample te
 let range = table.GetRange(0, 3);
 range.SetBold(true);
 ```
+

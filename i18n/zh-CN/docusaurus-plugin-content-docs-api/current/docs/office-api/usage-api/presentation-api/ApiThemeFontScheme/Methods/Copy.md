@@ -86,5 +86,5 @@ paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("New font scheme was set to this slide.");
 slide2.AddObject(shape);
-
 ```
+

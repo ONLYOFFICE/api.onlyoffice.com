@@ -16,7 +16,6 @@ Object
 | maxCharacters | number | The maximum number of characters in the text field. |
 | multiLine | boolean | Specifies if the current fixed size text field is multiline or not. |
 
-
 ## Example
 
 This example creates a text form with the specific text form properties.
@@ -34,5 +33,5 @@ let textFormPrBase = {
 	"autoFit": false
 };
 let textForm = Api.CreateTextForm(textFormPrBase);
-
 ```
+

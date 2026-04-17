@@ -40,3 +40,4 @@ doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("Two new columns were added after this cell.");
 table.GetCell(0, 0).AddColumns(2, false);
 ```
+

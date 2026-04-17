@@ -41,3 +41,4 @@ run2.AddText("This is the second text run in the inline text content control. Th
 inlineLvlSdt.AddElement(run2, 1);
 inlineLvlSdt.RemoveElement(0);
 ```
+

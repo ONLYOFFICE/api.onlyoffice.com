@@ -34,5 +34,5 @@ page.AddObject(squareAnnot);
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 textAnnot.SetContents("Annot reply");
 squareAnnot.AddReply(textAnnot);
-
 ```
+

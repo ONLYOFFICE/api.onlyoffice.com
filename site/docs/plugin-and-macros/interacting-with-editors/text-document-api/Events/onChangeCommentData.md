@@ -8,6 +8,8 @@ The function called when the specified comment is changed with the [ChangeCommen
 | --------- | ------------- | ----------- |
 | comment | [Event_comment](../Enumeration/Event_comment.md) | Defines the comment object containing the comment data. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeCommentData", (comment) => {
     console.log("event: onChangeCommentData");

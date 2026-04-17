@@ -2,21 +2,7 @@
 
 返回当前段落的段前间距值。
 
-## 语法
-
-```javascript
-expression.GetSpacingBefore();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md).
 
 ## 示例
 
@@ -54,5 +40,5 @@ const spacingBefore = paraPr.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
-
 ```
+

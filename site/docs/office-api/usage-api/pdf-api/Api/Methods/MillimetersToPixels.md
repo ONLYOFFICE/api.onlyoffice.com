@@ -38,5 +38,5 @@ paragraph.AddText(millimeters + ' millimeters are equal to ' + pixels + ' pixels
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```
+

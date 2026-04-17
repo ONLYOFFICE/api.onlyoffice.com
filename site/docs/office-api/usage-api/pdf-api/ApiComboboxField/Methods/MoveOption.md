@@ -2,24 +2,7 @@
 
 Moves option to specified position in list options.
 
-## Syntax
-
-```javascript
-expression.MoveOption(nCurPos, nNewPos);
-```
-
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCurPos | Required | number |  | index of moved option |
-| nNewPos | Required | number |  | new positon for option |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseListField.MoveOption](../../ApiBaseListField/Methods/MoveOption.md).
 
 ## Example
 
@@ -36,3 +19,4 @@ comboboxField.AddOption('Option 2');
 comboboxField.AddOption('Option 3');
 comboboxField.MoveOption(2, 0);
 ```
+

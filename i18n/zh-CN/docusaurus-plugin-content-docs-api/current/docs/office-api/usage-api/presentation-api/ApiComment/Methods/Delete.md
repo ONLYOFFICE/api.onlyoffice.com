@@ -48,5 +48,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The comment was just deleted from the current presentation.");
-
 ```
+

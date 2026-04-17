@@ -37,3 +37,4 @@ drawing.Delete();
 paragraph.AddLineBreak();
 paragraph.AddText("In this paragraph, the Drawing object has been deleted.");
 ```
+

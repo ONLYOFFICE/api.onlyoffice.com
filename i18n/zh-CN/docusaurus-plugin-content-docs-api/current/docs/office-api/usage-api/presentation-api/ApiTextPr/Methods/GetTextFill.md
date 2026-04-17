@@ -53,5 +53,5 @@ fill = textPr.GetTextFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 docContent.Push(paragraph);
-
 ```
+

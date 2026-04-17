@@ -66,5 +66,5 @@ pivotWorksheet.GetRangeByNumber(15, 0).SetValue('Style item captions');
 for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(15 + i, 1).SetValue(pivotItems[i].GetCaption());
 }
-
 ```
+

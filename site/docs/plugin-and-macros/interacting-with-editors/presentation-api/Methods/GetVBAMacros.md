@@ -43,7 +43,7 @@ window.Asc.plugin.executeMethod ("GetVBAMacros", null, function (data) {
                 Content.macrosArray.push (
                     {
                         name: name,
-                        value: '(function ()\n{\n\t\n})();\n\n',
+                        value: '(function ()\n{\n\t/* Enter your code here. */\n})();\n\n/*\nExecution of VBA commands does not support.\n' + macros + '*/',
                         guid: create_guid ()
                     }
                 );
@@ -59,3 +59,4 @@ window.Asc.plugin.executeMethod ("GetVBAMacros", null, function (data) {
     }
 });
 ```
+

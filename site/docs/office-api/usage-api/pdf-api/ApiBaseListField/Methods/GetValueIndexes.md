@@ -34,3 +34,4 @@ comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 console.log('Selected indexes is: ' + comboboxField.GetValueIndexes());
 ```
+

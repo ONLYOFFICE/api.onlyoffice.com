@@ -35,3 +35,4 @@ shape.GetContent().GetElement(0).AddText("Preset: " + geometry.GetPreset() + ", 
 shape.SetPosition(1000000, 1000000);
 page.AddObject(shape);
 ```
+

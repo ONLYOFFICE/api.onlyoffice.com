@@ -12,7 +12,7 @@ Invariants:
 
 ## Type
 
-Object
+array
 
 ## Properties
 
@@ -26,3 +26,4 @@ Object
 | 5 | [pt](../Enumeration/pt.md) | y3 (left bottom) |
 | 6 | [pt](../Enumeration/pt.md) | x4 (right bottom) |
 | 7 | [pt](../Enumeration/pt.md) | y4 (right bottom) |
+

@@ -33,3 +33,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Xml string representation after deletion: " + xml.GetXml());
 doc.Push(infoParagraph);
 ```
+

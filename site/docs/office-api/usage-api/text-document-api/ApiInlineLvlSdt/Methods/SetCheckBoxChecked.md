@@ -30,3 +30,4 @@ let doc = Api.GetDocument();
 let inlineControl = doc.AddCheckBoxContentControl();
 inlineControl.SetCheckBoxChecked(true);
 ```
+

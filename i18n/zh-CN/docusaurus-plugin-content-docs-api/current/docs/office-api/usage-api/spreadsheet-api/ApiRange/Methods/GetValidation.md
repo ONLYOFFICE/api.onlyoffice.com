@@ -34,5 +34,5 @@ worksheet.GetRange('A7').SetValue('Type:');
 worksheet.GetRange('B7').SetValue(validation.GetType());
 worksheet.GetRange('A8').SetValue('Range:');
 worksheet.GetRange('B8').SetValue(validation.GetParent().GetAddress());
-
 ```
+

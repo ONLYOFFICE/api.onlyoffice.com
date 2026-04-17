@@ -34,3 +34,4 @@ worksheet.GetRange("A2").SetValue("Struckout text");
 worksheet.GetRange("A2").SetStrikeout(true);
 worksheet.GetRange("A3").SetValue("Normal text");
 ```
+

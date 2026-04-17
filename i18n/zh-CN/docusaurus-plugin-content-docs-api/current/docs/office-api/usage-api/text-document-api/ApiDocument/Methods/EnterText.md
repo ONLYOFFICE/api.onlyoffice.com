@@ -31,3 +31,4 @@ boolean
 let doc = Api.GetDocument();
 doc.EnterText("This is the text in your document.");
 ```
+

@@ -32,5 +32,5 @@ This example shows how to multiply all the numbers given as arguments.
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.PRODUCT(65, 34, 165, 6, 9, 54));
-
 ```
+

@@ -52,5 +52,5 @@ if (font) {
 worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
-
 ```
+

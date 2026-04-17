@@ -40,3 +40,4 @@ paraPr.SetJc("right");
 
 console.log(`We got rich paragraph properties from rich paragraph and set justification to it`);
 ```
+

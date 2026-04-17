@@ -64,3 +64,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A13').SetValue('Current Page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetCurrentPage());
 ```
+

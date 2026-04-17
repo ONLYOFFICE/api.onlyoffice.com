@@ -38,5 +38,5 @@ condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
 const parentRange = condition.GetParent();
 worksheet.GetRange('C1').SetValue('Parent range:');
 worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
-
 ```
+

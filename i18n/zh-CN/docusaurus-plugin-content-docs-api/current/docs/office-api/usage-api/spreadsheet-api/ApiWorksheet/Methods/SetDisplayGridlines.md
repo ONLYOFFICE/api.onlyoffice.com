@@ -32,5 +32,5 @@ expression.SetDisplayGridlines(isDisplayed);
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The sheet settings make it display no gridlines");
 worksheet.SetDisplayGridlines(false);
-
 ```
+

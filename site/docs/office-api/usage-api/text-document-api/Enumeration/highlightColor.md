@@ -38,3 +38,4 @@ This example sets a paragraph highlight to green.
 
 paragraph.SetHighlight("green");
 ```
+

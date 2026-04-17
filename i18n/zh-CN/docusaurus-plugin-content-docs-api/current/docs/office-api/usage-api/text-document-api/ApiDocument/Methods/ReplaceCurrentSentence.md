@@ -41,6 +41,5 @@ doc.Push(para2);
 let run = para2.AddText(text);
 run.MoveCursorToPos(80);
 doc.ReplaceCurrentSentence("The quick brown fox jumps over the lazy dog.");
-
-
 ```
+

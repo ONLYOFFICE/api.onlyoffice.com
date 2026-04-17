@@ -54,5 +54,5 @@ paragraph1.AddText("Shapes are ungrouped");
 const docContent2 = shape2.GetDocContent();
 const paragraph2 = docContent2.GetElement(0);
 paragraph2.AddText("Shapes are ungrouped");
-
 ```
+

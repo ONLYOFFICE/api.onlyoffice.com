@@ -47,5 +47,5 @@ newParagraph.SetJc("left");
 newParagraph.AddText("Class Type = " + classType);
 docContent.Push(newParagraph);
 page.AddObject(shape);
-
 ```
+

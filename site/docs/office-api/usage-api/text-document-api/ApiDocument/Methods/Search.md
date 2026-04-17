@@ -39,3 +39,4 @@ doc.Push(paragraph);
 let searchResults = doc.Search("paragraph");
 searchResults[1].SetBold(true);
 ```
+

@@ -39,3 +39,4 @@ let header = section.GetHeader("default", true);
 paragraph = header.GetElement(0);
 paragraph.AddText("This is a page header");
 ```
+

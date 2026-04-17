@@ -29,5 +29,5 @@
 
 const color = Api.CreateColorFromRGB(0, 0, 0);
 worksheet.GetRange("E2").SetBorders("Bottom", "Dotted", color);
-
 ```
+

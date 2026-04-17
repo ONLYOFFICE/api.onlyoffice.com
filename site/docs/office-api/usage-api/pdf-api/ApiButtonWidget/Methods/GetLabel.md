@@ -40,5 +40,5 @@ widgets[0].SetLabel('Hover label', 'hover');
 
 let labels = [widgets[0].GetLabel('normal'), widgets[0].GetLabel('down'), widgets[0].GetLabel('hover')];
 console.log('Button widget labels are: ' + labels);
-
 ```
+

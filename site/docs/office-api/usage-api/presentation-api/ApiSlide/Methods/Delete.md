@@ -38,5 +38,5 @@ presentation.AddSlide(slide);
 
 slide = presentation.GetSlideByIndex(0);
 slide.Delete();
-
 ```
+

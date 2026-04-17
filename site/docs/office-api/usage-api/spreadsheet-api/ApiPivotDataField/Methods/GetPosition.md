@@ -63,3 +63,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 position:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetPosition());
 ```
+

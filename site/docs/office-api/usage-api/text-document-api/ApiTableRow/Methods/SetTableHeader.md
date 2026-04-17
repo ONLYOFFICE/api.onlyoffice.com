@@ -5,23 +5,7 @@ wherever this table is displayed. This gives this table row the behavior of a 'h
 each of these pages. This element can be applied to any number of rows at the top of the 
 table structure in order to generate multi-row table headers.
 
-## Syntax
-
-```javascript
-expression.SetTableHeader(isHeader);
-```
-
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isHeader | Required | boolean |  | The true value means that the current table row will be repeated at the top of each new page. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableRowPr.SetTableHeader](../../ApiTableRowPr/Methods/SetTableHeader.md).
 
 ## Example
 
@@ -45,3 +29,4 @@ tableRowPr.SetTableHeader(true);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

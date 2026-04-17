@@ -38,5 +38,5 @@ finalSection.SetType(possibleTypes[randomIndex]);
 const paragraph = Api.CreateParagraph();
 paragraph.AddText('This is section #2 and we randomly set \'' + finalSection.GetType() + '\' type to it. ');
 doc.Push(paragraph);
-
 ```
+

@@ -2,21 +2,7 @@
 
 返回时间段条件的日期运算符。
 
-## 语法
-
-```javascript
-expression.GetDateOperator();
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```
+

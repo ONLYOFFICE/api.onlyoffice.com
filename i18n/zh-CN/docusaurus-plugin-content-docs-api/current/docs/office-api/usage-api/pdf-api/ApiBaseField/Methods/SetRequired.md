@@ -31,3 +31,4 @@ page.AddObject(textField);
 textField.SetRequired(true);
 textField.SetValue('Required: ' + textField.IsRequired());
 ```
+

@@ -33,5 +33,5 @@ worksheet.GetRange("A1:A2").SetBold(true);
 let range = worksheet.GetRange("A1");
 range.ClearFormats();
 worksheet.GetRange("A3").SetValue("Result is bold format cleared for A1 cell.");
-
 ```
+

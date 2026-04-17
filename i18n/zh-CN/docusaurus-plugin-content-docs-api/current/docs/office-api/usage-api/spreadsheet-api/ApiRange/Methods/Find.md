@@ -57,5 +57,5 @@ let searchData = {
 };
 let searchRange = range.Find(searchData);
 searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```
+

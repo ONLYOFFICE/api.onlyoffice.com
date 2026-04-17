@@ -35,3 +35,4 @@ widgets[0].SetImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyo
 widgets[0].SetScaleWhen('never');
 widgets[0].SetIconXPos(0);
 ```
+

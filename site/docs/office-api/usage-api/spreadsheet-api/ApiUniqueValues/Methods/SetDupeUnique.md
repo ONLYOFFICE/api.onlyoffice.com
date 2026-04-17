@@ -52,3 +52,4 @@ worksheet.GetRange("C1").SetValue("Setting before: " + settingBefore);
 worksheet.GetRange("C2").SetValue("Setting after: " + settingAfter);
 worksheet.GetRange("C3").SetValue("Now highlighting duplicates");
 ```
+

@@ -48,5 +48,5 @@ paragraph.AddLineBreak();
 paragraph.AddLineBreak();
 const autoColor = Api.AutoColor();
 paragraph.AddText('Auto JSON:\n' + autoColor.ToJSON());
-
 ```
+

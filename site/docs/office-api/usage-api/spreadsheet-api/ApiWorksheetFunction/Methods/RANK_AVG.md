@@ -49,5 +49,5 @@ let func = Api.WorksheetFunction;
 let ans = func.RANK_AVG(number, range, order);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

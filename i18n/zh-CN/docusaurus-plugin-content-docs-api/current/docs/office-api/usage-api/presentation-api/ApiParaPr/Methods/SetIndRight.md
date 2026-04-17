@@ -49,5 +49,5 @@ paragraph.AddText("This offset is set by the paragraph style. No paragraph inlin
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 slide.AddObject(shape);
-
 ```
+

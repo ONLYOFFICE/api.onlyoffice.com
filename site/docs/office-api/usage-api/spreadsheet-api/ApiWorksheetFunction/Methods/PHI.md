@@ -40,5 +40,5 @@ let func = Api.WorksheetFunction;
 let ans = func.PHI(number);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

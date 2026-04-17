@@ -2,24 +2,7 @@
 
 Adds new option to list options.
 
-## Syntax
-
-```javascript
-expression.AddOption(option, nPos);
-```
-
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| option | Required | [ListOption](../../Enumeration/ListOption.md) |  | list option to add |
-| nPos | Optional | number | this.GetOptions().lenght | pos to add option |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseListField.AddOption](../../ApiBaseListField/Methods/AddOption.md).
 
 ## Example
 
@@ -36,3 +19,4 @@ comboboxField.AddOption('Option 2');
 comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 ```
+

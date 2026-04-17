@@ -36,5 +36,5 @@ paragraph.AddText('This paragraph will be selected.');
 page.AddObject(shape);
 
 paragraph.Select();
-
 ```
+

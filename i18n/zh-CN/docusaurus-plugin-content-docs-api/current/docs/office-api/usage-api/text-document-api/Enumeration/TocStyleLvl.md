@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -12,7 +12,6 @@
 | ---- | ---- | ----------- |
 | Lvl | number | 将应用于目录中指定样式的级别。 |
 | Name | string | 样式名称（例如「标题 1」）。 |
-
 
 ## 示例
 
@@ -38,5 +37,5 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```
+

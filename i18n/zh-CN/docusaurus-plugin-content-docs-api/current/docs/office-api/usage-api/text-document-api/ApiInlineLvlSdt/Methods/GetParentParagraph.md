@@ -36,3 +36,4 @@ paragraph.AddInlineLvlSdt(inlineLvlSdt);
 let parentParagraph = inlineLvlSdt.GetParentParagraph();
 parentParagraph.SetBold(true);
 ```
+

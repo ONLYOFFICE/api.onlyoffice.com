@@ -50,5 +50,5 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 slide.AddObject(chart);
-
 ```
+

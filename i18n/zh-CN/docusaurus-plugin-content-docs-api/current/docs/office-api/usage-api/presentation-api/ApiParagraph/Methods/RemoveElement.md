@@ -71,5 +71,5 @@ paragraph.AddElement(run);
 paragraph.RemoveElement(3);
 
 slide.AddObject(shape);
-
 ```
+

@@ -8,6 +8,8 @@ The function called when the user clicks the element.
 | --------- | ------------- | ----------- |
 | isSelectionUse | boolean | Defines if the selection is used or not. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onClick", (isSelectionUse) => {
     window.Asc.plugin.executeMethod("GetCurrentContentControlPr", [], function(obj) {
@@ -15,7 +17,7 @@ window.Asc.plugin.attachEditorEvent("onClick", (isSelectionUse) => {
         var controlTag = obj ? obj.Tag : "";
         if (isSelectionUse)
             controlTag = "";
-
+        /// some code
     });
 });
 ```

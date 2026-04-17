@@ -35,3 +35,4 @@ inlineLvlSdt.AddText("This is an inline text content control.");
 inlineLvlSdt.RemoveAllElements();
 inlineLvlSdt.AddText("We removed all the inline content control elements.");
 ```
+

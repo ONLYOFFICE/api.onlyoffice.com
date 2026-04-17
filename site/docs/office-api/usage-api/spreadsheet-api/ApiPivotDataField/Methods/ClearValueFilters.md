@@ -2,21 +2,7 @@
 
 Deletes all value filters from the pivot filters collection.
 
-## Syntax
-
-```javascript
-expression.ClearValueFilters();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.ClearValueFilters](../../ApiPivotField/Methods/ClearValueFilters.md).
 
 ## Example
 
@@ -62,3 +48,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 let pivotField = pivotTable.GetPivotFields('Region');
 pivotField.ClearValueFilters();
 ```
+

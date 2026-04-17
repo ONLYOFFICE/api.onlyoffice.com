@@ -48,5 +48,5 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
-
 ```
+

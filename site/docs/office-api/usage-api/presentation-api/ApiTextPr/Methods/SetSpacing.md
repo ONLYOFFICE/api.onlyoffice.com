@@ -48,5 +48,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the spacing set to 4 points (80 twentieths of a point) using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

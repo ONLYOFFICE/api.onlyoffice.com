@@ -31,3 +31,4 @@ page.AddObject(listboxField);
 listboxField.AddOption('Field type is: ' + listboxField.GetClassType());
 listboxField.SetValueIndexes([0]);
 ```
+

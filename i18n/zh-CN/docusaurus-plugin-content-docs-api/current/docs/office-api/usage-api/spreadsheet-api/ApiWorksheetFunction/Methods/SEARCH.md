@@ -35,3 +35,4 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SEARCH("line", "Online Office"));
 ```
+

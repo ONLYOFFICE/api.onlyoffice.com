@@ -45,5 +45,5 @@ let axisColor = dataBar.GetAxisColor();
 
 worksheet.GetRange("C1").SetValue("Has Axis Color:");
 worksheet.GetRange("C2").SetValue(axisColor ? "Yes" : "No");
-
 ```
+

@@ -53,5 +53,5 @@ const oParagraph = oDocContent.GetElement(0);
 const sClassType = presentation.GetClassType();
 oParagraph.AddText("A slide with no background was removed from this presentation.");
 slide.AddObject(oShape);
-
 ```
+

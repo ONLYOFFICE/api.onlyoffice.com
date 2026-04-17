@@ -36,3 +36,4 @@ worksheet.AddDefName("numbers", "Sheet1!$A$1:$B$1");
 let defName = worksheet.GetDefName("numbers");
 worksheet.GetRange("A3").SetValue("DefName: " + defName.GetName());
 ```
+

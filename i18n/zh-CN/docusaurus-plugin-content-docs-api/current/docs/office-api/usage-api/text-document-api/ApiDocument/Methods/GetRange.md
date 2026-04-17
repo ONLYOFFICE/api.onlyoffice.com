@@ -36,3 +36,4 @@ paragraph.AddText("This is just a sample text.");
 let range = doc.GetRange(8, 11);
 range.SetBold(true);
 ```
+

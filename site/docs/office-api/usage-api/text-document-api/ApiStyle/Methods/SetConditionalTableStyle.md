@@ -68,3 +68,4 @@ paragraph.AddText("This cell font is also set to italic");
 
 doc.Push(table);
 ```
+

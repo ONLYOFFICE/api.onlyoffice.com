@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(polylineAnnot);
 console.log(`Default line start style is: ${polylineAnnot.GetStartStyle()}`);
 ```
+

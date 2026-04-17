@@ -46,5 +46,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```
+

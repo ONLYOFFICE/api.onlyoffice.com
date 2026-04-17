@@ -41,3 +41,4 @@ let prevShape = shape2.GetPrevShape();
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 prevShape.Fill(fill);
 ```
+

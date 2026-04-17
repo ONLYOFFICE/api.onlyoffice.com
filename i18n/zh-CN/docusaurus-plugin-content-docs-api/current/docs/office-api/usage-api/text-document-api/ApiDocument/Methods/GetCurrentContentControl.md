@@ -2,21 +2,7 @@
 
 返回当前选中的内容控件。
 
-## 语法
-
-```javascript
-expression.GetCurrentContentControl();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
+Inherited from [ApiDocumentContent.GetCurrentContentControl](../../ApiDocumentContent/Methods/GetCurrentContentControl.md).
 
 ## 示例
 
@@ -39,5 +25,5 @@ if (currentCC) {
 	paragraph.AddText('No content control is selected.');
 }
 doc.Push(paragraph);
-
 ```
+

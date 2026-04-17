@@ -42,3 +42,4 @@ let classType = tableRowPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 ```
+

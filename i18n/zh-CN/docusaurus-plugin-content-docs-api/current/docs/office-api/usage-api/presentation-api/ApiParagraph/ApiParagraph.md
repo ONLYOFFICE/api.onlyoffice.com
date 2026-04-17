@@ -1,7 +1,6 @@
 # ApiParagraph
 
-表示 ApiParagraph 类。
-
+ApiParagraph is a subclass of [ApiParaPr](../ApiParaPr/ApiParaPr.md).
 
 ## 方法
 

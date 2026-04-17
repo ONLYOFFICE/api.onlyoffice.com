@@ -48,6 +48,5 @@ doc.Push(para2);
 para2 = Api.CreateParagraph();
 para2.AddText("The part of the word before cursor is " + doc.GetCurrentWord("before"));
 doc.Push(para2);
-
-
 ```
+

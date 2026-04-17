@@ -32,3 +32,4 @@ let widgets = comboboxField.GetAllWidgets();
 widgets[0].SetRegularExp('\S+@\S+\.\S+');
 console.log('Text widget reg exp is: "' + widgets[0].GetRegularExp() + '"');
 ```
+

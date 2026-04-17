@@ -41,5 +41,5 @@ const paragraph = docContent.GetElement(0);
 const width = presentation.GetWidth();
 paragraph.AddText("Width = " + width);
 slide.AddObject(shape);
-
 ```
+

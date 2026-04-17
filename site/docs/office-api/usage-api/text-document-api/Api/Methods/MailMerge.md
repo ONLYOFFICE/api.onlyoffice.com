@@ -45,3 +45,4 @@ paragraph.AddText("!");
 Api.LoadMailMergeData([fields, ["Dear", "John", "Smith"], ["Hello", "Lara", "Davis"]]);
 Api.MailMerge(1);
 ```
+

@@ -44,5 +44,5 @@ slide.AddObject(shapeCopy);
 
 const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
-
 ```
+

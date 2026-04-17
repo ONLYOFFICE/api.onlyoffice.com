@@ -39,5 +39,5 @@ const selection = Api.GetSelection();
 const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Type: ' + selection.GetType());
-
 ```
+

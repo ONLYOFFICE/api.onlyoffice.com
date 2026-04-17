@@ -62,3 +62,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("It has the same properties (alignment type, distances and wrapping type) as the shape above.");
 doc.Push(paragraph);
 ```
+

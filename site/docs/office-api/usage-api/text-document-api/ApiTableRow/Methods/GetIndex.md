@@ -37,3 +37,4 @@ let row = table.GetRow(1);
 row.GetCell(0).GetContent().GetElement(0).AddText("Row index: " + row.GetIndex());
 doc.Push(table);
 ```
+

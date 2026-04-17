@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"checkboxWidget"
 
 ## Example
 
@@ -31,3 +31,4 @@ page.AddObject(radiobuttonField);
 let widgets = radiobuttonField.GetAllWidgets();
 console.log('Widget type is: ' + widgets[0].GetClassType());
 ```
+

@@ -2,23 +2,7 @@
 
 Sets selected value indexes.
 
-## Syntax
-
-```javascript
-expression.SetValueIndexes(aIndexes);
-```
-
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | Required | number[] |  | selected indexes |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseListField.SetValueIndexes](../../ApiBaseListField/Methods/SetValueIndexes.md).
 
 ## Example
 
@@ -35,3 +19,4 @@ comboboxField.AddOption('Option 2');
 comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 ```
+

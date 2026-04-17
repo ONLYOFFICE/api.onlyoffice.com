@@ -2,21 +2,7 @@
 
 返回指定是否在每个字段后插入分页符的设置。
 
-## 语法
-
-```javascript
-expression.GetLayoutPageBreak();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md).
 
 ## 示例
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
+

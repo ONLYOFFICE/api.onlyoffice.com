@@ -32,5 +32,5 @@ const twips = 100;
 const points = Api.TwipsToPoints(twips);
 paragraph.AddText(twips + ' twips are equal to ' + points + ' points.');
 doc.Push(paragraph);
-
 ```
+

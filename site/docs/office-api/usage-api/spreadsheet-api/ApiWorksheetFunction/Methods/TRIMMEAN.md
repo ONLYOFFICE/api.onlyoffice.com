@@ -45,5 +45,5 @@ let data = worksheet.GetRange("A1:A4");
 let func = Api.WorksheetFunction;
 let result = func.TRIMMEAN(data, 0.6);
 worksheet.GetRange("B1").SetValue(result);
-
 ```
+

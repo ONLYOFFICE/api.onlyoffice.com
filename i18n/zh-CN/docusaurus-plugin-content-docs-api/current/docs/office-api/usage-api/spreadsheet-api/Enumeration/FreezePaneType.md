@@ -25,5 +25,5 @@
 
 const freezePaneType = "column";
 Api.SetFreezePanesType(freezePaneType);
-
 ```
+

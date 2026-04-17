@@ -40,5 +40,5 @@ let dateForm = Api.CreateDateForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(dateForm);
-
 ```
+

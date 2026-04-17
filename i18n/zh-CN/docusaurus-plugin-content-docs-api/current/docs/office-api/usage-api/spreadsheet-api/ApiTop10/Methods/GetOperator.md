@@ -2,21 +2,7 @@
 
 返回格式条件运算符。
 
-## 语法
-
-```javascript
-expression.GetOperator();
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+Inherited from [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let operator = condition1.GetOperator();
 
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
-
 ```
+

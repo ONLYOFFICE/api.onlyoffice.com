@@ -45,5 +45,5 @@ let maxPointType = dataBar.GetMaxPointType();
 
 worksheet.GetRange("C1").SetValue("Max Point Type:");
 worksheet.GetRange("C2").SetValue(maxPointType);
-
 ```
+

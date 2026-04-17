@@ -37,5 +37,5 @@ doc.SelectCurrentWord();
 let para2 = Api.CreateParagraph();
 para2.AddText("The selected text is " + doc.GetRangeBySelect().GetText());
 doc.Push(para2);
-
 ```
+

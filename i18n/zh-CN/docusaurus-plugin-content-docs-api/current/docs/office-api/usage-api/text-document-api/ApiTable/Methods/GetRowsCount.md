@@ -44,3 +44,4 @@ paragraph.AddText("The table above had " + tableRowsNumber + " rows before we ad
 paragraph.AddText("Now this table has " + tableRowsNumber1 + " rows.");
 doc.Push(paragraph);
 ```
+

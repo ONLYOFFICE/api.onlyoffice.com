@@ -1,7 +1,6 @@
 # ApiChart
 
-表示 ApiChart 类。
-
+ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## 方法
 
@@ -11,9 +10,19 @@
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | 返回图表空间中的所有系列。 |
 | [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | 返回图表对象的类型。 |
 | [GetClassType](./Methods/GetClassType.md) | "chart" | 返回 ApiChart 类的类型。 |
+| [GetHyperlink](./Methods/GetHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null | 返回当前绘图对象（形状或图像）的超链接。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前绘图对象的内部 ID。 |
+| [GetParent](./Methods/GetParent.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| [ApiLayout](../ApiLayout/ApiLayout.md) \| [ApiMaster](../ApiMaster/ApiMaster.md) \| null | 返回绘图的父对象。 |
+| [GetParentLayout](./Methods/GetParentLayout.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | 返回绘图的父幻灯片版式。 |
+| [GetParentMaster](./Methods/GetParentMaster.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | 返回绘图的父幻灯片母版。 |
+| [GetParentSlide](./Methods/GetParentSlide.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null | 返回绘图的父幻灯片。 |
+| [GetPlaceholder](./Methods/GetPlaceholder.md) | [ApiPlaceholder](../ApiPlaceholder/ApiPlaceholder.md) \| null | 返回当前绘图对象的占位符。 |
+| [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在幻灯片上的 x 位置。 |
+| [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在幻灯片上的 y 位置。 |
 | [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) | 返回具有特定索引的系列。 |
 | [GetTitle](./Methods/GetTitle.md) | string \| null | 返回图表标题文本。 |
 | [RemoveSeria](./Methods/RemoveSeria.md) | boolean | 从当前图表中删除指定的系列。 |
+| [ReplacePlaceholder](./Methods/ReplacePlaceholder.md) | boolean | 用幻灯片上的绘图替换占位符。 |
 | [SetAxieNumFormat](./Methods/SetAxieNumFormat.md) | boolean | 将指定的数字格式设置为坐标轴值。 |
 | [SetCategoryName](./Methods/SetCategoryName.md) | boolean | 为指定的图表类别设置名称。 |
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | 设置指定图表系列中数据点的填充。 |
@@ -25,6 +34,7 @@
 | [SetHorAxisOrientation](./Methods/SetHorAxisOrientation.md) | boolean | 指定横轴的方向。 |
 | [SetHorAxisTickLabelPosition](./Methods/SetHorAxisTickLabelPosition.md) | boolean | 指定横轴刻度标签的位置。 |
 | [SetHorAxisTitle](./Methods/SetHorAxisTitle.md) | boolean | 指定图表横轴的标题。 |
+| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | 为当前绘图对象（形状或图像）设置超链接。传递 null 以删除超链接。 |
 | [SetLegendFill](./Methods/SetLegendFill.md) | boolean | 设置图表图例的填充。 |
 | [SetLegendFontSize](./Methods/SetLegendFontSize.md) | boolean | 指定图例的字体大小。 |
 | [SetLegendOutLine](./Methods/SetLegendOutLine.md) | boolean | 设置图表图例的轮廓。 |
@@ -35,8 +45,12 @@
 | [SetMarkerOutLine](./Methods/SetMarkerOutLine.md) | boolean | 设置指定图表系列中标记的轮廓。 |
 | [SetMinorHorizontalGridlines](./Methods/SetMinorHorizontalGridlines.md) | boolean | 指定次要水平网格线的视觉属性。 |
 | [SetMinorVerticalGridlines](./Methods/SetMinorVerticalGridlines.md) | boolean | 指定次要垂直网格线的视觉属性。 |
+| [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | 将指定的占位符设置到当前绘图对象。 |
 | [SetPlotAreaFill](./Methods/SetPlotAreaFill.md) | boolean | 设置图表绘图区域的填充。 |
 | [SetPlotAreaOutLine](./Methods/SetPlotAreaOutLine.md) | boolean | 设置图表绘图区域的轮廓。 |
+| [SetPosX](./Methods/SetPosX.md) | boolean | 设置绘图在幻灯片上的 x 位置。 |
+| [SetPosY](./Methods/SetPosY.md) | boolean | 设置绘图在幻灯片上的 y 位置。 |
+| [SetPosition](./Methods/SetPosition.md) | 无 | 设置绘图在幻灯片上的位置。 |
 | [SetSeriaName](./Methods/SetSeriaName.md) | boolean | 为指定的图表系列设置名称。 |
 | [SetSeriaNumFormat](./Methods/SetSeriaNumFormat.md) | boolean | 将指定的数字格式设置为图表系列。 |
 | [SetSeriaValues](./Methods/SetSeriaValues.md) | boolean | 为指定的图表系列设置值。 |

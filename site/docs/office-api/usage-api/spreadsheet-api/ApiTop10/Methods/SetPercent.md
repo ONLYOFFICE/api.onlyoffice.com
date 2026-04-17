@@ -44,5 +44,5 @@ let top10Condition = formatConditions.AddTop10();
 worksheet.GetRange("B1").SetValue("Before: Count mode");
 top10Condition.SetPercent(true);
 worksheet.GetRange("B2").SetValue("After: Percentage mode");
-
 ```
+

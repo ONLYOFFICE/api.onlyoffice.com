@@ -25,3 +25,4 @@ This example assigns the default document paragraph style to the 'oNormalStyle' 
 
 let normalStyle = doc.GetDefaultStyle("paragraph");
 ```
+

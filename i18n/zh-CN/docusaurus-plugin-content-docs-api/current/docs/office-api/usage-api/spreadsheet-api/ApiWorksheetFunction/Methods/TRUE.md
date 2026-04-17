@@ -36,5 +36,5 @@ let func = Api.WorksheetFunction;
 let ans = func.XOR(logical1, logical2); //Works on XOR gate logic
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

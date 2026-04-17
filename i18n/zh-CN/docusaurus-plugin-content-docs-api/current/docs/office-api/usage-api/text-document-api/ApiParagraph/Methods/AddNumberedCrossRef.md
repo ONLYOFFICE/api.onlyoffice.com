@@ -56,3 +56,4 @@ paragraph.AddText("An example of the customized numbering type can be found in t
 doc.Push(paragraph);
 paragraph.AddNumberedCrossRef("paraNum", numberedParagraphs[1], true, true);
 ```
+

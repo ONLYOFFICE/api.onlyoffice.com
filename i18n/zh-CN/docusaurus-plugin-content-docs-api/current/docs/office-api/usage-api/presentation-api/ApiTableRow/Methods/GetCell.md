@@ -42,5 +42,5 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

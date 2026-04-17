@@ -36,5 +36,5 @@ const nonExistentProp = customProps.Get("NonExistentProp");
 const paragraph = doc.GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```
+

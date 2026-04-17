@@ -45,5 +45,5 @@ let negativeColor = dataBar.GetNegativeBarColor();
 
 worksheet.GetRange("C1").SetValue("Negative Color:");
 worksheet.GetRange("C2").SetValue(negativeColor ? "Set" : "None");
-
 ```
+

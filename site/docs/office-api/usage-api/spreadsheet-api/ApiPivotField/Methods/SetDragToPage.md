@@ -69,3 +69,4 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to pages!');
 ```
+

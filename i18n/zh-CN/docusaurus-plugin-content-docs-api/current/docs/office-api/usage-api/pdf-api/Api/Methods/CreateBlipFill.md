@@ -38,5 +38,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("star10", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```
+

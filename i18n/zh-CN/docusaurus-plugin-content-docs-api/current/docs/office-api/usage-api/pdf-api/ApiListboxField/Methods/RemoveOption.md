@@ -2,23 +2,7 @@
 
 从列表选项中移除选项。
 
-## 语法
-
-```javascript
-expression.RemoveOption(nPos);
-```
-
-`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 移除选项的位置 |
-
-## 返回值
-
-boolean
+Inherited from [ApiBaseListField.RemoveOption](../../ApiBaseListField/Methods/RemoveOption.md).
 
 ## 示例
 
@@ -36,3 +20,4 @@ comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 comboboxField.RemoveOption(2);
 ```
+

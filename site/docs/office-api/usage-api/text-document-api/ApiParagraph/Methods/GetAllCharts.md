@@ -52,3 +52,4 @@ let charts = paragraph.GetAllCharts();
 let stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[1].SetMinorHorizontalGridlines(stroke);
 ```
+

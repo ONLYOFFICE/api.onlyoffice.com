@@ -36,3 +36,4 @@ let para = richContent.GetElement(0);
 
 console.log(`Object class type is: ${para.GetClassType()}`);
 ```
+

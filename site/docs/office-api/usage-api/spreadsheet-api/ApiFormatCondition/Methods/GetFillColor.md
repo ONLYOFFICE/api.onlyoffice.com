@@ -48,5 +48,5 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```
+

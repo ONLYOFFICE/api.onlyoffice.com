@@ -37,5 +37,5 @@ if (slide) {
 	const paragraph = docContent.GetElement(0);
 	paragraph.AddText('This slide is currently visible');
 }
-
 ```
+

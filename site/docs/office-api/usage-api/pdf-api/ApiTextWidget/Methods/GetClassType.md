@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"textWidget"
 
 ## Example
 
@@ -31,3 +31,4 @@ page.AddObject(comboboxField);
 let widgets = comboboxField.GetAllWidgets();
 comboboxField.SetValue(widgets[0].GetClassType());
 ```
+

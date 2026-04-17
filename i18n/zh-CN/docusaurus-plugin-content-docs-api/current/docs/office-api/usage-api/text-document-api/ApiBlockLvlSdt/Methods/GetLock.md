@@ -34,3 +34,4 @@ blockLvlSdt.SetLock("sdtContentLocked");
 doc.AddElement(0, blockLvlSdt);
 doc.GetElement(1).AddText("Lock type: " + blockLvlSdt.GetLock());
 ```
+

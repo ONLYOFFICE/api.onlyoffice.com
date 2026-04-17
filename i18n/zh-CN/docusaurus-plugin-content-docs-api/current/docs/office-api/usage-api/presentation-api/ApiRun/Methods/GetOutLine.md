@@ -2,21 +2,7 @@
 
 从当前文本属性获取文本轮廓。
 
-## 语法
-
-```javascript
-expression.GetOutLine();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiStroke](../../ApiStroke/ApiStroke.md)
+Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
 ## 示例
 
@@ -53,5 +39,5 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
-
 ```
+

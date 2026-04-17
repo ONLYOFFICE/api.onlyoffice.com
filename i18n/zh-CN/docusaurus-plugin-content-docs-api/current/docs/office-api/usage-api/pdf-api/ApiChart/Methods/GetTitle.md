@@ -51,5 +51,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Chart Title: ' + chartTitle);
 page.AddObject(shape);
-
 ```
+

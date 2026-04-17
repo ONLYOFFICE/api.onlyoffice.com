@@ -2,7 +2,6 @@
 
 Represents the ApiBaseWidget class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -12,7 +11,7 @@ Represents the ApiBaseWidget class.
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget border color. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [WidgetBorderStyle](../Enumeration/WidgetBorderStyle.md) | Gets widget border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [WidgetBorderWidth](../Enumeration/WidgetBorderWidth.md) | Gets widget border width. |
-| [GetClassType](./Methods/GetClassType.md) | "page" | Returns a type of the ApiBaseWidget class. |
+| [GetClassType](./Methods/GetClassType.md) | "baseWidget" | Returns a type of the ApiBaseWidget class. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets widget position. |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |

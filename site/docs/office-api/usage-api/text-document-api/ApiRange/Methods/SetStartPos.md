@@ -36,3 +36,4 @@ let range = paragraph.GetRange();
 range.SetStartPos(12);
 range.SetBold(true);
 ```
+

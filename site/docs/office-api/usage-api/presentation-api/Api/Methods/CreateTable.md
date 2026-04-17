@@ -35,5 +35,5 @@ const slide = presentation.GetSlideByIndex(0);
 const table = Api.CreateTable(2, 4);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

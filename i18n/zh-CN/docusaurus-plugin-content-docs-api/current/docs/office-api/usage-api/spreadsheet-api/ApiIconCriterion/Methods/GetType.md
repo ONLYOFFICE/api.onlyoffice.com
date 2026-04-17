@@ -43,5 +43,5 @@ let firstCriterion = criteria[0];
 let criterionType = firstCriterion.GetType();
 
 worksheet.GetRange("B1").SetValue("First criterion type: " + criterionType);
-
 ```
+

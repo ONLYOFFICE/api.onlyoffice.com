@@ -36,3 +36,4 @@ font.SetUnderline("xlUnderlineStyleSingle");
 let underlineType = font.GetUnderline();
 worksheet.GetRange("B3").SetValue("Underline property: " + underlineType);
 ```
+

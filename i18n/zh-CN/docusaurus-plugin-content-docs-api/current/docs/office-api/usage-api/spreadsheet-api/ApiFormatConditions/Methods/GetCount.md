@@ -43,5 +43,5 @@ let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddDatabar();
 
 worksheet.GetRange("B1").SetValue("Count: " + formatConditions.GetCount());
-
 ```
+

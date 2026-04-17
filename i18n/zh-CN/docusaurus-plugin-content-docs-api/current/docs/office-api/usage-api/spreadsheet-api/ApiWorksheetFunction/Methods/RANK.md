@@ -50,3 +50,4 @@ let ans = func.RANK(number,range,order);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
+

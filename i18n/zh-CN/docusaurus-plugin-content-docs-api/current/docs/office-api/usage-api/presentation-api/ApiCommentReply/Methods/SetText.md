@@ -51,5 +51,5 @@ reply.SetText("New reply text");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply text: " + reply.GetText());
-
 ```
+

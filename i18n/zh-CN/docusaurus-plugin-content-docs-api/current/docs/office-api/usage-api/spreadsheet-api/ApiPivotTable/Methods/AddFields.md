@@ -59,3 +59,4 @@ pivotTable.AddFields({
     columns: 'Style',
 });
 ```
+

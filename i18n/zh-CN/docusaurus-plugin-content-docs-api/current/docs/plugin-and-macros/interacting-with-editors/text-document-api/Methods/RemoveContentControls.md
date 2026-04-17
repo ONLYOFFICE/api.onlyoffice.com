@@ -25,3 +25,4 @@ expression.RemoveContentControls(arrDocuments);
 ```javascript
 window.Asc.plugin.executeMethod ("RemoveContentControls", [[{"InternalId": "5_556"}]]);
 ```
+

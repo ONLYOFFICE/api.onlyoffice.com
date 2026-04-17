@@ -20,5 +20,5 @@
 
 ```javascript editor-pptx
 const selectionType = Api.GetSelection().GetType();
-
 ```
+

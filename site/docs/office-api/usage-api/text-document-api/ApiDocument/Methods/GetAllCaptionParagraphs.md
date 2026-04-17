@@ -39,5 +39,5 @@ doc.Push(paragraph);
 paragraph.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
 let captionParagraphs = doc.GetAllCaptionParagraphs('Figure');
 captionParagraphs[0].SetCaps(true);
-
 ```
+

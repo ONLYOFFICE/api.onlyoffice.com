@@ -46,5 +46,5 @@ paragraph.AddElement(run2);
 
 const lastRun = paragraph.GetLastRunWithText();
 worksheet.GetRange('A1').SetValue('Last run text: ' + lastRun.GetText());
-
 ```
+

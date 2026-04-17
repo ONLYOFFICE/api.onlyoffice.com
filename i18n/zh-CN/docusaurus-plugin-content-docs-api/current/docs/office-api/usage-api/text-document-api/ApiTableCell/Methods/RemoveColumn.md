@@ -38,3 +38,4 @@ table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 table.GetCell(0, 0).RemoveColumn();
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("A column with Cell 1 was removed.");
 ```
+

@@ -32,3 +32,4 @@ let text = listItem.GetText();
 paragraph.AddText("Text of the content control list entry: " + text);
 doc.AddElement(0, paragraph);
 ```
+

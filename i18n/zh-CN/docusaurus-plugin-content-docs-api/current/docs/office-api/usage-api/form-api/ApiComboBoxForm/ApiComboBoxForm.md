@@ -1,7 +1,6 @@
 # ApiComboBoxForm
 
-表示 ApiComboBoxForm 类。
-
+ApiComboBoxForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## 方法
 

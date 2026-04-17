@@ -10,6 +10,8 @@
 | data.slideIndex | number | 新幻灯片的索引。 |
 | data.previousSlideIndex | number | 上一张幻灯片的索引（如果是第一张幻灯片则为 -1）。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent('onSlideShowSlideChanged', (data) => {
 	data.previousSlideIndex === -1

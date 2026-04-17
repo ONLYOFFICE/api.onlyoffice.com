@@ -52,5 +52,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc('left');
 paragraph.AddText('Class type = ' + type);
 slide.AddObject(shape);
-
 ```
+

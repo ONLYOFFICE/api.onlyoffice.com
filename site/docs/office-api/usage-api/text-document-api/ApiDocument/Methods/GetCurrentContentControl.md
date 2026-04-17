@@ -2,21 +2,7 @@
 
 Returns the currently selected content control.
 
-## Syntax
-
-```javascript
-expression.GetCurrentContentControl();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
+Inherited from [ApiDocumentContent.GetCurrentContentControl](../../ApiDocumentContent/Methods/GetCurrentContentControl.md).
 
 ## Example
 
@@ -39,5 +25,5 @@ if (currentCC) {
 	paragraph.AddText('No content control is selected.');
 }
 doc.Push(paragraph);
-
 ```
+

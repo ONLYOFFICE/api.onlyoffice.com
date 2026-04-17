@@ -33,3 +33,4 @@ page.AddObject(radioField);
 radioField.AddOption(0, [10, 30, 25, 45], 'Choice 2');
 radioField.SetValue('Choice 2');
 ```
+

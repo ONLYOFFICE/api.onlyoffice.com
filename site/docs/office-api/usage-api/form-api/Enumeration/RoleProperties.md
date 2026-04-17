@@ -12,7 +12,6 @@ Object
 | ---- | ---- | ----------- |
 | color | string | The role color. |
 
-
 ## Example
 
 Create properties and add a new role with the specified properties.
@@ -21,3 +20,4 @@ Create properties and add a new role with the specified properties.
 let rolePr = {"color": "#ffefbf"};
 formRoles.Add("customer", rolePr);
 ```
+

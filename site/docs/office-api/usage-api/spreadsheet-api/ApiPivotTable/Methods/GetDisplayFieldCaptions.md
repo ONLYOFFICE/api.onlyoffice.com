@@ -61,5 +61,5 @@ pivotTable.AddFields({
 let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Display field captions');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetDisplayFieldCaptions());
-
 ```
+

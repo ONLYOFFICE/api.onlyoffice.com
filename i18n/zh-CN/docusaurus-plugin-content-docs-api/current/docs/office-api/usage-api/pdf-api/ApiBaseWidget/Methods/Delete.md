@@ -32,5 +32,5 @@ textField.SetValue('Example text');
 textField.AddWidget(0, [10, 40, 160, 60]);
 let widgets = textField.GetAllWidgets();
 widgets[0].Delete();
-
 ```
+

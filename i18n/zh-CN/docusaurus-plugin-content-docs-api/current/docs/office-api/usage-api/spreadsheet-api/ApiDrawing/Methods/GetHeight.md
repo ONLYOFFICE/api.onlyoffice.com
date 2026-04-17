@@ -36,3 +36,4 @@ drawing.SetPosition(0, 2 * 36000, 1, 3 * 36000);
 let height = drawing.GetHeight();
 worksheet.GetRange("A1").SetValue("Drawing height = " + height);
 ```
+

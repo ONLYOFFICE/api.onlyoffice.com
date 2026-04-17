@@ -41,5 +41,5 @@ slide = Api.CreateSlide();
 presentation.AddSlide(slide);
 layout.ClearBackground();
 slide.FollowLayoutBackground();
-
 ```
+

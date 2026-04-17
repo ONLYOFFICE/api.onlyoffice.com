@@ -35,3 +35,4 @@ let comment = range.GetComment();
 comment.Delete();
 worksheet.GetRange("A3").SetValue("The comment was just deleted from A1.");
 ```
+

@@ -45,3 +45,4 @@ let isStrikeout = textProps.GetStrikeout();
 paragraph.AddText("Strikeout property: " + isStrikeout);
 content.Push(paragraph);
 ```
+

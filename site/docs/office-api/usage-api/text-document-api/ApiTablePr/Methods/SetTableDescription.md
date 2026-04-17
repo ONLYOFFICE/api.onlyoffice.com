@@ -41,3 +41,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
+

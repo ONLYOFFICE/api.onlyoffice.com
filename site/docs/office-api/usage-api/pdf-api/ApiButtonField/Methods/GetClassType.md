@@ -30,3 +30,4 @@ page.AddObject(buttonField);
 
 console.log('Widget type is: ' + buttonField.GetClassType());
 ```
+

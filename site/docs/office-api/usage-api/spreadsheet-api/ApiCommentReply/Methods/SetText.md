@@ -39,3 +39,4 @@ reply.SetText("New reply text.");
 worksheet.GetRange("A3").SetValue("Comment's reply text: ");
 worksheet.GetRange("B3").SetValue(reply.GetText());
 ```
+

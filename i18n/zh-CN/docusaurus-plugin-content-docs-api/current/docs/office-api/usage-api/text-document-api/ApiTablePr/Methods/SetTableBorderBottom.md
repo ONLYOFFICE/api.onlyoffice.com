@@ -47,3 +47,4 @@ table.SetTableLook(true, true, true, true, true, true);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

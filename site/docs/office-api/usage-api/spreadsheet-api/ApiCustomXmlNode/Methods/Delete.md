@@ -36,3 +36,4 @@ itemNodes[0].Delete();
 let remainingNodes = rootNode.GetNodes("/item");
 worksheet.GetRange("A1").SetValue("Remaining items: " + remainingNodes.length);
 ```
+

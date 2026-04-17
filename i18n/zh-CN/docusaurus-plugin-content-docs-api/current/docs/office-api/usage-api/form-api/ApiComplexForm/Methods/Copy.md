@@ -2,21 +2,7 @@
 
 复制当前表单（如果存在形状，则连同形状一起复制）。
 
-## 语法
-
-```javascript
-expression.Copy();
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiForm](../../Enumeration/ApiForm.md)
+Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
 
 ## 示例
 
@@ -35,3 +21,4 @@ let copyTextForm = textForm.Copy();
 paragraph.AddLineBreak();
 paragraph.AddElement(copyTextForm);
 ```
+

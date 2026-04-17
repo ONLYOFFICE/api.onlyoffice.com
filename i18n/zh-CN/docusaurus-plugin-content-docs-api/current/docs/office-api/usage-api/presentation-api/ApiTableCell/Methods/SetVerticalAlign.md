@@ -44,5 +44,5 @@ cell.SetVerticalAlign("bottom");
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

@@ -40,5 +40,5 @@ let func = Api.WorksheetFunction;
 let ans = func.NORMSINV(value);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

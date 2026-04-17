@@ -53,5 +53,5 @@ fill = textPr.GetFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);
-
 ```
+

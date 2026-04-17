@@ -54,3 +54,4 @@ let range2 = worksheet.GetRange("B1:B6");
 let range3 = worksheet.GetRange("A1:A6");
 worksheet.GetRange("D6").SetValue(func.SUMIFS(range1, range2, "*Apples", range3, 2016));
 ```
+

@@ -56,5 +56,5 @@ if (filterRange !== null) {
 } else {
     worksheet.GetRange("D2").SetValue("No AutoFilter defined.");
 }
-
 ```
+

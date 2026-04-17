@@ -43,5 +43,5 @@ paragraph.AddText('This paragraph will be converted to JSON.');
 
 const json = paragraph.ToJSON(true, true);
 worksheet.GetRange('A1').SetValue('JSON length: ' + json.length);
-
 ```
+

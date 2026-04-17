@@ -40,5 +40,5 @@ run.SetFontSize(30);
 run.AddText('Theme name: ' + themeColor.GetThemeName());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

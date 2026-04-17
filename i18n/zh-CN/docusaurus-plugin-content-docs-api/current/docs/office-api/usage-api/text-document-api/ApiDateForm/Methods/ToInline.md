@@ -3,21 +3,7 @@
 将当前表单转换为内联表单。
 *图片表单无法转换为内联表单，它始终是固定大小的对象。*
 
-## 语法
-
-```javascript
-expression.ToInline();
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
 ## 示例
 
@@ -46,3 +32,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
 doc.Push(paragraph);
 ```
+

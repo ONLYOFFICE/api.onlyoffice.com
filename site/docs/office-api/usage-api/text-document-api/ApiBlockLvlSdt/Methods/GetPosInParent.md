@@ -47,3 +47,4 @@ let position = blockLvlSdt.GetPosInParent();
 blockLvlSdt = doc.GetElement(position);
 blockLvlSdt.SetPlaceholderText("Content control");
 ```
+

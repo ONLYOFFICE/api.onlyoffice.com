@@ -51,3 +51,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Series Type = " + seriesType);
 doc.Push(paragraph);
 ```
+

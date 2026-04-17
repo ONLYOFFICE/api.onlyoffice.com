@@ -42,5 +42,5 @@ shape2.GetContent().GetElement(0).AddText('This slide will be selected.');
 slide2.AddObject(shape2);
 
 slide2.Select();
-
 ```
+

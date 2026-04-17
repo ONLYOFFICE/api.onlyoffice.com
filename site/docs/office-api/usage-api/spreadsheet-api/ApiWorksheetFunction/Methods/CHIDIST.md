@@ -35,3 +35,4 @@ let func = Api.WorksheetFunction;
 let avg = func.CHIDIST(12, 10);
 worksheet.GetRange("B2").SetValue(avg);
 ```
+

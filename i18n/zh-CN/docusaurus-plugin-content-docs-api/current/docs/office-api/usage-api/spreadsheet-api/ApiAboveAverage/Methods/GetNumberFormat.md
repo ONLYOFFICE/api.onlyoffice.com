@@ -2,21 +2,7 @@
 
 返回当条件格式规则计算结果为 true 时应用于单元格的数字格式。
 
-## 语法
-
-```javascript
-expression.GetNumberFormat();
-```
-
-`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
 
 ## 示例
 
@@ -48,5 +34,5 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
-
 ```
+

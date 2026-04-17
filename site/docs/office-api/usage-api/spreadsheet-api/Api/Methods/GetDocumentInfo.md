@@ -42,3 +42,4 @@ let docInfo = Api.GetDocumentInfo();
 let range = Api.GetActiveSheet().GetRange('A1');
 range.SetValue('This document has been created with: ' + docInfo.Application);
 ```
+

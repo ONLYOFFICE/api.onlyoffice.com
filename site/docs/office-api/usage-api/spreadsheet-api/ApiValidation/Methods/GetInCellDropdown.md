@@ -33,5 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateList", null, null, "Apple,Banana,Cherry");
 let hasDropdown = validation.GetInCellDropdown();
 worksheet.GetRange("B1").SetValue("Has dropdown: " + hasDropdown);
-
 ```
+

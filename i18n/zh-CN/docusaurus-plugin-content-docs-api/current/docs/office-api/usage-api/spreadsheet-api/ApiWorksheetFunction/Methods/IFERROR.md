@@ -48,3 +48,4 @@ for (let n = 1; n < values.length; n++) {
     worksheet.GetRange("C" + (n + 1)).SetValue(func.IFERROR(value1/value2, "Out of stock"));
 }
 ```
+

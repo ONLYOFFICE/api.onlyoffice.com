@@ -2,23 +2,7 @@
 
 Specifies that when rendering the document using a page view, all lines of the current paragraph are maintained on a single page whenever possible.
 
-## Syntax
-
-```javascript
-expression.SetKeepLines(isKeepLines);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isKeepLines | Required | boolean |  | The true value enables the option to keep lines of the paragraph on a single page. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetKeepLines](../../ApiParaPr/Methods/SetKeepLines.md).
 
 ## Example
 
@@ -51,3 +35,4 @@ for (let i = 0; i < 10; ++i) {
 paragraph.SetStyle(myStyle);
 doc.Push(paragraph);
 ```
+

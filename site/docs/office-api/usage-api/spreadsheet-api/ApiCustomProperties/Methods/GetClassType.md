@@ -33,5 +33,5 @@ const shape = worksheet.AddShape("rect", 100 * 36000, 50 * 36000, fill, stroke, 
 
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
-
 ```
+

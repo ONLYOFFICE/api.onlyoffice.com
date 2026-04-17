@@ -46,3 +46,4 @@ run.SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```
+

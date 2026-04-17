@@ -50,3 +50,4 @@ paragraph.AddText("Color type: " + type);
 paragraph.SetColor(color);
 doc.Push(paragraph);
 ```
+

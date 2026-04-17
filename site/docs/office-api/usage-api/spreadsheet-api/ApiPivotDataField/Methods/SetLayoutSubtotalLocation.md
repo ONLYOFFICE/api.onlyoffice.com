@@ -2,23 +2,7 @@
 
 Sets the layout subtotal location.
 
-## Syntax
-
-```javascript
-expression.SetLayoutSubtotalLocation(type);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md) |  | The layout subtotal location. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutSubtotalLocation](../../ApiPivotField/Methods/SetLayoutSubtotalLocation.md).
 
 ## Example
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutSubtotalLocation('Bottom');
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotal location');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotalLocation());
 ```
+

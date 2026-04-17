@@ -42,3 +42,4 @@ textProps.SetFill(fill);
 run.AddText("This is a text run with the font color set to gray.");
 paragraph.AddElement(run);
 ```
+

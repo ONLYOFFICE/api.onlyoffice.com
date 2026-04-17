@@ -36,3 +36,4 @@ let copyInlineLvlSdt = inlineLvlSdt.Copy();
 paragraph.AddLineBreak();
 paragraph.AddInlineLvlSdt(copyInlineLvlSdt);
 ```
+

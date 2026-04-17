@@ -54,5 +54,5 @@ const paragraph = docContent.GetElement(0);
 const docInfo = presentation.GetDocumentInfo();
 paragraph.AddText('This document has been created with: ' + docInfo.Application);
 slide.AddObject(shape);
-
 ```
+

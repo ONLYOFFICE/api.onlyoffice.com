@@ -31,3 +31,4 @@ circleAnnot.SetBorderEffectStyle("cloud");
 circleAnnot.SetBorderEffectIntensity(1);
 console.log(`Annot rect diff is: ${circleAnnot.GetRectDiff()}`);
 ```
+

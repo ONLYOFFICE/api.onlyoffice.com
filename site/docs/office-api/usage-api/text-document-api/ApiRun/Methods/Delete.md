@@ -39,3 +39,4 @@ run1.RemoveAllElements();
 paragraph.AddLineBreak();
 paragraph.AddText("The first run was removed from the document.");
 ```
+

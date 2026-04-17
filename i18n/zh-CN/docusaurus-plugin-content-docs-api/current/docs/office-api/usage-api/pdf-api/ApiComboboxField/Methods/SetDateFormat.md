@@ -32,5 +32,5 @@ page.AddObject(comboboxField);
 
 comboboxField.SetDateFormat("dd.mm.yyyy");
 comboboxField.SetValue("10 january 2015");
-
 ```
+

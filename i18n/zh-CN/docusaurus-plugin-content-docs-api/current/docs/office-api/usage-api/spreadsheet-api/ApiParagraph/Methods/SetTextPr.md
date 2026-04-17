@@ -48,5 +48,5 @@ paragraph.SetTextPr(textPr);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has default properties.');
 content.Push(paragraph2);
-
 ```
+

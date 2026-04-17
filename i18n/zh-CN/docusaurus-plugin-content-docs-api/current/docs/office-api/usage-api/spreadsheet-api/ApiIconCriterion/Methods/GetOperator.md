@@ -40,5 +40,5 @@ for (let i = 0; i < criteria.length; i++) {
 	const range = worksheet.GetRange('B' + (i + 2));
 	range.SetValue('Criterion ' + (i + 1) + ' operator: ' + criteria[i].GetOperator());
 }
-
 ```
+

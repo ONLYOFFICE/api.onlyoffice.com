@@ -30,3 +30,4 @@ let checkBoxFormPr = {
 };
 let checkBoxForm = Api.CreateCheckBoxForm(checkBoxFormPr);
 ```
+

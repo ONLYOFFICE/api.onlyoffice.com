@@ -36,3 +36,4 @@ let range = doc.GetRange(0, 26);
 let style = doc.GetStyle("Heading 2");
 range.SetStyle(style);
 ```
+

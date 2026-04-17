@@ -34,3 +34,4 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.TEXT(45.5, "$0.00"));
 ```
+

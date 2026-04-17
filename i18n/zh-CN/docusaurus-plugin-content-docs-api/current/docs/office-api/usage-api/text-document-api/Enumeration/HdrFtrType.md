@@ -27,3 +27,4 @@
 
 let docContent = finalSection.RemoveHeader("title");
 ```
+

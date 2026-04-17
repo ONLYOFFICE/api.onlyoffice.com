@@ -35,3 +35,4 @@ let protectedRange = worksheet.GetProtectedRange("protectedRange");
 protectedRange.AddUser("userId", "name", "CanView");
 protectedRange.DeleteUser("userId");
 ```
+

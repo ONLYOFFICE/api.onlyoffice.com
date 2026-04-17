@@ -51,3 +51,4 @@ Api.AddCustomFunctionLibrary("LibraryName", function(){
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('=ADD(1,2)');
 ```
+

@@ -53,5 +53,5 @@ slide.RemoveAllObjects();
 const aCharts = master.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 aCharts[0].SetMinorHorizontalGridlines(stroke);
-
 ```
+

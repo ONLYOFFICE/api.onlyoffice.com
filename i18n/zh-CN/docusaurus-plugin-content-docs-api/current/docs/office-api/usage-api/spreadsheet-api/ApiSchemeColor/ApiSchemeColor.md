@@ -1,7 +1,6 @@
 # ApiSchemeColor
 
-表示 ApiSchemeColor 类。
-
+ApiSchemeColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
 
 ## 方法
 

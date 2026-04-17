@@ -41,3 +41,4 @@ for (let i = 0; i < values.length; i++) {
 let range = worksheet.GetRange("A2:A5");
 worksheet.GetRange("B5").SetValue(func.IRR(range));
 ```
+

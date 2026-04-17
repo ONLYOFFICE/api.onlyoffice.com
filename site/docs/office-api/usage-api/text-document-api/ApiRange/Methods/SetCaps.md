@@ -35,3 +35,4 @@ paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(10, 17);
 range.SetCaps(true);
 ```
+

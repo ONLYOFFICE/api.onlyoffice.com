@@ -43,5 +43,5 @@ shape.SetSize(300 * 36000, 130 * 36000);
 layout.AddObject(shape);
 master.AddLayout(0, layout);
 slide.ApplyLayout(master.GetLayout(0));
-
 ```
+

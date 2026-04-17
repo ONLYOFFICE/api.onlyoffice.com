@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"buttonWidget"
 
 ## Example
 
@@ -31,3 +31,4 @@ page.AddObject(buttonField);
 let widgets = buttonField.GetAllWidgets();
 console.log('Widget type is: ' + widgets[0].GetClassType());
 ```
+

@@ -52,5 +52,5 @@ condition1.SetNumberFormat("$#,##0.00");
 
 worksheet.GetRange("C4").SetValue("New format:");
 worksheet.GetRange("C5").SetValue(condition1.GetNumberFormat());
-
 ```
+

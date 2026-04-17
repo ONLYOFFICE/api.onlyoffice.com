@@ -71,3 +71,4 @@ pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
 pivotWorksheet.GetRange('A15').SetValue('Source Style field name');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetSourceName());
 ```
+

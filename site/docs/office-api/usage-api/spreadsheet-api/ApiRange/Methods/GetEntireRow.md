@@ -37,5 +37,5 @@ entireRows.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 
 worksheet.GetRange("A1").SetValue("Entire rows of C3:E5 are highlighted");
 worksheet.GetRange("A1").AutoFit(false, true);
-
 ```
+

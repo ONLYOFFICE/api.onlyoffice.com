@@ -2,23 +2,7 @@
 
 Sets the tag attribute to the current form.
 
-## Syntax
-
-```javascript
-expression.SetTag(tag);
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| tag | Required | string |  | The tag which will be added to the current container. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md).
 
 ## Example
 
@@ -46,5 +30,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```
+

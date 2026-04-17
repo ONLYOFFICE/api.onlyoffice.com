@@ -39,5 +39,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The stroke of this shape is transparent.");
 slide.AddObject(shape);
-
 ```
+

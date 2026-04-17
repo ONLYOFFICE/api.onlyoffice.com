@@ -39,5 +39,5 @@ const grandParent = parentNode.GetParent();
 
 worksheet.GetRange('A1').SetValue('Parent node name: ' + parentNode.GetNodeName());
 worksheet.GetRange('A2').SetValue('Grand parent: ' + grandParent);
-
 ```
+

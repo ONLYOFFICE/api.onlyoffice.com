@@ -17,7 +17,6 @@ Object
 | tag | string | The form tag. |
 | tip | string | The form tip text. |
 
-
 ## Example
 
 This example creates a text form with the common form properties.
@@ -34,5 +33,5 @@ let formPrBase = {
 	"placeholder": "First name"
 };
 let textForm = Api.CreateTextForm(formPrBase);
-
 ```
+

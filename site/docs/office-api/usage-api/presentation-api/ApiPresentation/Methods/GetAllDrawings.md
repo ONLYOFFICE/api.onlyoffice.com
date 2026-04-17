@@ -75,5 +75,5 @@ paragraph.AddText('Drawings: ' + drawings.length);
 label.SetPosition(0, 144 * 36000);
 slide.AddObject(label);
 label.Select();
-
 ```
+

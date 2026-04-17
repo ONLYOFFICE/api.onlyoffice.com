@@ -32,3 +32,4 @@ let dateField = Api.CreateDateField([10, 10, 160, 32]);
 page.AddObject(dateField);
 dateField.SetValue('01.01.2025');
 ```
+

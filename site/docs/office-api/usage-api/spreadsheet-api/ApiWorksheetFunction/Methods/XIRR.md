@@ -48,3 +48,4 @@ let range1 = worksheet.GetRange("A2:A5");
 let range2 = worksheet.GetRange("B2:B5");
 worksheet.GetRange("C5").SetValue(func.XIRR(range1, range2));
 ```
+

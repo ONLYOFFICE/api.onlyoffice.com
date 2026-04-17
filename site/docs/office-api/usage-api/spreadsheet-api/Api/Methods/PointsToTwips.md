@@ -31,5 +31,5 @@ const text = points + ' points are equal to ' + twips + ' twips.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```
+

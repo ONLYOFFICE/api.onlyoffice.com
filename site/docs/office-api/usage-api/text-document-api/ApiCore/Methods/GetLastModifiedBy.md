@@ -30,5 +30,5 @@ core.SetLastModifiedBy("Mark Pottato");
 const lastModifiedBy = core.GetLastModifiedBy();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
-
 ```
+

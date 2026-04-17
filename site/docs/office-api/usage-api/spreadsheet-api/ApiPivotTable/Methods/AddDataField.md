@@ -46,3 +46,4 @@ pivotTable.MoveField('Region', 'Rows');
 let dataField = pivotTable.AddDataField('Price');
 dataField.SetName('Regional prices');
 ```
+

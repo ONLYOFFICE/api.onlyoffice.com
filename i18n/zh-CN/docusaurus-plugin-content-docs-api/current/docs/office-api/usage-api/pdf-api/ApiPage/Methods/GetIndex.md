@@ -29,3 +29,4 @@ let textField = Api.CreateTextField([10, 10, 160, 32]);
 page.AddObject(textField);
 textField.SetValue('Page index is: ' + page.GetIndex());
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the priority value of the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.GetPriority();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-number
+Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
-
 ```
+

@@ -37,3 +37,4 @@ let rangeFrom = worksheet.GetRange("B4:D4");
 let range = worksheet.GetRange("A1:C1");
 range.Paste(rangeFrom);
 ```
+

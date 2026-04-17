@@ -51,5 +51,5 @@ dataBar.SetNegativeBarColor(negativeColor);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetNegativeBarColor() ? "Set" : "None");
-
 ```
+

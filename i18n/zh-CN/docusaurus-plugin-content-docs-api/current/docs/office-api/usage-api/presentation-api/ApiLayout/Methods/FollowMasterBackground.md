@@ -36,5 +36,5 @@ master.SetBackground(fill);
 const layout = master.GetLayout(0);
 layout.FollowMasterBackground();
 slide.FollowLayoutBackground();
-
 ```
+

@@ -90,5 +90,5 @@ pivotWorksheet.GetRange('A15').SetValue(`Product field will be sorted by Units i
 let priorityPivotField = pivotTable.GetPivotFields('Priority');
 priorityPivotField.AutoSort("xlManual", priorityField.Name);
 pivotWorksheet.GetRange('A16').SetValue(`Priority field set to manual sorting mode (${priorityPivotField.AutoSortOrder} - ${priorityPivotField.AutoSortField})`);
-
 ```
+

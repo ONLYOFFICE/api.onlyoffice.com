@@ -49,3 +49,4 @@ let range1 = worksheet.GetRange("B2:B11");
 let range2 = worksheet.GetRange("A2:A11");
 worksheet.GetRange("C2:C11").SetValue(func.TREND(range1, range2));
 ```
+

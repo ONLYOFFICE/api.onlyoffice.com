@@ -2,23 +2,7 @@
 
 指定将用于在文档中布局当前表格内容的算法。
 
-## 语法
-
-```javascript
-expression.SetTableLayout(sType);
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | "autofit" \| "fixed" |  | 文档中表格布局的类型。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTablePr.SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md).
 
 ## 示例
 
@@ -43,3 +27,4 @@ let cell = table.GetRow(0).GetCell(0);
 cell.GetContent().GetElement(0).AddText("Fixed layout");
 doc.Push(table);
 ```
+

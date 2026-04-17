@@ -36,5 +36,5 @@ let tofPr = {
 	"TofStyle": tofStyle
 };
 doc.AddTableOfFigures(tofPr);
-
 ```
+

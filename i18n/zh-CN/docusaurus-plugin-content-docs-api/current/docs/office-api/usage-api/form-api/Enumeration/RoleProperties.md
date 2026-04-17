@@ -4,14 +4,13 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | color | string | 角色颜色。 |
-
 
 ## 示例
 
@@ -21,3 +20,4 @@
 let rolePr = {"color": "#ffefbf"};
 formRoles.Add("customer", rolePr);
 ```
+

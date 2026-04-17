@@ -31,3 +31,4 @@ page.AddObject(textField);
 let widgets = textField.GetAllWidgets();
 console.log(`Annotation rect is: ${widgets[0].GetRect()}`);
 ```
+

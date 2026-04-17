@@ -48,5 +48,5 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Text from document content: ' + text);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```
+

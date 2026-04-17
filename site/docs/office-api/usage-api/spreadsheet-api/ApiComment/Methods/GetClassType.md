@@ -35,3 +35,4 @@ let comment = range.GetComment();
 let type = comment.GetClassType();
 worksheet.GetRange("A3").SetValue("Type: " + type);
 ```
+

@@ -34,3 +34,4 @@ let pageCount = doc.GetPageCount();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Number of pages: " + pageCount);
 ```
+

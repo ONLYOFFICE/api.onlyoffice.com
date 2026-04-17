@@ -30,5 +30,5 @@ core.SetKeywords("Example; ApiCore; Document");
 const keywords = core.GetKeywords();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```
+

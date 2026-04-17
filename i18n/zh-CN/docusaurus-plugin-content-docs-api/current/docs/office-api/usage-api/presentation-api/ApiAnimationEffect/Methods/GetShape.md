@@ -53,5 +53,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Animated object type: ' + shapeType);
 slide.AddObject(infoShape);
-
 ```
+

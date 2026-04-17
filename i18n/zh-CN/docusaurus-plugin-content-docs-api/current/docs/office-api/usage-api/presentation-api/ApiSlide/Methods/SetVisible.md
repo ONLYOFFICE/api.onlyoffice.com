@@ -33,5 +33,5 @@ const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
 slide.SetVisible(false);
 presentation.AddSlide(slide);
-
 ```
+

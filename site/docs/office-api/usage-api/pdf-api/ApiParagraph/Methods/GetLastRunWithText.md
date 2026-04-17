@@ -44,5 +44,5 @@ const lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(' [Last run]');
 lastRun.SetBold(true);
 page.AddObject(shape);
-
 ```
+

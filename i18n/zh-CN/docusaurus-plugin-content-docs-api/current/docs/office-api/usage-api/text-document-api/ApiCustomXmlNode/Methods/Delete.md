@@ -32,3 +32,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("XML text: " + xml.GetXml());
 doc.Push(infoParagraph);
 ```
+

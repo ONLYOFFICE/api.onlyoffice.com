@@ -34,3 +34,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Xml string representaion: " + xml.GetXml());
 doc.Push(infoParagraph);
 ```
+

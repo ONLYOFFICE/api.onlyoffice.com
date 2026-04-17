@@ -42,3 +42,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type of the node: " + classType);
 doc.Push(paragraph);
 ```
+

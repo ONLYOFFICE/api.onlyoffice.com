@@ -33,3 +33,4 @@ let xml = xmlManager.Add("<data><value>Sample</value></data>");
 let classType = xml.GetClassType();
 worksheet.GetRange("A1").SetValue("Class type: " + classType);
 ```
+

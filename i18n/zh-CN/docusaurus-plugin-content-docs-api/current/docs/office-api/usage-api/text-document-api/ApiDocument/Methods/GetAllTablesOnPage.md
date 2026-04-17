@@ -40,3 +40,4 @@ let tables = doc.GetAllTablesOnPage(0);
 let row1 = tables[0].GetRow(0);
 row1.Remove();
 ```
+

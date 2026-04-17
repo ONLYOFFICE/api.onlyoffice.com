@@ -3,21 +3,7 @@
 Returns a shape in which the form is placed to control the position and size of the fixed size form frame.
 The null value will be returned for the inline forms.
 
-## Syntax
-
-```javascript
-expression.GetWrapperShape();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiShape](../../ApiShape/ApiShape.md)
+Inherited from [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md).
 
 ## Example
 
@@ -37,3 +23,4 @@ let shape = textForm.GetWrapperShape();
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 shape.SetOutLine(stroke);
 ```
+

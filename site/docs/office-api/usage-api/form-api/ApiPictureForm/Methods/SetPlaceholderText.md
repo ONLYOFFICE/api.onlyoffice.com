@@ -3,23 +3,7 @@
 Sets the placeholder text to the current form.
 *Can't be set to checkbox or radio button.*
 
-## Syntax
-
-```javascript
-expression.SetPlaceholderText(sText);
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The text that will be set to the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetPlaceholderText](../../ApiFormBase/Methods/SetPlaceholderText.md).
 
 ## Example
 
@@ -36,3 +20,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetPlaceholderText("First name");
 ```
+

@@ -44,3 +44,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(xml.GetXml());
 doc.AddElement(0, paragraph);
 ```
+

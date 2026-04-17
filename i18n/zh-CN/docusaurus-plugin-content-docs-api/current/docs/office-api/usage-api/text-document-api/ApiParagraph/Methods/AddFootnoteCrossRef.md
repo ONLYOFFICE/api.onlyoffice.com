@@ -44,3 +44,4 @@ paragraph.AddText("For more information on previous sentences see footnote ");
 doc.Push(paragraph);
 paragraph.AddFootnoteCrossRef("formFootnoteNum", footnotesFirstParagraphs[0]);
 ```
+

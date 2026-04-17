@@ -31,5 +31,5 @@ page.AddObject(textField);
 textField.SetCharLimit(12);
 textField.SetComb(true);
 textField.SetValue('Comb is:' + textField.IsComb());
-
 ```
+

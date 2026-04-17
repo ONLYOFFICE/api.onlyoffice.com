@@ -65,3 +65,4 @@ let value = pivotTable.GetData(['East', 'Tee']);
 pivotWorksheet.GetRange('A9').SetValue('Value of East Tee Price:');
 pivotWorksheet.GetRange('B9').SetValue(value);
 ```
+

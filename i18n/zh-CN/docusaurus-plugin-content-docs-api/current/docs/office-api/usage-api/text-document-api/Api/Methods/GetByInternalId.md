@@ -38,5 +38,5 @@ resultParagraph.AddText('Found object class type: ' + found.GetClassType());
 resultParagraph.AddLineBreak();
 resultParagraph.AddText('Found paragraph text: ' + found.GetText());
 doc.Push(resultParagraph);
-
 ```
+

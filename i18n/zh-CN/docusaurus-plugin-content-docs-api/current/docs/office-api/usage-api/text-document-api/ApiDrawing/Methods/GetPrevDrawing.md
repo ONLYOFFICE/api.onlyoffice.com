@@ -38,3 +38,4 @@ paragraph.AddDrawing(copyDrawing);
 let nextDrawing = copyDrawing.GetPrevDrawing();
 nextDrawing.SetHorFlip(true);
 ```
+

@@ -40,5 +40,5 @@ const bookNode = xml.GetNodes('/bookstore/book')[0];
 bookNode.SetNodeValue('<book>Updated content</book>');
 worksheet.GetRange('A1').SetValue('XML after update:');
 worksheet.GetRange('B1').SetValue(xml.GetXml());
-
 ```
+

@@ -49,5 +49,5 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after adding the copied master: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

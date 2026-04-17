@@ -30,3 +30,4 @@ let appearance = contentControl.GetAppearance();
 contentControl.AddText("The appearance of this content control: " + appearance);
 paragraph.Push(contentControl);
 ```
+

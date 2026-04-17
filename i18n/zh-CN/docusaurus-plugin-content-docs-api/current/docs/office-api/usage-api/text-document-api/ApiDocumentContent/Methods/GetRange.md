@@ -44,3 +44,4 @@ docContent.AddElement(0, paragraph);
 let range = docContent.GetRange(8, 11);
 range.SetBold(true);
 ```
+

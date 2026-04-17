@@ -38,3 +38,4 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 1908000, 1404000, fillFromJSON, stroke);
 paragraph.AddDrawing(drawing);
 ```
+

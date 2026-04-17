@@ -2,21 +2,7 @@
 
 返回为页字段显示的当前页面（仅对页字段有效）。
 
-## 语法
-
-```javascript
-expression.GetCurrentPage();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string \| number
+Inherited from [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md).
 
 ## 示例
 
@@ -64,3 +50,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A13').SetValue('Current Page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetCurrentPage());
 ```
+

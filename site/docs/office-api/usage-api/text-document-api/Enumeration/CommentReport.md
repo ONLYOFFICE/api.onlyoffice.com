@@ -11,3 +11,4 @@ Object
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | username | [UserComments](../Enumeration/UserComments.md) | The comments grouped by username. |
+

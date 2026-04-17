@@ -50,5 +50,5 @@ dataBar.SetBarFillType("xlDataBarFillSolid");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetBarFillType());
-
 ```
+

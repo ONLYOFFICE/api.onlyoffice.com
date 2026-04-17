@@ -47,5 +47,5 @@ let formula1 = condition1.GetFormula1();
 
 worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
-
 ```
+

@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(polygonAnnot);
 console.log(`Annot class type is: ${polygonAnnot.GetClassType()}`);
 ```
+

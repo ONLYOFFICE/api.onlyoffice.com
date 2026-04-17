@@ -51,5 +51,5 @@ paragraph = Api.CreateParagraph();
 const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
-
 ```
+

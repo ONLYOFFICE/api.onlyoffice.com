@@ -43,3 +43,4 @@ textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);
 ```
+

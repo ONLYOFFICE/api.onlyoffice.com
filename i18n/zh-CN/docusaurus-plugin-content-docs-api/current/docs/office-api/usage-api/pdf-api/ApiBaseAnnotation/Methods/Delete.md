@@ -30,5 +30,5 @@ page.AddObject(squareAnnot);
 squareAnnot.SetBorderStyle("dashed");
 squareAnnot.SetDashPattern([8, 4, 4, 4]);
 squareAnnot.Delete();
-
 ```
+

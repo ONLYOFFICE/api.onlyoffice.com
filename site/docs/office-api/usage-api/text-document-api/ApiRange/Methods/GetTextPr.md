@@ -46,5 +46,5 @@ range2.SetTextPr(textPr);
 let newParagraph = Api.CreateParagraph();
 newParagraph.AddText("This text is in italic as per the modified text properties.");
 doc.Push(newParagraph);
-
 ```
+

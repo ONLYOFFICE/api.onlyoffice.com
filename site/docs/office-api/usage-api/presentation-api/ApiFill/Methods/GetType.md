@@ -59,5 +59,5 @@ let content3 = shape3.GetDocContent();
 let para3 = content3.GetElement(0);
 let fill3 = shape3.GetFill();
 para3.AddText("No fill: " + fill3.GetType());
-
 ```
+

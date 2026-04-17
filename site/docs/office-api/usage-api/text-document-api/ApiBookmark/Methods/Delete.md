@@ -36,5 +36,5 @@ let range2 = doc.GetRange(14, 22);
 range2.AddBookmark("Bookmark 2");
 let bookmark1 = doc.GetBookmark("Bookmark 1");
 bookmark1.Delete();
-
 ```
+

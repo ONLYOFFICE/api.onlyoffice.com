@@ -42,3 +42,4 @@ content.Push(paragraph2);
 let nextParagraph = paragraph1.GetNext();
 nextParagraph.SetBold(true);
 ```
+

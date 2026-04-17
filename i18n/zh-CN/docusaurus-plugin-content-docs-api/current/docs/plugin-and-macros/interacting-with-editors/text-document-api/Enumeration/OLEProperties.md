@@ -2,6 +2,10 @@
 
 OLE 对象属性
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -13,11 +17,6 @@ OLE 对象属性
 | imgSrc | string | 存储在 OLE 对象中并由插件使用的图像（其可视表示）的链接。 |
 | width | number | OLE 对象的宽度，以毫米为单位。 |
 | widthPix | number | OLE 对象图像的宽度，以像素为单位。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 
@@ -32,3 +31,4 @@ let oleProperties = {
     "heightPix": 60 * 36000
 };
 ```
+

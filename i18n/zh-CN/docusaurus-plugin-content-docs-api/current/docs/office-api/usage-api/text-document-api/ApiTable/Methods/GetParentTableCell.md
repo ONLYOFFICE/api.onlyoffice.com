@@ -42,3 +42,4 @@ table1.AddElement(cell, 0, table2);
 let parentTableCell = table2.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
+

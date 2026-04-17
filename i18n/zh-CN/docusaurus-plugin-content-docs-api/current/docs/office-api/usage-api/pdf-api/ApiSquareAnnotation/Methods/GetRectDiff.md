@@ -31,3 +31,4 @@ squareAnnot.SetBorderEffectStyle("cloud");
 squareAnnot.SetBorderEffectIntensity(1);
 console.log(`Annot rect diff is: ${squareAnnot.GetRectDiff()}`);
 ```
+

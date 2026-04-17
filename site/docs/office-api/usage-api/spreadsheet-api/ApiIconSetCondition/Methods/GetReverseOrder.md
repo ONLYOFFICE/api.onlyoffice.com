@@ -42,5 +42,5 @@ iconCondition.SetReverseOrder(true);
 
 let isReversed = iconCondition.GetReverseOrder();
 worksheet.GetRange("B1").SetValue("Icons reversed: " + isReversed);
-
 ```
+

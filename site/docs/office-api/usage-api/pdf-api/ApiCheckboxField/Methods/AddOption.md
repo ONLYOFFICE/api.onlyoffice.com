@@ -35,3 +35,4 @@ page.AddObject(checkboxField);
 checkboxField.AddOption(0, [10, 30, 25, 45], 'Choice 2');
 console.log('Toggle to off is: ' + checkboxField.IsToggleToOff());
 ```
+

@@ -2,21 +2,7 @@
 
 Returns a collection of drawing objects from the document content.
 
-## Syntax
-
-```javascript
-expression.GetAllDrawingObjects();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[Drawing](../../Enumeration/Drawing.md)[]
+Inherited from [ApiDocumentContent.GetAllDrawingObjects](../../ApiDocumentContent/Methods/GetAllDrawingObjects.md).
 
 ## Example
 
@@ -54,3 +40,4 @@ let drawings = docContent.GetAllDrawingObjects();
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 drawings[0].Fill(fill);
 ```
+

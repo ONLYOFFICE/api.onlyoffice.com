@@ -37,5 +37,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to capitalized letters.');
 paragraph.SetCaps(true);
 page.AddObject(shape);
-
 ```
+

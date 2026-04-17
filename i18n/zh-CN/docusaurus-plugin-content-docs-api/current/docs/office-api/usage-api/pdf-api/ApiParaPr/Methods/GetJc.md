@@ -52,5 +52,5 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
-
 ```
+

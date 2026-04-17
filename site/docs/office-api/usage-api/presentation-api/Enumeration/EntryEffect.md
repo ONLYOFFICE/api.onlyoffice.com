@@ -177,3 +177,5 @@ Enumeration
 - "effectZoomInSlightly"
 - "effectZoomOut"
 - "effectZoomOutSlightly"
+
+

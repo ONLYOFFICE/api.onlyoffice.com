@@ -43,3 +43,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Elements: paragraph, run1, run2, hyperlink");
 doc.Push(paragraph);
 ```
+

@@ -38,5 +38,5 @@ paragraph.AddLineBreak();
 checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "radio" : true, "key" : "Marital status"});
 checkBoxForm.SetLabel(" Single");
 paragraph.AddElement(checkBoxForm);
-
 ```
+

@@ -32,3 +32,4 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Type: ");
 worksheet.GetRange("B1").SetValue(Api.GetFreezePanesType());
 ```
+

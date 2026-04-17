@@ -33,5 +33,5 @@ let pictureFormPr = {
 	"shiftY": 50
 };
 let pictureForm = Api.CreatePictureForm(pictureFormPr);
-
 ```
+

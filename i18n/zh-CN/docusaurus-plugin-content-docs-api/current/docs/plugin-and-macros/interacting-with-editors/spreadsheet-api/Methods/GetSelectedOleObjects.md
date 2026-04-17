@@ -23,3 +23,4 @@ expression.GetSelectedOleObjects();
 ```javascript
 window.Asc.plugin.executeMethod ("GetSelectedOleObjects");
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the placeholder text from the current form.
 
-## Syntax
-
-```javascript
-expression.GetPlaceholderText();
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md).
 
 ## Example
 
@@ -36,5 +22,5 @@ let placeholderText = textForm.GetPlaceholderText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);
-
 ```
+

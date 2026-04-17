@@ -46,5 +46,5 @@ let conditionType = condition.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```
+

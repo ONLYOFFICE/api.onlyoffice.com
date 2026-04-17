@@ -46,5 +46,5 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```
+

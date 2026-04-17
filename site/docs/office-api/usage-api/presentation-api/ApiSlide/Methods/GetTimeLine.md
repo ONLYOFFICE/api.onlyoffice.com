@@ -50,5 +50,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Animation added: fade effect');
 slide.AddObject(infoShape);
-
 ```
+

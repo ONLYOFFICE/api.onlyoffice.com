@@ -34,3 +34,4 @@ let func = Api.WorksheetFunction;
 let ans = func.GAUSS(2);
 worksheet.GetRange("B2").SetValue(ans);
 ```
+

@@ -38,3 +38,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing is flipped horizontally: " + flip);
 doc.AddElement(0, paragraph);
 ```
+

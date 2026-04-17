@@ -44,5 +44,5 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + sType);
-
 ```
+

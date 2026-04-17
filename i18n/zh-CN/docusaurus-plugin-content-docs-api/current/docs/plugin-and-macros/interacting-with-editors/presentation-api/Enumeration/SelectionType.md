@@ -31,3 +31,4 @@ window.Asc.plugin.executeMethod ("GetSelectionType", [], function(type) {
     }
 });
 ```
+

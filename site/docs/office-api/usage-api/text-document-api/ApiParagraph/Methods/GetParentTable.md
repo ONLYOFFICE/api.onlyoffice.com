@@ -42,3 +42,4 @@ let parentTable = paragraph.GetParentTable();
 cell = parentTable.GetRow(2).GetCell(0);
 parentTable.RemoveRow(cell);
 ```
+

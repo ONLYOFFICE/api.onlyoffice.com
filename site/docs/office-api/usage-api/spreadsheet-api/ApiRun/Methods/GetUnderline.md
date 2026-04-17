@@ -2,21 +2,7 @@
 
 Gets the underline property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetUnderline();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
 
 ## Example
 
@@ -45,3 +31,4 @@ let isUnderline = textProps.GetUnderline();
 paragraph.AddText("Underline property: " + isUnderline);
 content.Push(paragraph);
 ```
+

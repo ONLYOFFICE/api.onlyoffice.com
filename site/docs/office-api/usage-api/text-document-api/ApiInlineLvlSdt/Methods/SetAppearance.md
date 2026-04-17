@@ -32,3 +32,4 @@ contentControl.SetAppearance("hidden");
 contentControl.AddText("This is a content control with a hidden appearance");
 paragraph.Push(contentControl);
 ```
+

@@ -39,5 +39,5 @@ paraPr.SetShd('clear', Api.RGB(255, 111, 61));
 let paragraph = doc.GetElement(0);
 paragraph.AddText('This is an example of setting a shading to a paragraph.');
 paragraph.SetStyle(myStyle);
-
 ```
+

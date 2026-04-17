@@ -2,21 +2,7 @@
 
 返回段落行距值。
 
-## 语法
-
-```javascript
-expression.GetSpacingLineValue();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
+Inherited from [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacingLineValue.md).
 
 ## 示例
 
@@ -43,3 +29,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line value : " + spacingLineValue);
 content.Push(paragraph);
 ```
+

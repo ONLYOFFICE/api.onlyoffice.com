@@ -44,5 +44,5 @@ const slide = Api.CreateSlide();
 presentation.AddSlide(slide);
 const duplicateLayout = layout.Duplicate(1);
 slide.ApplyLayout(duplicateLayout);
-
 ```
+

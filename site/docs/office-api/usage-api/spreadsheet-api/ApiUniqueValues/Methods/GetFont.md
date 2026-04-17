@@ -2,21 +2,7 @@
 
 Returns the font applied by the current format condition.
 
-## Syntax
-
-```javascript
-expression.GetFont();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
 
 ## Example
 
@@ -52,5 +38,5 @@ if (font) {
 worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
-
 ```
+

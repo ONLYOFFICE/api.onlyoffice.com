@@ -2,23 +2,7 @@
 
 Sets the cell range to which the current conditional formatting rule applies.
 
-## Syntax
-
-```javascript
-expression.ModifyAppliesToRange(Range);
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Range | Required | [ApiRange](../../ApiRange/ApiRange.md) |  | The range to which the current conditional formatting rule will be applied. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
 
 ## Example
 
@@ -55,5 +39,5 @@ condition1.ModifyAppliesToRange(newRange);
 
 worksheet.GetRange("D1").SetValue("Modified range:");
 worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
-
 ```
+

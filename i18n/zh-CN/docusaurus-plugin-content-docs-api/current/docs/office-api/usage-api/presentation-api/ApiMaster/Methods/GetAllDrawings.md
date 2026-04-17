@@ -42,5 +42,5 @@ master.AddObject(drawing);
 const allDrawings = master.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("picture");
 allDrawings[0].SetPlaceholder(placeholder);
-
 ```
+

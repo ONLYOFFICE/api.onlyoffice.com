@@ -50,5 +50,5 @@ forms = doc.GetFormsByRole("Chief");
 paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Number of forms with role 'Chief': " + forms.length);
-
 ```
+

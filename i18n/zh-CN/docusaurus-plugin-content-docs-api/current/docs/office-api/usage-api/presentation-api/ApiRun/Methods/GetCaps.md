@@ -2,21 +2,7 @@
 
 返回具有当前文本属性的文本是否大写。
 
-## 语法
-
-```javascript
-expression.GetCaps();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md).
 
 ## 示例
 
@@ -51,5 +37,5 @@ paragraph = Api.CreateParagraph();
 const caps = textPr.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 docContent.Push(paragraph);
-
 ```
+

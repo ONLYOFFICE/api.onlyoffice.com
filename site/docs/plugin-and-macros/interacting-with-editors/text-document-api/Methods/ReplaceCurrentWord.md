@@ -26,3 +26,4 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("ReplaceCurrentWord", ["ONLYOFFICE", "entirely"]);
 ```
+

@@ -38,5 +38,5 @@ const paragraph = content.GetElement(0);
 const isLooping = presentation.GetLoopUntilStopped();
 paragraph.AddText("Loop until stopped: " + isLooping);
 slide.AddObject(shape);
-
 ```
+

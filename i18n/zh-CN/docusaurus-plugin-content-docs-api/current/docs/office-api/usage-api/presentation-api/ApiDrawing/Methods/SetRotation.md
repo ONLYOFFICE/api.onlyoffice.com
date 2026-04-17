@@ -40,5 +40,5 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
 slide.AddObject(shape);
-
 ```
+

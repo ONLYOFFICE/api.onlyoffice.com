@@ -40,5 +40,5 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

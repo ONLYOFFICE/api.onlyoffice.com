@@ -45,5 +45,5 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 slide.AddObject(shape);
-
 ```
+

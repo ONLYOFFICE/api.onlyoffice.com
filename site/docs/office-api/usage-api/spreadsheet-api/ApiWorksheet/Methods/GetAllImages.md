@@ -33,3 +33,4 @@ let images = worksheet.GetAllImages();
 let classType = images[0].GetClassType();
 worksheet.GetRange("A10").SetValue("Class Type = " + classType);
 ```
+

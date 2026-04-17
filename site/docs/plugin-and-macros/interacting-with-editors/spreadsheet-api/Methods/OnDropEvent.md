@@ -42,3 +42,4 @@ window.Asc.plugin.executeMethod ("OnDropEvent", [{
   "html" : "<span>test html</span>"
 }]);
 ```
+

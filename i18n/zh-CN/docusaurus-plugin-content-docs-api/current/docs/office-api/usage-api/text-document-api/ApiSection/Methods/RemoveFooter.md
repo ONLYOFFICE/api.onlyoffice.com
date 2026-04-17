@@ -50,3 +50,4 @@ paragraph.AddText("This is page footer #2. ");
 paragraph.AddText("Only this footer can be seen, as the first one has been removed.");
 section.RemoveFooter("default");
 ```
+

@@ -45,3 +45,4 @@ let cell = table.GetCell(0, 0);
 table.AddElement(cell, 0, paragraph);
 table.AddComment("comment", "John Smith");
 ```
+

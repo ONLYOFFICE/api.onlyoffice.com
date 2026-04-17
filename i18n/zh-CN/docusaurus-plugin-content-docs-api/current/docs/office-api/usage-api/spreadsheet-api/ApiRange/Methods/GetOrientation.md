@@ -35,3 +35,4 @@ range.SetOrientation("xlUpward");
 let orientation = range.GetOrientation();
 worksheet.GetRange("A3").SetValue("Orientation: " + orientation);
 ```
+

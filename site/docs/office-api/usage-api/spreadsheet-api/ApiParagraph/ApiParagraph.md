@@ -1,7 +1,6 @@
 # ApiParagraph
 
-Represents the ApiParagraph class.
-
+ApiParagraph is a subclass of [ApiParaPr](../ApiParaPr/ApiParaPr.md).
 
 ## Methods
 

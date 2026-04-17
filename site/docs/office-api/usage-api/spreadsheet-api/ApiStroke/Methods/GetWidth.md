@@ -44,5 +44,5 @@ let stroke3 = Api.CreateStroke(5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor
 let shape3 = worksheet.AddShape("rect", 40 * 36000, 25 * 36000, fill, stroke3, 3, 0, 2, 2);
 let width3 = shape3.GetLine().GetWidth();
 worksheet.GetRange("A3").SetValue("Border 3: " + width3 + " EMU (" + (width3 / 12700).toFixed(2) + " pt)");
-
 ```
+

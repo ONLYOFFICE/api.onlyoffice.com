@@ -41,3 +41,4 @@ doc.Push(table);
 let searchResults = table.GetCell(0, 0).Search("Cell");
 searchResults[1].SetBold(true);
 ```
+

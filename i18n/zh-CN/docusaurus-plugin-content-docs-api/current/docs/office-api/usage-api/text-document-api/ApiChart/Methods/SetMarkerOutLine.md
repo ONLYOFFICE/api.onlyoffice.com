@@ -46,3 +46,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```
+

@@ -2,7 +2,6 @@
 
 Represents the ApiPivotFilters class.
 
-
 ## Methods
 
 | Method | Returns | Description |

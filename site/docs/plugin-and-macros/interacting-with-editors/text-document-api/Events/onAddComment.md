@@ -8,6 +8,8 @@ The function called when a comment is added to the document with the [AddComment
 | --------- | ------------- | ----------- |
 | comment | [Event_comment](../Enumeration/Event_comment.md) | Defines the comment object containing the comment data. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onAddComment", (comment) => {
     console.log("event: onAddComment");

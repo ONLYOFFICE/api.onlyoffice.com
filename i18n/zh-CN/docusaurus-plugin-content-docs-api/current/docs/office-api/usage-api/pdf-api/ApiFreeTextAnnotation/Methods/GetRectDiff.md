@@ -32,3 +32,4 @@ freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
 freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
 console.log(`Annot rect diff is: ${freeTextAnnot.GetRectDiff()}`);
 ```
+

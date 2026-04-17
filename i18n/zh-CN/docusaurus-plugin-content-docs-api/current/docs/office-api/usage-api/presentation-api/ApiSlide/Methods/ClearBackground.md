@@ -37,5 +37,5 @@ slide.SetBackground(fill);
 
 const duplicateSlide = slide.Duplicate(1);
 duplicateSlide.ClearBackground();
-
 ```
+

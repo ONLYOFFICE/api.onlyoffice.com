@@ -2,7 +2,6 @@
 
 Represents the ApiTableRowPr class.
 
-
 ## Methods
 
 | Method | Returns | Description |

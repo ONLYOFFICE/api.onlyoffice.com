@@ -8,6 +8,8 @@ The function called when an annotation receives focus.
 | --------- | ------------- | ----------- |
 | annotation | TextAnnotation | The annotation that received focus. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onFocusAnnotation", (data) => {
     console.log("event: onFocusAnnotation");

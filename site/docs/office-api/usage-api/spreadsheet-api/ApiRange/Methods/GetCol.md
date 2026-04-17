@@ -31,3 +31,4 @@ let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("D9").GetCol();
 worksheet.GetRange("A2").SetValue(range.toString());
 ```
+

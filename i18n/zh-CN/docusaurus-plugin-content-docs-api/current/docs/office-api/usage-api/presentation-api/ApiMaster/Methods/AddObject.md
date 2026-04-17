@@ -40,5 +40,5 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 master.AddObject(shape);
-
 ```
+

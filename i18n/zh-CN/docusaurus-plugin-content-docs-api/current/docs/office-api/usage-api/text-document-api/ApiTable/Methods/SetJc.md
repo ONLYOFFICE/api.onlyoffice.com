@@ -2,23 +2,7 @@
 
 指定当前表格相对于当前节中文本边距的对齐方式。
 
-## 语法
-
-```javascript
-expression.SetJc(sJcType);
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJcType | 必需 | "left" \| "right" \| "center" |  | 用于当前表格放置的对齐类型。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTablePr.SetJc](../../ApiTablePr/Methods/SetJc.md).
 
 ## 示例
 
@@ -42,3 +26,4 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

@@ -35,3 +35,4 @@ widgets[0].SetLayout('iconTextV');
 widgets[0].SetScaleHow('proportional');
 widgets[0].SetLabel('Scale how is: ' + widgets[0].GetScaleHow());
 ```
+

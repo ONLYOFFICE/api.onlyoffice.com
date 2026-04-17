@@ -30,5 +30,5 @@ page.AddObject(textField);
 
 textField.SetScrollLongText(true);
 textField.SetValue('Scroll long text property is: ' + textField.IsScrollLongText());
-
 ```
+

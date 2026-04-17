@@ -42,3 +42,4 @@ row.GetCell(0).GetContent().GetElement(0).AddText("First row");
 row.SetTextPr(textPr);
 doc.Push(table);
 ```
+

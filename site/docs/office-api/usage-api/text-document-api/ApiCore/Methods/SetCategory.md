@@ -32,5 +32,5 @@ core.SetCategory("Examples");
 const category = core.GetCategory();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Category: " + category);
-
 ```
+

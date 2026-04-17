@@ -34,5 +34,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetShowInput(true);
 let showInput = validation.GetShowInput();
 worksheet.GetRange("B1").SetValue("Show input: " + showInput);
-
 ```
+

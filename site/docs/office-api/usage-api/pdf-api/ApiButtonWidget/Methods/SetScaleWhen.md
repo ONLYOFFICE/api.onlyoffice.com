@@ -35,3 +35,4 @@ widgets[0].SetLayout('iconTextV');
 widgets[0].SetScaleWhen('always');
 widgets[0].SetLabel('Scale when is: ' + widgets[0].GetScaleWhen());
 ```
+

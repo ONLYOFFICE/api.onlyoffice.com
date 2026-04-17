@@ -64,3 +64,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A12').SetValue('The Style field orientation');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetOrientation());
 ```
+

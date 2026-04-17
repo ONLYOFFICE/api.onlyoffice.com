@@ -56,5 +56,5 @@ secondParaPr.SetSpacingBefore(1440);
 secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(secondParagraph);
 slide.AddObject(shape);
-
 ```
+

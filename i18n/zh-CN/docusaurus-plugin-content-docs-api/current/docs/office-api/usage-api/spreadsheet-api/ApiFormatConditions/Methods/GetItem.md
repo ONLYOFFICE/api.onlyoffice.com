@@ -47,5 +47,5 @@ formatConditions.AddDatabar();
 let firstRule = formatConditions.GetItem(1);
 
 worksheet.GetRange("B1").SetValue("Rule found: " + (firstRule !== null));
-
 ```
+

@@ -35,3 +35,4 @@ textPr.SetItalic(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the font set to italicized letters using the text properties.");
 ```
+

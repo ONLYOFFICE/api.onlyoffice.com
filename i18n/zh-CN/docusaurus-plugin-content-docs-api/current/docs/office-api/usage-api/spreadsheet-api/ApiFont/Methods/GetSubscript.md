@@ -36,3 +36,4 @@ font.SetSubscript(true);
 let isSubscript = font.GetSubscript();
 worksheet.GetRange("B3").SetValue("Subscript property: " + isSubscript);
 ```
+

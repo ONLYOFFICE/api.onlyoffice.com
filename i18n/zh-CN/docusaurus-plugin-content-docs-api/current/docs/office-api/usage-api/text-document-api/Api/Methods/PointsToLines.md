@@ -32,5 +32,5 @@ const points = 100;
 const lines = Api.PointsToLines(points);
 paragraph.AddText(points + ' points are equal to ' + lines + ' lines.');
 doc.Push(paragraph);
-
 ```
+

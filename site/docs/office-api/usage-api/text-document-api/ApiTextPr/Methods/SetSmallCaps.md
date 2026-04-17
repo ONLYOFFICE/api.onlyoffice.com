@@ -36,3 +36,4 @@ textPr.SetSmallCaps(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the font set to small capitalized letters.");
 ```
+

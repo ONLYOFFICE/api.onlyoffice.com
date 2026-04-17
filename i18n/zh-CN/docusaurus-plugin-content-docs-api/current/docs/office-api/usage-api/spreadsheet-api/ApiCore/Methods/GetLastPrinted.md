@@ -40,5 +40,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
-
 ```
+

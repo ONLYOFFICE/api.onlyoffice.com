@@ -47,3 +47,4 @@ let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
 table.SetStyle(tableStyle);
 ```
+

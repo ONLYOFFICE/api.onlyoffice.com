@@ -60,3 +60,4 @@ samePivotTable.AddFields({
 
 samePivotTable.AddDataField('Price');
 ```
+

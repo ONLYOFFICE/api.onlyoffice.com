@@ -38,3 +38,4 @@ for (let i = 0; i < 5; ++i) {
 let lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(" Last run.");
 ```
+

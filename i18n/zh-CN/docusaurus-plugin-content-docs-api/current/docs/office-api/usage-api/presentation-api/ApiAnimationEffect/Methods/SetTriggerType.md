@@ -56,5 +56,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New trigger type: ' + newTriggerType);
 slide.AddObject(infoShape);
-
 ```
+

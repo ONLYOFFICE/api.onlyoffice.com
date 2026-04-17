@@ -2,23 +2,7 @@
 
 设置基于文本的条件格式规则中使用的文本值。
 
-## 语法
-
-```javascript
-expression.SetText(Text);
-```
-
-`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Text | 必需 | string |  | 要比较的文本值。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md).
 
 ## 示例
 
@@ -52,5 +36,5 @@ condition1.SetText("Grape");
 
 worksheet.GetRange("C4").SetValue("New text:");
 worksheet.GetRange("C5").SetValue(condition1.GetText());
-
 ```
+

@@ -2,23 +2,7 @@
 
 从当前 ApiDocumentContent 对象返回文档元素数组。
 
-## 语法
-
-```javascript
-expression.GetContent(bGetCopies);
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bGetCopies | 必需 | boolean |  | 指定是否返回文档元素的副本。 |
-
-## 返回值
-
-[DocumentElement](../../Enumeration/DocumentElement.md)[]
+Inherited from [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md).
 
 ## 示例
 
@@ -57,3 +41,4 @@ docElements[0].SetBold(true);
 docElements[1].SetBackgroundColor(Api.HexColor('#EBEBEB'));
 docElements[2].Search("block text content control")[0].SetBold(true);
 ```
+

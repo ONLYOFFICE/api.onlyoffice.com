@@ -2,7 +2,6 @@
 
 Represents the ApiContentControlListEntry class.
 
-
 ## Methods
 
 | Method | Returns | Description |

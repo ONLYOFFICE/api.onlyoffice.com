@@ -40,5 +40,5 @@ const secondCriterion = criteria[1];
 worksheet.GetRange('B1').SetValue('Operator before: ' + secondCriterion.GetOperator());
 secondCriterion.SetOperator('xlGreater');
 worksheet.GetRange('B2').SetValue('Operator after: ' + secondCriterion.GetOperator());
-
 ```
+

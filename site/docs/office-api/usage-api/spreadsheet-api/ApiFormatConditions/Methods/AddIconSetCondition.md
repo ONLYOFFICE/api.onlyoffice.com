@@ -42,5 +42,5 @@ worksheet.GetRange("A9").SetValue(80);
 let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddIconSetCondition();
-
 ```
+

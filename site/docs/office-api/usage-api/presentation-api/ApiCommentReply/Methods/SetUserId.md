@@ -51,5 +51,5 @@ reply.SetUserId("new-uid-123");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply user ID is set to: " + reply.GetUserId());
-
 ```
+

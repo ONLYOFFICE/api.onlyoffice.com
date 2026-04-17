@@ -51,5 +51,5 @@ if (criteria && criteria.length > 0) {
         worksheet.GetRange("C4").SetValue(criteria[1].GetIndex());
     }
 }
-
 ```
+

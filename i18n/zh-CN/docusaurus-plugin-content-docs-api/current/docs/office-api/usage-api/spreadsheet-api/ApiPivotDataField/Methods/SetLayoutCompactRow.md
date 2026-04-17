@@ -2,23 +2,7 @@
 
 设置指定数据透视表字段是否紧凑的设置。
 
-## 语法
-
-```javascript
-expression.SetLayoutCompactRow(compact);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| compact | 必需 | boolean |  | 指定数据透视表字段是否紧凑。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetLayoutCompactRow](../../ApiPivotField/Methods/SetLayoutCompactRow.md).
 
 ## 示例
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutCompactRow(false);
 pivotWorksheet.GetRange('A12').SetValue('Region layout compact');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutCompactRow());
 ```
+

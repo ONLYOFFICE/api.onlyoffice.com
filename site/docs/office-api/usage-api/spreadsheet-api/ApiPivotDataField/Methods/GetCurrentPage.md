@@ -2,21 +2,7 @@
 
 Returns the current page which is displayed for the page field (valid only for page fields).
 
-## Syntax
-
-```javascript
-expression.GetCurrentPage();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string \| number
+Inherited from [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md).
 
 ## Example
 
@@ -64,3 +50,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A13').SetValue('Current Page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetCurrentPage());
 ```
+

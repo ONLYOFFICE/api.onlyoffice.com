@@ -2,21 +2,7 @@
 
 Returns a number of elements in the current document.
 
-## Syntax
-
-```javascript
-expression.GetElementsCount();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-number
+Inherited from [ApiDocumentContent.GetElementsCount](../../ApiDocumentContent/Methods/GetElementsCount.md).
 
 ## Example
 
@@ -41,3 +27,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of elements inside the shape: " + docContent.GetElementsCount());
 doc.Push(paragraph);
 ```
+

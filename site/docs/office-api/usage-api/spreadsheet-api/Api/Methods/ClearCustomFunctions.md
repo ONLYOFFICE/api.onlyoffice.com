@@ -43,5 +43,5 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("=ADD(1, 2)");
 Api.ClearCustomFunctions();
 worksheet.GetRange("A3").SetValue("All the custom functions were removed.");
-
 ```
+

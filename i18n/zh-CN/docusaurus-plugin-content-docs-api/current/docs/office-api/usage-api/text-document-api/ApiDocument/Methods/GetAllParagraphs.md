@@ -2,21 +2,7 @@
 
 从当前文档内容返回所有段落的数组。
 
-## 语法
-
-```javascript
-expression.GetAllParagraphs();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)[]
+Inherited from [ApiDocumentContent.GetAllParagraphs](../../ApiDocumentContent/Methods/GetAllParagraphs.md).
 
 ## 示例
 
@@ -42,3 +28,4 @@ docContent.Push(paragraph);
 let paragraphs = docContent.GetAllParagraphs();
 paragraphs[0].SetBold(true);
 ```
+

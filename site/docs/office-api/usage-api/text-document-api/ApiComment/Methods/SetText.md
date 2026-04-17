@@ -36,3 +36,4 @@ Api.AddComment(paragraph, "comment", "John Smith");
 let comments = doc.GetAllComments();
 comments[0].SetText("new comment's text");
 ```
+

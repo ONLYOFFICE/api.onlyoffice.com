@@ -38,3 +38,4 @@ let paragraph = doc.GetElement(0);
 paragraph.SetStyle(heading6Style);
 paragraph.AddText("This is a text in a paragraph styled with the 'Heading 6' style.");
 ```
+

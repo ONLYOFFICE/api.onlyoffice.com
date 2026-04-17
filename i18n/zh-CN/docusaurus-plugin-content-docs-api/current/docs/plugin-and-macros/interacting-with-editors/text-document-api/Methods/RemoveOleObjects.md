@@ -25,3 +25,4 @@ expression.RemoveOleObjects(arrObjects);
 ```javascript
 window.Asc.plugin.executeMethod ("RemoveOleObjects", [[{"InternalId": "5_556"}]]);
 ```
+

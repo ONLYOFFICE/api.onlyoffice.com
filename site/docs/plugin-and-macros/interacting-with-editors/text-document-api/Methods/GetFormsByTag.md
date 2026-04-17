@@ -32,3 +32,4 @@ window.Asc.plugin.executeMethod ("GetFormsByTag", ["{tag}"], function (data) {
     }
 });
 ```
+

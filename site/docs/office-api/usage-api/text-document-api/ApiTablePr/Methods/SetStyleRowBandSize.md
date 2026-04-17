@@ -50,3 +50,4 @@ table.GetRow(3).GetCell(0).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(3).GetCell(1).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
+

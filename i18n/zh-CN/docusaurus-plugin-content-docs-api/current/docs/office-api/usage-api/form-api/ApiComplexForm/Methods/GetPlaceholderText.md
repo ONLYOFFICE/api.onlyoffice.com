@@ -2,21 +2,7 @@
 
 返回当前表单的占位符文本。
 
-## 语法
-
-```javascript
-expression.GetPlaceholderText();
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md).
 
 ## 示例
 
@@ -36,5 +22,5 @@ let placeholderText = textForm.GetPlaceholderText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);
-
 ```
+

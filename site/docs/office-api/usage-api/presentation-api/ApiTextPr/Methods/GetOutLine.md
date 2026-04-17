@@ -53,5 +53,5 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
-
 ```
+

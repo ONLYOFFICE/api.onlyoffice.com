@@ -34,5 +34,5 @@ page.AddObject(textField2);
 
 textField1.SetValue('Name Surname');
 textField2.SetValue(textField1.GetValue());
-
 ```
+

@@ -44,3 +44,4 @@ let node = xml.GetNodes('/zoo/animal')[0];
 let classType = node.GetClassType();
 worksheet.GetRange("A1").SetValue("Class type of the node: " + classType);
 ```
+

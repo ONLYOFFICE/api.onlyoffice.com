@@ -43,5 +43,5 @@ paragraph.SetItalic(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not italic.');
 content.Push(paragraph2);
-
 ```
+

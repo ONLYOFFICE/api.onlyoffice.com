@@ -36,5 +36,5 @@ let widgets = textField.GetAllWidgets();
 widgets.forEach(function(widget) {
     widget.SetAutoFit(true);
 });
-
 ```
+

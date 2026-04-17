@@ -17,3 +17,5 @@ Enumeration
 - "xlConditionValuePercent"
 - "xlConditionValuePercentile"
 - "xlConditionValueFormula"
+
+

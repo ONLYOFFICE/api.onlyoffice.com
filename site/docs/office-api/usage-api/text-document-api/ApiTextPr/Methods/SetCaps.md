@@ -35,3 +35,4 @@ textPr.SetCaps(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text set to capital letters using the text properties.");
 ```
+

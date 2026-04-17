@@ -34,5 +34,5 @@ This example shows how to return the inverse of the lognormal cumulative distrib
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LOGNORM_INV(0.3, 2, 0.2));
-
 ```
+

@@ -46,5 +46,5 @@ if (formula) {
 	worksheet.GetRange('D1').SetValue('Icon set condition does not have a formula.');
 }
 worksheet.GetRange('D2').SetValue('Type: ' + iconCondition.GetType());
-
 ```
+

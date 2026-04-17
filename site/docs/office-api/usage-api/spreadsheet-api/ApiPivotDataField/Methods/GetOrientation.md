@@ -64,3 +64,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 orientation:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetOrientation());
 ```
+

@@ -28,3 +28,4 @@ This example paste data with paste options.
 
 range.PasteSpecial("xlPasteAll", "xlPasteSpecialOperationAdd");
 ```
+

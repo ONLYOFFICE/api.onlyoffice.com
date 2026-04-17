@@ -34,3 +34,4 @@ freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
 let richContent = freeTextAnnot.GetContent();
 console.log(`Object class type is: ${richContent.GetClassType()}`);
 ```
+

@@ -101,5 +101,5 @@ oSlide.AddObject(oShape);
 let oTimeLine = oSlide.GetTimeLine();
 let oMainSequence = oTimeLine.GetMainSequence();
 oMainSequence.AddEffect(oShape, 'entranceFade', 'onclick');
-
 ```
+

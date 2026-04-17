@@ -69,3 +69,4 @@ dataField.SetValue('My Sum of Price');
 pivotWorksheet.GetRange('A13').SetValue('New Data field value');
 pivotWorksheet.GetRange('B13').SetValue(dataField.GetValue());
 ```
+

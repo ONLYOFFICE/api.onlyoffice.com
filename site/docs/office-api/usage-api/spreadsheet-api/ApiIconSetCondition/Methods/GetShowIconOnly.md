@@ -42,5 +42,5 @@ iconCondition.SetShowIconOnly(true);
 
 let showIconOnly = iconCondition.GetShowIconOnly();
 worksheet.GetRange("B1").SetValue("Show icon only: " + showIconOnly);
-
 ```
+

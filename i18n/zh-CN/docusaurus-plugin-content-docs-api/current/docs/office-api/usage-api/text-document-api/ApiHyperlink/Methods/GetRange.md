@@ -37,3 +37,4 @@ let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/ba
 let range = hyperlink.GetRange(0, 2);
 range.SetBold(true);
 ```
+

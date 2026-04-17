@@ -2,21 +2,7 @@
 
 返回指定是否显示分类汇总的设置。
 
-## 语法
-
-```javascript
-expression.GetLayoutSubtotals();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiPivotField.GetLayoutSubtotals](../../ApiPivotField/Methods/GetLayoutSubtotals.md).
 
 ## 示例
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotals');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotals());
 ```
+

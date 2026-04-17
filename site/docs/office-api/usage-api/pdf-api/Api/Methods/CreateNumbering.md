@@ -47,5 +47,5 @@ paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```
+

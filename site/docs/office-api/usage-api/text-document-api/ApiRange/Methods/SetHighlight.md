@@ -35,3 +35,4 @@ paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(0, 26);
 range.SetHighlight("lightGray");
 ```
+

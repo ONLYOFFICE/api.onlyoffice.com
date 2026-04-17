@@ -2,21 +2,7 @@
 
 Deletes all manual filters from the pivot filters collection.
 
-## Syntax
-
-```javascript
-expression.ClearManualFilters();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.ClearManualFilters](../../ApiPivotField/Methods/ClearManualFilters.md).
 
 ## Example
 
@@ -62,3 +48,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 let pivotField = pivotTable.GetPivotFields('Region');
 pivotField.ClearManualFilters();
 ```
+

@@ -24,3 +24,4 @@
 
 watermarkSettings.SetType("text");
 ```
+

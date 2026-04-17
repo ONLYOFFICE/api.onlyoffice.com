@@ -52,5 +52,5 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Criteria1 (first condition):");
     worksheet.GetRange("D1").SetValue(criteria1);
 }
-
 ```
+

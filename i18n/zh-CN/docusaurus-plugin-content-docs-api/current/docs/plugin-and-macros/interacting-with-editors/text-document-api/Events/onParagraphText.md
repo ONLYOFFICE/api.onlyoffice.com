@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | data | Object | 包含已更新段落信息的事件数据。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onParagraphText", (data) => {
     console.log("event: onParagraphText");

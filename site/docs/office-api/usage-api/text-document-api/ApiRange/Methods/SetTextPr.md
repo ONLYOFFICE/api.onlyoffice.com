@@ -37,3 +37,4 @@ textPr.SetItalic(true);
 let range = doc.GetRange(0, 24);
 range.SetTextPr(textPr);
 ```
+

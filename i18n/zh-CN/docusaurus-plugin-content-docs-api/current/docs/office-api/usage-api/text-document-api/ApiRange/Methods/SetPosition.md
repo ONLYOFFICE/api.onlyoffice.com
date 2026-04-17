@@ -37,3 +37,4 @@ paragraph.AddText("This is a text run with the text raised 5 points (10 half-poi
 let range = doc.GetRange(22, 75);
 range.SetPosition(10);
 ```
+

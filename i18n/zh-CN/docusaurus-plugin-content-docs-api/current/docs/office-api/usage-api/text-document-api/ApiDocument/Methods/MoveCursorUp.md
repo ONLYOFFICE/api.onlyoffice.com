@@ -44,5 +44,5 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Current line is: ");
 paragraph.AddText(doc.GetCurrentSentence());
 doc.Push(paragraph);
-
 ```
+

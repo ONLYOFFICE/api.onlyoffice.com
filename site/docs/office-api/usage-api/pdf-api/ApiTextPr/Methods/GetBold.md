@@ -50,5 +50,5 @@ paragraph = Api.CreateParagraph();
 const bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
-
 ```
+

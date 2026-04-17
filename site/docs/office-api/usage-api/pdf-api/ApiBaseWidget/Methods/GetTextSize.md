@@ -36,6 +36,5 @@ widgets.forEach(function(widget) {
 });
 let textSize = widgets[0].GetTextSize();
 textField.SetValue('Text size is: ' + textSize);
-
-
 ```
+

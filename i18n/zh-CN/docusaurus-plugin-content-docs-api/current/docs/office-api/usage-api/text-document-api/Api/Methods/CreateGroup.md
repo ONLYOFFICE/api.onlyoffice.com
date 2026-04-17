@@ -42,3 +42,4 @@ let para = Api.CreateParagraph();
 para.AddDrawing(group);
 doc.Push(para);
 ```
+

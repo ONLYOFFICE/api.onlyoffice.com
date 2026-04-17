@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | 定义已失去焦点的内容控件。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onBlurContentControl", (oPr) => {
     if (oPr && "BankBIC" === oPr["Tag"]) {

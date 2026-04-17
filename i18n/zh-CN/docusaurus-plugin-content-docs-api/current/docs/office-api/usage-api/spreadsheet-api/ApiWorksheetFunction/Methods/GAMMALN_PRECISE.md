@@ -33,6 +33,5 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.GAMMALN_PRECISE(0.5);
 worksheet.GetRange("B2").SetValue(ans);
-
-
 ```
+

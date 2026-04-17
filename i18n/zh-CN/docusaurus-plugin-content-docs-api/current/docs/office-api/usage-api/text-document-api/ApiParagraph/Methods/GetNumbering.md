@@ -42,3 +42,4 @@ paragraph.SetNumbering(numLvl);
 paragraph.SetContextualSpacing(true);
 doc.Push(paragraph);
 ```
+

@@ -39,3 +39,4 @@ content.Push(paragraph);
 paragraph.Delete();
 worksheet.GetRange("A9").SetValue("The paragraph from the shape content was removed.");
 ```
+

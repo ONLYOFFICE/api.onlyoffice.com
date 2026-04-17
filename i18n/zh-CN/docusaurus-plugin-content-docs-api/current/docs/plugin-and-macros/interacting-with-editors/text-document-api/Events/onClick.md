@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | isSelectionUse | boolean | 定义是否使用选区。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onClick", (isSelectionUse) => {
     window.Asc.plugin.executeMethod("GetCurrentContentControlPr", [], function(obj) {
@@ -15,7 +17,7 @@ window.Asc.plugin.attachEditorEvent("onClick", (isSelectionUse) => {
         var controlTag = obj ? obj.Tag : "";
         if (isSelectionUse)
             controlTag = "";
-
+        /// some code
     });
 });
 ```

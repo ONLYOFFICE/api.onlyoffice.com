@@ -45,5 +45,5 @@ let barColor = dataBar.GetBarColor();
 
 worksheet.GetRange("C1").SetValue("Has Bar Color:");
 worksheet.GetRange("C2").SetValue(barColor ? "Yes" : "No");
-
 ```
+

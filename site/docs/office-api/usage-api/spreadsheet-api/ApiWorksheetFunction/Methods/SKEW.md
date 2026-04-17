@@ -42,5 +42,5 @@ let func = Api.WorksheetFunction;
 let ans = func.SKEW(1, 0, 0, 0, 0, 1, 0, 0, 2, 3, 4, 5, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

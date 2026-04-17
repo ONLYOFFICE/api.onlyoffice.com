@@ -39,3 +39,4 @@ inlineLvlSdt.AddText("This is an inline text content control.");
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 inlineLvlSdt.AddComment("comment", "John Smith");
 ```
+

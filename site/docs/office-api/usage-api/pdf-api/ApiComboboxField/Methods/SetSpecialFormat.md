@@ -32,5 +32,5 @@ page.AddObject(comboboxField);
 
 comboboxField.SetSpecialFormat("phone");
 comboboxField.SetValue("1234567890");
-
 ```
+

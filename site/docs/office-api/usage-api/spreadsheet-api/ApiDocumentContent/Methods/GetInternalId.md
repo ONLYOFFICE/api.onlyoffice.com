@@ -35,5 +35,5 @@ const shape = worksheet.AddShape(
 const content = shape.GetContent();
 const internalId = content.GetInternalId();
 worksheet.GetRange('A1').SetValue('Internal ID: ' + internalId);
-
 ```
+

@@ -40,5 +40,5 @@ const drawingFromJSON = Api.FromJSON(json);
 drawingFromJSON.SetPosition(608400, 1267200);
 drawingFromJSON.SetSize(300 * 36000, 130 * 36000);
 slide.AddObject(drawingFromJSON);
-
 ```
+

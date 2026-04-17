@@ -34,3 +34,4 @@ xmlManager.Add("<user><name>John Doe</name><email>john@example.com</email></user
 let count = xmlManager.GetCount();
 worksheet.GetRange("A1").SetValue("There are " + count + " custom XML parts in the workbook.");
 ```
+

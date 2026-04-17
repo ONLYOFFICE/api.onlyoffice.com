@@ -70,3 +70,4 @@ pivotWorksheet.GetRange('B9').SetValue(info.Type);
 pivotWorksheet.GetRange('A10').SetValue('ReportFilterFields');
 pivotWorksheet.GetRange('B10').SetValue(info.ReportFilterFields);
 ```
+

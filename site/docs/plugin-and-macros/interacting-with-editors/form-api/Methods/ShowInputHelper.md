@@ -28,3 +28,4 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("ShowInputHelper", ["asc.{UUID}", 70, 70, true]);
 ```
+

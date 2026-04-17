@@ -50,5 +50,5 @@ const drawings = doc.GetDrawingsByName(["MyShape1", "MyShape2"]);
 for (let i = 0; i < drawings.length; i++) {
 	drawings[i].SetRotation(45);
 }
-
 ```
+

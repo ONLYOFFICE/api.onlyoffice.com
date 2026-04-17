@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## Example
 
 This example set the cell width measured in millimeters to the applied comb of characters.
@@ -19,3 +17,4 @@ This example set the cell width measured in millimeters to the applied comb of c
 
 textForm.SetCellWidth(7);
 ```
+

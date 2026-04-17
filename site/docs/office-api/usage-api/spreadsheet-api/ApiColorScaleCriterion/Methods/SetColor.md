@@ -54,5 +54,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C3").SetValue("After Color:");
     worksheet.GetRange("C4").SetValue(criteria[0].GetColor() ? "Set" : "None");
 }
-
 ```
+

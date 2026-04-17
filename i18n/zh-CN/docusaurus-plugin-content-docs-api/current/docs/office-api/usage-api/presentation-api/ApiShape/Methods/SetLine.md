@@ -40,5 +40,5 @@ let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBCol
 shape.SetLine(newStroke);
 paragraph.AddLineBreak();
 paragraph.AddText("Border changed to 3pt blue line");
-
 ```
+

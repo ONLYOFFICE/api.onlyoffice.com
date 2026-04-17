@@ -30,3 +30,4 @@ page.AddObject(checkboxField);
 
 console.log('Field type is: ' + checkboxField.GetClassType());
 ```
+

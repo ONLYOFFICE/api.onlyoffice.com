@@ -72,5 +72,5 @@ paragraph.AddText('Effects before: ' + countBefore);
 paragraph.AddLineBreak();
 paragraph.AddText('Effects after: ' + countAfter);
 slide.AddObject(infoShape);
-
 ```
+

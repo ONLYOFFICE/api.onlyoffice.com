@@ -40,3 +40,4 @@ previousPara.AddText("This is previous paragraph");
 
 console.log(`We got previous paragraph and added some text to it`);
 ```
+

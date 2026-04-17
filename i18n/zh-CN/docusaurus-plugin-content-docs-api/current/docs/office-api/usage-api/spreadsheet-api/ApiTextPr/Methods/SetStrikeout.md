@@ -43,3 +43,4 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 ```
+

@@ -25,5 +25,5 @@ This example creates a blip fill with an image which is tiled all over the creat
 
 const imageUrl = 'https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png';
 let blipFill = Api.CreateBlipFill(imageUrl, 'tile');
-
 ```
+

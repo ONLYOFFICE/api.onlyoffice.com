@@ -37,3 +37,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Picture scale flag: " + scaleFlag);
 doc.Push(paragraph);
 ```
+

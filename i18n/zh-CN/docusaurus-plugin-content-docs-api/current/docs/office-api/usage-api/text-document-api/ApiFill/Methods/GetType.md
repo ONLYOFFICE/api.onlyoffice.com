@@ -52,5 +52,5 @@ let shape3 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, noFill, stroke);
 paragraph.AddDrawing(shape3);
 let fill3 = shape3.GetFill();
 paragraph.AddText("No fill type: " + fill3.GetType());
-
 ```
+

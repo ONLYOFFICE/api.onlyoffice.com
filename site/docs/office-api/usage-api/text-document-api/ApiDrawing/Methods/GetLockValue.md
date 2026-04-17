@@ -44,3 +44,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 ```
+

@@ -2,21 +2,7 @@
 
 返回条件格式规则的作用域类型。
 
-## 语法
-
-```javascript
-expression.GetScopeType();
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md)
+Inherited from [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let scopeType = condition1.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
-
 ```
+

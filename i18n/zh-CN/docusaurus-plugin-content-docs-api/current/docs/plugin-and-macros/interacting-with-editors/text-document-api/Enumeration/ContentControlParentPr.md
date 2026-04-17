@@ -2,6 +2,10 @@
 
 内容控件父级属性。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -9,11 +13,6 @@
 | Count | number | 父对象中的元素数量。 |
 | Parent | object | 内容控件的父级。例如，oParagraph。 |
 | Pos | number | 内容控件在父对象中的位置。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 
@@ -24,3 +23,4 @@ let contentControlParentPr = {
     "Count" : 1
 };
 ```
+

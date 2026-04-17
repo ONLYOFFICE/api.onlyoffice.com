@@ -50,3 +50,4 @@ chart.SetShowPointDataLabel(1, 0, false, false, true, false);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
+

@@ -2,21 +2,7 @@
 
 从当前标记批注获取四边形。
 
-## 语法
-
-```javascript
-expression.GetQuads();
-```
-
-`expression` - 表示 [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[Quad](../../Enumeration/Quad.md)[]
+Inherited from [ApiBaseMarkupAnnotation.GetQuads](../../ApiBaseMarkupAnnotation/Methods/GetQuads.md).
 
 ## 示例
 
@@ -29,3 +15,4 @@ let page = doc.GetPage(0);
 page.AddObject(markupAnnot);
 console.log(`The markup quads is: ${markupAnnot.GetQuads()}`);
 ```
+

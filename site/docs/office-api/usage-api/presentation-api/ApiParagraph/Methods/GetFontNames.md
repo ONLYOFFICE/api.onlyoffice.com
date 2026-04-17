@@ -49,5 +49,5 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Fonts: ' + fonts.join(', '));
 docContent.Push(paragraph2);
 slide.AddObject(shape);
-
 ```
+

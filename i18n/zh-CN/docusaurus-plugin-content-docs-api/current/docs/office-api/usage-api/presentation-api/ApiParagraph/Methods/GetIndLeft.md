@@ -2,21 +2,7 @@
 
 返回段落左侧缩进。
 
-## 语法
-
-```javascript
-expression.GetIndLeft();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md).
 
 ## 示例
 
@@ -53,5 +39,5 @@ const indLeft = paraPr.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
-
 ```
+

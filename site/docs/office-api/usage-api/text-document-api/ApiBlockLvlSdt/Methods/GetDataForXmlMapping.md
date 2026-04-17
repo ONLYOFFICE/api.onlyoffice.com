@@ -32,5 +32,5 @@ let data = contentControl.GetDataForXmlMapping();
 let paragraph = Api.CreateParagraph();
 paragraph.AddText(data);
 doc.Push(paragraph);
-
 ```
+

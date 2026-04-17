@@ -34,5 +34,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetIgnoreBlank(true);
 let ignoreBlank = validation.GetIgnoreBlank();
 worksheet.GetRange("B1").SetValue("Ignore blank: " + ignoreBlank);
-
 ```
+

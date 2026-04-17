@@ -35,3 +35,4 @@ pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/only
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(pictureForm);
 ```
+

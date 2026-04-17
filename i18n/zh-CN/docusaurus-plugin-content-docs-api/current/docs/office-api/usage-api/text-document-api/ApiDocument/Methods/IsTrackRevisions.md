@@ -33,3 +33,4 @@ doc.SetTrackRevisions(true);
 let trackRevisions = doc.IsTrackRevisions();
 paragraph.AddText("Change tracking is enabled: " + trackRevisions);
 ```
+

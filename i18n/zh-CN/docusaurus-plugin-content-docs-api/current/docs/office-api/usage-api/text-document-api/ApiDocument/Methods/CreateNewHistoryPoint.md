@@ -35,3 +35,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("New history point was just created.");
 doc.Push(paragraph);
 ```
+

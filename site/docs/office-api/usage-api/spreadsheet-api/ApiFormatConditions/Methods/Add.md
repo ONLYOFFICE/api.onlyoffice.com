@@ -49,5 +49,5 @@ let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
 if (condition1) {
     condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
 }
-
 ```
+

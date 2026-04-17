@@ -39,3 +39,4 @@ paragraph.AddElement(run);
 run.Delete();
 worksheet.GetRange("A9").SetValue("The run from the shape content was removed.");
 ```
+

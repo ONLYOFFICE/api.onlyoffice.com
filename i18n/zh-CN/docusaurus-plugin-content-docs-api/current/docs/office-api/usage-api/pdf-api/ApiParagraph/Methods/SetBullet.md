@@ -2,23 +2,7 @@
 
 设置当前段落的项目符号或编号。
 
-## 语法
-
-```javascript
-expression.SetBullet(oBullet);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oBullet | 必需 | [ApiBullet](../../ApiBullet/ApiBullet.md) |  | 使用 [Api#CreateBullet](../../Api/Methods/CreateBullet.md) 或 [Api#CreateNumbering](../../Api/Methods/CreateNumbering.md) 方法创建的项目符号对象。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiParaPr.SetBullet](../../ApiParaPr/Methods/SetBullet.md).
 
 ## 示例
 
@@ -46,5 +30,5 @@ const bullet = Api.CreateBullet("-");
 paraPr.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
-
 ```
+

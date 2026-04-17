@@ -6,8 +6,6 @@ A point.
 
 number
 
-
-
 ## Example
 
 In this example the paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge.
@@ -19,3 +17,4 @@ In this example the paragraph will have a single 3 point wide green bottom borde
 
 paraPr.SetBottomBorder("single", 24, 1, 0, 255, 0);
 ```
+

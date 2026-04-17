@@ -2,21 +2,7 @@
 
 Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing.
 
-## Syntax
-
-```javascript
-expression.SelectNoteReference();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiDocumentContent.SelectNoteReference](../../ApiDocumentContent/Methods/SelectNoteReference.md).
 
 ## Example
 
@@ -35,5 +21,5 @@ paragraph.AddText("Footnote text");
 footnote.SelectNoteReference();
 
 doc.GetRangeBySelect().SetFontSize(48);
-
 ```
+

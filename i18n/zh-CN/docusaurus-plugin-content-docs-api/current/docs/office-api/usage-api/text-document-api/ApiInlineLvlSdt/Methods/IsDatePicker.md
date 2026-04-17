@@ -29,3 +29,4 @@ let paragraph1 = Api.CreateParagraph();
 paragraph1.AddText(contentControl.IsDatePicker() ? "true" : "false");
 doc.AddElement(1, paragraph1);
 ```
+

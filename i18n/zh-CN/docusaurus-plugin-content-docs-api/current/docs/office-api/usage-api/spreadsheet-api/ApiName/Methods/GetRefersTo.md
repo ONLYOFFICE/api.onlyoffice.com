@@ -37,3 +37,4 @@ defName.SetRefersTo("=SUM(A1:B1)");
 worksheet.GetRange("A3").SetValue("The name 'summa' refers to the formula from the cell C1.");
 worksheet.GetRange("A4").SetValue("Formula: " + defName.GetRefersTo());
 ```
+

@@ -43,5 +43,5 @@ const paragraph = docContent.GetElement(0);
 const slideWidth = slide.GetWidth();
 paragraph.AddText("The slide width = " + slideWidth / 36000 + " mm");
 slide.AddObject(shape);
-
 ```
+

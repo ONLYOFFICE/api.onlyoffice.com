@@ -2,21 +2,7 @@
 
 Gets selected value indexes.
 
-## Syntax
-
-```javascript
-expression.GetValueIndexes();
-```
-
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-number[]
+Inherited from [ApiBaseListField.GetValueIndexes](../../ApiBaseListField/Methods/GetValueIndexes.md).
 
 ## Example
 
@@ -34,3 +20,4 @@ comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 console.log('Selected indexes is: ' + comboboxField.GetValueIndexes());
 ```
+

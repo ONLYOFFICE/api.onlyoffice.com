@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 该段落将具有 6 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为零。
@@ -19,3 +17,4 @@ number
 
 paraPr.SetBottomBorder("single", 48, 0, 0, 255, 0);
 ```
+

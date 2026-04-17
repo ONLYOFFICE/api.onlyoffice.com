@@ -39,5 +39,5 @@ if (comment) {
 	resultParagraph.AddText('Comment by ' + author + ' is now displayed.');
 	doc.Push(resultParagraph);
 }
-
 ```
+

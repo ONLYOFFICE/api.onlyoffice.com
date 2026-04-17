@@ -35,5 +35,5 @@ for (let rowIndex = 0; rowIndex < 3; rowIndex++) {
 	const internalId = table.GetRow(rowIndex).GetInternalId();
 	cellParagraph.AddText('This row internal ID: ' + internalId);
 }
-
 ```
+

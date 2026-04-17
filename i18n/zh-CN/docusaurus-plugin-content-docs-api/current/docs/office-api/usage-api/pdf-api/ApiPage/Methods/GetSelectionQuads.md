@@ -31,3 +31,4 @@ let annot = Api.CreateHighlightAnnot(quads);
 page.AddObject(annot);
 console.log('We highlight the selected text on the page');
 ```
+

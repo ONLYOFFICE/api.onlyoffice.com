@@ -36,3 +36,4 @@ doc.Push(paragraph);
 let element = doc.Last();
 element.SetBold(true);
 ```
+

@@ -31,3 +31,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of items in the list: " + count);
 doc.AddElement(0, paragraph);
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the ApiPivotTable object which represents the pivot table for the current field.
 
-## Syntax
-
-```javascript
-expression.GetTable();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+Inherited from [ApiPivotField.GetTable](../../ApiPivotField/Methods/GetTable.md).
 
 ## Example
 
@@ -62,3 +48,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotField.GetTable().AddDataField('Region');
 ```
+

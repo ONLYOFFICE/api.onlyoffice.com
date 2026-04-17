@@ -1,7 +1,6 @@
 # ApiDateForm
 
-Represents the ApiDateForm class.
-
+ApiDateForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
 

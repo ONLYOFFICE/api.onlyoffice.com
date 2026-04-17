@@ -33,3 +33,4 @@ let section = doc.GetFinalSection();
 let width = section.GetPageWidth();
 paragraph.AddText("Page width = " + width);
 ```
+

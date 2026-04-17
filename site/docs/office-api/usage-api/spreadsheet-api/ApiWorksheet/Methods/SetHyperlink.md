@@ -36,5 +36,5 @@ This example adds a hyperlink to the specified range.
 let worksheet = Api.GetActiveSheet();
 const logoUrl = 'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png';
 worksheet.SetHyperlink('A1', logoUrl, 'Api ONLYOFFICE', 'ONLYOFFICE for developers');
-
 ```
+

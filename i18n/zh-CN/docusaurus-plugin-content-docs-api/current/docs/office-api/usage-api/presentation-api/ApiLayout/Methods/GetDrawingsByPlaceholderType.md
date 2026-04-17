@@ -37,5 +37,5 @@ let drawingsWithPh = layout.GetDrawingsByPlaceholderType("ctrTitle");
 for (let i = 0; i < drawingsWithPh.length; i++) {
 	drawingsWithPh[i].Delete();
 }
-
 ```
+

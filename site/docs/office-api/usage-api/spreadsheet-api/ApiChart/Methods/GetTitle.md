@@ -39,5 +39,5 @@ chart.SetTitle('Financial Overview', 13);
 
 const chartTitle = chart.GetTitle();
 worksheet.GetRange('E1').SetValue('Chart Title: ' + chartTitle);
-
 ```
+

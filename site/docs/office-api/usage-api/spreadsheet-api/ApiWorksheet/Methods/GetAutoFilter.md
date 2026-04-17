@@ -38,5 +38,5 @@ let autoFilter = worksheet.GetAutoFilter();
 let filterRange = autoFilter.GetRange();
 worksheet.GetRange("C1").SetValue("AutoFilter range:");
 worksheet.GetRange("C2").SetValue(filterRange.GetAddress());
-
 ```
+

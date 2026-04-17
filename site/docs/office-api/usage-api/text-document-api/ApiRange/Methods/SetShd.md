@@ -35,5 +35,5 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(0, 24);
 range.SetShd("clear", Api.HexColor('#FF6F3D'));
-
 ```
+

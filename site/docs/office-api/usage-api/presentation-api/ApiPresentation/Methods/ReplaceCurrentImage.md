@@ -42,5 +42,5 @@ const drawing = Api.CreateImage(url1, 300 * 36000, 150 * 36000);
 slide.AddObject(drawing);
 drawing.Select();
 presentation.ReplaceCurrentImage(url2, 60 * 36000, 60 * 36000);
-
 ```
+

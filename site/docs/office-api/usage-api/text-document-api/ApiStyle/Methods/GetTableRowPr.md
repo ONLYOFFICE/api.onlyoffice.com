@@ -40,3 +40,4 @@ tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("cle
 tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
 tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
 ```
+

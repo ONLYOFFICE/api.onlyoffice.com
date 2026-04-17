@@ -34,3 +34,4 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.NORM_S_DIST(1.33, true));
 ```
+

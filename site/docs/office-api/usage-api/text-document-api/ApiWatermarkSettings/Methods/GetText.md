@@ -49,3 +49,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Text = " + watermarkSettings2.GetText());
 doc.Push(paragraph);
 ```
+

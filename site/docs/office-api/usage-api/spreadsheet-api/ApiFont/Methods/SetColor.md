@@ -38,3 +38,4 @@ let font = characters.GetFont();
 let color = Api.CreateColorFromRGB(255, 111, 61);
 font.SetColor(color);
 ```
+

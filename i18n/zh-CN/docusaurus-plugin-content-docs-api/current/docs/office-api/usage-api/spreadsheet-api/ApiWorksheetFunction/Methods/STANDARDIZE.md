@@ -49,5 +49,5 @@ let func = Api.WorksheetFunction;
 let ans = func.STANDARDIZE(x, mean, stdDev);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

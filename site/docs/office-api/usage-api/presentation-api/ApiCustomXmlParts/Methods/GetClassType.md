@@ -44,3 +44,4 @@ run.AddText("XML manager class type: " + classType);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
+

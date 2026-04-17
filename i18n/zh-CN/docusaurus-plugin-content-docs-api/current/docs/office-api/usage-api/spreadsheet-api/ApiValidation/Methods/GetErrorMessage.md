@@ -34,5 +34,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetErrorMessage("Value must be greater than 10");
 let errorMessage = validation.GetErrorMessage();
 worksheet.GetRange("B1").SetValue("Error message: " + errorMessage);
-
 ```
+

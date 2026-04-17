@@ -38,3 +38,4 @@ let tableStyleName = tableStyle.GetName();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Table style name = " + tableStyleName);
 ```
+

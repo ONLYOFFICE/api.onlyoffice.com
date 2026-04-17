@@ -51,5 +51,5 @@ reply.SetAuthorName("New Author Name");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply author: " + reply.GetAuthorName());
-
 ```
+

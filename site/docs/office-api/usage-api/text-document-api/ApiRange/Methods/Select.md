@@ -36,3 +36,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The word 'ONLYOFFICE' was just selected.");
 doc.Push(paragraph);
 ```
+

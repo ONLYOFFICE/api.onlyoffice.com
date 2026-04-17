@@ -33,5 +33,5 @@ const shape = worksheet.AddShape("flowChartMagneticTape", 120 * 36000, 70 * 3600
 
 worksheet.GetRange("A12").SetValue("Is hexColor a theme color? " + hexColor.IsThemeColor());
 worksheet.GetRange("A14").SetValue("Is themeColor a theme color? " + themeColor.IsThemeColor());
-
 ```
+

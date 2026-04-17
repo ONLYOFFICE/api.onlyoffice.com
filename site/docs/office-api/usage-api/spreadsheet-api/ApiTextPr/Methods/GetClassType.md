@@ -41,3 +41,4 @@ let classType = textProps.GetClassType();
 run.AddText("Class Type = " + classType);
 paragraph.AddElement(run);
 ```
+

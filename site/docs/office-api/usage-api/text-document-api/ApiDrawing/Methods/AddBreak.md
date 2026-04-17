@@ -39,3 +39,4 @@ paragraph.AddDrawing(drawing);
 drawing.InsertParagraph("Added a line break after this paragraph.", "before", false);
 drawing.AddBreak(1, "before");
 ```
+

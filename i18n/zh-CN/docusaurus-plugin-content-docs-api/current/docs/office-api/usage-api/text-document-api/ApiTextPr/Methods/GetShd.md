@@ -53,5 +53,5 @@ const color = secondRunTextPr.GetShd();
 const type = color.GetClassType();
 secondParagraph.AddText('Shading type: ' + type);
 doc.Push(secondParagraph);
-
 ```
+

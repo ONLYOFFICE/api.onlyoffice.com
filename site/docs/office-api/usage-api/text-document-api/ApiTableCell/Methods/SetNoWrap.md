@@ -3,23 +3,7 @@
 Specifies how the current table cell is laid out when the parent table is displayed in a document. This setting
 only affects the behavior of the cell when the [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) table layout for this table is set to use the &lt;code&gt;"autofit"&lt;/code&gt; algorithm.
 
-## Syntax
-
-```javascript
-expression.SetNoWrap(isNoWrap);
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isNoWrap | Required | boolean |  | The true value means that the current table cell will not be wrapped in the parent table. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableCellPr.SetNoWrap](../../ApiTableCellPr/Methods/SetNoWrap.md).
 
 ## Example
 
@@ -59,3 +43,4 @@ tableCellPr.SetNoWrap(true);
 copyTable2.SetStyle(tableStyle);
 doc.Push(copyTable2);
 ```
+

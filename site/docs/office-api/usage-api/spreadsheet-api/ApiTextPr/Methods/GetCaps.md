@@ -45,3 +45,4 @@ let isCaps = textProps.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + isCaps);
 content.Push(paragraph);
 ```
+

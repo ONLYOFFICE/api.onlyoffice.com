@@ -63,3 +63,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 let dataField = pivotTable.GetDataFields('Sum of Price');
 dataField.SetNumberFormat('0.00E+00');
 ```
+

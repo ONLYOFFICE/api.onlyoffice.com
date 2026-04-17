@@ -1,7 +1,6 @@
 # ApiPresetColor
 
-表示 ApiPresetColor 类。
-
+ApiPresetColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
 
 ## 方法
 

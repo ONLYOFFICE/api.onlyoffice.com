@@ -41,3 +41,4 @@ paragraph.SetJc("left");
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.AddElement(0, paragraph);
 ```
+

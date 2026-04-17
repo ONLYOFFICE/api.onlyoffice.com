@@ -2,21 +2,7 @@
 
 返回段落样式方法。
 
-## 语法
-
-```javascript
-expression.GetStyle();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+Inherited from [ApiParaPr.GetStyle](../../ApiParaPr/Methods/GetStyle.md).
 
 ## 示例
 
@@ -38,3 +24,4 @@ let style = paraPr.GetStyle();
 paragraph.AddLineBreak();
 paragraph.AddText("Style: " + style.GetName());
 ```
+

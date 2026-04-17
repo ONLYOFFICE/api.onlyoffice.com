@@ -48,3 +48,4 @@ chart.SetSeriesFill(fill, 1, false);
 let classType = chart.GetClassType();
 worksheet.GetRange("F1").SetValue("Class Type: " + classType);
 ```
+

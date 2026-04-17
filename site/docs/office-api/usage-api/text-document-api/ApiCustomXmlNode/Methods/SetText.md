@@ -47,3 +47,4 @@ paragraph.AddText("\r\nContent of custom xml:\r\n");
 paragraph.AddText(xml.GetXml());
 doc.AddElement(0, paragraph);
 ```
+

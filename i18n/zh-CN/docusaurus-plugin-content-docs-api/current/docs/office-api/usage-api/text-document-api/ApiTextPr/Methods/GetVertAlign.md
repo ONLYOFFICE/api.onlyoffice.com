@@ -48,3 +48,4 @@ let vertAlign = textPr.GetVertAlign();
 paragraph.AddText("Vertical alignment type: " + vertAlign);
 doc.Push(paragraph);
 ```
+

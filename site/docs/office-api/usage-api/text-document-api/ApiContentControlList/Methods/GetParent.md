@@ -30,5 +30,5 @@ let parentControl = contentControlList.GetParent();
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("Parent class type is: " + parentControl.GetClassType());
 doc.AddElement(0, paragraph);
-
 ```
+

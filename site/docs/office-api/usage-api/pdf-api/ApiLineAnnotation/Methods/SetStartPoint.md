@@ -33,3 +33,4 @@ let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
 console.log(`Start point set to: ${lineAnnot.GetEndPoint()}`);
 ```
+

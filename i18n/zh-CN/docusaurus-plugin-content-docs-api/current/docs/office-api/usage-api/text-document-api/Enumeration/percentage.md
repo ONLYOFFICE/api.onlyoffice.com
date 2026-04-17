@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例设置当前表单内以百分比计量的图片位置。
@@ -19,3 +17,4 @@ number
 
 pictureForm.SetPicturePosition(70, 70);
 ```
+

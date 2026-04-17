@@ -36,3 +36,4 @@ font.SetBold(true);
 let isBold = font.GetBold();
 worksheet.GetRange("B3").SetValue("Bold property: " + isBold);
 ```
+

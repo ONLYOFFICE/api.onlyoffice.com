@@ -8,7 +8,7 @@ Invariants:
 
 ## Type
 
-Object
+array
 
 ## Properties
 
@@ -18,3 +18,4 @@ Object
 | 1 | [pt](../Enumeration/pt.md) | y1 (top) |
 | 2 | [pt](../Enumeration/pt.md) | x2 (right) |
 | 3 | [pt](../Enumeration/pt.md) | y2 (bottom) |
+

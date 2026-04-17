@@ -3,23 +3,7 @@
 指定在文档中显示父表格时当前表格单元格的布局方式。此设置
 仅在表格的 [ApiTablePr#SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md) 表格布局设置为使用 &lt;code&gt;"autofit"&lt;/code&gt; 算法时影响单元格的行为。
 
-## 语法
-
-```javascript
-expression.SetNoWrap(isNoWrap);
-```
-
-`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isNoWrap | 必需 | boolean |  | true 值表示当前表格单元格不会在父表格中换行。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTableCellPr.SetNoWrap](../../ApiTableCellPr/Methods/SetNoWrap.md).
 
 ## 示例
 
@@ -59,3 +43,4 @@ tableCellPr.SetNoWrap(true);
 copyTable2.SetStyle(tableStyle);
 doc.Push(copyTable2);
 ```
+

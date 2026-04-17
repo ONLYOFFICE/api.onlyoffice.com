@@ -48,3 +48,4 @@ worksheet.GetRange("C1").SetValue("DupeUnique setting:");
 worksheet.GetRange("C2").SetValue(dupeUniqueSetting);
 worksheet.GetRange("C3").SetValue("(xlUnique = unique, xlDuplicate = duplicate)");
 ```
+

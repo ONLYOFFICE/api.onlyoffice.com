@@ -63,5 +63,5 @@ checkBoxForm = Api.CreateCheckBoxForm({
 });
 paragraph.AddElement(checkBoxForm);
 paragraph.AddText(" Single");
-
 ```
+

@@ -40,5 +40,5 @@ slide.AddObject(shape);
 
 const allShapes = slide.GetAllShapes();
 allShapes[0].SetSize(150 * 36000, 65 * 36000);
-
 ```
+

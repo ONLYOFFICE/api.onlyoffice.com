@@ -50,3 +50,4 @@ let ans = func.NEGBINOMDIST(numberF, numberS, probabilityS);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
+

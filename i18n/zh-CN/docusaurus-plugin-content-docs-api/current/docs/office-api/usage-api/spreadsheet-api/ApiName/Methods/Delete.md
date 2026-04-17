@@ -35,3 +35,4 @@ let defName = Api.GetDefName("numbers");
 defName.Delete();
 worksheet.GetRange("A3").SetValue("The name 'numbers' of the range A1:B1 was deleted.");
 ```
+

@@ -1,7 +1,6 @@
 # ApiDocument
 
-表示 ApiDocument 类。
-
+ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md).
 
 ## 方法
 

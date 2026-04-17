@@ -62,3 +62,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A12').SetValue('Style field position');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetPosition());
 ```
+

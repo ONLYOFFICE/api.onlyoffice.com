@@ -2,6 +2,10 @@
 
 An object containing the font information.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -29,11 +33,6 @@ An object containing the font information.
 | m_usWidth | number | The relative change from the normal aspect ratio (width to height ratio). |
 | m_wsFontName | string | The font name. |
 | m_wsFontPath | string | The path to the file with the current font. |
-## Type
-
-Object
-
-
 
 ## Example
 
@@ -64,3 +63,4 @@ let fontInfo = {
     "m_shCapHeight": 713
 };
 ```
+

@@ -44,3 +44,4 @@ paragraph.AddText("This is a sample text with paddings set to it.");
 docContent.Push(paragraph);
 drawing.SetPaddings(20 * 36000, 5 * 36000, 5 * 36000, 3 * 36000);
 ```
+

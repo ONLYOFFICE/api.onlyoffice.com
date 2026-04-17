@@ -2,23 +2,7 @@
 
 Specifies a number of columns which will comprise each table column band for this table style.
 
-## Syntax
-
-```javascript
-expression.SetStyleColBandSize(nCount);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of columns measured in positive integers. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetStyleColBandSize](../../ApiTablePr/Methods/SetStyleColBandSize.md).
 
 ## Example
 
@@ -50,3 +34,4 @@ table.GetRow(1).GetCell(2).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(1).GetCell(3).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
+

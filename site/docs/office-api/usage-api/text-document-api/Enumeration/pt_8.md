@@ -6,8 +6,6 @@ Eighths of a point (24 eighths of a point = 3 points).
 
 number
 
-
-
 ## Example
 
 The paragraph will have a single 6 point wide green bottom border with a zero offset from the bottom paragraph edge.
@@ -19,3 +17,4 @@ The paragraph will have a single 6 point wide green bottom border with a zero of
 
 paraPr.SetBottomBorder("single", 48, 0, 0, 255, 0);
 ```
+

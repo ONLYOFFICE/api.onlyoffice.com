@@ -65,3 +65,4 @@ pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetPivotFields('Region').GetS
 pivotWorksheet.GetRange('A13').SetValue('Style showing in axis');
 pivotWorksheet.GetRange('B13').SetValue(pivotTable.GetPivotFields('Style').GetShowingInAxis());
 ```
+

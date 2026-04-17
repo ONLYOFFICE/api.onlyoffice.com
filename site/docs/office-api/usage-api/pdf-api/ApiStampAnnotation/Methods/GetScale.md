@@ -30,3 +30,4 @@ let page = doc.GetPage(0);
 page.AddObject(stampAnnot);
 console.log(`We set scale: ${stampAnnot.GetType()} for stamp annotation`);
 ```
+

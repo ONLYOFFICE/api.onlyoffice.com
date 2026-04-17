@@ -50,3 +50,4 @@ let range1 = worksheet.GetRange("A1:C3");
 let range2 = worksheet.GetRange("E1:F2");
 worksheet.GetRange("F4").SetValue(func.DGET(range1, "Sales", range2));
 ```
+

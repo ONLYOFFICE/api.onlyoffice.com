@@ -32,3 +32,4 @@ let height = worksheet.GetRange("A1").GetRowHeight();
 worksheet.GetRange("A1").SetValue("Height: ");
 worksheet.GetRange("B1").SetValue(height);
 ```
+

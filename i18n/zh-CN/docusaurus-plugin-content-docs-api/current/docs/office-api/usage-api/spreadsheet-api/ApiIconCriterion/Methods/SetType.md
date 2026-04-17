@@ -40,5 +40,5 @@ const secondCriterion = criteria[1];
 worksheet.GetRange('B1').SetValue('Type before: ' + secondCriterion.GetType());
 secondCriterion.SetType('xlConditionValueNumber');
 worksheet.GetRange('B2').SetValue('Type after: ' + secondCriterion.GetType());
-
 ```
+

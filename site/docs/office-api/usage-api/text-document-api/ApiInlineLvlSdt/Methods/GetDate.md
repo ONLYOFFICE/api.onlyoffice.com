@@ -34,3 +34,4 @@ doc.Push(paragraph);
 let date = contentControl.GetDate();
 paragraph.AddText(date.toDateString());
 ```
+

@@ -38,3 +38,4 @@ window.Asc.plugin.executeMethod("GetAllAddinFields", null, function(fields) {
 		window.Asc.plugin.executeCommand("close", "");
 });
 ```
+

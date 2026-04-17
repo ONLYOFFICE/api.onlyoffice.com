@@ -41,5 +41,5 @@ let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 let type = uniqueValuesCondition.GetType();
 worksheet.GetRange("B1").SetValue("Rule type: " + type);
-
 ```
+

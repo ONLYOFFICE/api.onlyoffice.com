@@ -33,5 +33,5 @@ run.AddText("This is an inline text content control with blue border.");
 inlineLvlSdt.AddElement(run, 0);
 inlineLvlSdt.SetBorderColor(Api.HexColor('#0000FF'));
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```
+

@@ -63,3 +63,4 @@ let dataField = pivotTable.GetDataFields('Sum of Price');
 pivotWorksheet.GetRange('A15').SetValue('Number format:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetNumberFormat());
 ```
+

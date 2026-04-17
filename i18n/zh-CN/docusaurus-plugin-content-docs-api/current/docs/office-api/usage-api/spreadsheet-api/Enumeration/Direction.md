@@ -25,5 +25,5 @@
 
 const color = Api.CreateColorFromRGB(255, 224, 204);
 worksheet.GetRange("C4:D5").End("xlToLeft").SetFillColor(color);
-
 ```
+

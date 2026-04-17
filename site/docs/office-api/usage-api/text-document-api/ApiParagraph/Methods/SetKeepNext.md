@@ -3,23 +3,7 @@
 Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least
 partly rendered on the same page as the following paragraph whenever possible.
 
-## Syntax
-
-```javascript
-expression.SetKeepNext(isKeepNext);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isKeepNext | Required | boolean |  | The true value enables the option to keep lines of the paragraph on the same page as the following paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetKeepNext](../../ApiParaPr/Methods/SetKeepNext.md).
 
 ## Example
 
@@ -52,3 +36,4 @@ for (let i = 0; i < 10; ++i) {
 }
 doc.Push(paragraph);
 ```
+

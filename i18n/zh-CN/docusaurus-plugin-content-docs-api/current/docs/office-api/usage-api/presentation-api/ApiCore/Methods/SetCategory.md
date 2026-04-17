@@ -42,5 +42,5 @@ paragraph.AddText("Category: " + category);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

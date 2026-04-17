@@ -2,23 +2,7 @@
 
 设置当前表单的锁定状态。
 
-## 语法
-
-```javascript
-expression.SetLock(isLock);
-```
-
-`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isLock | 必需 | boolean |  | 指定是锁定表单（true）还是解锁表单（false）。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md).
 
 ## 示例
 
@@ -38,5 +22,5 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```
+

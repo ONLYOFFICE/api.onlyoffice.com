@@ -68,3 +68,4 @@ pivotWorksheet.GetRange('A11').SetValue('New Pivot Table title');
 pivotTable.SetTitle('My Pivot Table');
 pivotWorksheet.GetRange('B11').SetValue(pivotTable.GetTitle());
 ```
+

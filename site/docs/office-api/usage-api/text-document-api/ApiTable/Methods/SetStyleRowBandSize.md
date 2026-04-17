@@ -2,23 +2,7 @@
 
 Specifies a number of rows which will comprise each table row band for this table style.
 
-## Syntax
-
-```javascript
-expression.SetStyleRowBandSize(nCount);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of rows measured in positive integers. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetStyleRowBandSize](../../ApiTablePr/Methods/SetStyleRowBandSize.md).
 
 ## Example
 
@@ -50,3 +34,4 @@ table.GetRow(3).GetCell(0).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(3).GetCell(1).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
+

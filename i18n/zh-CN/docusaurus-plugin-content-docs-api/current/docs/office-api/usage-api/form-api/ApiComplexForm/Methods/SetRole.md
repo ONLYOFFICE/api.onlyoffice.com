@@ -2,23 +2,7 @@
 
 为当前表单设置角色。
 
-## 语法
-
-```javascript
-expression.SetRole(role);
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| role | 必需 | string |  | 将附加到当前表单的角色。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
 
 ## 示例
 
@@ -50,5 +34,5 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```
+

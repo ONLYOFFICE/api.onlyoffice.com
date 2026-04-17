@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether to repeat items labels at each row.
 
-## Syntax
-
-```javascript
-expression.GetRepeatLabels();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetRepeatLabels](../../ApiPivotField/Methods/GetRepeatLabels.md).
 
 ## Example
 
@@ -64,3 +50,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region repeat labels');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetRepeatLabels());
 ```
+

@@ -2,23 +2,7 @@
 
 设置指定是否在每个项目后插入空白行的设置。
 
-## 语法
-
-```javascript
-expression.SetLayoutBlankLine(insert);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| insert | 必需 | boolean |  | 指定是否在每个项目后插入空白行。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetLayoutBlankLine](../../ApiPivotField/Methods/SetLayoutBlankLine.md).
 
 ## 示例
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutBlankLine(true);
 pivotWorksheet.GetRange('A14').SetValue('Region blank line');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutBlankLine());
 ```
+

@@ -49,3 +49,4 @@ let prevChart = copyChart.GetPrevChart();
 let stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 prevChart.SetMinorHorizontalGridlines(stroke);
 ```
+

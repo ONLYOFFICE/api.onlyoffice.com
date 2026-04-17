@@ -2,23 +2,7 @@
 
 Sets the setting which specifies whether to insert a page break after each field.
 
-## Syntax
-
-```javascript
-expression.SetLayoutPageBreak(insert);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| insert | Required | boolean |  | Specifies whether to insert a page break after each field. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutPageBreak](../../ApiPivotField/Methods/SetLayoutPageBreak.md).
 
 ## Example
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutPageBreak(true);
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
+

@@ -42,5 +42,5 @@ shape2.SetPosition(608400, 1400000);
 slide.AddObject(shape1);
 slide.AddObject(shape2);
 slide.GroupDrawings([shape1, shape2]);
-
 ```
+

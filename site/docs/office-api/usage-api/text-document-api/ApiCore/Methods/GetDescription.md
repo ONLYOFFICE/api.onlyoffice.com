@@ -30,5 +30,5 @@ core.SetDescription("This is a sample document made to help fellow users underst
 const description = core.GetDescription();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Description: " + description);
-
 ```
+

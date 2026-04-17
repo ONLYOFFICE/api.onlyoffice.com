@@ -46,5 +46,5 @@ slide.AddObject(shape);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Number of tables on slide: " + slide.GetAllTables().length);
-
 ```
+

@@ -39,3 +39,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark height = " + doc.GetWatermarkSettings().GetImageHeight());
 doc.Push(paragraph);
 ```
+

@@ -46,5 +46,5 @@ let aboveAverageCondition = formatConditions.AddAboveAverage();
 if (aboveAverageCondition) {
     aboveAverageCondition.SetFillColor(Api.CreateColorFromRGB(144, 238, 144));
 }
-
 ```
+

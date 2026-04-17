@@ -32,3 +32,4 @@ doc.Push(paragraph);
 let isChecked = checkBox.IsCheckBoxChecked();
 paragraph.AddText("Checked: " + (isChecked ? "true" : "false"));
 ```
+

@@ -56,5 +56,5 @@ resultParagraph.AddText('Paragraphs found: ' + paragraphCount + ' (including par
 resultParagraph.AddLineBreak();
 resultParagraph.AddText('Tables found: ' + tableCount);
 doc.Push(resultParagraph);
-
 ```
+

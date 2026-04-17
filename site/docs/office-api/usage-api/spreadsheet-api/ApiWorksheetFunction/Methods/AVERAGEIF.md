@@ -42,3 +42,4 @@ for (let i = 0; i < numbers.length; i++) {
 let range = worksheet.GetRange("A1:A4");
 worksheet.GetRange("C1").SetValue(func.AVERAGEIF(range, ">45"));
 ```
+

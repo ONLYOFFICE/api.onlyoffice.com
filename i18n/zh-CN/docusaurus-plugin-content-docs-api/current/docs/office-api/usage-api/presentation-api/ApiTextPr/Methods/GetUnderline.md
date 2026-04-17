@@ -51,5 +51,5 @@ paragraph = Api.CreateParagraph();
 const underline = textPr.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
-
 ```
+

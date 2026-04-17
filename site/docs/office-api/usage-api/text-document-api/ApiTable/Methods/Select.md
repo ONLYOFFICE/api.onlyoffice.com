@@ -37,3 +37,4 @@ doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("This table is selected.");
 table.Select();
 ```
+

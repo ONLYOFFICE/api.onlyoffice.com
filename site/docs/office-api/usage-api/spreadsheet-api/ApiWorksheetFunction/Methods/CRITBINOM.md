@@ -36,3 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.CRITBINOM(678, 0.1, 0.007);
 worksheet.GetRange("B2").SetValue(ans);
 ```
+

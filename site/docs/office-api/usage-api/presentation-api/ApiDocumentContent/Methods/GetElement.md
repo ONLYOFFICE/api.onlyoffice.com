@@ -50,5 +50,5 @@ oParagraph.SetBullet(oBullet);
 oParagraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(oParagraph);
 slide.AddObject(shape);
-
 ```
+

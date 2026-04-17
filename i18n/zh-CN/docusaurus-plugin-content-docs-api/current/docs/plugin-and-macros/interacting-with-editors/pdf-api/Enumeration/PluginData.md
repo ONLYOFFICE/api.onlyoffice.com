@@ -2,6 +2,10 @@
 
 插件对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -10,11 +14,6 @@
 | guid | string | 插件标识符。必须是 *asc.&#123;UUID&#125;* 类型。 |
 | obj | object | 已安装插件的 [config](../../../../../docs/plugin-and-macros/structure/configuration/configuration.md)。从配置中获取版本并与当前版本进行比较以检查更新。 |
 | url | string | 插件配置的 URL。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 
@@ -32,3 +31,4 @@ let plugin = {
     }
 };
 ```
+

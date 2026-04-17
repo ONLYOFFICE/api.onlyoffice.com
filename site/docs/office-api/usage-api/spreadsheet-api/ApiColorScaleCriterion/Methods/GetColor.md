@@ -48,5 +48,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Has Color:");
     worksheet.GetRange("C2").SetValue(criterionColor ? "Yes" : "No");
 }
-
 ```
+

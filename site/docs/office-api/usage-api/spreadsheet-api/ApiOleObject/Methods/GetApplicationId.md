@@ -37,5 +37,5 @@ let oleObject = worksheet.AddOleObject(
 );
 let appId = oleObject.GetApplicationId();
 worksheet.GetRange('A1').SetValue('The OLE object application ID: ' + appId);
-
 ```
+

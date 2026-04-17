@@ -42,3 +42,4 @@ let classType = sections[1].GetClassType();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
+

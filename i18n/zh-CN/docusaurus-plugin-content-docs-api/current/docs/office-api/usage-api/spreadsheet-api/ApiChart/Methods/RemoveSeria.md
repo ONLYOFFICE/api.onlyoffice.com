@@ -48,3 +48,4 @@ let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 worksheet.GetRange("A5").SetValue("The Estimated Costs series was removed from the current chart.");
 ```
+

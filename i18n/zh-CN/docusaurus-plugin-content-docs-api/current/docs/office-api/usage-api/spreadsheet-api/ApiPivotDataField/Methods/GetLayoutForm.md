@@ -2,21 +2,7 @@
 
 返回指定数据透视表项目的显示方式 - 表格格式或大纲格式。
 
-## 语法
-
-```javascript
-expression.GetLayoutForm();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[PivotLayoutType](../../Enumeration/PivotLayoutType.md)
+Inherited from [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md).
 
 ## 示例
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
+

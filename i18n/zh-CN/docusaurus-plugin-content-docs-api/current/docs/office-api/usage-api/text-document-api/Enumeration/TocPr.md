@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -16,7 +16,6 @@
 | RightAlgn | boolean | 指定是否在目录中右对齐页码。 |
 | ShowPageNums | boolean | 指定是否在目录中显示页码。 |
 | TocStyle | [TocStyle](../Enumeration/TocStyle.md) | 目录样式类型。 |
-
 
 ## 示例
 
@@ -38,5 +37,5 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```
+

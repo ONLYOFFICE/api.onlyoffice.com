@@ -65,3 +65,4 @@ pivotWorksheet.GetRange('A15').SetValue('Functions:');
 pivotWorksheet.GetRange('B15').SetValue(sumDataField.GetFunction());
 pivotWorksheet.GetRange('B16').SetValue(countDataField.GetFunction());
 ```
+

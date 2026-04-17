@@ -39,3 +39,4 @@ let tableStylePrType = tableStylePr.GetType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Style type = " + tableStylePrType);
 ```
+

@@ -2,21 +2,7 @@
 
 从文档内容返回图表对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllCharts();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiChart](../../ApiChart/ApiChart.md)[]
+Inherited from [ApiDocumentContent.GetAllCharts](../../ApiDocumentContent/Methods/GetAllCharts.md).
 
 ## 示例
 
@@ -54,3 +40,4 @@ let charts = docContent.GetAllCharts();
 stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
 ```
+

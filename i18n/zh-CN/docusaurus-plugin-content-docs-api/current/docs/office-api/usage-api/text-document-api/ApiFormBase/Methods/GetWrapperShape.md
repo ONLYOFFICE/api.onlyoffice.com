@@ -37,3 +37,4 @@ let shape = textForm.GetWrapperShape();
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 shape.SetOutLine(stroke);
 ```
+

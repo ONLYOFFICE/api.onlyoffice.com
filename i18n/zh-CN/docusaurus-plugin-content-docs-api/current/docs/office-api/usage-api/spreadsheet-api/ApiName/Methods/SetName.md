@@ -38,3 +38,4 @@ defName.SetName("new_name");
 let newDefName = Api.GetDefName("new_name");
 worksheet.GetRange("A3").SetValue("The new name of the range: " + newDefName.GetName());
 ```
+

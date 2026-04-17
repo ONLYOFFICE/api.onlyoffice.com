@@ -39,3 +39,4 @@ run.RemoveAllElements();
 run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 ```
+

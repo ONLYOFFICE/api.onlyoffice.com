@@ -48,3 +48,4 @@ paragraph.AddText("Heading 2");
 doc.AddElement(3, paragraph);
 doc.UpdateAllTOC(false);
 ```
+

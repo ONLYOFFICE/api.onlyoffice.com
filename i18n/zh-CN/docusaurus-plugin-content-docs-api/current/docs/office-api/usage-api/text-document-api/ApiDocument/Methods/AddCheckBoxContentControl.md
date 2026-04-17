@@ -28,3 +28,4 @@ expression.AddCheckBoxContentControl(checkBoxPr);
 let doc = Api.GetDocument();
 doc.AddCheckBoxContentControl({checked : true});
 ```
+

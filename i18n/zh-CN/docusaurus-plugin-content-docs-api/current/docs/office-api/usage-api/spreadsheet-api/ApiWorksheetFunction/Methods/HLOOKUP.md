@@ -54,3 +54,4 @@ worksheet.GetRange("F1").SetValue("Phone number");
 let range = worksheet.GetRange("A1:C5");
 worksheet.GetRange("F2").SetValue(func.HLOOKUP("Phone number", range, 3+1));
 ```
+

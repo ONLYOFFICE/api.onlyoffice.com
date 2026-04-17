@@ -53,3 +53,4 @@ paragraph.AddText("The chart was replaced with the current shape in this documen
 docContent.AddElement(0, paragraph);
 doc.ReplaceDrawing(oldDrawing, newDrawing, false);
 ```
+

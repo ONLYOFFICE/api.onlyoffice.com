@@ -32,5 +32,5 @@ This example shows how to convert all letters in a text string to lowercase.
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LOWER("Day"));
-
 ```
+

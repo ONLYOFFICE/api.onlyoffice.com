@@ -30,5 +30,5 @@ core.SetIdentifier("#ID42");
 const identifier = core.GetIdentifier();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Identifier: " + identifier);
-
 ```
+

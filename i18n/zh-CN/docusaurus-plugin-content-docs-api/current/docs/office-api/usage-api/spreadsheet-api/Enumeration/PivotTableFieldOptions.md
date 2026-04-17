@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+object
 
 ## 属性
 
@@ -14,3 +14,4 @@
 | columns | number \| string \| number[] \| string[] | 要作为列添加或添加到系列轴的字段名称或 ID 数组。 |
 | pages | number \| string \| number[] \| string[] | 要作为页面添加或添加到页面区域的字段名称或 ID 数组。 |
 | rows | number \| string \| number[] \| string[] | 要作为行添加或添加到类别轴的字段名称或 ID 数组。 |
+

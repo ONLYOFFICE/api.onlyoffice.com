@@ -65,5 +65,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Total effects on slide: ' + allEffects.length);
 slide.AddObject(infoShape);
-
 ```
+

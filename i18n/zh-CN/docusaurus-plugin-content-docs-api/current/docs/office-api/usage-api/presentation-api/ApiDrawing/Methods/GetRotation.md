@@ -38,5 +38,5 @@ let docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is: " + rotAngle + " degrees");
 slide.AddObject(shape);
-
 ```
+

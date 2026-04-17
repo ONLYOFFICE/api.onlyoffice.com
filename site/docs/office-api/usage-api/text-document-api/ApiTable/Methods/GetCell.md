@@ -40,3 +40,4 @@ doc.Push(table);
 let cell = table.GetCell(0, 0);
 cell.GetContent().GetElement(0).AddText("Cell #1");
 ```
+

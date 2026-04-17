@@ -55,5 +55,5 @@ condition1.SetLastPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
-
 ```
+

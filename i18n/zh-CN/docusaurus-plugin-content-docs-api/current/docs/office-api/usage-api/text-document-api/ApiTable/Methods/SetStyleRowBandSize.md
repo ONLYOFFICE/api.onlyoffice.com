@@ -2,23 +2,7 @@
 
 指定此表格样式中每个表格行带包含的行数。
 
-## 语法
-
-```javascript
-expression.SetStyleRowBandSize(nCount);
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | 必需 | number |  | 以正整数表示的行数。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTablePr.SetStyleRowBandSize](../../ApiTablePr/Methods/SetStyleRowBandSize.md).
 
 ## 示例
 
@@ -50,3 +34,4 @@ table.GetRow(3).GetCell(0).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(3).GetCell(1).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
+

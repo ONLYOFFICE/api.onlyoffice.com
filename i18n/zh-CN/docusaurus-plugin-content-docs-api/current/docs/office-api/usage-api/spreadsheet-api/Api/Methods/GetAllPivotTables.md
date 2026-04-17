@@ -43,5 +43,5 @@ Api.InsertPivotNewWorksheet(dataRef);
 Api.GetAllPivotTables().forEach(function (pivot) {
     pivot.AddDataField('Price');
 });
-
 ```
+

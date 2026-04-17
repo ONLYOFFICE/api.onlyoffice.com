@@ -25,3 +25,4 @@
 
 chart.SetAxieNumFormat("top", "0.00");
 ```
+

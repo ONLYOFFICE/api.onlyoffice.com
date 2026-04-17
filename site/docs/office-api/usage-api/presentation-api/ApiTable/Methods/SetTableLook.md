@@ -46,5 +46,5 @@ const table = Api.CreateTable(2, 4);
 table.SetTableLook(true, false, false, false, false, true);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

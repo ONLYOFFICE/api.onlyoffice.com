@@ -51,5 +51,5 @@ paragraph = Api.CreateParagraph();
 const fontSize = textPr.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 docContent.Push(paragraph);
-
 ```
+

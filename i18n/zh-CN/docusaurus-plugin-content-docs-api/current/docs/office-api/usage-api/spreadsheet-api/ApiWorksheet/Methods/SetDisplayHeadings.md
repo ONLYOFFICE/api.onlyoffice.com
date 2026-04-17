@@ -32,5 +32,5 @@ expression.SetDisplayHeadings(isDisplayed);
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The sheet settings make it display no row/column headers");
 worksheet.SetDisplayHeadings(false);
-
 ```
+

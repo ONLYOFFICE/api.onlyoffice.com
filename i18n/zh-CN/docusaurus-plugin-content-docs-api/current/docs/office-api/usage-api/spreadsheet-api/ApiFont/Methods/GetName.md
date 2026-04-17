@@ -36,3 +36,4 @@ font.SetName("Font 1");
 let fontName = font.GetName();
 worksheet.GetRange("B3").SetValue("Font name: " + fontName);
 ```
+

@@ -26,3 +26,4 @@ expression.MoveCursorToStart(isMoveToMainContent);
 ```javascript
 window.Asc.plugin.executeMethod ("MoveCursorToStart", [true]);
 ```
+

@@ -50,5 +50,5 @@ let searchRange = range.Find("200", "B1", "xlValues", "xlWhole", "xlByColumns", 
 searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 let nextSearchRange = range.FindNext(searchRange);
 nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```
+

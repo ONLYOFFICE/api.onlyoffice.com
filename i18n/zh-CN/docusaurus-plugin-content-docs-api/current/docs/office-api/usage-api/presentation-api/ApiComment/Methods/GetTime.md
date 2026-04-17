@@ -47,5 +47,5 @@ const time = arrComments[0].GetTime();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's time: " + time);
-
 ```
+

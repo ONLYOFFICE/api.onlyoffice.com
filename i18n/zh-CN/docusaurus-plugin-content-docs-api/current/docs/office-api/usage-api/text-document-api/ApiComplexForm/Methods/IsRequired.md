@@ -2,21 +2,7 @@
 
 检查当前表单是否为必填项。
 
-## 语法
-
-```javascript
-expression.IsRequired();
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md).
 
 ## 示例
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
+

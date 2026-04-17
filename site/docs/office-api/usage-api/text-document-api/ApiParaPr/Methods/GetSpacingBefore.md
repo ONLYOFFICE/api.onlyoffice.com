@@ -41,3 +41,4 @@ let spacingBefore = paraPr.GetSpacingBefore();
 paragraph.AddText("Spacing before: " + spacingBefore);
 doc.Push(paragraph);
 ```
+

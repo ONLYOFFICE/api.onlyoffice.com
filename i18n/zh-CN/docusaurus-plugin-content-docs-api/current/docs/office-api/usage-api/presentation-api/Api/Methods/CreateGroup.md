@@ -41,5 +41,5 @@ shape1.SetPosition(608400, 1267200);
 shape2.SetPosition(3100000, 1867200);
 let group = Api.CreateGroup([shape1, shape2]);
 slide.AddObject(group);
-
 ```
+

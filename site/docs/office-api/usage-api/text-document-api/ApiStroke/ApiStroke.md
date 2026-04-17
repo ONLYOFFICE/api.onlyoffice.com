@@ -2,7 +2,6 @@
 
 Represents the ApiStroke class.
 
-
 ## Methods
 
 | Method | Returns | Description |

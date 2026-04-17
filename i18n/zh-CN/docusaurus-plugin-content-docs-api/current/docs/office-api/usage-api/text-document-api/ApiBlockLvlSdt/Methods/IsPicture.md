@@ -18,3 +18,4 @@ expression.IsPicture();
 ## 返回值
 
 boolean
+

@@ -39,3 +39,4 @@ value = worksheet.GetRange("A3").GetFormulaArray();
 worksheet.GetRange("A6").SetValue("Array formula of the cell A3: ");
 worksheet.GetRange("B6").SetValue("'" + value);
 ```
+

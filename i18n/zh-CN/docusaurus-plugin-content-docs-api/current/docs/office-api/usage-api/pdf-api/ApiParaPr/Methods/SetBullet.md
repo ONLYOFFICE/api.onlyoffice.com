@@ -46,5 +46,5 @@ const bullet = Api.CreateBullet("-");
 paraPr.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
-
 ```
+

@@ -2,24 +2,7 @@
 
 为数据透视表报表建立自动字段排序规则。
 
-## 语法
-
-```javascript
-expression.AutoSort(order, field);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| order | 必需 | [SortOrder](../../Enumeration/SortOrder.md) |  | 排序顺序。 |
-| field | 必需 | string |  | 用于排序的字段名称（pivotField.SourceName、pivotField.Name、dataField.Name）。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.AutoSort](../../ApiPivotField/Methods/AutoSort.md).
 
 ## 示例
 
@@ -90,5 +73,5 @@ pivotWorksheet.GetRange('A15').SetValue(`Product field will be sorted by Units i
 let priorityPivotField = pivotTable.GetPivotFields('Priority');
 priorityPivotField.AutoSort("xlManual", priorityField.Name);
 pivotWorksheet.GetRange('A16').SetValue(`Priority field set to manual sorting mode (${priorityPivotField.AutoSortOrder} - ${priorityPivotField.AutoSortField})`);
-
 ```
+

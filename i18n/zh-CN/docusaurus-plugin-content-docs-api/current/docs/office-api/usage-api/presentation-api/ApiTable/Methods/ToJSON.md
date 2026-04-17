@@ -45,5 +45,5 @@ const paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type = " + type);
 content.Push(paragraph);
 slide.AddObject(tableFromJSON);
-
 ```
+

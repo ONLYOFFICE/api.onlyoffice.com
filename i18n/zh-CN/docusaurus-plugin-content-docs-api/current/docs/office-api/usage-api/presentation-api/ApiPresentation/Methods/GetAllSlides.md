@@ -40,5 +40,5 @@ firstSlide.AddObject(shape);
 
 const paragraph =  shape.GetContent().GetElement(0);
 paragraph.AddText('Total slides count: ' + slides.length);
-
 ```
+

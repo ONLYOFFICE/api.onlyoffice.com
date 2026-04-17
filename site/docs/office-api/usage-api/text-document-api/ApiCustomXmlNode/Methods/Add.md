@@ -34,5 +34,5 @@ let classType = textNode.GetClassType();
 let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Class type: " + classType);
 doc.Push(infoParagraph);
-
 ```
+

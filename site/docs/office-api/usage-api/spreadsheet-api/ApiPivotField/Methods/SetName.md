@@ -70,3 +70,4 @@ pivotWorksheet.GetRange('A14').SetValue('New Style field name');
 pivotField.SetName('My name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
 ```
+

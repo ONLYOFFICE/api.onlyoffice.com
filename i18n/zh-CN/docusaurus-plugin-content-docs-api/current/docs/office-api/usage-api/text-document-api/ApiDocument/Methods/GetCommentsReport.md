@@ -103,3 +103,4 @@ for (let userName in commentsReport) {
 }
 table.SetStyle(doc.GetStyle("Bordered"));
 ```
+

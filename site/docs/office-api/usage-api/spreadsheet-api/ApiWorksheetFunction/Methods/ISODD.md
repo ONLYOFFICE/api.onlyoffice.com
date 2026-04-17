@@ -34,5 +34,5 @@ const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.ISODD("94");
 worksheet.GetRange("C3").SetValue(result);
-
 ```
+

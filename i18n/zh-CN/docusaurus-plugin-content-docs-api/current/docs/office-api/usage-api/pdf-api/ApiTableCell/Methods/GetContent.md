@@ -37,5 +37,5 @@ paragraph.AddText("This is a sample text in the cell.");
 content.Push(paragraph);
 
 page.AddObject(table);
-
 ```
+

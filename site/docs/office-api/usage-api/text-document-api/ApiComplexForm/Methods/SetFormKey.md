@@ -2,23 +2,7 @@
 
 Sets a key to the current form.
 
-## Syntax
-
-```javascript
-expression.SetFormKey(sKey);
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sKey | Required | string |  | Form key. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
 ## Example
 
@@ -39,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
+

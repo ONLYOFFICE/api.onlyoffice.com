@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | value | number | 限制值。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {
     if (value == 0) {

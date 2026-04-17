@@ -67,3 +67,4 @@ pivotWorksheet.GetRange('A9').SetValue('First value in Pivot Table');
 
 pivotWorksheet.GetRange('C9').SetValue(pivotTable.PivotValueCell(1, 1));
 ```
+

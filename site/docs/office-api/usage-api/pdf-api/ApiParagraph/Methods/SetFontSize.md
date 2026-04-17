@@ -37,5 +37,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font size set to 24 points.');
 paragraph.SetFontSize(48);
 page.AddObject(shape);
-
 ```
+

@@ -62,3 +62,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Grand Total name');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetGrandTotalName());
 ```
+

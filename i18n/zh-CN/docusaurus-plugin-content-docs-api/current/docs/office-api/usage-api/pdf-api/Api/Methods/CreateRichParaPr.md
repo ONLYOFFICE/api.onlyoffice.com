@@ -39,3 +39,4 @@ let paraPr = Api.CreateRichParaPr();
 paraPr.SetJc("right");
 para.SetParaPr(paraPr);
 ```
+

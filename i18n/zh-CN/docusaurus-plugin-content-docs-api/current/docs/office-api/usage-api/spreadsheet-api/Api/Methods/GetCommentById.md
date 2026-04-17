@@ -36,3 +36,4 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Comment Text: " + comment.GetText());
 worksheet.GetRange("B1").SetValue("Comment Author: " + comment.GetAuthorName());
 ```
+

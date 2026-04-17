@@ -38,3 +38,4 @@ let style = paraPr.GetStyle();
 paragraph.AddLineBreak();
 paragraph.AddText("Style: " + style.GetName());
 ```
+

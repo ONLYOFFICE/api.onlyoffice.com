@@ -33,3 +33,4 @@ let page = doc.GetPage(0);
 page.AddObject(stampAnnot);
 console.log(`We set rotate angle to: ${stampAnnot.GetRotation()} for stamp annotation`);
 ```
+

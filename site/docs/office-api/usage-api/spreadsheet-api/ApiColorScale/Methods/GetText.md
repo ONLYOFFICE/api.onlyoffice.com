@@ -2,21 +2,7 @@
 
 Returns the text value used in text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.GetText();
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormatCondition.GetText](../../ApiFormatCondition/Methods/GetText.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let textValue = condition1.GetText();
 
 worksheet.GetRange("C1").SetValue("Text value:");
 worksheet.GetRange("C2").SetValue(textValue);
-
 ```
+

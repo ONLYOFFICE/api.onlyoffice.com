@@ -2,23 +2,7 @@
 
 Sets the date operator for time period conditions.
 
-## Syntax
-
-```javascript
-expression.SetDateOperator(DateOperator);
-```
-
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| DateOperator | Required | [XlTimePeriods](../../Enumeration/XlTimePeriods.md) |  | The date operator for time period conditions. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetDateOperator](../../ApiFormatCondition/Methods/SetDateOperator.md).
 
 ## Example
 
@@ -52,5 +36,5 @@ condition1.SetDateOperator("xlLastWeek");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetDateOperator() || "None");
-
 ```
+

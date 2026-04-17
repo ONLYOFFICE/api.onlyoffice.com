@@ -50,5 +50,5 @@ dataBar.SetMinPointType("xlConditionValuePercent");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMinPointType());
-
 ```
+

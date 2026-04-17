@@ -38,3 +38,4 @@ inlineLvlSdt1.AddElement(inlineLvlSdt2, 0);
 let parentInlineLvlSdt = inlineLvlSdt2.GetParentContentControl();
 parentInlineLvlSdt.SetAlias("№1");
 ```
+

@@ -46,5 +46,5 @@ const layouts = master.GetAllLayouts();
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Number of master slide layouts: ' + layouts.length);
-
 ```
+

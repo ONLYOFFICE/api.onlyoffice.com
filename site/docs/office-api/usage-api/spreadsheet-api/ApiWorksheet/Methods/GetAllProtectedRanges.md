@@ -34,3 +34,4 @@ let protectedRanges = worksheet.GetAllProtectedRanges();
 protectedRanges[0].SetTitle("protectedRangeNew1");
 protectedRanges[1].SetTitle("protectedRangeNew2");
 ```
+

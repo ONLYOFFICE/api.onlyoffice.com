@@ -40,5 +40,5 @@ run.SetFontSize(30);
 run.AddText('Hex of rgbColor: ' + rgbColorHex);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```
+

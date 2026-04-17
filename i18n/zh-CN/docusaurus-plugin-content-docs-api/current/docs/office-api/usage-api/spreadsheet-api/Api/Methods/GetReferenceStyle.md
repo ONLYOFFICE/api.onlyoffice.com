@@ -30,3 +30,4 @@ expression.GetReferenceStyle();
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());
 ```
+

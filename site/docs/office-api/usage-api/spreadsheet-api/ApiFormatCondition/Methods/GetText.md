@@ -47,5 +47,5 @@ let textValue = condition1.GetText();
 
 worksheet.GetRange("C1").SetValue("Text value:");
 worksheet.GetRange("C2").SetValue(textValue);
-
 ```
+

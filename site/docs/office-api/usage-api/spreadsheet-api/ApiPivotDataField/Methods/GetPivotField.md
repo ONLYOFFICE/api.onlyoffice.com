@@ -67,3 +67,4 @@ pivotWorksheet.GetRange('B15').SetValue(dataField.GetIndex());
 pivotWorksheet.GetRange('A16').SetValue('Price position:');
 pivotWorksheet.GetRange('B16').SetValue(dataField.GetPivotField().GetIndex());
 ```
+

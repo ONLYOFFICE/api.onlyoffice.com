@@ -40,3 +40,4 @@ worksheet.GetRange("B1").SetValue(3);
 Api.RecalculateAllFormulas();
 worksheet.GetRange("A3").SetValue("Formulas from cells A1 and E1 were recalculated with a new value from cell C1.");
 ```
+

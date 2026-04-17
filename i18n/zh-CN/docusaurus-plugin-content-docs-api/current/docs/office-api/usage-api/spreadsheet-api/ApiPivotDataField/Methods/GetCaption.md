@@ -63,3 +63,4 @@ let dataField = pivotTable.GetDataFields('Sum of Price');
 pivotWorksheet.GetRange('A12').SetValue('The Data field caption');
 pivotWorksheet.GetRange('B12').SetValue(dataField.GetCaption());
 ```
+

@@ -36,3 +36,4 @@ table.SetStyle(tableStyle);
 doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("Row index: " + table.GetCell(0, 0).GetRowIndex());
 ```
+

@@ -45,3 +45,4 @@ let shape = Api.CreateShape("rect", 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
+

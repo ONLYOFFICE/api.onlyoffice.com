@@ -63,3 +63,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A12').SetValue('The Style field caption');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetCaption());
 ```
+

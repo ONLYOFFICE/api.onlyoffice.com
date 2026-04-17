@@ -2,21 +2,7 @@
 
 返回当前段落的段后间距值。
 
-## 语法
-
-```javascript
-expression.GetSpacingAfter();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md).
 
 ## 示例
 
@@ -53,3 +39,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing after : " + spacingAfter);
 docContent.Push(paragraph);
 ```
+

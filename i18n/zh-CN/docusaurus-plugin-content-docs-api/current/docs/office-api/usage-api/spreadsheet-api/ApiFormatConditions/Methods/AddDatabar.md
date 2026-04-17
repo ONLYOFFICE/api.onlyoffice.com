@@ -44,5 +44,5 @@ let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 
 formatConditions.AddDatabar();
-
 ```
+

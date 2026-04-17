@@ -2,21 +2,7 @@
 
 从当前文本属性获取文本间距，以磅的二十分之一为单位。
 
-## 语法
-
-```javascript
-expression.GetSpacing();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
 ## 示例
 
@@ -50,5 +36,5 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```
+

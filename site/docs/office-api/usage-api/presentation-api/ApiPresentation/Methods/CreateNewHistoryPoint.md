@@ -44,5 +44,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("New history point was just created.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```
+

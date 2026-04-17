@@ -59,5 +59,5 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Filter applied on column A:");
     worksheet.GetRange("D1").SetValue(filter.GetOn());    // or filter.On
 }
-
 ```
+

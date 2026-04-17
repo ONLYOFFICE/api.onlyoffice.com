@@ -43,5 +43,5 @@ iconCondition.SetPercentileValues(true);
 
 let usesPercentiles = iconCondition.GetPercentileValues();
 worksheet.GetRange("B1").SetValue("Uses percentiles: " + usesPercentiles);
-
 ```
+

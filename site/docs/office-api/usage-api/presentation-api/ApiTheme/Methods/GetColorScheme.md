@@ -50,5 +50,5 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```
+

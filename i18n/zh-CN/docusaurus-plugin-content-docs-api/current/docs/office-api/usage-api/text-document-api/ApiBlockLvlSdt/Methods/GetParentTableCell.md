@@ -41,3 +41,4 @@ cell.AddElement(0, blockLvlSdt);
 let parentTableCell = blockLvlSdt.GetParentTableCell();
 parentTableCell.SetCellBorderTop("single", 32, 0, 51, 51, 51);
 ```
+

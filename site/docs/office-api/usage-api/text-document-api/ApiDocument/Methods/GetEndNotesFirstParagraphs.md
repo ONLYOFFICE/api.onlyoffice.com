@@ -35,3 +35,4 @@ let endNotesFirstParagraphs = doc.GetEndNotesFirstParagraphs();
 endNotesFirstParagraphs[0].AddText("Endnote 1");
 endNotesFirstParagraphs[0].SetBold(true);
 ```
+

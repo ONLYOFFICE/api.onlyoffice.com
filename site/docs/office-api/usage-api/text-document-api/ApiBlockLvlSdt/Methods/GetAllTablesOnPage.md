@@ -47,3 +47,4 @@ let tablesOnPage = blockLvlSdt.GetAllTablesOnPage(0);
 let cell = tablesOnPage[0].GetRow(1).GetCell(0);
 tablesOnPage[0].RemoveRow(cell);
 ```
+

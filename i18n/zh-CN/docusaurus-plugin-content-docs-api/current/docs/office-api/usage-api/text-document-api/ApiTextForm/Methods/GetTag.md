@@ -2,21 +2,7 @@
 
 返回当前表单的标签属性。
 
-## 语法
-
-```javascript
-expression.GetTag();
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md).
 
 ## 示例
 
@@ -44,5 +30,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```
+

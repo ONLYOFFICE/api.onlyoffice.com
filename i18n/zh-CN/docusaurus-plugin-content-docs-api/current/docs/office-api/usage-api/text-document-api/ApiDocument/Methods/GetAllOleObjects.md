@@ -2,21 +2,7 @@
 
 从文档内容返回 OLE 对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllOleObjects();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)[]
+Inherited from [ApiDocumentContent.GetAllOleObjects](../../ApiDocumentContent/Methods/GetAllOleObjects.md).
 
 ## 示例
 
@@ -48,5 +34,5 @@ let appId = oleObjects[0].GetApplicationId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 doc.Push(paragraph);
-
 ```
+

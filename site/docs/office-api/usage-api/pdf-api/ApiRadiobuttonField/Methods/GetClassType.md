@@ -30,3 +30,4 @@ page.AddObject(radiobuttonField);
 
 console.log('Field type is: ' + radiobuttonField.GetClassType());
 ```
+

@@ -36,5 +36,5 @@ slide.AddObject(shape);
 
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
-
 ```
+

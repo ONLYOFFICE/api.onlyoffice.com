@@ -51,5 +51,5 @@ paragraph = Api.CreateParagraph();
 const doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
-
 ```
+

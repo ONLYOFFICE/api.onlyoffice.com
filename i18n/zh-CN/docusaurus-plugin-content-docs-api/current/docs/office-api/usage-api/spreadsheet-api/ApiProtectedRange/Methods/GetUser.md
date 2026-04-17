@@ -36,3 +36,4 @@ let userInfo = protectedRange.GetUser("userId");
 let userName = userInfo.GetName();
 worksheet.GetRange("A3").SetValue("User name: " + userName);
 ```
+

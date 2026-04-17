@@ -2,23 +2,7 @@
 
 指定此表格样式中每个表格列带包含的列数。
 
-## 语法
-
-```javascript
-expression.SetStyleColBandSize(nCount);
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | 必需 | number |  | 以正整数表示的列数。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTablePr.SetStyleColBandSize](../../ApiTablePr/Methods/SetStyleColBandSize.md).
 
 ## 示例
 
@@ -50,3 +34,4 @@ table.GetRow(1).GetCell(2).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(1).GetCell(3).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
+

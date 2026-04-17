@@ -51,5 +51,5 @@ condition.SetNumStdDev(2);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetNumStdDev().toString());
-
 ```
+

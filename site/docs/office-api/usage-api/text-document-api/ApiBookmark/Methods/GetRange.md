@@ -37,5 +37,5 @@ let bookmarkRange = bookmark.GetRange();
 bookmarkRange.SetBold(true);
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark range is shown in bold");
-
 ```
+

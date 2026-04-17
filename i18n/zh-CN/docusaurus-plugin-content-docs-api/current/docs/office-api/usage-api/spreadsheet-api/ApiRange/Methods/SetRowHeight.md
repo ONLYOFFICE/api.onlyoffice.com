@@ -32,3 +32,4 @@ expression.SetRowHeight(nHeight);
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetRowHeight(32);
 ```
+

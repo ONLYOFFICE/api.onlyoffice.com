@@ -46,3 +46,4 @@ watermarkSettings.SetOpacity(127);
 watermarkSettings.SetDirection("clockwise45");
 doc.SetWatermarkSettings(watermarkSettings);
 ```
+

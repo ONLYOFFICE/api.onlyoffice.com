@@ -26,3 +26,4 @@ expression.UnShowInputHelper(guid, isclear);
 ```javascript
 window.Asc.plugin.executeMethod ("UnShowInputHelper", ["asc.{UUID}", true]);
 ```
+

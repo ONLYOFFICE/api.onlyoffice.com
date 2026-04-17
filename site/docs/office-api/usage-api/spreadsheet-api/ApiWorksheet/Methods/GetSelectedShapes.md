@@ -50,5 +50,5 @@ if (shapes[0]) {
 	paragraph.AddText("aligning it vertically by the bottom.");
 	content.Push(paragraph);
 }
-
 ```
+

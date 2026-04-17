@@ -31,3 +31,4 @@ let worksheet = Api.GetActiveSheet();
 let name = Api.GetFullName();
 worksheet.GetRange("B1").SetValue("File name: " + name);
 ```
+

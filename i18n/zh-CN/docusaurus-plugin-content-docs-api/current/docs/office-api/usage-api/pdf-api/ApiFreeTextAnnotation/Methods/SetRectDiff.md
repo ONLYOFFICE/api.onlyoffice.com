@@ -32,3 +32,4 @@ page.AddObject(freeTextAnnot);
 freeTextAnnot.SetRectDiff([10, 10, 10, 10]);
 console.log(`Annot rect diff is: ${freeTextAnnot.GetRectDiff()}`);
 ```
+

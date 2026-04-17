@@ -39,3 +39,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The content control was replaced with the current paragraph.");
 blockLvlSdt.ReplaceByElement(paragraph);
 ```
+

@@ -37,5 +37,5 @@ page.AddObject(comboboxField);
 comboboxField.SetNumberFormat(0, "us", "black-minus", "$", true);
 comboboxField.SetValidateRange(true, 0, true, 5);
 comboboxField.SetValue('10');
-
 ```
+

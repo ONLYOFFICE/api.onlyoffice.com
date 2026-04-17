@@ -53,5 +53,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The third layout was moved to the seventh position within the same collection.");
 presentation.AddSlide(slide3);
-
 ```
+

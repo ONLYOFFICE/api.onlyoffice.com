@@ -39,3 +39,4 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 paragraph.AddDrawing(drawing);
 ```
+

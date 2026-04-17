@@ -33,5 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlBetween", 10, 20);
 let formula2 = validation.GetFormula2();
 worksheet.GetRange("B1").SetValue("Formula2: " + formula2);
-
 ```
+

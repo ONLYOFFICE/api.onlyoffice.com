@@ -2,21 +2,7 @@
 
 Clears the current form.
 
-## Syntax
-
-```javascript
-expression.Clear();
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
 ## Example
 
@@ -37,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);
 ```
+

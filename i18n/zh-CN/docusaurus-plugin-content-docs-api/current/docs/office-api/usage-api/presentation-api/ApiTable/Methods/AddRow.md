@@ -44,5 +44,5 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

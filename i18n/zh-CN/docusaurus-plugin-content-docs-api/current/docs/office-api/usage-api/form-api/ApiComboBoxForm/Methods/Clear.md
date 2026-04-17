@@ -2,21 +2,7 @@
 
 清除当前表单。
 
-## 语法
-
-```javascript
-expression.Clear();
-```
-
-`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
 ## 示例
 
@@ -37,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);
 ```
+

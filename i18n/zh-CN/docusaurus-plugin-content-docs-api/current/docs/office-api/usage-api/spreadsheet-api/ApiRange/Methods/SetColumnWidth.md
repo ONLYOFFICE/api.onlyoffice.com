@@ -34,3 +34,4 @@ expression.SetColumnWidth(nWidth);
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetColumnWidth(20);
 ```
+

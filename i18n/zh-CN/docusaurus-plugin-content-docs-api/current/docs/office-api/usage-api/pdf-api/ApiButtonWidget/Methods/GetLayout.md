@@ -32,3 +32,4 @@ let widgets = buttonField.GetAllWidgets();
 widgets[0].SetLayout('iconTextV');
 widgets[0].SetLabel('Layout is: ' + widgets[0].GetLayout());
 ```
+

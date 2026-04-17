@@ -3,23 +3,7 @@
 Specifies the indentation which will be added before the leading edge of the current table in the document
 (the left edge in the left-to-right table, and the right edge in the right-to-left table).
 
-## Syntax
-
-```javascript
-expression.SetTableInd(nValue);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableInd](../../ApiTablePr/Methods/SetTableInd.md).
 
 ## Example
 
@@ -43,3 +27,4 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

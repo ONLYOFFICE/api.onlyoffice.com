@@ -42,3 +42,4 @@ for (let i = 0; i < values.length; i++) {
 let range = worksheet.GetRange("B2:B5");
 worksheet.GetRange("B6").SetValue(func.NPV(0.05, range));
 ```
+

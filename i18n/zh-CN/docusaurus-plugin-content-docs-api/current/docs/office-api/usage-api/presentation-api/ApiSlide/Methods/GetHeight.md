@@ -43,5 +43,5 @@ const paragraph = docContent.GetElement(0);
 const slideHeight = slide.GetHeight();
 paragraph.AddText("The slide height = " + slideHeight / 36000 + " mm");
 slide.AddObject(shape);
-
 ```
+

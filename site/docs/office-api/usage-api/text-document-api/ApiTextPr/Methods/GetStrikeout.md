@@ -48,3 +48,4 @@ let strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 doc.Push(paragraph);
 ```
+

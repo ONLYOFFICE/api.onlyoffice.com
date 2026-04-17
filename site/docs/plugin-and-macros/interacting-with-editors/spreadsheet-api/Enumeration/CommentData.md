@@ -2,6 +2,10 @@
 
 The comment data.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -12,11 +16,6 @@ The comment data.
 | Text | string | The comment text. |
 | Time | string | The time when the comment was posted (in milliseconds). |
 | UserName | string | The comment author. |
-## Type
-
-Object
-
-
 
 ## Example
 
@@ -37,3 +36,4 @@ let commentData = {
 };
 window.Asc.plugin.executeMethod ("AddComment", [commentData]);
 ```
+

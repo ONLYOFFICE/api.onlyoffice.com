@@ -2,23 +2,7 @@
 
 Removes an element using the position specified.
 
-## Syntax
-
-```javascript
-expression.RemoveElement(nPos);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | The element number (position) in the document or inside other element. |
-
-## Returns
-
-boolean
+Inherited from [ApiDocumentContent.RemoveElement](../../ApiDocumentContent/Methods/RemoveElement.md).
 
 ## Example
 
@@ -49,3 +33,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed paragraph #3, check that out above.");
 docContent.Push(paragraph);
 ```
+

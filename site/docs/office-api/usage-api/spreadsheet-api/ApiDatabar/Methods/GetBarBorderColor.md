@@ -45,5 +45,5 @@ let borderColor = dataBar.GetBarBorderColor();
 
 worksheet.GetRange("C1").SetValue("Border Color:");
 worksheet.GetRange("C2").SetValue(borderColor ? "Set" : "None");
-
 ```
+

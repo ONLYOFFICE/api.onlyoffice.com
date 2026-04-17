@@ -38,5 +38,5 @@ paragraph.AddText("Class type: " + classType);
 content.Push(paragraph);
 
 page.AddObject(table);
-
 ```
+

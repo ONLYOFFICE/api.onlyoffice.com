@@ -1,7 +1,6 @@
 # ApiChart
 
-表示 ApiChart 类。
-
+ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## 方法
 
@@ -11,6 +10,9 @@
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | 返回图表空间中的所有系列。 |
 | [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | 返回图表对象的类型。 |
 | [GetClassType](./Methods/GetClassType.md) | "chart" | 返回 ApiChart 类的类型。 |
+| [GetParentPage](./Methods/GetParentPage.md) | [ApiPage](../ApiPage/ApiPage.md) | 返回 ApiDrawing 类的类型。 |
+| [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 x 位置。 |
+| [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 y 位置。 |
 | [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) | 返回具有特定索引的系列。 |
 | [GetTitle](./Methods/GetTitle.md) | string \| null | 返回图表标题文本。 |
 | [RemoveSeria](./Methods/RemoveSeria.md) | boolean | 从当前图表中删除指定的系列。 |
@@ -37,6 +39,9 @@
 | [SetMinorVerticalGridlines](./Methods/SetMinorVerticalGridlines.md) | boolean | 指定次要垂直网格线的视觉属性。 |
 | [SetPlotAreaFill](./Methods/SetPlotAreaFill.md) | boolean | 设置图表绘图区域的填充。 |
 | [SetPlotAreaOutLine](./Methods/SetPlotAreaOutLine.md) | boolean | 设置图表绘图区域的轮廓。 |
+| [SetPosX](./Methods/SetPosX.md) | boolean | 设置绘图在页面上的 x 位置。 |
+| [SetPosY](./Methods/SetPosY.md) | boolean | 设置绘图在页面上的 y 位置。 |
+| [SetPosition](./Methods/SetPosition.md) | boolean | 设置绘图在页面上的位置。 |
 | [SetSeriaName](./Methods/SetSeriaName.md) | boolean | 为指定的图表系列设置名称。 |
 | [SetSeriaNumFormat](./Methods/SetSeriaNumFormat.md) | boolean | 将指定的数字格式设置为图表系列。 |
 | [SetSeriaValues](./Methods/SetSeriaValues.md) | boolean | 为指定的图表系列设置值。 |

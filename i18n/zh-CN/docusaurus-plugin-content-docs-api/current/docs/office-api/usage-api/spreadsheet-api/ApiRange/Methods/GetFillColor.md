@@ -36,3 +36,4 @@ let fillColor = range.GetFillColor();
 worksheet.GetRange("A3").SetValue("This is another cell with the same color set to its background");
 worksheet.GetRange("A3").SetFillColor(fillColor);
 ```
+

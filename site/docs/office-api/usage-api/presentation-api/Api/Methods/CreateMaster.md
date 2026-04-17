@@ -50,5 +50,5 @@ paragraph.AddText("Number of masters after adding new master: " + countAfter);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

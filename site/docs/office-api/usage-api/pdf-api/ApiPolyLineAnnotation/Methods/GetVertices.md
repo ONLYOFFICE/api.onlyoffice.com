@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(polylineAnnot);
 console.log(`Polyline vertices are: ${JSON.stringify(polylineAnnot.GetVertices())}`);
 ```
+

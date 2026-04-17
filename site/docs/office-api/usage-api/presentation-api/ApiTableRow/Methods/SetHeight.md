@@ -38,5 +38,5 @@ row.SetHeight(30 * 36000);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

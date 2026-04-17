@@ -32,3 +32,4 @@ let annot = Api.CreateHighlightAnnot(quads);
 page.AddObject(annot);
 console.log('We added a highlight annotations searched word');
 ```
+

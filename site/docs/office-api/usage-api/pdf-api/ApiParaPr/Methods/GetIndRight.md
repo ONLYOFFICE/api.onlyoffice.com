@@ -53,5 +53,5 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
-
 ```
+

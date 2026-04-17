@@ -44,3 +44,4 @@ paragraph.AddText("Align bottom");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

@@ -47,5 +47,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("A new name was set to the current layout.");
 layout.AddObject(shape);
-
 ```
+

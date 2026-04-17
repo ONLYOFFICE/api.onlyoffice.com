@@ -29,5 +29,5 @@ let contentControl = Api.CreateBlockLvlSdt();
 let appearance = contentControl.GetAppearance();
 contentControl.GetContent().GetElement(0).AddText("The appearance of this content control: " + appearance);
 doc.Push(contentControl);
-
 ```
+

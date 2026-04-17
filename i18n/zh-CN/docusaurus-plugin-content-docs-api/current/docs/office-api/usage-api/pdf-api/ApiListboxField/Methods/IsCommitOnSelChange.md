@@ -2,21 +2,7 @@
 
 检查字段是否可在选择更改时提交。
 
-## 语法
-
-```javascript
-expression.IsCommitOnSelChange();
-```
-
-`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiBaseListField.IsCommitOnSelChange](../../ApiBaseListField/Methods/IsCommitOnSelChange.md).
 
 ## 示例
 
@@ -34,3 +20,4 @@ comboboxField.AddOption('Option 3');
 comboboxField.SetCommitOnSelChange(true);
 comboboxField.SetValue('Commit on sel change is: ' + comboboxField.IsCommitOnSelChange());
 ```
+

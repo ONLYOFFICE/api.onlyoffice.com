@@ -46,3 +46,4 @@ let position = paragraph.GetPosInParent();
 paragraph = doc.GetElement(position);
 paragraph.SetBold(true);
 ```
+

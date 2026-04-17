@@ -43,5 +43,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Shade: ');
 paragraph.AddDrawing(drawing);
 doc.Push(paragraph);
-
 ```
+

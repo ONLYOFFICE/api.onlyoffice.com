@@ -53,3 +53,4 @@ for(let seriesIndex = 0; seriesIndex < allSeries.length; ++seriesIndex) {
     worksheet.GetRange("F" + (seriesIndex + 1)).SetValue((seriesIndex + 1) + " Series Type = " + seriesType);
 }
 ```
+

@@ -38,3 +38,4 @@ paragraph.AddInlineLvlSdt(inlineLvlSdt);
 let range = inlineLvlSdt.GetRange(11, 16);
 range.SetBold(true);
 ```
+

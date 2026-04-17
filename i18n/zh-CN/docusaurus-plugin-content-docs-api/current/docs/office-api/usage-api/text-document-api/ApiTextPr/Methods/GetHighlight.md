@@ -48,3 +48,4 @@ let highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 doc.Push(paragraph);
 ```
+

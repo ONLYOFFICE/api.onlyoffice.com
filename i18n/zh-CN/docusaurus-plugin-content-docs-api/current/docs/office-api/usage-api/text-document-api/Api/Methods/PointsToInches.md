@@ -32,5 +32,5 @@ const points = 1000;
 const inches = Api.PointsToInches(points);
 paragraph.AddText(points + ' points are equal to ' + inches + ' inches.');
 doc.Push(paragraph);
-
 ```
+

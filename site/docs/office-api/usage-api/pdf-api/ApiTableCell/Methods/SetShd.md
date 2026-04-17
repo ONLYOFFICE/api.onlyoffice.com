@@ -40,5 +40,5 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 cell.SetShd(fill);
 
 page.AddObject(table);
-
 ```
+

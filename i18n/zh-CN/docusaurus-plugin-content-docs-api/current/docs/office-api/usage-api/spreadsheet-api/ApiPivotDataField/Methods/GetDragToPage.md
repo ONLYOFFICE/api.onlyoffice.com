@@ -2,21 +2,7 @@
 
 返回指定是否可以将指定字段拖动到页位置的设置。
 
-## 语法
-
-```javascript
-expression.GetDragToPage();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiPivotField.GetDragToPage](../../ApiPivotField/Methods/GetDragToPage.md).
 
 ## 示例
 
@@ -64,3 +50,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
 ```
+

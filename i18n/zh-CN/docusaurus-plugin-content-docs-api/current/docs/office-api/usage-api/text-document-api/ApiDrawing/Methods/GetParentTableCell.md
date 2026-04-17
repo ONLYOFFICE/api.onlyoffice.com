@@ -44,3 +44,4 @@ let cellContent = parentCell.GetContent().GetElement(0);
 cellContent.AddLineBreak();
 cellContent.AddText("This is a parent cell");
 ```
+

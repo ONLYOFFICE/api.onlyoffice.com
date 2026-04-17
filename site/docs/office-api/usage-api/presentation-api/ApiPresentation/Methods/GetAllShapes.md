@@ -52,5 +52,5 @@ const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const shapesCount = presentation.GetAllShapes().length;
 paragraph.AddText('Shapes: ' + shapesCount);
-
 ```
+

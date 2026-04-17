@@ -51,3 +51,4 @@ let range1 = worksheet.GetRange("B2:B5");
 let range2 = worksheet.GetRange("C2:C5");
 worksheet.GetRange("D5").SetValue(func.XNPV(0.05, range1, range2));
 ```
+

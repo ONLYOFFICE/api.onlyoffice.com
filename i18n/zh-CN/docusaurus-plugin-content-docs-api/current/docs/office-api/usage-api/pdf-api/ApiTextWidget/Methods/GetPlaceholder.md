@@ -32,3 +32,4 @@ let widgets = comboboxField.GetAllWidgets();
 widgets[0].SetPlaceholder('Your text here');
 console.log('Text widget placeholder is: "' + widgets[0].GetPlaceholder() + '"');
 ```
+

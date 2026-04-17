@@ -38,5 +38,5 @@ paragraph.AddText(points + ' points are equal to ' + twips + ' twips.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```
+

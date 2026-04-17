@@ -34,5 +34,5 @@ worksheet.GetRange('C4').SetValue(75);
 const range = worksheet.GetRange('B3');
 const region = range.GetCurrentRegion();
 worksheet.GetRange('A1').SetValue('Current region: ' + region.GetAddress(true, true, 'xlA1', false));
-
 ```
+

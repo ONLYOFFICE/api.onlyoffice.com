@@ -2,21 +2,7 @@
 
 从文档内容返回图像对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllImages();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiImage](../../ApiImage/ApiImage.md)[]
+Inherited from [ApiDocumentContent.GetAllImages](../../ApiDocumentContent/Methods/GetAllImages.md).
 
 ## 示例
 
@@ -44,5 +30,5 @@ let classType = images[0].GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Class type: ' + classType);
 doc.Push(paragraph);
-
 ```
+

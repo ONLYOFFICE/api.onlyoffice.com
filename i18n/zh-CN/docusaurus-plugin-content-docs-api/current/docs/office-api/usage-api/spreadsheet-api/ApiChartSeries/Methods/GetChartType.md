@@ -49,3 +49,4 @@ let series = chart.GetSeries(0);
 let seriesType = series.GetChartType();
 worksheet.GetRange("F1").SetValue("Series Type = " + seriesType);
 ```
+

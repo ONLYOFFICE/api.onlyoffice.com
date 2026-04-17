@@ -39,3 +39,4 @@ let footer = section.GetFooter("default", true);
 paragraph = footer.GetElement(0);
 paragraph.AddText("This is a page footer");
 ```
+

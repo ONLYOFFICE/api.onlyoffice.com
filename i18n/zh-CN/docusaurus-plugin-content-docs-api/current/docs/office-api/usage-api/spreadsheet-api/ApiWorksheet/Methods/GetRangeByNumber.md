@@ -33,3 +33,4 @@ expression.GetRangeByNumber(nRow, nCol);
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRangeByNumber(1, 2).SetValue("42");
 ```
+

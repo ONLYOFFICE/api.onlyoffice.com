@@ -39,3 +39,4 @@ Api.AddComment(paragraph, "comment", "John Smith");
 let comments = doc.GetAllComments();
 comments[0].AddReply("reply1", "Mark Potato", "uid-2", 0);
 ```
+

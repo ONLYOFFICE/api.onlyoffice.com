@@ -51,3 +51,4 @@ drawing.SetDistances(457200, 457200, 457200, 0);
 drawing.SetWrappingStyle("square");
 paragraph.AddDrawing(drawing);
 ```
+

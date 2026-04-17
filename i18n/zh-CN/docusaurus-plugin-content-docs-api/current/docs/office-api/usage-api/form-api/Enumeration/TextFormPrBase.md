@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -15,7 +15,6 @@
 | comb | boolean | 指定文本字段是否应为具有相同单元格宽度的字符梳。最大字符数必须设置为正值。 |
 | maxCharacters | number | 文本字段中的最大字符数。 |
 | multiLine | boolean | 指定当前固定大小的文本字段是否为多行。 |
-
 
 ## 示例
 
@@ -34,5 +33,5 @@ let textFormPrBase = {
 	"autoFit": false
 };
 let textForm = Api.CreateTextForm(textFormPrBase);
-
 ```
+

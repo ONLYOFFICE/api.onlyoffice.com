@@ -50,5 +50,5 @@ const oleObjects = presentation.GetAllOleObjects();
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('OLE Objects: ' + oleObjects.length);
-
 ```
+

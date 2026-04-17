@@ -2,21 +2,7 @@
 
 Converts the ApiTableCellPr object into the JSON object.
 
-## Syntax
-
-```javascript
-expression.ToJSON();
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-JSON
+Inherited from [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md).
 
 ## Example
 
@@ -42,3 +28,4 @@ let type = tableCellPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
+

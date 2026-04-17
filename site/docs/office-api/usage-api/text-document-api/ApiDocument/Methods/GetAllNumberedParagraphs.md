@@ -45,3 +45,4 @@ for (let lvl = 0; lvl < 8; ++lvl) {
 let numberedParagraphs = doc.GetAllNumberedParagraphs();
 numberedParagraphs[0].SetBold(true);
 ```
+

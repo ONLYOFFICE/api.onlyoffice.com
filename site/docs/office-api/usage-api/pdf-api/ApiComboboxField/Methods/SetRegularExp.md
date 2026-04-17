@@ -32,5 +32,5 @@ page.AddObject(comboboxField);
 
 comboboxField.SetRegularExp("\\S+@\\S+\\.\\S+");
 comboboxField.SetValue("example@gmail.com");
-
 ```
+

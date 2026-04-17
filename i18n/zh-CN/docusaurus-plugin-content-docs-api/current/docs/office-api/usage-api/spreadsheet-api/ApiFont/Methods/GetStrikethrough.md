@@ -36,3 +36,4 @@ font.SetStrikethrough(true);
 let isStrikethrough = font.GetStrikethrough();
 worksheet.GetRange("B3").SetValue("Strikethrough property: " + isStrikethrough);
 ```
+

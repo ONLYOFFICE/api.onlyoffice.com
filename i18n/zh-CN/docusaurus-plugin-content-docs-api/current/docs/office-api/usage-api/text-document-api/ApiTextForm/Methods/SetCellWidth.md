@@ -36,3 +36,4 @@ paragraph.AddElement(textForm);
 textForm.SetComb(true);
 textForm.SetCellWidth(7);
 ```
+

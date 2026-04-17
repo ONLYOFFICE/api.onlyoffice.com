@@ -3,23 +3,7 @@
 Sets a pivot field orientation value that represents the location
 of the field in the specified pivot table report.
 
-## Syntax
-
-```javascript
-expression.SetOrientation(type);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The pivot field orientation type. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md).
 
 ## Example
 
@@ -69,3 +53,4 @@ setTimeout(function () {
     pivotField.SetOrientation("Columns");
 }, 5000);
 ```
+

@@ -31,5 +31,5 @@ page.AddObject(comboboxField);
 comboboxField.SetNumberFormat(0, "us", "black-minus", "$", true);
 comboboxField.SetValue('-1000');
 comboboxField.ClearFormat();
-
 ```
+

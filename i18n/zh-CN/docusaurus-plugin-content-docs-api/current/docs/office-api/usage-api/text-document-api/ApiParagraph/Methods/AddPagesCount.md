@@ -40,3 +40,4 @@ paragraph.AddPageNumber();
 paragraph.AddText(" of ");
 paragraph.AddPagesCount();
 ```
+

@@ -50,5 +50,5 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 10000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMinorVerticalGridlines(stroke);
 slide.AddObject(chart);
-
 ```
+

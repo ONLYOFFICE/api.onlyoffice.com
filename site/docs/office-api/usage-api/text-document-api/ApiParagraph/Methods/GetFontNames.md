@@ -40,7 +40,5 @@ let fonts = paragraph.GetFontNames();
 let newParagraph = Api.CreateParagraph();
 newParagraph.AddText("Fonts from previous paragraph: " + fonts.join(", "));
 doc.AddElement(1, newParagraph);
-
-
-
 ```
+

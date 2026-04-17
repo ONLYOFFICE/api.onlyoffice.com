@@ -1,7 +1,6 @@
 # ApiRichRun
 
-表示 ApiRichRun 类。
-
+ApiRichRun is a subclass of [ApiRichTextPr](../ApiRichTextPr/ApiRichTextPr.md).
 
 ## 方法
 

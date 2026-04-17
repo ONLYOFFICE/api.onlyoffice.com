@@ -41,5 +41,5 @@ cell.SetCellBorderBottom(2, fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

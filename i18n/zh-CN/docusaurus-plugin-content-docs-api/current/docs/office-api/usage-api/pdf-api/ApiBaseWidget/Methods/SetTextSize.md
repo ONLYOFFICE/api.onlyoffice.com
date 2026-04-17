@@ -39,5 +39,5 @@ widgets.forEach(function(widget) {
     widget.SetTextColor(rgbColor);
     widget.SetTextSize(15);
 });
-
 ```
+

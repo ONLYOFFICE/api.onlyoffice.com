@@ -48,5 +48,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font set to italicized letters using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

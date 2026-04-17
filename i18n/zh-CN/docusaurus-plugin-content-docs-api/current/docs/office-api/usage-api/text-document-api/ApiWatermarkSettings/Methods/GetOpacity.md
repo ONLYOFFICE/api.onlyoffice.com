@@ -47,3 +47,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Opacity = " + watermarkSettings2.GetOpacity());
 doc.Push(paragraph);
 ```
+

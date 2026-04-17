@@ -34,5 +34,5 @@ blockLvlSdt = Api.CreateBlockLvlSdt();
 color = blockLvlSdt.GetBorderColor();
 blockLvlSdt.GetContent().GetElement(0).AddText("BorderColor: " + (color ? color.GetHex() : "none"));
 doc.AddElement(1, blockLvlSdt);
-
 ```
+

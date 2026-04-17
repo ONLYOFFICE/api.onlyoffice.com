@@ -41,3 +41,4 @@ text = firstItem.GetText();
 paragraph.AddText("\nText of the first item after change index: " + text);
 doc.AddElement(0, paragraph);
 ```
+

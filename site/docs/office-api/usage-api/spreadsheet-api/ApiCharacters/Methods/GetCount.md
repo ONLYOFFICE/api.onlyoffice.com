@@ -34,3 +34,4 @@ let characters = range.GetCharacters(23, 4);
 let count = characters.GetCount();
 worksheet.GetRange("B3").SetValue("Number of characters: " + count);
 ```
+

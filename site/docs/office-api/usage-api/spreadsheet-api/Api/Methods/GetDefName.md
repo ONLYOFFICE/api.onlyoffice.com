@@ -36,3 +36,4 @@ Api.AddDefName("numbers", "Sheet1!$A$1:$B$1");
 let defName = Api.GetDefName("numbers");
 worksheet.GetRange("A3").SetValue("DefName: " + defName.GetName());
 ```
+

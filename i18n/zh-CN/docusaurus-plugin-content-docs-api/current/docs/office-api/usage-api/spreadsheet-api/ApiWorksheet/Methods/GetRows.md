@@ -32,3 +32,4 @@ expression.GetRows(value);
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRows("1:4").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
+

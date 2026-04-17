@@ -27,3 +27,4 @@ expression.ShowButton(id, bShow, align);
 ```javascript
 window.Asc.plugin.executeMethod ("ShowButton", ["back", false, "right"]);
 ```
+

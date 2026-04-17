@@ -29,3 +29,4 @@ let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
 console.log(`Start style is: ${lineAnnot.GetStartStyle()}`);
 ```
+

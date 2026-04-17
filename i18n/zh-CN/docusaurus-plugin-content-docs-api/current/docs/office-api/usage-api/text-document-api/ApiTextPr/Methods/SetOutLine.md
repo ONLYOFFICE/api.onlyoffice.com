@@ -41,3 +41,4 @@ let textArt = Api.CreateWordArt(textPr, "onlyoffice", "textArchUp", null, null, 
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(textArt);
 ```
+

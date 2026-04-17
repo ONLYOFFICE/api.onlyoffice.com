@@ -2,23 +2,7 @@
 
 通过元素在文档中的位置返回元素。
 
-## 语法
-
-```javascript
-expression.GetElement(nPos);
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 将从文档中获取的元素位置。 |
-
-## 返回值
-
-[DocumentElement](../../Enumeration/DocumentElement.md)
+Inherited from [ApiDocumentContent.GetElement](../../ApiDocumentContent/Methods/GetElement.md).
 
 ## 示例
 
@@ -35,3 +19,4 @@ let docContent = section.GetHeader("default", true);
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is the text in the default header");
 ```
+

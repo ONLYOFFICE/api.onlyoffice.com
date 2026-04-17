@@ -39,3 +39,4 @@ let bullet = Api.CreateBullet("-");
 paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 ```
+

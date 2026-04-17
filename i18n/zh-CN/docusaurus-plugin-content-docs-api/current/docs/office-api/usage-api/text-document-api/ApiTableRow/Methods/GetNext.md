@@ -37,3 +37,4 @@ row.GetCell(0).GetContent().GetElement(0).AddText("First row");
 row.GetNext().GetCell(0).GetContent().GetElement(0).AddText("Second row");
 doc.Push(table);
 ```
+

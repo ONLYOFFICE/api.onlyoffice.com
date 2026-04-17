@@ -31,3 +31,4 @@ page.AddObject(checkboxField);
 checkboxField.SetToggleToOff(false);
 console.log('Toggle to off is: ' + checkboxField.IsToggleToOff());
 ```
+

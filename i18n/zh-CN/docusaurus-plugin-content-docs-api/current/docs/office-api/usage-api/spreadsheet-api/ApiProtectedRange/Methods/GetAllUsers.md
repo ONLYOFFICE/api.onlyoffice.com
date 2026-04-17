@@ -38,3 +38,4 @@ protectedRange.AddUser("uid-2", "Mark Potato", "CanView");
 let users = protectedRange.GetAllUsers();
 worksheet.GetRange("A3").SetValue(users[0].GetName());
 ```
+

@@ -69,3 +69,4 @@ dataField.SetCaption('My Sum of Price');
 pivotWorksheet.GetRange('A13').SetValue('New Data field caption');
 pivotWorksheet.GetRange('B13').SetValue(dataField.GetCaption());
 ```
+

@@ -43,3 +43,4 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is the first paragraph. ");
 paragraph.AddText("The paragraph properties styled above set a border at its right side.");
 ```
+

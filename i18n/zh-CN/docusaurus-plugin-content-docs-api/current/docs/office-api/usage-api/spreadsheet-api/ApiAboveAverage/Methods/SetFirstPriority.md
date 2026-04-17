@@ -2,21 +2,7 @@
 
 将当前条件格式规则的优先级值设置为「1」，使其在工作表上的所有其他规则之前计算。
 
-## 语法
-
-```javascript
-expression.SetFirstPriority();
-```
-
-`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md).
 
 ## 示例
 
@@ -55,5 +41,5 @@ condition2.SetFirstPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
-
 ```
+

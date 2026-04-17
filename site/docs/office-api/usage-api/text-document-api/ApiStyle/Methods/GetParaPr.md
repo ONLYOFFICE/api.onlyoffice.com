@@ -38,3 +38,4 @@ paragraph.AddText("This is a paragraph with the line spacing, text justification
 paragraph.AddText("We do not change the style of the paragraph itself. ");
 paragraph.AddText("Only document-wide paragraph styles are applied.");
 ```
+

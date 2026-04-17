@@ -47,3 +47,4 @@ let type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 content.Push(paragraph);
 ```
+

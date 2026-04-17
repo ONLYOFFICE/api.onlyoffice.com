@@ -38,5 +38,5 @@ transition.SetAdvanceOnTime(true);
 transition.SetAdvanceTime(3000);
 
 slide.SetSlideShowTransition(transition);
-
 ```
+

@@ -38,5 +38,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text struck out with a single line.');
 paragraph.SetStrikeout(true);
 slide.AddObject(shape);
-
 ```
+

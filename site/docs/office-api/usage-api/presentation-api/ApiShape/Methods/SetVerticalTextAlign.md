@@ -47,5 +47,5 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```
+

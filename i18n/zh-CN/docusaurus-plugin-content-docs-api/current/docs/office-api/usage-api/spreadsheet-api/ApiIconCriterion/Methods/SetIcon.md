@@ -45,5 +45,5 @@ worksheet.GetRange("B1").SetValue("Before: Default icons");
 
 criteria[0].SetIcon("xlIconRedFlag");
 worksheet.GetRange("B2").SetValue("After: First icon changed to red flag");
-
 ```
+

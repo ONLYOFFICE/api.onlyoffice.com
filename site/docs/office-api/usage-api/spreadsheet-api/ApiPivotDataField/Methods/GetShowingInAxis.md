@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether the pivot table field is currently visible in the pivot table.
 
-## Syntax
-
-```javascript
-expression.GetShowingInAxis();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetShowingInAxis](../../ApiPivotField/Methods/GetShowingInAxis.md).
 
 ## Example
 
@@ -65,3 +51,4 @@ pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetPivotFields('Region').GetS
 pivotWorksheet.GetRange('A13').SetValue('Style showing in axis');
 pivotWorksheet.GetRange('B13').SetValue(pivotTable.GetPivotFields('Style').GetShowingInAxis());
 ```
+

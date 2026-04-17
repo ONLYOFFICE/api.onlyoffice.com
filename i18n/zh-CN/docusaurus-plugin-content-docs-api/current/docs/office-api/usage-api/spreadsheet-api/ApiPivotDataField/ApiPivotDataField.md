@@ -1,6 +1,6 @@
 # ApiPivotDataField
 
-表示 ApiPivotDataField 类。
+ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotField.md).
 
 ## 属性
 

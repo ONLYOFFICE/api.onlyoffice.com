@@ -8,6 +8,8 @@ The function called when an annotation loses focus.
 | --------- | ------------- | ----------- |
 | annotation | TextAnnotation | The annotation that lost focus. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onBlurAnnotation", (data) => {
     console.log("event: onBlurAnnotation");

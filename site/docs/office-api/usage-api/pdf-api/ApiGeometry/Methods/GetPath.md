@@ -42,3 +42,4 @@ paragraph.AddText(", Fill: " + path.GetFill() + ", Array: " + paths.length);
 shape.SetPosition(1000000, 1000000);
 page.AddObject(shape);
 ```
+

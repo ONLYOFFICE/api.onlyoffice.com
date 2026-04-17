@@ -62,5 +62,5 @@ paragraph.AddText('Added effect: ' + effect.GetEffectType());
 paragraph.AddLineBreak();
 paragraph.AddText('Duration: ' + effect.GetDuration() + 'ms');
 slide.AddObject(infoShape);
-
 ```
+

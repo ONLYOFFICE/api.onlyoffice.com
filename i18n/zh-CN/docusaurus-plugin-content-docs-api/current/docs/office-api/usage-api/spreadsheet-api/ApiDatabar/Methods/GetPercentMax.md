@@ -45,5 +45,5 @@ let percentMax = dataBar.GetPercentMax();
 
 worksheet.GetRange("C1").SetValue("Max Percent:");
 worksheet.GetRange("C2").SetValue(percentMax + "%");
-
 ```
+

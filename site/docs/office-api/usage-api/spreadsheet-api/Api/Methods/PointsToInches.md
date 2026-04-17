@@ -31,5 +31,5 @@ const text = points + ' points are equal to ' + inches + ' inches.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```
+

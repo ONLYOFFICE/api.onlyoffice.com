@@ -39,5 +39,5 @@ run.SetFontSize(30);
 run.AddText('Theme name: ' + themeColor.GetThemeName());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```
+

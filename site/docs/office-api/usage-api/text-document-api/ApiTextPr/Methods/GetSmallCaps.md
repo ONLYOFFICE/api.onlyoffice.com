@@ -48,3 +48,4 @@ let smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 doc.Push(paragraph);
 ```
+

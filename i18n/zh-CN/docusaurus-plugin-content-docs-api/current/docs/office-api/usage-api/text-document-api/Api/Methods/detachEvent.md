@@ -31,3 +31,4 @@ boolean
 
 Api.detachEvent("asc_onHyperlinkClick");
 ```
+

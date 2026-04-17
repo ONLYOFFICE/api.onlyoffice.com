@@ -52,5 +52,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Effects in sequence: ' + mainSequence.GetCount());
 slide.AddObject(infoShape);
-
 ```
+

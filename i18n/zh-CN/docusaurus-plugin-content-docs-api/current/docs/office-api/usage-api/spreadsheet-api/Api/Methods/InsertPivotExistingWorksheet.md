@@ -43,5 +43,5 @@ worksheet.GetRange('C3').SetValue(35.2);
 let dataRef = Api.GetRange("'Sheet1'!$B$1:$C$3");
 let pivotRef = worksheet.GetRange('A7');
 let pivotTable = Api.InsertPivotExistingWorksheet(dataRef, pivotRef);
-
 ```
+

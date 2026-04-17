@@ -47,5 +47,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Slide will advance automatically after 4.3 seconds.');
 slide.AddObject(shape);
-
 ```
+

@@ -2,6 +2,10 @@
 
 The content control properties and contents.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -9,11 +13,6 @@ The content control properties and contents.
 | ContentControlProperties | [ContentControlProperties](../Enumeration/ContentControlProperties.md) | The content control properties. |
 | Script | string | A script that will be executed to generate the data within the content control (can be replaced with the *Url* parameter). |
 | Url | string | A link to the shared file (can be replaced with the *Script* parameter). |
-## Type
-
-Object
-
-
 
 ## Example
 
@@ -28,3 +27,4 @@ let documents = [{
 }];
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [documents]);
 ```
+

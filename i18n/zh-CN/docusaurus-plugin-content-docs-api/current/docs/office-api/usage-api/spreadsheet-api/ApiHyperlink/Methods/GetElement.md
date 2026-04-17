@@ -46,5 +46,5 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for
 const element = hyperlink.GetElement(0);
 const classType = element ? element.GetClassType() : 'null';
 worksheet.GetRange('A1').SetValue('Element class type: ' + classType);
-
 ```
+

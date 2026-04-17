@@ -49,3 +49,4 @@ let func = Api.WorksheetFunction;
 let normalDist = func.NORM_DIST(x, mean, standardDeviation, cumulative);
 worksheet.GetRange("C1").SetValue(normalDist);
 ```
+

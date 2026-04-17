@@ -2,23 +2,7 @@
 
 设置指定是否在每行重复项目标签的设置。
 
-## 语法
-
-```javascript
-expression.SetRepeatLabels(repeat);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| repeat | 必需 | boolean |  | 指定是否在每行重复项目标签。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetRepeatLabels](../../ApiPivotField/Methods/SetRepeatLabels.md).
 
 ## 示例
 
@@ -67,3 +51,4 @@ pivotField.SetRepeatLabels(true);
 pivotWorksheet.GetRange('A12').SetValue('Region repeat labels');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetRepeatLabels());
 ```
+

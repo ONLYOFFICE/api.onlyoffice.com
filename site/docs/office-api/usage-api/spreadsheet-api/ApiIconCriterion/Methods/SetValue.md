@@ -46,5 +46,5 @@ worksheet.GetRange("B1").SetValue("Before: Default threshold values");
 
 criteria[1].SetValue("80");
 worksheet.GetRange("B2").SetValue("After: Second threshold set to 80");
-
 ```
+

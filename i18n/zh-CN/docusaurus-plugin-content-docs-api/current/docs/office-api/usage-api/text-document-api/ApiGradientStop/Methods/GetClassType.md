@@ -40,3 +40,4 @@ paragraph.AddDrawing(drawing);
 let classType = gs1.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 ```
+

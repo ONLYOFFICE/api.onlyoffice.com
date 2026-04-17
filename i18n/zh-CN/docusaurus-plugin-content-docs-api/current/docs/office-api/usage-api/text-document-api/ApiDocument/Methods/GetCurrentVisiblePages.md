@@ -31,5 +31,5 @@ const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("The current visibles pages indexes is: " + doc.GetCurrentVisiblePages());
 doc.Push(paragraph);
-
 ```
+

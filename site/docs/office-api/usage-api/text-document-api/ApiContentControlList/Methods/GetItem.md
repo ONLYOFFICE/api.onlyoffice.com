@@ -32,5 +32,5 @@ let listItem = contentControlList.GetItem(0);
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("First item value: " + listItem.GetValue());
 doc.AddElement(0, paragraph);
-
 ```
+

@@ -53,3 +53,4 @@ let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.ClearAllFilters();
 ```
+

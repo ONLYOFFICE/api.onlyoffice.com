@@ -30,5 +30,5 @@ expression.UnMerge();
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A3:E8").Merge(true);
 worksheet.GetRange("A5:E5").UnMerge();
-
 ```
+

@@ -34,3 +34,4 @@ circleAnnot.SetBorderEffectIntensity(1);
 circleAnnot.SetRectDiff([10, 10, 10, 10]);
 console.log(`Annot rect diff is: ${circleAnnot.GetRectDiff()}`);
 ```
+

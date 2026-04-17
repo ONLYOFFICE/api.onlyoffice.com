@@ -36,3 +36,4 @@ let paragraphFromJSON = Api.FromJSON(json);
 paragraphFromJSON.SetBold(true);
 Api.GetDocument().AddElement(0, paragraphFromJSON);
 ```
+

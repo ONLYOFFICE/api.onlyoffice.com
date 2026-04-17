@@ -32,5 +32,5 @@ page.AddObject(textField);
 
 textField.SetMultiline(true);
 textField.SetValue('Multiline is: ' + textField.IsMultiline());
-
 ```
+

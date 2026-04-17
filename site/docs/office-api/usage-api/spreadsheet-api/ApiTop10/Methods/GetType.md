@@ -52,5 +52,5 @@ worksheet.GetRange('D2').SetValue('Condition type:');
 worksheet.GetRange('E2').SetValue(conditionType);
 worksheet.GetRange('D3').SetValue('Rank:');
 worksheet.GetRange('E3').SetValue(top10Condition.GetRank());
-
 ```
+

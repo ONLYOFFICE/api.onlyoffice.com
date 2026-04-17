@@ -33,3 +33,4 @@ page.AddObject(textField);
 textField.SetFullName('EXAMPLE');
 textField.SetValue('Field full name is: ' + textField.GetFullName());
 ```
+

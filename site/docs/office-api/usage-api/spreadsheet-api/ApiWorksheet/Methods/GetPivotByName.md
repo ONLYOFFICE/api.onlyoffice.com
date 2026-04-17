@@ -47,3 +47,4 @@ Api.GetActiveSheet().GetPivotByName(pivotTable.GetName()).AddFields({
 
 Api.GetActiveSheet().GetPivotByName(pivotTable.GetName()).AddDataField('Price');
 ```
+

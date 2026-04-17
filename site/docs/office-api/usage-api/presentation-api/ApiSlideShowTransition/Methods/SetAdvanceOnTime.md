@@ -46,5 +46,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Slide will advance on click or automatically after 5 seconds.');
 slide.AddObject(shape);
-
 ```
+

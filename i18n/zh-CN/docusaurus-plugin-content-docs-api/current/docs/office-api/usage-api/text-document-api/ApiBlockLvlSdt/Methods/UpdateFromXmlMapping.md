@@ -47,3 +47,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(contentControl.GetContent().GetText());
 doc.Push(paragraph);
 ```
+

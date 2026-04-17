@@ -46,5 +46,5 @@ formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Rules before delete: " + formatConditions.GetCount());
 formatConditions.Delete();
 worksheet.GetRange("B2").SetValue("Rules after delete: " + formatConditions.GetCount());
-
 ```
+

@@ -78,5 +78,5 @@ let fill = Api.CreatePatternFill(
 	Api.RGB(0, 225, 0),
 	Api.RGB(255, 0, 0)
 );
-
 ```
+

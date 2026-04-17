@@ -2,23 +2,7 @@
 
 Sets quads to current markup annotation.
 
-## Syntax
-
-```javascript
-expression.SetQuads(quads);
-```
-
-`expression` - A variable that represents a [ApiRedactAnnotation](../ApiRedactAnnotation.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| quads | Required | [Quad](../../Enumeration/Quad.md)[] |  | No description provided. |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseMarkupAnnotation.SetQuads](../../ApiBaseMarkupAnnotation/Methods/SetQuads.md).
 
 ## Example
 
@@ -32,3 +16,4 @@ let page = doc.GetPage(0);
 page.AddObject(markupAnnot);
 console.log(`We set new quads to markup annotation`);
 ```
+

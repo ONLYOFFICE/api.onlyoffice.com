@@ -51,5 +51,5 @@ condition.SetAboveBelow(false);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetAboveBelow() ? "Above" : "Below");
-
 ```
+

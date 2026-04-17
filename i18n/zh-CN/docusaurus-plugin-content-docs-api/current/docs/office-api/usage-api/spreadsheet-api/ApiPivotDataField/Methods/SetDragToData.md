@@ -2,23 +2,7 @@
 
 设置指定是否可以将指定字段拖动到数据位置的设置。
 
-## 语法
-
-```javascript
-expression.SetDragToData(flag);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | 必需 | boolean |  | 指定是否可以将指定字段拖动到数据位置。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetDragToData](../../ApiPivotField/Methods/SetDragToData.md).
 
 ## 示例
 
@@ -69,3 +53,4 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to data');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToData());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to data!');
 ```
+

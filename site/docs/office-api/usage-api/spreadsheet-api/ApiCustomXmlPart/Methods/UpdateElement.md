@@ -33,5 +33,5 @@ const xml = xmlManager.Add(xmlString);
 
 xml.UpdateElement('/content/text', '<text>New value</text>');
 worksheet.GetRange('A1').SetValue('XML after update: ' + xml.GetXml());
-
 ```
+

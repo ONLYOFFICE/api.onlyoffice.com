@@ -25,3 +25,4 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("RemoveOleObjects", [[{"InternalId": "5_556"}]]);
 ```
+

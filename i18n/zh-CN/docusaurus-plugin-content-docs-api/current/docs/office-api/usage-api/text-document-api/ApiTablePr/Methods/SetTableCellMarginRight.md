@@ -43,3 +43,4 @@ table.SetStyle(tableStyle);
 let cell = table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample text to show that the right cell margin is 36 points.");
 doc.Push(table);
 ```
+

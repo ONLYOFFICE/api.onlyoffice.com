@@ -39,3 +39,4 @@ paragraph.AddLineBreak();
 let spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph.AddText("Spacing line rule: " + spacingLineRule);
 ```
+

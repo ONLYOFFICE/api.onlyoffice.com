@@ -30,5 +30,5 @@ core.SetRevision("Rev. A");
 const revision = core.GetRevision();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Revision: " + revision);
-
 ```
+

@@ -36,5 +36,5 @@ expression.SetColumnWidth(nColumn, nWidth, bWithotPaddings);
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 10);
 worksheet.SetColumnWidth(1, 20);
-
 ```
+

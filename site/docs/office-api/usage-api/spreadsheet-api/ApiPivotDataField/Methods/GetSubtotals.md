@@ -2,21 +2,7 @@
 
 Returns an object that represents all subtotals.
 
-## Syntax
-
-```javascript
-expression.GetSubtotals();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md)
+Inherited from [ApiPivotField.GetSubtotals](../../ApiPivotField/Methods/GetSubtotals.md).
 
 ## Example
 
@@ -69,3 +55,4 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 ```
+

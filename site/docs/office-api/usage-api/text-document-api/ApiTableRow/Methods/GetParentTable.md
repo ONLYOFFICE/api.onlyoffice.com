@@ -38,3 +38,4 @@ let parentTable = row.GetParentTable();
 parentTable.SetTableBorderBottom("single", 32, 0, 51, 51, 51);
 doc.Push(parentTable);
 ```
+

@@ -35,3 +35,4 @@ let count = worksheet.GetRange("A1:C1").GetCount();
 worksheet.GetRange("A4").SetValue("Count: ");
 worksheet.GetRange("B4").SetValue(count);
 ```
+

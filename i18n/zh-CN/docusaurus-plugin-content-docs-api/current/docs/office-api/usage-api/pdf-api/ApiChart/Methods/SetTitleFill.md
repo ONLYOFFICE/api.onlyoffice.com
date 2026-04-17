@@ -45,5 +45,5 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetTitle("Financial Overview", 13);
 chart.SetTitleFill(fill);
 page.AddObject(chart);
-
 ```
+

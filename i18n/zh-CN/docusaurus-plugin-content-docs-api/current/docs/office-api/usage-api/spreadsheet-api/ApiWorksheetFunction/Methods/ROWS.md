@@ -44,3 +44,4 @@ for (let j = 0; j < column2.length; j++) {
 let range = worksheet.GetRange("A1:B3");
 worksheet.GetRange("C3").SetValue(func.ROWS(range));
 ```
+

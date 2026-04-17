@@ -40,5 +40,5 @@ let appId = oleObject.GetApplicationId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The OLE object application ID: ' + appId);
 doc.Push(paragraph);
-
 ```
+

@@ -40,3 +40,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText(doc.GetCurrentWord());
 doc.Push(paragraph);
 ```
+

@@ -49,5 +49,5 @@ paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 slide.AddObject(shape);
-
 ```
+

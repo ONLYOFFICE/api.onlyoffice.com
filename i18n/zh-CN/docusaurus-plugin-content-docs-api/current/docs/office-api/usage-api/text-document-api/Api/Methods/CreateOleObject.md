@@ -42,5 +42,5 @@ let oleObject = Api.CreateOleObject(
 );
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(oleObject);
-
 ```
+

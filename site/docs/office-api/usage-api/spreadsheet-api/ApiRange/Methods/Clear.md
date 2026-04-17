@@ -33,3 +33,4 @@ range.SetValue("1");
 range.Clear();
 worksheet.GetRange("A2").SetValue("The range A1:B1 was just cleared.");
 ```
+

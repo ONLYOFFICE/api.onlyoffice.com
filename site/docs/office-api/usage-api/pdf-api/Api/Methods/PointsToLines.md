@@ -38,5 +38,5 @@ paragraph.AddText(points + ' points are equal to ' + lines + ' lines.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```
+

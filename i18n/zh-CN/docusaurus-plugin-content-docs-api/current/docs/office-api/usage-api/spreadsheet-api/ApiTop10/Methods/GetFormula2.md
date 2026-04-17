@@ -2,21 +2,7 @@
 
 返回当前条件格式规则使用的第二个公式。
 
-## 语法
-
-```javascript
-expression.GetFormula2();
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md).
 
 ## 示例
 
@@ -50,5 +36,5 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
-
 ```
+

@@ -2,21 +2,7 @@
 
 返回在指定数据透视表报表的分类汇总列或行标题中显示的文本标签。
 
-## 语法
-
-```javascript
-expression.GetSubtotalName();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiPivotField.GetSubtotalName](../../ApiPivotField/Methods/GetSubtotalName.md).
 
 ## 示例
 
@@ -65,3 +51,4 @@ pivotField.SetSubtotalName('My name');
 pivotWorksheet.GetRange('A14').SetValue('Region subtotal name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetSubtotalName());
 ```
+

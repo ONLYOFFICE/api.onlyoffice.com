@@ -53,3 +53,4 @@ paragraph.AddText("Normal text");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

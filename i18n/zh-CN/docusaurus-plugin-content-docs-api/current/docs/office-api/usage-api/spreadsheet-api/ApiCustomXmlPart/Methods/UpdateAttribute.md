@@ -34,5 +34,5 @@ const xml = xmlManager.Add(xmlString);
 
 xml.UpdateAttribute('/config', 'version', '9.4');
 worksheet.GetRange('A1').SetValue('XML after update: ' + xml.GetXml());
-
 ```
+

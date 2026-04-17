@@ -2,23 +2,7 @@
 
 指定当前表单是否为必填项。
 
-## 语法
-
-```javascript
-expression.SetRequired(bRequired);
-```
-
-`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRequired | 必需 | boolean |  | 定义当前表单是否为必填项（true）或非必填项（false）。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
 
 ## 示例
 
@@ -39,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
+

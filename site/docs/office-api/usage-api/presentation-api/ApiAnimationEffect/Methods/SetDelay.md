@@ -56,5 +56,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New delay: ' + delay + 'ms (1 second)');
 slide.AddObject(infoShape);
-
 ```
+

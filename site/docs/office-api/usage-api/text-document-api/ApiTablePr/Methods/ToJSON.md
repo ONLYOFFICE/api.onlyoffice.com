@@ -37,3 +37,4 @@ let type = tablePrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
+

@@ -12,7 +12,7 @@
 
 ## 类型
 
-对象
+array
 
 ## 属性
 
@@ -26,3 +26,4 @@
 | 5 | [pt](../Enumeration/pt.md) | y3（左下） |
 | 6 | [pt](../Enumeration/pt.md) | x4（右下） |
 | 7 | [pt](../Enumeration/pt.md) | y4（右下） |
+

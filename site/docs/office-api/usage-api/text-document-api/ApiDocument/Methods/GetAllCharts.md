@@ -2,21 +2,7 @@
 
 Returns a collection of chart objects from the document content.
 
-## Syntax
-
-```javascript
-expression.GetAllCharts();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiChart](../../ApiChart/ApiChart.md)[]
+Inherited from [ApiDocumentContent.GetAllCharts](../../ApiDocumentContent/Methods/GetAllCharts.md).
 
 ## Example
 
@@ -54,3 +40,4 @@ let charts = docContent.GetAllCharts();
 stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
 ```
+

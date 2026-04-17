@@ -41,3 +41,4 @@ let cell = table.GetRow(1).GetCell(0);
 table.RemoveRow(cell);
 doc.Push(table);
 ```
+

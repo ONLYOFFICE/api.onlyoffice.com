@@ -47,5 +47,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph. The first paragraph was removed from the shape content.");
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```
+

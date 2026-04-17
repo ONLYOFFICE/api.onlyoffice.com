@@ -41,3 +41,4 @@ let nextShape = shape1.GetNextShape();
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 nextShape.Fill(fill);
 ```
+

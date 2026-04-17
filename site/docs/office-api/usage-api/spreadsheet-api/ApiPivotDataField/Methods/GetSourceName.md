@@ -2,21 +2,7 @@
 
 Returns a source name for the pivot table field.
 
-## Syntax
-
-```javascript
-expression.GetSourceName();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiPivotField.GetSourceName](../../ApiPivotField/Methods/GetSourceName.md).
 
 ## Example
 
@@ -71,3 +57,4 @@ pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
 pivotWorksheet.GetRange('A15').SetValue('Source Style field name');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetSourceName());
 ```
+

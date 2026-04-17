@@ -2,17 +2,16 @@
 
 包含文档中所有宏数据的对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | current | number | 当前宏索引。 |
 | macrosArray | string[] | 宏代码数组（*[&#123;"name": "Macros1", "value": "&#123;macrosCode&#125;"&#125;]*）。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 
@@ -32,3 +31,4 @@ let macros = {
 };
 window.Asc.plugin.executeMethod("SetMacros", [macros]);
 ```
+

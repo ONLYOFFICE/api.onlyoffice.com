@@ -35,3 +35,4 @@ range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(23, 4);
 characters.SetCaption("string");
 ```
+

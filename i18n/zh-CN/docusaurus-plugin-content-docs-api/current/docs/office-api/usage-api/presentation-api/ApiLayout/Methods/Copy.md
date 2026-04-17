@@ -44,5 +44,5 @@ presentation.AddSlide(slide);
 const copyLayout = layout.Copy();
 master.AddLayout(1, copyLayout);
 slide.ApplyLayout(copyLayout);
-
 ```
+

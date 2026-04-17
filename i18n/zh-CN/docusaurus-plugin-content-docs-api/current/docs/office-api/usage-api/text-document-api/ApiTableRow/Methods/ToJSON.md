@@ -2,21 +2,7 @@
 
 将 ApiTableRowPr 对象转换为 JSON 对象。
 
-## 语法
-
-```javascript
-expression.ToJSON();
-```
-
-`expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-JSON
+Inherited from [ApiTableRowPr.ToJSON](../../ApiTableRowPr/Methods/ToJSON.md).
 
 ## 示例
 
@@ -42,3 +28,4 @@ let classType = tableRowPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 ```
+

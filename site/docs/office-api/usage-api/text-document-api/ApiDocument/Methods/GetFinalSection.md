@@ -42,3 +42,4 @@ paraPr.SetSpacingAfter(200);
 paragraph = doc.GetElement(0);
 paragraph.AddText("This is a text in a paragraph.");
 ```
+

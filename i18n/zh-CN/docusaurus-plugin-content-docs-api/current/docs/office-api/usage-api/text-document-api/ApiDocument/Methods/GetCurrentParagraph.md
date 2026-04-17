@@ -2,21 +2,7 @@
 
 返回光标所在的当前段落。
 
-## 语法
-
-```javascript
-expression.GetCurrentParagraph();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)
+Inherited from [ApiDocumentContent.GetCurrentParagraph](../../ApiDocumentContent/Methods/GetCurrentParagraph.md).
 
 ## 示例
 
@@ -40,5 +26,5 @@ docContent.Push(newParagraph);
 
 const currentParagraph = docContent.GetCurrentParagraph();
 currentParagraph.AddText("(Current paragraph detected!)");
-
 ```
+

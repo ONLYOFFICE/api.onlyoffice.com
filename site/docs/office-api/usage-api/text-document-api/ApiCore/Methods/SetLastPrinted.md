@@ -32,5 +32,5 @@ core.SetLastPrinted(new Date());
 const lastPrintedDate = core.GetLastPrinted().toDateString();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
-
 ```
+

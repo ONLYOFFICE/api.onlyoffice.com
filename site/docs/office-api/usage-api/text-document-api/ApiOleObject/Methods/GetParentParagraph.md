@@ -1,0 +1,26 @@
+# GetParentParagraph
+
+Returns a parent paragraph that contains the graphic object.
+
+Inherited from [ApiDrawing.GetParentParagraph](../../ApiDrawing/Methods/GetParentParagraph.md).
+
+## Example
+
+This example shows how to get a parent paragraph that contains the graphic object.
+
+```javascript editor-docx
+// Get an element's parent paragraph.
+
+// How to show the shape's wrapper paragraph.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+let parentParagraph = drawing.GetParentParagraph();
+parentParagraph.AddLineBreak();
+parentParagraph.AddText("This is a parent paragraph");
+```
+

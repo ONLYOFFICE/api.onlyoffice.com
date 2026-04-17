@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | data | object[] | 包含已插入 OLE 对象信息的数组。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onInsertOleObjects", (arrData) => {
     console.log("event: onInsertOleObjects");

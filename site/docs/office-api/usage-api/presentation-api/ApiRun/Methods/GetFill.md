@@ -2,21 +2,7 @@
 
 Gets the text color from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetFill();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiFill](../../ApiFill/ApiFill.md)
+Inherited from [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md).
 
 ## Example
 
@@ -54,5 +40,5 @@ fill = textPr.GetFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);
-
 ```
+

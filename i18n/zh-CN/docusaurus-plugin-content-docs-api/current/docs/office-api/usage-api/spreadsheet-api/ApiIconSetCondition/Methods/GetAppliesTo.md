@@ -2,21 +2,7 @@
 
 返回当前条件格式规则应用的单元格区域。
 
-## 语法
-
-```javascript
-expression.GetAppliesTo();
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let appliedRange = condition1.GetAppliesTo();
 
 worksheet.GetRange("C1").SetValue("Rule applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
-
 ```
+

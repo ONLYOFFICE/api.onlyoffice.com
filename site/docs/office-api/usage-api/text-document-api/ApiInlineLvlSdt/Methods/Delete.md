@@ -37,3 +37,4 @@ paragraph.AddInlineLvlSdt(inlineLvlSdt);
 inlineLvlSdt.Delete(false);
 paragraph.AddText("The inline text content control was removed.");
 ```
+

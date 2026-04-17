@@ -36,3 +36,4 @@ listboxField.SetMultipleSelection(true);
 listboxField.SetValueIndexes([0, 3]);
 console.log('Multiple selection is: ' + listboxField.IsMultipleSelection());
 ```
+

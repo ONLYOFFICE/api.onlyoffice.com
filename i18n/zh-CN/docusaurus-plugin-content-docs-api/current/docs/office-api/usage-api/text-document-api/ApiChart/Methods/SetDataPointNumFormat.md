@@ -46,3 +46,4 @@ chart.SetShowPointDataLabel(1, 0, false, false, true, false);
 chart.SetDataPointNumFormat("0.00", 1, 0, true);
 paragraph.AddDrawing(chart);
 ```
+

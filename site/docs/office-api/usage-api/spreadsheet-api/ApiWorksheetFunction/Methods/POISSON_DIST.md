@@ -42,5 +42,5 @@ let func = Api.WorksheetFunction;
 let ans = func.POISSON_DIST(x, mean, cumulative);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

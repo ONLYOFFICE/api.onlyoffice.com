@@ -46,3 +46,4 @@ table2.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 doc.Push(table2);
 table2.GetCell(0, 0).SetCellPr(tableCellPr);
 ```
+

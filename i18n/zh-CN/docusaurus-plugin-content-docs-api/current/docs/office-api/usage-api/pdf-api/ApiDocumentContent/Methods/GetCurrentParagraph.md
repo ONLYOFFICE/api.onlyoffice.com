@@ -44,5 +44,5 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 page.AddObject(shape);
-
 ```
+

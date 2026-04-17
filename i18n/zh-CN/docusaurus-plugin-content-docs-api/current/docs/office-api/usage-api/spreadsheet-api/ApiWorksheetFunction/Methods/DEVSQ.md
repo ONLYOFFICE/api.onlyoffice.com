@@ -58,3 +58,4 @@ let func = Api.WorksheetFunction;
 let ans = func.DEVSQ(worksheet.GetRange("A1:E2"));
 worksheet.GetRange("E3").SetValue(ans);
 ```
+

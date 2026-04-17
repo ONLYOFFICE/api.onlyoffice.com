@@ -42,5 +42,5 @@ const stroke = textPr.GetOutLine();
 const drawing = Api.CreateShape('rect', 100 * 36000, 20 * 36000, fill, stroke);
 drawing.GetDocContent().GetElement(0).AddText('This is a rectangle with the same fill and outline as the WordArt text.');
 paragraph.AddDrawing(drawing);
-
 ```
+

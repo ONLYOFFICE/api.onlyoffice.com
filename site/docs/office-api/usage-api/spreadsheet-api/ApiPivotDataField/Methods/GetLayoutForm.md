@@ -2,21 +2,7 @@
 
 Returns the way the specified pivot table items appear — in table format or in outline format.
 
-## Syntax
-
-```javascript
-expression.GetLayoutForm();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[PivotLayoutType](../../Enumeration/PivotLayoutType.md)
+Inherited from [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md).
 
 ## Example
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
+

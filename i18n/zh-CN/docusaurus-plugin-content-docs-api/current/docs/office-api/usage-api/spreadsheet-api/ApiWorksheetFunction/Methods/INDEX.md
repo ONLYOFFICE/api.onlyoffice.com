@@ -51,3 +51,4 @@ for (let n = 0; n < phones.length; n++) {
 let range = worksheet.GetRange("A1:C5");
 worksheet.GetRange("E2").SetValue(func.INDEX(range, 3, 2));
 ```
+

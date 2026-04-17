@@ -2,21 +2,7 @@
 
 获取选定值的索引。
 
-## 语法
-
-```javascript
-expression.GetValueIndexes();
-```
-
-`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-number[]
+Inherited from [ApiBaseListField.GetValueIndexes](../../ApiBaseListField/Methods/GetValueIndexes.md).
 
 ## 示例
 
@@ -34,3 +20,4 @@ comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 console.log('Selected indexes is: ' + comboboxField.GetValueIndexes());
 ```
+

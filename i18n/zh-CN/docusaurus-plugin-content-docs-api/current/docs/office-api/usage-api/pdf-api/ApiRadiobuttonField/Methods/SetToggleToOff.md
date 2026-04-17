@@ -2,23 +2,7 @@
 
 设置字段的切换为关闭属性。
 
-## 语法
-
-```javascript
-expression.SetToggleToOff(bToggle);
-```
-
-`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bToggle | 必需 | boolean |  | 可切换为关闭 |
-
-## 返回值
-
-boolean
+Inherited from [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md).
 
 ## 示例
 
@@ -32,3 +16,4 @@ page.AddObject(checkboxField);
 
 checkboxField.SetToggleToOff(false);
 ```
+

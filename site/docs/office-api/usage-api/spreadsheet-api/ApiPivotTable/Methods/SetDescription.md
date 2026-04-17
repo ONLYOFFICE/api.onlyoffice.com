@@ -68,3 +68,4 @@ pivotWorksheet.GetRange('A11').SetValue('My description');
 pivotTable.SetDescription('Awesome description');
 pivotWorksheet.GetRange('B11').SetValue(pivotTable.GetDescription());
 ```
+

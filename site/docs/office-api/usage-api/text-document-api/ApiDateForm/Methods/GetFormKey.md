@@ -2,21 +2,7 @@
 
 Returns the current form key.
 
-## Syntax
-
-```javascript
-expression.GetFormKey();
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md).
 
 ## Example
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
+

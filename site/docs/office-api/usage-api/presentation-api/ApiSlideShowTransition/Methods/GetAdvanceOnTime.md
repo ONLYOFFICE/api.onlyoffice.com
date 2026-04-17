@@ -46,5 +46,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Time: ' + advanceOnTime);
 slide.AddObject(shape);
-
 ```
+

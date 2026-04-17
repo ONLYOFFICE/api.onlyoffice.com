@@ -40,5 +40,5 @@ paragraph.SetFontFamily('Consolas');
 
 const fontNames = paragraph.GetFontNames();
 worksheet.GetRange('A1').SetValue('Fonts used: ' + fontNames.join(', '));
-
 ```
+

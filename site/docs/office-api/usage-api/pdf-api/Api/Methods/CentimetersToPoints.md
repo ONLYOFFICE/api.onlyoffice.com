@@ -38,5 +38,5 @@ paragraph.AddText(centimeters + ' centimeters are equal to ' + points + ' points
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```
+

@@ -50,3 +50,4 @@ paragraph.AddText("This is page header #2. ");
 paragraph.AddText("Only this header can be seen, as the first one has been removed.");
 section.RemoveHeader("default");
 ```
+

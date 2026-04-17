@@ -8,6 +8,8 @@ The function called when one or more OLE objects are inserted into the document.
 | --------- | ------------- | ----------- |
 | data | object[] | An array containing information about the inserted OLE objects. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onInsertOleObjects", (arrData) => {
     console.log("event: onInsertOleObjects");

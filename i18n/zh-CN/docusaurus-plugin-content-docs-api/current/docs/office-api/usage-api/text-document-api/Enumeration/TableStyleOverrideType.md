@@ -47,3 +47,4 @@
 
 tableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);
 ```
+

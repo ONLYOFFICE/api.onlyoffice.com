@@ -48,5 +48,5 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```
+

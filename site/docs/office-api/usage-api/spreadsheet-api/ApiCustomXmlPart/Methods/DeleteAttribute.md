@@ -33,5 +33,5 @@ const xml = xmlManager.Add(xmlString);
 
 xml.DeleteAttribute('/config', 'namespace');
 worksheet.GetRange('A1').SetValue('XML after deletion: ' + xml.GetXml());
-
 ```
+

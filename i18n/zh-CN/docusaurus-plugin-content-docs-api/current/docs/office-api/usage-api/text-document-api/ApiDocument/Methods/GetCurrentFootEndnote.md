@@ -37,3 +37,4 @@ paragraph = doc.GetElement(0);
 let footnoteText = curFootnote.GetText();
 paragraph.AddText(footnoteText);
 ```
+

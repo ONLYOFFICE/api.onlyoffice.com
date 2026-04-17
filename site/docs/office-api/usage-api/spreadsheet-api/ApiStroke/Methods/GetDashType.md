@@ -33,5 +33,5 @@ let shape = worksheet.AddShape("rect", 60 * 36000, 40 * 36000, fill, stroke, 3, 
 let retrievedStroke = shape.GetLine();
 let dashType = retrievedStroke.GetDashType();
 worksheet.GetRange("A1").SetValue("Dash type: " + (dashType ? dashType : "not set"));
-
 ```
+

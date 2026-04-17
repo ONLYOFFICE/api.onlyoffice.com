@@ -20,5 +20,5 @@ This example gets type of a current selection.
 
 ```javascript editor-pptx
 const selectionType = Api.GetSelection().GetType();
-
 ```
+

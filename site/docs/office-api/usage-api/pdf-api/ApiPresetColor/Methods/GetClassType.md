@@ -45,5 +45,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```
+

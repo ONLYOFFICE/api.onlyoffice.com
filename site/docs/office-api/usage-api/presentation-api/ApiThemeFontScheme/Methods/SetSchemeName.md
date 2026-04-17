@@ -50,5 +50,5 @@ paragraph.SetJc("left");
 paragraph.AddText("New name was set to the theme font scheme.");
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

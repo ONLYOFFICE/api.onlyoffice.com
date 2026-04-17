@@ -38,5 +38,5 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```
+

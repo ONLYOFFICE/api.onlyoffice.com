@@ -45,5 +45,5 @@ const docContent = shapes[0].GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("This is a sample shape which was added to the current layout.");
-
 ```
+

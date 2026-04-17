@@ -57,3 +57,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Symbols with spaces: " + statistics.SymbolsWSCount);
 doc.Push(paragraph);
 ```
+

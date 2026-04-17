@@ -34,5 +34,5 @@ let func = Api.WorksheetFunction;
 worksheet.GetRange("B3").SetValue("#N/A")
 let result = func.ISERR("B3");
 worksheet.GetRange("C3").SetValue(result)
-
 ```
+

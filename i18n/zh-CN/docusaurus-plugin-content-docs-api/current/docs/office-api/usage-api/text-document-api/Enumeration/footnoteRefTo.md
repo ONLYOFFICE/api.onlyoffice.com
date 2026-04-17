@@ -29,3 +29,4 @@
 
 paragraph.AddFootnoteCrossRef("pageNum", footnoteParagraph);
 ```
+

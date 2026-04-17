@@ -64,3 +64,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
 ```
+

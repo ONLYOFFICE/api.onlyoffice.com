@@ -2,21 +2,7 @@
 
 返回段落右侧缩进。
 
-## 语法
-
-```javascript
-expression.GetIndRight();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## 示例
 
@@ -54,5 +40,5 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
-
 ```
+

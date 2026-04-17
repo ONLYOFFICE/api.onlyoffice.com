@@ -38,5 +38,5 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing width: " + width);
 page.AddObject(shape);
-
 ```
+

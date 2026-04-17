@@ -29,3 +29,4 @@ expression.AddPictureContentControl(width, height);
 let doc = Api.GetDocument();
 doc.AddPictureContentControl();
 ```
+

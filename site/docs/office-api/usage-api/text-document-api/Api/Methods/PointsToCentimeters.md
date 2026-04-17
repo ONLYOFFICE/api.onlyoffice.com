@@ -32,5 +32,5 @@ const points = 1000;
 const centimeters = Api.PointsToCentimeters(points);
 paragraph.AddText(points + ' points are equal to ' + centimeters + ' centimeters.');
 doc.Push(paragraph);
-
 ```
+

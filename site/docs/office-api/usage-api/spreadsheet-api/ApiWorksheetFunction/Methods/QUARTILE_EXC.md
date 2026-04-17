@@ -48,3 +48,4 @@ let ans = func.QUARTILE_EXC(array, quart); //0...1 exclusive
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
+

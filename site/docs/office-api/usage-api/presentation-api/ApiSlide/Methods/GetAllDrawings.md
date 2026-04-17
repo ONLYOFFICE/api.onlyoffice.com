@@ -41,5 +41,5 @@ slide.AddObject(drawing);
 const allDrawings = slide.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("chart");
 allDrawings[0].SetPlaceholder(placeholder);
-
 ```
+

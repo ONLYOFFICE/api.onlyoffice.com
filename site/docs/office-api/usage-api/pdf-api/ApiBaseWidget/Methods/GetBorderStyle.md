@@ -38,3 +38,4 @@ widgets.forEach(function(widget) {
 
 textField.SetValue('Widgets border style is: ' + widgets[0].GetBorderStyle());
 ```
+

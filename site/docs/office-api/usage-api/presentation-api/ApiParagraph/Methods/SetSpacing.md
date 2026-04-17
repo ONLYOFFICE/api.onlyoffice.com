@@ -38,5 +38,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text spacing set to 5 points.');
 paragraph.SetSpacing(60);
 slide.AddObject(shape);
-
 ```
+

@@ -55,5 +55,5 @@ let xml = `<math>
 		</mrow>
 </math>`;
 presentation.AddMathEquation(xml, "mathml");
-
 ```
+

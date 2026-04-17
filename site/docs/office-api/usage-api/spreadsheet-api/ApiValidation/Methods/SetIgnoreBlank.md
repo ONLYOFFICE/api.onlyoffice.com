@@ -35,5 +35,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetIgnoreBlank(false);
 worksheet.GetRange("B1").SetValue("Blank values are not allowed");
-
 ```
+

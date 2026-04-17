@@ -37,5 +37,5 @@ drawing.SetFlipV(true);
 let flip = drawing.GetFlipV();
 worksheet.SetColumnWidth(0, 28);
 worksheet.GetRange("A1").SetValue("Drawing is flipped vertically: " + flip);
-
 ```
+

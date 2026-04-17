@@ -29,3 +29,4 @@ let page = doc.GetPage(0);
 page.AddObject(markupAnnot);
 console.log(`The markup quads is: ${markupAnnot.GetQuads()}`);
 ```
+

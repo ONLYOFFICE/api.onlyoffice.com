@@ -42,5 +42,5 @@ iconCondition.SetIconSet("xl3TrafficLights1");
 
 let iconSet = iconCondition.GetIconSet();
 worksheet.GetRange("B1").SetValue("Current icon set: " + iconSet);
-
 ```
+

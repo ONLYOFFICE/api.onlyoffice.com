@@ -35,5 +35,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateList", null, null, "Apple,Banana,Cherry");
 validation.SetInCellDropdown(true);
 worksheet.GetRange("B1").SetValue("Dropdown is enabled for A1");
-
 ```
+

@@ -65,3 +65,4 @@ pivotField.SetSubtotalName('My name');
 pivotWorksheet.GetRange('A14').SetValue('Region subtotal name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetSubtotalName());
 ```
+

@@ -38,3 +38,4 @@ paragraph.AddElement(run);
 let range = run.GetRange(0, 3);
 range.SetBold(true);
 ```
+

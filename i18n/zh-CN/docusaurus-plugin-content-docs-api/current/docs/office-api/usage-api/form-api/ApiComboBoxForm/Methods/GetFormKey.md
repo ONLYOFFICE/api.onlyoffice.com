@@ -2,21 +2,7 @@
 
 返回当前表单的键。
 
-## 语法
-
-```javascript
-expression.GetFormKey();
-```
-
-`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md).
 
 ## 示例
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
+

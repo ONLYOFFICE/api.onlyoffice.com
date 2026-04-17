@@ -43,5 +43,5 @@ let secondCriterion = criteria[1];
 let criterionValue = secondCriterion.GetValue();
 
 worksheet.GetRange("B1").SetValue("Second criterion value: " + criterionValue);
-
 ```
+

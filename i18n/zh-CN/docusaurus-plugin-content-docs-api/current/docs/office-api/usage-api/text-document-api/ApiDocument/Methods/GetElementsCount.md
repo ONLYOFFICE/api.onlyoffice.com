@@ -2,21 +2,7 @@
 
 返回当前文档中的元素数量。
 
-## 语法
-
-```javascript
-expression.GetElementsCount();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-number
+Inherited from [ApiDocumentContent.GetElementsCount](../../ApiDocumentContent/Methods/GetElementsCount.md).
 
 ## 示例
 
@@ -41,3 +27,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of elements inside the shape: " + docContent.GetElementsCount());
 doc.Push(paragraph);
 ```
+

@@ -2,7 +2,6 @@
 
 Represents the ApiPage class.
 
-
 ## Methods
 
 | Method | Returns | Description |

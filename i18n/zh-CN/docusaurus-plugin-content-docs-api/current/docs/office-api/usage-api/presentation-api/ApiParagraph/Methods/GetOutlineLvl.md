@@ -2,21 +2,7 @@
 
 返回指定属性的大纲级别。
 
-## 语法
-
-```javascript
-expression.GetOutlineLvl();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-Number
+Inherited from [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md).
 
 ## 示例
 
@@ -46,5 +32,5 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```
+

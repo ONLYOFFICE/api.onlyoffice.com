@@ -62,3 +62,4 @@ pivotTable.AddDataField('Price');
 
 pivotTable.SetRowAxisLayout('Tabular', false);
 ```
+

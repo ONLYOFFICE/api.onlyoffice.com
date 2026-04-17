@@ -43,3 +43,4 @@ table.AddElement(cell, 0, paragraph);
 let parentTableCell = run.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
+

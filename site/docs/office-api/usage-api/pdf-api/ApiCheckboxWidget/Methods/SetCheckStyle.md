@@ -33,3 +33,4 @@ page.AddObject(radiobuttonField);
 let widgets = radiobuttonField.GetAllWidgets();
 widgets[0].SetCheckStyle('square');
 ```
+

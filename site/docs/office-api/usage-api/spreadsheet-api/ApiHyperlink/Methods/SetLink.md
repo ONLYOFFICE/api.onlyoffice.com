@@ -46,5 +46,5 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for
 
 hyperlink.SetLink('https://helpcenter.onlyoffice.com');
 worksheet.GetRange('A1').SetValue('New link: ' + hyperlink.GetLinkedText());
-
 ```
+

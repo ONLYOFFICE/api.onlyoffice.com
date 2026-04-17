@@ -6,8 +6,6 @@ The 1000th of a percent (100000 = 100%).
 
 number
 
-
-
 ## Example
 
 This example sets a gradient stop position in 100%.
@@ -19,3 +17,4 @@ This example sets a gradient stop position in 100%.
 
 let gs = Api.CreateGradientStop(Api.RGB(255, 164, 101), 100000);
 ```
+

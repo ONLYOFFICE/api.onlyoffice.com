@@ -47,3 +47,4 @@ table.SetTableBorderInsideH("single", 4, 0, 255, 111, 61);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample text.");
 table.SetVAlign("bottom");
 ```
+

@@ -37,3 +37,4 @@ const targetedRange = worksheet.GetRange("A2");
 targetedRange.GetValidation().Delete();
 worksheet.GetRange("A4").SetValue("Data Validation is now removed for A2");
 ```
+

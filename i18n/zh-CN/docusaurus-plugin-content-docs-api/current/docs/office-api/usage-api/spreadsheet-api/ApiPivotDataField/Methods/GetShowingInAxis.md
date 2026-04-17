@@ -2,21 +2,7 @@
 
 返回指定数据透视表字段当前是否在数据透视表中可见的设置。
 
-## 语法
-
-```javascript
-expression.GetShowingInAxis();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiPivotField.GetShowingInAxis](../../ApiPivotField/Methods/GetShowingInAxis.md).
 
 ## 示例
 
@@ -65,3 +51,4 @@ pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetPivotFields('Region').GetS
 pivotWorksheet.GetRange('A13').SetValue('Style showing in axis');
 pivotWorksheet.GetRange('B13').SetValue(pivotTable.GetPivotFields('Style').GetShowingInAxis());
 ```
+

@@ -41,5 +41,5 @@ paragraph.AddLineBreak();
 paragraph.AddText('RGB of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b);
 paragraph.AddLineBreak();
 paragraph.AddText('RGB for theme colors and auto color are always opaque black; actual color depends on the document theme.');
-
 ```
+

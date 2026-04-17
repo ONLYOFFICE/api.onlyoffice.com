@@ -29,5 +29,5 @@ doc.InsertBlankPage();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText('This text is on the page after the blank one.');
 doc.Push(paragraph);
-
 ```
+

@@ -44,3 +44,4 @@ paragraph.AddText("Heading 1 style is applied to the heading ");
 doc.Push(paragraph);
 paragraph.AddHeadingCrossRef("text", headingParagraphs[0]);
 ```
+

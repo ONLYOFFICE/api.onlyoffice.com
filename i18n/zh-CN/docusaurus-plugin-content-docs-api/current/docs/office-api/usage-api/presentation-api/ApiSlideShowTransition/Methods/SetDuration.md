@@ -44,5 +44,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Duration: 2000 ms');
 slide.AddObject(shape);
-
 ```
+

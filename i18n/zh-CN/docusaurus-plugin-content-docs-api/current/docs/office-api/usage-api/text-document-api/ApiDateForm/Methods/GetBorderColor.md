@@ -2,21 +2,7 @@
 
 返回当前表单的边框颜色。
 
-## 语法
-
-```javascript
-expression.GetBorderColor();
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiColor](../../ApiColor/ApiColor.md)
+Inherited from [ApiFormBase.GetBorderColor](../../ApiFormBase/Methods/GetBorderColor.md).
 
 ## 示例
 
@@ -36,5 +22,5 @@ let borderColor = textForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);
-
 ```
+

@@ -30,5 +30,5 @@ let stringValue = customProps.Get("MyStringProperty");
 
 const worksheet = workbook.GetActiveSheet();
 worksheet.GetRange('A1').SetValue(stringValue);
-
 ```
+

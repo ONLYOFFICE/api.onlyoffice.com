@@ -2,23 +2,7 @@
 
 Sets the text label displayed in the subtotal column or row heading in the specified pivot table report.
 
-## Syntax
-
-```javascript
-expression.SetSubtotalName(caption);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| caption | Required | string |  | The text label displayed in the subtotal column or row heading. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetSubtotalName](../../ApiPivotField/Methods/SetSubtotalName.md).
 
 ## Example
 
@@ -68,3 +52,4 @@ pivotField.SetSubtotalName('My name');
 pivotWorksheet.GetRange('A14').SetValue('Region subtotal name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetSubtotalName());
 ```
+

@@ -66,3 +66,4 @@ pivotTable.ShowDetails(1, 3);
 let showDetailsSheet = Api.GetActiveSheet();
 showDetailsSheet.GetRange('A5').SetValue('East details');
 ```
+

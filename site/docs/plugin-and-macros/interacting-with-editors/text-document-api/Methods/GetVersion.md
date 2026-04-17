@@ -48,3 +48,4 @@ window.Asc.plugin.executeMethod ("GetVersion", [], function (version) {
     }
 });
 ```
+

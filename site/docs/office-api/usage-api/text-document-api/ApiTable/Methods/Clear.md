@@ -40,3 +40,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The content of the table was cleared.");
 doc.Push(paragraph);
 ```
+

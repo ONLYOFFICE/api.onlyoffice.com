@@ -37,5 +37,5 @@ const lastCriterion = criteria[criteria.length - 1];
 
 worksheet.GetRange('B1').SetValue('Last criterion index: ' + lastCriterion.GetIndex());
 worksheet.GetRange('B2').SetValue('Total criteria: ' + criteria.length);
-
 ```
+

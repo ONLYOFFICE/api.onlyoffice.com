@@ -36,3 +36,4 @@ let range = freezePanes.GetLocation();
 worksheet.GetRange("A1").SetValue("Location: ");
 worksheet.GetRange("B1").SetValue(range.GetAddress());
 ```
+

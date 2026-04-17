@@ -45,3 +45,4 @@ paragraph.AddLineBreak();
 paragraph.AddLineBreak();
 paragraph.AddText("We added 10 text runs to the above inline text content control. Then we changed the fifth run, so it is different from the others.");
 ```
+

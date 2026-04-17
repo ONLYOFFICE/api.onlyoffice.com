@@ -30,5 +30,5 @@ const paragraph = doc.GetElement(0);
 paragraph.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
 paragraph.AddLineBreak();
 paragraph.AddText('Is themeColor a theme color? ' + themeColor.IsThemeColor());
-
 ```
+

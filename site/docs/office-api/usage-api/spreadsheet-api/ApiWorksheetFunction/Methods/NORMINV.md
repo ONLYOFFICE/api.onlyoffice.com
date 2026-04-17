@@ -47,3 +47,4 @@ let func = Api.WorksheetFunction;
 let inv = func.NORMINV(probability, mean, standardDeviation);
 worksheet.GetRange("C1").SetValue(inv);
 ```
+

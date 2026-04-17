@@ -37,3 +37,4 @@ const shape = Api.CreateImage(
 );
 page.AddObject(shape);
 ```
+

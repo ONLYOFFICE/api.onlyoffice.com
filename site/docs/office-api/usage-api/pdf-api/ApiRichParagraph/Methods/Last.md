@@ -38,3 +38,4 @@ run.AddText("Last rich run element");
 
 console.log("We gets last rich run element from rich paragraph and added some text to it");
 ```
+

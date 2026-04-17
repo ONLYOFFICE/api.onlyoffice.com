@@ -39,3 +39,4 @@ doc.Push(table);
 let nextCell = table.GetCell(0, 0).GetNext();
 nextCell.GetContent().GetElement(0).SetBold(true);
 ```
+

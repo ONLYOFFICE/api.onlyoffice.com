@@ -2,21 +2,7 @@
 
 Returns the date operator for time period conditions.
 
-## Syntax
-
-```javascript
-expression.GetDateOperator();
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```
+

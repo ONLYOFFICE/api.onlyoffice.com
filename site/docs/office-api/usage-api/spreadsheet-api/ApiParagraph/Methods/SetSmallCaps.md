@@ -44,5 +44,5 @@ paragraph.SetSmallCaps(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has normal capitalization.');
 content.Push(paragraph2);
-
 ```
+

@@ -33,3 +33,4 @@ page.AddObject(comboboxField);
 let widgets = comboboxField.GetAllWidgets();
 widgets[0].SetRegularExp('\S+@\S+\.\S+');
 ```
+

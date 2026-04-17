@@ -8,6 +8,8 @@ The function called when the specified comment is removed with the [RemoveCommen
 | --------- | ------------- | ----------- |
 | comment | [Event_comment](../Enumeration/Event_comment.md) | Defines the comment object containing the comment data. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onRemoveComment", (comment) => {
     console.log("event: onRemoveComment");

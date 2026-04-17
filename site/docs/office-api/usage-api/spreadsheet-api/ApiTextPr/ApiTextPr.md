@@ -2,7 +2,6 @@
 
 Represents the ApiTextPr class.
 
-
 ## Methods
 
 | Method | Returns | Description |

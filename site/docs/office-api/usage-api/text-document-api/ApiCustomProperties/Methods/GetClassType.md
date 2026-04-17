@@ -29,5 +29,5 @@ const customProps = doc.GetCustomProperties();
 const classType = customProps.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
-
 ```
+

@@ -53,5 +53,5 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
-
 ```
+

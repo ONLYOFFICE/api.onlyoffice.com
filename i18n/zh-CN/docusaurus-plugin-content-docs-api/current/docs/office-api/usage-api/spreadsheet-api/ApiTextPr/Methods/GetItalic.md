@@ -45,3 +45,4 @@ let isItalic = textProps.GetItalic();
 paragraph.AddText("Italic property: " + isItalic);
 content.Push(paragraph);
 ```
+

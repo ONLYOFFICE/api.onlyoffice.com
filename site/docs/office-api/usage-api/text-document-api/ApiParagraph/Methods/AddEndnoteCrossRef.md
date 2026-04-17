@@ -44,3 +44,4 @@ paragraph.AddText("For more information on previous sentences see endnote on pag
 doc.Push(paragraph);
 paragraph.AddEndnoteCrossRef("pageNum", endNotesFirstParagraphs[0]);
 ```
+

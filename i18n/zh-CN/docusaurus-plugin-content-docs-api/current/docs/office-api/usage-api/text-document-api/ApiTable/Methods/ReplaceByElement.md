@@ -39,3 +39,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The table was replaced with the current paragraph.");
 table.ReplaceByElement(paragraph);
 ```
+

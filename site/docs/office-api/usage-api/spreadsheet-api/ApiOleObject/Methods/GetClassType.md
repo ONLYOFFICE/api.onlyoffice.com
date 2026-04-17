@@ -37,5 +37,5 @@ let oleObject = worksheet.AddOleObject(
 );
 let type = oleObject.GetClassType();
 worksheet.GetRange('A1').SetValue('Class type: ' + type);
-
 ```
+

@@ -42,3 +42,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + contentControls[0].GetClassType());
 doc.Push(paragraph);
 ```
+

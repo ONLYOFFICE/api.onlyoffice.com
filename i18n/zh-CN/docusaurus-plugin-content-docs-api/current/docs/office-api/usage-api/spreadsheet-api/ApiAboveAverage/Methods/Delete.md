@@ -2,21 +2,7 @@
 
 删除当前格式条件。
 
-## 语法
-
-```javascript
-expression.Delete();
-```
-
-`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
 
 ## 示例
 
@@ -50,5 +36,5 @@ condition1.Delete();
 
 worksheet.GetRange("D1").SetValue("Rules after deletion:");
 worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
-
 ```
+

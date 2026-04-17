@@ -39,3 +39,4 @@ xmlParts.forEach((part, index) => {
     worksheet.GetRange("A" + (index + 2)).SetValue("XML part: " + part.GetXml());
 });
 ```
+

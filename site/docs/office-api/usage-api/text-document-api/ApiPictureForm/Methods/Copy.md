@@ -2,21 +2,7 @@
 
 Copies the current form (copies with the shape if it exists).
 
-## Syntax
-
-```javascript
-expression.Copy();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiForm](../../Enumeration/ApiForm.md)
+Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
 
 ## Example
 
@@ -35,3 +21,4 @@ let copyTextForm = textForm.Copy();
 paragraph.AddLineBreak();
 paragraph.AddElement(copyTextForm);
 ```
+

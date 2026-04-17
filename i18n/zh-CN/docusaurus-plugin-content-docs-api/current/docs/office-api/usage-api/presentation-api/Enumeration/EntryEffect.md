@@ -177,3 +177,5 @@
 - "effectZoomInSlightly"
 - "effectZoomOut"
 - "effectZoomOutSlightly"
+
+

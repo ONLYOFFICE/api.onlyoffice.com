@@ -47,5 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 10000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMinorHorizontalGridlines(stroke);
 page.AddObject(chart);
-
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the pivot table condition object.
 
-## Syntax
-
-```javascript
-expression.GetPTCondition();
-```
-
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-PTCondition \| null
+Inherited from [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let ptCondition = condition1.GetPTCondition();
 
 worksheet.GetRange("C1").SetValue("PT Condition:");
 worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
-
 ```
+

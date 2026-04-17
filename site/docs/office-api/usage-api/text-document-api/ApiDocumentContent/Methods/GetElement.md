@@ -35,3 +35,4 @@ let docContent = section.GetHeader("default", true);
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is the text in the default header");
 ```
+

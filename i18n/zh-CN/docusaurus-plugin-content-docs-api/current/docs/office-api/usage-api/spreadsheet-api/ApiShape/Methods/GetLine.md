@@ -41,5 +41,5 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     worksheet.GetRange("A" + row++).SetValue("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```
+

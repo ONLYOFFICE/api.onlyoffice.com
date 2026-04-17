@@ -26,3 +26,4 @@ This method doesn't return any data.
 let fieldId = "12";
 window.Asc.plugin.executeMethod("SelectAddinField", [fieldId]);
 ```
+

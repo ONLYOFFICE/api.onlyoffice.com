@@ -26,3 +26,4 @@
 
 watermarkSettings.SetDirection("clockwise45");
 ```
+

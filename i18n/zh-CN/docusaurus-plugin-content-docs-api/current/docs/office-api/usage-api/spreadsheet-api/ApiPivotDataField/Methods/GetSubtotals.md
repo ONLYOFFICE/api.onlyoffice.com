@@ -2,21 +2,7 @@
 
 返回表示所有分类汇总的对象。
 
-## 语法
-
-```javascript
-expression.GetSubtotals();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md)
+Inherited from [ApiPivotField.GetSubtotals](../../ApiPivotField/Methods/GetSubtotals.md).
 
 ## 示例
 
@@ -69,3 +55,4 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 ```
+

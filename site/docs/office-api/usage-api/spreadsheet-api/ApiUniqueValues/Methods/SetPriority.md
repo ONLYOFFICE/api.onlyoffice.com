@@ -2,23 +2,7 @@
 
 Sets the priority value of the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.SetPriority(Priority);
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Priority | Required | number |  | The priority value (1-based). |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods/SetPriority.md).
 
 ## Example
 
@@ -52,5 +36,5 @@ condition1.SetPriority(5);
 
 worksheet.GetRange("C4").SetValue("New priority:");
 worksheet.GetRange("C5").SetValue(condition1.GetPriority());
-
 ```
+

@@ -2,23 +2,7 @@
 
 Sets the text outline to the current text run.
 
-## Syntax
-
-```javascript
-expression.SetOutLine(oStroke);
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the text outline. |
-
-## Returns
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
 
 ## Example
 
@@ -49,5 +33,5 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

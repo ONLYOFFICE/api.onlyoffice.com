@@ -47,5 +47,5 @@ let operator = condition1.GetOperator();
 
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
-
 ```
+

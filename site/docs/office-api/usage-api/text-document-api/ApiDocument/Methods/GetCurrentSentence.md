@@ -38,3 +38,4 @@ let para2 = Api.CreateParagraph();
 para2.AddText("The current sentence is \"" + doc.GetCurrentSentence() + "\"");
 doc.Push(para2);
 ```
+

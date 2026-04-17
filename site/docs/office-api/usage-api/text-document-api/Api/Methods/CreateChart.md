@@ -48,3 +48,4 @@ chart.SetSeriesFill(solidFill, 0, false);
 solidFill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(solidFill, 1, false);
 ```
+

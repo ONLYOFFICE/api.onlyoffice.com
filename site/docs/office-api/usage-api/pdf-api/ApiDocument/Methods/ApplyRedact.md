@@ -30,3 +30,4 @@ page.AddObject(redactAnnot);
 doc.ApplyRedact();
 console.log('We added a redact annot to first page and applied it');
 ```
+

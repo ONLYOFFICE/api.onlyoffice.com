@@ -2,21 +2,7 @@
 
 Sets the evaluation order for the current conditional formatting rule so it is evaluated after all other rules on the worksheet.
 
-## Syntax
-
-```javascript
-expression.SetLastPriority();
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md).
 
 ## Example
 
@@ -55,5 +41,5 @@ condition1.SetLastPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
-
 ```
+

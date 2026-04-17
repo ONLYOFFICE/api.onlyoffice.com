@@ -38,3 +38,4 @@ let classType = inlineLvlSdt.GetClassType();
 paragraph.AddLineBreak();
 paragraph.AddText("Class Type = " + classType);
 ```
+

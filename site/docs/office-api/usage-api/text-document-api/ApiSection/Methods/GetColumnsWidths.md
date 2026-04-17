@@ -40,3 +40,4 @@ paragraph.AddText("This text starts from column #3. ");
 paragraph.AddText("This column is 3 inches wide (" + columnsWidths[2] + " twentieths of a point). ");
 paragraph.AddText("The distance between this column and column #2 is 1/3 of an inch (480 twentieths of a point).");
 ```
+

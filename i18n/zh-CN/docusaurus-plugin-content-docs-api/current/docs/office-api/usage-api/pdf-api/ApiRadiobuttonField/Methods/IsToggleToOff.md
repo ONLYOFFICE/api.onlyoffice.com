@@ -2,21 +2,7 @@
 
 检查字段是否可切换为关闭。
 
-## 语法
-
-```javascript
-expression.IsToggleToOff();
-```
-
-`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiCheckboxField.IsToggleToOff](../../ApiCheckboxField/Methods/IsToggleToOff.md).
 
 ## 示例
 
@@ -31,3 +17,4 @@ page.AddObject(checkboxField);
 checkboxField.SetToggleToOff(false);
 console.log('Toggle to off is: ' + checkboxField.IsToggleToOff());
 ```
+

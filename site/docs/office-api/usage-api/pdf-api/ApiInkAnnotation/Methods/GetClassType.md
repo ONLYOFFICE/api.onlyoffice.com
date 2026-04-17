@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(inkAnnot);
 console.log(`Annot class type is: ${inkAnnot.GetClassType()}`);
 ```
+

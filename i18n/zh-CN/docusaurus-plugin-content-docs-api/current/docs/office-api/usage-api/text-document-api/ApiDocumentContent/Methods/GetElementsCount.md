@@ -41,3 +41,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of elements inside the shape: " + docContent.GetElementsCount());
 doc.Push(paragraph);
 ```
+

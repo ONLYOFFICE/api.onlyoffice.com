@@ -37,3 +37,4 @@ let hyperlinkFromJSON = Api.FromJSON(json);
 hyperlinkFromJSON.SetDefaultStyle();
 paragraph.AddElement(hyperlinkFromJSON);
 ```
+

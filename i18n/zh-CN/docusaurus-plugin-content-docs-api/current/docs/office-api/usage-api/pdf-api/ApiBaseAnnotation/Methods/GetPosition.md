@@ -29,5 +29,5 @@ let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 let pos = squareAnnot.GetPosition();
 console.log(`Annot position x: ${pos.x}, y: ${pos.y}`);
-
 ```
+

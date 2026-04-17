@@ -2,21 +2,7 @@
 
 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回「无填充」。
 
-## 语法
-
-```javascript
-expression.GetFillColor();
-```
-
-`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
 
 ## 示例
 
@@ -48,5 +34,5 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```
+

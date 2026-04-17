@@ -41,5 +41,5 @@ let comboBoxForm = Api.CreateComboBoxForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(comboBoxForm);
-
 ```
+

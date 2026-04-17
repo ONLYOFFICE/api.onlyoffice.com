@@ -25,3 +25,4 @@ expression.GoToSlideInSlideShow(nSlideIndex);
 ```javascript
 window.Asc.plugin.executeMethod ("GoToSlideInSlideShow", [2]);
 ```
+

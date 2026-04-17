@@ -67,3 +67,4 @@ pivotField.SetRepeatLabels(true);
 pivotWorksheet.GetRange('A12').SetValue('Region repeat labels');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetRepeatLabels());
 ```
+

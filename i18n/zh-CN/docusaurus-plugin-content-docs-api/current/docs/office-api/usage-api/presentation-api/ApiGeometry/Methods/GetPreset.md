@@ -34,3 +34,4 @@ shape.GetDocContent().GetElement(0).AddText("Preset: " + geometry.GetPreset() + 
 shape.SetPosition(1000000, 1000000);
 slide.AddObject(shape);
 ```
+

@@ -48,3 +48,4 @@ paragraph = docContentFromJSON.GetElement(0);
 paragraph.AddText("Class type = " + type);
 Api.ReplaceDocumentContent(docContentFromJSON);
 ```
+

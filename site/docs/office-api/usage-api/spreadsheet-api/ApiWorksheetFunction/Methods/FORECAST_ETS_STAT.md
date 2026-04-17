@@ -50,3 +50,4 @@ let range1 = worksheet.GetRange("B1:B5");
 let range2 = worksheet.GetRange("A1:A5");
 worksheet.GetRange("B6").SetValue(func.FORECAST_ETS_STAT(range1, range2, 4));
 ```
+

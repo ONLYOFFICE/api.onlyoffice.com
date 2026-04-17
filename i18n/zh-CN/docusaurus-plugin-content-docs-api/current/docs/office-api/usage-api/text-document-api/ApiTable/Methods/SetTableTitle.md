@@ -2,23 +2,7 @@
 
 设置表格标题（题注）。
 
-## 语法
-
-```javascript
-expression.SetTableTitle(sTitle);
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sTitle | 必需 | string |  | 要设置的表格标题。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTablePr.SetTableTitle](../../ApiTablePr/Methods/SetTableTitle.md).
 
 ## 示例
 
@@ -41,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
+

@@ -47,5 +47,5 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
-
 ```
+

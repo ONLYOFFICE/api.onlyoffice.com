@@ -30,3 +30,4 @@ window.Asc.plugin.executeMethod ("CoAuthoringChatSendMessage", [Asc.scope.meetin
         alert ("Meeting was create, please update SDK for checking info about created meeting in chat.");
 });
 ```
+

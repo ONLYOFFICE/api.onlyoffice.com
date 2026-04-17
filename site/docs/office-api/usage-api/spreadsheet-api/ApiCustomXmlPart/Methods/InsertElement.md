@@ -35,5 +35,5 @@ const xml = xmlManager.Add(xmlString);
 xml.InsertElement('/content', '<text>lorem</text>');
 worksheet.GetRange('A1').SetValue('XML after insertion:');
 worksheet.GetRange('A2').SetValue(xml.GetXml());
-
 ```
+

@@ -35,5 +35,5 @@ let textPr = doc.GetDefaultTextPr();
 textPr.SetShd('clear', Api.HexColor('#ff6f3d'));
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the shading set to orange.");
-
 ```
+

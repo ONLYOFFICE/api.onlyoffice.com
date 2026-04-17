@@ -36,5 +36,5 @@ range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
 font.SetBold(true);
-
 ```
+

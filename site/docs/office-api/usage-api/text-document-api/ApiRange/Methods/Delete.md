@@ -33,3 +33,4 @@ paragraph.AddText("ONLYOFFICE delete text Document Builder");
 let range = doc.GetRange(10, 21);
 range.Delete();
 ```
+

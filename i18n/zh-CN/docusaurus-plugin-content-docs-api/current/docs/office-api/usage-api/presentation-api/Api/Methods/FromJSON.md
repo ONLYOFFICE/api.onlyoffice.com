@@ -56,5 +56,5 @@ paragraph.AddText("Class type = " + sType);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

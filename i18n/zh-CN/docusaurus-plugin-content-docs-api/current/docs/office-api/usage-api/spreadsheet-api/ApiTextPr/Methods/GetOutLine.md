@@ -47,3 +47,4 @@ let type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 content.Push(paragraph);
 ```
+

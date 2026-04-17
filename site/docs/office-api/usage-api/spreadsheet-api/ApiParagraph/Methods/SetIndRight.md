@@ -2,23 +2,7 @@
 
 Sets the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndRight(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph right side indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md).
 
 ## Example
 
@@ -41,3 +25,4 @@ paragraph.AddText("This is the first paragraph with the right offset of 2 inches
 paragraph.AddText("This offset is set by the paragraph style. No paragraph inline style is applied. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 ```
+

@@ -32,3 +32,4 @@ This example paste data with paste all options.
 
 range.PasteSpecial("xlPasteAll");
 ```
+

@@ -31,3 +31,4 @@ page.AddObject(lineAnnot);
 let endPoint = lineAnnot.GetEndPoint();
 console.log(`End point is: x: ${endPoint.x}, y: ${endPoint.y}`);
 ```
+

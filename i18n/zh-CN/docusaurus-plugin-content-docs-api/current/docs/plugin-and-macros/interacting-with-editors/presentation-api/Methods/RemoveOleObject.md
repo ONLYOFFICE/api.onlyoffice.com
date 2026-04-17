@@ -42,3 +42,4 @@ Asc.plugin.callCommand(addOleToPresentation, false, true, (id) => {
 	console.log('We removed OLE object with id: ' + id);
 });
 ```
+

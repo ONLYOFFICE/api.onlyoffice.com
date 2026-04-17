@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -12,7 +12,6 @@
 | ---- | ---- | ----------- |
 | keepSelectedTextInForm | boolean | 指定当前选定的文本是否应保存为插入表单的内容。 |
 | placeholderFromSelection | boolean | 指定当前选定的文本是否应保存为插入表单的占位符。 |
-
 
 ## 示例
 
@@ -37,5 +36,5 @@ let textFormInsertPr = {
 	"keepSelectedTextInForm": false
 };
 doc.InsertTextForm(textFormInsertPr);
-
 ```
+

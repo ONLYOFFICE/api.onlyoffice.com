@@ -39,3 +39,4 @@ let func = Api.WorksheetFunction;
 let ans = func.BETA_DIST(0.4, 4, 5, false);
 worksheet.GetRange("B2").SetValue(ans);
 ```
+

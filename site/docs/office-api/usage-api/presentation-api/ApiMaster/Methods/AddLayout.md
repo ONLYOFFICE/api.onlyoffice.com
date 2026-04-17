@@ -52,5 +52,5 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after adding new layout: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

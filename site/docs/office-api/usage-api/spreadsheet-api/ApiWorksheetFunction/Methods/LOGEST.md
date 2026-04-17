@@ -58,5 +58,5 @@ let ans = func.LOGEST(yRange, xRange, constant, stats);
 
 //print answer
 worksheet.GetRange("D1").SetValue(ans);
-
 ```
+

@@ -1,7 +1,6 @@
 # ApiDateForm
 
-表示 ApiDateForm 类。
-
+ApiDateForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## 方法
 

@@ -44,5 +44,5 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition parameters: random effect, fast speed, advance on click');
 slide.AddObject(shape);
-
 ```
+

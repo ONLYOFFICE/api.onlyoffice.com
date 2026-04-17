@@ -2,21 +2,7 @@
 
 Gets the font size from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetFontSize();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[hps](../../Enumeration/hps.md)
+Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
 ## Example
 
@@ -45,3 +31,4 @@ let fontSize = textProps.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 content.Push(paragraph);
 ```
+

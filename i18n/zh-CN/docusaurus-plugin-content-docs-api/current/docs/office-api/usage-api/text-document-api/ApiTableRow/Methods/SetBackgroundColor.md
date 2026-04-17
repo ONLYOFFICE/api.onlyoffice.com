@@ -38,5 +38,5 @@ table.SetStyle(tableStyle);
 let tableRow = table.GetRow(1);
 tableRow.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
-
 ```
+

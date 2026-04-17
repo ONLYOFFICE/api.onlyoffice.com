@@ -49,3 +49,4 @@ let charts = worksheet.GetAllCharts();
 let stroke = Api.CreateStroke(1 * 5000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
 ```
+

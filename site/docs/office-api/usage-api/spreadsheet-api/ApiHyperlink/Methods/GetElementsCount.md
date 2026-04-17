@@ -42,5 +42,5 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Elements count: ' + hyperlink.GetElementsCount());
-
 ```
+

@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | 定义已获得焦点的内容控件。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onFocusContentControl", (control) => {
     console.log("event: onFocusContentControl");

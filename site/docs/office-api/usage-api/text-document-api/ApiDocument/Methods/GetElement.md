@@ -2,23 +2,7 @@
 
 Returns an element by its position in the document.
 
-## Syntax
-
-```javascript
-expression.GetElement(nPos);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | The element position that will be taken from the document. |
-
-## Returns
-
-[DocumentElement](../../Enumeration/DocumentElement.md)
+Inherited from [ApiDocumentContent.GetElement](../../ApiDocumentContent/Methods/GetElement.md).
 
 ## Example
 
@@ -35,3 +19,4 @@ let docContent = section.GetHeader("default", true);
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is the text in the default header");
 ```
+

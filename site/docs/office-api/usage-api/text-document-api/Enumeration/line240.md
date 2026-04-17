@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## Example
 
 This example sets the paragraph line spacing to 1 line.
@@ -19,3 +17,4 @@ This example sets the paragraph line spacing to 1 line.
 
 paraPr.SetSpacingLine(240, "auto");
 ```
+

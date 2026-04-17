@@ -41,5 +41,5 @@ currentParagraph.AddElement(newRun);
 
 const currentRun = docContent.GetCurrentRun();
 currentRun.AddText("<CURRENT_RUN />");
-
 ```
+

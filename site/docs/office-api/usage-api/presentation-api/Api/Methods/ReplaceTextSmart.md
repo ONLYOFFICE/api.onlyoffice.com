@@ -59,5 +59,5 @@ slide.AddObject(shape);
 // range3.Select();
 const arr = ["test_1", "test_2"];
 Api.ReplaceTextSmart(arr, "", "");
-
 ```
+

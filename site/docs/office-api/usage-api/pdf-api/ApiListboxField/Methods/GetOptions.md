@@ -2,21 +2,7 @@
 
 Gets all options from list options.
 
-## Syntax
-
-```javascript
-expression.GetOptions();
-```
-
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ListOption](../../Enumeration/ListOption.md)[]
+Inherited from [ApiBaseListField.GetOptions](../../ApiBaseListField/Methods/GetOptions.md).
 
 ## Example
 
@@ -34,3 +20,4 @@ comboboxField.AddOption('Option 3');
 let options = comboboxField.GetOptions();
 console.log('Combobox options is: ' + options);
 ```
+

@@ -32,3 +32,4 @@ let geometry = shape.GetGeometry();
 worksheet.GetRange("A1").SetValue("Preset: " + geometry.GetPreset());
 worksheet.GetRange("A2").SetValue("IsCustom: " + geometry.IsCustom());
 ```
+

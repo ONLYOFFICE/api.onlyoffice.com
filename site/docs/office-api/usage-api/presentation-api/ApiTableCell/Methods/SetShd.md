@@ -43,5 +43,5 @@ cell.SetShd(fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

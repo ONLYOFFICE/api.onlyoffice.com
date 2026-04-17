@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例将文本字号设置为 22 半磅。
@@ -19,3 +17,4 @@ number
 
 textPr.SetFontSize(22);
 ```
+

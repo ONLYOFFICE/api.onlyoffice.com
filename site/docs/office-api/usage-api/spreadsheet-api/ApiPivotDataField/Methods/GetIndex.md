@@ -64,3 +64,4 @@ let dataField = pivotTable.GetDataFields('Sum of Price');
 pivotWorksheet.GetRange('A15').SetValue('Sum of Price index:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetIndex());
 ```
+

@@ -51,3 +51,4 @@ for (let n = 0; n < phones.length; n++) {
 let range = worksheet.GetRange("A1:C5");
 worksheet.GetRange("D6").SetValue(func.VLOOKUP(3, range, 2, true));
 ```
+

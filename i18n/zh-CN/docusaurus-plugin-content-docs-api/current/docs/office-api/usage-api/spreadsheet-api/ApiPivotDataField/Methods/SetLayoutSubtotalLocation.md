@@ -2,23 +2,7 @@
 
 设置布局分类汇总位置。
 
-## 语法
-
-```javascript
-expression.SetLayoutSubtotalLocation(type);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md) |  | 布局分类汇总位置。 |
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.SetLayoutSubtotalLocation](../../ApiPivotField/Methods/SetLayoutSubtotalLocation.md).
 
 ## 示例
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutSubtotalLocation('Bottom');
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotal location');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotalLocation());
 ```
+

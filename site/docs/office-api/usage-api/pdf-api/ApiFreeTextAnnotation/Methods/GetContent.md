@@ -35,3 +35,4 @@ let richContent = freeTextAnnot.GetContent();
 let para = richContent.GetElement(0);
 para.AddText("Example text");
 ```
+

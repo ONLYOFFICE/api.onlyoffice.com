@@ -1,7 +1,6 @@
 # ApiTableRow
 
-表示 ApiTableRow 类。
-
+ApiTableRow is a subclass of [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md).
 
 ## 方法
 

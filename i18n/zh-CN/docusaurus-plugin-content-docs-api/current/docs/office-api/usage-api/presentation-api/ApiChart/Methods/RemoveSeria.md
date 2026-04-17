@@ -44,5 +44,5 @@ chart.SetTitle("The Estimated Costs series was removed from the current chart.")
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 slide.AddObject(chart);
-
 ```
+

@@ -2,21 +2,7 @@
 
 返回基于文本的条件格式规则中使用的文本值。
 
-## 语法
-
-```javascript
-expression.GetText();
-```
-
-`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+Inherited from [ApiFormatCondition.GetText](../../ApiFormatCondition/Methods/GetText.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let textValue = condition1.GetText();
 
 worksheet.GetRange("C1").SetValue("Text value:");
 worksheet.GetRange("C2").SetValue(textValue);
-
 ```
+

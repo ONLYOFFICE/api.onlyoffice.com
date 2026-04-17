@@ -33,5 +33,5 @@ squareAnnot.SetBorderEffectIntensity(1);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 console.log(`Annotation border effect intensity is: ${squareAnnot.GetBorderEffectIntensity()}`);
-
 ```
+

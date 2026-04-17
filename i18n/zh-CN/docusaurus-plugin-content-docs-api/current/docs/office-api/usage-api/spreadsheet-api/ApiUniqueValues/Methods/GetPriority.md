@@ -2,21 +2,7 @@
 
 返回条件格式规则的优先级值。
 
-## 语法
-
-```javascript
-expression.GetPriority();
-```
-
-`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-number
+Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
-
 ```
+

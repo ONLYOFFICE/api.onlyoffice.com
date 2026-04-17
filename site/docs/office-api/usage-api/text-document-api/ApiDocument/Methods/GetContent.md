@@ -2,23 +2,7 @@
 
 Returns an array of document elements from the current ApiDocumentContent object.
 
-## Syntax
-
-```javascript
-expression.GetContent(bGetCopies);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bGetCopies | Required | boolean |  | Specifies if the copies of the document elements will be returned or not. |
-
-## Returns
-
-[DocumentElement](../../Enumeration/DocumentElement.md)[]
+Inherited from [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md).
 
 ## Example
 
@@ -57,3 +41,4 @@ docElements[0].SetBold(true);
 docElements[1].SetBackgroundColor(Api.HexColor('#EBEBEB'));
 docElements[2].Search("block text content control")[0].SetBold(true);
 ```
+

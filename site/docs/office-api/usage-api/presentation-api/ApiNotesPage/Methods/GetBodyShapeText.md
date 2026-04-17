@@ -38,5 +38,5 @@ slide.AddObject(shape);
 const text = notesPage.GetBodyShapeText();
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText(text);
-
 ```
+

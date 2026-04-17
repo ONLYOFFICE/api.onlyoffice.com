@@ -52,5 +52,5 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 slide.AddObject(drawing);
-
 ```
+

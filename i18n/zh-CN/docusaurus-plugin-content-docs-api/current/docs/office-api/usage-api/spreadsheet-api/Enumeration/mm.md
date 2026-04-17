@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例将以毫米为单位的单元格宽度设置到应用的字符梳。
@@ -19,3 +17,4 @@ number
 
 textForm.SetCellWidth(7);
 ```
+

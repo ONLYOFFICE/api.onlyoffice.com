@@ -46,5 +46,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph. The first paragraph was removed from the document content.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```
+

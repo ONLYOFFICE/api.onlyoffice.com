@@ -40,3 +40,4 @@ let section2 = doc.CreateSection(paragraph);
 let previousSection = section2.GetPrevious();
 previousSection.SetPageMargins(7200, 2880, 1440, 5760);
 ```
+

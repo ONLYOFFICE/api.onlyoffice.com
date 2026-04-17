@@ -36,3 +36,4 @@ worksheet.GetRange("A5").SetValue("Stroke: " + path.GetStroke() + ", Fill: " + p
 let paths = geometry.GetPaths();
 worksheet.GetRange("A6").SetValue("Total paths: " + paths.length);
 ```
+

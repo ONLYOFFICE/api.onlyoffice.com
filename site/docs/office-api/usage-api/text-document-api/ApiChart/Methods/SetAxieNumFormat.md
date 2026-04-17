@@ -43,3 +43,4 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetAxieNumFormat("0.00", "left");
 paragraph.AddDrawing(chart);
 ```
+

@@ -37,5 +37,5 @@ const drawing = worksheet.AddShape(
 drawing.SetName('MyRectangle');
 const drawingName = drawing.GetName();
 worksheet.GetRange('A1').SetValue('Drawing name: ' + drawingName);
-
 ```
+

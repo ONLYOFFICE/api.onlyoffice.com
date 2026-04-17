@@ -35,5 +35,5 @@ let internalId = textForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);
-
 ```
+

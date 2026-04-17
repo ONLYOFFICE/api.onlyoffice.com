@@ -35,5 +35,5 @@ paragraph.AddText("Footnote text");
 footnote.SelectNoteReference();
 
 doc.GetRangeBySelect().SetFontSize(48);
-
 ```
+

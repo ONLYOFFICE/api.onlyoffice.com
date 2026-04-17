@@ -2,24 +2,7 @@
 
 Sets the preferred width to the current table cell.
 
-## Syntax
-
-```javascript
-expression.SetWidth(sType, nValue);
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [TableWidth](../../Enumeration/TableWidth.md) |  | Type of the width value from one of the available width values types. |
-| nValue | Optional | number |  | The table cell width value measured in positive integers. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableCellPr.SetWidth](../../ApiTableCellPr/Methods/SetWidth.md).
 
 ## Example
 
@@ -41,3 +24,4 @@ tableCellPr.SetWidth("twips", 2880);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

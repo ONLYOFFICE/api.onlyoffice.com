@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"baseWidget"
 
 ## Example
 
@@ -30,5 +30,5 @@ page.AddObject(textField);
 
 let widgets = textField.GetAllWidgets();
 textField.SetValue(widgets[0].GetClassType());
-
 ```
+

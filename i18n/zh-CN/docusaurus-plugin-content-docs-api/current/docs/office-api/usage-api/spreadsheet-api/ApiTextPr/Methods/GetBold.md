@@ -45,3 +45,4 @@ let isBold = textProps.GetBold();
 paragraph.AddText("Bold property: " + isBold);
 content.Push(paragraph);
 ```
+

@@ -34,3 +34,4 @@ let page = doc.GetPage(0);
 page.AddObject(polylineAnnot);
 console.log(`We set line end style to: ${polylineAnnot.GetEndStyle()}`);
 ```
+

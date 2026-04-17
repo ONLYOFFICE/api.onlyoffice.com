@@ -53,3 +53,4 @@ shape.GetContent().GetElement(0).AddText("Adj value: " + customGeometry.GetAdjVa
 shape.SetPosition(1500000, 1500000);
 page.AddObject(shape);
 ```
+

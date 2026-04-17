@@ -2,23 +2,7 @@
 
 Sets the table title (caption).
 
-## Syntax
-
-```javascript
-expression.SetTableTitle(sTitle);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sTitle | Required | string |  | The table title to be set. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableTitle](../../ApiTablePr/Methods/SetTableTitle.md).
 
 ## Example
 
@@ -41,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
+

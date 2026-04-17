@@ -40,3 +40,4 @@ let classType = cell.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 ```
+

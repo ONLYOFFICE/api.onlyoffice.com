@@ -37,3 +37,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 Api.CreateRange(paragraph, 0, 11).SetBold(true);
 ```
+

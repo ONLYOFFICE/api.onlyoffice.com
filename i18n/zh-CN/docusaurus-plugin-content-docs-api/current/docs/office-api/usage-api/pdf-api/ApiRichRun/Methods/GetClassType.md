@@ -38,3 +38,4 @@ run.AddText("Some example text");
 
 console.log(`Object class type is: ${run.GetClassType()}`);
 ```
+

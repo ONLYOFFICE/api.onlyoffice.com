@@ -36,5 +36,5 @@ let textFormInsertPr = {
 	"keepSelectedTextInForm": false
 };
 doc.InsertTextForm(textFormInsertPr);
-
 ```
+

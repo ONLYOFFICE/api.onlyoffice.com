@@ -48,3 +48,4 @@ let range1 = worksheet.GetRange("A1:C3");
 let range2 = worksheet.GetRange("E1:F2");
 worksheet.GetRange("E4").SetValue(func.DPRODUCT(range1, "Value", range2));
 ```
+

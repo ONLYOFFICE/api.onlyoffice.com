@@ -40,5 +40,5 @@ const chartType = chart.GetChartType();
 chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 page.AddObject(chart);
-
 ```
+

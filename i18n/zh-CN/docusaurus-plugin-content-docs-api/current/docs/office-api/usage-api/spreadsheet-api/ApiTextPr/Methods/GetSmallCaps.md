@@ -45,3 +45,4 @@ let isSmallCaps = textProps.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + isSmallCaps);
 content.Push(paragraph);
 ```
+

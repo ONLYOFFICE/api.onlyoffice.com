@@ -45,5 +45,5 @@ if (retrievedHyperlink) {
   paragraph.AddText('No hyperlink found.');
 }
 slide.AddObject(shape);
-
 ```
+

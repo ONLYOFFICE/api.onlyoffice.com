@@ -30,5 +30,5 @@ core.SetSubject("ApiCore Method Showcase");
 const subject = core.GetSubject();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Subject: " + subject);
-
 ```
+

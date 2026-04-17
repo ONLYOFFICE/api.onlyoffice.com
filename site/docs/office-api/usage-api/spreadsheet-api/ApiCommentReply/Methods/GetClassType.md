@@ -36,3 +36,4 @@ let reply = comment.GetReply();
 let type = reply.GetClassType();
 worksheet.GetRange("A3").SetValue("Type: " + type);
 ```
+

@@ -33,3 +33,4 @@ let worksheet = Api.GetActiveSheet();
 worksheet.SetVisible(true);
 worksheet.GetRange("A1").SetValue("The current worksheet is visible.");
 ```
+

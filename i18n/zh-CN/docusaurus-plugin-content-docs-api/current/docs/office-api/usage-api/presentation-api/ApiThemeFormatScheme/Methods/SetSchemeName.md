@@ -49,5 +49,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("New name was set to the theme format scheme.");
 slide.AddObject(shape);
-
 ```
+

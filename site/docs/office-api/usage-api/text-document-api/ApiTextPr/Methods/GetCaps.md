@@ -48,3 +48,4 @@ let caps = textPr.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 doc.Push(paragraph);
 ```
+

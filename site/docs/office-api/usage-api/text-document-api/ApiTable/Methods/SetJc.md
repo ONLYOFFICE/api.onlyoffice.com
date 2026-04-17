@@ -2,23 +2,7 @@
 
 Specifies the alignment of the current table with respect to the text margins in the current section.
 
-## Syntax
-
-```javascript
-expression.SetJc(sJcType);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJcType | Required | "left" \| "right" \| "center" |  | The alignment type used for the current table placement. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetJc](../../ApiTablePr/Methods/SetJc.md).
 
 ## Example
 
@@ -42,3 +26,4 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

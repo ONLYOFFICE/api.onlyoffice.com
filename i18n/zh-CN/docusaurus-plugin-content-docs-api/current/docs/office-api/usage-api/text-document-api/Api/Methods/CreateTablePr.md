@@ -44,3 +44,4 @@ tableStylePr.SetTablePr(tablePr);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

@@ -2,21 +2,7 @@
 
 Returns the parent range object of the current format condition.
 
-## Syntax
-
-```javascript
-expression.GetParent();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiRange](../../ApiRange/ApiRange.md)
+Inherited from [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md).
 
 ## Example
 
@@ -38,5 +24,5 @@ condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
 const parentRange = condition.GetParent();
 worksheet.GetRange('C1').SetValue('Parent range:');
 worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
-
 ```
+

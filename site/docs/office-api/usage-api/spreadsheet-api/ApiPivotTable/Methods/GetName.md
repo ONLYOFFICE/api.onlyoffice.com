@@ -62,3 +62,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Pivot Table name');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetName());
 ```
+

@@ -62,3 +62,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Is Column Grand');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetColumnGrand());
 ```
+

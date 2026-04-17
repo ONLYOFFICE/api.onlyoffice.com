@@ -37,3 +37,4 @@ let parentTable = blockLvlSdt.GetParentTable();
 cell = parentTable.GetRow(2).GetCell(0);
 parentTable.RemoveRow(cell);
 ```
+

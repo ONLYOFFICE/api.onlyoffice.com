@@ -45,5 +45,5 @@ run.AddText('Pushed text.');
 paragraph.Push(run);
 
 worksheet.GetRange('A1').SetValue('Elements in paragraph: ' + paragraph.GetElementsCount());
-
 ```
+

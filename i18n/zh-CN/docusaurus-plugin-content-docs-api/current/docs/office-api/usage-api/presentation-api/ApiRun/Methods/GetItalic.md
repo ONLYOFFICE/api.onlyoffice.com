@@ -2,21 +2,7 @@
 
 从当前文本属性获取斜体属性。
 
-## 语法
-
-```javascript
-expression.GetItalic();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
 ## 示例
 
@@ -51,5 +37,5 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
-
 ```
+

@@ -58,6 +58,5 @@ let ans = func.LINEST(yRange, xRange, constant, stats);
 
 //print answer 
  worksheet.GetRange("D1").SetValue(ans);
-
-
 ```
+

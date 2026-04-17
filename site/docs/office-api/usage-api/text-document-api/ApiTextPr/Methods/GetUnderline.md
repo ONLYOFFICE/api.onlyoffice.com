@@ -48,3 +48,4 @@ let underline = textPr.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 doc.Push(paragraph);
 ```
+

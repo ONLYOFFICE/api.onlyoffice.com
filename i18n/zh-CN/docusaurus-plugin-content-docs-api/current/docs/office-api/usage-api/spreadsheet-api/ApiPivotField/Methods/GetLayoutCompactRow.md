@@ -63,3 +63,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout compact');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutCompactRow());
 ```
+

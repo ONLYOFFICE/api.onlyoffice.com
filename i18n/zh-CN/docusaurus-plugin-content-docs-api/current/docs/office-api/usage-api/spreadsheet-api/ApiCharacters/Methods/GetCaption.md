@@ -34,3 +34,4 @@ let characters = range.GetCharacters(23, 4);
 let caption = characters.GetCaption();
 worksheet.GetRange("B3").SetValue("Caption: " + caption);
 ```
+

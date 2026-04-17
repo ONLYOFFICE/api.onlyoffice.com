@@ -45,5 +45,5 @@ let axisPosition = dataBar.GetAxisPosition();
 
 worksheet.GetRange("C1").SetValue("Axis Position:");
 worksheet.GetRange("C2").SetValue(axisPosition);
-
 ```
+

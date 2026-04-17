@@ -43,3 +43,4 @@ para.SetParaPr(paraPr);
 
 console.log(`We set new rich paragraph properties to rich paragraph`);
 ```
+

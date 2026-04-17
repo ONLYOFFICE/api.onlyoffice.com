@@ -32,3 +32,4 @@ boolean
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:C3").SetFormulaArray("={1,2,3}");
 ```
+

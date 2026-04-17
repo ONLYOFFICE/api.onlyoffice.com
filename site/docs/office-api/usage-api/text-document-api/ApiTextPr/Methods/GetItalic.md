@@ -48,3 +48,4 @@ let italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 doc.Push(paragraph);
 ```
+

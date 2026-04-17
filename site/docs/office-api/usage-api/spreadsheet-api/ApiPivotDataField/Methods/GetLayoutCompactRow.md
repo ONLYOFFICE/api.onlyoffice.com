@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether a pivot table field is compacted.
 
-## Syntax
-
-```javascript
-expression.GetLayoutCompactRow();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetLayoutCompactRow](../../ApiPivotField/Methods/GetLayoutCompactRow.md).
 
 ## Example
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout compact');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutCompactRow());
 ```
+

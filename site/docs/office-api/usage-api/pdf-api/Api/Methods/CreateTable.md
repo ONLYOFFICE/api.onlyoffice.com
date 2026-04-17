@@ -33,3 +33,4 @@ const page = doc.GetPage(0);
 const table = Api.CreateTable(2, 4);
 page.AddObject(table);
 ```
+

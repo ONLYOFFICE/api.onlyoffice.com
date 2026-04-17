@@ -26,3 +26,4 @@ expression.ReplaceCurrentWord(replaceString, type);
 ```javascript
 window.Asc.plugin.executeMethod ("ReplaceCurrentWord", ["ONLYOFFICE", "entirely"]);
 ```
+

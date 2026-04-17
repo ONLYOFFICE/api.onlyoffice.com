@@ -69,3 +69,4 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to row');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToRow());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to rows!');
 ```
+

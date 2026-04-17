@@ -3,23 +3,7 @@
 返回表示单个数据透视表项（ApiPivotItem 对象）
 或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。
 
-## 语法
-
-```javascript
-expression.GetPivotItems(index);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| index | 可选 | number |  | 项索引。 |
-
-## 返回值
-
-[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
+Inherited from [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md).
 
 ## 示例
 
@@ -70,3 +54,4 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
 }
 ```
+

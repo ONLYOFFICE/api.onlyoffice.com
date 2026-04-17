@@ -31,5 +31,5 @@ const text = pixels + ' pixels are equal to ' + points + ' points.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```
+

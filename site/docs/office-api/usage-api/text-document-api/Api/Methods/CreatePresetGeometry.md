@@ -41,5 +41,5 @@ paragraph.AddText("Is custom: " + presetGeometry.IsCustom());
 paragraph.AddLineBreak();
 paragraph.AddDrawing(shape);
 paragraph.AddLineBreak();
-
 ```
+

@@ -40,5 +40,5 @@ chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 slide.RemoveAllObjects();
 slide.AddObject(chart);
-
 ```
+

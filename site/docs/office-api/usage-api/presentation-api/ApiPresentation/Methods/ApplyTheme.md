@@ -53,5 +53,5 @@ const formatScheme = Api.CreateThemeFormatScheme([fill1, fill2, fill3], [bgFill1
 const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");
 const theme = Api.CreateTheme("New theme", master, colorScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
-
 ```
+

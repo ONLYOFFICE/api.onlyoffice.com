@@ -47,5 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 page.AddObject(chart);
-
 ```
+

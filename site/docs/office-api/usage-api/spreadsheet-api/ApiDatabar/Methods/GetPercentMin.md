@@ -45,5 +45,5 @@ let percentMin = dataBar.GetPercentMin();
 
 worksheet.GetRange("C1").SetValue("Min Percent:");
 worksheet.GetRange("C2").SetValue(percentMin + "%");
-
 ```
+

@@ -6,8 +6,6 @@ Half-points (2 half-points = 1 point).
 
 number
 
-
-
 ## Example
 
 This example sets the text font size to 22 half-points.
@@ -19,3 +17,4 @@ This example sets the text font size to 22 half-points.
 
 textPr.SetFontSize(22);
 ```
+

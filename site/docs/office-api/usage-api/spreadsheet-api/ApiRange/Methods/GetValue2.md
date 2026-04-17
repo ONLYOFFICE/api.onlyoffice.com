@@ -34,3 +34,4 @@ range.SetValue(format);
 let value2 = range.GetValue2();
 worksheet.GetRange("A3").SetValue("Value of the cell A1 without format: " + value2);
 ```
+

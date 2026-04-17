@@ -35,3 +35,4 @@ paragraph.AddText("ONLYOFFICE Document Server Builder");
 let range = doc.GetRange(18, 23);
 range.SetDoubleStrikeout(true);
 ```
+

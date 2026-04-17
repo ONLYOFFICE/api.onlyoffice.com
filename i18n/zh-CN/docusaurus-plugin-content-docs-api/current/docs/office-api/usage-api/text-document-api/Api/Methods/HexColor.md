@@ -30,5 +30,5 @@ const color = Api.HexColor('#DECADE');
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This text is in hex color.');
 paragraph.SetColor(color);
-
 ```
+

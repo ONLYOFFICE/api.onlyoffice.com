@@ -33,5 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertWarning", "xlGreater", 10);
 let alertStyle = validation.GetAlertStyle();
 worksheet.GetRange("B1").SetValue("Alert style: " + alertStyle);
-
 ```
+

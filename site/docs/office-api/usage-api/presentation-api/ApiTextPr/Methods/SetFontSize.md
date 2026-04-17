@@ -47,5 +47,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font size set to 30 points using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

@@ -33,3 +33,4 @@ page.AddObject(textField);
 let widgets = textField.GetAllWidgets();
 widgets[0].SetPosition({x: 30, y: 30});
 ```
+

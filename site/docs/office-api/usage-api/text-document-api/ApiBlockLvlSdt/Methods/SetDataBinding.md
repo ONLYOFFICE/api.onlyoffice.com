@@ -41,3 +41,4 @@ contentControl.SetDataBinding({
   xpath : "/pic:documentData/pic:text"
 });
 ```
+

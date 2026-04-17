@@ -39,3 +39,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The table was removed from the document.");
 doc.Push(paragraph);
 ```
+

@@ -37,3 +37,4 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("star10", 5930900, 595605, fill, stroke);
 paragraph.AddDrawing(shape);
 ```
+

@@ -55,5 +55,5 @@ condition1.ModifyAppliesToRange(newRange);
 
 worksheet.GetRange("D1").SetValue("Modified range:");
 worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
-
 ```
+

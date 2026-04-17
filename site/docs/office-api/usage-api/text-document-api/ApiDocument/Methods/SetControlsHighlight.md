@@ -34,5 +34,5 @@ let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
 doc.AddElement(0, blockLvlSdt);
 doc.SetControlsHighlight(Api.HexColor('#FF6F3D'));
-
 ```
+

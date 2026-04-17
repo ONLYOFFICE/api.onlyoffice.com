@@ -38,3 +38,4 @@ let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);
 drawing.InsertInContentControl(1);
 ```
+

@@ -2,21 +2,7 @@
 
 Gets the bold property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetBold();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
 ## Example
 
@@ -45,3 +31,4 @@ let isBold = textProps.GetBold();
 paragraph.AddText("Bold property: " + isBold);
 content.Push(paragraph);
 ```
+

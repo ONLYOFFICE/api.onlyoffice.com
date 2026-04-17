@@ -47,5 +47,5 @@ let nextImage = image1.GetNextImage();
 let copyImage = nextImage.Copy();
 paragraph.AddLineBreak();
 paragraph.AddDrawing(copyImage);
-
 ```
+

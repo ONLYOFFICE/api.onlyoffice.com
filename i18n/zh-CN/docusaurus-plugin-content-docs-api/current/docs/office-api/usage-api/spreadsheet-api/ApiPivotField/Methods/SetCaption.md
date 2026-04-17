@@ -70,3 +70,4 @@ pivotWorksheet.GetRange('A14').SetValue('New Style field caption');
 pivotField.SetCaption('My caption');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetCaption());
 ```
+

@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | isEnabled | boolean | 指示鼠标或触控板是否启用（**true**）或禁用（**false**）。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onEnableMouseEvent", (isEnabled) => {
     let _frames = document.getElementsByTagName("iframe");

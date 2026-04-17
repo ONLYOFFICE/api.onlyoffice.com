@@ -2,21 +2,7 @@
 
 Check if the current document content is a footnote.
 
-## Syntax
-
-```javascript
-expression.IsFootnote();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiDocumentContent.IsFootnote](../../ApiDocumentContent/Methods/IsFootnote.md).
 
 ## Example
 
@@ -37,5 +23,5 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
-
 ```
+

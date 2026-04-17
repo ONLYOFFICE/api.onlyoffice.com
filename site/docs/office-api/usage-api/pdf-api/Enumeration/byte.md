@@ -6,8 +6,6 @@ A numeric value from 0 to 255.
 
 number
 
-
-
 ## Example
 
 This example creates two RGB colors.
@@ -22,3 +20,4 @@ let rgbColorGreen = Api.RGB(0, 255, 0);
 // The resulting color is red, the bytes are measured in hexadecimal numbers:
 let rgbColorRed = Api.RGB(0xff, 0, 0);
 ```
+

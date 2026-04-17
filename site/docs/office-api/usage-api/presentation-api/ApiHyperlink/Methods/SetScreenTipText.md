@@ -44,5 +44,5 @@ infoParagraph.AddText('Shape hyperlink screen tip: ' + hyperlink.GetScreenTipTex
 const docContent = shape.GetContent();
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```
+

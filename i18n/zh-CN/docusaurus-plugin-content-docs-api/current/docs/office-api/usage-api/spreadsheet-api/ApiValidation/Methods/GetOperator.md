@@ -33,5 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let operator = validation.GetOperator();
 worksheet.GetRange("B1").SetValue("Operator: " + operator);
-
 ```
+

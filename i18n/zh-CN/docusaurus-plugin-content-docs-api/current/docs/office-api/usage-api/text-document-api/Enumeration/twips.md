@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例将列间距设置为 36 磅。
@@ -19,3 +17,4 @@ number
 
 paragraph.SetEqualColumns(2, 720);
 ```
+

@@ -49,5 +49,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Shapes are ungrouped");
 docContent2.AddElement(0, paragraph);
 group.Ungroup();
-
 ```
+

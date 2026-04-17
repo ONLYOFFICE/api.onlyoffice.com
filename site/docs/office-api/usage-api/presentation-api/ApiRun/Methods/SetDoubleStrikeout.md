@@ -49,5 +49,5 @@ run.SetDoubleStrikeout(true);
 run.AddText("This is a text run with the text struck out with two lines.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

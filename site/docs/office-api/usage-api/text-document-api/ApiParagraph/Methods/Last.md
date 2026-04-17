@@ -38,3 +38,4 @@ paragraph.Push(run2);
 let lastRun = paragraph.Last();
 lastRun.SetBold(true);
 ```
+

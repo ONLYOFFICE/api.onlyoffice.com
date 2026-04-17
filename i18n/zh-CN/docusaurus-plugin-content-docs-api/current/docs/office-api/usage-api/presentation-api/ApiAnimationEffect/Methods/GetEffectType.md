@@ -52,5 +52,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Effect type: ' + effectType);
 slide.AddObject(infoShape);
-
 ```
+

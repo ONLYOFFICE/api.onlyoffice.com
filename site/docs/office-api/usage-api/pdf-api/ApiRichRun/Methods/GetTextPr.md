@@ -42,3 +42,4 @@ textPr.SetUnderline(true);
 
 console.log(`We set some properties to rich text properties from rich run object`);
 ```
+

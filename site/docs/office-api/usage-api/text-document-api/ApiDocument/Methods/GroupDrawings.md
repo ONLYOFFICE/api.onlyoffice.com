@@ -43,3 +43,4 @@ paragraph.AddDrawing(shape2);
 doc.Push(paragraph);
 doc.GroupDrawings([shape1, shape2]);
 ```
+

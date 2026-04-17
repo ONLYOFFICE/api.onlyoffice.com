@@ -39,3 +39,4 @@ paragraph.AddText("Number of elements inside the shape: " + content.GetElementsC
 paragraph.AddLineBreak();
 paragraph.AddText("Line breaks are NOT counted into the number of elements.");
 ```
+

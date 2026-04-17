@@ -40,3 +40,4 @@ paragraph = header.GetElement(0);
 paragraph.AddText("This is a page header. ");
 paragraph.AddText("The distance from the page top to the header is 1 inch (1440 twentieths of a point).");
 ```
+

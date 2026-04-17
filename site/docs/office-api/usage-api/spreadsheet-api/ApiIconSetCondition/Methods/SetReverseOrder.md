@@ -43,5 +43,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Normal icon order");
 iconCondition.SetReverseOrder(true);
 worksheet.GetRange("B2").SetValue("After: Reversed icon order");
-
 ```
+

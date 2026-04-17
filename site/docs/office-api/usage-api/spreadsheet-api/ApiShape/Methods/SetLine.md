@@ -34,5 +34,5 @@ worksheet.GetRange("A1").SetValue("Original shape with no border");
 let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
 shape.SetLine(newStroke);
 worksheet.GetRange("A2").SetValue("Border changed to 3pt blue line");
-
 ```
+

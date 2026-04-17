@@ -21,3 +21,4 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 ## Returns
 
 [ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| null
+

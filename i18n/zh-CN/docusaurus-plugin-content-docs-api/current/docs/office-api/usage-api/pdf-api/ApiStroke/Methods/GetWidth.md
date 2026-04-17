@@ -58,5 +58,5 @@ let content3 = shape3.GetContent();
 let para3 = content3.GetElement(0);
 let width3 = shape3.GetLine().GetWidth();
 para3.AddText("5pt: " + width3 + " EMU");
-
 ```
+

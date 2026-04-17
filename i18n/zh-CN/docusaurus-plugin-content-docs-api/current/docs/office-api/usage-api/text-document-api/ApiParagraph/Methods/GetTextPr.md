@@ -38,3 +38,4 @@ textPr = paragraph.GetTextPr();
 textPr.SetItalic(true);
 paragraph.SetTextPr(textPr);
 ```
+

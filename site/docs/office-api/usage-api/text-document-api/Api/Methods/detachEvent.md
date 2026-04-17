@@ -31,3 +31,4 @@ This example shows how to unsubscribe from the hyperlink click event.
 
 Api.detachEvent("asc_onHyperlinkClick");
 ```
+

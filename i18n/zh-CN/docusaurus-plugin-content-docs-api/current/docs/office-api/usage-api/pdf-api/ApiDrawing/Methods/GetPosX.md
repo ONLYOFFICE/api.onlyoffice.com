@@ -41,3 +41,4 @@ paragraph.AddText(`Drawing X position is: ${shape.GetPosX()}`);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
+

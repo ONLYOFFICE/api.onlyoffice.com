@@ -48,3 +48,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Direction = " + watermarkSettings2.GetDirection());
 doc.Push(paragraph);
 ```
+

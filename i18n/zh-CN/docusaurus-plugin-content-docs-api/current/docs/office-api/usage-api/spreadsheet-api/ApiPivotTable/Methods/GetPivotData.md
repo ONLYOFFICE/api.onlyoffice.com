@@ -67,5 +67,5 @@ pivotWorksheet.GetRange('A9').SetValue('East Total:');
 let range = pivotTable.GetPivotData('Price', ['Region', 'East']);
 let value = range.GetValue();
 pivotWorksheet.GetRange('B9').SetValue(value);
-
 ```
+

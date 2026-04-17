@@ -42,3 +42,4 @@ let parentTable = drawing.GetParentTable();
 let tableStyle = doc.GetStyle("Bordered");
 parentTable.SetStyle(tableStyle);
 ```
+

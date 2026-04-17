@@ -38,5 +38,5 @@ const table = Api.CreateTable(2, 4);
 table.SetShd("clear", Api.HexColor('#FF6F3D'));
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```
+

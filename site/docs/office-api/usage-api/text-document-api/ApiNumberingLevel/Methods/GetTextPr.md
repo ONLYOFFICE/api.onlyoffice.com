@@ -43,3 +43,4 @@ paragraph.SetNumbering(numLvl);
 paragraph.AddText("This is the second element of a numbered list which starts with '2'");
 doc.Push(paragraph);
 ```
+

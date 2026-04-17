@@ -36,5 +36,5 @@ const xml = xmlManager.Add(xmlString);
 
 xml.DeleteElement('/content/extra');
 worksheet.GetRange('A1').SetValue('XML after deletion: ' + xml.GetXml());
-
 ```
+

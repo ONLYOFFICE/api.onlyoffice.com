@@ -39,3 +39,4 @@ let rangeSecond = doc.GetRange(22, 123);
 let range = rangeFirst.IntersectWith(rangeSecond);
 range.SetBold(true);
 ```
+

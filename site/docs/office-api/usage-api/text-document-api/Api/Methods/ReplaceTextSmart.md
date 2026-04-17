@@ -42,3 +42,4 @@ paragraph.AddText("This is italic text.").SetItalic(true);
 paragraph.GetRange().Select();
 Api.ReplaceTextSmart(["This is the normal text. This bold text was smart replaced. This is italic text."]);
 ```
+

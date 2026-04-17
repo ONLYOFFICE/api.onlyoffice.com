@@ -37,3 +37,4 @@ let textNode = rootNode.Add("text");
 let classType = textNode.GetClassType();
 worksheet.GetRange("A1").SetValue("Class type: " + classType);
 ```
+

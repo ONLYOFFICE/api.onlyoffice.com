@@ -40,3 +40,4 @@ range.SetValue("The first item from the areas: ");
 range.AutoFit(false, true);
 worksheet.GetRange('B5').Paste(item);
 ```
+

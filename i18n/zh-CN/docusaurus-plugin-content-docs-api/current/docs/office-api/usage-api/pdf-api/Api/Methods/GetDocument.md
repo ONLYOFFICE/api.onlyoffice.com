@@ -27,3 +27,4 @@ let doc = Api.GetDocument();
 let page = doc.AddPage(1);
 page.SetRotation(90);
 ```
+

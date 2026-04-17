@@ -31,3 +31,4 @@ doc.AddElement(0, blockLvlSdt);
 paragraph = doc.GetElement(1);
 paragraph.AddText("Class type: " + blockLvlSdt.GetClassType());
 ```
+

@@ -58,5 +58,5 @@ autoFilter.ApplyFilter();
 worksheet.GetRange("C1").SetValue("AutoFilter reapplied with ApplyFilter().");
 worksheet.GetRange("C2").SetValue("Filter: Score > 25");
 worksheet.GetRange("C7").SetValue("Updated value in A3 is now included by the filter.");
-
 ```
+

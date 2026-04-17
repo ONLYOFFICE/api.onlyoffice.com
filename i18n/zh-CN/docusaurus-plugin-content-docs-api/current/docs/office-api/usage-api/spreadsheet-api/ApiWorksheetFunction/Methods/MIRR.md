@@ -47,3 +47,4 @@ worksheet.GetRange("C2").SetValue(0.23);
 let range = worksheet.GetRange("A2:A5");
 worksheet.GetRange("B5").SetValue(func.MIRR(range, 0.2, 0.23));
 ```
+

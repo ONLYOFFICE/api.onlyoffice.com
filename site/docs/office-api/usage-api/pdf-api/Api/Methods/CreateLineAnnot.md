@@ -32,5 +32,5 @@ let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 11, y: 11}, {x: 155, 
 lineAnnot.SetEndStyle("openArrow");
 let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
-
 ```
+

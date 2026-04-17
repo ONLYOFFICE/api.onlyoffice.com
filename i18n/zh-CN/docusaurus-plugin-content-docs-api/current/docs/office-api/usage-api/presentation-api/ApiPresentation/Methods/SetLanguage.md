@@ -44,5 +44,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("English (Canada) will be used to check spelling and grammar in this presentation (if requested).");
 slide.AddObject(shape);
-
 ```
+

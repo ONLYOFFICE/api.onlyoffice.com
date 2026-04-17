@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether to show subtotals.
 
-## Syntax
-
-```javascript
-expression.GetLayoutSubtotals();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetLayoutSubtotals](../../ApiPivotField/Methods/GetLayoutSubtotals.md).
 
 ## Example
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotals');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotals());
 ```
+

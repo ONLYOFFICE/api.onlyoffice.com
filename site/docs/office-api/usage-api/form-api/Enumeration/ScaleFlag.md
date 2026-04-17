@@ -25,3 +25,4 @@ This example sets the scaling condition when the current picture form is scaled 
 
 pictureForm.SetScaleFlag("tooBig");
 ```
+

@@ -16,7 +16,6 @@ Object
 | shiftX | [percentage](../Enumeration/percentage.md) | Horizontal picture position inside the picture form measured in percent: **0** - the picture is placed on the left; **50** - the picture is placed in the center; **100** - the picture is placed on the right. |
 | shiftY | [percentage](../Enumeration/percentage.md) | Vertical picture position inside the picture form measured in percent: **0** - the picture is placed on top; **50** - the picture is placed in the center; **100** - the picture is placed on the bottom. |
 
-
 ## Example
 
 Create a picture form with the specific picture form properties.
@@ -34,5 +33,5 @@ const pictureFormPrBase = {
 	"shiftY": 50
 };
 const pictureForm = Api.CreatePictureForm(pictureFormPrBase);
-
 ```
+

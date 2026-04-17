@@ -38,3 +38,4 @@ table.SetStyle(tableStyle);
 let blockLvlSdt = table.InsertInContentControl(1);
 doc.AddElement(0, blockLvlSdt);
 ```
+

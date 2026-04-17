@@ -38,3 +38,4 @@ table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 let parentRow = table.GetCell(0, 0).GetParentRow();
 parentRow.SetHeight("atLeast", 720);
 ```
+

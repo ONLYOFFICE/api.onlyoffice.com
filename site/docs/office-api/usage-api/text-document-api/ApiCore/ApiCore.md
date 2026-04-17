@@ -2,7 +2,6 @@
 
 Represents the ApiCore class.
 
-
 ## Methods
 
 | Method | Returns | Description |

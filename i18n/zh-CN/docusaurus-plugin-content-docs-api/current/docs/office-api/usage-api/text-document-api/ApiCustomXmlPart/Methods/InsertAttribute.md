@@ -35,3 +35,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("XML string representation: " + xml.GetXml());
 doc.Push(paragraph);
 ```
+

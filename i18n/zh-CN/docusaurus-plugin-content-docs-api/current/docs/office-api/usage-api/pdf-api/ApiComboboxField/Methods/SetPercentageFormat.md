@@ -33,5 +33,5 @@ page.AddObject(comboboxField);
 
 comboboxField.SetPercentageFormat(0, "us");
 comboboxField.SetValue(10);
-
 ```
+

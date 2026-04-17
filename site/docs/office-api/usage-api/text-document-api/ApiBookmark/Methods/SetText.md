@@ -39,5 +39,5 @@ let oldText = bookmark.GetText();
 bookmark.SetText("New bookmark text");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark text changed from: '" + oldText + "' to: '" + bookmark.GetText() + "'");
-
 ```
+

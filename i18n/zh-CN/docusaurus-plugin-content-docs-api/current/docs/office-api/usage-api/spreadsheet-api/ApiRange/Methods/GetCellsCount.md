@@ -31,5 +31,5 @@ let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:D10");
 range.SetValue("I was selected");
 worksheet.GetRange("A11").SetValue("Cells count in the selected range should be 40: " + range.GetCellsCount());
-
 ```
+

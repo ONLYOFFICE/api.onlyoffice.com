@@ -35,5 +35,5 @@ if (strokeObj) {
         worksheet.GetRange("A1").SetValue("Stroke fill type: " + strokeFill.GetType());
     }
 }
-
 ```
+

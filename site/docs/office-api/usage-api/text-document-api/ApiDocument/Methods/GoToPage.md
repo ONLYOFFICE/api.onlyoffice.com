@@ -42,5 +42,5 @@ oPage3.GetParaPr().SetPageBreakBefore(true);
 doc.Push(oPage3);
 doc.GoToPage(1);
 doc.EnterText("The cursor was moved to page 2.");
-
 ```
+

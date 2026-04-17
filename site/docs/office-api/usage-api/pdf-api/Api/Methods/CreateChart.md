@@ -50,3 +50,4 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
+

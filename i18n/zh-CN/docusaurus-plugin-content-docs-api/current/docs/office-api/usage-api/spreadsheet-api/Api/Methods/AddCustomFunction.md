@@ -52,3 +52,4 @@ Api.AddCustomFunction(function ADD(first, second) {
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('=ADD(1,2)');
 ```
+

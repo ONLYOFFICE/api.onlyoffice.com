@@ -60,5 +60,5 @@ paragraph.AddText("First comment and its reply are aligned to the top left corne
 paragraph.AddText("Comment from John Doe is aligned to the bottom right corner of the shape." + "\n");
 paragraph.AddLineBreak();
 paragraph.AddText("Comment's reply text: " + reply.GetText());
-
 ```
+

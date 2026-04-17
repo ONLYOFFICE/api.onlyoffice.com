@@ -40,3 +40,4 @@ let paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is: " + rotAngle + " degrees");
 page.AddObject(shape);
 ```
+

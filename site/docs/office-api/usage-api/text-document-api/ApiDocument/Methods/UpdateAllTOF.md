@@ -53,3 +53,4 @@ doc.AddElement(2, paragraph);
 paragraph.AddCaption(" - Sample shape", "Figure", false, "Arabic", false, undefined, "hyphen");
 doc.UpdateAllTOF(false);
 ```
+

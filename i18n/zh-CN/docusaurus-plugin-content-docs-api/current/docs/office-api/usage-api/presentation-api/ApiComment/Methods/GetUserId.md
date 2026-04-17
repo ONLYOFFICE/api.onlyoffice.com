@@ -45,5 +45,5 @@ const userId = comment.GetUserId();
 const paragraph = shape.GetDocContent().GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The ID of the user who commented on this presentation is " + userId);
-
 ```
+

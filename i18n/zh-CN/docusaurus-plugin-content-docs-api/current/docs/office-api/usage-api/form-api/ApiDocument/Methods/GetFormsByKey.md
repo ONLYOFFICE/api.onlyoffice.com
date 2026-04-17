@@ -42,5 +42,5 @@ let forms = doc.GetFormsByKey("FirstName");
 paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Number of forms with key 'FirstName': " + forms.length);
-
 ```
+

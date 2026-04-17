@@ -49,5 +49,5 @@ let docContent2 = shape2.GetContent();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent2.AddElement(0, paragraph);
-
 ```
+

@@ -33,3 +33,4 @@ let section = doc.GetFinalSection();
 let height = section.GetPageHeight();
 paragraph.AddText("Page height = " + height);
 ```
+

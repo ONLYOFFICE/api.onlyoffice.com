@@ -44,3 +44,4 @@ paragraph.AddText("This is page #2 and it has a footer. ");
 paragraph.AddText("Scroll down the page to see it.");
 doc.Push(paragraph);
 ```
+

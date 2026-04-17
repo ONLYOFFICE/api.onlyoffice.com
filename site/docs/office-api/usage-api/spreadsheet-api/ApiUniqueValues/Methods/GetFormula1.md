@@ -2,21 +2,7 @@
 
 Returns the first formula used by the current conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.GetFormula1();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormatCondition.GetFormula1](../../ApiFormatCondition/Methods/GetFormula1.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let formula1 = condition1.GetFormula1();
 
 worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
-
 ```
+

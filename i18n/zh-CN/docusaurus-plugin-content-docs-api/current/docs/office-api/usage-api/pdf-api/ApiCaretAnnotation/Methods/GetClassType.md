@@ -29,3 +29,4 @@ let page = doc.GetPage(0);
 page.AddObject(strikeoutAnnot);
 console.log(`Annot class type is: ${strikeoutAnnot.GetClassType()}`);
 ```
+

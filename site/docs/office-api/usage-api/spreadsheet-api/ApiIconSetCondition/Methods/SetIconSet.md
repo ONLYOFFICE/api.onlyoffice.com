@@ -44,5 +44,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Default icon set");
 iconCondition.SetIconSet("xl4Arrows");
 worksheet.GetRange("B2").SetValue("After: Changed to 4 arrows");
-
 ```
+

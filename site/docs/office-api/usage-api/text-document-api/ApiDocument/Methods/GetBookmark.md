@@ -37,5 +37,5 @@ range1.AddBookmark("Bookmark_ex");
 let bookmark = doc.GetBookmark("Bookmark_ex");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark with name '" + bookmark.GetName() + "' surrounds text: " + bookmark.GetText());
-
 ```
+

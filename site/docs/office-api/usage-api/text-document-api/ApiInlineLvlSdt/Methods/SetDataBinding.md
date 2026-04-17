@@ -41,5 +41,5 @@ contentControl.SetDataBinding({
 });
 let paragraph = doc.GetElement(0);
 paragraph.Push(contentControl);
-
 ```
+

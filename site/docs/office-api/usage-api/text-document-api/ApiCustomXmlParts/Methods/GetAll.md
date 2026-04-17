@@ -36,3 +36,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("All custom XML parts: " + allXmlParts.map(xml => xml.GetXml()).join(", "));
 doc.Push(infoParagraph);
 ```
+

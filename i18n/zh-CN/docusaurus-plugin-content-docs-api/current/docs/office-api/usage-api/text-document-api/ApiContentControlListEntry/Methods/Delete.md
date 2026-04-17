@@ -34,3 +34,4 @@ listItem.Delete();
 paragraph.AddText("Count of items inside drop-down after delete: " + contentControlList.GetElementsCount());
 doc.AddElement(0, paragraph);
 ```
+

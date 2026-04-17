@@ -33,3 +33,4 @@ range.SetValue(3);
 let format = range.GetNumberFormat();
 worksheet.GetRange("B3").SetValue("Number format: " + format);
 ```
+

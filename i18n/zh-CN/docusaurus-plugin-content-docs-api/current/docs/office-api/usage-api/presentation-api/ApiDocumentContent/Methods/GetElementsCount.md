@@ -43,5 +43,5 @@ paragraph.AddText("Number of elements inside the shape: " + docContent.GetElemen
 paragraph.AddLineBreak();
 paragraph.AddText("Line breaks are NOT counted into the number of elements.");
 slide.AddObject(shape);
-
 ```
+

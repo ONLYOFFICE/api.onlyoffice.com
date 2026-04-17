@@ -52,3 +52,4 @@ let range1 = worksheet.GetRange("B2:B6");
 let range2 = worksheet.GetRange("C2:C6");
 worksheet.GetRange("E6").SetValue(func.COUNTIFS(range1, "*apples", range2, "45"));
 ```
+

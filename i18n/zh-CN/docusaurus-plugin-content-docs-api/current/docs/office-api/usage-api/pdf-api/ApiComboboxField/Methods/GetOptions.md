@@ -2,21 +2,7 @@
 
 获取列表中的所有选项。
 
-## 语法
-
-```javascript
-expression.GetOptions();
-```
-
-`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ListOption](../../Enumeration/ListOption.md)[]
+Inherited from [ApiBaseListField.GetOptions](../../ApiBaseListField/Methods/GetOptions.md).
 
 ## 示例
 
@@ -34,3 +20,4 @@ comboboxField.AddOption('Option 3');
 let options = comboboxField.GetOptions();
 console.log('Combobox options is: ' + options);
 ```
+

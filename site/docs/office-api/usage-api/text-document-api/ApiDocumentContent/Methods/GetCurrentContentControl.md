@@ -39,5 +39,5 @@ if (currentCC) {
 	paragraph.AddText('No content control is selected.');
 }
 doc.Push(paragraph);
-
 ```
+

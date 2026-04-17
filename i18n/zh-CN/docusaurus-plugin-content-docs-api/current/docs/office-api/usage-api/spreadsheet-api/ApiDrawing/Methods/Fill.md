@@ -37,5 +37,5 @@ let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
 let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
 fill = Api.CreateRadialGradientFill([gs1, gs2]);
 drawing.Fill(fill);
-
 ```
+

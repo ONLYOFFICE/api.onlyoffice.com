@@ -48,3 +48,4 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is a paragraph with contextual spacing set to 'true' (paragraph style is applied).");
 doc.Push(paragraph);
 ```
+

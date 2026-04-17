@@ -46,5 +46,5 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Effect: ' + transitionEffect + '\n');
 paragraph.AddText('Speed: ' + transitionSpeed);
 slide.AddObject(shape);
-
 ```
+

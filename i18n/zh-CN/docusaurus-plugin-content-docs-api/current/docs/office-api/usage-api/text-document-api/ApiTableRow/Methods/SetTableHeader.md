@@ -5,23 +5,7 @@
 此元素可应用于表格结构顶部的任意数量的行，
 以生成多行表格标题。
 
-## 语法
-
-```javascript
-expression.SetTableHeader(isHeader);
-```
-
-`expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isHeader | 必需 | boolean |  | true 值表示当前表格行将在每个新页面的顶部重复显示。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTableRowPr.SetTableHeader](../../ApiTableRowPr/Methods/SetTableHeader.md).
 
 ## 示例
 
@@ -45,3 +29,4 @@ tableRowPr.SetTableHeader(true);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
+

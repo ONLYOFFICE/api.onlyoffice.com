@@ -50,5 +50,5 @@ autoFilter = worksheet.AutoFilter;
 
 worksheet.GetRange("C4").SetValue("FilterMode after SetAutoFilter:");
 worksheet.GetRange("C5").SetValue(autoFilter.GetFilterMode());
-
 ```
+

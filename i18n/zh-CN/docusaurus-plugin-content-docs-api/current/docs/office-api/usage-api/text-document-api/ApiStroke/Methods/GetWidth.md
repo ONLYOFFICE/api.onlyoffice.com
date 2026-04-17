@@ -50,5 +50,5 @@ let shape3 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, fill, stroke3);
 paragraph.AddDrawing(shape3);
 let width3 = shape3.GetLine().GetWidth();
 paragraph.AddText("Border 3: " + width3 + " EMU (" + (width3 / 12700).toFixed(2) + " pt)");
-
 ```
+

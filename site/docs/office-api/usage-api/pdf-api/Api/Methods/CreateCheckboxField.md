@@ -32,3 +32,4 @@ let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);
 page.AddObject(checkboxField);
 checkboxField.SetValue('Yes');
 ```
+

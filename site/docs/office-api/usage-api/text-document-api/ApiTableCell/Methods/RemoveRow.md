@@ -38,3 +38,4 @@ table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 table.GetCell(0, 0).RemoveRow();
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("A row with Cell 1 was removed.");
 ```
+

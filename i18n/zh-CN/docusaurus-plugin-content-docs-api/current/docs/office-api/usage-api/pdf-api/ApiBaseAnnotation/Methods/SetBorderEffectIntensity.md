@@ -33,3 +33,4 @@ page.AddObject(squareAnnot);
 squareAnnot.SetBorderEffectStyle("cloud");
 squareAnnot.SetBorderEffectIntensity(1);
 ```
+

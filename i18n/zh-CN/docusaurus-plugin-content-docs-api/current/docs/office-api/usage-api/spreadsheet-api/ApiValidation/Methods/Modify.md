@@ -42,5 +42,5 @@ const validation = range.GetValidation();
 validation.Add("xlValidateDecimal", "xlValidAlertWarning", "xlGreater", "12");
 targetRange.GetValidation().Modify("xlValidateDecimal", "xlValidAlertStop", "xlLess", "12");
 worksheet.GetRange("A6").SetValue("Data Validation is now modified for A4:A5, to accept values less than 12.");
-
 ```
+

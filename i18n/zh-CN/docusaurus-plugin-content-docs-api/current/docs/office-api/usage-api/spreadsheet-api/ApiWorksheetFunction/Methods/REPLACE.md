@@ -36,3 +36,4 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.REPLACE("Online Office", 8, 6, "portal"));
 ```
+

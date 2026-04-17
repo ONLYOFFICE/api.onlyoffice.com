@@ -8,7 +8,7 @@
 
 ## 类型
 
-对象
+array
 
 ## 属性
 
@@ -18,3 +18,4 @@
 | 1 | [pt](../Enumeration/pt.md) | y1（上） |
 | 2 | [pt](../Enumeration/pt.md) | x2（右） |
 | 3 | [pt](../Enumeration/pt.md) | y2（下） |
+

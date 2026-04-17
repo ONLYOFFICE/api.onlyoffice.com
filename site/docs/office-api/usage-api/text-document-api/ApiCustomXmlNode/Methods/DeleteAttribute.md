@@ -46,3 +46,4 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Xml after deletion: " + xml.GetXml());
 doc.Push(infoParagraph);
 ```
+

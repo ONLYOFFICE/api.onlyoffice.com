@@ -41,3 +41,4 @@ let spacingAfter = paraPr.GetSpacingAfter();
 paragraph2.AddText("Spacing after: " + spacingAfter);
 doc.Push(paragraph2);
 ```
+

@@ -48,3 +48,4 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is a paragraph styled as a bulleted list.");
 doc.Push(paragraph);
 ```
+

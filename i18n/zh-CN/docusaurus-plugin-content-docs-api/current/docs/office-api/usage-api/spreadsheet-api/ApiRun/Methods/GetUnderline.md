@@ -2,21 +2,7 @@
 
 从当前文本属性获取下划线属性。
 
-## 语法
-
-```javascript
-expression.GetUnderline();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
 
 ## 示例
 
@@ -45,3 +31,4 @@ let isUnderline = textProps.GetUnderline();
 paragraph.AddText("Underline property: " + isUnderline);
 content.Push(paragraph);
 ```
+

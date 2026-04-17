@@ -57,3 +57,4 @@ cellContent = table.GetRow(1).GetCell(1).GetContent();
 paragraph = cellContent.GetElement(0);
 paragraph.AddText("This cell font also remains default");
 ```
+

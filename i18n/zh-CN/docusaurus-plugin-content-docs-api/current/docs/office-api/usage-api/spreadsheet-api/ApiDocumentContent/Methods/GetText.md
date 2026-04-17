@@ -54,5 +54,5 @@ paragraph.AddElement(run);
 
 const text = content.GetText();
 worksheet.GetRange('A1').SetValue('Text: ' + text);
-
 ```
+

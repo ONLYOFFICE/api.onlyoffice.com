@@ -39,3 +39,4 @@ table.SetWidth("percent", 100);
 table.SetStyle(styleFromJSON);
 doc.Push(table);
 ```
+

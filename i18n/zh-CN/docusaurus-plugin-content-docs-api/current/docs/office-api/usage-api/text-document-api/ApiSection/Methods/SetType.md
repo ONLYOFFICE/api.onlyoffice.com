@@ -42,3 +42,4 @@ paragraph.AddText("As you can see, the section is not on a new page. ");
 paragraph.AddText("If this section had some other type (nextPage, oddPage, evenPage), it would start a new page.");
 doc.Push(paragraph);
 ```
+

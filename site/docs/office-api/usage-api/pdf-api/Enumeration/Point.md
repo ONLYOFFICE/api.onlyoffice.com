@@ -4,7 +4,7 @@ Axis-aligned point.
 
 ## Type
 
-Object
+object
 
 ## Properties
 
@@ -12,3 +12,4 @@ Object
 | ---- | ---- | ----------- |
 | x | [pt](../Enumeration/pt.md) | No description provided. |
 | y | [pt](../Enumeration/pt.md) | No description provided. |
+

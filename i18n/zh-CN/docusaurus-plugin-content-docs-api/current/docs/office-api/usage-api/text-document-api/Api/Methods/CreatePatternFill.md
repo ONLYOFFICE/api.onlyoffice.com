@@ -40,5 +40,5 @@ const shape = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 paragraph.AddDrawing(shape);
-
 ```
+

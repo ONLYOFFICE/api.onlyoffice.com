@@ -2,21 +2,7 @@
 
 Gets the strikeout property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetStrikeout();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
 
 ## Example
 
@@ -50,5 +36,5 @@ paragraph = Api.CreateParagraph();
 const strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
-
 ```
+

@@ -35,3 +35,4 @@ textPr.SetStrikeout(true);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text struck out with a single line.");
 ```
+

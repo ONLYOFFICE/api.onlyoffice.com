@@ -37,3 +37,4 @@ paragraph1.Delete();
 paragraph2.AddLineBreak();
 paragraph2.AddText("The sample paragraph №1 was removed.");
 ```
+

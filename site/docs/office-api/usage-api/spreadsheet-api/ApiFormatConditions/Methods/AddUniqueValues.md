@@ -44,5 +44,5 @@ let formatConditions = dataRange.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 uniqueValuesCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
-
 ```
+

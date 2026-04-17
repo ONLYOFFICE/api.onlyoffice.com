@@ -50,3 +50,4 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This last line would be displayed on the next page, if we had not used the set widow control method.");
 doc.Push(paragraph);
 ```
+

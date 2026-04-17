@@ -41,5 +41,5 @@ shape.SetSize(300 * 36000, 130 * 36000);
 const placeholder = Api.CreatePlaceholder("picture");
 shape.SetPlaceholder(placeholder);
 slide.AddObject(shape);
-
 ```
+

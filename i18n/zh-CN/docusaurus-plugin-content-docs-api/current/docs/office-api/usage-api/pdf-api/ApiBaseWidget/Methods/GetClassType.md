@@ -16,7 +16,7 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"baseWidget"
 
 ## 示例
 
@@ -30,5 +30,5 @@ page.AddObject(textField);
 
 let widgets = textField.GetAllWidgets();
 textField.SetValue(widgets[0].GetClassType());
-
 ```
+

@@ -33,3 +33,4 @@ let geometry = shape.GetGeometry();
 paragraph.AddText("Preset: " + geometry.GetPreset() + ", IsCustom: " + geometry.IsCustom());
 paragraph.AddDrawing(shape);
 ```
+

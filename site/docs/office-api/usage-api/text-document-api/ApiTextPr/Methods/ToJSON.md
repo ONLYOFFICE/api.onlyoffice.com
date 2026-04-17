@@ -39,3 +39,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the font size set to 15 points using the text properties.");
 paragraph.SetTextPr(textPrFromJSON);
 ```
+

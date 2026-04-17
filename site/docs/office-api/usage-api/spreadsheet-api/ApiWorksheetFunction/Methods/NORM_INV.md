@@ -42,5 +42,5 @@ let func = Api.WorksheetFunction;
 let ans = func.NORMSDIST(value);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

@@ -2,23 +2,7 @@
 
 Places a cursor before/after the current form.
 
-## Syntax
-
-```javascript
-expression.MoveCursorOutside(isAfter);
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isAfter | Optional | boolean | true | Specifies whether a cursor will be placed before (false) or after (true) the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.MoveCursorOutside](../../ApiFormBase/Methods/MoveCursorOutside.md).
 
 ## Example
 
@@ -36,3 +20,4 @@ paragraph.AddElement(textForm);
 textForm.SetText("The cursor will be placed after the current form.");
 textForm.MoveCursorOutside(true);
 ```
+

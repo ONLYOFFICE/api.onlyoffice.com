@@ -45,5 +45,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Using number values");
 iconCondition.SetPercentileValues(true);
 worksheet.GetRange("B2").SetValue("After: Using percentile values");
-
 ```
+

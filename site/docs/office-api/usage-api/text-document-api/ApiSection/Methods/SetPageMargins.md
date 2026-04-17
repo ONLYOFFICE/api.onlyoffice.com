@@ -42,3 +42,4 @@ paragraph.AddText("The bottom margin is 4 inches high (5760 twentieths of a poin
 let section = doc.GetFinalSection();
 section.SetPageMargins(7200, 2880, 1440, 5760);
 ```
+

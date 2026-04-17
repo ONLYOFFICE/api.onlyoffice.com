@@ -31,5 +31,5 @@ let innerSdt = Api.CreateBlockLvlSdt();
 innerSdt.GetContent().GetElement(0).AddText("This is a block text content control added in another content control.");
 blockLvlSdt.AddElement(innerSdt, 0);
 innerSdt.GetParentContentControl().SetAlias("Parent content control");
-
 ```
+

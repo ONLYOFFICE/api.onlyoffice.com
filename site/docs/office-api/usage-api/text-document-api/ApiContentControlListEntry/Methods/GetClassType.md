@@ -32,3 +32,4 @@ let classType = listItem.GetClassType();
 paragraph.AddText("Class type of the content control list entry:" + classType);
 doc.AddElement(0, paragraph);
 ```
+

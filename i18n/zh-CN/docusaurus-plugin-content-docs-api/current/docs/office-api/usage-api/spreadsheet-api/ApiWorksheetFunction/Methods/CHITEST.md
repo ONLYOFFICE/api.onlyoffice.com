@@ -54,3 +54,4 @@ let range1 = worksheet.GetRange("A2:B4");
 let range2 = worksheet.GetRange("C2:D4");
 worksheet.GetRange("D6").SetValue(func.CHITEST(range1, range2));
 ```
+

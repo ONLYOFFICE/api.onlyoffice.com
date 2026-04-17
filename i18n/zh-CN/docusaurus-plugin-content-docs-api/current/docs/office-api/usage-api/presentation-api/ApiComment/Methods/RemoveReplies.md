@@ -56,5 +56,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment replies count: " + arrComments[0].GetRepliesCount());
 paragraph.AddLineBreak();
 paragraph.AddText("Own reply was removed, but other two replies are still here.");
-
 ```
+

@@ -32,5 +32,5 @@ expression.SetPrintHeadings(bPrint);
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintHeadings(true);
 worksheet.GetRange("A1").SetValue("Row and column headings will be printed with this page: " + worksheet.GetPrintHeadings());
-
 ```
+

@@ -56,5 +56,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New duration: ' + duration + 'ms (2 seconds)');
 slide.AddObject(infoShape);
-
 ```
+

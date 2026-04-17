@@ -46,5 +46,5 @@ let aboveBelow = condition.GetAboveBelow();
 
 worksheet.GetRange("C1").SetValue("Above Average:");
 worksheet.GetRange("C2").SetValue(aboveBelow ? "Yes" : "No");
-
 ```
+

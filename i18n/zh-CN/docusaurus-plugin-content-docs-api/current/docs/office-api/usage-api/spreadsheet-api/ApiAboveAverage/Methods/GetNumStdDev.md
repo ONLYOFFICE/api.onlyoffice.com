@@ -46,5 +46,5 @@ let numStdDev = condition.GetNumStdDev();
 
 worksheet.GetRange("C1").SetValue("Std Deviations:");
 worksheet.GetRange("C2").SetValue(numStdDev.toString());
-
 ```
+

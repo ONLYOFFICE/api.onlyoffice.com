@@ -45,5 +45,5 @@ let direction = dataBar.GetDirection();
 
 worksheet.GetRange("C1").SetValue("Direction:");
 worksheet.GetRange("C2").SetValue(direction);
-
 ```
+

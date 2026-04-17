@@ -33,5 +33,5 @@ worksheet.GetRange("A1").SetValue("Original shape with no fill");
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 worksheet.GetRange("A2").SetValue("Fill changed to red");
-
 ```
+

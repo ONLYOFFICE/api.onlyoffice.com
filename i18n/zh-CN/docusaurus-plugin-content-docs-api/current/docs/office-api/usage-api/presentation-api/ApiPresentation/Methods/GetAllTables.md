@@ -54,5 +54,5 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().length);
 paragraph.AddLineBreak();
 paragraph.AddText("Total number of tables in presentation: " + presentation.GetAllTables().length);
-
 ```
+

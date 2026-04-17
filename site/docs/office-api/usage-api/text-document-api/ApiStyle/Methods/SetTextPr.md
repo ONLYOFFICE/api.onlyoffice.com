@@ -41,3 +41,4 @@ paragraph.AddText("This is a paragraph with the text color, font family and font
 paragraph.AddText("We do not change the style of the paragraph itself. ");
 paragraph.AddText("Only document-wide text styles are applied.");
 ```
+

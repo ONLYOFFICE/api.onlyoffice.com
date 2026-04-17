@@ -27,3 +27,4 @@ window.Asc.plugin.executeMethod ("GetCurrentSentence", ["entirely"], function (r
     console.log (res)
 });
 ```
+

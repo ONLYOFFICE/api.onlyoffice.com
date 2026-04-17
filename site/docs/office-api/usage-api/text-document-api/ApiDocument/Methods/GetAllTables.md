@@ -2,21 +2,7 @@
 
 Returns an array of all tables from the current document content.
 
-## Syntax
-
-```javascript
-expression.GetAllTables();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiTable](../../ApiTable/ApiTable.md)[]
+Inherited from [ApiDocumentContent.GetAllTables](../../ApiDocumentContent/Methods/GetAllTables.md).
 
 ## Example
 
@@ -46,3 +32,4 @@ paragraph.AddText("This is just a sample text in the first cell.");
 let cell = tables[0].GetCell(0, 0);
 tables[0].AddElement(cell, 0, paragraph);
 ```
+

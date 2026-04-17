@@ -64,5 +64,5 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirth Date: " + birthDate.toDateString() + " (" + typeof birthDate + ")");
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
-
 ```
+

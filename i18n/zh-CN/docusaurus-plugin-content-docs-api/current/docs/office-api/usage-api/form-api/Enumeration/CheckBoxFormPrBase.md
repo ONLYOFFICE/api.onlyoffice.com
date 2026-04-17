@@ -4,14 +4,13 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | radio | boolean | 指定当前复选框是否为单选按钮。在这种情况下，key 参数被视为单选按钮组的标识符。 |
-
 
 ## 示例
 
@@ -25,3 +24,4 @@
 let checkBoxFormPrBase = {"radio": true};
 let checkBoxForm = Api.CreateCheckBoxForm(checkBoxFormPrBase)
 ```
+

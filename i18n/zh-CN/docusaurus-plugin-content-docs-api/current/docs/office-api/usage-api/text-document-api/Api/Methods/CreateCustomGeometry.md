@@ -153,3 +153,4 @@ paragraph.AddText("Custom geometry - Is custom: " + customGeometry.IsCustom());
 paragraph.AddLineBreak();
 paragraph.AddDrawing(shape);
 ```
+

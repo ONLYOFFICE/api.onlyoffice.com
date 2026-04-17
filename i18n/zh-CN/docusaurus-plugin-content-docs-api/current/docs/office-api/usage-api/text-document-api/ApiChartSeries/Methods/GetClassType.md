@@ -49,3 +49,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The ApiChartSeries class type: " + classType);
 doc.Push(paragraph);
 ```
+

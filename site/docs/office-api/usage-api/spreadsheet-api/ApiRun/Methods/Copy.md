@@ -39,3 +39,4 @@ paragraph.AddElement(run);
 let copyRun = run.Copy();
 paragraph.AddElement(copyRun);
 ```
+

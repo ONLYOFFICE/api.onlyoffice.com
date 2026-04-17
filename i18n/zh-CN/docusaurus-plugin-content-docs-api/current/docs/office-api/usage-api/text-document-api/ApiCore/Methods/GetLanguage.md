@@ -30,5 +30,5 @@ core.SetLanguage("en-US");
 const language = core.GetLanguage();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Language: " + language);
-
 ```
+

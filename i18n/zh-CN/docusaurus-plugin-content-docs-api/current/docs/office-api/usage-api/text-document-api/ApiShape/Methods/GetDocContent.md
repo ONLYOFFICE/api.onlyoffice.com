@@ -39,3 +39,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent.AddElement(0, paragraph);
 ```
+

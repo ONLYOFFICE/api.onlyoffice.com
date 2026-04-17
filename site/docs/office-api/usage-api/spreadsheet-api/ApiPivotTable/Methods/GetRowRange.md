@@ -60,3 +60,4 @@ pivotTable.AddDataField('Price');
 
 pivotTable.GetRowRange().Select();
 ```
+

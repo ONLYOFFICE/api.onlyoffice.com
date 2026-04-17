@@ -55,6 +55,5 @@ drawing1.Select(true);
 drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
-
-
 ```
+

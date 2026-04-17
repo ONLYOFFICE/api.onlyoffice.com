@@ -55,3 +55,4 @@ paragraph.AddText("No need to add anything additionally to it. ");
 paragraph.AddText("The borders between the paragraphs have already been set.");
 doc.Push(paragraph);
 ```
+

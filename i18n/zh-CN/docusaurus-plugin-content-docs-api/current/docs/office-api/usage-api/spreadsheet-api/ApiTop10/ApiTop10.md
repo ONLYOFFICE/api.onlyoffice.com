@@ -1,6 +1,6 @@
 # ApiTop10
 
-表示 ApiTop10 类。
+ApiTop10 is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## 属性
 

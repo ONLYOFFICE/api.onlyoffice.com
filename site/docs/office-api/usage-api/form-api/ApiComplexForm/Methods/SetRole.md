@@ -2,23 +2,7 @@
 
 Sets the role to the current form.
 
-## Syntax
-
-```javascript
-expression.SetRole(role);
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| role | Required | string |  | The role which will be attached to the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
 
 ## Example
 
@@ -50,5 +34,5 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```
+

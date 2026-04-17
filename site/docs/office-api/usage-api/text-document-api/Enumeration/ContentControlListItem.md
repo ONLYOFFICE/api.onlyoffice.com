@@ -12,3 +12,4 @@ Object
 | ---- | ---- | ----------- |
 | display | string | The text to be displayed in the combo box or drop-down list. |
 | value | string | The value associated with the item. |
+

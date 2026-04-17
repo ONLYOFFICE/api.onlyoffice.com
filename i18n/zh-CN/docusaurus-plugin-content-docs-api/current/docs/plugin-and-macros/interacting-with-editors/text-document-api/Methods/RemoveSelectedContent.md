@@ -23,3 +23,4 @@ expression.RemoveSelectedContent();
 ```javascript
 window.Asc.plugin.executeMethod ("RemoveSelectedContent");
 ```
+

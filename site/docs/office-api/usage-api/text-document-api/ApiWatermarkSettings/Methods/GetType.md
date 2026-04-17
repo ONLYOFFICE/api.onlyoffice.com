@@ -35,3 +35,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Type = " + classType);
 doc.Push(paragraph);
 ```
+

@@ -30,5 +30,5 @@ const paragraph = doc.GetElement(0);
 paragraph.AddText('Is themeColor an auto color? ' + themeColor.IsAutoColor());
 paragraph.AddLineBreak();
 paragraph.AddText('Is autoColor an auto color? ' + autoColor.IsAutoColor());
-
 ```
+

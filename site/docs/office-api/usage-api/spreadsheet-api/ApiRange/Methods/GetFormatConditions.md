@@ -33,5 +33,5 @@ const dataRange = worksheet.GetRange('A2:A4');
 const formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddDatabar();
 worksheet.GetRange('C1').SetValue('Format conditions count: ' + formatConditions.GetCount());
-
 ```
+

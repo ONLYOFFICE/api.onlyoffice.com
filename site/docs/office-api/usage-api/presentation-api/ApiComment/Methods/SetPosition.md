@@ -46,5 +46,5 @@ arrComments[0].SetPosition(Api.MillimetersToEmus(20 + 300), Api.MillimetersToEmu
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The comment position was changed from (0, 0) to (320, 165).');
-
 ```
+

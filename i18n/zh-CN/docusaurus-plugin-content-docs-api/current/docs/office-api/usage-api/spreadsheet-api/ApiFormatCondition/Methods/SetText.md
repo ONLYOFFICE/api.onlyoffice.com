@@ -52,5 +52,5 @@ condition1.SetText("Grape");
 
 worksheet.GetRange("C4").SetValue("New text:");
 worksheet.GetRange("C5").SetValue(condition1.GetText());
-
 ```
+

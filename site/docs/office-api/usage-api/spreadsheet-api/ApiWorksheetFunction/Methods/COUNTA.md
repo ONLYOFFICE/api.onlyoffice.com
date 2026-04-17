@@ -47,3 +47,4 @@ let func = Api.WorksheetFunction;
 let ans = func.COUNTA(worksheet.GetRange("A1:C3"));
 worksheet.GetRange("D3").SetValue(ans);
 ```
+

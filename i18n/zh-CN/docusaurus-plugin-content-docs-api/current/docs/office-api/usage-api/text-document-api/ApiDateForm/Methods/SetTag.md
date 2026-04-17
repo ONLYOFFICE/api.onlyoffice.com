@@ -2,23 +2,7 @@
 
 为当前表单设置标签属性。
 
-## 语法
-
-```javascript
-expression.SetTag(tag);
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| tag | 必需 | string |  | 将添加到当前容器的标签。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md).
 
 ## 示例
 
@@ -46,5 +30,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```
+

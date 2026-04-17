@@ -65,5 +65,5 @@ for (let i = 0; i < regionItems.length; i += 1) {
     let status = isVisible ? 'Visible' : 'Hidden';
     pivotWorksheet.GetRangeByNumber(8 + i, 1).SetValue(regionItems[i].GetName() + ': ' + status);
 }
-
 ```
+

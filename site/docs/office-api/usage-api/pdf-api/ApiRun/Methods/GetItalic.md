@@ -2,21 +2,7 @@
 
 Gets the italic property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetItalic();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
 ## Example
 
@@ -50,5 +36,5 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
-
 ```
+

@@ -35,3 +35,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We used range in previous paragraph with start position: " + range.GetStartPos());
 doc.Push(paragraph);
 ```
+

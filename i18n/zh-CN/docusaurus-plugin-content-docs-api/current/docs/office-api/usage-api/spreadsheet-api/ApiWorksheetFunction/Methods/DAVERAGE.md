@@ -48,3 +48,4 @@ let range1 = worksheet.GetRange("A1:C3");
 let range2 = worksheet.GetRange("E1:E2");
 worksheet.GetRange("E4").SetValue(func.DAVERAGE(range1, "Sales", range2));
 ```
+

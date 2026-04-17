@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether to show items with no data.
 
-## Syntax
-
-```javascript
-expression.GetShowAllItems();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetShowAllItems](../../ApiPivotField/Methods/GetShowAllItems.md).
 
 ## Example
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A12').SetValue('Style get show all items');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetShowAllItems());
 ```
+

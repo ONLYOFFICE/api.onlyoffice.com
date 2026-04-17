@@ -34,3 +34,4 @@ comboboxField.AddOption('Option 3');
 let options = comboboxField.GetOptions();
 console.log('Combobox options is: ' + options);
 ```
+

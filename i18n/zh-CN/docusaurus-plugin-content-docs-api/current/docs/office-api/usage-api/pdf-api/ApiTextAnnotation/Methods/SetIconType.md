@@ -36,3 +36,4 @@ let page = doc.GetPage(0);
 page.AddObject(textAnnot);
 console.log(`Changed icon from: ${oldIcon} to ${newIcon}`);
 ```
+

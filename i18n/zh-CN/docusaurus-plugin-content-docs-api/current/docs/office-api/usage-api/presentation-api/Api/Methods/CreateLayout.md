@@ -48,5 +48,5 @@ slide1.ApplyLayout(layout);
 const slide2 = Api.CreateSlide();
 presentation.AddSlide(slide2);
 slide2.ApplyLayout(layout);
-
 ```
+

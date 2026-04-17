@@ -67,3 +67,4 @@ pivotField.SetLayoutBlankLine(true);
 pivotWorksheet.GetRange('A14').SetValue('Region blank line');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutBlankLine());
 ```
+

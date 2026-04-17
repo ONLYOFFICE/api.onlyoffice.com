@@ -52,5 +52,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 layoutFromJSON.AddObject(shape);
 slide.ApplyLayout(layoutFromJSON);
-
 ```
+

@@ -42,3 +42,4 @@ content.Push(paragraph2);
 let previousParagraph = paragraph2.GetPrevious();
 previousParagraph.SetBold(true);
 ```
+

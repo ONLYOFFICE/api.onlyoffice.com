@@ -38,5 +38,5 @@ originalRange.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
 let resizedRange = originalRange.Resize(originalRange.Rows.Count + 2, originalRange.Columns.Count + 1);
 resizedRange.SetBorders("InsideHorizontal", "Thick", Api.CreateColorFromRGB(255, 111, 61));
 resizedRange.SetBorders("InsideVertical", "Thick", Api.CreateColorFromRGB(255, 111, 61));
-
 ```
+

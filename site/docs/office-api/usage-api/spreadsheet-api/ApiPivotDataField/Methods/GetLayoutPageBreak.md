@@ -2,21 +2,7 @@
 
 Returns the setting which specifies whether to insert a page break after each field.
 
-## Syntax
-
-```javascript
-expression.GetLayoutPageBreak();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md).
 
 ## Example
 
@@ -63,3 +49,4 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
+

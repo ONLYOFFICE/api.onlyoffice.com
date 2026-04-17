@@ -49,5 +49,5 @@ slide.AddObject(shape);
 
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Placeholder index set to ' + placeholder.GetIndex());
-
 ```
+

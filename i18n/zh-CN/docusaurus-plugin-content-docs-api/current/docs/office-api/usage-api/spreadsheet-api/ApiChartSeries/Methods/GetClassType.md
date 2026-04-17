@@ -49,3 +49,4 @@ let series = chart.GetSeries(0);
 let classType = series.GetClassType();
 worksheet.GetRange("F1").SetValue("Class Type = " + classType);
 ```
+

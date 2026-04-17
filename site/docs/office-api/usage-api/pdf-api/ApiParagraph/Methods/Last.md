@@ -45,5 +45,5 @@ paragraph.Push(run2);
 const lastElement = paragraph.Last();
 lastElement.SetBold(true);
 page.AddObject(shape);
-
 ```
+

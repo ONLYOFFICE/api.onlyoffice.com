@@ -43,5 +43,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Shows icons and values");
 iconCondition.SetShowIconOnly(true);
 worksheet.GetRange("B2").SetValue("After: Shows icons only");
-
 ```
+

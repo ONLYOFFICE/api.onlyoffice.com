@@ -2,23 +2,7 @@
 
 Sets the background color to the current form.
 
-## Syntax
-
-```javascript
-expression.SetBackgroundColor(color);
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetBackgroundColor](../../ApiFormBase/Methods/SetBackgroundColor.md).
 
 ## Example
 
@@ -35,3 +19,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 ```
+

@@ -34,3 +34,4 @@ let employeeNode = xml.GetNodes('/company/department/employee')[0];
 let xpath = employeeNode.GetXPath();
 worksheet.GetRange("A1").SetValue("XPath of employee node: " + xpath);
 ```
+

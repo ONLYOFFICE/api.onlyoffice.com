@@ -2,21 +2,7 @@
 
 从文档内容返回形状对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllShapes();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiShape](../../ApiShape/ApiShape.md)[]
+Inherited from [ApiDocumentContent.GetAllShapes](../../ApiDocumentContent/Methods/GetAllShapes.md).
 
 ## 示例
 
@@ -48,3 +34,4 @@ paragraph.AddText("Class Type = " + classType);
 paragraph.SetColor(Api.HexColor('#333333'));
 shapes[0].SetVerticalTextAlign("bottom");
 ```
+

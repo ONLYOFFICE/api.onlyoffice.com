@@ -6,8 +6,6 @@
 
 number
 
-
-
 ## 示例
 
 此示例将段落行距设置为 1 行。
@@ -19,3 +17,4 @@ number
 
 paraPr.SetSpacingLine(240, "auto");
 ```
+

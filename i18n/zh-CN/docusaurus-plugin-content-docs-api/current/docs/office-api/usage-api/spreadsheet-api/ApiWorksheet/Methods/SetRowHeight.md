@@ -33,5 +33,5 @@ expression.SetRowHeight(nRow, nHeight);
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRowHeight(0, 30);
-
 ```
+

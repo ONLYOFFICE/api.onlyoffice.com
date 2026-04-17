@@ -31,3 +31,4 @@ let worksheet = Api.GetActiveSheet();
 let bottomMargin = worksheet.GetBottomMargin();
 worksheet.GetRange("A1").SetValue("Bottom margin: " + bottomMargin + " mm");
 ```
+

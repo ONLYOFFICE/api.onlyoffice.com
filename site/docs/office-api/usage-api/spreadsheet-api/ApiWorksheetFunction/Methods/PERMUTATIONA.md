@@ -43,5 +43,5 @@ let func = Api.WorksheetFunction;
 let ans = func.PERMUTATIONA(number, number_chosen);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

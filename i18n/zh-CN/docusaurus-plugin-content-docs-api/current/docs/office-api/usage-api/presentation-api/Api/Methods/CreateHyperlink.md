@@ -38,5 +38,5 @@ slide.AddObject(image);
 
 const hyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
 image.SetHyperlink(hyperlink);
-
 ```
+

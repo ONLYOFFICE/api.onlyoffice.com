@@ -38,3 +38,4 @@ paragraph.AddText("ONLYOFFICE Copyright Document Builder");
 let range = doc.GetRange(10, 19);
 range.SetVertAlign("superscript");
 ```
+

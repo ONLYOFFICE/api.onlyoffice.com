@@ -45,5 +45,5 @@ Api.GetPivotByName(pivotTable.GetName()).AddFields({
 });
 
 Api.GetPivotByName(pivotTable.GetName()).AddDataField('Price');
-
 ```
+

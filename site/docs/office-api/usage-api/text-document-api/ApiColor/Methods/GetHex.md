@@ -41,5 +41,5 @@ paragraph.AddLineBreak();
 paragraph.AddText('Hex of rgbaColor: ' + rgbaColorHex);
 paragraph.AddLineBreak();
 paragraph.AddText('Hex for theme colors and auto color are always opaque black; actual color depends on the document theme.');
-
 ```
+

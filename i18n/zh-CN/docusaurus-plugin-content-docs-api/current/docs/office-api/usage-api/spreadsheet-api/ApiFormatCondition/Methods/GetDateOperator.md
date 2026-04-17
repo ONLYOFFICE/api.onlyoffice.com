@@ -47,5 +47,5 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```
+

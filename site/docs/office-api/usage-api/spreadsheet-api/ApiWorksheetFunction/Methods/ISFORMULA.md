@@ -39,3 +39,4 @@ let func = Api.WorksheetFunction;
 let result = func.ISFORMULA(worksheet.GetRange("B3"));
 worksheet.GetRange("C3").SetValue(result);
 ```
+

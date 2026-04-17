@@ -41,3 +41,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing width: " + width / 36000 + " mm");
 docContent.AddElement(0, paragraph);
 ```
+

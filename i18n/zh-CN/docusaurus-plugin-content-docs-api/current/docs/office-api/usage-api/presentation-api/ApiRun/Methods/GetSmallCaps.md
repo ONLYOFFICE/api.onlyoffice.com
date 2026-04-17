@@ -2,21 +2,7 @@
 
 返回具有当前文本属性的文本是否显示为比实际字体大小小两磅的大写字母。
 
-## 语法
-
-```javascript
-expression.GetSmallCaps();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md).
 
 ## 示例
 
@@ -51,5 +37,5 @@ paragraph = Api.CreateParagraph();
 const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
-
 ```
+

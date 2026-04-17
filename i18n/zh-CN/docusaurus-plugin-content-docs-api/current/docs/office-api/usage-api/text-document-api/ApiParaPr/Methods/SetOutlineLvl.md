@@ -37,5 +37,5 @@ const levelAfter = paraPr.GetOutlineLvl();
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```
+

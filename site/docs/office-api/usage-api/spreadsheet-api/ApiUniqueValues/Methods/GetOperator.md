@@ -2,21 +2,7 @@
 
 Returns the format condition operator.
 
-## Syntax
-
-```javascript
-expression.GetOperator();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+Inherited from [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md).
 
 ## Example
 
@@ -47,5 +33,5 @@ let operator = condition1.GetOperator();
 
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
-
 ```
+

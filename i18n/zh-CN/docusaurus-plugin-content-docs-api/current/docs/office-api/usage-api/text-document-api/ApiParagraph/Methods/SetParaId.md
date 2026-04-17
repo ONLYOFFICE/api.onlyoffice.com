@@ -40,5 +40,5 @@ const retrievedId = paragraph.GetParaId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Retrieved paragraph ID: ' + retrievedId);
 doc.Push(paragraph);
-
 ```
+

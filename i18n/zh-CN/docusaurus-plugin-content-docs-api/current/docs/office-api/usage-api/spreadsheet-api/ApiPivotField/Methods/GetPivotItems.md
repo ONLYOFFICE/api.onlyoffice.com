@@ -70,3 +70,4 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
 }
 ```
+

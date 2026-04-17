@@ -39,5 +39,5 @@ const classType = hyperlink.GetClassType();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Class Type of ApiHyperlink instance is \"' + classType + '\".');
-
 ```
+

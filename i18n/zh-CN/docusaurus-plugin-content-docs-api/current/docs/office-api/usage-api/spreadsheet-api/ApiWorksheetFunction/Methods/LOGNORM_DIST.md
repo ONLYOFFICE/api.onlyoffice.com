@@ -55,3 +55,4 @@ let ans = func.LOGNORM_DIST(xValue, mean, standardDeviation, cummulative);
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
 ```
+

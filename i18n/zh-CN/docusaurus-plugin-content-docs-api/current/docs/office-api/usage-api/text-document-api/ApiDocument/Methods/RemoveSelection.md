@@ -37,3 +37,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The selection from the word 'Api' was removed.");
 doc.Push(paragraph);
 ```
+

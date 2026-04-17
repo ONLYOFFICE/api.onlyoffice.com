@@ -2,21 +2,7 @@
 
 返回段落首行缩进。
 
-## 语法
-
-```javascript
-expression.GetIndFirstLine();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md).
 
 ## 示例
 
@@ -52,5 +38,5 @@ const indFirstLine = paraPr.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
-
 ```
+

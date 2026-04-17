@@ -65,3 +65,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A12').SetValue('Table Style Row Stripes');
 pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetTableStyleRowStripes());
 ```
+

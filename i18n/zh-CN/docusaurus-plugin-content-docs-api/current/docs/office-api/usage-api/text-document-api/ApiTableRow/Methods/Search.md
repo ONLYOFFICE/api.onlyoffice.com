@@ -43,3 +43,4 @@ doc.Push(table);
 let rowSearch = row.Search("tex", true);
 rowSearch[1].SetBold("true");
 ```
+

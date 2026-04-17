@@ -45,3 +45,4 @@ for (let j = 0; j < numbers.length; j++) {
 let range = worksheet.GetRange("A1:B3");
 worksheet.GetRange("D3").SetValue(func.COUNTIF(range, "*es"));
 ```
+

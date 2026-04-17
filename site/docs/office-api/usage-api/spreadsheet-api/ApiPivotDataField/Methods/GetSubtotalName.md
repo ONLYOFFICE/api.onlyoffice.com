@@ -2,21 +2,7 @@
 
 Returns the text label displayed in the subtotal column or row heading in the specified pivot table report.
 
-## Syntax
-
-```javascript
-expression.GetSubtotalName();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiPivotField.GetSubtotalName](../../ApiPivotField/Methods/GetSubtotalName.md).
 
 ## Example
 
@@ -65,3 +51,4 @@ pivotField.SetSubtotalName('My name');
 pivotWorksheet.GetRange('A14').SetValue('Region subtotal name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetSubtotalName());
 ```
+

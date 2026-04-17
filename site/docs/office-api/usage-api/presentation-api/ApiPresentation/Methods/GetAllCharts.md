@@ -48,5 +48,5 @@ const chartsCount = presentation.GetAllCharts().length;
 paragraph.AddText('Charts: ' + chartsCount);
 label.SetPosition(36000, 170 * 36000);
 slide.AddObject(label);
-
 ```
+

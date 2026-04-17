@@ -40,3 +40,4 @@ let cell = table.MergeCells([table.GetRow(1).GetCell(1), table.GetRow(1).GetCell
 cell.GetContent().GetElement(0).AddText("Merged cell");
 doc.Push(table);
 ```
+

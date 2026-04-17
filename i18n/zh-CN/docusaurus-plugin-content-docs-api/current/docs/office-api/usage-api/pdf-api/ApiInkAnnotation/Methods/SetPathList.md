@@ -34,3 +34,4 @@ let page = doc.GetPage(0);
 page.AddObject(inkAnnot);
 console.log("We set path list to ink annot");
 ```
+

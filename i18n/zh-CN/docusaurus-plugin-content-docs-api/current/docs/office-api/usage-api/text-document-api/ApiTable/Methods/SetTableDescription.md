@@ -2,23 +2,7 @@
 
 设置表格说明。
 
-## 语法
-
-```javascript
-expression.SetTableDescription(sDescr);
-```
-
-`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sDescr | 必需 | string |  | 要设置的表格说明。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiTablePr.SetTableDescription](../../ApiTablePr/Methods/SetTableDescription.md).
 
 ## 示例
 
@@ -41,3 +25,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
+

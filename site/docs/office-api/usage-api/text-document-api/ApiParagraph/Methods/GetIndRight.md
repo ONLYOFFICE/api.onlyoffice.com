@@ -2,21 +2,7 @@
 
 Returns the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndRight();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## Example
 
@@ -42,3 +28,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 doc.Push(paragraph);
 ```
+

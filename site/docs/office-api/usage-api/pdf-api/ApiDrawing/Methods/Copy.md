@@ -39,3 +39,4 @@ const copyShape = shape.Copy();
 const newPage = doc.AddPage(1);
 newPage.AddObject(copyShape);
 ```
+

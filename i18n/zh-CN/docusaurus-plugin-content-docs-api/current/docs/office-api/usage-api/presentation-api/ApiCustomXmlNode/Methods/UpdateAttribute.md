@@ -46,5 +46,5 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after update: ' + xml.GetXml());
-
 ```
+

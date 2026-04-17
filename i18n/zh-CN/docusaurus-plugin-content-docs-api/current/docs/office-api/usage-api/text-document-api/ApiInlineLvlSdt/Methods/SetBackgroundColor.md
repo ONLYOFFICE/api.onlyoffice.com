@@ -33,5 +33,5 @@ run.AddText("This is an inline text content control with a transparent blue back
 inlineLvlSdt.AddElement(run, 0);
 inlineLvlSdt.SetBackgroundColor(Api.RGBA(0, 0, 255, 40));
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```
+

@@ -65,3 +65,4 @@ let pivotItem = pivotField.GetPivotItems()[0];
 pivotWorksheet.GetRange('A15').SetValue(pivotItem.GetName() + ' parent:');
 pivotWorksheet.GetRange('B15').SetValue(pivotItem.GetParent().GetName());
 ```
+

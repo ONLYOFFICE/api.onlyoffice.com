@@ -41,3 +41,4 @@ paragraph.AddText("This is the first paragraph with the right offset of 2 inches
 paragraph.AddText("This offset is set by the paragraph style. No paragraph inline style is applied. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 ```
+

@@ -38,5 +38,5 @@ originalRange.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
 let offsetRange = originalRange.Offset(2, 1);
 offsetRange.SetValue("Offset");
 offsetRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```
+

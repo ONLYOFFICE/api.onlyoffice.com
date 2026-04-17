@@ -32,5 +32,5 @@ core.SetContentStatus("Final");
 const contentStatus = core.GetContentStatus();
 const paragraph = doc.GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
-
 ```
+

@@ -47,5 +47,5 @@ const after = comment.IsSolved() ? 'solved' : 'not solved';
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Originally comment was ' + before + ', but currently it is ' + after);
-
 ```
+

@@ -72,5 +72,5 @@ paragraph.SetJc("left");
 paragraph.AddText("This text is written in the Times New Roman font.");
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

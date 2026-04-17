@@ -32,3 +32,4 @@ let range = worksheet.GetRange("A1:E2");
 range.SetValue("I was selected");
 worksheet.GetRange("A3").SetValue("Columns count in the selected range should be 5: " + range.GetColumnsCount());
 ```
+

@@ -51,5 +51,5 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
-
 ```
+

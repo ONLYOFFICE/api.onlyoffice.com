@@ -32,3 +32,4 @@ window.Asc.plugin.executeMethod ("ReplaceTextSmart", [Asc.scope.arr, String.from
         });
 });
 ```
+

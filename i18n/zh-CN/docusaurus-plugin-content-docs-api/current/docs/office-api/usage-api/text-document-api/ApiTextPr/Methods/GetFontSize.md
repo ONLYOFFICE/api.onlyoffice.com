@@ -48,3 +48,4 @@ let fontSize = textPr.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 doc.Push(paragraph);
 ```
+

@@ -34,3 +34,4 @@ window.Asc.plugin.executeMethod ("SearchAndReplace", [
     }
 ]);
 ```
+

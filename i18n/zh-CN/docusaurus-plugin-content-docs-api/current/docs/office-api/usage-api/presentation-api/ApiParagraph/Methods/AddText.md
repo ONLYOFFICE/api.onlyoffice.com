@@ -47,5 +47,5 @@ paragraph.AddText("This is a text inside the shape aligned left.");
 paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 slide.AddObject(shape);
-
 ```
+

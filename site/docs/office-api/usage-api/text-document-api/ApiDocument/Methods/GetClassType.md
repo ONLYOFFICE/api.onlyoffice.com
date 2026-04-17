@@ -33,3 +33,4 @@ let classType = doc.GetClassType();
 paragraph = doc.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 ```
+

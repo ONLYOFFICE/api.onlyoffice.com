@@ -2,21 +2,7 @@
 
 从当前文本属性获取字体大小。
 
-## 语法
-
-```javascript
-expression.GetFontSize();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[hps](../../Enumeration/hps.md)
+Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
 ## 示例
 
@@ -45,3 +31,4 @@ let fontSize = textProps.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 content.Push(paragraph);
 ```
+

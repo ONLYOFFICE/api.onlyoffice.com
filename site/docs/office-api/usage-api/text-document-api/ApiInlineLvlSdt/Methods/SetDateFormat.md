@@ -33,3 +33,4 @@ let paragraph1 = Api.CreateParagraph();
 contentControl.SetDateFormat('dd.mm.yyyy');
 contentControl.SetDate(new Date(1998, 2, 1));
 ```
+

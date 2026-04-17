@@ -44,3 +44,4 @@ run.AddText("We removed all the paragraph elements and added a new text run insi
 paragraph.AddElement(run);
 content.Push(paragraph);
 ```
+

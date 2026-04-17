@@ -1,7 +1,6 @@
 # ApiChart
 
-表示 ApiChart 类。
-
+ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## 方法
 
@@ -12,6 +11,7 @@
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | 返回图表空间中的所有系列。 |
 | [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | 返回图表对象的类型。 |
 | [GetClassType](./Methods/GetClassType.md) | "chart" | 返回 ApiChart 类的类型。 |
+| [GetParentSheet](./Methods/GetParentSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回当前绘图的父工作表。 |
 | [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) | 返回具有特定索引的系列。 |
 | [GetTitle](./Methods/GetTitle.md) | string \| null | 返回图表标题文本。 |
 | [RemoveSeria](./Methods/RemoveSeria.md) | boolean | 从当前图表中删除指定的系列。 |

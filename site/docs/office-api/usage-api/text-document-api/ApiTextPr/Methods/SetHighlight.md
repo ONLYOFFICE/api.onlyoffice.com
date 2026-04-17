@@ -35,3 +35,4 @@ textPr.SetHighlight("lightGray");
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text highlighted with light gray color using the text properties.");
 ```
+

@@ -43,5 +43,5 @@ const paragraph = docContent.GetElement(0);
 const classType = slide.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```
+

@@ -2,7 +2,6 @@
 
 Represents the ApiMaster class.
 
-
 ## Methods
 
 | Method | Returns | Description |

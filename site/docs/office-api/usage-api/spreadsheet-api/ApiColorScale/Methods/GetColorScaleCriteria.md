@@ -45,5 +45,5 @@ let criteria = colorScale.GetColorScaleCriteria();
 
 worksheet.GetRange("C1").SetValue("Criteria Count:");
 worksheet.GetRange("C2").SetValue(criteria ? criteria.length : 0);
-
 ```
+

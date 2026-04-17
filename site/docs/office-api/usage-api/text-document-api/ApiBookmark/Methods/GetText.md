@@ -44,5 +44,5 @@ range1.AddBookmark("BookmarkName")
 let bookmark = doc.GetBookmark("BookmarkName")
 paragraph.AddLineBreak()
 paragraph.AddText("Bookmark text is: " + bookmark.GetText())
-
 ```
+

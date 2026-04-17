@@ -41,5 +41,5 @@ run.SetFontSize(30);
 run.AddText('RGB: ' + rgb.r + ', ' + rgb.g + ', ' + rgb.b);
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

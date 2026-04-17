@@ -34,3 +34,4 @@ let freezePanes = worksheet.GetFreezePanes();
 let range = Api.GetRange('H2:K4');
 freezePanes.FreezeAt(range);
 ```
+

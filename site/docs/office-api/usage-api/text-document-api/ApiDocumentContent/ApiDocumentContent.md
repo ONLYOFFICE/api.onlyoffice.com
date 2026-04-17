@@ -2,7 +2,6 @@
 
 Represents the ApiDocumentContent class.
 
-
 ## Methods
 
 | Method | Returns | Description |

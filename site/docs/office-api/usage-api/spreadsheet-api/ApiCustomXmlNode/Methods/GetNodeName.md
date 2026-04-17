@@ -35,3 +35,4 @@ let itemNodes = inventoryNode.GetNodes('/item');
 let nodeName = itemNodes[0].GetNodeName();
 worksheet.GetRange("A1").SetValue("Node name: " + nodeName);
 ```
+

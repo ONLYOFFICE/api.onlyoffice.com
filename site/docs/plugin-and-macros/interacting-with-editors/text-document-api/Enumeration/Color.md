@@ -2,6 +2,10 @@
 
 No description provided.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -10,7 +14,4 @@ No description provided.
 | Color.B | number | Blue color component value. |
 | Color.G | number | Green color component value. |
 | Color.R | number | Red color component value. |
-## Type
-
-Object
 

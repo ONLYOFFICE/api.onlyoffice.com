@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(polygonAnnot);
 console.log(`Polygon vertices are: ${JSON.stringify(polygonAnnot.GetVertices())}`);
 ```
+

@@ -37,3 +37,4 @@ let paragraph = content.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 ```
+

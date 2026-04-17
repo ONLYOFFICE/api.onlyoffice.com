@@ -30,5 +30,5 @@ paragraph.Push(cc);
 let contentControlList = cc.GetDropdownList();
 let listItem = contentControlList.GetItem(3);
 listItem.Select();
-
 ```
+

@@ -42,3 +42,4 @@ let lock = blockLvlSdt.GetLock();
 let paragraph = doc.GetElement(1);
 paragraph.AddText("Lock type: " + lock);
 ```
+

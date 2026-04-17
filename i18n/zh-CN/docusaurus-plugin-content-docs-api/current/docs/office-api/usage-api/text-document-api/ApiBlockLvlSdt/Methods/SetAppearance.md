@@ -31,3 +31,4 @@ contentControl.SetAppearance("hidden");
 contentControl.GetContent().GetElement(0).AddText("This is a content control with a hidden appearance");
 doc.Push(contentControl);
 ```
+

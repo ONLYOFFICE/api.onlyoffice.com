@@ -35,5 +35,5 @@ let func = Api.WorksheetFunction;
 let ans = func.MINUTE("4:25 pm"); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```
+

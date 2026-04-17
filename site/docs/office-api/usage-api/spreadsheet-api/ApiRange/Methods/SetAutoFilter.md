@@ -41,5 +41,5 @@ worksheet.GetRange("A4").SetValue("value4");
 worksheet.GetRange("A5").SetValue("value5");
 let range = worksheet.GetRange("A1:A5");
 range.SetAutoFilter(1, ["value2","value3"], "xlFilterValues");
-
 ```
+

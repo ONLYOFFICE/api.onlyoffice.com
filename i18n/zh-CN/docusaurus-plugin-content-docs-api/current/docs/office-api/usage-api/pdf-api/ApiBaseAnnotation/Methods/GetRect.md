@@ -29,3 +29,4 @@ let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 console.log(`Annotation rect is: ${squareAnnot.GetRect()}`);
 ```
+

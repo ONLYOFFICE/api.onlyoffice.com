@@ -43,3 +43,4 @@ let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 3, 0, 2, 0);
 shape.SetGeometry(customGeometry);
 ```
+

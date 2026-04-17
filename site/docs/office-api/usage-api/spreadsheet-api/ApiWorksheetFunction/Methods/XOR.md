@@ -35,5 +35,5 @@ let func = Api.WorksheetFunction;
 let ans = func.TRUE(); //returns TRUE, doesnt require arguments
 
 worksheet.GetRange("A1").SetValue(ans);
-
 ```
+

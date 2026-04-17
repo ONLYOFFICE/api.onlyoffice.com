@@ -16,7 +16,7 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"buttonWidget"
 
 ## 示例
 
@@ -31,3 +31,4 @@ page.AddObject(buttonField);
 let widgets = buttonField.GetAllWidgets();
 console.log('Widget type is: ' + widgets[0].GetClassType());
 ```
+

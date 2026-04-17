@@ -44,5 +44,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Entry Effect: ' + entryEffect);
 slide.AddObject(shape);
-
 ```
+

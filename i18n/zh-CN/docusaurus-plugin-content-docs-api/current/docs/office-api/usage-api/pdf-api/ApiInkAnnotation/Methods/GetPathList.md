@@ -31,3 +31,4 @@ let page = doc.GetPage(0);
 page.AddObject(inkAnnot);
 console.log(`The ink pathList is: ${JSON.stringify(inkAnnot.GetPathList())}`);
 ```
+

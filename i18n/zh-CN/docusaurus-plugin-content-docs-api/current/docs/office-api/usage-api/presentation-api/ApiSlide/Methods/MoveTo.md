@@ -37,5 +37,5 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
 slide.MoveTo(0);
-
 ```
+

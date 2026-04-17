@@ -41,5 +41,5 @@ let top10Condition = formatConditions.AddTop10();
 
 let rank = top10Condition.GetRank();
 worksheet.GetRange("B1").SetValue("Current rank: " + rank);
-
 ```
+

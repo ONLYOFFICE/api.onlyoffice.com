@@ -33,3 +33,4 @@ let xml = xmlManager.Add("<settings><theme>dark</theme></settings>");
 let id = xml.GetId();
 worksheet.GetRange("A1").SetValue("XML part ID: " + id);
 ```
+

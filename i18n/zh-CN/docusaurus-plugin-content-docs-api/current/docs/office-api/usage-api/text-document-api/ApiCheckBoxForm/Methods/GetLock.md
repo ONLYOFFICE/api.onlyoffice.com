@@ -2,21 +2,7 @@
 
 返回当前表单的锁定状态。
 
-## 语法
-
-```javascript
-expression.GetLock();
-```
-
-`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+Inherited from [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md).
 
 ## 示例
 
@@ -36,5 +22,5 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```
+

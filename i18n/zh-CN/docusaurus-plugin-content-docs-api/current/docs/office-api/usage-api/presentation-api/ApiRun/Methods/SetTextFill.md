@@ -2,23 +2,7 @@
 
 设置当前文本块的文本填充。
 
-## 语法
-
-```javascript
-expression.SetTextFill(oApiFill);
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充文本颜色的颜色或图案。 |
-
-## 返回值
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md).
 
 ## 示例
 
@@ -49,5 +33,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the black text fill set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

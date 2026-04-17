@@ -47,5 +47,5 @@ let scopeType = condition1.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
-
 ```
+

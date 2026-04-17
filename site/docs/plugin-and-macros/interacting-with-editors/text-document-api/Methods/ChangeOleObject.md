@@ -37,3 +37,4 @@ window.Asc.plugin.executeMethod ("ChangeOleObject", [
     }
 ]);
 ```
+

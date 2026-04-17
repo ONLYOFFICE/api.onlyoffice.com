@@ -2,23 +2,7 @@
 
 Sets the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.SetJc(sJc);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
 ## Example
 
@@ -42,3 +26,4 @@ paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 ```
+

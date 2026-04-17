@@ -34,3 +34,4 @@ range.AddComment("This is just a number.");
 worksheet.GetRange("A3").SetValue("Comment: ");
 worksheet.GetRange("B3").SetValue(range.GetComment().GetText());
 ```
+

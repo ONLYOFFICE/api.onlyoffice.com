@@ -45,5 +45,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const imagesCount = presentation.GetAllImages().length;
 paragraph.AddText('' + imagesCount);
-
 ```
+

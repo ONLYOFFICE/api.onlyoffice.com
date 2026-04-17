@@ -2,23 +2,7 @@
 
 Sets the way the specified pivot table items appear — in table format or in outline format.
 
-## Syntax
-
-```javascript
-expression.SetLayoutForm(type);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [PivotLayoutType](../../Enumeration/PivotLayoutType.md) |  | The layout type of the pivot table report. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutForm](../../ApiPivotField/Methods/SetLayoutForm.md).
 
 ## Example
 
@@ -67,3 +51,4 @@ pivotField.SetLayoutForm("Tabular");
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
+

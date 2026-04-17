@@ -2,23 +2,7 @@
 
 Specifies if the current form should be required.
 
-## Syntax
-
-```javascript
-expression.SetRequired(bRequired);
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRequired | Required | boolean |  | Defines if the current form is required (true) or not (false). |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
 
 ## Example
 
@@ -39,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
+

@@ -36,5 +36,5 @@ const docContent = drawing.GetContent();
 const shapeParagraph = Api.CreateParagraph();
 shapeParagraph.AddText('This is the text added to the paragraph inside the drawing using the GetContent method.');
 docContent.AddElement(0, shapeParagraph);
-
 ```
+

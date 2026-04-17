@@ -1,6 +1,6 @@
 # ApiDatabar
 
-表示 ApiDatabar 类。
+ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## 属性
 

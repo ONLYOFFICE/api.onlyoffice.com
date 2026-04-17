@@ -2,21 +2,7 @@
 
 Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
 
-## Syntax
-
-```javascript
-expression.GetSmallCaps();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md).
 
 ## Example
 
@@ -50,5 +36,5 @@ paragraph = Api.CreateParagraph();
 const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
-
 ```
+

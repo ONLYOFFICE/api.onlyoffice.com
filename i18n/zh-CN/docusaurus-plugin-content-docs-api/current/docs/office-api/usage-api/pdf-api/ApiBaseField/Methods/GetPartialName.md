@@ -31,3 +31,4 @@ page.AddObject(textField);
 textField.SetPartialName('EXAMPLE');
 textField.SetValue('Field partial name is: ' + textField.GetFullName());
 ```
+

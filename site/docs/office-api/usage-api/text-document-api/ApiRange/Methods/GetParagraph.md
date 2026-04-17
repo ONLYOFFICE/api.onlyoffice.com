@@ -39,3 +39,4 @@ let range = doc.GetRange(0, 28);
 let rangeParagraph = range.GetParagraph(1);
 rangeParagraph.SetBold("true");
 ```
+

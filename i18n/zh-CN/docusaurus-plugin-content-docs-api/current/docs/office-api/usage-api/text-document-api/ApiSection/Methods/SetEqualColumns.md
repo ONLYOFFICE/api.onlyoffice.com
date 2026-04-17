@@ -43,3 +43,4 @@ paragraph.AddColumnBreak();
 paragraph.AddText("This text starts from column #3. ");
 paragraph.AddText("This sentence is used to add lines for demonstrative purposes.");
 ```
+

@@ -45,5 +45,5 @@ docContent.Push(paragraph);
 const copyParagraph = paragraph.Copy();
 docContent.Push(copyParagraph);
 page.AddObject(shape);
-
 ```
+

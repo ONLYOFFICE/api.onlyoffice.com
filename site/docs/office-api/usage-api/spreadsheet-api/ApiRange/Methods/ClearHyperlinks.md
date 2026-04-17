@@ -32,5 +32,5 @@ worksheet.GetRange("A1:B1").SetValue("http://example.com");
 let range = worksheet.GetRange("A1");
 range.ClearHyperlinks();
 worksheet.GetRange("A2").SetValue("Result is hyperlinks cleared for A1 cell.");
-
 ```
+

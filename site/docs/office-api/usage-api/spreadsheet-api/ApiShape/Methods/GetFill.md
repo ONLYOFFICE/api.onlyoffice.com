@@ -34,5 +34,5 @@ let retrievedFill = shape.GetFill();
 if (retrievedFill) {
     worksheet.GetRange("A1").SetValue("Fill type: " + retrievedFill.GetType());
 }
-
 ```
+

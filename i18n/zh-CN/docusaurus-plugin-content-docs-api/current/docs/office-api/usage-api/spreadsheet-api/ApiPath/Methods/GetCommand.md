@@ -37,3 +37,4 @@ worksheet.GetRange("A8").SetValue("Commands: " + path.GetCommandCount());
 let cmd = path.GetCommand(0);
 worksheet.GetRange("A9").SetValue("Type: " + cmd.GetType() + " at (" + cmd.GetX() + ", " + cmd.GetY() + ")");
 ```
+

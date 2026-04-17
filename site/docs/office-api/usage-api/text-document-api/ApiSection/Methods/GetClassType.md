@@ -35,3 +35,4 @@ section.SetPageSize(7200, 4320);
 let classType = section.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 ```
+

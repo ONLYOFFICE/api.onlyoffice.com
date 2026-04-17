@@ -31,5 +31,5 @@ const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.NA();
 worksheet.GetRange("C3").SetValue(result);
-
 ```
+

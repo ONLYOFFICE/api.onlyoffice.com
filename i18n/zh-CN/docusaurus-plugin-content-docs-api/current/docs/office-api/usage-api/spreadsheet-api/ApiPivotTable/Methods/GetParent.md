@@ -61,3 +61,4 @@ pivotTable.AddDataField('Price');
 pivotTable.GetParent().GetRange('A9').SetValue('Parent name');
 pivotTable.GetParent().GetRange('B9').SetValue(pivotTable.GetParent().GetName());
 ```
+

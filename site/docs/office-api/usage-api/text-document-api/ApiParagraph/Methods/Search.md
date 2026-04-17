@@ -36,3 +36,4 @@ paragraph.AddText("This is just a sample text. This text was added to the paragr
 let searchResults = paragraph.Search("text");
 searchResults[0].SetBold(true);
 ```
+

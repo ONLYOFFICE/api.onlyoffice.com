@@ -2,24 +2,7 @@
 
 指定当前段落引用当前文档中的编号定义实例。
 
-## 语法
-
-```javascript
-expression.SetNumPr(oNumPr, nLvl);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oNumPr | 必需 | [ApiNumbering](../../ApiNumbering/ApiNumbering.md) |  | 指定编号定义。 |
-| nLvl | 可选 | number | 0 | 指定编号级别引用。如果 ApiParaPr 类的当前实例是段落的直接格式，则必须指定此参数。否则，如果 ApiParaPr 类的当前实例是 ApiStyle 属性的一部分，则将忽略此参数。 |
-
-## 返回值
-
-boolean
+Inherited from [ApiParaPr.SetNumPr](../../ApiParaPr/Methods/SetNumPr.md).
 
 ## 示例
 
@@ -48,3 +31,4 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is a paragraph styled as a bulleted list.");
 doc.Push(paragraph);
 ```
+

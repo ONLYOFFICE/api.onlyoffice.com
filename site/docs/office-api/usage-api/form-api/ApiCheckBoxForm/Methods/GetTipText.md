@@ -2,21 +2,7 @@
 
 Returns the tip text of the current form.
 
-## Syntax
-
-```javascript
-expression.GetTipText();
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md).
 
 ## Example
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tip text: " + tipText);
 doc.Push(paragraph);
 ```
+

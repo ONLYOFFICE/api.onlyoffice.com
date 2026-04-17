@@ -6,6 +6,8 @@ The function called when the user clicks the "Complete & Submit" button.
 
 This event has no parameters.
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onSubmitForm", () => {
 	Asc.scope.st = "";

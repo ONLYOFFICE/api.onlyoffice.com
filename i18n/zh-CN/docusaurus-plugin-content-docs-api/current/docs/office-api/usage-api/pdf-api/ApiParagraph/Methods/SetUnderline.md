@@ -38,5 +38,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text underlined with a single line.');
 paragraph.SetUnderline(true);
 page.AddObject(shape);
-
 ```
+

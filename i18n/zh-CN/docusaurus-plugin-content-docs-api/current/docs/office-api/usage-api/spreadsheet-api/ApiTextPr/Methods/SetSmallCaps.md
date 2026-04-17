@@ -44,3 +44,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font set to small capitalized letters.");
 paragraph.AddElement(run);
 ```
+

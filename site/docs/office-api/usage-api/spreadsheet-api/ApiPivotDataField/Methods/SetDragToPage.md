@@ -2,23 +2,7 @@
 
 Sets the setting which specifies whether the specified field can be dragged to the page position.
 
-## Syntax
-
-```javascript
-expression.SetDragToPage(flag);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | Required | boolean |  | Specifies whether the specified field can be dragged to the page position. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetDragToPage](../../ApiPivotField/Methods/SetDragToPage.md).
 
 ## Example
 
@@ -69,3 +53,4 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to pages!');
 ```
+

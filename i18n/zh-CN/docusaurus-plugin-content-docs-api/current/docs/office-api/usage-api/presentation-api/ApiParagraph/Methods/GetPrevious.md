@@ -52,5 +52,5 @@ docContent.Push(paragraph2);
 slide.AddObject(shape);
 const previousParagraph = paragraph2.GetPrevious();
 previousParagraph.SetBold(true);
-
 ```
+

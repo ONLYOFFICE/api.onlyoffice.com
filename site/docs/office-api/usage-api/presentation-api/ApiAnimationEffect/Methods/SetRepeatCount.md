@@ -56,5 +56,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New repeat count: ' + repeatCount);
 slide.AddObject(infoShape);
-
 ```
+

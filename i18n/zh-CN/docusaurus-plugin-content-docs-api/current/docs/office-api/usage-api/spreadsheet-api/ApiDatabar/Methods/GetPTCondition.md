@@ -2,21 +2,7 @@
 
 返回数据透视表条件对象。
 
-## 语法
-
-```javascript
-expression.GetPTCondition();
-```
-
-`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-PTCondition \| null
+Inherited from [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Methods/GetPTCondition.md).
 
 ## 示例
 
@@ -47,5 +33,5 @@ let ptCondition = condition1.GetPTCondition();
 
 worksheet.GetRange("C1").SetValue("PT Condition:");
 worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
-
 ```
+

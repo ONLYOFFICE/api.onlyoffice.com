@@ -32,5 +32,5 @@ core.SetCreated(new Date('20 January 2000'));
 const createdDate = core.GetCreated().toDateString();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Created: " + createdDate);
-
 ```
+

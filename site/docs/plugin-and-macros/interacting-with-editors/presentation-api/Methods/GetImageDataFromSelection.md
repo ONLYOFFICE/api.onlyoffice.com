@@ -33,3 +33,4 @@ window.Asc.plugin.executeMethod ("GetImageDataFromSelection", [], function (resu
     window.Asc.plugin.resizeWindow (undefined, undefined, 870, imageHeight + 300, 0, 0);
 });
 ```
+

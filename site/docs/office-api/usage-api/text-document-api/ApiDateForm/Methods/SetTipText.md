@@ -2,23 +2,7 @@
 
 Sets the tip text to the current form.
 
-## Syntax
-
-```javascript
-expression.SetTipText(sText);
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | Tip text. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md).
 
 ## Example
 
@@ -39,3 +23,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Tip text: " + tipText);
 doc.Push(paragraph);
 ```
+

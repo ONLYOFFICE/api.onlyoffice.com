@@ -44,5 +44,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Placeholder type in this shape is: "' + placeholder.GetType() + '"');
 slide.AddObject(shape);
-
 ```
+

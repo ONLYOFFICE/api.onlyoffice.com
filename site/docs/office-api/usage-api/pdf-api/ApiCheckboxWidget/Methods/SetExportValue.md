@@ -34,3 +34,4 @@ let widgets = radiobuttonField.GetAllWidgets();
 widgets[0].SetExportValue('Export value');
 console.log('Export value is: ' + widgets[0].GetExportValue());
 ```
+

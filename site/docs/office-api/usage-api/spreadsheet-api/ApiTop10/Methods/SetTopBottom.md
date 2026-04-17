@@ -44,5 +44,5 @@ let top10Condition = formatConditions.AddTop10();
 worksheet.GetRange("B1").SetValue("Before: Top values");
 top10Condition.SetTopBottom("xlTop10Bottom");
 worksheet.GetRange("B2").SetValue("After: Bottom values");
-
 ```
+

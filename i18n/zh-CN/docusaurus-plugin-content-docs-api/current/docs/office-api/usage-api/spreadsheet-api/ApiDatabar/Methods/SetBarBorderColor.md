@@ -51,5 +51,5 @@ dataBar.SetBarBorderColor(borderColor);
 
 worksheet.GetRange("C3").SetValue("After Color:");
 worksheet.GetRange("C4").SetValue(dataBar.GetBarBorderColor() ? "Set" : "None");
-
 ```
+

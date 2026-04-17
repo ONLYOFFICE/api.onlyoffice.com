@@ -37,3 +37,4 @@ let richContent = freeTextAnnot.GetContent();
 let para = richContent.GetElement(0);
 console.log(`First element is: ${para.GetClassType()}`);
 ```
+

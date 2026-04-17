@@ -48,5 +48,5 @@ const urlHyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to Only
 const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link to the second slide');
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);
-
 ```
+

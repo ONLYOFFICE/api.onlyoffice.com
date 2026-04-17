@@ -49,5 +49,5 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```
+

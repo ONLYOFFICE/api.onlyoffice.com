@@ -44,5 +44,5 @@ let run = Api.CreateRun();
 run.AddText('This is a text run with the font color set to gray.');
 paragraph.AddElement(run);
 run.SetColor(Api.HexColor('#808080'));
-
 ```
+

@@ -37,5 +37,5 @@ drawing.SetFlipH(true);
 let flip = drawing.GetFlipH();
 worksheet.SetColumnWidth(0, 30);
 worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
-
 ```
+

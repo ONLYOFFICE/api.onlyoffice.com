@@ -1,11 +1,11 @@
 # ApiSchemeColor
 
-表示 ApiSchemeColor 类。
-
+ApiSchemeColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
 
 ## 方法
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [GetClassType](./Methods/GetClassType.md) | "schemeColor" | 返回 ApiSchemeColor 类的类型。 |
+| [GetRGB](./Methods/GetRGB.md) | number | 返回 RGB 格式的颜色值。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiSchemeColor 对象转换为 JSON 对象。 |

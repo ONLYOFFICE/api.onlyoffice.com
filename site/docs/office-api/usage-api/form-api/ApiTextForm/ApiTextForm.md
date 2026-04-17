@@ -1,7 +1,6 @@
 # ApiTextForm
 
-Represents the ApiTextForm class.
-
+ApiTextForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
 

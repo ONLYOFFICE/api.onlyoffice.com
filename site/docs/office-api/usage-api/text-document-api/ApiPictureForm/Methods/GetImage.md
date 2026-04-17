@@ -36,3 +36,4 @@ let base64img = pictureForm.GetImage();
 let drawing = Api.CreateImage(base64img, 60 * 36000, 35 * 36000);
 paragraph.AddDrawing(drawing);
 ```
+

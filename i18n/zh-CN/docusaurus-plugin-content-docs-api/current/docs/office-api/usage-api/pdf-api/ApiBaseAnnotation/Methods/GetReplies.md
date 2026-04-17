@@ -37,5 +37,5 @@ let replies = squareAnnot.GetReplies();
 replies.forEach((reply, idx) => {
 	console.log(`Reply with idx ${idx}: "${reply.GetContents()}"`);
 });
-
 ```
+

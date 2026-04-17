@@ -46,5 +46,5 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'NO SCREEN TIP'
 
 hyperlink.SetScreenTipText('ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Screen tip: ' + hyperlink.GetScreenTipText());
-
 ```
+

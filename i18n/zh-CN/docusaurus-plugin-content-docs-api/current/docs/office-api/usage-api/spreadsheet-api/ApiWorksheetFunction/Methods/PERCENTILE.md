@@ -53,3 +53,4 @@ for (let m = 0; m < column4.length; m++) {
 let range = worksheet.GetRange("A1:D4");
 worksheet.GetRange("D5").SetValue(func.PERCENTILE(range, 0.5));
 ```
+

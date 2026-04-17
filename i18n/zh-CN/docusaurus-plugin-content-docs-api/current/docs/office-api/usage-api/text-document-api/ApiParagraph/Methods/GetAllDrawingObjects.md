@@ -53,3 +53,4 @@ let drawings = paragraph.GetAllDrawingObjects();
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 drawings[0].Fill(fill);
 ```
+

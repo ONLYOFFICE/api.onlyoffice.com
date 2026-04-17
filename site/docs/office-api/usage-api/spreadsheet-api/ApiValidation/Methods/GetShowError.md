@@ -34,5 +34,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetShowError(true);
 let showError = validation.GetShowError();
 worksheet.GetRange("B1").SetValue("Show error: " + showError);
-
 ```
+

@@ -47,3 +47,4 @@ paragraph = footer.GetElement(0);
 paragraph.AddText("Page #");
 paragraph.AddPageNumber();
 ```
+

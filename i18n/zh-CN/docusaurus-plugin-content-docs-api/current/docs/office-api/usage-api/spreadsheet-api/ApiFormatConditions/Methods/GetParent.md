@@ -45,5 +45,5 @@ formatConditions.AddDatabar();
 let parentRange = formatConditions.GetParent();
 
 worksheet.GetRange("B1").SetValue("Parent: " + parentRange.GetAddress());
-
 ```
+

@@ -34,5 +34,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetErrorTitle("Invalid Input");
 let errorTitle = validation.GetErrorTitle();
 worksheet.GetRange("B1").SetValue("Error title: " + errorTitle);
-
 ```
+

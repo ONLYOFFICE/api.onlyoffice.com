@@ -50,5 +50,5 @@ paragraph.AddText("Custom Date Property: " + dateValue.toDateString() + "\n");
 paragraph.AddText("Custom Boolean Property: " + boolValue);
 
 slide.AddObject(shape);
-
 ```
+

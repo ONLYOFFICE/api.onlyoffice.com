@@ -32,3 +32,4 @@ let index = contentControlItem.GetIndex();
 paragraph.AddText("Index of the content control list entry:" + index);
 doc.AddElement(0, paragraph);
 ```
+

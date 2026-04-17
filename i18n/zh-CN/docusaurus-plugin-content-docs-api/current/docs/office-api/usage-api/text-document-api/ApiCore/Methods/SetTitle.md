@@ -32,5 +32,5 @@ core.SetTitle("My Document Title");
 const title = core.GetTitle();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Title: " + title);
-
 ```
+

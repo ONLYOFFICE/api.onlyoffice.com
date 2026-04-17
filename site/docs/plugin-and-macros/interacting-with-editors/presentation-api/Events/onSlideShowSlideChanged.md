@@ -10,6 +10,8 @@ The function called when slide changes during a slide show presentation. Provide
 | data.slideIndex | number | The index of the new slide. |
 | data.previousSlideIndex | number | The index of the previous slide (-1 if it's the first slide). |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent('onSlideShowSlideChanged', (data) => {
 	data.previousSlideIndex === -1

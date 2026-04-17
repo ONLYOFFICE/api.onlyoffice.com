@@ -55,3 +55,4 @@ let forecast = func.FREQUENCY(data_arrayRange, bins_arrayRange);
 // Print the forecast result
 worksheet.GetRange("D1").SetValue(forecast);
 ```
+

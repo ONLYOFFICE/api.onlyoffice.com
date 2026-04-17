@@ -2,21 +2,7 @@
 
 从透视筛选器集合中删除所有值筛选器。
 
-## 语法
-
-```javascript
-expression.ClearValueFilters();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-此方法不返回任何数据。
+Inherited from [ApiPivotField.ClearValueFilters](../../ApiPivotField/Methods/ClearValueFilters.md).
 
 ## 示例
 
@@ -62,3 +48,4 @@ let pivotWorksheet = Api.GetActiveSheet();
 let pivotField = pivotTable.GetPivotFields('Region');
 pivotField.ClearValueFilters();
 ```
+

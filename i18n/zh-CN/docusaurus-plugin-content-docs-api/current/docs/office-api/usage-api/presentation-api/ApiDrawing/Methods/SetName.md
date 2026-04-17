@@ -39,5 +39,5 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Shape name was set to: ' + shape.GetName());
 slide.AddObject(shape);
-
 ```
+

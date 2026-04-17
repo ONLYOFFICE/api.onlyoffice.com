@@ -37,3 +37,4 @@ let cmd = path.GetCommand(0);
 paragraph.AddText(", First command: " + cmd.GetType() + " (" + cmd.GetX() + ", " + cmd.GetY() + ")");
 paragraph.AddDrawing(shape);
 ```
+

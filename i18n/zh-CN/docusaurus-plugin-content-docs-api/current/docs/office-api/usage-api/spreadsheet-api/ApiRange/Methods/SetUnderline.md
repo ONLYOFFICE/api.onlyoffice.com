@@ -34,3 +34,4 @@ worksheet.GetRange("A2").SetValue("The text underlined with a single line");
 worksheet.GetRange("A2").SetUnderline("single");
 worksheet.GetRange("A4").SetValue("Normal text");
 ```
+

@@ -34,5 +34,5 @@ let range = doc.GetRange(21, 28);
 range.AddBookmark("BookmarkName");
 let bookmark = doc.GetBookmark("BookmarkName");
 bookmark.Select();
-
 ```
+

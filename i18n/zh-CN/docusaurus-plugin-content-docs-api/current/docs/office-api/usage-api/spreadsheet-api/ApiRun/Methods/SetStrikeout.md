@@ -43,3 +43,4 @@ run.SetStrikeout(true);
 run.AddText("This is a text run with the text struck out with a single line.");
 paragraph.AddElement(run);
 ```
+

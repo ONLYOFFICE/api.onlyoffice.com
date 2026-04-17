@@ -45,5 +45,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The size of this presentation was changed: width - 254 mm, height - 190 mm.");
 slide.AddObject(shape);
-
 ```
+

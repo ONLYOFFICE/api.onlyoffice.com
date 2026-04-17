@@ -34,3 +34,4 @@ let xmlManager = worksheet.GetCustomXmlParts();
 let newXml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");
 worksheet.GetRange("A1").SetValue("New XML part added: " + newXml.GetXml());
 ```
+

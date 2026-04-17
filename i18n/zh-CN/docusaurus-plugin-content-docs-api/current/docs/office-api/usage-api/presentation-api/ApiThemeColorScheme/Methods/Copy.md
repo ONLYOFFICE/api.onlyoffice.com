@@ -77,5 +77,5 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme2 = Api.CreateTheme("New theme", master, copyColorScheme, formatScheme, fontScheme);
 slide2.ApplyTheme(theme2);
 slide2.AddObject(chart);
-
 ```
+

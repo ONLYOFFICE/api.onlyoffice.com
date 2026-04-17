@@ -38,3 +38,4 @@ paragraph.AddElement(hyperlink, 0);
 paragraph.AddLineBreak();
 paragraph.AddText("Class type of the created object: " + hyperlink.GetClassType());
 ```
+

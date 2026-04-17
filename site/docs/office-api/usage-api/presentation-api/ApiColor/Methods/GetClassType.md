@@ -40,5 +40,5 @@ run.SetFontSize(30);
 run.AddText("Class Type = " + color.GetClassType());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```
+

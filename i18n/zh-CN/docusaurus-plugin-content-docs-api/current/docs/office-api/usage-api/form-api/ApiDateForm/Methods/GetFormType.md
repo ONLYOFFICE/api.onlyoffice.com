@@ -2,21 +2,7 @@
 
 返回当前表单的类型。
 
-## 语法
-
-```javascript
-expression.GetFormType();
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[FormType](../../Enumeration/FormType.md)
+Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
 ## 示例
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form type: " + formType);
 doc.Push(paragraph);
 ```
+

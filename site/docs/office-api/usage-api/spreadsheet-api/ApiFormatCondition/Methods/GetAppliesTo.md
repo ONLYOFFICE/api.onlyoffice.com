@@ -47,5 +47,5 @@ let appliedRange = condition1.GetAppliesTo();
 
 worksheet.GetRange("C1").SetValue("Rule applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
-
 ```
+

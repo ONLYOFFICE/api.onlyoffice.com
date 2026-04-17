@@ -40,5 +40,5 @@ shape.SetPosX(Api.MillimetersToEmus(50));
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('X position was changed to 50 mm.');
-
 ```
+

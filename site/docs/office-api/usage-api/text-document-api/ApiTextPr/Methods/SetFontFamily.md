@@ -35,3 +35,4 @@ textPr.SetFontFamily("Comic Sans MS");
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the font family set to 'Comic Sans MS' using the text properties.");
 ```
+

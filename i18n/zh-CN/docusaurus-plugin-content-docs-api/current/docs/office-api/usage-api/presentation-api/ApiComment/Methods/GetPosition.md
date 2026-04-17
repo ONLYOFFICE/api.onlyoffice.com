@@ -43,5 +43,5 @@ const position = arrComments[0].GetPosition();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Comment position - X: ' + position.x + ', Y: ' + position.y);
-
 ```
+

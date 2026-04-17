@@ -29,3 +29,4 @@ let doc = Api.GetDocument();
 doc.AddPage(1);
 doc.RemovePage(0);
 ```
+

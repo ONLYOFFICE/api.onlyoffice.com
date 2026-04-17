@@ -2,17 +2,16 @@
 
 The comment object.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | Data | [Event_CommentData](../Enumeration/Event_CommentData.md) | An object which contains the comment data. |
 | Id | string | The comment ID. |
-## Type
-
-Object
-
-
 
 ## Example
 
@@ -35,3 +34,4 @@ let comment = {
     }
 }
 ```
+

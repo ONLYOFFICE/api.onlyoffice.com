@@ -2,21 +2,7 @@
 
 Returns a type of the current form.
 
-## Syntax
-
-```javascript
-expression.GetFormType();
-```
-
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[FormType](../../Enumeration/FormType.md)
+Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
 ## Example
 
@@ -36,3 +22,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form type: " + formType);
 doc.Push(paragraph);
 ```
+

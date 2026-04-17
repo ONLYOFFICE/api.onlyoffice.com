@@ -30,5 +30,5 @@ expression.detachEvent(eventName);
 // Unsubscribe from the hyperlink click event.
 
 Api.detachEvent("asc_onHyperlinkClick");
-
 ```
+
