@@ -9,13 +9,9 @@ The figure and steps below explain how a document is saved in ONLYOFFICE Docs.
 ![Saving File](/assets/images/editor/saving.jpg)
 
 1. The user edits the document in the **document editor**.
-
 2. The **document editor** sends the changes to the **document editing service**.
-
 3. The user closes the **document editor**.
-
 4. The **document editing service** detects that all users have finished editing and compiles the changes received from the **document editor** into the final document.
-
 5. The **document editing service** informs the **document storage service** that editing is complete using the [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) and returns the link to the modified document as the [`url`](../../usage-api/callback-handler.md#url) parameter.
 
    :::note

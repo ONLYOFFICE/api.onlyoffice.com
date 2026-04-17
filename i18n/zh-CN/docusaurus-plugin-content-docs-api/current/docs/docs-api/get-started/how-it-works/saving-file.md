@@ -9,13 +9,9 @@ sidebar_position: -21
 ![保存文件](/assets/images/editor/saving.jpg)
 
 1. 用户在**文档编辑器**中编辑文档。
-
 2. **文档编辑器**将更改发送到**文档编辑服务**。
-
 3. 用户关闭**文档编辑器**。
-
 4. **文档编辑服务**检测到所有用户已完成编辑，并将从**文档编辑器**接收到的更改编译为最终文档。
-
 5. **文档编辑服务**使用 [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) 通知**文档存储服务**编辑已完成，并以 [`url`](../../usage-api/callback-handler.md#url) 参数返回修改后文档的链接。
 
    :::note

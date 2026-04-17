@@ -9,15 +9,10 @@ sidebar_position: -22
 ![打开文件](/assets/images/editor/opening.svg)
 
 1. 用户通过浏览器中的**文档管理器**打开文档进行查看或编辑。
-
 2. **文档管理器**使用一个 [`config`](../../usage-api/config/config.md) 对象初始化**文档编辑器**，该对象包含文档的 [`key`](../../usage-api/config/document/document.md#key)、[`url`](../../usage-api/config/document/document.md#url) 及其他必需参数。
-
 3. **文档编辑器**使用从**文档管理器**接收到的 `config`，向**文档编辑服务**发送打开文档的请求。
-
 4. **文档编辑服务**使用提供的 `url` 从**文档存储服务**下载文档文件。如果文件尚未处于编辑器的原生格式之一（`.docx`、`.xlsx`、`.pptx` 或 `.pdf`），则会在此步骤中进行[转换](./converting-and-downloading-file.md)，以便**文档编辑器**能够以原生方式处理该文件。
-
 5. 准备就绪后，**文档编辑服务**将文档文件传输到**文档编辑器**。
-
 6. **文档编辑器**显示文档文件，并在用户拥有适当权限时允许编辑。
 
 编辑完成后，文档将被[保存](./saving-file.md)。
