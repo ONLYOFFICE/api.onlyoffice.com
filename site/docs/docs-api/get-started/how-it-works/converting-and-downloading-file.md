@@ -4,40 +4,51 @@ sidebar_position: -13
 
 # Converting and downloading file
 
-Document conversion service is a part of ONLYOFFICE Docs. It lets the user convert files from one format into another to open them later in **document editors** or for their export.
+The **document conversion service** is part of ONLYOFFICE Docs. It converts document files between supported formats — either to prepare them for editing or to export them in a format the user needs.
 
-There are two main situations when document conversion is necessary.
+The **document editor** works with files in the editors' native formats: `.docx` for text documents, `.xlsx` for spreadsheets, `.pptx` for presentations, or `.pdf` for PDFs.
 
-## Interim conversion needed for document editing
+## Default behavior
 
-For the **document editors** correct work with the document files it is recommended to convert them prior to editing into Office Open XML formats:
+The **document editing service** converts files to the native format automatically when [opening](./opening-file.md) them — the integrator does not need to call the conversion API. When saving, the [`assemblyFormatAsOrigin`](../configuration/server-config/server.md#servicescoauthoringserverassemblyformatasorigin) server setting (enabled by default) ensures the file is converted back to its original format. For details, see [saving in original format](./saving-file.md#saving-in-original-format).
 
-- *docx* for text documents,
-- *xlsx* for spreadsheets,
-- *pptx* for presentations.
+## Converting before editing
 
-The reference figure and the steps below explain the process of document conversion.
+If the integrator needs to convert files before passing them to the editor — for example, to store them in a native format — they can use the [conversion API](../../additional-api/conversion-api/request.md) explicitly.
 
-<img alt="Interim conversion needed for document editing" src="/assets/images/editor/conversion.jpg" width="720px" />
+The figure and steps below explain this process.
 
-1. The users selects a file on the computer hard disk drive that is to be uploaded to the **document manager**.
-2. The **document manager** uploads the selected file to the **document storage service**.
-3. The **document storage service** sends the uploaded file to ONLYOFFICE Docs **document conversion service** for conversion into the Office Open XML format using the [conversion API](../../additional-api/conversion-api/request.md).
-4. The **document conversion service** converts the selected file to the Office Open XML format.
-5. The **document storage service** downloads the converted document file.
+![Converting before editing](/assets/images/editor/conversion.jpg)
 
-## Document export
+1. The user selects a file to upload to the **document manager**.
+2. The **document manager** uploads the file to the **document storage service**.
+3. The **document storage service** sends the file to the **document conversion service** for conversion into the appropriate native format using the [conversion API](../../additional-api/conversion-api/request.md).
+4. The **document conversion service** converts the file to the native format.
+5. The **document storage service** downloads the converted file.
 
-When the user needs to download the file in some format different from the Office Open XML format, ONLYOFFICE Docs converts the document file saved at the **document storage service** into the appropriate format prior to its export.
+## Converting for download
 
-The reference figure and the steps below explain the process of document export.
+When the user needs to download a file in a format other than the native one — whether from the **document manager** or directly from the **document editor** — the **document conversion service** converts it before download.
 
-<img alt="Document export" src="/assets/images/editor/export.jpg" width="720px" />
+### From the document manager
 
-1. The user selects the file in the **document manager** and the format the file must be downloaded in.
-2. The **document manager** transforms this user action into a request to the **document storage service**.
-3. The **document storage service** sends the uploaded file to ONLYOFFICE Docs **document conversion service** for conversion into the appropriate format using the [conversion API](../../additional-api/conversion-api/request.md).
-4. The **document conversion service** converts the selected file to the appropriate format.
-5. When the conversion is finished the **document storage service** downloads the converted file.
-6. The **document storage service** notifies the **document manager** that the conversion is successfully performed.
-7. The **document manager** downloads the converted file.
+The figure and steps below explain the download process from the **document manager**.
+
+![Document export](/assets/images/editor/export.jpg)
+
+1. The user selects a file in the **document manager** and chooses the download format.
+2. The **document manager** sends the request to the **document storage service**.
+3. The **document storage service** sends the file to the **document conversion service** for conversion into the requested format using the [conversion API](../../additional-api/conversion-api/request.md).
+4. The **document conversion service** converts the file to the requested format.
+5. When the conversion is finished, the **document storage service** downloads the converted file.
+6. The **document storage service** sends the converted file to the **document manager**.
+7. The **document manager** provides the converted file to the user for download.
+
+### From the document editor
+
+1. The user chooses the download format in the **document editor**.
+2. The **document editor** sends the current document state to the **document editing service**.
+3. The **document editing service** sends the file to the **document conversion service** for conversion into the requested format.
+4. The **document conversion service** converts the file to the requested format.
+5. The **document editing service** sends the converted file to the **document editor**.
+6. The **document editor** provides the converted file to the user for download.
