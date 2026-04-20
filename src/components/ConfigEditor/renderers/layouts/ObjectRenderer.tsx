@@ -2,6 +2,7 @@ import { isObjectControl, rankWith, ControlElement, JsonSchema, composePaths, re
 import { withJsonFormsControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react'
 import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from './depth'
+import { sortObjectKeys } from '../utils/fieldSort'
 
 function isRenderable(schema: JsonSchema): boolean {
     return !!(
@@ -27,7 +28,8 @@ function ObjectRendererInner(props: any) {
     const lastKey = path ? path.split('.').pop() || '' : ''
     const title = label || s.title || titleFromKey(lastKey) || 'Root'
 
-    const body = Object.keys(properties).map(key => {
+    const sortedKeys = sortObjectKeys(Object.keys(properties), path)
+    const body = sortedKeys.map(key => {
         const childPath = path ? composePaths(path, key) : key
         const rawChild = properties[key] as JsonSchema
         let childSchema: JsonSchema = rawChild
