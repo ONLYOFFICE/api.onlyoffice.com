@@ -1,6 +1,6 @@
 ---
 sidebar_label: Le Chat
-sidebar_position: 5
+sidebar_position: 6
 title: Troubleshooting issues with Le Chat MCP client
 ---
 

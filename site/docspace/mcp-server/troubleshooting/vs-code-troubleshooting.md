@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 sidebar_label: VS Code
 title: Resolving issues with VS Code client
 ---
