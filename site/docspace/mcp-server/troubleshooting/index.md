@@ -1,5 +1,6 @@
 ---
 sidebar_label: Troubleshooting
+sidebar_position: 1
 title: DocSpace MCP server troubleshooting docs
 ---
 
