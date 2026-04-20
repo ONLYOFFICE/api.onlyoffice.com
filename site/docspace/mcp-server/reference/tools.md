@@ -50,6 +50,13 @@ DocSpace operation.
 <tr><td>6</td><td><code>update_file</code></td><td>Update a file.</td></tr>
 <tr><td>7</td><td><code>upload_file</code></td><td>Upload a file.</td></tr>
 </tbody>
+
+<div style={{marginBottom: '1rem'}} />
+
+:::note
+Supported file formats for uploading: `txt`, `md`.
+:::
+
 <tbody>
 <tr><td></td><th scope="rowgroup">Folders Toolset</th><td></td></tr>
 <tr><td>8</td><td><code>create_folder</code></td><td>Create a folder.</td></tr>
