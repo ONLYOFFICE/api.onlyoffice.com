@@ -11,6 +11,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import { filterSchema } from "./schemaFilter";
 import { CopyButton } from "./renderers/utils/CopyButton";
+import { useDebounce } from "@site/src/hooks/useDebounce";
 
 interface ConfigEditorProps {
     defaultConfig: Record<string, unknown>
@@ -31,12 +32,23 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     const [formData, setFormData] = useState<Record<string, unknown>>(defaultConfig)
     const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2))
     const [tab, setTab] = useState<'form' | 'json'>('form')
+    const debouncedJsonText = useDebounce(jsonText, 300)
 
     useEffect(() => {
         setFormData(defaultConfig)
         setJsonText(JSON.stringify(defaultConfig, null, 2))
         onApply(defaultConfig)
     }, [defaultConfig, onApply])
+
+    // Sync debounced JSON to form data
+    useEffect(() => {
+        try {
+            const parsed = JSON.parse(debouncedJsonText)
+            setFormData(parsed)
+        } catch {
+            // invalid JSON — keep current formData
+        }
+    }, [debouncedJsonText])
 
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         const updated = data ?? {}
@@ -45,13 +57,7 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     }, [])
 
     const handleJsonChange = useCallback((value: string) => {
-        setJsonText(value)
-        try {
-            const parsed = JSON.parse(value)
-            setFormData(parsed)
-        } catch {
-            // invalid JSON — keep current formData
-        }
+        setJsonText(value ?? '')
     }, [])
 
     const handleRun = () => { onApply(formData) }
