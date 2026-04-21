@@ -14,7 +14,7 @@ In order to enable the comment option, the [comment](../../usage-api/config/docu
 
 In case the *edit* parameter is set to **true** and the *comment* parameter is also set to **true**, the user will be able to edit the document and comment.
 
-![Commenting](/assets/images/editor/commenting.png)
+![Commenting](/assets/images/editor/commenting.png#gh-light-mode-only)![Commenting](/assets/images/editor/commenting.dark.png#gh-dark-mode-only)
 
 In case the *edit* parameter is set to **false** and the *comment* parameter is set to **true**, the document will be available for commenting only.
 
@@ -129,7 +129,7 @@ To display ONLYOFFICE spreadsheet comments in other editors correctly, all the c
    reply2
    ```
 
-   ![Threaded comments](/assets/images/editor/comments-threaded.png)
+   ![Threaded comments](/assets/images/editor/comments-threaded.png#gh-light-mode-only)![Threaded comments](/assets/images/editor/comments-threaded.dark.png#gh-dark-mode-only)
 
 2. To convert the original comments format into the **threaded comments**, the *"$\{author\}:\n"* string is deleted if the comment starts with it.
 
