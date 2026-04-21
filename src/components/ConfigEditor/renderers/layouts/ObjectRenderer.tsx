@@ -65,7 +65,12 @@ function ObjectRendererInner(props: any) {
     if (!path) return <div>{body}</div>
 
     return (
-        <Section title={title} depth={depth} description={s.description}>
+        <Section
+            title={title}
+            depth={depth}
+            description={s.description}
+            shortDescription={s['x-shortDescription']}
+        >
             {body}
         </Section>
     )

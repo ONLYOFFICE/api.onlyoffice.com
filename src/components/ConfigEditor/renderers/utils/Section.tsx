@@ -5,14 +5,14 @@ interface SectionProps {
     title: string
     depth: number
     description?: string
+    shortDescription?: string
     defaultOpen?: boolean
     children: ReactNode
 }
 
-export function Section({ title, depth, description, defaultOpen = true, children }: SectionProps) {
+export function Section({ title, depth, description, shortDescription, defaultOpen = true, children }: SectionProps) {
     const level = Math.min(Math.max(depth, 1), 6)
     const headingTag = `h${level}`
-    const headingClass = styles[`heading${level}`] ?? styles.heading
 
     return (
         <details className={styles.section} open={defaultOpen}>
@@ -33,7 +33,8 @@ export function Section({ title, depth, description, defaultOpen = true, childre
                         strokeLinejoin="round"
                     />
                 </svg>
-                {createElement(headingTag, { className: headingClass }, title)}
+                {createElement(headingTag, { className: styles.heading }, title)}
+                {shortDescription && <span className={styles.descriptionInline}>{shortDescription}</span>}
             </summary>
             {description && <p className={styles.description}>{description}</p>}
             {children}

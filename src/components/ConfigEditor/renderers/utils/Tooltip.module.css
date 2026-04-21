@@ -12,13 +12,11 @@
     cursor: help;
     user-select: none;
     flex-shrink: 0;
-    transition: color var(--ce-transition-fast),
-                transform var(--ce-transition-fast);
+    transition: color var(--ce-transition-fast);
 }
 
 .icon:hover {
     color: var(--ifm-color-primary-dark);
-    transform: scale(1.1);
 }
 
 .icon:focus-visible {

@@ -5,16 +5,14 @@
 
 const ROOT_FIELD_ORDER: Record<string, number> = {
   // Single parameters first
-  'type': 1,
-  'width': 2,
-  'height': 3,
-  'documentType': 4,
+  'documentType': 1,
+  'type': 2,
+  'width': 3,
+  'height': 4,
+  'token': 5,
   // Complex objects
   'document': 10,
-  'editorConfig': 11,
-  'events': 12,
-  // Token last
-  'token': 100,
+  'editorConfig': 11
 }
 
 const EDITOR_CONFIG_FIELD_ORDER: Record<string, number> = {}

@@ -117,6 +117,14 @@ function getJSDocTag(sym, tagName) {
 
 /**
  * @param {ts.Symbol} sym
+ * @returns {string | undefined}
+ */
+function getShortDescription(sym) {
+    return getJSDocTag(sym, "shortDescription")
+}
+
+/**
+ * @param {ts.Symbol} sym
  * @returns {unknown | undefined}
  */
 function getDefault(sym) {
@@ -422,12 +430,14 @@ function objectToSchema(type) {
 
         // Attach JSDoc metadata
         const description = getDescription(prop)
+        const shortDescription = getShortDescription(prop)
         const defaultVal = getDefault(prop)
         const examples = getExamples(prop)
         const deprecated = getJSDocTag(prop, "deprecated")
 
         const annotated = {
             ...(description ? { description } : {}),
+            ...(shortDescription ? { "x-shortDescription": shortDescription } : {}),
             ...(defaultVal !== undefined ? { default: defaultVal } : {}),
             ...(examples ? { examples } : {}),
             ...(deprecated ? { deprecated: true, description: [description, `@deprecated ${deprecated}`].filter(Boolean).join("\n") } : {}),
