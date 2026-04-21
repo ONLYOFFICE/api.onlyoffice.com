@@ -29,7 +29,6 @@ export function CopyButton({ getText }: CopyButtonProps) {
             data-copied={copied}
         >
             <CopyIcon aria-hidden="true" />
-            {copied && <span className={styles.feedback}>Copied!</span>}
         </button>
     )
 }
