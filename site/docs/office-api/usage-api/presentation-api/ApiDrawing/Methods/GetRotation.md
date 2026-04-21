@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example shows how to get the rotation angle of the drawing.
+Get the rotation angle of the drawing in a presentation.
 
 ```javascript editor-pptx
+// How do I get the rotation in a presentation?
+
+// Get the rotation using a drawing object object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ let docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is: " + rotAngle + " degrees");
 slide.AddObject(shape);
-
 ```

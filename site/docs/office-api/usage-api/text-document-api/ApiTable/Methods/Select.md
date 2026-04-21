@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example selects the current table.
+Select the current table in a document.
 
 ```javascript editor-docx
-// How to select a table with a cursor.
+// How to select a table with a cursor in a document.
 
 // Add text to the table cell and select it.
 

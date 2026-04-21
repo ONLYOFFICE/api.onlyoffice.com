@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example demonstrates getting the formula from a data bar conditional formatting rule.
+Get the formula from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve the formula string from a data bar.
@@ -45,5 +45,4 @@ let formula = dataBar.GetFormula();
 
 worksheet.GetRange("C1").SetValue("Formula:");
 worksheet.GetRange("C2").SetValue(formula || "None");
-
 ```

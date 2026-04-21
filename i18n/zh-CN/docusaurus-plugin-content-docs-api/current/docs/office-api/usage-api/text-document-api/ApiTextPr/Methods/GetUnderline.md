@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何查明文本是否带下划线。
+检查文档中的文本是否有下划线。
 
 ```javascript editor-docx
-// How to know whether a text is underlined or not.
+// How to know whether a text is underlined or not in a document.
 
-// Get the text properties of the run and find whether it is underlined or not.
+// Get the text properties of the run and find whether it is underlined or not in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

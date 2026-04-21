@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置将用于段落中任何制表符的自定义制表位序列。
+在文档中设置一系列自定义制表位，用于段落中的所有制表符。
 
 ```javascript editor-docx
-// Add tabs to the paragraph.
+// Add tabs to the paragraph in a document.
 
-// Create a text in a paragraph and add tab stops to it.
+// Create a text in a paragraph and add tab stops to it in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

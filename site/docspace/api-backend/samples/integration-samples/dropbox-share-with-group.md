@@ -1,5 +1,6 @@
 ---
 description: Create shared Dropbox folders for DocSpace group members.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Dropbox share with group

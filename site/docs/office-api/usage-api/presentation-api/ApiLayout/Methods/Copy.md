@@ -21,10 +21,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of slide layout and apply it for other slide.
+Create a copy of slide layout and apply it for other slide.
 
 ```javascript editor-pptx
-// How to create a copy of a layout.
+// How to create a copy of a layout in a presentation.
 
 // Copy a layout of a presentation master.
 
@@ -44,5 +44,4 @@ presentation.AddSlide(slide);
 const copyLayout = layout.Copy();
 master.AddLayout(1, copyLayout);
 slide.ApplyLayout(copyLayout);
-
 ```

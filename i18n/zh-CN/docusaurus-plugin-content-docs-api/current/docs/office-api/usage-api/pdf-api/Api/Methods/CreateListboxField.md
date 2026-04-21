@@ -25,6 +25,10 @@ expression.CreateListboxField(aRect);
 如何创建列表框字段并添加到文档。
 
 ```javascript editor-pdf
+// How do I create the listbox field in a PDF document?
+
+// Create the listbox field and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

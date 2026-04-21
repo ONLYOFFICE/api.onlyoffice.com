@@ -22,10 +22,10 @@ expression.SetShowValue(showValue);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的显示值设置。
+设置数据条条件格式规则的显示值设置。
 
 ```javascript editor-xlsx
-// How to control whether the data bar shows the value.
+// How to control whether the data bar shows the value in a spreadsheet.
 
 // Set the show value setting of a data bar conditional formatting rule.
 
@@ -50,5 +50,4 @@ dataBar.SetShowValue(false);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetShowValue() ? "Yes" : "No");
-
 ```

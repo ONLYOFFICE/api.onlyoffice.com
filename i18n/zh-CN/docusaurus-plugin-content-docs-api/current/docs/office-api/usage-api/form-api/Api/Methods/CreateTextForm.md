@@ -22,12 +22,12 @@ expression.CreateTextForm(formPr);
 
 ## 示例
 
-此示例使用通用和特定的文本表单属性创建文本表单。
+创建文本表单并将其添加到文档段落中。
 
 ```javascript editor-forms
-// How to create a text form and add it to the paragraph.
+// Set text form properties and add the form to the document.
 
-// Add a text form to the ApiDocument object, set its properties like characters limit, etc.
+// Add a text form to the document object, set its properties like characters limit, etc.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({
@@ -43,5 +43,4 @@ let textForm = Api.CreateTextForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
-
 ```

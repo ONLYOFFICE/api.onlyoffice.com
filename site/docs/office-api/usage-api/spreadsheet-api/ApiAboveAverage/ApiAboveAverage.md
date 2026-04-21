@@ -1,6 +1,6 @@
 # ApiAboveAverage
 
-Represents the ApiAboveAverage class.
+ApiAboveAverage is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
 

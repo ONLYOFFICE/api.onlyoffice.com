@@ -2,7 +2,6 @@
 
 Represents the ApiRichContent class.
 
-
 ## Methods
 
 | Method | Returns | Description |

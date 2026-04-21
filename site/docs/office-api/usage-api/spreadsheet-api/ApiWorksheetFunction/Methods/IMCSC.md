@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the cosecant of a complex number.
+Return the cosecant of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the cosecant.
+// How to get the cosecant in a spreadsheet.
 
-// Use a function to get the cosecant of a complex number.
+// Use a function to get the cosecant of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMCSC("-2+2.5i"));
-
 ```

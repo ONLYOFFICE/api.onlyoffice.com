@@ -20,7 +20,7 @@ expression.GetAllCharts();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片版式中所有图表对象的数组。
+获取演示文稿中幻灯片版式的所有图表对象数组。
 
 ```javascript editor-pptx
 // How to get all charts from the layout of presentation.
@@ -54,5 +54,4 @@ layout.AddObject(chart);
 const charts = layout.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
-
 ```

@@ -2,25 +2,11 @@
 
 Checks if the current form is fixed size.
 
-## Syntax
-
-```javascript
-expression.IsFixed();
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md).
 
 ## Example
 
-This example checks if the current form is fixed size.
+Check if the current form is fixed size.
 
 ```javascript editor-docx
 // How to know whether a text form is fixed or not.

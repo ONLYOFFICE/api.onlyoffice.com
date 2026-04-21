@@ -3,25 +3,11 @@
 返回当前表单的文本属性。
 *如果该表单类型支持则使用*
 
-## 语法
-
-```javascript
-expression.GetTextPr();
-```
-
-`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
 
 ## 示例
 
-此示例展示如何从表单获取文本属性。
+获取文档中表单的文本属性。
 
 ```javascript editor-docx
 // How to get a text properties of a text form.

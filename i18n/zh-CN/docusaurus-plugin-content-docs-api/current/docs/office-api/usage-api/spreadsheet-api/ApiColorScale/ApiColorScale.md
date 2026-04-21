@@ -1,6 +1,6 @@
 # ApiColorScale
 
-表示 ApiColorScale 类。
+ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
 

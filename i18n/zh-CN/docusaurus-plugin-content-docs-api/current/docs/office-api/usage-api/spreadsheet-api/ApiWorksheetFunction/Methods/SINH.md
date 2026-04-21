@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的双曲正弦。
+在电子表格中返回数字的双曲正弦值。
 
 ```javascript editor-xlsx
-// How to calaculate the hyperbolic sine of a number.
+// How to calaculate the hyperbolic sine of a number in a spreadsheet.
 
-// Use a function to get a hyperbolic sine of a number.
+// Use a function to get a hyperbolic sine of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

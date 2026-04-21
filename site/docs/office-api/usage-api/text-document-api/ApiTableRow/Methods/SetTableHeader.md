@@ -5,32 +5,16 @@ wherever this table is displayed. This gives this table row the behavior of a 'h
 each of these pages. This element can be applied to any number of rows at the top of the 
 table structure in order to generate multi-row table headers.
 
-## Syntax
-
-```javascript
-expression.SetTableHeader(isHeader);
-```
-
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isHeader | Required | boolean |  | The true value means that the current table row will be repeated at the top of each new page. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableRowPr.SetTableHeader](../../ApiTableRowPr/Methods/SetTableHeader.md).
 
 ## Example
 
-This example specifies that the current table row will be repeated at the top of each new page wherever this table is displayed.
+Specify that the current table row will be repeated at the top of each new page wherever this table is displayed.
 
 ```javascript editor-docx
-// Rename the header of the table.
+// Rename the header of the table in a document.
 
-// How to set table row as a header.
+// How to set table row as a header in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

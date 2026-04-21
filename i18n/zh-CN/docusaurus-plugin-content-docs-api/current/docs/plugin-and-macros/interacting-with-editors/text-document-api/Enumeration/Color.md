@@ -2,6 +2,10 @@
 
 未提供描述。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -10,7 +14,3 @@
 | Color.B | number | 蓝色颜色分量值。 |
 | Color.G | number | 绿色颜色分量值。 |
 | Color.R | number | 红色颜色分量值。 |
-## 类型
-
-Object
-

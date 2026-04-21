@@ -14,10 +14,9 @@
 - "modern"
 - "classic"
 
-
 ## 示例
 
-此示例向文档添加标准样式的目录。
+向文档添加标准样式的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its style.
@@ -36,5 +35,4 @@ let tocPr = {
 	"TocStyle": tocStyle
 };
 doc.AddTableOfContents(tocPr);
-
 ```

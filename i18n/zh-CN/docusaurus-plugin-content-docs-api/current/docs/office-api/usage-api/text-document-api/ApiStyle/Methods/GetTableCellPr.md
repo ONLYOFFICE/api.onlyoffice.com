@@ -20,7 +20,7 @@ expression.GetTableCellPr();
 
 ## 示例
 
-此示例展示如何获取样式的表格单元格属性。
+获取文档中样式的表格单元格属性。
 
 ```javascript editor-docx
 // How to get table cell properties and add shading to it.

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the trigger type of an animation effect.
+Get the trigger type of an animation effect in a presentation.
 
 ```javascript editor-pptx
+// How can I get the trigger type using an animation effect in a presentation?
+
+// Get the trigger type for an animation effect in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Trigger type: ' + triggerType);
 slide.AddObject(infoShape);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定表格相对于当前节中文本边距的对齐方式。
+在文档中指定表格相对于当前节中文本边距的对齐方式。
 
 ```javascript editor-docx
-// How to set justification of the paragraph content.
+// How to set justification of the paragraph content in a document.
 
-// Change the justification of the paragraph.
+// Change the justification of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

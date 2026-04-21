@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns all comments from the current presentation.
+Return all comments from the current presentation.
 
 ```javascript editor-pptx
-// How to return an array of all comments from the ApiPresentation object and add a text of the first comment to the created shape.
+// How to return an array of all comments from the presentation object and add a text of the first comment to the created shape.
 
-// Get the ApiComment objects from the current presentation.
+// Get the comment objects from the current presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ const comments = presentation.GetAllComments();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment text: " + comments[0].GetText());
-
 ```

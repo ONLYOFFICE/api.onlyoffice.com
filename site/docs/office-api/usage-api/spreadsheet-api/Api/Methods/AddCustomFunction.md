@@ -29,14 +29,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example calculates custom function result.
+Calculate custom function result in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add custom function.
+// A custom function can perform calculations not available in standard functions.
 
-// How to use custom function.
-
-// How to add cell values using custom function.
+// Add cell values using a custom function.
 
 /**
  * Function that returns the argument

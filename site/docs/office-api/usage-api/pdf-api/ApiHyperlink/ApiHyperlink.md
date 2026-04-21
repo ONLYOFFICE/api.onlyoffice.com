@@ -2,7 +2,6 @@
 
 Represents the ApiHyperlink class.
 
-
 ## Methods
 
 | Method | Returns | Description |

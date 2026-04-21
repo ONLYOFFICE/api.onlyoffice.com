@@ -31,7 +31,9 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 1. Pack all the [plugin files](../../plugin-and-macros/structure/configuration/configuration.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
 
-   > If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   :::note
+   If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   :::
 
 2. Open the **Plugin Manager** on the **Plugins** tab.
 

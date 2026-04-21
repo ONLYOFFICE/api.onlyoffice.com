@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the theme color name used in a shape fill.
+Get the theme color name used in a shape fill in a PDF document.
 
 ```javascript editor-pdf
+// How to get the theme name for a color in a PDF document?
+
+// Get the theme name and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,5 +43,4 @@ run.SetFontSize(30);
 run.AddText('Theme name: ' + themeColor.GetThemeName());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

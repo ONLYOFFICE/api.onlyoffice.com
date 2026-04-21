@@ -26,7 +26,7 @@ expression.Modify(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## Example
 
-This example modifies a data validation rule for a range of cells.
+Modify a data validation rule for a range of cells.
 
 ```javascript editor-xlsx
 // How to change data validation for a range of cells.
@@ -42,5 +42,4 @@ const validation = range.GetValidation();
 validation.Add("xlValidateDecimal", "xlValidAlertWarning", "xlGreater", "12");
 targetRange.GetValidation().Modify("xlValidateDecimal", "xlValidAlertStop", "xlLess", "12");
 worksheet.GetRange("A6").SetValue("Data Validation is now modified for A4:A5, to accept values less than 12.");
-
 ```

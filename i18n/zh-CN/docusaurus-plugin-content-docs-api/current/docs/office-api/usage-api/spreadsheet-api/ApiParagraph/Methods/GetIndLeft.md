@@ -2,30 +2,16 @@
 
 返回段落左侧缩进。
 
-## 语法
-
-```javascript
-expression.GetIndLeft();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+继承自 [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md)。
 
 ## 示例
 
-此示例展示如何获取段落左侧缩进。
+获取电子表格中段落的左侧缩进。
 
 ```javascript editor-xlsx
-// How to get a left indent of a paragraph.
+// How to get a left indent of a paragraph in a spreadsheet.
 
-// Get the left paragraph indent by the side.
+// Get the left paragraph indent by the side in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

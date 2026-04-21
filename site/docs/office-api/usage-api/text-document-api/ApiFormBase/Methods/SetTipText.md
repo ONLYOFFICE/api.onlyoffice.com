@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the tip text to the form.
+Set the tip text to the form.
 
 ```javascript editor-docx
 // Add text as a tip of the form.

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets parent rich paragraph of rich run object and set justification property to it.
+Get parent rich paragraph of rich run object and set justification property to it in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the parent paragraph in a PDF document?
+
+// Get the parent paragraph using a rich text run object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

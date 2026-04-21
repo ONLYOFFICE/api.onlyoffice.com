@@ -22,12 +22,15 @@ expression.CreateRedactAnnot(rect);
 
 ## 示例
 
-此示例创建密文注释并将其添加到页面。
+创建密文注释并将其添加到页面。
 
 ```javascript editor-pdf
+// How do I create the redact annot in a PDF document?
+
+// Create the redact annot and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([[85.04985826771654,56.70000000000001,229.27237795275593,56.70000000000001,85.04985826771654,70.9988031496063,229.27237795275593,70.9988031496063]]);
 let page = doc.GetPage(0);
 page.AddObject(redactAnnot);
-
 ```

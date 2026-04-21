@@ -2,27 +2,17 @@
 
 Returns a visitor object for traversing the elements of the current document.
 
-## Syntax
-
-```javascript
-expression.GetDocumentVisitor();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-ApiDocumentVisitor
+Inherited from [ApiDocumentContent.GetDocumentVisitor](../../ApiDocumentContent/Methods/GetDocumentVisitor.md).
 
 ## Example
 
-This example shows how to use a document visitor to traverse document elements.
+Use a document visitor to traverse document elements in a document.
 
 ```javascript editor-docx
+// How can I get the document visitor using a document content in a document?
+
+// Get the document visitor for a document content in a document.
+
 const doc = Api.GetDocument();
 
 const p1 = doc.GetElement(0);
@@ -56,5 +46,4 @@ resultParagraph.AddText('Paragraphs found: ' + paragraphCount + ' (including par
 resultParagraph.AddLineBreak();
 resultParagraph.AddText('Tables found: ' + tableCount);
 doc.Push(resultParagraph);
-
 ```

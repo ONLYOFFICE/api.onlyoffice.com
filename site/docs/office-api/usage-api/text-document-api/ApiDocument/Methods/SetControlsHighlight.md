@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example sets the highlight to the content controls from the document.
+Set the highlight to the content controls from the document.
 
 ```javascript editor-docx
-// How to highlight thw controls with rose color.
+// How to highlight thw controls with rose color in a document.
 
 // Add elements to the document and color their background.
 
@@ -34,5 +34,4 @@ let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
 doc.AddElement(0, blockLvlSdt);
 doc.SetControlsHighlight(Api.HexColor('#FF6F3D'));
-
 ```

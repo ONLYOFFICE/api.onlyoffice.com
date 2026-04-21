@@ -2,30 +2,16 @@
 
 Returns the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndRight();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## Example
 
-This example shows how to get the paragraph right side indentation.
+Get the paragraph right side indentation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a right indent of a paragraph.
+// How to get a right indent of a paragraph in a spreadsheet.
 
-// Get the right paragraph indent by the side.
+// Get the right paragraph indent by the side in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

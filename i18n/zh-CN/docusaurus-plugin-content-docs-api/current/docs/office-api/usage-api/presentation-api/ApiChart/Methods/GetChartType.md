@@ -20,9 +20,13 @@ expression.GetChartType();
 
 ## 示例
 
-此示例演示如何获取图表的类型
+获取演示文稿中图表的类型。
 
 ```javascript editor-pptx
+// How can I get the chart type using a chart in a presentation?
+
+// Get the chart type for a chart in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -40,5 +44,4 @@ chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 slide.RemoveAllObjects();
 slide.AddObject(chart);
-
 ```

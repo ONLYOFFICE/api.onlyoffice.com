@@ -23,10 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## 示例
 
-如何向表格插入行。
+如何在 PDF 文档中向表格插入行。
 
 ```javascript editor-pdf
-// Create a 2x4 table, set its position and then insert a row to it.
+// Create a 2x4 table, set its position and then insert a row to it in a PDF document.
+
+// Add the row using a table object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

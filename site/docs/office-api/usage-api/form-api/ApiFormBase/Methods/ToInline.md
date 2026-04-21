@@ -21,7 +21,7 @@ boolean
 
 ## Example
 
-This example converts the form to an inline form.
+Convert the form to an inline form.
 
 ```javascript editor-forms
 // How to make the form inline.

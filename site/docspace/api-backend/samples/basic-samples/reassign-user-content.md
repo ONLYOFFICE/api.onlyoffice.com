@@ -1,5 +1,6 @@
 ---
 description: Reassign all user content to another user via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

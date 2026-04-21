@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the ApiName object of the range.
+Get the named range object of the range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a range name.
+// How to find out a range name in a spreadsheet.
 
 // Get a range, get its name and show it in the worksheet.
 

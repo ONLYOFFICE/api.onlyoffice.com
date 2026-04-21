@@ -12,9 +12,9 @@ expression.SetFontSize(nSize);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型**                    | **默认值** | **描述**                                     |
-| -------- | ------------- | ------------------------------- | ---------- | -------------------------------------------- |
-| nSize    | 必需          | [hps](../../Enumeration/hps.md) |            | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nSize | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位测量的文本大小值。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例设置当前文本块字符的字体大小。
+在文档中为当前文本 run 的字符设置字体大小。
 
 ```javascript editor-docx
-// How to change the text font size.
+// How to change the text font size in a document.
 
-// Create a text run object, resize its font.
+// Create a text run object, resize its font in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

@@ -1,5 +1,6 @@
 ---
 description: Configure and use the Text display component.
+tags: ["DocSpace", "Plugins", "Basic"]
 ---
 
 # Text component

@@ -22,10 +22,10 @@ object
 
 ## 示例
 
-此示例将段落转换为 JSON，然后从 JSON 恢复。
+将段落转换为 JSON，然后从 JSON 恢复。
 
 ```javascript editor-docx
-// Creates a paragraph, converts it to the JSON object, and then converts it back to the ApiParagraph object.
+// Create a paragraph, convert it to the JSON object, and then converts it back to the paragraph object in a document.
 
 // How to convert the specified JSON object into the Document Builder object of the corresponding type.
 

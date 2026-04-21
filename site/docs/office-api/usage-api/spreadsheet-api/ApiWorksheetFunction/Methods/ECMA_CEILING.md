@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to round the number up to the nearest multiple of significance. Negative numbers are rounded towards zero.
+Round the number up to the nearest multiple of significance. Negative numbers are rounded towards zero in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round up the number.
+// How to round up the number in a spreadsheet.
 
-// Use function to round up a number to the nearest multiple of significance.
+// Use function to round up a number to the nearest multiple of significance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

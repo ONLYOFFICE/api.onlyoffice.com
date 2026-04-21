@@ -1,5 +1,6 @@
 ---
 description: Retrieve hash settings from the DocSpace frame using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Get hash settings

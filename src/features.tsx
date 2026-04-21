@@ -12,7 +12,7 @@ import MCPServerIcon from "@site/static/icons/mcp-server-icon.svg";
 export type Features = {
   linkPrefix: string
   items: FeaturesGrid.Item[]
-  button: FeaturesGrid.Button
+  button?: FeaturesGrid.Button
 };
 
 export const DocsFeatures: Features = {
@@ -79,8 +79,8 @@ export const DocsFeatures: Features = {
 export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
   button: {
-    text: "Try DocSpace Cloud",
-    href: "https://www.onlyoffice.com/docspace-registration",
+    text: "Try DocSpace Playground",
+    href: "/docspace/javascript-sdk/get-started/playground/",
   },
   items: [
     {

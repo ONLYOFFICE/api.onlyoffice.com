@@ -22,7 +22,7 @@ expression.Duplicate(nPos);
 
 ## Example
 
-This example makes a duplicate of slide layout and applies it to another slide.
+Make a duplicate of slide layout and apply it to another slide.
 
 ```javascript editor-pptx
 // How to create a duplicate of a slide layout.
@@ -44,5 +44,4 @@ const slide = Api.CreateSlide();
 presentation.AddSlide(slide);
 const duplicateLayout = layout.Duplicate(1);
 slide.ApplyLayout(duplicateLayout);
-
 ```

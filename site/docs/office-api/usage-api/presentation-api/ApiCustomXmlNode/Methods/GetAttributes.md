@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to retrieve and display the attributes of the current XML node.
+Retrieve and display the attributes of the current XML node in a presentation.
 
 ```javascript editor-pptx
+// How can I get the attributes using a custom XML node in a presentation?
+
+// Get the attributes for a custom XML node in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +50,4 @@ for (let i = 0; i < attributes.length; i++) {
 	displayText += 'name: ' + attributes[i].name + ', value: ' + attributes[i].value + '\n';
 }
 paragraph.AddText(displayText);
-
 ```

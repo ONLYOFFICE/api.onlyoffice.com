@@ -24,12 +24,12 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 ## 示例
 
-此示例删除指定的批注回复。
+移除电子表格中指定的批注回复。
 
 ```javascript editor-xlsx
-// How to remove replies from the comment.
+// How to remove replies from the comment in a spreadsheet.
 
-// Add a comment and replies to it, then remove specified reply and then show replies count.
+// Add a comment and replies to it, then remove specified reply and then show replies count in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

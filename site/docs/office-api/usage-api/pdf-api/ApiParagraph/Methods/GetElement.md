@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get a paragraph element using the position specified.
+Get a paragraph element using the position specified in a PDF document.
 
 ```javascript editor-pdf
-// How to return an element from the ApiPargaraph object.
+// How to return an element from the ApiPargaraph object in a PDF document.
 
-// Get an object from the paragraph.
+// Get an object from the paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.RemoveAllElements();
 
@@ -57,5 +57,4 @@ paragraph.AddElement(run);
 run = paragraph.GetElement(2);
 run.SetBold(true);
 page.AddObject(shape);
-
 ```

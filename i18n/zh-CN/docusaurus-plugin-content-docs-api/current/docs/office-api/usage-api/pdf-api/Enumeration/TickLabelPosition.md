@@ -17,10 +17,9 @@
 - "low"
 - "high"
 
-
 ## 示例
 
-此示例将垂直刻度标签的位置设置在主垂直标签旁边。
+将垂直刻度标签的位置设置在主垂直标签旁边。
 
 ```javascript editor-pdf
 // How to set tick label positions for the chart.

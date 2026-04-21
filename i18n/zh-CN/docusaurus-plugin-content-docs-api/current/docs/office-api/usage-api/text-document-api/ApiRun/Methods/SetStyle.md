@@ -12,9 +12,9 @@ expression.SetStyle(oStyle);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型**                           | **默认值** | **描述**                 |
-| -------- | ------------- | -------------------------------------- | ---------- | ------------------------ |
-| oStyle   | 必需          | [ApiStyle](../../ApiStyle/ApiStyle.md) |            | 必须应用于文本块的样式。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStyle | 必需 | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | 必须应用于文本块的样式。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-此示例为文本块设置样式。
+在文档中为 run 设置样式。
 
 ```javascript editor-docx
-// How to update the style of the text run.
+// How to update the style of the text run in a document.
 
-// Create a new style and apply it to the run.
+// Create a new style and apply it to the run in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

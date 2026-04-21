@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Get the paragraph contents justification in a document.
 
 ```javascript editor-docx
 // Get the justification of the paragraph and show it in the document.
 
-// How to know the justification type of the paragraph.
+// How to know the justification type of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

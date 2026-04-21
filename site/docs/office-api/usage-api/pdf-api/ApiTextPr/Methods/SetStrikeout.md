@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+Specify that the contents of the run are displayed with a single horizontal line through the center of the line in a PDF document.
 
 ```javascript editor-pdf
-// How to strike out a text with one line.
+// How to strike out a text with one line in a PDF document.
 
-// Get the text properties of the run and cross it out.
+// Get the text properties of the run and cross it out in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

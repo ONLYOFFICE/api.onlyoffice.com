@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a tab stop to the paragraph.
+Add a tab stop to the paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to add a tab after a sentence in a paragraph.
+// How to add a tab after a sentence in a paragraph in a PDF document.
 
-// How to split a text string with a tab.
+// How to split a text string with a tab in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -36,7 +36,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 
 paragraph.AddText("This is just a sample text. After it three tab stops will be added.");
@@ -45,5 +45,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("This is the text which starts after the tab stops.");
 page.AddObject(shape);
-
 ```

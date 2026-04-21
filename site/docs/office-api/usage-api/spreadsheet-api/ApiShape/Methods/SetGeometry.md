@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Create a custom triangle shape and add it to the worksheet. Applies custom geometry to a shape with specific fill and stroke.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I set geometry in a spreadsheet?
+
+// Set geometry using a shape object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

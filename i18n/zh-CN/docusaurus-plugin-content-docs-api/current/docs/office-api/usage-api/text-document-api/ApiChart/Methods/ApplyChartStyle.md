@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例展示如何为图表应用样式。
+为文档中的图表应用样式。
 
 ```javascript editor-docx
-// How to change the style of the chart by indicating a number that specifies a style type.
+// How to change the style of the chart by indicating a number that specifies a style type in a document.
 
-// Create a bar chart and set its style.
+// Create a bar chart and set its style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

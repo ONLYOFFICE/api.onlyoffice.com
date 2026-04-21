@@ -23,7 +23,7 @@ expression.SetCellBorderBottom(fSize, oApiFill);
 
 ## 示例
 
-此示例设置应在表格单元格底部显示的边框。
+设置表格单元格底部显示的边框。
 
 ```javascript editor-pptx
 // How to set cell bottom border with its fill color.
@@ -41,5 +41,4 @@ cell.SetCellBorderBottom(2, fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

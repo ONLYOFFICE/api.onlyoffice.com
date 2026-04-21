@@ -1,5 +1,6 @@
 ---
 description: Retrieve the current selection in DocSpace using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Get selection

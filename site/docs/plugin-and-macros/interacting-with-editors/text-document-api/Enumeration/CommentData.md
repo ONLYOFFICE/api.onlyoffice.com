@@ -2,6 +2,10 @@
 
 The comment data.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -13,11 +17,6 @@ The comment data.
 | Time | string | The time when the comment was posted (in milliseconds). |
 | UserId | string | The user ID of the comment author. |
 | UserName | string | The comment author. |
-## Type
-
-Object
-
-
 
 ## Example
 

@@ -1,5 +1,6 @@
 ---
 description: Set a "Need Review" comment on a file automatically when it is updated.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets a custom start page index for section.
+Set a custom start page index for section.
 
 ```javascript editor-docx
 // How to set the start page number for the current section.

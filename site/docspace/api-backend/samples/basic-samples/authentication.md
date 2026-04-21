@@ -1,5 +1,6 @@
 ---
 description: Authenticate a user and verify the received token via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

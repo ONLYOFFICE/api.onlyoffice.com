@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the internal id of a form.
+Get the internal id of a form in a document.
 
 ```javascript editor-forms
 // How to get an internal id of a text form.
@@ -35,5 +35,4 @@ let internalId = textForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);
-
 ```

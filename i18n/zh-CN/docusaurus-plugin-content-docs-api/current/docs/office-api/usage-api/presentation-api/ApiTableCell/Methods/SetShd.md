@@ -25,7 +25,7 @@ expression.SetShd(sType, r, g, b);
 
 ## 示例
 
-此示例指定应应用于当前表格单元格范围的底纹。
+指定应用于当前表格单元格范围的底纹。
 
 ```javascript editor-pptx
 // How to set shading fill to the cell.
@@ -43,5 +43,4 @@ cell.SetShd(fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

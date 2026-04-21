@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the chart series.
+Set the specified numeric format to the chart series.
 
 ```javascript editor-pptx
 // How to set the "0.00" numeric format to the chart seria.
@@ -47,5 +47,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

@@ -2,27 +2,11 @@
 
 Sets the tip text to the current form.
 
-## Syntax
-
-```javascript
-expression.SetTipText(sText);
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | Tip text. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md).
 
 ## Example
 
-This example sets the tip text to the form.
+Set the tip text to the form.
 
 ```javascript editor-forms
 // Add text as a tip of the form.

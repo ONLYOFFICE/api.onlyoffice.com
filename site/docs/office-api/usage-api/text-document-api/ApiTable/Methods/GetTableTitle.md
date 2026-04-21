@@ -2,28 +2,14 @@
 
 Returns the table title (caption).
 
-## Syntax
-
-```javascript
-expression.GetTableTitle();
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle.md).
 
 ## Example
 
-This example shows how to get the table title.
+Get the table title in a document.
 
 ```javascript editor-docx
-// How to get the table title.
+// How to get the table title in a document.
 
 // Display the title of the table in the document.
 

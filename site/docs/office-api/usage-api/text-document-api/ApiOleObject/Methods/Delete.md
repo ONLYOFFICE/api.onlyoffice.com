@@ -1,0 +1,25 @@
+# Delete
+
+Deletes the current graphic object.
+
+Inherited from [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md).
+
+## Example
+
+Delete the current graphic object in a document.
+
+```javascript editor-docx
+// How to delete a shape from the document.
+
+// Remove the drawing object in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.Delete();
+paragraph.AddLineBreak();
+paragraph.AddText("In this paragraph, the Drawing object has been deleted.");
+```

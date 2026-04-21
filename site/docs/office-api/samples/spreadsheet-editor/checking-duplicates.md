@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Find and highlight duplicate values in a spreadsheet column.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Checking duplicates

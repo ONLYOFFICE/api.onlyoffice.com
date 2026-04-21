@@ -29,9 +29,13 @@ string
 
 ## Example
 
-This example shows how to get all text from the document content of a shape.
+Get all text from the document content of a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the text for a document content?
+
+// Get the text and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -54,5 +58,4 @@ paragraph.AddElement(run);
 
 const text = content.GetText();
 worksheet.GetRange('A1').SetValue('Text: ' + text);
-
 ```

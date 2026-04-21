@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## Example
 
-This example adds a comment to the paragraph.
+Add a comment to the paragraph in a document.
 
 ```javascript editor-docx
-// How to add a comment with an author to the paragraph.
+// How to add a comment with an author to the paragraph in a document.
 
-// Comment a paragraph.
+// Add the comment and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

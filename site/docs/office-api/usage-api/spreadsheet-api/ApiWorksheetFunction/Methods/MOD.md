@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the remainder after a number is divided by a divisor.
+Return the remainder after a number is divided by a divisor in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the modulo from the division.
+// How to get the modulo from the division in a spreadsheet.
 
-// Use a function to calculate the remainder from the division operation.
+// Use a function to calculate the remainder from the division operation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

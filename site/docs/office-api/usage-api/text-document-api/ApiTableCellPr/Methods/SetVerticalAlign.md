@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies the vertical alignment for the text contents within the table cell.
+Specify the vertical alignment for the text contents within the table cell.
 
 ```javascript editor-docx
 // Set text vertical alignment to the cell.

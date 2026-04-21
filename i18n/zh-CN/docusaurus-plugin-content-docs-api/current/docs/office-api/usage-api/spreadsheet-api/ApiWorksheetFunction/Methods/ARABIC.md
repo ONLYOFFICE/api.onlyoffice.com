@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何将罗马数字转换为阿拉伯数字。
+在电子表格中将罗马数字转换为阿拉伯数字。
 
 ```javascript editor-xlsx
-// How to convert numbers to Arabic numerical.
+// How to convert numbers to Arabic numerical in a spreadsheet.
 
-// Use function to convert numbers to Arabic numerical.
+// Use function to convert numbers to Arabic numerical in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

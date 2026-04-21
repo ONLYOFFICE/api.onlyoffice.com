@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example reads filter information from the worksheet AutoFilter.
+Read filter information from the worksheet AutoFilter.
 
 ```javascript editor-xlsx
-// How to inspect the criteria of existing filters.
+// How to inspect the criteria of existing filters in a spreadsheet.
 
-// Read ApiFilter objects using ApiAutoFilter.GetFilters().
+// Read filter objects using ApiAutoFilter.GetFilters() in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,5 +61,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C10").SetValue("Filter On:");
     worksheet.GetRange("C11").SetValue(f.On);
 }
-
 ```

@@ -1,5 +1,6 @@
 ---
 description: Embed a read-only document viewer using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Initialize viewer

@@ -21,9 +21,13 @@ expression.GetCore();
 
 ## 示例
 
-此示例演示如何获取 ApiCore 实例并使用其方法管理文档元数据。
+获取核心属性实例并使用其方法管理文档元数据。
 
 ```javascript editor-docx
+// How can I get the core using a document in a document?
+
+// Get the core for a document in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 
@@ -75,5 +79,4 @@ paragraph.AddText("Revision: " + revision + "\n");
 paragraph.AddText("Subject: " + subject + "\n");
 paragraph.AddText("Title: " + title + "\n");
 paragraph.AddText("Version: " + version);
-
 ```

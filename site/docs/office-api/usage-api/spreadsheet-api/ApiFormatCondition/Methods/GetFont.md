@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the font applied by a conditional formatting rule.
+Get the font applied by a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve font settings from conditional formatting rules.
@@ -52,5 +52,4 @@ if (font) {
 worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
-
 ```

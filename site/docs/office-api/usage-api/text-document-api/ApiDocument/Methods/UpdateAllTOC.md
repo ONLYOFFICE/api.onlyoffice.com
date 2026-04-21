@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example updates all tables of contents in the current document.
+Update all tables of contents in the current document.
 
 ```javascript editor-docx
-// How to update all table of contents.
+// How to update all table of contents in a document.
 
 // Edit document content and update the table of contents.
 

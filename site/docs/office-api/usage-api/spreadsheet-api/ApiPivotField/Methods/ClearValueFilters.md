@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to clear value filters from a pivot field.
+Clear value filters from a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field value filters.
+// How to remove previously applied pivot field value filters in a spreadsheet.
 
-// Create a pivot table, add data to it then delete value filters from a custom field.
+// Create a pivot table, add data to it then delete value filters from a custom field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

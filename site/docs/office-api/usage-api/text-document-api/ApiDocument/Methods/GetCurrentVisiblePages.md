@@ -20,7 +20,7 @@ number[]
 
 ## Example
 
-This example shows how to get current visible pages indexes.
+Get current visible pages indexes in a document.
 
 ```javascript editor-docx
 // How to get all indexes of non-hidden pages.
@@ -31,5 +31,4 @@ const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("The current visibles pages indexes is: " + doc.GetCurrentVisiblePages());
 doc.Push(paragraph);
-
 ```

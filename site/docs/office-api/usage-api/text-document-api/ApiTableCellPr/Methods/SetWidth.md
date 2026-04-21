@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the preferred width to the current table cell.
+Set the preferred width to the current table cell.
 
 ```javascript editor-docx
 // Resize the width of the cell.

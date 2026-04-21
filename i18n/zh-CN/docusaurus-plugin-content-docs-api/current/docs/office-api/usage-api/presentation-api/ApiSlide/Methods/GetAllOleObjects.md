@@ -20,7 +20,7 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-此示例展示如何获取幻灯片中所有 OLE 对象的数组。
+获取演示文稿中幻灯片的所有 OLE 对象数组。
 
 ```javascript editor-pptx
 // How to get all OLE objects from the slide.
@@ -54,5 +54,4 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 slide.AddObject(drawing);
-
 ```

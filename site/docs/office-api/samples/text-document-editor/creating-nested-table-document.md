@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a table with nested tables for hierarchical data.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating nested table document

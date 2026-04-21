@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-此示例展示如何获取批注创建时间戳（当前时区格式）。
+获取电子表格中批注创建的当前时区格式时间戳。
 
 ```javascript editor-xlsx
-// How to get a time when a comment was created.
+// How to get a time when a comment was created in a spreadsheet.
 
 // Add a comment creation timestamp to a range of the worksheet.
 

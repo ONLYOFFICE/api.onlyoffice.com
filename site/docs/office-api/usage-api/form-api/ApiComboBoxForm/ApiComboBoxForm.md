@@ -1,7 +1,6 @@
 # ApiComboBoxForm
 
-Represents the ApiComboBoxForm class.
-
+ApiComboBoxForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
 

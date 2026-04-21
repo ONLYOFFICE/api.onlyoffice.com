@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Retrieves arc parameters including radii and angles.
+Retrieve arc parameters including radii and angles. Displays arc width radius, height radius, start and sweep angles in cells.
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How to get the h r for a path command in a spreadsheet?
+
+// Get the h r and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

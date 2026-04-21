@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Format a table with alternating row colors.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Formatting alternating row colors

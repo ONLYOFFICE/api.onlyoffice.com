@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the confidence interval for a population mean, using a normal distribution.
+Return the confidence interval for a population mean, using a normal distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the confidence interval for a population mean, using a normal distribution.
+// How to return the confidence interval for a population mean, using a normal distribution in a spreadsheet.
 
-// Use function to confidence interval for a population mean.
+// Use function to confidence interval for a population mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

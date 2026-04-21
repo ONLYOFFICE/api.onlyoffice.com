@@ -20,7 +20,7 @@ string \| null
 
 ## Example
 
-This example shows how to get a value that represents the format code for the current range.
+Get a value that represents the format code for the current range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find out a number format of a range.

@@ -2,30 +2,16 @@
 
 Returns the paragraph line spacing value.
 
-## Syntax
-
-```javascript
-expression.GetSpacingLineValue();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
+Inherited from [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacingLineValue.md).
 
 ## Example
 
-This example shows how to get the paragraph line spacing value.
+Get the paragraph line spacing value in a PDF document.
 
 ```javascript editor-pdf
-/// How to get the spacing line value between sentences of a paragraph.
+// / How to get the spacing line value between sentences of a paragraph in a PDF document.
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value.
+// Create a paragraph, set the spacing line between the sentences and retrieve the value in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +24,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingLine(3 * 240, "auto");
@@ -51,5 +37,4 @@ const spacingLineValue = paraPr.GetSpacingLineValue();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line value : " + spacingLineValue);
 docContent.Push(paragraph);
-
 ```

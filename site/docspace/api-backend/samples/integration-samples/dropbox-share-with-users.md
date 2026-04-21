@@ -1,5 +1,6 @@
 ---
 description: Share Dropbox folders with DocSpace users.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 # Dropbox share with users

@@ -18,8 +18,8 @@ type Category = {
 };
 
 const categories: Category[] = [
-  { id: 'favorite', label: 'Favorite', subtitle: 'Recommended', icon: <FavoriteIcon /> },
-  { id: 'docs', label: 'Docs', subtitle: 'Documents Editors', icon: <DocsApiIcon /> },
+  { id: 'favorites', label: 'Favorites', subtitle: 'Frequently used', icon: <FavoriteIcon /> },
+  { id: 'docs', label: 'Docs', subtitle: 'Document Editors', icon: <DocsApiIcon /> },
   { id: 'docspace', label: 'DocSpace', subtitle: 'Collaborative cloud', icon: <DocSpaceIcon /> },
   { id: 'ai', label: 'AI', subtitle: 'Artificial Intelligence', icon: <AiIcon /> },
 ];
@@ -35,11 +35,11 @@ export default function SamplesPage(): ReactNode {
       <div className={layoutStyles.container}>
         <div className={layoutStyles.containerInner}>
           <div className={layoutStyles.headerSection}>
-            <Heading as="h1" className="hero__title">API integration samples</Heading>
+            <Heading as="h1" className="hero__title">ONLYOFFICE API samples</Heading>
             <p>
-              Explore ready-to-use code examples for integrating ONLYOFFICE
-              document editing into your applications across multiple languages
-              and platforms.
+              Explore a collection of ready-to-use code examples demonstrating
+              how to integrate and extend ONLYOFFICE document editing and
+              collaboration across various platforms, languages, and use cases.
             </p>
           </div>
 

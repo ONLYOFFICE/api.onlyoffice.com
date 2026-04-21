@@ -2,7 +2,6 @@
 
 Represents the Api class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -11,13 +10,11 @@ Represents the Api class.
 | [AddOleObject](./AddOleObject.md) | None | Adds an OLE object to the current document position. |
 | [ChangeComment](./ChangeComment.md) | boolean | Changes the specified comment. |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
-| [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
 | [FocusEditor](./FocusEditor.md) | None | Returns focus to the editor. |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetCustomFunctions](./GetCustomFunctions.md) | string | Returns a library of local custom functions. |
-| [GetDocumentLang](./GetDocumentLang.md) | string | Returns the document language. |
 | [GetFileToDownload](./GetFileToDownload.md) | string | Returns the current file to download in the specified format. |
 | [GetFontList](./GetFontList.md) | [FontInfo](../Enumeration/FontInfo.md)[] | Returns the fonts list. |
 | [GetImageDataFromSelection](./GetImageDataFromSelection.md) | [ImageData](../Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle. |

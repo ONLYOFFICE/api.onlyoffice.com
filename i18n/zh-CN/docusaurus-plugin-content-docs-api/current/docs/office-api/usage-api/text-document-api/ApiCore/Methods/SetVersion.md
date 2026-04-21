@@ -22,9 +22,13 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-此示例演示如何设置当前文档的版本。
+设置文档中当前文档的版本。
 
 ```javascript editor-docx
+// How do I set version in a document?
+
+// Set version using a core properties object in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetVersion("v9.0");
@@ -32,5 +36,4 @@ core.SetVersion("v9.0");
 const version = core.GetVersion();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Version: " + version);
-
 ```

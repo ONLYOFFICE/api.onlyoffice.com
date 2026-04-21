@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the x position of the drawing on the slide.
+Get the x position of the drawing on the slide.
 
 ```javascript editor-pptx
+// How can I get the pos x using a drawing object in a presentation?
+
+// Get the pos x for a drawing object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,5 +41,4 @@ const posX = shape.GetPosX();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing X position: ' + posX + ' EMU');
-
 ```

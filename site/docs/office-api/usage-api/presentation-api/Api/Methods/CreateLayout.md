@@ -22,12 +22,12 @@ expression.CreateLayout(oMaster);
 
 ## Example
 
-This example shows how to create layout.
+Create layout in a presentation.
 
 ```javascript editor-pptx
 // How to create and apply a layout for a slide.
 
-// Change a slide layout.
+// Create the layout and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ slide1.ApplyLayout(layout);
 const slide2 = Api.CreateSlide();
 presentation.AddSlide(slide2);
 slide2.ApplyLayout(layout);
-
 ```

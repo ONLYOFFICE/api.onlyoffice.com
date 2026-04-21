@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例演示如何创建指定幻灯片母版对象的副本。
+在演示文稿中创建指定幻灯片母版对象的副本。
 
 ```javascript editor-pptx
-// How to create a copy of a master.
+// How to create a copy of a master in a presentation.
 
-// Copy the ApiMaster object.
+// Copy the slide master object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after adding the copied master: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

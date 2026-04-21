@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a table with bold headers and gray background.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating formatted table

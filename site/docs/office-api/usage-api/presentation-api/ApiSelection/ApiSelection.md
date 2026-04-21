@@ -2,7 +2,6 @@
 
 Represents the ApiSelection class.
 
-
 ## Methods
 
 | Method | Returns | Description |

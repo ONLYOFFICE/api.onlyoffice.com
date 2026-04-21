@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为包含该单元格的列中的所有单元格设置背景颜色。
+为包含该单元格的列中的所有单元格设置背景颜色。
 
 ```javascript editor-docx
 // How to color the cell column background.
@@ -38,5 +38,4 @@ table.SetStyle(tableStyle);
 let cell = table.GetRow(0).GetCell(0);
 cell.SetColumnBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
-
 ```

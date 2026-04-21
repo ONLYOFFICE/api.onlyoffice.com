@@ -24,10 +24,12 @@ boolean
 
 ## Example
 
-How to rename a chart.
+How to rename a chart in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title.
+// Create a chart, set its properties and its title in a PDF document.
+
+// Use chart to set title using the chart API in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,5 +51,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

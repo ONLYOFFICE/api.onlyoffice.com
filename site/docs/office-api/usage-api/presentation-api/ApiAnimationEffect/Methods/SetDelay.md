@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the delay of an animation effect.
+Set the delay of an animation effect in a presentation.
 
 ```javascript editor-pptx
+// How do I set delay in a presentation?
+
+// Set delay using an animation effect object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -56,5 +60,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New delay: ' + delay + 'ms (1 second)');
 slide.AddObject(infoShape);
-
 ```

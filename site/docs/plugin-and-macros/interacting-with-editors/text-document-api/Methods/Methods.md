@@ -2,7 +2,6 @@
 
 Represents the Api class.
 
-
 ## Methods
 
 | Method | Returns | Description |

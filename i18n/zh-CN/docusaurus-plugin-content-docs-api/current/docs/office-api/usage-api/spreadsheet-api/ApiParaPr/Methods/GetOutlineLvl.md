@@ -20,9 +20,13 @@ Number
 
 ## 示例
 
-此示例演示如何通过段落属性设置和获取指定段落的大纲级别。
+通过电子表格中的段落属性设置和获取指定段落的大纲级别。
 
 ```javascript editor-xlsx
+// How to get the outline lvl for a paragraph properties in a spreadsheet?
+
+// Get the outline lvl and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +43,4 @@ const levelAfter = paraPr.GetOutlineLvl();
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

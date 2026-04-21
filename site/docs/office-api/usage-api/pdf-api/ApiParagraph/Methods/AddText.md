@@ -22,12 +22,12 @@ expression.AddText(text);
 
 ## Example
 
-This example adds some text to the paragraph.
+Add some text to the paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to add a text to the ApiParagraph object.
+// How to add a text to the paragraph object in a PDF document.
 
-// How to add a text to the shape.
+// How to add a text to the shape in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 
 paragraph.SetJc("left");
@@ -46,5 +46,4 @@ paragraph.AddText("This is a text inside the shape aligned left.");
 paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 page.AddObject(shape);
-
 ```

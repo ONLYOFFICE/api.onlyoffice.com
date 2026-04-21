@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the border color of a form.
+Get the border color of a form in a document.
 
 ```javascript editor-docx
 // How to get the border color of a text form.
@@ -36,5 +36,4 @@ let borderColor = textForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);
-
 ```

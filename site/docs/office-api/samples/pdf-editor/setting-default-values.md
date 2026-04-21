@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Set default values for PDF form fields.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Setting default values

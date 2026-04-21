@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回两个数据集的（右尾）F 概率分布（离散度）。
+在电子表格中返回两个数据集的（右尾）F 概率分布（差异程度）。
 
 ```javascript editor-xlsx
-// How to get an F probability distribution of two datasets.
+// How to get an F probability distribution of two datasets in a spreadsheet.
 
-// Use function to get F probability distribution (degree of diversity).
+// Use function to get F probability distribution (degree of diversity) in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

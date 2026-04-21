@@ -4,33 +4,16 @@
 nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
 将其解释为 false。
 
-## 语法
-
-```javascript
-expression.SetSpacingAfter(nAfter, isAfterAuto);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAfter | 必需 | [twips](../../Enumeration/twips.md) |  | 当前段落段后间距的值，以磅的二十分之一（1/1440 英寸）为单位。 |
-| isAfterAuto | 可选 | boolean | false | true 值禁用当前段落的段后间距。 |
-
-## 返回值
-
-boolean
+继承自 [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md)。
 
 ## 示例
 
-此示例设置当前段落的段后间距。
+设置电子表格中当前段落之后的间距。
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points.
+// How to add the spacing after the paragraphs using points in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
+// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

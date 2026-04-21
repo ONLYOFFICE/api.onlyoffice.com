@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例获取文本的双删除线属性。
+获取电子表格中文本的双删除线属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out with double lines or not.
+// How to find out whether a text is stroke out with double lines or not in a spreadsheet.
 
-// Get a text double cross out property.
+// Get a text double cross out property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

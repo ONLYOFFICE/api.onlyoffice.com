@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何查明文本是否带下划线。
+检查 PDF 文档中的文本是否有下划线。
 
 ```javascript editor-pdf
-// How to know whether a text is underlined or not.
+// How to know whether a text is underlined or not in a PDF document.
 
-// Get the text properties of the run and find whether it is underlined or not.
+// Get the text properties of the run and find whether it is underlined or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -50,5 +50,4 @@ paragraph = Api.CreateParagraph();
 const underline = textPr.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
-
 ```

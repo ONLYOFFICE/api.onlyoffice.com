@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example checks if the form border width is respected or not.
+Check if the form border width is respected or not.
 
 ```javascript editor-docx
-// How to find out whether the borders of the image are respected.
+// How to find out whether the borders of the image are respected in a document.
 
 // Find out whether the borders of the picture form in this document are respected when scaling the image.
 

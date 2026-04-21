@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-This example adds a heading cross-reference to the paragraph.
+Add a heading cross-reference to the paragraph in a document.
 
 ```javascript editor-docx
-// How to create a heading reference to the paragraph.
+// How to create a heading reference to the paragraph in a document.
 
-// Add a cross-reference to the heading of the paragraph.
+// Add a cross-reference to the heading of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");

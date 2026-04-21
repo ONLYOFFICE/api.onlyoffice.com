@@ -2,7 +2,6 @@
 
 Represents the Api class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -11,7 +10,6 @@ Represents the Api class.
 | [AddOleObject](./AddOleObject.md) | None | Adds an OLE object to the current document position. |
 | [ChangeComment](./ChangeComment.md) | boolean | Changes the specified comment. |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
-| [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
 | [EndSlideShow](./EndSlideShow.md) | None | Ends the current slide show. |

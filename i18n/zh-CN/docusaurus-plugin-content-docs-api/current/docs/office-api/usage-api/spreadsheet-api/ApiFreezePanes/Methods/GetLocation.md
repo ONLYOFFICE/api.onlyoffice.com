@@ -20,10 +20,10 @@ expression.GetLocation();
 
 ## 示例
 
-此示例冻结第一列并将冻结的范围地址粘贴到表格中。
+冻结第一列并将冻结的范围地址粘贴到电子表格中的表格。
 
 ```javascript editor-xlsx
-// How to get location address of a freezed column.
+// How to get location address of a freezed column in a spreadsheet.
 
 // Get an address of a column from freezed panes and display it in the worksheet.
 

@@ -22,7 +22,7 @@ expression.GetSlideByIndex(nIndex);
 
 ## Example
 
-This example shows how to get a slide by its position in the presentation.
+Get a slide by its position in the presentation.
 
 ```javascript editor-pptx
 // How to find a slide from the presentation using its index.
@@ -38,5 +38,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

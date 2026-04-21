@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例使用在单元格中的位置添加段落。
+使用单元格中的位置添加段落。
 
 ```javascript editor-docx
 // Insert new paragraph into the current cell.

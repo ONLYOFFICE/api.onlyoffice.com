@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is not text (blank cells are not text), and returns true or false.
+Check whether a value is not text (blank cells are not text), and return true or false in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to check if the cell contains a non-text value.
 
-// Use a function to check whether a range data is a text or not.
+// Use a function to check whether a range data is a text or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

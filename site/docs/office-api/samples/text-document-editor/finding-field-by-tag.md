@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Find content controls by tag and retrieve their values.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 # Finding field by tag
 

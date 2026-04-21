@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例指定当前范围的内容显示时，字符正下方会出现一条线。
+指定在文档中当前范围的内容与字符正下方的线条一起显示。
 
 ```javascript editor-docx
-// Underline the range.
+// Underline the range in a document.
 
-// Get a range and underline it with one line.
+// Get a range and underline it with one line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies whether the current section in this document has the different header and footer for the section first page.
+Specify whether the current section in this document has the different header and footer for the section first page.
 
 ```javascript editor-docx
 // How to make a page a title one.

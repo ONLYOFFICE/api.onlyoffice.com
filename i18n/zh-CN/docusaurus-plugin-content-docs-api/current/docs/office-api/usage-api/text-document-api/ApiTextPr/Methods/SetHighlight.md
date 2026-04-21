@@ -12,9 +12,9 @@ expression.SetHighlight(sColor);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型**                                          | **默认值** | **描述**             |
-| -------- | ------------- | ----------------------------------------------------- | ---------- | -------------------- |
-| sColor   | 必需          | [highlightColor](../../Enumeration/highlightColor.md) |            | 可用的突出显示颜色。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sColor | 必需 | [highlightColor](../../Enumeration/highlightColor.md) |  | 可用的突出显示颜色。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定添加到文本属性并作为背景应用于当前文本块/范围/段落内容的高亮颜色。
+指定在文档中添加到文本属性并作为背景应用于当前 run/范围/段落内容的突出显示颜色。
 
 ```javascript editor-docx
-// How to color a text object background.
+// How to color a text object background in a document.
 
-// Create a text run object, add color to its background.
+// Create a text run object, add color to its background in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取字段类型并显示。
+获取 PDF 文档中列表框字段的类类型。
 
 ```javascript editor-pdf
+// How to identify the class type of a listbox field in a PDF document?
+
+// Obtain the class type identifier of a listbox field object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let listboxField = Api.CreateListboxField([10, 10, 160, 100]);

@@ -1,5 +1,6 @@
 ---
 description: Generate a monthly compliance report from audit events and upload it.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

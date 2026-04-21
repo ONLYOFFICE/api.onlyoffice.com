@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-此示例演示如何计算包含数字的区域中单元格的数量，忽略空单元格或其他单元格。
+在电子表格中计算范围内包含数字的单元格数量，忽略空单元格。
 
 ```javascript editor-xlsx
 // How to find a number of cells.

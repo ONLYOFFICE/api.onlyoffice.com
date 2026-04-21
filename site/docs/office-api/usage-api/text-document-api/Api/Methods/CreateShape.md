@@ -26,12 +26,12 @@ expression.CreateShape(shapeType, width, height, fill, stroke);
 
 ## Example
 
-This example creates a shape using the 'rect' preset.
+Create a shape using the 'rect' preset in a document.
 
 ```javascript editor-docx
-// Creates the "rect" shape and adds it to the first paraghraph of the document.
+// Create the "rect" shape and add it to the first paraghraph of the document.
 
-// How to create the ApiShape object and add it to the ApiParagraph class.
+// How to create the shape object and add it to the paragraph class in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

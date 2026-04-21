@@ -4,7 +4,7 @@ FreeText callout coordinates (Array of 3 points).
 
 ## Type
 
-Object
+[Point](../Enumeration/Point.md)[]
 
 ## Properties
 

@@ -13,10 +13,9 @@ Enumeration
 - "right"
 - "center"
 
-
 ## Example
 
-This example set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly.
+Set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly.
 
 ```javascript editor-docx
 // How to set tabs and indicate justifications of text at each tab stop.

@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to lines.
+Convert points to lines in a presentation.
 
 ```javascript editor-pptx
+// How can I convert points to lines in a presentation?
+
+// Convert points to lines in a presentation.
+
 const points = 100;
 const lines = Api.PointsToLines(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

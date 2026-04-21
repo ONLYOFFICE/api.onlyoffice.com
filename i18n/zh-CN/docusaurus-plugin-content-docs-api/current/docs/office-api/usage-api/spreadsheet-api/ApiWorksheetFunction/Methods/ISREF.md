@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查值是否为引用，并返回 true 或 false。
+在电子表格中检查值是否为引用，并返回 true 或 false。
 
 ```javascript editor-xlsx
-// How to know whether a value is a reference.
+// How to know whether a value is a reference in a spreadsheet.
 
-// Use a function to find out whether a value is a reference.
+// Use a function to find out whether a value is a reference in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

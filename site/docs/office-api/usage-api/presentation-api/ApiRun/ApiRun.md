@@ -1,7 +1,6 @@
 # ApiRun
 
-Represents the ApiRun class.
-
+ApiRun is a subclass of [ApiTextPr](../ApiTextPr/ApiTextPr.md).
 
 ## Methods
 

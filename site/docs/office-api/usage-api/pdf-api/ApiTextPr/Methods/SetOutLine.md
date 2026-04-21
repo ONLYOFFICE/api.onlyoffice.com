@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## Example
 
-This example sets the text outline to the current text run.
+Set the text outline to the current text run in a PDF document.
 
 ```javascript editor-pdf
-// How to make a text outlined.
+// How to make a text outlined in a PDF document.
 
-// Get the text properties of the run and outline it with a stroke.
+// Get the text properties of the run and outline it with a stroke in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

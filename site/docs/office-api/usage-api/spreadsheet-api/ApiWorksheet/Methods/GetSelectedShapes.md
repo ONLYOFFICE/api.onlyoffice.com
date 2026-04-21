@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get selected shapes from the sheet.
+Get selected shapes from the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get seletectd shapes.
+// How to get seletectd shapes in a spreadsheet.
 
-// Get selected shapes as an array.
+// Get selected shapes as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -50,5 +50,4 @@ if (shapes[0]) {
 	paragraph.AddText("aligning it vertically by the bottom.");
 	content.Push(paragraph);
 }
-
 ```

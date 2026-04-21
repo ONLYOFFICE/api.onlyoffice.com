@@ -2,30 +2,16 @@
 
 Returns the spacing before value of the current paragraph.
 
-## Syntax
-
-```javascript
-expression.GetSpacingBefore();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md).
 
 ## Example
 
-This example shows how to get the spacing before value of the current paragraph.
+Get the spacing before value of the current paragraph in a document.
 
 ```javascript editor-docx
-// How to get the spacing before of the paragraph and display it.
+// How to get the spacing before of the paragraph and display it in a document.
 
-// Get the paragraph spacing value.
+// Get the paragraph spacing value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

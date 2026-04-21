@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set a major tick mark using predefined symbols.
+How to set a major tick mark using predefined symbols in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and major tick mark for vertical axis.
+// Create a chart, set its properties and major tick mark for vertical axis in a PDF document.
+
+// Set vert axis major tick mark for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +52,4 @@ stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255,
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

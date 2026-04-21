@@ -20,9 +20,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example selects the current slide.
+Select the current slide.
 
 ```javascript editor-pptx
+// How to select for a slide?
+
+// Select and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
 slide1.RemoveAllObjects();
@@ -42,5 +46,4 @@ shape2.GetContent().GetElement(0).AddText('This slide will be selected.');
 slide2.AddObject(shape2);
 
 slide2.Select();
-
 ```

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the visibility to the current presentation slide.
+Set the visibility to the current presentation slide.
 
 ```javascript editor-pptx
 // How to change visibility of the slide.
@@ -33,5 +33,4 @@ const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
 slide.SetVisible(false);
 presentation.AddSlide(slide);
-
 ```

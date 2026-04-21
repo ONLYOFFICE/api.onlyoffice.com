@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties and displays them in cells.
+Analyzes cloud shape path properties and display them in cells. Shows path count, dimensions, stroke and fill information.
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How can I get the height using a geometry path in a spreadsheet?
+
+// Get the height for a geometry path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

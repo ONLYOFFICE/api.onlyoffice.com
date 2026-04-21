@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a spreadsheet with different cell data types.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Creating cell types spreadsheet

@@ -2,32 +2,16 @@
 
 Sets the table description.
 
-## Syntax
-
-```javascript
-expression.SetTableDescription(sDescr);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sDescr | Required | string |  | The table description to be set. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableDescription](../../ApiTablePr/Methods/SetTableDescription.md).
 
 ## Example
 
-This example sets the table description.
+Set the table description in a document.
 
 ```javascript editor-docx
 // How to display the table description in the document.
 
-// Get the table description from the table properties.
+// Get the table description from the table properties in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -22,10 +22,12 @@ expression.GetSeries(nIdx);
 
 ## Example
 
-How to get a seria from a chart using its index.
+How to get a seria from a chart using its index in a PDF document.
 
 ```javascript editor-pdf
-// Find a chart seria.
+// Find a chart seria in a PDF document.
+
+// Use chart to get the series in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -52,5 +54,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

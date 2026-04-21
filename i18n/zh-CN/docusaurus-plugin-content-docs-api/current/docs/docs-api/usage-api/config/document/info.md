@@ -4,7 +4,7 @@
 
 ## 作者 {#author}
 
-`类型: string`
+`类型：string`
 
 定义文档作者/创建者的姓名。
 
@@ -16,7 +16,7 @@
 
 ## 创建 {#created}
 
-`类型: string`
+`类型：string`
 
 定义文档的创建日期。
 
@@ -28,7 +28,7 @@
 
 ## 收藏 {#favorite}
 
-`类型: boolean`
+`类型：boolean`
 
 定义*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange)事件。如果参数为*undefined*或*null*，则*收藏*图标不会显示在编辑器窗口标题处。
 
@@ -38,7 +38,7 @@
 
 ## 文件夹
 
-`类型: string`
+`类型：string`
 
 定义存储文档的文件夹（如果文档存储在根文件夹中，则可以为空）。
 
@@ -46,7 +46,7 @@
 
 ## 所有者 {#owner}
 
-`类型: string`
+`类型：string`
 
 定义文档所有者/创建者的名称。
 
@@ -54,7 +54,7 @@
 
 ## sharingSettings
 
-`类型: array of object`
+`类型：array of object`
 
 显示有关允许与其他用户共享文档的设置的信息。
 
@@ -71,7 +71,7 @@
 
 ### sharingSettings.isLink
 
-`类型: boolean`
+`类型：boolean`
 
 将用户图标更改为链接图标。
 
@@ -79,7 +79,7 @@
 
 ### sharingSettings.permissions
 
-`类型: string`
+`类型：string`
 
 具有上述名称的用户的访问权限。可以是**完全访问**、**只读**或**拒绝访问**
 
@@ -87,7 +87,7 @@
 
 ### sharingSettings.user
 
-`类型: string`
+`类型：string`
 
 文档将与之共享的用户的名称。
 
@@ -97,7 +97,7 @@
 
 ## 已上传 {#uploaded}
 
-`类型: string`
+`类型：string`
 
 定义文档上传日期。
 

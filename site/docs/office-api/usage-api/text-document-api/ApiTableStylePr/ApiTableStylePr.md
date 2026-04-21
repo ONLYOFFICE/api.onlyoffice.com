@@ -2,7 +2,6 @@
 
 Represents the ApiTableStylePr class.
 
-
 ## Methods
 
 | Method | Returns | Description |

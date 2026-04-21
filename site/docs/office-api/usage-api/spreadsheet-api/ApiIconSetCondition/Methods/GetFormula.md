@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the formula associated with an icon set condition.
+Get the formula associated with an icon set condition in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I get the formula in a spreadsheet?
+
+// Get the formula using an icon set condition object.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Month');
 worksheet.GetRange('B1').SetValue('Revenue');
@@ -46,5 +50,4 @@ if (formula) {
 	worksheet.GetRange('D1').SetValue('Icon set condition does not have a formula.');
 }
 worksheet.GetRange('D2').SetValue('Type: ' + iconCondition.GetType());
-
 ```

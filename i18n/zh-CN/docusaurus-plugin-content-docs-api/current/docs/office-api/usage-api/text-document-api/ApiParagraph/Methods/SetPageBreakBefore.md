@@ -2,27 +2,11 @@
 
 指定在使用分页视图呈现文档时，当前段落的内容呈现在文档新页的开头。
 
-## 语法
-
-```javascript
-expression.SetPageBreakBefore(isPageBreakBefore);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isPageBreakBefore | 必需 | boolean |  | true 值启用将段落内容呈现在文档新页开头的选项。 |
-
-## 返回值
-
-boolean
+继承自 [ApiParaPr.SetPageBreakBefore](../../ApiParaPr/Methods/SetPageBreakBefore.md)。
 
 ## 示例
 
-此示例指定在使用分页视图呈现文档时，当前段落的内容呈现在文档新页的开头。
+指定在使用分页视图呈现文档时，当前段落的内容在文档的新页面开头呈现。
 
 ```javascript editor-docx
 // How to set a page break before the current paragraph.

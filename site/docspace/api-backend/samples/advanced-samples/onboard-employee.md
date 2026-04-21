@@ -1,5 +1,6 @@
 ---
 description: Prepare a structured workspace for a new employee in a shared folder.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

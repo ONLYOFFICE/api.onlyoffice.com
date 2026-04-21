@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example specifies the distance from the top edge of the page to the top edge of the header.
+Specify the distance from the top edge of the page to the top edge of the header.
 
 ```javascript editor-docx
-// How to set header distance of the section.
+// How to set header distance of the section in a document.
 
 // Specify the distance between the page end and the header.
 

@@ -3,27 +3,11 @@
 设置当前表单的文本属性。
 *如果该表单类型支持则使用*
 
-## 语法
-
-```javascript
-expression.SetTextPr(textPr);
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| textPr | 必需 | [ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md) |  | 将设置到当前表单的文本属性。 |
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md)。
 
 ## 示例
 
-此示例为表单设置文本属性。
+为表单设置文本属性。
 
 ```javascript editor-forms
 // Add text properties to the text form.

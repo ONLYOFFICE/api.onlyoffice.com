@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a borderless table for structured data display.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Creating borderless table document

@@ -1,3 +1,8 @@
+---
+description: Create a project room with folder structure and team access.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Create room with team access
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to create a ready-to-use project workspace: a room, a predefined folder structure, and team access permissions.

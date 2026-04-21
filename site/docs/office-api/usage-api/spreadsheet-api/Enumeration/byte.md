@@ -6,19 +6,15 @@ A numeric value from 0 to 255.
 
 number
 
-
-
 ## Example
 
-This example creates two RGB colors.
+Create two RGB colors.
 
 ```javascript editor-xlsx
-// How to use bytes to create a color.
-
 // Create RGB colors using bytes in decimal and hexadecimal.
 
-// The resulting color is green, the bytes are measured in decimal numbers:
+// The resulting colors are green (decimal) and red (hexadecimal).
+
 let rgbColorGreen = Api.RGB(0, 255, 0);
-// The resulting color is red, the bytes are measured in hexadecimal numbers:
 let rgbColorRed = Api.RGB(0xff, 0, 0);
 ```

@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the tip text of the form.
+Get the tip text of the form in a document.
 
 ```javascript editor-docx
 // Get a comboBox form tip text and show it in the document.

@@ -1,6 +1,6 @@
 # ApiIconSetCondition
 
-表示 ApiIconSetCondition 类。
+ApiIconSetCondition 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
 

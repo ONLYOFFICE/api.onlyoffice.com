@@ -1,5 +1,6 @@
 ---
 description: Create a new project room from an existing room template.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

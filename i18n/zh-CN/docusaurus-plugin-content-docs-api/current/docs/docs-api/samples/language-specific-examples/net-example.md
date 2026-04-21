@@ -3,7 +3,7 @@ sidebar_label: .Net example
 sidebar_position: -10
 ---
 
-# .Net 示例
+# .Net (C#) 集成
 
 ## 概述
 

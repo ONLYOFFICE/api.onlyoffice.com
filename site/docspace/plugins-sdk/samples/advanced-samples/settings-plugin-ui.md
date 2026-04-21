@@ -1,5 +1,6 @@
 ---
 description: Build an admin settings interface with form controls.
+tags: ["DocSpace", "Plugins", "Advanced"]
 ---
 
 # Settings plugin UI

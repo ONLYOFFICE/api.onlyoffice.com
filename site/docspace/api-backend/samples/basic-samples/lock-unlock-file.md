@@ -1,5 +1,6 @@
 ---
 description: Lock or unlock a file and view its access levels via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

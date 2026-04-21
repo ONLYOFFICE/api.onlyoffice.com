@@ -20,10 +20,10 @@ expression.GetMinPointType();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取最小点类型。
+从数据条条件格式规则获取最小点类型。
 
 ```javascript editor-xlsx
-// How to check the type of the minimum condition value.
+// How to check the type of the minimum condition value in a spreadsheet.
 
 // Get the minimum point type of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let minPointType = dataBar.GetMinPointType();
 
 worksheet.GetRange("C1").SetValue("Min Point Type:");
 worksheet.GetRange("C2").SetValue(minPointType);
-
 ```

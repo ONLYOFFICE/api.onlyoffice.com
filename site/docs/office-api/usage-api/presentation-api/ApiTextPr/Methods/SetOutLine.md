@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## Example
 
-This example sets the text outline to the current text run.
+Set the text outline to the current text run in a presentation.
 
 ```javascript editor-pptx
-// How to make a text outlined.
+// How to make a text outlined in a presentation.
 
-// Get the text properties of the run and outline it with a stroke.
+// Get the text properties of the run and outline it with a stroke in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

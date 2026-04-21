@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的阶乘，即 1*2*3*...*数字。
+在电子表格中返回数字的阶乘，即 1*2*3*...*数字。
 
 ```javascript editor-xlsx
-// How to calculate a number factorial.
+// How to calculate a number factorial in a spreadsheet.
 
-// Use function to calculate the factorial of a number.
+// Use function to calculate the factorial of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

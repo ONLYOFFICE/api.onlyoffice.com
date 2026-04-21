@@ -17,10 +17,9 @@ Enumeration
 - "aboveBelow"
 - "formFootnoteNum"
 
-
 ## Example
 
-This example adds a cross-reference to the page containing a footnote.
+Add a cross-reference to the page containing a footnote.
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with an footnote.

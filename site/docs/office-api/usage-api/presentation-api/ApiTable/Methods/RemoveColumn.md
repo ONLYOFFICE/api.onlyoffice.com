@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example removes a table column with the specified cell.
+Remove a table column with the specified cell.
 
 ```javascript editor-pptx
-// How to delete a column from the table.
+// How to delete a column from the table in a presentation.
 
 // Create a table, create cells and remove the whole column by its cell.
 
@@ -44,5 +44,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

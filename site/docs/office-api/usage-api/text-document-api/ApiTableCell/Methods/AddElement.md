@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example adds a paragraph using its position in the cell.
+Add a paragraph using its position in the cell.
 
 ```javascript editor-docx
 // Insert new paragraph into the current cell.

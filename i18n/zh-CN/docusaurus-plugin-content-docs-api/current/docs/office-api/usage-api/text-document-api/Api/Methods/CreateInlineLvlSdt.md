@@ -20,12 +20,12 @@ expression.CreateInlineLvlSdt();
 
 ## 示例
 
-此示例向文档添加内联容器。
+向文档添加内联容器。
 
 ```javascript editor-docx
 // How to create an inline text content control, add a text run to it, and add this container to the document.
 
-// Creates an inline container and adds it to the ApiParagraph class.
+// Create an inline container and add it to the paragraph class in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

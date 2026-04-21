@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a set of the table properties which will be applied to all the regions within a table which match the conditional formatting type.
+Get a set of the table properties which will be applied to all the regions within a table which match the conditional formatting type.
 
 ```javascript editor-docx
-// How to get table properties and set its bottom border.
+// How to get table properties and set its bottom border in a document.
 
-// Update the table style by setting its border.
+// Update the table style by setting its border in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

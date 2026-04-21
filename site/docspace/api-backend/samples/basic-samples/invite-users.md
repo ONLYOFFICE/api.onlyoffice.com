@@ -1,5 +1,6 @@
 ---
 description: Create new users and send them invitations via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

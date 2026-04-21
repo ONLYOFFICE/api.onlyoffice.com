@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例向指定的幻灯片母版添加版式。
+向指定的幻灯片母版添加版式。
 
 ```javascript editor-pptx
 // Create a layout and add it to the slide master.
@@ -52,5 +52,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after adding new layout: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

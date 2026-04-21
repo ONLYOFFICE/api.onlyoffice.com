@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the marker in the specified chart series.
+Set the fill to the marker in the specified chart series in a document.
 
 ```javascript editor-docx
-// How to set a fill to the marker.
+// How to set a fill to the marker in a document.
 
-// Create a chart, set its properties and its marker color.
+// Create a chart, set its properties and its marker color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何删除自定义 XML 部件。
+删除电子表格中的自定义 XML 部件。
 
 ```javascript editor-xlsx
-// How to delete a custom XML part from the workbook.
+// How to delete a custom XML part from the workbook in a spreadsheet.
 
-// Delete an XML part.
+// Delete an XML part using the custom XML part API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

@@ -1,0 +1,28 @@
+# SetTextColor
+
+Sets widget text color.
+
+Inherited from [ApiBaseWidget.SetTextColor](../../ApiBaseWidget/Methods/SetTextColor.md).
+
+## Example
+
+Get all field widgets and set text color for them in a PDF document.
+
+```javascript editor-pdf
+// How can I set text color using a widget in a PDF document?
+
+// Set text color for a widget in a PDF document.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let textField = Api.CreateTextField([10, 10, 160, 30]);
+page.AddObject(textField);
+
+textField.SetValue('Example text');
+textField.AddWidget(0, [10, 40, 160, 60]);
+let widgets = textField.GetAllWidgets();
+let rgbColor = Api.RGB(255, 100, 0);
+widgets.forEach(function(widget) {
+    widget.SetTextColor(rgbColor);
+});
+```

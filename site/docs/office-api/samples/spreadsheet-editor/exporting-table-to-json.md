@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Export spreadsheet table data to a JSON array.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Exporting table to JSON

@@ -22,9 +22,13 @@ expression.SetCreator(sCreator);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置当前文档的创建者。
+使用文档中的核心属性设置当前文档的创建者。
 
 ```javascript editor-docx
+// How to set creator for a core properties in a document?
+
+// Set creator and display the result in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCreator("John Smith");
@@ -32,5 +36,4 @@ core.SetCreator("John Smith");
 const creator = core.GetCreator();
 const paragraph = doc.GetElement(0);
 paragraph.AddText("Creator: " + creator);
-	
 ```

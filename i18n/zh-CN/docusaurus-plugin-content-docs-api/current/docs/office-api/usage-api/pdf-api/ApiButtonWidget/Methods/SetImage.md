@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例为带图像的字段设置图像。
+在 PDF 文档中为带有图像的字段设置图像。
 
 ```javascript editor-pdf
+// How do I set image in a PDF document?
+
+// Set image using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let imageField = Api.CreateImageField([10, 10, 100, 100]);

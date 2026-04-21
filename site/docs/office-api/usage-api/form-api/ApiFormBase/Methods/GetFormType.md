@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a type of the form.
+Get a type of the form in a document.
 
 ```javascript editor-forms
 // How to know the type of a text form.

@@ -2,32 +2,16 @@
 
 Sets an object that represents all subtotals.
 
-## Syntax
-
-```javascript
-expression.SetSubtotals(subtotals);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| subtotals | Required | [PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md) |  | An object that represents all subtotals or some of them. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetSubtotals](../../ApiPivotField/Methods/SetSubtotals.md).
 
 ## Example
 
-This example shows how to set subtotals of a pivot field.
+Set subtotals of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotals.
+// How to change a pivot field subtotals in a spreadsheet.
 
-// Create a pivot table, add data to it then set subtotals of a specified pivot.
+// Create a pivot table, add data to it then set subtotals of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

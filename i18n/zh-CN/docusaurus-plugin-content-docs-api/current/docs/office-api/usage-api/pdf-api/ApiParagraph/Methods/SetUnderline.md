@@ -23,9 +23,13 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例对段落文本应用下划线格式。
+对段落文本应用下划线格式。
 
 ```javascript editor-pdf
+// How do I set underline in a PDF document?
+
+// Set underline using a paragraph object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text underlined with a single line.');
 paragraph.SetUnderline(true);
 page.AddObject(shape);
-
 ```

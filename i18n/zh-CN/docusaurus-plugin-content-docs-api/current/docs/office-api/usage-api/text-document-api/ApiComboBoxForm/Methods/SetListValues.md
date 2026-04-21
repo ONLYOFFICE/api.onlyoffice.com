@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前组合框的列表值。
+设置文档中当前组合框的列表值。
 
 ```javascript editor-docx
-// How to set items of the dropdown.
+// How to set items of the dropdown in a document.
 
-// Create a combobox and add its list values.
+// Create a combobox and add its list values in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false});

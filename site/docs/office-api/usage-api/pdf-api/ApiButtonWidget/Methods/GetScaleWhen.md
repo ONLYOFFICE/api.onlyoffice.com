@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets button widget scale when type and displays it.
+Get button widget scale when type and display it in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the scale when in a PDF document?
+
+// Get the scale when using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

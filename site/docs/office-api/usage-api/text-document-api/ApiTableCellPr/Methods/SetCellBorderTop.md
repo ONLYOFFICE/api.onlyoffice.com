@@ -27,7 +27,7 @@ boolean
 
 ## Example
 
-This example sets the border which will be displayed at the top of the table cell.
+Set the border which will be displayed at the top of the table cell.
 
 ```javascript editor-docx
 // How to add border to the top of the cell.

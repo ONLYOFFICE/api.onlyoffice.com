@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies the reference to the parent style which this style inherits from in the style hierarchy.
+Specify the reference to the parent style which this style inherits from in the style hierarchy in a document.
 
 ```javascript editor-docx
 // How to get the specific style from the document and create table style based on it.

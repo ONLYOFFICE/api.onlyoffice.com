@@ -20,12 +20,12 @@ string \| null
 
 ## Example
 
-This example shows how to get the font name property of the specified font.
+Get the font name property of the specified font in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine a font name.
+// How to determine a font name in a spreadsheet.
 
-// Apply a font to the characters then get its name and add it in the range.
+// Apply a font to the characters then get its name and add it in the range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

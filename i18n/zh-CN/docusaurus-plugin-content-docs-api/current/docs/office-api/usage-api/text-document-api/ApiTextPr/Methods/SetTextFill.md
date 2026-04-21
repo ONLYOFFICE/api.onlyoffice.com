@@ -12,9 +12,9 @@ expression.SetTextFill(oApiFill);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型**                        | **默认值** | **描述**                       |
-| -------- | ------------- | ----------------------------------- | ---------- | ------------------------------ |
-| oApiFill | 必需          | [ApiFill](../../ApiFill/ApiFill.md) |            | 用于填充文本颜色的颜色或图案。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充文本颜色的颜色或图案。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetTextFill(oApiFill);
 
 ## 示例
 
-在此示例中，艺术字文本具有文本填充。
+为文档中的艺术字文本设置文本填充。
 
 ```javascript editor-docx
-// How to color a text object.
+// How to color a text object in a document.
 
-// Create a text run object, add color to it using solid fill.
+// Create a text run object, add color to it using solid fill in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

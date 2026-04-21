@@ -1,5 +1,6 @@
 ---
 description: Disable an employee account and archive their workspace on offboarding.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

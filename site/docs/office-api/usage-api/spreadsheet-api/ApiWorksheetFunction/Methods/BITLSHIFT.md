@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a number shifted left by the specified number of bits.
+Return a number shifted left by the specified number of bits in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from bits left shift.
+// How to get a result from bits left shift in a spreadsheet.
 
-// Use function to calculate bitwise left shift operation.
+// Use function to calculate bitwise left shift operation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

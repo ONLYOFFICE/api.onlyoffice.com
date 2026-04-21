@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets a limit to the text field characters.
+Set a limit to the text field characters in a document.
 
 ```javascript editor-docx
 // How to specify the characters limit of the text form.

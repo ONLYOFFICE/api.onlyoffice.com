@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何检索自定义 XML 部件的 ID。
+获取文档中自定义 XML 部件的 ID。
 
 ```javascript editor-docx
+// How do I get the id in a document?
+
+// Get the id using a custom XML part object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'></content>");

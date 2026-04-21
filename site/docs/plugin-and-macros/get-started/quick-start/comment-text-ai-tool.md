@@ -151,7 +151,7 @@ Wrap your document changes in `StartAction` / `EndAction` calls so the entire op
 
 **Explore examples:**
 
-- [Browse all AI tool examples](../../samples/custom-ai-tools/custom-ai-tools.md)
+- [Browse all AI tool examples](/samples/?doctype=ai&text=ai+tools)
 
 **Need help?**
 

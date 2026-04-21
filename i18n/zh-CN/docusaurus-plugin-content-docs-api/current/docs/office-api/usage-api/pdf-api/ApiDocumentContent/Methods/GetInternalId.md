@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例返回当前文档内容的内部 ID。
+返回当前文档内容的内部 ID。
 
 ```javascript editor-pdf
+// How do I get the internal id in a PDF document?
+
+// Get the internal id using a document content object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -35,5 +39,4 @@ const internalId = docContent.GetInternalId();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Document content internal ID: ' + internalId);
 page.AddObject(shape);
-
 ```

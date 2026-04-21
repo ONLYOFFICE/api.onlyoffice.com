@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例获取颜色的 RGB 格式并将其插入到表格中。
+获取颜色的 RGB 格式并将其插入表格。
 
 ```javascript editor-xlsx
 // How to get a RGB color format.
 
-// Convert a color to the RGB values.
+// Convert a color to the RGB values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let color = Api.CreateColorFromRGB(255, 111, 61);

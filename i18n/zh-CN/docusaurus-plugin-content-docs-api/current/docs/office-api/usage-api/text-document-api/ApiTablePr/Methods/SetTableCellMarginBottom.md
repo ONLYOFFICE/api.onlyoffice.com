@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例指定在父表格中所有表格单元格的单元格内容底部范围与边框之间保留的空间量。
+指定单元格内容底部边缘与父表格中所有表格单元格边框之间保留的间距。
 
 ```javascript editor-docx
 // How to add margin to the bottom of the cell.

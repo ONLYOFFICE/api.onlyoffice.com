@@ -23,10 +23,10 @@ expression.AddComment(sText, sAuthor);
 
 ## Example
 
-This example adds a comment to the range.
+Add a comment to the range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to comment a range.
+// How to comment a range in a spreadsheet.
 
 // Get a range from the worksheet, add a comment to it and then show the comments text.
 

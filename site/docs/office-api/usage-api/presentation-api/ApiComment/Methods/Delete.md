@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example shows how to delete a comment.
+Delete a comment in a presentation.
 
 ```javascript editor-pptx
-// How to remove a comment.
+// How to remove a comment in a presentation.
 
 // Get all comments from the presentation and remove the first one.
 
@@ -48,5 +48,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The comment was just deleted from the current presentation.");
-
 ```

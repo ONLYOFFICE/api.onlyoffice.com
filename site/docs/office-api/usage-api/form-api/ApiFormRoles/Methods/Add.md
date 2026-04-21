@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to add new roles.
+Add new roles in a form document.
 
 ```javascript editor-forms
+// How to add for a form roles?
+
+// Add and display the result in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -35,5 +39,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddText(role);
     paragraph.AddLineBreak();
 });
-
 ```

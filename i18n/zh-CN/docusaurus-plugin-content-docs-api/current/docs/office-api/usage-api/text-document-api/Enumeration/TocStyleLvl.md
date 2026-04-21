@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -13,10 +13,9 @@
 | Lvl | number | 将应用于目录中指定样式的级别。 |
 | Name | string | 样式名称（例如「标题 1」）。 |
 
-
 ## 示例
 
-此示例向文档添加从指定样式生成的目录。
+向文档添加从指定样式生成的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its style levels.
@@ -38,5 +37,4 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```

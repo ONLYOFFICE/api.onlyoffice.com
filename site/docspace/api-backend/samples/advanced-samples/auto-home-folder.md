@@ -1,5 +1,6 @@
 ---
 description: Create a personal home folder for each new user in a shared room.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

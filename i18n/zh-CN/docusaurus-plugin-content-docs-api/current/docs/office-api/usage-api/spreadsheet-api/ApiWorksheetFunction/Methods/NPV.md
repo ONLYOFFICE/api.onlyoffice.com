@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何根据贴现率和一系列未来付款（负值）和收入（正值）返回投资的净现值。
+在电子表格中基于贴现率和一系列未来付款（负值）及收入（正值）返回投资的净现值。
 
 ```javascript editor-xlsx
-// How to get the net present value of an investment.
+// How to get the net present value of an investment in a spreadsheet.
 
-// Use a function to get the net present value of an investment based on different parameters.
+// Use a function to get the net present value of an investment based on different parameters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

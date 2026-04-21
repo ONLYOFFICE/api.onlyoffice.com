@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to set the date language in a date form.
+Set the date language in a date form in a document.
 
 ```javascript editor-forms
 // Change the language of the date form.

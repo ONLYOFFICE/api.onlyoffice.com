@@ -2,27 +2,17 @@
 
 Returns the current paragraph where the cursor is located.
 
-## Syntax
-
-```javascript
-expression.GetCurrentParagraph();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)
+Inherited from [ApiDocumentContent.GetCurrentParagraph](../../ApiDocumentContent/Methods/GetCurrentParagraph.md).
 
 ## Example
 
-This example shows how to get the current paragraph from the document content.
+Get the current paragraph from the document content in a document.
 
 ```javascript editor-docx
+// How do I get current paragraph in a document?
+
+// Get current paragraph using a document content object.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -40,5 +30,4 @@ docContent.Push(newParagraph);
 
 const currentParagraph = docContent.GetCurrentParagraph();
 currentParagraph.AddText("(Current paragraph detected!)");
-
 ```

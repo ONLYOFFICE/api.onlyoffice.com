@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the marker in the specified chart series.
+Set the fill to the marker in the specified chart series in a presentation.
 
 ```javascript editor-pptx
-// How to set a fill to the marker.
+// How to set a fill to the marker in a presentation.
 
-// Create a chart, set its properties and its marker color.
+// Create a chart, set its properties and its marker color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
-
 ```

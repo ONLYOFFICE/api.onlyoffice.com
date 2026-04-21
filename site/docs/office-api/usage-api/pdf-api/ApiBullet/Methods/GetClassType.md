@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a type of ApiBullet class and inserts it into the pdf document.
+Check the class type returned by a bullet in a PDF document.
 
 ```javascript editor-pdf
-// How get a class type of ApiBullet.
+// How do I check what type a bullet object is in a PDF document?
 
-// Retrieve class type of ApiBullet object and insert it to the page.
+// Retrieve and output the class type string for a bullet in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const bullet = Api.CreateBullet("-");
 paragraph.SetBullet(bullet);
@@ -47,5 +47,4 @@ newParagraph.SetJc("left");
 newParagraph.AddText("Class Type = " + classType);
 docContent.Push(newParagraph);
 page.AddObject(shape);
-
 ```

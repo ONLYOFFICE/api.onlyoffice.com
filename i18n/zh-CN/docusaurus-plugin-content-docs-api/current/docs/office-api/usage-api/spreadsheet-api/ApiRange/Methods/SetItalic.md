@@ -22,7 +22,7 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-此示例设置单元格中文本字符的斜体属性。
+为单元格中的文本字符设置斜体属性。
 
 ```javascript editor-xlsx
 // How to make a text value of cells italic.

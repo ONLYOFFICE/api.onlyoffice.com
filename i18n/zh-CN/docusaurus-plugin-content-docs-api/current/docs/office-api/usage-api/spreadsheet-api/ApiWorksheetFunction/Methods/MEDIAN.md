@@ -22,18 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何返回中位数，即给定数字集中间的数字。
+在电子表格中返回一组给定数字的中位数。
 
 ```javascript editor-xlsx
-// How to get a median from the list.
+// How to get a median from the list in a spreadsheet.
 
-// Use a function to get a value that located in the middle of the list.
+// Use a function to get a value that located in the middle of the list in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let median = func.MEDIAN(4,45,12,34,3,54,2,2);
 worksheet.GetRange("C1").SetValue(median);
-
-
-
 ```

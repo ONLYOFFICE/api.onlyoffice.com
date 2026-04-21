@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例通过段落属性设置指定段落的大纲级别。
+在演示文稿中通过段落属性设置指定段落的大纲级别。
 
 ```javascript editor-pptx
+// How can I set outline lvl using a paragraph properties in a presentation?
+
+// Set outline lvl for a paragraph properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ const paragraph = content.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetOutlineLvl(outlineLvlIndex);
 paragraph.AddText("This is a paragraph with outline level parameter set to " + (outlineLvlIndex + 1));
-
 ```

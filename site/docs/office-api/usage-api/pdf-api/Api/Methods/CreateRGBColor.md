@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## Example
 
-This example shows how to create a RGB color for gradient stop.
+Create a RGB color for gradient stop in a PDF document.
 
 ```javascript editor-pdf
-// How to create a RGB color for a gradient stop.
+// How to create a RGB color for a gradient stop in a PDF document.
 
-// Add an RGB color as a stop for a gradient.
+// Add an RGB color as a stop for a gradient in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,5 +42,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定水平轴上显示数据的方向。
+在电子表格中指定水平轴上数据的显示方向。
 
 ```javascript editor-xlsx
-// Set the orientation of the values on the horizontal axis.
+// Set the orientation of the values on the horizontal axis in a spreadsheet.
 
-// How to change the direction of the values on the horizontal axis.
+// How to change the direction of the values on the horizontal axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -2,7 +2,6 @@
 
 Represents the ApiTheme class.
 
-
 ## Methods
 
 | Method | Returns | Description |

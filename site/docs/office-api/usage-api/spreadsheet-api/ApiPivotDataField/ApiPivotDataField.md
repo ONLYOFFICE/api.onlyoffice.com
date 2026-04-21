@@ -1,6 +1,6 @@
 # ApiPivotDataField
 
-Represents the ApiPivotDataField class.
+ApiPivotDataField is a subclass of [ApiPivotField](../ApiPivotField/ApiPivotField.md).
 
 ## Properties
 

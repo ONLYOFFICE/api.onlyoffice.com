@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the previous inline image if exists.
+Get the previous inline image if exists in a document.
 
 ```javascript editor-docx
-// How to add the previous drawing to the paragraph.
+// How to add the previous drawing to the paragraph in a document.
 
-// Get the previous drawing and add it separated with a line break.
+// Get the previous drawing and add it separated with a line break in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,5 +47,4 @@ let prevImage = image2.GetPrevImage();
 let copyImage = prevImage.Copy();
 paragraph.AddLineBreak();
 paragraph.AddDrawing(copyImage);
-
 ```

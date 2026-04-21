@@ -2,25 +2,11 @@
 
 Checks if the current form is required.
 
-## Syntax
-
-```javascript
-expression.IsRequired();
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md).
 
 ## Example
 
-This example checks if the current form is required.
+Check if the current form is required.
 
 ```javascript editor-docx
 // How to know whether a text form is required or not.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为已应用的字符梳设置单元格宽度。
+为应用的字符梳设置单元格宽度。
 
 ```javascript editor-docx
 // How to set the width of the cell of the text form.

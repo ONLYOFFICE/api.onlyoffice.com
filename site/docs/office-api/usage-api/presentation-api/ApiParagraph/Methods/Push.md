@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example adds an element to the paragraph.
+Add an element to the paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I push in a presentation?
+
+// Push using a paragraph object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +50,4 @@ for (let i = 0; i < 5; i++) {
 	paragraph.Push(run);
 }
 slide.AddObject(shape);
-
 ```

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of freeText annotation.
+Check the class type returned by a free text annotation in a PDF document.
 
 ```javascript editor-pdf
+// How do I check what type a free text annotation object is in a PDF document?
+
+// Retrieve and output the class type string for a free text annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

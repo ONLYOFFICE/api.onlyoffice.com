@@ -1,5 +1,6 @@
 ---
 description: Configure and use the ToggleButton component.
+tags: ["DocSpace", "Plugins", "Basic"]
 ---
 
 # ToggleButton component

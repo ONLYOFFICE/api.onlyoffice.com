@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the date when the current presentation was printed last time.
+Set and get the date when the current presentation was printed last time in a presentation.
 
 ```javascript editor-pptx
+// How to set last printed for a core properties in a presentation?
+
+// Set last printed and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastPrinted(new Date());
@@ -40,5 +44,4 @@ paragraph.AddText("Last printed: " + lastPrintedDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

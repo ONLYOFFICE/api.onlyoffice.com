@@ -20,7 +20,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example deletes a data validation rule from a range of cells.
+Delete a data validation rule from a range of cells.
 
 ```javascript editor-xlsx
 // How to remove data validation from a range of cells.

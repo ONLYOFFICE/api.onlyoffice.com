@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes path commands of a star shape.
+Analyzes path commands of a star shape. Retrieves information about the first command including type and coordinates.
 
 ```javascript editor-docx
-// Retrieves information about the first command including type and coordinates.
+// How can I get the y using a path command in a document?
+
+// Get the y for a path command in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

@@ -25,7 +25,7 @@ boolean
 
 ## Example
 
-This example show how to set the outline to the data point.
+Set the outline to the data point in a document.
 
 ```javascript editor-docx
 // How to set a numeric format of the data points.

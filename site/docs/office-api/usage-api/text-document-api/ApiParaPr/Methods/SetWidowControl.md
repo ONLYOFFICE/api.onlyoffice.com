@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example specifies whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.
+Specify whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.
 
 ```javascript editor-docx
-// Set the window control of the paragraph.
+// Set the window control of the paragraph in a document.
 
 // Make the last line to be displayed on the next page, by setting widow control method set to 'true'.
 

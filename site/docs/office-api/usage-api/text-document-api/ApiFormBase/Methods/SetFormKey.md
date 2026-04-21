@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets a key to the form.
+Set a key to the form.
 
 ```javascript editor-docx
 // Change the key of the text form.

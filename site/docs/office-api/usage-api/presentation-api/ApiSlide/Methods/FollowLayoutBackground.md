@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example sets the layout background as the background of the slide.
+Set the layout background as the background of the slide.
 
 ```javascript editor-pptx
 // How to set a slide's background same as the layout's.
@@ -35,5 +35,4 @@ const layout = master.GetLayout(0);
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
-
 ```

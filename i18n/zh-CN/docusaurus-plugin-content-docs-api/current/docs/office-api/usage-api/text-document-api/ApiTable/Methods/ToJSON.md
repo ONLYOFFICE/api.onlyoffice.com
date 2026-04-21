@@ -23,10 +23,10 @@ JSON
 
 ## 示例
 
-此示例将表格对象转换为 JSON 对象。
+在文档中将表格对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the table object.
+// How to get a JSON from the table object in a document.
 
 // Convert the table to json and add it to the document.
 

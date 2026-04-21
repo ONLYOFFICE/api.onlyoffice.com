@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example scales the height of the figure using the specified coefficient.
+Scales the height of the figure using the specified coefficient in a document.
 
 ```javascript editor-docx
-// How to increase the height of the drawing.
+// How to increase the height of the drawing in a document.
 
-// Make the cube longer.
+// Scale height and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

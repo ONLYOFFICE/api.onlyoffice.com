@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例返回当前 XML 节点的绝对 XPath。
+返回演示文稿中当前 XML 节点的绝对 XPath。
 
 ```javascript editor-pptx
+// How to get the x path for a custom XML node in a presentation?
+
+// Get the x path and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XPath: ' + xPath);
-
 ```

@@ -21,10 +21,10 @@ boolean
 
 ## 示例
 
-此示例删除父对象中的指定对象（如果存在）。
+如果存在，从演示文稿的父对象中删除指定对象。
 
 ```javascript editor-pptx
-// How to delete a master.
+// How to delete a master in a presentation.
 
 // Remove a master from a presentation.
 
@@ -49,5 +49,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

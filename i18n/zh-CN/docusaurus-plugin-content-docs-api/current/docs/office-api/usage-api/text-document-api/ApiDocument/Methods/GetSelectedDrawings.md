@@ -20,12 +20,12 @@ expression.GetSelectedDrawings();
 
 ## 示例
 
-此示例展示如何获取当前文档中所有选中的图形。
+获取文档中当前文档内所有选中的绘图对象。
 
 ```javascript editor-docx
 // How to get the drawing selected on the document.
 
-// Select a drawing and make it bigger.
+// Select a drawing and make it bigger in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

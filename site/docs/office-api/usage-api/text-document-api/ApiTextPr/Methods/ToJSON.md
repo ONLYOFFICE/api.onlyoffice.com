@@ -22,10 +22,10 @@ JSON
 
 ## Example
 
-This example converts the ApiTextPr object into the JSON object.
+Convert the text properties object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the text properties.
+// How to get a JSON from the text properties in a document.
 
 // Convert the text properties to json and add it to the document.
 

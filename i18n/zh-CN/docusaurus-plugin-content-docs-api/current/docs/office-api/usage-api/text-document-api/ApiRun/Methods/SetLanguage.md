@@ -12,9 +12,9 @@ expression.SetLanguage(sLangId);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述**                                                           |
-| -------- | ------------- | ------------ | ---------- | ------------------------------------------------------------------ |
-| sLangId  | 必需          | string       |            | 此参数的可能值是 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sLangId | 必需 | string |  | 此参数的可能值是 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在文档中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
 
 ```javascript editor-docx
-// How to change language of the text for grammar check.
+// How to change language of the text for grammar check in a document.
 
-// Create a new text run and change its language.
+// Create a new text run and change its language in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

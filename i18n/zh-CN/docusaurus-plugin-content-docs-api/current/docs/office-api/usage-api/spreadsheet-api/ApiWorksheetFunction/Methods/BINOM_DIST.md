@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回单项二项分布概率。
+在电子表格中返回单个项二项分布概率。
 
 ```javascript editor-xlsx
-// How to get an individual term binomial distribution probability.
+// How to get an individual term binomial distribution probability in a spreadsheet.
 
-// Use function to get an individual term binomial distribution probability.
+// Use function to get an individual term binomial distribution probability in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example spicifies tick label position for the vertical axis.
+Spicifies tick label position for the vertical axis in a presentation.
 
 ```javascript editor-pptx
-// How to change a position of tick label.
+// How to change a position of tick label in a presentation.
 
-// Create a chart, set its properties and its vertical axis tick label position.
+// Create a chart, set its properties and its vertical axis tick label position in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

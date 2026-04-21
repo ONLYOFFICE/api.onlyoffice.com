@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## Example
 
-This example shows how to restore ApiColor objects of different types from JSON.
+Restore color objects of different types from JSON in a document.
 
 ```javascript editor-docx
+// The JSON string contains the color type and value properties.
+
+// Restore each color object from JSON and display the theme name.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -56,5 +60,4 @@ for (let i = 0; i < colors.length; i++) {
 	run.AddText('Restored: ' + restored.GetHex());
 	paragraph.Push(run);
 }
-
 ```

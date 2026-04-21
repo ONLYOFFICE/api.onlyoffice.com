@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-检索弧参数，包括半径和角度。
+获取弧线参数，包括半径和角度。在单元格中显示弧线宽度半径、高度半径、起始角和扫掠角。
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How can I get the sweep angle using a path command in a spreadsheet?
+
+// Get the sweep angle for a path command in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

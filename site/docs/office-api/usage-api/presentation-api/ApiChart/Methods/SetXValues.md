@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the x-axis values to all chart series. It is used with the scatter charts only.
+Set the x-axis values to all chart series. It is used with the scatter charts only in a presentation.
 
 ```javascript editor-pptx
-// How to add values to horizontal axis for all series of scatter charts.
+// How to add values to horizontal axis for all series of scatter charts in a presentation.
 
-// Fill all x-axis values of scattered charts series.
+// Fill all x-axis values of scattered charts series in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)))
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
-
 ```

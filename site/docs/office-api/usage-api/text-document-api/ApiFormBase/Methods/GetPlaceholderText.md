@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the placeholder text of a form.
+Get the placeholder text of a form in a document.
 
 ```javascript editor-docx
 // How to get the placeholder text of a text form.
@@ -36,5 +36,4 @@ let placeholderText = textForm.GetPlaceholderText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);
-
 ```

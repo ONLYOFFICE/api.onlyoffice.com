@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example adds some text to the run.
+Add some text to the run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a text to the run.
+// How to add a text to the run in a spreadsheet.
 
-// Get a paragraph and add a text to it.
+// Get a paragraph and add a text to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

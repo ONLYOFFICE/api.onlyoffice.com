@@ -1,0 +1,45 @@
+# SetVertAlign
+
+指定将应用于文本块内容相对于文本块默认外观的对齐方式：
+-**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
+-**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
+-**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+
+继承自 [ApiTextPr.SetVertAlign](../../ApiTextPr/Methods/SetVertAlign.md)。
+
+## 示例
+
+指定在文档中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+
+```javascript editor-docx
+// How to set vertical alignment of a text object in a document.
+
+// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+let myNewRunStyle1 = doc.CreateStyle("My New Run Style 1", "run");
+let textPr1 = myNewRunStyle1.GetTextPr();
+textPr1.SetVertAlign("subscript");
+run = Api.CreateRun();
+run.SetStyle(myNewRunStyle1);
+run.AddText("This is a text run with the text aligned below the baseline vertically. ");
+paragraph.AddElement(run);
+let myNewRunStyle2 = doc.CreateStyle("My New Run Style 2", "run");
+let textPr2 = myNewRunStyle2.GetTextPr();
+textPr2.SetVertAlign("baseline");
+run = Api.CreateRun();
+run.SetStyle(myNewRunStyle2);
+run.AddText("This is a text run with the text aligned by the baseline vertically. ");
+paragraph.AddElement(run);
+let myNewRunStyle3 = doc.CreateStyle("My New Run Style 3", "run");
+let textPr3 = myNewRunStyle3.GetTextPr();
+textPr3.SetVertAlign("superscript");
+run = Api.CreateRun();
+run.SetStyle(myNewRunStyle3);
+run.AddText("This is a text run with the text aligned above the baseline vertically.");
+paragraph.AddElement(run);
+```

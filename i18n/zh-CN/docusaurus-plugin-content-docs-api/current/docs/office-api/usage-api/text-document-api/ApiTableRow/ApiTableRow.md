@@ -1,7 +1,6 @@
 # ApiTableRow
 
-表示 ApiTableRow 类。
-
+ApiTableRow 是 [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md) 的子类。
 
 ## 方法
 

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a pivot table grouped by category with sum totals.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Creating pivot table by categories

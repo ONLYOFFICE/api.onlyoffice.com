@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of an ApiHyperlink object inside a shape.
+Check the class type returned by a hyperlink in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I check what type a hyperlink object is in a spreadsheet?
+
+// Retrieve and output the class type string for a hyperlink in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Class type: ' + hyperlink.GetClassType());
-
 ```

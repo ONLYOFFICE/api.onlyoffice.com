@@ -20,9 +20,13 @@ expression.GetPosX();
 
 ## 示例
 
-此示例获取绘图在幻灯片上的 X 坐标位置。
+获取绘图对象在幻灯片上的 x 位置。
 
 ```javascript editor-pptx
+// How can I get the pos x using a drawing object in a presentation?
+
+// Get the pos x for a drawing object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,5 +41,4 @@ const posX = shape.GetPosX();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing X position: ' + posX + ' EMU');
-
 ```

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example copies a range to the specified range.
+Copy a range to the specified range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create identical range.
+// How to create identical range in a spreadsheet.
 
-// Get a range and create a copy of it.
+// Get a range and create a copy of it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

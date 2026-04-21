@@ -1,5 +1,6 @@
 ---
 description: Retrieve current folder information using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Get folder info

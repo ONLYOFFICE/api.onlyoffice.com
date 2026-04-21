@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to set and get the background color of the current table cell.
+Set and get the background color of the current table cell in a document.
 
 ```javascript editor-docx
+// How can I get the background color using a table cell in a document?
+
+// Get the background color for a table cell in a document.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
@@ -38,5 +42,4 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText('This paragraph has the same color as the table cell background: ' + backgroundColor.GetHex());
 paragraph.SetColor(backgroundColor);
 doc.Push(table);
-
 ```

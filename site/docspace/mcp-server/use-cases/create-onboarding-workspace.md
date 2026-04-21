@@ -1,3 +1,8 @@
+---
+description: Set up an onboarding workspace for a new employee.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Create onboarding workspace
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to set up an onboarding workspace for a new employee. The workspace can include a predefined folder structure and the required access permissions for HR and the employee's manager.

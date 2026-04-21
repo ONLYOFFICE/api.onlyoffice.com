@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to delete an attribute from the current XML node.
+Delete an attribute from the current XML node in a document.
 
 ```javascript editor-docx
+// How to delete the attribute for a custom XML node in a document?
+
+// Delete the attribute and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

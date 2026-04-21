@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Identify and remove empty rows from a data range.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Removing empty rows

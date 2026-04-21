@@ -23,7 +23,7 @@ expression.GetCells(row, col);
 
 ## Example
 
-This example shows how to get a Range object that represents all the cells in the specified range or a specified cell.
+Get a Range object that represents all the cells in the specified range or a specified cell in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get range cells.
@@ -33,5 +33,4 @@ This example shows how to get a Range object that represents all the cells in th
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
 range.GetCells(2, 1).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```

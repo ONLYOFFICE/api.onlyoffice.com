@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a collection of paragraphs that represents all the paragraphs in the specified range.
+Get a collection of paragraphs that represents all the paragraphs in the specified range in a document.
 
 ```javascript editor-docx
-// How to get all paragraphs.
+// How to get all paragraphs in a document.
 
 // Retrieve all paragraphs from the document and make the first one bold.
 

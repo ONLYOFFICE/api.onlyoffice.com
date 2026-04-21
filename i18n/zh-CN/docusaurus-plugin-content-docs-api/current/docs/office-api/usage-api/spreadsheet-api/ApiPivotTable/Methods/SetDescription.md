@@ -22,12 +22,12 @@ expression.SetDescription(description);
 
 ## 示例
 
-此示例展示如何设置表格的描述。
+在电子表格中设置表格的描述。
 
 ```javascript editor-xlsx
-// How to rename a description of a table.
+// How to rename a description of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its description.
+// Create a pivot table, add data to it then set its description in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

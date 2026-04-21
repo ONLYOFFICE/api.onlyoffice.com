@@ -20,10 +20,10 @@ expression.GetIndRight();
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+获取 PDF 文档中的段落右侧缩进。
 
 ```javascript editor-pdf
-// How to return a right side identation of a paragraph property.
+// How to return a right side identation of a paragraph property in a PDF document.
 
 // Return a right side indentation of a text property from the page.
 
@@ -38,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndRight(2880);
@@ -53,5 +53,4 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
-
 ```

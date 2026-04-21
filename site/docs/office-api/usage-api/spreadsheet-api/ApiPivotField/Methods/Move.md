@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to move a pivot field.
+Move a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the position a pivot field.
+// How to change the position a pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then move a specified pivot field by columns.
+// Create a pivot table, add data to it then move a specified pivot field by columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

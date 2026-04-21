@@ -8,6 +8,8 @@ export interface PlaygroundState {
     scriptValue: string
     isScriptModified: boolean
     documentType: DocumentType
+    documentServerUrl: string
+    documentServerSecret: string
 }
 
 export type PlaygroundAction =
@@ -17,6 +19,7 @@ export type PlaygroundAction =
     | { type: 'SET_SCRIPT_VALUE'; payload: string }
     | { type: 'RESET_SCRIPT' }
     | { type: 'SET_DOCUMENT_TYPE'; payload: DocumentType }
+    | { type: 'SET_SERVER_CONFIG'; payload: { documentServerUrl: string; documentServerSecret: string } }
 
 export function playgroundReducer(state: PlaygroundState, action: PlaygroundAction): PlaygroundState {
     switch (action.type) {
@@ -56,6 +59,12 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
             }
         case 'SET_DOCUMENT_TYPE':
             return {...state, documentType: action.payload}
+        case 'SET_SERVER_CONFIG':
+            return {
+                ...state,
+                documentServerUrl: action.payload.documentServerUrl,
+                documentServerSecret: action.payload.documentServerSecret,
+            }
         default:
             return state
     }

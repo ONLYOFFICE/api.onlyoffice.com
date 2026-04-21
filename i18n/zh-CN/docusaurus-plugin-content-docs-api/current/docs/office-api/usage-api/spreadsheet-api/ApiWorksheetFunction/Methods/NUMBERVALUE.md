@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何以与区域设置无关的方式将文本转换为数字。
+在电子表格中以与区域设置无关的方式将文本转换为数字。
 
 ```javascript editor-xlsx
-// How to get a number from text.
+// How to get a number from text in a spreadsheet.
 
-// Use a function to convert a text to a number.
+// Use a function to convert a text to a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

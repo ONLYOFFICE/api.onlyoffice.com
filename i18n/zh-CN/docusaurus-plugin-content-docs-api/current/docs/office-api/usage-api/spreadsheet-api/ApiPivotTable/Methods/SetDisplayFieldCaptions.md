@@ -22,12 +22,12 @@ expression.SetDisplayFieldCaptions(show);
 
 ## 示例
 
-此示例展示如何设置表格的显示字段标题。
+在电子表格中设置表格的显示字段标题。
 
 ```javascript editor-xlsx
-// How to set a display field captions of a table.
+// How to set a display field captions of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set a display field captions.
+// Create a pivot table, add data to it then set a display field captions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

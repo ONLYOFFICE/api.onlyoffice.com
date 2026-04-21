@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定作为背景应用于文本块内容的高亮颜色。
+指定在 PDF 文档中作为背景应用于 run 内容的突出显示颜色。
 
 ```javascript editor-pdf
-// How to set highlight to the text run.
+// How to set highlight to the text run in a PDF document.
 
-// Create a new text run and highlight it.
+// Create a new text run and highlight it in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,12 +37,11 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is a text run with the text highlighted with light gray color.");
 paragraph.AddElement(run);
 run.SetHighlight("lightGray");
 page.AddObject(shape);
-
 ```

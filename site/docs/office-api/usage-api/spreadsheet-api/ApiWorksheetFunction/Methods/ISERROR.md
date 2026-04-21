@@ -22,17 +22,16 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is an error, and returns true or false.
+Check whether a value is an error, and return true or false in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to check if the cell contains an error.
 
-// Use a function to check whether the value is error or not.
+// Use a function to check whether the value is error or not in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("B3").SetValue("#N/A")
 let result = func.ISERR("B3");
 worksheet.GetRange("C3").SetValue(result)
-
 ```

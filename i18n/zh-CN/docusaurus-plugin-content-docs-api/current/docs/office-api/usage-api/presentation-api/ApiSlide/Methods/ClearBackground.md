@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例清除幻灯片背景。
+清除幻灯片背景。
 
 ```javascript editor-pptx
 // How to remove the background from the slide.
@@ -37,5 +37,4 @@ slide.SetBackground(fill);
 
 const duplicateSlide = slide.Duplicate(1);
 duplicateSlide.ClearBackground();
-
 ```

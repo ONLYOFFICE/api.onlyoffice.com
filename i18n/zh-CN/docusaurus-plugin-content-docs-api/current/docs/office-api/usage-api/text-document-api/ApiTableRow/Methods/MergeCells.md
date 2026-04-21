@@ -20,7 +20,7 @@ expression.MergeCells();
 
 ## 示例
 
-此示例合并行中的单元格。
+合并行中的单元格。
 
 ```javascript editor-docx
 // Merge cells of the entire row.

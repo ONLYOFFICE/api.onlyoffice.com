@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除表格。
+删除文档中的表格。
 
 ```javascript editor-docx
 // How to remove a table from the document.
 
-// Get a table and delete it.
+// Get a table and delete it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

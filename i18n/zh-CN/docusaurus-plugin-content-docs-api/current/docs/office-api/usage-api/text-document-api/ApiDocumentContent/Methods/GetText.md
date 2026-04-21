@@ -29,12 +29,12 @@ string
 
 ## 示例
 
-此示例从文档内容元素获取文本。
+从文档内容元素获取文本。
 
 ```javascript editor-docx
 // Get the text of the document content as a string.
 
-// Display all content. 
+// Display all content using the document content API in a document.
 
 const doc = Api.GetDocument();
 
@@ -47,5 +47,4 @@ content.GetElement(0).AddText("This is a block text content control.");
 const para = Api.CreateParagraph();
 para.AddText("This text from DocContent element: " + content.GetText());
 doc.Push(para);
-
 ```

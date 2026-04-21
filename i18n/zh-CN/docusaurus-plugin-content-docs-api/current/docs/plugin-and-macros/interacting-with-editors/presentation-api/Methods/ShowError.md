@@ -20,3 +20,11 @@ expression.ShowError(error, level);
 ## 返回值
 
 此方法不返回任何数据。
+
+## 示例
+
+```javascript
+const text = 'Message you want to show';
+const level = 0; // Warning, not an error
+Asc.plugin.executeMethod('ShowError', [text, level]);
+```

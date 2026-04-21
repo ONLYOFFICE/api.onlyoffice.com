@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+获取 PDF 文档中统一颜色对象的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiUniColor.
+// How can I get the class type of a uni color in a PDF document?
 
-// Retrieve class type of ApiUniColor object and insert it to the page.
+// Get the class type of a uni color and display it in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,11 +39,10 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const classType = presetColor.GetClassType();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```

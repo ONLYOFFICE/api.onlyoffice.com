@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Mix regular text with italic variables and monospace values.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Formatting variables in text

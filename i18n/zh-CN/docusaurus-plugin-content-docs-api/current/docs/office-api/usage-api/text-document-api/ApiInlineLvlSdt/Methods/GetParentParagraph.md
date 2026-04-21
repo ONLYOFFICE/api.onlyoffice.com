@@ -20,12 +20,12 @@ expression.GetParentParagraph();
 
 ## 示例
 
-此示例展示如何获取包含内容控件的段落。
+获取文档中包含内容控件的段落。
 
 ```javascript editor-docx
-// How to display the parent paragraph of the inline text control.
+// How to display the parent paragraph of the inline text control in a document.
 
-// Make bold the parent paragraph of inline content control.
+// Make bold the parent paragraph of inline content control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

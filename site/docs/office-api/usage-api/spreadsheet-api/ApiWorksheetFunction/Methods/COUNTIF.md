@@ -23,7 +23,7 @@ number
 
 ## Example
 
-This example shows how to count a number of cells within a range that meet the given condition.
+Count a number of cells within a range that meet the given condition in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find a number of cells that satisfies some condition.

@@ -2,30 +2,16 @@
 
 Returns the shading applied to the contents of the paragraph.
 
-## Syntax
-
-```javascript
-expression.GetShd();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiColor](../../ApiColor/ApiColor.md)
+Inherited from [ApiParaPr.GetShd](../../ApiParaPr/Methods/GetShd.md).
 
 ## Example
 
-This example shows how to get the shading applied to the contents of the paragraph.
+Get the shading applied to the contents of the paragraph in a document.
 
 ```javascript editor-docx
-// How to get the shading type of the paragraph.
+// How to get the shading type of the paragraph in a document.
 
-// Get the paragraph shading and fill the drawing with it.
+// Get the paragraph shading and fill the drawing with it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,5 +29,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Shade: ');
 paragraph.AddDrawing(drawing);
 doc.Push(paragraph);
-
 ```

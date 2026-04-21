@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add a header with a company logo and organization name.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 
 # Adding header and footer with logo

@@ -21,12 +21,12 @@ string
 
 ## Example
 
-This example shows how to get the text content of a custom XML node.
+Get the text content of a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How to get text content from an XML node.
+// How to get text content from an XML node in a presentation.
 
-// Get XML node text.
+// Get the text for a custom XML node in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a slide with a title and numbered list.
+tags: ["Docs", "Office API", "Presentations"]
 ---
 
 # Creating numbered list slide

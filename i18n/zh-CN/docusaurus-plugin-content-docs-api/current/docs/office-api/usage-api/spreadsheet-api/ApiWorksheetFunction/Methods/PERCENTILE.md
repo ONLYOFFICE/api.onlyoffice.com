@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回区域中值的第 k 个百分位数。
+在电子表格中返回范围内值的第 k 个百分位数。
 
 ```javascript editor-xlsx
-// How to get the k-th percentile of values.
+// How to get the k-th percentile of values in a spreadsheet.
 
-// Use a function to get the k-th percentile.
+// Use a function to get the k-th percentile in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

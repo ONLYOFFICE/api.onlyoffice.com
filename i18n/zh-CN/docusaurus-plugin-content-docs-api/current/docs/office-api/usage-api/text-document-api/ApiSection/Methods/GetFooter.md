@@ -23,12 +23,12 @@ expression.GetFooter(sType, isCreate);
 
 ## 示例
 
-此示例展示如何获取指定页脚类型的内容。
+获取文档中指定页脚类型的内容。
 
 ```javascript editor-docx
 // How to get the footer of the page.
 
-// Get the default footer from the final section. 
+// Get the default footer from the final section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

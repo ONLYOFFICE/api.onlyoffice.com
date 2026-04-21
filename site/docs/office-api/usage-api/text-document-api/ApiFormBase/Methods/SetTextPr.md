@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the text properties to the form.
+Set the text properties to the form.
 
 ```javascript editor-docx
 // Add text properties to the text form.

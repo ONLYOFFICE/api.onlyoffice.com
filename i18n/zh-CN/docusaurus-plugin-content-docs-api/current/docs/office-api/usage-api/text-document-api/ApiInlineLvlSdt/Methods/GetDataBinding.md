@@ -20,9 +20,13 @@ expression.GetDataBinding();
 
 ## 示例
 
-此示例展示如何检索内联内容控件的数据绑定。
+获取文档中内联内容控件的数据绑定。
 
 ```javascript editor-docx
+// How do I get the data binding in a document?
+
+// Get the data binding using an inline content control object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

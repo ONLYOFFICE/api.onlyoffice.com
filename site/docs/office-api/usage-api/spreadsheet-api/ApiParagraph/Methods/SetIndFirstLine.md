@@ -2,32 +2,16 @@
 
 Sets the paragraph first line indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndFirstLine(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph first line indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md).
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Set the paragraph first line indentation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the first sentence indentation of the paragraph.
+// How to change the first sentence indentation of the paragraph in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the first line indentation.
+// Get a paragraph from the shape's content then add a text specifying the first line indentation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

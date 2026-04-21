@@ -20,7 +20,7 @@ expression.GetType();
 
 ## 示例
 
-此示例演示如何获取高于平均值条件格式规则的类型。
+获取高于平均值条件格式规则的类型。
 
 ```javascript editor-xlsx
 // How to identify the type of conditional formatting rule.
@@ -46,5 +46,4 @@ let conditionType = condition.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```

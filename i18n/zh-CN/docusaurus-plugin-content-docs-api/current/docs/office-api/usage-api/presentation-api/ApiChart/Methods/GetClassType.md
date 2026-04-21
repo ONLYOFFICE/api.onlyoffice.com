@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiChart 类的类型并将其插入演示文稿。
+获取演示文稿中图表对象的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiChart.
+// How can I get the class type of a chart in a presentation?
 
-// Retrieve class type of ApiChart object and insert it to the slide.
+// Get the class type of a chart and display it in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

@@ -22,12 +22,12 @@ expression.SetName(name);
 
 ## 示例
 
-此示例展示如何为数据字段设置名称。
+在电子表格中设置数据字段的名称。
 
 ```javascript editor-xlsx
-// How to rename a table element.
+// How to rename a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then set a custom data field's name.
+// Create a pivot table, add data to it then set a custom data field's name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

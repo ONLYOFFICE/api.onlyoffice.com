@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the type of color scale conditional formatting rule.
+Get the type of color scale conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to identify the type of conditional formatting rule.
@@ -45,5 +45,4 @@ let conditionType = colorScale.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```

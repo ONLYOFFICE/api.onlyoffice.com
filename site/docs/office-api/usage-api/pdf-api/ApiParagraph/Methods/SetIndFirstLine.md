@@ -2,32 +2,16 @@
 
 Sets the paragraph first line indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndFirstLine(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph first line indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md).
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Set the paragraph first line indentation in a PDF document.
 
 ```javascript editor-pdf
-// How to set a size of the first line indentation using a paragraph properties.
+// How to set a size of the first line indentation using a paragraph properties in a PDF document.
 
-// Create a paragraph setting its first line indentation.
+// Create a paragraph setting its first line indentation in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,7 +23,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndFirstLine(1440);
@@ -49,5 +33,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
-
 ```

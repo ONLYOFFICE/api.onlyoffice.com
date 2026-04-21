@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+检查 PDF 文档中段落属性返回的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiParaPr.
+// How do I check what type a paragraph properties object is in a PDF document?
 
-// Retrieve class type of ApiParaPr object and insert it to the page.
+// Retrieve and output the class type string for a paragraph properties in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 const classType = paraPr.GetClassType();
@@ -52,5 +52,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

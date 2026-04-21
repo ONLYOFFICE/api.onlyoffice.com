@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为节设置自定义起始页码索引。
+为节设置自定义起始页码。
 
 ```javascript editor-docx
 // How to set the start page number for the current section.

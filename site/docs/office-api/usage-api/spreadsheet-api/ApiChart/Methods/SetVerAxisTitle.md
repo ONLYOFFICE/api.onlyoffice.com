@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example specifies the chart vertical axis title.
+Specify the chart vertical axis title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add title for the chart vertical axis.
+// How to add title for the chart vertical axis in a spreadsheet.
 
-// Specify the chart vertical axis title.
+// Specify the chart vertical axis title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

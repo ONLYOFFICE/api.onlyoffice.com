@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example removes objects (image, shape or chart) from the current slide.
+Remove objects (image, shape or chart) from the current slide.
 
 ```javascript editor-pptx
 // How to remove a specific object from the slide.
@@ -47,5 +47,4 @@ copyDrawing.SetSize(150 * 36000, 130 * 36000);
 slide.AddObject(drawing);
 slide.AddObject(copyDrawing);
 slide.RemoveObject(1, 1);
-
 ```

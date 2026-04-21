@@ -2,27 +2,17 @@
 
 返回光标所在的当前文本域。
 
-## 语法
-
-```javascript
-expression.GetCurrentRun();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiRun](../../ApiRun/ApiRun.md)
+继承自 [ApiDocumentContent.GetCurrentRun](../../ApiDocumentContent/Methods/GetCurrentRun.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取当前文本域。
+从文档中的文档内容获取当前文本块。
 
 ```javascript editor-docx
+// How to get current run for a document content?
+
+// Get current run and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -41,5 +31,4 @@ currentParagraph.AddElement(newRun);
 
 const currentRun = docContent.GetCurrentRun();
 currentRun.AddText("<CURRENT_RUN />");
-
 ```

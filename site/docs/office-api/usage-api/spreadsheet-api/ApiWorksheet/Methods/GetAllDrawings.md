@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all drawings from the sheet.
+Get all drawings from the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all drawings.
+// How to get all drawings in a spreadsheet.
 
-// Get all drawings as an array.
+// Get all drawings as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

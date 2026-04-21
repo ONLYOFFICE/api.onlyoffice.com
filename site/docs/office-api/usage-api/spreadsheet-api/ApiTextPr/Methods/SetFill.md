@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## Example
 
-This example sets the text color to the current text run.
+Set the text color to the current text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color a text with a solid fill.
+// How to color a text with a solid fill in a spreadsheet.
 
-// Set a text color using a solid fill.
+// Set a text color using a solid fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

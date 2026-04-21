@@ -20,10 +20,13 @@ expression.GetType();
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。
+分析星形的路径命令并显示命令详细信息。在单元格中显示命令总数和第一个命令信息。
 
 ```javascript editor-xlsx
-// Shows total command count and first command information in cells.
+// How to get the type for a path command in a spreadsheet?
+
+// Get the type and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

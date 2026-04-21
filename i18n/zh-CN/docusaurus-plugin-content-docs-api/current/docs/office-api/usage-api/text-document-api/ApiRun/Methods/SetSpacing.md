@@ -12,9 +12,9 @@ expression.SetSpacing(nSpacing);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型**                        | **默认值** | **描述**                                              |
-| -------- | ------------- | ----------------------------------- | ---------- | ----------------------------------------------------- |
-| nSpacing | 必需          | [twips](../../Enumeration/twips.md) |            | 以二十分之一磅（1/1440 英寸）为单位测量的文本间距值。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nSpacing | 必需 | [twips](../../Enumeration/twips.md) |  | 以二十分之一磅（1/1440 英寸）为单位测量的文本间距值。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+在文档中设置以磅的二十分之一为单位的文本间距。
 
 ```javascript editor-docx
-// How to resize spacing between words in a text run.
+// How to resize spacing between words in a text run in a document.
 
-// Create a new text run and set its spacing size (point * 20).
+// Create a new text run and set its spacing size (point * 20) in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

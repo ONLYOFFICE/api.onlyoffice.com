@@ -2,7 +2,6 @@
 
 Represents the ApiUniColor class.
 
-
 ## Methods
 
 | Method | Returns | Description |

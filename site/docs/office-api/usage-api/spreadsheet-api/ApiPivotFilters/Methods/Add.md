@@ -27,11 +27,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates comprehensive testing of ApiPivotFilters.Add method
+Comprehensive testing of ApiPivotFilters.Add method Creates one comprehensive dataset and 15 pivot tables with different filter types Tests all major filter categories: label, value, top/bottom, and date filters in a spreadsheet.
 
 ```javascript editor-xlsx
-// Creates one comprehensive dataset and 15 pivot tables with different filter types
-// Tests all major filter categories: label, value, top/bottom, and date filters
+// Pivot filters support label, value, top/bottom, and date filter types.
+
+// Add using a pivot filters object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -274,5 +275,4 @@ let dateField19 = pivotTable19.GetPivotFields('Date');
 dateField19.PivotFilters.Add("xlDateBetween", null, new Date("1 March 2024"), new Date("31 May 2024"), true); // March 1 - May 31, 2024
 
 worksheet.GetRange('U31').SetValue('Test 19: Date Between Mar-May 2024');
-
 ```

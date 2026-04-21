@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example specifies that all the columns in the current section have the different widths.
+Specify that all the columns in the current section have the different widths in a document.
 
 ```javascript editor-docx
+// How to get the columns count for a section in a document?
+
+// Get the columns count and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();

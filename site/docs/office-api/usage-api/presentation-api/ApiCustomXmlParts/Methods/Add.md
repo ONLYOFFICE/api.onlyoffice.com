@@ -22,12 +22,12 @@ expression.Add(xml);
 
 ## Example
 
-This example shows how to add a new custom XML part and then access it.
+Add a new custom XML part and then access it in a presentation.
 
 ```javascript editor-pptx
 // How to add a custom XML part to the presentation.
 
-// Add a new XML part.
+// Add and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

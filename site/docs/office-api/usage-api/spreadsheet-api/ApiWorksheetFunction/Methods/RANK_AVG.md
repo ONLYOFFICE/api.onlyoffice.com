@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the rank of a number in a list of numbers: its size relative to other values in the list. If more than one value has the same rank, the average rank is returned.
+Return the rank of a number in a list of numbers: its size relative to other values in the list. If more than one value has the same rank, the average rank is returned in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to estimate a rank of a number from the list.
+// How to estimate a rank of a number from the list in a spreadsheet.
 
-// Use a function to estimate rank of the a number from the list.
+// Use a function to estimate rank of the a number from the list in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -49,5 +49,4 @@ let func = Api.WorksheetFunction;
 let ans = func.RANK_AVG(number, range, order);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

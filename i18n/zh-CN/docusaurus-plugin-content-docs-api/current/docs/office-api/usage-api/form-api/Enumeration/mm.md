@@ -6,11 +6,9 @@
 
 number
 
-
-
 ## 示例
 
-此示例将以毫米为单位的单元格宽度设置到应用的字符梳。
+将以毫米为单位的单元格宽度设置到应用的字符梳。
 
 ```javascript editor-forms
 // How to set a cell width in millimeters.

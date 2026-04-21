@@ -6,11 +6,9 @@ English measure unit. 1 mm = 36000 EMUs, 1 inch = 914400 EMUs.
 
 number
 
-
-
 ## Example
 
-This example sets the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height.
+Set the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height.
 
 ```javascript editor-pptx
 // How to set a size of the drawing.

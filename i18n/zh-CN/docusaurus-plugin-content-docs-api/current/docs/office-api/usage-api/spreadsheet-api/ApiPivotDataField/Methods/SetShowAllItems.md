@@ -2,32 +2,16 @@
 
 设置指定是否显示无数据项的设置。
 
-## 语法
-
-```javascript
-expression.SetShowAllItems(show);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| show | 必需 | boolean |  | 指定是否显示无数据的项。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的显示所有项。
+在电子表格中设置透视字段的显示所有项。
 
 ```javascript editor-xlsx
-// How to change a pivot field show all items value.
+// How to change a pivot field show all items value in a spreadsheet.
 
-// Create a pivot table, add data to it then set show all items of a specified pivot.
+// Create a pivot table, add data to it then set show all items of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

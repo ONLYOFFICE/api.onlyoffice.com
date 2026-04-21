@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定此文本块的文本相对于周围非定位文本的默认基线升高或降低的量。
+指定在电子表格中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-xlsx
-// How to set an inline position of a text.
+// How to set an inline position of a text in a spreadsheet.
 
-// Create a text run object, specify its position to move down or up.
+// Create a text run object, specify its position to move down or up in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

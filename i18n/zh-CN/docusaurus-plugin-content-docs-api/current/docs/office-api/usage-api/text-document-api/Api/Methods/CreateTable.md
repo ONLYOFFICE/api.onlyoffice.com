@@ -23,12 +23,12 @@ expression.CreateTable(cols, rows);
 
 ## 示例
 
-此示例创建一个 3x3 的表格并将其插入到文档中。
+创建 3x3 表格并将其插入文档。
 
 ```javascript editor-docx
-// Creates a table, adds it to the document, and sets its width to 100%.
+// Create a table, add it to the document, and set its width to 100%.
 
-// How to create the ApiTable object and add it to the ApiDocument class.
+// How to create the table object and add it to the document class.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(3, 3);

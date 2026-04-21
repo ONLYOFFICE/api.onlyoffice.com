@@ -2,32 +2,16 @@
 
 Sets the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.SetJc(sJc);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
 ## Example
 
-This example sets the paragraph contents justification.
+Set the paragraph contents justification in a presentation.
 
 ```javascript editor-pptx
-// How to set justification using a paragraph properties.
+// How to set justification using a paragraph properties in a presentation.
 
-// Create a paragraph setting its justification property.
+// Create a paragraph setting its justification property in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +33,4 @@ paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 slide.AddObject(shape);
-
 ```

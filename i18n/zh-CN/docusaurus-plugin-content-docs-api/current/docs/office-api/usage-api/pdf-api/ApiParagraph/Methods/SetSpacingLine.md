@@ -5,33 +5,16 @@
 sLineRule 参数的值为 "auto"，则
 nLine 参数的值将被解释为行的 240 分之一。
 
-## 语法
-
-```javascript
-expression.SetSpacingLine(nLine, sLineRule);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLine | 必需 | [twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) |  | 行距值，以磅的二十分之一（1/1440 英寸）或行的 240 分之一为单位。 |
-| sLineRule | 必需 | "auto" \| "atLeast" \| "exact" |  | 确定行距度量单位的规则。 |
-
-## 返回值
-
-boolean
+继承自 [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md)。
 
 ## 示例
 
-此示例设置段落行距。
+在 PDF 文档中设置段落行距。
 
 ```javascript editor-pdf
-// How to set the size of a spacing line from a paragraph properties.
+// How to set the size of a spacing line from a paragraph properties in a PDF document.
 
-// Change a spacing line size property of a paragraph properties.
+// Change a spacing line size property of a paragraph properties in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,7 +26,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingLine(3 * 240, "auto");
@@ -53,5 +36,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 page.AddObject(shape);
-
 ```

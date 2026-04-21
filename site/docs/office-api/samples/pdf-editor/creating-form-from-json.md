@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Generate a PDF form from a JSON data structure.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating form from JSON

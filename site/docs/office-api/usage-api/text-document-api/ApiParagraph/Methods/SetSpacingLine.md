@@ -5,33 +5,16 @@ Sets the paragraph line spacing. If the value of the sLineRule parameter is eith
 the value of the sLineRule parameter is "auto", then the value of the 
 nLine parameter will be interpreted as 240ths of a line.
 
-## Syntax
-
-```javascript
-expression.SetSpacingLine(nLine, sLineRule);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLine | Required | [twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) |  | The line spacing value measured either in twentieths of a point (1/1440 of an inch) or in 240ths of a line. |
-| sLineRule | Required | "auto" \| "atLeast" \| "exact" |  | The rule that determines the measuring units of the line spacing. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md).
 
 ## Example
 
-This example sets the paragraph line spacing.
+Set the paragraph line spacing in a document.
 
 ```javascript editor-docx
-// How to set the size of a spacing line from a paragraph properties.
+// How to set the size of a spacing line from a paragraph properties in a document.
 
-// Change a spacing line size property of a paragraph properties.
+// Change a spacing line size property of a paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let myStyle1 = doc.CreateStyle("My document style #1");

@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the number of days from the settlement date to the next coupon date.
+Return the number of days from the settlement date to the next coupon date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find the number of days from the settlement date to the next coupon date.
+// How to find the number of days from the settlement date to the next coupon date in a spreadsheet.
 
-// Use function to get the number of days from the settlement date to the next coupon date.
+// Use function to get the number of days from the settlement date to the next coupon date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

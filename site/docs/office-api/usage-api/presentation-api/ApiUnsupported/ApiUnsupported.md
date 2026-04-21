@@ -2,7 +2,6 @@
 
 Represents the ApiUnsupported class.
 
-
 ## Methods
 
 | Method | Returns | Description |

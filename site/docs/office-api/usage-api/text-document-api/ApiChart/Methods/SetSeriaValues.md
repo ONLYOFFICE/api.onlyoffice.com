@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets values to the specified chart series.
+Set values to the specified chart series in a document.
 
 ```javascript editor-docx
-// How to set values to the specified ApiChart object.
+// How to set values to the specified chart object in a document.
 
-// Create a chart, set its properties and its series values.
+// Create a chart, set its properties and its series values in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

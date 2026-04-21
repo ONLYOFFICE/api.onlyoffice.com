@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the background to the current slide master.
+Set the background to the current slide master.
 
 ```javascript editor-pptx
 // How to set a background of a slide master.
@@ -37,5 +37,4 @@ const master = presentation.GetMaster(0);
 master.ClearBackground();
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 master.SetBackground(fill);
-
 ```

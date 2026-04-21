@@ -8,9 +8,10 @@ The function called when the current slide has changed.
 | --------- | ------------- | ----------- |
 | index | number | The index of the newly activated slide. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent('onChangeCurrentSlide', (index) => {
     console.log('Current slide changed to index: ' + index);
 });
 ```
-

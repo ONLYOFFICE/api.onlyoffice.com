@@ -20,10 +20,12 @@ boolean
 
 ## Example
 
-This example check is the ApiDocumentContent is a endnote.
+Check is the document content is an endnote.
 
 ```javascript editor-docx
 // How to add endnote to the document.
+
+// Use document content to is endnote.
 
 let doc = Api.GetDocument();
 let endnote = doc.AddEndnote();
@@ -37,5 +39,4 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
-
 ```

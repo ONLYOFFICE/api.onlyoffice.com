@@ -25,12 +25,12 @@ number \| string
 
 ## 示例
 
-此示例演示如何在表的最左列中查找值，然后从指定列返回同一行中的值。默认情况下，表必须按升序排序。
+在电子表格中在表格最左列中查找值，然后从指定列返回同一行中的值。默认情况下，表格必须按升序排序。
 
 ```javascript editor-xlsx
-// How to look for a value in the leftmost column of a table.
+// How to look for a value in the leftmost column of a table in a spreadsheet.
 
-// Use a find a value in the leftmost column of a table and display it in the row.
+// Use a find a value in the leftmost column of a table and display it in the row in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

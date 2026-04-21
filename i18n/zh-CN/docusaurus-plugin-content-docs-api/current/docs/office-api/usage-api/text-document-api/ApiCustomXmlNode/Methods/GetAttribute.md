@@ -23,9 +23,13 @@ string \| null
 
 ## 示例
 
-此示例演示如何从当前 XML 节点检索属性的值。
+获取文档中当前 XML 节点的属性值。
 
 ```javascript editor-docx
+// How to get the attribute for a custom XML node in a document?
+
+// Get the attribute and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

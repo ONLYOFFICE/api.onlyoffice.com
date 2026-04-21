@@ -22,12 +22,12 @@ expression.GetProtectedRange(sTitle);
 
 ## Example
 
-This example shows how to get an object that represents the protected range.
+Get an object that represents the protected range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get protected range.
+// How to get protected range in a spreadsheet.
 
-// Get protected range and set its title.
+// Get protected range and set its title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");

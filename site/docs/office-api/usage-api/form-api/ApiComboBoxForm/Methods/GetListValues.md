@@ -20,7 +20,7 @@ string[]
 
 ## Example
 
-This example shows how to get the list values from the combo box.
+Get the list values from the combo box in a document.
 
 ```javascript editor-forms
 // How to get list values of a combobox form.

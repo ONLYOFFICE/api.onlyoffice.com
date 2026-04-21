@@ -22,12 +22,12 @@ expression.CreateLayout(oMaster);
 
 ## 示例
 
-此示例演示如何创建版式。
+在演示文稿中创建版式。
 
 ```javascript editor-pptx
 // How to create and apply a layout for a slide.
 
-// Change a slide layout.
+// Create the layout and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ slide1.ApplyLayout(layout);
 const slide2 = Api.CreateSlide();
 presentation.AddSlide(slide2);
 slide2.ApplyLayout(layout);
-
 ```

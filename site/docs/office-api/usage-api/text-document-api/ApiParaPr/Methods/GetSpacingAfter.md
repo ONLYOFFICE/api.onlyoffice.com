@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the spacing after value of the current paragraph.
+Get the spacing after value of the current paragraph in a document.
 
 ```javascript editor-docx
-// How to get the spacing after of the paragraph and display it.
+// How to get the spacing after of the paragraph and display it in a document.
 
-// Get the paragraph spacing value.
+// Get the paragraph spacing value in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

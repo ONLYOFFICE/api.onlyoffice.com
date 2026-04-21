@@ -1,5 +1,6 @@
 ---
 description: Select a file and open it in ONLYOFFICE editors via the SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Open file in ONLYOFFICE editors

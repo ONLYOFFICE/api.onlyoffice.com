@@ -22,10 +22,10 @@ expression.Find(oSearchData);
 
 ## 示例
 
-此示例在范围中查找特定信息。
+在范围中查找特定信息。
 
 ```javascript editor-xlsx
-// How to search throughout the range.
+// How to search throughout the range in a spreadsheet.
 
 // Get a range, search information using value, position, order, etc.
 
@@ -57,5 +57,4 @@ let searchData = {
 };
 let searchRange = range.Find(searchData);
 searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the slide height in English measure units.
+Get the slide height in English measure units in a presentation.
 
 ```javascript editor-pptx
 // How to find a slide's height and display it on the slide.
 
-// Get a height ofthe  ApiSlide object and show it in the slide.
+// Get a height ofthe slide object and show it in the slide.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -43,5 +43,4 @@ const paragraph = docContent.GetElement(0);
 const slideHeight = slide.GetHeight();
 paragraph.AddText("The slide height = " + slideHeight / 36000 + " mm");
 slide.AddObject(shape);
-
 ```

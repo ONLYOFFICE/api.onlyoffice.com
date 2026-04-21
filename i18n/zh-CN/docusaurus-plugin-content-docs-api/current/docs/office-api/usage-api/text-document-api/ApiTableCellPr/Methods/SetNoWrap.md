@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例指定在文档中显示父表格时表格单元格的布局方式。
+指定在文档中显示父表格时表格单元格的布局方式。
 
 ```javascript editor-docx
 // Create a table cell where text is not wrapped when we try to change table width.

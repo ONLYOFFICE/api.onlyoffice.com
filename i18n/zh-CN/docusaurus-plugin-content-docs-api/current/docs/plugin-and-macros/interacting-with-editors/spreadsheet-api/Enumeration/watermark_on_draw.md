@@ -2,6 +2,10 @@
 
 包含水印属性的对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -29,11 +33,6 @@
 | transparent | number | 水印的透明度。 |
 | type | [ShapeType](../Enumeration/ShapeType.md) | 指定当前水印预设形状几何的类型。 |
 | width | number | 水印的宽度，以毫米为单位。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

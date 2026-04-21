@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert millimeters to points.
+Convert millimeters to points in a PDF document.
 
 ```javascript editor-pdf
+// How to convert millimeters to points in a PDF document?
+
+// Convert millimeters to points using the PDF document API.
+
 const millimeters = 100;
 const points = Api.MillimetersToPoints(millimeters);
 
@@ -38,5 +42,4 @@ paragraph.AddText(millimeters + ' millimeters are equal to ' + points + ' points
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

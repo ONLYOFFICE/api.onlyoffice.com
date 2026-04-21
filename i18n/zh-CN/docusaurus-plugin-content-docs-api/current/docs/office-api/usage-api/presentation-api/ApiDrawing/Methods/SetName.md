@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例设置当前绘图的名称。
+在演示文稿中设置当前绘图对象的名称。
 
 ```javascript editor-pptx
+// How to set name for a drawing object in a presentation?
+
+// Set name and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Shape name was set to: ' + shape.GetName());
 slide.AddObject(shape);
-
 ```

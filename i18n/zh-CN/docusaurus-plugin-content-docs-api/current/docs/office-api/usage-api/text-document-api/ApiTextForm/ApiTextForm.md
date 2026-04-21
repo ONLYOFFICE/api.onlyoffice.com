@@ -1,7 +1,6 @@
 # ApiTextForm
 
-表示 ApiTextForm 类。
-
+ApiTextForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
 

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Validate and highlight unfilled required content controls.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 # Checking unfilled content controls
 

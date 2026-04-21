@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示时在行的中心有一条水平线。
+指定在演示文稿中 run 的内容以通过行中心的单条水平线显示。
 
 ```javascript editor-pptx
-// How to strike out a text with one line.
+// How to strike out a text with one line in a presentation.
 
-// Get the text properties of the run and cross it out.
+// Get the text properties of the run and cross it out in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

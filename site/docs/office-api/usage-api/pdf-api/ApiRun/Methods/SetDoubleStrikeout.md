@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
+Specify that the contents of the current run are displayed with two horizontal lines through each character displayed on the line in a PDF document.
 
 ```javascript editor-pdf
-// How to strike out a text with two lines.
+// How to strike out a text with two lines in a PDF document.
 
-// Create a new text run and set double strikeout to it.
+// Create a new text run and set double strikeout to it in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -48,5 +48,4 @@ run.SetDoubleStrikeout(true);
 run.AddText("This is a text run with the text struck out with two lines.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

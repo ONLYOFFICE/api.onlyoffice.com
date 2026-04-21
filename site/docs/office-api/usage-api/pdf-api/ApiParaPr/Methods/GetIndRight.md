@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph right side indentation.
+Get the paragraph right side indentation in a PDF document.
 
 ```javascript editor-pdf
-// How to return a right side identation of a paragraph property.
+// How to return a right side identation of a paragraph property in a PDF document.
 
 // Return a right side indentation of a text property from the page.
 
@@ -38,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndRight(2880);
@@ -53,5 +53,4 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
-
 ```

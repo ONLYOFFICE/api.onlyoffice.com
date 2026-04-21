@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example gets a pdf document name and inserts it into the pdf document.
+Get a pdf document name and insert it into the pdf document.
 
 ```javascript editor-pdf
 // How to get a pdf document name.
@@ -36,10 +36,9 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const fullName = Api.GetFullName();
 paragraph.AddText("File name: " + fullName);
 page.AddObject(shape);
-
 ```

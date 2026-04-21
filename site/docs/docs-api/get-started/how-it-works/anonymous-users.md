@@ -10,7 +10,9 @@ The reference figure and the steps below explain the process of setting a name t
 
 1. The anonymous user uses the **document manager** to open a document for viewing or editing.
 
-   > Anonymous user is a user with an empty [user id](../../usage-api/config/editor/editor.md#user).
+   :::note
+   Anonymous user is a user with an empty [user id](../../usage-api/config/editor/editor.md#user).
+   :::
 
 2. The **document storage service** sends the initialization config to the **document editor** using the [JavaScript API](../basic-concepts.md) but the user name is not specified there.
 

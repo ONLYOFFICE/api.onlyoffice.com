@@ -1,5 +1,6 @@
 ---
 description: Render and configure the Button component.
+tags: ["DocSpace", "Plugins", "Basic"]
 ---
 
 # Button component

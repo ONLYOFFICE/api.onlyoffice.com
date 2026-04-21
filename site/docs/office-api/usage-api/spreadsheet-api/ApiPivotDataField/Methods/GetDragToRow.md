@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether the specified field can be dragged to the row position.
 
-## Syntax
-
-```javascript
-expression.GetDragToRow();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetDragToRow](../../ApiPivotField/Methods/GetDragToRow.md).
 
 ## Example
 
-This example shows how to get a drag to row of a pivot field.
+Get a drag to row of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to row.
+// How to get a pivot field drag to row in a spreadsheet.
 
-// Create a pivot table, add data to it then get a drag to row of a specified pivot field.
+// Create a pivot table, add data to it then get a drag to row of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

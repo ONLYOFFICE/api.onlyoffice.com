@@ -2,6 +2,10 @@
 
 An object containing the form properties.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -11,11 +15,6 @@ An object containing the form properties.
 | tags.comboBox | string | The combo box form value (one of the items from the combo box list values). |
 | tags.picture | string | The image form value (a link to the image). |
 | tags.text | string | The text field value (some text). |
-## Type
-
-Object
-
-
 
 ## Example
 

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定次要水平网格线的视觉属性。
+在电子表格中指定次要水平网格线的视觉属性。
 
 ```javascript editor-xlsx
-// Set a stroke as a minor horizontal gridline.
+// Set a stroke as a minor horizontal gridline in a spreadsheet.
 
-// How to add gridlines for the chart.
+// How to add gridlines for the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

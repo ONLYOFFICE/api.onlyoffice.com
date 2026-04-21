@@ -20,10 +20,10 @@ expression.GetSelection();
 
 ## 示例
 
-此示例演示如何获取表示所选范围的对象。
+获取表示电子表格中所选范围的对象。
 
 ```javascript editor-xlsx
-// How to get selected range.
+// How to get selected range in a spreadsheet.
 
 // Get selection from the worksheet and set its value.
 

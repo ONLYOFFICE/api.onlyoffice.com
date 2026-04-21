@@ -23,12 +23,12 @@ expression.SetFillColor(oColor);
 
 ## 示例
 
-此示例使用先前创建的颜色对象设置单元格范围的背景颜色。
+使用先前创建的颜色对象为单元格范围设置背景颜色。
 
 ```javascript editor-xlsx
 // How to color a cell.
 
-// Get a range and apply a solid fill to its background color.
+// Get a range and apply a solid fill to its background color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);

@@ -2,27 +2,11 @@
 
 Places a cursor before/after the current form.
 
-## Syntax
-
-```javascript
-expression.MoveCursorOutside(isAfter);
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isAfter | Optional | boolean | true | Specifies whether a cursor will be placed before (false) or after (true) the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.MoveCursorOutside](../../ApiFormBase/Methods/MoveCursorOutside.md).
 
 ## Example
 
-This example shows how to move the cursor outside.
+Move the cursor outside in a document.
 
 ```javascript editor-docx
 // How to know whether the cursor should be moved out of the text form.

@@ -2,7 +2,6 @@
 
 Represents the ApiCustomProperties class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例展示如何从当前图表中删除指定的系列。
+从文档中的当前图表中删除指定的系列。
 
 ```javascript editor-docx
-// How to remove seria from the chart indicating its index.
+// How to remove seria from the chart indicating its index in a document.
 
-// Create a chart, add series to it and then remove the second one. 
+// Create a chart, add series to it and then remove the second one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

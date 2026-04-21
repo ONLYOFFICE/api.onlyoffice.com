@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the text field is a comb of characters with the same cell width.
+Check if the text field is a comb of characters with the same cell width.
 
 ```javascript editor-docx
 // How to know whether the first text form from this document is comb.

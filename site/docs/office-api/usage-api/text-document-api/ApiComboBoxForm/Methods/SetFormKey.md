@@ -2,27 +2,11 @@
 
 Sets a key to the current form.
 
-## Syntax
-
-```javascript
-expression.SetFormKey(sKey);
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sKey | Required | string |  | Form key. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
 
 ## Example
 
-This example sets a key to the form.
+Set a key to the form.
 
 ```javascript editor-docx
 // Change the key of the text form.

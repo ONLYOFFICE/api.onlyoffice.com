@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Extract all filled content control values as key-value pairs.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 # Extracting filled fields
 

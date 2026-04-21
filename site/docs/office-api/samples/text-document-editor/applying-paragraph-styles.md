@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Copy and apply formatting styles between paragraphs.
+tags: ["Docs", "Office API", "Text documents"]
 ---
 # Applying paragraph styles
 

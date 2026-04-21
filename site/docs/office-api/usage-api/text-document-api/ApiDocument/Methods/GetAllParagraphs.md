@@ -2,30 +2,16 @@
 
 Returns an array of all paragraphs from the current document content.
 
-## Syntax
-
-```javascript
-expression.GetAllParagraphs();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md)[]
+Inherited from [ApiDocumentContent.GetAllParagraphs](../../ApiDocumentContent/Methods/GetAllParagraphs.md).
 
 ## Example
 
-This example shows how to get an array of all paragraphs from the document content.
+Get an array of all paragraphs from the document content in a document.
 
 ```javascript editor-docx
 // Get all paragraphs added to the document.
 
-// How to retrieve all paragraphs and make the first one bold.
+// How to retrieve all paragraphs and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

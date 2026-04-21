@@ -2,7 +2,6 @@
 
 Represents the ApiWorkbook class.
 
-
 ## Methods
 
 | Method | Returns | Description |

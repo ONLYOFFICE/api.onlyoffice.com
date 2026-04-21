@@ -20,9 +20,13 @@ expression.Select();
 
 ## 示例
 
-此示例选择当前幻灯片。
+选中当前幻灯片。
 
 ```javascript editor-pptx
+// How to select for a slide?
+
+// Select and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
 slide1.RemoveAllObjects();
@@ -42,5 +46,4 @@ shape2.GetContent().GetElement(0).AddText('This slide will be selected.');
 slide2.AddObject(shape2);
 
 slide2.Select();
-
 ```

@@ -1,5 +1,6 @@
 ---
 description: Generate a weekly contracts report for recently created rooms.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

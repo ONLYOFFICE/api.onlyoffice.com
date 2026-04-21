@@ -20,14 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取当前段落中的元素数量。
+获取 PDF 文档中当前段落的元素数量。
 
 ```javascript editor-pdf
-// How to return a number of paragraph elements.
+// Find out how many elements a paragraph has in a PDF document.
 
-// Find out how many elements a paragraph has.
-
-// Return a number of element from the ApiParagraph object.
+// Return a number of elements from the paragraph object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +36,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.RemoveAllElements();
 
@@ -52,5 +50,4 @@ run.AddText("Number of paragraph elements after we added a text run: ");
 run.AddTabStop();
 run.AddText("" + paragraph.GetElementsCount());
 page.AddObject(shape);
-
 ```

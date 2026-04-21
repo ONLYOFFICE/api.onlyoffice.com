@@ -1,10 +1,10 @@
 ---
-sidebar_label: .Net example
 sidebar_position: -10
 description: Integrate ONLYOFFICE Docs into a .Net (C#) web application.
+tags: ["Docs", "Integration", "C#"]
 ---
 
-# .Net example
+# .Net (C#) integration
 
 ## Overview
 

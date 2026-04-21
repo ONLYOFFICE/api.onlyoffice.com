@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置表格的水平对齐方式。
+在文档中设置表格的水平对齐方式。
 
 ```javascript editor-docx
-// How to set alignment of the text to the center.
+// How to set alignment of the text to the center in a document.
 
-// Create a table and set its horizontal alignment.
+// Create a table and set its horizontal alignment in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

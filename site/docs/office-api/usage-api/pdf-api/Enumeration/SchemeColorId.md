@@ -23,10 +23,9 @@ Enumeration
 - "tx1"
 - "tx2"
 
-
 ## Example
 
-This example creates a scheme color with the 'accent2' identifier.
+Create a scheme color with the 'accent2' identifier.
 
 ```javascript editor-pdf
 // How to create a scheme color.

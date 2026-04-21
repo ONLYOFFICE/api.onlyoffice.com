@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds an endnote for the document.
+Add an endnote for the document.
 
 ```javascript editor-docx
 // How to add endnote to the document.
 
-// Get all endnotes first paragraphs and make the first one bold.
+// Get all endnotes first paragraphs and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 

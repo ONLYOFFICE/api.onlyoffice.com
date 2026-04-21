@@ -25,18 +25,15 @@ number
 
 ## Example
 
-This example shows how to return the Weibull distribution.
+Return the Weibull distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the Weibull distribution.
+// How to return the Weibull distribution in a spreadsheet.
 
-// Use a function to calculate the Weibull distribution.
-
+// Use a function to calculate the Weibull distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.WEIBULL(12, 2, 5, true);
 worksheet.GetRange("B2").SetValue(result);
-
-
 ```

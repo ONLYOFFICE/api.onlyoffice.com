@@ -23,12 +23,12 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-此示例展示如何在段落中进行搜索。
+在文档中的段落内进行搜索。
 
 ```javascript editor-docx
-// How to find a word in the paragraph.
+// How to find a word in the paragraph in a document.
 
-// Make the search result word bold.
+// Make the search result word bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

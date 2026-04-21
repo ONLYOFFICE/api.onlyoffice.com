@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the date operator for a time period conditional formatting rule.
+Set the date operator for a time period conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to change date operators in time period conditional formatting rules.
@@ -52,5 +52,4 @@ condition1.SetDateOperator("xlLastWeek");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetDateOperator() || "None");
-
 ```

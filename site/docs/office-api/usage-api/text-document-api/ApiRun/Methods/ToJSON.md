@@ -22,7 +22,7 @@ JSON
 
 ## Example
 
-This example converts the ApiRun object into the JSON object.
+Convert the text run object into the JSON object in a document.
 
 ```javascript editor-docx
 // How to convert a slide object to a JSON object.

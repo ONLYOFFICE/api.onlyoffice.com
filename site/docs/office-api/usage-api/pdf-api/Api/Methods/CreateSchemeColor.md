@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## Example
 
-This example shows how to create a scheme color with the 'dk1' identifier.
+Create a scheme color with the 'dk1' identifier in a PDF document.
 
 ```javascript editor-pdf
-// How to create a new scheme color.
+// How to create a new scheme color in a PDF document.
 
-// Add a scheme color to create a solid fill.
+// Add a scheme color to create a solid fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,5 +38,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("curvedUpArrow", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

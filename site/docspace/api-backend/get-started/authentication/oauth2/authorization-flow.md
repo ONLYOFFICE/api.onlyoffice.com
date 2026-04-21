@@ -36,7 +36,9 @@ If the authorization link contains non-existent [client_id](auth-button.md#clien
 
 1. When the user clicks the **Allow** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) where the code field will be added to the search.
 
-   > If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
+   :::note
+   If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
+   :::
 
    To send a consent request, you can also send POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/submit-consent.api.mdx) address.
 

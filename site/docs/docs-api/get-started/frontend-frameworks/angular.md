@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Angular
 
 The ONLYOFFICE Docs Angular [component](https://github.com/ONLYOFFICE/document-editor-angular-workspace) integrates ONLYOFFICE Docs into [Angular](https://angularjs.org/) projects.
@@ -140,7 +144,9 @@ ng version
 
 1. Open the *./src/app/app.component.ts* file in the *onlyoffice-angular-demo* project and define options in your consuming component:
 
-   > Please note that starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
+   :::note
+   Starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
+   :::
 
    ``` ts
    import {Component} from "@angular/core";

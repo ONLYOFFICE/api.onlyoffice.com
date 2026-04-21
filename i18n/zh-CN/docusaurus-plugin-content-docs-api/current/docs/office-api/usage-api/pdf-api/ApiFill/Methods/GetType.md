@@ -20,10 +20,13 @@ expression.GetType();
 
 ## 示例
 
-获取填充类型并显示。
+获取并显示填充类型。在 PDF 文档中创建具有不同填充类型的形状并显示其类型。
 
 ```javascript editor-pdf
-// Creates shapes with different fill types and shows their types.
+// How to get the type for a fill in a PDF document?
+
+// Get the type and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -33,7 +36,7 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape1 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, solidFill, stroke);
 shape1.SetPosition(2000000, 1000000);
 page.AddObject(shape1);
-let content1 = shape1.GetDocContent();
+let content1 = shape1.GetContent();
 let para1 = content1.GetElement(0);
 let fill1 = shape1.GetFill();
 para1.AddText("Solid: " + fill1.GetType());
@@ -45,7 +48,7 @@ let gradientFill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 let shape2 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, gradientFill, stroke);
 shape2.SetPosition(2000000, 2000000);
 page.AddObject(shape2);
-let content2 = shape2.GetDocContent();
+let content2 = shape2.GetContent();
 let para2 = content2.GetElement(0);
 let fill2 = shape2.GetFill();
 para2.AddText("Gradient: " + fill2.GetType());
@@ -55,9 +58,8 @@ let noFill = Api.CreateNoFill();
 let shape3 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, noFill, stroke);
 shape3.SetPosition(2000000, 3000000);
 page.AddObject(shape3);
-let content3 = shape3.GetDocContent();
+let content3 = shape3.GetContent();
 let para3 = content3.GetElement(0);
 let fill3 = shape3.GetFill();
 para3.AddText("No fill: " + fill3.GetType());
-
 ```

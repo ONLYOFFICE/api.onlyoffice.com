@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the width of a stroke in EMU.
+Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a presentation.
 
 ```javascript editor-pptx
-// Creates shapes with different border widths and displays their widths.
+// How do I get the width in a presentation?
+
+// Get the width using a stroke object in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -57,5 +60,4 @@ let content3 = shape3.GetDocContent();
 let para3 = content3.GetElement(0);
 let width3 = shape3.GetLine().GetWidth();
 para3.AddText("5pt: " + width3 + " EMU");
-
 ```

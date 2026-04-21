@@ -23,10 +23,10 @@ expression.CreateTable(nCols, nRows);
 
 ## Example
 
-This example creates a 2x4 table and inserts it into the presentation.
+Create a 2x4 table and insert it into the presentation.
 
 ```javascript editor-pptx
-// How to create new table with two rows and four columns.
+// How to create new table with two rows and four columns in a presentation.
 
 // Add a table to the presentation.
 
@@ -35,5 +35,4 @@ const slide = presentation.GetSlideByIndex(0);
 const table = Api.CreateTable(2, 4);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

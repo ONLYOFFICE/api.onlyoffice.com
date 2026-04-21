@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the first series of ApiChart class and inserts its type into the document.
+Get the first series of chart class and insert its type into the document.
 
 ```javascript editor-docx
 // How to get a chart type and show it on the slide.
 
-// Change a chart type to the "area" type.
+// Change a chart type to the "area" type in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

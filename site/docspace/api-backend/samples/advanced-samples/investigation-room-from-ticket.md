@@ -1,5 +1,6 @@
 ---
 description: Create a dedicated investigation room when a helpdesk ticket arrives.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-此示例展示如何获取包含内容控件的内容控件。
+获取文档中包含该内容控件的内容控件。
 
 ```javascript editor-docx
-// How to display the parent control of the inline text control.
+// How to display the parent control of the inline text control in a document.
 
-// Set the alias to the parent inline content control.
+// Set the alias to the parent inline content control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

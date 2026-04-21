@@ -2,32 +2,16 @@
 
 推送段落或表格以将其实际添加到文档中。
 
-## 语法
-
-```javascript
-expression.Push(oElement);
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | 必需 | [DocumentElement](../../Enumeration/DocumentElement.md) |  | 将推送到文档的元素类型。 |
-
-## 返回值
-
-boolean
+继承自 [ApiDocumentContent.Push](../../ApiDocumentContent/Methods/Push.md)。
 
 ## 示例
 
-此示例移除形状的所有内容并在其中添加新段落。
+在文档中移除形状的所有内容并在其中添加新段落。
 
 ```javascript editor-docx
 // Insert an element to the document.
 
-// Push the paragraph to the content of the document. 
+// Push the paragraph to the content of the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

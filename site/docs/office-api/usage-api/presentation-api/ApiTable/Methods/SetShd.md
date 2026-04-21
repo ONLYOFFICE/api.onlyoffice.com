@@ -25,10 +25,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies the shading which shall be applied to the extents of the table.
+Specify the shading which shall be applied to the extents of the table in a presentation.
 
 ```javascript editor-pptx
-// How to add a shading to the table background.
+// How to add a shading to the table background in a presentation.
 
 // Create a table, set its shading color and add it to the slide.
 
@@ -38,5 +38,4 @@ const table = Api.CreateTable(2, 4);
 table.SetShd("clear", Api.HexColor('#FF6F3D'));
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

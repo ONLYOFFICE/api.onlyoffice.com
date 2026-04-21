@@ -23,10 +23,10 @@ expression.CreateTable(nCols, nRows);
 
 ## 示例
 
-此示例创建 2x4 表格并将其插入演示文稿。
+创建 2x4 表格并将其插入演示文稿。
 
 ```javascript editor-pptx
-// How to create new table with two rows and four columns.
+// How to create new table with two rows and four columns in a presentation.
 
 // Add a table to the presentation.
 
@@ -35,5 +35,4 @@ const slide = presentation.GetSlideByIndex(0);
 const table = Api.CreateTable(2, 4);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

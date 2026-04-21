@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-此示例演示如何使用 XPath 从自定义 XML 部件获取节点。
+在电子表格中使用 XPath 从自定义 XML 部件获取节点。
 
 ```javascript editor-xlsx
-// How to get nodes from an XML part using XPath.
+// How to get nodes from an XML part using XPath in a spreadsheet.
 
-// Get XML nodes.
+// Get the nodes for a custom XML part in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

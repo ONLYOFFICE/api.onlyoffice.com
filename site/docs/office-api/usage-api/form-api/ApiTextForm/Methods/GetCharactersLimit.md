@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get a limit of the text field characters.
+Get a limit of the text field characters in a document.
 
 ```javascript editor-forms
 // How to display the characters limit of the text form.

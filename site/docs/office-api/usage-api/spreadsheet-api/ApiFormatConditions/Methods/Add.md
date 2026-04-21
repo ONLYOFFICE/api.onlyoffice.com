@@ -25,7 +25,7 @@ expression.Add(Type, Operator, Formula1, Formula2);
 
 ## Example
 
-This example adds conditional formatting to a range.
+Add conditional formatting to a range.
 
 ```javascript editor-xlsx
 // How to add conditional formatting rules to highlight cells based on values.
@@ -49,5 +49,4 @@ let condition1 = formatConditions.Add("xlCellValue", "xlGreater", "200");
 if (condition1) {
     condition1.SetFillColor(Api.CreateColorFromRGB(255, 0, 0));
 }
-
 ```

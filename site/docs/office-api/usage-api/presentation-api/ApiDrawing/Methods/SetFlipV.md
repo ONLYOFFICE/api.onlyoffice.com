@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to flip the drawing vertically.
+Flip the drawing vertically in a presentation.
 
 ```javascript editor-pptx
-// How to set the vertical flip property of the shape.
+// How to set the vertical flip property of the shape in a presentation.
 
-// Create a drawing and flip it vertically.
+// Create a drawing and flip it vertically in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped vertically: " + flip);
 slide.AddObject(drawing);
-
 ```

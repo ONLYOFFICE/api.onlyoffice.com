@@ -23,12 +23,12 @@ expression.Resize(rowSize, columnSize);
 
 ## 示例
 
-此示例演示如何将范围调整为不同的行数和列数。
+在电子表格中将范围调整为不同的行数和列数。
 
 ```javascript editor-xlsx
-// How to resize a range.
+// How to resize a range in a spreadsheet.
 
-// Get a range, resize it and fill the resized range with color.
+// Get a range, resize it and fill the resized range with color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let originalRange = worksheet.GetRange("B2:C3");
@@ -38,5 +38,4 @@ originalRange.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
 let resizedRange = originalRange.Resize(originalRange.Rows.Count + 2, originalRange.Columns.Count + 1);
 resizedRange.SetBorders("InsideHorizontal", "Thick", Api.CreateColorFromRGB(255, 111, 61));
 resizedRange.SetBorders("InsideVertical", "Thick", Api.CreateColorFromRGB(255, 111, 61));
-
 ```

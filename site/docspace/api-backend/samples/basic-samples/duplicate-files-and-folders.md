@@ -1,5 +1,6 @@
 ---
 description: Duplicate files and folders in place via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

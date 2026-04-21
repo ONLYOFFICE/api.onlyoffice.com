@@ -20,9 +20,13 @@ expression.GetGeometry();
 
 ## 示例
 
-在文本形状中显示预设类型和自定义状态。
+在 PDF 文档中的文本形状中显示预设类型和自定义状态。
 
 ```javascript editor-pdf
+// How do I get the geometry in a PDF document?
+
+// Get the geometry using a shape object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

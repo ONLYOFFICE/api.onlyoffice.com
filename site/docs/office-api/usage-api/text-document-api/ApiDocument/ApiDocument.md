@@ -1,7 +1,6 @@
 # ApiDocument
 
-Represents the ApiDocument class.
-
+ApiDocument is a subclass of [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md).
 
 ## Methods
 

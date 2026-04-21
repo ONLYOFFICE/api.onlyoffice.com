@@ -20,9 +20,13 @@ expression.GetBorderColor();
 
 ## 示例
 
-此示例展示如何获取容器的边框颜色。
+获取文档中容器的边框颜色。
 
 ```javascript editor-docx
+// How do I get the border color in a document?
+
+// Get the border color using an inline content control object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
@@ -39,5 +43,4 @@ color = inlineLvlSdt.GetBorderColor();
 run.AddText("BorderColor: " + (color ? color.GetHex() : "none"));
 inlineLvlSdt.AddElement(run, 0);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```

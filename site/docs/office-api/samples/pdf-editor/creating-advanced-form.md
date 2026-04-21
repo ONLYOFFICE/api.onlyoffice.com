@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a complex form with tables, text fields, and checkboxes.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating advanced form

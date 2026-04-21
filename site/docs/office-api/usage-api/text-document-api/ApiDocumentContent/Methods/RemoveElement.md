@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes an element using the position specified.
+Remove an element using the position specified in a document.
 
 ```javascript editor-docx
-// Remove the element using its index.
+// Remove the element using its index in a document.
 
-// Delete document item.
+// Remove the element for a document content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

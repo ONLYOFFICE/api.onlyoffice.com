@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的指数。
+在电子表格中返回复数的指数。
 
 ```javascript editor-xlsx
-// How to get the exponential of a comlex numbers.
+// How to get the exponential of a comlex numbers in a spreadsheet.
 
-// Use a function to get the exponential.
+// Use a function to get the exponential in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMEXP("-2+2.5i"));
-
 ```

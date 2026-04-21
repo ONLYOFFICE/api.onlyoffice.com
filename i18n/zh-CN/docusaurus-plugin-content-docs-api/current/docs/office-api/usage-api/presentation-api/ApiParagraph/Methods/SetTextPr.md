@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置段落文本属性。
+在演示文稿中设置段落文本属性。
 
 ```javascript editor-pptx
+// How to set text pr for a paragraph in a presentation?
+
+// Set text pr and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 paragraph.SetTextPr(textPr);
 slide.AddObject(shape);
-
 ```

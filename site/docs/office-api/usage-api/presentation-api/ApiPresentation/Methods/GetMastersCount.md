@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get a number of slide masters.
+Get a number of slide masters in a presentation.
 
 ```javascript editor-pptx
 // How to get a master count from the presentation.
@@ -44,5 +44,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Number of masters = " + mastersCount);
 slide.AddObject(shape);
-
 ```

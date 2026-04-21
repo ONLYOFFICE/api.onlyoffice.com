@@ -22,10 +22,10 @@ expression.SetPercentMax(percent);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的最大百分比长度。
+设置数据条条件格式规则的最大百分比长度。
 
 ```javascript editor-xlsx
-// How to change the maximum length setting of a data bar.
+// How to change the maximum length setting of a data bar in a spreadsheet.
 
 // Set the maximum percentage length of a data bar conditional formatting rule.
 
@@ -50,5 +50,4 @@ dataBar.SetPercentMax(80);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetPercentMax() + "%");
-
 ```

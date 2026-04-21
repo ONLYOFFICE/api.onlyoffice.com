@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example demonstrates how to add a boolean custom property.
+Add a boolean custom property in a spreadsheet.
 
 ```javascript editor-xlsx
+// Custom properties support string, boolean, number, and date value types.
+
+// Add using a custom properties object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 
@@ -67,5 +71,4 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirthDate: " + birthDate.toDateString());
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
-
 ```

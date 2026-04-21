@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to remove the specified series from the current chart.
+Remove the specified series from the current chart in a document.
 
 ```javascript editor-docx
-// How to remove seria from the chart indicating its index.
+// How to remove seria from the chart indicating its index in a document.
 
-// Create a chart, add series to it and then remove the second one. 
+// Create a chart, add series to it and then remove the second one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

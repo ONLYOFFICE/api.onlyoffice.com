@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the XML content of a custom XML node.
+Get the XML content of a custom XML node in a document.
 
 ```javascript editor-docx
+// How can I get the xml using a custom XML node in a document?
+
+// Get the xml for a custom XML node in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

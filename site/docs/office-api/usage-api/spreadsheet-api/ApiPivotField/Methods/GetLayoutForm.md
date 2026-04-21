@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a layout form of a pivot field.
+Get a layout form of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a layout form of a pivot field.

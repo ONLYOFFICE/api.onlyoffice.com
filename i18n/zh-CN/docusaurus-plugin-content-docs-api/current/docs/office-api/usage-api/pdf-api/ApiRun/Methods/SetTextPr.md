@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例设置当前文本块的文本属性。
+在 PDF 文档中为当前 run 设置文本属性。
 
 ```javascript editor-pdf
-// How to create the new text properties and apply it to the text run.
+// How to create the new text properties and apply it to the text run in a PDF document.
 
-// Create a new text run and set its properties like font size, color, etc.
+// Create a new text run and set its properties like font size, color, etc in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is a sample text with the font size set to 15 points and the font weight set to bold.");
@@ -48,5 +48,4 @@ textPr.SetBold(true);
 run.SetTextPr(textPr);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

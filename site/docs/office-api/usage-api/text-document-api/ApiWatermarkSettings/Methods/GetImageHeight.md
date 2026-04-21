@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example sets the parameters of the watermark settings and apply them to the document.
+Set the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
-// How to get the height of the image. 
+// How to get the height of the image in a document.
 
-// Get the watermark image height.
+// Get the watermark image height in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

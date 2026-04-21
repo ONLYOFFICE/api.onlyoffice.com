@@ -2,28 +2,14 @@
 
 返回段落内容对齐方式。
 
-## 语法
-
-```javascript
-expression.GetJc();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-"left" \| "right" \| "both" \| "center" \| undefined
+继承自 [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md)。
 
 ## 示例
 
-此示例展示如何获取段落内容对齐方式。
+获取电子表格中段落内容的对齐方式。
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph.
+// How to know the justification type of a paragraph in a spreadsheet.
 
 // Create a paragraph set justification type, get it and display in the worksheet.
 

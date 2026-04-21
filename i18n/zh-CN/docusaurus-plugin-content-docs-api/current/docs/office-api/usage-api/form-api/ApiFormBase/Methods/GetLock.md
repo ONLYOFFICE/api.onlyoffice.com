@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查当前表单是否已锁定。
+检查当前表单是否被锁定。
 
 ```javascript editor-forms
 // How to know whether a form is locked or not.
@@ -36,5 +36,4 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```

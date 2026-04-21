@@ -2,30 +2,16 @@
 
 从当前文本属性获取字体大小。
 
-## 语法
-
-```javascript
-expression.GetFontSize();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[hps](../../Enumeration/hps.md)
+继承自 [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md)。
 
 ## 示例
 
-此示例演示如何确定文本字体大小。
+获取 PDF 文档中的文本字体大小。
 
 ```javascript editor-pdf
-// How to know font size of a text run.
+// How to know font size of a text run in a PDF document.
 
-// Get the text properties of the run and display its font size.
+// Get the text properties of the run and display its font size in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +21,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const fontSize = textPr.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 docContent.Push(paragraph);
-
 ```

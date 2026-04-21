@@ -2,27 +2,11 @@
 
 为当前表单设置键。
 
-## 语法
-
-```javascript
-expression.SetFormKey(sKey);
-```
-
-`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sKey | 必需 | string |  | 表单键。 |
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md)。
 
 ## 示例
 
-此示例为表单设置键。
+为表单设置键。
 
 ```javascript editor-forms
 // Change the key of the text form.

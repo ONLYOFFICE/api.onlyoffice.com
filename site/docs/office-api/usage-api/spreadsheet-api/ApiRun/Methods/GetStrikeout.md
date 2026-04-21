@@ -2,30 +2,16 @@
 
 Gets the strikeout property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetStrikeout();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
 
 ## Example
 
-This example gets a text strikeout using its property.
+Get a text strikeout using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out or not.
+// How to find out whether a text is stroke out or not in a spreadsheet.
 
-// Get cross out property of a text.
+// Get cross out property of a text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -1,5 +1,6 @@
 ---
 description: Share a file via a temporary link and revoke it after a download limit.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

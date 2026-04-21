@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the current text run.
+Set the font size to the characters of the current text run in a presentation.
 
 ```javascript editor-pptx
-// How to set font size to the text run.
+// How to set font size to the text run in a presentation.
 
-// Create a new text run and change resize its font.
+// Create a new text run and change resize its font in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ run.SetFontSize(50);
 run.AddText("This is a text run with the font size set to 25 points (50 half-points).");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

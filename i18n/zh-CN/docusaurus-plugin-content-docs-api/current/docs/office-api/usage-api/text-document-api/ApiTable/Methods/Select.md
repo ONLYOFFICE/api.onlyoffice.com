@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例选择当前表格。
+在文档中选中当前表格。
 
 ```javascript editor-docx
-// How to select a table with a cursor.
+// How to select a table with a cursor in a document.
 
 // Add text to the table cell and select it.
 

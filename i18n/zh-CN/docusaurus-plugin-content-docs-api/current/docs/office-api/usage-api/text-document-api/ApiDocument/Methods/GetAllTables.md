@@ -2,25 +2,11 @@
 
 从当前文档内容返回所有表格的数组。
 
-## 语法
-
-```javascript
-expression.GetAllTables();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiTable](../../ApiTable/ApiTable.md)[]
+继承自 [ApiDocumentContent.GetAllTables](../../ApiDocumentContent/Methods/GetAllTables.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取所有表格的数组。
+从文档内容中获取所有表格的数组。
 
 ```javascript editor-docx
 // Get all tables added to the document.

@@ -20,7 +20,7 @@ expression.CreateNewHistoryPoint();
 
 ## 示例
 
-此示例创建一个新的历史记录点。
+在演示文稿中创建新的历史点。
 
 ```javascript editor-pptx
 // How to add a new history point to the presentation.
@@ -44,5 +44,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("New history point was just created.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

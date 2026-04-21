@@ -2,29 +2,17 @@
 
 Sets the role to the current form.
 
-## Syntax
-
-```javascript
-expression.SetRole(role);
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| role | Required | string |  | The role which will be attached to the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
 
 ## Example
 
-This example shows how to set a role for a form element.
+Set a role for a form element in a document.
 
 ```javascript editor-docx
+// How can I set role using a form base in a document?
+
+// Set role for a form base in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -50,5 +38,4 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```

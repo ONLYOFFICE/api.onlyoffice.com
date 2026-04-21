@@ -96,6 +96,12 @@
   --ifm-link-hover-color: var(--ifm-link-color);
 
   --ifm-color-primary: var(--color-foreground-link);
+  --ifm-color-primary-dark: #e55e31;
+  --ifm-color-primary-darker: #d9572e;
+  --ifm-color-primary-darkest: #b34726;
+  --ifm-color-primary-light: #ff8254;
+  --ifm-color-primary-lighter: #ff9670;
+  --ifm-color-primary-lightest: #ffb89e;
   --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
 
   --button-text-color: #245add;
@@ -123,12 +129,12 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary-dark: #e55e31;
+  --ifm-color-primary-darker: #d9572e;
+  --ifm-color-primary-darkest: #b34726;
+  --ifm-color-primary-light: #ff8254;
+  --ifm-color-primary-lighter: #ff9670;
+  --ifm-color-primary-lightest: #ffb89e;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   --card-border-color: #454545;

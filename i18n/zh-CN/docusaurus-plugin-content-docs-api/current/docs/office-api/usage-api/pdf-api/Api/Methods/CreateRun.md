@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-此示例创建一个文本域并将其插入到文档中。
+创建文本块并将其插入文档。
 
 ```javascript editor-pdf
-// How to add text.
+// How to add text in a PDF document.
 
-// Add an ApiRun object that represents a text.
+// Add an text run object that represents a text in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -34,7 +34,7 @@ const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.SetFontSize(60);
@@ -46,5 +46,4 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

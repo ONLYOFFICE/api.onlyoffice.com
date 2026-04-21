@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例获取给定范围对象的结束位置。
+获取文档中给定范围对象的结束位置。
 
 ```javascript editor-docx
-// How to get the last index of the range position.
+// How to get the last index of the range position in a document.
 
-// Get a range of the paragraph and display its the end position.
+// Get a range of the paragraph and display its the end position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

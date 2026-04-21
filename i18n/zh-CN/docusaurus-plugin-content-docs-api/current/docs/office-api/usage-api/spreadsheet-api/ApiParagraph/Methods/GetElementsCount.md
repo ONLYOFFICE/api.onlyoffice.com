@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-此示例展示如何获取当前段落中的元素数量。
+获取电子表格中当前段落的元素数量。
 
 ```javascript editor-xlsx
-// Get paragraph elements count.
+// Get paragraph elements count in a spreadsheet.
 
 // How to get number of elements of the paragraph and show it in the worksheet.
 

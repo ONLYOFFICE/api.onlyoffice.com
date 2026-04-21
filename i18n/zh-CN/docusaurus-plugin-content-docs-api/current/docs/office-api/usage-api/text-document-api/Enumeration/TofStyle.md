@@ -15,10 +15,9 @@
 - "centered"
 - "formal"
 
-
 ## 示例
 
-此示例向文档添加独特样式的图表目录。
+向文档添加独特样式的图表目录。
 
 ```javascript editor-docx
 // How to create a table of figures with distinctive style property.
@@ -36,5 +35,4 @@ let tofPr = {
 	"TofStyle": tofStyle
 };
 doc.AddTableOfFigures(tofPr);
-
 ```

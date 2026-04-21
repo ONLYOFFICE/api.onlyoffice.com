@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查演示文稿中配色方案颜色返回的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiSchemeColor.
+// How do I check what type a scheme color object is in a presentation?
 
-// Retrieve class type of ApiSchemeColor object and insert it to the slide.
+// Retrieve and output the class type string for a scheme color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

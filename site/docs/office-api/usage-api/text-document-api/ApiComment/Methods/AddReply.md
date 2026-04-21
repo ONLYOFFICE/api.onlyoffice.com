@@ -25,12 +25,12 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## Example
 
-This example adds a comment and makes a reply for it.
+Add a comment and make a reply for it in a document.
 
 ```javascript editor-docx
-// How to reply to the comment.
+// How to reply to the comment in a document.
 
-// Create a comment from a paragraph and add a reply to its first one.
+// Create a comment from a paragraph and add a reply to its first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

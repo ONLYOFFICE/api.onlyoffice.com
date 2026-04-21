@@ -20,9 +20,13 @@ expression.GetParent();
 
 ## 示例
 
-此示例展示如何获取自定义 XML 节点的父节点。
+获取演示文稿中自定义 XML 节点的父节点。
 
 ```javascript editor-pptx
+// How to get the parent for a custom XML node in a presentation?
+
+// Get the parent and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Parent node name: ' + parent.GetNodeName());
-
 ```

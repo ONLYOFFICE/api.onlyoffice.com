@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the pdf document.
+Find out the class type of a text run object in a PDF document.
 
 ```javascript editor-pdf
-// How to get a class type of ApiRun.
+// How can I get the class type of a text run in a PDF document?
 
-// Retrieve class type of ApiRun object and insert it to the page.
+// Get the class type of a text run and display it in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const classType = run.GetClassType();
@@ -43,5 +43,4 @@ run.SetFontSize(30);
 run.AddText("Class Type = " + classType);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

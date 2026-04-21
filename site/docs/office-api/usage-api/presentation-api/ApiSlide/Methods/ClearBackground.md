@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example clears the slide background.
+Clear the slide background.
 
 ```javascript editor-pptx
 // How to remove the background from the slide.
@@ -37,5 +37,4 @@ slide.SetBackground(fill);
 
 const duplicateSlide = slide.Duplicate(1);
 duplicateSlide.ClearBackground();
-
 ```

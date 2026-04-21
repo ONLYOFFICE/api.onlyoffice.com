@@ -24,14 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-此示例展示如何创建笔触。
+在文档中创建笔触。
 
 ```javascript editor-docx
-// Create a stroke using the specified width and fill and apply it to the shape from the first paragraph.
+// Create a stroke using the specified width and fill and apply it to the shape from the first paragraph in a document.
 
-// How to create the ApiStroke object and use it to create the ApiShape object.
-
-// Specifies the parameters of the shape stroke.
+// Specify the parameters of the shape stroke in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

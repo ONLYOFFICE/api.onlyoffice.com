@@ -20,7 +20,7 @@ Number
 
 ## 示例
 
-此示例展示如何获取单元格索引。
+获取文档中的单元格索引。
 
 ```javascript editor-docx
 // How to get position index of the cell.

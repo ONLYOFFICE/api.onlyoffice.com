@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a multi-slide presentation with styled text.
+tags: ["Docs", "Office API", "Presentations"]
 ---
 
 # Creating presentation

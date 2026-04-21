@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiPresetColor 对象转换为 JSON 对象。
+将文档中的预设颜色对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the preset color object.
+// How to get a JSON from the preset color object in a document.
 
-// Convert the preset color element to json and add it to the paragraph.
+// Convert the preset color element to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

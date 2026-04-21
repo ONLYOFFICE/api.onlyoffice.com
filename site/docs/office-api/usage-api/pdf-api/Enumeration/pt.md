@@ -5,4 +5,3 @@ A point.
 ## Type
 
 number
-

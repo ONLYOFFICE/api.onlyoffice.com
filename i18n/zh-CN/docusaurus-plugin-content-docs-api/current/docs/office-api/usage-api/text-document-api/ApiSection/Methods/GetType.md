@@ -20,9 +20,13 @@ expression.GetType();
 
 ## 示例
 
-此示例展示如何设置和获取文档中节的类型。
+设置并获取文档中节的类型。
 
 ```javascript editor-docx
+// How to get the type for a section in a document?
+
+// Get the type and display the result in a document.
+
 const doc = Api.GetDocument();
 
 const firstParagraph = doc.GetElement(0);
@@ -38,5 +42,4 @@ finalSection.SetType(possibleTypes[randomIndex]);
 const paragraph = Api.CreateParagraph();
 paragraph.AddText('This is section #2 and we randomly set \'' + finalSection.GetType() + '\' type to it. ');
 doc.Push(paragraph);
-
 ```

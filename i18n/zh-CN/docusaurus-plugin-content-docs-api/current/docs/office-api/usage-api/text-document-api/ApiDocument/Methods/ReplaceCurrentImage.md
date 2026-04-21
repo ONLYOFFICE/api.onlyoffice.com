@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例用指定的图像替换当前图像。
+在文档中用指定的图像替换当前图像。
 
 ```javascript editor-docx
-// How to change the image to another one.
+// How to change the image to another one in a document.
 
-// Add the new image instead of another using the URL.
+// Add the new image instead of another using the URL in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,5 +40,4 @@ let drawing = Api.CreateImage(
 paragraph.AddDrawing(drawing);
 drawing.Select();
 doc.ReplaceCurrentImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png');
-
 ```

@@ -22,10 +22,10 @@ JSON
 
 ## Example
 
-This example converts the ApiStyle object into the JSON object.
+Convert the style object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the style object.
+// How to get a JSON from the style object in a document.
 
 // Convert the style to json and add it to the document.
 

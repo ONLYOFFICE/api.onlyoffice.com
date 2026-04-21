@@ -1,5 +1,6 @@
 ---
 description: Create a personal home room for every new user via webhooks.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

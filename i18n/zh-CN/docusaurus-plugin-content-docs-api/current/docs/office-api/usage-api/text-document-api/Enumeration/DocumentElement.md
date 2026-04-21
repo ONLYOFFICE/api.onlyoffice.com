@@ -12,10 +12,9 @@
 - [ApiTable](../ApiTable/ApiTable.md)
 - [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)
 
-
 ## 示例
 
-此示例向文档添加名为 "paragraph" 的文档元素。
+向文档添加名为 "paragraph" 的文档元素。
 
 ```javascript editor-docx
 // How to add a paragraph element to the document.

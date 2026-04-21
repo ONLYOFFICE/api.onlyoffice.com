@@ -2,30 +2,16 @@
 
 返回指定是否在每行重复项目标签的设置。
 
-## 语法
-
-```javascript
-expression.GetRepeatLabels();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetRepeatLabels](../../ApiPivotField/Methods/GetRepeatLabels.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的重复标签值。
+获取电子表格中透视字段的重复标签值。
 
 ```javascript editor-xlsx
-// How to get a pivot field's repeate labels boolean value.
+// How to get a pivot field's repeate labels boolean value in a spreadsheet.
 
-// Create a pivot table, add data to it then get repeate labels of a specified pivot field.
+// Create a pivot table, add data to it then get repeate labels of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

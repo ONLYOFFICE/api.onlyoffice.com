@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to get table style raw headers of a pivot table.
+Get table style raw headers of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table style raw headers.
+// How to get table style raw headers in a spreadsheet.
 
-// Create a pivot table, add data to it then get its table style raw headers.
+// Create a pivot table, add data to it then get its table style raw headers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

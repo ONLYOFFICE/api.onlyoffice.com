@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例演示如何将新 XML 元素插入自定义 XML 部件。
+在演示文稿中向自定义 XML 部件插入新的 XML 元素。
 
 ```javascript editor-pptx
+// How to insert the element for a custom XML part in a presentation?
+
+// Insert the element and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after insertion: ' + xml.GetXml());
-
 ```

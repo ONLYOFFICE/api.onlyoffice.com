@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the description of the current workbook using the ApiCore.
+Set the description of the current workbook using the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set description in a spreadsheet?
+
+// Set description using a core properties object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Description: " + description);
-
 ```

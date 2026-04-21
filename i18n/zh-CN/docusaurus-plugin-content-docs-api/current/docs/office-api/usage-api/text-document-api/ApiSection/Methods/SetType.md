@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例将节分隔符类型设置为「continuous」。
+在文档中设置节分隔符类型为"continuous"。
 
 ```javascript editor-docx
-// How to update a section type.
+// How to update a section type in a document.
 
-// Create a section from a paragraph and make it continuous.
+// Create a section from a paragraph and make it continuous in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

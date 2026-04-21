@@ -15,7 +15,6 @@
 - "beforeCursor"
 - "afterCursor"
 
-
 ## 示例
 
 ```javascript

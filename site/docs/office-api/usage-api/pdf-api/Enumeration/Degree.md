@@ -6,4 +6,3 @@ Can be any finite number (positive or negative).
 ## Type
 
 number
-

@@ -1,5 +1,6 @@
 ---
 description: Authenticate a user with a one-time 2FA code via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

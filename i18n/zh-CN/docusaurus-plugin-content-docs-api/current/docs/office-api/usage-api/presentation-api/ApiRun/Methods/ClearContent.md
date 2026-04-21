@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例清除文本块中的内容。
+清除演示文稿中 run 的内容。
 
 ```javascript editor-pptx
-// How to delete content from the text run.
+// How to delete content from the text run in a presentation.
 
 // Remove text from the slide.
 
@@ -51,5 +51,4 @@ run.AddText("The text in the previous paragraph cannot be seen, as it has been c
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

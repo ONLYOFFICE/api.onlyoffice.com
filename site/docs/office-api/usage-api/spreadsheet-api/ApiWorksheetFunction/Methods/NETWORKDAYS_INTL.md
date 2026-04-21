@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the number of whole workdays between two dates with custom weekend parameters.
+Return the number of whole workdays between two dates with custom weekend parameters in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the number of whole dates with parameters.
+// How to get the number of whole dates with parameters in a spreadsheet.
 
-// Use a function to get number of days between two dates.
+// Use a function to get number of days between two dates in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

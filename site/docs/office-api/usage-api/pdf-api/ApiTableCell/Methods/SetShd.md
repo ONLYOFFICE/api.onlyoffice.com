@@ -30,6 +30,8 @@ How to set shading fill to the cell.
 ```javascript editor-pdf
 // Create table and set its cell shading color.
 
+// Set shd using a table cell object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +42,4 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 cell.SetShd(fill);
 
 page.AddObject(table);
-
 ```

@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例展示如何向组合框添加列表项。
+向文档中的组合框添加列表项。
 
 ```javascript editor-docx
+// How to add the list item for an inline content control in a document?
+
+// Add the list item and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddComboBoxContentControl();

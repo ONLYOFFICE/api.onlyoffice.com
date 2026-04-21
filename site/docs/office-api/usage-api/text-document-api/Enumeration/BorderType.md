@@ -13,7 +13,6 @@ Enumeration
 - "none"
 - "single"
 
-
 ## Example
 
 The paragraph has a single green bottom border of 3 point wide with a zero offset from the bottom paragraph edge.

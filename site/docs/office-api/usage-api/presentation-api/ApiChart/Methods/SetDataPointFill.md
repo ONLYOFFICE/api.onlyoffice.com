@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example shows how to set the fill to the data point.
+Set the fill to the data point in a presentation.
 
 ```javascript editor-pptx
-// How to color a data point.
+// How to color a data point in a presentation.
 
-// Create a chart then color its data points.
+// Create a chart then color its data points in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 slide.AddObject(chart);
-
 ```

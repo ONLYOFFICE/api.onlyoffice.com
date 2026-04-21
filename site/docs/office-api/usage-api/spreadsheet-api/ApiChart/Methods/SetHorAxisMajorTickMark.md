@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the major tick mark "cross" for the horizontal axis.
+Specify the major tick mark "cross" for the horizontal axis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to specify major tick mark for the horizontal axis.
+// How to specify major tick mark for the horizontal axis in a spreadsheet.
 
-// Major mark the horizontal axis of the chart.
+// Major mark the horizontal axis of the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

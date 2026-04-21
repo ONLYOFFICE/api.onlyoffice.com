@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例演示如何为日期选择器内容控件设置日期。
+为文档中的日期选择器内容控件设置日期。
 
 ```javascript editor-docx
+// How can I set date using an inline content control in a document?
+
+// Set date for an inline content control in a document.
+
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 contentControl.SetDate(new Date(1998, 4, 10));

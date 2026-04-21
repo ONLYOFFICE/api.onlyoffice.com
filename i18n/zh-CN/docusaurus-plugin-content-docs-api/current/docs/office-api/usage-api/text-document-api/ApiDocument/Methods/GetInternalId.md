@@ -2,27 +2,17 @@
 
 返回当前文档内容的内部 ID。
 
-## 语法
-
-```javascript
-expression.GetInternalId();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiDocumentContent.GetInternalId](../../ApiDocumentContent/Methods/GetInternalId.md)。
 
 ## 示例
 
-此示例展示如何获取文档内容的内部 ID。
+获取文档中文档内容的内部 ID。
 
 ```javascript editor-docx
+// How to get the internal id for a document content?
+
+// Get the internal id and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -36,5 +26,4 @@ const internalId = docContent.GetInternalId();
 
 const shapeParagraph = docContent.GetElement(0);
 shapeParagraph.AddText('Document content internal ID: ' + internalId);
-
 ```

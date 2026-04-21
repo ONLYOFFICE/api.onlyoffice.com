@@ -23,12 +23,12 @@ expression.GetPivotData(dataField, fieldItemsArray);
 
 ## 示例
 
-此示例展示如何获取数据透视表的透视数据。
+获取电子表格中数据透视表的透视数据。
 
 ```javascript editor-xlsx
-// How to get table pivot data.
+// How to get table pivot data in a spreadsheet.
 
-// Create a pivot table, add data to it then get its pivot data.
+// Create a pivot table, add data to it then get its pivot data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -67,5 +67,4 @@ pivotWorksheet.GetRange('A9').SetValue('East Total:');
 let range = pivotTable.GetPivotData('Price', ['Region', 'East']);
 let value = range.GetValue();
 pivotWorksheet.GetRange('B9').SetValue(value);
-
 ```

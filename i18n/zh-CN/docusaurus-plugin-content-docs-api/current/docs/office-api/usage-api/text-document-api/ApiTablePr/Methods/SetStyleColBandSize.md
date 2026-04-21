@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定此表格样式中每个表格列带包含的列数。
+在文档中指定构成此表格样式的每个表格列带区的列数。
 
 ```javascript editor-docx
-// How to set column band size.
+// How to set column band size in a document.
 
-// How to style a column band size.
+// How to style a column band size in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();

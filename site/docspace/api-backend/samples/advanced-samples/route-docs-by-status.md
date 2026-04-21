@@ -1,5 +1,6 @@
 ---
 description: Classify uploaded documents by filename and move them to status folders.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置将用于段落中任何制表符的自定义制表位序列。
+在演示文稿中设置一系列自定义制表位，用于段落中的所有制表符。
 
 ```javascript editor-pptx
-// How to set the size of a spacing tabs from a paragraph properties.
+// How to set the size of a spacing tabs from a paragraph properties in a presentation.
 
-// Change a tabs size property of a paragraph properties.
+// Change a tabs size property of a paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -57,5 +57,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");
 slide.AddObject(shape);
-
 ```

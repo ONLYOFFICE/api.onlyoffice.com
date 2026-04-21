@@ -22,10 +22,10 @@ expression.SetTimeUTC(nTimeStamp);
 
 ## 示例
 
-此示例设置批注创建时间戳（UTC 格式）。
+设置批注创建的 UTC 格式时间戳。
 
 ```javascript editor-xlsx
-// How to change a timestamp in UTC when a comment was created.
+// How to change a timestamp in UTC when a comment was created in a spreadsheet.
 
 // Add a comment then update its creation time in UTC format and show it in the worksheet.
 

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置文本自动适应。
+获取 PDF 文档中的所有字段控件并为其设置文本自动适应。
 
 ```javascript editor-pdf
+// How do I set auto fit in a PDF document?
+
+// Set auto fit using a widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -36,5 +40,4 @@ let widgets = textField.GetAllWidgets();
 widgets.forEach(function(widget) {
     widget.SetAutoFit(true);
 });
-
 ```

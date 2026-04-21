@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the pdf document.
+Retrieve the class type of a stroke in a PDF document.
 
 ```javascript editor-pdf
-// How to get a class type of ApiStroke.
+// How to identify the class type of a stroke in a PDF document?
 
-// Retrieve class type of ApiStroke object and insert it to the page.
+// Obtain the class type identifier of a stroke object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,10 +38,9 @@ const stroke = Api.CreateStroke(3 * 36000, fill1);
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 
 const classType = stroke.GetClassType();
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```

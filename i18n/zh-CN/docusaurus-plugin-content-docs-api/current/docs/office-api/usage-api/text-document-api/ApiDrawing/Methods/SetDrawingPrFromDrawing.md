@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例将另一个绘图的属性设置到绘图。
+将另一个绘图对象的属性设置到文档中的绘图对象。
 
 ```javascript editor-docx
-// How to apply the properties of one shape to another.
+// How to apply the properties of one shape to another in a document.
 
-// Create the second drawing with the same style.
+// Create the second drawing with the same style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

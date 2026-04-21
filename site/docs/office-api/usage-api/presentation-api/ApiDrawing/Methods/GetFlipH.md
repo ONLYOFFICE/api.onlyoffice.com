@@ -20,12 +20,12 @@ boolean \| null
 
 ## Example
 
-This example checks whether the drawing is flipped horizontally.
+Check whether the drawing is flipped horizontally in a presentation.
 
 ```javascript editor-pptx
-// How to get the horizontal flip property of the shape.
+// How to get the horizontal flip property of the shape in a presentation.
 
-// Create a drawing and read its horizontal flip value.
+// Create a drawing and read its horizontal flip value in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,5 +40,4 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped horizontally: " + flip);
-
 ```

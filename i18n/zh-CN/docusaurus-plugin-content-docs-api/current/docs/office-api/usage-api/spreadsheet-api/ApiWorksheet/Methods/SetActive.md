@@ -20,12 +20,12 @@ expression.SetActive();
 
 ## 示例
 
-此示例激活工作表。
+在电子表格中将工作表设置为活动状态。
 
 ```javascript editor-xlsx
-// How to set an active sheet.
+// How to set an active sheet in a spreadsheet.
 
-// Set a current sheet active.
+// Set a current sheet active in a spreadsheet.
 
 Api.AddSheet("New_sheet");
 let sheet = Api.GetSheet("New_sheet");

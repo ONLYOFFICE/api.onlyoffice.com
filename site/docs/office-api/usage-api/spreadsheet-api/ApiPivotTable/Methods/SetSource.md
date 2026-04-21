@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set source of a pivot table.
+Set source of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set source of a table.
+// How to set source of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its source.
+// Create a pivot table, add data to it then set its source in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

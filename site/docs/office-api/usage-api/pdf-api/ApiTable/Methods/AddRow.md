@@ -23,10 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## Example
 
-How to insert a row to the table.
+How to insert a row to the table in a PDF document.
 
 ```javascript editor-pdf
-// Create a 2x4 table, set its position and then insert a row to it.
+// Create a 2x4 table, set its position and then insert a row to it in a PDF document.
+
+// Add the row using a table object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

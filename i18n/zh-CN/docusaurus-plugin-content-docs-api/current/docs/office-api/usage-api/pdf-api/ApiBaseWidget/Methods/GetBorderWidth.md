@@ -20,9 +20,13 @@ expression.GetBorderWidth();
 
 ## 示例
 
-此示例获取字段控件的边框宽度并显示。
+获取并显示 PDF 文档中字段控件的边框宽度。
 
 ```javascript editor-pdf
+// How to get the border width for a widget in a PDF document?
+
+// Get the border width and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

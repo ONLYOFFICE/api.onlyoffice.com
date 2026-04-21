@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the name of the current workbook (filename)
+Get the name of the current workbook (filename) in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I get the name using a workbook in a spreadsheet?
+
+// Get the name for a workbook in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const workbookName = workbook.GetName();
 const worksheet = workbook.GetActiveSheet();
@@ -40,5 +44,4 @@ let shape = worksheet.AddShape(
 );
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Filename: ' + workbookName);
-
 ```

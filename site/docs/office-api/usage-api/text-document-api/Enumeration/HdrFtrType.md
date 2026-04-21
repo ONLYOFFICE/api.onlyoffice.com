@@ -15,10 +15,9 @@ Enumeration
 - "title"
 - "even"
 
-
 ## Example
 
-This example removes the header of the 'title' type from the final document section.
+Remove the header of the 'title' type from the final document section.
 
 ```javascript editor-docx
 // How to delete a header from the title type.

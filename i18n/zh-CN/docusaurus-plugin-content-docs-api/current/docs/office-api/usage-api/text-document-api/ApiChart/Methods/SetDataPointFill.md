@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例展示如何设置数据点的填充。
+设置文档中数据点的填充。
 
 ```javascript editor-docx
-// How to color chart data point with a solid fill.
+// How to color chart data point with a solid fill in a document.
 
-// Create a chart and set a color for its data points.
+// Create a chart and set a color for its data points in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

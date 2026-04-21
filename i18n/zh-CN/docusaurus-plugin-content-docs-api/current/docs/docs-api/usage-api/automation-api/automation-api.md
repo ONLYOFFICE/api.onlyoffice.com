@@ -18,10 +18,10 @@ sidebar_position: -2
 
 | 用例 | 描述 |
 | -------- | ----------- |
-| [处理评论](../../samples/external-access-to-the-document-editing/working-with-comments.md) | 在自定义界面中收集和显示所有文档评论。从您自己的 UI 添加、删除和导航评论。 |
-| [管理审阅修订](../../samples/external-access-to-the-document-editing/working-with-review-changes.md) | 从外部控制审阅流程 — 从自定义面板接受或拒绝修订并在修订之间导航。 |
-| [填写表单](../../samples/external-access-to-the-document-editing/filling-out-the-form.md) | 使用外部数据自动填充表单字段。在您的界面和文档之间实时同步表单值。 |
-| [使用内容控件](../../samples/external-access-to-the-document-editing/working-with-content-controls.md) | 添加不同类型的内容控件，并从外部 UI 查看其属性。 |
+| [处理评论](../../samples/automation-api/working-with-comments.md) | 在自定义界面中收集和显示所有文档评论。从您自己的 UI 添加、删除和导航评论。 |
+| [管理审阅修订](../../samples/automation-api/working-with-review-changes.md) | 从外部控制审阅流程 — 从自定义面板接受或拒绝修订并在修订之间导航。 |
+| [填写表单](../../samples/automation-api/filling-out-the-form.md) | 使用外部数据自动填充表单字段。在您的界面和文档之间实时同步表单值。 |
+| [使用内容控件](../../samples/automation-api/working-with-content-controls.md) | 添加不同类型的内容控件，并从外部 UI 查看其属性。 |
 
 ## 快速入门
 

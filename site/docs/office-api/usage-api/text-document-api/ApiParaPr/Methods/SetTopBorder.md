@@ -28,12 +28,12 @@ boolean
 
 ## Example
 
-This example specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.
+Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings in a document.
 
 ```javascript editor-docx
-// Set top border to the paragraph.
+// Set top border to the paragraph in a document.
 
-// Border with single line the text.
+// Border with single line the text in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

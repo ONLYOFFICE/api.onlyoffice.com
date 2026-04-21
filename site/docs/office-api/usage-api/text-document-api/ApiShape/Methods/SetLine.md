@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Sets the outline properties to a shape.
+Set the outline properties to a shape. Creates a rectangle and change its outline to a thick blue line in a document.
 
 ```javascript editor-docx
-// Creates a rectangle and changes its outline to a thick blue line.
+// How do I set line in a document?
+
+// Set line using a shape object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -38,5 +41,4 @@ paragraph.AddLineBreak();
 let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
 shape.SetLine(newStroke);
 paragraph.AddText("Border changed to 3pt blue line");
-
 ```

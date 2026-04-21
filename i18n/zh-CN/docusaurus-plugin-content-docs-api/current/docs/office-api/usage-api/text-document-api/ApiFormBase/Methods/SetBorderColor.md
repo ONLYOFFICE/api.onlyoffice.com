@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例为表单设置边框颜色。
+为表单设置边框颜色。
 
 ```javascript editor-docx
-// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+// Apply an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
 
 // Define the border color of the date form.
 

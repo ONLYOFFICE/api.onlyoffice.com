@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何向文档添加字符串自定义属性。
+向文档中添加字符串自定义属性。
 
 ```javascript editor-docx
+// Custom properties support string, boolean, number, and date value types.
+
+// Add using a custom properties object in a document.
+
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 
@@ -57,5 +61,4 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirthDate: " + birthDate.toDateString());
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
-
 ```

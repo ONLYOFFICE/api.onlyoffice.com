@@ -2,6 +2,10 @@
 
 包含 base64 编码 *png* 图像信息的对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -10,11 +14,6 @@
 | replaceMode | [ReplaceImageMode](../Enumeration/ReplaceImageMode.md) | 指定在替换所选图像时如何调整图像对象。 |
 | src | string | base64 格式的图像源。 |
 | width | number | 图像的宽度，以像素为单位。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

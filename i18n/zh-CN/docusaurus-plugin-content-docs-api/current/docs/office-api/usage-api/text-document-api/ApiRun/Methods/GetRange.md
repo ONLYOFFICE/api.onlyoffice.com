@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-此示例展示如何获取表示指定文本块中所包含文档部分的 Range 对象。
+获取表示文档中指定 run 所包含的文档部分的 Range 对象。
 
 ```javascript editor-docx
-// Get a range using position index and make it bold.
+// Get a range using position index and make it bold in a document.
 
-// How to get the range where the run is located.
+// How to get the range where the run is located in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

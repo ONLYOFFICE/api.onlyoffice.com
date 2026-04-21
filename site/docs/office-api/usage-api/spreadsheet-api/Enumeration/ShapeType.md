@@ -196,10 +196,9 @@ Enumeration
 - "wedgeRectCallout"
 - "wedgeRoundRectCallout"
 
-
 ## Example
 
-This example creates a shape using the 'diamond' preset.
+Create a shape using the 'diamond' preset.
 
 ```javascript editor-xlsx
 // How to change a shape type of a drawing.

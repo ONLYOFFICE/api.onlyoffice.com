@@ -2,29 +2,11 @@
 
 Sets the border style for the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.SetBorders(bordersIndex, lineStyle, oColor);
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bordersIndex | Required | [BordersIndex](../../Enumeration/BordersIndex.md) |  | Specifies the cell border position. |
-| lineStyle | Required | [LineStyle](../../Enumeration/LineStyle.md) |  | Specifies the line style used to form the cell border. |
-| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object which specifies the color to be set to the cell border. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md).
 
 ## Example
 
-This example sets borders for a conditional formatting rule.
+Set borders for a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to apply border formatting to conditional formatting rules.
@@ -53,5 +35,4 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
-
 ```

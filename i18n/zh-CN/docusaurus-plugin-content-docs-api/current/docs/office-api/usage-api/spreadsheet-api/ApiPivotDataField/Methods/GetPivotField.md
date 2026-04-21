@@ -20,12 +20,12 @@ expression.GetPivotField();
 
 ## 示例
 
-此示例展示如何获取数据字段的透视字段索引。
+获取电子表格中数据字段的透视字段索引。
 
 ```javascript editor-xlsx
-// How to use a table element pivot field.
+// How to use a table element pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's pivot index.
+// Create a pivot table, add data to it then display a custom data field's pivot index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

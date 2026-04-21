@@ -2,25 +2,11 @@
 
 Returns a type of the current form.
 
-## Syntax
-
-```javascript
-expression.GetFormType();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[FormType](../../Enumeration/FormType.md)
+Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
 ## Example
 
-This example shows how to get a type of the form.
+Get a type of the form in a document.
 
 ```javascript editor-forms
 // How to know the type of a text form.

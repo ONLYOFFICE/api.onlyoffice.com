@@ -13,9 +13,9 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 参数
 
-| **名称**    | **必需/可选** | **数据类型** | **默认值** | **描述**                                         |
-| ----------- | ------------- | ------------ | ---------- | ------------------------------------------------ |
-| isSmallCaps | 必需          | boolean      |            | 指定当前文本块的内容是否显示为小两磅的大写字母。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isSmallCaps | 必需 | boolean |  | 指定当前文本块的内容是否显示为小两磅的大写字母。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-此示例指定文本块中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。
+指定文本 run 中的所有小写字母字符仅以比指定字体大小小两磅的对应大写字母格式显示。
 
 ```javascript editor-docx
-// How to make text characters uncapitalized.
+// How to make text characters uncapitalized in a document.
 
-// Create a text run object, update its style by making its letters uncapitalized.
+// Create a text run object, update its style by making its letters uncapitalized in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

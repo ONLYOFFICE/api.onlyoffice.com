@@ -2,32 +2,16 @@
 
 Sets the text fill to the current text run.
 
-## Syntax
-
-```javascript
-expression.SetTextFill(oApiFill);
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oApiFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the text color. |
-
-## Returns
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md).
 
 ## Example
 
-This example sets the text fill to the current text run.
+Set the text fill to the current text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color a text with solid fill.
+// How to color a text with solid fill in a spreadsheet.
 
-// Set color a text using solid color fill.
+// Set color a text using solid color fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -20,12 +20,12 @@ expression.GetAllNumberedParagraphs();
 
 ## 示例
 
-此示例展示如何获取当前文档中的所有编号段落。
+获取文档中当前文档的所有编号段落。
 
 ```javascript editor-docx
 // Get all paragraphs with numbering added to the document.
 
-// How to retrieve all paragraphs with numbering and make the first one bold.
+// How to retrieve all paragraphs with numbering and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

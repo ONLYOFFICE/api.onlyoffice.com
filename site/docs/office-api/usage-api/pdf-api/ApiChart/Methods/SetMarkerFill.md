@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to set a fill to the marker.
+How to set a fill to the marker in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker color.
+// Create a chart, set its properties and its marker color in a PDF document.
+
+// Set marker fill using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +52,4 @@ stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(25
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

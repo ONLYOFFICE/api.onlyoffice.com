@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set the ID of the container.
+Set the ID of the container in a document.
 
 ```javascript editor-docx
+// How do I set id in a document?
+
+// Set id using a block-level content control object in a document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.SetId("4815162342");
@@ -35,5 +39,4 @@ let contentControlId = blockLvlSdt.GetId();
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("Id: " + contentControlId);
 doc.Push(paragraph);
-
 ```

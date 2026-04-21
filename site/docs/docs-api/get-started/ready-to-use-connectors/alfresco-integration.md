@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Alfresco for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/alfresco.svg
 ---

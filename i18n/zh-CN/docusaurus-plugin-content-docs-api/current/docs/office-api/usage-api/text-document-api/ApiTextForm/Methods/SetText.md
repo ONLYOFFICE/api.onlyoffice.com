@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置当前文本字段的文本。
+设置文档中当前文本字段的文本。
 
 ```javascript editor-docx
 // How to add the text to the text form.

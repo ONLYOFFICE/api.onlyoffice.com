@@ -2,6 +2,10 @@
 
 包含表单属性的对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -11,11 +15,6 @@
 | tags.comboBox | string | 组合框表单值（组合框列表值中的项目之一）。 |
 | tags.picture | string | 图像表单值（图像的链接）。 |
 | tags.text | string | 文本字段值（一些文本）。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

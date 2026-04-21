@@ -25,7 +25,7 @@ boolean
 
 ## Example
 
-This example specifies the page margins for all the pages in this section.
+Specify the page margins for all the pages in this section.
 
 ```javascript editor-docx
 // How to set page margins.

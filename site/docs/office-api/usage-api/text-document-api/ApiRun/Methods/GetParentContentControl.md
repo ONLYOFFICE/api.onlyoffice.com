@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a content control that contains the run.
+Get a content control that contains the run in a document.
 
 ```javascript editor-docx
-// How to get an element that is a parent of the text.
+// How to get an element that is a parent of the text in a document.
 
-// Get the parent content control of the text.
+// Get the parent content control of the text in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

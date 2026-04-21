@@ -50,10 +50,9 @@
 - "textWave4"
 - "textNoShape"
 
-
 ## 示例
 
-此示例使用 "textArchUp" 文本变换类型创建艺术字对象。
+创建文本变换类型为 "textArchUp" 的艺术字对象。
 
 ```javascript editor-docx
 // How to create a word art with adding properties like fill color, size, and transform type to it.

@@ -22,7 +22,7 @@ expression.SetLocale(LCID);
 
 ## 示例
 
-此示例设置文档的区域设置。
+为文档设置区域设置。
 
 ```javascript editor-xlsx
 // How to set a region to the document.

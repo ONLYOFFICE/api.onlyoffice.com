@@ -20,9 +20,13 @@ expression.GetType();
 
 ## 示例
 
-此示例展示如何获取前 10 条件格式规则的类型。
+获取电子表格中前 10 条件格式规则的类型。
 
 ```javascript editor-xlsx
+// How to get the type for a top 10 conditional format?
+
+// Get the type and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Employee');
@@ -52,5 +56,4 @@ worksheet.GetRange('D2').SetValue('Condition type:');
 worksheet.GetRange('E2').SetValue(conditionType);
 worksheet.GetRange('D3').SetValue('Rank:');
 worksheet.GetRange('E3').SetValue(top10Condition.GetRank());
-
 ```

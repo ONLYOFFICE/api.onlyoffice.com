@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to add a shading to the table background.
+How to add a shading to the table background in a PDF document.
 
 ```javascript editor-pdf
 // Create a table, set its shading color and add it to the page.
+
+// Set shd for a table in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

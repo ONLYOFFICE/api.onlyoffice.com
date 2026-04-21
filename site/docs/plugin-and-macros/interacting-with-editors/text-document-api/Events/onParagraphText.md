@@ -8,6 +8,8 @@ The function called when the paragraph text is updated in the document.
 | --------- | ------------- | ----------- |
 | data | Object | Event data containing information about the updated paragraph. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onParagraphText", (data) => {
     console.log("event: onParagraphText");
@@ -22,4 +24,3 @@ window.Asc.plugin.attachEditorEvent("onParagraphText", (data) => {
     }
 });
 ```
-

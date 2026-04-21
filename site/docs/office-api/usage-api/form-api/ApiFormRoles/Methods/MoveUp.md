@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to move up the specified role.
+Move up the specified role in a form document.
 
 ```javascript editor-forms
+// How can I move up using a form roles in a form document?
+
+// Move up for a form roles in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -41,5 +45,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
     orderIndex++;
 });
-
 ```

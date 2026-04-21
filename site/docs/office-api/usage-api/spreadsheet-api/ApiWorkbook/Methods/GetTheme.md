@@ -20,7 +20,6 @@ This method doesn't have any parameters.
 
 ## Example
 
-
-
 ```javascript editor-xlsx
+
 ```

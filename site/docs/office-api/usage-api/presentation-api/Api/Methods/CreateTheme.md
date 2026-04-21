@@ -26,12 +26,12 @@ expression.CreateTheme(sName, oMaster, oClrScheme, oFormatScheme, oFontScheme);
 
 ## Example
 
-This example creates theme and applies it for presentation.
+Create theme and apply it for presentation.
 
 ```javascript editor-pptx
 // How to change theme of the presentation.
 
-// Create new theme indicating all its properties.
+// Create new theme indicating all its properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -66,5 +66,4 @@ const formatScheme = Api.CreateThemeFormatScheme([fill1, fill2, fill3], [bgFill1
 const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");
 const theme = Api.CreateTheme("New theme", master, clrScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
-
 ```

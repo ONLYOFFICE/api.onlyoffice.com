@@ -22,12 +22,12 @@ expression.GetItem(ind);
 
 ## Example
 
-This example shows how to get a single object from a collection by its ID.
+Get a single object from a collection by its ID in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find an object by its ID from the collection.
+// How to find an object by its ID from the collection in a spreadsheet.
 
-// Get element from an array by its ID.
+// Get element from an array by its ID in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");

@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the content status of the workbook using the ApiCore.
+Get the content status of the workbook using the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the content status for a core properties in a spreadsheet?
+
+// Get the content status and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 core.SetContentStatus("Final");
@@ -39,5 +43,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
-
 ```

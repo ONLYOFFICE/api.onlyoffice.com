@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a tab stop to the paragraph.
+Add a tab stop to the paragraph in a document.
 
 ```javascript editor-docx
-// How to separate two texts with tabs.
+// How to separate two texts with tabs in a document.
 
-// Insert tabs to the paragraph.
+// Insert tabs to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

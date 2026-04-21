@@ -1,5 +1,6 @@
 ---
 description: Approve and manage guest users via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a data body range.
+Get a data body range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a field a data body range from a pivot table.
+// How to get a field a data body range from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get a data body range and select it.
+// Create a pivot table, add data to it then get a data body range and select it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

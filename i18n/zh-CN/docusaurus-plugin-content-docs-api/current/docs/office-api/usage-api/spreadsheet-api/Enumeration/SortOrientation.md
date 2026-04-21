@@ -11,10 +11,9 @@
 - "xlSortColumns"
 - "xlSortRows"
 
-
 ## 示例
 
-此示例指定应按列排序。
+指定应按列排序。
 
 ```javascript editor-xlsx
 // How to specify a sorting orientation (column wise or row wise) for each range.

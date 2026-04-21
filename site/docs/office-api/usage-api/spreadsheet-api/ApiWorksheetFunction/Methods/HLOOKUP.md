@@ -25,12 +25,12 @@ number \| string
 
 ## Example
 
-This example shows how to look for a value in the top row of a table or array of values and returns the value in the same column from the specified row.
+Look for a value in the top row of a table or array of values and return the value in the same column from the specified row in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find a value from the row of a table.
+// How to find a value from the row of a table in a spreadsheet.
 
-// Use a function to look up a value from a table or an array and return found value.
+// Use a function to look up a value from a table or an array and return found value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

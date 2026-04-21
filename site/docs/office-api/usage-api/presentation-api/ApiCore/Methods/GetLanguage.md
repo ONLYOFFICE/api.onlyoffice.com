@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the language of the current presentation using the ApiCore.
+Set and get the language of the current presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How do I get the language in a presentation?
+
+// Get the language using a core properties object in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLanguage("en-US");
@@ -38,5 +42,4 @@ paragraph.AddText("Language: " + language);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

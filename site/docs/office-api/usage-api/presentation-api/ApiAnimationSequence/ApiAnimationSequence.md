@@ -2,7 +2,6 @@
 
 Represents the ApiAnimationSequence class.
 
-
 ## Methods
 
 | Method | Returns | Description |

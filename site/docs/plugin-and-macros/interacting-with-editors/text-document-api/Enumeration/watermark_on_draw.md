@@ -2,6 +2,10 @@
 
 An object containing the watermark properties.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -29,11 +33,6 @@ An object containing the watermark properties.
 | transparent | number | The watermark transparency degree. |
 | type | [ShapeType](../Enumeration/ShapeType.md) | The type which specifies the preset shape geometry for the current watermark. |
 | width | number | The watermark width measured in millimeters. |
-## Type
-
-Object
-
-
 
 ## Example
 

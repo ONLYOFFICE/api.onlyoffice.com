@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为图章注释设置旋转角度。
+在 PDF 文档中为图章注释设置旋转。
 
 ```javascript editor-pdf
+// How to set rotation for a stamp annotation in a PDF document?
+
+// Set rotation and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');
 stampAnnot.SetScale(0.5);

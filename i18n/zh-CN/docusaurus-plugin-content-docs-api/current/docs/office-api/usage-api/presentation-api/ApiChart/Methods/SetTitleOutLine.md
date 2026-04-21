@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表标题的轮廓。
+在演示文稿中为图表标题设置轮廓。
 
 ```javascript editor-pptx
-// How to outline a chart title.
+// How to outline a chart title in a presentation.
 
-// Create a chart, set its properties and its title outline.
+// Create a chart, set its properties and its title outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 slide.AddObject(chart);
-
 ```

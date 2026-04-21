@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents the selected range.
+Get an object that represents the selected range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get selected range object.
+// How to get selected range object in a spreadsheet.
 
-// Update the value of the selected range.
+// Update the value of the selected range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 Api.GetSelection().SetValue("selected");

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例在文本块位置添加换行符，并从新行开始下一个元素。
+在电子表格中向 run 位置添加换行符并从新行开始下一个元素。
 
 ```javascript editor-xlsx
-// How to start a sentence on a new line.
+// How to start a sentence on a new line in a spreadsheet.
 
-// Break two lines of a text run with a line. 
+// Break two lines of a text run with a line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

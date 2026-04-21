@@ -20,7 +20,7 @@ expression.GetScopeType();
 
 ## 示例
 
-此示例获取条件格式规则的作用域类型。
+获取条件格式规则的范围类型。
 
 ```javascript editor-xlsx
 // How to retrieve the scope type from conditional formatting rules.
@@ -47,5 +47,4 @@ let scopeType = condition1.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
-
 ```

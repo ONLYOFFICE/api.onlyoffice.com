@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取错误消息标题。
+获取电子表格中的错误消息标题。
 
 ```javascript editor-xlsx
-// How to retrieve the validation error title.
+// How to retrieve the validation error title in a spreadsheet.
 
-// Get the error title.
+// Get the error title and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,5 +34,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetErrorTitle("Invalid Input");
 let errorTitle = validation.GetErrorTitle();
 worksheet.GetRange("B1").SetValue("Error title: " + errorTitle);
-
 ```

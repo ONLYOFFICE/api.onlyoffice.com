@@ -1,7 +1,6 @@
 # ApiCheckBoxForm
 
-表示 ApiCheckBoxForm 类。
-
+ApiCheckBoxForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
 

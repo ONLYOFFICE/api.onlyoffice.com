@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例获取元素计数并将此值插入演示文稿。
+获取元素数量并将此值插入演示文稿。
 
 ```javascript editor-pptx
 // How to get a number of elements a slide shape contains.
@@ -43,5 +43,4 @@ paragraph.AddText("Number of elements inside the shape: " + docContent.GetElemen
 paragraph.AddLineBreak();
 paragraph.AddText("Line breaks are NOT counted into the number of elements.");
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-This example sets the italic property to the text character.
+Set the italic property to the text character in a PDF document.
 
 ```javascript editor-pdf
-// How to make text run italic.
+// How to make text run italic in a PDF document.
 
-// Create a new text run and make its style italic.
+// Create a new text run and make its style italic in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -48,5 +48,4 @@ run.SetItalic(true);
 run.AddText("This is a text run with the font set to italicized letters.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

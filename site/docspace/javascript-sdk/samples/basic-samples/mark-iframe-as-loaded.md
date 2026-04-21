@@ -1,5 +1,6 @@
 ---
 description: Mark the DocSpace iframe as loaded using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Mark iframe as loaded

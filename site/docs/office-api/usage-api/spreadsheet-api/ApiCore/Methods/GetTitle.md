@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the title of the current workbook.
+Get the title of the current workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I get the title in a spreadsheet?
+
+// Get the title using a core properties object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Title: " + title);
-
 ```

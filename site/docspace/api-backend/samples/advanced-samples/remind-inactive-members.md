@@ -1,5 +1,6 @@
 ---
 description: Send reminders to room members with low activity based on audit events.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

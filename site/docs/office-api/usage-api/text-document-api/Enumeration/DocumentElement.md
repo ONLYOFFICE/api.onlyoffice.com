@@ -12,10 +12,9 @@ Enumeration
 - [ApiTable](../ApiTable/ApiTable.md)
 - [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)
 
-
 ## Example
 
-This example adds a document element called "paragraph" to the document.
+Add a document element called "paragraph" to the document.
 
 ```javascript editor-docx
 // How to add a paragraph element to the document.

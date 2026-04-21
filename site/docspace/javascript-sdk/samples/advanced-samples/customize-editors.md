@@ -1,5 +1,6 @@
 ---
 description: Customize the editor interface with branded buttons, logos, and links.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Customize editors

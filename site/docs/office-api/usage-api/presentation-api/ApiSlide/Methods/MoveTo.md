@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example moves the current slide to a specific location within the same collection.
+Move the current slide to a specific location within the same collection.
 
 ```javascript editor-pptx
 // How to move a slide to the position index.
@@ -37,5 +37,4 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
 slide.MoveTo(0);
-
 ```

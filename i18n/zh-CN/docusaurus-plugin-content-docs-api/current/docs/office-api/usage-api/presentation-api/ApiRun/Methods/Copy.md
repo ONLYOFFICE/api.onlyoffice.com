@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建文本块的副本。
+在演示文稿中创建 run 的副本。
 
 ```javascript editor-pptx
-// How to copy a text run object and insert it to the paragraph.
+// How to copy a text run object and insert it to the paragraph in a presentation.
 
-// Create a duplicate of a text.
+// Create a duplicate of a text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ paragraph.AddElement(run);
 const copyRun = run.Copy();
 paragraph.AddElement(copyRun);
 slide.AddObject(shape);
-
 ```

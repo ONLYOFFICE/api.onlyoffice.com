@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example specifies which chart data labels are shown for the chart.
+Specify which chart data labels are shown for the chart in a document.
 
 ```javascript editor-docx
-// How to show specific chart data labels.
+// How to show specific chart data labels in a document.
 
-// Create a chart, set its properties and its specific data labels visibility.
+// Create a chart, set its properties and its specific data labels visibility in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

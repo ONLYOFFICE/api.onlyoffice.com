@@ -21,9 +21,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to use ApiCore to manage spreadsheet metadata.
+Use core properties to manage spreadsheet metadata in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the core in a spreadsheet?
+
+// Get the core using the spreadsheet API.
+
 const worksheet = Api.GetActiveSheet();
 
 const core = Api.GetCore();
@@ -86,5 +90,4 @@ paragraph.AddText("Revision: " + revision + "\n");
 paragraph.AddText("Subject: " + subject + "\n");
 paragraph.AddText("Title: " + title + "\n");
 paragraph.AddText("Version: " + version);
-
 ```

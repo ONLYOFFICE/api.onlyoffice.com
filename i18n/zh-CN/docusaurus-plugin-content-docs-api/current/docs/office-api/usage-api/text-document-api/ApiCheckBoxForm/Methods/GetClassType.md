@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取文档中复选框表单的类类型。
 
 ```javascript editor-docx
-// How get a class type of ApiCheckBoxForm.
+// How to identify the class type of a checkbox form?
 
-// Retrieve class type of a created checkbox object and display it.
+// Obtain the class type identifier of a checkbox form object.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

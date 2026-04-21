@@ -20,12 +20,12 @@ string[]
 
 ## Example
 
-This example shows how to get all font names from all elements inside the run.
+Get all font names from all elements inside the run in a PDF document.
 
 ```javascript editor-pdf
-// How to get all font names used in the text.
+// How to get all font names used in the text in a PDF document.
 
-// Retrieve ApiRun font names and display them in the page.
+// Retrieve text run font names and display them in the page.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -57,5 +57,4 @@ for (let i = 0; i < fontNames.length; i++) {
 }
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

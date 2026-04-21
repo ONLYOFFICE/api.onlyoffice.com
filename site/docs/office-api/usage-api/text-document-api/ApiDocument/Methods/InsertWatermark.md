@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example inserts a watermark on each document page.
+Insert a watermark on each document page.
 
 ```javascript editor-docx
 // How to insert watermark to the document.
 
-// Watermark the document.
+// Insert the watermark and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

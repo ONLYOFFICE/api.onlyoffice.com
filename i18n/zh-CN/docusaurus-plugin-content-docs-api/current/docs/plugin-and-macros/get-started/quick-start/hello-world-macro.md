@@ -145,7 +145,7 @@ title: Hello world 宏
 
 **浏览示例：**
 
-- [宏示例集合](../../samples/macro-samples/macro-samples.md)
+- [宏示例集合](/samples/?doctype=docs&text=macros)
 - [转换 VBA 宏](../../macros/converting-vba-macros.md)
 
 **需要帮助？**

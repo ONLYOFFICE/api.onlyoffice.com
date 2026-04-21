@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置当前演示文稿幻灯片的可见性。
+设置当前演示文稿幻灯片的可见性。
 
 ```javascript editor-pptx
 // How to change visibility of the slide.
@@ -33,5 +33,4 @@ const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
 slide.SetVisible(false);
 presentation.AddSlide(slide);
-
 ```

@@ -24,9 +24,13 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## 示例
 
-此示例在指定位置插入段落。
+在演示文稿中的指定位置插入段落。
 
 ```javascript editor-pptx
+// How can I insert the paragraph using a paragraph in a presentation?
+
+// Insert the paragraph for a paragraph in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This paragraph was inserted after the first one.');
 paragraph.InsertParagraph(paragraph2, 'after', true);
 slide.AddObject(shape);
-
 ```

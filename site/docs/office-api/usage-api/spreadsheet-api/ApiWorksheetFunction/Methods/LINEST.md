@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return statistics that describe a linear trend matching known data points, by fitting a straight line using the least squares method.
+Return statistics that describe a linear trend matching known data points, by fitting a straight line using the least squares method in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get statistics that describe a linear trend matching known data points.
+// How to get statistics that describe a linear trend matching known data points in a spreadsheet.
 
-// Use a function to return statistics that describe a linear trend matching known data points using the least squares method.
+// Use a function to return statistics that describe a linear trend matching known data points using the least squares method in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -58,6 +58,4 @@ let ans = func.LINEST(yRange, xRange, constant, stats);
 
 //print answer 
  worksheet.GetRange("D1").SetValue(ans);
-
-
 ```

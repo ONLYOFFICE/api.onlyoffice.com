@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取文档中超链接对象的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiHyperlink.
+// How can I get the class type of a hyperlink in a document?
 
-// Retrieve class type of ApiHyperlink object and insert it to the document.
+// Get the class type of a hyperlink and display it in the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

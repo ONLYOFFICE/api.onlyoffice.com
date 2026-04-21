@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to move a data field.
+Move a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a table element position by moving it by rows.
+// How to change a table element position by moving it by rows in a spreadsheet.
 
-// Create a pivot table, add data to it then move data field's by rows.
+// Create a pivot table, add data to it then move data field's by rows in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

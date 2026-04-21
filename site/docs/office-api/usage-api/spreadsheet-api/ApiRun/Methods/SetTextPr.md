@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## Example
 
-This example sets the text properties to the current run.
+Set the text properties to the current run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create text property for a text object.
+// How to create text property for a text object in a spreadsheet.
 
-// Create a text run object, add properties like font size, style, color, etc.
+// Create a text run object, add properties like font size, style, color, etc in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

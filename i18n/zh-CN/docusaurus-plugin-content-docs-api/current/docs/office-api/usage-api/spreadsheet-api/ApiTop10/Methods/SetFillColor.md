@@ -3,27 +3,11 @@
 使用先前创建的颜色对象设置格式条件的背景颜色。
 当先前创建的颜色对象为 null 时设置为「无填充」。
 
-## 语法
-
-```javascript
-expression.SetFillColor(oColor);
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定格式条件背景颜色的颜色对象。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Methods/SetFillColor.md)。
 
 ## 示例
 
-此示例设置条件格式规则的背景颜色。
+为条件格式规则设置背景颜色。
 
 ```javascript editor-xlsx
 // How to apply background colors to conditional formatting rules.
@@ -53,5 +37,4 @@ condition1.SetFillColor(fillColor);
 
 worksheet.GetRange("C4").SetValue("New color:");
 worksheet.GetRange("C5").SetValue("Yellow background");
-
 ```

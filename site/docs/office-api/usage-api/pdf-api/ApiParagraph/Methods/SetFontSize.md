@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the paragraph.
+Set the font size to the characters of the paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How to set font size for a paragraph in a PDF document?
+
+// Set font size and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font size set to 24 points.');
 paragraph.SetFontSize(48);
 page.AddObject(shape);
-
 ```

@@ -1,5 +1,6 @@
 ---
 description: Retrieve and filter user login audit events via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

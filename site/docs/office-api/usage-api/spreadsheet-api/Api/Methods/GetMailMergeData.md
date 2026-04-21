@@ -23,7 +23,7 @@ string[][]
 
 ## Example
 
-This example shows how to get the mail merge data.
+Get the mail merge data in a spreadsheet.
 
 ```javascript editor-xlsx
 // Get mail merge data from the worksheet.

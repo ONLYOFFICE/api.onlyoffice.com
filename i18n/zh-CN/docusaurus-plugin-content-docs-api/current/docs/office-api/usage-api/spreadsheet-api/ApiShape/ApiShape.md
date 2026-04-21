@@ -1,7 +1,6 @@
 # ApiShape
 
-表示 ApiShape 类。
-
+ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
 
@@ -13,6 +12,7 @@
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 从当前形状获取填充属性。 |
 | [GetGeometry](./Methods/GetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 返回当前形状的几何对象。 |
 | [GetLine](./Methods/GetLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) \| null | 从当前形状获取轮廓属性。 |
+| [GetParentSheet](./Methods/GetParentSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回当前绘图的父工作表。 |
 | [SetFill](./Methods/SetFill.md) | boolean | 设置当前形状的填充属性。 |
 | [SetGeometry](./Methods/SetGeometry.md) | boolean | 为当前形状设置自定义几何形状。 |
 | [SetLine](./Methods/SetLine.md) | boolean | 设置当前形状的轮廓属性。 |

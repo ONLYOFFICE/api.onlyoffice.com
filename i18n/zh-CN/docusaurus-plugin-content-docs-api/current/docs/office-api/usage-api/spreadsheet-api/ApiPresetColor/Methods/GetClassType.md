@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取电子表格中预设颜色对象的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiPresetColor.
+// How can I get the class type of a preset color in a spreadsheet?
 
-// Get a class type of ApiPresetColor and display it in the worksheet.
+// Get the class type of a preset color and display it in the spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let presetColor = Api.CreatePresetColor("peachPuff");

@@ -24,14 +24,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the height of the specified row measured in points.
+Set the height of the specified row measured in points in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to resize the height of the row.
+// How to resize the height of the row in a spreadsheet.
 
-// Set a row height.
+// Set row height for a worksheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRowHeight(0, 30);
-
 ```

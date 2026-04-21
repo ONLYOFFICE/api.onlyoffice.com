@@ -2,30 +2,16 @@
 
 返回段落行距规则。
 
-## 语法
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-"auto" \| "atLeast" \| "exact" \| undefined
+继承自 [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md)。
 
 ## 示例
 
-此示例展示如何获取段落行距规则。
+获取文档中的段落行距规则。
 
 ```javascript editor-docx
-// How to get the spacing line rule of the paragraph and display it.
+// How to get the spacing line rule of the paragraph and display it in a document.
 
-// Get the paragraph spacing line rule.
+// Get the paragraph spacing line rule in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to create a rich run and add it to rich paragraph.
+How to create a rich run and add it to rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How to create the rich run in a PDF document?
+
+// Create the rich run using the PDF document API.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

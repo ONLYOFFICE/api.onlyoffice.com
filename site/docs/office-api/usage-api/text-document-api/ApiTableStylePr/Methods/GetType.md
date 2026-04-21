@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a type of the current table conditional style.
+Get a type of the current table conditional style in a document.
 
 ```javascript editor-docx
 // How to get the table style type and display it in the document.
 
-// Retrieve the type of the style.
+// Retrieve the type of the style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

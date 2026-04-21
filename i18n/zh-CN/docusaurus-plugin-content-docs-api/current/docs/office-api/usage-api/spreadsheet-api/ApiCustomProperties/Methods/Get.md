@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-此示例演示如何根据名称获取自定义属性的值。
+通过名称获取电子表格中自定义属性的值。
 
 ```javascript editor-xlsx
+// Return null for properties that do not exist.
+
+// Get for a custom properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 
@@ -45,5 +49,4 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```

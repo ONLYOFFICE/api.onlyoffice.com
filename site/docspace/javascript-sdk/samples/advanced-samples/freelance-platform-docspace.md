@@ -1,5 +1,6 @@
 ---
 description: Build a freelance project workspace with rooms and file management.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Collaborative project workflow

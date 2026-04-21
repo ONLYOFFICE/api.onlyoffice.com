@@ -20,10 +20,10 @@ expression.GetMaxPointType();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取最大点类型。
+从数据条条件格式规则获取最大点类型。
 
 ```javascript editor-xlsx
-// How to check the type of the maximum condition value.
+// How to check the type of the maximum condition value in a spreadsheet.
 
 // Get the maximum point type of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let maxPointType = dataBar.GetMaxPointType();
 
 worksheet.GetRange("C1").SetValue("Max Point Type:");
 worksheet.GetRange("C2").SetValue(maxPointType);
-
 ```

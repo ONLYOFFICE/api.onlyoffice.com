@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example adds a new column to the table.
+Add a new column to the table in a presentation.
 
 ```javascript editor-pptx
-// How to insert a column to the table.
+// How to insert a column to the table in a presentation.
 
-// Create a 2x4 table, set its position and then insert a column to it.
+// Create a 2x4 table, set its position and then insert a column to it in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(300 * 36000, 190 * 36000);
@@ -47,5 +47,4 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

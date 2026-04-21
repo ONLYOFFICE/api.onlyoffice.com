@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to find out if the comment is solved or not.
+Find out if the comment is solved or not in a presentation.
 
 ```javascript editor-pptx
+// How can I is solved using a comment in a presentation?
+
+// Is solved for a comment in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -47,5 +51,4 @@ const after = comment.IsSolved() ? 'solved' : 'not solved';
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Originally comment was ' + before + ', but currently it is ' + after);
-
 ```

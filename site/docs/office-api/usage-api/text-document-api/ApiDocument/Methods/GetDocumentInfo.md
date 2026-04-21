@@ -31,7 +31,7 @@ object
 
 ## Example
 
-This example shows how to get the document info represented as an object and paste the application name into the last paragraph.
+Get the document info represented as an object and paste the application name into the last paragraph in a document.
 
 ```javascript editor-docx
 // How to get information such as application with which the document was created.

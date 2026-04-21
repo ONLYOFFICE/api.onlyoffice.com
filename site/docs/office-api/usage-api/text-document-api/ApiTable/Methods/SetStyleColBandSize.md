@@ -2,32 +2,16 @@
 
 Specifies a number of columns which will comprise each table column band for this table style.
 
-## Syntax
-
-```javascript
-expression.SetStyleColBandSize(nCount);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of columns measured in positive integers. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetStyleColBandSize](../../ApiTablePr/Methods/SetStyleColBandSize.md).
 
 ## Example
 
-This example specifies a number of columns which will comprise each table column band for this table style.
+Specify a number of columns which will comprise each table column band for this table style in a document.
 
 ```javascript editor-docx
-// How to set column band size.
+// How to set column band size in a document.
 
-// How to style a column band size.
+// How to style a column band size in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();

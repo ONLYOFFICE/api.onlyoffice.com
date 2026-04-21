@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例将带图像字段的图标 Y 坐标位置设置为 0。
+在 PDF 文档中将带有图像的字段图标 Y 位置设置为 0。
 
 ```javascript editor-pdf
+// How do I set icon y pos in a PDF document?
+
+// Set icon y pos using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let imageField = Api.CreateImageField([10, 10, 100, 100]);

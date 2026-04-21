@@ -2,29 +2,17 @@
 
 设置字段在选择更改时提交的属性。
 
-## 语法
-
-```javascript
-expression.SetCommitOnSelChange(bCommit);
-```
-
-`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bCommit | 必需 | boolean |  | 更改后字段值是否立即应用于所有同名字段 |
-
-## 返回值
-
-boolean
+继承自 [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md)。
 
 ## 示例
 
-此示例为带有选项列表的字段设置选择更改时提交属性。
+在 PDF 文档中为带有选项列表的字段设置选择更改时提交属性。
 
 ```javascript editor-pdf
+// How can I set commit on sel change using a list field in a PDF document?
+
+// Set commit on sel change for a list field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

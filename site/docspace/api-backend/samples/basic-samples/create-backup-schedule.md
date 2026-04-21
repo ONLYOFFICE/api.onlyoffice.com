@@ -1,5 +1,6 @@
 ---
 description: Create a daily backup schedule for the portal via the API.
+tags: ["DocSpace", "REST API", "Integration"]
 ---
 
 import Tabs from '@theme/Tabs';

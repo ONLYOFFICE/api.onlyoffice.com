@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the hyperlink address.
+Set the hyperlink address in a PDF document.
 
 ```javascript editor-pdf
-// How to change the link address of the hyperlink object.
+// How to change the link address of the hyperlink object in a PDF document.
 
-// Set link of the hyperlink.
+// Set link of the hyperlink in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,5 +45,4 @@ run.AddText("ONLYOFFICE Document Builder");
 paragraph.AddElement(run);
 let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
 hyperlink.SetLink("https://api.onlyoffice.com/");
-
 ```

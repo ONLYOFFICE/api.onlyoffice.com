@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取文本字段并显示多行属性。
+获取文本字段并显示其在 PDF 文档中的多行属性。
 
 ```javascript editor-pdf
+// How to is multiline for a text field in a PDF document?
+
+// Is multiline and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -30,5 +34,4 @@ page.AddObject(textField);
 
 textField.SetMultiline(true);
 textField.SetValue('Multiline is: ' + textField.IsMultiline());
-
 ```

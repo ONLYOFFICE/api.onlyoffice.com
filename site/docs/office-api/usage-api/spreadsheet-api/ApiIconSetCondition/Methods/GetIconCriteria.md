@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get icon criteria collection.
+Get icon criteria collection in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to retrieve icon criteria for conditional formatting.
@@ -40,5 +40,4 @@ let iconCondition = formatConditions.AddIconSetCondition();
 
 let criteria = iconCondition.GetIconCriteria();
 worksheet.GetRange("B1").SetValue("Number of criteria: " + criteria.length);
-
 ```

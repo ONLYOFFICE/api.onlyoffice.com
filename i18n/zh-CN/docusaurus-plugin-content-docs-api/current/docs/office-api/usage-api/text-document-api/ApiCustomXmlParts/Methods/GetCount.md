@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例演示如何获取 XML 管理器中自定义 XML 部件的数量。
+获取文档中 XML 管理器中自定义 XML 部件的数量。
 
 ```javascript editor-docx
+// How do I get the count in a document?
+
+// Get the count using a custom XML parts object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 xmlManager.Add("<products><item><name>Laptop</name><price>999</price></item></products>");

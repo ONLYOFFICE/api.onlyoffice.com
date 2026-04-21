@@ -23,10 +23,13 @@ boolean
 
 ## 示例
 
-为演示文稿创建带有参考线和连接点的可调整几何图形。
+为演示文稿创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
 
 ```javascript editor-pptx
-// Displays adjustment value and applies custom geometry to shape.
+// How to add the adj for a geometry in a presentation?
+
+// Add the adj and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

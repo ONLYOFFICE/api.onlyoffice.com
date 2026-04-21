@@ -8,9 +8,10 @@
 | --------- | ------------- | ----------- |
 | index | number | 新激活幻灯片的索引。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent('onChangeCurrentSlide', (index) => {
     console.log('Current slide changed to index: ' + index);
 });
 ```
-

@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何获取文本的高亮属性。
+获取文档中文本的突出显示属性。
 
 ```javascript editor-docx
 // How to know the highlight type of the form.

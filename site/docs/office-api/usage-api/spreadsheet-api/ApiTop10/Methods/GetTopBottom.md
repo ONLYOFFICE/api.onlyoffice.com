@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the top/bottom setting for top 10 condition.
+Get the top/bottom setting for top 10 condition in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine if the condition evaluates top or bottom values.
+// How to determine if the condition evaluates top or bottom values in a spreadsheet.
 
-// Get the top/bottom direction setting from the top 10 rule.
+// Get the top/bottom direction setting from the top 10 rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -41,5 +41,4 @@ let top10Condition = formatConditions.AddTop10();
 
 let topBottom = top10Condition.GetTopBottom();
 worksheet.GetRange("B1").SetValue("Direction: " + topBottom);
-
 ```

@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-此示例展示如何获取包含文本块的表格。
+获取文档中包含 run 的表格。
 
 ```javascript editor-docx
-// Get a parent table of the text.
+// Get a parent table of the text in a document.
 
-// How to remove the row of the table that contains a text run.
+// How to remove the row of the table that contains a text run in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

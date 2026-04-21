@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例从文本控件获取占位符并显示。
+从 PDF 文档中的文本控件获取占位符并显示。
 
 ```javascript editor-pdf
+// How do I get the placeholder in a PDF document?
+
+// Get the placeholder using a text widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

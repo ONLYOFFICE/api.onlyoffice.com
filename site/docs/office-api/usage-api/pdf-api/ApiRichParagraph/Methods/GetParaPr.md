@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets rich paragraph properties from rich paragraph.
+Get rich paragraph properties from rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the para pr using a rich paragraph in a PDF document?
+
+// Get the para pr for a rich paragraph in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

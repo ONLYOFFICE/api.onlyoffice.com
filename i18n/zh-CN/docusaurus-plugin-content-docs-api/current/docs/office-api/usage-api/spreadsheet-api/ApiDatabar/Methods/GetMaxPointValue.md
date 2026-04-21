@@ -20,10 +20,10 @@ string \| number \| null
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取最大点值。
+从数据条条件格式规则获取最大点值。
 
 ```javascript editor-xlsx
-// How to retrieve the value of the maximum condition.
+// How to retrieve the value of the maximum condition in a spreadsheet.
 
 // Get the maximum point value of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let maxPointValue = dataBar.GetMaxPointValue();
 
 worksheet.GetRange("C1").SetValue("Max Point Value:");
 worksheet.GetRange("C2").SetValue(maxPointValue || "Auto");
-
 ```

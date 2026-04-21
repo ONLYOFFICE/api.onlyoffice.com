@@ -2,32 +2,16 @@
 
 设置表示所有分类汇总的对象。
 
-## 语法
-
-```javascript
-expression.SetSubtotals(subtotals);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| subtotals | 必需 | [PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md) |  | 表示所有分类汇总或其中一部分的对象。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetSubtotals](../../ApiPivotField/Methods/SetSubtotals.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的分类汇总。
+在电子表格中设置透视字段的小计。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotals.
+// How to change a pivot field subtotals in a spreadsheet.
 
-// Create a pivot table, add data to it then set subtotals of a specified pivot.
+// Create a pivot table, add data to it then set subtotals of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

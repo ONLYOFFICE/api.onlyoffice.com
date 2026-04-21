@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to color a chart legend.
+How to color a chart legend in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and background color of a legend.
+// Create a chart, set its properties and background color of a legend in a PDF document.
+
+// Use chart to set legend fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +46,4 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetLegendFill(fill);
 page.AddObject(chart);
-
 ```

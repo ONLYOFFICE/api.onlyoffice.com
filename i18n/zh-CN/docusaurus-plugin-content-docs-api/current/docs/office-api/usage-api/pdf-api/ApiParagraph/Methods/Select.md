@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例选择当前段落。
+在 PDF 文档中选中当前段落。
 
 ```javascript editor-pdf
+// How do I select in a PDF document?
+
+// Select using a paragraph object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -36,5 +40,4 @@ paragraph.AddText('This paragraph will be selected.');
 page.AddObject(shape);
 
 paragraph.Select();
-
 ```

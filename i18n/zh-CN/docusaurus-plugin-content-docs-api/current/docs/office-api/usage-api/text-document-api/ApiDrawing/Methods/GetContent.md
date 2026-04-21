@@ -20,9 +20,13 @@ expression.GetContent();
 
 ## 示例
 
-此示例展示如何获取绘图的内容。
+获取文档中绘图对象的内容。
 
 ```javascript editor-docx
+// How do I get the content in a document?
+
+// Get the content using a drawing object object in a document.
+
 const doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);
 
@@ -36,5 +40,4 @@ const docContent = drawing.GetContent();
 const shapeParagraph = Api.CreateParagraph();
 shapeParagraph.AddText('This is the text added to the paragraph inside the drawing using the GetContent method.');
 docContent.AddElement(0, shapeParagraph);
-
 ```

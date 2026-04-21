@@ -11,10 +11,9 @@ Enumeration
 - "xlLandscape"
 - "xlPortrait"
 
-
 ## Example
 
-This example sets the page orientation to portrait.
+Set the page orientation to portrait.
 
 ```javascript editor-xlsx
 // How to change an orientation of a page.

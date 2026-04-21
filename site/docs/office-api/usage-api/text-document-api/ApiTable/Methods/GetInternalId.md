@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the internal ID of a table.
+Get the internal ID of a table in a document.
 
 ```javascript editor-docx
+// How do I get the internal id in a document?
+
+// Get the internal id using a table object in a document.
+
 const doc = Api.GetDocument();
 const table = Api.CreateTable(2, 1);
 table.SetWidth('percent', 100);
@@ -34,5 +38,4 @@ const cell = table.GetCell(0, 0);
 const cellContent = cell.GetContent();
 const paragraph = cellContent.GetElement(0);
 paragraph.AddText('This table internal ID: ' + internalId);
-
 ```

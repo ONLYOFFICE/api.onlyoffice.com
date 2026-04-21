@@ -7,4 +7,3 @@ The function called when the current page has changed.
 | **Name** | **Data type** | **Description** |
 | --------- | ------------- | ----------- |
 | index | number | The index of the newly activated page. |
-

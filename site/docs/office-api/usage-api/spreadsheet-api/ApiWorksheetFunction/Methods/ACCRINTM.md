@@ -26,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to return the accrued interest for a security that pays interest at maturity.
+Return the accrued interest for a security that pays interest at maturity in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an accrued interest for a security that pays periodic interest at maturity.
+// How to get an accrued interest for a security that pays periodic interest at maturity in a spreadsheet.
 
-// Get a function that gets accrued interest for a security at maturity.
+// Get a function that gets accrued interest for a security at maturity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -1,7 +1,6 @@
 # ApiTableRow
 
-Represents the ApiTableRow class.
-
+ApiTableRow is a subclass of [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md).
 
 ## Methods
 

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of strikeout annotation.
+Find out the class type of an underline annotation object in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the class type of an underline annotation in a PDF document?
+
+// Get the class type of an underline annotation and display it in the PDF.
+
 let doc = Api.GetDocument();
 let strikeoutAnnot = Api.CreateStrikeoutAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

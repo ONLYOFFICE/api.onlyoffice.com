@@ -22,10 +22,10 @@ expression.SetColor(color);
 
 ## Example
 
-This example sets the text color for the current text run.
+Set the text color for the current text run in a document.
 
 ```javascript editor-docx
-// How to change a text color.
+// How to change a text color in a document.
 
 // Get a font object of characters and color it specifying a color in RGB format.
 
@@ -40,5 +40,4 @@ secondParagraph.AddText('This text is in the same orange color set to the paragr
 const color = Api.RGB(255, 111, 61);
 secondParagraph.GetTextPr().SetColor(color);
 doc.Push(secondParagraph);
-
 ```

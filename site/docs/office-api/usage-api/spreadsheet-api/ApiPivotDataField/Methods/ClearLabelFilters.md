@@ -2,30 +2,16 @@
 
 Deletes all label filters or all date filters from the pivot filters collection.
 
-## Syntax
-
-```javascript
-expression.ClearLabelFilters();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.ClearLabelFilters](../../ApiPivotField/Methods/ClearLabelFilters.md).
 
 ## Example
 
-This example shows how to clear label filters from a pivot field.
+Clear label filters from a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field label filters.
+// How to remove previously applied pivot field label filters in a spreadsheet.
 
-// Create a pivot table, add data to it then delete label filters from a custom field.
+// Create a pivot table, add data to it then delete label filters from a custom field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

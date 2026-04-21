@@ -1,5 +1,6 @@
 ---
 description: Add a custom item to the user profile menu.
+tags: ["DocSpace", "Plugins", "Basic"]
 ---
 
 # Profile menu plugin

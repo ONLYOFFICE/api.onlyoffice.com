@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the shape objects from the slide layout.
+Get an array with all the shape objects from the slide layout in a presentation.
 
 ```javascript editor-pptx
 // How to get all shapes from the layout of presentation.
@@ -45,5 +45,4 @@ const docContent = shapes[0].GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("This is a sample shape which was added to the current layout.");
-
 ```

@@ -4,7 +4,7 @@ The settings for adding row, column, and page fields to the pivot table report.
 
 ## Type
 
-Object
+object
 
 ## Properties
 

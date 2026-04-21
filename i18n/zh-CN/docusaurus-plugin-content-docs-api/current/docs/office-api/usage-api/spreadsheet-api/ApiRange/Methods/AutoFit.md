@@ -23,12 +23,12 @@ expression.AutoFit(bRows, bCols);
 
 ## 示例
 
-此示例更改范围内列的宽度或行的高度以实现最佳适应。
+更改范围内列的宽度或行的高度以在电子表格中实现最佳适配。
 
 ```javascript editor-xlsx
-// How to set an autofit for width or height for a range.
+// How to set an autofit for width or height for a range in a spreadsheet.
 
-// Get a range and apply autofit property.
+// Get a range and apply autofit property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

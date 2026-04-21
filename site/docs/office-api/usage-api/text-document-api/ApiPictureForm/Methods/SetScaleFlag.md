@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the scaling condition to the current picture form.
+Set the scaling condition to the current picture form.
 
 ```javascript editor-docx
 // How to set the image scale flag of the form.
 
-// Make the picture scalable.
+// Make the picture scalable in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get a value of a data field.
+Get a value of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to use a table element value.
+// How to use a table element value in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's value.
+// Create a pivot table, add data to it then display a custom data field's value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

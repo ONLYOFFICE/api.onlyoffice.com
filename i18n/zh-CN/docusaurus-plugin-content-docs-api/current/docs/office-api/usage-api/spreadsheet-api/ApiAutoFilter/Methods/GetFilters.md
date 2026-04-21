@@ -20,12 +20,12 @@ expression.GetFilters();
 
 ## 示例
 
-此示例从工作表自动筛选中读取筛选信息。
+从工作表自动筛选中读取筛选信息。
 
 ```javascript editor-xlsx
-// How to inspect the criteria of existing filters.
+// How to inspect the criteria of existing filters in a spreadsheet.
 
-// Read ApiFilter objects using ApiAutoFilter.GetFilters().
+// Read filter objects using ApiAutoFilter.GetFilters() in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,5 +61,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C10").SetValue("Filter On:");
     worksheet.GetRange("C11").SetValue(f.On);
 }
-
 ```

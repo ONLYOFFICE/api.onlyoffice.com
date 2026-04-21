@@ -22,12 +22,12 @@ expression.SetConditionalTableStyle(oTableStylePr);
 
 ## 示例
 
-此示例展示如何创建和设置格式属性，这些属性将有条件地应用于符合 sType 参数中指定要求的表格部分。
+创建并设置格式属性，这些属性将有条件地应用于文档中与 sType 参数指定的要求匹配的表格部分。
 
 ```javascript editor-docx
-// How to create a style that will be applied to the table elements whish satisfy the condition.
+// How to create a style that will be applied to the table elements whish satisfy the condition in a document.
 
-// Create a conditional table style.
+// Create a conditional table style in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

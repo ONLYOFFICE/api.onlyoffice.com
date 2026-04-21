@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a title slide with a main title and subtitle.
+tags: ["Docs", "Office API", "Presentations"]
 ---
 
 # Creating title slide

@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill color of a stroke.
+Get the fill color of a stroke. Creates a shape with a colored border and retrieve its fill properties in a presentation.
 
 ```javascript editor-pptx
-// Creates a shape with a colored border and retrieves its fill properties.
+// How do I get the fill in a presentation?
+
+// Get the fill using a stroke object in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -40,5 +43,4 @@ if (strokeObj) {
         paragraph.AddText("Stroke fill type: " + strokeFill.GetType());
     }
 }
-
 ```

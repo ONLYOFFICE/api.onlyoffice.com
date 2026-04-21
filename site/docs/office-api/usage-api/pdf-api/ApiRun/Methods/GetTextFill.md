@@ -2,30 +2,16 @@
 
 Gets the text fill from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetTextFill();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiFill](../../ApiFill/ApiFill.md)
+Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
 
 ## Example
 
-This example shows how to find out a color of a text.
+Find out a color of a text in a PDF document.
 
 ```javascript editor-pdf
-// How to know a color fill of a text.
+// How to know a color fill of a text in a PDF document.
 
-// Get the text properties of the run and display its font color.
+// Get the text properties of the run and display its font color in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +21,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -52,5 +38,4 @@ fill = textPr.GetTextFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 docContent.Push(paragraph);
-
 ```

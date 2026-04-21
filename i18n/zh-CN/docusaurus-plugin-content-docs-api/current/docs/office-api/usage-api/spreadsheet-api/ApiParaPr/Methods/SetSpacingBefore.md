@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置当前段落的段前间距。
+设置电子表格中当前段落之前的间距。
 
 ```javascript editor-xlsx
-// How to add the spacing before the paragraphs using points.
+// How to add the spacing before the paragraphs using points in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing before a custom text.
+// Get a paragraph from the shape's content then add a text specifying the spacing before a custom text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

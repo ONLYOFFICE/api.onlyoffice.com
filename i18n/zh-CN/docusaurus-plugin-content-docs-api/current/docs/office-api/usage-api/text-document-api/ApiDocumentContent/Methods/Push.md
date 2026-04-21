@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例移除形状的所有内容并在其中添加新段落。
+在文档中移除形状的所有内容并在其中添加新段落。
 
 ```javascript editor-docx
 // Insert an element to the document.
 
-// Push the paragraph to the content of the document. 
+// Push the paragraph to the content of the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

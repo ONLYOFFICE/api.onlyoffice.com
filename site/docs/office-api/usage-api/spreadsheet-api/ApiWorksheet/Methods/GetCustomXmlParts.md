@@ -21,12 +21,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the custom XML manager, add a new XML part, and retrieve it by its ID.
+Get the custom XML manager, add a new XML part, and retrieve it by its ID in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get custom XML parts from a worksheet.
 
-// Get the custom XML parts manager.
+// Get the custom XML parts manager in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the complex conjugate of a complex number.
+Return the complex conjugate of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the complex conjugate.
+// How to get the complex conjugate in a spreadsheet.
 
-// Use a function to get the complex conjugate of a complex number.
+// Use a function to get the complex conjugate of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

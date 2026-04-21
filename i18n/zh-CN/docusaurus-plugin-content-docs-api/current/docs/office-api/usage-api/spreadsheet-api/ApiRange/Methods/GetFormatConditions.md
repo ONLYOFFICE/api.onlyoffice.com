@@ -20,9 +20,13 @@ expression.GetFormatConditions();
 
 ## 示例
 
-此示例展示如何获取范围的格式条件集合。
+获取电子表格中范围的格式条件集合。
 
 ```javascript editor-xlsx
+// How to get the format conditions for a cell range?
+
+// Get the format conditions and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Score');
 worksheet.GetRange('A2').SetValue(10);
@@ -33,5 +37,4 @@ const dataRange = worksheet.GetRange('A2:A4');
 const formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddDatabar();
 worksheet.GetRange('C1').SetValue('Format conditions count: ' + formatConditions.GetCount());
-
 ```

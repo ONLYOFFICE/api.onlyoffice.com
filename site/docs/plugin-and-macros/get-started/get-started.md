@@ -12,9 +12,9 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
 
-- Embedding external content ([YouTube](../samples/plugin-samples/youtube.md), media galleries)
-- Third-party integrations ([Translator](../samples/plugin-samples/translator.md), [Zotero](../samples/plugin-samples/zotero.md), CRM systems)
-- Advanced processing ([OCR](../samples/plugin-samples/ocr.md), image manipulation, data visualization)
+- Embedding external content ([YouTube](../samples/plugins/youtube.md), media galleries)
+- Third-party integrations ([Translator](../samples/plugins/translator.md), [Zotero](../samples/plugins/zotero.md), CRM systems)
+- Advanced processing ([OCR](../samples/plugins/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
@@ -30,17 +30,17 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 
 **Perfect for:**
 
-- One-click formatting ([Reset text properties](../samples/macro-samples/text-document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
-- Batch operations ([Remove empty tables](../samples/macro-samples/text-document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
-- Custom calculations ([Find weighted average](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
-- Document cleanup ([Remove empty paragraphs](../samples/macro-samples/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
+- One-click formatting ([Reset text properties](../samples/macros/text-document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
+- Batch operations ([Remove empty tables](../samples/macros/text-document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
+- Custom calculations ([Find weighted average](../samples/macros/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
+- Document cleanup ([Remove empty paragraphs](../samples/macros/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
 
 **Development profile:**
 
 - **Time:** 30 mins - 2 hours | **Skill:** Beginner | **Tech:** JavaScript basics
 - **Distribution:** Copy-paste code or embed in document templates
 
-[Browse all macro examples](../samples/macro-samples/macro-samples.md)
+[Browse all macro examples](/samples/?doctype=docs&text=macros)
 
 ### Custom AI tools — intelligent assistants
 
@@ -48,17 +48,17 @@ Custom tools enhanced with AI capabilities for next-generation document workflow
 
 **Perfect for:**
 
-- Writing assistance ([Check spelling](../samples/custom-ai-tools/text-document-editor/checkSpelling.md) — AI-powered spell checking)
-- Smart styling ([Change text style](../samples/custom-ai-tools/text-document-editor/changeTextStyle.md) — AI-powered text styling)
-- Automatic shape generation ([Add shape](../samples/custom-ai-tools/presentation-editor/addShapeToSlide.md) — AI-powered presentation design)
-- Data insights ([Explain formula](../samples/custom-ai-tools/spreadsheet-editor/explainFormula.md) — AI-powered formula explanations)
+- Writing assistance ([Check spelling](../samples/custom-ai-tools/text-document-editor/check-spelling.md) — AI-powered spell checking)
+- Smart styling ([Change text style](../samples/custom-ai-tools/text-document-editor/change-text-style.md) — AI-powered text styling)
+- Automatic shape generation ([Add shape](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
+- Data insights ([Explain formula](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
 
 **Development profile:**
 
 - **Time:** 3-10 days | **Skill:** Advanced | **Tech:** Plugin API + AI provider integration
 - **Requirements:** API keys for OpenAI, Claude, or custom AI services
 
-[Browse all AI function examples](../samples/custom-ai-tools/custom-ai-tools.md)
+[Browse all AI function examples](/samples/?doctype=ai&text=ai+tools)
 
 ## Which approach would you choose? {#which-approach-would-you-choose}
 
@@ -135,9 +135,9 @@ Answer these questions to find your ideal path:
 
 ### Sample code
 
-- **[Plugin examples](../samples/plugin-samples/plugin-samples.md)** — Working examples
-- **[Macro examples](../samples/macro-samples/macro-samples.md)** — Common automation scripts
-- **[AI function examples](../samples/custom-ai-tools/custom-ai-tools.md)** — AI integration patterns
+- **[Plugin examples](/samples/?doctype=docs&text=plugin)** — Working examples
+- **[Macro examples](/samples/?doctype=docs&text=macros)** — Common automation scripts
+- **[AI function examples](/samples/?doctype=ai&text=ai+tools)** — AI integration patterns
 
 ### Documentation
 

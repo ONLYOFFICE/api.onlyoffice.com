@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-此示例展示如何获取行的父表格。
+获取文档中行的父表格。
 
 ```javascript editor-docx
-// Get the parent table of the table row.
+// Get the parent table of the table row in a document.
 
-// Display the first and the second row.
+// Display the first and the second row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a slide with a background image and text overlay.
+tags: ["Docs", "Office API", "Presentations"]
 ---
 
 # Creating background image slide

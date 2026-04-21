@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the timestamp of the comment creation in the current time zone format.
+Set the timestamp of the comment creation in the current time zone format.
 
 ```javascript editor-xlsx
-// How to change a time when a comment was created.
+// How to change a time when a comment was created in a spreadsheet.
 
 // Add a comment then update its creation time and show it in the worksheet.
 

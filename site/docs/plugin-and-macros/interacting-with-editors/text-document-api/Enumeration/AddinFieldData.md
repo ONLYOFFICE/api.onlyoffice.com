@@ -2,6 +2,10 @@
 
 The addin field data.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -9,11 +13,6 @@ The addin field data.
 | Content | string | Field text content. |
 | FieldId | string | Field identifier. |
 | Value | string | Field value. |
-## Type
-
-Object
-
-
 
 ## Example
 

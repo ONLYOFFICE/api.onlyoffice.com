@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例演示如何获取图标条件的类型。
+获取电子表格中图标条件的类型。
 
 ```javascript editor-xlsx
-// How to retrieve the type from an icon set criterion.
+// How to retrieve the type from an icon set criterion in a spreadsheet.
 
-// Get the criterion type used for threshold comparison.
+// Get the criterion type used for threshold comparison in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let firstCriterion = criteria[0];
 let criterionType = firstCriterion.GetType();
 
 worksheet.GetRange("B1").SetValue("First criterion type: " + criterionType);
-
 ```

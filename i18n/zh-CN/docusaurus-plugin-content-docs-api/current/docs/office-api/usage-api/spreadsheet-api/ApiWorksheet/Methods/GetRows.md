@@ -22,7 +22,7 @@ expression.GetRows(value);
 
 ## 示例
 
-此示例展示如何获取表示行区域中所有单元格的 ApiRange 对象。
+获取表示电子表格中行范围上所有单元格的单元格范围对象。
 
 ```javascript editor-xlsx
 // How to get all row cells.

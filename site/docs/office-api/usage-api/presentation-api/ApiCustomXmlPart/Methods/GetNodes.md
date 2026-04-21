@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## Example
 
-This example shows how to get nodes from a custom XML part using XPath.
+Get nodes from a custom XML part using XPath in a presentation.
 
 ```javascript editor-pptx
-// How to get nodes from an XML part using XPath.
+// How to get nodes from an XML part using XPath in a presentation.
 
-// Get XML nodes.
+// Get the nodes and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

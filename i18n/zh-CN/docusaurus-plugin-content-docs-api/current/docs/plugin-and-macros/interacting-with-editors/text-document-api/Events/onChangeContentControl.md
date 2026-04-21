@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | 定义已更改的内容控件。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeContentControl", (control) => {
     console.log("event: onChangeContentControl");
@@ -19,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onChangeContentControl", (control) => {
     console.log("Appearance: " + control.Appearance);
 });
 ```
-

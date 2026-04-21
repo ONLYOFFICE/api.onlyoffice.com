@@ -2,7 +2,6 @@
 
 Represents the ApiNumberingLevel class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the placeholder index.
+Set the placeholder index in a presentation.
 
 ```javascript editor-pptx
+// How to set index for a placeholder in a presentation?
+
+// Set index and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,5 +53,4 @@ slide.AddObject(shape);
 
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Placeholder index set to ' + placeholder.GetIndex());
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get column range of a pivot table.
+Get column range of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get column range from a pivot table.
+// How to get column range from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get its column range and select them.
+// Create a pivot table, add data to it then get its column range and select them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

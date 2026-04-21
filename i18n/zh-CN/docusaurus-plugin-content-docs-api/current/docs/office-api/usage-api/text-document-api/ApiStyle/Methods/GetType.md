@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例展示如何获取当前样式的类型。
+获取文档中当前样式的类型。
 
 ```javascript editor-docx
-// How to get type of the table style.
+// How to get type of the table style in a document.
 
-// Display the name of the table style.
+// Display the name of the table style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

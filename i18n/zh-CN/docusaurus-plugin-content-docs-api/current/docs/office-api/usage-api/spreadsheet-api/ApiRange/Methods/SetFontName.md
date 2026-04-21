@@ -22,12 +22,12 @@ expression.SetFontName(sName);
 
 ## 示例
 
-此示例将指定的字体系列设置为单元格范围的字体名称。
+将指定的字体系列设置为单元格范围的字体名称。
 
 ```javascript editor-xlsx
 // How to change a cell font family.
 
-// Get a range and set its font family using its name.
+// Get a range and set its font family using its name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

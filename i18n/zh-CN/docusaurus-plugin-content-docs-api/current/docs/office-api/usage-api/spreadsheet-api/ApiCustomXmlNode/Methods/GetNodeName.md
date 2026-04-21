@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的节点名称。
+获取电子表格中自定义 XML 节点的节点名称。
 
 ```javascript editor-xlsx
-// How to retrieve node names from custom XML node elements.
+// How to retrieve node names from custom XML node elements in a spreadsheet.
 
-// Get node name from item element.
+// Get node name from item element in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

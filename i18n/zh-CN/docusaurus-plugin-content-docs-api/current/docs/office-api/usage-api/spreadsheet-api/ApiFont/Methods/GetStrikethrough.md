@@ -20,10 +20,10 @@ boolean \| null
 
 ## 示例
 
-此示例演示如何获取指定字体的删除线属性。
+获取电子表格中指定字体的删除线属性。
 
 ```javascript editor-xlsx
-// How to determine a font strikethrough property.
+// How to determine a font strikethrough property in a spreadsheet.
 
 // Get a boolean value that represents whether a font is strikethrough or not and show the value in the worksheet.
 

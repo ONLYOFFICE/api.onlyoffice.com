@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the axis values.
+Set the specified numeric format to the axis values.
 
 ```javascript editor-pptx
 // How to change a numeric format of left axis lables.
@@ -46,5 +46,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

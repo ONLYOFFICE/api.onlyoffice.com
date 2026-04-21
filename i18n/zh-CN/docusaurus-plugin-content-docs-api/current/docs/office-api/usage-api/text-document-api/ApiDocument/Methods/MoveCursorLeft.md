@@ -24,12 +24,13 @@ boolean
 
 ## 示例
 
-此示例展示如何在文档中向左移动光标。
+在文档中将光标向左移动。
 
 ```javascript editor-docx
-// How to move the cursor left by a specified number of characters.
+// How to move the cursor left by a specified number of characters in a document.
 
-// Add text, move cursor right, then move it left.
+// Add text, move cursor right, then move it left in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the text in your document.");

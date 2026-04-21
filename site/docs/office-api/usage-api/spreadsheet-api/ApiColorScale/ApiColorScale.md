@@ -1,6 +1,6 @@
 # ApiColorScale
 
-Represents the ApiColorScale class.
+ApiColorScale is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
 

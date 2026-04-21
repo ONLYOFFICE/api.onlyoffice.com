@@ -25,12 +25,12 @@ string
 
 ## Example
 
-This example shows how to replace existing text with new text in a text string.
+Replace existing text with new text in a text string in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to substitute a substring with another one.
+// How to substitute a substring with another one in a spreadsheet.
 
-// Use a function to replace a text with another one.
+// Use a function to replace a text with another one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

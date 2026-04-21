@@ -30,6 +30,8 @@ How to change a number format of a data point.
 ```javascript editor-pdf
 // Create a chart then apply specified numeric format to its data points.
 
+// Set data point num format using a chart object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

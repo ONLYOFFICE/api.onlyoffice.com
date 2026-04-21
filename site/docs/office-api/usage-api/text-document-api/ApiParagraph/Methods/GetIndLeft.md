@@ -2,30 +2,16 @@
 
 Returns the paragraph left side indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndLeft();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md).
 
 ## Example
 
-This example shows how to get the paragraph left side indentation.
+Get the paragraph left side indentation in a document.
 
 ```javascript editor-docx
 // Get the left indentation of the paragraph and show it in the document.
 
-// How to know the number of inches of the left indentation.
+// How to know the number of inches of the left indentation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

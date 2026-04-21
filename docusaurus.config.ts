@@ -51,7 +51,7 @@ const config: Config = {
     v4: {
       removeLegacyPostBuildHeadAttribute: true
     },
-    experimental_faster: {
+    faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
       ssgWorkerThreads: true,

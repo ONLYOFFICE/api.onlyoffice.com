@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the selected slides from current selection.
+Get the selected slides from current selection in a presentation.
 
 ```javascript editor-pptx
+// How do I get the slides in a presentation?
+
+// Get the slides using a selection object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,5 +53,4 @@ const outDoc = outShape.GetDocContent();
 const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(text);
 slide.AddObject(outShape);
-
 ```

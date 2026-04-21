@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a parent content control that contains the graphic object.
+Get a parent content control that contains the graphic object in a document.
 
 ```javascript editor-docx
-// Get an element's parent control.
+// Get an element's parent control in a document.
 
-// How to show the shape's wrapper control.
+// How to show the shape's wrapper control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

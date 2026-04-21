@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets field type and display it.
+Check the class type returned by a combobox field in a PDF document.
 
 ```javascript editor-pdf
+// How do I check what type a combobox field object is in a PDF document?
+
+// Retrieve and output the class type string for a combobox field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

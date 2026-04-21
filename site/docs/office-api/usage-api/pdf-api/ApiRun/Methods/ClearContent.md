@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example clears the content from the run.
+Clear the content from the run in a PDF document.
 
 ```javascript editor-pdf
-// How to delete content from the text run.
+// How to delete content from the text run in a PDF document.
 
 // Remove text from the page.
 
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.SetFontSize(30);
@@ -50,5 +50,4 @@ run.AddText("The text in the previous paragraph cannot be seen, as it has been c
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the font size to the characters of the cell range.
+Set the font size to the characters of the cell range.
 
 ```javascript editor-xlsx
 // How to resize a cell font size.
 
-// Get a range and set its font size.
+// Get a range and set its font size in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

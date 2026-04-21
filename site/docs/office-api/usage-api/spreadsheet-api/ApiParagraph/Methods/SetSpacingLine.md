@@ -5,33 +5,16 @@ Sets the paragraph line spacing. If the value of the sLineRule parameter is eith
 the value of the sLineRule parameter is "auto", then the value of the 
 nLine parameter will be interpreted as 240ths of a line.
 
-## Syntax
-
-```javascript
-expression.SetSpacingLine(nLine, sLineRule);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLine | Required | [twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) |  | The line spacing value measured either in twentieths of a point (1/1440 of an inch) or in 240ths of a line. |
-| sLineRule | Required | "auto" \| "atLeast" \| "exact" |  | The rule that determines the measuring units of the line spacing. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md).
 
 ## Example
 
-This example sets the paragraph line spacing.
+Set the paragraph line spacing in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a spacing line between paragraphs.
+// How to add a spacing line between paragraphs in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying spacing between text lines.
+// Get a paragraph from the shape's content then add a text specifying spacing between text lines in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

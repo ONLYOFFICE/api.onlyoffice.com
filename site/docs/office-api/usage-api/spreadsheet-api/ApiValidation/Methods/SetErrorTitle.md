@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the error message title.
+Set the error message title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the validation error title.
+// How to set the validation error title in a spreadsheet.
 
-// Set the error title.
+// Set error title for a validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -36,5 +36,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetErrorTitle("Invalid Input");
 validation.SetShowError(true);
 worksheet.GetRange("B1").SetValue("Error title has been set");
-
 ```

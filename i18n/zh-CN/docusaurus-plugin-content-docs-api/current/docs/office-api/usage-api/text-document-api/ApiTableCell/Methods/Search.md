@@ -23,7 +23,7 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-此示例展示如何在表格单元格中搜索。
+在文档的表格单元格中进行搜索。
 
 ```javascript editor-docx
 // Search the word from the cell.

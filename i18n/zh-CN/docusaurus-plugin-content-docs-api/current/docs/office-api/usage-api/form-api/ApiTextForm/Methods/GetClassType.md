@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查文本表单返回的类类型。
 
 ```javascript editor-forms
-// How to get a class type of ApiTextForm.
+// How do I check what type a text form object is?
 
-// Retrieve class type of ApiTextForm object and insert it to the document.
+// Retrieve and output the class type string for a text form.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

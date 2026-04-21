@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例从演示文稿中删除当前幻灯片。
+从演示文稿中删除当前幻灯片。
 
 ```javascript editor-pptx
 // How to delete a slide.
@@ -38,5 +38,4 @@ presentation.AddSlide(slide);
 
 slide = presentation.GetSlideByIndex(0);
 slide.Delete();
-
 ```

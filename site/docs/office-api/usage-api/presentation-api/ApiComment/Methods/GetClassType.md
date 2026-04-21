@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a type of ApiComment class and inserts it into the presentation.
+Find out the class type of a comment object in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiComment.
+// How can I get the class type of a comment in a presentation?
 
-// Retrieve class type of ApiComment object and insert it to the slide.
+// Get the class type of a comment and display it in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const classType = arrComments[0].GetClassType();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's class type: " + classType);
-
 ```

@@ -2,30 +2,16 @@
 
 Gets the text outline from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetOutLine();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiStroke](../../ApiStroke/ApiStroke.md)
+Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
 ## Example
 
-This example shows how to find out whether a text is outlined.
+Find out whether a text is outlined in a presentation.
 
 ```javascript editor-pptx
-// How to know whether an outline is set to the text.
+// How to know whether an outline is set to the text in a presentation.
 
-// Get the text properties of the run and find whether it is outlined or not.
+// Get the text properties of the run and find whether it is outlined or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +39,4 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
-
 ```

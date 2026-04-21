@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example selects the current paragraph.
+Select the current paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How do I select in a PDF document?
+
+// Select using a paragraph object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -36,5 +40,4 @@ paragraph.AddText('This paragraph will be selected.');
 page.AddObject(shape);
 
 paragraph.Select();
-
 ```

@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将应用于当前文本块内容相对于文本块默认外观的对齐方式。
+指定在电子表格中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
 
 ```javascript editor-xlsx
-// How to set vertical alignment of a text object.
+// How to set vertical alignment of a text object in a spreadsheet.
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript" in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

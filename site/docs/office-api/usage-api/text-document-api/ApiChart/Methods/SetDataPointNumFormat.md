@@ -25,7 +25,7 @@ boolean
 
 ## Example
 
-This example sets "0.00" numeric format for chart.
+Set "0.00" numeric format for chart.
 
 ```javascript editor-docx
 // How to set a numeric format of the data points.

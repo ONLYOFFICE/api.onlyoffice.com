@@ -1,7 +1,6 @@
 # ApiChart
 
-Represents the ApiChart class.
-
+ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 ## Methods
 
@@ -12,6 +11,7 @@ Represents the ApiChart class.
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | Returns all series from the chart space. |
 | [GetChartType](./Methods/GetChartType.md) | [ChartType](../Enumeration/ChartType.md) | Returns a type of the chart object. |
 | [GetClassType](./Methods/GetClassType.md) | "chart" | Returns a type of the ApiChart class. |
+| [GetParentSheet](./Methods/GetParentSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the parent sheet of the current drawing. |
 | [GetSeries](./Methods/GetSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md) | Returns the series with a specific index. |
 | [GetTitle](./Methods/GetTitle.md) | string \| null | Returns the chart title text. |
 | [RemoveSeria](./Methods/RemoveSeria.md) | boolean | Removes the specified series from the current chart. |

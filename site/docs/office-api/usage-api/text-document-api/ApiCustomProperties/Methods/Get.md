@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## Example
 
-This example demonstrates how to get the value of a custom property by its name.
+Get the value of a custom property by its name in a document.
 
 ```javascript editor-docx
+// Return null for properties that do not exist.
+
+// Get for a custom properties in a document.
+
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 
@@ -36,5 +40,4 @@ const nonExistentProp = customProps.Get("NonExistentProp");
 const paragraph = doc.GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```

@@ -25,10 +25,13 @@ boolean
 
 ## 示例
 
-创建带有参考线和连接点的可调整自定义几何图形。
+创建带有参考线和连接点的可调节自定义几何图形。在单元格中显示调整值并将几何图形应用于形状。
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I set text rect in a spreadsheet?
+
+// Set text rect using a geometry object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

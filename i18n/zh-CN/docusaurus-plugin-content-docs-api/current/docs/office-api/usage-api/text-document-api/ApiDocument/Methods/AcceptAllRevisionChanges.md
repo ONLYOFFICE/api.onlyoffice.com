@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例接受在审阅模式下所做的所有更改。
+接受文档中在审阅模式下所做的所有更改。
 
 ```javascript editor-docx
-// How to apply all changes and fixes after review.
+// How to apply all changes and fixes after review in a document.
 
 // Change the status of the document to the review mode and apply all changes.
 

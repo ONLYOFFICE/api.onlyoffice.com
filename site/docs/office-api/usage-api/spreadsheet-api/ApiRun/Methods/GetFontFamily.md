@@ -3,28 +3,14 @@
 Returns the font family from the current text properties.
 The method automatically calculates the font from the theme if the font was set via the theme.
 
-## Syntax
-
-```javascript
-expression.GetFontFamily();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md).
 
 ## Example
 
-This example gets a text font family.
+Get a text font family in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text font family.
+// How to find out a text font family in a spreadsheet.
 
 // Get a text font family name and display it in the worksheet.
 

@@ -1,5 +1,6 @@
 ---
 description: Log in to a DocSpace account using email and password hash.
+tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
 # Authorization

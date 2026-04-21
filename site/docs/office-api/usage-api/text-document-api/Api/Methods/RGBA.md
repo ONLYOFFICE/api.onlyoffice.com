@@ -25,9 +25,13 @@ expression.RGBA(r, g, b, a);
 
 ## Example
 
-This example shows how to create RGBA color and use it as content control background color
+Create RGBA color and use it as content control background color in a document.
 
 ```javascript editor-docx
+// How to r g b an in a document?
+
+// R g b an using the document API.
+
 const doc = Api.GetDocument();
 
 const run = Api.CreateRun();
@@ -45,5 +49,4 @@ drawing.SetWrappingStyle('behind');
 const paragraph = doc.GetElement(0);
 paragraph.AddDrawing(drawing);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```

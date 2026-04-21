@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+获取 PDF 文档中填充的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiFill.
+// How to identify the class type of a fill in a PDF document?
 
-// Retrieve class type of ApiFill object and insert it to the page.
+// Obtain the class type identifier of a fill object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,11 +38,10 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const classType = fill.GetClassType();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```

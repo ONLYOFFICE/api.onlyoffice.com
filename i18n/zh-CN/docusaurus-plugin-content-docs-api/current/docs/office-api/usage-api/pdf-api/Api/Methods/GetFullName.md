@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例获取 PDF 文档名称并将其插入到 PDF 文档中。
+获取 PDF 文档名称并将其插入 PDF 文档。
 
 ```javascript editor-pdf
 // How to get a pdf document name.
@@ -36,10 +36,9 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const fullName = Api.GetFullName();
 paragraph.AddText("File name: " + fullName);
 page.AddObject(shape);
-
 ```

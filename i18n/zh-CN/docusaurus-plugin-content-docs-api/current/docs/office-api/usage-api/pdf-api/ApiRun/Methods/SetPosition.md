@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定此文本块的文本相对于周围非定位文本的默认基线升高或降低的量。
+指定在 PDF 文档中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-pdf
-// How to change inline position of the text.
+// How to change inline position of the text in a PDF document.
 
-// Create a new text run and make its position lower or higher.
+// Create a new text run and make its position lower or higher in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is a text run with the text raised 10 half-points.");
@@ -50,5 +50,4 @@ run.AddText("This is a text run with the text lowered 16 half-points.");
 paragraph.AddElement(run);
 run.SetPosition(-16);
 page.AddObject(shape);
-
 ```

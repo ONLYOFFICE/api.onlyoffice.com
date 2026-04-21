@@ -2,7 +2,6 @@
 
 Represents the ApiRichParaPr class.
 
-
 ## Methods
 
 | Method | Returns | Description |

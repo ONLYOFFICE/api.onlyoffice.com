@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例演示如何获取元素。
+获取 PDF 文档中的元素。
 
 ```javascript editor-pdf
 // How to get an element from the content of a page shape.
 
-// Find an element from the shape using its index.
+// Find an element from the shape using its index in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,7 +39,7 @@ shape.SetPosition(608400, 1267200);
 
 const oBullet = Api.CreateNumbering("ArabicParenR", 1);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let oParagraph = docContent.GetElement(0);
 oParagraph.SetBullet(oBullet);
 oParagraph.AddText(" This is an example of the numbered paragraph.");
@@ -49,5 +49,4 @@ oParagraph.SetBullet(oBullet);
 oParagraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(oParagraph);
 page.AddObject(shape);
-
 ```

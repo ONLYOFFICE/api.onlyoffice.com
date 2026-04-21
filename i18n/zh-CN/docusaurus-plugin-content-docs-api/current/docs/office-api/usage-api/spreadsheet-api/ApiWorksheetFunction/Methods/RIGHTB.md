@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-此示例演示如何根据指定的字符数从字符串的最右侧字符开始提取子字符串，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
+在电子表格中根据指定的字符数从字符串的最右侧字符开始提取子字符串，适用于使用双字节字符集 (DBCS) 的语言。
 
 ```javascript editor-xlsx
-// How to get characters from the end of a string for languages that use the double-byte character set.
+// How to get characters from the end of a string for languages that use the double-byte character set in a spreadsheet.
 
-// Use a function to return n characters from the right part of a text.
+// Use a function to return n characters from the right part of a text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

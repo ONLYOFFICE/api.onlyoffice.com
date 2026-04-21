@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例展示如何使用指定的位置获取段落元素。
+使用演示文稿中指定的位置获取段落元素。
 
 ```javascript editor-pptx
-// How to return an element from the ApiPargaraph object.
+// How to return an element from the ApiPargaraph object in a presentation.
 
-// Get an object from the paragraph.
+// Get an object from the paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,5 +58,4 @@ paragraph.AddElement(run);
 run = paragraph.GetElement(2);
 run.SetBold(true);
 slide.AddObject(shape);
-
 ```

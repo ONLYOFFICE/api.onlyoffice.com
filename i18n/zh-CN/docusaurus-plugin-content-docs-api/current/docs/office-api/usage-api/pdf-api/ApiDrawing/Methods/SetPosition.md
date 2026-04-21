@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何更改绘图的位置。
+如何在 PDF 文档中更改绘图对象的位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and move it.
+
+// Set position using a drawing object object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

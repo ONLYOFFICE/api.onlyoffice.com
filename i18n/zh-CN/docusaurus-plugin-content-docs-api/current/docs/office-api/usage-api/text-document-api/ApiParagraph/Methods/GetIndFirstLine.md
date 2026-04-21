@@ -2,30 +2,16 @@
 
 返回段落首行缩进。
 
-## 语法
-
-```javascript
-expression.GetIndFirstLine();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+继承自 [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md)。
 
 ## 示例
 
-此示例展示如何获取段落首行缩进。
+获取文档中的段落首行缩进。
 
 ```javascript editor-docx
-// How to get the indentation of the first sentence line of the paragraph.
+// How to get the indentation of the first sentence line of the paragraph in a document.
 
-// Print the identation of the line of a paragraph.
+// Print the identation of the line of a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

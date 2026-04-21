@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates creating a custom geometry.
+Create a custom geometry in a document.
 
 ```javascript editor-docx
+// How to create custom geometry in a document?
+
+// Create custom geometry using the document API.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
  // Airplane shape in EMU units

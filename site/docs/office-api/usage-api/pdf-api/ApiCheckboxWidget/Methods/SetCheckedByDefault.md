@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets checkbox widget checked by default property.
+Set checkbox widget checked by default property in a PDF document.
 
 ```javascript editor-pdf
+// How to set checked by default for a checkbox widget in a PDF document?
+
+// Set checked by default and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取数据字段的位置。
+获取电子表格中数据字段的位置。
 
 ```javascript editor-xlsx
-// How to get a table element position.
+// How to get a table element position in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's position.
+// Create a pivot table, add data to it then display a custom data field's position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

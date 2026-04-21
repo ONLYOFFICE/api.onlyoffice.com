@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-此示例向内联内容控件添加批注。
+向文档中的内联内容控件添加批注。
 
 ```javascript editor-docx
-// How to comment an inline text element.
+// How to comment an inline text element in a document.
 
-// Add comment to the text.
+// Add the comment and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

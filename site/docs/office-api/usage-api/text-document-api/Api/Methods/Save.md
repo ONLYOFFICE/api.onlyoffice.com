@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example saves changes to the specified document.
+Save changes to the specified document.
 
 ```javascript editor-docx
-// Adds a text to the first paragraph of the document and saves these changes.
+// Add a text to the first paragraph of the document and save these changes.
 
-// How to save changes made to the ApiParagraph object.
+// How to save changes made to the paragraph object in a document.
 
 let paragraph = Api.GetDocument().GetElement(0);
 paragraph.AddText("This sample text is saved to the document.");

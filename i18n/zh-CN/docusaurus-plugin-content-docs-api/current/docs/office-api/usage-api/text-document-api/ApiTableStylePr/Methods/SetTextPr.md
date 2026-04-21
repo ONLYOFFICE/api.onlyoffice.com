@@ -12,9 +12,9 @@ expression.SetTextPr(oTextPr);
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型**                              | **默认值** | **描述**             |
-| -------- | ------------- | ----------------------------------------- | ---------- | -------------------- |
-| oTextPr  | 必需          | [ApiTextPr](../../ApiTextPr/ApiTextPr.md) |            | 将要设置的文本属性。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oTextPr | 必需 | [ApiTextPr](../../ApiTextPr/ApiTextPr.md) |  | 将要设置的文本属性。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例展示如何创建和设置将应用于表格中符合条件格式类型的所有文本块的文本属性。
+创建并设置将应用于表格中与条件格式类型匹配的所有文本 run 的文本 run 属性。
 
 ```javascript editor-docx
-// How to set text properties to the table style and make it bold.
+// How to set text properties to the table style and make it bold in a document.
 
-// Update the table style text properties.
+// Update the table style text properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
