@@ -23,10 +23,10 @@ expression.SetSize(nWidth, nHeight);
 
 ## 示例
 
-此示例设置形状的大小。
+在演示文稿中设置形状的大小。
 
 ```javascript editor-pptx
-// How to resize a drawing.
+// How to resize a drawing in a presentation.
 
 // Get a shape object from a slide and set its size.
 
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

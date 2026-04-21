@@ -2,30 +2,16 @@
 
 Gets the double strikeout property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetDoubleStrikeout();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md).
 
 ## Example
 
-This example gets a double strikeout property of a text.
+Get a double strikeout property of a text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out with double lines or not.
+// How to find out whether a text is stroke out with double lines or not in a spreadsheet.
 
-// Get a text double cross out property.
+// Get a text double cross out property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何测试两个数字是否相等。如果数字相等，函数返回 1，否则返回 0。
+在电子表格中测试两个数字是否相等。如果相等则返回 1，否则返回 0。
 
 ```javascript editor-xlsx
-// How to compare two numbers.
+// How to compare two numbers in a spreadsheet.
 
-// Use function to compare two numbers if it returns 1 they are equal else 0.
+// Use function to compare two numbers if it returns 1 they are equal else 0 in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

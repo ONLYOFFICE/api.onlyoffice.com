@@ -11,10 +11,9 @@
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [CheckBoxFormPrBase](../Enumeration/CheckBoxFormPrBase.md)
 
-
 ## 示例
 
-此示例创建具有通用和特定复选框表单属性的复选框表单。
+创建具有通用和特定复选框表单属性的复选框表单。
 
 ```javascript editor-forms
 // How to create a checkbox form with its properties.

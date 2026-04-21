@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何根据定期固定付款和固定利率返回投资的期数。
+在电子表格中基于定期、固定付款和固定利率返回投资的期数。
 
 ```javascript editor-xlsx
-// How to get the number of periods for an investment.
+// How to get the number of periods for an investment in a spreadsheet.
 
-// Use a function to get the number of periods for an investment based on different parameters.
+// Use a function to get the number of periods for an investment based on different parameters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

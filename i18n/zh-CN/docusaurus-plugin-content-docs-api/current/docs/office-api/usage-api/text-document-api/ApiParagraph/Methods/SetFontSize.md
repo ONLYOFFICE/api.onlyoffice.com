@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例设置段落字符的字体大小。
+在文档中为段落的字符设置字体大小。
 
 ```javascript editor-docx
-// How to set font size to the text.
+// How to set font size to the text in a document.
 
-// Create a new paragraph and resize its font.
+// Create a new paragraph and resize its font in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

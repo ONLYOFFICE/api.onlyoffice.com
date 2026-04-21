@@ -24,10 +24,10 @@ expression.AddRows(oCell, nCount, isBefore);
 
 ## Example
 
-This example adds the new rows to the table.
+Add the new rows to the table in a document.
 
 ```javascript editor-docx
-// How to add rows to the table.
+// How to add rows to the table in a document.
 
 // Get a table cell and insert two new rows after it.
 

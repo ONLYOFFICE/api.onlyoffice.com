@@ -2,32 +2,16 @@
 
 Sets the bullet or numbering to the current paragraph.
 
-## Syntax
-
-```javascript
-expression.SetBullet(oBullet);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oBullet | Required | [ApiBullet](../../ApiBullet/ApiBullet.md) |  | The bullet object created with the [Api#CreateBullet](../../Api/Methods/CreateBullet.md) or [Api#CreateNumbering](../../Api/Methods/CreateNumbering.md) method. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiParaPr.SetBullet](../../ApiParaPr/Methods/SetBullet.md).
 
 ## Example
 
-This example sets the bullet or numbering to the current paragraph.
+Set the bullet or numbering to the current paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to set a bullet type to the paragraph properties.
+// How to set a bullet type to the paragraph properties in a PDF document.
 
-// Create a bulleted paragraph setting its bullet type.
+// Create a bulleted paragraph setting its bullet type in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +30,4 @@ const bullet = Api.CreateBullet("-");
 paraPr.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
-
 ```

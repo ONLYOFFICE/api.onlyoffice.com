@@ -2,7 +2,6 @@
 
 表示 Api 类。
 
-
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -11,7 +10,6 @@
 | [AddOleObject](./AddOleObject.md) | 无 | 在当前文档位置添加 OLE 对象。 |
 | [ChangeComment](./ChangeComment.md) | boolean | 更改指定的批注。 |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | 无 | 向协作聊天发送消息。 |
-| [ConvertDocument](./ConvertDocument.md) | string | 将文档转换为 Markdown 或 HTML 文本。 |
 | [EditOleObject](./EditOleObject.md) | 无 | 编辑文档中的 OLE 对象。 |
 | [EndAction](./EndAction.md) | 无 | 指定长时间操作的结束操作。 |
 | [EndSlideShow](./EndSlideShow.md) | 无 | 结束当前幻灯片放映。 |

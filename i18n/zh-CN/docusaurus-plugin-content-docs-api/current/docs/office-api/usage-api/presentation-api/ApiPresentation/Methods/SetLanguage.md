@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置将用于检查拼写和语法的语言。
+设置在演示文稿中用于检查拼写和语法的语言。
 
 ```javascript editor-pptx
 // How to specify a language of the current presentation.
 
-// Set the 'en-CA' language to the ApiPresentation object.
+// Set the 'en-CA' language to the presentation object.
 
 const presentation = Api.GetPresentation();
 presentation.SetLanguage("en-CA");
@@ -44,5 +44,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("English (Canada) will be used to check spelling and grammar in this presentation (if requested).");
 slide.AddObject(shape);
-
 ```

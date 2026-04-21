@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets placeholder for text widget.
+Set placeholder for text widget in a PDF document.
 
 ```javascript editor-pdf
+// How do I set placeholder in a PDF document?
+
+// Set placeholder using a text widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

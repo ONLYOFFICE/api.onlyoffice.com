@@ -2,6 +2,10 @@
 
 内容控件对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -10,11 +14,6 @@
 | InternalId | string | 内容控件的唯一内部标识符。用于所有内容控件操作。 |
 | Lock | [ContentControlLock](../Enumeration/ContentControlLock.md) | 定义是否可以删除和/或编辑内容控件的值：0 - 仅删除，1 - 不可删除或编辑，2 - 仅编辑，3 - 完全访问。 |
 | Tag | string | 分配给内容控件的标签。相同的标签可以分配给多个内容控件，以便在代码中引用它们。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

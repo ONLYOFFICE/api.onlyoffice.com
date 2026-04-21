@@ -4,33 +4,16 @@ Sets the spacing after the current paragraph. If the value of the isAfterAuto pa
 any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it 
 will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingAfter(nAfter, isAfterAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAfter | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing after the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isAfterAuto | Optional | boolean | false | The true value disables the spacing after the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Set the spacing after the current paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points.
+// How to add the spacing after the paragraphs using points in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
+// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

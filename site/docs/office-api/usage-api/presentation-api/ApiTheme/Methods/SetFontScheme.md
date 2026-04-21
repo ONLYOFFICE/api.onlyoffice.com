@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example sets the font scheme to the current presentation theme.
+Set the font scheme to the current presentation theme.
 
 ```javascript editor-pptx
-// How to get a theme and set a new font scheme.
+// How to get a theme and set a new font scheme in a presentation.
 
 // Create a new font scheme and apply it to the slide theme.
 
@@ -49,5 +49,4 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph with a new font scheme set.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set an orientation of horizontal axis.
+How to set an orientation of horizontal axis in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis orientation.
+// Create a chart, set its properties and its horizontal axis orientation in a PDF document.
+
+// Set hor axis orientation for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | annotation | TextAnnotation | 获得焦点的批注。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onFocusAnnotation", (data) => {
     console.log("event: onFocusAnnotation");
@@ -15,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onFocusAnnotation", (data) => {
     console.log("rangeId: " + data.rangeId);
 });
 ```
-

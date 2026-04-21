@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置占位符类型。
+在演示文稿中设置占位符类型。
 
 ```javascript editor-pptx
-// How to set a placeholder type (chart, table, etc.).
+// How to set a placeholder type (chart, table, etc.) in a presentation.
 
-// Create a shape and set its placeholder type to "chart".
+// Create a shape and set its placeholder type to "chart" in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ shape.SetPlaceholder(placeholder);
 
 placeholder.SetType("picture");
 slide.AddObject(shape);
-
 ```

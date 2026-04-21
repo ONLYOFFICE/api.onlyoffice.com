@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例检查修订跟踪模式是否已启用。
+检查文档中是否启用了修订跟踪模式。
 
 ```javascript editor-docx
 // How to track revisions of the document.
 
-// Get a boolean value that shows whether revision tracking is enabled or not.
+// Get a boolean value that shows whether revision tracking is enabled or not in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

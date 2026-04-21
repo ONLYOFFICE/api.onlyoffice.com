@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets geometry information from a star shape on a presentation page.
+Get geometry information from a star shape on a presentation page. Displays preset type and custom status in a text shape.
 
 ```javascript editor-pdf
-// Displays preset type and custom status in a text shape.
+// How can I get the preset using a geometry in a PDF document?
+
+// Get the preset for a geometry in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

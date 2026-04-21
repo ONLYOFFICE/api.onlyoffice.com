@@ -11,13 +11,12 @@
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [TextFormPrBase](../Enumeration/TextFormPrBase.md)
 
-
 ## 示例
 
-此示例创建具有通用和特定文本表单属性的文本表单。
+指定通用和特定属性创建文本表单。
 
 ```javascript editor-forms
-// How to create a text form with adding properties like tip text, placeholder, etc. to it.
+// Set text form properties like tip text, placeholder, and characters limit.
 
 // Create a text form with properties.
 
@@ -33,5 +32,4 @@ let textFormPr = {
 	"autoFit": false
 };
 let textForm = Api.CreateTextForm(textFormPr);
-
 ```

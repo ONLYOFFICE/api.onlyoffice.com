@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取段落的内部 ID。
+获取 PDF 文档中段落的内部 ID。
 
 ```javascript editor-pdf
+// How to get the internal id for a paragraph in a PDF document?
+
+// Get the internal id and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,5 +42,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Internal Id: ' + paragraph.GetInternalId());
 docContent.Push(paragraph2);
 page.AddObject(shape);
-
 ```

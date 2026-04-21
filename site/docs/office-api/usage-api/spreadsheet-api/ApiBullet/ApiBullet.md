@@ -2,7 +2,6 @@
 
 Represents the ApiBullet class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -22,12 +22,12 @@ expression.CreateTableStylePr(sType);
 
 ## Example
 
-This example shows how to create and use the conditional table style properties.
+Create and use the conditional table style properties in a document.
 
 ```javascript editor-docx
-// How to create a style that will be applied to the table elements whish satisfy the condition.
+// How to create a style that will be applied to the table elements whish satisfy the condition in a document.
 
-// Create a conditional table style properties.
+// Create a conditional table style properties in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

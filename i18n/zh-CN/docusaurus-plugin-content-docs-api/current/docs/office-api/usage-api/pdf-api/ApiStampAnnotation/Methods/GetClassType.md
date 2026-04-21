@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取图章注释的类类型。
+检查 PDF 文档中图章注释返回的类类型。
 
 ```javascript editor-pdf
+// How do I check what type a stamp annotation object is in a PDF document?
+
+// Retrieve and output the class type string for a stamp annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'SB_Approved');
 let page = doc.GetPage(0);

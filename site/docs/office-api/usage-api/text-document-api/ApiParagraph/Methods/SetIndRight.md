@@ -2,32 +2,16 @@
 
 Sets the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndRight(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph right side indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md).
 
 ## Example
 
-This example sets the paragraph right side indentation.
+Set the paragraph right side indentation in a document.
 
 ```javascript editor-docx
-// How to set the indentation for the paragraph right side.
+// How to set the indentation for the paragraph right side in a document.
 
-// Create a new paragraph and set its right side indentation.
+// Create a new paragraph and set its right side indentation in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to get the hyperbolic cotangent of a number.
+Get the hyperbolic cotangent of a number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find a hyperbolic cotangent.
+// How to find a hyperbolic cotangent in a spreadsheet.
 
-// Use function to get the hyperbolic cotangent of an angle.
+// Use function to get the hyperbolic cotangent of an angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

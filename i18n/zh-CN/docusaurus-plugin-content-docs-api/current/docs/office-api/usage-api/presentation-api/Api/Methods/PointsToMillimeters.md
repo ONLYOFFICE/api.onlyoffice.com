@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为毫米。
+在演示文稿中将磅转换为毫米。
 
 ```javascript editor-pptx
+// How do I convert points to millimeters in a presentation?
+
+// Convert points to millimeters and display the result in a presentation.
+
 const points = 100;
 const millimeters = Api.PointsToMillimeters(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

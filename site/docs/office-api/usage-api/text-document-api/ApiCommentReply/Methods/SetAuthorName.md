@@ -22,10 +22,10 @@ expression.SetAuthorName(sAuthorName);
 
 ## Example
 
-This example sets the comment reply author's name.
+Set the comment reply author's name in a document.
 
 ```javascript editor-docx
-// How to change a comment's reply author name.
+// How to change a comment's reply author name in a document.
 
 // Get all comments from the presentation and set an author to the first one's reply.
 

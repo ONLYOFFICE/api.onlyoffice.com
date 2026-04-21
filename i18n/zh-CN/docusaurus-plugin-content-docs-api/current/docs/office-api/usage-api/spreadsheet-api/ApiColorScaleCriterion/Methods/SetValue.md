@@ -22,12 +22,12 @@ expression.SetValue(value);
 
 ## 示例
 
-此示例演示如何设置色阶条件的值。
+在电子表格中设置色阶条件的值。
 
 ```javascript editor-xlsx
-// How to change the value of a color scale criterion.
+// How to change the value of a color scale criterion in a spreadsheet.
 
-// Set the value of a color scale criterion.
+// Set the value of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,5 +53,4 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C3").SetValue("After:");
     worksheet.GetRange("C4").SetValue(criteria[1].GetValue() || "No value");
 }
-
 ```

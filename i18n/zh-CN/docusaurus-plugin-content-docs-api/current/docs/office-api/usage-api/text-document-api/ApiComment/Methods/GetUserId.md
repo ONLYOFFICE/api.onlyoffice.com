@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取批注作者的用户 ID。
+获取文档中批注作者的用户 ID。
 
 ```javascript editor-docx
-// How to get ID of the user who left the first comment.
+// How to get ID of the user who left the first comment in a document.
 
-// Get the comment author ID.
+// Get the comment author ID in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

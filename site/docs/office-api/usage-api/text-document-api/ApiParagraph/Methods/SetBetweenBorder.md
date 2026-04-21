@@ -2,37 +2,16 @@
 
 Specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.
 
-## Syntax
-
-```javascript
-expression.SetBetweenBorder(sType, nSize, nSpace, r, g, b);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
-| nSize | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current border measured in eighths of a point. |
-| nSpace | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset between the paragraphs measured in points used to place this border. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetBetweenBorder](../../ApiParaPr/Methods/SetBetweenBorder.md).
 
 ## Example
 
-This example specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.
+Specify the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings in a document.
 
 ```javascript editor-docx
-// How to set the border between paragraphs.
+// How to set the border between paragraphs in a document.
 
-// Create a paragraph, add text to it and the single border between the text.
+// Create a paragraph, add text to it and the single border between the text in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

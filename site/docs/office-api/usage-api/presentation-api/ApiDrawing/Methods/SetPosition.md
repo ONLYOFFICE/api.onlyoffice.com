@@ -23,10 +23,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets position to the shape.
+Set position to the shape in a presentation.
 
 ```javascript editor-pptx
-// How to change a position of a drawing.
+// How to change a position of a drawing in a presentation.
 
 // Get a shape object from a slide and move it.
 
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

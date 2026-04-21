@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的关键字字符串。
+在演示文稿中使用核心属性设置和获取当前演示文稿的关键词字符串。
 
 ```javascript editor-pptx
+// How to get the keywords for a core properties in a presentation?
+
+// Get the keywords and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetKeywords("Example; ApiCore; Presentation");
@@ -38,5 +42,4 @@ paragraph.AddText("Keywords: " + keywords);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

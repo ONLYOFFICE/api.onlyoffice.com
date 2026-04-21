@@ -20,7 +20,7 @@ string \| number
 
 ## 示例
 
-此示例展示如何获取透视字段的当前页。
+获取电子表格中透视字段的当前页。
 
 ```javascript editor-xlsx
 // How to get a pivot field current page.

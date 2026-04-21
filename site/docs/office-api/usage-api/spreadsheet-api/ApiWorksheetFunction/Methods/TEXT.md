@@ -23,12 +23,12 @@ string
 
 ## Example
 
-This example shows how to convert a value to text in a specific number format.
+Convert a value to text in a specific number format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert a value to text.
+// How to convert a value to text in a spreadsheet.
 
-// Use a function to convert a value to text.
+// Use a function to convert a value to text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

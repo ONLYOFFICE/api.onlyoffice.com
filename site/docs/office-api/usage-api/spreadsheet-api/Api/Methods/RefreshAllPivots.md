@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example how to refresh all pivot tables in the active workbook.
+How to refresh all pivot tables in the active workbook in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to refresh all pivot tables in a worksheet.
 
-// Refresh all values from the pivot table using a method.
+// Refresh all values from the pivot table using a method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ Api.GetPivotByName(pivotTable.GetName()).AddFields({
 
 Api.GetPivotByName(pivotTable.GetName()).AddDataField('Price');
 Api.RefreshAllPivots();
-
 ```

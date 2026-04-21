@@ -2,25 +2,11 @@
 
 Sets the priority value for the current conditional formatting rule to "1" so that it will be evaluated before all other rules on the worksheet.
 
-## Syntax
-
-```javascript
-expression.SetFirstPriority();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md).
 
 ## Example
 
-This example sets a conditional formatting rule as first priority.
+Set a conditional formatting rule as first priority.
 
 ```javascript editor-xlsx
 // How to change the priority order of conditional formatting rules.
@@ -55,5 +41,4 @@ condition2.SetFirstPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
-
 ```

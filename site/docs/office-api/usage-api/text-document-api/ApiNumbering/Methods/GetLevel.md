@@ -22,12 +22,12 @@ expression.GetLevel(nLevel);
 
 ## Example
 
-This example shows how to get the specified level of the numbering.
+Get the specified level of the numbering in a document.
 
 ```javascript editor-docx
-// How to find out the level of the bulleted paragraph.
+// How to find out the level of the bulleted paragraph in a document.
 
-// Print the level of numbering of the text.
+// Print the level of numbering of the text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds unique values conditional formatting to a range.
+Add unique values conditional formatting to a range.
 
 ```javascript editor-xlsx
 // How to add unique values conditional formatting rules to highlight unique or duplicate values.
@@ -44,5 +44,4 @@ let formatConditions = dataRange.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 uniqueValuesCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
-
 ```

@@ -20,12 +20,12 @@ expression.GetSpacingAfter();
 
 ## 示例
 
-此示例展示如何获取当前段落的段后间距值。
+获取文档中当前段落的段后间距值。
 
 ```javascript editor-docx
-// How to get the spacing after of the paragraph and display it.
+// How to get the spacing after of the paragraph and display it in a document.
 
-// Get the paragraph spacing value.
+// Get the paragraph spacing value in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

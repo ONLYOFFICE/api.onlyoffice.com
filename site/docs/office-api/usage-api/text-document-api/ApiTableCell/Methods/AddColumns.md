@@ -23,7 +23,7 @@ expression.AddColumns(nCount, isBefore);
 
 ## Example
 
-This example adds the new columns to the table.
+Add the new columns to the table in a document.
 
 ```javascript editor-docx
 // Insert new columns after the current cell.

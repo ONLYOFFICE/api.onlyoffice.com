@@ -22,12 +22,12 @@ expression.SetFreezePanesType(FreezePaneType);
 
 ## 示例
 
-此示例冻结第一列并将冻结的范围地址粘贴到表格中。
+冻结第一列并将冻结的范围地址粘贴到电子表格中的表格。
 
 ```javascript editor-xlsx
-// How to freeze a column and get its address.
+// How to freeze a column and get its address in a spreadsheet.
 
-// Insert address of freezed columns into a range.
+// Insert address of freezed columns into a range in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

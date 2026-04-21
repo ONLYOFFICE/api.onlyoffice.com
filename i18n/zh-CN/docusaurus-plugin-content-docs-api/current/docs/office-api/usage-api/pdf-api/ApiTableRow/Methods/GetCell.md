@@ -27,6 +27,8 @@ expression.GetCell(nPos);
 ```javascript editor-pdf
 // Create a table, get its row and get a cell from this row.
 
+// Get the cell using a table row object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

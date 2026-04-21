@@ -3,32 +3,16 @@
 指定当前后段落具有相同段落样式时，使用
 [ApiParaPr#SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md) 或 [ApiParaPr#SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md) 间距元素设置的此段落前后任何间距不应被应用，分别影响顶部和底部间距。
 
-## 语法
-
-```javascript
-expression.SetContextualSpacing(isContextualSpacing);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isContextualSpacing | 必需 | boolean |  | true 值将启用段落上下文间距。 |
-
-## 返回值
-
-boolean
+继承自 [ApiParaPr.SetContextualSpacing](../../ApiParaPr/Methods/SetContextualSpacing.md)。
 
 ## 示例
 
-此示例指定当前后段落具有相同段落样式时，使用 [ApiParaPr#SetSpacingBefore](./SetSpacingBefore.md) 或 [ApiParaPr#SetSpacingAfter](./SetSpacingAfter.md) 间距元素设置的此段落前后任何间距不应被应用，分别影响顶部和底部间距。
+指定在文档中使用 [paragraph properties#SetSpacingBefore](./SetSpacingBefore.md) 或 [paragraph properties#SetSpacingAfter](./SetSpacingAfter.md) 间距元素设置的此段落前后间距，当前后段落具有相同的段落样式时不应用，分别影响顶部和底部间距。
 
 ```javascript editor-docx
-// Set the contextual spacing for paragraph.
+// Set the contextual spacing for paragraph in a document.
 
-// Get the first paragraph and set the spacing for its two ends.
+// Get the first paragraph and set the spacing for its two ends in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

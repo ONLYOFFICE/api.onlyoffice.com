@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何创建内联内容控件并选择它。
+在文档中创建内联内容控件并选择它。
 
 ```javascript editor-docx
+// How do I select in a document?
+
+// Select using an inline content control object in a document.
+
 let doc = Api.GetDocument();
 let checkbox = doc.AddCheckBoxContentControl();
 checkbox.Select();

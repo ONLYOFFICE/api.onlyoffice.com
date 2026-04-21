@@ -24,7 +24,7 @@ expression.Split(oCell, nRow, nCol);
 
 ## Example
 
-This example splits the cell into a given number of rows and columns.
+Splits the cell into a given number of rows and columns.
 
 ```javascript editor-docx
 // How to divide the table cell.

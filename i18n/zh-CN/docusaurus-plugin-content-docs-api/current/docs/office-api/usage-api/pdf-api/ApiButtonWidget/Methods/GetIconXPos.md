@@ -20,9 +20,13 @@ expression.GetIconXPos();
 
 ## 示例
 
-此示例从带图像的字段获取图标 X 坐标位置。
+从 PDF 文档中带有图像的字段获取图标 X 位置。
 
 ```javascript editor-pdf
+// How to get the icon x pos for a button widget in a PDF document?
+
+// Get the icon x pos and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

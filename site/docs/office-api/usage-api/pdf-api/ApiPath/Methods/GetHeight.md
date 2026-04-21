@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties on a page.
+Analyzes cloud shape path properties on a page. Displays comprehensive path information in a text shape.
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How do I get the height in a PDF document?
+
+// Get the height using a geometry path object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

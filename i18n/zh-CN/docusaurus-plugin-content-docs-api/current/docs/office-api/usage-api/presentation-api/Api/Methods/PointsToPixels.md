@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为像素。
+在演示文稿中将磅转换为像素。
 
 ```javascript editor-pptx
+// How do I convert points to pixels in a presentation?
+
+// Convert points to pixels and display the result in a presentation.
+
 const points = 1000;
 const pixels = Api.PointsToPixels(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

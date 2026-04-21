@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the previous inline drawing object if exists.
+Get the previous inline drawing object if exists in a document.
 
 ```javascript editor-docx
-// How to set vertical flip for the previous drawing.
+// How to set vertical flip for the previous drawing in a document.
 
-// Get the previous drawing and update its properties.
+// Get the previous drawing and update its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

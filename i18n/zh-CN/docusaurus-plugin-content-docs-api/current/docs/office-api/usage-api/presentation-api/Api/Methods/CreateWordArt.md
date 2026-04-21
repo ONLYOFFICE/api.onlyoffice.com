@@ -31,12 +31,12 @@ expression.CreateWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, 
 
 ## 示例
 
-此示例使用 "textArchUp" 文本变换类型创建艺术字对象。
+创建文本变换类型为 "textArchUp" 的艺术字对象。
 
 ```javascript editor-pptx
-// How to create word art indicating its text properties.
+// How to create word art indicating its text properties in a presentation.
 
-// Add arch up text word art.
+// Add arch up text word art in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 const textArt = Api.CreateWordArt(textPr, "onlyoffice", "textArchUp", fill, stroke, 0, 100 * 36000, 30 * 36000);
 slide.AddObject(textArt);
-
 ```

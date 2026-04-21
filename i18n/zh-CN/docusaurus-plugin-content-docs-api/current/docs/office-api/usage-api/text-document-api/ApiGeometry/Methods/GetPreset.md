@@ -20,10 +20,13 @@ expression.GetPreset();
 
 ## 示例
 
-从预设星形获取几何信息。
+从预设星形中获取几何图形信息。显示预设类型并检查几何图形是否为自定义。
 
 ```javascript editor-docx
-// Displays the preset type and checks if the geometry is custom.
+// How can I get the preset using a geometry in a document?
+
+// Get the preset for a geometry in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

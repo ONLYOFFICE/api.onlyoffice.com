@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is N/A, and returns true or false.
+Check whether a value is N/A, and return true or false in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to check if the cell contains N/A value.
 
-// Use a function to check whether a range data is an N/A value.
+// Use a function to check whether a range data is an N/A value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

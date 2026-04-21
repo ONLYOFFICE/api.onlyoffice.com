@@ -2,6 +2,10 @@
 
 No description provided.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -10,7 +14,3 @@ No description provided.
 | length | number | Length of the text range. |
 | name | string | Annotation type (e.g., `"grammar"`). |
 | start | number | Starting index of the text range. |
-## Type
-
-Object
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the paragraph left side indentation.
+Set the paragraph left side indentation in a PDF document.
 
 ```javascript editor-pdf
-// How to set a left side indentation using a paragraph properties.
+// How to set a left side indentation using a paragraph properties in a PDF document.
 
-// Create a paragraph setting its left side indentation property.
+// Create a paragraph setting its left side indentation property in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +48,4 @@ paragraph.AddText("This indent is set by the paragraph style. No paragraph inlin
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 page.AddObject(shape);
-
 ```

@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the background color from a conditional formatting rule.
+Get the background color from a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve background colors from conditional formatting rules.
@@ -48,5 +48,4 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定纵轴的方向。
+指定文档中的垂直轴方向。
 
 ```javascript editor-docx
-// How to set an orientation of vertical axis.
+// How to set an orientation of vertical axis in a document.
 
-// Create a chart, set its properties and its vertical axis orientation.
+// Create a chart, set its properties and its vertical axis orientation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

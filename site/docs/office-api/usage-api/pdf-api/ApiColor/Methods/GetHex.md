@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the RGB components of the color.
+Get the RGB components of the color in a PDF document.
 
 ```javascript editor-pdf
+// How to get the hex for a color in a PDF document?
+
+// Get the hex and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText('Hex of rgbColor: ' + rgbColorHex);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

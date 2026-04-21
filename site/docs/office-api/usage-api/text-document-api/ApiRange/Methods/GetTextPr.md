@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example get the text properties from the Range.
+Get the text properties from the Range in a document.
 
 ```javascript editor-docx
-// How to make italic the text of the range.
+// How to make italic the text of the range in a document.
 
-// Get a range and update its text style.
+// Get a range and update its text style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,5 +46,4 @@ range2.SetTextPr(textPr);
 let newParagraph = Api.CreateParagraph();
 newParagraph.AddText("This text is in italic as per the modified text properties.");
 doc.Push(newParagraph);
-
 ```

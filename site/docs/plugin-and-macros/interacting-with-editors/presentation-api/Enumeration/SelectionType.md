@@ -13,7 +13,6 @@ Enumeration
 - "drawing"
 - "slide"
 
-
 ## Example
 
 ```javascript

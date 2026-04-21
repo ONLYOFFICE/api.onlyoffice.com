@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the secant of an angle.
+Return the secant of an angle in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get angle's secant.
+// How to get angle's secant in a spreadsheet.
 
-// Use a function to calculate the secant of an angle.
+// Use a function to calculate the secant of an angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

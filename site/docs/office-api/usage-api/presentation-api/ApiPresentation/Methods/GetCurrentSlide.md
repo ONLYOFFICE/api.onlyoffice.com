@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current slide.
+Get the current slide in a presentation.
 
 ```javascript editor-pptx
 // How to get a current slide as an object.
@@ -36,5 +36,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

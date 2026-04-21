@@ -22,9 +22,13 @@ expression.HexColor(hexString);
 
 ## Example
 
-This example shows how to create a hex color and use it as a shape fill.
+Create a hex color and use it as a shape fill in a presentation.
 
 ```javascript editor-pptx
+// How to hex color in a presentation?
+
+// Hex color using the presentation API.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -35,5 +39,4 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to remove the specified series from the current chart.
+Remove the specified series from the current chart in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete series using indices. 
+// How to delete series using indices in a spreadsheet.
 
-// Remove seria from the chart using idex number.
+// Remove seria from the chart using idex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

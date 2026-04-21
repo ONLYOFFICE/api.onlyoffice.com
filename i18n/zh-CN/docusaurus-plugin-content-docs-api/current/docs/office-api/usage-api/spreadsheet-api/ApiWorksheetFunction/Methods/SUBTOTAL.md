@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回列表或数据库中的分类汇总。
+在电子表格中返回列表或数据库中的小计。
 
 ```javascript editor-xlsx
-// How to calculate a subtotal.
+// How to calculate a subtotal in a spreadsheet.
 
-// Use a function to estimate a subtotal from the list.
+// Use a function to estimate a subtotal from the list in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

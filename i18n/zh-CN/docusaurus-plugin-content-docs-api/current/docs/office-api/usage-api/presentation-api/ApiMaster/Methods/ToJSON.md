@@ -22,7 +22,7 @@ JSON
 
 ## 示例
 
-此示例将 ApiMaster 对象转换为 JSON 对象。
+将幻灯片母版对象转换为 JSON 对象。
 
 ```javascript editor-pptx
 // How to convert a slide master object to a JSON object.
@@ -47,5 +47,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
-
 ```

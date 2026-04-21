@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何从 OLE 对象获取字符串数据。
+获取文档中 OLE 对象的字符串数据。
 
 ```javascript editor-docx
-// How to get raw data from the OLE object content.
+// How to get raw data from the OLE object content in a document.
 
 // Retrieve content of the OLE object and insert it to the document.
 
@@ -40,5 +40,4 @@ let data = oleObject.GetData();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The OLE object data: ' + data);
 doc.Push(paragraph);
-
 ```

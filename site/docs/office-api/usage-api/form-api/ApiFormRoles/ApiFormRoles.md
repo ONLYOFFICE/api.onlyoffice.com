@@ -2,7 +2,6 @@
 
 Represents the ApiFormRoles class.
 
-
 ## Methods
 
 | Method | Returns | Description |

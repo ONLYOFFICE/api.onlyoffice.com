@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## Example
 
-This example demonstrates how to get the value of a custom property by its name.
+Get the value of a custom property by its name in a spreadsheet.
 
 ```javascript editor-xlsx
+// Return null for properties that do not exist.
+
+// Get for a custom properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 
@@ -45,5 +49,4 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```

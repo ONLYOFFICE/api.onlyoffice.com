@@ -11,21 +11,24 @@ The [ONLYOFFICE DocSpace SDK](https://www.npmjs.com/package/@onlyoffice/docspace
 
 You don't need to be an experienced JavaScript developer to use the DocSpace JavaScript SDK because we provide you with all the basics. You only need a few lines of JavaScript to set up a fully functional integration.
 
-The example below shows what the DocSpace portal Public room looks like embedded in your website as a frame.
-
-<DocspaceEmbed params="?mode=public-room&id=2613800&token=ZjIrNGhZM2tDbmFnbzRHMmxKODE4Umx5SHdXOUx4OXVpc3BpaTlyN1ZIOD0_IjEzZmQ4MmRkLTVkNTAtNDM0ZC1iZTE0LWM2M2ZkNDJkMDFhNCI" />
-
 ## Comparison table
 
-| Mode | SDK method | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
-| ------ | ----------- | ----------------- | ------ | -------- | ------ | ------ |
-| Frame | `initFrame()` | Full file and room manager | Yes | Yes | No | Yes |
-| Manager | `initManager()` | Full file and room manager | Yes | Yes | No | Yes |
-| Viewer | `initViewer()` | Read-only document preview | No | No | Yes (file) | Yes |
-| Editor | `initEditor()` | Document editor | No | Yes | Yes (file) | Yes |
-| Room selector | `initRoomSelector()` | Room picker dialog | Rooms only | No | No | Yes |
-| File selector | `initFileSelector()` | File picker dialog | Yes | No | No | Yes |
-| System | `initSystem()` | None (blank/hidden frame) | N/A | N/A | N/A | Yes |
+The SDK supports multiple initialization modes:
+
+| Mode | UI shown to user | User can browse | User can edit | Requires file/room ID | Auth required |
+| ------ | ----------------- | ------ | -------- | ------ | ------ |
+| Manager | Full file and room manager | Yes | Yes | No | Yes |
+| Public room | Public room view | Yes (within room) | Yes (within room) | Yes (room) | No |
+| Viewer | Document viewer | No | No | Yes (file) | Yes |
+| Editor | Document editor | No | Yes | Yes (file) | Yes |
+| Room selector | Room picker dialog | Rooms only | No | No | Yes |
+| File selector | File picker dialog | Yes | No | No | Yes |
+| System | None (hidden frame) | N/A | N/A | N/A | Yes |
+
+:::note
+- For Public room, editing is scoped to documents within the room.
+- Selector and system modes do not expose editing capabilities.
+:::
 
 Follow the steps below to connect DocSpace as a frame to your website.
 
@@ -85,7 +88,7 @@ If the users are not authenticated, they will see a page asking them to sign in 
 When working via HTTPS, it is necessary to set the **"SameSite": "none"** parameter in *appsettings.json* to avoid blocking the work with cookies during cross-domain requests.
 :::
 
-Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDKInstance.md#initframe) method with the SDK config passed to it:
+Initialize DocSpace frame using the [initFrame](../usage-sdk/classes/SDK.md#initframe) method with the SDK config passed to it:
 
 ``` ts
 const docSpace = DocSpace.SDK.initFrame({
@@ -105,3 +108,9 @@ After initialization, the current SDK instance can be accessed by using its [fra
 ``` ts
 DocSpace.SDK.frames[frameId]
 ```
+
+## Example
+
+This example shows what a DocSpace Public room looks like when embedded in your website as a frame.
+
+<DocspaceEmbed params="?mode=public-room&id=2613800&token=ZjIrNGhZM2tDbmFnbzRHMmxKODE4Umx5SHdXOUx4OXVpc3BpaTlyN1ZIOD0_IjEzZmQ4MmRkLTVkNTAtNDM0ZC1iZTE0LWM2M2ZkNDJkMDFhNCI" />

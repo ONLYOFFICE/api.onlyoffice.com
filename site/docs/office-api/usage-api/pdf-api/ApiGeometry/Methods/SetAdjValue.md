@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates adjustable geometry with guides and connection points for a pdf document.
+Create adjustable geometry with guides and connection points for a pdf document. Displays adjustment value and apply custom geometry to shape.
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How to set adj value for a geometry in a PDF document?
+
+// Set adj value and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

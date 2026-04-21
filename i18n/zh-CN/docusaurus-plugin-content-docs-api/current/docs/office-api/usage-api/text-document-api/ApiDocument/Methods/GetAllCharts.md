@@ -2,30 +2,16 @@
 
 从文档内容返回图表对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllCharts();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiChart](../../ApiChart/ApiChart.md)[]
+继承自 [ApiDocumentContent.GetAllCharts](../../ApiDocumentContent/Methods/GetAllCharts.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取图表对象集合。
+从文档中的文档内容获取图表对象集合。
 
 ```javascript editor-docx
 // Get all charts from the document.
 
-// How to retrieve all charts and set horizontal gridlines to the first one.
+// How to retrieve all charts and set horizontal gridlines to the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

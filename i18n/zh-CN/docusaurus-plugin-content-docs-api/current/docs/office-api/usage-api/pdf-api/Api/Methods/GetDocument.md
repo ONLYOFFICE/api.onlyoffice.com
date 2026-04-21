@@ -20,9 +20,13 @@ expression.GetDocument();
 
 ## 示例
 
-此示例获取文档对象以供进一步使用。
+获取文档对象以供进一步使用。
 
 ```javascript editor-pdf
+// How to get the document in a PDF document?
+
+// Get the document using the PDF document API.
+
 let doc = Api.GetDocument();
 let page = doc.AddPage(1);
 page.SetRotation(90);

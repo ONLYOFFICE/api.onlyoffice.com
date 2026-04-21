@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析页面形状中的弧线命令参数。
+分析页面形状中的弧线命令参数。获取并显示弧线半径和角度信息。
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// How to get the w r for a path command in a PDF document?
+
+// Get the w r and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

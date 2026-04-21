@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the background color for the cell range.
+Get the background color for the cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a range background color.
+// How to find out a range background color in a spreadsheet.
 
 // Get a range get, set its background color using RGB value and show it in the worksheet.
 

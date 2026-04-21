@@ -1,6 +1,6 @@
 # ApiIconSetCondition
 
-Represents the ApiIconSetCondition class.
+ApiIconSetCondition is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
 

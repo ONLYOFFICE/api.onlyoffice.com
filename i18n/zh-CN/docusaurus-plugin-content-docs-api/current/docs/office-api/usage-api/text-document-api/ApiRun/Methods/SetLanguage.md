@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在文档中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
 
 ```javascript editor-docx
-// How to change language of the text for grammar check.
+// How to change language of the text for grammar check in a document.
 
-// Create a new text run and change its language.
+// Create a new text run and change its language in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

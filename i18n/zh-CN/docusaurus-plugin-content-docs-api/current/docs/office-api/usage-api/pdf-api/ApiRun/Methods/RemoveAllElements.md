@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例从文本块中移除所有元素。
+从 PDF 文档中的 run 移除所有元素。
 
 ```javascript editor-pdf
-// How to remove all elements from the text run object.
+// How to remove all elements from the text run object in a PDF document.
 
 // Delete text from the page.
 
@@ -43,5 +43,4 @@ run.RemoveAllElements();
 run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

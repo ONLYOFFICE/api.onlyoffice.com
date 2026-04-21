@@ -2,27 +2,17 @@
 
 检查字段是否可切换为关闭。
 
-## 语法
-
-```javascript
-expression.IsToggleToOff();
-```
-
-`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiCheckboxField.IsToggleToOff](../../ApiCheckboxField/Methods/IsToggleToOff.md)。
 
 ## 示例
 
-此示例获取复选框字段的切换为关闭属性。
+获取 PDF 文档中复选框字段的切换为关闭属性。
 
 ```javascript editor-pdf
+// How can I is toggle to off using a checkbox field in a PDF document?
+
+// Is toggle to off for a checkbox field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

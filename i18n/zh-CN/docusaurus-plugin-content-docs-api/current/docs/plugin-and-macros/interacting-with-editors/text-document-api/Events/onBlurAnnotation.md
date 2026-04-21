@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | annotation | TextAnnotation | 失去焦点的批注。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onBlurAnnotation", (data) => {
     console.log("event: onBlurAnnotation");
@@ -15,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onBlurAnnotation", (data) => {
     console.log("rangeId: " + data.rangeId);
 });
 ```
-

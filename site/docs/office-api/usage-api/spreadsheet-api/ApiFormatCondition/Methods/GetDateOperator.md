@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the date operator from a time period conditional formatting rule.
+Get the date operator from a time period conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve date operators from time period conditional formatting rules.
@@ -47,5 +47,4 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```

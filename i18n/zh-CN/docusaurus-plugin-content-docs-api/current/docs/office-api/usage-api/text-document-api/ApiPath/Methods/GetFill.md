@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-分析云形状的路径属性。
+分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
 
 ```javascript editor-docx
-// Retrieves and displays path dimensions, stroke and fill information.
+// How do I get the fill in a document?
+
+// Get the fill using a geometry path object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

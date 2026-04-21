@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回贝塞尔函数 Jn(x)。
+在电子表格中返回贝塞尔函数 Jn(x)。
 
 ```javascript editor-xlsx
-// How to get a result from Bessel function Jn(x).
+// How to get a result from Bessel function Jn(x) in a spreadsheet.
 
-// Use function to get the Bessel function Jn(x).
+// Use function to get the Bessel function Jn(x) in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

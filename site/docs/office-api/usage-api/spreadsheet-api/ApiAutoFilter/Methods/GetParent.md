@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example retrieves the worksheet that owns the AutoFilter.
+Retrieve the worksheet that owns the AutoFilter.
 
 ```javascript editor-xlsx
-// How to navigate back from ApiAutoFilter to ApiWorksheet.
+// How to navigate back from auto filter to worksheet.
 
-// Use ApiAutoFilter.GetParent() to get the parent sheet.
+// Use ApiAutoFilter.GetParent() to get the parent sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ worksheet.GetRange("C1").SetValue("Parent worksheet name:");
 worksheet.GetRange("C2").SetValue(parentSheet.GetName());
 
 worksheet.GetRange("C4").SetValue("AutoFilter is attached to this worksheet.");
-
 ```

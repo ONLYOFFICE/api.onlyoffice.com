@@ -20,13 +20,16 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents the active workbook.
+Get an object that represents the active workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I get active workbook in a spreadsheet?
+
+// Get active workbook and display the result in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 const cell = worksheet.GetActiveCell();
 const workbookName = workbook.GetName();
 cell.SetValue(workbookName);
-
 ```

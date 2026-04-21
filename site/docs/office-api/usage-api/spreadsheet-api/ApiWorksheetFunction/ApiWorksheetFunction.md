@@ -2,7 +2,6 @@
 
 Represents the ApiWorksheetFunction class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -20,10 +20,10 @@ Number
 
 ## Example
 
-This example shows how to get a number of the comment replies.
+Get a number of the comment replies in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a number of replies to the comment.
+// How to get a number of replies to the comment in a spreadsheet.
 
 // Add a comment to the range and display its replies count in the worksheet.
 

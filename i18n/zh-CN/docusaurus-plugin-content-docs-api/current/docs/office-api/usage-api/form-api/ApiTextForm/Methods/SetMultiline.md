@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例指定文本字段是否应为多行。
+指定文档中文本字段是否应为多行。
 
 ```javascript editor-forms
 // How to set the first text form from this document multiline.

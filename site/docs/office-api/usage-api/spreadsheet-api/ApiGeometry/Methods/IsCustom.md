@@ -20,10 +20,13 @@ boolean
 
 ## Example
 
-Retrieves geometry information from a star shape in a spreadsheet.
+Retrieve geometry information from a star shape in a spreadsheet. Displays preset type and custom status in cells.
 
 ```javascript editor-xlsx
-// Displays preset type and custom status in cells.
+// How do I is custom in a spreadsheet?
+
+// Is custom using a geometry object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));

@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何获取表单的提示文本。
+获取文档中表单的提示文本。
 
 ```javascript editor-forms
 // Get a comboBox form tip text and show it in the document.

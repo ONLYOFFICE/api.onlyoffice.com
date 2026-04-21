@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to creates a copy of the specified slide master object.
+Create a copy of the specified slide master object in a presentation.
 
 ```javascript editor-pptx
-// How to create a copy of a master.
+// How to create a copy of a master in a presentation.
 
-// Copy the ApiMaster object.
+// Copy the slide master object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after adding the copied master: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to apply a style for chart.
+Apply a style for chart in a document.
 
 ```javascript editor-docx
-// How to change the style of the chart by indicating a number that specifies a style type.
+// How to change the style of the chart by indicating a number that specifies a style type in a document.
 
-// Create a bar chart and set its style.
+// Create a bar chart and set its style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

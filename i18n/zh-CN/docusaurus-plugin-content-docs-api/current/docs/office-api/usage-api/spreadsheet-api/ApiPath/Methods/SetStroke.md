@@ -22,10 +22,13 @@ expression.SetStroke(bStroke);
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。
+创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How to set stroke for a geometry path in a spreadsheet?
+
+// Set stroke and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

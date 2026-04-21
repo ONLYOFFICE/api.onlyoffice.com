@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例获取 PDF 文档名称并将其插入到 PDF 文档中。
+获取 PDF 文档名称并将其插入 PDF 文档。
 
 ```javascript editor-pdf
 // How to get a pdf document name.
@@ -41,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 const fullName = Api.GetFullName();
 paragraph.AddText("File name: " + fullName);
 page.AddObject(shape);
-
 ```

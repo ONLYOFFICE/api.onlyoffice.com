@@ -22,9 +22,13 @@ expression.GetContent(getCopies);
 
 ## Example
 
-This example gets all elements from rich content.
+Get all elements from rich content in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the content in a PDF document?
+
+// Get the content using a rich content object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

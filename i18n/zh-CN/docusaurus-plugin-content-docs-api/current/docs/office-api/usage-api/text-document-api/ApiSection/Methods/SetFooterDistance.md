@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例指定从页面底边到页脚底边的距离。
+指定从页面底部边缘到页脚底部边缘的距离。
 
 ```javascript editor-docx
-// How to set footer distance of the section.
+// How to set footer distance of the section in a document.
 
 // Specify the distance between the page end and the footer.
 

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the table.
+Find out the class type of a comment object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a comment class type.
+// How can I get the class type of a comment in a spreadsheet?
 
-// Get an comment class type to show it in the worksheet.
+// Get the class type of a comment and display it in the spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

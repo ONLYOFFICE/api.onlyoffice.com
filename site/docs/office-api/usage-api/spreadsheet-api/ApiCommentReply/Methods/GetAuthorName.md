@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the comment reply author's name.
+Get the comment reply author's name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the name of who wrote a reply.
+// How to get the name of who wrote a reply in a spreadsheet.
 
-// Get reply author's name and display it in the worksheet. 
+// Get reply author's name and display it in the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

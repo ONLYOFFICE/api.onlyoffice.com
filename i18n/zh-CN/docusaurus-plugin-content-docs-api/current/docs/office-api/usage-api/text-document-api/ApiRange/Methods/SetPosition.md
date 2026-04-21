@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定范围的文本相对于周围非定位文本的默认基线升高或降低的量。
+指定在文档中范围的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-docx
-// How to set an inline position of a range text.
+// How to set an inline position of a range text in a document.
 
-// Get a range text, specify its position to move down or up.
+// Get a range text, specify its position to move down or up in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -26,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to calculate the payment for a loan based on constant payments and a constant interest rate.
+Calculate the payment for a loan based on constant payments and a constant interest rate in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the payment for a loan based on different parameters.
+// How to return the payment for a loan based on different parameters in a spreadsheet.
 
-// Use a function to return the payment for a loan.
+// Use a function to return the payment for a loan in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

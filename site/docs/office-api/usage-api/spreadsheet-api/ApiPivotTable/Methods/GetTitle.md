@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get a title pivot table.
+Get a title pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table title.
+// How to get table title in a spreadsheet.
 
-// Create a pivot table, add data to it then get its title.
+// Create a pivot table, add data to it then get its title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -23,10 +23,10 @@ expression.AddComment(sText, sAuthor);
 
 ## 示例
 
-此示例向范围添加批注。
+在电子表格中为范围添加批注。
 
 ```javascript editor-xlsx
-// How to comment a range.
+// How to comment a range in a spreadsheet.
 
 // Get a range from the worksheet, add a comment to it and then show the comments text.
 

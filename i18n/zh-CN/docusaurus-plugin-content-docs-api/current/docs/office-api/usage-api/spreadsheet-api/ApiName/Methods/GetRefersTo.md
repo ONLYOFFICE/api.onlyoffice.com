@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何获取名称定义引用的公式。
+获取电子表格中名称定义要引用的公式。
 
 ```javascript editor-xlsx
 // How to add a defname that refers to the formula from the specified range.

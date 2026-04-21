@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the current form is required.
+Check if the current form is required.
 
 ```javascript editor-forms
 // How to know whether a text form is required or not.

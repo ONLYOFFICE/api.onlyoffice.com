@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to create a new rich paragraph and add it to rich content
+How to create a new rich paragraph and add it to rich content in a PDF document.
 
 ```javascript editor-pdf
+// How can I create the rich paragraph in a PDF document?
+
+// Create the rich paragraph in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

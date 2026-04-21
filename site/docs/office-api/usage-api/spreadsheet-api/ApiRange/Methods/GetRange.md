@@ -24,12 +24,12 @@ expression.GetRange(cell1, cell2);
 
 ## Example
 
-This example shows how to get a subrange from an existing range.
+Get a subrange from an existing range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a range within a range.
+// How to get a range within a range in a spreadsheet.
 
-// Get a range, access subranges and fill them with different colors.
+// Get a range, access subranges and fill them with different colors in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let parentRange = worksheet.GetRange("B2:F6");
@@ -48,5 +48,4 @@ subRange2.SetFillColor(Api.CreateColorFromRGB(173, 216, 230));
 let subRange3 = parentRange.GetRange("B1", "D2");
 subRange3.SetValue("Sub 3");
 subRange3.SetFillColor(Api.CreateColorFromRGB(255, 255, 0));
-
 ```

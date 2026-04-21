@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例获取条件格式规则的优先级。
+获取条件格式规则的优先级。
 
 ```javascript editor-xlsx
 // How to retrieve the priority value from conditional formatting rules.
@@ -47,5 +47,4 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
-
 ```

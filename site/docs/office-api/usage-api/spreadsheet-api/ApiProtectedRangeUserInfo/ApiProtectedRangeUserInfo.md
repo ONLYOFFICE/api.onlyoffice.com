@@ -2,7 +2,6 @@
 
 Represents the ApiProtectedRangeUserInfo class.
 
-
 ## Methods
 
 | Method | Returns | Description |

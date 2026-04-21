@@ -23,7 +23,7 @@ expression.AddRows(nCount, isBefore);
 
 ## Example
 
-This example adds the new rows to the table.
+Add the new rows to the table in a document.
 
 ```javascript editor-docx
 // Insert new rows after the current cell.

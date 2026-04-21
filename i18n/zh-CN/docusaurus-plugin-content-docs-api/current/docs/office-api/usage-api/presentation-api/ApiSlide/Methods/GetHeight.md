@@ -20,12 +20,12 @@ expression.GetHeight();
 
 ## 示例
 
-此示例展示如何获取以英制单位表示的幻灯片高度。
+获取演示文稿中幻灯片的高度（英制度量单位）。
 
 ```javascript editor-pptx
 // How to find a slide's height and display it on the slide.
 
-// Get a height ofthe  ApiSlide object and show it in the slide.
+// Get a height ofthe slide object and show it in the slide.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -43,5 +43,4 @@ const paragraph = docContent.GetElement(0);
 const slideHeight = slide.GetHeight();
 paragraph.AddText("The slide height = " + slideHeight / 36000 + " mm");
 slide.AddObject(shape);
-
 ```

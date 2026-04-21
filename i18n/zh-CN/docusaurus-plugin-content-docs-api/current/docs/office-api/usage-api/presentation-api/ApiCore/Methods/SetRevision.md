@@ -22,9 +22,13 @@ expression.SetRevision(sRevision);
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿的修订版本。
+在演示文稿中设置和获取当前演示文稿的修订版本。
 
 ```javascript editor-pptx
+// How to set revision for a core properties in a presentation?
+
+// Set revision and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetRevision("Rev. B");
@@ -40,5 +44,4 @@ paragraph.AddText("Revision: " + revision);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

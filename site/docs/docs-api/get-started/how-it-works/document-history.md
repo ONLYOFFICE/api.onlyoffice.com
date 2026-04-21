@@ -63,7 +63,7 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px" />
+   ![Opening History](/assets/images/editor/history_open.png#gh-light-mode-only)![Opening History](/assets/images/editor/history_open.dark.png#gh-dark-mode-only)
 
 3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](../../usage-api/config/events.md#onrequesthistorydata). When the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) event is called, the [setHistoryData](../../usage-api/methods.md#sethistorydata) method must be executed. This method contains the absolute URL to the file of the corresponding version.
 
@@ -90,7 +90,7 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![History](/assets/images/editor/history.png)
+   ![History](/assets/images/editor/history.png#gh-light-mode-only)![History](/assets/images/editor/history.dark.png#gh-dark-mode-only)
 
 4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](../../usage-api/config/events.md#onrequestrestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](../../usage-api/config/events.md#onrequestrestore) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
 
@@ -230,4 +230,4 @@ When the server version is updated, the **document editor** does not use the *ch
   The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
   :::
 
-  ![changesurl](/assets/images/editor/changesurl.png)
+  ![changesurl](/assets/images/editor/changesurl.png#gh-light-mode-only)![changesurl](/assets/images/editor/changesurl.dark.png#gh-dark-mode-only)

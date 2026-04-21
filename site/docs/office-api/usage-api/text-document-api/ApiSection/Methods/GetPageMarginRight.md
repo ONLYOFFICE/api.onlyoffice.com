@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example specifies the page margins for all the pages in this section and returns it back.
+Specify the page margins for all the pages in this section and return it back.
 
 ```javascript editor-docx
 // How to get right page margin.
+
+// Get the page margin right for a section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

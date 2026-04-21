@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the Worksheet object that represents the worksheet containing the specified range.
+Get the Worksheet object that represents the worksheet containing the specified range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a worksheet where a range is contained in.

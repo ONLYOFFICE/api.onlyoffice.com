@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+获取 PDF 文档中文本属性对象的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiTextPr.
+// How can I get the class type of a text properties in a PDF document?
 
-// Retrieve class type of ApiTextPr object and insert it to the page.
+// Get the class type of a text properties and display it in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,5 +45,4 @@ const classType = textPr.GetClassType();
 run.AddText("Class Type = " + classType);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the height of the drawing.
+Get the height of the drawing in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know a height of a drawing.
+// How to know a height of a drawing in a spreadsheet.
 
 // Get a drawing's height and display it in the worksheet.
 

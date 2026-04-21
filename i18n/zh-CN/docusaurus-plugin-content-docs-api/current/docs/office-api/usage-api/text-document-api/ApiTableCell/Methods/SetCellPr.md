@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置当前单元格的单元格属性。
+为当前单元格设置单元格属性。
 
 ```javascript editor-docx
 // How to add properties to the cell.

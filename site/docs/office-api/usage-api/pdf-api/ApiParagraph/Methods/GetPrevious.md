@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the previous paragraph.
+Get the previous paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to get the previous paragraph of the current one.
+// How to get the previous paragraph of the current one in a PDF document.
 
 // Return the previous paragraph on the page and make its text bold.
 
@@ -51,5 +51,4 @@ docContent.Push(paragraph2);
 page.AddObject(shape);
 const previousParagraph = paragraph2.GetPrevious();
 previousParagraph.SetBold(true);
-
 ```

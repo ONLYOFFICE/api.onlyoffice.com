@@ -1,7 +1,6 @@
 # ApiPictureForm
 
-Represents the ApiPictureForm class.
-
+ApiPictureForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
 

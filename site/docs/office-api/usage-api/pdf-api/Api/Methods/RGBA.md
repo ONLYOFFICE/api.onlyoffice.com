@@ -25,9 +25,13 @@ expression.RGBA(r, g, b, a);
 
 ## Example
 
-This example shows how to create an RGBA color and use it as a shape fill.
+Create an RGBA color and use it as a shape fill in a PDF document.
 
 ```javascript editor-pdf
+// How can I r g b an in a PDF document?
+
+// R g b an in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
-
 ```

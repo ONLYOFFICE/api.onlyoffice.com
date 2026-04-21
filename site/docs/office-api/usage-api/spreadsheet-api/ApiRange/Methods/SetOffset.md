@@ -23,7 +23,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the cell offset.
+Set the cell offset.
 
 ```javascript editor-xlsx
 // How to set an offset of cells.

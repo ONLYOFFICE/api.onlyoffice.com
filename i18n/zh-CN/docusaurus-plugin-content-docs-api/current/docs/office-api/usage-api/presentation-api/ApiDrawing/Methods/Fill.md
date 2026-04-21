@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前图形对象的填充格式属性。
+为当前图形对象设置填充格式属性。
 
 ```javascript editor-pptx
-// How to color a drawing with a radiant fill.
+// How to color a drawing with a radiant fill in a presentation.
 
-// Change the background color of the shape.
+// Change the background color of the shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,5 +40,4 @@ const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
 const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
 const gradientFill = Api.CreateRadialGradientFill([gs1, gs2]);
 drawing.Fill(gradientFill);
-
 ```

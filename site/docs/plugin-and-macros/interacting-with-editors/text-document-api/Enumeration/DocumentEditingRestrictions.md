@@ -17,7 +17,6 @@ Enumeration
 - 'forms'
 - 'readOnly'
 
-
 ## Example
 
 ```javascript

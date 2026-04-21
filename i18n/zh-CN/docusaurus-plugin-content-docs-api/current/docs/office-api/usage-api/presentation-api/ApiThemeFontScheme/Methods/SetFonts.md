@@ -27,12 +27,12 @@ expression.SetFonts(mjLatin, mjEa, mjCs, mnLatin, mnEa, mnCs);
 
 ## 示例
 
-此示例为当前主题字体方案设置字体。
+在演示文稿中为当前主题字体方案设置字体。
 
 ```javascript editor-pptx
-// How to set fonts to a theme.
+// How to set fonts to a theme in a presentation.
 
-// Retrieve theme and set its font theme by adding fonts.
+// Retrieve theme and set its font theme by adding fonts in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ paragraph.SetJc("left");
 paragraph.AddText("New font scheme was set to this slide.");
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

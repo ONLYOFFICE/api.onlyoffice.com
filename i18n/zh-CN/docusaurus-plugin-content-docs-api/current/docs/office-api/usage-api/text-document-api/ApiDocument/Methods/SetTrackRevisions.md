@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置修订跟踪模式。
+在文档中设置修订跟踪模式。
 
 ```javascript editor-docx
 // How to track revisions of the document.

@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the width of a stroke in EMU.
+Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a document.
 
 ```javascript editor-docx
-// Creates shapes with different border widths and displays their widths.
+// How do I get the width in a document?
+
+// Get the width using a stroke object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -50,5 +53,4 @@ let shape3 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, fill, stroke3);
 paragraph.AddDrawing(shape3);
 let width3 = shape3.GetLine().GetWidth();
 paragraph.AddText("Border 3: " + width3 + " EMU (" + (width3 / 12700).toFixed(2) + " pt)");
-
 ```

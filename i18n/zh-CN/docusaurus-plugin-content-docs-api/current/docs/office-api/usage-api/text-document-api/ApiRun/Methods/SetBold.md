@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-此示例为文本字符设置粗体属性。
+在文档中为文本字符设置粗体属性。
 
 ```javascript editor-docx
-// How to make a text run bold.
+// How to make a text run bold in a document.
 
-// Create new run and set its font style.
+// Create new run and set its font style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

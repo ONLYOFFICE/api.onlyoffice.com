@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-此示例演示如何将多个文本字符串合并为一个文本字符串。
+在电子表格中将多个文本字符串合并为一个文本字符串。
 
 ```javascript editor-xlsx
-// How to add multiple text strings into one text string.
+// How to add multiple text strings into one text string in a spreadsheet.
 
-// Use function to create one text string from multiple ones.
+// Use function to create one text string from multiple ones in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

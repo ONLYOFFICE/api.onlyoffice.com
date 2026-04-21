@@ -24,10 +24,12 @@ boolean
 
 ## Example
 
-Title the chart's horizontal axis.
+Title the chart's horizontal axis in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and name its horizontal axis.
+// Create a chart, set its properties and name its horizontal axis in a PDF document.
+
+// Set hor axis title for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,5 +51,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

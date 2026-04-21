@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何添加布尔自定义属性。
+在电子表格中添加布尔自定义属性。
 
 ```javascript editor-xlsx
+// Custom properties support string, boolean, number, and date value types.
+
+// Add using a custom properties object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 
@@ -67,5 +71,4 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirthDate: " + birthDate.toDateString());
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
-
 ```

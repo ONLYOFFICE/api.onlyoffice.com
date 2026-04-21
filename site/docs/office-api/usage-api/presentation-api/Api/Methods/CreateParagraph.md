@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a new paragraph and inserts it into the shape.
+Create a new paragraph and insert it into the shape in a presentation.
 
 ```javascript editor-pptx
-// How to add a text.
+// How to add a text in a presentation.
 
 // Insert text to the paragraph and add it to the slide.
 
@@ -42,5 +42,4 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

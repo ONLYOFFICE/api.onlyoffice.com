@@ -24,10 +24,10 @@ number
 
 ## Example
 
-This example shows how to add the cells specified by a given condition or criteria.
+Add the cells specified by a given condition or criteria in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to sum up all elements under the condition.
+// How to sum up all elements under the condition in a spreadsheet.
 
 // Use a function to estimate a sum from the cells by a given condition.
 

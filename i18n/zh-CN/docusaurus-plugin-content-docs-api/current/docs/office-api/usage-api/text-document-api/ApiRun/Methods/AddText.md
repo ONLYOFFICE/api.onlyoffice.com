@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例向文本块添加文本。
+在文档中向 run 添加文本。
 
 ```javascript editor-docx
-// How to add a sentence to the text run.
+// How to add a sentence to the text run in a document.
 
-// Add text to the document. 
+// Add text to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

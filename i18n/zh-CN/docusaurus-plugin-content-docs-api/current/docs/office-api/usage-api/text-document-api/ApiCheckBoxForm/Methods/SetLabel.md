@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为复选框表单设置标签文本。
+为复选框表单设置标签文本。
 
 ```javascript editor-docx
 // How to add a label to the checkbox form.
 
-// Set a label text to the checkbox.
+// Set a label text to the checkbox in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "radio": true, "key" : "Marital status"});
@@ -38,5 +38,4 @@ paragraph.AddLineBreak();
 checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "radio" : true, "key" : "Marital status"});
 checkBoxForm.SetLabel(" Single");
 paragraph.AddElement(checkBoxForm);
-
 ```

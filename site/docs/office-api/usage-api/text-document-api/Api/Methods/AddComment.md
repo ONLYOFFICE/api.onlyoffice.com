@@ -25,14 +25,12 @@ expression.AddComment(element, text, author, userId);
 
 ## Example
 
-This example adds text and comment to the first paragraph.
+Add text and comment to the first paragraph in a document.
 
 ```javascript editor-docx
-// How to add a comment to the ApiParagraph class.
+// The comment is attached to the paragraph with the specified author name.
 
-// How to comment on text.
-
-// Adds a paragraph to the document and comments on it.
+// Add a paragraph to the document and comment on it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

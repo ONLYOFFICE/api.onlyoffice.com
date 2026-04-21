@@ -20,12 +20,12 @@ expression.GetAllSeries();
 
 ## 示例
 
-此示例获取 ApiChart 类的所有系列并将其类型插入到表格中。
+获取图表类的所有系列并将其类型插入电子表格中的表格。
 
 ```javascript editor-xlsx
 // How to get all series of the chart and diplay their type on the worksheet.
 
-// Get all series from the chart and display their types. 
+// Get all series from the chart and display their types in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

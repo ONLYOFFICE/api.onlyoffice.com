@@ -20,9 +20,13 @@ expression.GetRectDiff();
 
 ## 示例
 
-此示例获取圆形注释的矩形差异。
+获取 PDF 文档中圆形注释的矩形差异。
 
 ```javascript editor-pdf
+// How do I get the rect diff in a PDF document?
+
+// Get the rect diff using a circle annotation object in a PDF document.
+
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

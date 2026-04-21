@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the current form is fixed size.
+Check if the current form is fixed size.
 
 ```javascript editor-docx
 // How to know whether a text form is fixed or not.

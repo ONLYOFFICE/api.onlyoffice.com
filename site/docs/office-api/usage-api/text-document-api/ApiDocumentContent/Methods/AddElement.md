@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example adds a paragraph in document content.
+Add a paragraph in document content.
 
 ```javascript editor-docx
 // How to add elements to the document content.

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Find out the class type of a table style properties object in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiTableStylePr.
+// How can I get the class type of a table style properties in a document?
 
-// Retrieve class type of ApiTableStylePr object and insert it to the document.
+// Get the class type of a table style properties and display it in the document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

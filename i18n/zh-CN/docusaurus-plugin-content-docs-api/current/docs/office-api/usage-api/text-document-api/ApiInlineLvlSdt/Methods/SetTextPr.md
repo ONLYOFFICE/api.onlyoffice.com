@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例将文本设置应用于内容控件的内容。
+将文本设置应用于文档中内容控件的内容。
 
 ```javascript editor-docx
-// How to set text properties for the inline content control.
+// How to set text properties for the inline content control in a document.
 
-// Display the text properties set for inline text element.
+// Display the text properties set for inline text element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

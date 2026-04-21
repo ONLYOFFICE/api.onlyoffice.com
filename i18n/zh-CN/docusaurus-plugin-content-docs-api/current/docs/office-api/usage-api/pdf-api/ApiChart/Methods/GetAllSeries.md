@@ -20,10 +20,12 @@ expression.GetAllSeries();
 
 ## 示例
 
-如何获取图表所有系列的类型。
+如何获取 PDF 文档中图表所有系列的类型。
 
 ```javascript editor-pdf
-// Get all series from a chart.
+// Get all series from a chart in a PDF document.
+
+// Get all series for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -53,5 +55,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

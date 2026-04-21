@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the two-tailed Student's t-distribution.
+Return the two-tailed Student's t-distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the two-tailed Student's t-distribution.
+// How to calculate the two-tailed Student's t-distribution in a spreadsheet.
 
-// Use a function to estimate the Student's t-distribution right-tailed.
+// Use a function to estimate the Student's t-distribution right-tailed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

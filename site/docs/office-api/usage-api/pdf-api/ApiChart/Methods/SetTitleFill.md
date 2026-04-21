@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to color a chart title.
+How to color a chart title in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title color.
+// Create a chart, set its properties and its title color in a PDF document.
+
+// Use chart to set title fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,5 +47,4 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetTitle("Financial Overview", 13);
 chart.SetTitleFill(fill);
 page.AddObject(chart);
-
 ```

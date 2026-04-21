@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example makes the sheet active.
+Make the sheet active in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set an active sheet.
+// How to set an active sheet in a spreadsheet.
 
-// Set a current sheet active.
+// Set a current sheet active in a spreadsheet.
 
 Api.AddSheet("New_sheet");
 let sheet = Api.GetSheet("New_sheet");

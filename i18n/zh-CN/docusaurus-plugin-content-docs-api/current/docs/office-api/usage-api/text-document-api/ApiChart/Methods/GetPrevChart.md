@@ -20,12 +20,12 @@ expression.GetPrevChart();
 
 ## 示例
 
-此示例展示如何获取上一个图表。
+获取文档中的上一个图表。
 
 ```javascript editor-docx
-// How to update minor horizontal gridlines of the previous chart.
+// How to update minor horizontal gridlines of the previous chart in a document.
 
-// Get the previous chart and set its horizontal lines as a stroke. 
+// Get the previous chart and set its horizontal lines as a stroke in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

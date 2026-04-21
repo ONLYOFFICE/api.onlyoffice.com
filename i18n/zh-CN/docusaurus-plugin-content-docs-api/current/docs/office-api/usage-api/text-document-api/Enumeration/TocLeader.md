@@ -16,10 +16,9 @@
 - "underline"
 - "none"
 
-
 ## 示例
 
-此示例向文档添加具有点状前导符的目录。
+向文档添加具有点状前导符的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its leader type.
@@ -38,5 +37,4 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```

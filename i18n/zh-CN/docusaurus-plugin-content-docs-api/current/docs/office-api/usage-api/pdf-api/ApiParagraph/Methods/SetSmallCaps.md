@@ -23,9 +23,13 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-此示例对段落文本应用小型大写字母格式。
+对段落文本应用小型大写字母格式。
 
 ```javascript editor-pdf
+// How can I set small caps using a paragraph in a PDF document?
+
+// Set small caps for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to small capitalized letters.');
 paragraph.SetSmallCaps(true);
 page.AddObject(shape);
-
 ```

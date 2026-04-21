@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## Example
 
-This example creates a pattern fill and applies it to the object using the selected pattern as the object background.
+Create a pattern fill and apply it to the object using the selected pattern as the object background in a document.
 
 ```javascript editor-docx
-// Creates the ApiFill object using the "dashDnDiag" pattern type and applies it to the created shape.
+// Create the fill object using the "dashDnDiag" pattern type and apply it to the created shape in a document.
 
-// How to create a pattern fill for the ApiShape object background.
+// How to create a pattern fill for the shape object background in a document.
 
 const bgColor = Api.HexColor('#abcdef');
 const fgColor = Api.ThemeColor('accent3');
@@ -40,5 +40,4 @@ const shape = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 paragraph.AddDrawing(shape);
-
 ```

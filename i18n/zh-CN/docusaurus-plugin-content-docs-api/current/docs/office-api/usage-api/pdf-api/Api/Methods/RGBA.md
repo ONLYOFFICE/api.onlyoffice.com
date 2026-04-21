@@ -25,9 +25,13 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-此示例展示如何创建 RGBA 颜色并将其用作形状填充。
+在 PDF 文档中创建 RGBA 颜色并将其用作形状填充。
 
 ```javascript editor-pdf
+// How can I r g b an in a PDF document?
+
+// R g b an in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
-
 ```

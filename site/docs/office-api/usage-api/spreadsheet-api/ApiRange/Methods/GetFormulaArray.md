@@ -20,7 +20,7 @@ string \| null
 
 ## Example
 
-This example shows how to get the array formula of a range.
+Get the array formula of a range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get an array formula value.

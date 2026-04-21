@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-This example sets all 4 font slots with the specified font family.
+Set all 4 font slots with the specified font family in a presentation.
 
 ```javascript editor-pptx
-// How to change a text font family.
+// How to change a text font family in a presentation.
 
-// Get the text properties of the run and set its font family.
+// Get the text properties of the run and set its font family in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font family set to 'Comic Sans MS' using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定当前范围的内容显示时有一条水平线穿过范围中心。
+指定在文档中当前范围的内容以通过范围中心的单条水平线显示。
 
 ```javascript editor-docx
-// How to cross the range with one line.
+// How to cross the range with one line in a document.
 
-// Strike out the range content.
+// Strike out the range content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

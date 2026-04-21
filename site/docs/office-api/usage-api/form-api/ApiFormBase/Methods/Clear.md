@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example clears the current form.
+Clear the current form.
 
 ```javascript editor-forms
 // How to remove texy from the form.

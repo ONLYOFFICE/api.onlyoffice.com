@@ -22,10 +22,10 @@ expression.SetText(sText);
 
 ## 示例
 
-此示例设置批注文本。
+在文档中设置批注文本。
 
 ```javascript editor-docx
-// How to change a text of a comment.
+// How to change a text of a comment in a document.
 
 // Get all comments from the presentation and set its first one's text.
 

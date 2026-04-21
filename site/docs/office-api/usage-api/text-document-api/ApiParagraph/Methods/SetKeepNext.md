@@ -3,30 +3,14 @@
 Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least
 partly rendered on the same page as the following paragraph whenever possible.
 
-## Syntax
-
-```javascript
-expression.SetKeepNext(isKeepNext);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isKeepNext | Required | boolean |  | The true value enables the option to keep lines of the paragraph on the same page as the following paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetKeepNext](../../ApiParaPr/Methods/SetKeepNext.md).
 
 ## Example
 
-This example specifies that when rendering the document using a paginated view, the contents of the paragraph are at least partly rendered on the same page as the following paragraph whenever possible.
+Specify that when rendering the document using a paginated view, the contents of the paragraph are at least partly rendered on the same page as the following paragraph whenever possible.
 
 ```javascript editor-docx
-// How to partly keep lines of the paragraph content.
+// How to partly keep lines of the paragraph content in a document.
 
 // How to try to keep all lines of the paragraph on the same page.
 

@@ -20,16 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-此示例创建一个文本域并将其插入到文档中。
+创建文本块并将其插入文档。
 
 ```javascript editor-docx
-// Creates a run, adds a text to it, and inserts it into the first paragraph of the document.
+// Create a run, add a text to it, and insert it into the first paragraph of the document.
 
-// How to create the ApiRun object and adds it to the ApiParagraph class.
-
-// How to add a text to the paragraph.
-
-// How to add a text to the ApiRun object.
+// A text run represents a contiguous block of text with the same formatting.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

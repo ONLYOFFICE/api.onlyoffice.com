@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何通过 ID 显示批注。
+通过 ID 在文档中显示批注。
 
 ```javascript editor-docx
+// How can I show comment using a document in a document?
+
+// Show comment for a document in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This text has a comment attached to it.');
@@ -39,5 +43,4 @@ if (comment) {
 	resultParagraph.AddText('Comment by ' + author + ' is now displayed.');
 	doc.Push(resultParagraph);
 }
-
 ```

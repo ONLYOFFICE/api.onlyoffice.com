@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the future value of an initial principal after applying a series of compound interest rates.
+Return the future value of an initial principal after applying a series of compound interest rates in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the future value of an initial principal.
+// How to get the future value of an initial principal in a spreadsheet.
 
-// Use a function to get future value of an initial principal based on different parameters.
+// Use a function to get future value of an initial principal based on different parameters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the type of color scale criterion.
+Set the type of color scale criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the type of a color scale criterion.
+// How to change the type of a color scale criterion in a spreadsheet.
 
-// Set the type of a color scale criterion.
+// Set the type of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,5 +53,4 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C3").SetValue("After:");
     worksheet.GetRange("C4").SetValue(criteria[1].GetType());
 }
-
 ```

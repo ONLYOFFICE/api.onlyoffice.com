@@ -2,25 +2,11 @@
 
 Deletes the current format condition.
 
-## Syntax
-
-```javascript
-expression.Delete();
-```
-
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
 
 ## Example
 
-This example deletes a conditional formatting rule.
+Delete a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to remove specific conditional formatting rules from a range.
@@ -50,5 +36,4 @@ condition1.Delete();
 
 worksheet.GetRange("D1").SetValue("Rules after deletion:");
 worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
-
 ```

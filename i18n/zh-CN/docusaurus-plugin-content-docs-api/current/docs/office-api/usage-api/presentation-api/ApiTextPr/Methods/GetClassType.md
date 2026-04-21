@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+获取演示文稿中文本属性的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiTextPr.
+// How to identify the class type of a text properties in a presentation?
 
-// Retrieve class type of ApiTextPr object and insert it to the slide.
+// Obtain the class type identifier of a text properties object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ const classType = textPr.GetClassType();
 run.AddText("Class Type = " + classType);
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the form key.
+Get the form key in a document.
 
 ```javascript editor-forms
 // How get a key of a comboBox form.

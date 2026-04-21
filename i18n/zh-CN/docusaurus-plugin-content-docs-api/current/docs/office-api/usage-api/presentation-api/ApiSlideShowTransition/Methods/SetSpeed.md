@@ -26,9 +26,13 @@ boolean
 
 ## 示例
 
-此示例将过渡速度设置为'慢速'。
+在演示文稿中将切换速度设置为 'slow'。
 
 ```javascript editor-pptx
+// How to set speed for a slide show transition?
+
+// Set speed and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -48,5 +52,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Speed is "slow" which is 1 second by default.');
 slide.AddObject(shape);
-
 ```

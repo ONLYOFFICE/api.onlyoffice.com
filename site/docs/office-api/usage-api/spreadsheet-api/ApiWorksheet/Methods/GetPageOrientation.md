@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the page orientation.
+Get the page orientation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get orientation of the sheet.
+// How to get orientation of the sheet in a spreadsheet.
 
-// Get a sheet orientation.
+// Get a sheet orientation using the worksheet API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let pageOrientation = worksheet.GetPageOrientation();

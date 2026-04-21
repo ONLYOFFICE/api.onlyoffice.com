@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get a number of cells in the row.
+Get a number of cells in the row in a document.
 
 ```javascript editor-docx
 // How to count the cells of the row.

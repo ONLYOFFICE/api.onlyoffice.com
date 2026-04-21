@@ -22,14 +22,17 @@ number
 
 ## 示例
 
-此示例展示如何将毫米转换为像素。
+在电子表格中将毫米转换为像素。
 
 ```javascript editor-xlsx
+// How do I convert millimeters to pixels in a spreadsheet?
+
+// Convert millimeters to pixels and display the result in a spreadsheet.
+
 const millimeters = 100;
 const pixels = Api.MillimetersToPixels(millimeters);
 const text = millimeters + ' millimeters are equal to ' + pixels + ' pixels.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```

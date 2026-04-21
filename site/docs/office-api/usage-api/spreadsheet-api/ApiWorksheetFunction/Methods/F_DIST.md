@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the (left-tailed) F probability distribution (degree of diversity) for two data sets.
+Return the (left-tailed) F probability distribution (degree of diversity) for two data sets in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the F probability distribution (degree of diversity).
+// How to get the F probability distribution (degree of diversity) in a spreadsheet.
 
-// Use function to calculate a left-tailed F probability distribution.
+// Use function to calculate a left-tailed F probability distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

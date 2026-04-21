@@ -2,30 +2,16 @@
 
 返回段落右侧缩进。
 
-## 语法
-
-```javascript
-expression.GetIndRight();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+获取文档中的段落右侧缩进。
 
 ```javascript editor-docx
 // Get the right indentation of the paragraph and show it in the document.
 
-// How to know the number of inches of the right indentation.
+// How to know the number of inches of the right indentation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

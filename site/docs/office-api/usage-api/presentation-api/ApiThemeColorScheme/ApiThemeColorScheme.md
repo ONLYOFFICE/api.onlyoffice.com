@@ -2,7 +2,6 @@
 
 Represents the ApiThemeColorScheme class.
 
-
 ## Methods
 
 | Method | Returns | Description |

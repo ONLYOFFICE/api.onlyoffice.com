@@ -2,32 +2,16 @@
 
 设置指定是否可以将指定字段拖动到数据位置的设置。
 
-## 语法
-
-```javascript
-expression.SetDragToData(flag);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | 必需 | boolean |  | 指定是否可以将指定字段拖动到数据位置。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetDragToData](../../ApiPivotField/Methods/SetDragToData.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到数据。
+在电子表格中设置透视字段的拖动到数据属性。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to data.
+// How to rename a pivot field drag to data in a spreadsheet.
 
-// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value.
+// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

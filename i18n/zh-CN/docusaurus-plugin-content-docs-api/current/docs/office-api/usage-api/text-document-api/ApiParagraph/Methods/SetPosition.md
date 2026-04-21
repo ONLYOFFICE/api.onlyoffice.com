@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定此段落的文本相对于周围非定位文本的默认基线升高或降低的量。
+指定在文档中此段落的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-docx
-// How to set the line position of the text.
+// How to set the line position of the text in a document.
 
-// Lower the paragraph by 15 points.
+// Lower the paragraph by 15 points in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -2,6 +2,10 @@
 
 The content control checkbox properties.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -9,11 +13,6 @@ The content control checkbox properties.
 | Checked | boolean | Defines if the content control checkbox is checked or not. |
 | CheckedSymbol | number | A symbol in the HTML code format that is used when the checkbox is checked. |
 | UncheckedSymbol | number | A symbol in the HTML code format that is used when the checkbox is not checked. |
-## Type
-
-Object
-
-
 
 ## Example
 

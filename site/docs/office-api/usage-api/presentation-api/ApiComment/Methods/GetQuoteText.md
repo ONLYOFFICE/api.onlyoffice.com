@@ -20,10 +20,10 @@ Number
 
 ## Example
 
-This example gets a quote text of a comment.
+Get a quote text of a comment in a presentation.
 
 ```javascript editor-pptx
-// How to retrieve a quote text from a comment.
+// How to retrieve a quote text from a comment in a presentation.
 
 // Get all comments from the presentation and the first one's quote text.
 
@@ -47,5 +47,4 @@ const quoteText = arrComments[0].GetQuoteText();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's quote text: " + quoteText);
-
 ```

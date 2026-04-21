@@ -27,7 +27,7 @@ boolean
 
 ## Example
 
-This example sets the border which will be displayed to the right of the table cell.
+Set the border which will be displayed to the right of the table cell.
 
 ```javascript editor-docx
 // How to add margin to the right of the cell.

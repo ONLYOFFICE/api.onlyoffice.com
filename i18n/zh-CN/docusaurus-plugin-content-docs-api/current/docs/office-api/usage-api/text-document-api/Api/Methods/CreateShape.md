@@ -26,12 +26,12 @@ expression.CreateShape(shapeType, width, height, fill, stroke);
 
 ## 示例
 
-此示例使用 'rect' 预设创建形状。
+在文档中使用 'rect' 预设创建形状。
 
 ```javascript editor-docx
-// Creates the "rect" shape and adds it to the first paraghraph of the document.
+// Create the "rect" shape and add it to the first paraghraph of the document.
 
-// How to create the ApiShape object and add it to the ApiParagraph class.
+// How to create the shape object and add it to the paragraph class in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

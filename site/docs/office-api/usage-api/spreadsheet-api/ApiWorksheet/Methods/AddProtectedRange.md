@@ -23,10 +23,10 @@ expression.AddProtectedRange(sTitle, sDataRange);
 
 ## Example
 
-This example adds a new protected range.
+Add a new protected range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the protected ApiRange object.
+// How to add the protected cell range object.
 
 // Insert a protected range to the worksheet.
 

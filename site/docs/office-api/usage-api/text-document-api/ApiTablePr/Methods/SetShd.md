@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-This example specifies the shading which shall be applied to the extents of the table.
+Specify the shading which shall be applied to the extents of the table in a document.
 
 ```javascript editor-docx
-// How to add shading to the paragraph.
+// How to add shading to the paragraph in a document.
 
-// Apply the clear shading to the paragraph.
+// Apply the clear shading to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

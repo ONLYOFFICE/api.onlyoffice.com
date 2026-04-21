@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get an index of the row.
+Get an index of the row in a document.
 
 ```javascript editor-docx
 // How to get row index of the table cell.

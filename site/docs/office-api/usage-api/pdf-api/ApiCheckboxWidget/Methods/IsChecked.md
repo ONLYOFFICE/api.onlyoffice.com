@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets checkbox widget checked prop in group of checkbox widgets.
+Get checkbox widget checked prop in group of checkbox widgets in a PDF document.
 
 ```javascript editor-pdf
+// How can I is checked using a checkbox widget in a PDF document?
+
+// Is checked for a checkbox widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

@@ -1,7 +1,6 @@
 # ApiDocument
 
-表示 ApiDocument 类。
-
+ApiDocument 是 [ApiDocumentContent](../../text-document-api/ApiDocumentContent/ApiDocumentContent.md) 的子类。
 
 ## 方法
 

@@ -23,10 +23,10 @@ JSON
 
 ## Example
 
-This example converts the ApiLayout object into the JSON object.
+Convert the layout object into the JSON object in a presentation.
 
 ```javascript editor-pptx
-// How to convert a layout object to a JSON object.
+// How to convert a layout object to a JSON object in a presentation.
 
 // Get a slide layout object from a slide and convert to JSON.
 
@@ -52,5 +52,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 layoutFromJSON.AddObject(shape);
 slide.ApplyLayout(layoutFromJSON);
-
 ```

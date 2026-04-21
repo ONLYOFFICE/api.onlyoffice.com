@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example pushes 5 paragraphs to actually add its to the document content.
+Pushes 5 paragraphs to actually add its to the document content.
 
 ```javascript editor-xlsx
 // How to insert paragraphs into a document.

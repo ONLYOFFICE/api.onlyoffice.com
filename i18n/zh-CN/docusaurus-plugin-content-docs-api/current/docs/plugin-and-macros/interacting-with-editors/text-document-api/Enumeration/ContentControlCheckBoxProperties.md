@@ -2,6 +2,10 @@
 
 内容控件复选框属性。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -9,11 +13,6 @@
 | Checked | boolean | 定义内容控件复选框是否被选中。 |
 | CheckedSymbol | number | 复选框被选中时使用的 HTML 代码格式符号。 |
 | UncheckedSymbol | number | 复选框未被选中时使用的 HTML 代码格式符号。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

@@ -20,12 +20,12 @@ expression.GetSpacing();
 
 ## 示例
 
-此示例使用其属性获取文本间距。
+获取电子表格中文本的间距属性。
 
 ```javascript editor-xlsx
-// How to find out space size of a text.
+// How to find out space size of a text in a spreadsheet.
 
-// Get spacing size.
+// Get the spacing for a text properties in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

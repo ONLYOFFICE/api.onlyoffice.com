@@ -22,12 +22,12 @@ expression.GetAllCaptionParagraphs(sCaption);
 
 ## 示例
 
-此示例展示如何从当前文档获取指定类型的所有题注段落。
+从文档中获取当前文档中指定类型的所有题注段落。
 
 ```javascript editor-docx
-// Get all caption paragraphs with the name 'Figure' and make the first one capitalized.
+// Get all caption paragraphs with the name 'Figure' and make the first one capitalized in a document.
 
-// Make the caption text letters uppercase.
+// Make the caption text letters uppercase in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,5 +39,4 @@ doc.Push(paragraph);
 paragraph.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
 let captionParagraphs = doc.GetAllCaptionParagraphs('Figure');
 captionParagraphs[0].SetCaps(true);
-
 ```

@@ -2,28 +2,14 @@
 
 返回段落首行缩进。
 
-## 语法
-
-```javascript
-expression.GetIndFirstLine();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+继承自 [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md)。
 
 ## 示例
 
-此示例展示如何获取段落首行缩进。
+获取 PDF 文档中的段落首行缩进。
 
 ```javascript editor-pdf
-// How to return the first line identation of a paragraph property.
+// How to return the first line identation of a paragraph property in a PDF document.
 
 // Return the first line indentation of a text property from the page.
 
@@ -52,5 +38,4 @@ const indFirstLine = paraPr.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
-
 ```

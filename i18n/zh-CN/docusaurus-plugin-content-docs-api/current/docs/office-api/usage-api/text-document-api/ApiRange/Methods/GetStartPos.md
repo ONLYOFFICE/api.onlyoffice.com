@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例获取给定范围对象的起始位置。
+获取文档中给定范围对象的起始位置。
 
 ```javascript editor-docx
-// Get the start index of the range and display it.
+// Get the start index of the range and display it in a document.
 
-// Retrieve a range of the paragraph and show its first position.
+// Retrieve a range of the paragraph and show its first position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

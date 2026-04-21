@@ -1,7 +1,6 @@
 # ApiComplexForm
 
-表示 ApiComplexForm 类。
-
+ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
 

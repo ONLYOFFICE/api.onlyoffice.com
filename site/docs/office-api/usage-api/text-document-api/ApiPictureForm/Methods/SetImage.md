@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets an image to the current picture form.
+Set an image to the current picture form.
 
 ```javascript editor-docx
 // How to set image of the picture form.

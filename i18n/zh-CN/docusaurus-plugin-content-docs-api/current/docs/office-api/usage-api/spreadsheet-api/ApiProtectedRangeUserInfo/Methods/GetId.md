@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-此示例获取受保护区域用户的 ID。
+获取电子表格中受保护范围用户的 ID。
 
 ```javascript editor-xlsx
-// How to get a user info of a protected range and show its Id.
+// How to get an user info of a protected range and show its Id in a spreadsheet.
 
-// Get a user id of a protected range and add it to the worksheet.
+// Get an user id of a protected range and add it to the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");

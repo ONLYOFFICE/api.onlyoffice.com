@@ -21,7 +21,7 @@ boolean
 
 ## 示例
 
-此示例演示如何从形状中删除所有元素。
+从演示文稿中的形状移除所有元素。
 
 ```javascript editor-pptx
 // How to remove all elements from the slide shape.
@@ -45,5 +45,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

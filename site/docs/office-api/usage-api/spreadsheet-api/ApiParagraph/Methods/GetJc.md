@@ -2,28 +2,14 @@
 
 Returns the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.GetJc();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"left" \| "right" \| "both" \| "center" \| undefined
+Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Get the paragraph contents justification in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph.
+// How to know the justification type of a paragraph in a spreadsheet.
 
 // Create a paragraph set justification type, get it and display in the worksheet.
 

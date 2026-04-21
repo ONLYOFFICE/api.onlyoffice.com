@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the parameters of the watermark settings and apply them to the document.
+Set the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
-// How to set the image opacity of the watermark.
+// How to set the image opacity of the watermark in a document.
 
-// Indicate the image opacity in watermark settings.
+// Indicate the image opacity in watermark settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

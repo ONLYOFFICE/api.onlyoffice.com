@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create and use the table cell properties.
+Create and use the table cell properties in a document.
 
 ```javascript editor-docx
 // How to create the table cell properties and set it to table style.
+
+// Create the table cell pr using the document API.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

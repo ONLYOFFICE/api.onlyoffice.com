@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何将值转换为数字，将日期转换为序列号，将 true 转换为 1，将错误转换为 &#123;@link global#ErrorValue ErrorValue&#125;，其他任何内容转换为 0（零）。
+在电子表格中将值转换为数字，日期转换为序列号，true 转换为 1，错误转换为 &#123;@link global#ErrorValue ErrorValue&#125;，其他转换为 0（零）。
 
 ```javascript editor-xlsx
-// How to convert an object to a number.
+// How to convert an object to a number in a spreadsheet.
 
-// Use a function to get a number from any data type.
+// Use a function to get a number from any data type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

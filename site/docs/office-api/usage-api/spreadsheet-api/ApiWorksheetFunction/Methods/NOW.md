@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to return the current date and time in the MM/dd/yy hh:mm format.
+Return the current date and time in the MM/dd/yy hh:mm format in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a current date in the specified format.
@@ -33,5 +33,4 @@ let func = Api.WorksheetFunction;
 let ans = func.NOW(); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

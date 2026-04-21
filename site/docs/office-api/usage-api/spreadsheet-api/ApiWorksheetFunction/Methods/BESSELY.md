@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the modified Bessel function Yn(x).
+Return the modified Bessel function Yn(x) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from Bessel function Yn(x).
+// How to get a result from Bessel function Yn(x) in a spreadsheet.
 
-// Use function to get the Bessel function Yn(x).
+// Use function to get the Bessel function Yn(x) in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

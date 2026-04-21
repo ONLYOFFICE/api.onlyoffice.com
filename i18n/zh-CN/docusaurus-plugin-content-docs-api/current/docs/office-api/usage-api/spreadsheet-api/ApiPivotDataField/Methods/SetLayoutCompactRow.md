@@ -2,32 +2,16 @@
 
 设置指定数据透视表字段是否紧凑的设置。
 
-## 语法
-
-```javascript
-expression.SetLayoutCompactRow(compact);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| compact | 必需 | boolean |  | 指定数据透视表字段是否紧凑。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetLayoutCompactRow](../../ApiPivotField/Methods/SetLayoutCompactRow.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的布局紧凑行线。
+在电子表格中设置透视字段的紧凑行布局。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout compact row.
+// How to change a pivot field layout compact row in a spreadsheet.
 
-// Create a pivot table, add data to it then set layout compact row of a specified pivot.
+// Create a pivot table, add data to it then set layout compact row of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

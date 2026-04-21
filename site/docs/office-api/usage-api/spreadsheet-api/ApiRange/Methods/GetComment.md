@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the ApiComment object of the range.
+Get the comment object of the range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a range comment.
+// How to get a range comment in a spreadsheet.
 
 // Get a range, get its comment and show its text in the worksheet.
 

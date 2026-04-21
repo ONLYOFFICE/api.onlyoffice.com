@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例更新当前文档中的所有域。
+更新当前文档中的所有字段。
 
 ```javascript editor-docx
 // How to update all forms in the document.

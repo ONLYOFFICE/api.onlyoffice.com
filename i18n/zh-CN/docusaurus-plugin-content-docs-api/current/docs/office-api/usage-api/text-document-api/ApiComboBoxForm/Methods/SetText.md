@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例设置当前组合框的文本。
+设置文档中当前组合框的文本。
 
 ```javascript editor-docx
-// Add text to the combobox.
+// Add text to the combobox in a document.
 
-// How to create a combobox and change its content text.
+// How to create a combobox and change its content text in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": true, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

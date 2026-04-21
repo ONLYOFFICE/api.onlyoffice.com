@@ -2,6 +2,10 @@
 
 内容控件属性。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -18,11 +22,6 @@
 | Shd | Object | 背景底纹属性。 |
 | Shd.Color | [Color](../Enumeration/Color.md) | RGBA 格式的底纹颜色。 |
 | Tag | string | 分配给内容控件的标签。相同的标签可以分配给多个内容控件，以便在代码中引用它们。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

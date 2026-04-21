@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例向文本块添加制表位。
+在 PDF 文档中向 run 添加制表位。
 
 ```javascript editor-pdf
-// How to add a tab after a string in a text run.
+// How to add a tab after a string in a text run in a PDF document.
 
-// How to split a text with a tab.
+// How to split a text with a tab in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +46,4 @@ run.AddTabStop();
 run.AddText("This is the text which starts after the tab stops.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

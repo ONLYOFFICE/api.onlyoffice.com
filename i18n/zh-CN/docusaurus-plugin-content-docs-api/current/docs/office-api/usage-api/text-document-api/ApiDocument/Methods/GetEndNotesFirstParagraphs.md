@@ -20,12 +20,12 @@ expression.GetEndNotesFirstParagraphs();
 
 ## 示例
 
-此示例展示如何获取文档中所有尾注的首段。
+获取文档中所有尾注的第一个段落。
 
 ```javascript editor-docx
-// How to get the first endnote paragraph, add text to it and make it bold.
+// How to get the first endnote paragraph, add text to it and make it bold in a document.
 
-// Retrieve all endnote first paragraph for further manipulation.
+// Retrieve all endnote first paragraph for further manipulation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 

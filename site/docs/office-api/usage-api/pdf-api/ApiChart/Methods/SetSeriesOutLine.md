@@ -24,10 +24,12 @@ boolean
 
 ## Example
 
-How to outline a chart seria.
+How to outline a chart seria in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series outline.
+// Create a chart, set its properties and its series outline in a PDF document.
+
+// Set series out line using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 page.AddObject(chart);
-
 ```

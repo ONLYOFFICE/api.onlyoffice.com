@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the nested tables of the specified table.
+Get the nested tables of the specified table in a document.
 
 ```javascript editor-docx
-// How to get all tables from the table object.
+// How to get all tables from the table object in a document.
 
-// Get array of tables and update their width.
+// Get array of tables and update their width in a document.
 
 let doc = Api.GetDocument();
 let table1 = Api.CreateTable(3, 3);

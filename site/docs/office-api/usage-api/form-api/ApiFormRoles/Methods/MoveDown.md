@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to move down the specified role.
+Move down the specified role in a form document.
 
 ```javascript editor-forms
+// How to move down for a form roles?
+
+// Move down and display the result in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -41,5 +45,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
     orderIndex++;
 });
-
 ```

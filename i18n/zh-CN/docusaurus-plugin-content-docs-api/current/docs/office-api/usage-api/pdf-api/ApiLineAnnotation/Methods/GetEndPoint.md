@@ -20,9 +20,13 @@ expression.GetEndPoint();
 
 ## 示例
 
-此示例获取线条注释的终点。
+获取 PDF 文档中线条注释的终点。
 
 ```javascript editor-pdf
+// How do I get the end point in a PDF document?
+
+// Get the end point using a line annotation object in a PDF document.
+
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 12, y: 12}, {x: 155, y: 30});
 lineAnnot.SetEndStyle("openArrow");

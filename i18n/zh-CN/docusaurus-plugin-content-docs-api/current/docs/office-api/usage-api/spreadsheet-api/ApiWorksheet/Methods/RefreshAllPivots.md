@@ -20,10 +20,10 @@ expression.RefreshAllPivots();
 
 ## 示例
 
-此示例展示如何刷新所有数据透视表。
+在电子表格中刷新所有数据透视表。
 
 ```javascript editor-xlsx
-// How to refresh field values of all pivot tables.
+// How to refresh field values of all pivot tables in a spreadsheet.
 
 // Refresh pivot tables from the worksheet.
 
@@ -46,5 +46,4 @@ worksheet.GetAllPivotTables().forEach(function (pivot) {
 });
 
 worksheet.RefreshAllPivots();
-
 ```

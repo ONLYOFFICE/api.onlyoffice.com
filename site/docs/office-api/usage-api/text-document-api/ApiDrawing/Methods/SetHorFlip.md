@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example flips the drawing horizontally.
+Flips the drawing horizontally in a document.
 
 ```javascript editor-docx
-// How to set the horizontal flip property of the shape.
+// How to set the horizontal flip property of the shape in a document.
 
-// Create a drawing, add text to it and flip it horizontally.
+// Create a drawing, add text to it and flip it horizontally in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置当前形状的文本内边距。
+在电子表格中为当前形状设置文本内边距。
 
 ```javascript editor-xlsx
-// How to update paddings of the drawing.
+// How to update paddings of the drawing in a spreadsheet.
 
-// Create a shape and set its paddings.
+// Create a shape and set its paddings in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

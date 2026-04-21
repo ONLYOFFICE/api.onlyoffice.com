@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例指定文本字段是否应为具有相同单元格宽度的字符梳。
+指定文本字段是否应为具有相同单元格宽度的字符梳。
 
 ```javascript editor-docx
 // How to specify the comb property of the text form.

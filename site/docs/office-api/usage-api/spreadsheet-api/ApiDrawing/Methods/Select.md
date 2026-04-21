@@ -22,14 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example selects the current graphic object.
+Select the current graphic object in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to select drawing objects on the worksheet.
 
-// Create three shapes, select the first one,
-// then select the second shape with isReplace=true (replacing the selection),
-// and finally select the third shape without isReplace parameter (adding to selection).
+// Create three shapes, select the first one, then select the second shape with isReplace=true (replacing the selection), and finally select the third shape without isReplace parameter (adding to selection) in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,5 +42,4 @@ let drawing3 = worksheet.AddShape("rect", 60 * 36000, 35 * 36000, fill3, stroke3
 drawing1.Select(true);
 drawing2.Select(true);
 drawing3.Select();
-
 ```

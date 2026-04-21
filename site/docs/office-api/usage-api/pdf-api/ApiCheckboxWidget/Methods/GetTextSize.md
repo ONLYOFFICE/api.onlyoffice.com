@@ -1,0 +1,29 @@
+# GetTextSize
+
+Gets widget text size.
+💡  Text size === 0 means autofit 
+
+Inherited from [ApiBaseWidget.GetTextSize](../../ApiBaseWidget/Methods/GetTextSize.md).
+
+## Example
+
+Get field widget and display it's text size in a PDF document.
+
+```javascript editor-pdf
+// How can I get the text size using a widget in a PDF document?
+
+// Get the text size for a widget in a PDF document.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let textField = Api.CreateTextField([10, 10, 160, 30]);
+page.AddObject(textField);
+
+textField.AddWidget(0, [10, 40, 160, 60]);
+let widgets = textField.GetAllWidgets();
+widgets.forEach(function(widget) {
+    widget.SetTextSize(15);
+});
+let textSize = widgets[0].GetTextSize();
+textField.SetValue('Text size is: ' + textSize);
+```

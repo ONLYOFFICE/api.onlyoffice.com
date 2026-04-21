@@ -20,14 +20,17 @@ string
 
 ## Example
 
-This example shows how to get the name of the current workbook theme.
+Get the name of the current workbook theme in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the name for a theme in a spreadsheet?
+
+// Get the name and display the result in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const theme = workbook.GetTheme();
 const themeName = theme.GetName();
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Theme name: ' + themeName);
-
 ```

@@ -22,10 +22,10 @@ expression.SetTime(nTimeStamp);
 
 ## Example
 
-This example shows how to set a comment time.
+Set a comment time in a presentation.
 
 ```javascript editor-pptx
-// How to change a creation time of a comment.
+// How to change a creation time of a comment in a presentation.
 
 // Get all comments from the presentation and change its first one's creation time.
 
@@ -50,5 +50,4 @@ const time = arrComments[0].GetTime();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's time: " + time);
-
 ```

@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取当前文档的语言。
+使用文档中的核心属性获取当前文档的语言。
 
 ```javascript editor-docx
+// How can I get the language using a core properties in a document?
+
+// Get the language for a core properties in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetLanguage("en-US");
@@ -30,5 +34,4 @@ core.SetLanguage("en-US");
 const language = core.GetLanguage();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Language: " + language);
-
 ```

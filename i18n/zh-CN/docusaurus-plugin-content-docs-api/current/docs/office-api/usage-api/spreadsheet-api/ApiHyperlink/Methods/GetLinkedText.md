@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状内超链接的 URL。
+获取电子表格中形状内超链接的 URL。
 
 ```javascript editor-xlsx
+// How to get the linked text for a hyperlink in a spreadsheet?
+
+// Get the linked text and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Linked text: ' + hyperlink.GetLinkedText());
-
 ```

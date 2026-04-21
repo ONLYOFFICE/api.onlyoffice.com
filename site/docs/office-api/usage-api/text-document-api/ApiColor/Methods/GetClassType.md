@@ -20,12 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of ApiColor object.
+Retrieve the class type of a color in a document.
 
 ```javascript editor-docx
+// How to identify the class type of a color in a document?
+
+// Obtain the class type identifier of a color object in a document.
+
 const doc = Api.GetDocument();
 const color = Api.ThemeColor('accent1');
 const paragraph = doc.GetElement(0);
 paragraph.AddText('Class type of ApiColor instance: ' + color.GetClassType());
-
 ```

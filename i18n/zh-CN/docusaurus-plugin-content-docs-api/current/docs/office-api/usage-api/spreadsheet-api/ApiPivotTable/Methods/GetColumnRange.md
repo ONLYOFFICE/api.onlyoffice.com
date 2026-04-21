@@ -20,12 +20,12 @@ expression.GetColumnRange();
 
 ## 示例
 
-此示例展示如何获取数据透视表的列区域。
+获取电子表格中数据透视表的列范围。
 
 ```javascript editor-xlsx
-// How to get column range from a pivot table.
+// How to get column range from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get its column range and select them.
+// Create a pivot table, add data to it then get its column range and select them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

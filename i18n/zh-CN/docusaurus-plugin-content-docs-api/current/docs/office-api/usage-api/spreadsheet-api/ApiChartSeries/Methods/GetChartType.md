@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-此示例获取 ApiChart 类的第一个系列并将其类型插入文档中。
+获取图表类的第一个系列并将其类型插入到文档中。
 
 ```javascript editor-xlsx
-// How to find out a chart type.
+// How to find out a chart type in a spreadsheet.
 
-// Display a chart type inserting it in a range.
+// Display a chart type inserting it in a range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

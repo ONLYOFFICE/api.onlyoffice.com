@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the background color to the cell range with the previously created color object.
+Set the background color to the cell range with the previously created color object.
 
 ```javascript editor-xlsx
 // How to color a cell.
 
-// Get a range and apply a solid fill to its background color.
+// Get a range and apply a solid fill to its background color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);

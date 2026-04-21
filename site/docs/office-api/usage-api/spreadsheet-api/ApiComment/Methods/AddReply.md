@@ -25,12 +25,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example adds a reply to a comment.
+Add a reply to a comment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to reply to a comment.
+// The comment is added to cell A1 containing a numeric value.
 
-// Add a commnet reply indicating an author and id.
+// Retrieve the reply text with the specified author name and user id and display it in cell B3.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

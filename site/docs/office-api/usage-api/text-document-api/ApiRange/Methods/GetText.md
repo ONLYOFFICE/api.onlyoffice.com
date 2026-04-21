@@ -29,12 +29,12 @@ string
 
 ## Example
 
-This example shows how to get a text from the specified range.
+Get a text from the specified range in a document.
 
 ```javascript editor-docx
-// How to get a raw text from the characters.
+// How to get a raw text from the characters in a document.
 
-// Retrieve a text from the character collection.
+// Retrieve a text from the character collection in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

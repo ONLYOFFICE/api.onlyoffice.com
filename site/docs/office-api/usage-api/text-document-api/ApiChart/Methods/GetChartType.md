@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to get the chart type of a chart.
+Get the chart type of a chart in a document.
 
 ```javascript editor-docx
+// How to get the chart type for a chart in a document?
+
+// Get the chart type and display the result in a document.
+
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 
@@ -39,5 +43,4 @@ const chartType = chart.GetChartType();
 chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 firstParagraph.AddDrawing(chart);
-
 ```

@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes path commands of a star shape on a presentation slide.
+Analyzes path commands of a star shape on a presentation slide. Shows command count and first command details in a text shape.
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I get the command count in a presentation?
+
+// Get the command count using a geometry path object in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

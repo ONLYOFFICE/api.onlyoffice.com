@@ -20,12 +20,12 @@ expression.Select();
 
 ## 示例
 
-此示例展示如何选择数据透视表。
+在电子表格中选中数据透视表。
 
 ```javascript editor-xlsx
-// How to select a table.
+// How to select a table in a spreadsheet.
 
-// Create a pivot table, add data to it then select it.
+// Create a pivot table, add data to it then select it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

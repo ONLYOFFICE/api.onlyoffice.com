@@ -1,6 +1,6 @@
 # ApiDatabar
 
-Represents the ApiDatabar class.
+ApiDatabar is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
 

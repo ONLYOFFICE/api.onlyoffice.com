@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example applies the text settings to the entire contents of the cell.
+Apply the text settings to the entire contents of the cell.
 
 ```javascript editor-docx
 // Set text properties to the table cell.

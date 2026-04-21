@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-此示例设置内联文本内容控件的锁定。
+为文档中的内联文本内容控件设置锁定。
 
 ```javascript editor-docx
-// How to set lock type for the inline content control.
+// How to set lock type for the inline content control in a document.
 
-// Display the lock type set for inline text element.
+// Display the lock type set for inline text element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

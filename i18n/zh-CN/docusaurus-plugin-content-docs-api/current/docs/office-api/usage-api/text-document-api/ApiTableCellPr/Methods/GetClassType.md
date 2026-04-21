@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+获取文档中表格单元格属性的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiTableCellPr.
+// How to identify the class type of a table cell properties?
 
-// Retrieve class type of ApiTableCellPr object and insert it to the document.
+// Obtain the class type identifier of a table cell properties object.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状内超链接的屏幕提示文本。
+获取电子表格中形状内超链接的屏幕提示文本。
 
 ```javascript editor-xlsx
+// How do I get the screen tip text in a spreadsheet?
+
+// Get the screen tip text using a hyperlink object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Screen tip: ' + hyperlink.GetScreenTipText());
-
 ```

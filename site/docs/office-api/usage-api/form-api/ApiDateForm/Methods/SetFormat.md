@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to set the date format on a date form.
+Set the date format on a date form in a document.
 
 ```javascript editor-forms
 // Specify the format of the date for the form.

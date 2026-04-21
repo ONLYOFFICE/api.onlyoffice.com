@@ -2,30 +2,16 @@
 
 从文档内容返回绘图对象集合。
 
-## 语法
-
-```javascript
-expression.GetAllDrawingObjects();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[Drawing](../../Enumeration/Drawing.md)[]
+继承自 [ApiDocumentContent.GetAllDrawingObjects](../../ApiDocumentContent/Methods/GetAllDrawingObjects.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取绘图对象集合。
+从文档中的文档内容获取绘图对象集合。
 
 ```javascript editor-docx
 // Get all drawing objects added to the document.
 
-// How to retrieve all drawing objects and fill with color its first one.
+// How to retrieve all drawing objects and fill with color its first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

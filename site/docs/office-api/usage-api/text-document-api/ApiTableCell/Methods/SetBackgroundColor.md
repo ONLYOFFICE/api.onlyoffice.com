@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the background color to the table cell.
+Set the background color to the table cell.
 
 ```javascript editor-docx
 // How to color the cell.
@@ -38,5 +38,4 @@ table.SetStyle(tableStyle);
 let cell = table.GetRow(0).GetCell(0);
 cell.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
-
 ```

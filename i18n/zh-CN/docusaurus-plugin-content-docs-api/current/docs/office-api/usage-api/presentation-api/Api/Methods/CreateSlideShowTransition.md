@@ -20,10 +20,12 @@ expression.CreateSlideShowTransition();
 
 ## 示例
 
-此示例创建幻灯片放映过渡效果
+创建具有淡入效果的幻灯片放映切换，3 秒后开始。
 
 ```javascript editor-pptx
-// with fade effect that starts after 3 seconds.
+// How do I create the slide show transition in a presentation?
+
+// Create the slide show transition and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,5 +40,4 @@ transition.SetAdvanceOnTime(true);
 transition.SetAdvanceTime(3000);
 
 slide.SetSlideShowTransition(transition);
-
 ```

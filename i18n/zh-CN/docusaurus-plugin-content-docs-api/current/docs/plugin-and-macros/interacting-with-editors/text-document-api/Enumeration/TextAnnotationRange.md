@@ -2,6 +2,10 @@
 
 未提供描述。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -10,7 +14,3 @@
 | length | number | 文本范围的长度。 |
 | name | string | 批注类型（例如，`"grammar"`）。 |
 | start | number | 文本范围的起始索引。 |
-## 类型
-
-Object
-

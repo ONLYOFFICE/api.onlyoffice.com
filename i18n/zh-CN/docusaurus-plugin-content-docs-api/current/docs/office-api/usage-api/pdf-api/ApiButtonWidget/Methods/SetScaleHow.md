@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置按钮控件的缩放方式类型。
+在 PDF 文档中设置按钮控件的缩放方式类型。
 
 ```javascript editor-pdf
+// How do I set scale how in a PDF document?
+
+// Set scale how using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

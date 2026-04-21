@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除段落。
+删除电子表格中的段落。
 
 ```javascript editor-xlsx
-// How to remove a paragraph.
+// How to remove a paragraph in a spreadsheet.
 
-// Delete the paragraph from the shape content.
+// Delete the paragraph from the shape content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -20,7 +20,7 @@ JSON
 
 ## Example
 
-This example converts the ApiTableCellPr object into the JSON object.
+Convert the table cell properties object into the JSON object.
 
 ```javascript editor-docx
 // How to get a JSON from the table cell object.

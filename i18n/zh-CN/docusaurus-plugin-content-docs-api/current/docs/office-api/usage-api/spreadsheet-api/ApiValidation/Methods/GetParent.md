@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-此示例获取验证的父范围。
+获取电子表格中验证的父范围。
 
 ```javascript editor-xlsx
-// How to retrieve the validation parent range.
+// How to retrieve the validation parent range in a spreadsheet.
 
-// Get the parent range.
+// Get the parent for a validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:A5");
@@ -33,5 +33,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let parent = validation.GetParent();
 worksheet.GetRange("B1").SetValue("Parent range: " + parent.GetAddress());
-
 ```

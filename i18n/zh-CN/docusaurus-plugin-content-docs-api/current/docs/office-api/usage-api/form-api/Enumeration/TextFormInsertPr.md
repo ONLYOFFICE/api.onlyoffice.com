@@ -12,10 +12,9 @@
 - [TextFormPrBase](../Enumeration/TextFormPrBase.md)
 - [FormInsertPr](../Enumeration/FormInsertPr.md)
 
-
 ## 示例
 
-此示例在选定文本上方插入具有指定文本框属性的文本框。
+在选定文本上方插入具有指定文本框属性的文本框。
 
 ```javascript editor-forms
 // How to insert a text form with adding properties like tip text, placeholder, etc. to it.
@@ -36,5 +35,4 @@ let textFormInsertPr = {
 	"keepSelectedTextInForm": false
 };
 doc.InsertTextForm(textFormInsertPr);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph text properties.
+Get the paragraph text properties in a document.
 
 ```javascript editor-docx
-// How to get text properties of the paragraph object.
+// How to get text properties of the paragraph object in a document.
 
-// Get the paragraph text properties and display it.
+// Get the paragraph text properties and display it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

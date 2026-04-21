@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the previous coupon date before the settlement date.
+Return the previous coupon date before the settlement date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the previous coupon date before the settlement date.
+// How to return the previous coupon date before the settlement date in a spreadsheet.
 
-// Use function to get the previous coupon date.
+// Use function to get the previous coupon date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

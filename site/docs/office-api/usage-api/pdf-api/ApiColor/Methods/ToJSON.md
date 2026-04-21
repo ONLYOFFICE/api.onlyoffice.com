@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to convert a shape fill color to JSON.
+Convert a shape fill color to JSON in a PDF document.
 
 ```javascript editor-pdf
+// The color is obtained from the first shape fill in the document.
+
+// Convert the color to a JSON string and display the result.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,5 +43,4 @@ run.SetFontSize(30);
 run.AddText('Color JSON:\n' + color.ToJSON());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

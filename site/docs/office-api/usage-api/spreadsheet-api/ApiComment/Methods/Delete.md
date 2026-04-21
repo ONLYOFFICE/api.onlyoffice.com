@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example deletes the ApiComment object.
+Delete the comment object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove a comment from a range.
+// How to remove a comment from a range in a spreadsheet.
 
-// Get a range add a comment to it and then remove it.
+// Get a range add a comment to it and then remove it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

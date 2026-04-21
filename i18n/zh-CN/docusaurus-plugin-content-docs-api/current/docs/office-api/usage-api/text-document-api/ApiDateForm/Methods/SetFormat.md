@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例展示如何在日期表单上设置日期格式。
+设置文档中日期表单的日期格式。
 
 ```javascript editor-docx
 // Specify the format of the date for the form.

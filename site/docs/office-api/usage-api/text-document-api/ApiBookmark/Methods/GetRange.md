@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get bookmark range.
+Get bookmark range in a document.
 
 ```javascript editor-docx
-// How to add a bookmark and then make its range bold.
+// How to add a bookmark and then make its range bold in a document.
 
-// Highlight the range of a bookmark.
+// Highlight the range of a bookmark in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,5 +37,4 @@ let bookmarkRange = bookmark.GetRange();
 bookmarkRange.SetBold(true);
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark range is shown in bold");
-
 ```

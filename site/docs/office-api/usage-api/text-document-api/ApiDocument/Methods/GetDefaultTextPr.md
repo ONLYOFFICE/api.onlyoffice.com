@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a set of default properties for the text run in the current document.
+Get a set of default properties for the text run in the current document in a document.
 
 ```javascript editor-docx
 // How to get default text properties of a document.
 
-// Update the default text properties of the text elements.
+// Update the default text properties of the text elements in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

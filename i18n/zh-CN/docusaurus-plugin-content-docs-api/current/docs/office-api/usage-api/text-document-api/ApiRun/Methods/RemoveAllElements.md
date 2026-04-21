@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例从文本块中移除所有元素。
+从文档中的 run 移除所有元素。
 
 ```javascript editor-docx
-// How to clear the text run.
+// How to clear the text run in a document.
 
-// Delete all elements from the run.
+// Delete all elements from the run in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -2,27 +2,17 @@
 
 返回当前选中的内容控件。
 
-## 语法
-
-```javascript
-expression.GetCurrentContentControl();
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| [ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md) \| null
+继承自 [ApiDocumentContent.GetCurrentContentControl](../../ApiDocumentContent/Methods/GetCurrentContentControl.md)。
 
 ## 示例
 
-此示例展示如何获取当前选中的内容控件。
+获取文档中当前选中的内容控件。
 
 ```javascript editor-docx
+// How to get current content control for a document content?
+
+// Get current content control and display the result in a document.
+
 const doc = Api.GetDocument();
 
 const blockSdt = Api.CreateBlockLvlSdt();
@@ -39,5 +29,4 @@ if (currentCC) {
 	paragraph.AddText('No content control is selected.');
 }
 doc.Push(paragraph);
-
 ```

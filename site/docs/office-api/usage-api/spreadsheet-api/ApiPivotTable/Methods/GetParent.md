@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get parent of a pivot table.
+Get parent of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table parent and show its name.
+// How to get table parent and show its name in a spreadsheet.
 
-// Create a pivot table, add data to it then get its parent.
+// Create a pivot table, add data to it then get its parent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

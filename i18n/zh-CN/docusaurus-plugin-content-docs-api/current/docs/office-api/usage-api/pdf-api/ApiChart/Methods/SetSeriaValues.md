@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何为指定的 ApiChart 对象设置值。
+如何在 PDF 文档中为指定的图表对象设置值。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series values.
+// Create a chart, set its properties and its series values in a PDF document.
+
+// Set seria values using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

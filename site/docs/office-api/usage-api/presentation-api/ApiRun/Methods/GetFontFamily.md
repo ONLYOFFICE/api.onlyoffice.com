@@ -3,30 +3,16 @@
 Returns the font family from the current text properties.
 The method automatically calculates the font from the theme if the font was set via the theme.
 
-## Syntax
-
-```javascript
-expression.GetFontFamily();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md).
 
 ## Example
 
-This example shows how to find out a text font family.
+Find out a text font family in a presentation.
 
 ```javascript editor-pptx
-// How to know font name of a text run.
+// How to know font name of a text run in a presentation.
 
-// Get the text properties of the run and display its font family.
+// Get the text properties of the run and display its font family in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +39,4 @@ paragraph = Api.CreateParagraph();
 const fontFamily = textPr.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 docContent.Push(paragraph);
-
 ```

@@ -20,9 +20,13 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例返回文档内容中的当前文本块。
+返回文档内容中的当前 run。
 
 ```javascript editor-pdf
+// How to get current run for a document content?
+
+// Get current run and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,5 +46,4 @@ if (currentRun) {
   currentRun.AddText(' (Current run detected!)');
 }
 page.AddObject(shape);
-
 ```

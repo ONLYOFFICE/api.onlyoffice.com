@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the identifier of the current presentation using the ApiCore.
+Set and get the identifier of the current presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How to set identifier for a core properties in a presentation?
+
+// Set identifier and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetIdentifier("#ID42");
@@ -40,5 +44,4 @@ paragraph.AddText("Identifier: " + identifier);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a class type of ApiChart.
+Check the class type returned by a chart in a PDF document.
 
 ```javascript editor-pdf
-// Retrieve class type of ApiChart object and insert it to the page.
+// How do I check what type a chart object is in a PDF document?
+
+// Retrieve and output the class type string for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

@@ -2,25 +2,11 @@
 
 Returns the date operator for time period conditions.
 
-## Syntax
-
-```javascript
-expression.GetDateOperator();
-```
-
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md).
 
 ## Example
 
-This example gets the date operator from a time period conditional formatting rule.
+Get the date operator from a time period conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve date operators from time period conditional formatting rules.
@@ -47,5 +33,4 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```

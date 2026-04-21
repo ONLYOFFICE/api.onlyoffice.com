@@ -20,12 +20,12 @@ Number
 
 ## Example
 
-This example shows how to get the row index.
+Get the row index in a document.
 
 ```javascript editor-docx
-// Display the row index.
+// Display the row index in a document.
 
-// Get the index of the table row.
+// Get the index of the table row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

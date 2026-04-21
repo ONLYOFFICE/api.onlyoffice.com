@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets the advance on time setting and displays it.
+Get the advance on time setting and display it in a presentation.
 
 ```javascript editor-pptx
+// How can I get the advance on time using a slide show transition in a presentation?
+
+// Get the advance on time for a slide show transition in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -46,5 +50,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Time: ' + advanceOnTime);
 slide.AddObject(shape);
-
 ```

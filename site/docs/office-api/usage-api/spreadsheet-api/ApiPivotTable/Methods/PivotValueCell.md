@@ -23,7 +23,7 @@ number \| string \| null
 
 ## Example
 
-This example shows how to get a pivot value cell using its position.
+Get a pivot value cell using its position in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a pivot value cell.

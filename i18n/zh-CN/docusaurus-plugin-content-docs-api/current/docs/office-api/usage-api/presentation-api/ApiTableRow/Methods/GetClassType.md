@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查演示文稿中表格行返回的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiTableRow.
+// How do I check what type a table row object is in a presentation?
 
-// Retrieve class type of ApiTableRow object and insert it to the slide.
+// Retrieve and output the class type string for a table row in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates no fill and removes the fill from the element.
+Create no fill and remove the fill from the element in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove fill from the element.
+// How to remove fill from the element in a spreadsheet.
 
-// Set no fill color for the element.
+// Set no fill color for the element in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

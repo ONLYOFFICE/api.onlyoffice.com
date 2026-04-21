@@ -1,7 +1,6 @@
 # ApiRichRun
 
-Represents the ApiRichRun class.
-
+ApiRichRun is a subclass of [ApiRichTextPr](../ApiRichTextPr/ApiRichTextPr.md).
 
 ## Methods
 

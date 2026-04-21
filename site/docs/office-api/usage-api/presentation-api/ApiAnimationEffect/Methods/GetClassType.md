@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the class type of the ApiAnimationEffect object.
+Check the class type returned by an animation effect in a presentation.
 
 ```javascript editor-pptx
+// How do I check what type an animation effect object is in a presentation?
+
+// Retrieve and output the class type string for an animation effect in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(infoShape);
-
 ```

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all fields in the document.
+Get all fields in the document.
 
 ```javascript editor-pdf
+// How can I get all fields using a document in a PDF document?
+
+// Get all fields for a document in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

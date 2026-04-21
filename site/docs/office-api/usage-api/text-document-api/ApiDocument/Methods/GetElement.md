@@ -2,32 +2,16 @@
 
 Returns an element by its position in the document.
 
-## Syntax
-
-```javascript
-expression.GetElement(nPos);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | The element position that will be taken from the document. |
-
-## Returns
-
-[DocumentElement](../../Enumeration/DocumentElement.md)
+Inherited from [ApiDocumentContent.GetElement](../../ApiDocumentContent/Methods/GetElement.md).
 
 ## Example
 
-This example shows how to get an element by its position in the document content.
+Get an element by its position in the document content.
 
 ```javascript editor-docx
-// How to get element knowing its index.
+// How to get element knowing its index in a document.
 
-// Get the first paragraph and add text to it.
+// Get the first paragraph and add text to it in a document.
 
 let doc = Api.GetDocument();
 let section = doc.GetFinalSection();

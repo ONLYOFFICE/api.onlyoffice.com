@@ -2,25 +2,11 @@
 
 返回当前表单的锁定状态。
 
-## 语法
-
-```javascript
-expression.GetLock();
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md)。
 
 ## 示例
 
-此示例检查当前表单是否已锁定。
+检查当前表单是否被锁定。
 
 ```javascript editor-forms
 // How to know whether a form is locked or not.
@@ -36,5 +22,4 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```

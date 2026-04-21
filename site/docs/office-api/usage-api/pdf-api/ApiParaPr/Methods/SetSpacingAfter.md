@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Set the spacing after the current paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to set the size of a spacing after a text from a paragraph properties.
+// How to set the size of a spacing after a text from a paragraph properties in a PDF document.
 
-// Change the size property of a spacing after a paragraph.
+// Change the size property of a spacing after a paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -54,5 +54,4 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(secondParagraph);
 page.AddObject(shape);
-
 ```

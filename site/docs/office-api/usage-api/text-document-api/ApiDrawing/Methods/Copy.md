@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example copies the current graphic object.
+Copy the current graphic object in a document.
 
 ```javascript editor-docx
-// How to create a duplicate of a drawing.
+// How to create a duplicate of a drawing in a document.
 
 // Add two similar shapes into the document.
 

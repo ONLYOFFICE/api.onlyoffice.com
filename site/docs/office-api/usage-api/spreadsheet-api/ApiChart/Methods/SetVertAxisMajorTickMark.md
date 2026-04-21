@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the major tick mark for the vertical axis.
+Specify the major tick mark for the vertical axis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a major tick as a cross for the vertical axis labels.
+// How to add a major tick as a cross for the vertical axis labels in a spreadsheet.
 
-// Specifies major tick mark for the vertical axis.
+// Specify major tick mark for the vertical axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

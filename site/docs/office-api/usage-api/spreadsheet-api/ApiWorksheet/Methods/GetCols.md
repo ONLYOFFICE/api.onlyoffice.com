@@ -22,7 +22,7 @@ expression.GetCols(sRange);
 
 ## Example
 
-This example shows how to get the ApiRange object that represents all the cells on the columns range.
+Get the cell range object that represents all the cells on the columns range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get all column cells.

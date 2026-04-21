@@ -2,7 +2,6 @@
 
 Represents the ApiBaseField class.
 
-
 ## Methods
 
 | Method | Returns | Description |

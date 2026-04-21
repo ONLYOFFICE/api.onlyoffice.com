@@ -2,32 +2,16 @@
 
 Pushes a paragraph or a table to actually add it to the document.
 
-## Syntax
-
-```javascript
-expression.Push(oElement);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The element type which will be pushed to the document. |
-
-## Returns
-
-boolean
+Inherited from [ApiDocumentContent.Push](../../ApiDocumentContent/Methods/Push.md).
 
 ## Example
 
-This example removes all contents of the shape and adds a new paragraph inside it.
+Remove all contents of the shape and add a new paragraph inside it in a document.
 
 ```javascript editor-docx
 // Insert an element to the document.
 
-// Push the paragraph to the content of the document. 
+// Push the paragraph to the content of the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,7 +22,7 @@ number
 
 ## Example
 
-This example shows how to counts a number of empty cells in a specified range of cells.
+Counts a number of empty cells in a specified range of cells in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find a number of empty cells.

@@ -20,12 +20,12 @@ expression.GetNumbering();
 
 ## 示例
 
-此示例展示如何获取编号列表的编号定义和编号级别。
+获取文档中编号列表的编号定义和编号级别。
 
 ```javascript editor-docx
-// Get the numbering from the paragraph.
+// Get the numbering from the paragraph in a document.
 
-// How to get the numbering of the numbered text.
+// How to get the numbering of the numbered text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

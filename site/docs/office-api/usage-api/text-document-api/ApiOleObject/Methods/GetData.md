@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the string data from the OLE object.
+Get the string data from the OLE object in a document.
 
 ```javascript editor-docx
-// How to get raw data from the OLE object content.
+// How to get raw data from the OLE object content in a document.
 
 // Retrieve content of the OLE object and insert it to the document.
 
@@ -40,5 +40,4 @@ let data = oleObject.GetData();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The OLE object data: ' + data);
 doc.Push(paragraph);
-
 ```

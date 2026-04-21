@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-此示例演示如何获取电子表格所有可用主题颜色的列表。
+获取电子表格中所有可用主题颜色的列表。
 
 ```javascript editor-xlsx
 // Get all theme colors from the worksheet.
 
-// List all available theme colors.
+// List all available theme colors in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let themes = Api.GetThemesColors();

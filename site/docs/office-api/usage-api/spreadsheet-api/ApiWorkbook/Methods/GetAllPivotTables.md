@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get pivot tables from the workbook.
+Get pivot tables from the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get all pivot tables for a workbook in a spreadsheet?
+
+// Get all pivot tables and display the result in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 
@@ -41,5 +45,4 @@ Api.InsertPivotNewWorksheet(dataRef);
 workbook.GetAllPivotTables().forEach(function (pivot) {
 	pivot.AddDataField('Price');
 });
-
 ```

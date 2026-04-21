@@ -2,30 +2,16 @@
 
 从当前文本属性获取文本轮廓。
 
-## 语法
-
-```javascript
-expression.GetOutLine();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiStroke](../../ApiStroke/ApiStroke.md)
+继承自 [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md)。
 
 ## 示例
 
-此示例获取文本的轮廓属性。
+获取电子表格中文本的轮廓属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is outlined or not.
+// How to find out whether a text is outlined or not in a spreadsheet.
 
-// Get a text outline property type, for example as a stroke.
+// Get a text outline property type, for example as a stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

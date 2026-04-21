@@ -22,13 +22,16 @@ boolean
 
 ## 示例
 
-此示例创建方形注释并为其设置红色填充颜色。
+在 PDF 文档中创建方形注释并为其设置红色填充颜色。
 
 ```javascript editor-pdf
+// How can I set fill color using an annotation in a PDF document?
+
+// Set fill color for an annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 squareAnnot.SetFillColor(Api.RGB(255, 0, 0));
-
 ```

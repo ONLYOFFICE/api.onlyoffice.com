@@ -17,10 +17,9 @@ Object
 | ShowPageNums | boolean | Specifies whether to show page numbers in the table of contents. |
 | TocStyle | [TocStyle](../Enumeration/TocStyle.md) | The table of contents style type. |
 
-
 ## Example
 
-This example adds a table of contents with the specified properties to the document.
+Add a table of contents with the specified properties to the document.
 
 ```javascript editor-docx
 // How to create a table of contents properties.
@@ -38,5 +37,4 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```

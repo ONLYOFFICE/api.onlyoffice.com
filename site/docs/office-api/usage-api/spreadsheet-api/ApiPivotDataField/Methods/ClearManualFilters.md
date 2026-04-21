@@ -2,30 +2,16 @@
 
 Deletes all manual filters from the pivot filters collection.
 
-## Syntax
-
-```javascript
-expression.ClearManualFilters();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.ClearManualFilters](../../ApiPivotField/Methods/ClearManualFilters.md).
 
 ## Example
 
-This example shows how to clear manual filters from a pivot field.
+Clear manual filters from a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field manual filters.
+// How to remove previously applied pivot field manual filters in a spreadsheet.
 
-// Create a pivot table, add data to it then delete manual filters from a custom field.
+// Create a pivot table, add data to it then delete manual filters from a custom field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

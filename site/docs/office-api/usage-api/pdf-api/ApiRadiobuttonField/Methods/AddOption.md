@@ -2,31 +2,17 @@
 
 Adds options to checkbox group.
 
-## Syntax
-
-```javascript
-expression.AddOption(nPage, aRect, sExportValue);
-```
-
-`expression` - A variable that represents a [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | Required | number |  | page to add option |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | rect of new option |
-| sExportValue | Optional | string |  | option checked value |
-
-## Returns
-
-[ApiCheckboxWidget](../../ApiCheckboxWidget/ApiCheckboxWidget.md)
+Inherited from [ApiCheckboxField.AddOption](../../ApiCheckboxField/Methods/AddOption.md).
 
 ## Example
 
-This example adds an option for checkbox field group.
+Add an option for checkbox field group in a PDF document.
 
 ```javascript editor-pdf
+// How do I add the option in a PDF document?
+
+// Add the option using a checkbox field object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

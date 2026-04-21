@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例展示如何获取形状填充中使用的颜色的类类型。
+获取演示文稿中颜色对象的类类型。
 
 ```javascript editor-pptx
+// How can I get the class type of a color in a presentation?
+
+// Get the class type of a color and display it in the presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText("Class Type = " + color.GetClassType());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

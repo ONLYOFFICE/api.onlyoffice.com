@@ -2,6 +2,10 @@
 
 包含字体信息的对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -29,11 +33,6 @@
 | m_usWidth | number | 与正常宽高比（宽度与高度的比率）的相对变化。 |
 | m_wsFontName | string | 字体名称。 |
 | m_wsFontPath | string | 当前字体文件的路径。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

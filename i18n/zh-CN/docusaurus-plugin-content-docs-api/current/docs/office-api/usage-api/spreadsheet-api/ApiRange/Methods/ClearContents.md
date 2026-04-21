@@ -20,17 +20,16 @@ expression.ClearContents();
 
 ## 示例
 
-此示例清除范围中的所有内容。
+清除电子表格中范围的所有内容。
 
 ```javascript editor-xlsx
-// How to clear contents for a range.
+// How to clear contents for a range in a spreadsheet.
 
-// Get a range, clear contents and show the result.
+// Get a range, clear contents and show the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:B1").SetValue("Example text");
 let range = worksheet.GetRange("A1");
 range.ClearContents();
 worksheet.GetRange("A2").SetValue("Result is contents cleared for A1 cell.");
-
 ```

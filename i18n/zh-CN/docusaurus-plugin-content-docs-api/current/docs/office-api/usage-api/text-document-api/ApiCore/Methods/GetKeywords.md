@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取当前文档的关键字。
+使用文档中的核心属性获取当前文档的关键字。
 
 ```javascript editor-docx
+// How do I get the keywords in a document?
+
+// Get the keywords using a core properties object in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetKeywords("Example; ApiCore; Document");
@@ -30,5 +34,4 @@ core.SetKeywords("Example; ApiCore; Document");
 const keywords = core.GetKeywords();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```

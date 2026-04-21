@@ -2,30 +2,16 @@
 
 Gets the italic property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetItalic();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
 ## Example
 
-This example shows how to find out whether a text is italic.
+Find out whether a text is italic in a presentation.
 
 ```javascript editor-pptx
-// How to know whether a text is set to italic or not.
+// How to know whether a text is set to italic or not in a presentation.
 
-// Get the text properties of the run and find whether it is italic or not.
+// Get the text properties of the run and find whether it is italic or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +37,4 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
-
 ```

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to move the cursor outside.
+Move the cursor outside in a document.
 
 ```javascript editor-forms
 // How to know whether the cursor should be moved out of the text form.

@@ -2,25 +2,11 @@
 
 将 ApiTableCellPr 对象转换为 JSON 对象。
 
-## 语法
-
-```javascript
-expression.ToJSON();
-```
-
-`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-JSON
+继承自 [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md)。
 
 ## 示例
 
-此示例将 ApiTableCellPr 对象转换为 JSON 对象。
+将表格单元格属性对象转换为 JSON 对象。
 
 ```javascript editor-docx
 // How to get a JSON from the table cell object.

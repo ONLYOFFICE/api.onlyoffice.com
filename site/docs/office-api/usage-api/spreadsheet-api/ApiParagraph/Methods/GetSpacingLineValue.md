@@ -2,30 +2,16 @@
 
 Returns the paragraph line spacing value.
 
-## Syntax
-
-```javascript
-expression.GetSpacingLineValue();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
+Inherited from [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacingLineValue.md).
 
 ## Example
 
-This example shows how to get the paragraph line spacing value.
+Get the paragraph line spacing value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get spacing line value between sentences of a paragraph.
+// How to get spacing line value between sentences of a paragraph in a spreadsheet.
 
-// Create a paragraph set spacing line between the sentences and retrieve the value.
+// Create a paragraph set spacing line between the sentences and retrieve the value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

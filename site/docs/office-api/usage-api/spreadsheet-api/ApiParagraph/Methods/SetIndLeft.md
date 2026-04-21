@@ -2,32 +2,16 @@
 
 Sets the paragraph left side indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndLeft(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph left side indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndLeft](../../ApiParaPr/Methods/SetIndLeft.md).
 
 ## Example
 
-This example sets the paragraph left side indentation.
+Set the paragraph left side indentation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the sentence's left side indentation of the paragraph.
+// How to change the sentence's left side indentation of the paragraph in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the left side indentation.
+// Get a paragraph from the shape's content then add a text specifying the left side indentation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

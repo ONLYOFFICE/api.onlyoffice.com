@@ -23,7 +23,7 @@ number
 
 ## Example
 
-This example shows how to choose a value or action to perform from a list of values, based on an index number.
+Choose a value or action to perform from a list of values, based on an index number in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to choose a value or action to perform from a list of values, based on an index number.

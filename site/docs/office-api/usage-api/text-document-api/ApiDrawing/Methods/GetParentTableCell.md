@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get a parent table cell that contains the graphic object.
+Get the parent table cell that contains the graphic object.
 
 ```javascript editor-docx
 // Get an element's parent table cell.

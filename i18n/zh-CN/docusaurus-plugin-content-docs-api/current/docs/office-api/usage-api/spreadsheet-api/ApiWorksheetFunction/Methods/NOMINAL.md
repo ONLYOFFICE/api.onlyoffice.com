@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回年名义利率。
+在电子表格中返回年度名义利率。
 
 ```javascript editor-xlsx
-// How to calculate the annual nominal interest rate.
+// How to calculate the annual nominal interest rate in a spreadsheet.
 
-// Use a function to get the annual nominal interest rate.
+// Use a function to get the annual nominal interest rate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

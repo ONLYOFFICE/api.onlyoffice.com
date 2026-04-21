@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to use ApiCustomProperties to configure custom properties in a spreadsheet.
+Use custom properties to configure custom properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I get custom properties in a spreadsheet?
+
+// Get custom properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const customProps = Api.GetCustomProperties();
@@ -51,5 +55,4 @@ paragraph.AddText("Custom String Property: " + stringValue + "\n");
 paragraph.AddText("Custom Number Property: " + numberValue + "\n");
 paragraph.AddText("Custom Date Property: " + dateValue.toDateString() + "\n");
 paragraph.AddText("Custom Boolean Property: " + boolValue);
-
 ```

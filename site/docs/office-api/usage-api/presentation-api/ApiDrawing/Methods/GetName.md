@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example returns the name of the current drawing.
+Return the name of the current drawing in a presentation.
 
 ```javascript editor-pptx
+// How do I get the name in a presentation?
+
+// Get the name using a drawing object object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing name: ' + name);
 slide.AddObject(shape);
-
 ```

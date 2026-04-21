@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-此示例向工作表添加新名称。
+向工作表添加新名称。
 
 ```javascript editor-xlsx
 // How to change a name of the worksheet range.

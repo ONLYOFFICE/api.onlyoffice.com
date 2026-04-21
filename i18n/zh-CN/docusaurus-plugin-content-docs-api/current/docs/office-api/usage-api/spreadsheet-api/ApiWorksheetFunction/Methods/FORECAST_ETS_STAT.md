@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-此示例演示如何返回预测的请求统计量。
+在电子表格中返回预测的请求统计量。
 
 ```javascript editor-xlsx
-// How to return the requested forecast statistic.
+// How to return the requested forecast statistic in a spreadsheet.
 
-// Use function to return the forecast.
+// Use function to return the forecast in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

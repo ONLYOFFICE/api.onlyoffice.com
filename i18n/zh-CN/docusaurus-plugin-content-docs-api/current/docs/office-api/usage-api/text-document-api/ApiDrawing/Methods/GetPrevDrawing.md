@@ -20,12 +20,12 @@ expression.GetPrevDrawing();
 
 ## 示例
 
-此示例展示如何获取上一个内联绘图对象（如果存在）。
+获取文档中的上一个内联绘图对象（如果存在）。
 
 ```javascript editor-docx
-// How to set vertical flip for the previous drawing.
+// How to set vertical flip for the previous drawing in a document.
 
-// Get the previous drawing and update its properties.
+// Get the previous drawing and update its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

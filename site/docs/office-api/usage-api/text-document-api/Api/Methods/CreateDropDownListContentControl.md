@@ -23,9 +23,13 @@ expression.CreateDropDownListContentControl(list, selected);
 
 ## Example
 
-This example shows how to create a combo box content control.
+Create a combo box content control in a document.
 
 ```javascript editor-docx
+// How to create the drop down list content control in a document?
+
+// Create the drop down list content control using the document API.
+
 let doc = Api.GetDocument();
 let cc = Api.CreateDropDownListContentControl([{display: 'one', value: '1'}, {display: 'two', value: '2'}], 1);
 let paragraph = Api.CreateParagraph();

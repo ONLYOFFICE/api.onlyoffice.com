@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Sets a solid fill color to a shape.
+Set a solid fill color to a shape. Creates a rectangle and apply a red fill to it in a document.
 
 ```javascript editor-docx
-// Creates a rectangle and applies a red fill to it.
+// How to set fill for a shape in a document?
+
+// Set fill and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -37,5 +40,4 @@ paragraph.AddLineBreak();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddText("Fill changed to red");
-
 ```

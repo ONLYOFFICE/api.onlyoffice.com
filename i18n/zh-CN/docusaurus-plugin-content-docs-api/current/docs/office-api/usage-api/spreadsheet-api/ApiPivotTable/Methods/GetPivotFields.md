@@ -23,12 +23,12 @@ expression.GetPivotFields(field);
 
 ## 示例
 
-此示例展示如何获取数据透视表的透视字段。
+获取电子表格中数据透视表的透视字段。
 
 ```javascript editor-xlsx
-// How to get table pivot fields as an array of fields.
+// How to get table pivot fields as an array of fields in a spreadsheet.
 
-// Create a pivot table, add data to it then get its pivot fields.
+// Create a pivot table, add data to it then get its pivot fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

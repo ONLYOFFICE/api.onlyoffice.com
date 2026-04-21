@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置表格环绕样式。
+在文档中设置表格环绕样式。
 
 ```javascript editor-docx
-// How to set the wrapping to the table.
+// How to set the wrapping to the table in a document.
 
-// Resize table by making its the width 100 percent.
+// Resize table by making its the width 100 percent in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

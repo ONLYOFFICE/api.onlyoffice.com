@@ -28,12 +28,12 @@ boolean
 
 ## 示例
 
-此示例检查列上是否有活动筛选。
+检查电子表格中某列上的筛选是否处于活动状态。
 
 ```javascript editor-xlsx
-// How to see if a given column currently has any filter definition.
+// How to see if a given column currently has any filter definition in a spreadsheet.
 
-// Use ApiFilter.GetOn() to test if a filter is applied.
+// Use ApiFilter.GetOn() to test if a filter is applied in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -59,5 +59,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Filter applied on column A:");
     worksheet.GetRange("D1").SetValue(filter.GetOn());    // or filter.On
 }
-
 ```

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取电子表格中形状的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiShape.
+// How to identify the class type of a shape in a spreadsheet?
 
-// Get a class type of ApiShape and display it in the worksheet.
+// Obtain the class type identifier of a shape object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

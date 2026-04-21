@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the chart title.
+Set the outline to the chart title in a document.
 
 ```javascript editor-docx
-// How to outline a chart title.
+// How to outline a chart title in a document.
 
-// Create a chart, set its properties and its title outline.
+// Create a chart, set its properties and its title outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a collection of the ranges.
+Get a collection of the ranges in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get range areas.
+// How to get range areas in a spreadsheet.
 
 // Get range areas, count them and display the result in the worksheet.
 
@@ -37,5 +37,4 @@ range = worksheet.GetRange("A5");
 range.SetValue("The number of ranges in the areas: ");
 range.AutoFit(false, true);
 worksheet.GetRange("B5").SetValue(count);
-
 ```

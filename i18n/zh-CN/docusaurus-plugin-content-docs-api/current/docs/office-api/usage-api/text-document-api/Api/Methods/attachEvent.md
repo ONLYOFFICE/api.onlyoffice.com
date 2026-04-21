@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例展示如何订阅超链接点击事件。
+在文档中订阅超链接点击事件。
 
 ```javascript editor-docx
-// How to attach the "asc_onHyperlinkClick" event.
+// How to attach the "asc_onHyperlinkClick" event in a document.
 
-// Subscribes to the "asc_onHyperlinkClick" event and calls the callback function which displays the "HYPERLINK!!!" message in the console log when the event fires.
+// Subscribes to the "asc_onHyperlinkClick" event and calls the callback function which displays the "HYPERLINK!!!" message in the console log when the event fires in a document.
 
 Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");

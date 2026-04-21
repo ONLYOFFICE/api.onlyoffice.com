@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## Example
 
-This example shows how to get all drawings with the specified names from the workbook.
+Get all drawings with the specified names from the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// Get drawings by their names.
+// Get drawings by their names in a spreadsheet.
 
-// How to retrieve drawings by their names and rotate them.
+// How to retrieve drawings by their names and rotate them in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
@@ -47,5 +47,4 @@ const drawings = workbook.GetDrawingsByName(["MyShape1", "MyShape2"]);
 for (let i = 0; i < drawings.length; i++) {
 	drawings[i].SetRotation(45);
 }
-
 ```

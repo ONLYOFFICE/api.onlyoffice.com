@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to convert radians to degrees.
+Convert radians to degrees in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert radians to degrees.
+// How to convert radians to degrees in a spreadsheet.
 
-// Use function to get degrees from radians.
+// Use function to get degrees from radians in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

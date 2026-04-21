@@ -23,7 +23,7 @@ expression.AddComment(sText, sAuthor);
 
 ## Example
 
-This example adds a comment to the document.
+Add a comment to the document.
 
 ```javascript editor-xlsx
 // How to add comments in a worksheet.

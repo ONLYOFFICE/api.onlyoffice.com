@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的余割。
+在电子表格中返回复数的余割值。
 
 ```javascript editor-xlsx
-// How to get the cosecant.
+// How to get the cosecant in a spreadsheet.
 
-// Use a function to get the cosecant of a complex number.
+// Use a function to get the cosecant of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMCSC("-2+2.5i"));
-
 ```

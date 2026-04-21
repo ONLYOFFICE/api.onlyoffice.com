@@ -22,9 +22,13 @@ expression.Add(xml);
 
 ## 示例
 
-此示例演示如何添加新的自定义 XML 部件然后访问它。
+在文档中添加新的自定义 XML 部件并访问它。
 
 ```javascript editor-docx
+// How to add for a custom XML parts in a document?
+
+// Add and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let newXml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

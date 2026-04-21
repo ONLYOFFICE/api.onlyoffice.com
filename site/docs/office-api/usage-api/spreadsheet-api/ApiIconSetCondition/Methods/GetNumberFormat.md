@@ -2,25 +2,11 @@
 
 Returns the number format applied to a cell when the conditional formatting rule evaluates to true.
 
-## Syntax
-
-```javascript
-expression.GetNumberFormat();
-```
-
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md).
 
 ## Example
 
-This example gets the number format of a conditional formatting rule.
+Get the number format of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve number formatting from conditional formatting rules.
@@ -48,5 +34,4 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
-
 ```

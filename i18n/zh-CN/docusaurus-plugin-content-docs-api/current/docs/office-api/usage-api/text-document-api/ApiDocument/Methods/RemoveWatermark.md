@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to remove the watermark.
+// How to remove the watermark in a document.
 
-// Add the watermark with settings and then delete it.
+// Add the watermark with settings and then delete it in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

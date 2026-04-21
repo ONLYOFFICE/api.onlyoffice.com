@@ -22,12 +22,12 @@ JSON
 
 ## Example
 
-This example converts the ApiParaPr object into the JSON object.
+Convert the paragraph properties object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the paragraph properties.
+// How to get a JSON from the paragraph properties in a document.
 
-// Convert the paragraph properties to json and add it to the paragraph.
+// Convert the paragraph properties to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

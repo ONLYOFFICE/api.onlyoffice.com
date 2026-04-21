@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph properties which are applied to any numbered paragraph that references the given numbering definition and numbering level.
+Get the paragraph properties which are applied to any numbered paragraph that references the given numbering definition and numbering level in a document.
 
 ```javascript editor-docx
-// How to retrieve the paragraph properties.
+// How to retrieve the paragraph properties in a document.
 
-// Get the properties of the paragraph of the numbering.
+// Get the properties of the paragraph of the numbering in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

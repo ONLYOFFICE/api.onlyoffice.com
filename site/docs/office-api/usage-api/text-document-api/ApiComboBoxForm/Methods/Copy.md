@@ -2,25 +2,11 @@
 
 Copies the current form (copies with the shape if it exists).
 
-## Syntax
-
-```javascript
-expression.Copy();
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiForm](../../Enumeration/ApiForm.md)
+Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
 
 ## Example
 
-This example shows how to make a copy of the form.
+Make a copy of the form in a document.
 
 ```javascript editor-docx
 // How to create the same text form.

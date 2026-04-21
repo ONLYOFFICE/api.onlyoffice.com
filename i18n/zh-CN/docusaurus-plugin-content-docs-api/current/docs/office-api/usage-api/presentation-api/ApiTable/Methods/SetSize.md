@@ -23,9 +23,13 @@ expression.SetSize(width, height);
 
 ## 示例
 
-此示例展示如何设置表格大小。
+在演示文稿中设置表格的大小。
 
 ```javascript editor-pptx
+// How do I set size in a presentation?
+
+// Set size using a table object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,5 +45,4 @@ paragraph.AddText('Table size: 220 x 110 millimeters.');
 content.Push(paragraph);
 
 slide.AddObject(table);
-
 ```

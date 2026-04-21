@@ -22,12 +22,12 @@ expression.Replace(oReplaceData);
 
 ## 示例
 
-此示例将范围中的特定信息替换为另一个。
+在范围中将特定信息替换为另一个。
 
 ```javascript editor-xlsx
-// How to replace one data value with another in a range.
+// How to replace one data value with another in a range in a spreadsheet.
 
-// Create a range and replace its data field value with a new one.
+// Create a range and replace its data field value with a new one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | ids | string[] | 已失去焦点的内容控件 ID 数组。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onHideContentControlTrack", (ids) => {
     console.log("event: onHideContentControlTrack");
@@ -16,4 +18,3 @@ window.Asc.plugin.attachEditorEvent("onHideContentControlTrack", (ids) => {
     }
 });
 ```
-

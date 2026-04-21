@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-此示例向表格的所有内容添加批注。
+在文档中向表格的所有内容添加批注。
 
 ```javascript editor-docx
-// How to add comment to the table indicating its author name.
+// How to add comment to the table indicating its author name in a document.
 
-// Insert a comment into a table.
+// Insert a comment into a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

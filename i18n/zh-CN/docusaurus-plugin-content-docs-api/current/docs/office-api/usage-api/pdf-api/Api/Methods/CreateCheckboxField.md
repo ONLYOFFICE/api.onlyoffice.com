@@ -25,6 +25,10 @@ expression.CreateCheckboxField(aRect);
 如何创建复选框字段并添加到文档。
 
 ```javascript editor-pdf
+// How to create the checkbox field in a PDF document?
+
+// Create the checkbox field using the PDF document API.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

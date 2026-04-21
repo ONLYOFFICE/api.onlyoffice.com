@@ -2,7 +2,6 @@
 
 Represents the ApiStyle class.
 
-
 ## Methods
 
 | Method | Returns | Description |

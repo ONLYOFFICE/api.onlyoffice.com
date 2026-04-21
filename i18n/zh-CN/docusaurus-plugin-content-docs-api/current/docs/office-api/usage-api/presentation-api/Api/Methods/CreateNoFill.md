@@ -20,12 +20,12 @@ expression.CreateNoFill();
 
 ## 示例
 
-此示例创建无填充并移除元素的填充。
+在演示文稿中创建无填充并从元素中移除填充。
 
 ```javascript editor-pptx
-// How to remove background fill from the object.
+// How to remove background fill from the object in a presentation.
 
-// Create no fill and apply it to the element.
+// Create no fill and apply it to the element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,5 +39,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The stroke of this shape is transparent.");
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.SetDragToData(flag);
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到数据。
+在电子表格中设置透视字段的拖动到数据属性。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to data.
+// How to rename a pivot field drag to data in a spreadsheet.
 
-// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value.
+// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

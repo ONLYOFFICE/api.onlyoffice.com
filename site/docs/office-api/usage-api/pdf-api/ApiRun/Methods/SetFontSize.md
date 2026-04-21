@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the current text run.
+Set the font size to the characters of the current text run in a PDF document.
 
 ```javascript editor-pdf
-// How to set font size to the text run.
+// How to set font size to the text run in a PDF document.
 
-// Create a new text run and change resize its font.
+// Create a new text run and change resize its font in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +48,4 @@ run.SetFontSize(50);
 run.AddText("This is a text run with the font size set to 25 points (50 half-points).");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

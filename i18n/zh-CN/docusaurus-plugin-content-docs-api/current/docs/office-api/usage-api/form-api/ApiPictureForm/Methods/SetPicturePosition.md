@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-此示例设置表单中图片的位置。
+设置图片在表单内的位置。
 
 ```javascript editor-forms
 // How to move the picture inside the form.

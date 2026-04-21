@@ -27,7 +27,7 @@ boolean
 
 ## 示例
 
-此示例设置将显示在表格单元格左侧的边框。
+设置将显示在表格单元格左侧的边框。
 
 ```javascript editor-docx
 // How to add border to the left of the cell.

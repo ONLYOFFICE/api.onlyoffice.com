@@ -2,7 +2,6 @@
 
 Represents the ApiLayout class.
 
-
 ## Methods
 
 | Method | Returns | Description |

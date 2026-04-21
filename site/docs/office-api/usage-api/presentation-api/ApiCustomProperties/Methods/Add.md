@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example demonstrates how to add string custom properties to a document.
+Add string custom properties to a document in a presentation.
 
 ```javascript editor-pptx
+// Custom properties support string, boolean, number, and date value types.
+
+// Add for a custom properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 
@@ -64,5 +68,4 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirth Date: " + birthDate.toDateString() + " (" + typeof birthDate + ")");
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
-
 ```

@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to the hyperbolic cosecant of an angle.
+The hyperbolic cosecant of an angle in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return hyperbolic cosecant.
+// How to return hyperbolic cosecant in a spreadsheet.
 
-// Use function to get the hyperbolic cosecant of an angle.
+// Use function to get the hyperbolic cosecant of an angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

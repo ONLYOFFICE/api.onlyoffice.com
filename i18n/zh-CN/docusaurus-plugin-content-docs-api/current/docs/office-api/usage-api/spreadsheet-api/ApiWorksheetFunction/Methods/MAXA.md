@@ -22,17 +22,16 @@ number
 
 ## 示例
 
-此示例演示如何返回一组值中的最大值。不忽略逻辑值和文本。
+在电子表格中返回一组值中的最大值。不忽略逻辑值和文本。
 
 ```javascript editor-xlsx
-// How to get a maximum from a list including text and logical values.
+// How to get a maximum from a list including text and logical values in a spreadsheet.
 
-// Use a function to find a maximum from a list of objects.
+// Use a function to find a maximum from a list of objects in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:A5").GetValue();
 let func = Api.WorksheetFunction;
 let maxA = func.MAX(23, 45, true, "text", 0.89);
 worksheet.GetRange("C1").SetValue(maxA);
-
 ```

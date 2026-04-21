@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example deletes the paragraph.
+Delete the paragraph in a PDF document.
 
 ```javascript editor-pdf
 // How to remove a paragraph from the page.
 
-// Delete a text.
+// Delete and display the result in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +47,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph. The first paragraph was removed from the shape content.");
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

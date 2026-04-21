@@ -25,10 +25,13 @@ expression.QuadBezTo(x1, y1, x2, y2);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+使用各种贝塞尔和弧线命令创建复杂的曲线形状。在页面上的单条路径中演示不同的曲线类型。
 
 ```javascript editor-pdf
-// Demonstrates different curve types in a single path on a page.
+// How to quad bez to for a geometry path in a PDF document?
+
+// Quad bez to and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

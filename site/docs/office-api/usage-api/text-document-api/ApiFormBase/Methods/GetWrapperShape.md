@@ -21,7 +21,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a shape in which the form is placed to control the position and size of the fixed size form frame.
+Get a shape in which the form is placed to control the position and size of the fixed size form frame in a document.
 
 ```javascript editor-docx
 // Get wrapper shape of the text form.

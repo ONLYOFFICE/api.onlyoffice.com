@@ -20,7 +20,7 @@ expression.GetNext();
 
 ## 示例
 
-此示例展示如何获取下一个单元格。
+获取文档中的下一个单元格。
 
 ```javascript editor-docx
 // How to get next cell.

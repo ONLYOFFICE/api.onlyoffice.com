@@ -22,12 +22,12 @@ expression.Add(xml);
 
 ## Example
 
-This example shows how to add a new custom XML part and then access it.
+Add a new custom XML part and then access it in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a custom XML part to the workbook.
+// How to add a custom XML part to the workbook in a spreadsheet.
 
-// Add a new XML part.
+// Add and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

@@ -20,9 +20,13 @@ Object
 
 ## Example
 
-This example shows how to get the RGBA components of a shape fill color.
+Get the RGBA components of a shape fill color in a presentation.
 
 ```javascript editor-pptx
+// How do I get the r g b an in a presentation?
+
+// Get the r g b an using a color object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,5 +45,4 @@ run.SetFontSize(30);
 run.AddText('RGBA: ' + rgba.r + ', ' + rgba.g + ', ' + rgba.b + ', ' + rgba.a);
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

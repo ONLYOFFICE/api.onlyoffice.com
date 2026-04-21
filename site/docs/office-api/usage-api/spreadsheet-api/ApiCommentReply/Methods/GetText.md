@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the comment reply text.
+Get the comment reply text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a raw text of a reply.
+// How to get a raw text of a reply in a spreadsheet.
 
 // Display a reply text to a range of the worksheet.
 

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the user ID of the comment reply author.
+Get the user ID of the comment reply author in a document.
 
 ```javascript editor-docx
-// How to get ID of the user who left the first reply to the first comment.
+// How to get ID of the user who left the first reply to the first comment in a document.
 
-// Get the comment reply author ID.
+// Get the comment reply author ID in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

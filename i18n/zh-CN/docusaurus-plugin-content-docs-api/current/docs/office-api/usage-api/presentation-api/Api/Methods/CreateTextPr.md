@@ -20,12 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-此示例演示如何创建文本属性并使用它。
+在演示文稿中创建文本属性并使用它。
 
 ```javascript editor-pptx
-// How to change text style, size and font.
+// How to change text style, size and font in a presentation.
 
-// Change text properties.
+// Create the text pr and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ run.SetTextPr(textPr);
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example adds a paragraph to the presentation.
+Add a paragraph to the presentation.
 
 ```javascript editor-pptx
 // How to insert an element into a slide shape.
@@ -45,5 +45,4 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 docContent.AddElement(paragraph);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

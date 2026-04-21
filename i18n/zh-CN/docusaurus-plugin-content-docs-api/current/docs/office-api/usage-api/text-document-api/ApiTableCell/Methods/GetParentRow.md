@@ -20,7 +20,7 @@ expression.GetParentRow();
 
 ## 示例
 
-此示例展示如何获取单元格的父行。
+获取文档中单元格的父行。
 
 ```javascript editor-docx
 // How to get parent row of the cell.

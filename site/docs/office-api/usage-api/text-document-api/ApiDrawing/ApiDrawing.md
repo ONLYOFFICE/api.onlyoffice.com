@@ -2,7 +2,6 @@
 
 Represents the ApiDrawing class.
 
-
 ## Methods
 
 | Method | Returns | Description |

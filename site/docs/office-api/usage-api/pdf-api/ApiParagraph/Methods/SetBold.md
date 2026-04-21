@@ -22,9 +22,13 @@ expression.SetBold(isBold);
 
 ## Example
 
-This example sets the bold property to the text of the paragraph.
+Set the bold property to the text of the paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How do I set bold in a PDF document?
+
+// Set bold using a paragraph object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to bold.');
 paragraph.SetBold(true);
 page.AddObject(shape);
-
 ```

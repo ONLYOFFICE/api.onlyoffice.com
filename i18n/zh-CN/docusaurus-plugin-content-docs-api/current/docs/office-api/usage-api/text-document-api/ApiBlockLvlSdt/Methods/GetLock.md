@@ -20,12 +20,12 @@ expression.GetLock();
 
 ## 示例
 
-此示例演示如何获取容器的锁定类型。
+获取文档中容器的锁定类型。
 
 ```javascript editor-docx
-// Creates a block content control, sets its lock to "sdtContentLocked", and returns the lock type to insert it into the second paragraph of the document.
+// Create a block content control, set its lock to "sdtContentLocked", and return the lock type to insert it into the second paragraph of the document.
 
-// How to get the lock type of the ApiBlockLvlSdt object.
+// How to get the lock type of the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

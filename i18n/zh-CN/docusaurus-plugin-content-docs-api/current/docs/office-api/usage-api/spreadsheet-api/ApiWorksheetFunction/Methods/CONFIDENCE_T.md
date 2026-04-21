@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何使用学生 t 分布返回总体平均值的置信区间。
+在电子表格中使用学生 t 分布返回总体均值的置信区间。
 
 ```javascript editor-xlsx
-// How to return the confidence interval for a population mean, using a Student's t distribution.
+// How to return the confidence interval for a population mean, using a Student's t distribution in a spreadsheet.
 
-// Use function to get the confidence interval for a population mean.
+// Use function to get the confidence interval for a population mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

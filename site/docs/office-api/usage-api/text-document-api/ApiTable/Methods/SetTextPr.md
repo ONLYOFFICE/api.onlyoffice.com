@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example applies the text settings to the entire contents of the table.
+Apply the text settings to the entire contents of the table in a document.
 
 ```javascript editor-docx
-// How to create a text properties and apply it to the table.
+// How to create a text properties and apply it to the table in a document.
 
-// Create a table and make its text bold and bigger.
+// Create a table and make its text bold and bigger in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

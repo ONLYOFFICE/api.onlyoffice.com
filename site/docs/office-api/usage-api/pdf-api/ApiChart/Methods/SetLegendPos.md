@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to place a chart legend.
+How to place a chart legend in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's position.
+// Create a chart, set its properties and its legend's position in a PDF document.
+
+// Set legend pos for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

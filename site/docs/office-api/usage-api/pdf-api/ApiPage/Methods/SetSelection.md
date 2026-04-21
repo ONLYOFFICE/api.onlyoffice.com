@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example selects the text on the page.
+Select the text on the page.
 
 ```javascript editor-pdf
+// How can I set selection using a page in a PDF document?
+
+// Set selection for a page in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 page.SetSelection({x: 10, y: 10}, {x: 100, y: 100});

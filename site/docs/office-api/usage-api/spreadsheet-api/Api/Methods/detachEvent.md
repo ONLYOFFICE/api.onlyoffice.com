@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example unsubscribes from the "onWorksheetChange" event.
+Unsubscribes from the "onWorksheetChange" event.
 
 ```javascript editor-xlsx
-// Detach from an event.
+// Detach from an event in a spreadsheet.
 
-// How to stop event handling.
+// How to stop event handling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

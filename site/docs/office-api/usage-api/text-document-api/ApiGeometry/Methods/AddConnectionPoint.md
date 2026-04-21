@@ -24,10 +24,13 @@ boolean
 
 ## Example
 
-Creates a shape with adjustable parameters and guides.
+Create a shape with adjustable parameters and guides. Sets up text rectangle and connection points for the custom geometry in a document.
 
 ```javascript editor-docx
-// Sets up text rectangle and connection points for the custom geometry.
+// How do I add the connection point in a document?
+
+// Add the connection point using a geometry object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();

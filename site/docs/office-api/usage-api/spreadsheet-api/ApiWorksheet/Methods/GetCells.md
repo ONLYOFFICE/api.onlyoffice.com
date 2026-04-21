@@ -23,7 +23,7 @@ expression.GetCells(row, col);
 
 ## Example
 
-This example shows how to get the ApiRange that represents all the cells on the worksheet.
+Get the cell range that represents all the cells on the worksheet in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get all cells.

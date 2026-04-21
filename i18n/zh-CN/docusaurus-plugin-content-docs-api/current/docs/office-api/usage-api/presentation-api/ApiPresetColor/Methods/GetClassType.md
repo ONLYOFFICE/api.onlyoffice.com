@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+获取演示文稿中预设颜色对象的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiPresetColor.
+// How can I get the class type of a preset color in a presentation?
 
-// Retrieve class type of ApiPresetColor object and insert it to the slide.
+// Get the class type of a preset color and display it in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

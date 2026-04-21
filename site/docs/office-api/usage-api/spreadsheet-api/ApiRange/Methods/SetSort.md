@@ -29,12 +29,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sorts the cells in the given range by the parameters specified in the request.
+Sort the cells in the given range by the parameters specified in the request.
 
 ```javascript editor-xlsx
 // How to sort values of cells specifying the order.
 
-// Get a range and sort its values.
+// Get a range and sort its values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(2016);

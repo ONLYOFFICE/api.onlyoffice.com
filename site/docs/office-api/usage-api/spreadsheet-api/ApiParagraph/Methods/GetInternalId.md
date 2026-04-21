@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the internal identifier of a paragraph inside a shape.
+Get the internal identifier of a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I get the internal id using a paragraph in a spreadsheet?
+
+// Get the internal id for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -38,5 +42,4 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Sample text.');
 
 worksheet.GetRange('A1').SetValue('Paragraph ID: ' + paragraph.GetInternalId());
-
 ```

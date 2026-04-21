@@ -2,27 +2,17 @@
 
 Returns the outline level of the specified properties.
 
-## Syntax
-
-```javascript
-expression.GetOutlineLvl();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-Number
+Inherited from [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md).
 
 ## Example
 
-This example shows how to get the outline level of the specified paragraph via paragraph properties.
+Get the outline level of the specified paragraph via paragraph properties in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the outline lvl in a PDF document?
+
+// Get the outline lvl using a paragraph properties object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,5 +35,4 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

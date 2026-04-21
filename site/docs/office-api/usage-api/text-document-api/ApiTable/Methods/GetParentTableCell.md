@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table cell that contains the table.
+Get a table cell that contains the table in a document.
 
 ```javascript editor-docx
 // How to get the parent table cell.

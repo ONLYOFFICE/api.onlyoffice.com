@@ -2,33 +2,16 @@
 
 Sets the height to the current table row within the current table.
 
-## Syntax
-
-```javascript
-expression.SetHeight(sHRule, nValue);
-```
-
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sHRule | Required | "auto" \| "atLeast" |  | The rule to apply the height value to the current table row or ignore it. Use the &lt;code&gt;"atLeast"&lt;/code&gt; value to enable the &lt;code&gt;SetHeight&lt;/code&gt; method use. |
-| nValue | Optional | [twips](../../Enumeration/twips.md) |  | The height for the current table row measured in twentieths of a point (1/1440 of an inch). This value will be ignored if &lt;code&gt;sHRule="auto"&lt;code&gt;. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableRowPr.SetHeight](../../ApiTableRowPr/Methods/SetHeight.md).
 
 ## Example
 
-This example sets the height to the current table row within the table.
+Set the height to the current table row within the table in a document.
 
 ```javascript editor-docx
-// Resize the height of the row.
+// Resize the height of the row in a document.
 
-// How to set a minimum row height of the table.
+// How to set a minimum row height of the table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

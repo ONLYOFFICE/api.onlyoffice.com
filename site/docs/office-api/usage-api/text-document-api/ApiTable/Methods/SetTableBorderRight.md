@@ -2,37 +2,16 @@
 
 Sets the border which will be displayed on the right of the current table.
 
-## Syntax
-
-```javascript
-expression.SetTableBorderRight(sType, nSize, nSpace, r, g, b);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The right border style. |
-| nSize | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current right border measured in eighths of a point. |
-| nSpace | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset in the right part of the table measured in points used to place this border. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableBorderRight](../../ApiTablePr/Methods/SetTableBorderRight.md).
 
 ## Example
 
-This example sets the border which will be displayed on the right of the table.
+Set the border which will be displayed on the right of the table in a document.
 
 ```javascript editor-docx
-// How to create a 3x3 table and add the right 4 point black border.
+// How to create a 3x3 table and add the right 4 point black border in a document.
 
-// Add right border to the table.
+// Add right border to the table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

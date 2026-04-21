@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a text run object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiRun.
+// How can I get the class type of a text run in a spreadsheet?
 
-// Get a class type of ApiRun and display it in the worksheet.
+// Get the class type of a text run and display it in the spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

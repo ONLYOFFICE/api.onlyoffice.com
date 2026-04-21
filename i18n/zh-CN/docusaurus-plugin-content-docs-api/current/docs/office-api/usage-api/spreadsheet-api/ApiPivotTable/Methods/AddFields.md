@@ -22,12 +22,12 @@ expression.AddFields(options);
 
 ## 示例
 
-此示例展示如何通过指定行和列向数据透视表添加字段。
+在电子表格中通过指定行和列向数据透视表添加字段。
 
 ```javascript editor-xlsx
-// How to add new fields to the table.
+// How to add new fields to the table in a spreadsheet.
 
-// Create a pivot table, add data to it then add new data fields.
+// Create a pivot table, add data to it then add new data fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

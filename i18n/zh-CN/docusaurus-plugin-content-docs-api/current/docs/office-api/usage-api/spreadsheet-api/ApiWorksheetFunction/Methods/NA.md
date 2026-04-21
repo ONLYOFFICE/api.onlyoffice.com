@@ -20,16 +20,15 @@ string
 
 ## 示例
 
-此示例演示如何返回表示「无可用值」的 N/A 错误值。
+在电子表格中返回 N/A 错误值，表示"无可用值"。
 
 ```javascript editor-xlsx
-// How to return the N/A.
+// How to return the N/A in a spreadsheet.
 
-// Use a function to get a N/A error value.
+// Use a function to get a N/A error value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet(); 
 let func = Api.WorksheetFunction;
 let result = func.NA();
 worksheet.GetRange("C3").SetValue(result);
-
 ```

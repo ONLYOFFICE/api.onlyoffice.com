@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the repeat count for an animation effect.
+Set the repeat count for an animation effect in a presentation.
 
 ```javascript editor-pptx
+// How do I set repeat count in a presentation?
+
+// Set repeat count using an animation effect object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -56,5 +60,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New repeat count: ' + repeatCount);
 slide.AddObject(infoShape);
-
 ```

@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回贴现证券的年收益率。例如，国库券。
+在电子表格中返回贴现证券的年收益率。例如国库券。
 
 ```javascript editor-xlsx
-// How to return an annual yield for a discounted security.
+// How to return an annual yield for a discounted security in a spreadsheet.
 
-// Use a function to get an annual yield.
+// Use a function to get an annual yield in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充。
+为形状设置纯色填充颜色。在 PDF 文档中创建矩形并为其应用红色填充。
 
 ```javascript editor-pdf
-// Creates a rectangle and applies a red fill to it.
+// How do I set fill in a PDF document?
+
+// Set fill using a shape object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +42,4 @@ let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddLineBreak();
 paragraph.AddText("Fill changed to red");
-
 ```

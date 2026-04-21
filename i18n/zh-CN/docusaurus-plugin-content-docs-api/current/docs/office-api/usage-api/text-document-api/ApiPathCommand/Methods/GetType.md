@@ -20,10 +20,13 @@ expression.GetType();
 
 ## 示例
 
-分析星形的路径命令。
+分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
 
 ```javascript editor-docx
-// Retrieves information about the first command including type and coordinates.
+// How to get the type for a path command in a document?
+
+// Get the type and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

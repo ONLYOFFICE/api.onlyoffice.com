@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示为每个字符都有两条水平线穿过。
+指定在电子表格中 run 的内容以每个字符上显示两条水平线的方式显示。
 
 ```javascript editor-xlsx
-// How to strike out a text with two lines.
+// How to strike out a text with two lines in a spreadsheet.
 
-// Cross out a text with two lines.
+// Cross out a text with two lines in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

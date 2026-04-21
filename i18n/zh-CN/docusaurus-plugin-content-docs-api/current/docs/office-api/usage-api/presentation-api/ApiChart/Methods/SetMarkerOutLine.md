@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置指定图表系列中标记的轮廓。
+在演示文稿中为指定图表系列中的标记设置轮廓。
 
 ```javascript editor-pptx
-// How to set an outline to the marker.
+// How to set an outline to the marker in a presentation.
 
-// Create a chart, set its properties and its marker outline.
+// Create a chart, set its properties and its marker outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
-
 ```

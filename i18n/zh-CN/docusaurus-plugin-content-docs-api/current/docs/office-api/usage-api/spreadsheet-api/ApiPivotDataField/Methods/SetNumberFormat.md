@@ -22,7 +22,7 @@ expression.SetNumberFormat(format);
 
 ## 示例
 
-此示例展示如何为数据字段设置数字格式。
+在电子表格中设置数据字段的数字格式。
 
 ```javascript editor-xlsx
 // How to change a number format a table element.

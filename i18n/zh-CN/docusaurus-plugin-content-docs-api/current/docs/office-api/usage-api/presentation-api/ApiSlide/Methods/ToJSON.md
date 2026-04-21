@@ -25,7 +25,7 @@ JSON
 
 ## 示例
 
-此示例将 ApiSlide 对象转换为 JSON 对象。
+将幻灯片对象转换为 JSON 对象。
 
 ```javascript editor-pptx
 // How to convert a slide object to a JSON object.
@@ -51,5 +51,4 @@ slide.AddObject(drawing);
 const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
-
 ```

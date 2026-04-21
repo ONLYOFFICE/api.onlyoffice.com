@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets button widget fit bounds property and displays it.
+Get button widget fit bounds property and display it in a PDF document.
 
 ```javascript editor-pdf
+// How to is fit bounds for a button widget in a PDF document?
+
+// Is fit bounds and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

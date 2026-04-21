@@ -2,32 +2,16 @@
 
 Sets the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.SetJc(sJc);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
 ## Example
 
-This example sets the paragraph contents justification.
+Set the paragraph contents justification in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to center a paragraph text.
+// How to center a paragraph text in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying its justification type.
+// Get a paragraph from the shape's content then add a text specifying its justification type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

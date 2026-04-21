@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-此示例展示如何使用 'dk1' 标识符创建方案颜色。
+在 PDF 文档中创建标识符为 'dk1' 的配色方案颜色。
 
 ```javascript editor-pdf
-// How to create a new scheme color.
+// How to create a new scheme color in a PDF document.
 
-// Add a scheme color to create a solid fill.
+// Add a scheme color to create a solid fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,5 +38,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("curvedUpArrow", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

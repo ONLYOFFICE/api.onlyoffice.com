@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example updates all fields in the current document.
+Update all fields in the current document.
 
 ```javascript editor-docx
 // How to update all forms in the document.

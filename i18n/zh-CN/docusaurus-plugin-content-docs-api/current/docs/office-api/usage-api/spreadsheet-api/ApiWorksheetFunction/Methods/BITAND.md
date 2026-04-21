@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回两个数的按位 AND 运算结果。
+在电子表格中返回两个数字的按位 "AND"。
 
 ```javascript editor-xlsx
-// How to get a two numbers bitwise AND.
+// How to get a two numbers bitwise AND in a spreadsheet.
 
-// Use function to calculate bitwise AND opertation.
+// Use function to calculate bitwise AND opertation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

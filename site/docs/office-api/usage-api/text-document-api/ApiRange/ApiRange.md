@@ -2,7 +2,6 @@
 
 Represents the ApiRange class.
 
-
 ## Methods
 
 | Method | Returns | Description |

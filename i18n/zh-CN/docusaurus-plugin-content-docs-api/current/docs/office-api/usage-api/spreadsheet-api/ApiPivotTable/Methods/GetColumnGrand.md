@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取数据透视表的列总计。
+获取电子表格中数据透视表的列总计。
 
 ```javascript editor-xlsx
-// How to get column grand from a pivot table.
+// How to get column grand from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get its column grand.
+// Create a pivot table, add data to it then get its column grand in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

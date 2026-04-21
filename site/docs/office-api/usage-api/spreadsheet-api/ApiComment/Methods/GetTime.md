@@ -20,10 +20,10 @@ Number
 
 ## Example
 
-This example shows how to get the timestamp of the comment creation in the current time zone format.
+Get the timestamp of the comment creation in the current time zone format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a time when a comment was created.
+// How to get a time when a comment was created in a spreadsheet.
 
 // Add a comment creation timestamp to a range of the worksheet.
 

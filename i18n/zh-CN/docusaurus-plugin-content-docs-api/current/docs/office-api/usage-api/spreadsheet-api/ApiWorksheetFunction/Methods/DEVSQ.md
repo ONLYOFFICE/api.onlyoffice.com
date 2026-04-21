@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何获取数据点与其样本平均值之间偏差的平方和。
+在电子表格中获取数据点与其样本均值的偏差平方和。
 
 ```javascript editor-xlsx
-// How to get sum of squares of deviations.
+// How to get sum of squares of deviations in a spreadsheet.
 
-// Use function to get the sum of squares of deviations of data points from their sample mean.
+// Use function to get the sum of squares of deviations of data points from their sample mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let argumentsArrA = [34, 244];

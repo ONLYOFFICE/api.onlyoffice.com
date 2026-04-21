@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为横轴指定主刻度线「cross」。
+指定文档中水平轴的主要刻度线"cross"。
 
 ```javascript editor-docx
-// How to change a tickmark of a major horizontal axis.
+// How to change a tickmark of a major horizontal axis in a document.
 
-// Create a chart and set its major horizontal axis tickmark as a cross symbol.
+// Create a chart and set its major horizontal axis tickmark as a cross symbol in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

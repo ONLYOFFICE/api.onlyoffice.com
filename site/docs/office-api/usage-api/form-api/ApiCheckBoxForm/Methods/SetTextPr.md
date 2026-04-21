@@ -3,27 +3,11 @@
 Sets the text properties to the current form.
 *Used if possible for this type of form*
 
-## Syntax
-
-```javascript
-expression.SetTextPr(textPr);
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| textPr | Required | [ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md) |  | The text properties that will be set to the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md).
 
 ## Example
 
-This example sets the text properties to the form.
+Set the text properties to the form.
 
 ```javascript editor-forms
 // Add text properties to the text form.

@@ -23,7 +23,7 @@ expression.SetOffset(nRow, nCol);
 
 ## 示例
 
-此示例设置单元格偏移量。
+设置单元格偏移量。
 
 ```javascript editor-xlsx
 // How to set an offset of cells.

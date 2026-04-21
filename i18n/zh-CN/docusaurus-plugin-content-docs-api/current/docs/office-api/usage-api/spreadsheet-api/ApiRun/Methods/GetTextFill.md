@@ -2,30 +2,16 @@
 
 从当前文本属性获取文本填充。
 
-## 语法
-
-```javascript
-expression.GetTextFill();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiFill](../../ApiFill/ApiFill.md)
+继承自 [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md)。
 
 ## 示例
 
-此示例使用其属性获取文本填充。
+获取电子表格中文本的填充属性。
 
 ```javascript editor-xlsx
-// How to find out a text color type.
+// How to find out a text color type in a spreadsheet.
 
-// Get solid fill color of a text run object.
+// Get solid fill color of a text run object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

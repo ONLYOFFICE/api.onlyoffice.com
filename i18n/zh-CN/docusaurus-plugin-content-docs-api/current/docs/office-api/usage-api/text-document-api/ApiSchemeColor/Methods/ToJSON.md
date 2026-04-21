@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-此示例将 ApiSchemeColor 对象转换为 JSON 对象。
+将文档中的配色方案颜色对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the color object.
+// How to get a JSON from the color object in a document.
 
 // Convert the RGB color object to json and add it to the document.
 

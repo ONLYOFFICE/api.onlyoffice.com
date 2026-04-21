@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例用块级内容控件替换段落。
+在文档中用块级内容控件替换段落。
 
 ```javascript editor-docx
-// How to replace paragraph with another element.
+// How to replace paragraph with another element in a document.
 
-// Add a block level content control instead of the paragraph.
+// Add a block level content control instead of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

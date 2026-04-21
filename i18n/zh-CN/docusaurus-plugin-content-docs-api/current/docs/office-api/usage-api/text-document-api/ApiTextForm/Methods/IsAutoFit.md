@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查文本字段内容是否自动适应。
+检查文档中文本字段内容是否自动适应。
 
 ```javascript editor-docx
 // How to know whether the first text form from this document is autofit.

@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the specified chart series.
+Set the fill to the specified chart series in a document.
 
 ```javascript editor-docx
-// How to color a chart seria.
+// How to color a chart seria in a document.
 
-// Create a chart, set its properties and its series background.
+// Create a chart, set its properties and its series background in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

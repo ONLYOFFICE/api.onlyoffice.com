@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets regular expression for text widget.
+Set regular expression for text widget in a PDF document.
 
 ```javascript editor-pdf
+// How can I set regular exp using a text widget in a PDF document?
+
+// Set regular exp for a text widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

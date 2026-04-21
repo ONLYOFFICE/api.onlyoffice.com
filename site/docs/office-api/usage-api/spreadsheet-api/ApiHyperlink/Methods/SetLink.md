@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set a new URL for a hyperlink inside a shape.
+Set a new URL for a hyperlink inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set link using a hyperlink in a spreadsheet?
+
+// Set link for a hyperlink in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -46,5 +50,4 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for
 
 hyperlink.SetLink('https://helpcenter.onlyoffice.com');
 worksheet.GetRange('A1').SetValue('New link: ' + hyperlink.GetLinkedText());
-
 ```

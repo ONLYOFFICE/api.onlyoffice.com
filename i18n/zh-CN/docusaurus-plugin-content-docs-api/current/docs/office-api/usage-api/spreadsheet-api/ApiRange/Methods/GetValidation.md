@@ -20,9 +20,13 @@ expression.GetValidation();
 
 ## 示例
 
-此示例展示如何获取范围的验证对象。
+获取电子表格中范围的验证对象。
 
 ```javascript editor-xlsx
+// How do I get the validation in a spreadsheet?
+
+// Get the validation using a cell range object.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Try to enter a whole number less than 10 in A2:B5. Warning will be shown.');
@@ -34,5 +38,4 @@ worksheet.GetRange('A7').SetValue('Type:');
 worksheet.GetRange('B7').SetValue(validation.GetType());
 worksheet.GetRange('A8').SetValue('Range:');
 worksheet.GetRange('B8').SetValue(validation.GetParent().GetAddress());
-
 ```

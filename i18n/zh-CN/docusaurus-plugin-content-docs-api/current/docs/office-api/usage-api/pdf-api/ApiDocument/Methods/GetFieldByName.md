@@ -20,9 +20,13 @@ expression.GetFieldByName();
 
 ## 示例
 
-此示例按名称获取文档中的字段。
+通过名称获取文档中的字段。
 
 ```javascript editor-pdf
+// How can I get the field by name using a document in a PDF document?
+
+// Get the field by name for a document in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

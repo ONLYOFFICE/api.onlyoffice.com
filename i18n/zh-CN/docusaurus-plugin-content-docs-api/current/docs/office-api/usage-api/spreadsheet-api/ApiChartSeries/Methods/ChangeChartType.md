@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例更改 ApiChart 类第一个系列的类型并将新类型插入文档中。
+更改图表类的第一个系列的类型并将新类型插入到文档中。
 
 ```javascript editor-xlsx
-// How to change a chart type to an area one.
+// How to change a chart type to an area one in a spreadsheet.
 
-// Change a chart type.
+// Change chart type and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

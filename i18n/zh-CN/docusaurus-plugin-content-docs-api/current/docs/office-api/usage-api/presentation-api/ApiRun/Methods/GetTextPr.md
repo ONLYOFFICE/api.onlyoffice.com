@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取文本块的文本属性。
+获取演示文稿中 run 的文本属性。
 
 ```javascript editor-pptx
-// How to get the text properties of the current ApiRun object and change its font size.
+// How to get the text properties of the current text run object and change its font size in a presentation.
 
-// Resize a font of a text run.
+// Resize a font of a text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font size set to 15 points using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

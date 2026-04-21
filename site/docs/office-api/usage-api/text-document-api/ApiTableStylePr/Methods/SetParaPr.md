@@ -22,12 +22,12 @@ expression.SetParaPr(oParaPr);
 
 ## Example
 
-This example shows how to create and set the paragraph properties which will be applied to all the paragraphs within a table which match the conditional formatting type.
+Create and set the paragraph properties which will be applied to all the paragraphs within a table which match the conditional formatting type.
 
 ```javascript editor-docx
-// How to set paragraph properties to the table style.
+// How to set paragraph properties to the table style in a document.
 
-// Update the table style paragraph properties.
+// Update the table style paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

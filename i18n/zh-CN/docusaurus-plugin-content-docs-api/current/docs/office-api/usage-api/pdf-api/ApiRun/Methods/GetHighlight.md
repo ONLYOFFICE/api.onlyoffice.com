@@ -2,30 +2,16 @@
 
 从当前文本属性获取高亮属性。
 
-## 语法
-
-```javascript
-expression.GetHighlight();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否突出显示。
+检查 PDF 文档中的文本是否有突出显示。
 
 ```javascript editor-pdf
-// How to know whether a highlight set to the text.
+// How to know whether a highlight set to the text in a PDF document.
 
-// Get the text properties of the run and find whether it is highlighted or not.
+// Get the text properties of the run and find whether it is highlighted or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 docContent.Push(paragraph);
-
 ```

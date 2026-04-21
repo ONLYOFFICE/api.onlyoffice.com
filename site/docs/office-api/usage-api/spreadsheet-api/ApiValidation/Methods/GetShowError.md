@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example gets whether the error message is displayed.
+Get whether the error message is displayed in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check if validation shows an error message.
+// How to check if validation shows an error message in a spreadsheet.
 
-// Get the ShowError setting.
+// Get the ShowError setting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,5 +34,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetShowError(true);
 let showError = validation.GetShowError();
 worksheet.GetRange("B1").SetValue("Show error: " + showError);
-
 ```

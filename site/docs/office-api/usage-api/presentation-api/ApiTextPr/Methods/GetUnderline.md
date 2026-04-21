@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to find out whether a text is underlined.
+Find out whether a text is underlined in a presentation.
 
 ```javascript editor-pptx
-// How to know whether a text is underlined or not.
+// How to know whether a text is underlined or not in a presentation.
 
-// Get the text properties of the run and find whether it is underlined or not.
+// Get the text properties of the run and find whether it is underlined or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const underline = textPr.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
-
 ```

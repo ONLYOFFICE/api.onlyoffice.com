@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何返回大于或等于 0 且小于 1 的均匀分布的随机数（重新计算时会更改）。
+在电子表格中返回大于或等于 0 且小于 1 的均匀分布的随机数（重新计算时变化）。
 
 ```javascript editor-xlsx
-// How to get a number between 0 and 1.
+// How to get a number between 0 and 1 in a spreadsheet.
 
-// Use a function to return a random value more or equal to zero and less than one.
+// Use a function to return a random value more or equal to zero and less than one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

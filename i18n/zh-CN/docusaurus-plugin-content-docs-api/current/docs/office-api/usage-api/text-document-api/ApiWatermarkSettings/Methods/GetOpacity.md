@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to get the opacity of the watermark. 
+// How to get the opacity of the watermark in a document.
 
-// Get the percent of the watermark opacity from its settings.
+// Get the percent of the watermark opacity from its settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例演示如何为日期选择器内容控件设置自定义日期格式。
+为文档中的日期选择器内容控件设置自定义日期格式。
 
 ```javascript editor-docx
+// How to set date format for an inline content control?
+
+// Set date format and display the result in a document.
+
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 let paragraph1 = Api.CreateParagraph();

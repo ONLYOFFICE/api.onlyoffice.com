@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何设置水平轴的方向。
+如何在 PDF 文档中设置水平轴的方向。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis orientation.
+// Create a chart, set its properties and its horizontal axis orientation in a PDF document.
+
+// Set hor axis orientation for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

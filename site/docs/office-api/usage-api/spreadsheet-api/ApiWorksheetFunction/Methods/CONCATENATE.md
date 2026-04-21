@@ -22,12 +22,12 @@ string
 
 ## Example
 
-This example shows how to combine multiple text strings into one text string.
+Combine multiple text strings into one text string in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add multiple text strings into one text string.
+// How to add multiple text strings into one text string in a spreadsheet.
 
-// Use function to create one text string from multiple ones.
+// Use function to create one text string from multiple ones in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

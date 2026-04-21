@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取富文本段落属性的类类型。
+获取 PDF 文档中富文本段落属性的类类型。
 
 ```javascript editor-pdf
+// How to identify the class type of a rich paragraph properties in a PDF document?
+
+// Obtain the class type identifier of a rich paragraph properties object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

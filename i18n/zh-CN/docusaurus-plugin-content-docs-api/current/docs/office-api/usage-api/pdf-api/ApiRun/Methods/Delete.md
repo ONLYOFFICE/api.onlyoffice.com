@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例删除文本块。
+删除 run。
 
 ```javascript editor-pdf
-// How to delete a text run object.
+// How to delete a text run object in a PDF document.
 
 // Remove text from the page.
 
@@ -46,5 +46,4 @@ run = Api.CreateRun();
 run.AddText("This is the second run. The first run was removed from the paragraph.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

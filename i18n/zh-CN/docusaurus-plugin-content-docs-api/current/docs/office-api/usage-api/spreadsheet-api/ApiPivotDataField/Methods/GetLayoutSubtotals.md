@@ -2,30 +2,16 @@
 
 返回指定是否显示分类汇总的设置。
 
-## 语法
-
-```javascript
-expression.GetLayoutSubtotals();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetLayoutSubtotals](../../ApiPivotField/Methods/GetLayoutSubtotals.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局分类汇总。
+获取电子表格中透视字段的布局小计。
 
 ```javascript editor-xlsx
-// How to get a layout subtotals of a pivot field.
+// How to get a layout subtotals of a pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then get a layout subtotals of a specified pivot field.
+// Create a pivot table, add data to it then get a layout subtotals of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定横轴的次刻度线。
+在电子表格中为水平轴指定次要刻度线。
 
 ```javascript editor-xlsx
-// How to specify minor tick mark for the horizontal axis.
+// How to specify minor tick mark for the horizontal axis in a spreadsheet.
 
-// Minor mark the horizontal axis of the chart.
+// Minor mark the horizontal axis of the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

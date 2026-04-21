@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-此示例为当前文本块设置文本颜色。
+在文档中为当前文本 run 设置文本颜色。
 
 ```javascript editor-docx
-// How to change text color.
+// How to change text color in a document.
 
-// Create a new text run and change its font color.
+// Create a new text run and change its font color in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
@@ -42,5 +42,4 @@ secondRun.AddText('The text uses a bluish color created with HexColor method.');
 const hexColor = Api.HexColor('#219ebc');
 secondRun.SetColor(hexColor);
 paragraph.AddElement(secondRun);
-
 ```

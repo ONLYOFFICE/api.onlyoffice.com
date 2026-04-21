@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置边框颜色。
+获取 PDF 文档中的所有字段控件并为其设置边框颜色。
 
 ```javascript editor-pdf
+// How can I set border color using a widget in a PDF document?
+
+// Set border color for a widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -37,5 +41,4 @@ let rgbColor = Api.RGB(255, 100, 0);
 widgets.forEach(function(widget) {
     widget.SetBorderColor(rgbColor);
 });
-
 ```

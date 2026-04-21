@@ -2,30 +2,17 @@
 
 Adds new option to list options.
 
-## Syntax
-
-```javascript
-expression.AddOption(option, nPos);
-```
-
-`expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| option | Required | [ListOption](../../Enumeration/ListOption.md) |  | list option to add |
-| nPos | Optional | number | this.GetOptions().lenght | pos to add option |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseListField.AddOption](../../ApiBaseListField/Methods/AddOption.md).
 
 ## Example
 
-This example adds new options to field with list of options.
+Add new options to field with list of options in a PDF document.
 
 ```javascript editor-pdf
+// How do I add the option in a PDF document?
+
+// Add the option using a list field object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

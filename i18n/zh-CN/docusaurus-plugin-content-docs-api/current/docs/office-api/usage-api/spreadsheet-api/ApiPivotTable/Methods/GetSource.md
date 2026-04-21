@@ -20,12 +20,12 @@ expression.GetSource();
 
 ## 示例
 
-此示例展示如何获取数据透视表的源。
+获取电子表格中数据透视表的数据源。
 
 ```javascript editor-xlsx
-// How to get table source and its address.
+// How to get table source and its address in a spreadsheet.
 
-// Create a pivot table, add data to it then get its source.
+// Create a pivot table, add data to it then get its source in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ expression.SetLayoutBlankLine(insert);
 
 ## 示例
 
-此示例展示如何设置表格的布局空白行。
+在电子表格中设置表格的布局空白行。
 
 ```javascript editor-xlsx
-// How to set layout blank line of a table.
+// How to set layout blank line of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set layout blank line.
+// Create a pivot table, add data to it then set layout blank line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

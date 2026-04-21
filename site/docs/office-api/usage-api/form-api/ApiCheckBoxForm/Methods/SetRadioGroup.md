@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the radio group key to the radio button.
+Set the radio group key to the radio button in a document.
 
 ```javascript editor-forms
 // How to add a radio group to the form.

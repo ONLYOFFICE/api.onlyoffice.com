@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert twips to points.
+Convert twips to points in a PDF document.
 
 ```javascript editor-pdf
+// How to convert twips to points in a PDF document?
+
+// Convert twips to points using the PDF document API.
+
 const twips = 100;
 const points = Api.TwipsToPoints(twips);
 
@@ -38,5 +42,4 @@ paragraph.AddText(twips + ' twips are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

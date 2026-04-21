@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the visual properties for the minor horizontal gridlines.
+Specify the visual properties for the minor horizontal gridlines in a spreadsheet.
 
 ```javascript editor-xlsx
-// Set a stroke as a minor horizontal gridline.
+// Set a stroke as a minor horizontal gridline in a spreadsheet.
 
-// How to add gridlines for the chart.
+// How to add gridlines for the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

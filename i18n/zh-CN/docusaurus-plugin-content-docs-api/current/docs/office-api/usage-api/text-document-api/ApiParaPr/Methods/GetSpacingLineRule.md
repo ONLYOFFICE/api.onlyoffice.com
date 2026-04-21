@@ -20,12 +20,12 @@ expression.GetSpacingLineRule();
 
 ## 示例
 
-此示例展示如何获取段落行距规则。
+获取文档中的段落行距规则。
 
 ```javascript editor-docx
-// How to get the spacing line rule of the paragraph and display it.
+// How to get the spacing line rule of the paragraph and display it in a document.
 
-// Get the paragraph spacing line rule.
+// Get the paragraph spacing line rule in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

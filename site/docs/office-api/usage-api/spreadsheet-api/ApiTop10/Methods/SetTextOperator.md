@@ -2,27 +2,11 @@
 
 Sets the text operator for text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.SetTextOperator(TextOperator);
-```
-
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| TextOperator | Required | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | The text operator: "xlContains", "xlDoesNotContain", "xlBeginsWith", "xlEndsWith". |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetTextOperator](../../ApiFormatCondition/Methods/SetTextOperator.md).
 
 ## Example
 
-This example sets the text operator for a text-based conditional formatting rule.
+Set the text operator for a text-based conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to change text operators in text-based conditional formatting rules.
@@ -52,5 +36,4 @@ condition1.SetTextOperator("xlBeginsWith");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetTextOperator() || "None");
-
 ```

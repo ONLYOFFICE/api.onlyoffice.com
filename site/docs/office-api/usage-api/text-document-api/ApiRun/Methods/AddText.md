@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example adds some text to the run.
+Add some text to the run in a document.
 
 ```javascript editor-docx
-// How to add a sentence to the text run.
+// How to add a sentence to the text run in a document.
 
-// Add text to the document. 
+// Add text to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

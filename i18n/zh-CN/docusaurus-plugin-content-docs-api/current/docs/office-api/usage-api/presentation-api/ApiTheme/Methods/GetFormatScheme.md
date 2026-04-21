@@ -20,7 +20,7 @@ expression.GetFormatScheme();
 
 ## 示例
 
-此示例演示如何获取主题的格式方案。
+获取演示文稿中主题的格式方案。
 
 ```javascript editor-pptx
 // How to get a format scheme from a theme.
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
-
 ```

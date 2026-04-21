@@ -24,7 +24,7 @@ boolean
 
 ## Example
 
-This example specifies the properties (size and orientation) for all the pages in the section.
+Specify the properties (size and orientation) for all the pages in the section.
 
 ```javascript editor-docx
 // How to set page size.

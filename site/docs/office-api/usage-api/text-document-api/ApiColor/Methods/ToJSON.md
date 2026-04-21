@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to convert ApiColor objects of different types to JSON strings.
+Convert color objects of different types to JSON strings in a document.
 
 ```javascript editor-docx
+// The color object can be created from a hex value or a theme color.
+
+// Convert each color type to a JSON string and display the result.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -48,5 +52,4 @@ paragraph.AddLineBreak();
 paragraph.AddLineBreak();
 const autoColor = Api.AutoColor();
 paragraph.AddText('Auto JSON:\n' + autoColor.ToJSON());
-
 ```

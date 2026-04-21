@@ -2,39 +2,16 @@
 
 Returns the inner text of the current document content object.
 
-## Syntax
-
-```javascript
-expression.GetText(options);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| options | Optional | object |  | Options for formatting the returned text. |
-| options.Numbering | Optional | boolean | true | Defines if the resulting string will include numbering or not. |
-| options.Math | Optional | boolean | true | Defines if the resulting string will include mathematical expressions or not. |
-| options.TableCellSeparator | Optional | string | '\t' | Defines how the table cell separator will be specified in the resulting string. Any symbol can be used. The default separator is "\t". |
-| options.TableRowSeparator | Optional | string | '\r\n' | Defines how the table row separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r\n". |
-| options.ParaSeparator | Optional | string | '\r\n' | Defines how the paragraph separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r\n". |
-| options.TabSymbol | Optional | string | '\t' | Defines how the tab will be specified in the resulting string. Any symbol can be used. The default symbol is "\t". |
-| options.NewLineSeparator | Optional | string | '\r' | Defines how the line separator will be specified in the resulting string. Any symbol can be used. The default separator is "\r". |
-
-## Returns
-
-string
+Inherited from [ApiDocumentContent.GetText](../../ApiDocumentContent/Methods/GetText.md).
 
 ## Example
 
-This example gets a text from document content element.
+Get a text from document content element.
 
 ```javascript editor-docx
 // Get the text of the document content as a string.
 
-// Display all content. 
+// Display all content using the document content API in a document.
 
 const doc = Api.GetDocument();
 
@@ -47,5 +24,4 @@ content.GetElement(0).AddText("This is a block text content control.");
 const para = Api.CreateParagraph();
 para.AddText("This text from DocContent element: " + content.GetText());
 doc.Push(para);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Check the class type returned by a uni color in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiUniColor.
+// How do I check what type a uni color object is in a spreadsheet?
 
-// Get a class type of ApiUniColor and display it in the worksheet.
+// Retrieve and output the class type string for a uni color in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const presetColor = Api.CreatePresetColor("peachPuff");
@@ -39,5 +39,4 @@ worksheet.SetColumnWidth(0, 15);
 worksheet.SetColumnWidth(1, 10);
 worksheet.GetRange("A1").SetValue("Class Type = ");
 worksheet.GetRange("B1").SetValue(classType);
-
 ```

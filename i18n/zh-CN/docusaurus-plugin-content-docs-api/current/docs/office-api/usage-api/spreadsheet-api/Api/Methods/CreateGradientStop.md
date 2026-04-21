@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## 示例
 
-此示例创建用于不同类型渐变的渐变色标。
+在电子表格中创建用于不同类型渐变的渐变光圈。
 
 ```javascript editor-xlsx
-// How to create a gradient background using gradient stop.
+// How to create a gradient background using gradient stop in a spreadsheet.
 
-// Create a shape with a gradient background using gradient stop.
+// Create a shape with a gradient background using gradient stop in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

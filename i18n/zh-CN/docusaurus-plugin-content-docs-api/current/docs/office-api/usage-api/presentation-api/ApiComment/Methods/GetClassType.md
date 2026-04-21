@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiComment 类的类型并将其插入演示文稿。
+获取演示文稿中批注对象的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiComment.
+// How can I get the class type of a comment in a presentation?
 
-// Retrieve class type of ApiComment object and insert it to the slide.
+// Get the class type of a comment and display it in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const classType = arrComments[0].GetClassType();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's class type: " + classType);
-
 ```

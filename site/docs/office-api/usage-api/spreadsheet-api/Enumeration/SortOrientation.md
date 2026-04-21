@@ -11,10 +11,9 @@ Enumeration
 - "xlSortColumns"
 - "xlSortRows"
 
-
 ## Example
 
-This example specify that the sort should be by column.
+Specify that the sort should be by column.
 
 ```javascript editor-xlsx
 // How to specify a sorting orientation (column wise or row wise) for each range.

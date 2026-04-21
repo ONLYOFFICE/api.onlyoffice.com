@@ -20,7 +20,7 @@ PTCondition \| null
 
 ## 示例
 
-此示例从条件格式规则获取数据透视表条件。
+从条件格式规则获取数据透视表条件。
 
 ```javascript editor-xlsx
 // How to retrieve pivot table conditions from conditional formatting rules.
@@ -47,5 +47,4 @@ let ptCondition = condition1.GetPTCondition();
 
 worksheet.GetRange("C1").SetValue("PT Condition:");
 worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
-
 ```

@@ -20,7 +20,7 @@ expression.GetTheme();
 
 ## 示例
 
-此示例展示如何获取当前幻灯片的主题。
+获取演示文稿中当前幻灯片的主题。
 
 ```javascript editor-pptx
 // How to return a theme of the slide.
@@ -52,5 +52,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

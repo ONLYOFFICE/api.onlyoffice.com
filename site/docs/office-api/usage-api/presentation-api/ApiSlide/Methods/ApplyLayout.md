@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example applies the specified layout to the slide. The layout must be in slide master.
+Apply the specified layout to the slide. The layout must be in slide master.
 
 ```javascript editor-pptx
 // How to apply a layout to the slide.
@@ -35,5 +35,4 @@ const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
 const layout = master.GetLayout(4);
 slide.ApplyLayout(layout);
-
 ```

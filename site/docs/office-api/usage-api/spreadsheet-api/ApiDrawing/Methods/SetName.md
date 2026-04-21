@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to set the name for a drawing object.
+Set the name for a drawing object in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to set name for a drawing object in a spreadsheet?
+
+// Set name and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(80, 120, 160));
@@ -44,5 +48,4 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Name: ' + drawing.GetName());
 
 worksheet.GetRange('A1').SetValue('Drawing name was set to: ' + drawing.GetName());
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the paragraph contents justification.
+Set the paragraph contents justification in a document.
 
 ```javascript editor-docx
-// How to set justification of the paragraph content.
+// How to set justification of the paragraph content in a document.
 
-// Change the justification of the paragraph.
+// Change the justification of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyleLeft = doc.CreateStyle("My style with left text alignment");

@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the previous paragraph.
+Get the previous paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to get the previous paragraph of the current one.
+// How to get the previous paragraph of the current one in a presentation.
 
 // Return the previous paragraph on the slide and make its text bold.
 
@@ -52,5 +52,4 @@ docContent.Push(paragraph2);
 slide.AddObject(shape);
 const previousParagraph = paragraph2.GetPrevious();
 previousParagraph.SetBold(true);
-
 ```

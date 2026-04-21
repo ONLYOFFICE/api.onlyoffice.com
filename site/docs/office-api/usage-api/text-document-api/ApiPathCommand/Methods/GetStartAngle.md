@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes arc command parameters including radius and angles.
+Analyzes arc command parameters including radius and angles. Retrieves width radius, height radius, start and sweep angles of an arc in a document.
 
 ```javascript editor-docx
-// Retrieves width radius, height radius, start and sweep angles of an arc.
+// How to get the start angle for a path command in a document?
+
+// Get the start angle and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();

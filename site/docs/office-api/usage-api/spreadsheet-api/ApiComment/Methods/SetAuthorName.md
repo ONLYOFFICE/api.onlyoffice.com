@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the comment author's name.
+Set the comment author's name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add author's name to the comment.
+// How to add author's name to the comment in a spreadsheet.
 
 // Add a comment and author name to it, then show author name in the worksheet.
 

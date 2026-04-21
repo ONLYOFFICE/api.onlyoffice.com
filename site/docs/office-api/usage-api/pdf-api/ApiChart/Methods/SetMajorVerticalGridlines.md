@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set a stroke as major vertical gridlines.
+How to set a stroke as major vertical gridlines in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical gridlines properties.
+// Create a chart, set its properties and its vertical gridlines properties in a PDF document.
+
+// Set major vertical gridlines using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMajorVerticalGridlines(stroke);
 page.AddObject(chart);
-
 ```

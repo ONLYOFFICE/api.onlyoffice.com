@@ -2,25 +2,11 @@
 
 Returns the background color for the format condition. Returns 'No Fill' when the background color of the format condition is null.
 
-## Syntax
-
-```javascript
-expression.GetFillColor();
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
 
 ## Example
 
-This example gets the background color from a conditional formatting rule.
+Get the background color from a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve background colors from conditional formatting rules.
@@ -48,5 +34,4 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```

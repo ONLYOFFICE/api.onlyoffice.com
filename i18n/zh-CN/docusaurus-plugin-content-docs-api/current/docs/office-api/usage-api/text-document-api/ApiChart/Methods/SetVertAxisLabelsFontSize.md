@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为垂直轴标签指定字体大小。
+指定文档中垂直轴标签的字体大小。
 
 ```javascript editor-docx
-// How to resize a font size of the vertical axis labels.
+// How to resize a font size of the vertical axis labels in a document.
 
-// Create a chart then change a font size of axis labels.
+// Create a chart then change a font size of axis labels in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定维数的单位矩阵。
+在电子表格中返回指定维度的单位矩阵。
 
 ```javascript editor-xlsx
-// How to get a unit matrix.
+// How to get an unit matrix in a spreadsheet.
 
-// Use a function to get a unit matrix specifying dimension.
+// Use a function to get an unit matrix specifying dimension in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

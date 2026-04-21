@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get an array of all tables from the document content.
+Get an array of all tables from the document content.
 
 ```javascript editor-docx
 // Get all tables added to the document.

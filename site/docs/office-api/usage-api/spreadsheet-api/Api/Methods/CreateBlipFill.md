@@ -23,12 +23,12 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## Example
 
-This example creates a blip fill to apply to the object using the selected image as the object background.
+Create a blip fill to apply to the object using the selected image as the object background in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set image background to the shape object.
+// How to set image background to the shape object in a spreadsheet.
 
-// Create a blip fill from the image to set object background.
+// Create a blip fill from the image to set object background in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", "tile");

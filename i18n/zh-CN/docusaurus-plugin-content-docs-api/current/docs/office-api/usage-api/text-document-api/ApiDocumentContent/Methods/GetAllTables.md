@@ -20,7 +20,7 @@ expression.GetAllTables();
 
 ## 示例
 
-此示例展示如何从文档内容获取所有表格的数组。
+从文档内容中获取所有表格的数组。
 
 ```javascript editor-docx
 // Get all tables added to the document.

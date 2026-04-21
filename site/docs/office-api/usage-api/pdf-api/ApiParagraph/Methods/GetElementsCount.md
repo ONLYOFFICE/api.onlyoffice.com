@@ -20,14 +20,12 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the current paragraph.
+Get a number of elements in the current paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to return a number of paragraph elements.
+// Find out how many elements a paragraph has in a PDF document.
 
-// Find out how many elements a paragraph has.
-
-// Return a number of element from the ApiParagraph object.
+// Return a number of elements from the paragraph object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -52,5 +50,4 @@ run.AddText("Number of paragraph elements after we added a text run: ");
 run.AddTabStop();
 run.AddText("" + paragraph.GetElementsCount());
 page.AddObject(shape);
-
 ```

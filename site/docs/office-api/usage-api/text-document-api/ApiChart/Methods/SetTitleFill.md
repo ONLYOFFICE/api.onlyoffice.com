@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart title.
+Set the fill to the chart title in a document.
 
 ```javascript editor-docx
-// How to color a chart title.
+// How to color a chart title in a document.
 
-// Create a chart, set its properties and its title color.
+// Create a chart, set its properties and its title color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,9 +20,13 @@ string \| null
 
 ## Example
 
-This example shows how to get the chart title text.
+Get the chart title text in a document.
 
 ```javascript editor-docx
+// How do I get the title in a document?
+
+// Get the title using a chart object in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -48,6 +52,4 @@ const chartTitle = chart.GetTitle();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Chart Title: ' + chartTitle);
 doc.Push(paragraph);
-
-
 ```

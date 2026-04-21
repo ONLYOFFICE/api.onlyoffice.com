@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定一个基于 1 的索引，用于确定编号级别何时应重新开始其起始值。
+指定一个从 1 开始的索引，用于确定文档中编号级别何时应重新开始为其起始值。
 
 ```javascript editor-docx
-// How to restart the numbering.
+// How to restart the numbering in a document.
 
-// Reset the numbering of the bulleted text.
+// Reset the numbering of the bulleted text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

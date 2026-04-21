@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-此示例演示如何计算指定单元格区域中空单元格的数量。
+在电子表格中计算指定单元格范围内空单元格的数量。
 
 ```javascript editor-xlsx
 // How to find a number of empty cells.

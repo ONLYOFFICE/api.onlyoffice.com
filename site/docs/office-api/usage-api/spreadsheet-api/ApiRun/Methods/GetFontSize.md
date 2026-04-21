@@ -2,28 +2,14 @@
 
 Gets the font size from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetFontSize();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[hps](../../Enumeration/hps.md)
+Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
 ## Example
 
-This example gets a text font size.
+Get a text font size in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text font size.
+// How to find out a text font size in a spreadsheet.
 
 // Get a text font size and display it in the worksheet.
 

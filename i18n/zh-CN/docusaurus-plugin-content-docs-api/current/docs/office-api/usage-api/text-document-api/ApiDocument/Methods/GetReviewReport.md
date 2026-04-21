@@ -20,7 +20,7 @@ expression.GetReviewReport();
 
 ## 示例
 
-此示例展示如何获取在审阅模式下对文档所做的每项更改的报告。
+获取在审阅模式下对文档所做的每项更改的报告。
 
 ```javascript editor-docx
 // How to get the report after the document review.

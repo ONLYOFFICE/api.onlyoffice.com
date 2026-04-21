@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to retrieve and display the list of attributes of the current XML node.
+Retrieve and display the list of attributes of the current XML node in a document.
 
 ```javascript editor-docx
+// How can I get the attributes using a custom XML node in a document?
+
+// Get the attributes for a custom XML node in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

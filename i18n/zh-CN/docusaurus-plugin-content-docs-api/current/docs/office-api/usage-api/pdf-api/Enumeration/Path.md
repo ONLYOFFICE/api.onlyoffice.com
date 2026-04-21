@@ -5,4 +5,3 @@
 ## 类型
 
 [Point](../Enumeration/Point.md)[]
-

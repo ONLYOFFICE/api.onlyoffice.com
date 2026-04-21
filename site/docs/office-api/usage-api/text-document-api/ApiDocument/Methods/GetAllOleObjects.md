@@ -2,30 +2,16 @@
 
 Returns a collection of OLE objects from the document content.
 
-## Syntax
-
-```javascript
-expression.GetAllOleObjects();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiOleObject](../../ApiOleObject/ApiOleObject.md)[]
+Inherited from [ApiDocumentContent.GetAllOleObjects](../../ApiDocumentContent/Methods/GetAllOleObjects.md).
 
 ## Example
 
-This example showh how to get a collection of OLE objects from the document content.
+Get a collection of OLE objects from the document content.
 
 ```javascript editor-docx
 // Get all OLE objects added to the document.
 
-// How to retrieve all OLE objects and display the application ID of the first one.
+// How to retrieve all OLE objects and display the application ID of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,5 +34,4 @@ let appId = oleObjects[0].GetApplicationId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 doc.Push(paragraph);
-
 ```

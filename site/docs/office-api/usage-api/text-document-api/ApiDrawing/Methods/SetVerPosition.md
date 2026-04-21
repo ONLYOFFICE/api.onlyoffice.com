@@ -24,7 +24,7 @@ boolean
 
 ## Example
 
-This example sets the absolute measurement for the vertical positioning of the floating object.
+Set the absolute measurement for the vertical positioning of the floating object in a document.
 
 ```javascript editor-docx
 // How to set the vertical position at page in points.

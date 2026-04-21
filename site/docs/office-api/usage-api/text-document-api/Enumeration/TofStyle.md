@@ -15,10 +15,9 @@ Enumeration
 - "centered"
 - "formal"
 
-
 ## Example
 
-This example adds a table of figures of the distinctive style to the document.
+Add a table of figures of the distinctive style to the document.
 
 ```javascript editor-docx
 // How to create a table of figures with distinctive style property.
@@ -36,5 +35,4 @@ let tofPr = {
 	"TofStyle": tofStyle
 };
 doc.AddTableOfFigures(tofPr);
-
 ```

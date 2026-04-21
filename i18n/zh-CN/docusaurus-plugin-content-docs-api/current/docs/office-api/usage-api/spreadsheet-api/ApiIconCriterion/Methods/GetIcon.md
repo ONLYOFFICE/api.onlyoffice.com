@@ -20,12 +20,12 @@ expression.GetIcon();
 
 ## 示例
 
-此示例演示如何获取条件的图标。
+获取电子表格中条件的图标。
 
 ```javascript editor-xlsx
-// How to retrieve the icon from an icon set criterion.
+// How to retrieve the icon from an icon set criterion in a spreadsheet.
 
-// Get the icon assigned to this criterion.
+// Get the icon assigned to this criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,5 +42,4 @@ let criteria = iconCondition.GetIconCriteria();
 let firstIcon = criteria[0].GetIcon();
 
 worksheet.GetRange("B1").SetValue("First criterion icon: " + firstIcon);
-
 ```

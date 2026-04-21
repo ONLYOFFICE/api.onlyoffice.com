@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为当前主题格式方案设置名称。
+为当前主题格式方案设置名称。
 
 ```javascript editor-pptx
 // How to set a format scheme name.
@@ -49,5 +49,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("New name was set to the theme format scheme.");
 slide.AddObject(shape);
-
 ```

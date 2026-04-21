@@ -22,9 +22,13 @@ expression.Add(nodeName);
 
 ## 示例
 
-此示例演示如何创建新子节点并将其作为当前 XML 节点的子节点插入。
+创建新的子节点并将其作为文档中当前 XML 节点的子节点插入。
 
 ```javascript editor-docx
+// How can I add using a custom XML node in a document?
+
+// Add for a custom XML node in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'><text>Hello World!</text></content>");
@@ -34,5 +38,4 @@ let classType = textNode.GetClassType();
 let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Class type: " + classType);
 doc.Push(infoParagraph);
-
 ```

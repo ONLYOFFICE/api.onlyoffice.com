@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example shows how to get a drag to page of a pivot field.
+Get a drag to page of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a pivot field drag to page.

@@ -26,7 +26,9 @@ boolean
 How to set the cell bottom margin for the current table cell.
 
 ```javascript editor-pdf
-// Specify the bottom margin value for the ApiTableCell object.
+// Specify the bottom margin value for the table cell object.
+
+// Set cell margin bottom for a table cell in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,5 +43,4 @@ content.Push(paragraph);
 cell.SetCellMarginBottom(600);
 
 page.AddObject(table);
-
 ```

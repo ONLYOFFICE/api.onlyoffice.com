@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回参数的平方和。
+在电子表格中返回参数的平方和。
 
 ```javascript editor-xlsx
-// How to calculate the sum of the squares.
+// How to calculate the sum of the squares in a spreadsheet.
 
-// Use a function to estimate the sum of the squares.
+// Use a function to estimate the sum of the squares in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

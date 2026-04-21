@@ -20,7 +20,7 @@ expression.AddPageNumber();
 
 ## 示例
 
-此示例将当前文档页码插入到段落中。
+将当前文档页码插入段落。
 
 ```javascript editor-docx
 // How to add a page number to the text.

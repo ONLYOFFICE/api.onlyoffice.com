@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example merges the cells in the row.
+Merge the cells in the row.
 
 ```javascript editor-docx
 // Merge cells of the entire row.

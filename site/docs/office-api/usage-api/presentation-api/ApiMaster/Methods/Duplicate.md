@@ -22,12 +22,12 @@ expression.Duplicate(nPos);
 
 ## Example
 
-This example creates a duplicate of the specified slide master object, adds the new slide master to the slide masters collection.
+Create a duplicate of the specified slide master object, add the new slide master to the slide masters collection.
 
 ```javascript editor-pptx
 // How to create a duplicate of a slide master.
 
-// Add a duplicate master.
+// Duplicate and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after duplicating: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

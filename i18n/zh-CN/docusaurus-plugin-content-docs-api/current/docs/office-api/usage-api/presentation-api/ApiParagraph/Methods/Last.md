@@ -20,9 +20,13 @@ expression.Last();
 
 ## 示例
 
-此示例展示如何获取段落的最后一个元素。
+获取演示文稿中段落的最后一个元素。
 
 ```javascript editor-pptx
+// How do I last in a presentation?
+
+// Last using a paragraph object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +50,4 @@ paragraph.Push(run2);
 const lastElement = paragraph.Last();
 lastElement.SetBold(true);
 slide.AddObject(shape);
-
 ```

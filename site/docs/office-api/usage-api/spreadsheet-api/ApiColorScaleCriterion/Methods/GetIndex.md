@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example demonstrates getting the index of color scale criterion.
+Get the index of color scale criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine which threshold a criterion represents.
+// How to determine which threshold a criterion represents in a spreadsheet.
 
-// Get the index of a color scale criterion.
+// Get the index of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ if (criteria && criteria.length > 0) {
         worksheet.GetRange("C4").SetValue(criteria[1].GetIndex());
     }
 }
-
 ```

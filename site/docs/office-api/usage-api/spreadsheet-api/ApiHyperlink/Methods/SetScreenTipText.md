@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set a tooltip for a hyperlink inside a shape.
+Set a tooltip for a hyperlink inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set screen tip text in a spreadsheet?
+
+// Set screen tip text using a hyperlink object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -46,5 +50,4 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'NO SCREEN TIP'
 
 hyperlink.SetScreenTipText('ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Screen tip: ' + hyperlink.GetScreenTipText());
-
 ```

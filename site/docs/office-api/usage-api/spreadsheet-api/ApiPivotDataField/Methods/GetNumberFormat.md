@@ -20,7 +20,7 @@ string \| null
 
 ## Example
 
-This example shows how to get a number format of a data field.
+Get a number format of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a table element format.

@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例返回当前超链接中的元素数量。
+返回演示文稿中当前超链接的元素数量。
 
 ```javascript editor-pptx
+// How do I get the elements count in a presentation?
+
+// Get the elements count using a hyperlink object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -54,5 +58,4 @@ infoParagraph.AddText('Shape hyperlink elements count: ' + hyperlink.GetElements
 
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

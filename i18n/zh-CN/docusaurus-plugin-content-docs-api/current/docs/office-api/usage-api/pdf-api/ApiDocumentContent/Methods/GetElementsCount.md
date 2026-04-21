@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例获取元素数量并将此值插入到 PDF 文档中。
+获取元素数量并将该值插入 PDF 文档。
 
 ```javascript editor-pdf
 // How to get a number of elements a page shape contains.
@@ -42,5 +42,4 @@ paragraph.AddText("Number of elements inside the shape: " + docContent.GetElemen
 paragraph.AddLineBreak();
 paragraph.AddText("Line breaks are NOT counted into the number of elements.");
 page.AddObject(shape);
-
 ```

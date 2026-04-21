@@ -22,9 +22,13 @@ expression.CreatePresetGeometry(sPreset);
 
 ## Example
 
-This example demonstrates creating a preset geometry.
+Create a preset geometry in a PDF document.
 
 ```javascript editor-pdf
+// How do I create the preset geometry in a PDF document?
+
+// Create the preset geometry and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

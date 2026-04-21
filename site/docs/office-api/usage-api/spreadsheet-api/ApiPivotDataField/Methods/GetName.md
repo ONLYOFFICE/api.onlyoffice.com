@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get a name of a data field.
+Get a name of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a table element name.
+// How to get a table element name in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's name.
+// Create a pivot table, add data to it then display a custom data field's name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

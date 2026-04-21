@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何检查形状填充中使用的颜色是否为主题颜色。
+检查演示文稿中形状填充使用的颜色是否为主题颜色。
 
 ```javascript editor-pptx
+// How can I is theme color using a color in a presentation?
+
+// Is theme color for a color in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ run.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
 run.AddText('\nIs themeColor a theme color? ' + themeColor.IsThemeColor());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

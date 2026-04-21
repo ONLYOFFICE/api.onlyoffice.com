@@ -23,7 +23,7 @@ expression.GetCell(nRow, nCell);
 
 ## Example
 
-This example shows how to get a cell by its position.
+Get a cell by its position in a document.
 
 ```javascript editor-docx
 // How to get cell from the table.

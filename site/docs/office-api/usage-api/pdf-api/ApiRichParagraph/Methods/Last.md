@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets last element from rich paragraph.
+Get last element from rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How to last for a rich paragraph in a PDF document?
+
+// Last and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

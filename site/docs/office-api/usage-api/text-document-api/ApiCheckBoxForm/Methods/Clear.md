@@ -2,25 +2,11 @@
 
 Clears the current form.
 
-## Syntax
-
-```javascript
-expression.Clear();
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
 ## Example
 
-This example clears the current form.
+Clear the current form.
 
 ```javascript editor-docx
 // How to remove texy from the form.

@@ -2,28 +2,16 @@
 
 Check if the current document content is an endnote.
 
-## Syntax
-
-```javascript
-expression.IsEndnote();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiDocumentContent.IsEndnote](../../ApiDocumentContent/Methods/IsEndnote.md).
 
 ## Example
 
-This example check is the ApiDocumentContent is a endnote.
+Check is the document content is an endnote.
 
 ```javascript editor-docx
 // How to add endnote to the document.
+
+// Use document content to is endnote.
 
 let doc = Api.GetDocument();
 let endnote = doc.AddEndnote();
@@ -37,5 +25,4 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
-
 ```

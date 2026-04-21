@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何获取批注回复作者的姓名。
+获取文档中批注回复作者的名称。
 
 ```javascript editor-docx
-// How to find out a comment's reply author.
+// How to find out a comment's reply author in a document.
 
 // Get all comments from the presentation and display the first one's reply author name.
 

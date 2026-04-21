@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example removes the header of the specified type from the section.
+Remove the header of the specified type from the section in a document.
 
 ```javascript editor-docx
-// How to remove the header of the current section.
+// How to remove the header of the current section in a document.
 
-// Create section from the paragraph and remove its header.
+// Create section from the paragraph and remove its header in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

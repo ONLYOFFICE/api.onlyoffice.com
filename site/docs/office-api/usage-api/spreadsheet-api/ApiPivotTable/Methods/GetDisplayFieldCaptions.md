@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to get a display field captions of a pivot table.
+Get a display field captions of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get pivot table display field captions.
+// How to get pivot table display field captions in a spreadsheet.
 
-// Create a pivot table, add data to it then get its display field captions.
+// Create a pivot table, add data to it then get its display field captions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,5 +61,4 @@ pivotTable.AddFields({
 let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Display field captions');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetDisplayFieldCaptions());
-
 ```

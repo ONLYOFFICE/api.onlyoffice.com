@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example gets a text bold using its property.
+Get a text bold using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is bold or not.
+// How to find out whether a text is bold or not in a spreadsheet.
 
-// Get a text bold property.
+// Get a text bold property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

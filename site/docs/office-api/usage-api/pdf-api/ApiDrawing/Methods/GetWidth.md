@@ -25,6 +25,8 @@ How to find a shape's width and display it on the page.
 ```javascript editor-pdf
 // Get a page shape's width.
 
+// Get the width using a drawing object object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,5 +40,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing width: " + width);
 page.AddObject(shape);
-
 ```

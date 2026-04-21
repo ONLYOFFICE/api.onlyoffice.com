@@ -20,9 +20,13 @@ expression.GetSelection();
 
 ## 示例
 
-此示例演示如何获取当前选择
+获取演示文稿中的当前选区。
 
 ```javascript editor-pptx
+// How can I get the selection in a presentation?
+
+// Get the selection in a presentation.
+
 const presentation = Api.GetPresentation();
 
 const rgb = Api.CreateRGBColor(50, 100, 150);
@@ -39,5 +43,4 @@ const selection = Api.GetSelection();
 const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Type: ' + selection.GetType());
-
 ```

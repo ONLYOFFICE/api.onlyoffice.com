@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Set the paragraph first line indentation in a PDF document.
 
 ```javascript editor-pdf
-// How to set a size of the first line indentation using a paragraph properties.
+// How to set a size of the first line indentation using a paragraph properties in a PDF document.
 
-// Create a paragraph setting its first line indentation.
+// Create a paragraph setting its first line indentation in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,5 +49,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
-
 ```

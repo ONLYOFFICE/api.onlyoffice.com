@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the category of the presentation using the ApiCore.
+Get the category of the presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How can I get the category using a core properties in a presentation?
+
+// Get the category for a core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
@@ -40,5 +44,4 @@ paragraph.AddText("Category: " + category);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

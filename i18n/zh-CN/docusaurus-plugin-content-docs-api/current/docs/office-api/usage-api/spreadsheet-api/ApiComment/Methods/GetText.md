@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何获取批注文本。
+获取电子表格中的批注文本。
 
 ```javascript editor-xlsx
-// How to get a comment raw text.
+// How to get a comment raw text in a spreadsheet.
 
 // Add a comment text to a range of the worksheet.
 

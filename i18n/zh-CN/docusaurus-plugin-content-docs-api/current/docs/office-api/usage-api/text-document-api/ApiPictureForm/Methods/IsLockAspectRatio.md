@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查当前图片表单的宽高比是否已锁定。
+检查当前图片表单的纵横比是否被锁定。
 
 ```javascript editor-docx
 // How to find out whether a picture form is fixed or not.

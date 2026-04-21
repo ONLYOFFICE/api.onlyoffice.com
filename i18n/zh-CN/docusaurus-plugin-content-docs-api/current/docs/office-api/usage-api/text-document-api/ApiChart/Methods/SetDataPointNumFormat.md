@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-此示例为图表设置「0.00」数字格式。
+为图表设置"0.00"数字格式。
 
 ```javascript editor-docx
 // How to set a numeric format of the data points.

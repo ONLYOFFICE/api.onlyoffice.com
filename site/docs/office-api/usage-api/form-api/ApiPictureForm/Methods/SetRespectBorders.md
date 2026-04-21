@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example respects the form border width when scaling the image.
+Respects the form border width when scaling the image.
 
 ```javascript editor-forms
-// How to make borders respected when increasing it.
+// How to make borders respected when increasing it in a document.
 
 // Set respect borders property of the picture form.
 

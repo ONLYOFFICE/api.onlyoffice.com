@@ -23,12 +23,12 @@ expression.CreateThemeColorScheme(arrColors, sName);
 
 ## 示例
 
-此示例演示如何创建新的主题配色方案。
+在演示文稿中创建新的主题配色方案。
 
 ```javascript editor-pptx
-// How to change color scheme of the theme.
+// How to change color scheme of the theme in a presentation.
 
-// Add color scheme to the theme.
+// Add color scheme to the theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

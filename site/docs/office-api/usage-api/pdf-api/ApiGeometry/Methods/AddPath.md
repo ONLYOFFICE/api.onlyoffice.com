@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Create a custom shape and add it to a page. Applies custom geometry with specific fill and stroke properties.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I add the path in a PDF document?
+
+// Add the path using a geometry object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

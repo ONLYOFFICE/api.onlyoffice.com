@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents the selected range.
+Get an object that represents the selected range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get selected range.
+// How to get selected range in a spreadsheet.
 
 // Get selection from the worksheet and set its value.
 

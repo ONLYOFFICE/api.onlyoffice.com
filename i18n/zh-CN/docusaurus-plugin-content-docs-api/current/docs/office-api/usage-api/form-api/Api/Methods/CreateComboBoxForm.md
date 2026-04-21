@@ -22,12 +22,12 @@ expression.CreateComboBoxForm(formPr);
 
 ## 示例
 
-此示例使用通用和特定的组合框表单属性创建组合框表单。
+使用通用和特定的组合框表单属性创建组合框表单。
 
 ```javascript editor-forms
 // How to create a combo box form and add it to the paragraph.
 
-// Add a combo box with the state options to the ApiDocument object.
+// Add a combo box with the state options to the document object.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({
@@ -41,5 +41,4 @@ let comboBoxForm = Api.CreateComboBoxForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(comboBoxForm);
-
 ```

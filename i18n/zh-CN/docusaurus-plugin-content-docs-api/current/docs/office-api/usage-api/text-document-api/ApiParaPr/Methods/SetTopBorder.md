@@ -28,12 +28,12 @@ boolean
 
 ## 示例
 
-此示例指定在具有相同段落边框设置的一组段落上方显示的边框。
+指定在文档中具有相同段落边框设置的一组段落上方显示的边框。
 
 ```javascript editor-docx
-// Set top border to the paragraph.
+// Set top border to the paragraph in a document.
 
-// Border with single line the text.
+// Border with single line the text in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

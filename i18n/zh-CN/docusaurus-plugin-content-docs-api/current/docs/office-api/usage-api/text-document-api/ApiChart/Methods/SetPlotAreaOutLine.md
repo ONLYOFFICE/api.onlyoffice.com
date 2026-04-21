@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表绘图区域的轮廓。
+设置文档中图表绘图区域的轮廓。
 
 ```javascript editor-docx
-// How to set an outline color for the plot area.
+// How to set an outline color for the plot area in a document.
 
-// Create a chart, set its properties and its plot area outline.
+// Create a chart, set its properties and its plot area outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

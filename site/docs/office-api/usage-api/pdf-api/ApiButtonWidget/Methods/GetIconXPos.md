@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets icon x position from field with image.
+Get icon x position from field with image in a PDF document.
 
 ```javascript editor-pdf
+// How to get the icon x pos for a button widget in a PDF document?
+
+// Get the icon x pos and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

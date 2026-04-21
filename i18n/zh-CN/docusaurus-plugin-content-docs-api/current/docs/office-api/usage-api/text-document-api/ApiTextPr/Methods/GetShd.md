@@ -20,12 +20,12 @@ expression.GetShd();
 
 ## 示例
 
-此示例展示如何查明文本的底纹类型。
+获取文档中文本的底纹类型。
 
 ```javascript editor-docx
 // Get the shading of the text and display it in the document.
 
-// How to know the text shading type.
+// How to know the text shading type in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
@@ -53,5 +53,4 @@ const color = secondRunTextPr.GetShd();
 const type = color.GetClassType();
 secondParagraph.AddText('Shading type: ' + type);
 doc.Push(secondParagraph);
-
 ```

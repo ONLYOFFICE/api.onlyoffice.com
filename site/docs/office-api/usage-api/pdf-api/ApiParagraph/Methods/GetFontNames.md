@@ -20,9 +20,13 @@ string[]
 
 ## Example
 
-This example shows how to get all font names from all elements inside the paragraph.
+Get all font names from all elements inside the paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the font names using a paragraph in a PDF document?
+
+// Get the font names for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -48,5 +52,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Fonts: ' + fonts.join(', '));
 docContent.Push(paragraph2);
 page.AddObject(shape);
-
 ```

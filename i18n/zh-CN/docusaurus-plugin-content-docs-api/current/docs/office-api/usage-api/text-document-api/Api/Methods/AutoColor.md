@@ -20,13 +20,16 @@ expression.AutoColor();
 
 ## 示例
 
-此示例展示如何创建自动颜色并将其用作字体颜色。
+在文档中创建自动颜色并将其用作字体颜色。
 
 ```javascript editor-docx
+// How to auto color in a document?
+
+// Auto color using the document API.
+
 const doc = Api.GetDocument();
 const color = Api.AutoColor();
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This text is in auto color.');
 paragraph.SetColor(color);
-
 ```

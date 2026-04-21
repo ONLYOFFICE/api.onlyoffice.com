@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to set the image size of the watermark.
+// How to set the image size of the watermark in a document.
 
-// Resize the image using the watermark settings.
+// Resize the image using the watermark settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

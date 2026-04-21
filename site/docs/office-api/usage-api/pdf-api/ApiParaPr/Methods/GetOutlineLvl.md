@@ -20,9 +20,13 @@ Number
 
 ## Example
 
-This example shows how to get the outline level of the specified paragraph via paragraph properties.
+Get the outline level of the specified paragraph via paragraph properties in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the outline lvl in a PDF document?
+
+// Get the outline lvl using a paragraph properties object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,5 +49,4 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

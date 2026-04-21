@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example removes an element using the position specified.
+Remove an element using the position specified in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to remove an element from a document knowing its position in the document content.

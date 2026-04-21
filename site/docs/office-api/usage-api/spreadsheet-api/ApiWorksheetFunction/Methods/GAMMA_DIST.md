@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the gamma distribution.
+Return the gamma distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the gamma distribution.
+// How to calculate the gamma distribution in a spreadsheet.
 
-// Use a function to get the result from a gamma distribution.
+// Use a function to get the result from a gamma distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

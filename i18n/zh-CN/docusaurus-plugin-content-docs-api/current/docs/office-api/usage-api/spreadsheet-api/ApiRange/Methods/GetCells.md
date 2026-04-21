@@ -23,7 +23,7 @@ expression.GetCells(row, col);
 
 ## 示例
 
-此示例演示如何获取表示指定范围中所有单元格或指定单元格的 Range 对象。
+获取表示电子表格中指定范围中所有单元格或指定单元格的 Range 对象。
 
 ```javascript editor-xlsx
 // How to get range cells.
@@ -33,5 +33,4 @@ expression.GetCells(row, col);
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
 range.GetCells(2, 1).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```

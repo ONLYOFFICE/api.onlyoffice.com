@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the automatic advance time to 4.3 seconds (4300 milliseconds).
+Set the automatic advance time to 4.3 seconds (4300 milliseconds) in a presentation.
 
 ```javascript editor-pptx
+// How do I set advance time in a presentation?
+
+// Set advance time using a slide show transition object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -47,5 +51,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Slide will advance automatically after 4.3 seconds.');
 slide.AddObject(shape);
-
 ```

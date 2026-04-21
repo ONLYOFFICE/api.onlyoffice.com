@@ -2,30 +2,16 @@
 
 Returns a collection of image objects from the document content.
 
-## Syntax
-
-```javascript
-expression.GetAllImages();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiImage](../../ApiImage/ApiImage.md)[]
+Inherited from [ApiDocumentContent.GetAllImages](../../ApiDocumentContent/Methods/GetAllImages.md).
 
 ## Example
 
-This example shows how to get a collection of image objects from the document content.
+Get a collection of image objects from the document content in a document.
 
 ```javascript editor-docx
 // Get all images added to the document.
 
-// How to retrieve all images and display the class type of the first one.
+// How to retrieve all images and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,5 +30,4 @@ let classType = images[0].GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Class type: ' + classType);
 doc.Push(paragraph);
-
 ```

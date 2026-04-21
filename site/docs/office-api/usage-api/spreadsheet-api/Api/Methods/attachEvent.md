@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to subscribe to the "onWorksheetChange" event.
+Subscribe to the "onWorksheetChange" event in a spreadsheet.
 
 ```javascript editor-xlsx
-// Attach an event.
+// Attach an event in a spreadsheet.
 
-// How to start event handling.
+// How to start event handling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

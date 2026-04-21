@@ -25,7 +25,7 @@ object
 
 ## 示例
 
-此示例展示如何获取以对象形式表示的文档统计信息。
+获取以对象形式表示的文档统计信息。
 
 ```javascript editor-docx
 // How to get the document statistics showing pages count, words count, etc.

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例指定此样式在样式层次结构中继承的父样式的引用。
+在文档的样式层次结构中指定此样式所继承的父样式的引用。
 
 ```javascript editor-docx
 // How to get the specific style from the document and create table style based on it.

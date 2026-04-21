@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiThemeFormatScheme 对象转换为 JSON 对象。
+将主题格式方案对象转换为 JSON 对象。
 
 ```javascript editor-pptx
-// How to convert a ApiThemeFormatScheme object to a JSON object.
+// How to convert a theme format scheme object to a JSON object.
 
-// Create a ApiThemeFormatScheme, convert it to JSON and create a new object from it.
+// Create a theme format scheme, convert it to JSON and create a new object from it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -62,5 +62,4 @@ chart.SetTitle("Class type = " + type, 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

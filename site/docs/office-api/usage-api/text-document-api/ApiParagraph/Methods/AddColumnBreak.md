@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a column break to the current position and starts the next element from a new column.
+Add a column break to the current position and start the next element from a new column in a document.
 
 ```javascript editor-docx
-// How to add a column break between the text of paragraph.
+// How to add a column break between the text of paragraph in a document.
 
-// Split paragraph with a coulumn break.
+// Split paragraph with a coulumn break in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

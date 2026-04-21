@@ -2,7 +2,6 @@
 
 Represents the ApiPlaceholder class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -1,7 +1,6 @@
 # ApiCheckBoxForm
 
-Represents the ApiCheckBoxForm class.
-
+ApiCheckBoxForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 
 ## Methods
 

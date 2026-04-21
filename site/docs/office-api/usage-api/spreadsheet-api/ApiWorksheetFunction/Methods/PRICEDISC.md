@@ -26,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to return the price per $100 face value for a discounted security.
+Return the price per $100 face value for a discounted security in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the price per $100 face value for a discounted security.
+// How to return the price per $100 face value for a discounted security in a spreadsheet.
 
-// Use a function to return the price per $100 face value for a discounted security.
+// Use a function to return the price per $100 face value for a discounted security in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

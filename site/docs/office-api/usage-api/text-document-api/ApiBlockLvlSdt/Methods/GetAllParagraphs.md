@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a collection of paragraph objects in the content control.
+Get a collection of paragraph objects in the content control in a document.
 
 ```javascript editor-docx
+// How do I get all paragraphs in a document?
+
+// Get all paragraphs using a block-level content control object in a document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let paragraph = Api.CreateParagraph();

@@ -29,12 +29,12 @@ expression.SetSort(key1, sSortOrder1, key2, sSortOrder2, key3, sSortOrder3, sHea
 
 ## 示例
 
-此示例根据请求中指定的参数对给定范围内的单元格进行排序。
+按请求中指定的参数对给定范围内的单元格进行排序。
 
 ```javascript editor-xlsx
 // How to sort values of cells specifying the order.
 
-// Get a range and sort its values.
+// Get a range and sort its values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(2016);

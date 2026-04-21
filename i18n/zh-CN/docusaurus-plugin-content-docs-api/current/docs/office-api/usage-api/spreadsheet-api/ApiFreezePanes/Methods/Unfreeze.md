@@ -20,12 +20,12 @@ expression.Unfreeze();
 
 ## 示例
 
-此示例冻结第一列，然后解冻工作表中的所有窗格。
+冻结第一列，然后取消冻结工作表中的所有窗格。
 
 ```javascript editor-xlsx
-// How to unfreeze columns from freezed panes.
+// How to unfreeze columns from freezed panes in a spreadsheet.
 
-// Add freezed panes then unfreeze the first column and show all freezed ones' location to prove it.
+// Add freezed panes then unfreeze the first column and show all freezed ones' location to prove it in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

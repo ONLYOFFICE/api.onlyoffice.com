@@ -20,9 +20,13 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例展示如何从形状的文档内容中获取当前文本块。
+获取电子表格中形状的文档内容中的当前 run。
 
 ```javascript editor-xlsx
+// How to get current run for a document content?
+
+// Get current run and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -42,5 +46,4 @@ run.AddText('Run text.');
 const currentRun = content.GetCurrentRun();
 const result = currentRun ? currentRun.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current run: ' + result);
-
 ```

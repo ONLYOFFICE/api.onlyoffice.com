@@ -6,11 +6,9 @@
 
 number
 
-
-
 ## 示例
 
-此示例设置当前表单内以百分比计量的图片位置。
+设置当前表单内以百分比计量的图片位置。
 
 ```javascript editor-forms
 // How to set a position of a picture form.

@@ -22,12 +22,12 @@ expression.CreateNumbering(sType);
 
 ## 示例
 
-此示例创建一个「项目符号」类型的抽象多级编号。
+在文档中创建 "bullet" 类型的抽象多级编号。
 
 ```javascript editor-docx
-// How to add a paragraph with numbering.
+// How to add a paragraph with numbering in a document.
 
-// Add a text to the paragraph, make it bulleted.
+// Add a text to the paragraph, make it bulleted in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

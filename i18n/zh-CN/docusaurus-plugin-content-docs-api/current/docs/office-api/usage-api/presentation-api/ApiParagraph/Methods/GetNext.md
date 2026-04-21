@@ -20,10 +20,10 @@ expression.GetNext();
 
 ## 示例
 
-此示例展示如何获取下一个段落。
+获取演示文稿中的下一个段落。
 
 ```javascript editor-pptx
-// How to get the next paragraph of the current one.
+// How to get the next paragraph of the current one in a presentation.
 
 // Return the next paragraph on the slide and make its text bold.
 
@@ -52,5 +52,4 @@ docContent.Push(paragraph2);
 slide.AddObject(shape);
 const nextParagraph = paragraph1.GetNext();
 nextParagraph.SetBold(true);
-
 ```

@@ -22,12 +22,12 @@ expression.CreateSolidFill(color);
 
 ## Example
 
-This example shows how to create a solid fill.
+Create a solid fill in a document.
 
 ```javascript editor-docx
-// Creates a solid fill to apply to the shape using the selected solid color as the shape background.
+// Create a solid fill to apply to the shape using the selected solid color as the shape background in a document.
 
-// How to create the ApiFill object which represents a solid fill and apply it to the ApiShape class.
+// How to create the fill object which represents a solid fill and apply it to the shape class in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

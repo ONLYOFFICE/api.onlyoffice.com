@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates no fill and removes the fill from the element.
+Create no fill and remove the fill from the element in a PDF document.
 
 ```javascript editor-pdf
-// How to remove background fill from the object.
+// How to remove background fill from the object in a PDF document.
 
-// Create no fill and apply it to the element.
+// Create no fill and apply it to the element in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,5 +38,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The stroke of this shape is transparent.");
 page.AddObject(shape);
-
 ```

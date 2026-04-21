@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the creator of the current workbook using the ApiCore.
+Set the creator of the current workbook using the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to set creator for a core properties in a spreadsheet?
+
+// Set creator and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Creator: " + creator);
-
 ```

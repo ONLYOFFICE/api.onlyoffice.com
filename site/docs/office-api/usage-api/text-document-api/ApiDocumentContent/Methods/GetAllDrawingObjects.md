@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a collection of drawing objects from the document content.
+Get a collection of drawing objects from the document content in a document.
 
 ```javascript editor-docx
 // Get all drawing objects added to the document.
 
-// How to retrieve all drawing objects and fill with color its first one.
+// How to retrieve all drawing objects and fill with color its first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -2,25 +2,11 @@
 
 返回时间段条件的日期运算符。
 
-## 语法
-
-```javascript
-expression.GetDateOperator();
-```
-
-`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+继承自 [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md)。
 
 ## 示例
 
-此示例从时间段条件格式规则获取日期运算符。
+从时间段条件格式规则获取日期运算符。
 
 ```javascript editor-xlsx
 // How to retrieve date operators from time period conditional formatting rules.
@@ -47,5 +33,4 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```

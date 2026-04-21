@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets one of the existing predefined numbering templates.
+Set one of the existing predefined numbering templates in a document.
 
 ```javascript editor-docx
-// How to set template type of the numbering.
+// How to set template type of the numbering in a document.
 
-// Set "A." template to the numbering.
+// Set "A." template to the numbering in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

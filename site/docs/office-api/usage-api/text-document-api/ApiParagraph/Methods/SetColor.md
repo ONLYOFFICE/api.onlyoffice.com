@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## Example
 
-This example sets the text color to the current paragraph.
+Set the text color to the current paragraph in a document.
 
 ```javascript editor-docx
-// Color the paragraph text with orange.
+// Color the paragraph text with orange in a document.
 
-// Get the first paragraph and make its font color orange.
+// Get the first paragraph and make its font color orange in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
@@ -39,5 +39,4 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText('This text is in same orange color, but created using HexColor method.');
 secondParagraph.SetColor(color);
 doc.Push(secondParagraph);
-
 ```

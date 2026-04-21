@@ -16,16 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[LineDashType](../../Enumeration/LineDashType.md) \| null
+[DashType](../../Enumeration/DashType.md) \| null
 
 ## Example
 
-Gets the dash type of a stroke.
+Get the dash type of a stroke. Creates a shape with a solid border and display its dash type. Returns string value: "dash", "dashDot", "dot", "lgDash", "lgDashDot", "lgDashDotDot", "solid", "sysDash", "sysDashDot", "sysDashDotDot", "sysDot" in a PDF document.
 
 ```javascript editor-pdf
-// Creates a shape with a solid border and displays its dash type.
-// Returns string value: "dash", "dashDot", "dot", "lgDash", "lgDashDot",
-// "lgDashDotDot", "solid", "sysDash", "sysDashDot", "sysDashDotDot", "sysDot"
+// How to get the dash type for a stroke in a PDF document?
+
+// Get the dash type and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,5 +40,4 @@ let paragraph = content.GetElement(0);
 let retrievedStroke = shape.GetLine();
 let dashType = retrievedStroke.GetDashType();
 paragraph.AddText("Dash type: " + (dashType ? dashType : "not set"));
-
 ```

@@ -25,12 +25,12 @@ number \| string
 
 ## 示例
 
-此示例演示如何返回复数的索引。
+在电子表格中返回复数的索引。
 
 ```javascript editor-xlsx
-// How to get an index of a complex numbers.
+// How to get an index of a complex numbers in a spreadsheet.
 
-// Use a function to get the index.
+// Use a function to get the index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ expression.SetErrorMessage(ErrorMessage);
 
 ## 示例
 
-此示例设置错误消息文本。
+在电子表格中设置错误消息文本。
 
 ```javascript editor-xlsx
-// How to set the validation error message.
+// How to set the validation error message in a spreadsheet.
 
-// Set the error message.
+// Set error message for a validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -36,5 +36,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetErrorMessage("The value must be greater than 10");
 validation.SetShowError(true);
 worksheet.GetRange("B1").SetValue("Error message has been set");
-
 ```

@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例指定此段落的内容显示时在字符正下方有一条线。
+指定在文档中此段落的内容与字符正下方的线条一起显示。
 
 ```javascript editor-docx
-// How to create a new text and underline it.
+// How to create a new text and underline it in a document.
 
-// Create a new text run and underline it.
+// Create a new text run and underline it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

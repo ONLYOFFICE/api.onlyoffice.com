@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example deletes the Range object.
+Delete the Range object in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to remove a range from the worksheet.

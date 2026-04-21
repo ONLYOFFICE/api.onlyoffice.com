@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates slide and inserts it into the presentation.
+Create slide and insert it into the presentation.
 
 ```javascript editor-pptx
 // How to add a new slide.
@@ -34,5 +34,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
-
 ```

@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a bitwise "AND" of two numbers.
+Return a bitwise "AND" of two numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a two numbers bitwise AND.
+// How to get a two numbers bitwise AND in a spreadsheet.
 
-// Use function to calculate bitwise AND opertation.
+// Use function to calculate bitwise AND opertation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

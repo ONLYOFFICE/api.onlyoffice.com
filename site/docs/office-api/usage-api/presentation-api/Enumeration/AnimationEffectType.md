@@ -85,12 +85,15 @@ Enumeration
 - "pathUp"
 - "pathDown"
 
-
 ## Example
 
-This example adds an entrance fade animation to a shape.
+Add an entrance fade animation to a shape.
 
 ```javascript editor-pptx
+// Set the animation effect type and trigger for a presentation shape.
+
+// The shape will have an entrance fade effect triggered on click.
+
 let oPresentation = Api.GetPresentation();
 let oSlide = oPresentation.GetSlideByIndex(0);
 let oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
@@ -101,5 +104,4 @@ oSlide.AddObject(oShape);
 let oTimeLine = oSlide.GetTimeLine();
 let oMainSequence = oTimeLine.GetMainSequence();
 oMainSequence.AddEffect(oShape, 'entranceFade', 'onclick');
-
 ```

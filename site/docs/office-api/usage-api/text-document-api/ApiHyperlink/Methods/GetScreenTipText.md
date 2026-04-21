@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the screen tip text of the hyperlink.
+Get the screen tip text of the hyperlink in a document.
 
 ```javascript editor-docx
-// How to show the screen tip text of the hyperlink.
+// How to show the screen tip text of the hyperlink in a document.
 
-// Set and display the hyperlink tip text appearing on the screen.
+// Set and display the hyperlink tip text appearing on the screen in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

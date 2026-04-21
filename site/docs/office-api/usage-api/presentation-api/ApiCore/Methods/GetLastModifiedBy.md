@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the name of the last user who modified the current presentation.
+Set and get the name of the last user who modified the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How can I get last modified by using a core properties in a presentation?
+
+// Get last modified by for a core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -38,5 +42,4 @@ paragraph.AddText("Last modified by: " + lastModifiedBy);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

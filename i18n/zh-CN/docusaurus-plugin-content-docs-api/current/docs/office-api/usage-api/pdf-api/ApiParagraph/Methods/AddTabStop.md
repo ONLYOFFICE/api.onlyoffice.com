@@ -20,12 +20,12 @@ expression.AddTabStop();
 
 ## 示例
 
-此示例向段落添加一个制表位。
+在 PDF 文档中向段落添加制表位。
 
 ```javascript editor-pdf
-// How to add a tab after a sentence in a paragraph.
+// How to add a tab after a sentence in a paragraph in a PDF document.
 
-// How to split a text string with a tab.
+// How to split a text string with a tab in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,5 +45,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("This is the text which starts after the tab stops.");
 page.AddObject(shape);
-
 ```

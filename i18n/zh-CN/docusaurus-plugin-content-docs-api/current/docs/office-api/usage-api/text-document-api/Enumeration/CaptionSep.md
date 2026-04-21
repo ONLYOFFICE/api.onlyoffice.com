@@ -19,10 +19,9 @@
 - "longDash"
 - "dash"
 
-
 ## 示例
 
-此示例向段落添加以连字符作为编号分隔符的题注。
+向段落添加以连字符作为编号分隔符的题注。
 
 ```javascript editor-docx
 // How to create a caption indicating the type of a numbering separator.

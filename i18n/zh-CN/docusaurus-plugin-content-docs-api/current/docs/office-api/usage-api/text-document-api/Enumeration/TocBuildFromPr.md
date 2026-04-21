@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -13,10 +13,9 @@
 | OutlineLvls | number | 目录中的最大级别数。 |
 | StylesLvls | [TocStyleLvl](../Enumeration/TocStyleLvl.md)[] | 样式级别（例如 [&#123;Name: "Heading 1", Lvl: 2&#125;, &#123;Name: "Heading 2", Lvl: 3&#125;]）。💡 如果 StylesLvls.length &gt; 0，则 OutlineLvls 属性将被忽略。 |
 
-
 ## 示例
 
-此示例向文档添加从 9 个大纲级别生成的目录。
+向文档添加从 9 个大纲级别生成的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating the source from which it should be generated.
@@ -33,5 +32,4 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```

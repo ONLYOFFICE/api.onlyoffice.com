@@ -2,32 +2,16 @@
 
 Sets the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.SetJc(sJc);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
 ## Example
 
-This example sets the paragraph contents justification.
+Set the paragraph contents justification in a document.
 
 ```javascript editor-docx
-// How to set justification of the paragraph content.
+// How to set justification of the paragraph content in a document.
 
-// Change the justification of the paragraph.
+// Change the justification of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyleLeft = doc.CreateStyle("My style with left text alignment");

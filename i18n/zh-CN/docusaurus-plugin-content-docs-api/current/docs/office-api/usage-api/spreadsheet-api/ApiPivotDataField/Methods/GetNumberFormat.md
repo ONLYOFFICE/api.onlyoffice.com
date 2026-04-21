@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取数据字段的数字格式。
+获取电子表格中数据字段的数字格式。
 
 ```javascript editor-xlsx
 // How to get a table element format.

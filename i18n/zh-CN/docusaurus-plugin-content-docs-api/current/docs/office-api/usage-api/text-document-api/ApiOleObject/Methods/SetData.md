@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前 OLE 对象的数据。
+设置文档中当前 OLE 对象的数据。
 
 ```javascript editor-docx
-// How to add link to the OLE object.
+// How to add link to the OLE object in a document.
 
-// Update content of the OLE object.
+// Update content of the OLE object in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(
@@ -39,5 +39,4 @@ let oleObject = Api.CreateOleObject(
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(oleObject);
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
-
 ```

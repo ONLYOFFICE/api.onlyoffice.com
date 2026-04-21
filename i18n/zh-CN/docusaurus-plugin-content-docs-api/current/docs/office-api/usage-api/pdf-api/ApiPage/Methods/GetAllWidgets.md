@@ -20,9 +20,13 @@ expression.GetAllWidgets();
 
 ## 示例
 
-此示例获取页面上的所有字段。
+获取页面上的所有字段。
 
 ```javascript editor-pdf
+// How can I get all widgets using a page in a PDF document?
+
+// Get all widgets for a page in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

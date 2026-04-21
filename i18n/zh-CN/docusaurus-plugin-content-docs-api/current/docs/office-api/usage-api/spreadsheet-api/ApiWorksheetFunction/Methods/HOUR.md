@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何获取小时数，一个从 0（上午 12:00）到 23（下午 11:00）的数字。
+在电子表格中获取小时数，从 0（12:00 A.M.）到 23（11:00 P.M.）。
 
 ```javascript editor-xlsx
-// How to get an hour.
+// How to get an hour in a spreadsheet.
 
-// Use a function to get an hour from a time.
+// Use a function to get an hour from a time in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -35,5 +35,4 @@ let func = Api.WorksheetFunction;
 let ans = func.HOUR("4:17 pm"); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

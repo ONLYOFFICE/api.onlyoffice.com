@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example sets the selection to the specified range.
+Set the selection to the specified range in a document.
 
 ```javascript editor-docx
-// How to select a range with a cursor.
+// How to select a range with a cursor in a document.
 
-// Get range of the paragraph and select it.
+// Get range of the paragraph and select it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

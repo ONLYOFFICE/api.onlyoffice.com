@@ -2,7 +2,6 @@
 
 Represents the ApiWatermarkSettings class.
 
-
 ## Methods
 
 | Method | Returns | Description |

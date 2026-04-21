@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a display fields in report filter area of a pivot table.
+Get a display fields in report filter area of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a display fields in report filter area value.
+// How to get a display fields in report filter area value in a spreadsheet.
 
-// Create a pivot table, add data to it then get its display the value of a display fields in report filter.
+// Create a pivot table, add data to it then get its display the value of a display fields in report filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

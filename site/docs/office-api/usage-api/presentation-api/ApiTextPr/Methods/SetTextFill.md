@@ -22,12 +22,12 @@ expression.SetTextFill(oApiFill);
 
 ## Example
 
-This example sets the text fill to the current text run.
+Set the text fill to the current text run in a presentation.
 
 ```javascript editor-pptx
-// How to change a font color.
+// How to change a font color in a presentation.
 
-// Get the text properties of the run and color its font.
+// Get the text properties of the run and color its font in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the black text fill set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

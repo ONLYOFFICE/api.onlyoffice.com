@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example specifies that all the columns in the current section have the different widths.
+Specify that all the columns in the current section have the different widths in a document.
 
 ```javascript editor-docx
+// How to get the columns widths for a section in a document?
+
+// Get the columns widths and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();

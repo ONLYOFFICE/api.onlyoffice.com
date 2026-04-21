@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the table title.
+Set the table title in a document.
 
 ```javascript editor-docx
-// How to rename the table title.
+// How to rename the table title in a document.
 
-// Create a table and indicate its title.
+// Create a table and indicate its title in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
