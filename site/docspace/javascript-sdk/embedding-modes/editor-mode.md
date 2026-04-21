@@ -20,112 +20,38 @@ const docSpace = DocSpace.SDK.initEditor({
 
 Only the parameters `frameId`, `src`, and `id` are required. All other parameters are optional and have sensible defaults.
 
-## Integration
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
 
-The SDK can be embedded either in an HTML file or via the npm package, depending on your application setup.
+## Configuration, events, and methods
 
-### HTML example
+`initEditor()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md).
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DocSpace initEditor() Example</title>
-    <script src="https://your-docspace.com/static/scripts/sdk/2.0.0/api.js"></script>
-  </head>
-  <body>
-    <div id="ds-frame"></div>
-    <script>
-      const docSpace = DocSpace.SDK.initEditor({
-        frameId: "ds-frame",
-        src: "https://your-docspace.com",
-        id: "your-file-id",
-        width: "100%",
-        height: "700px",
-      });
-    </script>
-  </body>
-</html>
-```
+## Use cases
 
-### Integrating using an npm package
+### Customizing the editor interface
 
-To install the package, run:
-
-```bash
-npm install @onlyoffice/docspace-sdk-js
-```
-
-Then import and initialize the SDK using the desired parameters:
+Use `editorCustomization` to match the editor to your application's branding and hide features your users don't need:
 
 ```javascript
-import { SDK, EditorType, Theme } from "@onlyoffice/docspace-sdk-js";
-
-const sdk = new SDK();
-
-const docSpace = sdk.initEditor({
+const docSpace = DocSpace.SDK.initEditor({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
   id: "your-file-id",
-  width: "100%",
-  height: "700px",
-  theme: Theme.Base,
-  editorType: EditorType.Desktop,
+  editorCustomization: {
+    customer: {
+      name: "Your Company",
+      logo: "https://your-company.com/logo.png",
+    },
+    compactHeader: true,
+    toolbarNoTabs: true,
+    help: false,
+  },
 });
 ```
 
-> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
+### Handling editor close
 
-## Configuration parameters
-
-### Required
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
-| `src` | string | The URL of your DocSpace server. |
-| `id` | string | The ID of the file to open in the editor. |
-
-### Layout
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
-| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
-
-### Display
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
-| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
-
-### Editor customization
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `editorType` | `EditorType` | `EditorType.Desktop` | Editor display type. Accepted values: `EditorType.Desktop`, `EditorType.Embedded`, `EditorType.Mobile`. |
-| `editorGoBack` | boolean | `true` | Displays the "Open file location" button in the editor. |
-| `editorCustomization` | object | `{}` | Parameters to customize the editor interface and behavior. |
-
-### Authentication and access
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
-| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
-
-### Lifecycle
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
-| `downloadToEvent` | boolean | Switches download operations to fire the `onDownload` event instead of triggering a direct browser download. |
-
-## Events
-
-Events are passed as an object to the `events` key in the config.
+Use `onEditorCloseCallback` to redirect the user or update your application state when they close the editor:
 
 ```javascript
 const docSpace = DocSpace.SDK.initEditor({
@@ -133,41 +59,29 @@ const docSpace = DocSpace.SDK.initEditor({
   src: "https://your-docspace.com",
   id: "your-file-id",
   events: {
-    onAppReady: function () {},
-    onAppError: function (error) {},
+    onEditorCloseCallback: function () {
+      window.location.href = "/documents";
+    },
   },
 });
 ```
 
-| Event | Description |
-| ------- | ------------- |
-| `onAppReady` | Fires when the SDK frame has finished initializing and is ready for interaction. |
-| `onContentReady` | Fires when the document content inside the frame has fully loaded. |
-| `onAuthSuccess` | Fires when a user successfully authenticates. |
-| `onSignOut` | Fires when the user signs out of DocSpace. |
-| `onEditorCloseCallback` | Fires when the user closes the document editor. |
-| `onDownload` | Fires when a download is triggered and `downloadToEvent` is set to `true`. Returns a download link. |
-| `onAppError` | Fires when an error occurs in the SDK frame. |
-| `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
-| `onNotFound` | Fires when the requested resource cannot be found. |
-| `onEditorOpen` | Fires when the document editor is opened from the context menu, modal windows, panels, or hotkeys. |
+### Inserting content programmatically
 
-## Methods
-
-After initialization, the SDK instance can be accessed by its `frameId`:
+Use `executeInEditor` to run custom logic inside the editor after it has loaded:
 
 ```javascript
-const frame = DocSpace.SDK.frames["ds-frame"];
+const docSpace = DocSpace.SDK.initEditor({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  id: "your-file-id",
+  events: {
+    onAppReady: function () {
+      const frame = DocSpace.SDK.frames["ds-frame"];
+      frame.executeInEditor(function (editor, data) {
+        editor.insertText("Hello, " + data.username);
+      }, { username: "Alice" });
+    },
+  },
+});
 ```
-
-The following methods are available on an editor instance:
-
-| Method | Description |
-| -------- | ------------- |
-| `getConfig()` | Returns the current configuration object for this frame. |
-| `setConfig(config)` | Updates the configuration of this frame. |
-| `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `executeInEditor(callback, data?)` | Executes a callback function within the editor context. |
-| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
-| `logout()` | Logs out the current user. |
-| `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |

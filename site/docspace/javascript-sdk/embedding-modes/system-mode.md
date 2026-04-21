@@ -19,70 +19,7 @@ const docSpace = DocSpace.SDK.initSystem({
 
 Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
 
-## Integration
-
-The SDK can be embedded either in an HTML file or via the npm package, depending on your application setup.
-
-### HTML example
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DocSpace initSystem() Example</title>
-    <script src="https://your-docspace.com/static/scripts/sdk/2.0.0/api.js"></script>
-  </head>
-  <body>
-    <div id="ds-frame"></div>
-    <script>
-      const docSpace = DocSpace.SDK.initSystem({
-        frameId: "ds-frame",
-        src: "https://your-docspace.com",
-        events: {
-          onAppReady: async function () {
-            const frame = DocSpace.SDK.frames["ds-frame"];
-            const hashSettings = await frame.getHashSettings();
-            const passwordHash = await frame.createHash("user-password", hashSettings);
-            await frame.login("user@example.com", passwordHash);
-          },
-        },
-      });
-    </script>
-  </body>
-</html>
-```
-
-### Integrating using an npm package
-
-To install the package, run:
-
-```bash
-npm install @onlyoffice/docspace-sdk-js
-```
-
-Then import and initialize the SDK using the desired parameters:
-
-```javascript
-import { SDK } from "@onlyoffice/docspace-sdk-js";
-
-const sdk = new SDK();
-
-const docSpace = sdk.initSystem({
-  frameId: "ds-frame",
-  src: "https://your-docspace.com",
-  events: {
-    onAppReady: async () => {
-      const frame = sdk.frames["ds-frame"];
-      const hashSettings = await frame.getHashSettings();
-      const passwordHash = await frame.createHash("user-password", hashSettings);
-      await frame.login("user@example.com", passwordHash);
-    },
-  },
-});
-```
-
-> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
 
 ## Configuration parameters
 

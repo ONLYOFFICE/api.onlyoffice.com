@@ -19,172 +19,67 @@ const docSpace = DocSpace.SDK.initFileSelector({
 
 Only the parameters `frameId` and `src` are required. All other parameters are optional and have sensible defaults.
 
-## Integration
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
 
-The SDK can be embedded either in an HTML file or via the npm package, depending on your application setup.
+## Configuration, events, and methods
 
-### HTML example
+`initFileSelector()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md).
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DocSpace initFileSelector() Example</title>
-    <script src="https://your-docspace.com/static/scripts/sdk/2.0.0/api.js"></script>
-  </head>
-  <body>
-    <div id="ds-frame"></div>
-    <script>
-      const docSpace = DocSpace.SDK.initFileSelector({
-        frameId: "ds-frame",
-        src: "https://your-docspace.com",
-        width: "100%",
-        height: "700px",
-        withSearch: true,
-        events: {
-          onSelectCallback: function (data) {
-            console.log("File selected:", data);
-          },
-          onCloseCallback: function () {
-            console.log("File selector closed.");
-          },
-        },
-      });
-    </script>
-  </body>
-</html>
-```
+## Use cases
 
-### Integrating using an npm package
+### Attaching a DocSpace file to a form
 
-To install the package, run:
-
-```bash
-npm install @onlyoffice/docspace-sdk-js
-```
-
-Then import and initialize the SDK using the desired parameters:
+Let users browse and pick a file, then use the returned data to attach it to a record in your application:
 
 ```javascript
-import { SDK, Theme } from "@onlyoffice/docspace-sdk-js";
-
-const sdk = new SDK();
-
-const docSpace = sdk.initFileSelector({
-  frameId: "ds-frame",
+const selector = DocSpace.SDK.initFileSelector({
+  frameId: "ds-selector",
   src: "https://your-docspace.com",
-  width: "100%",
-  height: "700px",
-  theme: Theme.Base,
   withSearch: true,
+  withBreadCrumbs: true,
+  showSelectorHeader: true,
+  showSelectorCancel: true,
+  acceptButtonLabel: "Attach file",
   events: {
-    onSelectCallback: (data) => {
-      console.log("File selected:", data);
+    onSelectCallback: function (file) {
+      console.log("File selected:", file.label, file.id);
+      attachFileToRecord(file.id, file.label);
+      selector.destroyFrame();
     },
-    onCloseCallback: () => {
-      console.log("File selector closed.");
+    onCloseCallback: function () {
+      selector.destroyFrame();
     },
   },
 });
 ```
 
-> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
+### Showing only files from a specific folder
 
-## Configuration parameters
-
-### Required
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
-| `src` | string | The URL of your DocSpace server. |
-
-### Layout
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
-| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
-
-### Display
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
-| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
-| `buttonColor` | string | `"#5299E0"` | Hex color code for the selector action button. Example: `"#2196f3"`. |
-
-### Selector options
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `withSearch` | boolean | `true` | Displays the search bar. |
-| `withBreadCrumbs` | boolean | `true` | Displays breadcrumb navigation. |
-| `withSubtitle` | boolean | `true` | Displays a subtitle with additional descriptions for the current directory. |
-| `selectorType` | `SelectorFilterType` | `SelectorFilterType.All` | Filters the items shown in the selector. Accepted values: `SelectorFilterType.All`, `SelectorFilterType.RoomsOnly`, `SelectorFilterType.UserOnly`. |
-| `showSelectorCancel` | boolean | `false` | Displays the cancel button in the selector. |
-| `showSelectorHeader` | boolean | `false` | Displays the header in the selector. |
-| `acceptButtonLabel` | string | — | Custom label for the selector confirm button. |
-| `cancelButtonLabel` | string | — | Custom label for the selector cancel button. |
-
-### Authentication and access
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
-| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
-
-### Lifecycle
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
-
-## Events
-
-Events are passed as an object to the `events` key in the config.
+Pass `id` to open the selector at a specific folder instead of the root:
 
 ```javascript
 const docSpace = DocSpace.SDK.initFileSelector({
-  frameId: "ds-frame",
+  frameId: "ds-selector",
   src: "https://your-docspace.com",
-  events: {
-    onSelectCallback: function (data) {},
-    onCloseCallback: function () {},
-    onAppError: function (error) {},
-  },
+  id: "your-folder-id",
+  withBreadCrumbs: true,
 });
 ```
 
-| Event | Description |
-| ------- | ------------- |
-| `onSelectCallback` | Fires when the user selects a file. Returns an object containing the selected file's `id`, `label`, `icon`, and `isSelected` fields. |
-| `onCloseCallback` | Fires when the user closes the file selector without making a selection. |
-| `onAppReady` | Fires when the SDK frame has finished initializing and is ready for interaction. |
-| `onContentReady` | Fires when the content inside the frame has fully loaded. |
-| `onAuthSuccess` | Fires when a user successfully authenticates. |
-| `onSignOut` | Fires when the user signs out of DocSpace. |
-| `onAppError` | Fires when an error occurs in the SDK frame. |
-| `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
-| `onNotFound` | Fires when the requested resource cannot be found. |
+### Filtering by file type
 
-## Methods
-
-After initialization, the SDK instance can be accessed by its `frameId`:
+Use `selectorType` to limit the selector to files owned by the current user, or restrict to rooms only:
 
 ```javascript
-const frame = DocSpace.SDK.frames["ds-frame"];
+const docSpace = DocSpace.SDK.initFileSelector({
+  frameId: "ds-selector",
+  src: "https://your-docspace.com",
+  selectorType: "userFolderOnly",
+  withSearch: true,
+  events: {
+    onSelectCallback: function (file) {
+      console.log("Selected:", file.label);
+    },
+  },
+});
 ```
-
-The following methods are available on a file selector instance:
-
-| Method | Description |
-| -------- | ------------- |
-| `getConfig()` | Returns the current configuration object for this frame. |
-| `setConfig(config)` | Updates the configuration of this frame. |
-| `getSelection()` | Returns information about the currently selected file. |
-| `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
-| `logout()` | Logs out the current user. |
-| `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |

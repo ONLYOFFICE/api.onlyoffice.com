@@ -18,111 +18,44 @@ const docSpace = DocSpace.SDK.initViewer({
 
 Only the parameters `frameId`, `src`, and `id` are required. All other parameters are optional and have sensible defaults.
 
-## Integration
+For setup instructions (connecting the script, CSP configuration, npm package), see [Get started](../get-started/get-started.md).
 
-The SDK can be embedded either in an HTML file or via the npm package, depending on your application setup.
+## Configuration, events, and methods
 
-### HTML example
+`initViewer()` accepts the full [`TFrameConfig`](../usage-sdk/type-aliases/TFrameConfig.md) configuration object and returns an [`SDKInstance`](../usage-sdk/classes/SDKInstance.md).
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DocSpace initViewer() Example</title>
-    <script src="https://your-docspace.com/static/scripts/sdk/2.0.0/api.js"></script>
-  </head>
-  <body>
-    <div id="ds-frame"></div>
-    <script>
-      const docSpace = DocSpace.SDK.initViewer({
-        frameId: "ds-frame",
-        src: "https://your-docspace.com",
-        id: "your-file-id",
-        width: "100%",
-        height: "700px",
-      });
-    </script>
-  </body>
-</html>
-```
+## Use cases
 
-### Integrating using an npm package
+### Viewing a public document without login
 
-To install the package, run:
-
-```bash
-npm install @onlyoffice/docspace-sdk-js
-```
-
-Then import and initialize the SDK using the desired parameters:
+Use `requestToken` to let unauthenticated users view a document shared via a public link:
 
 ```javascript
-import { SDK, EditorType, Theme } from "@onlyoffice/docspace-sdk-js";
-
-const sdk = new SDK();
-
-const docSpace = sdk.initViewer({
+const docSpace = DocSpace.SDK.initViewer({
   frameId: "ds-frame",
   src: "https://your-docspace.com",
   id: "your-file-id",
-  width: "100%",
-  height: "700px",
-  theme: Theme.Base,
-  editorType: EditorType.Desktop,
+  requestToken: "public-share-token",
 });
 ```
 
-> **Note:** The npm package renders an iframe in the browser DOM. Hence, it requires a frontend environment (built using React, Vue, etc.) and cannot be used in a Node.js backend on its own. Check out the [DocSpace-sdk npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) for more information.
+### Embedding a document preview in mobile layout
 
-## Configuration parameters
+Use `editorType` to switch the viewer to a mobile-optimized layout and hide the "Open file location" button:
 
-### Required
+```javascript
+const docSpace = DocSpace.SDK.initViewer({
+  frameId: "ds-frame",
+  src: "https://your-docspace.com",
+  id: "your-file-id",
+  editorType: "mobile",
+  editorGoBack: false,
+});
+```
 
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `frameId` | string | The ID of the `div` element where the frame will be rendered. Also used to reference this SDK instance later via `DocSpace.SDK.frames[frameId]`. |
-| `src` | string | The URL of your DocSpace server. |
-| `id` | string | The ID of the file to open in the viewer. |
+### Handling access and not found errors
 
-### Layout
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `width` | string | `"100%"` | Frame width. Accepts CSS values such as `"100%"` or `"1200px"`. |
-| `height` | string | `"100%"` | Frame height. Accepts CSS values such as `"700px"` or `"100vh"`. |
-
-### Display
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `theme` | `Theme` | `Theme.System` | UI theme. Accepted values: `Theme.Base`, `Theme.Dark`, `Theme.System`. |
-| `locale` | string | Portal default | Language of the DocSpace UI, specified as a four-letter language code (e.g. `"en-US"`). |
-
-### Viewer customization
-
-| Parameter | Type | Default | Description |
-| ----------- | ------ | --------- | ------------- |
-| `editorType` | `EditorType` | `EditorType.Desktop` | Viewer display type. Accepted values: `EditorType.Desktop`, `EditorType.Embedded`, `EditorType.Mobile`. |
-| `editorGoBack` | boolean | `true` | Displays the "Open file location" button in the viewer. |
-
-### Authentication and access
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `requestToken` | string | Token for accessing public rooms or files without a full login session. |
-| `checkCSP` | boolean | Checks for the presence of valid CSP headers before initialization. Recommended in production. |
-
-### Lifecycle
-
-| Parameter | Type | Description |
-| ----------- | ------ | ------------- |
-| `destroyText` | string | Text inserted into the frame's `div` element when `destroyFrame()` is called. |
-| `downloadToEvent` | boolean | Switches download operations to fire the `onDownload` event instead of triggering a direct browser download. |
-
-## Events
-
-Events are passed as an object to the `events` key in the config.
+Display a fallback UI when the user cannot access the document or the file no longer exists:
 
 ```javascript
 const docSpace = DocSpace.SDK.initViewer({
@@ -130,38 +63,14 @@ const docSpace = DocSpace.SDK.initViewer({
   src: "https://your-docspace.com",
   id: "your-file-id",
   events: {
-    onAppReady: function () {},
-    onAppError: function (error) {},
+    onNoAccess: function () {
+      document.getElementById("ds-frame").innerHTML =
+        "You do not have permission to view this document.";
+    },
+    onNotFound: function () {
+      document.getElementById("ds-frame").innerHTML =
+        "This document no longer exists.";
+    },
   },
 });
 ```
-
-| Event | Description |
-| ------- | ------------- |
-| `onAppReady` | Fires when the SDK frame has finished initializing and is ready for interaction. |
-| `onContentReady` | Fires when the document content inside the frame has fully loaded. |
-| `onAuthSuccess` | Fires when a user successfully authenticates. |
-| `onSignOut` | Fires when the user signs out of DocSpace. |
-| `onDownload` | Fires when a download is triggered and `downloadToEvent` is set to `true`. Returns a download link. |
-| `onAppError` | Fires when an error occurs in the SDK frame. |
-| `onNoAccess` | Fires when the user attempts to access a resource they do not have permission to view. |
-| `onNotFound` | Fires when the requested resource cannot be found. |
-
-## Methods
-
-After initialization, the SDK instance can be accessed by its `frameId`:
-
-```javascript
-const frame = DocSpace.SDK.frames["ds-frame"];
-```
-
-The following methods are available on a viewer instance:
-
-| Method | Description |
-| -------- | ------------- |
-| `getConfig()` | Returns the current configuration object for this frame. |
-| `setConfig(config)` | Updates the configuration of this frame. |
-| `getUserInfo()` | Returns information about the currently authenticated user, or `null` if no user is logged in. |
-| `login(email, passwordHash, password?, session?)` | Logs in to DocSpace using the specified credentials. |
-| `logout()` | Logs out the current user. |
-| `destroyFrame()` | Removes the SDK frame and inserts `destroyText` into the container element. |
