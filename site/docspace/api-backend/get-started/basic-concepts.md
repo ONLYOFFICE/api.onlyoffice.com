@@ -10,13 +10,17 @@ title: Introducing ONLYOFFICE DocSpace
 - creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
 - inviting users to collaborate on files in real time.
 
+:::info
+The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All resources, like rooms, files, or users, have their own URLs and are designed to be manipulated in isolation.
+:::
+
 ## Basic concepts
 
 Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
-- **Portal:** Your personal DocSpace cloud containing your rooms with all your documents and files.
-- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers different types of rooms (Collaboration, Editing, Public, Custom, Form filling, and Virtual data rooms) based on your specific needs.
-- **Users:** People with access to your DocSpace portal. Users are split between owners, and other members who can access some documents and files in DocSpace.
+- **Portal:** Your DocSpace cloud containing your rooms with all your documents and files.
+- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers different types of rooms (Collaboration, Meeting, Public, Custom, Form filling, and Virtual data rooms) based on your specific needs.
+- **Users:** People with access to your DocSpace portal. Users are split between the owner, and other [members with different access levels](https://helpcenter.onlyoffice.com/docspace/administration/docspace-inviting-users.aspx) on who can access the documents and files in DocSpace. Other user types include the admin and guests.
 
 ## Quickstart
 
@@ -26,7 +30,7 @@ Follow these steps to get started with ONLYOFFICE DocSpace:
 
 ONLYOFFICE offers these ways to access and use DocSpace:
 
-- **Remote server**: This method requires no installation. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to get started and access your DocSpace portal. 
+- **Cloud version**: This method requires no installation. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to get started and access your DocSpace portal. 
 - **Local server**: [ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx#docspace-developer) is available for Windows, Linux and Docker. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
 
     - [Get ONLYOFFICE DocSpace for Windows](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-windows.aspx?from=api)
@@ -37,9 +41,9 @@ ONLYOFFICE offers these ways to access and use DocSpace:
 
 Authenticate your account using API keys, OAuth, or any of the other [authentication methods](authentication/authentication.md) available on ONLYOFFICE DocSpace. This quickstart uses API keys. Follow these steps on [how to create and use API keys](./authentication/api-keys.md#how-to-create-api-keys) for your request.
 
-### Step 3: Create a room
+### Step 3: Create a Public room
 
-This sample request creates an **Editing Room** titled **Graduation Planning**.
+This sample request creates a **Public Room** titled **Graduation Planning**.
 
 :::note
 Set your Content-Type and Accept headers to application/json, as every endpoint in the DocSpace API supports JSON.
@@ -56,7 +60,6 @@ Content-Length: 115
 {
     "title": "Chi's bridal shower",
     "roomType": "PublicRoom",
-    "color": "Red",
     "private": false
     
 }
@@ -76,6 +79,9 @@ You can send requests to customize and change room details to fit your specific 
 |--------------------|----------------------------------------------------------------------------------|
 | 200                | Successful query, delete, update, or read request.                               |
 | 201                | Successfully created a new record.                                               |
+| 400                | Bad request from client-side error                                               |
+| 401                | Client authentication error from invalid/incorrect authentication credentials.   |
+| 403                | Forbidden client request from inadequate permissions.                            |
 | 404                | Requested resource not found.                                                    |
 | 407                | Proxy authentication error from invalid/incorrect authentication credentials.    |
 | 429                | Exceeded rate limit.                                                             |
